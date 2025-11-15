@@ -14,7 +14,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative container h-full flex flex-col items-center justify-center text-center px-4 md:px-6">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-fade-in">
-          Explore Your DrDestinations
+          Explore your Destination Activities
         </h1>
         <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl animate-slide-up">
           Find exclusive tours, activities, and transfer deals all in one place
