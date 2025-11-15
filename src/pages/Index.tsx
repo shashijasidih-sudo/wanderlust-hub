@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import TrendingActivities from "@/components/TrendingActivities";
 import QuickDestinations from "@/components/QuickDestinations";
+import InstaStories from "@/components/InstaStories";
 import TopThingsToDo from "@/components/TopThingsToDo";
 import FeaturedDestinations from "@/components/FeaturedDestinations";
 import ActivityCategories from "@/components/ActivityCategories";
@@ -16,6 +17,7 @@ const Index = () => {
         <HeroSection />
         <TrendingActivities />
         <QuickDestinations />
+        <InstaStories />
         <TopThingsToDo />
         <FeaturedDestinations />
         <ActivityCategories />
