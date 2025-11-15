@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Star, MapPin } from "lucide-react";
 
 const activities = [
@@ -7,6 +8,7 @@ const activities = [
     location: "Phuket",
     rating: 4.8,
     reviews: 2341,
+    price: 89,
     image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop"
   },
   {
@@ -14,6 +16,7 @@ const activities = [
     location: "Dubai",
     rating: 4.9,
     reviews: 1876,
+    price: 65,
     image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop"
   },
   {
@@ -21,6 +24,7 @@ const activities = [
     location: "Krabi",
     rating: 4.7,
     reviews: 1523,
+    price: 45,
     image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&auto=format&fit=crop"
   },
   {
@@ -28,6 +32,7 @@ const activities = [
     location: "Abu Dhabi",
     rating: 4.9,
     reviews: 3102,
+    price: 95,
     image: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=800&auto=format&fit=crop"
   }
 ];
@@ -64,7 +69,7 @@ const TrendingActivities = () => {
                   {activity.title}
                 </h3>
                 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 mb-4">
                   <div className="flex items-center gap-1">
                     <Star className="h-4 w-4 fill-accent text-accent" />
                     <span className="font-medium text-sm">{activity.rating}</span>
@@ -72,6 +77,17 @@ const TrendingActivities = () => {
                   <span className="text-xs text-muted-foreground">
                     ({activity.reviews} reviews)
                   </span>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-xs text-muted-foreground">From</span>
+                    <span className="text-xl font-bold text-primary">${activity.price}</span>
+                    <span className="text-xs text-muted-foreground">/person</span>
+                  </div>
+                  <Button size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                    Book Now
+                  </Button>
                 </div>
               </div>
             </Card>
