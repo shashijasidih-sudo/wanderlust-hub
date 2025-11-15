@@ -6,28 +6,28 @@ import newyorkImage from "@/assets/destination-newyork.jpg";
 
 const destinations = [
   {
-    image: parisImage,
-    name: "Paris",
-    country: "France",
-    activities: 250,
-  },
-  {
     image: tokyoImage,
-    name: "Tokyo",
-    country: "Japan",
-    activities: 180,
-  },
-  {
-    image: maldivesImage,
-    name: "Maldives",
-    country: "Maldives",
-    activities: 120,
+    name: "Thailand",
+    duration: "6 Nights 7 Days",
+    price: 22000,
   },
   {
     image: newyorkImage,
-    name: "New York",
-    country: "USA",
-    activities: 300,
+    name: "Dubai",
+    duration: "4 Nights 5 Days",
+    price: 25000,
+  },
+  {
+    image: maldivesImage,
+    name: "Singapore",
+    duration: "4 Nights 5 Days",
+    price: 23000,
+  },
+  {
+    image: tokyoImage,
+    name: "Thailand",
+    duration: "4 Nights 5 Days",
+    price: 15000,
   },
 ];
 
@@ -36,9 +36,9 @@ const FeaturedDestinations = () => {
     <section className="py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Destinations</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Destinations Packages in Your Budget</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Discover the world's most breathtaking locations and create unforgettable memories
+            Explore amazing destinations with affordable packages tailored to your budget
           </p>
         </div>
 
