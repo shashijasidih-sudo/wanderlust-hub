@@ -12,7 +12,7 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="text-2xl font-bold bg-hero-gradient bg-clip-text text-transparent">
-            TravelHub
+            Yellodae
           </div>
         </div>
 
