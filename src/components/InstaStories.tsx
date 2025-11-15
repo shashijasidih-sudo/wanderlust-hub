@@ -17,6 +17,9 @@ const reels = [
   },
 ];
 
+import { Button } from "@/components/ui/button";
+import { Instagram } from "lucide-react";
+
 const InstaStories = () => {
   return (
     <section className="py-16 md:py-24 bg-muted/30">
@@ -28,7 +31,7 @@ const InstaStories = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-slide-up">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-slide-up mb-8">
           {reels.map((reel) => (
             <div key={reel.id} className="relative overflow-hidden rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300">
               <div className="aspect-[9/16] bg-muted">
@@ -44,6 +47,23 @@ const InstaStories = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center animate-fade-in">
+          <Button 
+            asChild
+            size="lg"
+            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
+          >
+            <a 
+              href="https://www.instagram.com/yellodaetrails/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Instagram className="mr-2 h-5 w-5" />
+              Follow Us on Instagram
+            </a>
+          </Button>
         </div>
       </div>
     </section>
