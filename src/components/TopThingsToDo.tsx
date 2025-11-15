@@ -39,7 +39,7 @@ const TopThingsToDo = () => {
           Top things to do:
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-slide-up">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 animate-slide-up">
           {topDestinations.map((destination) => (
             <Card 
               key={destination.title}
@@ -59,7 +59,7 @@ const TopThingsToDo = () => {
               </CardHeader>
               
               <CardContent>
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {destination.activities.map((activity) => (
                     <li key={activity} className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
