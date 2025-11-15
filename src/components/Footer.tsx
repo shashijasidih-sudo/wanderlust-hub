@@ -30,7 +30,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-4 bg-hero-gradient bg-clip-text text-transparent">
-              TravelHub
+              Yellodae
             </h3>
             <p className="text-background/80 text-sm mb-4">
               Your trusted partner for unforgettable travel experiences around the world.
@@ -86,7 +86,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-background/20 text-center text-sm text-background/60">
-          <p>© 2024 TravelHub. All rights reserved.</p>
+          <p>© 2024 Yellodae. All rights reserved.</p>
         </div>
       </div>
     </footer>
