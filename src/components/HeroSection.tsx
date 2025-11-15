@@ -25,11 +25,11 @@ const HeroSection = () => {
 
         {/* Search Box */}
         <div className="w-full max-w-4xl bg-white rounded-2xl shadow-card-hover p-4 md:p-6 animate-scale-in">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div className="flex items-center gap-2 border rounded-lg px-4 py-3">
-              <MapPin className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+              <Search className="h-5 w-5 text-muted-foreground flex-shrink-0" />
               <Input 
-                placeholder="Where to?" 
+                placeholder="Activity type" 
                 className="border-0 p-0 focus-visible:ring-0"
               />
             </div>
@@ -37,13 +37,6 @@ const HeroSection = () => {
               <Calendar className="h-5 w-5 text-muted-foreground flex-shrink-0" />
               <Input 
                 type="date" 
-                className="border-0 p-0 focus-visible:ring-0"
-              />
-            </div>
-            <div className="flex items-center gap-2 border rounded-lg px-4 py-3">
-              <Search className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-              <Input 
-                placeholder="Activity type" 
                 className="border-0 p-0 focus-visible:ring-0"
               />
             </div>
