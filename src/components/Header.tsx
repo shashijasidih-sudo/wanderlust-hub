@@ -1,4 +1,4 @@
-import { Search, Menu, DollarSign, Heart, ShoppingCart, User, ChevronDown } from "lucide-react";
+import { Search, Menu, DollarSign, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -106,40 +106,76 @@ const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-lg z-50">
               <DropdownMenuItem className="cursor-pointer">
-                <a href="#phi-phi-island" className="w-full">Phi Phi Island Tours</a>
+                <Link to="/phi-phi-island" className="w-full flex items-center gap-2">
+                  <Ship className="h-4 w-4" />
+                  Phi Phi Island Tours
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <a href="#james-bond-island" className="w-full">James Bond Island Tours</a>
+                <Link to="/james-bond-island" className="w-full flex items-center gap-2">
+                  <Anchor className="h-4 w-4" />
+                  James Bond Island Tours
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <a href="#sentosa-island" className="w-full">Sentosa Island Tours</a>
+                <Link to="/sentosa-island" className="w-full flex items-center gap-2">
+                  <Palmtree className="h-4 w-4" />
+                  Sentosa Island Tours
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <a href="#desert-safari" className="w-full">Desert Safari</a>
+                <Link to="/desert-safari" className="w-full flex items-center gap-2">
+                  <Tent className="h-4 w-4" />
+                  Desert Safari
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <a href="#dolphin-show" className="w-full">Dolphin Show</a>
+                <Link to="/dolphin-show" className="w-full flex items-center gap-2">
+                  <Fish className="h-4 w-4" />
+                  Dolphin Show
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <a href="#selfie-tigers" className="w-full">Selfie with Tigers</a>
+                <Link to="/selfie-tigers" className="w-full flex items-center gap-2">
+                  <Camera className="h-4 w-4" />
+                  Selfie with Tigers
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <a href="#elephant-safari" className="w-full">Elephant Safari</a>
+                <Link to="/elephant-safari" className="w-full flex items-center gap-2">
+                  <TreePine className="h-4 w-4" />
+                  Elephant Safari
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <a href="#hot-spring" className="w-full">Hot Spring and Emeral Pool</a>
+                <Link to="/hot-spring" className="w-full flex items-center gap-2">
+                  <Droplet className="h-4 w-4" />
+                  Hot Spring and Emeral Pool
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <a href="#bangkok-skywalk" className="w-full">Bangkok Mahanakhon Skywalk</a>
+                <Link to="/bangkok-skywalk" className="w-full flex items-center gap-2">
+                  <Building2 className="h-4 w-4" />
+                  Bangkok Mahanakhon Skywalk
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <a href="#dhow-cruise" className="w-full">Dhow Night Cruise</a>
+                <Link to="/dhow-cruise" className="w-full flex items-center gap-2">
+                  <Ship className="h-4 w-4" />
+                  Dhow Night Cruise
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <a href="#atlantis-palm" className="w-full">Atlantis, The Palm</a>
+                <Link to="/atlantis-palm" className="w-full flex items-center gap-2">
+                  <Castle className="h-4 w-4" />
+                  Atlantis, The Palm
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <a href="#massage-coupons" className="w-full">Massage Coupons</a>
+                <Link to="/massage-coupons" className="w-full flex items-center gap-2">
+                  <Ticket className="h-4 w-4" />
+                  Massage Coupons
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -180,40 +216,76 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50">
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#phi-phi-island" className="w-full">Phi Phi Island Tours</a>
+                  <Link to="/phi-phi-island" className="w-full flex items-center gap-2">
+                    <Ship className="h-4 w-4" />
+                    Phi Phi Island Tours
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#james-bond-island" className="w-full">James Bond Island Tours</a>
+                  <Link to="/james-bond-island" className="w-full flex items-center gap-2">
+                    <Anchor className="h-4 w-4" />
+                    James Bond Island Tours
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#sentosa-island" className="w-full">Sentosa Island Tours</a>
+                  <Link to="/sentosa-island" className="w-full flex items-center gap-2">
+                    <Palmtree className="h-4 w-4" />
+                    Sentosa Island Tours
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#desert-safari" className="w-full">Desert Safari</a>
+                  <Link to="/desert-safari" className="w-full flex items-center gap-2">
+                    <Tent className="h-4 w-4" />
+                    Desert Safari
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#dolphin-show" className="w-full">Dolphin Show</a>
+                  <Link to="/dolphin-show" className="w-full flex items-center gap-2">
+                    <Fish className="h-4 w-4" />
+                    Dolphin Show
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#selfie-tigers" className="w-full">Selfie with Tigers</a>
+                  <Link to="/selfie-tigers" className="w-full flex items-center gap-2">
+                    <Camera className="h-4 w-4" />
+                    Selfie with Tigers
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#elephant-safari" className="w-full">Elephant Safari</a>
+                  <Link to="/elephant-safari" className="w-full flex items-center gap-2">
+                    <TreePine className="h-4 w-4" />
+                    Elephant Safari
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#hot-spring" className="w-full">Hot Spring and Emeral Pool</a>
+                  <Link to="/hot-spring" className="w-full flex items-center gap-2">
+                    <Droplet className="h-4 w-4" />
+                    Hot Spring and Emeral Pool
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#bangkok-skywalk" className="w-full">Bangkok Mahanakhon Skywalk</a>
+                  <Link to="/bangkok-skywalk" className="w-full flex items-center gap-2">
+                    <Building2 className="h-4 w-4" />
+                    Bangkok Mahanakhon Skywalk
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#dhow-cruise" className="w-full">Dhow Night Cruise</a>
+                  <Link to="/dhow-cruise" className="w-full flex items-center gap-2">
+                    <Ship className="h-4 w-4" />
+                    Dhow Night Cruise
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#atlantis-palm" className="w-full">Atlantis, The Palm</a>
+                  <Link to="/atlantis-palm" className="w-full flex items-center gap-2">
+                    <Castle className="h-4 w-4" />
+                    Atlantis, The Palm
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#massage-coupons" className="w-full">Massage Coupons</a>
+                  <Link to="/massage-coupons" className="w-full flex items-center gap-2">
+                    <Ticket className="h-4 w-4" />
+                    Massage Coupons
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
