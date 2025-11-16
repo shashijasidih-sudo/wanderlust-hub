@@ -1,16 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface DestinationCardProps {
   image: string;
   name: string;
   duration: string;
   price: number;
+  link?: string;
 }
 
-const DestinationCard = ({ image, name, duration, price }: DestinationCardProps) => {
+const DestinationCard = ({ image, name, duration, price, link }: DestinationCardProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (link && link.startsWith('/')) {
+      navigate(link);
+    }
+  };
+
   return (
-    <div className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 cursor-pointer">
+    <div className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 cursor-pointer" onClick={handleClick}>
       <div className="aspect-square overflow-hidden">
         <img 
           src={image} 

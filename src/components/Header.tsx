@@ -2,7 +2,7 @@ import { Search, Menu, DollarSign, Heart, ShoppingCart, User, ChevronDown, Ship,
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,6 +13,21 @@ import logo from "@/assets/yellodae-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const query = searchQuery.toLowerCase();
+    
+    // Navigate based on search query
+    if (query.includes('bangkok')) navigate('/bangkok');
+    else if (query.includes('pattaya')) navigate('/pattaya');
+    else if (query.includes('phuket')) navigate('/phuket');
+    else if (query.includes('krabi')) navigate('/krabi');
+    else if (query.includes('dubai')) navigate('/dubai');
+    else if (query.includes('thailand')) navigate('/thailand');
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -34,13 +49,15 @@ const Header = () => {
 
           {/* Search Bar - Hidden on mobile */}
           <div className="hidden md:flex flex-1 max-w-xl mx-4">
-            <div className="relative w-full">
+            <form onSubmit={handleSearch} className="relative w-full">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input 
                 placeholder="Search Destination or activities" 
                 className="pl-10 w-full"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
-            </div>
+            </form>
           </div>
 
           {/* Right Side Icons */}
@@ -71,13 +88,15 @@ const Header = () => {
 
         {/* Mobile Search Bar */}
         <div className="md:hidden pb-3">
-          <div className="relative w-full">
+          <form onSubmit={handleSearch} className="relative w-full">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input 
               placeholder="Search Destination or activities" 
               className="pl-10 w-full"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
-          </div>
+          </form>
         </div>
 
         {/* Navigation Bar - Desktop */}
@@ -89,13 +108,25 @@ const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-lg z-50">
               <DropdownMenuItem className="cursor-pointer">
-                <Link to="/thailand" className="w-full">Thailand</Link>
+                <Link to="/thailand" className="w-full">Thailand (All Cities)</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <Link to="/bangkok" className="w-full">Bangkok</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <Link to="/pattaya" className="w-full">Pattaya</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <Link to="/phuket" className="w-full">Phuket</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <Link to="/krabi" className="w-full">Krabi</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <Link to="/dubai" className="w-full">Dubai</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
                 <a href="#singapore" className="w-full">Singapore</a>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer">
-                <a href="#dubai" className="w-full">Dubai</a>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
