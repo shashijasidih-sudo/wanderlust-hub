@@ -6,6 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Thailand from "./pages/Thailand";
+import Bangkok from "./pages/Bangkok";
+import Pattaya from "./pages/Pattaya";
+import Phuket from "./pages/Phuket";
+import Krabi from "./pages/Krabi";
+import Dubai from "./pages/Dubai";
 import PhiPhiIsland from "./pages/PhiPhiIsland";
 import JamesBondIsland from "./pages/JamesBondIsland";
 import SentosaIsland from "./pages/SentosaIsland";
@@ -30,6 +35,11 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/thailand" element={<Thailand />} />
+          <Route path="/bangkok" element={<Bangkok />} />
+          <Route path="/pattaya" element={<Pattaya />} />
+          <Route path="/phuket" element={<Phuket />} />
+          <Route path="/krabi" element={<Krabi />} />
+          <Route path="/dubai" element={<Dubai />} />
           <Route path="/phi-phi-island" element={<PhiPhiIsland />} />
           <Route path="/james-bond-island" element={<JamesBondIsland />} />
           <Route path="/sentosa-island" element={<SentosaIsland />} />
