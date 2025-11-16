@@ -15,7 +15,12 @@ const Header = () => {
           {/* Logo & Brand Name */}
           <div className="flex items-center gap-3">
             <img src={logo} alt="Yellodae Logo" className="h-10 w-10 object-contain" />
-            <div className="text-2xl font-bold bg-hero-gradient bg-clip-text text-transparent">
+          <div 
+              className="text-2xl font-bold bg-clip-text text-transparent"
+              style={{
+                backgroundImage: 'linear-gradient(to right, #FBBF24 0%, #FBBF24 40%, #3B82F6 40%, #3B82F6 100%)'
+              }}
+            >
               Yellodae
             </div>
           </div>
@@ -82,9 +87,6 @@ const Header = () => {
           <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
             Smart Destinations
           </a>
-          <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
-            Support
-          </a>
         </nav>
       </div>
 
@@ -103,9 +105,6 @@ const Header = () => {
             </a>
             <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
               Smart Destinations
-            </a>
-            <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
-              Support
             </a>
             <div className="flex items-center gap-2 pt-2 border-t">
               <Button variant="ghost" size="icon">
