@@ -99,9 +99,50 @@ const Header = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
-            Trending Activities
-          </a>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
+              Trending Activities
+              <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-background border shadow-lg z-50">
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#phi-phi-island" className="w-full">Phi Phi Island Tours</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#james-bond-island" className="w-full">James Bond Island Tours</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#sentosa-island" className="w-full">Sentosa Island Tours</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#desert-safari" className="w-full">Desert Safari</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#dolphin-show" className="w-full">Dolphin Show</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#selfie-tigers" className="w-full">Selfie with Tigers</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#elephant-safari" className="w-full">Elephant Safari</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#hot-spring" className="w-full">Hot Spring and Emeral Pool</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#bangkok-skywalk" className="w-full">Bangkok Mahanakhon Skywalk</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#dhow-cruise" className="w-full">Dhow Night Cruise</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#atlantis-palm" className="w-full">Atlantis, The Palm</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#massage-coupons" className="w-full">Massage Coupons</a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
             Tours & Packages
           </a>
@@ -132,9 +173,50 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
-              Trending Activities
-            </a>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
+                Trending Activities
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background border shadow-lg z-50">
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#phi-phi-island" className="w-full">Phi Phi Island Tours</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#james-bond-island" className="w-full">James Bond Island Tours</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#sentosa-island" className="w-full">Sentosa Island Tours</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#desert-safari" className="w-full">Desert Safari</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#dolphin-show" className="w-full">Dolphin Show</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#selfie-tigers" className="w-full">Selfie with Tigers</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#elephant-safari" className="w-full">Elephant Safari</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#hot-spring" className="w-full">Hot Spring and Emeral Pool</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#bangkok-skywalk" className="w-full">Bangkok Mahanakhon Skywalk</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#dhow-cruise" className="w-full">Dhow Night Cruise</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#atlantis-palm" className="w-full">Atlantis, The Palm</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#massage-coupons" className="w-full">Massage Coupons</a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
               Tours & Packages
             </a>
