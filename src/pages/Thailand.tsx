@@ -206,27 +206,31 @@ const Thailand = () => {
             </CardContent>
           </Card>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
-            {cities.map((city) => (
-              <Card key={city.name} className="group cursor-pointer overflow-hidden hover:shadow-card-hover transition-all">
-                <div className="relative aspect-video">
-                  <img
-                    src={city.image}
-                    alt={city.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                    <p className="text-white font-semibold text-lg p-3">{city.name}</p>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-
           <div className="flex flex-col lg:flex-row gap-6">
             <aside className="lg:w-64 flex-shrink-0">
               <Card className="sticky top-6">
                 <CardContent className="p-6">
+                  <div className="grid grid-cols-2 md:grid-cols-1 gap-4 mb-6">
+                    {cities.map((city) => (
+                      <Card 
+                        key={city.name} 
+                        className="group cursor-pointer overflow-hidden hover:shadow-card-hover transition-all"
+                        onClick={() => setSearchQuery(city.name)}
+                      >
+                        <div className="relative aspect-video">
+                          <img
+                            src={city.image}
+                            alt={city.name}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                            <p className="text-white font-semibold text-sm p-2">{city.name}</p>
+                          </div>
+                        </div>
+                      </Card>
+                    ))}
+                  </div>
+                  
                   <h3 className="font-semibold text-lg mb-4">Filters</h3>
                   
                   <div className="mb-6">
@@ -333,7 +337,7 @@ const Thailand = () => {
               </div>
 
               <div className={viewMode === "grid" 
-                ? "grid grid-cols-1 md:grid-cols-2 gap-6 mb-8" 
+                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8" 
                 : "flex flex-col gap-4 mb-8"
               }>
                 {displayedActivities.map((activity) => (
