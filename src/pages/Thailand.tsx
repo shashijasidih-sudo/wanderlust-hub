@@ -33,6 +33,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Link } from "react-router-dom";
+import thailandNewsletterImg from "@/assets/thailand-newsletter.jpg";
 
 const activities = [
   {
@@ -206,31 +207,31 @@ const Thailand = () => {
             </CardContent>
           </Card>
 
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+            {cities.map((city) => (
+              <Card 
+                key={city.name} 
+                className="group cursor-pointer overflow-hidden hover:shadow-card-hover transition-all"
+                onClick={() => setSearchQuery(city.name)}
+              >
+                <div className="relative aspect-video">
+                  <img
+                    src={city.image}
+                    alt={city.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                    <p className="text-white font-semibold text-sm p-2">{city.name}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+
           <div className="flex flex-col lg:flex-row gap-6">
             <aside className="lg:w-64 flex-shrink-0">
               <Card className="sticky top-6">
                 <CardContent className="p-6">
-                  <div className="grid grid-cols-2 md:grid-cols-1 gap-4 mb-6">
-                    {cities.map((city) => (
-                      <Card 
-                        key={city.name} 
-                        className="group cursor-pointer overflow-hidden hover:shadow-card-hover transition-all"
-                        onClick={() => setSearchQuery(city.name)}
-                      >
-                        <div className="relative aspect-video">
-                          <img
-                            src={city.image}
-                            alt={city.name}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                            <p className="text-white font-semibold text-sm p-2">{city.name}</p>
-                          </div>
-                        </div>
-                      </Card>
-                    ))}
-                  </div>
-                  
                   <h3 className="font-semibold text-lg mb-4">Filters</h3>
                   
                   <div className="mb-6">
@@ -444,7 +445,7 @@ const Thailand = () => {
                 <h2 className="text-3xl font-bold text-foreground mb-6">
                   Top Picks in Thailand
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                   <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
                     <CardContent className="p-6">
                       <h3 className="font-semibold text-lg mb-2">🏖️ Beach Adventures</h3>
@@ -472,6 +473,155 @@ const Thailand = () => {
                         Discover ancient temples and history
                       </p>
                       <Button variant="outline" size="sm">View All</Button>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <Card className="overflow-hidden mb-12">
+                  <CardContent className="p-0">
+                    <div className="grid md:grid-cols-2 gap-0">
+                      <div className="relative aspect-[4/3] md:aspect-auto">
+                        <img
+                          src={thailandNewsletterImg}
+                          alt="Thailand Experience"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="p-8 flex flex-col justify-center">
+                        <h3 className="text-2xl font-bold text-foreground mb-3">
+                          Get Your Perfect Thailand Package
+                        </h3>
+                        <p className="text-sm text-muted-foreground mb-6">
+                          Receive a curated 48-hour itinerary featuring the most iconic experiences in Bangkok, straight to your inbox.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-3">
+                          <Input 
+                            type="email" 
+                            placeholder="Enter your email" 
+                            className="flex-1"
+                          />
+                          <Button>Signup</Button>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <h2 className="text-3xl font-bold text-foreground mb-6">
+                  Things You Should Not Miss in Thailand
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
+                    <div className="aspect-[16/9] overflow-hidden">
+                      <img
+                        src="/placeholder.svg"
+                        alt="Floating Markets"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
+                        Experience Bangkok's Floating Markets
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-3">
+                        Discover the vibrant atmosphere of traditional Thai floating markets, where vendors sell fresh produce and local delicacies from their boats.
+                      </p>
+                      <Button variant="link" className="p-0">Read More →</Button>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
+                    <div className="aspect-[16/9] overflow-hidden">
+                      <img
+                        src="/placeholder.svg"
+                        alt="Thai Temples"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
+                        Visit Ancient Temples in Chiang Mai
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-3">
+                        Explore the spiritual heart of Northern Thailand with stunning temples showcasing intricate architecture and peaceful gardens.
+                      </p>
+                      <Button variant="link" className="p-0">Read More →</Button>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
+                    <div className="aspect-[16/9] overflow-hidden">
+                      <img
+                        src="/placeholder.svg"
+                        alt="Island Hopping"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
+                        Island Hopping in Krabi & Phi Phi
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-3">
+                        Navigate through crystal-clear waters and limestone cliffs while visiting some of the world's most beautiful tropical islands.
+                      </p>
+                      <Button variant="link" className="p-0">Read More →</Button>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
+                    <div className="aspect-[16/9] overflow-hidden">
+                      <img
+                        src="/placeholder.svg"
+                        alt="Street Food"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
+                        Taste Authentic Thai Street Food
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-3">
+                        Embark on a culinary journey through bustling night markets and street food stalls serving authentic pad thai, som tam, and more.
+                      </p>
+                      <Button variant="link" className="p-0">Read More →</Button>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
+                    <div className="aspect-[16/9] overflow-hidden">
+                      <img
+                        src="/placeholder.svg"
+                        alt="Elephant Sanctuary"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
+                        Visit Ethical Elephant Sanctuaries
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-3">
+                        Connect with rescued elephants in their natural habitat, learning about conservation efforts while feeding and bathing these gentle giants.
+                      </p>
+                      <Button variant="link" className="p-0">Read More →</Button>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
+                    <div className="aspect-[16/9] overflow-hidden">
+                      <img
+                        src="/placeholder.svg"
+                        alt="Thai Massage"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
+                        Relax with Traditional Thai Massage
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-3">
+                        Experience the ancient healing art of Thai massage, combining acupressure, stretching, and meditation for ultimate relaxation.
+                      </p>
+                      <Button variant="link" className="p-0">Read More →</Button>
                     </CardContent>
                   </Card>
                 </div>
