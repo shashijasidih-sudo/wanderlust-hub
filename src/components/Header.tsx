@@ -1,8 +1,14 @@
-import { Search, Menu, DollarSign, Heart, ShoppingCart, User } from "lucide-react";
+import { Search, Menu, DollarSign, Heart, ShoppingCart, User, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import logo from "@/assets/yellodae-logo.png";
 
 const Header = () => {
@@ -76,9 +82,23 @@ const Header = () => {
 
         {/* Navigation Bar - Desktop */}
         <nav className="hidden md:flex items-center gap-6 pb-3 border-t pt-3">
-          <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
-            Things to Do
-          </a>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
+              Things to Do
+              <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-background border shadow-lg z-50">
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#thailand" className="w-full">Thailand</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#singapore" className="w-full">Singapore</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">
+                <a href="#dubai" className="w-full">Dubai</a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
             Trending Activities
           </a>
@@ -95,9 +115,23 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden border-t bg-background p-4 animate-fade-in">
           <nav className="flex flex-col gap-4">
-            <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
-              Things to Do
-            </a>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
+                Things to Do
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background border shadow-lg z-50">
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#thailand" className="w-full">Thailand</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#singapore" className="w-full">Singapore</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <a href="#dubai" className="w-full">Dubai</a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
               Trending Activities
             </a>
