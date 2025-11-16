@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Search, Grid3x3, List, Star, MapPin, Clock, ChevronDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import bangkokImg from "@/assets/city-bangkok.jpg";
 import phuketImg from "@/assets/city-phuket.jpg";
 import krabiImg from "@/assets/city-krabi.jpg";
@@ -111,16 +112,17 @@ const activities = [
 ];
 
 const cities = [
-  { name: "Bangkok", image: bangkokImg },
-  { name: "Phuket", image: phuketImg },
-  { name: "Krabi", image: krabiImg },
-  { name: "Koh Samui", image: kohsamuiImg },
-  { name: "Pattaya", image: pattayaImg },
+  { name: "Bangkok", image: bangkokImg, link: "/bangkok" },
+  { name: "Phuket", image: phuketImg, link: "/phuket" },
+  { name: "Krabi", image: krabiImg, link: "/krabi" },
+  { name: "Koh Samui", image: kohsamuiImg, link: "/thailand" },
+  { name: "Pattaya", image: pattayaImg, link: "/pattaya" },
 ];
 
 const placeholderCities = ["Phuket", "Krabi", "Chiang Mai", "Pattaya", "Bangkok"];
 
 const Thailand = () => {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [priceRange, setPriceRange] = useState([0, 5000]);
@@ -212,7 +214,7 @@ const Thailand = () => {
               <Card 
                 key={city.name} 
                 className="group cursor-pointer overflow-hidden hover:shadow-card-hover transition-all"
-                onClick={() => setSearchQuery(city.name)}
+                onClick={() => navigate(city.link)}
               >
                 <div className="relative aspect-video">
                   <img

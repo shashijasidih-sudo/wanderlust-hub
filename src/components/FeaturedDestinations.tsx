@@ -10,24 +10,28 @@ const destinations = [
     name: "Thailand",
     duration: "6 Nights 7 Days",
     price: 22000,
+    link: "/thailand"
   },
   {
     image: newyorkImage,
     name: "Dubai",
     duration: "4 Nights 5 Days",
     price: 25000,
+    link: "/dubai"
   },
   {
     image: maldivesImage,
     name: "Singapore",
     duration: "4 Nights 5 Days",
     price: 23000,
+    link: "#singapore"
   },
   {
     image: tokyoImage,
     name: "Thailand",
     duration: "4 Nights 5 Days",
     price: 15000,
+    link: "/thailand"
   },
 ];
 
@@ -43,8 +47,8 @@ const FeaturedDestinations = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-slide-up">
-          {destinations.map((destination) => (
-            <DestinationCard key={destination.name} {...destination} />
+          {destinations.map((destination, index) => (
+            <DestinationCard key={`${destination.name}-${index}`} {...destination} />
           ))}
         </div>
       </div>
