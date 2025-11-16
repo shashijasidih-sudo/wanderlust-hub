@@ -2,6 +2,7 @@ import { Search, Menu, DollarSign, Heart, ShoppingCart, User } from "lucide-reac
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/yellodae-logo.png";
 
 const Header = () => {
@@ -13,9 +14,9 @@ const Header = () => {
       <div className="container px-4 md:px-6">
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Logo & Brand Name */}
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
             <img src={logo} alt="Yellodae Logo" className="h-10 w-10 object-contain" />
-          <div 
+            <div 
               className="text-2xl font-bold"
               style={{
                 color: 'rgb(255, 191, 0)'
@@ -23,7 +24,7 @@ const Header = () => {
             >
               Yellodae
             </div>
-          </div>
+          </Link>
 
           {/* Search Bar - Hidden on mobile */}
           <div className="hidden md:flex flex-1 max-w-xl mx-4">
