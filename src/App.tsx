@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Thailand from "./pages/Thailand";
 import PhiPhiIsland from "./pages/PhiPhiIsland";
 import JamesBondIsland from "./pages/JamesBondIsland";
 import SentosaIsland from "./pages/SentosaIsland";
@@ -28,6 +29,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/thailand" element={<Thailand />} />
           <Route path="/phi-phi-island" element={<PhiPhiIsland />} />
           <Route path="/james-bond-island" element={<JamesBondIsland />} />
           <Route path="/sentosa-island" element={<SentosaIsland />} />

@@ -89,7 +89,7 @@ const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-lg z-50">
               <DropdownMenuItem className="cursor-pointer">
-                <a href="#thailand" className="w-full">Thailand</a>
+                <Link to="/thailand" className="w-full">Thailand</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
                 <a href="#singapore" className="w-full">Singapore</a>
