@@ -33,7 +33,7 @@ const destinations = [
 
 const FeaturedDestinations = () => {
   return (
-    <section className="py-10 md:py-14 bg-background">
+    <section className="py-8 md:py-12 bg-background">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Destinations Packages in Your Budget</h2>
