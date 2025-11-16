@@ -16,9 +16,9 @@ const Header = () => {
           <div className="flex items-center gap-3">
             <img src={logo} alt="Yellodae Logo" className="h-10 w-10 object-contain" />
           <div 
-              className="text-2xl font-bold bg-clip-text text-transparent"
+              className="text-2xl font-bold"
               style={{
-                backgroundImage: 'linear-gradient(to right, #FBBF24 0%, #FBBF24 40%, #3B82F6 40%, #3B82F6 100%)'
+                color: 'rgb(136, 154, 162)'
               }}
             >
               Yellodae
