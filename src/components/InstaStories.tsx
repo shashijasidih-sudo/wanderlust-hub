@@ -22,7 +22,7 @@ import { Instagram } from "lucide-react";
 
 const InstaStories = () => {
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
+    <section className="py-8 md:py-12 bg-muted/30">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Insta Stories</h2>
