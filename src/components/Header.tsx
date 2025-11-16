@@ -19,7 +19,7 @@ const Header = () => {
             <div 
               className="text-2xl font-bold"
               style={{
-                color: 'rgb(255, 191, 0)'
+                color: 'rgb(25, 25, 112)'
               }}
             >
               Yellodae
