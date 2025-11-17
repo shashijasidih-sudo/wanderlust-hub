@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Star, CheckCircle } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useNavigate } from "react-router-dom";
 
 interface ActivityCardProps {
   title: string;
@@ -9,6 +10,7 @@ interface ActivityCardProps {
   isRecommended?: boolean;
   viewMode: 'grid' | 'list';
   reviews?: number;
+  slug?: string;
 }
 
 const ActivityCard = ({ 
@@ -17,13 +19,24 @@ const ActivityCard = ({
   image, 
   isRecommended = false, 
   viewMode,
-  reviews = Math.floor(Math.random() * 100) + 20
+  reviews = Math.floor(Math.random() * 100) + 20,
+  slug
 }: ActivityCardProps) => {
   const rating = (Math.random() * 1 + 4).toFixed(1);
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    if (slug) {
+      navigate(slug);
+    }
+  };
 
   if (viewMode === 'list') {
     return (
-      <div className="flex gap-4 bg-card rounded-lg shadow-card hover:shadow-card-hover transition-all overflow-hidden">
+      <div 
+        className="flex gap-4 bg-card rounded-lg shadow-card hover:shadow-card-hover transition-all overflow-hidden cursor-pointer"
+        onClick={handleCardClick}
+      >
         <div className="relative w-80 h-64 flex-shrink-0">
           <img src={image} alt={title} className="w-full h-full object-cover" />
           {isRecommended && (
@@ -97,7 +110,10 @@ const ActivityCard = ({
   }
 
   return (
-    <div className="bg-card rounded-lg shadow-card hover:shadow-card-hover transition-all overflow-hidden">
+    <div 
+      className="bg-card rounded-lg shadow-card hover:shadow-card-hover transition-all overflow-hidden cursor-pointer"
+      onClick={handleCardClick}
+    >
       <div className="relative h-56">
         <img src={image} alt={title} className="w-full h-full object-cover" />
         {isRecommended && (
