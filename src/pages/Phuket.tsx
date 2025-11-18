@@ -11,7 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 const activities = [
   { title: "Phi Phi + Maya Bay + Khai (Speedboat)", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
-  { title: "Phi Phi Big Boat Guided Tour", price: 3300, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
+  { title: "Phi Phi Island Guided Tour by Big Boat with Normal Transfer", price: 3300, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/phi-phi-island" },
   { title: "Royal Jet Cruiser First Class", price: 4700, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
   { title: "Phi Phi–Maya–Khai Speedboat", price: 3100, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
   { title: "Dolphin Bay Phuket + Transfer", price: 3300, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
