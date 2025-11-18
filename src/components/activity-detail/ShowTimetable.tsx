@@ -2,13 +2,15 @@ import { Clock } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const ShowTimetable = () => {
-  const shows = [
-    { name: "Dolphin Show", time: "11:00 AM, 03:00 PM", duration: "20 mins" },
-    { name: "Sea Lion Show", time: "11:30 AM, 03:30 PM", duration: "15 mins" },
-    { name: "Orangutan Boxing", time: "12:00 PM, 04:00 PM", duration: "15 mins" },
-    { name: "Cowboy Stunt Show", time: "01:00 PM, 04:30 PM", duration: "30 mins" },
-    { name: "Bird Show", time: "10:30 AM, 02:30 PM", duration: "20 mins" },
-    { name: "Elephant Show", time: "02:00 PM", duration: "25 mins" },
+  const itinerary = [
+    { time: "07:00 AM", activity: "Hotel pickup from Phuket", duration: "30 mins" },
+    { time: "08:00 AM", activity: "Arrive at pier and boat departure", duration: "45 mins" },
+    { time: "09:00 AM", activity: "Phi Phi Leh - Maya Bay visit", duration: "1 hour" },
+    { time: "10:30 AM", activity: "Viking Cave & Loh Samah Bay", duration: "45 mins" },
+    { time: "11:30 AM", activity: "Snorkeling at Phi Phi Don", duration: "1 hour" },
+    { time: "12:30 PM", activity: "Thai buffet lunch", duration: "1 hour" },
+    { time: "02:00 PM", activity: "Beach relaxation & swimming", duration: "1.5 hours" },
+    { time: "04:00 PM", activity: "Return journey to Phuket", duration: "1 hour" },
   ];
 
   return (
@@ -16,28 +18,28 @@ const ShowTimetable = () => {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Clock className="h-5 w-5 text-primary" />
-          Show Schedule
+          Tour Itinerary
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="grid md:grid-cols-2 gap-4">
-          {shows.map((show, index) => (
+        <div className="space-y-3">
+          {itinerary.map((item, index) => (
             <div
               key={index}
-              className="flex items-center justify-between p-4 bg-accent/50 rounded-lg hover:bg-accent transition-colors"
+              className="flex items-start gap-4 p-4 bg-accent/50 rounded-lg hover:bg-accent transition-colors"
             >
-              <div>
-                <p className="font-semibold">{show.name}</p>
-                <p className="text-sm text-muted-foreground">{show.duration}</p>
+              <div className="min-w-[100px]">
+                <p className="font-semibold text-primary">{item.time}</p>
+                <p className="text-xs text-muted-foreground">{item.duration}</p>
               </div>
-              <div className="text-right">
-                <p className="text-sm font-medium text-primary">{show.time}</p>
+              <div className="flex-1">
+                <p className="font-medium">{item.activity}</p>
               </div>
             </div>
           ))}
         </div>
         <p className="text-sm text-muted-foreground mt-4 text-center">
-          * Show times are subject to change. Please check with staff upon arrival.
+          * Times are approximate and may vary based on weather and sea conditions.
         </p>
       </CardContent>
     </Card>
