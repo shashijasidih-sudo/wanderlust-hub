@@ -51,10 +51,6 @@ const ActivityCard = ({
         
         <div className="flex-1 p-4 flex flex-col">
           <h3 className="text-lg font-bold text-foreground mb-2">{title}</h3>
-          
-          <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white w-fit mb-3">
-            Add to Email Flyer
-          </Button>
 
           <div className="flex gap-4 mb-3">
             <div className="flex items-center gap-1 text-sm">
@@ -128,10 +124,6 @@ const ActivityCard = ({
       
       <div className="p-4">
         <h3 className="text-base font-bold text-foreground mb-2 line-clamp-2 h-12">{title}</h3>
-        
-        <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white w-full mb-3">
-          Add to Email Flyer
-        </Button>
 
         <div className="space-y-2 mb-3">
           <div className="flex items-center gap-1 text-xs">
