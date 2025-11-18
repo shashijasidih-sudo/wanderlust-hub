@@ -41,13 +41,24 @@ const TourBooking = () => {
 
             <div>
               <h1 className="text-4xl font-bold mb-4">
-                Phi Phi Island Guided Tour by Big Boat with Normal Transfer
+                From Phuket: Phi Phi Island Guided Tour by Big Boat with Normal Transfer
               </h1>
-              <p className="text-lg text-muted-foreground">
-                Experience the breathtaking beauty of Phi Phi Islands on a comfortable big boat journey. 
-                Explore Maya Bay, snorkel in crystal-clear waters, and enjoy a delicious lunch on this 
-                unforgettable full-day adventure.
+              <p className="text-lg text-muted-foreground mb-4">
+                Explore the stunning Phi Phi Islands, one of Thailand's most scenic destinations. 
+                Enjoy a relaxing boat ride with beautiful views of the Andaman Sea, visit iconic spots 
+                like Viking Cave, Loh Samah Bay, and the famous Maya Bay. Snorkel in crystal-clear waters, 
+                sunbathe on pristine beaches, and indulge in a Thai buffet lunch with refreshing soft drinks.
               </p>
+              <div className="flex flex-wrap gap-4 text-sm">
+                <div className="flex items-center gap-2">
+                  <span className="font-semibold">Duration:</span>
+                  <span className="text-muted-foreground">Full Day (7:00 AM – 4:30 PM)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-semibold">Price:</span>
+                  <span className="text-muted-foreground">From ₹2,900 per person</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -55,8 +66,8 @@ const TourBooking = () => {
           <div className="lg:col-span-1">
             <div className="sticky top-4">
               <PricingCalculator 
-                basePrice={3300}
-                activityName="Phi Phi Island Guided Tour by Big Boat with Normal Transfer"
+                basePrice={2900}
+                activityName="From Phuket: Phi Phi Island Guided Tour by Big Boat with Normal Transfer"
               />
             </div>
           </div>
