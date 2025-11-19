@@ -109,52 +109,12 @@ const PricingCalculator = ({ basePrice, activityName }: PricingCalculatorProps) 
               </Button>
             </div>
           </div>
-            <div className="flex items-center gap-3">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setAdults(Math.max(1, adults - 1))}
-                className="h-8 w-8"
-              >
-                <Minus className="h-4 w-4" />
-              </Button>
-              <span className="w-8 text-center font-semibold">{adults}</span>
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setAdults(Math.min(10, adults + 1))}
-                className="h-8 w-8"
-              >
-                <Plus className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
 
           <div className="flex items-center justify-between p-4 bg-accent/50 rounded-lg">
             <div className="flex-1">
               <p className="font-medium">No. of Child (2-11 yrs)</p>
               <p className="text-sm text-muted-foreground">₹{childPrice.toLocaleString()} per child</p>
             </div>
-            <div className="flex items-center gap-3">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setChildren(Math.max(0, children - 1))}
-                className="h-8 w-8"
-              >
-                <Minus className="h-4 w-4" />
-              </Button>
-              <span className="w-8 text-center font-semibold">{children}</span>
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setChildren(Math.min(10, children + 1))}
-                className="h-8 w-8"
-              >
-                <Plus className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
             <div className="flex items-center gap-3">
               <Button
                 variant="outline"
@@ -194,12 +154,21 @@ const PricingCalculator = ({ basePrice, activityName }: PricingCalculatorProps) 
           </div>
         </div>
 
-        <Button 
-          onClick={handleBookNow}
-          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-6"
-        >
-          Book Now
-        </Button>
+        <div className="flex gap-3">
+          <Button 
+            onClick={handleAddToCart}
+            variant="outline"
+            className="flex-1 text-lg py-6 border-2 border-primary hover:bg-primary/10"
+          >
+            Add to Cart
+          </Button>
+          <Button 
+            onClick={handleBookNow}
+            className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-6"
+          >
+            Book Now
+          </Button>
+        </div>
 
         <div className="space-y-2 text-sm text-muted-foreground">
           <p className="flex items-center gap-2">

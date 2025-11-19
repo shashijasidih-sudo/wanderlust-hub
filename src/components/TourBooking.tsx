@@ -7,10 +7,12 @@ import PhotoGallery from "./activity-detail/PhotoGallery";
 import CustomerReviews from "./activity-detail/CustomerReviews";
 import PricingCalculator from "./activity-detail/PricingCalculator";
 import TourPolicies from "./activity-detail/TourPolicies";
+import TourDescription from "./activity-detail/TourDescription";
+import FAQSection from "./activity-detail/FAQSection";
 import CustomerSupport from "./activity-detail/CustomerSupport";
 import SuggestedTours from "./activity-detail/SuggestedTours";
 import { Button } from "./ui/button";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Star, MapPin } from "lucide-react";
 
 const TourBooking = () => {
   const itineraryRef = useRef<HTMLDivElement>(null);
@@ -24,41 +26,61 @@ const TourBooking = () => {
       <Header />
       
       <main className="container mx-auto px-4 py-8">
-        {/* Hero Section with Sticky Sidebar */}
+        {/* Hero Section */}
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
-        <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-6">
+            {/* Hero Image Slider */}
             <HeroSlider onExplore={scrollToItinerary} />
             
-            <div className="text-center">
-              <Button
-                size="lg"
-                onClick={scrollToItinerary}
-                className="bg-primary hover:bg-primary/90 text-lg px-8 py-6"
-              >
-                Explore Your Adventure Now
-                <ChevronDown className="ml-2 h-5 w-5" />
-              </Button>
-            </div>
-
-            <div>
-              <h1 className="text-4xl font-bold mb-4">
+            {/* Title, Location, Rating */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <MapPin className="h-4 w-4" />
+                <span>Phuket, Thailand</span>
+              </div>
+              
+              <h1 className="text-3xl md:text-4xl font-bold leading-tight">
                 From Phuket: Phi Phi Island Guided Tour by Big Boat with Normal Transfer
               </h1>
-              <p className="text-lg text-muted-foreground mb-4">
-                Explore the stunning Phi Phi Islands, one of Thailand's most scenic destinations. 
-                Enjoy a relaxing boat ride with beautiful views of the Andaman Sea, visit iconic spots 
-                like Viking Cave, Loh Samah Bay, and the famous Maya Bay. Snorkel in crystal-clear waters, 
-                sunbathe on pristine beaches, and indulge in a Thai buffet lunch with refreshing soft drinks.
+              
+              <p className="text-lg text-muted-foreground">
+                Explore the stunning Phi Phi Islands on a comfortable big boat. Visit Maya Bay, snorkel 
+                in crystal-clear waters, and enjoy a Thai buffet lunch on this unforgettable full-day adventure.
               </p>
-              <div className="flex flex-wrap gap-4 text-sm">
+
+              {/* Rating & Reviews */}
+              <div className="flex items-center gap-6 flex-wrap">
                 <div className="flex items-center gap-2">
-                  <span className="font-semibold">Duration:</span>
-                  <span className="text-muted-foreground">Full Day (7:00 AM – 4:30 PM)</span>
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <span className="font-semibold text-lg">4.8</span>
+                  <span className="text-muted-foreground">(1,247 reviews)</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="font-semibold">Price:</span>
-                  <span className="text-muted-foreground">From ₹2,900 per person</span>
+                <div className="flex items-center gap-4 text-sm">
+                  <div>
+                    <span className="font-semibold">Duration:</span>
+                    <span className="text-muted-foreground ml-2">Full Day</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold">From:</span>
+                    <span className="text-primary ml-2 text-lg font-bold">₹2,900</span>
+                  </div>
                 </div>
+              </div>
+
+              {/* Mobile CTA */}
+              <div className="lg:hidden">
+                <Button
+                  size="lg"
+                  onClick={scrollToItinerary}
+                  className="w-full bg-primary hover:bg-primary/90 text-lg py-6"
+                >
+                  Explore Your Adventure
+                  <ChevronDown className="ml-2 h-5 w-5" />
+                </Button>
               </div>
             </div>
           </div>
@@ -74,27 +96,39 @@ const TourBooking = () => {
           </div>
         </div>
 
-        {/* Main Content */}
+        {/* Main Content Sections */}
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
-            <div ref={itineraryRef}>
-              <ShowTimetable />
-            </div>
-            
+            {/* Photo Gallery */}
             <PhotoGallery />
             
+            {/* Customer Reviews */}
+            <CustomerReviews />
+            
+            {/* Tour Description */}
+            <div ref={itineraryRef}>
+              <TourDescription />
+            </div>
+            
+            {/* Tour Policies (Inclusion, Exclusion, Policies) */}
             <TourPolicies />
             
-            <CustomerReviews />
+            {/* FAQ Section */}
+            <FAQSection />
           </div>
 
+          {/* Sidebar */}
           <div className="lg:col-span-1">
-            <CustomerSupport />
+            <div className="sticky top-4">
+              <CustomerSupport />
+            </div>
           </div>
         </div>
 
         {/* Suggested Tours */}
-        <SuggestedTours currentCity="phuket" />
+        <div className="mt-12">
+          <SuggestedTours currentCity="phuket" />
+        </div>
       </main>
 
       <Footer />
