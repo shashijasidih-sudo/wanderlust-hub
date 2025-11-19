@@ -12,12 +12,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 const activities = [
   { title: "Phi Phi Island by Speedboat with Transfer from Krabi", price: 3800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/phi-phi-island" },
   { title: "James Bond Island Sightseeing Tour by Long-Tailed Boat", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/james-bond-island" },
-  { title: "Hong Islands by Longtail Boat", price: 2600, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
-  { title: "Hong Island Tour (By Speed Boat)", price: 3500, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
-  { title: "7 Islands Sunset Tour BBQ with Longtail boat", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
-  { title: "7 Islands Sunset Tour BBQ with Speedboat", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
-  { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
-  { title: "4 Islands by Speedboat", price: 2700, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
+  { title: "Hong Islands by Longtail Boat", price: 2600, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/hong-islands-longtail" },
+  { title: "Hong Island Tour (By Speed Boat)", price: 3500, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/hong-islands-speedboat" },
+  { title: "7 Islands Sunset Tour BBQ with Longtail boat", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/seven-islands-longtail" },
+  { title: "7 Islands Sunset Tour BBQ with Speedboat", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/seven-islands-speedboat" },
+  { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/four-islands-longtail" },
+  { title: "4 Islands by Speedboat", price: 2700, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/four-islands-speedboat" },
   { title: "Half Day Emerald Pool + Hot Springs with Lunch", price: 2800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/hot-spring" },
   { title: "Full Day Emerald Pool + Hot Springs + Tiger Cave with Lunch", price: 3000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/hot-spring" },
 ];
