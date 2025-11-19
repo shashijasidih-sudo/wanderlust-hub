@@ -3,9 +3,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 import HeroSlider from "./activity-detail/HeroSlider";
 import ShowTimetable from "./activity-detail/ShowTimetable";
-import TourDetails from "./activity-detail/TourDetails";
+import PhotoGallery from "./activity-detail/PhotoGallery";
+import CustomerReviews from "./activity-detail/CustomerReviews";
 import PricingCalculator from "./activity-detail/PricingCalculator";
-import PolicyAccordion from "./activity-detail/PolicyAccordion";
+import TourPolicies from "./activity-detail/TourPolicies";
 import CustomerSupport from "./activity-detail/CustomerSupport";
 import SuggestedTours from "./activity-detail/SuggestedTours";
 import { Button } from "./ui/button";
@@ -80,9 +81,11 @@ const TourBooking = () => {
               <ShowTimetable />
             </div>
             
-            <TourDetails />
+            <PhotoGallery />
             
-            <PolicyAccordion />
+            <TourPolicies />
+            
+            <CustomerReviews />
           </div>
 
           <div className="lg:col-span-1">

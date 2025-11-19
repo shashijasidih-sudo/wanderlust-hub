@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Calendar, Users, Minus, Plus } from "lucide-react";
+import { Calendar, Users, Minus, Plus, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
@@ -13,6 +13,7 @@ const PricingCalculator = ({ basePrice, activityName }: PricingCalculatorProps) 
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
   const [selectedDate, setSelectedDate] = useState("");
+  const [selectedTime, setSelectedTime] = useState("");
 
   const childPrice = Math.round(basePrice * 0.7);
   const totalPrice = adults * basePrice + children * childPrice;
@@ -22,7 +23,23 @@ const PricingCalculator = ({ basePrice, activityName }: PricingCalculatorProps) 
       toast.error("Please select a date");
       return;
     }
+    if (!selectedTime) {
+      toast.error("Please select a tour timing");
+      return;
+    }
     toast.success("Booking initiated! Redirecting to checkout...");
+  };
+
+  const handleAddToCart = () => {
+    if (!selectedDate) {
+      toast.error("Please select a date");
+      return;
+    }
+    if (!selectedTime) {
+      toast.error("Please select a tour timing");
+      return;
+    }
+    toast.success("Added to cart successfully!");
   };
 
   return (
@@ -45,6 +62,22 @@ const PricingCalculator = ({ basePrice, activityName }: PricingCalculatorProps) 
           />
         </div>
 
+        <div className="space-y-2">
+          <label className="text-sm font-medium flex items-center gap-2">
+            <Clock className="h-4 w-4 text-primary" />
+            Tour Timing
+          </label>
+          <select
+            value={selectedTime}
+            onChange={(e) => setSelectedTime(e.target.value)}
+            className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+          >
+            <option value="">Select timing</option>
+            <option value="07:00">07:00 AM - 04:30 PM</option>
+            <option value="08:00">08:00 AM - 05:30 PM</option>
+          </select>
+        </div>
+
         <div className="space-y-4">
           <label className="text-sm font-medium flex items-center gap-2">
             <Users className="h-4 w-4 text-primary" />
@@ -52,10 +85,30 @@ const PricingCalculator = ({ basePrice, activityName }: PricingCalculatorProps) 
           </label>
           
           <div className="flex items-center justify-between p-4 bg-accent/50 rounded-lg">
-            <div>
-              <p className="font-medium">Adults</p>
-              <p className="text-sm text-muted-foreground">Age 12+</p>
+            <div className="flex-1">
+              <p className="font-medium">No. of Adults (≥12 yrs)</p>
+              <p className="text-sm text-muted-foreground">₹{basePrice.toLocaleString()} per person</p>
             </div>
+            <div className="flex items-center gap-3">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => setAdults(Math.max(1, adults - 1))}
+                className="h-8 w-8"
+              >
+                <Minus className="h-4 w-4" />
+              </Button>
+              <span className="w-8 text-center font-semibold">{adults}</span>
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => setAdults(Math.min(10, adults + 1))}
+                className="h-8 w-8"
+              >
+                <Plus className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
             <div className="flex items-center gap-3">
               <Button
                 variant="outline"
@@ -78,10 +131,30 @@ const PricingCalculator = ({ basePrice, activityName }: PricingCalculatorProps) 
           </div>
 
           <div className="flex items-center justify-between p-4 bg-accent/50 rounded-lg">
-            <div>
-              <p className="font-medium">Children</p>
-              <p className="text-sm text-muted-foreground">Age 3-11</p>
+            <div className="flex-1">
+              <p className="font-medium">No. of Child (2-11 yrs)</p>
+              <p className="text-sm text-muted-foreground">₹{childPrice.toLocaleString()} per child</p>
             </div>
+            <div className="flex items-center gap-3">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => setChildren(Math.max(0, children - 1))}
+                className="h-8 w-8"
+              >
+                <Minus className="h-4 w-4" />
+              </Button>
+              <span className="w-8 text-center font-semibold">{children}</span>
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => setChildren(Math.min(10, children + 1))}
+                className="h-8 w-8"
+              >
+                <Plus className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
             <div className="flex items-center gap-3">
               <Button
                 variant="outline"
