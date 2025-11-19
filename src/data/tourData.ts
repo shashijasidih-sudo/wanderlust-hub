@@ -40,6 +40,98 @@ export interface TourData {
 }
 
 export const toursData: Record<string, TourData> = {
+  "bangkok-three-temples": {
+    id: "bangkok-three-temples",
+    title: "Bangkok's Iconic Three Temple Tour with Grand Palace and Canal Tour",
+    shortDescription: "Experience Bangkok's most iconic landmarks including the Grand Palace, Emerald Buddha, Reclining Buddha at Wat Pho, and the stunning Wat Arun temple on this comprehensive half-day tour.",
+    location: "Bangkok, Thailand",
+    city: "bangkok",
+    basePrice: 10020,
+    childPrice: 3600,
+    duration: "Half Day",
+    rating: 4.9,
+    reviews: 2847,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Visit the majestic Grand Palace and Emerald Buddha Temple",
+      "Marvel at the 46-meter Reclining Buddha at Wat Pho",
+      "Explore Wat Arun's porcelain-adorned spires",
+      "Stroll through Pak Khlong Talat Flower Market",
+      "Optional traditional Thai attire photo shoot with 20 HD photos",
+      "Optional 60-minute Bangkok canal tour"
+    ],
+    description: {
+      overview: "Dive into Bangkok's Rich Heritage with Our Unforgettable Temple Tour. Experience the best of Bangkok with our Half-Day, Full-Day, and Canal Tours, showcasing the city's most iconic landmarks.",
+      whatToExpect: "Discover Thailand's royal heritage at the Grand Palace and marvel at the sacred Emerald Buddha. Visit Wat Pho to admire the impressive 46-meter Reclining Buddha and its serene temple grounds, known as the birthplace of traditional Thai massage. Take in the beauty of Wat Arun, with its porcelain-adorned spires standing majestically along the Chao Phraya River—especially breathtaking at sunset."
+    },
+    itinerary: [
+      { time: "08:00 AM", title: "Hotel Pickup", description: "Pick-up from your centrally located hotel within 2 KM radius of Central Business District" },
+      { time: "08:30 AM", title: "Meeting Point", description: "Meet at Saphan Taksin Skytrain Station, Exit No. 2" },
+      { time: "10:30 AM", title: "Wat Arun Visit", description: "Visit the Temple of Dawn with optional traditional Thai dress and photography" },
+      { time: "11:30 AM", title: "Royal Grand Palace", description: "Take a boat to Tha Tien Pier and visit the Royal Grand Palace and Emerald Buddha" },
+      { time: "12:00 PM", title: "Wat Pho", description: "Walk to see the famous 46-meter Reclining Buddha" },
+      { time: "12:30 PM", title: "Flower Market", description: "Take a local Tuk Tuk to Pak Khlong Talat Flower Market" },
+      { time: "01:00 PM", title: "Lunch Break", description: "Learn about flower folding and enjoy lunch" },
+      { time: "02:00 PM", title: "Optional Canal Tour", description: "Begin 60-minute canal tour or return to starting point" },
+      { time: "03:00 PM", title: "Return", description: "Return to meeting point or hotel" }
+    ],
+    tourTimings: [
+      "09:00 AM – 03:00 PM",
+      "02:00 PM – 08:00 PM"
+    ],
+    inclusions: [
+      "Hotel pickup and drop-off (selected hotels)",
+      "Professional English-speaking guide",
+      "All entrance fees to temples",
+      "Boat transfer to Wat Arun",
+      "Tuk Tuk ride to Flower Market",
+      "Bottled water"
+    ],
+    exclusions: [
+      "Lunch and beverages",
+      "Optional traditional Thai attire photo shoot (1,500 THB)",
+      "Optional canal tour (additional cost)",
+      "Personal expenses",
+      "Tips and gratuities"
+    ],
+    bookingPolicy: [
+      "Confirmation will be received within 24 hours of booking",
+      "Please wear appropriate clothing (shoulders and knees covered)",
+      "Grand Palace may be closed for special royal ceremonies",
+      "Meeting point pickup available at reduced price"
+    ],
+    cancellationPolicy: [
+      "Free cancellation up to 24 hours before tour start",
+      "50% refund for cancellations within 12-24 hours",
+      "No refund for cancellations within 12 hours",
+      "No refund for no-shows"
+    ],
+    childPolicy: [
+      "Children under 3 years are free",
+      "Child rate applies for ages 3-11 years",
+      "Children must be accompanied by an adult",
+      "Infant seats not available"
+    ],
+    faqs: [
+      {
+        question: "What should I wear to the temples?",
+        answer: "Please wear clothing that covers your shoulders and knees. Sleeveless tops, shorts, and short skirts are not permitted in the Grand Palace."
+      },
+      {
+        question: "Is the Grand Palace always open?",
+        answer: "The Royal Grand Palace and Emerald Buddha Temple will be closed from October 26 to November 9, 2025. They will reopen on November 10, 2025. The palace may also close for special royal ceremonies."
+      },
+      {
+        question: "How much does the photo shoot cost?",
+        answer: "The optional traditional Thai attire photo shoot costs 1,500 THB and includes 20 HD images delivered via Google Drive."
+      },
+      {
+        question: "Can I join the canal tour separately?",
+        answer: "Yes, you can opt for the 60-minute canal tour at 2:00 PM for an additional cost."
+      }
+    ]
+  },
   "phi-phi-island": {
     id: "phi-phi-island",
     title: "From Phuket: Phi Phi Island Guided Tour by Big Boat with Normal Transfer",
