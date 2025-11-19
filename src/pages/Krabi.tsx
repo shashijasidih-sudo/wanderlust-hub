@@ -11,15 +11,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 const activities = [
   { title: "Phi Phi Island Speedboat Tour", price: 3800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
-  { title: "James Bond Sightseeing", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
+  { title: "James Bond Sightseeing", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/james-bond-island" },
   { title: "Hong Islands (Longtail)", price: 2600, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
   { title: "Hong Island (Speedboat)", price: 3500, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
   { title: "7 Islands Sunset BBQ (Longtail)", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
   { title: "7 Islands Sunset BBQ (Speedboat)", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
   { title: "4 Islands (Longtail)", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
   { title: "4 Islands (Speedboat)", price: 2700, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
-  { title: "Half Day Emerald Pool + Hot Springs", price: 2800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
-  { title: "Full Day Emerald Pool + Hot Springs + Tiger Cave", price: 3000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
+  { title: "Half Day Emerald Pool + Hot Springs", price: 2800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/hot-spring" },
+  { title: "Full Day Emerald Pool + Hot Springs + Tiger Cave", price: 3000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/hot-spring" },
   { title: "Krabi Airport Transfer (Private)", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
   { title: "Krabi → Phuket Private Transfer", price: 7500, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
 ];
