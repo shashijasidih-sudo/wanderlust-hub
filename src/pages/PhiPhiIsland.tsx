@@ -13,8 +13,26 @@ import phiPhi9 from "@/assets/phi-phi-9.jpg";
 import phiPhi10 from "@/assets/phi-phi-10.jpg";
 
 const PhiPhiIsland = () => {
+  console.log("PhiPhiIsland: toursData available?", !!toursData);
+  console.log("PhiPhiIsland: phi-phi-island exists?", !!toursData["phi-phi-island"]);
+  console.log("PhiPhiIsland: toursData keys:", Object.keys(toursData || {}));
+  
+  const baseTourData = toursData["phi-phi-island"];
+  
+  if (!baseTourData) {
+    console.error("PhiPhiIsland: Base tour data not found for phi-phi-island");
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Tour Configuration Error</h1>
+          <p className="text-muted-foreground">Tour data not found in database.</p>
+        </div>
+      </div>
+    );
+  }
+  
   const tourData = {
-    ...toursData["phi-phi-island"],
+    ...baseTourData,
     heroImages: [
       { src: phiPhiBoat, title: "Phi Phi Island Guided Tour by Big Boat with Normal Transfer" },
       { src: phiPhi1, title: "Discover Paradise Islands" },
@@ -33,6 +51,12 @@ const PhiPhiIsland = () => {
       { src: phiPhi10, alt: "Loh Samah Bay secluded lagoon" }
     ]
   };
+  
+  console.log("PhiPhiIsland: Final tourData created", {
+    id: tourData.id,
+    title: tourData.title,
+    hasHeroImages: !!tourData.heroImages
+  });
 
   return <TourBooking tourData={tourData} />;
 };
