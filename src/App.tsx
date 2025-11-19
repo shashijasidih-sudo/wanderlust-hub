@@ -42,6 +42,25 @@ import ChaoPhrayaPrincessJoin from "./pages/ChaoPhrayaPrincessJoin";
 import MaeklongFloatingMarket from "./pages/MaeklongFloatingMarket";
 import BangkokTukTukNight from "./pages/BangkokTukTukNight";
 import DreamWorldBangkok from "./pages/DreamWorldBangkok";
+import DolphinBayPhuket from "./pages/DolphinBayPhuket";
+import PhuketCityNightMarket from "./pages/PhuketCityNightMarket";
+import PhuketSimonCabaret from "./pages/PhuketSimonCabaret";
+import PhuketCarnivalMagic from "./pages/PhuketCarnivalMagic";
+import PhuketMuslimFriendlyTour from "./pages/PhuketMuslimFriendlyTour";
+import PattayaFloatingMarketTour from "./pages/PattayaFloatingMarketTour";
+import PattayaBigBuddhaGems from "./pages/PattayaBigBuddhaGems";
+import CoralIslandPattaya from "./pages/CoralIslandPattaya";
+import NongNoochGarden from "./pages/NongNoochGarden";
+import PattayaDolphinarium from "./pages/PattayaDolphinarium";
+import MuayThaiPattaya from "./pages/MuayThaiPattaya";
+import AlcazarShowPattaya from "./pages/AlcazarShowPattaya";
+import PattayaFloatingMarketGuided from "./pages/PattayaFloatingMarketGuided";
+import HongIslandsLongtail from "./pages/HongIslandsLongtail";
+import HongIslandsSpeedboat from "./pages/HongIslandsSpeedboat";
+import SevenIslandsLongtail from "./pages/SevenIslandsLongtail";
+import SevenIslandsSpeedboat from "./pages/SevenIslandsSpeedboat";
+import FourIslandsLongtail from "./pages/FourIslandsLongtail";
+import FourIslandsSpeedboat from "./pages/FourIslandsSpeedboat";
 
 const queryClient = new QueryClient();
 
@@ -90,6 +109,25 @@ const App = () => (
           <Route path="/maeklong-floating-market" element={<MaeklongFloatingMarket />} />
           <Route path="/bangkok-tuk-tuk-night" element={<BangkokTukTukNight />} />
           <Route path="/dream-world-bangkok" element={<DreamWorldBangkok />} />
+          <Route path="/dolphin-bay-phuket" element={<DolphinBayPhuket />} />
+          <Route path="/phuket-city-night-market" element={<PhuketCityNightMarket />} />
+          <Route path="/phuket-simon-cabaret" element={<PhuketSimonCabaret />} />
+          <Route path="/phuket-carnival-magic" element={<PhuketCarnivalMagic />} />
+          <Route path="/phuket-muslim-friendly-tour" element={<PhuketMuslimFriendlyTour />} />
+          <Route path="/pattaya-floating-market-tour" element={<PattayaFloatingMarketTour />} />
+          <Route path="/pattaya-big-buddha-gems" element={<PattayaBigBuddhaGems />} />
+          <Route path="/coral-island-pattaya" element={<CoralIslandPattaya />} />
+          <Route path="/nong-nooch-garden" element={<NongNoochGarden />} />
+          <Route path="/pattaya-dolphinarium" element={<PattayaDolphinarium />} />
+          <Route path="/muay-thai-pattaya" element={<MuayThaiPattaya />} />
+          <Route path="/alcazar-show-pattaya" element={<AlcazarShowPattaya />} />
+          <Route path="/pattaya-floating-market-guided" element={<PattayaFloatingMarketGuided />} />
+          <Route path="/hong-islands-longtail" element={<HongIslandsLongtail />} />
+          <Route path="/hong-islands-speedboat" element={<HongIslandsSpeedboat />} />
+          <Route path="/seven-islands-longtail" element={<SevenIslandsLongtail />} />
+          <Route path="/seven-islands-speedboat" element={<SevenIslandsSpeedboat />} />
+          <Route path="/four-islands-longtail" element={<FourIslandsLongtail />} />
+          <Route path="/four-islands-speedboat" element={<FourIslandsSpeedboat />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
