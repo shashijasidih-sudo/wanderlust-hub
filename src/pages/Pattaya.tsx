@@ -10,17 +10,16 @@ import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const activities = [
-  { title: "Discovery Pattaya City Tour + Floating Market + Lunch", price: 1800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
-  { title: "Pattaya City Tour (Big Buddha Hill, Gems Museum)", price: 1200, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop" },
-  { title: "Coral Island Join Tour + Indian Lunch", price: 650, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop" },
-  { title: "Nong Nooch + Show + Lunch + Transfer", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
-  { title: "Pattaya Dolphinarium + Transfer", price: 3100, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop" },
-  { title: "Muay Thai Pattaya", price: 4000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
-  { title: "Alcazar Show + Transfer", price: 1500, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop" },
-  { title: "Pattaya Floating Market Guided Tour", price: 2800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
-  { title: "Sanctuary of Truth + Transfer", price: 2700, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop" },
-  { title: "Lost in Nightlight Walking/Drinking/Food Tour", price: 4200, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
-  { title: "Sunset Club & Pub Crawl", price: 5200, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop" },
+  { title: "Discovery Pattaya City Tours with Floating Market and Lunch", price: 1800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
+  { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1200, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop" },
+  { title: "Coral Island Join Tour with Indian Lunch", price: 650, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop" },
+  { title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
+  { title: "Pattaya Dolphinarium Admission Ticket with Transfer", price: 3100, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop" },
+  { title: "Muay Thai Pattaya Admission Ticket", price: 4000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
+  { title: "Alcazar Show Pattaya Ticket with Transfer", price: 1500, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop" },
+  { title: "Pattaya Floating Market Guided Tour with Transfer", price: 2800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
+  { title: "Lost in Nightlight - A Walking, Drinking, and Food Tasting Experience at Pattaya's Red Light District", price: 4200, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop" },
+  { title: "Sunset Club and Pub Crawling Experience at Drinking Street in Pattaya", price: 5200, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
 ];
 
 const categories = [
