@@ -1,3 +1,20 @@
+import phiPhi1 from "@/assets/phi-phi-1.jpg";
+import phiPhi2 from "@/assets/phi-phi-2.jpg";
+import phiPhi3 from "@/assets/phi-phi-3.jpg";
+import phiPhi4 from "@/assets/phi-phi-4.jpg";
+import phiPhi5 from "@/assets/phi-phi-5.jpg";
+import phiPhi6 from "@/assets/phi-phi-6.jpg";
+import phiPhi7 from "@/assets/phi-phi-7.jpg";
+import phiPhi8 from "@/assets/phi-phi-8.jpg";
+import jamesBond1 from "@/assets/james-bond-1.jpg";
+import jamesBond2 from "@/assets/james-bond-2.jpg";
+import jamesBond3 from "@/assets/james-bond-3.jpg";
+import jamesBond4 from "@/assets/james-bond-4.jpg";
+import bangkokSkywalk1 from "@/assets/bangkok-skywalk-1.jpg";
+import bangkokSkywalk2 from "@/assets/bangkok-skywalk-2.jpg";
+import bangkokSkywalk3 from "@/assets/bangkok-skywalk-3.jpg";
+import emerald1 from "@/assets/emerald-1.jpg";
+
 export interface TourData {
   id: string;
   title: string;
@@ -829,8 +846,17 @@ export const toursData: Record<string, TourData> = {
     duration: "4-5 Hours",
     rating: 4.6,
     reviews: 289,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: phiPhi1, title: "Dolphin Bay Phuket - Marine Show" },
+      { src: phiPhi2, title: "Interactive Dolphin Performance" },
+      { src: phiPhi3, title: "Seal Show Entertainment" }
+    ],
+    galleryImages: [
+      { src: phiPhi4, alt: "Dolphin jumping performance" },
+      { src: phiPhi5, alt: "Seal show entertainment" },
+      { src: phiPhi6, alt: "Meet and greet with dolphins" },
+      { src: phiPhi7, alt: "Family enjoying dolphin show" }
+    ],
     highlights: [
       "Interactive dolphin and seal shows",
       "Meet and greet with dolphins",
@@ -871,8 +897,17 @@ export const toursData: Record<string, TourData> = {
     duration: "5-6 Hours",
     rating: 4.4,
     reviews: 312,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: bangkokSkywalk1, title: "Phuket City Night Market Tour" },
+      { src: bangkokSkywalk2, title: "Big Buddha Sunset Views" },
+      { src: bangkokSkywalk3, title: "Vibrant Night Market" }
+    ],
+    galleryImages: [
+      { src: phiPhi1, alt: "Phuket Old Town architecture" },
+      { src: phiPhi2, alt: "Big Buddha landmark" },
+      { src: phiPhi3, alt: "Night market stalls" },
+      { src: phiPhi4, alt: "Street food vendors" }
+    ],
     highlights: [
       "Visit Phuket's iconic landmarks",
       "Explore vibrant night markets",
@@ -914,8 +949,17 @@ export const toursData: Record<string, TourData> = {
     duration: "3 Hours",
     rating: 4.7,
     reviews: 456,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: phiPhi5, title: "Simon Cabaret Show" },
+      { src: phiPhi6, title: "Spectacular Costumes" },
+      { src: phiPhi7, title: "World-Class Performance" }
+    ],
+    galleryImages: [
+      { src: phiPhi8, alt: "Cabaret performers" },
+      { src: phiPhi1, alt: "Elaborate stage production" },
+      { src: phiPhi2, alt: "Costume showcase" },
+      { src: phiPhi3, alt: "Photo with performers" }
+    ],
     highlights: [
       "World-famous cabaret show",
       "Spectacular costumes and choreography",
@@ -955,8 +999,17 @@ export const toursData: Record<string, TourData> = {
     duration: "4-5 Hours",
     rating: 4.8,
     reviews: 523,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: phiPhi4, title: "Carnival Magic Theme Park" },
+      { src: phiPhi5, title: "Carnival Parade Show" },
+      { src: phiPhi6, title: "Kingdom of Lights" }
+    ],
+    galleryImages: [
+      { src: phiPhi7, alt: "Carnival parade floats" },
+      { src: phiPhi8, alt: "Bird Paradise zone" },
+      { src: phiPhi1, alt: "Fun fair attractions" },
+      { src: phiPhi2, alt: "Evening carnival lights" }
+    ],
     highlights: [
       "Thailand's first theme park carnival",
       "Spectacular carnival parade show",
@@ -997,8 +1050,17 @@ export const toursData: Record<string, TourData> = {
     duration: "8 Hours",
     rating: 4.9,
     reviews: 187,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: bangkokSkywalk1, title: "Muslim-Friendly Phuket Tour" },
+      { src: bangkokSkywalk2, title: "Masjid Mukaram Mosque" },
+      { src: bangkokSkywalk3, title: "Phuket Cultural Sites" }
+    ],
+    galleryImages: [
+      { src: phiPhi3, alt: "Historic mosque visit" },
+      { src: phiPhi4, alt: "Phuket Old Town" },
+      { src: phiPhi5, alt: "Halal dining experience" },
+      { src: phiPhi6, alt: "Scenic viewpoints" }
+    ],
     highlights: [
       "Halal-certified dining experiences",
       "Prayer time accommodations",
@@ -1043,8 +1105,17 @@ export const toursData: Record<string, TourData> = {
     duration: "6-7 Hours",
     rating: 4.5,
     reviews: 342,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: phiPhi7, title: "Pattaya Floating Market" },
+      { src: phiPhi8, title: "Traditional Thai Market" },
+      { src: phiPhi1, title: "Sanctuary of Truth" }
+    ],
+    galleryImages: [
+      { src: phiPhi2, alt: "Floating market vendors" },
+      { src: phiPhi3, alt: "Traditional boats" },
+      { src: phiPhi4, alt: "Big Buddha Hill view" },
+      { src: phiPhi5, alt: "Thai cultural site" }
+    ],
     highlights: [
       "Visit authentic floating market",
       "Explore Pattaya's cultural sites",
@@ -1086,8 +1157,17 @@ export const toursData: Record<string, TourData> = {
     duration: "4-5 Hours",
     rating: 4.3,
     reviews: 256,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: bangkokSkywalk1, title: "Big Buddha Hill Pattaya" },
+      { src: bangkokSkywalk2, title: "Panoramic City Views" },
+      { src: bangkokSkywalk3, title: "Gems Gallery Museum" }
+    ],
+    galleryImages: [
+      { src: phiPhi6, alt: "Golden Buddha statue" },
+      { src: phiPhi7, alt: "Pattaya Bay view" },
+      { src: phiPhi8, alt: "Gems and jewelry showcase" },
+      { src: phiPhi1, alt: "Museum exhibition" }
+    ],
     highlights: [
       "Visit Big Buddha on Pratumnak Hill",
       "Explore Gems Gallery and Museum",
@@ -1128,8 +1208,17 @@ export const toursData: Record<string, TourData> = {
     duration: "6-7 Hours",
     rating: 4.4,
     reviews: 489,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: phiPhi2, title: "Coral Island Paradise" },
+      { src: phiPhi3, title: "Crystal Clear Waters" },
+      { src: phiPhi4, title: "Beach Activities" }
+    ],
+    galleryImages: [
+      { src: phiPhi5, alt: "White sandy beach" },
+      { src: phiPhi6, alt: "Snorkeling adventure" },
+      { src: phiPhi7, alt: "Water sports activities" },
+      { src: phiPhi8, alt: "Tropical paradise" }
+    ],
     highlights: [
       "Pristine white sandy beaches",
       "Crystal clear waters",
@@ -1171,8 +1260,17 @@ export const toursData: Record<string, TourData> = {
     duration: "5-6 Hours",
     rating: 4.7,
     reviews: 612,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: phiPhi1, title: "Nong Nooch Tropical Garden" },
+      { src: phiPhi2, title: "Elephant Show" },
+      { src: phiPhi3, title: "Thai Cultural Performance" }
+    ],
+    galleryImages: [
+      { src: phiPhi4, alt: "Beautiful botanical gardens" },
+      { src: phiPhi5, alt: "Elephant performance" },
+      { src: phiPhi6, alt: "Traditional Thai dance" },
+      { src: phiPhi7, alt: "Garden landscapes" }
+    ],
     highlights: [
       "Beautiful tropical botanical gardens",
       "Traditional Thai cultural show",
@@ -1214,8 +1312,17 @@ export const toursData: Record<string, TourData> = {
     duration: "3-4 Hours",
     rating: 4.6,
     reviews: 378,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: phiPhi8, title: "Pattaya Dolphinarium" },
+      { src: phiPhi1, title: "Dolphin Performance" },
+      { src: phiPhi2, title: "Marine Life Show" }
+    ],
+    galleryImages: [
+      { src: phiPhi3, alt: "Dolphin jumping tricks" },
+      { src: phiPhi4, alt: "Seal show" },
+      { src: phiPhi5, alt: "Interactive experience" },
+      { src: phiPhi6, alt: "Family entertainment" }
+    ],
     highlights: [
       "Interactive dolphin show",
       "Educational marine life presentation",
@@ -1256,8 +1363,17 @@ export const toursData: Record<string, TourData> = {
     duration: "2-3 Hours",
     rating: 4.8,
     reviews: 523,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: phiPhi7, title: "Muay Thai Boxing Match" },
+      { src: phiPhi8, title: "Traditional Wai Kru Ritual" },
+      { src: phiPhi1, title: "Stadium Atmosphere" }
+    ],
+    galleryImages: [
+      { src: phiPhi2, alt: "Professional fighters" },
+      { src: phiPhi3, alt: "Boxing ring action" },
+      { src: phiPhi4, alt: "Pre-fight ceremony" },
+      { src: phiPhi5, alt: "Audience excitement" }
+    ],
     highlights: [
       "Authentic Muay Thai matches",
       "Professional fighters",
@@ -1296,8 +1412,17 @@ export const toursData: Record<string, TourData> = {
     duration: "3 Hours",
     rating: 4.7,
     reviews: 445,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: phiPhi6, title: "Alcazar Cabaret Show" },
+      { src: phiPhi7, title: "Stunning Stage Production" },
+      { src: phiPhi8, title: "Talented Performers" }
+    ],
+    galleryImages: [
+      { src: phiPhi1, alt: "Cabaret dancers" },
+      { src: phiPhi2, alt: "Elaborate costumes" },
+      { src: phiPhi3, alt: "Stage performance" },
+      { src: phiPhi4, alt: "Photo session" }
+    ],
     highlights: [
       "World-famous cabaret show",
       "Stunning costumes and sets",
@@ -1337,8 +1462,17 @@ export const toursData: Record<string, TourData> = {
     duration: "4 Hours",
     rating: 4.4,
     reviews: 289,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: phiPhi5, title: "Pattaya Floating Market" },
+      { src: phiPhi6, title: "Traditional Market Boats" },
+      { src: phiPhi7, title: "Four Regions Concept" }
+    ],
+    galleryImages: [
+      { src: phiPhi8, alt: "Market canal boats" },
+      { src: phiPhi1, alt: "Traditional architecture" },
+      { src: phiPhi2, alt: "Local handicrafts" },
+      { src: phiPhi3, alt: "Cultural performances" }
+    ],
     highlights: [
       "Four regions floating market",
       "Traditional Thai architecture",
@@ -1381,8 +1515,17 @@ export const toursData: Record<string, TourData> = {
     duration: "6-7 Hours",
     rating: 4.5,
     reviews: 423,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: jamesBond1, title: "Hong Islands Krabi" },
+      { src: jamesBond2, title: "Pristine Beach Paradise" },
+      { src: jamesBond3, title: "Longtail Boat Journey" }
+    ],
+    galleryImages: [
+      { src: jamesBond4, alt: "Hong Island beach" },
+      { src: phiPhi1, alt: "Hong Lagoon kayaking" },
+      { src: phiPhi2, alt: "Snorkeling activity" },
+      { src: phiPhi3, alt: "Crystal clear waters" }
+    ],
     highlights: [
       "Visit pristine Hong Islands",
       "Snorkeling in crystal clear waters",
@@ -1425,8 +1568,17 @@ export const toursData: Record<string, TourData> = {
     duration: "6-7 Hours",
     rating: 4.6,
     reviews: 512,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: jamesBond1, title: "Hong Islands Speedboat Tour" },
+      { src: jamesBond2, title: "Multiple Island Destinations" },
+      { src: jamesBond3, title: "Premium Island Hopping" }
+    ],
+    galleryImages: [
+      { src: jamesBond4, alt: "Speedboat adventure" },
+      { src: phiPhi4, alt: "Island hopping" },
+      { src: phiPhi5, alt: "Pakbia Island snorkeling" },
+      { src: phiPhi6, alt: "Hong Lagoon exploration" }
+    ],
     highlights: [
       "Fast speedboat to Hong Islands",
       "More time for activities",
@@ -1470,8 +1622,17 @@ export const toursData: Record<string, TourData> = {
     duration: "5-6 Hours",
     rating: 4.7,
     reviews: 356,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: phiPhi7, title: "Seven Islands Sunset Tour" },
+      { src: phiPhi8, title: "Stunning Sunset Views" },
+      { src: phiPhi1, title: "BBQ Beach Dinner" }
+    ],
+    galleryImages: [
+      { src: phiPhi2, alt: "Tup Island sandbar" },
+      { src: phiPhi3, alt: "Chicken Island snorkeling" },
+      { src: phiPhi4, alt: "Sunset cruise" },
+      { src: phiPhi5, alt: "BBQ seafood dinner" }
+    ],
     highlights: [
       "Visit 7 beautiful islands",
       "Stunning sunset views",
@@ -1515,8 +1676,17 @@ export const toursData: Record<string, TourData> = {
     duration: "5-6 Hours",
     rating: 4.8,
     reviews: 478,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: phiPhi6, title: "Seven Islands Speedboat Sunset" },
+      { src: phiPhi7, title: "Premium Island Experience" },
+      { src: phiPhi8, title: "Magical Sunset Cruise" }
+    ],
+    galleryImages: [
+      { src: phiPhi1, alt: "Speedboat to islands" },
+      { src: phiPhi2, alt: "Phra Nang Cave beach" },
+      { src: phiPhi3, alt: "Railay Beach views" },
+      { src: phiPhi4, alt: "Sunset BBQ feast" }
+    ],
     highlights: [
       "Fast speedboat to 7 islands",
       "More time at each location",
@@ -1562,8 +1732,17 @@ export const toursData: Record<string, TourData> = {
     duration: "7-8 Hours",
     rating: 4.4,
     reviews: 589,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: jamesBond1, title: "Four Islands Longtail Tour" },
+      { src: jamesBond2, title: "Classic Krabi Experience" },
+      { src: jamesBond3, title: "Traditional Boat Journey" }
+    ],
+    galleryImages: [
+      { src: jamesBond4, alt: "Phra Nang Cave Beach" },
+      { src: phiPhi5, alt: "Tup Island sandbar" },
+      { src: phiPhi6, alt: "Chicken Island" },
+      { src: phiPhi7, alt: "Poda Island beach" }
+    ],
     highlights: [
       "Visit 4 iconic Krabi islands",
       "Traditional longtail boat",
@@ -1607,8 +1786,17 @@ export const toursData: Record<string, TourData> = {
     duration: "6-7 Hours",
     rating: 4.6,
     reviews: 634,
-    heroImages: [],
-    galleryImages: [],
+    heroImages: [
+      { src: jamesBond1, title: "Four Islands Speedboat Tour" },
+      { src: jamesBond2, title: "Fast Island Hopping" },
+      { src: jamesBond3, title: "Premium Krabi Tour" }
+    ],
+    galleryImages: [
+      { src: jamesBond4, alt: "Speedboat island hopping" },
+      { src: phiPhi8, alt: "Phra Nang Cave exploration" },
+      { src: phiPhi1, alt: "Chicken Island snorkeling" },
+      { src: phiPhi2, alt: "Poda Island lunch" }
+    ],
     highlights: [
       "Fast speedboat to 4 islands",
       "Extended time at each stop",
