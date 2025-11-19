@@ -25,6 +25,32 @@ const TourBooking = ({ tourData }: TourBookingProps) => {
     itineraryRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Add safety check for tourData
+  if (!tourData) {
+    console.error("TourBooking: tourData is undefined");
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Tour Not Found</h1>
+          <p className="text-muted-foreground">Unable to load tour information.</p>
+        </div>
+      </div>
+    );
+  }
+
+  console.log("TourBooking received tourData:", {
+    id: tourData.id,
+    title: tourData.title,
+    hasHeroImages: !!tourData.heroImages,
+    heroImagesLength: tourData.heroImages?.length,
+    hasGalleryImages: !!tourData.galleryImages,
+    galleryImagesLength: tourData.galleryImages?.length
+  });
+
+  // Ensure arrays exist
+  const safeHeroImages = tourData.heroImages || [];
+  const safeGalleryImages = tourData.galleryImages || [];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -34,7 +60,7 @@ const TourBooking = ({ tourData }: TourBookingProps) => {
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-2 space-y-6">
             {/* Hero Image Slider */}
-            <HeroSlider images={tourData.heroImages} onExplore={scrollToItinerary} />
+            <HeroSlider images={safeHeroImages} onExplore={scrollToItinerary} />
             
             {/* Title, Location, Rating */}
             <div className="space-y-4">
@@ -105,7 +131,7 @@ const TourBooking = ({ tourData }: TourBookingProps) => {
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Photo Gallery */}
-            <PhotoGallery images={tourData.galleryImages} />
+            <PhotoGallery images={safeGalleryImages} />
             
             {/* Tour Description */}
             <div ref={itineraryRef}>
