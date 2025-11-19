@@ -1,31 +1,16 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import phiPhiBoat from "@/assets/phi-phi-boat.jpeg";
-import phiPhi1 from "@/assets/phi-phi-1.jpg";
-import phiPhi2 from "@/assets/phi-phi-2.jpg";
 
 interface HeroSliderProps {
+  images: { src: string; title: string }[];
   onExplore: () => void;
 }
 
-const HeroSlider = ({ onExplore }: HeroSliderProps) => {
+const HeroSlider = ({ images, onExplore }: HeroSliderProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
-    {
-      image: phiPhiBoat,
-      title: "Phi Phi Island Guided Tour by Big Boat with Normal Transfer"
-    },
-    {
-      image: phiPhi1,
-      title: "Discover Paradise Islands"
-    },
-    {
-      image: phiPhi2,
-      title: "Maya Bay Crystal Waters"
-    }
-  ];
+  const slides = images;
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -45,7 +30,7 @@ const HeroSlider = ({ onExplore }: HeroSliderProps) => {
           }`}
         >
           <img
-            src={slide.image}
+            src={slide.src}
             alt={slide.title}
             className="w-full h-full object-cover"
           />

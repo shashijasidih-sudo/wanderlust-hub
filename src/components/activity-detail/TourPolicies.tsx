@@ -6,8 +6,13 @@ import {
 } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, X } from "lucide-react";
+import { TourData } from "@/data/tourData";
 
-const TourPolicies = () => {
+interface TourPoliciesProps {
+  tourData: TourData;
+}
+
+const TourPolicies = ({ tourData }: TourPoliciesProps) => {
   return (
     <Card>
       <CardHeader>
@@ -21,38 +26,12 @@ const TourPolicies = () => {
             What's Included
           </h3>
           <ul className="space-y-2 ml-7">
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">•</span>
-              <span>Round-trip hotel transfer from Phuket (Normal Transfer)</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">•</span>
-              <span>Big boat ferry to Phi Phi Islands</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">•</span>
-              <span>Professional English-speaking tour guide</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">•</span>
-              <span>Thai buffet lunch with vegetarian options</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">•</span>
-              <span>Snorkeling equipment (mask and life jacket)</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">•</span>
-              <span>Soft drinks and fresh fruits on board</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">•</span>
-              <span>National park fees</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">•</span>
-              <span>Travel insurance</span>
-            </li>
+            {tourData.inclusions.map((item, idx) => (
+              <li key={idx} className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -63,26 +42,12 @@ const TourPolicies = () => {
             What's Not Included
           </h3>
           <ul className="space-y-2 ml-7">
-            <li className="flex items-start gap-2">
-              <span className="text-destructive mt-1">•</span>
-              <span>Personal expenses and souvenirs</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-destructive mt-1">•</span>
-              <span>Alcoholic beverages</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-destructive mt-1">•</span>
-              <span>Tips and gratuities (optional)</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-destructive mt-1">•</span>
-              <span>Underwater camera rental</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-destructive mt-1">•</span>
-              <span>Speedboat upgrade (available at additional cost)</span>
-            </li>
+            {tourData.exclusions.map((item, idx) => (
+              <li key={idx} className="flex items-start gap-2">
+                <span className="text-destructive mt-1">•</span>
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -91,9 +56,9 @@ const TourPolicies = () => {
           <AccordionItem value="booking">
             <AccordionTrigger>Booking Policy</AccordionTrigger>
             <AccordionContent className="space-y-2 text-muted-foreground">
-              <p>• Instant confirmation upon booking</p>
-              <p>• Mobile or printed voucher accepted</p>
-              <p>• Confirmation email sent immediately with booking details</p>
+              {tourData.bookingPolicy.map((item, idx) => (
+                <p key={idx}>• {item}</p>
+              ))}
               <p>• Booking reference number required for check-in</p>
               <p>• Please arrive at pickup point 10 minutes before departure</p>
             </AccordionContent>
@@ -102,23 +67,18 @@ const TourPolicies = () => {
           <AccordionItem value="cancellation">
             <AccordionTrigger>Cancellation Policy</AccordionTrigger>
             <AccordionContent className="space-y-2 text-muted-foreground">
-              <p>• Free cancellation up to 24 hours before the activity start time</p>
-              <p>• 50% refund for cancellations made 12-24 hours before start time</p>
-              <p>• No refund for cancellations made less than 12 hours before start time</p>
-              <p>• No-shows are non-refundable</p>
-              <p>• Refunds processed within 7-10 business days</p>
+              {tourData.cancellationPolicy.map((item, idx) => (
+                <p key={idx}>• {item}</p>
+              ))}
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="child">
             <AccordionTrigger>Child Policy</AccordionTrigger>
             <AccordionContent className="space-y-2 text-muted-foreground">
-              <p>• Children aged 2-11 years qualify for child pricing (30% discount)</p>
-              <p>• Children under 2 years are free but must sit on parent's lap</p>
-              <p>• Child pricing includes all amenities except separate seating for under 2s</p>
-              <p>• Children must be accompanied by an adult at all times</p>
-              <p>• Life jackets provided for all children during water activities</p>
-              <p>• Valid ID proof of age may be required at check-in</p>
+              {tourData.childPolicy.map((item, idx) => (
+                <p key={idx}>• {item}</p>
+              ))}
             </AccordionContent>
           </AccordionItem>
         </Accordion>
