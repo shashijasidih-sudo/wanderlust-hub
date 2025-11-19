@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import phiPhiBoat from "@/assets/phi-phi-boat.jpeg";
+import phiPhi1 from "@/assets/phi-phi-1.jpg";
+import phiPhi2 from "@/assets/phi-phi-2.jpg";
 
 interface HeroSliderProps {
   onExplore: () => void;
@@ -11,16 +14,16 @@ const HeroSlider = ({ onExplore }: HeroSliderProps) => {
 
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=1200&h=600&fit=crop",
-      title: "Safari World Adventure"
+      image: phiPhiBoat,
+      title: "Phi Phi Island Guided Tour by Big Boat with Normal Transfer"
     },
     {
-      image: "https://images.unsplash.com/photo-1535083783855-76ae62b2914e?w=1200&h=600&fit=crop",
-      title: "Marine Park Shows"
+      image: phiPhi1,
+      title: "Discover Paradise Islands"
     },
     {
-      image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=1200&h=600&fit=crop",
-      title: "Wildlife Encounters"
+      image: phiPhi2,
+      title: "Maya Bay Crystal Waters"
     }
   ];
 

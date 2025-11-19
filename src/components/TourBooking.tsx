@@ -102,16 +102,16 @@ const TourBooking = () => {
             {/* Photo Gallery */}
             <PhotoGallery />
             
-            {/* Customer Reviews */}
-            <CustomerReviews />
-            
             {/* Tour Description */}
             <div ref={itineraryRef}>
               <TourDescription />
             </div>
             
-            {/* Tour Policies (Inclusion, Exclusion, Policies) */}
+            {/* Tour Policies (Inclusion, Exclusion, Booking, Cancellation, Child Policy) */}
             <TourPolicies />
+            
+            {/* Customer Reviews */}
+            <CustomerReviews />
             
             {/* FAQ Section */}
             <FAQSection />
