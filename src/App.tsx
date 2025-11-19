@@ -25,6 +25,23 @@ import DhowCruise from "./pages/DhowCruise";
 import AtlantisPalm from "./pages/AtlantisPalm";
 import MassageCoupons from "./pages/MassageCoupons";
 import BangkokThreeTemples from "./pages/BangkokThreeTemples";
+import BangkokWatArunPhoTraimit from "./pages/BangkokWatArunPhoTraimit";
+import BangkokCityBoatTour from "./pages/BangkokCityBoatTour";
+import BangkokCityGemsGallery from "./pages/BangkokCityGemsGallery";
+import BangkokWatArunChinatown from "./pages/BangkokWatArunChinatown";
+import BangkokGoldenMarbleBuddha from "./pages/BangkokGoldenMarbleBuddha";
+import AyutthayaTempleTour from "./pages/AyutthayaTempleTour";
+import BangkokGrandPalaceEmerald from "./pages/BangkokGrandPalaceEmerald";
+import BaiyokeBuffet from "./pages/BaiyokeBuffet";
+import SeaLifeMadameTussauds from "./pages/SeaLifeMadameTussauds";
+import VivaAlangkaCruise from "./pages/VivaAlangkaCruise";
+import AyutthayaSunsetCruise from "./pages/AyutthayaSunsetCruise";
+import ChaoPhrayaPrincessPrivate from "./pages/ChaoPhrayaPrincessPrivate";
+import ChaoPhrayaPrincessValentine from "./pages/ChaoPhrayaPrincessValentine";
+import ChaoPhrayaPrincessJoin from "./pages/ChaoPhrayaPrincessJoin";
+import MaeklongFloatingMarket from "./pages/MaeklongFloatingMarket";
+import BangkokTukTukNight from "./pages/BangkokTukTukNight";
+import DreamWorldBangkok from "./pages/DreamWorldBangkok";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +73,23 @@ const App = () => (
           <Route path="/atlantis-palm" element={<AtlantisPalm />} />
           <Route path="/massage-coupons" element={<MassageCoupons />} />
           <Route path="/bangkok-three-temples" element={<BangkokThreeTemples />} />
+          <Route path="/bangkok-wat-arun-pho-traimit" element={<BangkokWatArunPhoTraimit />} />
+          <Route path="/bangkok-city-boat-tour" element={<BangkokCityBoatTour />} />
+          <Route path="/bangkok-city-gems-gallery" element={<BangkokCityGemsGallery />} />
+          <Route path="/bangkok-wat-arun-chinatown" element={<BangkokWatArunChinatown />} />
+          <Route path="/bangkok-golden-marble-buddha" element={<BangkokGoldenMarbleBuddha />} />
+          <Route path="/ayutthaya-temple-tour" element={<AyutthayaTempleTour />} />
+          <Route path="/bangkok-grand-palace-emerald" element={<BangkokGrandPalaceEmerald />} />
+          <Route path="/baiyoke-buffet" element={<BaiyokeBuffet />} />
+          <Route path="/sea-life-madame-tussauds" element={<SeaLifeMadameTussauds />} />
+          <Route path="/viva-alangka-cruise" element={<VivaAlangkaCruise />} />
+          <Route path="/ayutthaya-sunset-cruise" element={<AyutthayaSunsetCruise />} />
+          <Route path="/chao-phraya-princess-private" element={<ChaoPhrayaPrincessPrivate />} />
+          <Route path="/chao-phraya-princess-valentine" element={<ChaoPhrayaPrincessValentine />} />
+          <Route path="/chao-phraya-princess-join" element={<ChaoPhrayaPrincessJoin />} />
+          <Route path="/maeklong-floating-market" element={<MaeklongFloatingMarket />} />
+          <Route path="/bangkok-tuk-tuk-night" element={<BangkokTukTukNight />} />
+          <Route path="/dream-world-bangkok" element={<DreamWorldBangkok />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
