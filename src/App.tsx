@@ -24,6 +24,7 @@ import BangkokSkywalk from "./pages/BangkokSkywalk";
 import DhowCruise from "./pages/DhowCruise";
 import AtlantisPalm from "./pages/AtlantisPalm";
 import MassageCoupons from "./pages/MassageCoupons";
+import BangkokThreeTemples from "./pages/BangkokThreeTemples";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +55,7 @@ const App = () => (
           <Route path="/dhow-cruise" element={<DhowCruise />} />
           <Route path="/atlantis-palm" element={<AtlantisPalm />} />
           <Route path="/massage-coupons" element={<MassageCoupons />} />
+          <Route path="/bangkok-three-temples" element={<BangkokThreeTemples />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
