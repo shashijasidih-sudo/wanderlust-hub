@@ -1,16 +1,8 @@
 import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import HeroSlider from "@/components/activity-detail/HeroSlider";
-import PricingCalculator from "@/components/activity-detail/PricingCalculator";
-import TourDetails from "@/components/activity-detail/TourDetails";
-import ShowTimetable from "@/components/activity-detail/ShowTimetable";
-import PolicyAccordion from "@/components/activity-detail/PolicyAccordion";
-import CustomerSupport from "@/components/activity-detail/CustomerSupport";
-import SuggestedTours from "@/components/activity-detail/SuggestedTours";
 import { Button } from "@/components/ui/button";
+import TourBooking from "@/components/TourBooking";
 
 const SafariWorld = () => {
   const navigate = useNavigate();
@@ -19,15 +11,52 @@ const SafariWorld = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const scrollToItinerary = () => {
-    const element = document.getElementById("itinerary");
-    element?.scrollIntoView({ behavior: "smooth" });
+  // Using placeholder data - this will need actual Safari World data
+  const tourData = {
+    id: "safari-world",
+    title: "Safari World & Marine Park (Join Transfer)",
+    shortDescription: "Experience Thailand's premier open zoo and marine park featuring exotic wildlife shows, safari adventures, and spectacular marine performances.",
+    location: "Bangkok, Thailand",
+    city: "bangkok",
+    basePrice: 1800,
+    childPrice: 1400,
+    duration: "Full Day",
+    rating: 4.6,
+    reviews: 3421,
+    heroImages: [
+      { src: "/placeholder.svg", title: "Safari World Adventure" }
+    ],
+    galleryImages: [
+      { src: "/placeholder.svg", alt: "Safari World" }
+    ],
+    highlights: [
+      "Safari Park drive-through experience",
+      "Marine Park spectacular shows",
+      "Exotic animal encounters",
+      "Bird shows and orangutan boxing",
+      "Sea lion and dolphin shows"
+    ],
+    description: {
+      overview: "Spend an exciting day at Safari World, Thailand's popular open zoo and leisure park.",
+      whatToExpect: "Enjoy safari drive, marine shows, and amazing wildlife encounters."
+    },
+    itinerary: [
+      { time: "08:00 AM", title: "Hotel Pickup", description: "Pickup from Bangkok hotel" },
+      { time: "09:00 AM", title: "Safari Park", description: "Drive-through safari experience" }
+    ],
+    tourTimings: ["08:00 AM - 05:00 PM"],
+    inclusions: ["Hotel transfers", "Entrance tickets", "Guide"],
+    exclusions: ["Lunch", "Personal expenses"],
+    bookingPolicy: ["Instant confirmation"],
+    cancellationPolicy: ["Free cancellation 24 hours before"],
+    childPolicy: ["Children 3-11 years discounted"],
+    faqs: [
+      { question: "What animals can we see?", answer: "Lions, tigers, giraffes, and many more exotic animals." }
+    ]
   };
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      
       <div className="container mx-auto px-4 py-8">
         <Button
           variant="ghost"
@@ -37,49 +66,8 @@ const SafariWorld = () => {
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Activities
         </Button>
-
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8">
-            <HeroSlider onExplore={scrollToItinerary} />
-            
-            <div className="space-y-2">
-              <h1 className="text-4xl font-bold text-foreground">
-                Safari World & Marine Park (Join Transfer)
-              </h1>
-              <p className="text-lg text-muted-foreground">
-                Experience the ultimate adventure at Bangkok's largest open zoo and marine park. 
-                Witness amazing animal shows, explore safari zones, and enjoy a day filled with 
-                wildlife encounters and entertainment.
-              </p>
-            </div>
-
-            <ShowTimetable />
-            
-            <div id="itinerary">
-              <TourDetails />
-            </div>
-
-            <PolicyAccordion />
-            
-            <CustomerSupport />
-          </div>
-
-          {/* Sticky Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-24">
-              <PricingCalculator 
-                basePrice={4100}
-                activityName="Safari World & Marine Park"
-              />
-            </div>
-          </div>
-        </div>
-
-        <SuggestedTours currentCity="bangkok" />
+        <TourBooking tourData={tourData} />
       </div>
-
-      <Footer />
     </div>
   );
 };

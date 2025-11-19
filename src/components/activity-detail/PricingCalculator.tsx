@@ -6,16 +6,17 @@ import { toast } from "sonner";
 
 interface PricingCalculatorProps {
   basePrice: number;
+  childPrice: number;
   activityName: string;
+  tourTimings: string[];
 }
 
-const PricingCalculator = ({ basePrice, activityName }: PricingCalculatorProps) => {
+const PricingCalculator = ({ basePrice, childPrice, activityName, tourTimings }: PricingCalculatorProps) => {
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
 
-  const childPrice = Math.round(basePrice * 0.7);
   const totalPrice = adults * basePrice + children * childPrice;
 
   const handleBookNow = () => {
@@ -73,8 +74,9 @@ const PricingCalculator = ({ basePrice, activityName }: PricingCalculatorProps) 
             className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background"
           >
             <option value="">Select timing</option>
-            <option value="07:00">07:00 AM - 04:30 PM</option>
-            <option value="08:00">08:00 AM - 05:30 PM</option>
+            {tourTimings.map((timing, idx) => (
+              <option key={idx} value={timing}>{timing}</option>
+            ))}
           </select>
         </div>
 
