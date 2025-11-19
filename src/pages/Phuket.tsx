@@ -14,16 +14,16 @@ const activities = [
   { title: "From Phuket: Phi Phi Island Guided Tour by Big Boat with Normal Transfer", price: 3300, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/phi-phi-island" },
   { title: "Phi Phi Island Tour by Big Boat By Royal Jet Cruiser (First Class)", price: 4700, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/phi-phi-island" },
   { title: "Phi Phi-Maya Bay-Khai Full day Tour by Speedboat (Excluded national marine fee)", price: 3100, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/phi-phi-island" },
-  { title: "Dolphin Bay Phuket Admission Ticket with Transfer", price: 3300, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
+  { title: "Dolphin Bay Phuket Admission Ticket with Transfer", price: 3300, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/dolphin-bay-phuket" },
   { title: "Phang Nga Bay (James Bond Island) Sea Canoe Tour by Long tail Boat", price: 3600, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/james-bond-island" },
   { title: "Phang Nga Bay (James Bond Island) Tour with Lunch By Long Tail Boat", price: 3400, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/james-bond-island" },
   { title: "Phuket City Tour and Tiger Experience: Tiger Only", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/selfie-tigers" },
-  { title: "Phuket City Tour: Sightseeing and Night Market Everyday", price: 1800, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
+  { title: "Phuket City Tour: Sightseeing and Night Market Everyday", price: 1800, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/phuket-city-night-market" },
   { title: "Phuket City Tour and Tiger Experience: Tiger + ATV (30 Mins)", price: 4500, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/selfie-tigers" },
   { title: "5 km Rafting Adventure + Monkey Caves +ATV Ride + Elephant Trekking + Flying Fox + Lunch", price: 6000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/elephant-safari" },
-  { title: "Phuket Simon Cabaret Show Ticket with Join Roundtrip Transfer", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
-  { title: "Phuket Carnival Magic Admission Ticket with Hotel Transfer", price: 5000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop" },
-  { title: "Muslim-Friendly Phuket Tour: A Halal Travel Experience", price: 8500, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop" },
+  { title: "Phuket Simon Cabaret Show Ticket with Join Roundtrip Transfer", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/phuket-simon-cabaret" },
+  { title: "Phuket Carnival Magic Admission Ticket with Hotel Transfer", price: 5000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/phuket-carnival-magic" },
+  { title: "Muslim-Friendly Phuket Tour: A Halal Travel Experience", price: 8500, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/phuket-muslim-friendly-tour" },
 ];
 
 const categories = [

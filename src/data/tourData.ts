@@ -816,5 +816,829 @@ export const toursData: Record<string, TourData> = {
         answer: "Bring swimwear, sunscreen, hat, sunglasses, camera, and some cash for souvenirs and National Park fees."
       }
     ]
+  },
+  // New Phuket Tours
+  "dolphin-bay-phuket": {
+    id: "dolphin-bay-phuket",
+    title: "Dolphin Bay Phuket Admission Ticket with Transfer",
+    shortDescription: "Interactive dolphin and seal shows with meet-and-greet opportunities. Perfect family entertainment experience in Phuket.",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    basePrice: 3300,
+    childPrice: 1650,
+    duration: "4-5 Hours",
+    rating: 4.6,
+    reviews: 289,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Interactive dolphin and seal shows",
+      "Meet and greet with dolphins",
+      "Photo opportunities with marine animals",
+      "Hotel pickup and drop-off included"
+    ],
+    description: {
+      overview: "Experience an unforgettable day at Dolphin Bay Phuket, where you can watch amazing dolphin and seal performances. This family-friendly attraction offers interactive shows and photo opportunities with these intelligent marine mammals.",
+      whatToExpect: "Enjoy spectacular dolphin shows featuring jumps, tricks, and synchronized swimming. Watch entertaining seal performances, and get up close with these amazing animals during the meet-and-greet session. Professional handlers ensure a safe and enjoyable experience for all visitors."
+    },
+    itinerary: [
+      { time: "09:00 AM", title: "Hotel Pickup", description: "Comfortable air-conditioned vehicle pickup from your hotel" },
+      { time: "10:00 AM", title: "Arrive at Dolphin Bay", description: "Check-in and introduction to the facility" },
+      { time: "10:30 AM", title: "Dolphin Show", description: "Watch amazing dolphin performance and tricks" },
+      { time: "11:30 AM", title: "Seal Show", description: "Enjoy entertaining seal performances" },
+      { time: "12:00 PM", title: "Meet & Greet", description: "Photo opportunity with dolphins and seals" },
+      { time: "01:00 PM", title: "Return Transfer", description: "Drop-off back at your hotel" }
+    ],
+    tourTimings: ["10:00 AM Show", "02:00 PM Show"],
+    inclusions: ["Round-trip hotel transfer", "Admission ticket", "All shows", "English-speaking guide"],
+    exclusions: ["Personal expenses", "Food and beverages", "Swimming with dolphins (extra cost)", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "Children must be accompanied by adults"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "Late cancellations are non-refundable"],
+    childPolicy: ["Children age 3-11 years at discounted rate", "Children under 3 are free"],
+    faqs: [
+      { question: "Can I swim with the dolphins?", answer: "Swimming with dolphins is available at an additional cost and must be booked separately." },
+      { question: "Are photos allowed?", answer: "Yes, you can take photos during the shows. Professional photos with animals are available for purchase." }
+    ]
+  },
+  "phuket-city-night-market": {
+    id: "phuket-city-night-market",
+    title: "Phuket City Tour: Sightseeing and Night Market Everyday",
+    shortDescription: "Explore Phuket's iconic landmarks and vibrant night markets. Experience local culture, street food, and shopping.",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    basePrice: 1800,
+    childPrice: 900,
+    duration: "5-6 Hours",
+    rating: 4.4,
+    reviews: 312,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Visit Phuket's iconic landmarks",
+      "Explore vibrant night markets",
+      "Try authentic Thai street food",
+      "Experience local culture and shopping"
+    ],
+    description: {
+      overview: "Discover the best of Phuket on this comprehensive city and night market tour. Visit famous landmarks including Big Buddha and Wat Chalong, then immerse yourself in the vibrant atmosphere of Phuket's bustling night markets.",
+      whatToExpect: "Enjoy panoramic views from viewpoints, explore historic temples, witness stunning sunsets, and experience the excitement of night markets with their colorful stalls, delicious street food, and unique shopping opportunities."
+    },
+    itinerary: [
+      { time: "02:00 PM", title: "Hotel Pickup", description: "Start your afternoon city exploration" },
+      { time: "02:30 PM", title: "Big Buddha", description: "Visit the iconic 45-meter marble statue" },
+      { time: "03:30 PM", title: "Wat Chalong", description: "Explore Phuket's most important Buddhist temple" },
+      { time: "04:30 PM", title: "Promthep Cape", description: "Enjoy stunning sunset views" },
+      { time: "06:00 PM", title: "Phuket Town", description: "Discover old town's Sino-Portuguese architecture" },
+      { time: "07:00 PM", title: "Night Market", description: "Experience vibrant night market atmosphere" },
+      { time: "08:30 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["02:00 PM – 08:30 PM"],
+    inclusions: ["Hotel pickup and drop-off", "English-speaking guide", "Entrance fees", "Air-conditioned transport"],
+    exclusions: ["Food and beverages", "Personal shopping expenses", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "Dress modestly for temples", "Tour operates daily"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for no-shows"],
+    childPolicy: ["Children age 3-11 years at discounted rate", "Children under 3 are free"],
+    faqs: [
+      { question: "What time does the night market close?", answer: "Most night markets operate until 10-11 PM, but we'll return earlier to ensure comfortable transfer." },
+      { question: "Can I bargain at the night market?", answer: "Yes, bargaining is common and expected at night markets." }
+    ]
+  },
+  "phuket-simon-cabaret": {
+    id: "phuket-simon-cabaret",
+    title: "Phuket Simon Cabaret Show Ticket with Join Roundtrip Transfer",
+    shortDescription: "World-famous cabaret show featuring spectacular costumes, choreography, and talented performers in Phuket.",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    basePrice: 2000,
+    childPrice: 1000,
+    duration: "3 Hours",
+    rating: 4.7,
+    reviews: 456,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "World-famous cabaret show",
+      "Spectacular costumes and choreography",
+      "Photo opportunities with performers",
+      "Round-trip hotel transfer included"
+    ],
+    description: {
+      overview: "Experience the glitz and glamour of Phuket's most famous cabaret show at Simon Cabaret. This spectacular production features stunning costumes, professional choreography, and talented performers in a state-of-the-art theater.",
+      whatToExpect: "Enjoy a 70-minute show filled with dazzling performances, vibrant costumes, and impressive stage production. After the show, take photos with the beautiful performers in their elaborate costumes."
+    },
+    itinerary: [
+      { time: "06:00 PM", title: "Hotel Pickup", description: "Pick up from your hotel in Phuket" },
+      { time: "06:45 PM", title: "Arrive at Simon Cabaret", description: "Check-in and seat assignment" },
+      { time: "07:00 PM", title: "Cabaret Show", description: "Enjoy 70 minutes of spectacular performance" },
+      { time: "08:15 PM", title: "Optional Photos", description: "Take photos with performers" },
+      { time: "09:00 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["06:00 PM Show", "07:45 PM Show", "09:30 PM Show"],
+    inclusions: ["Simon Cabaret admission", "Round-trip transfer", "Reserved seating"],
+    exclusions: ["Photo session with performers (extra cost)", "Food and beverages", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "Children of all ages welcome"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for no-shows"],
+    childPolicy: ["Same pricing for all ages", "Children must be accompanied by adults"],
+    faqs: [
+      { question: "Can I take photos during the show?", answer: "Photography during the show is not allowed, but you can take photos with performers after the show." },
+      { question: "How long is the show?", answer: "The show duration is approximately 70 minutes." }
+    ]
+  },
+  "phuket-carnival-magic": {
+    id: "phuket-carnival-magic",
+    title: "Phuket Carnival Magic Admission Ticket with Hotel Transfer",
+    shortDescription: "Thailand's first theme park carnival with spectacular parade shows, themed zones, and unique cultural entertainment.",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    basePrice: 5000,
+    childPrice: 2500,
+    duration: "4-5 Hours",
+    rating: 4.8,
+    reviews: 523,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Thailand's first theme park carnival",
+      "Spectacular carnival parade show",
+      "Multiple themed zones to explore",
+      "Unique cultural entertainment experience"
+    ],
+    description: {
+      overview: "Step into a magical world at Phuket Carnival Magic, Thailand's first theme park carnival. Experience spectacular parades, explore themed zones including Bird Paradise and Kingdom of Lights, and enjoy unique cultural entertainment.",
+      whatToExpect: "Marvel at the grand carnival parade with elaborate floats and costumes, explore beautifully designed themed zones, enjoy carnival games and attractions, and shop for unique souvenirs in this one-of-a-kind destination."
+    },
+    itinerary: [
+      { time: "04:00 PM", title: "Hotel Pickup", description: "Comfortable transfer to Carnival Magic" },
+      { time: "05:00 PM", title: "Arrive at Carnival", description: "Enter the magical carnival world" },
+      { time: "05:30 PM", title: "Explore Zones", description: "Visit Bird Paradise, Kingdom of Lights, Carnival Fun Fair" },
+      { time: "07:30 PM", title: "Carnival Parade", description: "Watch the spectacular parade show" },
+      { time: "08:30 PM", title: "Free Time", description: "Continue exploring and shopping" },
+      { time: "09:30 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["04:00 PM – 09:30 PM (Wed-Sun)"],
+    inclusions: ["Round-trip transfer", "Carnival admission", "Access to all themed zones", "Carnival parade show"],
+    exclusions: ["Food and beverages", "Games and activities", "Shopping expenses", "Photo packages"],
+    bookingPolicy: ["Confirmation within 24 hours", "Operates Wednesday to Sunday", "Arrive early to explore all zones"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before", "No refund for no-shows"],
+    childPolicy: ["Children age 4-11 years at discounted rate", "Children under 4 are free"],
+    faqs: [
+      { question: "What days does the carnival operate?", answer: "Carnival Magic operates Wednesday through Sunday." },
+      { question: "Are there food options inside?", answer: "Yes, various food stalls and restaurants are available throughout the carnival." }
+    ]
+  },
+  "phuket-muslim-friendly-tour": {
+    id: "phuket-muslim-friendly-tour",
+    title: "Muslim-Friendly Phuket Tour: A Halal Travel Experience",
+    shortDescription: "Comprehensive Muslim-friendly tour with halal dining, prayer accommodations, and visits to important mosques and attractions.",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    basePrice: 8500,
+    childPrice: 4250,
+    duration: "8 Hours",
+    rating: 4.9,
+    reviews: 187,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Halal-certified dining experiences",
+      "Prayer time accommodations",
+      "Visit important mosques",
+      "Muslim-friendly tour guide"
+    ],
+    description: {
+      overview: "Explore Phuket with confidence on this specially designed Muslim-friendly tour. Enjoy halal meals, prayer accommodations, visits to important mosques, and modest dress-friendly locations with a knowledgeable Muslim guide.",
+      whatToExpect: "Experience the best of Phuket while adhering to Islamic practices. Visit Masjid Mukaram, explore cultural sites, enjoy halal Thai cuisine, and shop at Muslim-friendly stores, all with flexible prayer breaks throughout the day."
+    },
+    itinerary: [
+      { time: "08:00 AM", title: "Hotel Pickup", description: "Start your Muslim-friendly Phuket exploration" },
+      { time: "08:30 AM", title: "Masjid Mukaram", description: "Visit Phuket's oldest mosque" },
+      { time: "09:30 AM", title: "Phuket Old Town", description: "Explore Sino-Portuguese architecture" },
+      { time: "11:00 AM", title: "Viewpoint", description: "Panoramic views of Phuket" },
+      { time: "12:00 PM", title: "Halal Lunch", description: "Authentic Thai halal cuisine" },
+      { time: "01:30 PM", title: "Big Buddha", description: "Visit the iconic landmark" },
+      { time: "03:00 PM", title: "Wat Chalong", description: "Explore famous temple (external viewing)" },
+      { time: "04:00 PM", title: "Halal Shopping", description: "Muslim-friendly souvenir shops" },
+      { time: "05:00 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["08:00 AM – 05:00 PM"],
+    inclusions: ["Private air-conditioned vehicle", "Muslim guide (English/Arabic)", "Halal lunch and refreshments", "All entrance fees", "Hotel transfers"],
+    exclusions: ["Personal shopping", "Optional activities", "Travel insurance", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "Prayer breaks provided", "All food is halal-certified", "Customizable for prayer times"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before", "50% refund within 48 hours"],
+    childPolicy: ["Children age 3-11 years at discounted rate", "Children under 3 are free", "Family-friendly tour"],
+    faqs: [
+      { question: "Are prayer mats provided?", answer: "Yes, prayer mats are provided if needed." },
+      { question: "Can the itinerary be adjusted for prayer times?", answer: "Yes, the tour is flexible and can be customized to accommodate prayer times." }
+    ]
+  },
+  // Pattaya Tours
+  "pattaya-floating-market-tour": {
+    id: "pattaya-floating-market-tour",
+    title: "Discovery Pattaya City Tours with Floating Market and Lunch",
+    shortDescription: "Comprehensive Pattaya city tour visiting floating market, cultural sites, and landmarks with authentic Thai lunch included.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 1800,
+    childPrice: 900,
+    duration: "6-7 Hours",
+    rating: 4.5,
+    reviews: 342,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Visit authentic floating market",
+      "Explore Pattaya's cultural sites",
+      "Traditional Thai lunch included",
+      "Experience local lifestyle"
+    ],
+    description: {
+      overview: "Discover the best of Pattaya on this comprehensive city tour. Visit the famous four-regions floating market, explore the magnificent Sanctuary of Truth, enjoy panoramic views from Big Buddha Hill, and savor authentic Thai cuisine.",
+      whatToExpect: "Experience the charm of Thailand's floating market with vendors selling goods from boats, marvel at the intricate wooden architecture of Sanctuary of Truth, and enjoy stunning views of Pattaya Bay from the hilltop Big Buddha temple."
+    },
+    itinerary: [
+      { time: "08:00 AM", title: "Hotel Pickup", description: "Start your Pattaya discovery tour" },
+      { time: "08:30 AM", title: "Floating Market", description: "Explore the four-regions floating market" },
+      { time: "10:30 AM", title: "Sanctuary of Truth", description: "Visit the impressive wooden temple" },
+      { time: "12:00 PM", title: "Thai Lunch", description: "Enjoy authentic local cuisine" },
+      { time: "01:00 PM", title: "Big Buddha Hill", description: "Panoramic views of Pattaya Bay" },
+      { time: "02:00 PM", title: "Wat Phra Yai", description: "Visit the golden Buddha temple" },
+      { time: "03:00 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["08:00 AM – 03:00 PM"],
+    inclusions: ["Hotel transfers", "English-speaking guide", "Entrance fees", "Thai lunch", "Air-conditioned transport"],
+    exclusions: ["Personal expenses", "Boat rides at floating market", "Shopping expenses", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "Dress modestly for temples", "Tour operates daily"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for no-shows"],
+    childPolicy: ["Children age 3-11 years at discounted rate", "Children under 3 are free"],
+    faqs: [
+      { question: "Is the floating market authentic?", answer: "Yes, vendors sell authentic Thai products and food from traditional boats." },
+      { question: "What type of food is included in lunch?", answer: "Traditional Thai cuisine including rice, curry, stir-fry, and fresh fruits." }
+    ]
+  },
+  "pattaya-big-buddha-gems": {
+    id: "pattaya-big-buddha-gems",
+    title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer",
+    shortDescription: "Half-day tour visiting Big Buddha Hill for panoramic views and exploring the world's largest gem and jewelry center.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 1200,
+    childPrice: 600,
+    duration: "4-5 Hours",
+    rating: 4.3,
+    reviews: 256,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Visit Big Buddha on Pratumnak Hill",
+      "Explore Gems Gallery and Museum",
+      "Panoramic city views",
+      "Learn about Thai gemstones"
+    ],
+    description: {
+      overview: "Experience Pattaya's spiritual and cultural highlights on this half-day tour. Visit the iconic Big Buddha temple with its golden statue and breathtaking views, then explore the fascinating Gems Gallery, the world's largest gem and jewelry center.",
+      whatToExpect: "Enjoy panoramic views of Pattaya Bay from Pratumnak Hill, learn about Thai Buddhism at Wat Phra Yai, and discover the world of precious gems and jewelry at the impressive Gems Gallery with its museum and showroom."
+    },
+    itinerary: [
+      { time: "09:00 AM", title: "Hotel Pickup", description: "Comfortable transfer from your hotel" },
+      { time: "09:30 AM", title: "Big Buddha Hill", description: "Visit Wat Phra Yai temple and golden Buddha" },
+      { time: "10:30 AM", title: "Viewpoint", description: "Enjoy panoramic views of Pattaya Bay" },
+      { time: "11:00 AM", title: "Gems Gallery", description: "Tour the world's largest gem center" },
+      { time: "12:30 PM", title: "Free Time", description: "Browse and shop at Gems Gallery" },
+      { time: "01:30 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["09:00 AM – 01:30 PM"],
+    inclusions: ["Round-trip hotel transfer", "English-speaking guide", "Entrance fees", "Bottled water"],
+    exclusions: ["Meals and beverages", "Purchases at Gems Gallery", "Optional activities", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "Dress modestly for temple", "No purchase obligation at gallery"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for no-shows"],
+    childPolicy: ["Children age 3-11 years at discounted rate", "Children under 3 are free"],
+    faqs: [
+      { question: "Do I have to buy anything at Gems Gallery?", answer: "No, browsing is free and there's no obligation to purchase." },
+      { question: "Is the Gems Gallery tour informative?", answer: "Yes, professional guides explain the gem creation process and Thai jewelry craftsmanship." }
+    ]
+  },
+  "coral-island-pattaya": {
+    id: "coral-island-pattaya",
+    title: "Coral Island Join Tour with Indian Lunch",
+    shortDescription: "Full-day beach excursion to Coral Island with pristine beaches, crystal clear waters, and optional water sports activities.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 650,
+    childPrice: 325,
+    duration: "6-7 Hours",
+    rating: 4.4,
+    reviews: 489,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Pristine white sandy beaches",
+      "Crystal clear waters",
+      "Optional water sports activities",
+      "Indian lunch included"
+    ],
+    description: {
+      overview: "Escape to the beautiful Coral Island (Koh Larn) for a day of sun, sand, and sea. Enjoy pristine beaches, crystal clear waters perfect for swimming and snorkeling, and optional exciting water sports activities.",
+      whatToExpect: "Relax on white sandy beaches, swim in turquoise waters, try optional water sports like parasailing, banana boat, and jet skiing. Enjoy a delicious Indian buffet lunch at a beachside restaurant."
+    },
+    itinerary: [
+      { time: "08:00 AM", title: "Hotel Pickup", description: "Pick up from Pattaya hotels" },
+      { time: "09:00 AM", title: "Depart to Coral Island", description: "Speedboat ride to the island" },
+      { time: "09:30 AM", title: "Free Time at Beach", description: "Relax, swim, or enjoy water sports" },
+      { time: "12:00 PM", title: "Indian Lunch", description: "Buffet lunch at beach restaurant" },
+      { time: "01:00 PM", title: "More Beach Time", description: "Continue enjoying the island" },
+      { time: "03:00 PM", title: "Return Journey", description: "Speedboat back to Pattaya" },
+      { time: "04:00 PM", title: "Hotel Drop-off", description: "Return to your hotel" }
+    ],
+    tourTimings: ["08:00 AM – 04:00 PM"],
+    inclusions: ["Round-trip hotel transfer", "Speedboat to Coral Island", "Indian lunch buffet", "Life jacket", "Basic insurance"],
+    exclusions: ["Water sports (parasailing, banana boat, jet ski)", "Beach chair rental", "Personal expenses", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "Subject to weather conditions", "Vegetarian options available"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for weather cancellations"],
+    childPolicy: ["Children age 4-11 years at discounted rate", "Children under 4 are free", "Not suitable for infants"],
+    faqs: [
+      { question: "Are water sports included?", answer: "No, water sports are optional and available at additional cost on the island." },
+      { question: "Is the lunch vegetarian-friendly?", answer: "Yes, both vegetarian and non-vegetarian options are available in the buffet." }
+    ]
+  },
+  "nong-nooch-garden": {
+    id: "nong-nooch-garden",
+    title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya",
+    shortDescription: "Visit beautiful tropical botanical gardens featuring cultural shows, elephant performances, and international buffet lunch.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 3000,
+    childPrice: 1500,
+    duration: "5-6 Hours",
+    rating: 4.7,
+    reviews: 612,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Beautiful tropical botanical gardens",
+      "Traditional Thai cultural show",
+      "Elephant show",
+      "Buffet lunch included"
+    ],
+    description: {
+      overview: "Discover the spectacular Nong Nooch Tropical Botanical Garden, one of Thailand's most beautiful gardens. Enjoy stunning landscaped gardens, traditional Thai cultural performances, exciting elephant shows, and a delicious international buffet.",
+      whatToExpect: "Explore beautifully manicured gardens with themed sections, watch amazing elephant performances showcasing their intelligence and skills, enjoy traditional Thai dance and martial arts demonstrations, and savor an international buffet lunch."
+    },
+    itinerary: [
+      { time: "08:30 AM", title: "Hotel Pickup", description: "Comfortable transfer to Nong Nooch" },
+      { time: "09:30 AM", title: "Garden Tour", description: "Explore the stunning botanical gardens" },
+      { time: "10:30 AM", title: "Elephant Show", description: "Watch amazing elephant performances" },
+      { time: "11:30 AM", title: "Cultural Show", description: "Traditional Thai dance and martial arts" },
+      { time: "12:30 PM", title: "Buffet Lunch", description: "International and Thai cuisine buffet" },
+      { time: "01:30 PM", title: "Free Time", description: "Explore gardens or optional activities" },
+      { time: "02:30 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["08:30 AM – 02:30 PM"],
+    inclusions: ["Round-trip transfer", "Nong Nooch admission", "Cultural and elephant shows", "Buffet lunch", "Garden tour"],
+    exclusions: ["Elephant riding (extra cost)", "Personal expenses", "Optional activities", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "Shows run at scheduled times", "Wheelchair accessible"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for no-shows"],
+    childPolicy: ["Children age 4-11 years at discounted rate", "Children under 4 are free", "Family-friendly"],
+    faqs: [
+      { question: "Can I ride elephants?", answer: "Elephant riding is available at an additional cost. Please inquire on-site." },
+      { question: "How much time should I allocate?", answer: "The full tour takes about 5-6 hours including shows, lunch, and garden exploration." }
+    ]
+  },
+  "pattaya-dolphinarium": {
+    id: "pattaya-dolphinarium",
+    title: "Pattaya Dolphinarium Admission Ticket with Transfer",
+    shortDescription: "Interactive dolphin and seal shows in an air-conditioned venue with photo opportunities and educational presentations.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 3100,
+    childPrice: 1550,
+    duration: "3-4 Hours",
+    rating: 4.6,
+    reviews: 378,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Interactive dolphin show",
+      "Educational marine life presentation",
+      "Photo opportunities",
+      "Air-conditioned venue"
+    ],
+    description: {
+      overview: "Experience the wonder of dolphins and seals at Pattaya Dolphinarium. Watch entertaining and educational shows featuring intelligent dolphins performing amazing tricks and playful seals showcasing their talents in a comfortable, air-conditioned theater.",
+      whatToExpect: "Enjoy a 45-minute interactive dolphin show with jumps, spins, and synchronized swimming, followed by an entertaining seal performance. Learn about marine mammal conservation and have the opportunity to take photos with these incredible animals."
+    },
+    itinerary: [
+      { time: "09:00 AM", title: "Hotel Pickup", description: "Pick up from Pattaya hotels" },
+      { time: "09:30 AM", title: "Arrive at Dolphinarium", description: "Check-in and seat selection" },
+      { time: "10:00 AM", title: "Dolphin Show", description: "45-minute interactive dolphin performance" },
+      { time: "11:00 AM", title: "Seal Show", description: "Entertaining seal performance" },
+      { time: "11:30 AM", title: "Photo Session", description: "Optional photos with dolphins" },
+      { time: "12:00 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["11:00 AM Show", "03:00 PM Show"],
+    inclusions: ["Round-trip hotel transfer", "Dolphinarium admission", "Dolphin show", "Seal show"],
+    exclusions: ["Swimming with dolphins (extra cost)", "Professional photos", "Food and beverages", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "Children must be supervised", "No flash photography during show"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for no-shows"],
+    childPolicy: ["Children age 3-11 years at discounted rate", "Children under 3 are free"],
+    faqs: [
+      { question: "Can I swim with the dolphins?", answer: "Yes, swimming with dolphins is available at extra cost and requires advance booking." },
+      { question: "How long is the show?", answer: "The dolphin show is approximately 45 minutes, followed by a 20-minute seal show." }
+    ]
+  },
+  "muay-thai-pattaya": {
+    id: "muay-thai-pattaya",
+    title: "Muay Thai Pattaya Admission Ticket",
+    shortDescription: "Experience authentic Muay Thai matches with professional fighters in an electric stadium atmosphere.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 4000,
+    childPrice: 2000,
+    duration: "2-3 Hours",
+    rating: 4.8,
+    reviews: 523,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Authentic Muay Thai matches",
+      "Professional fighters",
+      "Electric stadium atmosphere",
+      "Experience Thai martial arts culture"
+    ],
+    description: {
+      overview: "Witness the power and grace of Muay Thai, Thailand's national sport, at a professional stadium in Pattaya. Experience multiple fight matches featuring skilled fighters, traditional pre-fight rituals, and the electric atmosphere of live combat sports.",
+      whatToExpect: "Watch professional Muay Thai bouts between trained fighters, experience the traditional Wai Kru ritual, feel the energy of the crowd, and immerse yourself in this important aspect of Thai culture and martial arts heritage."
+    },
+    itinerary: [
+      { time: "06:30 PM", title: "Arrive at Stadium", description: "Check-in and find your seat" },
+      { time: "07:00 PM", title: "Opening Ceremony", description: "Traditional Wai Kru ritual" },
+      { time: "07:15 PM", title: "Fight Matches Begin", description: "Watch professional Muay Thai bouts" },
+      { time: "09:30 PM", title: "End of Event", description: "Matches conclude" }
+    ],
+    tourTimings: ["Monday, Wednesday, Friday, Saturday 07:00 PM"],
+    inclusions: ["Stadium admission ticket", "Reserved seating", "Multiple fight matches"],
+    exclusions: ["Hotel transfer", "Food and beverages", "Betting", "Souvenirs"],
+    bookingPolicy: ["Confirmation within 24 hours", "Stadium can get loud", "Betting at own risk"],
+    cancellationPolicy: ["Tickets are non-refundable once purchased"],
+    childPolicy: ["Same pricing for all ages", "Not recommended for children under 6"],
+    faqs: [
+      { question: "Is betting allowed?", answer: "Betting is legal in Thailand but is at your own risk." },
+      { question: "How many fights are there?", answer: "Typically 6-8 fights per evening, ranging from amateur to professional levels." }
+    ]
+  },
+  "alcazar-show-pattaya": {
+    id: "alcazar-show-pattaya",
+    title: "Alcazar Show Pattaya Ticket with Transfer",
+    shortDescription: "World-famous cabaret show with stunning costumes, professional performers, and spectacular stage production.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 1500,
+    childPrice: 750,
+    duration: "3 Hours",
+    rating: 4.7,
+    reviews: 445,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "World-famous cabaret show",
+      "Stunning costumes and sets",
+      "Professional performers",
+      "Photo opportunities"
+    ],
+    description: {
+      overview: "Experience the glamour and spectacle of Alcazar Show, one of Thailand's most famous cabaret performances. Enjoy world-class entertainment featuring elaborate costumes, professional choreography, and talented performers in a stunning theater.",
+      whatToExpect: "Watch a 70-minute spectacular show featuring singing, dancing, and comedy performances. Marvel at the intricate costumes and impressive stage sets. After the show, take photos with the beautiful performers."
+    },
+    itinerary: [
+      { time: "05:30 PM", title: "Hotel Pickup", description: "Pick up from Pattaya hotels" },
+      { time: "06:15 PM", title: "Arrive at Alcazar", description: "Check-in and seat assignment" },
+      { time: "06:30 PM", title: "Cabaret Show", description: "70-minute spectacular performance" },
+      { time: "07:45 PM", title: "Photo Session", description: "Optional photos with performers" },
+      { time: "08:30 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["06:00 PM", "07:30 PM", "09:00 PM"],
+    inclusions: ["Round-trip transfer", "Alcazar show admission", "Reserved seating"],
+    exclusions: ["Photo session with performers (extra)", "Food and beverages", "Personal expenses", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "No photography during performance", "Shows operate daily"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for no-shows"],
+    childPolicy: ["Children age 3-11 years at discounted rate", "Suitable for all ages"],
+    faqs: [
+      { question: "Can I take photos during the show?", answer: "No photography during the performance, but you can take photos with performers after the show." },
+      { question: "How often do shows run?", answer: "Shows run daily at 6:00 PM, 7:30 PM, and 9:00 PM." }
+    ]
+  },
+  "pattaya-floating-market-guided": {
+    id: "pattaya-floating-market-guided",
+    title: "Pattaya Floating Market Guided Tour with Transfer",
+    shortDescription: "Explore the four-regions floating market with traditional architecture, local handicrafts, and cultural performances.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 2800,
+    childPrice: 1400,
+    duration: "4 Hours",
+    rating: 4.4,
+    reviews: 289,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Four regions floating market",
+      "Traditional Thai architecture",
+      "Local handicrafts and food",
+      "Cultural performances"
+    ],
+    description: {
+      overview: "Discover Pattaya's unique four-regions floating market on this guided tour. Explore traditional Thai architecture representing the North, Northeast, Central, and South regions, shop for local handicrafts, and enjoy authentic Thai street food.",
+      whatToExpect: "Take a boat ride through the market canals, explore shops showcasing products from different Thai regions, watch cultural performances, sample delicious local foods, and shop for unique souvenirs in this authentic Thai market setting."
+    },
+    itinerary: [
+      { time: "09:00 AM", title: "Hotel Pickup", description: "Start your floating market adventure" },
+      { time: "09:30 AM", title: "Arrive at Market", description: "Introduction to four regions concept" },
+      { time: "10:00 AM", title: "Boat Ride", description: "Explore market canals by traditional boat" },
+      { time: "11:00 AM", title: "Walking Tour", description: "Visit shops representing four Thai regions" },
+      { time: "12:00 PM", title: "Cultural Show", description: "Watch traditional Thai performances" },
+      { time: "12:30 PM", title: "Free Time", description: "Shopping and refreshments" },
+      { time: "01:00 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["09:00 AM – 01:00 PM"],
+    inclusions: ["Round-trip transfer", "English-speaking guide", "Entrance fee", "Boat ride within market"],
+    exclusions: ["Food and beverages", "Shopping expenses", "Optional activities", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "Best to visit in morning", "Bring cash for purchases"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for no-shows"],
+    childPolicy: ["Children age 3-11 years at discounted rate", "Children under 3 are free"],
+    faqs: [
+      { question: "What time does the market operate?", answer: "The floating market operates daily from 9:00 AM to 7:00 PM." },
+      { question: "Can I bargain at the market?", answer: "Yes, bargaining is expected and part of the experience." }
+    ]
+  },
+  // Krabi Tours
+  "hong-islands-longtail": {
+    id: "hong-islands-longtail",
+    title: "Hong Islands by Longtail Boat",
+    shortDescription: "Traditional longtail boat tour to pristine Hong Islands with snorkeling, beach relaxation, and lagoon exploration.",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    basePrice: 2600,
+    childPrice: 1300,
+    duration: "6-7 Hours",
+    rating: 4.5,
+    reviews: 423,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Visit pristine Hong Islands",
+      "Snorkeling in crystal clear waters",
+      "Explore Hong Lagoon",
+      "Traditional longtail boat experience"
+    ],
+    description: {
+      overview: "Experience the natural beauty of Hong Islands on a traditional longtail boat tour. Visit pristine beaches, snorkel in crystal clear waters, explore the stunning Hong Lagoon, and relax on some of Krabi's most beautiful islands.",
+      whatToExpect: "Enjoy the authentic experience of traveling by traditional longtail boat, swim and snorkel in turquoise waters, kayak through the emerald Hong Lagoon, and relax on white sandy beaches surrounded by dramatic limestone cliffs."
+    },
+    itinerary: [
+      { time: "08:00 AM", title: "Hotel Pickup", description: "Pick up from Krabi hotels" },
+      { time: "09:00 AM", title: "Depart to Hong Islands", description: "Scenic longtail boat journey" },
+      { time: "10:00 AM", title: "Hong Island Beach", description: "Relax on white sandy beach" },
+      { time: "11:00 AM", title: "Hong Lagoon", description: "Kayak through the stunning lagoon" },
+      { time: "12:00 PM", title: "Lunch Break", description: "Enjoy lunch box on the beach" },
+      { time: "01:00 PM", title: "Snorkeling", description: "Explore colorful coral reefs" },
+      { time: "02:30 PM", title: "Return Journey", description: "Boat back to shore" },
+      { time: "03:30 PM", title: "Hotel Drop-off", description: "Return to your hotel" }
+    ],
+    tourTimings: ["08:00 AM – 03:30 PM"],
+    inclusions: ["Hotel transfers", "Longtail boat", "National park fees", "Snorkeling equipment", "Life jacket", "Lunch box", "Guide", "Insurance"],
+    exclusions: ["Personal expenses", "Underwater camera rental", "Tips", "Additional activities"],
+    bookingPolicy: ["Confirmation within 24 hours", "Subject to weather conditions", "Bring seasickness medicine if needed"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for weather cancellations"],
+    childPolicy: ["Children age 4-11 years at discounted rate", "Children under 4 are free", "Not suitable for infants"],
+    faqs: [
+      { question: "Is kayaking included?", answer: "Yes, kayaking in Hong Lagoon is included in the tour." },
+      { question: "What's the difference between longtail and speedboat?", answer: "Longtail boats are slower but offer a more traditional, authentic experience. Speedboats are faster and allow more time at destinations." }
+    ]
+  },
+  "hong-islands-speedboat": {
+    id: "hong-islands-speedboat",
+    title: "Hong Island Tour (By Speed Boat)",
+    shortDescription: "Fast speedboat tour to Hong Islands visiting multiple locations with extended time for activities and snorkeling.",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    basePrice: 3500,
+    childPrice: 1750,
+    duration: "6-7 Hours",
+    rating: 4.6,
+    reviews: 512,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Fast speedboat to Hong Islands",
+      "More time for activities",
+      "Visit multiple islands",
+      "Excellent snorkeling spots"
+    ],
+    description: {
+      overview: "Explore Hong Islands efficiently on a modern speedboat tour. Visit more locations including Hong Island, Pakbia Island, Hong Lagoon, and Lading Island. Enjoy extended time for swimming, snorkeling, and beach relaxation.",
+      whatToExpect: "Travel quickly between islands on a comfortable speedboat, maximizing your time at each location. Snorkel at pristine coral reefs, explore the emerald Hong Lagoon, relax on stunning beaches, and enjoy a buffet lunch with fresh fruit."
+    },
+    itinerary: [
+      { time: "07:30 AM", title: "Hotel Pickup", description: "Pick up from Krabi hotels" },
+      { time: "08:30 AM", title: "Speedboat Depart", description: "Fast journey to Hong Islands" },
+      { time: "09:15 AM", title: "Hong Island", description: "Beach relaxation and swimming" },
+      { time: "10:30 AM", title: "Pakbia Island", description: "Snorkeling at coral reef" },
+      { time: "11:30 AM", title: "Hong Lagoon", description: "Explore the beautiful lagoon" },
+      { time: "12:30 PM", title: "Lunch", description: "Buffet lunch on Hong Island beach" },
+      { time: "01:30 PM", title: "Lading Island", description: "Final snorkeling stop" },
+      { time: "02:30 PM", title: "Return Journey", description: "Speedboat back to shore" },
+      { time: "03:30 PM", title: "Hotel Drop-off", description: "Return to your hotel" }
+    ],
+    tourTimings: ["07:30 AM – 03:30 PM"],
+    inclusions: ["Hotel transfers", "Speedboat", "National park fees", "Snorkeling equipment", "Life jacket", "Buffet lunch", "Fruit and drinks", "Guide", "Insurance"],
+    exclusions: ["Personal expenses", "Underwater camera rental", "Tips", "Additional water activities"],
+    bookingPolicy: ["Confirmation within 24 hours", "Maximum 25 passengers per boat", "Life jackets mandatory"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for weather cancellations"],
+    childPolicy: ["Children age 4-11 years at discounted rate", "Children under 4 are free", "Not suitable for infants or pregnant women"],
+    faqs: [
+      { question: "How many islands will we visit?", answer: "The tour visits Hong Island, Pakbia Island, Hong Lagoon, and Lading Island." },
+      { question: "Is the speedboat safe?", answer: "Yes, all speedboats are safety-certified with life jackets for all passengers and experienced captains." }
+    ]
+  },
+  "seven-islands-longtail": {
+    id: "seven-islands-longtail",
+    title: "7 Islands Sunset Tour BBQ with Longtail boat",
+    shortDescription: "Afternoon sunset tour visiting seven islands with BBQ dinner on beach and seasonal bioluminescent plankton viewing.",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    basePrice: 3000,
+    childPrice: 1500,
+    duration: "5-6 Hours",
+    rating: 4.7,
+    reviews: 356,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Visit 7 beautiful islands",
+      "Stunning sunset views",
+      "BBQ dinner on beach",
+      "Bioluminescent plankton (seasonal)"
+    ],
+    description: {
+      overview: "Experience a magical sunset tour visiting seven stunning islands around Krabi. Enjoy snorkeling, beach hopping, spectacular sunset views, and a BBQ seafood dinner on the beach. During certain seasons, witness the amazing bioluminescent plankton.",
+      whatToExpect: "Visit Tup Island's sandbar, snorkel at Chicken Island, relax at Poda Island, explore Railay Beach, watch a beautiful sunset, enjoy fresh BBQ seafood, and possibly see glowing plankton in the water during October to May."
+    },
+    itinerary: [
+      { time: "01:00 PM", title: "Hotel Pickup", description: "Afternoon pick up from hotels" },
+      { time: "02:00 PM", title: "Depart to Islands", description: "Start your island adventure" },
+      { time: "02:30 PM", title: "Tup Island", description: "Walk on sandbar connecting islands" },
+      { time: "03:30 PM", title: "Chicken Island", description: "Snorkeling session" },
+      { time: "04:30 PM", title: "Poda Island", description: "Beach relaxation" },
+      { time: "05:30 PM", title: "Railay Beach", description: "Explore famous beach" },
+      { time: "06:30 PM", title: "Sunset & BBQ", description: "Watch sunset while enjoying BBQ dinner" },
+      { time: "07:30 PM", title: "Return Journey", description: "Boat back under the stars" },
+      { time: "08:30 PM", title: "Hotel Drop-off", description: "Return to your hotel" }
+    ],
+    tourTimings: ["01:00 PM – 08:30 PM"],
+    inclusions: ["Hotel transfers", "Longtail boat", "Snorkeling equipment", "Life jacket", "BBQ seafood dinner", "Soft drinks and water", "Guide", "Insurance"],
+    exclusions: ["National park fees (400 THB)", "Kayak rental", "Underwater camera", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "Bring cash for national park fees", "Subject to weather conditions"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for weather cancellations"],
+    childPolicy: ["Children age 4-11 years at discounted rate", "Children under 4 are free"],
+    faqs: [
+      { question: "When can we see bioluminescent plankton?", answer: "Bioluminescent plankton is typically visible from October to May, weather and moon phase dependent." },
+      { question: "What's included in the BBQ dinner?", answer: "Fresh grilled seafood, chicken, pork, vegetables, rice, and fruits." }
+    ]
+  },
+  "seven-islands-speedboat": {
+    id: "seven-islands-speedboat",
+    title: "7 Islands Sunset Tour BBQ with Speedboat",
+    shortDescription: "Premium speedboat sunset tour visiting seven islands with more activities, BBQ dinner, and sunset cruise.",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    basePrice: 4000,
+    childPrice: 2000,
+    duration: "5-6 Hours",
+    rating: 4.8,
+    reviews: 478,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Fast speedboat to 7 islands",
+      "More time at each location",
+      "Spectacular sunset cruise",
+      "BBQ seafood dinner"
+    ],
+    description: {
+      overview: "Enjoy a premium seven-islands sunset tour by speedboat. Visit more locations in less time, allowing extended activities at each stop. Experience breathtaking sunset views from the speedboat and enjoy a delicious BBQ seafood dinner on the beach.",
+      whatToExpect: "Efficiently visit Chicken Island, Tup Island, Poda Island, Phra Nang Cave, and Railay Beach. Enjoy multiple snorkeling stops, beach activities, stunning sunset cruise, and fresh seafood BBQ dinner. More comfortable and faster than longtail boat."
+    },
+    itinerary: [
+      { time: "01:00 PM", title: "Hotel Pickup", description: "Pick up from Krabi hotels" },
+      { time: "02:00 PM", title: "Speedboat Depart", description: "Fast journey begins" },
+      { time: "02:20 PM", title: "Chicken Island", description: "Snorkeling and swimming" },
+      { time: "03:00 PM", title: "Tup Island", description: "Sandbar and beach walk" },
+      { time: "03:45 PM", title: "Poda Island", description: "Beach activities" },
+      { time: "04:30 PM", title: "Phra Nang Cave", description: "Explore famous cave beach" },
+      { time: "05:30 PM", title: "Railay Beach", description: "Relax on stunning beach" },
+      { time: "06:15 PM", title: "Sunset Cruise", description: "Watch sunset from speedboat" },
+      { time: "06:45 PM", title: "BBQ Dinner", description: "Enjoy seafood BBQ on beach" },
+      { time: "08:00 PM", title: "Return Journey", description: "Speedboat back to shore" },
+      { time: "08:45 PM", title: "Hotel Drop-off", description: "Return to your hotel" }
+    ],
+    tourTimings: ["01:00 PM – 08:45 PM"],
+    inclusions: ["Hotel transfers", "Speedboat", "Snorkeling equipment", "Life jacket", "BBQ seafood dinner", "Soft drinks and water", "Fresh fruit", "Guide", "Insurance"],
+    exclusions: ["National park fees (400 THB)", "Personal expenses", "Underwater camera", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "Bring cash for park fees", "Not suitable for pregnant women"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for weather cancellations"],
+    childPolicy: ["Children age 4-11 years at discounted rate", "Children under 4 are free", "Not suitable for infants"],
+    faqs: [
+      { question: "Why choose speedboat over longtail?", answer: "Speedboat allows you to visit more islands with more time at each stop, providing a more comfortable and efficient experience." },
+      { question: "Is the sunset guaranteed?", answer: "Sunset views depend on weather conditions, but the tour operates rain or shine." }
+    ]
+  },
+  "four-islands-longtail": {
+    id: "four-islands-longtail",
+    title: "4 Islands by Longtail Boat (With National Park Fee)",
+    shortDescription: "Classic four-islands tour by traditional longtail boat with national park fees included. Visit Krabi's most iconic islands.",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    basePrice: 2000,
+    childPrice: 1000,
+    duration: "7-8 Hours",
+    rating: 4.4,
+    reviews: 589,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Visit 4 iconic Krabi islands",
+      "Traditional longtail boat",
+      "Snorkeling and swimming",
+      "National park fees included"
+    ],
+    description: {
+      overview: "Experience Krabi's classic four-islands tour by traditional longtail boat. Visit the famous Phra Nang Cave Beach, walk on Tup Island's connecting sandbar, snorkel at Chicken Island, and relax at beautiful Poda Island. All national park entrance fees are included.",
+      whatToExpect: "Enjoy an authentic Thai boat experience visiting four of Krabi's most beautiful islands. Explore stunning beaches, swim in crystal clear waters, snorkel among colorful fish, and walk on the unique sandbar connecting Tup and Mor islands."
+    },
+    itinerary: [
+      { time: "08:00 AM", title: "Hotel Pickup", description: "Morning pick up from hotels" },
+      { time: "09:00 AM", title: "Depart to Islands", description: "Traditional longtail boat journey" },
+      { time: "09:45 AM", title: "Phra Nang Cave Beach", description: "Explore the famous cave and beach" },
+      { time: "11:00 AM", title: "Tup Island", description: "Walk on the connecting sandbar" },
+      { time: "12:00 PM", title: "Lunch Break", description: "Lunch box on the beach" },
+      { time: "01:00 PM", title: "Chicken Island", description: "Snorkeling session" },
+      { time: "02:30 PM", title: "Poda Island", description: "Beach relaxation and swimming" },
+      { time: "03:30 PM", title: "Return Journey", description: "Boat back to mainland" },
+      { time: "04:30 PM", title: "Hotel Drop-off", description: "Return to your hotel" }
+    ],
+    tourTimings: ["08:00 AM – 04:30 PM"],
+    inclusions: ["Hotel transfers", "Longtail boat", "National park entrance fees", "Snorkeling equipment", "Life jacket", "Lunch box", "Drinking water and fruit", "Guide", "Basic insurance"],
+    exclusions: ["Personal expenses", "Kayak rental", "Underwater camera", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "National park fee already included", "Suitable for all ages"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for weather cancellations"],
+    childPolicy: ["Children age 4-11 years at discounted rate", "Children under 4 are free", "Family-friendly tour"],
+    faqs: [
+      { question: "Are national park fees really included?", answer: "Yes, all national park entrance fees are included in the tour price." },
+      { question: "How many people per longtail boat?", answer: "Longtail boats typically accommodate 8-10 passengers comfortably." }
+    ]
+  },
+  "four-islands-speedboat": {
+    id: "four-islands-speedboat",
+    title: "4 Islands by Speedboat",
+    shortDescription: "Premium four-islands speedboat tour with buffet lunch, extended activities, and comfortable fast travel between islands.",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    basePrice: 2700,
+    childPrice: 1350,
+    duration: "6-7 Hours",
+    rating: 4.6,
+    reviews: 634,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Fast speedboat to 4 islands",
+      "Extended time at each stop",
+      "Premium snorkeling spots",
+      "Comfortable and efficient"
+    ],
+    description: {
+      overview: "Explore Krabi's four iconic islands efficiently by speedboat. Enjoy more time at each destination with faster travel between islands. Visit Phra Nang Cave, Chicken Island, Tup & Mor Islands, and Poda Island with premium snorkeling and beach activities.",
+      whatToExpect: "Travel comfortably on a modern speedboat, maximizing your time at each island. Enjoy extended snorkeling sessions, beach relaxation, and exploration. Buffet lunch with fresh fruit and drinks included. Perfect for those wanting efficiency without sacrificing experience."
+    },
+    itinerary: [
+      { time: "08:00 AM", title: "Hotel Pickup", description: "Pick up from Krabi hotels" },
+      { time: "09:00 AM", title: "Speedboat Depart", description: "Fast journey to the islands" },
+      { time: "09:30 AM", title: "Phra Nang Cave", description: "Explore stunning cave beach" },
+      { time: "10:45 AM", title: "Chicken Island", description: "Snorkeling at coral reef" },
+      { time: "12:00 PM", title: "Tup & Mor Islands", description: "Sandbar walk and swimming" },
+      { time: "01:00 PM", title: "Lunch", description: "Buffet lunch on Poda Island" },
+      { time: "02:00 PM", title: "Poda Island", description: "Beach time and relaxation" },
+      { time: "03:00 PM", title: "Return Journey", description: "Speedboat back to shore" },
+      { time: "03:45 PM", title: "Hotel Drop-off", description: "Return to your hotel" }
+    ],
+    tourTimings: ["08:00 AM – 03:45 PM"],
+    inclusions: ["Hotel transfers", "Speedboat", "Snorkeling equipment", "Life jacket", "Buffet lunch", "Soft drinks and fresh fruit", "Guide", "Insurance"],
+    exclusions: ["National park fees (400 THB)", "Personal expenses", "Underwater camera rental", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "Bring 400 THB cash for park fees", "Not suitable for pregnant women or infants"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for weather cancellations"],
+    childPolicy: ["Children age 4-11 years at discounted rate", "Children under 4 are free", "Not suitable for infants"],
+    faqs: [
+      { question: "Why should I choose speedboat over longtail?", answer: "Speedboat offers a smoother, faster ride allowing more time at each island and better for those prone to seasickness." },
+      { question: "Do I need to bring cash?", answer: "Yes, bring 400 THB in cash for national park entrance fees which are not included in the tour price." }
+    ]
   }
 };
