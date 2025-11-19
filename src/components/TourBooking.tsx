@@ -1,8 +1,7 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import HeroSlider from "./activity-detail/HeroSlider";
-import ShowTimetable from "./activity-detail/ShowTimetable";
 import PhotoGallery from "./activity-detail/PhotoGallery";
 import CustomerReviews from "./activity-detail/CustomerReviews";
 import PricingCalculator from "./activity-detail/PricingCalculator";
@@ -13,8 +12,13 @@ import CustomerSupport from "./activity-detail/CustomerSupport";
 import SuggestedTours from "./activity-detail/SuggestedTours";
 import { Button } from "./ui/button";
 import { ChevronDown, Star, MapPin } from "lucide-react";
+import { TourData } from "@/data/tourData";
 
-const TourBooking = () => {
+interface TourBookingProps {
+  tourData: TourData;
+}
+
+const TourBooking = ({ tourData }: TourBookingProps) => {
   const itineraryRef = useRef<HTMLDivElement>(null);
 
   const scrollToItinerary = () => {
@@ -30,22 +34,21 @@ const TourBooking = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-2 space-y-6">
             {/* Hero Image Slider */}
-            <HeroSlider onExplore={scrollToItinerary} />
+            <HeroSlider images={tourData.heroImages} onExplore={scrollToItinerary} />
             
             {/* Title, Location, Rating */}
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>Phuket, Thailand</span>
+                <span>{tourData.location}</span>
               </div>
               
               <h1 className="text-3xl md:text-4xl font-bold leading-tight">
-                From Phuket: Phi Phi Island Guided Tour by Big Boat with Normal Transfer
+                {tourData.title}
               </h1>
               
               <p className="text-lg text-muted-foreground">
-                Explore the stunning Phi Phi Islands on a comfortable big boat. Visit Maya Bay, snorkel 
-                in crystal-clear waters, and enjoy a Thai buffet lunch on this unforgettable full-day adventure.
+                {tourData.shortDescription}
               </p>
 
               {/* Rating & Reviews */}
@@ -56,17 +59,17 @@ const TourBooking = () => {
                       <Star key={i} className="h-5 w-5 fill-primary text-primary" />
                     ))}
                   </div>
-                  <span className="font-semibold text-lg">4.8</span>
-                  <span className="text-muted-foreground">(1,247 reviews)</span>
+                  <span className="font-semibold text-lg">{tourData.rating}</span>
+                  <span className="text-muted-foreground">({tourData.reviews.toLocaleString()} reviews)</span>
                 </div>
                 <div className="flex items-center gap-4 text-sm">
                   <div>
                     <span className="font-semibold">Duration:</span>
-                    <span className="text-muted-foreground ml-2">Full Day</span>
+                    <span className="text-muted-foreground ml-2">{tourData.duration}</span>
                   </div>
                   <div>
                     <span className="font-semibold">From:</span>
-                    <span className="text-primary ml-2 text-lg font-bold">₹2,900</span>
+                    <span className="text-primary ml-2 text-lg font-bold">₹{tourData.basePrice.toLocaleString()}</span>
                   </div>
                 </div>
               </div>
@@ -89,8 +92,10 @@ const TourBooking = () => {
           <div className="lg:col-span-1">
             <div className="sticky top-4">
               <PricingCalculator 
-                basePrice={2900}
-                activityName="From Phuket: Phi Phi Island Guided Tour by Big Boat with Normal Transfer"
+                basePrice={tourData.basePrice}
+                childPrice={tourData.childPrice}
+                activityName={tourData.title}
+                tourTimings={tourData.tourTimings}
               />
             </div>
           </div>
@@ -100,21 +105,21 @@ const TourBooking = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Photo Gallery */}
-            <PhotoGallery />
+            <PhotoGallery images={tourData.galleryImages} />
             
             {/* Tour Description */}
             <div ref={itineraryRef}>
-              <TourDescription />
+              <TourDescription tourData={tourData} />
             </div>
             
             {/* Tour Policies (Inclusion, Exclusion, Booking, Cancellation, Child Policy) */}
-            <TourPolicies />
+            <TourPolicies tourData={tourData} />
             
             {/* Customer Reviews */}
             <CustomerReviews />
             
             {/* FAQ Section */}
-            <FAQSection />
+            <FAQSection faqs={tourData.faqs} />
           </div>
 
           {/* Sidebar */}
@@ -127,7 +132,7 @@ const TourBooking = () => {
 
         {/* Suggested Tours */}
         <div className="mt-12">
-          <SuggestedTours currentCity="phuket" />
+          <SuggestedTours currentCity={tourData.city} />
         </div>
       </main>
 
