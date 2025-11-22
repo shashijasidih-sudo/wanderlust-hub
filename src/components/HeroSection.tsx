@@ -11,15 +11,29 @@ const HeroSection = () => {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    const query = searchQuery.toLowerCase();
+    if (!searchQuery.trim()) return;
+
+    const query = searchQuery.toLowerCase().trim();
     
-    // Navigate based on search query
+    // Check if query is a city name
     if (query.includes('bangkok')) navigate('/bangkok');
     else if (query.includes('pattaya')) navigate('/pattaya');
     else if (query.includes('phuket')) navigate('/phuket');
     else if (query.includes('krabi')) navigate('/krabi');
     else if (query.includes('dubai')) navigate('/dubai');
     else if (query.includes('thailand')) navigate('/thailand');
+    // Check for popular activities/destinations
+    else if (query.includes('phi phi') || query.includes('phiphi')) navigate('/phi-phi-island');
+    else if (query.includes('james bond')) navigate('/james-bond-island');
+    else if (query.includes('temple') || query.includes('wat') || query.includes('buddha')) navigate('/bangkok');
+    else if (query.includes('island') || query.includes('boat') || query.includes('cruise')) navigate('/phuket');
+    else if (query.includes('massage') || query.includes('spa')) navigate('/massage-coupons');
+    else if (query.includes('elephant')) navigate('/elephant-safari');
+    else if (query.includes('tiger')) navigate('/selfie-tigers');
+    else if (query.includes('skywalk')) navigate('/bangkok-skywalk');
+    else if (query.includes('grand palace') || query.includes('emerald')) navigate('/bangkok-grand-palace-emerald');
+    // Default to Bangkok for general searches
+    else navigate('/bangkok');
   };
   return <section className="relative h-[600px] md:h-[700px] w-full overflow-hidden">
       {/* Background Image */}
