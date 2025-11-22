@@ -43,6 +43,7 @@ const Bangkok = () => {
   const [sortBy, setSortBy] = useState('popular');
   const [priceRange, setPriceRange] = useState([1600, 11000]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState('');
   const itemsPerPage = 12;
 
   const sortedActivities = [...activities].sort((a, b) => {
@@ -52,7 +53,13 @@ const Bangkok = () => {
     return 0;
   });
 
-  const filteredActivities = sortedActivities.filter(
+  const searchFilteredActivities = searchQuery.trim() 
+    ? sortedActivities.filter(activity => 
+        activity.title.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : sortedActivities;
+
+  const filteredActivities = searchFilteredActivities.filter(
     activity => activity.price >= priceRange[0] && activity.price <= priceRange[1]
   );
 
@@ -87,7 +94,12 @@ const Bangkok = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <Input placeholder="Search activities..." className="flex-1" />
+            <Input 
+              placeholder="Search activities..." 
+              className="flex-1" 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
             <Button
               variant={viewMode === 'grid' ? 'default' : 'outline'}
               size="icon"
