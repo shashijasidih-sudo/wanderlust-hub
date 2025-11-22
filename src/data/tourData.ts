@@ -142,345 +142,389 @@ export const toursData: Record<string, TourData> = {
   "bangkok-city-boat-tour": {
     id: "bangkok-city-boat-tour",
     title: "Bangkok City Tour by Boat from Meeting Point",
-    shortDescription: "Discover Bangkok from the water on this scenic boat tour along the Chao Phraya River and canals, visiting key landmarks.",
+    shortDescription: "Step aboard the boat and set off on a relaxing cruise along the Chao Phraya River—Bangkok's lifeline.",
     location: "Bangkok, Thailand",
     city: "bangkok",
     basePrice: 6300,
     childPrice: 0,
-    duration: "2 Hours",
+    duration: "3 Hours",
     rating: 4.7,
-    reviews: 892,
+    reviews: 856,
     heroImages: [
-      { src: bangkokSkywalk1, title: "Chao Phraya River" },
-      { src: bangkokSkywalk2, title: "Wat Arun from River" },
-      { src: bangkokSkywalk3, title: "Bangkok Canals" },
-      { src: emerald1, title: "Riverside Temples" }
+      { src: bangkokSkywalk1, title: "Chao Phraya River Cruise" },
+      { src: bangkokSkywalk2, title: "Wat Arun from Water" },
+      { src: bangkokSkywalk3, title: "Bangkok Waterways" }
     ],
     galleryImages: [
-      { src: bangkokSkywalk1, alt: "Long-tail boat on Chao Phraya River" },
-      { src: bangkokSkywalk2, alt: "Wat Arun riverside view" },
-      { src: bangkokSkywalk3, alt: "Bangkok canal houses" },
-      { src: emerald1, alt: "Royal Barge Museum view" }
+      { src: bangkokSkywalk1, alt: "River cruise Bangkok" },
+      { src: bangkokSkywalk2, alt: "Wat Arun Temple" },
+      { src: bangkokSkywalk3, alt: "Chao Phraya River" },
+      { src: emerald1, alt: "Bangkok landmarks" }
     ],
     highlights: [
-      "Scenic Chao Phraya River cruise",
-      "View Royal Barge Museum from water",
-      "Explore Wat Rakhang (weather permitting)",
-      "Breathtaking Wat Arun views",
-      "Flexible tour ending",
-      "Morning or afternoon departure"
+      "Chao Phraya River Cruise",
+      "Royal Barge Museum View",
+      "Wat Rakhang Visit",
+      "Wat Arun Photo Stop"
     ],
     description: {
-      overview: "Step aboard the boat and set off on a relaxing cruise along the Chao Phraya River—Bangkok's lifeline. As the boat glides along, take in peaceful views of the city's iconic temples and riverside sights.",
-      whatToExpect: "Along the way, you'll pass the Royal Barge Museum, explore the quiet charm of Wat Rakhang (may not be available due to weather conditions), and enjoy a breathtaking view of Wat Arun, the stunning Temple of Dawn (please note: entry ticket not included). This is the perfect way to soak up Bangkok's rich temple culture—without the rush. You can choose to cruise in the morning or afternoon—whatever works best for your plans!"
+      overview: "Step aboard the boat and set off on a relaxing cruise along the Chao Phraya River—Bangkok's lifeline.",
+      whatToExpect: "Step aboard the boat and set off on a relaxing cruise along the Chao Phraya River—Bangkok's lifeline. As the boat glides along, take in peaceful views of the city's iconic temples and riverside sights.\n\nAlong the way, you'll pass the Royal Barge Museum, explore the quiet charm of Wat Rakhang (may not be available due to weather conditions), and enjoy a breathtaking view of Wat Arun, the stunning Temple of Dawn (please note: entry ticket not included).\n\nThis is the perfect way to soak up Bangkok's rich temple culture—without the rush. There are no entry fees included, so you're free to explore each stop at your own pace.\n\nYou can choose to cruise in the morning or afternoon—whatever works best for your plans!"
     },
     itinerary: [
-      { time: "10:30 AM", title: "Meeting Point", description: "Meet at Saphan Thaksin BTS station Exit Gate Number 02" },
-      { time: "11:00 AM", title: "River Cruise Begins", description: "Cruise down Chao Phraya River, waterside view of Royal Barge Museum" },
-      { time: "11:30 AM", title: "Photo Opportunities", description: "Take your time to explore Bangkok and snap great photos" },
-      { time: "12:30 PM", title: "Wat Arun Arrival", description: "Arrive at Wat Arun. Free to continue exploring or return to hotel" }
+      { time: "10:30 AM / 03:30 PM", title: "Meeting Point", description: "Meet at Saphan Thaksin BTS station Exit Gate Number - 02. Climb aboard the boat and get ready for a scenic cruise along the river." },
+      { time: "11:00 AM / 04:00 PM", title: "River Cruise", description: "Cruise down the Chao Phraya River and soak in the sights of Bangkok's famous riverside landmarks. You'll also catch a waterside view of the Royal Barge Museum (no stop here)." },
+      { time: "11:30 AM / 04:30 PM", title: "Exploration Time", description: "Take your time to explore Bangkok and snap some great photos." },
+      { time: "12:30 PM / 05:30 PM", title: "Wat Arun", description: "Arrive at Wat Arun, the iconic Temple of Dawn. From here, you're free to continue exploring on your own or head back to your hotel." }
     ],
-    tourTimings: ["10:30 AM – 12:30 PM", "03:30 PM – 05:30 PM"],
+    tourTimings: ["10:30 AM", "03:30 PM"],
     inclusions: [
       "Boat ride on the Chao Phraya River",
-      "Professional English-speaking staff assistance at boarding",
+      "Professional English-speaking staff assistance at the boarding",
       "Drinking water on board",
       "Flexible tour ending: Option to continue sightseeing"
     ],
     exclusions: [
-      "Hotel transfers",
       "Temple entrance fees",
+      "Personal expenses",
       "Food and drinks",
-      "Personal expenses"
+      "Hotel transfers"
     ],
     bookingPolicy: [
-      "Confirmation will be received within 24 hours of booking",
-      "Please provide hotel name and address for pickup",
-      "Bring swimwear, sunscreen, towel, and camera",
-      "Check-in closes 30 minutes before departure",
-      "Booking reference number required for check-in",
-      "Please arrive at pickup point 10 minutes before departure"
+      "Meet at Saphan Thaksin BTS Station Exit 2",
+      "Arrive 10 minutes before departure time"
     ],
     cancellationPolicy: [
-      "Free cancellation up to 48 hours before the activity",
-      "100% charge for cancellations within 48 hours",
-      "No refund for no-shows or late arrivals"
+      "Free cancellation up to 48 hours before the activity"
     ],
     childPolicy: [
-      "Free entrance for children below 100cm",
-      "Child ticket is only applicable for children 100-140cm (must be between 2-12 years old)",
-      "Children aged 0-2 can join the tour for free provided they do not occupy an additional seat",
-      "Children aged 3-8 would be charged 75% of the tour's rate",
-      "Children over 8 would be considered adult"
+      "No child rate available"
     ],
-    faqs: [
-      { question: "Where do we meet?", answer: "Meet at Saphan Thaksin BTS station Exit Gate Number 02." },
-      { question: "Is the tour covered?", answer: "Boats have covered seating areas for protection from sun and rain." }
-    ]
+    faqs: []
   },
   "bangkok-city-gems-gallery": {
     id: "bangkok-city-gems-gallery",
     title: "Bangkok City and Temple Tours with Gems Gallery",
-    shortDescription: "Explore Bangkok's famous temples and visit the world-renowned Gems Gallery on this comprehensive city tour.",
+    shortDescription: "Bangkok is home to stunning temples, but choosing which ones to visit first can be overwhelming. This convenient city tour takes you to two of Bangkok's most popular temples.",
     location: "Bangkok, Thailand",
     city: "bangkok",
     basePrice: 1800,
     childPrice: 1800,
-    duration: "Half Day",
+    duration: "4 Hours",
     rating: 4.5,
-    reviews: 678,
+    reviews: 432,
     heroImages: [
-      { src: bangkokSkywalk1, title: "Golden Buddha" },
-      { src: bangkokSkywalk2, title: "Marble Temple" },
-      { src: bangkokSkywalk3, title: "Gems Gallery" },
-      { src: emerald1, title: "Temple Architecture" }
+      { src: bangkokSkywalk1, title: "Golden Buddha Temple" },
+      { src: bangkokSkywalk2, title: "Mini Reclining Buddha" },
+      { src: bangkokSkywalk3, title: "Gems Gallery" }
     ],
     galleryImages: [
-      { src: bangkokSkywalk1, alt: "Golden Buddha at Wat Traimit" },
+      { src: bangkokSkywalk1, alt: "Wat Traimit Golden Buddha" },
       { src: bangkokSkywalk2, alt: "Mini Reclining Buddha" },
-      { src: bangkokSkywalk3, alt: "Gems Gallery showcase" },
-      { src: emerald1, alt: "Chinatown streets" }
+      { src: bangkokSkywalk3, alt: "Chinatown Bangkok" },
+      { src: emerald1, alt: "Gems Gallery" }
     ],
     highlights: [
-      "Visit Golden Buddha at Wat Traimit",
-      "Explore Mini Reclining Buddha temple",
-      "Drive through Chinatown & India Town",
-      "Gems Gallery shopping experience",
-      "Group tour with shared transfers",
-      "Perfect for first-time visitors"
+      "Golden Buddha at Wat Traimit",
+      "Mini Reclining Buddha at Wat Noi",
+      "Chinatown & India Town Drive",
+      "Gems Gallery Shopping"
     ],
     description: {
       overview: "Bangkok is home to stunning temples, but choosing which ones to visit first can be overwhelming. This convenient city tour takes you to two of Bangkok's most popular temples, accompanied by a professional English-speaking guide and shared transfers (4-hour duration).",
-      whatToExpect: "Designed as a group tour, it's perfect for those who enjoy exploring with others and is especially popular among Indian travelers. The Bangkok City Tour also includes a visit to the Gems Gallery, where you can admire and purchase some of the finest gems available. This tour is an excellent choice for first-time visitors, offering a great introduction to Thailand's culture and religion."
+      whatToExpect: "Bangkok is home to stunning temples, but choosing which ones to visit first can be overwhelming. This convenient city tour takes you to two of Bangkok's most popular temples, accompanied by a professional English-speaking guide and shared transfers (4-hour duration). Designed as a group tour, it's perfect for those who enjoy exploring with others and is especially popular among Indian travelers.\n\nThe Bangkok City Tour also includes a visit to the Gems Gallery, where you can admire and purchase some of the finest gems available. This tour is an excellent choice for first-time visitors, offering a great introduction to Thailand's culture and religion. With hotel transfers and all entrance tickets included, it's ideal for travelers short on time but eager to see the city's highlights.\n\nDon't wait—join us today and experience one of the best tours in Thailand!"
     },
     itinerary: [
-      { time: "08:00 AM", title: "Hotel Pick-up", description: "Pick-up from various hotels (typically 4 to 5 hotels)" },
-      { time: "09:00 AM", title: "Wat Traimit", description: "Visit Golden Buddha - 5.5-ton solid gold statue in Sukhothai style" },
-      { time: "09:30 AM", title: "City Drive", description: "Drive through Chinatown (Yaowarat Road), India Town, and vibrant areas" },
-      { time: "10:00 AM", title: "Mini Reclining Buddha", description: "Visit Wat Maha Phruettharam Worawihan temple" },
-      { time: "11:00 AM", title: "Gems Gallery", description: "Browse high-quality gems with certificate and tax refund option" },
-      { time: "12:00 PM", title: "Tour End", description: "Return transfer to your hotel" }
+      { time: "08:00 AM", title: "Hotel Pickup", description: "Pick-up from various hotels (typically 4 to 5 hotels)." },
+      { time: "09:00 AM", title: "Golden Buddha", description: "Visit to Golden Buddha (Wat Traimit). The group will head to Wat Traimit, home to the Golden Buddha—a stunning 5.5-ton solid gold statue sculpted in the Sukhothai style. Drive through Chinatown (Yaowarat Road), India Town, and other vibrant areas." },
+      { time: "10:00 AM", title: "Mini Reclining Buddha", description: "Visit to Mini Reclining Buddha (Wat Noi or Mahapruttaram Temple). Explore Wat Maha Phruettharam Worawihan, featuring a small reclining Buddha and a stupa reminiscent of Wat Arun." },
+      { time: "11:00 AM", title: "Gems Gallery", description: "Gems Gallery for Shopping. At the Gems Gallery, admire exquisite craftsmanship and browse high-quality gems. Purchases come with a certificate and a tax refund option at the airport." },
+      { time: "12:00 PM", title: "Return", description: "End of the tour with a return transfer to your hotel." }
     ],
-    tourTimings: ["08:00 AM – 12:00 PM", "01:00 PM – 05:00 PM"],
+    tourTimings: ["08:00 AM", "01:00 PM"],
     inclusions: [
       "Roundtrip transfer",
-      "Entry tickets to temples",
+      "Entry ticket",
       "English speaking guide",
-      "Air-conditioned vehicle",
+      "Air condition vehicle",
       "Experience operates every day"
     ],
     exclusions: [
-      "Food and drinks",
       "Personal expenses",
-      "Gems purchases",
-      "Tips"
+      "Food and drinks",
+      "Tips and gratuities"
     ],
     bookingPolicy: [
       "Confirmation will be received within 24 hours of booking",
-      "Please provide hotel name and address for pickup",
-      "Bring swimwear, sunscreen, towel, and camera",
-      "Check-in closes 30 minutes before departure",
-      "Booking reference number required for check-in",
-      "Please arrive at pickup point 10 minutes before departure"
+      "Please provide hotel name and address for pickup"
     ],
     cancellationPolicy: [
-      "Free cancellation up to 48 hours before the activity",
-      "100% charge for cancellations within 48 hours",
-      "No refund for no-shows or late arrivals"
+      "Free cancellation up to 48 hours before the activity"
     ],
     childPolicy: [
-      "Free entrance for children below 100cm",
-      "Child ticket is only applicable for children 100-140cm (must be between 2-12 years old)",
-      "Children aged 0-2 can join the tour for free provided they do not occupy an additional seat",
-      "Children aged 3-8 would be charged 75% of the tour's rate",
-      "Children over 8 would be considered adult"
+      "Same rate for adults and children"
     ],
-    faqs: [
-      { question: "What is Gems Gallery?", answer: "Thailand's largest jewelry store showcasing exquisite gemstones with certificates and tax refund options." }
-    ]
+    faqs: []
   },
   "bangkok-wat-arun-chinatown": {
     id: "bangkok-wat-arun-chinatown",
     title: "Double World Heritage Bangkok City Tour: Sunset at Wat Arun and Chinatown Street Food Experience",
-    shortDescription: "Experience sunset at Wat Arun followed by a street food adventure in Bangkok's vibrant Chinatown.",
+    shortDescription: "Discover the best of Bangkok on a carefully crafted city tour designed to show you the city's top highlights and hidden gems.",
     location: "Bangkok, Thailand",
     city: "bangkok",
     basePrice: 5900,
     childPrice: 1500,
     duration: "Full Day",
     rating: 4.9,
-    reviews: 1456,
+    reviews: 687,
     heroImages: [
       { src: bangkokSkywalk1, title: "Wat Arun Sunset" },
-      { src: bangkokSkywalk2, title: "Chinatown Food" },
-      { src: bangkokSkywalk3, title: "Grand Palace" },
-      { src: emerald1, title: "Wat Pho" }
+      { src: bangkokSkywalk2, title: "Chinatown Street Food" },
+      { src: bangkokSkywalk3, title: "Grand Palace" }
     ],
     galleryImages: [
       { src: bangkokSkywalk1, alt: "Wat Arun at sunset" },
-      { src: bangkokSkywalk2, alt: "Chinatown food stalls" },
-      { src: bangkokSkywalk3, alt: "Grand Palace architecture" },
-      { src: emerald1, alt: "Street food experience" }
+      { src: bangkokSkywalk2, alt: "Chinatown Bangkok" },
+      { src: bangkokSkywalk3, alt: "Reclining Buddha" },
+      { src: emerald1, alt: "Bangkok temples" }
     ],
     highlights: [
-      "Sunset views at Wat Arun",
-      "Chinatown street food tasting",
-      "Grand Palace & Emerald Buddha",
-      "Reclining Buddha at Wat Pho",
-      "Tuk-tuk ride through Bangkok",
-      "Royal Theatre visit",
-      "Eco-friendly boat rides"
+      "Wat Pho (Temple of the Reclining Buddha)",
+      "Wat Arun (Temple of Dawn)",
+      "Grand Palace",
+      "Chinatown Street Food Experience",
+      "Royal Theatre Visit"
     ],
     description: {
-      overview: "Discover the best of Bangkok on a carefully crafted city tour designed to show you the city's top highlights and hidden gems. Explore iconic landmarks like Wat Pho, Wat Arun, the Grand Palace, and the Royal Theatre—each rich in history and cultural significance.",
-      whatToExpect: "This tour also gives you a taste of local life. Wander through bustling markets, soak up the vibrant energy, and enjoy the sights, sounds, and flavors of Bangkok like a true local. We're committed to eco-friendly travel. By using local transport and boat rides, we help reduce carbon emissions and support sustainable tourism. Perfect for first-time visitors, this tour offers a complete introduction to Bangkok's culture, history, and way of life—all in one unforgettable day."
+      overview: "Discover the best of Bangkok on a carefully crafted city tour designed to show you the city's top highlights and hidden gems.",
+      whatToExpect: "Discover the best of Bangkok on a carefully crafted city tour designed to show you the city's top highlights and hidden gems. Explore iconic landmarks like Wat Pho, Wat Arun, the Grand Palace, and the Royal Theatre—each rich in history and cultural significance.\n\nThis tour also gives you a taste of local life. Wander through bustling markets, soak up the vibrant energy, and enjoy the sights, sounds, and flavors of Bangkok like a true local.\n\nWe're committed to eco-friendly travel. By using local transport and boat rides, we help reduce carbon emissions and support sustainable tourism.\n\nPerfect for first-time visitors, this tour offers a complete introduction to Bangkok's culture, history, and way of life—all in one unforgettable day."
     },
     itinerary: [
-      { time: "02:00 PM", title: "Hotel Pick-up", description: "Pick-up from City Center hotel or meet at Novotel Silom/Ploenchit" },
-      { time: "02:30 PM", title: "Saphan Taksin Station", description: "Meet guide at BTS station with Sun Leisure World placard" },
-      { time: "03:00 PM", title: "River Cruise", description: "Sail on boat along Chaophraya River" },
-      { time: "03:30 PM", title: "Wat Arun", description: "Visit Temple of Dawn with intricate architecture" },
-      { time: "04:30 PM", title: "Wat Pho", description: "See Reclining Buddha - 46 meters long, 15 meters high" },
-      { time: "05:30 PM", title: "Tuk Tuk Ride", description: "Thrilling ride through bustling Bangkok streets" },
-      { time: "06:00 PM", title: "Grand Palace", description: "Visit architectural masterpiece of Thai history" },
-      { time: "07:00 PM", title: "Chinatown", description: "Taste unique local Thai-Chinese cuisine" },
-      { time: "07:30 PM", title: "Royal Theatre", description: "Optional visit to Royal Theatre" },
-      { time: "08:00 PM", title: "Return", description: "Safe return to pick-up location" }
+      { time: "Morning", title: "Hotel Pickup", description: "Your adventure begins with a convenient pick-up from your hotel located at the City Center. Alternatively, join us at the Novotel Silom or Novotel Ploenchit Hotel Bangkok." },
+      { time: "", title: "BTS Station", description: "We'll whisk you away to Saphan Taksin BTS Station, where our knowledgeable guide awaits, holding the distinctive Sun Leisure World Pla Card." },
+      { time: "", title: "River Cruise", description: "Immerse yourself in the enchanting beauty of Bangkok as we set sail on a boat, gliding along the picturesque Chaophraya River." },
+      { time: "", title: "Wat Arun", description: "Our next stop takes us to the awe-inspiring Temple of Dawn, known as Wat Arun. This gem nestled on the banks of the Chaophraya River offers a mesmerizing sight with its intricate architecture." },
+      { time: "", title: "Wat Pho", description: "Prepare to be awestruck as we venture to Wat Pho, home to the revered Reclining Buddha. Witness the sheer magnificence of this golden marvel, standing tall at 46 meters long and 15 meters high." },
+      { time: "", title: "Tuk Tuk Ride", description: "To truly embrace the local spirit, we'll embark on a thrilling Tuk Tuk ride, winding through the bustling streets of Bangkok." },
+      { time: "", title: "Grand Palace", description: "The illustrious Royal Grand Palace is an architectural masterpiece that epitomizes the grandeur of Thai history." },
+      { time: "", title: "Chinatown", description: "No visit to Bangkok would be complete without tasting the local flavors. Indulge your taste buds with a visit to China Town." },
+      { time: "", title: "Royal Theatre", description: "To make this tour even more wholesome, we invite you to visit the Royal Theatre." },
+      { time: "Evening", title: "Return", description: "As our adventure draws to a close, we'll ensure your safe return to your pick-up location." }
     ],
-    tourTimings: ["02:00 PM – 08:00 PM"],
+    tourTimings: ["Morning"],
     inclusions: [
       "Roundtrip transfer",
-      "Boat ticket on Chao Phraya River",
-      "English speaking guide",
-      "Tuk-tuk ride",
-      "Temple entrance fees"
+      "Boat ticket",
+      "English speaking guide"
     ],
     exclusions: [
-      "Food and drinks (tasting portions available)",
+      "Temple entrance fees",
       "Personal expenses",
-      "Royal Theatre entrance (optional)",
+      "Food and drinks",
       "Tips"
     ],
     bookingPolicy: [
       "Confirmation will be received within 24 hours of booking",
-      "Please provide hotel name and address for pickup",
-      "Bring swimwear, sunscreen, towel, and camera",
-      "Check-in closes 30 minutes before departure",
-      "Booking reference number required for check-in",
-      "Please arrive at pickup point 10 minutes before departure"
+      "Please provide hotel name for pickup"
     ],
     cancellationPolicy: [
-      "Free cancellation up to 48 hours before the activity",
-      "100% charge for cancellations within 48 hours",
-      "No refund for no-shows or late arrivals"
+      "Free cancellation up to 48 hours before the activity"
     ],
     childPolicy: [
-      "Free entrance for children below 100cm",
-      "Child ticket is only applicable for children 100-140cm (must be between 2-12 years old)",
-      "Children aged 0-2 can join the tour for free provided they do not occupy an additional seat",
-      "Children aged 3-8 would be charged 75% of the tour's rate",
-      "Children over 8 would be considered adult"
+      "Child rate 3-11 years"
     ],
-    faqs: [
-      { question: "How much food is included?", answer: "Multiple tasting portions at different stalls in Chinatown are included." },
-      { question: "Is this tour eco-friendly?", answer: "Yes, we use local transport and boat rides to reduce carbon emissions." }
-    ]
+    faqs: []
   },
   "bangkok-golden-marble-buddha": {
     id: "bangkok-golden-marble-buddha",
     title: "Bangkok City and Temple Tour with Golden Buddha, Marble Temple, Mini Reclining Buddha, and Gems Gallery",
-    shortDescription: "Visit Bangkok's beautiful temples including Golden Buddha, Marble Temple, and Mini Reclining Buddha, plus Gems Gallery.",
+    shortDescription: "Bangkok is home to many stunning landmarks and temples, making it easy to feel overwhelmed by the options. Our half-day Bangkok city tour simplifies your choices by taking you to the must-see spots.",
     location: "Bangkok, Thailand",
     city: "bangkok",
-    basePrice: 2000,
-    childPrice: 1000,
+    basePrice: 4500,
+    childPrice: 3800,
     duration: "Half Day",
-    rating: 4.7,
-    reviews: 892,
-    heroImages: [],
-    galleryImages: [],
-    highlights: ["Golden Buddha at Wat Traimit", "Marble Temple visit", "Mini Reclining Buddha", "Gems Gallery tour", "Comprehensive city tour"],
-    description: { overview: "Explore Bangkok's most significant temples on this half-day tour.", whatToExpect: "Visit stunning temples showcasing Thai Buddhist architecture and artistry." },
-    itinerary: [{ time: "09:00 AM", title: "Pickup", description: "Hotel pickup" }, { time: "09:30 AM", title: "Wat Traimit", description: "Golden Buddha" }, { time: "10:30 AM", title: "Marble Temple", description: "Wat Benchamabophit" }, { time: "11:30 AM", title: "Mini Reclining Buddha", description: "Temple visit" }, { time: "12:30 PM", title: "Gems Gallery", description: "Shopping tour" }, { time: "01:30 PM", title: "Return", description: "Hotel drop-off" }],
-    tourTimings: ["09:00 AM – 01:30 PM"],
-    inclusions: ["Transfers", "Guide", "Entrance fees", "Water"],
-    exclusions: ["Meals", "Shopping"],
-    bookingPolicy: ["Dress modestly"],
-    cancellationPolicy: ["Free cancellation 24 hours before"],
-    childPolicy: ["Child rate 3-11 years"],
-    faqs: [{ question: "What is the Marble Temple?", answer: "Wat Benchamabophit, known for its Italian marble construction." }]
-  },
-  "ayutthaya-temple-tour": {
-    id: "ayutthaya-temple-tour",
-    title: "Ayutthaya Temple Join Tour from Bangkok by Road with Transfer",
-    shortDescription: "Full-day tour to the ancient capital of Ayutthaya, exploring UNESCO World Heritage temples and historical sites.",
-    location: "Ayutthaya, Thailand",
-    city: "bangkok",
-    basePrice: 5000,
-    childPrice: 2500,
-    duration: "Full Day",
-    rating: 4.8,
-    reviews: 2145,
-    heroImages: [],
-    galleryImages: [],
-    highlights: ["UNESCO World Heritage Site", "Wat Mahathat", "Wat Phra Si Sanphet", "Bang Pa-In Palace", "Join-in group tour", "Lunch included"],
-    description: { overview: "Journey to Ayutthaya, the former capital of Siam, and explore magnificent temple ruins.", whatToExpect: "Discover ancient temples, learn Thai history, and visit the royal summer palace." },
-    itinerary: [{ time: "07:00 AM", title: "Pickup", description: "Hotel pickup in Bangkok" }, { time: "09:00 AM", title: "Ayutthaya", description: "Arrive at ancient city" }, { time: "09:30 AM", title: "Temple Tour", description: "Visit major temples" }, { time: "12:00 PM", title: "Lunch", description: "Thai buffet lunch" }, { time: "02:00 PM", title: "Bang Pa-In", description: "Summer Palace visit" }, { time: "04:00 PM", title: "Return", description: "Drive back to Bangkok" }, { time: "06:00 PM", title: "Hotel Drop-off", description: "Return to hotel" }],
-    tourTimings: ["07:00 AM – 06:00 PM"],
-    inclusions: ["Round-trip transfer", "Guide", "Lunch", "Entrance fees", "Water"],
-    exclusions: ["Personal expenses", "Additional snacks"],
-    bookingPolicy: ["Join-in tour", "Minimum 2 people"],
-    cancellationPolicy: ["Free cancellation 24 hours before"],
-    childPolicy: ["Child rate 3-11 years", "Infants free"],
-    faqs: [{ question: "How long is the drive?", answer: "Approximately 1.5-2 hours each way." }]
+    rating: 4.6,
+    reviews: 523,
+    heroImages: [
+      { src: bangkokSkywalk1, title: "Golden Buddha Temple" },
+      { src: bangkokSkywalk2, title: "Marble Temple" },
+      { src: bangkokSkywalk3, title: "Chinatown" }
+    ],
+    galleryImages: [
+      { src: bangkokSkywalk1, alt: "Golden Buddha" },
+      { src: bangkokSkywalk2, alt: "Marble Temple architecture" },
+      { src: bangkokSkywalk3, alt: "Chinatown Bangkok" },
+      { src: emerald1, alt: "Flower Market" }
+    ],
+    highlights: [
+      "Wat Traimit (Golden Buddha)",
+      "Wat Benchamabophit (Marble Temple)",
+      "Chinatown Photo Stop",
+      "Little India Visit",
+      "Flower Market",
+      "Gems Gallery"
+    ],
+    description: {
+      overview: "Bangkok is home to many stunning landmarks and temples, making it easy to feel overwhelmed by the options. Our half-day Bangkok city tour simplifies your choices by taking you to the must-see spots.",
+      whatToExpect: "Bangkok is home to many stunning landmarks and temples, making it easy to feel overwhelmed by the options. Our half-day Bangkok city tour simplifies your choices by taking you to the must-see spots. Visit iconic temples like Wat Traimit and Wat Benchamabophit, and explore famous areas like Chinatown, India Town, and the Flower Market. Perfect for first-time visitors, this tour offers a great introduction to Bangkok's culture and religion. Join us for an unforgettable experience!"
+    },
+    itinerary: [
+      { time: "", title: "Hotel Pickup", description: "Pick up from Bangkok." },
+      { time: "", title: "Wat Traimit", description: "Discover Wat Traimit: Marvel at the Golden Buddha, the largest pure gold statue in the world, housed in an elegant white-and-gold temple." },
+      { time: "", title: "Chinatown", description: "Chinatown Icon Photo Stop: Explore the vibrant Chinatown and capture some stunning shots at the iconic landmarks. Perfect for selfies and group photos!" },
+      { time: "", title: "Little India", description: "Visit Phahurat – Little India: Step into the bustling India Town, Phahurat. Take a break to admire the famous Sikh Temple and savor delicious samosas while clicking memorable photos." },
+      { time: "", title: "Flower Market", description: "Pak Khlong Talad – The Flower Market: Immerse yourself in the colorful beauty of the largest flower market in Asia. Snap some stunning selfies amidst the vibrant blooms!" },
+      { time: "", title: "Marble Temple", description: "Wat Benchamabophit (Marble Temple): End your temple visit at this architectural marvel built by King Rama V in 1900. Made with Italian marble, this iconic temple features on Thailand's 5-Baht coin." },
+      { time: "", title: "Gems Gallery", description: "Gems Gallery Visit: Conclude your tour with a visit to a world-class gems factory. Learn how exquisite gemstones are crafted into stunning jewelry." },
+      { time: "", title: "Return", description: "As the tour comes to an end we will send you back to the initial meeting point." }
+    ],
+    tourTimings: ["08:30 AM"],
+    inclusions: [
+      "Round-trip transfer from Phaya Thai BTS Station",
+      "Visit to Wat Traimit (Golden Temple)",
+      "Visit to Wat Benchamabophit (Marble Temple)",
+      "Gems Gallery",
+      "Photo stop at Chinatown Icon",
+      "Photo stop at India Town",
+      "Photo stop at the Flower Market"
+    ],
+    exclusions: [
+      "Personal expenses",
+      "Food and drinks",
+      "Tips"
+    ],
+    bookingPolicy: [
+      "Confirmation will be received within 24 hours of booking"
+    ],
+    cancellationPolicy: [
+      "Free cancellation up to 48 hours before the activity"
+    ],
+    childPolicy: [
+      "Child rate 3-11 years"
+    ],
+    faqs: []
   },
   "bangkok-grand-palace-emerald": {
     id: "bangkok-grand-palace-emerald",
     title: "The Best of Bangkok: Royal Grand Palace, Emerald Buddha and Reclining Buddha",
-    shortDescription: "Visit Bangkok's top three attractions: the Grand Palace, Emerald Buddha, and Reclining Buddha at Wat Pho.",
+    shortDescription: "Embark on a captivating journey through Bangkok's most famous temples and landmarks. This half-day tour will take you to the Royal Grand Palace, the Emerald Buddha Temple, and Wat Pho – the Temple of the Reclining Buddha.",
     location: "Bangkok, Thailand",
     city: "bangkok",
-    basePrice: 2300,
-    childPrice: 1150,
+    basePrice: 2400,
+    childPrice: 0,
     duration: "Half Day",
-    rating: 4.9,
-    reviews: 3156,
-    heroImages: [],
-    galleryImages: [],
-    highlights: ["Grand Palace", "Emerald Buddha", "Wat Pho Reclining Buddha", "Professional guide", "Skip-the-line access"],
-    description: { overview: "Experience Bangkok's most important cultural sites in one tour.", whatToExpect: "Explore royal architecture, sacred temples, and learn about Thai Buddhism." },
-    itinerary: [{ time: "08:00 AM", title: "Pickup", description: "Hotel pickup" }, { time: "09:00 AM", title: "Grand Palace", description: "Tour the palace complex" }, { time: "10:30 AM", title: "Emerald Buddha", description: "Visit Wat Phra Kaew" }, { time: "11:30 AM", title: "Wat Pho", description: "See the Reclining Buddha" }, { time: "12:30 PM", title: "Return", description: "Hotel drop-off" }],
-    tourTimings: ["08:00 AM – 12:30 PM", "01:00 PM – 05:30 PM"],
-    inclusions: ["Hotel transfers", "Guide", "All entrance fees", "Water"],
-    exclusions: ["Meals", "Tips"],
-    bookingPolicy: ["Dress code: covered shoulders and knees"],
-    cancellationPolicy: ["Free cancellation 24 hours before"],
-    childPolicy: ["Children under 3 free", "Child rate 3-11 years"],
-    faqs: [{ question: "Can I take photos inside?", answer: "Photography allowed in most areas except inside the Emerald Buddha temple." }]
+    rating: 4.8,
+    reviews: 956,
+    heroImages: [
+      { src: bangkokSkywalk1, title: "Royal Grand Palace" },
+      { src: bangkokSkywalk2, title: "Emerald Buddha" },
+      { src: bangkokSkywalk3, title: "Reclining Buddha" }
+    ],
+    galleryImages: [
+      { src: bangkokSkywalk1, alt: "Grand Palace Bangkok" },
+      { src: bangkokSkywalk2, alt: "Emerald Buddha Temple" },
+      { src: bangkokSkywalk3, alt: "Wat Pho Reclining Buddha" },
+      { src: emerald1, alt: "Temple architecture" }
+    ],
+    highlights: [
+      "Royal Grand Palace",
+      "Emerald Buddha Temple (Wat Phra Kaew)",
+      "Reclining Buddha at Wat Pho",
+      "Boat and Tuk Tuk Experience"
+    ],
+    description: {
+      overview: "Embark on a captivating journey through Bangkok's most famous temples and landmarks. This half-day tour will take you to the Royal Grand Palace, the Emerald Buddha Temple, and Wat Pho – the Temple of the Reclining Buddha.",
+      whatToExpect: "Embark on a captivating journey through Bangkok's most famous temples and landmarks. This half-day tour will take you to the Royal Grand Palace, the Emerald Buddha Temple, and Wat Pho – the Temple of the Reclining Buddha. Admire the intricate architecture, spiritual ambiance, and historical significance of these iconic locations.\n\nStarting at Saphan Taksin Station, you'll travel comfortably with an expert guide who will bring these landmarks to life with fascinating stories and cultural insights. This is an ideal experience for history enthusiasts and cultural explorers. Please note that admission tickets to the attractions are not included and must be purchased on-site.\n\nNote: The Royal Grand Palace and Emerald Buddha Temple will be closed from October 26 to November 9, 2025. They will reopen on November 10, 2025."
+    },
+    itinerary: [
+      { time: "08:30 AM / 12:30 PM", title: "Meeting Point", description: "Meet at Saphan Taksin Station: Meet your guide at Exit Gate Number 02 for a warm welcome and briefing about the day's activities." },
+      { time: "", title: "Royal Grand Palace", description: "Visit the Grand Palace, a former royal residence and one of Bangkok's most iconic landmarks. Marvel at its ornate architecture, golden stupas, and intricate murals." },
+      { time: "", title: "Emerald Buddha Temple", description: "Explore the Temple of the Emerald Buddha (Wat Phra Kaew), located within the Grand Palace grounds. Learn about its spiritual significance and admire the stunning craftsmanship of the Emerald Buddha statue." },
+      { time: "", title: "Wat Pho", description: "Discover Wat Pho, home to the impressive Reclining Buddha, stretching 46 meters in length. Wander through the serene temple grounds and immerse yourself in its tranquil atmosphere." },
+      { time: "", title: "Return", description: "Conclude your tour with a return to Saphan Taksin Station, enriched by the historical and cultural insights of your journey." }
+    ],
+    tourTimings: ["08:30 AM", "12:30 PM"],
+    inclusions: [
+      "English Speaking Guide",
+      "Boat Experience",
+      "Tuk Tuk Ride",
+      "Pick up from meeting point"
+    ],
+    exclusions: [
+      "Temple entrance fees (must be purchased on-site)",
+      "Personal expenses",
+      "Food and drinks",
+      "Tips",
+      "Hotel transfers"
+    ],
+    bookingPolicy: [
+      "Meet at Saphan Taksin Station Exit Gate Number 02",
+      "Admission tickets not included - purchase on-site",
+      "Price: ₹2400 (min 2 adults), ₹3900 (1 Adult)"
+    ],
+    cancellationPolicy: [
+      "Free cancellation up to 48 hours before the activity"
+    ],
+    childPolicy: [
+      "No child rate available"
+    ],
+    faqs: []
   },
   "baiyoke-buffet": {
     id: "baiyoke-buffet",
     title: "All Day Buffet at Baiyoke Floating Market on 75th floor",
-    shortDescription: "Enjoy an all-day international buffet with panoramic Bangkok views from the 75th floor of Baiyoke Tower.",
+    shortDescription: "Savor the flavors of India and beyond at the Baiyoke Sky Hotel's 'All Day Buffet' on the 75th floor.",
     location: "Bangkok, Thailand",
     city: "bangkok",
-    basePrice: 2200,
-    childPrice: 1100,
-    duration: "Flexible",
+    basePrice: 1700,
+    childPrice: 1600,
+    duration: "All Day",
     rating: 4.5,
     reviews: 1678,
-    heroImages: [],
-    galleryImages: [],
-    highlights: ["360-degree city views", "International buffet", "Thai and Asian cuisine", "Rotating observation deck", "75th floor dining"],
-    description: { overview: "Dine at one of Bangkok's highest restaurants with spectacular views.", whatToExpect: "Enjoy unlimited buffet with diverse cuisines while taking in panoramic city views." },
-    itinerary: [{ time: "10:00 AM", title: "Admission", description: "Buffet opens" }, { time: "All Day", title: "Dining", description: "Enjoy buffet and views" }, { time: "10:00 PM", title: "Closing", description: "Last admission" }],
-    tourTimings: ["10:00 AM – 10:00 PM"],
-    inclusions: ["Buffet meal", "Observation deck access", "Soft drinks"],
-    exclusions: ["Hotel transfers", "Alcoholic beverages", "Special menu items"],
-    bookingPolicy: ["Voucher must be presented", "Smart casual dress code"],
-    cancellationPolicy: ["Free cancellation 24 hours before"],
-    childPolicy: ["Child height under 90cm free", "Child rate 90-135cm"],
-    faqs: [{ question: "What type of food is available?", answer: "Thai, Asian, Western, seafood, desserts, and more." }]
+    heroImages: [
+      { src: bangkokSkywalk1, title: "Baiyoke Sky Hotel" },
+      { src: bangkokSkywalk2, title: "75th Floor View" },
+      { src: bangkokSkywalk3, title: "Buffet Dining" }
+    ],
+    galleryImages: [
+      { src: bangkokSkywalk1, alt: "Baiyoke Tower panorama" },
+      { src: bangkokSkywalk2, alt: "Buffet spread" },
+      { src: bangkokSkywalk3, alt: "City views" },
+      { src: emerald1, alt: "Restaurant interior" }
+    ],
+    highlights: [
+      "All Day Buffet: Indian, Vegetarian, Vegan, Jain",
+      "Free soft drink and tea",
+      "Free entry to Observation Deck on 77th floor",
+      "Free entry to Revolving View Point on 84th floor"
+    ],
+    description: {
+      overview: "Savor the flavors of India and beyond at the Baiyoke Sky Hotel's 'All Day Buffet' on the 75th floor.",
+      whatToExpect: "Savor the flavors of India and beyond at the Baiyoke Sky Hotel's 'All Day Buffet' on the 75th floor. Held at the Baiyoke Floating Market Restaurant, this buffet is a one-stop destination for authentic Indian cuisine, along with a wide selection of vegetarian, vegan, and Jain dishes.\n\nEvery dish is prepared with care and without pork or lard, making it the perfect choice for guests with specific dietary preferences. From rich curries to fresh plant-based delicacies, you'll enjoy a world of flavor high above the city of Bangkok."
+    },
+    itinerary: [],
+    tourTimings: ["All Day"],
+    inclusions: [
+      "All Day Buffet: Indian, Vegetarian, Vegan, Jain",
+      "Baiyoke Floating Market Restaurant on the 75th floor - Admission",
+      "Free soft drink and tea",
+      "Free entry to the Observation Deck on the 77th floor",
+      "Free entry to the Revolving View Point on the 84th floor",
+      "Service charge and government tax"
+    ],
+    exclusions: [
+      "Hotel transfers",
+      "Personal expenses"
+    ],
+    bookingPolicy: [],
+    cancellationPolicy: [
+      "Free cancellation up to 24 hours before"
+    ],
+    childPolicy: [
+      "Child rate available"
+    ],
+    faqs: []
   },
   "sea-life-madame-tussauds": {
     id: "sea-life-madame-tussauds",
@@ -700,100 +744,69 @@ export const toursData: Record<string, TourData> = {
   },
   "bangkok-three-temples": {
     id: "bangkok-three-temples",
-    title: "Bangkok's Iconic Three Temple Tour with Grand Palace and Canal Tour",
-    shortDescription: "Experience Bangkok's most iconic landmarks including the Grand Palace, Emerald Buddha, Reclining Buddha at Wat Pho, and the stunning Wat Arun temple on this comprehensive half-day tour.",
+    title: "Bangkok's Famous Three Temple Wat Arun, Wat Pho, and Wat Traimit Private City and Cultural Tour",
+    shortDescription: "Take part in the Bangkok City Tour, a must-do experience in Thailand! Explore three beautiful temples—Wat Traimit, Wat Pho, and Wat Arun—while learning about Buddhism and Thai culture.",
     location: "Bangkok, Thailand",
     city: "bangkok",
-    basePrice: 10020,
-    childPrice: 3600,
-    duration: "Full Day",
-    rating: 4.9,
-    reviews: 2847,
+    basePrice: 4700,
+    childPrice: 4300,
+    duration: "Half Day",
+    rating: 4.8,
+    reviews: 1523,
     heroImages: [
-      { src: bangkokSkywalk1, title: "Bangkok's Iconic Three Temple Tour with Grand Palace and Canal Tour" },
-      { src: emerald1, title: "Grand Palace & Emerald Buddha" },
-      { src: bangkokSkywalk2, title: "Wat Arun Temple of Dawn" }
+      { src: bangkokSkywalk1, title: "Wat Traimit Golden Buddha" },
+      { src: bangkokSkywalk2, title: "Wat Pho Reclining Buddha" },
+      { src: bangkokSkywalk3, title: "Wat Arun Temple" }
     ],
     galleryImages: [
-      { src: bangkokSkywalk3, alt: "Grand Palace golden spires and ornate architecture" },
-      { src: emerald1, alt: "Emerald Buddha in Wat Phra Kaew" },
+      { src: bangkokSkywalk1, alt: "Golden Buddha at Wat Traimit" },
       { src: bangkokSkywalk2, alt: "Reclining Buddha at Wat Pho" },
-      { src: bangkokSkywalk1, alt: "Wat Arun porcelain spires along Chao Phraya River" }
+      { src: bangkokSkywalk3, alt: "Wat Arun porcelain spires" },
+      { src: emerald1, alt: "Bangkok temples" }
     ],
     highlights: [
-      "Grand Palace & Wat Phra Kaew (Temple of the Emerald Buddha)",
+      "Wat Traimit (Golden Buddha Temple)",
       "Wat Pho (Temple of the Reclining Buddha)",
       "Wat Arun (Temple of Dawn)",
-      "Scenic Canal Tours (Optional)"
+      "Chinatown, Little India, and Flower Market"
     ],
     description: {
-      overview: "Dive into Bangkok's Rich Heritage with Our Unforgettable Temple Tour Experience the best of Bangkok with our Half-Day, Full-Day, and Canal Tours, showcasing the city's most iconic landmarks.",
-      whatToExpect: "Discover Thailand's royal heritage at the Grand Palace and marvel at the sacred Emerald Buddha. Visit Wat Pho to admire the impressive 46-meter Reclining Buddha and its serene temple grounds, known as the birthplace of traditional Thai massage. Take in the beauty of Wat Arun, with its porcelain-adorned spires standing majestically along the Chao Phraya River—especially breathtaking at sunset.\n\nStroll through the bustling Pak Khlong Talat Flower Market, where vibrant blooms and fragrant aromas captivate your senses. For a truly unique experience, elevate your tour with optional traditional Thai attire and a professional photo shoot, which includes 20 stunning photos.\n\nLooking for more adventure? Add a Canal Tour to uncover Bangkok's hidden treasures along its enchanting waterways. Glide past stilted houses, bustling local markets, and hidden temples, offering a rare glimpse into Bangkok's traditional way of life.\n\nDon't miss out on any of Bangkok's must-see locations. Book your tour now with Sun Leisure World and embark on an unforgettable adventure in the heart of Thailand!"
+      overview: "Take part in the Bangkok City Tour, a must-do experience in Thailand! Explore three beautiful temples—Wat Traimit, Wat Pho, and Wat Arun—while learning about Buddhism and Thai culture.",
+      whatToExpect: "Take part in the Bangkok City Tour, a must-do experience in Thailand! Explore three beautiful temples—Wat Traimit, Wat Pho, and Wat Arun—while learning about Buddhism and Thai culture. Our expert guide will lead you through the vibrant local life of this amazing city. Ideal for first-time visitors, this tour covers key landmarks like Little India, Chinatown, and the Flower Market, so you won't miss any of the highlights. Book now and discover the best of Bangkok!"
     },
     itinerary: [
-      { time: "08:00", title: "Hotel Pick-up", description: "Pick-up from your centrally located hotel within a 2 KM radius of the Central Business District, including Silom, Pratunam, Sathorn, or Riverside areas." },
-      { time: "08:30", title: "Meeting Point Alternative", description: "Meet at Saphan Taksin Skytrain Station, Exit No. 2. Our guide will hold a Sun Leisure World placard (for those selecting the 'Experience from Meeting Point' option)." },
-      { time: "10:30", title: "Wat Arun Visit", description: "Visit Wat Arun, the Temple of the Sun (Duration: 45 Minutes). Optional: Dress in a traditional Thai uniform and photography package with 20 HD images delivered via Google Drive." },
-      { time: "11:30", title: "Royal Grand Palace & Emerald Buddha", description: "Take a boat to Tha Tien Pier and visit the Royal Grand Palace and Emerald Buddha (15 Minutes)." },
-      { time: "12:00", title: "Reclining Buddha", description: "Walk to the Reclining Buddha and admire the famous statue (30 Minutes)." },
-      { time: "12:30", title: "Tuk Tuk Ride to Flower Market", description: "Take a local Tuk Tuk to the Flower Market." },
-      { time: "13:00", title: "Pak Khlong Talat & Lunch", description: "Visit Pak Khlong Talat and learn about flower folding. Take a lunch break." },
-      { time: "14:00", title: "Canal Tour (Optional)", description: "Return to the starting point or begin a 60-minute canal tour." },
-      { time: "15:00", title: "Return", description: "Return to the meeting point or your hotel." }
+      { time: "08:00 AM / 01:00 PM", title: "Hotel Pickup", description: "Hotel pickup from selected Bangkok areas." },
+      { time: "08:30 AM / 01:30 PM", title: "Wat Traimit", description: "Begin your journey at Wat Traimit with your guide." },
+      { time: "09:00 AM / 02:00 PM", title: "City Tour", description: "Enjoy a scenic drive through Chinatown, Little India, the Flower Market, and Bangkok's lively business district." },
+      { time: "09:30 AM / 02:30 PM", title: "Wat Pho", description: "Visit Wat Pho to admire the impressive reclining Buddha and capture some great photos." },
+      { time: "10:30 AM / 03:30 PM", title: "Wat Arun", description: "Cross the Chao Phraya River by boat to explore the iconic Wat Arun." },
+      { time: "11:30 AM / 04:30 PM", title: "Souvenir Shopping", description: "Wrap up your tour with a visit to a local shop for unique souvenirs before heading back." }
     ],
-    tourTimings: ["09:00 AM", "02:00 PM"],
+    tourTimings: ["08:00 AM", "01:00 PM"],
     inclusions: [
-      "Hotel Pick up and Drop Off",
-      "Viewpoint",
-      "Tickets",
-      "English-speaking guide",
-      "Boat transfers between temples"
+      "Round Trip Transfer",
+      "English Speaking Guide",
+      "Wat Arun - Admission Fees",
+      "Wat Pho - Admission Fees",
+      "Wat Traimit - Admission Fees"
     ],
     exclusions: [
-      "Lunch and personal meals",
       "Personal expenses",
-      "Tips and gratuities",
-      "Optional canal tour",
-      "Optional traditional Thai attire and photo shoot"
+      "Food and drinks",
+      "Tips and gratuities"
     ],
     bookingPolicy: [
       "Confirmation will be received within 24 hours of booking",
-      "Please provide hotel name and address for pickup",
-      "Bring swimwear, sunscreen, towel, and camera",
-      "Check-in closes 30 minutes before departure",
-      "Booking reference number required for check-in",
-      "Please arrive at pickup point 10 minutes before departure"
+      "Please provide hotel name and address for pickup"
     ],
     cancellationPolicy: [
       "Free cancellation up to 48 hours before the activity",
-      "100% charge for cancellations within 48 hours",
-      "No refund for no-shows or late arrivals"
+      "100% charge for cancellations within 48 hours"
     ],
     childPolicy: [
-      "Free entrance for children below 100cm",
-      "Child ticket is only applicable for children 100-140cm (must be between 2-12 years old)",
-      "Children aged 0-2 can join the tour for free provided they do not occupy an additional seat",
-      "Children aged 3-8 would be charged 75% of tour's rate",
-      "Children over 8 would be considered as adult"
+      "Child rate 3-11 years"
     ],
-    faqs: [
-      {
-        question: "What is included in this tour?",
-        answer: "The tour includes hotel transfers, all entrance tickets, English-speaking guide, and boat rides. Optional canal tour and Thai attire photo shoot available."
-      },
-      {
-        question: "How long is the tour?",
-        answer: "The standard tour is approximately 6-7 hours. With canal tour option, it extends by an additional hour."
-      },
-      {
-        question: "What should I wear?",
-        answer: "Please wear modest clothing covering shoulders and knees when visiting temples. Comfortable walking shoes recommended."
-      },
-      {
-        question: "Is the Royal Grand Palace always open?",
-        answer: "The Royal Grand Palace and Emerald Buddha Temple will be closed from October 26 to November 9, 2025. They will reopen on November 10, 2025."
-      }
-    ]
+    faqs: []
   },
   "bangkok-skywalk": {
     id: "bangkok-skywalk",
