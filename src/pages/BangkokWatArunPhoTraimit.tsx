@@ -15,20 +15,7 @@ const BangkokWatArunPhoTraimit = () => {
     );
   }
   
-  const tourData = {
-    ...baseTourData,
-    heroImages: [
-      { src: "/placeholder.svg", title: "Bangkok's Famous Three Temple Tour" },
-      { src: "/placeholder.svg", title: "Wat Arun Temple of Dawn" },
-      { src: "/placeholder.svg", title: "Golden Buddha at Wat Traimit" }
-    ],
-    galleryImages: [
-      { src: "/placeholder.svg", alt: "Wat Arun porcelain spires" },
-      { src: "/placeholder.svg", alt: "Reclining Buddha at Wat Pho" },
-      { src: "/placeholder.svg", alt: "Golden Buddha statue" },
-      { src: "/placeholder.svg", alt: "Temple architecture details" }
-    ]
-  };
+  const tourData = baseTourData;
 
   return <TourBooking tourData={tourData} />;
 };

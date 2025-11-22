@@ -59,55 +59,53 @@ export interface TourData {
 export const toursData: Record<string, TourData> = {
   "bangkok-wat-arun-pho-traimit": {
     id: "bangkok-wat-arun-pho-traimit",
-    title: "Bangkok's Famous Three Temple Wat Arun, Wat Pho, and Wat Traimit Private City and Cultural Tour",
-    shortDescription: "Private tour exploring three iconic temples: Wat Arun, Wat Pho, and Wat Traimit (Golden Buddha), with personalized guide and flexible itinerary.",
+    title: "Bangkok's Iconic Three Temple Tour with Grand Palace and Canal Tour",
+    shortDescription: "Dive into Bangkok's Rich Heritage with our Half-Day, Full-Day, and Canal Tours, showcasing the city's most iconic landmarks.",
     location: "Bangkok, Thailand",
     city: "bangkok",
-    basePrice: 4700,
-    childPrice: 4300,
+    basePrice: 10020,
+    childPrice: 3600,
     duration: "Half Day",
     rating: 4.8,
     reviews: 1523,
     heroImages: [
-      { src: bangkokSkywalk1, title: "Wat Arun Temple" },
-      { src: bangkokSkywalk2, title: "Reclining Buddha" },
-      { src: bangkokSkywalk3, title: "Golden Buddha" },
-      { src: emerald1, title: "Temple Architecture" }
+      { src: bangkokSkywalk1, title: "Grand Palace & Emerald Buddha" },
+      { src: bangkokSkywalk2, title: "Wat Pho Reclining Buddha" },
+      { src: bangkokSkywalk3, title: "Wat Arun Temple of Dawn" },
+      { src: emerald1, title: "Canal Tour Bangkok" }
     ],
     galleryImages: [
-      { src: bangkokSkywalk1, alt: "Wat Arun porcelain spires" },
+      { src: bangkokSkywalk1, alt: "Grand Palace Bangkok" },
       { src: bangkokSkywalk2, alt: "Reclining Buddha at Wat Pho" },
-      { src: bangkokSkywalk3, alt: "Golden Buddha at Wat Traimit" },
-      { src: emerald1, alt: "Bangkok temple details" }
+      { src: bangkokSkywalk3, alt: "Wat Arun porcelain spires" },
+      { src: emerald1, alt: "Bangkok canal waterways" }
     ],
     highlights: [
-      "Private guided temple tour",
-      "Visit Wat Traimit - Golden Buddha",
-      "See the Reclining Buddha at Wat Pho",
-      "Marvel at Wat Arun Temple of Dawn",
-      "Explore Chinatown & Little India",
-      "Flower Market photo stop"
+      "Grand Palace & Wat Phra Kaew (Temple of the Emerald Buddha)",
+      "Wat Pho (Temple of the Reclining Buddha)",
+      "Wat Arun (Temple of Dawn)",
+      "Scenic Canal Tours (Optional)"
     ],
     description: {
-      overview: "Take part in the Bangkok City Tour, a must-do experience in Thailand! Explore three beautiful temples—Wat Traimit, Wat Pho, and Wat Arun—while learning about Buddhism and Thai culture.",
-      whatToExpect: "Our expert guide will lead you through the vibrant local life of this amazing city. Ideal for first-time visitors, this tour covers key landmarks like Little India, Chinatown, and the Flower Market, so you won't miss any of the highlights."
+      overview: "Experience the best of Bangkok with our Half-Day, Full-Day, and Canal Tours, showcasing the city's most iconic landmarks.",
+      whatToExpect: "Dive into Bangkok's Rich Heritage with Our Unforgettable Temple Tour Experience the best of Bangkok with our Half-Day, Full-Day, and Canal Tours, showcasing the city's most iconic landmarks.\n\nDiscover Thailand's royal heritage at the Grand Palace and marvel at the sacred Emerald Buddha. Visit Wat Pho to admire the impressive 46-meter Reclining Buddha and its serene temple grounds, known as the birthplace of traditional Thai massage. Take in the beauty of Wat Arun, with its porcelain-adorned spires standing majestically along the Chao Phraya River—especially breathtaking at sunset.\n\nStroll through the bustling Pak Khlong Talat Flower Market, where vibrant blooms and fragrant aromas captivate your senses. For a truly unique experience, elevate your tour with optional traditional Thai attire and a professional photo shoot, which includes 20 stunning photos.\n\nLooking for more adventure? Add a Canal Tour to uncover Bangkok's hidden treasures along its enchanting waterways. Glide past stilted houses, bustling local markets, and hidden temples, offering a rare glimpse into Bangkok's traditional way of life.\n\nDon't miss out on any of Bangkok's must-see locations. Book your tour now with Sun Leisure World and embark on an unforgettable adventure in the heart of Thailand!"
     },
     itinerary: [
-      { time: "08:00 AM", title: "Hotel Pickup", description: "Hotel pickup from selected Bangkok areas" },
-      { time: "08:30 AM", title: "Wat Traimit", description: "Begin your journey at Wat Traimit with your guide, see the Golden Buddha" },
-      { time: "09:00 AM", title: "City Drive", description: "Scenic drive through Chinatown, Little India, Flower Market, and business district" },
-      { time: "09:30 AM", title: "Wat Pho", description: "Visit Wat Pho to admire the impressive reclining Buddha and capture photos" },
-      { time: "10:30 AM", title: "Wat Arun", description: "Cross the Chao Phraya River by boat to explore the iconic Wat Arun" },
-      { time: "11:30 AM", title: "Return", description: "Visit local shop for souvenirs before heading back to hotel" }
+      { time: "08:00 Hours", title: "Hotel Pick-up", description: "Pick-up from your centrally located hotel within a 2 KM radius of the Central Business District, including Silom, Pratunam, Sathorn, or Riverside areas." },
+      { time: "08:30 Hours", title: "Meeting Point", description: "Meet at Saphan Taksin Skytrain Station, Exit No. 2. Our guide will hold a Sun Leisure World placard (for those selecting the 'Experience from Meeting Point' option)." },
+      { time: "10:30 Hours", title: "Wat Arun Visit", description: "Visit Wat Arun, the Temple of the Sun (Duration: 45 Minutes). Optional: Dress in a traditional Thai uniform and Photography package with 20 HD images delivered via Google Drive." },
+      { time: "11:30 Hours", title: "Boat to Tha Tien Pier", description: "Take a boat to Tha Tien Pier and visit the Royal Grand Palace and Emerald Buddha (15 Minutes)." },
+      { time: "12:00–12:30 Hours", title: "Reclining Buddha", description: "Walk to the Reclining Buddha and admire the famous statue (30 Minutes)." },
+      { time: "12:30–12:45 Hours", title: "Tuk Tuk to Flower Market", description: "Take a local Tuk Tuk to the Flower Market." },
+      { time: "13:00 Hours", title: "Pak Khlong Talat", description: "Visit Pak Khlong Talat and learn about flower folding. Take a lunch break." },
+      { time: "14:00 Hours", title: "Optional Canal Tour", description: "Return to the starting point or begin a 60-minute canal tour." },
+      { time: "15:00 Hours", title: "Return", description: "Return to the meeting point or your hotel." }
     ],
-    tourTimings: ["08:00 AM – 12:00 PM", "01:00 PM – 05:00 PM"],
+    tourTimings: ["09:00 AM", "02:00 PM"],
     inclusions: [
-      "Round trip transfer",
-      "English speaking guide",
-      "Wat Arun admission fees",
-      "Wat Pho admission fees",
-      "Wat Traimit admission fees",
-      "Air-conditioned vehicle"
+      "Hotel Pick up and Drop Off",
+      "Viewpoint",
+      "Tickets"
     ],
     exclusions: [
       "Personal expenses",
@@ -131,12 +129,14 @@ export const toursData: Record<string, TourData> = {
       "Free entrance for children below 100cm",
       "Child ticket is only applicable for children 100-140cm (must be between 2-12 years old)",
       "Children aged 0-2 can join the tour for free provided they do not occupy an additional seat",
-      "Children aged 3-8 would be charged 75% of the tour's rate",
-      "Children over 8 would be considered adult"
+      "Children aged 3-8 would be charged 75% of tours rate",
+      "Children over 8 would be considered as adult"
     ],
     faqs: [
-      { question: "Is this a private tour?", answer: "Yes, this is a private tour for your group only with dedicated guide." },
-      { question: "What should I wear?", answer: "Please wear clothing that covers shoulders and knees for temple visits." }
+      { question: "What time does the tour start?", answer: "The tour is available at 09:00 AM or 02:00 PM. Please select your preferred timing when booking." },
+      { question: "Is the Grand Palace currently open?", answer: "Note: The Royal Grand Palace and Emerald Buddha Temple will be closed from October 26 to November 9, 2025. They will reopen on November 10, 2025." },
+      { question: "What should I wear?", answer: "Please wear clothing that covers shoulders and knees for temple visits. Optional traditional Thai attire is available for photo sessions." },
+      { question: "Is the canal tour included?", answer: "The canal tour is optional and can be added to your itinerary for an additional 60-minute experience exploring Bangkok's waterways." }
     ]
   },
   "bangkok-city-boat-tour": {
