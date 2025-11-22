@@ -41,7 +41,7 @@ const categories = [
 const Bangkok = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('popular');
-  const [priceRange, setPriceRange] = useState([1600, 5900]);
+  const [priceRange, setPriceRange] = useState([1600, 11000]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
 
@@ -130,7 +130,7 @@ const Bangkok = () => {
                   value={priceRange}
                   onValueChange={setPriceRange}
                   min={1600}
-                  max={5900}
+                  max={11000}
                   step={100}
                   className="mb-2"
                 />
