@@ -710,53 +710,51 @@ export const toursData: Record<string, TourData> = {
     rating: 4.9,
     reviews: 2847,
     heroImages: [
-      { src: bangkokSkywalk1, title: "Grand Palace" },
-      { src: bangkokSkywalk2, title: "Wat Arun" },
-      { src: bangkokSkywalk3, title: "Reclining Buddha" },
-      { src: emerald1, title: "Emerald Buddha" }
+      { src: bangkokSkywalk1, title: "Bangkok's Iconic Three Temple Tour with Grand Palace and Canal Tour" },
+      { src: emerald1, title: "Grand Palace & Emerald Buddha" },
+      { src: bangkokSkywalk2, title: "Wat Arun Temple of Dawn" }
     ],
     galleryImages: [
-      { src: bangkokSkywalk1, alt: "Grand Palace golden spires" },
-      { src: bangkokSkywalk2, alt: "Wat Arun Temple of Dawn" },
-      { src: bangkokSkywalk3, alt: "Reclining Buddha at Wat Pho" },
-      { src: emerald1, alt: "Emerald Buddha Temple" }
+      { src: bangkokSkywalk3, alt: "Grand Palace golden spires and ornate architecture" },
+      { src: emerald1, alt: "Emerald Buddha in Wat Phra Kaew" },
+      { src: bangkokSkywalk2, alt: "Reclining Buddha at Wat Pho" },
+      { src: bangkokSkywalk1, alt: "Wat Arun porcelain spires along Chao Phraya River" }
     ],
     highlights: [
-      "Visit Grand Palace & Emerald Buddha",
-      "Explore Wat Pho - Reclining Buddha",
-      "Admire Wat Arun's porcelain spires",
-      "Pak Khlong Talat Flower Market",
-      "Optional traditional Thai attire & photo shoot",
-      "Canal tour through Bangkok's waterways"
+      "Grand Palace & Wat Phra Kaew (Temple of the Emerald Buddha)",
+      "Wat Pho (Temple of the Reclining Buddha)",
+      "Wat Arun (Temple of Dawn)",
+      "Scenic Canal Tours (Optional)"
     ],
     description: {
-      overview: "Dive into Bangkok's Rich Heritage with Our Unforgettable Temple Tour. Experience the best of Bangkok with our Half-Day, Full-Day, and Canal Tours, showcasing the city's most iconic landmarks.",
-      whatToExpect: "Discover Thailand's royal heritage at the Grand Palace and marvel at the sacred Emerald Buddha. Visit Wat Pho to admire the impressive 46-meter Reclining Buddha and its serene temple grounds, known as the birthplace of traditional Thai massage. Take in the beauty of Wat Arun, with its porcelain-adorned spires standing majestically along the Chao Phraya River—especially breathtaking at sunset. Stroll through the bustling Pak Khlong Talat Flower Market, where vibrant blooms and fragrant aromas captivate your senses. For a truly unique experience, elevate your tour with optional traditional Thai attire and a professional photo shoot, which includes 20 stunning photos. Looking for more adventure? Add a Canal Tour to uncover Bangkok's hidden treasures along its enchanting waterways."
+      overview: "Dive into Bangkok's Rich Heritage with Our Unforgettable Temple Tour Experience the best of Bangkok with our Half-Day, Full-Day, and Canal Tours, showcasing the city's most iconic landmarks.",
+      whatToExpect: "Discover Thailand's royal heritage at the Grand Palace and marvel at the sacred Emerald Buddha. Visit Wat Pho to admire the impressive 46-meter Reclining Buddha and its serene temple grounds, known as the birthplace of traditional Thai massage. Take in the beauty of Wat Arun, with its porcelain-adorned spires standing majestically along the Chao Phraya River—especially breathtaking at sunset.\n\nStroll through the bustling Pak Khlong Talat Flower Market, where vibrant blooms and fragrant aromas captivate your senses. For a truly unique experience, elevate your tour with optional traditional Thai attire and a professional photo shoot, which includes 20 stunning photos.\n\nLooking for more adventure? Add a Canal Tour to uncover Bangkok's hidden treasures along its enchanting waterways. Glide past stilted houses, bustling local markets, and hidden temples, offering a rare glimpse into Bangkok's traditional way of life.\n\nDon't miss out on any of Bangkok's must-see locations. Book your tour now with Sun Leisure World and embark on an unforgettable adventure in the heart of Thailand!"
     },
     itinerary: [
-      { time: "08:00", title: "Hotel Pick-up", description: "Pick-up from your centrally located hotel within 2 KM radius of Central Business District" },
-      { time: "08:30", title: "Meeting Point", description: "Meet at Saphan Taksin Skytrain Station, Exit No. 2 (for Meeting Point option)" },
-      { time: "10:30", title: "Wat Arun Visit", description: "Visit Wat Arun, the Temple of Dawn. Optional traditional Thai uniform dress & photography package" },
-      { time: "11:30", title: "Royal Grand Palace", description: "Take a boat to Tha Tien Pier and visit the Royal Grand Palace and Emerald Buddha" },
-      { time: "12:00", title: "Reclining Buddha", description: "Walk to the Reclining Buddha and admire the famous 46-meter statue" },
-      { time: "12:30", title: "Flower Market", description: "Take a local Tuk Tuk to Pak Khlong Talat Flower Market" },
-      { time: "13:00", title: "Lunch Break", description: "Visit flower market, learn about flower folding and take lunch break" },
-      { time: "14:00", title: "Canal Tour (Optional)", description: "Return to starting point or begin 60-minute canal tour" },
-      { time: "15:00", title: "Tour End", description: "Return to meeting point or hotel" }
+      { time: "08:00", title: "Hotel Pick-up", description: "Pick-up from your centrally located hotel within a 2 KM radius of the Central Business District, including Silom, Pratunam, Sathorn, or Riverside areas." },
+      { time: "08:30", title: "Meeting Point Alternative", description: "Meet at Saphan Taksin Skytrain Station, Exit No. 2. Our guide will hold a Sun Leisure World placard (for those selecting the 'Experience from Meeting Point' option)." },
+      { time: "10:30", title: "Wat Arun Visit", description: "Visit Wat Arun, the Temple of the Sun (Duration: 45 Minutes). Optional: Dress in a traditional Thai uniform and photography package with 20 HD images delivered via Google Drive." },
+      { time: "11:30", title: "Royal Grand Palace & Emerald Buddha", description: "Take a boat to Tha Tien Pier and visit the Royal Grand Palace and Emerald Buddha (15 Minutes)." },
+      { time: "12:00", title: "Reclining Buddha", description: "Walk to the Reclining Buddha and admire the famous statue (30 Minutes)." },
+      { time: "12:30", title: "Tuk Tuk Ride to Flower Market", description: "Take a local Tuk Tuk to the Flower Market." },
+      { time: "13:00", title: "Pak Khlong Talat & Lunch", description: "Visit Pak Khlong Talat and learn about flower folding. Take a lunch break." },
+      { time: "14:00", title: "Canal Tour (Optional)", description: "Return to the starting point or begin a 60-minute canal tour." },
+      { time: "15:00", title: "Return", description: "Return to the meeting point or your hotel." }
     ],
-    tourTimings: ["09:00 AM – 03:00 PM", "02:00 PM – 06:00 PM"],
+    tourTimings: ["09:00 AM", "02:00 PM"],
     inclusions: [
-      "Hotel pickup and drop-off",
-      "All viewpoint entry tickets",
-      "Professional English-speaking guide",
-      "Air-conditioned vehicle",
-      "Boat transfers"
+      "Hotel Pick up and Drop Off",
+      "Viewpoint",
+      "Tickets",
+      "English-speaking guide",
+      "Boat transfers between temples"
     ],
     exclusions: [
+      "Lunch and personal meals",
       "Personal expenses",
-      "Food and drinks",
-      "Optional Thai attire photo shoot",
-      "Tips and gratuities"
+      "Tips and gratuities",
+      "Optional canal tour",
+      "Optional traditional Thai attire and photo shoot"
     ],
     bookingPolicy: [
       "Confirmation will be received within 24 hours of booking",
@@ -775,8 +773,8 @@ export const toursData: Record<string, TourData> = {
       "Free entrance for children below 100cm",
       "Child ticket is only applicable for children 100-140cm (must be between 2-12 years old)",
       "Children aged 0-2 can join the tour for free provided they do not occupy an additional seat",
-      "Children aged 3-8 would be charged 75% of the tour's rate",
-      "Children over 8 would be considered adult"
+      "Children aged 3-8 would be charged 75% of tour's rate",
+      "Children over 8 would be considered as adult"
     ],
     faqs: [
       {
