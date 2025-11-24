@@ -935,6 +935,91 @@ export const toursData: Record<string, TourData> = {
       }
     ]
   },
+  "phi-phi-island": {
+    id: "phi-phi-island",
+    title: "Full Day Tour from Phuket to Phi Phi Island, Maya Bay and Khai Island by Speedboat with National Park Fee",
+    shortDescription: "Explore the world-famous Phi Phi Islands with Maya Bay and Khai Island. Enjoy snorkeling, swimming, and stunning scenery.",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    basePrice: 4000,
+    childPrice: 4000,
+    duration: "Full Day",
+    rating: 4.9,
+    reviews: 2453,
+    heroImages: [
+      { src: phiPhi1, title: "Maya Bay Paradise" },
+      { src: phiPhi2, title: "Phi Phi Islands" },
+      { src: phiPhi3, title: "Khai Island Beach" },
+      { src: phiPhi4, title: "Viking Cave" }
+    ],
+    galleryImages: [
+      { src: phiPhi5, alt: "Maya Bay white sand" },
+      { src: phiPhi6, alt: "Monkey Beach" },
+      { src: phiPhi7, alt: "Pileh Lagoon" },
+      { src: phiPhi8, alt: "Phi Phi Don lunch" }
+    ],
+    highlights: [
+      "Visit iconic Maya Bay featured in 'The Beach'",
+      "Snorkel at multiple pristine locations",
+      "See Viking Cave and Monkey Beach",
+      "Explore Khai Island's coral reefs",
+      "National Park fees included"
+    ],
+    description: {
+      overview: "The Phi Phi Islands, located in the Andaman Sea, are among the world's top spots for snorkeling and diving. Positioned between Phuket and Krabi, these islands belong to Krabi province and are 48 kilometers from Phuket and 45 kilometers from Krabi.",
+      whatToExpect: "Maya Bay, on Phi Phi Lay, features stunning white sandy beaches surrounded by high cliffs on three sides. This beautiful bay, with its clear water and vibrant reef, is ideal for swimming and snorkeling. Diving in Maya Bay reveals an amazing underwater world.\n\nKhai Island is a great escape from city life, offering sandy beaches and clear waters perfect for relaxing, swimming, and snorkeling. Visitors can enjoy the sun and see plenty of colorful fish in this tranquil setting."
+    },
+    itinerary: [
+      { time: "08:00 - 08:20 AM", title: "Hotel Pickup", description: "Pick up from your hotel to the Pier at Chalong Pier (time pick up will be advised when booking). Complimentary Coffee, tea, Cookies, and Briefing by the tour guide." },
+      { time: "09:00 AM", title: "Departure", description: "Departure from the pier. Visit the beautiful scenery of Maya Bay." },
+      { time: "10:00 AM", title: "Viking Cave & Pileh Lagoon", description: "Depart from Phi Phi Lay Island. Sightseeing at 'Viking Cave' and swimming at Pileh Lagoon." },
+      { time: "11:00 AM", title: "Monkey Beach", description: "Arrive at the 'Monkey Beach' and snorkel at the beautiful coral reef point." },
+      { time: "12:00 PM", title: "Phi Phi Don Island", description: "Arrive at the Phi Phi Don Island. Lunch at the beach and relax on the beach or enjoy shopping at the famous walking street." },
+      { time: "02:00 PM", title: "Khai Island", description: "Arrive at the pier to Khai Island where there's an abundance of coral reefs, the perfect spot for snorkeling." },
+      { time: "05:00 PM", title: "Return", description: "Arrive at the pier and transfer back to your hotel." }
+    ],
+    tourTimings: ["07:30 AM"],
+    inclusions: [
+      "Transfer from your resort",
+      "English speaking guide",
+      "Mask & Snorkel",
+      "Lunch",
+      "Soft drinks & Fruits",
+      "Insurance",
+      "National Park fee (THB 400/- per person)"
+    ],
+    exclusions: [
+      "Personal Expenses",
+      "Gratuities and Tips"
+    ],
+    bookingPolicy: [
+      "Confirmation will be received within 24 hours of booking",
+      "Please provide hotel name and address for pickup",
+      "Bring swimwear, sunscreen, towel, and camera",
+      "Check-in closes 30 minutes before departure",
+      "Booking reference number required for check-in",
+      "Please arrive at pickup point 10 minutes before departure"
+    ],
+    cancellationPolicy: [
+      "Free cancellation up to 48 hours before the activity",
+      "100% charge for cancellations within 48 hours",
+      "No refund for no-shows or late arrivals"
+    ],
+    childPolicy: [
+      "Child rates are only applicable for individuals with a height under 120 cm",
+      "Adult rates are only applicable for individuals with a height over 120 cm"
+    ],
+    faqs: [
+      {
+        question: "Is Maya Bay open?",
+        answer: "Yes, Maya Bay has reopened with limited daily visitors to protect the environment. Visit times may vary."
+      },
+      {
+        question: "What should I bring?",
+        answer: "Bring swimwear, sunscreen, hat, sunglasses, camera, and some cash for souvenirs."
+      }
+    ]
+  },
   // New Phuket Tours
   "dolphin-bay-phuket": {
     id: "dolphin-bay-phuket",
