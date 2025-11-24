@@ -889,8 +889,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Explore the iconic James Bond Island and Phang Nga Bay's stunning limestone karsts. Enjoy canoeing through sea caves and visit a floating Muslim village.",
     location: "Phang Nga Bay, Thailand",
     city: "phuket",
-    basePrice: 2500,
-    childPrice: 2000,
+    basePrice: 4000,
+    childPrice: 3900,
     duration: "Full Day",
     rating: 4.6,
     reviews: 2156,
@@ -905,56 +905,25 @@ export const toursData: Record<string, TourData> = {
       "Enjoy Thai lunch with sea views"
     ],
     description: {
-      overview: "Discover the breathtaking beauty of Phang Nga Bay on this full-day tour from Phuket or Khao Lak. Visit the world-famous James Bond Island, made iconic by the 007 movie 'The Man with the Golden Gun', and explore magnificent limestone karst formations rising from emerald-green waters.",
-      whatToExpect: "Your journey includes canoeing through mystical sea caves at Panak Island, visiting the stunning Hong Island lagoon, and exploring James Bond Island. You'll have lunch at the unique Koh Panyi floating village and witness the incredible natural beauty of Phang Nga Bay's iconic seascape."
+      overview: "Discover the breathtaking beauty of Phang Nga Bay on this full-day tour.",
+      whatToExpect: "During the tour, you'll stop at Panyee Island, a traditional Muslim fishing village built on stilts above the sea. Here, you'll enjoy a tasty local lunch while experiencing the warm culture and unique lifestyle of the community.\n\nThis trip is the perfect mix of movie history, local culture, and stunning scenery. Join us on the James Bond Island Tour for an experience that's fun, memorable, and full of amazing views."
     },
     itinerary: [
-      { time: "07:00 AM", title: "Hotel Pickup", description: "Transfer from hotel to pier" },
-      { time: "08:30 AM", title: "Depart by Longtail Boat", description: "Begin your Phang Nga Bay adventure" },
-      { time: "09:30 AM", title: "Panak Island Canoeing", description: "Paddle through sea caves and lagoons" },
-      { time: "11:00 AM", title: "Hong Island", description: "Explore the interior lagoon" },
-      { time: "12:00 PM", title: "James Bond Island", description: "Visit the iconic Khao Phing Kan" },
-      { time: "01:00 PM", title: "Lunch at Koh Panyi", description: "Thai lunch at floating village" },
-      { time: "02:30 PM", title: "Return Journey", description: "Cruise back to mainland" },
-      { time: "04:00 PM", title: "Hotel Drop-off", description: "Return to your hotel" }
+      { time: "08:00 AM - 08:45 AM", title: "Hotel Pickup", description: "Our pick-up service will collect you from your hotel. We will then proceed to Phang Nga in a comfortable air-conditioned minibus." },
+      { time: "", title: "Suwankhuha Temple", description: "Visit the enchanting Suwankhuha Temple, also known as the Monkey Cave." },
+      { time: "", title: "Longtail Boat", description: "Embark on a thrilling longtail boat ride to James Bond Island." },
+      { time: "", title: "James Bond Island", description: "Explore the iconic James Bond Island and its famous landmark, Khao Ping Gan." },
+      { time: "", title: "Phang Nga Bay", description: "Continue the adventure with a scenic longtail boat ride around the picturesque Phang Nga Bay, where you can marvel at the expansive mangrove forest." },
+      { time: "", title: "Koh Panyee", description: "Enjoy a delicious restaurant lunch at Koh Panyee, a captivating floating village." },
+      { time: "", title: "Waterfall", description: "Indulge in swimming and relaxation at a refreshing waterfall." },
+      { time: "05:00 PM", title: "Return", description: "We will safely transport you back to your hotel, concluding an unforgettable day of exploration and discovery." }
     ],
-    tourTimings: [
-      "07:00 AM – 04:00 PM",
-      "08:00 AM – 05:00 PM"
-    ],
-    inclusions: [
-      "Hotel pickup and drop-off",
-      "Longtail boat transportation",
-      "English-speaking guide",
-      "Canoeing with local rower",
-      "Thai buffet lunch",
-      "Drinking water and snacks",
-      "Life jackets",
-      "Insurance"
-    ],
-    exclusions: [
-      "National Park fee (300 THB per person)",
-      "Personal expenses",
-      "Tips for guide and rower",
-      "Optional activities"
-    ],
-    bookingPolicy: [
-      "Confirmation within 24 hours",
-      "Provide hotel details for pickup",
-      "Wear comfortable clothes and shoes",
-      "Bring sunscreen and hat"
-    ],
-    cancellationPolicy: [
-      "Free cancellation up to 48 hours before tour",
-      "50% refund for cancellations within 48 hours",
-      "No refund for no-shows"
-    ],
-    childPolicy: [
-      "Children age 4-11 years at discounted rate",
-      "Children under 4 are free",
-      "Must be accompanied by adult",
-      "Suitable for families"
-    ],
+    tourTimings: [],
+    inclusions: ["Hotel round-trip transfer", "Professional tour guide", "Lunch", "Accident Insurance", "Life Jacket", "Boat fee", "Entry/Admission - James Bond Island", "Entry/Admission - Waterfall", "Entry/Admission - Wat Suwan Kuha (Cave Temple)"],
+    exclusions: ["Exclude National Park Fee", "Any personal expenses", "Accommodation", "Gratuities"],
+    bookingPolicy: ["Confirmation will be received within 24 hours of booking", "Please provide hotel name and address for pickup", "Bring swimwear, sunscreen, towel, and camera", "Check-in closes 30 minutes before departure", "Booking reference number required for check-in", "Please arrive at pickup point 10 minutes before departure"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before the activity", "100% charge for cancellations within 48 hours", "No refund for no-shows or late arrivals"],
+    childPolicy: ["Free entrance for children below 100cm", "Child ticket is only applicable for children 100-140cm (must be between 2-12 years old)", "Children aged 0-2 can join the tour for free provided they do not occupy an additional seat", "Children aged 3-8 would be charged 75% of tours rate", "Children over 8 would be considered as adult"],
     faqs: [
       {
         question: "Do I need canoeing experience?",
@@ -1232,8 +1201,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Comprehensive Pattaya city tour visiting floating market, cultural sites, and landmarks with authentic Thai lunch included.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 1800,
-    childPrice: 900,
+    basePrice: 2000,
+    childPrice: 1800,
     duration: "6-7 Hours",
     rating: 4.5,
     reviews: 342,
@@ -1249,30 +1218,34 @@ export const toursData: Record<string, TourData> = {
       { src: phiPhi5, alt: "Thai cultural site" }
     ],
     highlights: [
-      "Visit authentic floating market",
-      "Explore Pattaya's cultural sites",
-      "Traditional Thai lunch included",
-      "Experience local lifestyle"
+      "Walking Street",
+      "Bali Hai Pier",
+      "Big Buddha",
+      "Viewpoint",
+      "Floating Market",
+      "Gems Gallery"
     ],
     description: {
-      overview: "Discover the best of Pattaya on this comprehensive city tour. Visit the famous four-regions floating market, explore the magnificent Sanctuary of Truth, enjoy panoramic views from Big Buddha Hill, and savor authentic Thai cuisine.",
-      whatToExpect: "Experience the charm of Thailand's floating market with vendors selling goods from boats, marvel at the intricate wooden architecture of Sanctuary of Truth, and enjoy stunning views of Pattaya Bay from the hilltop Big Buddha temple."
+      overview: "Discover the best of Pattaya on this comprehensive city tour.",
+      whatToExpect: "Capture unforgettable moments with your friends and family, and make memories that will last a lifetime. Don't miss out on this incredible opportunity to discover the heart and soul of Pattaya! This tour is perfect for first-time visitors, offering a one-of-a-kind and unforgettable glimpse into the beauty and excitement of this captivating city."
     },
     itinerary: [
-      { time: "08:00 AM", title: "Hotel Pickup", description: "Start your Pattaya discovery tour" },
-      { time: "08:30 AM", title: "Floating Market", description: "Explore the four-regions floating market" },
-      { time: "10:30 AM", title: "Sanctuary of Truth", description: "Visit the impressive wooden temple" },
-      { time: "12:00 PM", title: "Thai Lunch", description: "Enjoy authentic local cuisine" },
-      { time: "01:00 PM", title: "Big Buddha Hill", description: "Panoramic views of Pattaya Bay" },
-      { time: "02:00 PM", title: "Wat Phra Yai", description: "Visit the golden Buddha temple" },
-      { time: "03:00 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+      { time: "08:00 AM", title: "Meet at Hotel Dusit Thani", description: "Meet us at the lobby of Hotel Dusit Thani Pattaya. Our Sun Leisure World Staff will meet you either at the hotel lobby or you can visit our office located just beside the restaurant." },
+      { time: "09:45 AM", title: "Walking Street Pattaya", description: "Walking Street is an entertainment and red-light district in the city of Pattaya, Thailand. The area includes seafood restaurants, live music venues, beer bars, discothèques, sports bars, go-go bars, nightclubs, and hotels. Explore this vibrant spot, known for its nightlife." },
+      { time: "10:00 AM", title: "Bali Hai Pier", description: "Bali Hai Pier, also known as Pattaya Pier, is a central feature located at the end of Walking Street, near the southernmost point of Pattaya Bay. It is a bustling hub with day-trippers, scuba divers, and fishing enthusiasts. Capture a classic image of Pattaya from here." },
+      { time: "10:00 AM", title: "Pattaya City Sign - Viewpoint", description: "Pattaya City Sign is located next to Bali Hai Pier, providing an opportunity for a memorable selfie with the city's iconic signage." },
+      { time: "10:30 AM", title: "Big Buddha Temple", description: "Visit the Big Buddha Temple, home to one of the largest Buddha images in the world. The 300 feet high image of Lord Buddha is a prominent landmark in Pattaya. Explore the hilltop location with stunning views of the city and bay." },
+      { time: "11:30 AM", title: "Buddha Mountain", description: "Explore Khao Chi Chan, also known as Buddha Mountain, featuring a massive Buddha image carved into a limestone hill. The intricate depiction of Lord Buddha measures an impressive 109 meters in height and 70 meters in width. Enjoy the tranquil surroundings with landscaped gardens and reflecting pools." },
+      { time: "12:00 PM", title: "Pattaya Floating Market", description: "Experience the colorful market with traditional Thai crafts and produce sold from boats and waterfront shops. Enjoy the exceptional lifestyle of Pattaya at the Floating Market, including a great local lunch as part of our package. Take a boat ride and savor a quick lunch with a limited 2-3 item set meal." },
+      { time: "02:00 PM", title: "Gems Gallery Pattaya", description: "Visit the biggest Gems Museum and enjoy the world-class craftsmanship of Gems and Jewellery." },
+      { time: "02:30 PM", title: "Tour Ends", description: "Our tour ends at the meeting point. We will drop you here or at your hotel, depending on the places you started our experience." }
     ],
-    tourTimings: ["08:00 AM – 03:00 PM"],
-    inclusions: ["Hotel transfers", "English-speaking guide", "Entrance fees", "Thai lunch", "Air-conditioned transport"],
-    exclusions: ["Personal expenses", "Boat rides at floating market", "Shopping expenses", "Tips"],
-    bookingPolicy: ["Confirmation within 24 hours", "Dress modestly for temples", "Tour operates daily"],
-    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for no-shows"],
-    childPolicy: ["Children age 3-11 years at discounted rate", "Children under 3 are free"],
+    tourTimings: ["08:00 AM"],
+    inclusions: ["Walking Street", "Bali Hai Pier", "Big Buddha", "Viewpoint", "Floating Market", "Gems Gallery", "Lunch", "Transfer by Minibus"],
+    exclusions: ["Personal expense", "Tips and gratuities"],
+    bookingPolicy: ["Confirmation will be received within 24 hours of booking", "Please provide hotel name and address for pickup", "Bring swimwear, sunscreen, towel, and camera", "Check-in closes 30 minutes before departure", "Booking reference number required for check-in", "Please arrive at pickup point 10 minutes before departure"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before the activity", "100% charge for cancellations within 48 hours", "No refund for no-shows or late arrivals"],
+    childPolicy: ["Free entrance for children below 100cm", "Child ticket is only applicable for children 100-140cm (must be between 2-12 years old)", "Children aged 0-2 can join the tour for free provided they do not occupy an additional seat", "Children aged 3-8 would be charged 75% of tours rate", "Children over 8 would be considered as adult"],
     faqs: [
       { question: "Is the floating market authentic?", answer: "Yes, vendors sell authentic Thai products and food from traditional boats." },
       { question: "What type of food is included in lunch?", answer: "Traditional Thai cuisine including rice, curry, stir-fry, and fresh fruits." }
@@ -1284,8 +1257,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Half-day tour visiting Big Buddha Hill for panoramic views and exploring the world's largest gem and jewelry center.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 1200,
-    childPrice: 600,
+    basePrice: 1400,
+    childPrice: 0,
     duration: "4-5 Hours",
     rating: 4.3,
     reviews: 256,
@@ -1335,8 +1308,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Full-day beach excursion to Coral Island with pristine beaches, crystal clear waters, and optional water sports activities.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 650,
-    childPrice: 325,
+    basePrice: 700,
+    childPrice: 700,
     duration: "6-7 Hours",
     rating: 4.4,
     reviews: 489,
@@ -1358,24 +1331,25 @@ export const toursData: Record<string, TourData> = {
       "Indian lunch included"
     ],
     description: {
-      overview: "Escape to the beautiful Coral Island (Koh Larn) for a day of sun, sand, and sea. Enjoy pristine beaches, crystal clear waters perfect for swimming and snorkeling, and optional exciting water sports activities.",
-      whatToExpect: "Relax on white sandy beaches, swim in turquoise waters, try optional water sports like parasailing, banana boat, and jet skiing. Enjoy a delicious Indian buffet lunch at a beachside restaurant."
+      overview: "Escape to the beautiful Coral Island (Koh Larn) for a day of sun, sand, and sea.",
+      whatToExpect: "Koh Larn caters to all types of tourists, whether you want to relax on the island's soft white sand or indulge in water sports activities. You can choose from parasailing, water skiing, and jet skiing. For snorkeling and deep-sea diving, it is recommended to visit the nearby islands of Koh Krok and Koh Sak, where you can explore the abundant coral and undersea life. However, it's important to note that there are no dive shops in this area, so tourists should bring their own diving equipment.\n\nCoral Island Pattaya with activity Stopover"
     },
     itinerary: [
-      { time: "08:00 AM", title: "Hotel Pickup", description: "Pick up from Pattaya hotels" },
-      { time: "09:00 AM", title: "Depart to Coral Island", description: "Speedboat ride to the island" },
-      { time: "09:30 AM", title: "Free Time at Beach", description: "Relax, swim, or enjoy water sports" },
-      { time: "12:00 PM", title: "Indian Lunch", description: "Buffet lunch at beach restaurant" },
-      { time: "01:00 PM", title: "More Beach Time", description: "Continue enjoying the island" },
-      { time: "03:00 PM", title: "Return Journey", description: "Speedboat back to Pattaya" },
-      { time: "04:00 PM", title: "Hotel Drop-off", description: "Return to your hotel" }
+      { time: "09:00 AM - 09:45 AM", title: "Hotel Pickup", description: "Pick up at Hotel lobby by Van and transfer to Pattaya Beach." },
+      { time: "09:30 AM", title: "Depart from Coral Island", description: "Depart from Coral Island (Tawan Beach)" },
+      { time: "10:00 AM", title: "Water Activities", description: "Drop off Parasailing Boat / Sea Walking Boat (optional, you must wait for others to take this activity)" },
+      { time: "10:30 AM", title: "Underwater Marine", description: "Drop off underwater marine (optional, you must wait for others to take this activity)" },
+      { time: "11:30 AM", title: "Ta Wan Beach", description: "Arrive at Ta Wan Beach on Coral Island for swimming, relaxing, and sunbathing on the beach" },
+      { time: "01:00 PM - 01:30 PM", title: "Return", description: "The boat will take you back to Pattaya" },
+      { time: "01:30 PM", title: "Indian Lunch", description: "Enjoy a delicious lunch at an Indian restaurant" },
+      { time: "02:30 PM", title: "Hotel Transfer", description: "Transfer back to the Hotel." }
     ],
-    tourTimings: ["08:00 AM – 04:00 PM"],
-    inclusions: ["Round-trip hotel transfer", "Speedboat to Coral Island", "Indian lunch buffet", "Life jacket", "Basic insurance"],
-    exclusions: ["Water sports (parasailing, banana boat, jet ski)", "Beach chair rental", "Personal expenses", "Tips"],
-    bookingPolicy: ["Confirmation within 24 hours", "Subject to weather conditions", "Vegetarian options available"],
-    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for weather cancellations"],
-    childPolicy: ["Children age 4-11 years at discounted rate", "Children under 4 are free", "Not suitable for infants"],
+    tourTimings: ["09:00 AM"],
+    inclusions: ["Join round trip transfer from the hotel", "PA insurance throughout the trip", "Life jacket", "Indian Lunch", "English speaking guide", "Free toilet use on the Island except for the shower room"],
+    exclusions: ["Personal expenses and gratuities", "Entry for water activities"],
+    bookingPolicy: ["Confirmation will be received within 24 hours of booking", "Please provide hotel name and address for pickup", "Bring swimwear, sunscreen, towel, and camera", "Check-in closes 30 minutes before departure", "Booking reference number required for check-in", "Please arrive at pickup point 10 minutes before departure"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before the activity", "100% charge for cancellations within 48 hours", "No refund for no-shows or late arrivals"],
+    childPolicy: ["Free entrance for children below 100cm", "Child ticket is only applicable for children 100-140cm (must be between 2-12 years old)", "Children aged 0-2 can join the tour for free provided they do not occupy an additional seat", "Children aged 3-8 would be charged 75% of tours rate", "Children over 8 would be considered as adult"],
     faqs: [
       { question: "Are water sports included?", answer: "No, water sports are optional and available at additional cost on the island." },
       { question: "Is the lunch vegetarian-friendly?", answer: "Yes, both vegetarian and non-vegetarian options are available in the buffet." }
@@ -1642,8 +1616,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Traditional longtail boat tour to pristine Hong Islands with snorkeling, beach relaxation, and lagoon exploration.",
     location: "Krabi, Thailand",
     city: "krabi",
-    basePrice: 2600,
-    childPrice: 1300,
+    basePrice: 2800,
+    childPrice: 2500,
     duration: "6-7 Hours",
     rating: 4.5,
     reviews: 423,
@@ -1665,25 +1639,22 @@ export const toursData: Record<string, TourData> = {
       "Traditional longtail boat experience"
     ],
     description: {
-      overview: "Experience the natural beauty of Hong Islands on a traditional longtail boat tour. Visit pristine beaches, snorkel in crystal clear waters, explore the stunning Hong Lagoon, and relax on some of Krabi's most beautiful islands.",
-      whatToExpect: "Enjoy the authentic experience of traveling by traditional longtail boat, swim and snorkel in turquoise waters, kayak through the emerald Hong Lagoon, and relax on white sandy beaches surrounded by dramatic limestone cliffs."
+      overview: "Experience the natural beauty of Hong Islands on a traditional longtail boat tour.",
+      whatToExpect: "Koh Hong (Room Island) is part of a group of islands one hour north of Krabi. Koh Hong has only one beach but it is recognized for being extremely beautiful, boasting fine white sand, coral, and lots of varieties of tropical fish. Pelay Beach is framed by limestone rock formations which gives it an enclosed feel. Coupled with the fact that there are seldom many people there, Koh Hong very much offers a 'deserted island' experience. Its name comes from an eroded group of caves in the middle of the island which harbors a large lake with a small passage to the sea. When the tide is high long tail boats can enter the 'room' and visitors can swim in the crystal clear water with a depth of around one meter. Koh Hong is another collection point for the nests that provide the ingredients for bird's nest soup. You can witness the fascinating sight of young men climbing up high bamboo poles to collect these nests, genuinely risking life and limb in pursuit of their income.\n\nDiscover the stunning Hong Island in Krabi by boat. This paradise island is belonging to the National Marine Park. Hong is translated as 'room' from Thai and for a reason as the island is secluded with a lagoon surrounded by cliffs at the center. You will be able to enjoy complete privacy, crystal clear water, and sunny sandy beaches away from crowds of tourists to spend your special moments."
     },
     itinerary: [
-      { time: "08:00 AM", title: "Hotel Pickup", description: "Pick up from Krabi hotels" },
-      { time: "09:00 AM", title: "Depart to Hong Islands", description: "Scenic longtail boat journey" },
-      { time: "10:00 AM", title: "Hong Island Beach", description: "Relax on white sandy beach" },
-      { time: "11:00 AM", title: "Hong Lagoon", description: "Kayak through the stunning lagoon" },
-      { time: "12:00 PM", title: "Lunch Break", description: "Enjoy lunch box on the beach" },
-      { time: "01:00 PM", title: "Snorkeling", description: "Explore colorful coral reefs" },
-      { time: "02:30 PM", title: "Return Journey", description: "Boat back to shore" },
-      { time: "03:30 PM", title: "Hotel Drop-off", description: "Return to your hotel" }
+      { time: "08:30", title: "Hotel Pickup", description: "Hotel pick-up from your hotel or meeting point to Hong Island" },
+      { time: "09:00", title: "Hong Islands", description: "Arrive at Hong Island with a professional guide. The tour guide will bring you to the best place for snorkeling together with demonstrating the best way to snorkel. Guided sightseeing to see the exotic highlight of Hong Island, including the 'Room' (Lagoon) inside the island. A special drop by at a bird's nests collecting point" },
+      { time: "12:30", title: "Ko Lao La Ding", description: "A picnic lunch is served on the beach. Followed by transferring to the Lading Island (Paradise Island) for sightseeing & more snorkeling! You would get to discover the wonderful underwater stones here." },
+      { time: "", title: "Pak Bia Island", description: "Then go to Pakbia Island & Rai Island. The boat will stop by on the sandy beaches for relaxing, sunbathing & more water activities!" },
+      { time: "15:00", title: "Return", description: "Return to Ao nang Beach, thus transfers to your hotel. Notice: Itinerary may be subject to change depending on weather and tidal conditions" }
     ],
-    tourTimings: ["08:00 AM – 03:30 PM"],
-    inclusions: ["Hotel transfers", "Longtail boat", "National park fees", "Snorkeling equipment", "Life jacket", "Lunch box", "Guide", "Insurance"],
-    exclusions: ["Personal expenses", "Underwater camera rental", "Tips", "Additional activities"],
-    bookingPolicy: ["Confirmation within 24 hours", "Subject to weather conditions", "Bring seasickness medicine if needed"],
-    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for weather cancellations"],
-    childPolicy: ["Children age 4-11 years at discounted rate", "Children under 4 are free", "Not suitable for infants"],
+    tourTimings: ["08:00 AM"],
+    inclusions: ["Hotel round-trip transfer", "Long Tailboat Transfer to Hong Island", "Snorkel Equipment", "Life Jacket", "English Speaking Guide", "Drinking Water", "Fresh fruits", "Lunch", "First Aid Kit", "Insurance", "Entry/Admission - Hong Islands", "Entry/Admission - Ko Lao La Ding", "Entry/Admission - Pak Bia Island"],
+    exclusions: ["Exclude National Park Fee", "Any personal expenses", "Accommodation", "Gratuities"],
+    bookingPolicy: ["Confirmation will be received within 24 hours of booking", "Please provide hotel name and address for pickup", "Bring swimwear, sunscreen, towel, and camera", "Check-in closes 30 minutes before departure", "Booking reference number required for check-in", "Please arrive at pickup point 10 minutes before departure"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before the activity", "100% charge for cancellations within 48 hours", "No refund for no-shows or late arrivals"],
+    childPolicy: ["Free entrance for children below 100cm", "Child ticket is only applicable for children 100-140cm (must be between 2-12 years old)", "Children aged 0-2 can join the tour for free provided they do not occupy an additional seat", "Children aged 3-8 would be charged 75% of tours rate", "Children over 8 would be considered as adult"],
     faqs: [
       { question: "Is kayaking included?", answer: "Yes, kayaking in Hong Lagoon is included in the tour." },
       { question: "What's the difference between longtail and speedboat?", answer: "Longtail boats are slower but offer a more traditional, authentic experience. Speedboats are faster and allow more time at destinations." }
