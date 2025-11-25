@@ -1,8 +1,7 @@
-import { Search, Menu, DollarSign, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket } from "lucide-react";
+import { Menu, DollarSign, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,38 +9,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/yellodae-logo.png";
+import SearchInput from "./SearchInput";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const navigate = useNavigate();
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!searchQuery.trim()) return;
-
-    const query = searchQuery.toLowerCase().trim();
-    
-    // Check if query is a city name
-    if (query.includes('bangkok')) navigate('/bangkok');
-    else if (query.includes('pattaya')) navigate('/pattaya');
-    else if (query.includes('phuket')) navigate('/phuket');
-    else if (query.includes('krabi')) navigate('/krabi');
-    else if (query.includes('dubai')) navigate('/dubai');
-    else if (query.includes('thailand')) navigate('/thailand');
-    // Check for popular activities/destinations
-    else if (query.includes('phi phi') || query.includes('phiphi')) navigate('/phi-phi-island');
-    else if (query.includes('james bond')) navigate('/james-bond-island');
-    else if (query.includes('temple') || query.includes('wat') || query.includes('buddha')) navigate('/bangkok');
-    else if (query.includes('island') || query.includes('boat') || query.includes('cruise')) navigate('/phuket');
-    else if (query.includes('massage') || query.includes('spa')) navigate('/massage-coupons');
-    else if (query.includes('elephant')) navigate('/elephant-safari');
-    else if (query.includes('tiger')) navigate('/selfie-tigers');
-    else if (query.includes('skywalk')) navigate('/bangkok-skywalk');
-    else if (query.includes('grand palace') || query.includes('emerald')) navigate('/bangkok-grand-palace-emerald');
-    // Default to Bangkok for general searches
-    else navigate('/bangkok');
-  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -63,15 +34,7 @@ const Header = () => {
 
           {/* Search Bar - Hidden on mobile */}
           <div className="hidden md:flex flex-1 max-w-xl mx-4">
-            <form onSubmit={handleSearch} className="relative w-full">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input 
-                placeholder="Search Destination or activities" 
-                className="pl-10 w-full"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </form>
+            <SearchInput placeholder="Search destinations or activities..." />
           </div>
 
           {/* Right Side Icons */}
@@ -102,15 +65,7 @@ const Header = () => {
 
         {/* Mobile Search Bar */}
         <div className="md:hidden pb-3">
-          <form onSubmit={handleSearch} className="relative w-full">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-            <Input 
-              placeholder="Search Destination or activities" 
-              className="pl-10 w-full"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </form>
+          <SearchInput placeholder="Search destinations or activities..." />
         </div>
 
         {/* Navigation Bar - Desktop */}

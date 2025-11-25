@@ -3,11 +3,11 @@ import { Grid, List, ShoppingCart, Mail } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ActivityCard from "@/components/ActivityCard";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import SearchInput from "@/components/SearchInput";
 
 const activities = [
   { title: "Bangkok's Iconic Three Temple Tour with Grand Palace and Canal Tour", price: 10020, image: "https://images.unsplash.com/photo-1563492065567-7a0b2e7d1a3e?w=800&auto=format&fit=crop", slug: "/bangkok-three-temples" },
@@ -43,7 +43,6 @@ const Bangkok = () => {
   const [sortBy, setSortBy] = useState('popular');
   const [priceRange, setPriceRange] = useState([1600, 11000]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState('');
   const itemsPerPage = 12;
 
   const sortedActivities = [...activities].sort((a, b) => {
@@ -53,13 +52,7 @@ const Bangkok = () => {
     return 0;
   });
 
-  const searchFilteredActivities = searchQuery.trim() 
-    ? sortedActivities.filter(activity => 
-        activity.title.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : sortedActivities;
-
-  const filteredActivities = searchFilteredActivities.filter(
+  const filteredActivities = sortedActivities.filter(
     activity => activity.price >= priceRange[0] && activity.price <= priceRange[1]
   );
 
@@ -94,12 +87,7 @@ const Bangkok = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <Input 
-              placeholder="Search activities..." 
-              className="flex-1" 
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
+            <SearchInput placeholder="Search Bangkok activities..." className="flex-1" />
             <Button
               variant={viewMode === 'grid' ? 'default' : 'outline'}
               size="icon"

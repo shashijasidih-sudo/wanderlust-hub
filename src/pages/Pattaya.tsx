@@ -3,11 +3,11 @@ import { Grid, List, ShoppingCart, Mail } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ActivityCard from "@/components/ActivityCard";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import SearchInput from "@/components/SearchInput";
 
 const activities = [
   { title: "Discovery Pattaya City Tours with Floating Market and Lunch", price: 1800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/pattaya-floating-market-tour" },
@@ -33,7 +33,6 @@ const Pattaya = () => {
   const [sortBy, setSortBy] = useState('popular');
   const [priceRange, setPriceRange] = useState([650, 5200]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState('');
   const itemsPerPage = 12;
 
   const sortedActivities = [...activities].sort((a, b) => {
@@ -43,13 +42,7 @@ const Pattaya = () => {
     return 0;
   });
 
-  const searchFilteredActivities = searchQuery.trim() 
-    ? sortedActivities.filter(activity => 
-        activity.title.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : sortedActivities;
-
-  const filteredActivities = searchFilteredActivities.filter(
+  const filteredActivities = sortedActivities.filter(
     activity => activity.price >= priceRange[0] && activity.price <= priceRange[1]
   );
 
@@ -84,12 +77,7 @@ const Pattaya = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <Input 
-              placeholder="Search activities..." 
-              className="flex-1" 
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
+            <SearchInput placeholder="Search Pattaya activities..." className="flex-1" />
             <Button
               variant={viewMode === 'grid' ? 'default' : 'outline'}
               size="icon"
