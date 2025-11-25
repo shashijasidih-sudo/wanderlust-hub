@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Building2, MapPin, Clock, DollarSign } from "lucide-react";
+import { Building2, MapPin, Clock, IndianRupee } from "lucide-react";
 
 const BangkokSkywalk = () => {
   return (
@@ -42,8 +42,8 @@ const BangkokSkywalk = () => {
                   <span><strong>Location:</strong> King Power Mahanakhon Building</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <DollarSign className="w-5 h-5 text-primary" />
-                  <span><strong>Price:</strong> Starting from $28 per person</span>
+                  <IndianRupee className="w-5 h-5 text-primary" />
+                  <span><strong>Price:</strong> Starting from ₹28 per person</span>
                 </div>
               </div>
             </div>

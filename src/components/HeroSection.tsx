@@ -24,12 +24,14 @@ const HeroSection = () => {
 
         {/* Search Box */}
         <div className="w-full max-w-4xl bg-white rounded-2xl shadow-card-hover p-4 md:p-6 animate-scale-in">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <SearchInput 
-              placeholder="Search destination, activity, city..." 
-              className="w-full"
-            />
-            <div className="flex items-center gap-2 border rounded-lg px-4 py-3">
+          <div className="flex flex-col md:flex-row gap-4 mb-4">
+            <div className="w-full md:w-[60%]">
+              <SearchInput 
+                placeholder="Search destination, activity, city..." 
+                className="w-full"
+              />
+            </div>
+            <div className="w-full md:w-[40%] flex items-center gap-2 border rounded-lg px-4 py-3">
               <Calendar className="h-5 w-5 text-muted-foreground flex-shrink-0" />
               <Input type="date" className="border-0 p-0 focus-visible:ring-0" />
             </div>

@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Tent, MapPin, Clock, DollarSign } from "lucide-react";
+import { Tent, MapPin, Clock, IndianRupee } from "lucide-react";
 
 const DesertSafari = () => {
   return (
@@ -42,8 +42,8 @@ const DesertSafari = () => {
                   <span><strong>Pickup Location:</strong> Dubai hotels</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <DollarSign className="w-5 h-5 text-primary" />
-                  <span><strong>Price:</strong> Starting from $65 per person</span>
+                  <IndianRupee className="w-5 h-5 text-primary" />
+                  <span><strong>Price:</strong> Starting from ₹65 per person</span>
                 </div>
               </div>
             </div>

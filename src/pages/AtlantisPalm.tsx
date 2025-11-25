@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Castle, MapPin, Clock, DollarSign } from "lucide-react";
+import { Castle, MapPin, Clock, IndianRupee } from "lucide-react";
 
 const AtlantisPalm = () => {
   return (
@@ -42,8 +42,8 @@ const AtlantisPalm = () => {
                   <span><strong>Location:</strong> The Palm Jumeirah, Dubai</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <DollarSign className="w-5 h-5 text-primary" />
-                  <span><strong>Price:</strong> Starting from $95 per person</span>
+                  <IndianRupee className="w-5 h-5 text-primary" />
+                  <span><strong>Price:</strong> Starting from ₹95 per person</span>
                 </div>
               </div>
             </div>

@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Fish, MapPin, Clock, DollarSign } from "lucide-react";
+import { Fish, MapPin, Clock, IndianRupee } from "lucide-react";
 
 const DolphinShow = () => {
   return (
@@ -42,8 +42,8 @@ const DolphinShow = () => {
                   <span><strong>Location:</strong> Marine Park Theater</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <DollarSign className="w-5 h-5 text-primary" />
-                  <span><strong>Price:</strong> Starting from $35 per person</span>
+                  <IndianRupee className="w-5 h-5 text-primary" />
+                  <span><strong>Price:</strong> Starting from ₹35 per person</span>
                 </div>
               </div>
             </div>

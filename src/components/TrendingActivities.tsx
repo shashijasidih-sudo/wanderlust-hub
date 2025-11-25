@@ -82,7 +82,7 @@ const TrendingActivities = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-baseline gap-1">
                     <span className="text-xs text-muted-foreground">From</span>
-                    <span className="text-xl font-bold text-primary">${activity.price}</span>
+                    <span className="text-xl font-bold text-primary">₹{activity.price}</span>
                     <span className="text-xs text-muted-foreground">/person</span>
                   </div>
                   <Button size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground">
