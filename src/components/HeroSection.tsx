@@ -1,40 +1,10 @@
-import { Search, MapPin, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-beach.jpg";
+import SearchInput from "./SearchInput";
 
 const HeroSection = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const navigate = useNavigate();
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!searchQuery.trim()) return;
-
-    const query = searchQuery.toLowerCase().trim();
-    
-    // Check if query is a city name
-    if (query.includes('bangkok')) navigate('/bangkok');
-    else if (query.includes('pattaya')) navigate('/pattaya');
-    else if (query.includes('phuket')) navigate('/phuket');
-    else if (query.includes('krabi')) navigate('/krabi');
-    else if (query.includes('dubai')) navigate('/dubai');
-    else if (query.includes('thailand')) navigate('/thailand');
-    // Check for popular activities/destinations
-    else if (query.includes('phi phi') || query.includes('phiphi')) navigate('/phi-phi-island');
-    else if (query.includes('james bond')) navigate('/james-bond-island');
-    else if (query.includes('temple') || query.includes('wat') || query.includes('buddha')) navigate('/bangkok');
-    else if (query.includes('island') || query.includes('boat') || query.includes('cruise')) navigate('/phuket');
-    else if (query.includes('massage') || query.includes('spa')) navigate('/massage-coupons');
-    else if (query.includes('elephant')) navigate('/elephant-safari');
-    else if (query.includes('tiger')) navigate('/selfie-tigers');
-    else if (query.includes('skywalk')) navigate('/bangkok-skywalk');
-    else if (query.includes('grand palace') || query.includes('emerald')) navigate('/bangkok-grand-palace-emerald');
-    // Default to Bangkok for general searches
-    else navigate('/bangkok');
-  };
   return <section className="relative h-[600px] md:h-[700px] w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center" style={{
@@ -53,26 +23,21 @@ const HeroSection = () => {
         </p>
 
         {/* Search Box */}
-        <form onSubmit={handleSearch} className="w-full max-w-4xl bg-white rounded-2xl shadow-card-hover p-4 md:p-6 animate-scale-in">
+        <div className="w-full max-w-4xl bg-white rounded-2xl shadow-card-hover p-4 md:p-6 animate-scale-in">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div className="flex items-center gap-2 border rounded-lg px-4 py-3">
-              <Search className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-              <Input 
-                placeholder="Search destination (Bangkok, Phuket, Dubai...)" 
-                className="border-0 p-0 focus-visible:ring-0"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </div>
+            <SearchInput 
+              placeholder="Search destination, activity, city..." 
+              className="w-full"
+            />
             <div className="flex items-center gap-2 border rounded-lg px-4 py-3">
               <Calendar className="h-5 w-5 text-muted-foreground flex-shrink-0" />
               <Input type="date" className="border-0 p-0 focus-visible:ring-0" />
             </div>
           </div>
-          <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold h-12 text-lg">
+          <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold h-12 text-lg">
             Start Your Adventure
           </Button>
-        </form>
+        </div>
 
         {/* Categories */}
         <div className="mt-8 flex flex-wrap gap-3 justify-center animate-fade-in">

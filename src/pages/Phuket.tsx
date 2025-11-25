@@ -3,11 +3,11 @@ import { Grid, List, ShoppingCart, Mail } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ActivityCard from "@/components/ActivityCard";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import SearchInput from "@/components/SearchInput";
 
 const activities = [
   { title: "Full Day Tour from Phuket to Phi Phi Island, Maya Bay and Khai Island by Speedboat with National Park Fee", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/phi-phi-island" },
@@ -37,7 +37,6 @@ const Phuket = () => {
   const [sortBy, setSortBy] = useState('popular');
   const [priceRange, setPriceRange] = useState([1800, 8500]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState('');
   const itemsPerPage = 12;
 
   const sortedActivities = [...activities].sort((a, b) => {
@@ -47,13 +46,7 @@ const Phuket = () => {
     return 0;
   });
 
-  const searchFilteredActivities = searchQuery.trim() 
-    ? sortedActivities.filter(activity => 
-        activity.title.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : sortedActivities;
-
-  const filteredActivities = searchFilteredActivities.filter(
+  const filteredActivities = sortedActivities.filter(
     activity => activity.price >= priceRange[0] && activity.price <= priceRange[1]
   );
 
@@ -88,12 +81,7 @@ const Phuket = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <Input 
-              placeholder="Search activities..." 
-              className="flex-1" 
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
+            <SearchInput placeholder="Search Phuket activities..." className="flex-1" />
             <Button
               variant={viewMode === 'grid' ? 'default' : 'outline'}
               size="icon"

@@ -3,11 +3,11 @@ import { Grid, List, ShoppingCart, Mail } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ActivityCard from "@/components/ActivityCard";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import SearchInput from "@/components/SearchInput";
 
 const activities = [
   { title: "Dhow Cruise Dinner – Lower Deck + Transfers", price: 1900, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop" },
@@ -81,7 +81,7 @@ const Dubai = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <Input placeholder="Search activities..." className="flex-1" />
+            <SearchInput placeholder="Search Dubai activities..." className="flex-1" />
             <Button
               variant={viewMode === 'grid' ? 'default' : 'outline'}
               size="icon"
