@@ -1,4 +1,4 @@
-import { Menu, DollarSign, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket } from "lucide-react";
+import { Menu, IndianRupee, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -15,7 +15,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b" style={{ backgroundColor: '#EAF3FF' }}>
       {/* Top Bar */}
       <div className="container px-4 md:px-6">
         <div className="flex h-16 items-center justify-between gap-4">
@@ -33,14 +33,14 @@ const Header = () => {
           </Link>
 
           {/* Search Bar - Hidden on mobile */}
-          <div className="hidden md:flex flex-1 max-w-xl mx-4">
+          <div className="hidden md:flex flex-1 max-w-3xl mx-4">
             <SearchInput placeholder="Search destinations or activities..." />
           </div>
 
           {/* Right Side Icons */}
           <div className="flex items-center gap-2 md:gap-3">
             <Button variant="ghost" size="icon" className="hidden md:inline-flex">
-              <DollarSign className="h-5 w-5" />
+              <IndianRupee className="h-5 w-5" />
             </Button>
             <Button variant="ghost" size="icon" className="hidden md:inline-flex">
               <Heart className="h-5 w-5" />
@@ -297,7 +297,7 @@ const Header = () => {
             </a>
             <div className="flex items-center gap-2 pt-2 border-t">
               <Button variant="ghost" size="icon">
-                <DollarSign className="h-5 w-5" />
+                <IndianRupee className="h-5 w-5" />
               </Button>
               <Button variant="ghost" size="icon">
                 <Heart className="h-5 w-5" />

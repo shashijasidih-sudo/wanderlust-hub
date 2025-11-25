@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Palmtree, MapPin, Clock, DollarSign } from "lucide-react";
+import { Palmtree, MapPin, Clock, IndianRupee } from "lucide-react";
 
 const SentosaIsland = () => {
   return (
@@ -42,8 +42,8 @@ const SentosaIsland = () => {
                   <span><strong>Meeting Point:</strong> Sentosa Gateway</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <DollarSign className="w-5 h-5 text-primary" />
-                  <span><strong>Price:</strong> Starting from $95 per person</span>
+                  <IndianRupee className="w-5 h-5 text-primary" />
+                  <span><strong>Price:</strong> Starting from ₹95 per person</span>
                 </div>
               </div>
             </div>
