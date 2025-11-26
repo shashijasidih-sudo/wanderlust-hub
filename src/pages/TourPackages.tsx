@@ -1,5 +1,7 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TourBookingForm from "@/components/TourBookingForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -7,6 +9,11 @@ import { MapPin, Users, Calendar, Star, Utensils, Hotel, Plane } from "lucide-re
 import { Link } from "react-router-dom";
 
 const TourPackages = () => {
+  const [selectedPackage, setSelectedPackage] = useState<{
+    title: string;
+    location: string;
+  } | null>(null);
+
   const packages = [
     {
       id: 1,
@@ -188,7 +195,13 @@ const TourPackages = () => {
                     </div>
 
                     <div className="flex gap-3">
-                      <Button className="flex-1">
+                      <Button 
+                        className="flex-1"
+                        onClick={() => setSelectedPackage({
+                          title: pkg.title,
+                          location: pkg.location
+                        })}
+                      >
                         Book Now
                       </Button>
                       <Button variant="outline" className="flex-1">
@@ -240,6 +253,13 @@ const TourPackages = () => {
       </main>
 
       <Footer />
+
+      <TourBookingForm
+        isOpen={!!selectedPackage}
+        onClose={() => setSelectedPackage(null)}
+        packageTitle={selectedPackage?.title || ""}
+        destination={selectedPackage?.location || ""}
+      />
     </div>
   );
 };
