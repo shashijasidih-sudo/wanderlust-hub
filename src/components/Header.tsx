@@ -300,9 +300,9 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary">
               Tours & Packages
-            </a>
+            </Link>
             <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
               Smart Destinations
             </a>
