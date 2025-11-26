@@ -33,15 +33,26 @@ const Header = () => {
           </Link>
 
           {/* Search Bar - Hidden on mobile */}
-          <div className="hidden md:flex flex-1 max-w-3xl mx-4">
+          <div className="hidden md:flex flex-1 mx-4">
             <SearchInput placeholder="Search destinations or activities..." />
           </div>
 
           {/* Right Side Icons */}
           <div className="flex items-center gap-2 md:gap-3">
-            <Button variant="ghost" size="icon" className="hidden md:inline-flex">
-              <IndianRupee className="h-5 w-5" />
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon" className="hidden md:inline-flex">
+                  <IndianRupee className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background border shadow-lg z-50">
+                <DropdownMenuItem className="cursor-pointer">INR - Indian Rupee</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">USD - US Dollar</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">EUR - Euro</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">GBP - British Pound</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">AED - UAE Dirham</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Button variant="ghost" size="icon" className="hidden md:inline-flex">
               <Heart className="h-5 w-5" />
             </Button>
@@ -179,9 +190,9 @@ const Header = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary">
             Tours & Packages
-          </a>
+          </Link>
           <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
             Smart Destinations
           </a>
