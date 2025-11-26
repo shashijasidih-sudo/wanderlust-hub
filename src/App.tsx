@@ -61,6 +61,7 @@ import SevenIslandsLongtail from "./pages/SevenIslandsLongtail";
 import SevenIslandsSpeedboat from "./pages/SevenIslandsSpeedboat";
 import FourIslandsLongtail from "./pages/FourIslandsLongtail";
 import FourIslandsSpeedboat from "./pages/FourIslandsSpeedboat";
+import TourPackages from "./pages/TourPackages";
 
 const queryClient = new QueryClient();
 
@@ -128,6 +129,7 @@ const App = () => (
           <Route path="/seven-islands-speedboat" element={<SevenIslandsSpeedboat />} />
           <Route path="/four-islands-longtail" element={<FourIslandsLongtail />} />
           <Route path="/four-islands-speedboat" element={<FourIslandsSpeedboat />} />
+          <Route path="/tour-packages" element={<TourPackages />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
