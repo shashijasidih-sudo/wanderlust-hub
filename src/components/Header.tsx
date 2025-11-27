@@ -83,7 +83,7 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-6 pb-3 border-t pt-3">
           <DropdownMenu>
             <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
-              Things to Do
+              Activities to Do
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-lg z-50">
@@ -110,91 +110,34 @@ const Header = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary">
+            Tours & Packages
+          </Link>
           <DropdownMenu>
             <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
-              Trending Activities
+              Smart Destinations
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-lg z-50">
               <DropdownMenuItem className="cursor-pointer">
-                <Link to="/phi-phi-island" className="w-full flex items-center gap-2">
-                  <Ship className="h-4 w-4" />
-                  Phi Phi Island Tours
-                </Link>
+                <a href="#thailand" className="w-full">Thailand Smart Guides</a>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <Link to="/james-bond-island" className="w-full flex items-center gap-2">
-                  <Anchor className="h-4 w-4" />
-                  James Bond Island Tours
-                </Link>
+                <a href="#singapore" className="w-full">Singapore Smart Guides</a>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <Link to="/sentosa-island" className="w-full flex items-center gap-2">
-                  <Palmtree className="h-4 w-4" />
-                  Sentosa Island Tours
-                </Link>
+                <a href="#dubai" className="w-full">Dubai Smart Guides</a>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <Link to="/desert-safari" className="w-full flex items-center gap-2">
-                  <Tent className="h-4 w-4" />
-                  Desert Safari
-                </Link>
+                <a href="#netherlands" className="w-full">Netherlands Smart Guides</a>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">
-                <Link to="/dolphin-show" className="w-full flex items-center gap-2">
-                  <Fish className="h-4 w-4" />
-                  Dolphin Show
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer">
-                <Link to="/selfie-tigers" className="w-full flex items-center gap-2">
-                  <Camera className="h-4 w-4" />
-                  Selfie with Tigers
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer">
-                <Link to="/elephant-safari" className="w-full flex items-center gap-2">
-                  <TreePine className="h-4 w-4" />
-                  Elephant Safari
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer">
-                <Link to="/hot-spring" className="w-full flex items-center gap-2">
-                  <Droplet className="h-4 w-4" />
-                  Hot Spring and Emeral Pool
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer">
-                <Link to="/bangkok-skywalk" className="w-full flex items-center gap-2">
-                  <Building2 className="h-4 w-4" />
-                  Bangkok Mahanakhon Skywalk
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer">
-                <Link to="/dhow-cruise" className="w-full flex items-center gap-2">
-                  <Ship className="h-4 w-4" />
-                  Dhow Night Cruise
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer">
-                <Link to="/atlantis-palm" className="w-full flex items-center gap-2">
-                  <Castle className="h-4 w-4" />
-                  Atlantis, The Palm
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer">
-                <Link to="/massage-coupons" className="w-full flex items-center gap-2">
-                  <Ticket className="h-4 w-4" />
-                  Massage Coupons
-                </Link>
+                <a href="#australia" className="w-full">Australia Smart Guides</a>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary">
-            Tours & Packages
-          </Link>
-          <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
-            Smart Destinations
+          <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
+            Travel Essentials
           </a>
         </nav>
       </div>
@@ -205,7 +148,7 @@ const Header = () => {
           <nav className="flex flex-col gap-4">
             <DropdownMenu>
               <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
-                Things to Do
+                Activities to Do
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50">
@@ -220,91 +163,34 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+            <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary">
+              Tours & Packages
+            </Link>
             <DropdownMenu>
               <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
-                Trending Activities
+                Smart Destinations
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50">
                 <DropdownMenuItem className="cursor-pointer">
-                  <Link to="/phi-phi-island" className="w-full flex items-center gap-2">
-                    <Ship className="h-4 w-4" />
-                    Phi Phi Island Tours
-                  </Link>
+                  <a href="#thailand" className="w-full">Thailand Smart Guides</a>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <Link to="/james-bond-island" className="w-full flex items-center gap-2">
-                    <Anchor className="h-4 w-4" />
-                    James Bond Island Tours
-                  </Link>
+                  <a href="#singapore" className="w-full">Singapore Smart Guides</a>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <Link to="/sentosa-island" className="w-full flex items-center gap-2">
-                    <Palmtree className="h-4 w-4" />
-                    Sentosa Island Tours
-                  </Link>
+                  <a href="#dubai" className="w-full">Dubai Smart Guides</a>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <Link to="/desert-safari" className="w-full flex items-center gap-2">
-                    <Tent className="h-4 w-4" />
-                    Desert Safari
-                  </Link>
+                  <a href="#netherlands" className="w-full">Netherlands Smart Guides</a>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <Link to="/dolphin-show" className="w-full flex items-center gap-2">
-                    <Fish className="h-4 w-4" />
-                    Dolphin Show
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
-                  <Link to="/selfie-tigers" className="w-full flex items-center gap-2">
-                    <Camera className="h-4 w-4" />
-                    Selfie with Tigers
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
-                  <Link to="/elephant-safari" className="w-full flex items-center gap-2">
-                    <TreePine className="h-4 w-4" />
-                    Elephant Safari
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
-                  <Link to="/hot-spring" className="w-full flex items-center gap-2">
-                    <Droplet className="h-4 w-4" />
-                    Hot Spring and Emeral Pool
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
-                  <Link to="/bangkok-skywalk" className="w-full flex items-center gap-2">
-                    <Building2 className="h-4 w-4" />
-                    Bangkok Mahanakhon Skywalk
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
-                  <Link to="/dhow-cruise" className="w-full flex items-center gap-2">
-                    <Ship className="h-4 w-4" />
-                    Dhow Night Cruise
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
-                  <Link to="/atlantis-palm" className="w-full flex items-center gap-2">
-                    <Castle className="h-4 w-4" />
-                    Atlantis, The Palm
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
-                  <Link to="/massage-coupons" className="w-full flex items-center gap-2">
-                    <Ticket className="h-4 w-4" />
-                    Massage Coupons
-                  </Link>
+                  <a href="#australia" className="w-full">Australia Smart Guides</a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary">
-              Tours & Packages
-            </Link>
-            <a href="#" className="text-sm font-medium transition-colors hover:text-primary">
-              Smart Destinations
+            <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
+              Travel Essentials
             </a>
             <div className="flex items-center gap-2 pt-2 border-t">
               <Button variant="ghost" size="icon">

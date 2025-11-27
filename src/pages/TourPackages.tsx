@@ -5,7 +5,7 @@ import TourBookingForm from "@/components/TourBookingForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Users, Calendar, Star, Utensils, Hotel, Plane } from "lucide-react";
+import { MapPin, Users, Calendar, Star, Utensils, Hotel, Plane, Ship, Tent, Building2, Fish, Camera, Droplet, Castle, TreePine, Ticket, Palmtree } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const TourPackages = () => {
@@ -122,7 +122,8 @@ const TourPackages = () => {
         {/* Packages Section */}
         <section className="py-12 bg-background">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+            <h2 className="text-3xl font-bold text-center mb-8">Our Tour Packages</h2>
+            <div className="grid gap-8 md:grid-cols-2">
               {packages.map((pkg) => (
                 <Card key={pkg.id} className="overflow-hidden hover:shadow-xl transition-shadow">
                   <div className="relative h-64">
@@ -211,6 +212,123 @@ const TourPackages = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Different Tour Activities Section */}
+        <section className="py-12 bg-background">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold text-center mb-8">Different Tour Activities</h2>
+            <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Ship className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <h3 className="font-semibold mb-2">Island Tours</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Explore stunning islands with guided tours
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Tent className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <h3 className="font-semibold mb-2">Desert Safari</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Experience thrilling desert adventures
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Building2 className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <h3 className="font-semibold mb-2">City Tours</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Discover iconic landmarks and culture
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Fish className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <h3 className="font-semibold mb-2">Marine Life</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Swim with dolphins and marine animals
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Camera className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <h3 className="font-semibold mb-2">Wildlife Safari</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Get close to exotic wildlife
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Droplet className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <h3 className="font-semibold mb-2">Nature Tours</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Hot springs, waterfalls & natural pools
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Castle className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <h3 className="font-semibold mb-2">Theme Parks</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Fun-filled attractions for all ages
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Ship className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <h3 className="font-semibold mb-2">Dinner Cruises</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Romantic cruises with entertainment
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <TreePine className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <h3 className="font-semibold mb-2">Jungle Adventures</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Elephant rides and jungle exploration
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Ticket className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <h3 className="font-semibold mb-2">Shows & Entertainment</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Cultural shows and live performances
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Palmtree className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <h3 className="font-semibold mb-2">Beach Activities</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Water sports and beach relaxation
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Utensils className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <h3 className="font-semibold mb-2">Food Tours</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Explore local cuisine and markets
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
