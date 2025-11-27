@@ -2,11 +2,13 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TourBookingForm from "@/components/TourBookingForm";
+import Testimonials from "@/components/Testimonials";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Users, Calendar, Star, Utensils, Hotel, Plane, Ship, Tent, Building2, Fish, Camera, Droplet, Castle, TreePine, Ticket, Palmtree } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/hero-beach.jpg";
 
 const TourPackages = () => {
   const [selectedPackage, setSelectedPackage] = useState<{
@@ -98,6 +100,48 @@ const TourPackages = () => {
         { name: "Phi Phi Island Tour", link: "/phi-phi-island" },
         { name: "Phuket City Night Market", link: "/phuket-city-night-market" }
       ]
+    },
+    {
+      id: 5,
+      title: "6N/7D Bali",
+      price: 22000,
+      duration: "6 Nights / 7 Days",
+      location: "Bali, Indonesia",
+      rating: 4.9,
+      image: "/src/assets/destination-paris.jpg",
+      highlights: [
+        "Ubud Rice Terraces",
+        "Tanah Lot Temple",
+        "Water Sports Activities",
+        "Traditional Balinese Spa",
+        "Hotel & Breakfast Included"
+      ],
+      activities: [
+        { name: "Ubud Cultural Tour", link: "#" },
+        { name: "Water Sports Package", link: "#" },
+        { name: "Sunset at Tanah Lot", link: "#" }
+      ]
+    },
+    {
+      id: 6,
+      title: "4N/5D Maldives",
+      price: 35000,
+      duration: "4 Nights / 5 Days",
+      location: "Maldives",
+      rating: 5.0,
+      image: "/src/assets/destination-maldives.jpg",
+      highlights: [
+        "Overwater Villa Stay",
+        "Snorkeling & Diving",
+        "Sunset Cruise",
+        "Beach Activities",
+        "All Meals Included"
+      ],
+      activities: [
+        { name: "Scuba Diving Experience", link: "#" },
+        { name: "Island Hopping Tour", link: "#" },
+        { name: "Dolphin Watching", link: "#" }
+      ]
     }
   ];
 
@@ -107,15 +151,23 @@ const TourPackages = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[400px] bg-gradient-to-r from-primary/90 to-primary/70 flex items-center justify-center">
-          <div className="container px-4 md:px-6 text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Tour Packages</h1>
-            <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto">
-              Explore our carefully curated tour packages with amazing destinations and unforgettable experiences
-            </p>
-            <Badge variant="secondary" className="text-lg px-4 py-2">
-              Best Value Guaranteed
-            </Badge>
+        <section className="relative h-[500px] overflow-hidden">
+          <img 
+            src={heroImage} 
+            alt="Tour Packages" 
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
+          <div className="relative container px-4 md:px-6 h-full flex items-center justify-center text-center">
+            <div className="text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-4">Tour Packages</h1>
+              <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto">
+                Explore our carefully curated tour packages with amazing destinations and unforgettable experiences
+              </p>
+              <Badge variant="secondary" className="text-lg px-4 py-2">
+                Best Value Guaranteed
+              </Badge>
+            </div>
           </div>
         </section>
 
@@ -330,6 +382,13 @@ const TourPackages = () => {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </section>
+
+        {/* Customer Reviews Section */}
+        <section className="py-12 bg-background">
+          <div className="container px-4 md:px-6">
+            <Testimonials />
           </div>
         </section>
 
