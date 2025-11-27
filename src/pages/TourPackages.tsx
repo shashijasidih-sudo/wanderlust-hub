@@ -175,7 +175,7 @@ const TourPackages = () => {
         <section className="py-12 bg-background">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold text-center mb-8">Our Tour Packages</h2>
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {packages.map((pkg) => (
                 <Card key={pkg.id} className="overflow-hidden hover:shadow-xl transition-shadow">
                   <div className="relative h-64">
