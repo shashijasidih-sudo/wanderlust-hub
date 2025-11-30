@@ -8,32 +8,64 @@ const activities = [
     location: "Phuket",
     rating: 4.8,
     reviews: 2341,
-    price: 89,
+    price: 3500,
     image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop"
   },
   {
-    title: "Dubai Aquarium & Underwater Zoo with Penguin Cove",
-    location: "Dubai",
-    rating: 4.9,
-    reviews: 1876,
-    price: 65,
-    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop"
+    title: "James Bond Island & Phang Nga Bay by Speed boat",
+    location: "Phuket",
+    rating: 4.7,
+    reviews: 1987,
+    price: 2800,
+    image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop"
   },
   {
-    title: "Emerald pool, Hot Spring & Tiger Cave",
+    title: "Grand Palace & Emerald Buddha Temple Tour",
+    location: "Bangkok",
+    rating: 4.9,
+    reviews: 3421,
+    price: 1200,
+    image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop"
+  },
+  {
+    title: "Floating Market & Railway Market with River Cruise",
+    location: "Bangkok",
+    rating: 4.6,
+    reviews: 1654,
+    price: 1800,
+    image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=800&auto=format&fit=crop"
+  },
+  {
+    title: "Coral Island & Water Sports in Pattaya",
+    location: "Pattaya",
+    rating: 4.5,
+    reviews: 2103,
+    price: 1500,
+    image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&auto=format&fit=crop"
+  },
+  {
+    title: "Alcazar Cabaret Show Pattaya",
+    location: "Pattaya",
+    rating: 4.8,
+    reviews: 2876,
+    price: 900,
+    image: "https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=800&auto=format&fit=crop"
+  },
+  {
+    title: "Four Islands Tour by Longtail Boat",
     location: "Krabi",
     rating: 4.7,
-    reviews: 1523,
-    price: 45,
+    reviews: 1876,
+    price: 1400,
     image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&auto=format&fit=crop"
   },
   {
-    title: "Ferrari World",
-    location: "Abu Dhabi",
-    rating: 4.9,
-    reviews: 3102,
-    price: 95,
-    image: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=800&auto=format&fit=crop"
+    title: "Emerald Pool & Hot Springs with Tiger Cave Temple",
+    location: "Krabi",
+    rating: 4.6,
+    reviews: 1523,
+    price: 1100,
+    image: "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&auto=format&fit=crop"
   }
 ];
 
@@ -45,7 +77,7 @@ const TrendingActivities = () => {
           Traveler's Trending Activities
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-slide-up">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-slide-up max-w-7xl mx-auto">
           {activities.map((activity) => (
             <Card 
               key={activity.title}
@@ -79,13 +111,12 @@ const TrendingActivities = () => {
                   </span>
                 </div>
 
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col gap-3">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-xs text-muted-foreground">From</span>
+                    <span className="text-xs text-muted-foreground">Adult Price:</span>
                     <span className="text-xl font-bold text-primary">₹{activity.price}</span>
-                    <span className="text-xs text-muted-foreground">/person</span>
                   </div>
-                  <Button size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                  <Button size="sm" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
                     Book Now
                   </Button>
                 </div>

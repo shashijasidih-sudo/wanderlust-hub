@@ -10,6 +10,7 @@ const cities = [
   { name: "Phuket", image: phuketImg, link: "/phuket" },
   { name: "Krabi", image: krabiImg, link: "/krabi" },
   { name: "Pattaya", image: pattayaImg, link: "/pattaya" },
+  { name: "Koh Samui", image: kohsamuiImg, link: "/thailand" },
 ];
 
 interface CityNavigationProps {
@@ -20,7 +21,7 @@ const CityNavigation = ({ currentCity }: CityNavigationProps) => {
   return (
     <div className="mb-8">
       <h2 className="text-2xl font-bold text-foreground mb-4">Explore Thailand Cities</h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         {cities.map((city) => (
           <Link
             key={city.name}
