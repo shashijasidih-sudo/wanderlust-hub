@@ -3,6 +3,7 @@ import { Grid, List, ShoppingCart, Mail } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ActivityCard from "@/components/ActivityCard";
+import CityNavigation from "@/components/CityNavigation";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
@@ -104,6 +105,8 @@ const Bangkok = () => {
             </Button>
           </div>
         </div>
+
+        <CityNavigation currentCity="Bangkok" />
 
         <div className="flex gap-8">
           <aside className="w-80 flex-shrink-0">
