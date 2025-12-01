@@ -22,7 +22,7 @@ const PhotoGallery = ({ images }: PhotoGalleryProps) => {
           <CardTitle className="text-2xl">Photo Gallery</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             {images.map((image, index) => (
               <div
                 key={index}
