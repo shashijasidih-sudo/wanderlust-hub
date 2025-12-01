@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import TrendingActivities from "@/components/TrendingActivities";
 import QuickDestinations from "@/components/QuickDestinations";
 import InstaStories from "@/components/InstaStories";
+import SmartDestinationGuides from "@/components/SmartDestinationGuides";
 import TopThingsToDo from "@/components/TopThingsToDo";
 import FeaturedDestinations from "@/components/FeaturedDestinations";
 import ActivityCategories from "@/components/ActivityCategories";
@@ -18,6 +19,7 @@ const Index = () => {
         <TrendingActivities />
         <QuickDestinations />
         <InstaStories />
+        <SmartDestinationGuides />
         <TopThingsToDo />
         <FeaturedDestinations />
         <ActivityCategories />
