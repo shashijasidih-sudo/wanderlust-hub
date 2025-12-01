@@ -21,8 +21,8 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Logo & Brand Name */}
           <Link to="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
-            <img src={logo} alt="Yellodae Logo" className="h-10 w-10 object-contain" />
-            <div 
+            <img src={logo} alt="Yellodae Logo" className="h-14 w-14 object-contain" />
+            <div
               className="text-2xl font-bold"
               style={{
                 color: 'rgb(25, 25, 112)'
