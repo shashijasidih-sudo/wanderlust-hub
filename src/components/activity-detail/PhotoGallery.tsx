@@ -9,11 +9,14 @@ interface PhotoGalleryProps {
 
 const PhotoGallery = ({ images }: PhotoGalleryProps) => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  
+  // Only show the first 3 images
+  const displayImages = images.slice(0, 3);
 
   const openLightbox = (index: number) => setSelectedImage(index);
   const closeLightbox = () => setSelectedImage(null);
-  const nextImage = () => setSelectedImage((prev) => (prev !== null ? (prev + 1) % images.length : 0));
-  const prevImage = () => setSelectedImage((prev) => (prev !== null ? (prev - 1 + images.length) % images.length : 0));
+  const nextImage = () => setSelectedImage((prev) => (prev !== null ? (prev + 1) % displayImages.length : 0));
+  const prevImage = () => setSelectedImage((prev) => (prev !== null ? (prev - 1 + displayImages.length) % displayImages.length : 0));
 
   return (
     <>
@@ -23,7 +26,7 @@ const PhotoGallery = ({ images }: PhotoGalleryProps) => {
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-3 gap-4">
-            {images.map((image, index) => (
+            {displayImages.map((image, index) => (
               <div
                 key={index}
                 className="relative aspect-video cursor-pointer overflow-hidden rounded-lg group"
@@ -63,8 +66,8 @@ const PhotoGallery = ({ images }: PhotoGalleryProps) => {
           </Button>
           
           <img
-            src={images[selectedImage].src}
-            alt={images[selectedImage].alt}
+            src={displayImages[selectedImage].src}
+            alt={displayImages[selectedImage].alt}
             className="max-h-[90vh] max-w-[90vw] object-contain"
           />
           
@@ -78,7 +81,7 @@ const PhotoGallery = ({ images }: PhotoGalleryProps) => {
           </Button>
           
           <div className="absolute bottom-4 text-white text-sm">
-            {selectedImage + 1} / {images.length}
+            {selectedImage + 1} / {displayImages.length}
           </div>
         </div>
       )}
