@@ -6,6 +6,12 @@ import phuketImg from "@/assets/city-phuket.jpg";
 import krabiImg from "@/assets/city-krabi.jpg";
 import kohsamuiImg from "@/assets/city-kohsamui.jpg";
 import pattayaImg from "@/assets/city-pattaya.jpg";
+import bangkokSkywalkImg from "@/assets/bangkok-skywalk-1.jpg";
+import phiPhiImg from "@/assets/phi-phi-1.jpg";
+import jamesBondImg from "@/assets/james-bond-1.jpg";
+import elephantImg from "@/assets/elephant-1.jpg";
+import massageImg from "@/assets/massage-1.jpg";
+import tigerImg from "@/assets/tiger-1.jpg";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -37,77 +43,92 @@ import { Link } from "react-router-dom";
 import thailandNewsletterImg from "@/assets/thailand-newsletter.jpg";
 
 const activities = [
+  // Bangkok Activities
   {
     id: 1,
-    title: "Phi Phi Island Day Tour",
-    image: "/placeholder.svg",
+    title: "Bangkok Skywalk Observation Deck",
+    image: bangkokImg,
     rating: 4.8,
     reviews: 234,
-    price: 3500,
-    duration: "Full Day",
-    category: "Adventure",
-    description: "Explore the stunning Phi Phi Islands with snorkeling, swimming, and beach activities.",
+    price: 880,
+    duration: "Half Day",
+    category: "Sightseeing",
+    description: "Experience breathtaking 360° views of Bangkok from the iconic King Power MahaNakhon Skywalk.",
     availability: "Available",
+    city: "Bangkok",
+    slug: "/bangkok-skywalk"
   },
   {
     id: 2,
-    title: "Bangkok Night Food Tour",
-    image: "/placeholder.svg",
+    title: "Bangkok Three Temples Tour",
+    image: bangkokImg,
     rating: 4.9,
     reviews: 567,
     price: 1200,
     duration: "Half Day",
-    category: "Food & Dining",
-    description: "Experience authentic Thai street food in Bangkok's bustling night markets.",
+    category: "Sightseeing",
+    description: "Visit Bangkok's most iconic temples including Wat Pho, Wat Arun, and Wat Traimit.",
     availability: "Available",
+    city: "Bangkok",
+    slug: "/bangkok-three-temples"
   },
+  // Phuket Activities
   {
     id: 3,
-    title: "Chiang Mai Elephant Safari",
-    image: "/placeholder.svg",
+    title: "Phi Phi Island Day Tour",
+    image: phuketImg,
     rating: 4.7,
-    reviews: 189,
-    price: 4500,
+    reviews: 456,
+    price: 1500,
     duration: "Full Day",
-    category: "Wildlife",
-    description: "Ethical elephant sanctuary experience with feeding and bathing.",
-    availability: "Limited Slots",
+    category: "Adventure",
+    description: "Explore the stunning Phi Phi Islands with snorkeling, swimming, and beach activities.",
+    availability: "Available",
+    city: "Phuket",
+    slug: "/phi-phi-island"
   },
   {
     id: 4,
-    title: "Phuket Sunset Cruise",
-    image: "/placeholder.svg",
+    title: "Phuket Simon Cabaret Show",
+    image: phuketImg,
     rating: 4.6,
     reviews: 342,
-    price: 2800,
+    price: 900,
     duration: "Half Day",
-    category: "Cruises",
-    description: "Luxury yacht cruise with dinner and stunning Andaman Sea views.",
+    category: "Entertainment",
+    description: "Enjoy Thailand's most famous cabaret show with spectacular costumes and performances.",
     availability: "Available",
+    city: "Phuket",
+    slug: "/phuket-simon-cabaret"
   },
+  // Krabi Activities
   {
     id: 5,
-    title: "Ayutthaya Historical Park Tour",
-    image: "/placeholder.svg",
-    rating: 4.5,
-    reviews: 156,
+    title: "James Bond Island Tour",
+    image: krabiImg,
+    rating: 4.8,
+    reviews: 289,
     price: 1800,
     duration: "Full Day",
-    category: "Sightseeing",
-    description: "Explore ancient temples and ruins of the UNESCO World Heritage site.",
+    category: "Adventure",
+    description: "Visit the famous James Bond Island and explore Phang Nga Bay's stunning limestone karsts.",
     availability: "Available",
+    city: "Krabi",
+    slug: "/james-bond-island"
   },
   {
     id: 6,
-    title: "Krabi Rock Climbing Adventure",
-    image: "/placeholder.svg",
+    title: "Four Islands Speedboat Tour",
+    image: krabiImg,
     rating: 4.9,
-    reviews: 98,
-    price: 3200,
-    duration: "Half Day",
+    reviews: 198,
+    price: 1400,
+    duration: "Full Day",
     category: "Adventure",
-    description: "Climb the famous limestone cliffs of Railay Beach with expert guides.",
+    description: "Discover Krabi's four islands including Phra Nang Beach and Tup Island by speedboat.",
     availability: "Available",
+    city: "Krabi",
+    slug: "/four-islands-speedboat"
   },
 ];
 
@@ -454,7 +475,9 @@ const Thailand = () => {
                       <p className="text-sm text-muted-foreground mb-4">
                         Explore pristine beaches and islands
                       </p>
-                      <Button variant="outline" size="sm">View All</Button>
+                      <Link to="/thailand-smart-guides">
+                        <Button variant="outline" size="sm">View All</Button>
+                      </Link>
                     </CardContent>
                   </Card>
                   
@@ -464,7 +487,9 @@ const Thailand = () => {
                       <p className="text-sm text-muted-foreground mb-4">
                         Taste authentic Thai cuisine
                       </p>
-                      <Button variant="outline" size="sm">View All</Button>
+                      <Link to="/thailand-smart-guides">
+                        <Button variant="outline" size="sm">View All</Button>
+                      </Link>
                     </CardContent>
                   </Card>
                   
@@ -474,7 +499,9 @@ const Thailand = () => {
                       <p className="text-sm text-muted-foreground mb-4">
                         Discover ancient temples and history
                       </p>
-                      <Button variant="outline" size="sm">View All</Button>
+                      <Link to="/thailand-smart-guides">
+                        <Button variant="outline" size="sm">View All</Button>
+                      </Link>
                     </CardContent>
                   </Card>
                 </div>
@@ -513,119 +540,143 @@ const Thailand = () => {
                   Things You Should Not Miss in Thailand
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
-                    <div className="aspect-[16/9] overflow-hidden">
-                      <img
-                        src="/placeholder.svg"
-                        alt="Floating Markets"
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <CardContent className="p-6">
-                      <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
-                        Experience Bangkok's Floating Markets
-                      </h3>
-                      <p className="text-muted-foreground text-sm mb-3">
-                        Discover the vibrant atmosphere of traditional Thai floating markets, where vendors sell fresh produce and local delicacies from their boats.
-                      </p>
-                      <Button variant="link" className="p-0">Read More →</Button>
-                    </CardContent>
-                  </Card>
+                  {/* Bangkok - Skywalk */}
+                  <Link to="/bangkok-skywalk">
+                    <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
+                      <div className="aspect-[16/9] overflow-hidden">
+                        <img
+                          src={bangkokSkywalkImg}
+                          alt="Bangkok Skywalk"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <CardContent className="p-6">
+                        <span className="text-xs text-primary font-semibold">Bangkok</span>
+                        <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
+                          Bangkok Skywalk Observation Deck
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-3">
+                          Experience breathtaking 360° views of Bangkok from the iconic King Power MahaNakhon Skywalk.
+                        </p>
+                        <Button variant="link" className="p-0">Book Now →</Button>
+                      </CardContent>
+                    </Card>
+                  </Link>
 
-                  <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
-                    <div className="aspect-[16/9] overflow-hidden">
-                      <img
-                        src="/placeholder.svg"
-                        alt="Thai Temples"
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <CardContent className="p-6">
-                      <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
-                        Visit Ancient Temples in Chiang Mai
-                      </h3>
-                      <p className="text-muted-foreground text-sm mb-3">
-                        Explore the spiritual heart of Northern Thailand with stunning temples showcasing intricate architecture and peaceful gardens.
-                      </p>
-                      <Button variant="link" className="p-0">Read More →</Button>
-                    </CardContent>
-                  </Card>
+                  {/* Phuket - Phi Phi Island */}
+                  <Link to="/phi-phi-island">
+                    <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
+                      <div className="aspect-[16/9] overflow-hidden">
+                        <img
+                          src={phiPhiImg}
+                          alt="Phi Phi Island"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <CardContent className="p-6">
+                        <span className="text-xs text-primary font-semibold">Phuket</span>
+                        <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
+                          Phi Phi Island Day Tour
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-3">
+                          Explore the stunning Phi Phi Islands with snorkeling, swimming, and beach activities.
+                        </p>
+                        <Button variant="link" className="p-0">Book Now →</Button>
+                      </CardContent>
+                    </Card>
+                  </Link>
 
-                  <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
-                    <div className="aspect-[16/9] overflow-hidden">
-                      <img
-                        src="/placeholder.svg"
-                        alt="Island Hopping"
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <CardContent className="p-6">
-                      <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
-                        Island Hopping in Krabi & Phi Phi
-                      </h3>
-                      <p className="text-muted-foreground text-sm mb-3">
-                        Navigate through crystal-clear waters and limestone cliffs while visiting some of the world's most beautiful tropical islands.
-                      </p>
-                      <Button variant="link" className="p-0">Read More →</Button>
-                    </CardContent>
-                  </Card>
+                  {/* Krabi - James Bond Island */}
+                  <Link to="/james-bond-island">
+                    <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
+                      <div className="aspect-[16/9] overflow-hidden">
+                        <img
+                          src={jamesBondImg}
+                          alt="James Bond Island"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <CardContent className="p-6">
+                        <span className="text-xs text-primary font-semibold">Krabi</span>
+                        <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
+                          James Bond Island Tour
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-3">
+                          Visit the famous James Bond Island and explore Phang Nga Bay's stunning limestone karsts.
+                        </p>
+                        <Button variant="link" className="p-0">Book Now →</Button>
+                      </CardContent>
+                    </Card>
+                  </Link>
 
-                  <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
-                    <div className="aspect-[16/9] overflow-hidden">
-                      <img
-                        src="/placeholder.svg"
-                        alt="Street Food"
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <CardContent className="p-6">
-                      <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
-                        Taste Authentic Thai Street Food
-                      </h3>
-                      <p className="text-muted-foreground text-sm mb-3">
-                        Embark on a culinary journey through bustling night markets and street food stalls serving authentic pad thai, som tam, and more.
-                      </p>
-                      <Button variant="link" className="p-0">Read More →</Button>
-                    </CardContent>
-                  </Card>
+                  {/* Pattaya - Elephant Safari */}
+                  <Link to="/elephant-safari">
+                    <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
+                      <div className="aspect-[16/9] overflow-hidden">
+                        <img
+                          src={elephantImg}
+                          alt="Elephant Safari"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <CardContent className="p-6">
+                        <span className="text-xs text-primary font-semibold">Pattaya</span>
+                        <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
+                          Elephant Jungle Sanctuary
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-3">
+                          Connect with rescued elephants in their natural habitat while feeding and bathing these gentle giants.
+                        </p>
+                        <Button variant="link" className="p-0">Book Now →</Button>
+                      </CardContent>
+                    </Card>
+                  </Link>
 
-                  <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
-                    <div className="aspect-[16/9] overflow-hidden">
-                      <img
-                        src="/placeholder.svg"
-                        alt="Elephant Sanctuary"
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <CardContent className="p-6">
-                      <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
-                        Visit Ethical Elephant Sanctuaries
-                      </h3>
-                      <p className="text-muted-foreground text-sm mb-3">
-                        Connect with rescued elephants in their natural habitat, learning about conservation efforts while feeding and bathing these gentle giants.
-                      </p>
-                      <Button variant="link" className="p-0">Read More →</Button>
-                    </CardContent>
-                  </Card>
+                  {/* Bangkok - Thai Massage */}
+                  <Link to="/massage-coupons">
+                    <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
+                      <div className="aspect-[16/9] overflow-hidden">
+                        <img
+                          src={massageImg}
+                          alt="Thai Massage"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <CardContent className="p-6">
+                        <span className="text-xs text-primary font-semibold">Bangkok</span>
+                        <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
+                          Traditional Thai Massage
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-3">
+                          Experience the ancient healing art of Thai massage combining acupressure and meditation.
+                        </p>
+                        <Button variant="link" className="p-0">Book Now →</Button>
+                      </CardContent>
+                    </Card>
+                  </Link>
 
-                  <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
-                    <div className="aspect-[16/9] overflow-hidden">
-                      <img
-                        src="/placeholder.svg"
-                        alt="Thai Massage"
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <CardContent className="p-6">
-                      <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
-                        Relax with Traditional Thai Massage
-                      </h3>
-                      <p className="text-muted-foreground text-sm mb-3">
-                        Experience the ancient healing art of Thai massage, combining acupressure, stretching, and meditation for ultimate relaxation.
-                      </p>
-                      <Button variant="link" className="p-0">Read More →</Button>
-                    </CardContent>
-                  </Card>
+                  {/* Phuket - Tiger Kingdom */}
+                  <Link to="/selfie-tigers">
+                    <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
+                      <div className="aspect-[16/9] overflow-hidden">
+                        <img
+                          src={tigerImg}
+                          alt="Tiger Kingdom"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <CardContent className="p-6">
+                        <span className="text-xs text-primary font-semibold">Phuket</span>
+                        <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-colors">
+                          Selfie with Tigers
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-3">
+                          Get up close with majestic tigers and capture unforgettable photos at Tiger Kingdom.
+                        </p>
+                        <Button variant="link" className="p-0">Book Now →</Button>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 </div>
               </section>
             </div>

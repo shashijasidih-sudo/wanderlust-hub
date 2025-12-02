@@ -62,6 +62,7 @@ import SevenIslandsSpeedboat from "./pages/SevenIslandsSpeedboat";
 import FourIslandsLongtail from "./pages/FourIslandsLongtail";
 import FourIslandsSpeedboat from "./pages/FourIslandsSpeedboat";
 import TourPackages from "./pages/TourPackages";
+import ThailandSmartGuides from "./pages/ThailandSmartGuides";
 
 const queryClient = new QueryClient();
 
@@ -130,6 +131,7 @@ const App = () => (
           <Route path="/four-islands-longtail" element={<FourIslandsLongtail />} />
           <Route path="/four-islands-speedboat" element={<FourIslandsSpeedboat />} />
           <Route path="/tour-packages" element={<TourPackages />} />
+          <Route path="/thailand-smart-guides" element={<ThailandSmartGuides />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
