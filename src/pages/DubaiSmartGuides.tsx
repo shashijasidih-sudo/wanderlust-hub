@@ -1,0 +1,294 @@
+import { Link } from "react-router-dom";
+import { Calendar, Clock, ArrowRight, User } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+
+const blogArticles = [
+  {
+    id: 1,
+    title: "Ultimate Guide to Dubai's Desert Safari",
+    description: "Experience the thrill of dune bashing, camel rides, and traditional Bedouin camps under the stars.",
+    category: "Adventure",
+    image: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800",
+    author: "Desert Expert",
+    date: "Nov 25, 2024",
+    readTime: "8 min read",
+    slug: "/desert-safari"
+  },
+  {
+    id: 2,
+    title: "Burj Khalifa: Everything You Need to Know",
+    description: "Complete guide to visiting the world's tallest building, from ticket tips to best viewing times.",
+    category: "Landmarks",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800",
+    author: "Architecture Buff",
+    date: "Nov 22, 2024",
+    readTime: "10 min read",
+    slug: "/dubai"
+  },
+  {
+    id: 3,
+    title: "Dubai Creek and Old Dubai Walking Tour",
+    description: "Discover the historic heart of Dubai with its traditional souks, museums, and waterfront charm.",
+    category: "Cultural Sites",
+    image: "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=800",
+    author: "History Guide",
+    date: "Nov 20, 2024",
+    readTime: "12 min read",
+    slug: "/dubai"
+  },
+  {
+    id: 4,
+    title: "Best Dhow Cruise Dinner Experiences",
+    description: "Sail along Dubai Marina or Creek while enjoying a sumptuous dinner with stunning city views.",
+    category: "Dining",
+    image: "https://images.unsplash.com/photo-1597659840241-37e2b9c2f55f?w=800",
+    author: "Food Critic",
+    date: "Nov 18, 2024",
+    readTime: "7 min read",
+    slug: "/dhow-cruise"
+  },
+  {
+    id: 5,
+    title: "Shopping Guide: From Souks to Malls",
+    description: "Navigate Dubai's world-class shopping scene from traditional gold souks to mega malls.",
+    category: "Shopping",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+    author: "Style Expert",
+    date: "Nov 15, 2024",
+    readTime: "9 min read",
+    slug: "/dubai"
+  },
+  {
+    id: 6,
+    title: "Dubai Theme Parks: Complete Guide",
+    description: "From IMG Worlds to Dubai Parks, discover the best theme parks for family fun.",
+    category: "Family Fun",
+    image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800",
+    author: "Family Travel",
+    date: "Nov 12, 2024",
+    readTime: "11 min read",
+    slug: "/dubai"
+  },
+  {
+    id: 7,
+    title: "Palm Jumeirah & Atlantis Experience",
+    description: "Explore the iconic palm-shaped island and its world-famous resort attractions.",
+    category: "Landmarks",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800",
+    author: "Island Explorer",
+    date: "Nov 10, 2024",
+    readTime: "8 min read",
+    slug: "/atlantis-palm"
+  },
+  {
+    id: 8,
+    title: "Dubai Marina: Day & Night Guide",
+    description: "The best activities, restaurants, and experiences in Dubai's stunning marina district.",
+    category: "Neighborhoods",
+    image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800",
+    author: "Local Guide",
+    date: "Nov 8, 2024",
+    readTime: "6 min read",
+    slug: "/dubai"
+  },
+  {
+    id: 9,
+    title: "Abu Dhabi Day Trip from Dubai",
+    description: "Visit Sheikh Zayed Mosque, Louvre Abu Dhabi, and more on a perfect day trip.",
+    category: "Day Trips",
+    image: "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=800",
+    author: "Day Tripper",
+    date: "Nov 5, 2024",
+    readTime: "10 min read",
+    slug: "/dubai"
+  },
+  {
+    id: 10,
+    title: "Best Beaches in Dubai",
+    description: "From JBR to La Mer, find the perfect beach for swimming, water sports, or relaxation.",
+    category: "Adventure",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800",
+    author: "Beach Lover",
+    date: "Nov 2, 2024",
+    readTime: "7 min read",
+    slug: "/dubai"
+  },
+  {
+    id: 11,
+    title: "Dubai Food Scene: A Culinary Journey",
+    description: "From street shawarma to Michelin-starred restaurants, explore Dubai's diverse food culture.",
+    category: "Dining",
+    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800",
+    author: "Food Explorer",
+    date: "Oct 30, 2024",
+    readTime: "9 min read",
+    slug: "/dubai"
+  },
+  {
+    id: 12,
+    title: "Dubai Nightlife: Clubs & Rooftop Bars",
+    description: "Experience the glamorous nightlife scene with the best clubs and rooftop venues.",
+    category: "Nightlife",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800",
+    author: "Night Owl",
+    date: "Oct 28, 2024",
+    readTime: "8 min read",
+    slug: "/dubai"
+  }
+];
+
+const DubaiSmartGuides = () => {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <main className="flex-1 bg-secondary/30">
+        <div className="container px-4 py-6">
+          <Breadcrumb className="mb-6">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/">Home</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/dubai">Dubai</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Smart Guides</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Dubai Smart Guides
+            </h1>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Expert travel guides, insider tips, and curated experiences to help you explore Dubai like a local
+            </p>
+          </div>
+
+          {/* Featured Article */}
+          <Card className="mb-12 overflow-hidden group cursor-pointer hover:shadow-card-hover transition-all">
+            <Link to={blogArticles[0].slug}>
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="aspect-[4/3] md:aspect-auto overflow-hidden">
+                  <img
+                    src={blogArticles[0].image}
+                    alt={blogArticles[0].title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-8 flex flex-col justify-center">
+                  <span className="text-primary font-semibold text-sm mb-2">{blogArticles[0].category}</span>
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                    {blogArticles[0].title}
+                  </h2>
+                  <p className="text-muted-foreground mb-6">{blogArticles[0].description}</p>
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                    <span className="flex items-center gap-1">
+                      <User className="h-4 w-4" />
+                      {blogArticles[0].author}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Calendar className="h-4 w-4" />
+                      {blogArticles[0].date}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="h-4 w-4" />
+                      {blogArticles[0].readTime}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </Card>
+
+          {/* Category Filters */}
+          <div className="flex flex-wrap gap-3 mb-8 justify-center">
+            <Button variant="default">All Guides</Button>
+            <Button variant="outline">Adventure</Button>
+            <Button variant="outline">Landmarks</Button>
+            <Button variant="outline">Dining</Button>
+            <Button variant="outline">Cultural Sites</Button>
+          </div>
+
+          {/* Article Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {blogArticles.slice(1).map((article) => (
+              <Card key={article.id} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
+                <Link to={article.slug}>
+                  <div className="aspect-[16/10] overflow-hidden">
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <span className="text-primary font-semibold text-xs uppercase tracking-wide">{article.category}</span>
+                    <h3 className="font-bold text-lg mt-2 mb-3 text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                      {article.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{article.description}</p>
+                    <div className="flex items-center justify-between text-xs text-muted-foreground">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="h-3 w-3" />
+                        {article.date}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="h-3 w-3" />
+                        {article.readTime}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 text-primary mt-4 text-sm font-medium group-hover:gap-3 transition-all">
+                      Read More <ArrowRight className="h-4 w-4" />
+                    </div>
+                  </CardContent>
+                </Link>
+              </Card>
+            ))}
+          </div>
+
+          {/* Newsletter Section */}
+          <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-none">
+            <CardContent className="p-8 text-center">
+              <h2 className="text-2xl font-bold text-foreground mb-3">Get More Dubai Tips</h2>
+              <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+                Subscribe to our newsletter for exclusive travel guides, deals, and insider tips delivered to your inbox.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-2 rounded-md border border-border bg-background"
+                />
+                <Button>Subscribe</Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default DubaiSmartGuides;
