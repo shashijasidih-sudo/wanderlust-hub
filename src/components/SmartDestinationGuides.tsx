@@ -10,7 +10,7 @@ const guides = [
     name: "Thailand",
     description: "Beaches, Temples & Street Food",
     image: thailandImage,
-    link: "/thailand"
+    link: "/thailand-smart-guides"
   },
   {
     name: "Dubai",
