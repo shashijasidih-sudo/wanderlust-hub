@@ -16,19 +16,19 @@ const guides = [
     name: "Dubai",
     description: "Luxury, Desert & Modern Marvels",
     image: dubaiImage,
-    link: "/dubai"
+    link: "/dubai-smart-guides"
   },
   {
     name: "Singapore",
     description: "Gardens, Culture & Urban Delights",
     image: singaporeImage,
-    link: "#singapore"
+    link: "/singapore-smart-guides"
   },
   {
     name: "Netherlands",
     description: "Canals, Tulips & Art",
     image: netherlandsImage,
-    link: "#netherlands"
+    link: "/netherlands-smart-guides"
   },
 ];
 
