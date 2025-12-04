@@ -67,6 +67,10 @@ import DubaiSmartGuides from "./pages/DubaiSmartGuides";
 import SingaporeSmartGuides from "./pages/SingaporeSmartGuides";
 import NetherlandsSmartGuides from "./pages/NetherlandsSmartGuides";
 import AboutUs from "./pages/AboutUs";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
+import RefundPolicy from "./pages/RefundPolicy";
 
 const queryClient = new QueryClient();
 
@@ -140,6 +144,10 @@ const App = () => (
           <Route path="/singapore-smart-guides" element={<SingaporeSmartGuides />} />
           <Route path="/netherlands-smart-guides" element={<NetherlandsSmartGuides />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
