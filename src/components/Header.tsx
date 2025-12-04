@@ -129,19 +129,19 @@ const Header = () => {
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[260px] p-2">
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
                 <Palmtree className="h-5 w-5 mr-3 text-primary" />
-                <a href="#thailand" className="w-full font-medium">Thailand Smart Guides</a>
+                <Link to="/thailand-smart-guides" className="w-full font-medium">Thailand Smart Guides</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
                 <TreePine className="h-5 w-5 mr-3 text-primary" />
-                <a href="#singapore" className="w-full font-medium">Singapore Smart Guides</a>
+                <Link to="/singapore-smart-guides" className="w-full font-medium">Singapore Smart Guides</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
                 <Castle className="h-5 w-5 mr-3 text-primary" />
-                <a href="#dubai" className="w-full font-medium">Dubai Smart Guides</a>
+                <Link to="/dubai-smart-guides" className="w-full font-medium">Dubai Smart Guides</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
                 <Droplet className="h-5 w-5 mr-3 text-primary" />
-                <a href="#netherlands" className="w-full font-medium">Netherlands Smart Guides</a>
+                <Link to="/netherlands-smart-guides" className="w-full font-medium">Netherlands Smart Guides</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
                 <Tent className="h-5 w-5 mr-3 text-primary" />
@@ -186,16 +186,16 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50">
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#thailand" className="w-full">Thailand Smart Guides</a>
+                  <Link to="/thailand-smart-guides" className="w-full">Thailand Smart Guides</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#singapore" className="w-full">Singapore Smart Guides</a>
+                  <Link to="/singapore-smart-guides" className="w-full">Singapore Smart Guides</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#dubai" className="w-full">Dubai Smart Guides</a>
+                  <Link to="/dubai-smart-guides" className="w-full">Dubai Smart Guides</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  <a href="#netherlands" className="w-full">Netherlands Smart Guides</a>
+                  <Link to="/netherlands-smart-guides" className="w-full">Netherlands Smart Guides</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
                   <a href="#australia" className="w-full">Australia Smart Guides</a>
