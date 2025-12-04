@@ -66,6 +66,7 @@ import ThailandSmartGuides from "./pages/ThailandSmartGuides";
 import DubaiSmartGuides from "./pages/DubaiSmartGuides";
 import SingaporeSmartGuides from "./pages/SingaporeSmartGuides";
 import NetherlandsSmartGuides from "./pages/NetherlandsSmartGuides";
+import AboutUs from "./pages/AboutUs";
 
 const queryClient = new QueryClient();
 
@@ -138,6 +139,7 @@ const App = () => (
           <Route path="/dubai-smart-guides" element={<DubaiSmartGuides />} />
           <Route path="/singapore-smart-guides" element={<SingaporeSmartGuides />} />
           <Route path="/netherlands-smart-guides" element={<NetherlandsSmartGuides />} />
+          <Route path="/about-us" element={<AboutUs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

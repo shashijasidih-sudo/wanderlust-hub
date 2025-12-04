@@ -152,6 +152,9 @@ const Header = () => {
           <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
             Travel Essentials
           </a>
+          <Link to="/about-us" className="text-sm font-medium transition-colors hover:text-primary">
+            About Us
+          </Link>
         </nav>
       </div>
 
@@ -205,6 +208,9 @@ const Header = () => {
             <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
               Travel Essentials
             </a>
+            <Link to="/about-us" className="text-sm font-medium transition-colors hover:text-primary">
+              About Us
+            </Link>
             <div className="flex items-center gap-2 pt-2 border-t">
               <Button variant="ghost" size="icon">
                 <IndianRupee className="h-5 w-5" />
