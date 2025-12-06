@@ -52,27 +52,27 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm text-background/80">
-              <li><Link to="/about-us" className="hover:text-background transition-colors">About Us</Link></li>
-              <li><a href="#" className="hover:text-background transition-colors">Destinations</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Tours</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Blog</a></li>
-            </ul>
-          </div>
+        {/* Quick Links */}
+        <div>
+          <h4 className="font-semibold mb-4">Quick Links</h4>
+          <ul className="space-y-2 text-sm text-background/80">
+            <li><Link to="/about-us" className="hover:text-background transition-colors">About Us</Link></li>
+            <li><Link to="/thailand" className="hover:text-background transition-colors">Trending Thailand Activities</Link></li>
+            <li><Link to="/dubai" className="hover:text-background transition-colors">Trending Dubai Activities</Link></li>
+            <li><a href="#singapore" className="hover:text-background transition-colors">Trending Singapore Activities</a></li>
+            <li><Link to="/tour-packages" className="hover:text-background transition-colors">Tours & Packages</Link></li>
+            <li><Link to="/thailand-smart-guides" className="hover:text-background transition-colors">Smart Destination Guides</Link></li>
+          </ul>
+        </div>
 
-          {/* Support */}
-          <div>
-            <h4 className="font-semibold mb-4">Support</h4>
-            <ul className="space-y-2 text-sm text-background/80">
-              <li><a href="#" className="hover:text-background transition-colors">Contact Us</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">FAQ</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Booking Help</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Customer Service</a></li>
-            </ul>
-          </div>
+        {/* Support */}
+        <div>
+          <h4 className="font-semibold mb-4">Support</h4>
+          <ul className="space-y-2 text-sm text-background/80">
+            <li><Link to="/contact-us" className="hover:text-background transition-colors">Contact Us</Link></li>
+            <li><Link to="/faq" className="hover:text-background transition-colors">FAQ</Link></li>
+          </ul>
+        </div>
 
           {/* Legal */}
           <div>

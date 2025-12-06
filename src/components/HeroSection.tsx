@@ -49,6 +49,8 @@ const HeroSection = () => {
                   <SelectItem value="/pattaya">Pattaya</SelectItem>
                   <SelectItem value="/phuket">Phuket</SelectItem>
                   <SelectItem value="/krabi">Krabi</SelectItem>
+                  <SelectItem value="/dubai">Dubai</SelectItem>
+                  <SelectItem value="#singapore">Singapore</SelectItem>
                 </SelectContent>
               </Select>
             </div>
