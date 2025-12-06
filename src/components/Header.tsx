@@ -118,6 +118,43 @@ const Header = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
+              Transfers
+              <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[240px] p-2">
+              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
+                <Palmtree className="h-5 w-5 mr-3 text-primary" />
+                <Link to="/thailand" className="w-full font-medium">Thailand</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
+                <Building2 className="h-5 w-5 mr-3 text-primary" />
+                <Link to="/bangkok" className="w-full font-medium">Bangkok</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
+                <Fish className="h-5 w-5 mr-3 text-primary" />
+                <Link to="/phuket" className="w-full font-medium">Phuket</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
+                <Anchor className="h-5 w-5 mr-3 text-primary" />
+                <Link to="/krabi" className="w-full font-medium">Krabi</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
+                <Ship className="h-5 w-5 mr-3 text-primary" />
+                <Link to="/pattaya" className="w-full font-medium">Pattaya</Link>
+              </DropdownMenuItem>
+              <div className="h-px bg-border my-2" />
+              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
+                <Castle className="h-5 w-5 mr-3 text-primary" />
+                <Link to="/dubai" className="w-full font-medium">Dubai</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
+                <TreePine className="h-5 w-5 mr-3 text-primary" />
+                <a href="#singapore" className="w-full font-medium">Singapore</a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary">
             Tours & Packages
           </Link>
@@ -152,9 +189,6 @@ const Header = () => {
           <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
             Travel Essentials
           </a>
-          <Link to="/about-us" className="text-sm font-medium transition-colors hover:text-primary">
-            About Us
-          </Link>
         </nav>
       </div>
 
@@ -208,9 +242,6 @@ const Header = () => {
             <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
               Travel Essentials
             </a>
-            <Link to="/about-us" className="text-sm font-medium transition-colors hover:text-primary">
-              About Us
-            </Link>
             <div className="flex items-center gap-2 pt-2 border-t">
               <Button variant="ghost" size="icon">
                 <IndianRupee className="h-5 w-5" />
