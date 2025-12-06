@@ -56,12 +56,13 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm text-background/80">
-            <li><Link to="/about-us" className="hover:text-background transition-colors">About Us</Link></li>
             <li><Link to="/thailand" className="hover:text-background transition-colors">Trending Thailand Activities</Link></li>
             <li><Link to="/dubai" className="hover:text-background transition-colors">Trending Dubai Activities</Link></li>
             <li><a href="#singapore" className="hover:text-background transition-colors">Trending Singapore Activities</a></li>
-            <li><Link to="/tour-packages" className="hover:text-background transition-colors">Tours & Packages</Link></li>
             <li><Link to="/thailand-smart-guides" className="hover:text-background transition-colors">Smart Destination Guides</Link></li>
+            <li><Link to="/thailand" className="hover:text-background transition-colors">Thailand Transfers</Link></li>
+            <li><a href="#singapore" className="hover:text-background transition-colors">Singapore Transfers</a></li>
+            <li><Link to="/dubai" className="hover:text-background transition-colors">Dubai Transfers</Link></li>
           </ul>
         </div>
 
@@ -69,6 +70,7 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-4">Support</h4>
           <ul className="space-y-2 text-sm text-background/80">
+            <li><Link to="/about-us" className="hover:text-background transition-colors">About Us</Link></li>
             <li><Link to="/contact-us" className="hover:text-background transition-colors">Contact Us</Link></li>
             <li><Link to="/faq" className="hover:text-background transition-colors">FAQ</Link></li>
           </ul>
