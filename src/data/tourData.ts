@@ -2174,5 +2174,256 @@ export const toursData: Record<string, TourData> = {
       { question: "Why should I choose speedboat over longtail?", answer: "Speedboat offers a smoother, faster ride allowing more time at each island and better for those prone to seasickness." },
       { question: "Do I need to bring cash?", answer: "Yes, bring 400 THB in cash for national park entrance fees which are not included in the tour price." }
     ]
+  },
+  // Additional Bangkok Tours
+  "safari-world-bangkok": {
+    id: "safari-world-bangkok",
+    title: "Safari World Bangkok Full Day Tour with Lunch and Transfer",
+    shortDescription: "Experience Thailand's largest open zoo with Safari Park drive-through and Marine Park shows.",
+    location: "Bangkok, Thailand",
+    city: "bangkok",
+    basePrice: 3500,
+    childPrice: 2800,
+    duration: "Full Day",
+    rating: 4.7,
+    reviews: 1567,
+    heroImages: [
+      { src: bangkokSkywalk1, title: "Safari World Bangkok" },
+      { src: bangkokSkywalk2, title: "Safari Park" },
+      { src: bangkokSkywalk3, title: "Marine Park" }
+    ],
+    galleryImages: [
+      { src: bangkokSkywalk1, alt: "Safari drive" },
+      { src: bangkokSkywalk2, alt: "Marine show" },
+      { src: bangkokSkywalk3, alt: "Wildlife" },
+      { src: emerald1, alt: "Animal encounters" }
+    ],
+    highlights: [
+      "Safari Park Drive-Through",
+      "Marine Park Shows",
+      "Dolphin & Sea Lion Shows",
+      "Feeding Sessions"
+    ],
+    description: {
+      overview: "Thailand's largest open zoo featuring a drive-through safari and marine park with spectacular animal shows.",
+      whatToExpect: "Drive through Safari Park to see African wildlife, then enjoy Marine Park's dolphin shows, sea lion performances, and more."
+    },
+    itinerary: [
+      { time: "08:00 AM", title: "Hotel Pickup", description: "Pick up from Bangkok hotel" },
+      { time: "09:30 AM", title: "Safari Park", description: "Drive through wildlife reserve" },
+      { time: "11:00 AM", title: "Marine Shows", description: "Dolphin and sea lion shows" },
+      { time: "12:30 PM", title: "Lunch", description: "Buffet lunch included" },
+      { time: "02:00 PM", title: "More Shows", description: "Additional performances" },
+      { time: "04:30 PM", title: "Return", description: "Return to hotel" }
+    ],
+    tourTimings: ["08:00 AM"],
+    inclusions: ["Hotel Transfer", "Admission", "Buffet Lunch", "All Shows"],
+    exclusions: ["Personal Expenses", "Feeding Tickets"],
+    bookingPolicy: ["Confirmation within 24 hours"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before"],
+    childPolicy: ["Child rate for ages 3-11"],
+    faqs: [
+      { question: "Is it suitable for children?", answer: "Yes, perfect for families with children of all ages." }
+    ]
+  },
+  // Additional Pattaya Tours
+  "pattaya-nightlife-walking": {
+    id: "pattaya-nightlife-walking",
+    title: "Lost in Nightlight - A Walking, Drinking, and Food Tasting Experience at Pattaya's Red Light District",
+    shortDescription: "An adults-only guided walking tour exploring Pattaya's famous nightlife scene with food and drinks.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 4200,
+    childPrice: 0,
+    duration: "4 Hours",
+    rating: 4.4,
+    reviews: 345,
+    heroImages: [
+      { src: phiPhi1, title: "Pattaya Nightlife" },
+      { src: phiPhi2, title: "Walking Street" },
+      { src: phiPhi3, title: "Food and Drinks" }
+    ],
+    galleryImages: [
+      { src: phiPhi4, alt: "Night scene" },
+      { src: phiPhi5, alt: "Street food" },
+      { src: phiPhi6, alt: "Local bars" },
+      { src: phiPhi7, alt: "Entertainment" }
+    ],
+    highlights: [
+      "Walking Street Experience",
+      "Local Food Tasting",
+      "Drinks Included",
+      "Knowledgeable Guide"
+    ],
+    description: {
+      overview: "An adults-only tour exploring Pattaya's legendary nightlife with local food, drinks, and cultural insights.",
+      whatToExpect: "Walk through Pattaya's famous entertainment districts, sample local street food, enjoy drinks at various venues, and learn about the area's history."
+    },
+    itinerary: [
+      { time: "08:00 PM", title: "Meeting Point", description: "Meet at designated location" },
+      { time: "08:30 PM", title: "Food Tasting", description: "Sample local street food" },
+      { time: "09:30 PM", title: "Walking Tour", description: "Explore the entertainment areas" },
+      { time: "11:00 PM", title: "Drinks", description: "Enjoy drinks at local venues" },
+      { time: "12:00 AM", title: "End", description: "Tour concludes" }
+    ],
+    tourTimings: ["08:00 PM"],
+    inclusions: ["Guide", "Food Tastings", "3 Drinks", "Walking Tour"],
+    exclusions: ["Additional Drinks", "Personal Expenses"],
+    bookingPolicy: ["Adults only (18+)", "ID required"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before"],
+    childPolicy: ["Not suitable for children"],
+    faqs: [
+      { question: "Is this tour safe?", answer: "Yes, our guides ensure a safe and respectful experience." }
+    ]
+  },
+  "pattaya-pub-crawl": {
+    id: "pattaya-pub-crawl",
+    title: "Sunset Club and Pub Crawling Experience at Drinking Street in Pattaya",
+    shortDescription: "Ultimate Pattaya nightlife experience with sunset drinks and guided pub crawl through the best venues.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 5200,
+    childPrice: 0,
+    duration: "5 Hours",
+    rating: 4.6,
+    reviews: 278,
+    heroImages: [
+      { src: phiPhi1, title: "Sunset Views" },
+      { src: phiPhi2, title: "Rooftop Bars" },
+      { src: phiPhi3, title: "Pub Crawl" }
+    ],
+    galleryImages: [
+      { src: phiPhi4, alt: "Sunset drinks" },
+      { src: phiPhi5, alt: "Club experience" },
+      { src: phiPhi6, alt: "Group fun" },
+      { src: phiPhi7, alt: "Night venues" }
+    ],
+    highlights: [
+      "Sunset Rooftop Drinks",
+      "VIP Entry to Clubs",
+      "Drinks at Multiple Venues",
+      "Party Atmosphere"
+    ],
+    description: {
+      overview: "Start with sunset cocktails at a rooftop bar then explore Pattaya's best nightlife venues on this guided pub crawl.",
+      whatToExpect: "Begin with sunset views and drinks, then visit 4-5 of Pattaya's hottest bars and clubs with VIP entry and drink deals."
+    },
+    itinerary: [
+      { time: "06:00 PM", title: "Sunset Bar", description: "Rooftop sunset drinks" },
+      { time: "08:00 PM", title: "Pub Crawl Begins", description: "First venue visit" },
+      { time: "09:30 PM", title: "Club Hopping", description: "Visit multiple venues" },
+      { time: "11:00 PM", title: "Final Venue", description: "End at top club" }
+    ],
+    tourTimings: ["06:00 PM"],
+    inclusions: ["Welcome Drink", "VIP Entry", "Drink at Each Venue", "Guide"],
+    exclusions: ["Additional Drinks", "Personal Expenses"],
+    bookingPolicy: ["Adults only (18+)", "Dress code applies"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before"],
+    childPolicy: ["Not suitable for children"],
+    faqs: [
+      { question: "What's the dress code?", answer: "Smart casual - no flip flops or tank tops." }
+    ]
+  },
+  // Additional Krabi Tours
+  "phi-phi-krabi-speedboat": {
+    id: "phi-phi-krabi-speedboat",
+    title: "Phi Phi Island by Speedboat with Transfer from Krabi",
+    shortDescription: "Full day speedboat tour to Phi Phi Islands departing from Krabi with Maya Bay, snorkeling, and lunch.",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    basePrice: 3800,
+    childPrice: 2800,
+    duration: "Full Day",
+    rating: 4.8,
+    reviews: 1234,
+    heroImages: [
+      { src: phiPhi1, title: "Phi Phi from Krabi" },
+      { src: phiPhi2, title: "Maya Bay" },
+      { src: phiPhi3, title: "Speedboat Adventure" }
+    ],
+    galleryImages: [
+      { src: phiPhi4, alt: "Phi Phi Islands" },
+      { src: phiPhi5, alt: "Snorkeling" },
+      { src: phiPhi6, alt: "Beach time" },
+      { src: phiPhi7, alt: "Lunch on island" }
+    ],
+    highlights: [
+      "Speedboat from Krabi",
+      "Maya Bay Visit",
+      "Phi Phi Don Exploration",
+      "Snorkeling at Coral Reefs"
+    ],
+    description: {
+      overview: "Experience the stunning Phi Phi Islands on a speedboat tour departing from Krabi, visiting Maya Bay and multiple snorkeling spots.",
+      whatToExpect: "Fast speedboat journey to Phi Phi Islands, visit iconic Maya Bay, snorkel at pristine reefs, lunch at Phi Phi Don, and explore Viking Cave."
+    },
+    itinerary: [
+      { time: "07:30 AM", title: "Hotel Pickup", description: "Pickup from Krabi hotel" },
+      { time: "09:00 AM", title: "Speedboat Departs", description: "Journey to Phi Phi" },
+      { time: "10:00 AM", title: "Maya Bay", description: "Visit famous beach" },
+      { time: "11:30 AM", title: "Snorkeling", description: "Coral reef snorkeling" },
+      { time: "01:00 PM", title: "Lunch", description: "Lunch at Phi Phi Don" },
+      { time: "03:00 PM", title: "Viking Cave", description: "Sightseeing" },
+      { time: "05:00 PM", title: "Return", description: "Return to Krabi" }
+    ],
+    tourTimings: ["07:30 AM"],
+    inclusions: ["Hotel Transfer", "Speedboat", "Lunch", "Snorkeling Gear", "Guide"],
+    exclusions: ["National Park Fee", "Personal Expenses"],
+    bookingPolicy: ["Confirmation within 24 hours"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before"],
+    childPolicy: ["Child rate for ages 4-11"],
+    faqs: [
+      { question: "How long is the boat ride?", answer: "About 1 hour by speedboat from Krabi." }
+    ]
+  },
+  "krabi-emerald-pool-tiger-cave": {
+    id: "krabi-emerald-pool-tiger-cave",
+    title: "Full Day Emerald Pool + Hot Springs + Tiger Cave with Lunch",
+    shortDescription: "Complete nature tour including the famous Emerald Pool, natural hot springs, and challenging Tiger Cave Temple climb.",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    basePrice: 3000,
+    childPrice: 2000,
+    duration: "Full Day",
+    rating: 4.6,
+    reviews: 567,
+    heroImages: [
+      { src: emerald1, title: "Emerald Pool" },
+      { src: phiPhi1, title: "Hot Springs" },
+      { src: phiPhi2, title: "Tiger Cave Temple" }
+    ],
+    galleryImages: [
+      { src: phiPhi3, alt: "Emerald Pool swimming" },
+      { src: phiPhi4, alt: "Natural hot springs" },
+      { src: phiPhi5, alt: "Tiger Cave stairs" },
+      { src: phiPhi6, alt: "Temple views" }
+    ],
+    highlights: [
+      "Emerald Pool Swimming",
+      "Natural Hot Springs",
+      "Tiger Cave Temple",
+      "Rainforest Experience"
+    ],
+    description: {
+      overview: "A full day nature adventure visiting Krabi's most famous natural attractions including Emerald Pool, hot springs, and Tiger Cave Temple.",
+      whatToExpect: "Swim in the crystal-clear Emerald Pool, relax in natural hot springs, and optionally climb 1,260 steps to Tiger Cave Temple for stunning views."
+    },
+    itinerary: [
+      { time: "08:00 AM", title: "Hotel Pickup", description: "Pick up from Krabi hotel" },
+      { time: "09:30 AM", title: "Emerald Pool", description: "Swim in crystal waters" },
+      { time: "11:00 AM", title: "Hot Springs", description: "Relax in natural springs" },
+      { time: "12:30 PM", title: "Lunch", description: "Thai lunch included" },
+      { time: "02:00 PM", title: "Tiger Cave", description: "Visit the temple" },
+      { time: "04:30 PM", title: "Return", description: "Return to hotel" }
+    ],
+    tourTimings: ["08:00 AM"],
+    inclusions: ["Hotel Transfer", "Park Fees", "Lunch", "Guide"],
+    exclusions: ["Personal Expenses", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before"],
+    childPolicy: ["Child rate for ages 4-11"],
+    faqs: [
+      { question: "Do I have to climb Tiger Cave?", answer: "No, climbing the 1,260 steps is optional. You can explore the temple grounds instead." }
+    ]
   }
 };
