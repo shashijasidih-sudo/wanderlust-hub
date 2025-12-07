@@ -78,7 +78,7 @@ const Krabi = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <SearchInput placeholder="Search Krabi activities..." className="flex-1" />
+            <SearchInput placeholder="Search Krabi activities..." className="flex-1" cityFilter="Krabi" />
             <Button
               variant={viewMode === 'grid' ? 'default' : 'outline'}
               size="icon"

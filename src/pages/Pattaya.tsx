@@ -78,7 +78,7 @@ const Pattaya = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <SearchInput placeholder="Search Pattaya activities..." className="flex-1" />
+            <SearchInput placeholder="Search Pattaya activities..." className="flex-1" cityFilter="Pattaya" />
             <Button
               variant={viewMode === 'grid' ? 'default' : 'outline'}
               size="icon"

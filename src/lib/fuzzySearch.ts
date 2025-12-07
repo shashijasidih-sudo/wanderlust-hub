@@ -120,7 +120,7 @@ export function highlightText(text: string, query: string): string {
 }
 
 // Main search function
-export function fuzzySearchTours(query: string, limit: number = 20): SearchResult[] {
+export function fuzzySearchTours(query: string, limit: number = 20, cityFilter?: string): SearchResult[] {
   if (!query.trim()) return [];
   
   const normalizedQuery = query.toLowerCase().trim();
@@ -128,7 +128,12 @@ export function fuzzySearchTours(query: string, limit: number = 20): SearchResul
   
   const results: SearchResult[] = [];
   
-  Object.values(toursData).forEach(tour => {
+  // Filter tours by city if cityFilter is provided
+  const toursToSearch = cityFilter 
+    ? Object.values(toursData).filter(tour => tour.city.toLowerCase() === cityFilter.toLowerCase())
+    : Object.values(toursData);
+  
+  toursToSearch.forEach(tour => {
     let totalScore = 0;
     const matchedFields: string[] = [];
     const searchableFields = getSearchableFields(tour);
