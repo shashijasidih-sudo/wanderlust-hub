@@ -9,9 +9,10 @@ interface SearchInputProps {
   placeholder?: string;
   className?: string;
   autoFocus?: boolean;
+  cityFilter?: string;
 }
 
-const SearchInput = ({ placeholder = "Search...", className = "", autoFocus = false }: SearchInputProps) => {
+const SearchInput = ({ placeholder = "Search...", className = "", autoFocus = false, cityFilter }: SearchInputProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -20,14 +21,14 @@ const SearchInput = ({ placeholder = "Search...", className = "", autoFocus = fa
 
   useEffect(() => {
     if (searchQuery.length >= 1) {
-      const searchResults = fuzzySearchTours(searchQuery);
+      const searchResults = fuzzySearchTours(searchQuery, 20, cityFilter);
       setResults(searchResults);
       setIsOpen(searchResults.length > 0);
     } else {
       setResults([]);
       setIsOpen(false);
     }
-  }, [searchQuery]);
+  }, [searchQuery, cityFilter]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

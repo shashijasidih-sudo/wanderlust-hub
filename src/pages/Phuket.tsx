@@ -82,7 +82,7 @@ const Phuket = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <SearchInput placeholder="Search Phuket activities..." className="flex-1" />
+            <SearchInput placeholder="Search Phuket activities..." className="flex-1" cityFilter="Phuket" />
             <Button
               variant={viewMode === 'grid' ? 'default' : 'outline'}
               size="icon"
