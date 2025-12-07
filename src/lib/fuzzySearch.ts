@@ -139,6 +139,17 @@ export function fuzzySearchTours(query: string, limit: number = 20, cityFilter?:
     const searchableFields = getSearchableFields(tour);
     const keywords = createSearchKeywords(tour);
     
+    // Check if title contains query words (highest priority for partial matches)
+    const normalizedTitle = tour.title.toLowerCase();
+    const allQueryWordsInTitle = queryWords.every(word => 
+      word.length < 2 || normalizedTitle.includes(word)
+    );
+    
+    if (allQueryWordsInTitle && queryWords.some(w => w.length >= 2)) {
+      totalScore += 150; // High score for title containing all query words
+      matchedFields.push('title-match');
+    }
+    
     // Check exact matches in keywords (highest priority)
     keywords.forEach(keyword => {
       if (keyword === normalizedQuery) {
@@ -150,11 +161,16 @@ export function fuzzySearchTours(query: string, limit: number = 20, cityFilter?:
       }
     });
     
-    // Check fuzzy matches in keywords
+    // Check if any query word matches keyword
     queryWords.forEach(queryWord => {
       if (queryWord.length < 2) return;
       
       keywords.forEach(keyword => {
+        if (keyword.includes(queryWord) || queryWord.includes(keyword)) {
+          totalScore += 40;
+          matchedFields.push('keyword-word-match');
+        }
+        
         const similarity = similarityScore(queryWord, keyword);
         if (similarity > 0.7) { // 70% similarity threshold
           totalScore += similarity * 30;
@@ -172,6 +188,15 @@ export function fuzzySearchTours(query: string, limit: number = 20, cityFilter?:
         totalScore += 80;
         matchedFields.push(field);
         return;
+      }
+      
+      // Check if all query words are in this field
+      const allWordsInField = queryWords.every(word => 
+        word.length < 2 || normalizedText.includes(word)
+      );
+      if (allWordsInField && queryWords.some(w => w.length >= 2)) {
+        totalScore += 60;
+        matchedFields.push(field);
       }
       
       // Word-by-word matching
