@@ -201,15 +201,72 @@ const Header = () => {
                 Activities to Do
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background border shadow-lg z-50">
-                <DropdownMenuItem className="cursor-pointer">
-                  <a href="#thailand" className="w-full">Thailand</a>
+              <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Palmtree className="h-4 w-4 mr-2 text-primary" />
+                  <Link to="/thailand" className="w-full">Thailand (All Cities)</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Building2 className="h-4 w-4 mr-2 text-primary" />
+                  <Link to="/bangkok" className="w-full">Bangkok</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Ship className="h-4 w-4 mr-2 text-primary" />
+                  <Link to="/pattaya" className="w-full">Pattaya</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Fish className="h-4 w-4 mr-2 text-primary" />
+                  <Link to="/phuket" className="w-full">Phuket</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Anchor className="h-4 w-4 mr-2 text-primary" />
+                  <Link to="/krabi" className="w-full">Krabi</Link>
+                </DropdownMenuItem>
+                <div className="h-px bg-border my-1" />
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Castle className="h-4 w-4 mr-2 text-primary" />
+                  <Link to="/dubai" className="w-full">Dubai</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <TreePine className="h-4 w-4 mr-2 text-primary" />
                   <a href="#singapore" className="w-full">Singapore</a>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
-                  <a href="#dubai" className="w-full">Dubai</a>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
+                Airport Transfers
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Palmtree className="h-4 w-4 mr-2 text-primary" />
+                  <Link to="/thailand" className="w-full">Thailand</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Building2 className="h-4 w-4 mr-2 text-primary" />
+                  <Link to="/bangkok" className="w-full">Bangkok</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Fish className="h-4 w-4 mr-2 text-primary" />
+                  <Link to="/phuket" className="w-full">Phuket</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Anchor className="h-4 w-4 mr-2 text-primary" />
+                  <Link to="/krabi" className="w-full">Krabi</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Ship className="h-4 w-4 mr-2 text-primary" />
+                  <Link to="/pattaya" className="w-full">Pattaya</Link>
+                </DropdownMenuItem>
+                <div className="h-px bg-border my-1" />
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Castle className="h-4 w-4 mr-2 text-primary" />
+                  <Link to="/dubai" className="w-full">Dubai</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <TreePine className="h-4 w-4 mr-2 text-primary" />
+                  <a href="#singapore" className="w-full">Singapore</a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -221,20 +278,25 @@ const Header = () => {
                 Smart Destinations
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background border shadow-lg z-50">
-                <DropdownMenuItem className="cursor-pointer">
+              <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Palmtree className="h-4 w-4 mr-2 text-primary" />
                   <Link to="/thailand-smart-guides" className="w-full">Thailand Smart Guides</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <TreePine className="h-4 w-4 mr-2 text-primary" />
                   <Link to="/singapore-smart-guides" className="w-full">Singapore Smart Guides</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Castle className="h-4 w-4 mr-2 text-primary" />
                   <Link to="/dubai-smart-guides" className="w-full">Dubai Smart Guides</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Droplet className="h-4 w-4 mr-2 text-primary" />
                   <Link to="/netherlands-smart-guides" className="w-full">Netherlands Smart Guides</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
+                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
+                  <Tent className="h-4 w-4 mr-2 text-primary" />
                   <a href="#australia" className="w-full">Australia Smart Guides</a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
