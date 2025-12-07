@@ -1020,6 +1020,164 @@ export const toursData: Record<string, TourData> = {
       }
     ]
   },
+  // Additional Phi Phi Island Tours
+  "phi-phi-big-boat": {
+    id: "phi-phi-big-boat",
+    title: "From Phuket: Phi Phi Island Guided Tour by Big Boat with Normal Transfer",
+    shortDescription: "Experience the stunning Phi Phi Islands on a comfortable big boat tour with professional guide and hotel transfers included.",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    basePrice: 3300,
+    childPrice: 2500,
+    duration: "Full Day",
+    rating: 4.7,
+    reviews: 1856,
+    heroImages: [
+      { src: phiPhi1, title: "Phi Phi Islands Big Boat Tour" },
+      { src: phiPhi2, title: "Maya Bay Beach" },
+      { src: phiPhi3, title: "Snorkeling Adventure" },
+      { src: phiPhi4, title: "Phi Phi Don Island" }
+    ],
+    galleryImages: [
+      { src: phiPhi5, alt: "Big boat cruise" },
+      { src: phiPhi6, alt: "Phi Phi Islands panorama" },
+      { src: phiPhi7, alt: "Beach relaxation" },
+      { src: phiPhi8, alt: "Lunch on the island" }
+    ],
+    highlights: [
+      "Comfortable Big Boat Experience",
+      "Maya Bay Visit",
+      "Phi Phi Don Island Exploration",
+      "Snorkeling at Coral Reefs",
+      "Lunch Included"
+    ],
+    description: {
+      overview: "Join this comfortable big boat tour to the world-famous Phi Phi Islands from Phuket. Perfect for those who prefer a more relaxed cruise experience.",
+      whatToExpect: "Enjoy a scenic cruise to the Phi Phi Islands on a spacious big boat. Visit the iconic Maya Bay, explore Phi Phi Don Island, and snorkel in crystal-clear waters. Includes hotel transfers and delicious lunch."
+    },
+    itinerary: [
+      { time: "07:30 AM", title: "Hotel Pickup", description: "Pickup from your Phuket hotel" },
+      { time: "09:00 AM", title: "Departure", description: "Board the big boat and depart for Phi Phi Islands" },
+      { time: "10:30 AM", title: "Maya Bay", description: "Visit the famous Maya Bay beach" },
+      { time: "12:00 PM", title: "Lunch", description: "Enjoy lunch at Phi Phi Don Island" },
+      { time: "02:00 PM", title: "Snorkeling", description: "Snorkel at beautiful coral reefs" },
+      { time: "04:30 PM", title: "Return", description: "Return cruise to Phuket" }
+    ],
+    tourTimings: ["07:30 AM"],
+    inclusions: ["Hotel Transfer", "Big Boat Cruise", "Lunch", "Snorkeling Equipment", "English Guide"],
+    exclusions: ["National Park Fee", "Personal Expenses"],
+    bookingPolicy: ["Confirmation within 24 hours"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before"],
+    childPolicy: ["Child rate for ages 4-11"],
+    faqs: [
+      { question: "Is this suitable for non-swimmers?", answer: "Yes, life jackets are provided and snorkeling is optional." }
+    ]
+  },
+  "phi-phi-royal-jet": {
+    id: "phi-phi-royal-jet",
+    title: "Phi Phi Island Tour by Big Boat By Royal Jet Cruiser (First Class)",
+    shortDescription: "Experience luxury with our First Class Royal Jet Cruiser to Phi Phi Islands. Premium amenities and exclusive service.",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    basePrice: 4700,
+    childPrice: 3500,
+    duration: "Full Day",
+    rating: 4.9,
+    reviews: 987,
+    heroImages: [
+      { src: phiPhi1, title: "Royal Jet Cruiser" },
+      { src: phiPhi2, title: "First Class Experience" },
+      { src: phiPhi3, title: "Phi Phi Islands" },
+      { src: phiPhi4, title: "Premium Service" }
+    ],
+    galleryImages: [
+      { src: phiPhi5, alt: "Luxury cruiser" },
+      { src: phiPhi6, alt: "Premium seating" },
+      { src: phiPhi7, alt: "Gourmet lunch" },
+      { src: phiPhi8, alt: "VIP experience" }
+    ],
+    highlights: [
+      "First Class Royal Jet Cruiser",
+      "Premium Amenities",
+      "Gourmet Lunch Included",
+      "VIP Service",
+      "Best Snorkeling Spots"
+    ],
+    description: {
+      overview: "Travel in luxury to the Phi Phi Islands aboard our Royal Jet Cruiser. Enjoy first-class service, premium amenities, and an unforgettable experience.",
+      whatToExpect: "Board our luxury Royal Jet Cruiser for a first-class journey to Phi Phi Islands. Enjoy premium seating, gourmet lunch, and VIP treatment throughout the day. Visit Maya Bay, snorkel at pristine reefs, and explore Phi Phi Don."
+    },
+    itinerary: [
+      { time: "07:00 AM", title: "VIP Pickup", description: "Private transfer from your hotel" },
+      { time: "08:30 AM", title: "Board Cruiser", description: "Welcome aboard with refreshments" },
+      { time: "10:30 AM", title: "Maya Bay", description: "Exclusive Maya Bay experience" },
+      { time: "12:30 PM", title: "Gourmet Lunch", description: "Premium buffet lunch" },
+      { time: "02:00 PM", title: "Snorkeling", description: "Best snorkeling locations" },
+      { time: "05:00 PM", title: "Return", description: "Scenic return to Phuket" }
+    ],
+    tourTimings: ["07:00 AM"],
+    inclusions: ["VIP Transfer", "First Class Seat", "Gourmet Lunch", "Premium Equipment", "Personal Guide"],
+    exclusions: ["National Park Fee"],
+    bookingPolicy: ["Confirmation within 24 hours"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before"],
+    childPolicy: ["Child rate for ages 4-11"],
+    faqs: [
+      { question: "What makes this first class?", answer: "Premium seating, gourmet food, smaller groups, and VIP service." }
+    ]
+  },
+  "phi-phi-maya-khai-speedboat": {
+    id: "phi-phi-maya-khai-speedboat",
+    title: "Phi Phi-Maya Bay-Khai Full day Tour by Speedboat (Excluded national marine fee)",
+    shortDescription: "Fast and exciting speedboat tour to Phi Phi Islands, Maya Bay, and Khai Island. Perfect for adventure seekers.",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    basePrice: 3100,
+    childPrice: 2300,
+    duration: "Full Day",
+    rating: 4.6,
+    reviews: 2234,
+    heroImages: [
+      { src: phiPhi1, title: "Speedboat Adventure" },
+      { src: phiPhi2, title: "Maya Bay" },
+      { src: phiPhi3, title: "Khai Island" },
+      { src: phiPhi4, title: "Phi Phi Islands" }
+    ],
+    galleryImages: [
+      { src: phiPhi5, alt: "Speedboat ride" },
+      { src: phiPhi6, alt: "Maya Bay beach" },
+      { src: phiPhi7, alt: "Khai Island" },
+      { src: phiPhi8, alt: "Snorkeling" }
+    ],
+    highlights: [
+      "Exciting Speedboat Experience",
+      "Maya Bay Visit",
+      "Khai Island Beach",
+      "Multiple Snorkeling Spots",
+      "Lunch Included"
+    ],
+    description: {
+      overview: "Experience the thrill of a speedboat journey to Phi Phi Islands, Maya Bay, and beautiful Khai Island. Fast, fun, and unforgettable.",
+      whatToExpect: "Zoom across the Andaman Sea on our speedboat to visit Phi Phi Islands, the famous Maya Bay, and the pristine Khai Island. Enjoy snorkeling, swimming, and beach time at multiple locations."
+    },
+    itinerary: [
+      { time: "07:30 AM", title: "Hotel Pickup", description: "Pickup from Phuket hotel" },
+      { time: "09:00 AM", title: "Speedboat Departure", description: "Board speedboat and depart" },
+      { time: "10:00 AM", title: "Khai Island", description: "Beach time and snorkeling" },
+      { time: "11:30 AM", title: "Maya Bay", description: "Visit iconic Maya Bay" },
+      { time: "01:00 PM", title: "Lunch", description: "Lunch at Phi Phi Don" },
+      { time: "03:00 PM", title: "Snorkeling", description: "Snorkel at coral reefs" },
+      { time: "05:00 PM", title: "Return", description: "Return to Phuket" }
+    ],
+    tourTimings: ["07:30 AM"],
+    inclusions: ["Hotel Transfer", "Speedboat", "Lunch", "Snorkeling Gear", "Guide"],
+    exclusions: ["National Marine Park Fee (฿400)"],
+    bookingPolicy: ["Confirmation within 24 hours"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before"],
+    childPolicy: ["Child rate for ages 4-11"],
+    faqs: [
+      { question: "Why is national park fee excluded?", answer: "The fee must be paid in cash at the pier on the day of the tour." }
+    ]
+  },
   // New Phuket Tours
   "dolphin-bay-phuket": {
     id: "dolphin-bay-phuket",
