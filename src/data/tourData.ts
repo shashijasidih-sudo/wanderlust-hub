@@ -2425,5 +2425,719 @@ export const toursData: Record<string, TourData> = {
     faqs: [
       { question: "Do I have to climb Tiger Cave?", answer: "No, climbing the 1,260 steps is optional. You can explore the temple grounds instead." }
     ]
+  },
+  // Dubai Tours
+  "dhow-cruise-creek-lower": {
+    id: "dhow-cruise-creek-lower",
+    title: "Dhow Cruise Dinner - Lower Deck with Transfers",
+    shortDescription: "Experience a traditional Arabian dhow cruise on Dubai Creek with a delicious buffet dinner and live entertainment.",
+    location: "Dubai Creek, Dubai",
+    city: "dubai",
+    basePrice: 1900,
+    childPrice: 1800,
+    duration: "90 Minutes",
+    rating: 4.7,
+    reviews: 1245,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Creek Cruise" },
+      { src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", title: "Dubai Skyline" },
+      { src: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", title: "Traditional Dhow" }
+    ],
+    galleryImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", alt: "Dubai Creek" },
+      { src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", alt: "Dubai at night" }
+    ],
+    highlights: [
+      "90-minute cruise along Dubai Creek",
+      "Air-conditioned lower deck seating",
+      "Welcome drink on arrival",
+      "Delicious buffet dinner with vegetarian and non-vegetarian options",
+      "Live entertainment including Tanura dancing",
+      "Views of Dubai's historic landmarks"
+    ],
+    description: {
+      overview: "The dhow is a traditional Bedouin boat that was used for trade and transportation. Today, these dhows have been converted into restaurants with lower (air-conditioned) and upper (open-air) decks.",
+      whatToExpect: "Experience the charm of old Dubai on this enchanting dhow cruise. You are offered a welcome drink on arrival and are served delicious barbecued dishes once the dhow sets sail. While you enjoy your drink and starters, take in the prestigious buildings and structures of Dubai glittering in the night lights. Enjoy a delicious buffet spread with a variety of vegetarian and non-vegetarian dishes. Entertainment includes live music performances and mesmerizing Tanura dancing."
+    },
+    itinerary: [
+      { time: "7:45 PM", title: "Boarding", description: "Boarding starts between 7:45 pm - 8:00 pm" },
+      { time: "8:00 PM", title: "Welcome Drink", description: "Receive your welcome drink as you settle in" },
+      { time: "8:15 PM", title: "Departure", description: "Dhow sets sail along Dubai Creek" },
+      { time: "8:30 PM", title: "Dinner & Entertainment", description: "Enjoy buffet dinner while watching Tanura dance" },
+      { time: "9:45 PM", title: "Return", description: "Cruise ends and return to starting point" }
+    ],
+    tourTimings: ["8:00 PM"],
+    inclusions: [
+      "Transfers (if option selected)",
+      "Cruise Experience",
+      "Welcome Drink",
+      "Buffet Dinner",
+      "Live Entertainment",
+      "Dubai Creek Views and Landmarks",
+      "Soft Drinks and Mineral Water",
+      "Onboard facilities including washrooms"
+    ],
+    exclusions: [
+      "Personal expenses on photography",
+      "Alcoholic beverages",
+      "Tips and gratuities"
+    ],
+    bookingPolicy: [
+      "Please report to the venue 30 minutes prior to departure time",
+      "No outside food and drinks allowed",
+      "No eating, drinking, or smoking in transfer vehicle"
+    ],
+    cancellationPolicy: [
+      "Free cancellation 72 hours prior to departure",
+      "100% charge within 72 hours of departure",
+      "Refund within 7 working days if eligible"
+    ],
+    childPolicy: [
+      "Children under 3 years: Free entry",
+      "Children 3-10 years: Child rate applies",
+      "Above 10 years: Adult rate applies"
+    ],
+    faqs: [
+      { question: "What time does boarding start?", answer: "Boarding starts between 7:45 PM - 8:00 PM." },
+      { question: "Is the cruise air-conditioned?", answer: "Yes, the lower deck is fully air-conditioned." }
+    ]
+  },
+  "dhow-cruise-creek-upper": {
+    id: "dhow-cruise-creek-upper",
+    title: "Dhow Cruise Dinner - Upper Deck with Transfers",
+    shortDescription: "Enjoy an open-air dining experience on the upper deck of a traditional Arabian dhow cruising Dubai Creek.",
+    location: "Dubai Creek, Dubai",
+    city: "dubai",
+    basePrice: 2100,
+    childPrice: 2100,
+    duration: "90 Minutes",
+    rating: 4.8,
+    reviews: 987,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Creek Night" },
+      { src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", title: "Open Air Cruise" }
+    ],
+    galleryImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", alt: "Dubai Creek" }
+    ],
+    highlights: [
+      "Open-air upper deck experience",
+      "Panoramic views of Dubai Creek",
+      "Welcome drink and buffet dinner",
+      "Live Tanura dance performance",
+      "Traditional Arabian ambiance"
+    ],
+    description: {
+      overview: "Experience Dubai Creek from the open-air upper deck of a traditional dhow.",
+      whatToExpect: "Sail through the historic heart of Dubai aboard a traditional Arabian dhow on the partially open upper deck. Get astonishing views of ancient sandstone structures, Arabian bazaars and contemporary buildings along the creek. Relish an all-inclusive buffet dinner with both Vegetarian and Non-vegetarian specialties while watching the breathtaking Tanura show."
+    },
+    itinerary: [
+      { time: "7:45 PM", title: "Boarding", description: "Boarding starts between 7:45 pm - 8:00 pm" },
+      { time: "8:15 PM", title: "Departure", description: "Dhow sets sail" },
+      { time: "8:30 PM", title: "Dinner & Shows", description: "Buffet dinner with live entertainment" },
+      { time: "9:45 PM", title: "Return", description: "Return to dock" }
+    ],
+    tourTimings: ["8:00 PM"],
+    inclusions: ["Transfers", "Cruise", "Welcome Drink", "Buffet Dinner", "Live Entertainment", "Soft Drinks"],
+    exclusions: ["Alcoholic beverages", "Personal expenses", "Photography services"],
+    bookingPolicy: ["Report 30 minutes before departure"],
+    cancellationPolicy: ["Free cancellation 72 hours prior", "100% charge within 72 hours"],
+    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    faqs: []
+  },
+  "desert-safari-shisha": {
+    id: "desert-safari-shisha",
+    title: "Desert Safari with Shisha on Table with Sharing Transfer",
+    shortDescription: "Premium desert safari experience with private shisha service at your table and thrilling dune bashing.",
+    location: "Dubai Desert, UAE",
+    city: "dubai",
+    basePrice: 4600,
+    childPrice: 0,
+    duration: "6 Hours",
+    rating: 4.9,
+    reviews: 2156,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", title: "Desert Safari" },
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Desert" }
+    ],
+    galleryImages: [
+      { src: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", alt: "Desert dunes" }
+    ],
+    highlights: [
+      "Thrilling dune bashing in 4x4 Land Cruiser",
+      "Private shisha served at your table",
+      "Camel riding experience",
+      "BBQ buffet dinner",
+      "Belly dance and fire show",
+      "Sunset photography opportunity",
+      "Butler service per table"
+    ],
+    description: {
+      overview: "Discover the essence of Dubai with our captivating desert safari tour featuring premium shisha service at your table.",
+      whatToExpect: "Experience the thrill of dune bashing in a 4X4 Land Cruiser as you cascade down steep sand dunes. At our desert campsite, soak in the ambiance of a traditional Bedouin-style tent. Enjoy flavored shisha served directly at your table, sip authentic Arabic coffee, and be captivated by mesmerizing performances under the starlit sky. Indulge in a delicious buffet dinner featuring Arabic delicacies."
+    },
+    itinerary: [
+      { time: "2:30 PM", title: "Hotel Pickup", description: "Pickup from Dubai hotels" },
+      { time: "4:00 PM", title: "Dune Bashing", description: "Thrilling 4x4 adventure" },
+      { time: "5:00 PM", title: "Sunset Photos", description: "Capture the golden hour" },
+      { time: "5:30 PM", title: "Camp Activities", description: "Camel riding, henna, shisha" },
+      { time: "7:00 PM", title: "Dinner & Shows", description: "BBQ dinner with entertainment" },
+      { time: "8:30 PM", title: "Return", description: "Drop-off at hotel" }
+    ],
+    tourTimings: ["2:30 PM - 3:00 PM"],
+    inclusions: [
+      "Hotel transfers",
+      "Unlimited refreshments",
+      "Dune bashing in AC 4x4",
+      "BBQ dinner (veg & non-veg)",
+      "Belly dance show",
+      "Fire show",
+      "Camel riding",
+      "Shisha served on table",
+      "Sufi dance show",
+      "Khaliji show",
+      "Dabka + Drummers show"
+    ],
+    exclusions: [
+      "Personal shopping expenses",
+      "Professional photography (extra charge)"
+    ],
+    bookingPolicy: [
+      "Not recommended for pregnant women or those with back issues",
+      "Infants not allowed for dune bashing",
+      "Children under 16 not allowed for shisha",
+      "No heavy luggage allowed"
+    ],
+    cancellationPolicy: ["Free cancellation 72 hours prior", "100% charge within 72 hours"],
+    childPolicy: ["This experience is not suitable for children"],
+    faqs: [
+      { question: "Is dune bashing safe?", answer: "Yes, experienced drivers and modern vehicles ensure safety. However, it's not recommended for pregnant women or those with back problems." }
+    ]
+  },
+  "desert-safari-sharing": {
+    id: "desert-safari-sharing",
+    title: "Desert Safari with Sharing Transfer",
+    shortDescription: "Classic desert safari experience with dune bashing, camel riding, and BBQ dinner under the stars.",
+    location: "Dubai Desert, UAE",
+    city: "dubai",
+    basePrice: 2900,
+    childPrice: 2800,
+    duration: "6 Hours",
+    rating: 4.8,
+    reviews: 3421,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", title: "Desert Adventure" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Dune bashing in AC 4x4",
+      "Camel riding",
+      "Sunset photography",
+      "BBQ buffet dinner",
+      "Live entertainment shows",
+      "Shisha corner access"
+    ],
+    description: {
+      overview: "The classic Dubai desert safari experience with all essential activities included.",
+      whatToExpect: "Experience the thrill of dune bashing, enjoy camel riding, watch stunning sunset, and indulge in BBQ dinner with live entertainment including belly dance and fire shows."
+    },
+    itinerary: [
+      { time: "2:30 PM", title: "Pickup", description: "Hotel pickup" },
+      { time: "4:00 PM", title: "Dune Bashing", description: "4x4 adventure" },
+      { time: "5:00 PM", title: "Sunset", description: "Photo opportunity" },
+      { time: "5:30 PM", title: "Camp", description: "Activities and dinner" },
+      { time: "8:30 PM", title: "Return", description: "Drop-off" }
+    ],
+    tourTimings: ["2:30 PM - 3:00 PM"],
+    inclusions: ["Transfers", "Refreshments", "Dune bashing", "BBQ dinner", "Shows", "Camel riding", "Shisha corner access"],
+    exclusions: ["Personal expenses", "Professional photography"],
+    bookingPolicy: ["Not for pregnant women", "Infants not allowed for dune bashing"],
+    cancellationPolicy: ["Free cancellation 72 hours prior"],
+    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    faqs: []
+  },
+  "dubai-city-tour": {
+    id: "dubai-city-tour",
+    title: "Dubai City Tour",
+    shortDescription: "Comprehensive tour of Dubai's iconic landmarks including Burj Al Arab, Dubai Frame, and traditional souks.",
+    location: "Dubai, UAE",
+    city: "dubai",
+    basePrice: 1600,
+    childPrice: 1500,
+    duration: "6 Hours",
+    rating: 4.6,
+    reviews: 1876,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai City" },
+      { src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", title: "Burj Al Arab" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Zabeel Palace photo stop",
+      "Dubai Frame photo opportunity",
+      "Bastakiya neighborhood exploration",
+      "Abra ride on Dubai Creek",
+      "Spice and Gold Souk visit",
+      "Burj Al Arab photo stop",
+      "View of Atlantis The Palm"
+    ],
+    description: {
+      overview: "Discover the best of Dubai on this comprehensive city tour covering historical and modern landmarks.",
+      whatToExpect: "Begin at the iconic Zabeel Palace for a photo stop. Move to Dubai Frame for timeless snapshots. Explore the charming Bastakiya neighborhood with traditional architecture. Board an Abra for a delightful ride on Dubai Creek. Visit the Spice Souq and Gold Souq. Drive through Al Qasr and head to The Pointe for views of Atlantis The Palm."
+    },
+    itinerary: [
+      { time: "8:30 AM", title: "Pickup", description: "Hotel pickup" },
+      { time: "9:00 AM", title: "Zabeel Palace", description: "Photo stop" },
+      { time: "9:30 AM", title: "Dubai Frame", description: "Photo opportunity" },
+      { time: "10:30 AM", title: "Bastakiya", description: "Heritage walk" },
+      { time: "11:30 AM", title: "Abra Ride", description: "Cross Dubai Creek" },
+      { time: "12:00 PM", title: "Souks", description: "Spice and Gold souks" },
+      { time: "1:30 PM", title: "Burj Al Arab", description: "Photo stop" },
+      { time: "2:30 PM", title: "Return", description: "Drop-off" }
+    ],
+    tourTimings: ["8:30 AM"],
+    inclusions: ["Hotel transfers", "All photo stops", "Abra ride", "Souk visits", "Air-conditioned vehicle", "English guide"],
+    exclusions: ["Lunch", "Shopping expenses", "Entry tickets to attractions"],
+    bookingPolicy: ["Dress modestly for religious sites", "Sharing transfers from central Dubai hotels"],
+    cancellationPolicy: ["Free cancellation 72 hours prior"],
+    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    faqs: []
+  },
+  "dubai-city-tour-mall": {
+    id: "dubai-city-tour-mall",
+    title: "Dubai City Tour with Dubai Mall",
+    shortDescription: "Complete Dubai city tour including visit to the world-famous Dubai Mall.",
+    location: "Dubai, UAE",
+    city: "dubai",
+    basePrice: 2000,
+    childPrice: 2000,
+    duration: "6 Hours",
+    rating: 4.7,
+    reviews: 1543,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Mall" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "All Dubai City Tour highlights",
+      "Dubai Mall visit",
+      "Drive through Atlantis The Palm"
+    ],
+    description: {
+      overview: "Experience the complete Dubai city tour with additional time at Dubai Mall.",
+      whatToExpect: "All the highlights of the Dubai City Tour plus extended time at Dubai Mall, surrounded by the wonders of the city."
+    },
+    itinerary: [
+      { time: "8:30 AM", title: "Pickup", description: "Hotel pickup" },
+      { time: "9:00 AM", title: "City Tour", description: "Visit all major landmarks" },
+      { time: "1:00 PM", title: "Dubai Mall", description: "Free time at mall" },
+      { time: "2:30 PM", title: "Return", description: "Drop-off" }
+    ],
+    tourTimings: ["8:30 AM"],
+    inclusions: ["Transfers", "All city tour inclusions", "Dubai Mall visit"],
+    exclusions: ["Lunch", "Shopping", "Entry tickets"],
+    bookingPolicy: ["Dress modestly"],
+    cancellationPolicy: ["Free cancellation 72 hours prior"],
+    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    faqs: []
+  },
+  "dhow-cruise-marina-lower": {
+    id: "dhow-cruise-marina-lower",
+    title: "Dhow Dinner Cruise Marina - Lower Deck with Transfers",
+    shortDescription: "Elegant cruise along Dubai Marina's Venetian-styled canal with international cuisine and stunning views.",
+    location: "Dubai Marina, UAE",
+    city: "dubai",
+    basePrice: 3000,
+    childPrice: 3000,
+    duration: "90 Minutes",
+    rating: 4.8,
+    reviews: 1654,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", title: "Dubai Marina" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Cruise along Dubai Marina",
+      "Venetian-styled canal views",
+      "Modern Dubai skyline",
+      "International buffet dinner",
+      "Live Tanura performance"
+    ],
+    description: {
+      overview: "Experience a 90-minute classy cruise along Dubai Marina's Venetian styled canal.",
+      whatToExpect: "This traditional dhow offers the best views of modern Dubai from unexpected angles. Witness the glorious architectures of Dubai while feasting on international cuisines. Entertainment arranged onboard while you enjoy savory dishes and complimentary drinks."
+    },
+    itinerary: [
+      { time: "7:45 PM", title: "Boarding", description: "Board the dhow" },
+      { time: "8:00 PM", title: "Welcome", description: "Welcome drink" },
+      { time: "8:15 PM", title: "Cruise", description: "Sail Dubai Marina" },
+      { time: "9:30 PM", title: "Return", description: "End of cruise" }
+    ],
+    tourTimings: ["8:00 PM"],
+    inclusions: ["Transfers", "Cruise", "Welcome Drink", "Buffet Dinner", "Entertainment", "Soft Drinks"],
+    exclusions: ["Alcoholic beverages", "Personal expenses"],
+    bookingPolicy: ["Report 30 minutes early"],
+    cancellationPolicy: ["Free cancellation 72 hours prior"],
+    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    faqs: []
+  },
+  "dhow-cruise-marina-upper": {
+    id: "dhow-cruise-marina-upper",
+    title: "Dhow Dinner Cruise Marina - Upper Deck with Transfers",
+    shortDescription: "Premium open-air dining experience on Dubai Marina with panoramic views of modern Dubai.",
+    location: "Dubai Marina, UAE",
+    city: "dubai",
+    basePrice: 3600,
+    childPrice: 3600,
+    duration: "90 Minutes",
+    rating: 4.9,
+    reviews: 1234,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", title: "Marina Upper Deck" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Open-air upper deck",
+      "Unobstructed Marina views",
+      "Premium dining experience",
+      "Live entertainment"
+    ],
+    description: {
+      overview: "Premium upper deck experience along Dubai Marina.",
+      whatToExpect: "Enjoy the best views from the partially open upper deck as you cruise through modern Dubai's stunning marina with international cuisine and live entertainment."
+    },
+    itinerary: [
+      { time: "7:45 PM", title: "Boarding", description: "Board the dhow" },
+      { time: "8:15 PM", title: "Cruise", description: "Sail Dubai Marina" },
+      { time: "9:30 PM", title: "Return", description: "End of cruise" }
+    ],
+    tourTimings: ["8:00 PM"],
+    inclusions: ["Transfers", "Cruise", "Dinner", "Entertainment", "Drinks"],
+    exclusions: ["Alcohol", "Personal expenses"],
+    bookingPolicy: ["Report 30 minutes early"],
+    cancellationPolicy: ["Free cancellation 72 hours prior"],
+    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    faqs: []
+  },
+  "global-village-dubai": {
+    id: "global-village-dubai",
+    title: "Global Village Dubai",
+    shortDescription: "Explore 32 pavilions representing 75+ countries at Dubai's largest cultural and entertainment destination.",
+    location: "Global Village, Dubai",
+    city: "dubai",
+    basePrice: 2700,
+    childPrice: 2600,
+    duration: "Full Day",
+    rating: 4.7,
+    reviews: 2345,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Global Village" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "32 pavilions from 75+ countries",
+      "Thrilling rides and attractions",
+      "Diverse international cuisines",
+      "Cultural shows and concerts",
+      "Unique shopping experience",
+      "Wheel of the World (Ferris Wheel)"
+    ],
+    description: {
+      overview: "Dubai's iconic Global Village - the region's largest shopping and entertainment attraction.",
+      whatToExpect: "Explore the world in a day at this open-air multi-cultural entertainment complex with close to 30 pavilions representing about 80 countries. Discover authentic culture, heritage and culinary flavors. Watch cultural shows and acrobatic performances. Enjoy attractions like Carnaval fun fair, Wheel of the World, and Circus! Circus!"
+    },
+    itinerary: [
+      { time: "4:00 PM", title: "Pickup", description: "Hotel pickup" },
+      { time: "5:00 PM", title: "Arrival", description: "Arrive at Global Village" },
+      { time: "5:00-10:00 PM", title: "Exploration", description: "Free time to explore" },
+      { time: "10:30 PM", title: "Return", description: "Drop-off" }
+    ],
+    tourTimings: ["4:00 PM"],
+    inclusions: ["Transfers", "Entry ticket", "Access to 75+ pavilions"],
+    exclusions: ["Food and shopping", "Rides and games", "Souvenirs"],
+    bookingPolicy: ["Bring valid photo ID", "Children must wear safety wristband", "No pets allowed", "No outside food"],
+    cancellationPolicy: ["100% charge for all cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-65: Adult rate"],
+    faqs: []
+  },
+  "abu-dhabi-city-tour": {
+    id: "abu-dhabi-city-tour",
+    title: "Abu Dhabi City Tour",
+    shortDescription: "Explore the UAE capital including the magnificent Sheikh Zayed Grand Mosque and cultural landmarks.",
+    location: "Abu Dhabi, UAE",
+    city: "dubai",
+    basePrice: 3000,
+    childPrice: 3000,
+    duration: "Full Day",
+    rating: 4.8,
+    reviews: 1987,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Abu Dhabi" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Sheikh Zayed Grand Mosque visit",
+      "Abu Dhabi Corniche drive",
+      "Emirates Palace view",
+      "BAPS Mandir visit",
+      "Islamic Art House"
+    ],
+    description: {
+      overview: "An unforgettable journey through the heart of the UAE capital.",
+      whatToExpect: "Discover iconic landmarks, architectural marvels, and vibrant heritage that define Abu Dhabi. From modern marvels to ancient wonders, this excursion promises a comprehensive experience of this dynamic destination."
+    },
+    itinerary: [
+      { time: "8:00 AM", title: "Pickup", description: "Dubai hotel pickup" },
+      { time: "10:00 AM", title: "Grand Mosque", description: "Visit Sheikh Zayed Mosque" },
+      { time: "12:00 PM", title: "Lunch Break", description: "At Marina Mall (own expense)" },
+      { time: "2:00 PM", title: "City Tour", description: "Corniche, Emirates Palace" },
+      { time: "5:00 PM", title: "Return", description: "Return to Dubai" }
+    ],
+    tourTimings: ["8:00 AM"],
+    inclusions: ["Round-trip transfers from Dubai", "Abu Dhabi City Tour", "All mentioned visits"],
+    exclusions: ["Lunch", "Personal expenses", "Tips"],
+    bookingPolicy: ["Moderate dressing for Grand Mosque", "Physical ID required for BAPS Mandir"],
+    cancellationPolicy: ["Free cancellation 72 hours prior"],
+    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    faqs: []
+  },
+  "abu-dhabi-ferrari-world": {
+    id: "abu-dhabi-ferrari-world",
+    title: "Abu Dhabi City Tour + Ferrari World Ticket with Transfer",
+    shortDescription: "Combine Abu Dhabi sightseeing with the thrill of Ferrari World theme park.",
+    location: "Abu Dhabi, UAE",
+    city: "dubai",
+    basePrice: 8400,
+    childPrice: 8400,
+    duration: "Full Day",
+    rating: 4.9,
+    reviews: 1567,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Ferrari World" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Sheikh Zayed Grand Mosque",
+      "Ferrari World Abu Dhabi",
+      "World's fastest roller coaster",
+      "BAPS Mandir visit",
+      "Abu Dhabi landmarks"
+    ],
+    description: {
+      overview: "An extraordinary expedition combining Abu Dhabi's grandeur with Ferrari World excitement.",
+      whatToExpect: "Discover the awe-inspiring Sheikh Zayed Grand Mosque, journey through Al Bateen's palaces, and experience the thrill of Ferrari World with heart-pounding rides and interactive exhibits."
+    },
+    itinerary: [
+      { time: "8:00 AM", title: "Pickup", description: "Dubai hotel pickup" },
+      { time: "10:00 AM", title: "Grand Mosque", description: "Visit the mosque" },
+      { time: "12:00 PM", title: "City Tour", description: "Abu Dhabi landmarks" },
+      { time: "2:00 PM", title: "Ferrari World", description: "Theme park visit" },
+      { time: "6:00 PM", title: "Return", description: "Return to Dubai" }
+    ],
+    tourTimings: ["8:00 AM"],
+    inclusions: ["Dubai transfers", "Grand Mosque visit", "Ferrari World ticket", "City tour"],
+    exclusions: ["Lunch", "Personal expenses"],
+    bookingPolicy: ["Dress modestly for mosque", "Physical ID required for BAPS Mandir"],
+    cancellationPolicy: ["Free cancellation 72 hours prior", "100% charge within 72 hours"],
+    childPolicy: ["Under 2: Free at Ferrari World", "Above 3: Paid admission required"],
+    faqs: []
+  },
+  "dubai-aquarium-penguin": {
+    id: "dubai-aquarium-penguin",
+    title: "Dubai Aquarium and Underwater Zoo with Penguin Cove",
+    shortDescription: "Explore one of the world's largest suspended aquariums with 30,000+ aquatic animals.",
+    location: "Dubai Mall, Dubai",
+    city: "dubai",
+    basePrice: 3800,
+    childPrice: 3500,
+    duration: "2-3 Hours",
+    rating: 4.7,
+    reviews: 2134,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Aquarium" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "10-million liter water tank",
+      "30,000+ aquatic animals",
+      "Giant crocodile (750 kg)",
+      "Penguin Cove experience",
+      "Underwater tunnel walk",
+      "Sharks and rays"
+    ],
+    description: {
+      overview: "One of its kind center-piece of Dubai Mall, home to more than 30,000 aquatic animals.",
+      whatToExpect: "See the 40-year-old giant crocodile weighing 750 kg, along with pelagic fish, piranha, penguins, lizards, snakes, rays, and sharks. Walk through the tunnel and explore the underwater zoo. The largest suspended aquarium in the world!"
+    },
+    itinerary: [
+      { time: "Flexible", title: "Entry", description: "Enter at your convenience" },
+      { time: "1 Hour", title: "Aquarium", description: "Explore main tank and tunnel" },
+      { time: "1 Hour", title: "Underwater Zoo", description: "Visit all exhibits" },
+      { time: "30 Min", title: "Penguin Cove", description: "See the penguins" }
+    ],
+    tourTimings: ["Open during Dubai Mall hours"],
+    inclusions: ["Aquarium entry", "Underwater Zoo access", "Penguin Cove access"],
+    exclusions: ["Transfers", "Food", "Glass boat (separate ticket)"],
+    bookingPolicy: ["Arrive 15 minutes before", "Children must be accompanied by adult"],
+    cancellationPolicy: ["Free cancellation 72 hours prior"],
+    childPolicy: ["Under 2: Free", "2-15: Must be accompanied by adult"],
+    faqs: []
+  },
+  "burj-khalifa-non-prime": {
+    id: "burj-khalifa-non-prime",
+    title: "Burj Khalifa 124th + 125th Floor: Non Prime Hours",
+    shortDescription: "Visit the world's tallest building during non-prime hours for the best value.",
+    location: "Downtown Dubai, UAE",
+    city: "dubai",
+    basePrice: 5000,
+    childPrice: 4000,
+    duration: "1-2 Hours",
+    rating: 4.9,
+    reviews: 4567,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Burj Khalifa" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "124th & 125th floor access",
+      "Panoramic Dubai views",
+      "High-speed elevator ride",
+      "Interactive displays",
+      "Telescopes available"
+    ],
+    description: {
+      overview: "An unforgettable journey into the heart of Dubai's skyline at the world's tallest building.",
+      whatToExpect: "Enter the iconic tower through a lavish lobby. Board high-speed elevators with mesmerizing glimpses of the cityscape through glass panels. Arrive at observation decks with panoramic views from the glittering Arabian Gulf to sprawling desert landscapes."
+    },
+    itinerary: [
+      { time: "Chosen Slot", title: "Entry", description: "Enter at your booked time" },
+      { time: "5 Min", title: "Elevator", description: "High-speed ride to top" },
+      { time: "1 Hour", title: "Observation", description: "Explore both floors" }
+    ],
+    tourTimings: ["Morning: 07:00-11:30", "Night: 20:30-23:00"],
+    inclusions: ["Entry to 124th & 125th floor", "Observation deck access"],
+    exclusions: ["Transfers", "Food", "Souvenirs"],
+    bookingPolicy: ["Valid photo ID required", "Booking valid for selected date/time only", "Children must be accompanied"],
+    cancellationPolicy: ["100% charge for all cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-8: Child rate", "Above 8: Adult rate"],
+    faqs: []
+  },
+  "burj-khalifa-prime": {
+    id: "burj-khalifa-prime",
+    title: "Burj Khalifa 124th + 125th Floor: Prime Hours",
+    shortDescription: "Experience stunning sunset views from the world's tallest building during prime hours.",
+    location: "Downtown Dubai, UAE",
+    city: "dubai",
+    basePrice: 6000,
+    childPrice: 4200,
+    duration: "1-2 Hours",
+    rating: 4.9,
+    reviews: 3456,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Burj Khalifa Sunset" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Prime time sunset views",
+      "124th & 125th floor access",
+      "Golden hour photography",
+      "City transformation views"
+    ],
+    description: {
+      overview: "Experience Burj Khalifa during the magical prime hours.",
+      whatToExpect: "Witness Dubai transform from day to night from the world's highest observation deck. Prime hours offer the best lighting for photography and the magical experience of watching the city light up."
+    },
+    itinerary: [
+      { time: "Chosen Slot", title: "Entry", description: "Enter at your booked time" },
+      { time: "1 Hour", title: "Observation", description: "Explore and photograph" }
+    ],
+    tourTimings: ["12:00 PM - 8:00 PM"],
+    inclusions: ["Entry to 124th & 125th floor"],
+    exclusions: ["Transfers", "Food"],
+    bookingPolicy: ["Valid photo ID required", "Booking valid for selected date/time only"],
+    cancellationPolicy: ["100% charge for all cancellations"],
+    childPolicy: ["Under 3: Free", "3-8: Child rate", "Above 8: Adult rate"],
+    faqs: []
+  },
+  "dubai-dolphin-show": {
+    id: "dubai-dolphin-show",
+    title: "Dubai Dolphin & Seal Show Ticket with Transfer",
+    shortDescription: "Interactive dolphin and seal show at Dubai's only fully air-conditioned dolphinarium.",
+    location: "Dubai Creek Park, Dubai",
+    city: "dubai",
+    basePrice: 3200,
+    childPrice: 2700,
+    duration: "2.5 Hours",
+    rating: 4.6,
+    reviews: 1234,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dolphin Show" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "45-minute dolphin & seal show",
+      "180-degree amphitheatre",
+      "Air-conditioned venue",
+      "Interactive experience",
+      "Marine life education"
+    ],
+    description: {
+      overview: "Meet intelligent dolphins and seals at Dubai's only fully air-conditioned dolphinarium.",
+      whatToExpect: "The 45-minute dolphin and seal shows are held in a 180-degree amphitheatre with state-of-the-art light and sound technology. The impressive performances are enjoyed by kids and adults alike. Interact with these intelligent animals and learn about marine life from expert trainers."
+    },
+    itinerary: [
+      { time: "10:00 AM", title: "Pickup", description: "Hotel pickup" },
+      { time: "11:00 AM", title: "Show", description: "Dolphin & Seal performance" },
+      { time: "12:30 PM", title: "Return", description: "Drop-off at hotel" }
+    ],
+    tourTimings: ["11:00 AM"],
+    inclusions: ["Transfers", "Show admission", "45-minute live show"],
+    exclusions: ["Photography", "Dining", "Souvenirs"],
+    bookingPolicy: ["Report on time", "Children must be accompanied"],
+    cancellationPolicy: ["Free cancellation 72 hours prior"],
+    childPolicy: ["Under 2: Free", "2-11: Child rate", "Above 11: Adult rate"],
+    faqs: []
+  },
+  "miracle-garden-dubai": {
+    id: "miracle-garden-dubai",
+    title: "Miracle Garden Dubai",
+    shortDescription: "Visit the world's largest natural flower garden with over 100 million blooming flowers.",
+    location: "Al Barsha South, Dubai",
+    city: "dubai",
+    basePrice: 2700,
+    childPrice: 2700,
+    duration: "3-4 Hours",
+    rating: 4.8,
+    reviews: 3456,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Miracle Garden" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "72,000 square meters of gardens",
+      "100+ million blooming flowers",
+      "70+ rare floral species",
+      "World's largest flower wall",
+      "Themed garden sections",
+      "Iconic floral structures"
+    ],
+    description: {
+      overview: "A botanical paradise spanning 72,000 square meters in the middle of the desert.",
+      whatToExpect: "Stroll along manicured themed gardens and pathways, admire unique structures and water features all decked up with vivid arrays of flowers and plants. The garden features over 100 million blooming flowers from 70+ rare, exotic and indigenous floral species. Recognized by Guinness Book of World Records for its astonishing flower wall."
+    },
+    itinerary: [
+      { time: "Flexible", title: "Entry", description: "Enter the garden" },
+      { time: "2-3 Hours", title: "Exploration", description: "Walk through themed sections" },
+      { time: "", title: "Photo Ops", description: "Capture the colorful landscapes" }
+    ],
+    tourTimings: ["9:00 AM - 9:00 PM"],
+    inclusions: ["Garden entry", "Access to all themed sections", "Photo opportunities", "Restrooms and food outlets access"],
+    exclusions: ["Food and dining", "Souvenirs", "Transfers (unless selected)"],
+    bookingPolicy: ["Comfortable walking shoes recommended", "Subject to weather conditions"],
+    cancellationPolicy: ["100% charge for all cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: [
+      { question: "When is Miracle Garden open?", answer: "The garden is seasonal, typically open from November to May. Check the official website for current dates." }
+    ]
   }
 };

@@ -10,20 +10,22 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import SearchInput from "@/components/SearchInput";
 
 const activities = [
-  { title: "Dhow Cruise Dinner – Lower Deck + Transfers", price: 1900, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop" },
-  { title: "Dhow Cruise Dinner – Upper Deck + Transfers", price: 2100, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop" },
-  { title: "Desert Safari", price: 2800, image: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop" },
-  { title: "Dubai City Tour", price: 1600, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop" },
-  { title: "Dubai City Tour + Dubai Mall", price: 2000, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop" },
-  { title: "Dhow Cruise Marina", price: 3000, image: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop" },
-  { title: "Global Village Ticket", price: 2700, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop" },
-  { title: "Abu Dhabi City Tour", price: 3000, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop" },
-  { title: "Abu Dhabi City Tour + Ferrari World", price: 8000, image: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop" },
-  { title: "Dubai Aquarium + Penguin Cove", price: 3500, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop" },
-  { title: "Burj Khalifa 124/125 Non-Prime", price: 4400, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop" },
-  { title: "Burj Khalifa 124/125 Prime", price: 6000, image: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop" },
-  { title: "Airport Pickup", price: 2800, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop" },
-  { title: "Airport Dropoff", price: 2800, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop" },
+  { title: "Dhow Cruise Dinner - Lower Deck with Transfers", price: 1900, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "dhow-cruise-creek-lower" },
+  { title: "Dhow Cruise Dinner - Upper Deck with Transfers", price: 2100, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", slug: "dhow-cruise-creek-upper" },
+  { title: "Desert Safari with Shisha on Table", price: 4600, image: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", slug: "desert-safari-shisha" },
+  { title: "Desert Safari with Sharing Transfer", price: 2900, image: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", slug: "desert-safari-sharing" },
+  { title: "Dubai City Tour", price: 1600, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "dubai-city-tour" },
+  { title: "Dubai City Tour with Dubai Mall", price: 2000, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", slug: "dubai-city-tour-mall" },
+  { title: "Dhow Dinner Cruise Marina - Lower Deck", price: 3000, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", slug: "dhow-cruise-marina-lower" },
+  { title: "Dhow Dinner Cruise Marina - Upper Deck", price: 3600, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", slug: "dhow-cruise-marina-upper" },
+  { title: "Global Village Dubai", price: 2700, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "global-village-dubai" },
+  { title: "Abu Dhabi City Tour", price: 3000, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "abu-dhabi-city-tour" },
+  { title: "Abu Dhabi City Tour + Ferrari World", price: 8400, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", slug: "abu-dhabi-ferrari-world" },
+  { title: "Dubai Aquarium + Penguin Cove", price: 3800, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "dubai-aquarium-penguin" },
+  { title: "Burj Khalifa 124/125 Non-Prime", price: 5000, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", slug: "burj-khalifa-non-prime" },
+  { title: "Burj Khalifa 124/125 Prime", price: 6000, image: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", slug: "burj-khalifa-prime" },
+  { title: "Dubai Dolphin & Seal Show", price: 3200, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "dubai-dolphin-show" },
+  { title: "Miracle Garden Dubai", price: 2700, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "miracle-garden-dubai" },
 ];
 
 const categories = [
@@ -35,7 +37,7 @@ const categories = [
 const Dubai = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('popular');
-  const [priceRange, setPriceRange] = useState([1600, 8000]);
+  const [priceRange, setPriceRange] = useState([1600, 8500]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
 
@@ -124,7 +126,7 @@ const Dubai = () => {
                   value={priceRange}
                   onValueChange={setPriceRange}
                   min={1600}
-                  max={8000}
+                  max={8500}
                   step={100}
                   className="mb-2"
                 />
