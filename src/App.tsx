@@ -73,6 +73,22 @@ import CookiePolicy from "./pages/CookiePolicy";
 import RefundPolicy from "./pages/RefundPolicy";
 import ContactUs from "./pages/ContactUs";
 import FAQ from "./pages/FAQ";
+import DhowCruiseCreekLower from "./pages/DhowCruiseCreekLower";
+import DhowCruiseCreekUpper from "./pages/DhowCruiseCreekUpper";
+import DesertSafariShisha from "./pages/DesertSafariShisha";
+import DesertSafariSharing from "./pages/DesertSafariSharing";
+import DubaiCityTour from "./pages/DubaiCityTour";
+import DubaiCityTourMall from "./pages/DubaiCityTourMall";
+import DhowCruiseMarinaLower from "./pages/DhowCruiseMarinaLower";
+import DhowCruiseMarinaUpper from "./pages/DhowCruiseMarinaUpper";
+import GlobalVillageDubai from "./pages/GlobalVillageDubai";
+import AbuDhabiCityTour from "./pages/AbuDhabiCityTour";
+import AbuDhabiFerrariWorld from "./pages/AbuDhabiFerrariWorld";
+import DubaiAquariumPenguin from "./pages/DubaiAquariumPenguin";
+import BurjKhalifaNonPrime from "./pages/BurjKhalifaNonPrime";
+import BurjKhalifaPrime from "./pages/BurjKhalifaPrime";
+import DubaiDolphinShow from "./pages/DubaiDolphinShow";
+import MiracleGardenDubai from "./pages/MiracleGardenDubai";
 
 const queryClient = new QueryClient();
 
