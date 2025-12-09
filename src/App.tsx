@@ -168,22 +168,22 @@ const App = () => (
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/faq" element={<FAQ />} />
-          <Route path="/dhow-cruise-creek-lower" element={<DhowCruiseCreekLower />} />
-          <Route path="/dhow-cruise-creek-upper" element={<DhowCruiseCreekUpper />} />
-          <Route path="/desert-safari-shisha" element={<DesertSafariShisha />} />
-          <Route path="/desert-safari-sharing" element={<DesertSafariSharing />} />
-          <Route path="/dubai-city-tour" element={<DubaiCityTour />} />
-          <Route path="/dubai-city-tour-mall" element={<DubaiCityTourMall />} />
-          <Route path="/dhow-cruise-marina-lower" element={<DhowCruiseMarinaLower />} />
-          <Route path="/dhow-cruise-marina-upper" element={<DhowCruiseMarinaUpper />} />
-          <Route path="/global-village-dubai" element={<GlobalVillageDubai />} />
-          <Route path="/abu-dhabi-city-tour" element={<AbuDhabiCityTour />} />
-          <Route path="/abu-dhabi-ferrari-world" element={<AbuDhabiFerrariWorld />} />
-          <Route path="/dubai-aquarium-penguin" element={<DubaiAquariumPenguin />} />
-          <Route path="/burj-khalifa-non-prime" element={<BurjKhalifaNonPrime />} />
-          <Route path="/burj-khalifa-prime" element={<BurjKhalifaPrime />} />
-          <Route path="/dubai-dolphin-show" element={<DubaiDolphinShow />} />
-          <Route path="/miracle-garden-dubai" element={<MiracleGardenDubai />} />
+          <Route path="/dubai/dhow-cruise-creek-lower" element={<DhowCruiseCreekLower />} />
+          <Route path="/dubai/dhow-cruise-creek-upper" element={<DhowCruiseCreekUpper />} />
+          <Route path="/dubai/desert-safari-shisha" element={<DesertSafariShisha />} />
+          <Route path="/dubai/desert-safari-sharing" element={<DesertSafariSharing />} />
+          <Route path="/dubai/dubai-city-tour" element={<DubaiCityTour />} />
+          <Route path="/dubai/dubai-city-tour-mall" element={<DubaiCityTourMall />} />
+          <Route path="/dubai/dhow-cruise-marina-lower" element={<DhowCruiseMarinaLower />} />
+          <Route path="/dubai/dhow-cruise-marina-upper" element={<DhowCruiseMarinaUpper />} />
+          <Route path="/dubai/global-village-dubai" element={<GlobalVillageDubai />} />
+          <Route path="/dubai/abu-dhabi-city-tour" element={<AbuDhabiCityTour />} />
+          <Route path="/dubai/abu-dhabi-ferrari-world" element={<AbuDhabiFerrariWorld />} />
+          <Route path="/dubai/dubai-aquarium-penguin" element={<DubaiAquariumPenguin />} />
+          <Route path="/dubai/burj-khalifa-non-prime" element={<BurjKhalifaNonPrime />} />
+          <Route path="/dubai/burj-khalifa-prime" element={<BurjKhalifaPrime />} />
+          <Route path="/dubai/dubai-dolphin-show" element={<DubaiDolphinShow />} />
+          <Route path="/dubai/miracle-garden-dubai" element={<MiracleGardenDubai />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
