@@ -27,7 +27,7 @@ const ActivityCard = ({
 
   const handleCardClick = () => {
     if (slug) {
-      navigate(slug);
+      navigate(`/${slug}`);
     }
   };
 
