@@ -89,6 +89,27 @@ import BurjKhalifaNonPrime from "./pages/BurjKhalifaNonPrime";
 import BurjKhalifaPrime from "./pages/BurjKhalifaPrime";
 import DubaiDolphinShow from "./pages/DubaiDolphinShow";
 import MiracleGardenDubai from "./pages/MiracleGardenDubai";
+import Singapore from "./pages/Singapore";
+import SingaporeCityTour from "./pages/SingaporeCityTour";
+import NightSafariTickets from "./pages/NightSafariTickets";
+import NightSafariTransfer from "./pages/NightSafariTransfer";
+import NightSafariDinner from "./pages/NightSafariDinner";
+import Sentosa4D2Rides from "./pages/Sentosa4D2Rides";
+import Sentosa4D3Rides from "./pages/Sentosa4D3Rides";
+import SentosaCableCar from "./pages/SentosaCableCar";
+import SentosaWingsTime from "./pages/SentosaWingsTime";
+import SentosaSkyHelix from "./pages/SentosaSkyHelix";
+import SingaporeRiverCruise from "./pages/SingaporeRiverCruise";
+import GardensByTheBay from "./pages/GardensByTheBay";
+import AdventureCove from "./pages/AdventureCove";
+import SingaporeFlyer from "./pages/SingaporeFlyer";
+import RiverSafari from "./pages/RiverSafari";
+import UniversalStudiosWeekday from "./pages/UniversalStudiosWeekday";
+import UniversalStudiosWeekend from "./pages/UniversalStudiosWeekend";
+import SingaporeZoo from "./pages/SingaporeZoo";
+import RainforestWildAsia from "./pages/RainforestWildAsia";
+import BigBusDiscover from "./pages/BigBusDiscover";
+import BigBusNight from "./pages/BigBusNight";
 
 const queryClient = new QueryClient();
 
@@ -184,6 +205,27 @@ const App = () => (
           <Route path="/dubai/burj-khalifa-prime" element={<BurjKhalifaPrime />} />
           <Route path="/dubai/dubai-dolphin-show" element={<DubaiDolphinShow />} />
           <Route path="/dubai/miracle-garden-dubai" element={<MiracleGardenDubai />} />
+          <Route path="/singapore" element={<Singapore />} />
+          <Route path="/singapore/singapore-city-tour" element={<SingaporeCityTour />} />
+          <Route path="/singapore/night-safari-tickets" element={<NightSafariTickets />} />
+          <Route path="/singapore/night-safari-transfer" element={<NightSafariTransfer />} />
+          <Route path="/singapore/night-safari-dinner" element={<NightSafariDinner />} />
+          <Route path="/singapore/sentosa-4d-2rides" element={<Sentosa4D2Rides />} />
+          <Route path="/singapore/sentosa-4d-3rides" element={<Sentosa4D3Rides />} />
+          <Route path="/singapore/sentosa-cable-car" element={<SentosaCableCar />} />
+          <Route path="/singapore/sentosa-wings-time" element={<SentosaWingsTime />} />
+          <Route path="/singapore/sentosa-sky-helix" element={<SentosaSkyHelix />} />
+          <Route path="/singapore/singapore-river-cruise" element={<SingaporeRiverCruise />} />
+          <Route path="/singapore/gardens-by-the-bay" element={<GardensByTheBay />} />
+          <Route path="/singapore/adventure-cove" element={<AdventureCove />} />
+          <Route path="/singapore/singapore-flyer" element={<SingaporeFlyer />} />
+          <Route path="/singapore/river-safari" element={<RiverSafari />} />
+          <Route path="/singapore/universal-studios-weekday" element={<UniversalStudiosWeekday />} />
+          <Route path="/singapore/universal-studios-weekend" element={<UniversalStudiosWeekend />} />
+          <Route path="/singapore/singapore-zoo" element={<SingaporeZoo />} />
+          <Route path="/singapore/rainforest-wild-asia" element={<RainforestWildAsia />} />
+          <Route path="/singapore/big-bus-discover" element={<BigBusDiscover />} />
+          <Route path="/singapore/big-bus-night" element={<BigBusNight />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

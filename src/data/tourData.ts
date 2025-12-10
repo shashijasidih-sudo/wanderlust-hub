@@ -3139,5 +3139,718 @@ export const toursData: Record<string, TourData> = {
     faqs: [
       { question: "When is Miracle Garden open?", answer: "The garden is seasonal, typically open from November to May. Check the official website for current dates." }
     ]
+  },
+  // Singapore Tours
+  "singapore-city-tour": {
+    id: "singapore-city-tour",
+    title: "Singapore City Tour with Guide",
+    shortDescription: "Explore iconic landmarks like Suntec City, Fountain of Wealth, Merlion Park, Little India and Chinatown.",
+    location: "Singapore",
+    city: "singapore",
+    basePrice: 1600,
+    childPrice: 1200,
+    duration: "Half Day",
+    rating: 4.7,
+    reviews: 1234,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", title: "Singapore Skyline" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Suntec City & Fountain of Wealth",
+      "Merlion Park",
+      "Little India exploration",
+      "Chinatown & Buddha Temple",
+      "Singapore Flyer view"
+    ],
+    description: {
+      overview: "Embark on a Singapore city tour with a knowledgeable guide to explore the best of this modern and diverse city.",
+      whatToExpect: "Visit iconic landmarks like Suntec City, Fountain of Wealth and Merlion Park. Experience the cultural vibrancy of Little India and Chinatown. Discover the beauty of Gardens by the Bay and the historical charm of Colonial District. Enjoy a memorable journey filled with fascinating history, stunning architecture, and a taste of Singapore's rich multicultural heritage."
+    },
+    itinerary: [
+      { time: "Start", title: "Little India", description: "Begin tour from Little India" },
+      { time: "", title: "Beach Road", description: "Drive through Beach Road area" },
+      { time: "", title: "Suntec City", description: "Visit Suntec City and Fountain of Wealth" },
+      { time: "", title: "Merlion Park", description: "See the iconic Merlion statue" },
+      { time: "", title: "Chinatown", description: "Explore Chinatown and Buddha Temple" },
+      { time: "End", title: "Return", description: "Return to Little India" }
+    ],
+    tourTimings: ["09:00 AM", "02:00 PM"],
+    inclusions: ["City tour from Little India", "Suntec City & Fountain of Wealth", "Singapore Flyer view", "Merlion Park", "Duty free shop visit", "Chinatown & Buddha Temple", "Sharing transfers"],
+    exclusions: ["Personal expenses for shopping, drinks and dining"],
+    bookingPolicy: ["Be ready in hotel lobby 15 minutes before pickup", "Provide accurate hotel address", "Carry valid ID/passport"],
+    cancellationPolicy: ["Free cancellation 84 hours prior", "100% charge within 84 hours"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "night-safari-tickets": {
+    id: "night-safari-tickets",
+    title: "Night Safari Singapore Tickets Only",
+    shortDescription: "Experience a unique adventure to witness nocturnal animals in their natural settings across 7 climate zones.",
+    location: "Mandai, Singapore",
+    city: "singapore",
+    basePrice: 5000,
+    childPrice: 4700,
+    duration: "3-4 Hours",
+    rating: 4.8,
+    reviews: 2345,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "Night Safari" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "7 climate zones",
+      "Tram ride through habitats",
+      "Nocturnal animals viewing",
+      "Moonlit walking trails",
+      "Flying squirrels & Malayan flying foxes"
+    ],
+    description: {
+      overview: "Experience the Singapore Night Safari Tour – a unique adventure to witness nocturnal animals in their natural settings.",
+      whatToExpect: "Take a tram ride or walk the moonlit trails, spotting rare creatures like flying squirrels and Malayan flying foxes. An unforgettable wildlife encounter under the stars across 7 different climate zones."
+    },
+    itinerary: [
+      { time: "Evening", title: "Arrival", description: "Arrive at Night Safari" },
+      { time: "", title: "Tram Ride", description: "Board the tram for guided tour" },
+      { time: "", title: "Walking Trails", description: "Explore on foot" }
+    ],
+    tourTimings: ["7:15 PM onwards"],
+    inclusions: ["Night Safari tickets", "Tram ride"],
+    exclusions: ["Transfers", "Personal expenses"],
+    bookingPolicy: ["Pre-book slots 72 hours in advance", "Valid photo ID required", "No flash photography"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    faqs: []
+  },
+  "night-safari-transfer": {
+    id: "night-safari-transfer",
+    title: "Night Safari Singapore with Transfer",
+    shortDescription: "Night Safari experience with convenient hotel transfers included.",
+    location: "Mandai, Singapore",
+    city: "singapore",
+    basePrice: 4900,
+    childPrice: 4600,
+    duration: "4-5 Hours",
+    rating: 4.8,
+    reviews: 1890,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "Night Safari" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Hotel pickup & drop-off",
+      "7 climate zones",
+      "Tram ride",
+      "Nocturnal wildlife"
+    ],
+    description: {
+      overview: "Experience the Night Safari with hassle-free hotel transfers.",
+      whatToExpect: "Witness nocturnal animals in their natural settings with the convenience of round-trip hotel transfers. Minimum 2 adults required."
+    },
+    itinerary: [
+      { time: "Evening", title: "Pickup", description: "Hotel pickup" },
+      { time: "", title: "Safari", description: "Night Safari experience" },
+      { time: "", title: "Return", description: "Hotel drop-off" }
+    ],
+    tourTimings: ["7:30 PM pickup"],
+    inclusions: ["Night Safari tickets", "Tram ride", "Round-trip transfers"],
+    exclusions: ["Personal expenses", "Food"],
+    bookingPolicy: ["Minimum 2 adults required", "Provide exact hotel address"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    faqs: []
+  },
+  "night-safari-dinner": {
+    id: "night-safari-dinner",
+    title: "Night Safari Singapore with Indian Dinner & Transfer",
+    shortDescription: "Complete Night Safari experience with Indian dinner and hotel transfers.",
+    location: "Mandai, Singapore",
+    city: "singapore",
+    basePrice: 6500,
+    childPrice: 5800,
+    duration: "5-6 Hours",
+    rating: 4.9,
+    reviews: 1567,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "Night Safari" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Indian buffet dinner",
+      "Hotel transfers",
+      "Night Safari entry",
+      "Tram ride"
+    ],
+    description: {
+      overview: "The complete Night Safari package with Indian dinner and transfers.",
+      whatToExpect: "Enjoy a delicious Indian buffet dinner before experiencing the Night Safari. Minimum 2 adults required."
+    },
+    itinerary: [
+      { time: "Evening", title: "Pickup", description: "Hotel pickup" },
+      { time: "", title: "Dinner", description: "Indian buffet dinner" },
+      { time: "", title: "Safari", description: "Night Safari experience" },
+      { time: "", title: "Return", description: "Hotel drop-off" }
+    ],
+    tourTimings: ["6:00 PM pickup"],
+    inclusions: ["Night Safari tickets", "Tram ride", "Indian dinner", "Round-trip transfers"],
+    exclusions: ["Personal expenses"],
+    bookingPolicy: ["Minimum 2 adults required"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    faqs: []
+  },
+  "sentosa-4d-2rides": {
+    id: "sentosa-4d-2rides",
+    title: "Sentosa 4D Adventureland with 2 Rides Tickets Only",
+    shortDescription: "Experience cutting-edge 4D technology with sensory effects for an immersive adventure.",
+    location: "Sentosa Island, Singapore",
+    city: "singapore",
+    basePrice: 2100,
+    childPrice: 2100,
+    duration: "2 Hours",
+    rating: 4.5,
+    reviews: 876,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&auto=format&fit=crop", title: "4D Adventureland" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "3D visuals with sensory effects",
+      "Wind, water sprays, motion seats",
+      "Choose 2 thrilling rides",
+      "Action & adventure themes"
+    ],
+    description: {
+      overview: "4D AdventureLand offers cutting-edge technology combining 3D visuals with sensory effects.",
+      whatToExpect: "Experience wind, water sprays, motion seats, and scents for an immersive experience. Choose any two rides from Pirates 4D, Extreme Log Ride, Haunted Mine Ride, or Desperados."
+    },
+    itinerary: [],
+    tourTimings: ["10:00 AM - 9:00 PM"],
+    inclusions: ["Sentosa 4D Adventureland admission", "Choice of any 2 rides"],
+    exclusions: ["Personal expenses", "Food"],
+    bookingPolicy: ["Valid photo ID required", "Children under 12 must be accompanied by adult"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    faqs: []
+  },
+  "sentosa-4d-3rides": {
+    id: "sentosa-4d-3rides",
+    title: "Sentosa 4D Adventureland with 3 Rides Tickets Only",
+    shortDescription: "Extended 4D adventure with 3 thrilling rides to choose from.",
+    location: "Sentosa Island, Singapore",
+    city: "singapore",
+    basePrice: 3000,
+    childPrice: 3000,
+    duration: "2.5 Hours",
+    rating: 4.6,
+    reviews: 654,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&auto=format&fit=crop", title: "4D Adventureland" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Choose 3 thrilling rides",
+      "Full sensory experience",
+      "Multiple adventure themes"
+    ],
+    description: {
+      overview: "Get more adventure with 3 rides at 4D AdventureLand.",
+      whatToExpect: "Choose any three rides from Pirates 4D, Extreme Log Ride, Haunted Mine Ride, or Desperados for the ultimate immersive experience."
+    },
+    itinerary: [],
+    tourTimings: ["10:00 AM - 9:00 PM"],
+    inclusions: ["Sentosa 4D Adventureland admission", "Choice of any 3 rides"],
+    exclusions: ["Personal expenses", "Food"],
+    bookingPolicy: ["Valid photo ID required"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    faqs: []
+  },
+  "sentosa-cable-car": {
+    id: "sentosa-cable-car",
+    title: "Sentosa Cable Car Roundtrip Pass Tickets Only",
+    shortDescription: "World-famous cable car offering breathtaking views of Singapore's cityscape.",
+    location: "Mount Faber to Sentosa, Singapore",
+    city: "singapore",
+    basePrice: 2500,
+    childPrice: 2000,
+    duration: "30 Minutes",
+    rating: 4.7,
+    reviews: 1234,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&auto=format&fit=crop", title: "Cable Car" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Mount Faber to Sentosa connection",
+      "Panoramic city views",
+      "Marina Bay Sands views",
+      "Merlion sighting"
+    ],
+    description: {
+      overview: "The Singapore Cable Car is a world-famous tourist attraction.",
+      whatToExpect: "Enjoy breathtaking vistas of the cityscape, lush landscapes, and picturesque waterfront spots. See iconic landmarks like Marina Bay Sands and the Merlion from above."
+    },
+    itinerary: [],
+    tourTimings: ["8:45 AM - 10:00 PM"],
+    inclusions: ["Access to Mount Faber Line", "Access to Sentosa Line", "Roundtrip pass"],
+    exclusions: ["Personal expenses", "Food"],
+    bookingPolicy: ["Valid photo ID required"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "sentosa-wings-time": {
+    id: "sentosa-wings-time",
+    title: "Sentosa Wings of Time Tickets with Transfers",
+    shortDescription: "Spectacular outdoor night show with fireworks, water jets and lasers.",
+    location: "Sentosa Island, Singapore",
+    city: "singapore",
+    basePrice: 1900,
+    childPrice: 1900,
+    duration: "1 Hour",
+    rating: 4.6,
+    reviews: 987,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&auto=format&fit=crop", title: "Wings of Time" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Outdoor night show",
+      "Fireworks display",
+      "Water jets & lasers",
+      "Musical storytelling"
+    ],
+    description: {
+      overview: "Wings of Time is Sentosa's spectacular outdoor night show.",
+      whatToExpect: "Experience a magical show featuring fireworks, water jets, lasers and stunning visual effects set to music."
+    },
+    itinerary: [],
+    tourTimings: ["7:40 PM", "8:40 PM"],
+    inclusions: ["Wings of Time admission"],
+    exclusions: ["Personal expenses", "Food"],
+    bookingPolicy: ["Pre-book slot 72 hours in advance at reservation.mountfaberleisure.com"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "sentosa-sky-helix": {
+    id: "sentosa-sky-helix",
+    title: "Sentosa Sky Helix",
+    shortDescription: "Exhilarating aerial adventure with stunning panoramic views.",
+    location: "Sentosa Island, Singapore",
+    city: "singapore",
+    basePrice: 1500,
+    childPrice: 1500,
+    duration: "15 Minutes",
+    rating: 4.5,
+    reviews: 543,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&auto=format&fit=crop", title: "Sky Helix" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Highest vantage point in Sentosa",
+      "360-degree views",
+      "Gentle rotating ascent",
+      "Complimentary beverage or souvenir"
+    ],
+    description: {
+      overview: "SkyHelix Sentosa is an exhilarating aerial adventure.",
+      whatToExpect: "Rise above Sentosa for stunning 360-degree views. Perfect for solo travelers, friends, and families. Includes one standard non-alcoholic beverage or exclusive souvenir."
+    },
+    itinerary: [],
+    tourTimings: ["10:00 AM - 9:30 PM"],
+    inclusions: ["SkyHelix ticket", "One non-alcoholic beverage or souvenir"],
+    exclusions: ["Personal expenses"],
+    bookingPolicy: ["Minimum height 1.05m required", "Children 1.05-1.2m must be accompanied by adult"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "singapore-river-cruise": {
+    id: "singapore-river-cruise",
+    title: "Singapore River Cruise Tickets",
+    shortDescription: "Delightful journey along the iconic Singapore River showcasing picturesque landmarks.",
+    location: "Clarke Quay, Singapore",
+    city: "singapore",
+    basePrice: 2800,
+    childPrice: 2000,
+    duration: "40 Minutes",
+    rating: 4.7,
+    reviews: 1567,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1555217851-6141535bd771?w=800&auto=format&fit=crop", title: "River Cruise" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Marina Bay Sands views",
+      "Singapore Flyer sighting",
+      "Clarke Quay & Boat Quay",
+      "Audio commentary"
+    ],
+    description: {
+      overview: "The Singapore River Cruise offers a delightful journey along the iconic Singapore River.",
+      whatToExpect: "Enjoy picturesque landscapes, iconic landmarks like Marina Bay Sands and Singapore Flyer, and vibrant quays. Knowledgeable guides provide interesting commentary about the city's history."
+    },
+    itinerary: [
+      { time: "", title: "Boarding", description: "Board at Clarke Quay Jetty" },
+      { time: "40 mins", title: "Cruise", description: "Scenic river cruise with commentary" }
+    ],
+    tourTimings: ["9:00 AM - 11:00 PM"],
+    inclusions: ["40-minute cruise", "Audio visual commentary in English"],
+    exclusions: ["Personal expenses", "Food"],
+    bookingPolicy: ["Report 15 minutes before", "Boarding at Clarke Quay Jetty", "No re-boarding after disembarking"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "gardens-by-the-bay": {
+    id: "gardens-by-the-bay",
+    title: "Gardens by the Bay + Flower Dome + Cloud Forest with Jurassic World",
+    shortDescription: "Stunning 101-hectare oasis featuring 250,000 plants and iconic Supertree Grove.",
+    location: "Marina Bay, Singapore",
+    city: "singapore",
+    basePrice: 3100,
+    childPrice: 2800,
+    duration: "3-4 Hours",
+    rating: 4.9,
+    reviews: 3456,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?w=800&auto=format&fit=crop", title: "Gardens by the Bay" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Flower Dome conservatory",
+      "Cloud Forest with Jurassic World",
+      "Supertree Grove",
+      "250,000 rare plants"
+    ],
+    description: {
+      overview: "Gardens by the Bay is a stunning oasis in Singapore's concrete jungle, spanning 101 hectares.",
+      whatToExpect: "Explore the Cloud Forest and Flower Dome showcasing rare flora from Mediterranean regions and mountain environments. The Supertree Grove features eco-friendly man-made trees with a 20-meter high walkway. Experience Jurassic World with 13 immersive zones including dinosaur encounters."
+    },
+    itinerary: [],
+    tourTimings: ["9:00 AM - 8:00 PM"],
+    inclusions: ["Gardens by the Bay admission", "Flower Dome entry", "Cloud Forest with Jurassic World"],
+    exclusions: ["Personal expenses", "Food", "Transfers"],
+    bookingPolicy: ["Valid photo ID required", "No re-entry allowed", "Maximum 1 hour per conservatory"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "adventure-cove": {
+    id: "adventure-cove",
+    title: "Adventure Cove Water Park Tickets Only",
+    shortDescription: "Thrilling water park with rides, snorkeling with tropical fish, and dolphin encounters.",
+    location: "Resorts World Sentosa, Singapore",
+    city: "singapore",
+    basePrice: 3800,
+    childPrice: 3500,
+    duration: "Full Day",
+    rating: 4.7,
+    reviews: 2345,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&auto=format&fit=crop", title: "Adventure Cove" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Dueling Racer & Pipeline Plunge",
+      "Riptide Rocket",
+      "Snorkel with 20,000 fishes",
+      "Ray Bay & Rainbow Reef",
+      "14 themed zones"
+    ],
+    description: {
+      overview: "Adventure Cove Water Park at Resorts World Sentosa offers thrilling water adventures.",
+      whatToExpect: "Enjoy rides like Dueling Racer, Pipeline Plunge, and Riptide Rocket. Snorkel with 20,000 tropical fishes at Rainbow Reef. Experience Southeast Asia's first hydro-magnetic coaster and 14 themed zones in Adventure River."
+    },
+    itinerary: [],
+    tourTimings: ["10:00 AM - 6:00 PM"],
+    inclusions: ["Adventure Cove Waterpark ticket", "All rides and attractions"],
+    exclusions: ["Personal expenses", "Food", "Locker rental"],
+    bookingPolicy: ["Valid photo ID required", "Children must be accompanied by adult"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "singapore-flyer": {
+    id: "singapore-flyer",
+    title: "Singapore Flyer Ticket Only",
+    shortDescription: "Experience panoramic views from 165 meters high on this giant observation wheel.",
+    location: "Marina Bay, Singapore",
+    city: "singapore",
+    basePrice: 3600,
+    childPrice: 3200,
+    duration: "30 Minutes",
+    rating: 4.7,
+    reviews: 2890,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", title: "Singapore Flyer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "165 meters high",
+      "Panoramic city views",
+      "Marina Bay Sands views",
+      "30-minute scenic ride"
+    ],
+    description: {
+      overview: "The Singapore Flyer offers breathtaking panoramic views at 165 meters high.",
+      whatToExpect: "Marvel at Singapore's stunning skyline and catch glimpses of the Indonesian Spice Islands and Straits of Johor. Begin with the Time Capsule for an immersive multisensory journey."
+    },
+    itinerary: [],
+    tourTimings: ["2:00 PM - 10:00 PM"],
+    inclusions: ["Singapore Flyer admission", "30-minute scenic ride"],
+    exclusions: ["Personal expenses", "Food", "Transfers"],
+    bookingPolicy: ["Valid photo ID required", "No bulky items in capsule"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "river-safari": {
+    id: "river-safari",
+    title: "Singapore River Safari Tickets Only",
+    shortDescription: "Captivating wildlife park with river-themed exhibits and Amazon River Quest boat ride.",
+    location: "Mandai, Singapore",
+    city: "singapore",
+    basePrice: 3700,
+    childPrice: 3700,
+    duration: "3-4 Hours",
+    rating: 4.6,
+    reviews: 1234,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "River Safari" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Amazon Flooded Forest",
+      "Congo River exhibit",
+      "Amazon River Quest boat ride",
+      "Diverse aquatic animals"
+    ],
+    description: {
+      overview: "River Safari is a captivating wildlife park and river-themed zoo.",
+      whatToExpect: "Discover exhibits like the Amazon Flooded Forest and Congo River showcasing diverse aquatic and land animals. The highlight is the Amazon River Quest boat ride through the rain forest."
+    },
+    itinerary: [],
+    tourTimings: ["10:00 AM - 7:00 PM"],
+    inclusions: ["River Safari admission", "Amazon River Quest boat ride", "Animal shows"],
+    exclusions: ["Personal expenses", "Food"],
+    bookingPolicy: ["Pre-book slots 72 hours in advance", "Valid photo ID required"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "universal-studios-weekday": {
+    id: "universal-studios-weekday",
+    title: "Universal Studios Singapore Weekday Ticket",
+    shortDescription: "Movie-themed experience with thrilling rides and 7 exciting zones.",
+    location: "Resorts World Sentosa, Singapore",
+    city: "singapore",
+    basePrice: 7000,
+    childPrice: 4200,
+    duration: "Full Day",
+    rating: 4.9,
+    reviews: 5678,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1581351123004-757df051db8e?w=800&auto=format&fit=crop", title: "Universal Studios" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "7 themed zones",
+      "Hollywood & New York replicas",
+      "Ancient Egypt adventures",
+      "Far Far Away fairytale fun",
+      "Sci-Fi City roller coasters",
+      "Madagascar characters"
+    ],
+    description: {
+      overview: "Universal Studios Singapore offers thrilling movie-themed experiences.",
+      whatToExpect: "Explore Hollywood and New York replicas, venture into Ancient Egypt for adventure rides, visit Far Far Away for fairytale fun, dance with Madagascar's characters, and face your fears on one of the world's tallest roller coasters at Sci-Fi City."
+    },
+    itinerary: [],
+    tourTimings: ["10:00 AM - 8:00 PM"],
+    inclusions: ["Universal Studios entrance", "Access to all 7 zones", "All rides and attractions"],
+    exclusions: ["Personal expenses", "Food", "Express passes"],
+    bookingPolicy: ["Valid photo ID required", "Children must be accompanied by adult"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "universal-studios-weekend": {
+    id: "universal-studios-weekend",
+    title: "Universal Studios Singapore Weekend Ticket",
+    shortDescription: "Weekend admission to the ultimate movie-themed adventure park.",
+    location: "Resorts World Sentosa, Singapore",
+    city: "singapore",
+    basePrice: 7200,
+    childPrice: 4200,
+    duration: "Full Day",
+    rating: 4.9,
+    reviews: 4567,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1581351123004-757df051db8e?w=800&auto=format&fit=crop", title: "Universal Studios" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Weekend admission",
+      "7 themed zones",
+      "World-class roller coasters",
+      "Minion Land attraction"
+    ],
+    description: {
+      overview: "Universal Studios Singapore weekend ticket for the ultimate adventure.",
+      whatToExpect: "Same thrilling experience as weekdays but on weekends. Peak rates apply for weekends, Singapore public holidays, and June-August & December 2025."
+    },
+    itinerary: [],
+    tourTimings: ["10:00 AM - 8:00 PM"],
+    inclusions: ["Universal Studios entrance", "Access to all zones and rides", "Minion Land"],
+    exclusions: ["Personal expenses", "Food", "Express passes"],
+    bookingPolicy: ["Valid photo ID required", "Peak rates on weekends and holidays"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "singapore-zoo": {
+    id: "singapore-zoo",
+    title: "Singapore Zoo + Tram Ride Tickets Only",
+    shortDescription: "Home to 3500 animals of 300 species with unique climate zones.",
+    location: "Mandai, Singapore",
+    city: "singapore",
+    basePrice: 4000,
+    childPrice: 3500,
+    duration: "4-5 Hours",
+    rating: 4.8,
+    reviews: 3456,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "Singapore Zoo" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "3500 animals of 300 species",
+      "Frozen Tundra for polar bears",
+      "Fragile Forest rainforest",
+      "Wild Africa safari",
+      "Tram ride included"
+    ],
+    description: {
+      overview: "Singapore Zoo is home to 3500 animals of 300 species.",
+      whatToExpect: "Visit the Frozen Tundra for polar bears, Reptile Garden for snakes, Fragile Forest for a real rainforest experience, and Wild Africa for an African safari adventure. Don't miss the Orchid Garden for beautiful tropical flowers."
+    },
+    itinerary: [],
+    tourTimings: ["8:30 AM - 6:00 PM"],
+    inclusions: ["Singapore Zoo ticket", "Tram ride within zoo"],
+    exclusions: ["Personal expenses", "Food", "Transfers"],
+    bookingPolicy: ["Pre-book slots 72 hours in advance", "Valid photo ID required"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "rainforest-wild-asia": {
+    id: "rainforest-wild-asia",
+    title: "Rainforest Wild Asia with Transfer",
+    shortDescription: "Asia's first wildlife adventure park with 36 species roaming freely.",
+    location: "Mandai, Singapore",
+    city: "singapore",
+    basePrice: 3800,
+    childPrice: 3600,
+    duration: "3-4 Hours",
+    rating: 4.7,
+    reviews: 876,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "Rainforest Wild Asia" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "36 species roaming freely",
+      "The Karsts with langurs",
+      "The Cavern cave experience",
+      "Immersive wildlife encounters"
+    ],
+    description: {
+      overview: "Asia's first wildlife adventure park where every journey brings unique encounters.",
+      whatToExpect: "Ascend The Karsts, home to Francois' langurs making their debut in Singapore. Delve into The Cavern inspired by Mulu Caves in Sarawak. Connect with nature as 36 species roam freely."
+    },
+    itinerary: [],
+    tourTimings: ["10:00 AM - 7:00 PM"],
+    inclusions: ["Rainforest Wild Asia tickets", "Transfers"],
+    exclusions: ["Personal expenses", "Food"],
+    bookingPolicy: ["Pre-book slots 72 hours in advance", "No flash photography"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "big-bus-discover": {
+    id: "big-bus-discover",
+    title: "Big Bus Singapore - Discover Ticket",
+    shortDescription: "Hop-on-hop-off sightseeing experience covering top attractions.",
+    location: "Singapore",
+    city: "singapore",
+    basePrice: 4800,
+    childPrice: 4500,
+    duration: "7 Hours",
+    rating: 4.6,
+    reviews: 1234,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", title: "Big Bus" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Over 30 stops",
+      "Yellow & Red lines",
+      "Commentary in 12 languages",
+      "See all top landmarks"
+    ],
+    description: {
+      overview: "Big Bus Singapore offers convenient hop-on-hop-off sightseeing.",
+      whatToExpect: "Explore the city's top attractions at your own pace. Multiple routes cover key landmarks including Marina Bay Sands, Gardens by the Bay, Chinatown, and Sentosa Island."
+    },
+    itinerary: [],
+    tourTimings: ["Yellow Line: 9:30 AM - 5:15 PM", "Red Line: 9:40 AM - 5:05 PM"],
+    inclusions: ["Big Bus admission", "Over 30 stops", "Commentary in 12 languages"],
+    exclusions: ["Personal expenses", "Food"],
+    bookingPolicy: ["Maximum 10 guests per booking", "Start from Suntec City Tower 2"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 2: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
+  },
+  "big-bus-night": {
+    id: "big-bus-night",
+    title: "Big Bus Singapore Night City Tour",
+    shortDescription: "3-hour guided night tour with satay sampling at Lau Pa Sat.",
+    location: "Singapore",
+    city: "singapore",
+    basePrice: 5000,
+    childPrice: 4900,
+    duration: "3 Hours",
+    rating: 4.7,
+    reviews: 987,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", title: "Night Tour" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Open-top double-decker bus",
+      "Satay sampling at Lau Pa Sat",
+      "Professional English guide",
+      "3-hour fully guided tour"
+    ],
+    description: {
+      overview: "Experience Singapore at night on an open-top double-decker bus.",
+      whatToExpect: "Enjoy a fully guided 3-hour night tour with satay sampling at Lau Pa Sat. See iconic sites lit up beautifully after dark."
+    },
+    itinerary: [
+      { time: "6:15 PM", title: "Departure", description: "Tour departs (Thu-Tue)" },
+      { time: "", title: "Night Tour", description: "See Singapore's landmarks at night" },
+      { time: "", title: "Satay Sampling", description: "Enjoy satay at Lau Pa Sat" }
+    ],
+    tourTimings: ["6:15 PM (Thursday to Tuesday)"],
+    inclusions: ["Open-top bus transport", "Satay sampling", "Professional English guide", "Complimentary transfer from 33 stops"],
+    exclusions: ["Personal expenses", "Additional food"],
+    bookingPolicy: ["Tour runs Thursday to Tuesday"],
+    cancellationPolicy: ["100% charge for cancellations after booking"],
+    childPolicy: ["Under 2: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: []
   }
 };
