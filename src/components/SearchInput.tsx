@@ -80,7 +80,10 @@ const SearchInput = ({ placeholder = "Search...", className = "", autoFocus = fa
                 key={index}
                 className="px-3 py-2.5 hover:bg-accent cursor-pointer rounded transition-colors border-b border-border/30 last:border-0"
                 onClick={() => {
-                  navigate(`/${result.tour.id}`);
+                  // Dubai tours have /dubai/ prefix in routes
+                  const city = result.tour.city.toLowerCase();
+                  const path = city === 'dubai' ? `/dubai/${result.tour.id}` : `/${result.tour.id}`;
+                  navigate(path);
                   setIsOpen(false);
                 }}
               >
