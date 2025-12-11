@@ -83,13 +83,13 @@ const Footer = () => {
               <li><Link to="/privacy-policy" className="hover:text-background transition-colors">Privacy Policy</Link></li>
               <li><Link to="/terms-of-service" className="hover:text-background transition-colors">Terms of Service</Link></li>
               <li><Link to="/cookie-policy" className="hover:text-background transition-colors">Cookie Policy</Link></li>
-              <li><Link to="/refund-policy" className="hover:text-background transition-colors">Refund Policy</Link></li>
+              <li><Link to="/disclaimer" className="hover:text-background transition-colors">Disclaimer</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="pt-8 border-t border-background/20 text-center text-sm text-background/60">
-          <p>© 2024 Yellodae. All rights reserved.</p>
+          <p>© 2025 Yellodae. All rights reserved.</p>
         </div>
       </div>
     </footer>
