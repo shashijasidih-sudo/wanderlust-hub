@@ -9,27 +9,43 @@ import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SearchInput from "@/components/SearchInput";
 
+// Singapore-specific images
+import singaporeCityTour from "@/assets/singapore-city-tour.jpg";
+import singaporeNightSafari from "@/assets/singapore-night-safari.jpg";
+import singaporeSentosa4d from "@/assets/singapore-sentosa-4d.jpg";
+import singaporeCableCar from "@/assets/singapore-cable-car.jpg";
+import singaporeWingsTime from "@/assets/singapore-wings-time.jpg";
+import singaporeSkyHelix from "@/assets/singapore-sky-helix.jpg";
+import singaporeRiverCruise from "@/assets/singapore-river-cruise.jpg";
+import singaporeGardensBay from "@/assets/singapore-gardens-bay.jpg";
+import singaporeAdventureCove from "@/assets/singapore-adventure-cove.jpg";
+import singaporeFlyer from "@/assets/singapore-flyer.jpg";
+import singaporeRiverSafari from "@/assets/singapore-river-safari.jpg";
+import singaporeUniversalStudios from "@/assets/singapore-universal-studios.jpg";
+import singaporeZoo from "@/assets/singapore-zoo.jpg";
+import singaporeBigBus from "@/assets/singapore-big-bus.jpg";
+
 const activities = [
-  { title: "Singapore City Tour with Guide", price: 1600, image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", slug: "singapore/singapore-city-tour" },
-  { title: "Night Safari Singapore Tickets Only", price: 5000, image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", slug: "singapore/night-safari-tickets" },
-  { title: "Night Safari Singapore with Transfer", price: 4900, image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", slug: "singapore/night-safari-transfer" },
-  { title: "Night Safari with Indian Dinner & Transfer", price: 6500, image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", slug: "singapore/night-safari-dinner" },
-  { title: "Sentosa 4D Adventureland - 2 Rides", price: 2100, image: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&auto=format&fit=crop", slug: "singapore/sentosa-4d-2rides" },
-  { title: "Sentosa 4D Adventureland - 3 Rides", price: 3000, image: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&auto=format&fit=crop", slug: "singapore/sentosa-4d-3rides" },
-  { title: "Sentosa Cable Car Roundtrip Pass", price: 2500, image: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&auto=format&fit=crop", slug: "singapore/sentosa-cable-car" },
-  { title: "Sentosa Wings of Time with Transfers", price: 1900, image: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&auto=format&fit=crop", slug: "singapore/sentosa-wings-time" },
-  { title: "Sentosa Sky Helix", price: 1500, image: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&auto=format&fit=crop", slug: "singapore/sentosa-sky-helix" },
-  { title: "Singapore River Cruise Tickets", price: 2800, image: "https://images.unsplash.com/photo-1555217851-6141535bd771?w=800&auto=format&fit=crop", slug: "singapore/singapore-river-cruise" },
-  { title: "Gardens by the Bay + Flower Dome + Cloud Forest", price: 3100, image: "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?w=800&auto=format&fit=crop", slug: "singapore/gardens-by-the-bay" },
-  { title: "Adventure Cove Water Park Tickets", price: 3800, image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&auto=format&fit=crop", slug: "singapore/adventure-cove" },
-  { title: "Singapore Flyer Ticket", price: 3600, image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", slug: "singapore/singapore-flyer" },
-  { title: "Singapore River Safari Tickets", price: 3700, image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", slug: "singapore/river-safari" },
-  { title: "Universal Studios Weekday Ticket", price: 7000, image: "https://images.unsplash.com/photo-1581351123004-757df051db8e?w=800&auto=format&fit=crop", slug: "singapore/universal-studios-weekday" },
-  { title: "Universal Studios Weekend Ticket", price: 7200, image: "https://images.unsplash.com/photo-1581351123004-757df051db8e?w=800&auto=format&fit=crop", slug: "singapore/universal-studios-weekend" },
-  { title: "Singapore Zoo + Tram Ride", price: 4000, image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", slug: "singapore/singapore-zoo" },
-  { title: "Rainforest Wild Asia with Transfer", price: 3800, image: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", slug: "singapore/rainforest-wild-asia" },
-  { title: "Big Bus Singapore - Discover Ticket", price: 4800, image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", slug: "singapore/big-bus-discover" },
-  { title: "Big Bus Singapore Night City Tour", price: 5000, image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", slug: "singapore/big-bus-night" },
+  { title: "Singapore City Tour with Guide", price: 1600, image: singaporeCityTour, slug: "singapore/singapore-city-tour" },
+  { title: "Night Safari Singapore Tickets Only", price: 5000, image: singaporeNightSafari, slug: "singapore/night-safari-tickets" },
+  { title: "Night Safari Singapore with Transfer", price: 4900, image: singaporeNightSafari, slug: "singapore/night-safari-transfer" },
+  { title: "Night Safari with Indian Dinner & Transfer", price: 6500, image: singaporeNightSafari, slug: "singapore/night-safari-dinner" },
+  { title: "Sentosa 4D Adventureland - 2 Rides", price: 2100, image: singaporeSentosa4d, slug: "singapore/sentosa-4d-2rides" },
+  { title: "Sentosa 4D Adventureland - 3 Rides", price: 3000, image: singaporeSentosa4d, slug: "singapore/sentosa-4d-3rides" },
+  { title: "Sentosa Cable Car Roundtrip Pass", price: 2500, image: singaporeCableCar, slug: "singapore/sentosa-cable-car" },
+  { title: "Sentosa Wings of Time with Transfers", price: 1900, image: singaporeWingsTime, slug: "singapore/sentosa-wings-time" },
+  { title: "Sentosa Sky Helix", price: 1500, image: singaporeSkyHelix, slug: "singapore/sentosa-sky-helix" },
+  { title: "Singapore River Cruise Tickets", price: 2800, image: singaporeRiverCruise, slug: "singapore/singapore-river-cruise" },
+  { title: "Gardens by the Bay + Flower Dome + Cloud Forest", price: 3100, image: singaporeGardensBay, slug: "singapore/gardens-by-the-bay" },
+  { title: "Adventure Cove Water Park Tickets", price: 3800, image: singaporeAdventureCove, slug: "singapore/adventure-cove" },
+  { title: "Singapore Flyer Ticket", price: 3600, image: singaporeFlyer, slug: "singapore/singapore-flyer" },
+  { title: "Singapore River Safari Tickets", price: 3700, image: singaporeRiverSafari, slug: "singapore/river-safari" },
+  { title: "Universal Studios Weekday Ticket", price: 7000, image: singaporeUniversalStudios, slug: "singapore/universal-studios-weekday" },
+  { title: "Universal Studios Weekend Ticket", price: 7200, image: singaporeUniversalStudios, slug: "singapore/universal-studios-weekend" },
+  { title: "Singapore Zoo + Tram Ride", price: 4000, image: singaporeZoo, slug: "singapore/singapore-zoo" },
+  { title: "Rainforest Wild Asia with Transfer", price: 3800, image: singaporeZoo, slug: "singapore/rainforest-wild-asia" },
+  { title: "Big Bus Singapore - Discover Ticket", price: 4800, image: singaporeBigBus, slug: "singapore/big-bus-discover" },
+  { title: "Big Bus Singapore Night City Tour", price: 5000, image: singaporeBigBus, slug: "singapore/big-bus-night" },
 ];
 
 const categories = [
@@ -87,7 +103,7 @@ const Singapore = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <SearchInput placeholder="Search Singapore activities..." className="flex-1" />
+            <SearchInput placeholder="Search Singapore activities..." className="flex-1" cityFilter="Singapore" />
             <Button
               variant={viewMode === 'grid' ? 'default' : 'outline'}
               size="icon"
