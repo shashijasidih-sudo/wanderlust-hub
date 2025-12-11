@@ -46,11 +46,11 @@ const Header = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50">
-                <DropdownMenuItem className="cursor-pointer">INR - Indian Rupee</DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">USD - US Dollar</DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">EUR - Euro</DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">GBP - British Pound</DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">AED - UAE Dirham</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">₹ INR - Indian Rupee</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">฿ THB - Thai Baht</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">$ USD - US Dollar</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">د.إ AED - UAE Dirham</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">S$ SGD - Singapore Dollar</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <Button variant="ghost" size="icon" className="hidden md:inline-flex">
