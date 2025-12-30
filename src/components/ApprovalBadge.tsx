@@ -4,7 +4,7 @@ import { Shield } from "lucide-react";
 
 const ApprovalBadge = () => {
   return (
-    <div className="bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border-b border-amber-200/50">
+    <div className="sticky top-0 z-50 bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border-b border-amber-200/50 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center gap-3 md:gap-6 py-2">
           {/* Ministry of Tourism Logo */}
