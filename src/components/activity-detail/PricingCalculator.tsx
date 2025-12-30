@@ -155,8 +155,12 @@ const PricingCalculator = ({
                   <Button
                     variant="outline"
                     size="icon"
-                    onClick={() => setAdults(Math.min(vehicles * vehicleCapacity, adults + 1))}
+                    onClick={() => {
+                      const maxAllowed = vehicles * vehicleCapacity - children;
+                      setAdults(Math.min(maxAllowed, adults + 1));
+                    }}
                     className="h-8 w-8"
+                    disabled={adults + children >= vehicles * vehicleCapacity}
                   >
                     <Plus className="h-4 w-4" />
                   </Button>
@@ -180,13 +184,21 @@ const PricingCalculator = ({
                   <Button
                     variant="outline"
                     size="icon"
-                    onClick={() => setChildren(Math.min(vehicles * vehicleCapacity, children + 1))}
+                    onClick={() => {
+                      const maxAllowed = vehicles * vehicleCapacity - adults;
+                      setChildren(Math.min(maxAllowed, children + 1));
+                    }}
                     className="h-8 w-8"
+                    disabled={adults + children >= vehicles * vehicleCapacity}
                   >
                     <Plus className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
+
+              <p className="text-xs text-muted-foreground text-center">
+                Total passengers: {adults + children} / {vehicles * vehicleCapacity}
+              </p>
             </div>
           </div>
         ) : (
