@@ -26,6 +26,8 @@ export interface TourData {
   duration: string;
   rating: number;
   reviews: number;
+  pricePerVehicle?: boolean;
+  vehicleCapacity?: number;
   heroImages: {
     src: string;
     title: string;
@@ -3864,6 +3866,8 @@ export const toursData: Record<string, TourData> = {
     duration: "Transfer",
     rating: 4.9,
     reviews: 856,
+    pricePerVehicle: true,
+    vehicleCapacity: 5,
     heroImages: [
       { src: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop", title: "Private Transfer" }
     ],
@@ -3913,6 +3917,8 @@ export const toursData: Record<string, TourData> = {
     duration: "Transfer",
     rating: 4.9,
     reviews: 654,
+    pricePerVehicle: true,
+    vehicleCapacity: 10,
     heroImages: [
       { src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop", title: "Private Transfer" }
     ],
@@ -3962,6 +3968,8 @@ export const toursData: Record<string, TourData> = {
     duration: "Transfer",
     rating: 4.8,
     reviews: 723,
+    pricePerVehicle: true,
+    vehicleCapacity: 5,
     heroImages: [
       { src: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop", title: "Airport Drop Off" }
     ],
@@ -4010,6 +4018,8 @@ export const toursData: Record<string, TourData> = {
     duration: "Transfer",
     rating: 4.8,
     reviews: 512,
+    pricePerVehicle: true,
+    vehicleCapacity: 10,
     heroImages: [
       { src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop", title: "Airport Drop Off" }
     ],
@@ -4058,6 +4068,8 @@ export const toursData: Record<string, TourData> = {
     duration: "Transfer",
     rating: 4.9,
     reviews: 432,
+    pricePerVehicle: true,
+    vehicleCapacity: 5,
     heroImages: [
       { src: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&auto=format&fit=crop", title: "Night Transfer" }
     ],
@@ -4107,6 +4119,8 @@ export const toursData: Record<string, TourData> = {
     duration: "Transfer",
     rating: 4.9,
     reviews: 321,
+    pricePerVehicle: true,
+    vehicleCapacity: 10,
     heroImages: [
       { src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop", title: "Night Transfer" }
     ],
