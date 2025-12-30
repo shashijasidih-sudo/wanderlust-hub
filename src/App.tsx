@@ -110,6 +110,13 @@ import SingaporeZoo from "./pages/SingaporeZoo";
 import RainforestWildAsia from "./pages/RainforestWildAsia";
 import BigBusDiscover from "./pages/BigBusDiscover";
 import BigBusNight from "./pages/BigBusNight";
+import SingaporeTransfers from "./pages/SingaporeTransfers";
+import SingaporeAirportPickup5 from "./pages/SingaporeAirportPickup5";
+import SingaporeAirportPickup10 from "./pages/SingaporeAirportPickup10";
+import SingaporeAirportDropoff5 from "./pages/SingaporeAirportDropoff5";
+import SingaporeAirportDropoff10 from "./pages/SingaporeAirportDropoff10";
+import SingaporeAirportNightPickup5 from "./pages/SingaporeAirportNightPickup5";
+import SingaporeAirportNightPickup10 from "./pages/SingaporeAirportNightPickup10";
 
 const queryClient = new QueryClient();
 
@@ -226,6 +233,13 @@ const App = () => (
           <Route path="/singapore/rainforest-wild-asia" element={<RainforestWildAsia />} />
           <Route path="/singapore/big-bus-discover" element={<BigBusDiscover />} />
           <Route path="/singapore/big-bus-night" element={<BigBusNight />} />
+          <Route path="/singapore/transfers" element={<SingaporeTransfers />} />
+          <Route path="/singapore/airport-pickup-5-seater" element={<SingaporeAirportPickup5 />} />
+          <Route path="/singapore/airport-pickup-10-seater" element={<SingaporeAirportPickup10 />} />
+          <Route path="/singapore/airport-dropoff-5-seater" element={<SingaporeAirportDropoff5 />} />
+          <Route path="/singapore/airport-dropoff-10-seater" element={<SingaporeAirportDropoff10 />} />
+          <Route path="/singapore/airport-night-pickup-5-seater" element={<SingaporeAirportNightPickup5 />} />
+          <Route path="/singapore/airport-night-pickup-10-seater" element={<SingaporeAirportNightPickup10 />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
