@@ -4796,7 +4796,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Pickup", "Oversize and excess baggage is subject to availability of storage space", "If guests fail to report within the given time it will be a NO Show with no refund", "Limousine and Luxury transfers available at extra charges", "No eating, drinking, and smoking inside the vehicle", "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable", "If eligible for Refund your Amount will be returned back to your Account within 7 working days"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Arun Sharma", date: "2 days ago", rating: 5, comment: "Perfect sedan for our couple trip to Marina! Clean car and very professional driver. Reached our hotel at Palm Jumeirah quickly. Excellent service!", helpful: 26 },
+      { name: "Meenakshi Iyer", date: "1 week ago", rating: 5, comment: "Great 4-seater service to JBR! Just right for two of us with luggage. Driver was waiting at arrivals and helped with bags. Will book again!", helpful: 21 },
+      { name: "Ravi Krishnan", date: "2 weeks ago", rating: 5, comment: "Comfortable ride to Zone 2. Sedan was clean and well-maintained. Driver knew the fastest route to our Marina apartment.", helpful: 16 },
+      { name: "Sunita Devi", date: "3 weeks ago", rating: 4, comment: "Good experience overall. Car was nice and driver was courteous. Smooth transfer from airport to Palm Jumeirah.", helpful: 12 }
+    ]
   },
   "dubai-airport-pickup-zone3-4-seater": {
     id: "dubai-airport-pickup-zone3-4-seater",
@@ -4827,7 +4833,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Pickup", "Oversize and excess baggage is subject to availability of storage space", "If guests fail to report within the given time it will be a NO Show with no refund", "Limousine and Luxury transfers available at extra charges", "No eating, drinking, and smoking inside the vehicle", "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable", "If eligible for Refund your Amount will be returned back to your Account within 7 working days"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Prakash Gupta", date: "3 days ago", rating: 5, comment: "Excellent sedan transfer to JVC! Driver was very professional and knew the exact location. Perfect for our small family of 3.", helpful: 24 },
+      { name: "Lakshmi Narayanan", date: "1 week ago", rating: 5, comment: "Great service to Sports City! Clean 4-seater and punctual driver. Comfortable ride after our long flight. Highly recommend!", helpful: 19 },
+      { name: "Deepak Malhotra", date: "2 weeks ago", rating: 5, comment: "Smooth pickup to Motor City. Sedan was comfortable and AC was perfect. Driver helped with all our luggage.", helpful: 15 },
+      { name: "Kavitha Ramesh", date: "3 weeks ago", rating: 4, comment: "Good transfer to Zone 3. Car was clean and driver was friendly. Value for money for couples or solo travelers.", helpful: 11 }
+    ]
   },
   "dubai-airport-pickup-zone4-4-seater": {
     id: "dubai-airport-pickup-zone4-4-seater",
@@ -4858,7 +4870,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Pickup", "Oversize and excess baggage is subject to availability of storage space", "If guests fail to report within the given time it will be a NO Show with no refund", "Limousine and Luxury transfers available at extra charges", "No eating, drinking, and smoking inside the vehicle", "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable", "If eligible for Refund your Amount will be returned back to your Account within 7 working days"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Mohan Pillai", date: "2 days ago", rating: 5, comment: "Perfect sedan for our trip to Dubai South! Long journey but very comfortable. Driver was experienced and got us there safely.", helpful: 23 },
+      { name: "Anita Bhatia", date: "1 week ago", rating: 5, comment: "Great transfer to DWC area. Clean car and professional driver. Worth every rupee for the distance covered!", helpful: 18 },
+      { name: "Suresh Menon", date: "2 weeks ago", rating: 5, comment: "Excellent service to Zone 4. Sedan was comfortable for the long ride. Driver was punctual and helpful.", helpful: 14 },
+      { name: "Geeta Venkatesh", date: "3 weeks ago", rating: 4, comment: "Good experience for the Zone 4 transfer. Vehicle was nice and driver knew the route well. Recommended!", helpful: 10 }
+    ]
   },
   "dubai-airport-pickup-zone4-7-seater": {
     id: "dubai-airport-pickup-zone4-7-seater",
@@ -4889,7 +4907,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Pickup", "Oversize and excess baggage is subject to availability of storage space", "If guests fail to report within the given time it will be a NO Show with no refund", "Limousine and Luxury transfers available at extra charges", "No eating, drinking, and smoking inside the vehicle", "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable", "If eligible for Refund your Amount will be returned back to your Account within 7 working days"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Rajendra Prasad", date: "3 days ago", rating: 5, comment: "Excellent 7-seater for our family trip to Dubai South! Spacious and comfortable for all 6 of us. Driver was very professional.", helpful: 27 },
+      { name: "Sarita Joshi", date: "1 week ago", rating: 5, comment: "Great service to DWC area. The 7-seater was perfect for our family with kids. Driver helped with car seats. Highly recommend!", helpful: 22 },
+      { name: "Vijay Kumar", date: "2 weeks ago", rating: 5, comment: "Smooth transfer to Zone 4. Vehicle was clean and spacious. Driver was punctual and knew the best route.", helpful: 17 },
+      { name: "Padma Rao", date: "3 weeks ago", rating: 4, comment: "Good experience with the 7-seater to Dubai South. Comfortable ride for our group of 5. Would book again.", helpful: 13 }
+    ]
   },
   "dubai-airport-pickup-zone4-12-seater": {
     id: "dubai-airport-pickup-zone4-12-seater",
@@ -4920,7 +4944,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Pickup", "Oversize and excess baggage is subject to availability of storage space", "If guests fail to report within the given time it will be a NO Show with no refund", "Limousine and Luxury transfers available at extra charges", "No eating, drinking, and smoking inside the vehicle", "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable", "If eligible for Refund your Amount will be returned back to your Account within 7 working days"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Harish Chandran", date: "2 days ago", rating: 5, comment: "Perfect 12-seater for our joint family trip to Zone 4! All 10 of us fit comfortably with luggage. Driver was excellent!", helpful: 29 },
+      { name: "Usha Devi", date: "1 week ago", rating: 5, comment: "Great for large groups going to Dubai South! The van was spacious and well-maintained. Smooth ride for everyone.", helpful: 23 },
+      { name: "Ramesh Babu", date: "2 weeks ago", rating: 5, comment: "Excellent service for our group to DWC area. 12-seater was perfect. Professional driver and comfortable journey.", helpful: 18 },
+      { name: "Shanti Priya", date: "3 weeks ago", rating: 4, comment: "Good value for Zone 4 group transfer. Spacious vehicle and friendly driver. Would use again for family trips.", helpful: 14 }
+    ]
   },
   "dubai-airport-pickup-zone5-4-seater": {
     id: "dubai-airport-pickup-zone5-4-seater",
@@ -4951,7 +4981,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Pickup", "Oversize and excess baggage is subject to availability of storage space", "If guests fail to report within the given time it will be a NO Show with no refund", "Limousine and Luxury transfers available at extra charges", "No eating, drinking, and smoking inside the vehicle", "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable", "If eligible for Refund your Amount will be returned back to your Account within 7 working days"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Ganesh Murthy", date: "2 days ago", rating: 5, comment: "Perfect sedan for our couple trip to Abu Dhabi! Long journey but very comfortable. Driver was experienced and we felt safe throughout.", helpful: 28 },
+      { name: "Pooja Srinivasan", date: "1 week ago", rating: 5, comment: "Great 4-seater service for the long trip to Al Ain. Clean car and professional driver. Worth the price for Zone 5!", helpful: 22 },
+      { name: "Ashok Verma", date: "2 weeks ago", rating: 5, comment: "Excellent transfer to Abu Dhabi. Sedan was comfortable for the distance. Driver knew the highway well and got us there smoothly.", helpful: 17 },
+      { name: "Radha Krishnan", date: "3 weeks ago", rating: 4, comment: "Good service for Zone 5 transfer. Vehicle was nice and driver was punctual. Comfortable for the long journey.", helpful: 13 }
+    ]
   },
   "dubai-airport-dropoff-zone1-4-seater": {
     id: "dubai-airport-dropoff-zone1-4-seater",
@@ -4982,7 +5018,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Oversize and excess baggage is subject to availability of storage space", "If guests fail to report within the given time it will be a NO Show with no refund", "Limousine and Luxury transfers available at extra charges", "No eating, drinking, and smoking inside the vehicle", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable", "If eligible for Refund your Amount will be returned back to your Account within 7 working days"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Sanjay Bhatt", date: "3 days ago", rating: 5, comment: "Perfect drop-off service from Downtown! Driver arrived early and got us to the airport with plenty of time. Clean sedan and professional service.", helpful: 27 },
+      { name: "Divya Agarwal", date: "1 week ago", rating: 5, comment: "Excellent airport drop from Bur Dubai. Sedan was comfortable and driver helped with all our bags. Stress-free end to our Dubai trip!", helpful: 22 },
+      { name: "Manoj Tiwari", date: "2 weeks ago", rating: 5, comment: "Great 4-seater drop-off from Deira. Driver was punctual and knew the fastest route to the airport. Highly recommend!", helpful: 17 },
+      { name: "Nandini Rao", date: "3 weeks ago", rating: 4, comment: "Good experience with the airport drop. Car was clean and driver was friendly. Reached terminal on time.", helpful: 13 }
+    ]
   },
   "dubai-airport-dropoff-zone1-7-seater": {
     id: "dubai-airport-dropoff-zone1-7-seater",
@@ -5013,7 +5055,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Oversize and excess baggage is subject to availability of storage space", "If guests fail to report within the given time it will be a NO Show with no refund", "Limousine and Luxury transfers available at extra charges", "No eating, drinking, and smoking inside the vehicle", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable", "If eligible for Refund your Amount will be returned back to your Account within 7 working days"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Vinod Kapoor", date: "2 days ago", rating: 5, comment: "Excellent 7-seater drop-off for our family from Downtown! Spacious vehicle and driver arrived 10 minutes early. Made our departure stress-free.", helpful: 29 },
+      { name: "Rekha Sharma", date: "1 week ago", rating: 5, comment: "Perfect airport transfer from Bur Dubai. The 7-seater was comfortable for our family of 5 with luggage. Driver was very helpful!", helpful: 24 },
+      { name: "Anil Saxena", date: "2 weeks ago", rating: 5, comment: "Great service from Deira to airport. Vehicle was clean and spacious. Driver knew the best route and we reached early.", helpful: 18 },
+      { name: "Sudha Venkat", date: "3 weeks ago", rating: 4, comment: "Good drop-off experience. 7-seater was perfect for our group. Driver was punctual and professional. Would book again.", helpful: 14 }
+    ]
   },
   "dubai-airport-dropoff-zone1-12-seater": {
     id: "dubai-airport-dropoff-zone1-12-seater",
@@ -5044,7 +5092,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Oversize and excess baggage is subject to availability of storage space", "If guests fail to report within the given time it will be a NO Show with no refund", "Limousine and Luxury transfers available at extra charges", "No eating, drinking, and smoking inside the vehicle", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable", "If eligible for Refund your Amount will be returned back to your Account within 7 working days"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Ramesh Choudhary", date: "3 days ago", rating: 5, comment: "Perfect 12-seater for our large family drop-off! All 10 of us with heavy luggage reached airport smoothly from Downtown. Excellent service!", helpful: 31 },
+      { name: "Kiran Deshmukh", date: "1 week ago", rating: 5, comment: "Great group transfer from Bur Dubai to airport. The van was spacious and comfortable. Driver was very helpful with all our bags!", helpful: 25 },
+      { name: "Mahesh Kulkarni", date: "2 weeks ago", rating: 5, comment: "Excellent 12-seater service from Deira. Perfect for our joint family. Everyone reached the airport comfortably and on time.", helpful: 19 },
+      { name: "Bhavna Patel", date: "3 weeks ago", rating: 4, comment: "Good experience with group drop-off. Van was clean and driver arrived on time. Would recommend for large groups.", helpful: 15 }
+    ]
   },
   "dubai-airport-dropoff-zone2-4-seater": {
     id: "dubai-airport-dropoff-zone2-4-seater",
@@ -5070,7 +5124,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Vikas Reddy", date: "2 days ago", rating: 5, comment: "Great sedan drop-off from Marina! Clean car and punctual driver. Perfect for couples heading to the airport.", helpful: 25 },
+      { name: "Jyoti Mishra", date: "1 week ago", rating: 5, comment: "Excellent service from Palm Jumeirah to airport. Sedan was comfortable and driver knew the fastest route. Stress-free departure!", helpful: 20 },
+      { name: "Naveen Singh", date: "2 weeks ago", rating: 5, comment: "Smooth transfer from JBR to Dubai airport. 4-seater was perfect for us. Driver was professional and helpful.", helpful: 16 },
+      { name: "Meghna Iyer", date: "3 weeks ago", rating: 4, comment: "Good drop-off experience from Zone 2. Car was clean and driver was on time. Would use again for future trips.", helpful: 12 }
+    ]
   },
   "dubai-airport-dropoff-zone2-7-seater": {
     id: "dubai-airport-dropoff-zone2-7-seater",
@@ -5096,7 +5156,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Pankaj Sharma", date: "3 days ago", rating: 5, comment: "Perfect 7-seater drop-off from Marina! Family of 6 reached airport comfortably with all luggage. Driver was excellent!", helpful: 28 },
+      { name: "Smita Nair", date: "1 week ago", rating: 5, comment: "Excellent service from Palm Jumeirah. Spacious vehicle and professional driver. Made our airport transfer stress-free!", helpful: 23 },
+      { name: "Rakesh Kumar", date: "2 weeks ago", rating: 5, comment: "Great transfer from JBR to airport. 7-seater was perfect for our family. Driver arrived early and helped with bags.", helpful: 18 },
+      { name: "Anupama Devi", date: "3 weeks ago", rating: 4, comment: "Good experience with Zone 2 drop-off. Vehicle was comfortable and driver was punctual. Reached airport on time.", helpful: 14 }
+    ]
   },
   "dubai-airport-dropoff-zone2-12-seater": {
     id: "dubai-airport-dropoff-zone2-12-seater",
@@ -5122,7 +5188,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Gopal Krishnan", date: "2 days ago", rating: 5, comment: "Excellent 12-seater for our big group from Marina! Everyone fit comfortably with all luggage. Perfect for joint family trips!", helpful: 30 },
+      { name: "Sarita Gupta", date: "1 week ago", rating: 5, comment: "Great van service from Palm Jumeirah. 10 of us reached airport smoothly. Driver was very professional and helpful!", helpful: 24 },
+      { name: "Dinesh Yadav", date: "2 weeks ago", rating: 5, comment: "Perfect transfer from JBR for our group. 12-seater was spacious and comfortable. Highly recommend for large groups!", helpful: 18 },
+      { name: "Pushpa Menon", date: "3 weeks ago", rating: 4, comment: "Good experience with group drop-off from Zone 2. Van was clean and driver was punctual. Would book again.", helpful: 14 }
+    ]
   },
   "dubai-airport-dropoff-zone3-4-seater": {
     id: "dubai-airport-dropoff-zone3-4-seater",
@@ -5148,7 +5220,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Narayan Joshi", date: "3 days ago", rating: 5, comment: "Excellent sedan drop-off from JVC! Driver arrived early and knew the best route to the airport. Perfect for couples or small families.", helpful: 24 },
+      { name: "Asha Pillai", date: "1 week ago", rating: 5, comment: "Great service from Sports City. Clean 4-seater and punctual driver. Reached airport with plenty of time. Highly recommend!", helpful: 19 },
+      { name: "Kishore Babu", date: "2 weeks ago", rating: 5, comment: "Smooth transfer from Motor City to Dubai airport. Sedan was comfortable and driver was professional. Will use again!", helpful: 15 },
+      { name: "Vasudha Rani", date: "3 weeks ago", rating: 4, comment: "Good drop-off experience from Zone 3. Car was nice and driver was friendly. Reached terminal on time.", helpful: 11 }
+    ]
   },
   "dubai-airport-dropoff-zone3-7-seater": {
     id: "dubai-airport-dropoff-zone3-7-seater",
@@ -5174,7 +5252,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Shekhar Reddy", date: "2 days ago", rating: 5, comment: "Perfect 7-seater drop-off from JVC! Family of 6 reached airport comfortably. Driver was excellent and arrived early.", helpful: 27 },
+      { name: "Shalini Devi", date: "1 week ago", rating: 5, comment: "Great service from Sports City. Spacious 7-seater was perfect for our family. Driver helped with all luggage. Stress-free departure!", helpful: 22 },
+      { name: "Murali Krishna", date: "2 weeks ago", rating: 5, comment: "Excellent transfer from Motor City. Vehicle was clean and comfortable. Driver knew the fastest route to airport.", helpful: 17 },
+      { name: "Aruna Kumari", date: "3 weeks ago", rating: 4, comment: "Good experience with Zone 3 drop-off. 7-seater was spacious and driver was punctual. Would recommend!", helpful: 13 }
+    ]
   },
   "dubai-airport-dropoff-zone3-12-seater": {
     id: "dubai-airport-dropoff-zone3-12-seater",
@@ -5200,7 +5284,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Balakrishnan Nair", date: "3 days ago", rating: 5, comment: "Excellent 12-seater for our big group from JVC! All 11 of us reached airport smoothly. Perfect for joint family trips!", helpful: 29 },
+      { name: "Kamala Devi", date: "1 week ago", rating: 5, comment: "Great van service from Sports City. 10 of us with luggage fit perfectly. Driver was very professional and helpful!", helpful: 24 },
+      { name: "Prasad Rao", date: "2 weeks ago", rating: 5, comment: "Perfect transfer from Motor City for our group. 12-seater was spacious and comfortable. Highly recommend!", helpful: 18 },
+      { name: "Savitri Bai", date: "3 weeks ago", rating: 4, comment: "Good group drop-off from Zone 3. Van was clean and driver was punctual. Everyone reached airport on time.", helpful: 14 }
+    ]
   },
   "dubai-airport-dropoff-zone4-4-seater": {
     id: "dubai-airport-dropoff-zone4-4-seater",
@@ -5226,7 +5316,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Jagdish Prasad", date: "2 days ago", rating: 5, comment: "Perfect sedan drop-off from Dubai South! Long journey but very comfortable. Driver was experienced and got us to airport on time.", helpful: 25 },
+      { name: "Veena Sharma", date: "1 week ago", rating: 5, comment: "Great 4-seater service from DWC area. Clean car and professional driver. Worth every penny for Zone 4!", helpful: 20 },
+      { name: "Rajan Menon", date: "2 weeks ago", rating: 5, comment: "Excellent transfer from Zone 4. Sedan was comfortable for the distance. Driver knew the highway well.", helpful: 16 },
+      { name: "Geetha Kumari", date: "3 weeks ago", rating: 4, comment: "Good service for Zone 4 drop-off. Vehicle was nice and driver was punctual. Comfortable for couples.", helpful: 12 }
+    ]
   },
   "dubai-airport-dropoff-zone4-7-seater": {
     id: "dubai-airport-dropoff-zone4-7-seater",
@@ -5252,7 +5348,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Venkatesh Iyer", date: "3 days ago", rating: 5, comment: "Excellent 7-seater drop-off from Dubai South! Family of 6 traveled comfortably to the airport. Driver was professional!", helpful: 28 },
+      { name: "Lakshmi Priya", date: "1 week ago", rating: 5, comment: "Great service from DWC area. Spacious 7-seater was perfect for our family. Driver arrived on time and helped with bags.", helpful: 23 },
+      { name: "Krishna Murthy", date: "2 weeks ago", rating: 5, comment: "Perfect transfer from Zone 4. Vehicle was clean and comfortable. Driver knew the best route to airport.", helpful: 18 },
+      { name: "Padmini Rao", date: "3 weeks ago", rating: 4, comment: "Good experience with Zone 4 drop-off. 7-seater was spacious and driver was helpful. Would book again.", helpful: 14 }
+    ]
   },
   "dubai-airport-dropoff-zone4-12-seater": {
     id: "dubai-airport-dropoff-zone4-12-seater",
@@ -5278,7 +5380,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Chandrasekhar Rao", date: "2 days ago", rating: 5, comment: "Perfect 12-seater for our large group from Dubai South! Everyone reached airport comfortably and on time. Excellent service!", helpful: 30 },
+      { name: "Manjula Devi", date: "1 week ago", rating: 5, comment: "Great van service from DWC area. 11 of us with luggage fit perfectly. Driver was very professional!", helpful: 25 },
+      { name: "Satish Kumar", date: "2 weeks ago", rating: 5, comment: "Excellent group transfer from Zone 4. 12-seater was spacious and comfortable. Highly recommend for families!", helpful: 19 },
+      { name: "Vani Kumari", date: "3 weeks ago", rating: 4, comment: "Good experience with large group drop-off. Van was clean and driver was punctual. Would use again.", helpful: 15 }
+    ]
   },
   "dubai-airport-dropoff-zone5-4-seater": {
     id: "dubai-airport-dropoff-zone5-4-seater",
@@ -5304,7 +5412,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Raghunath Sharma", date: "3 days ago", rating: 5, comment: "Excellent long-distance drop-off from Abu Dhabi! Sedan was comfortable for the journey. Driver was experienced and professional.", helpful: 27 },
+      { name: "Sita Devi", date: "1 week ago", rating: 5, comment: "Great service from Al Ain to Dubai airport. Clean 4-seater and punctual driver. Worth every rupee for Zone 5!", helpful: 22 },
+      { name: "Naresh Gupta", date: "2 weeks ago", rating: 5, comment: "Perfect transfer from Abu Dhabi. Sedan was comfortable for the long ride. Driver knew the route well.", helpful: 17 },
+      { name: "Lalitha Rani", date: "3 weeks ago", rating: 4, comment: "Good service for Zone 5 drop-off. Vehicle was nice and driver was helpful. Comfortable for the long journey.", helpful: 13 }
+    ]
   },
   "dubai-airport-dropoff-zone5-7-seater": {
     id: "dubai-airport-dropoff-zone5-7-seater",
@@ -5330,7 +5444,13 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Subramaniam Pillai", date: "2 days ago", rating: 5, comment: "Excellent 7-seater for our family drop-off from Abu Dhabi! Long journey but very comfortable. Driver was experienced and professional.", helpful: 29 },
+      { name: "Kamakshi Devi", date: "1 week ago", rating: 5, comment: "Great service from Al Ain to Dubai airport. Spacious 7-seater was perfect for our family of 5. Driver knew the highway well!", helpful: 24 },
+      { name: "Vijayaraghavan", date: "2 weeks ago", rating: 5, comment: "Perfect transfer from Abu Dhabi. Vehicle was comfortable for the long ride. Driver was punctual and helpful.", helpful: 18 },
+      { name: "Uma Shankar", date: "3 weeks ago", rating: 4, comment: "Good experience with Zone 5 drop-off. 7-seater was spacious and driver was professional. Would recommend!", helpful: 14 }
+    ]
   },
   "dubai-airport-dropoff-zone5-12-seater": {
     id: "dubai-airport-dropoff-zone5-12-seater",
@@ -5356,6 +5476,12 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Please carry a valid ID/Passport along with you during the transfer", "Provide detailed information on your Flight timings for easy Drop-off", "Keep 3 hrs difference between your pickup and flight departure to avoid any inconvenience"],
     cancellationPolicy: ["All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable", "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable"],
     childPolicy: ["Children under 3 years will be considered as infant and entry will be free of cost", "Children aged from 3 to 10 years will be considered as child and charged child rate", "Children above age 10 will be considered as an adult and charged adult rate"],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Thirumalai Rajan", date: "3 days ago", rating: 5, comment: "Perfect 12-seater for our extended family from Abu Dhabi! All 10 of us traveled comfortably to Dubai airport. Excellent long-distance service!", helpful: 31 },
+      { name: "Parvathi Devi", date: "1 week ago", rating: 5, comment: "Great van service from Al Ain. 11 of us with heavy luggage reached airport smoothly. Driver was very professional and knew the route well!", helpful: 26 },
+      { name: "Gopalan Nair", date: "2 weeks ago", rating: 5, comment: "Excellent group transfer from Zone 5. 12-seater was spacious and comfortable for the long journey. Highly recommend for families!", helpful: 20 },
+      { name: "Shobha Rani", date: "3 weeks ago", rating: 4, comment: "Good experience with large group drop-off from Abu Dhabi. Van was clean and driver was helpful. Worth the price for Zone 5.", helpful: 16 }
+    ]
   }
 };
