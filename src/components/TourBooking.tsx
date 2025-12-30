@@ -147,7 +147,11 @@ const TourBooking = ({ tourData }: TourBookingProps) => {
             <TourPolicies tourData={tourData} />
             
             {/* Customer Reviews */}
-            <CustomerReviews />
+            <CustomerReviews 
+              reviews={tourData.customerReviews}
+              averageRating={tourData.rating}
+              totalReviews={tourData.reviews}
+            />
             
             {/* FAQ Section */}
             <FAQSection faqs={tourData.faqs} />
