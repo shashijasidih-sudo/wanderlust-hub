@@ -4158,5 +4158,509 @@ export const toursData: Record<string, TourData> = {
       "Children above age 3 will be considered as an adult and charged adult rate"
     ],
     faqs: []
+  },
+  "dubai-airport-pickup-zone1-7-seater": {
+    id: "dubai-airport-pickup-zone1-7-seater",
+    title: "Dubai Airport Pick Up to Zone 1 - 7 Seater",
+    shortDescription: "Book our flawless and best-priced Airport Pick Up services for a perfect start of your Dubai vacation.",
+    location: "Dubai, UAE",
+    city: "dubai",
+    basePrice: 3000,
+    childPrice: 3000,
+    duration: "Transfer",
+    rating: 4.9,
+    reviews: 856,
+    pricePerVehicle: true,
+    vehicleCapacity: 7,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Airport Transfer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Eliminates all confusions and stress locating a safe and reliable transport",
+      "Meet and greet by friendly and experienced driver",
+      "Fully air-conditioned and comfortable vehicle",
+      "Baggage assistance included"
+    ],
+    description: {
+      overview: "Book our flawless and best-priced Airport Pick Up services to eliminate all expenses and tensions of finding a cab as you touch down the Dubai International Airport.",
+      whatToExpect: "Whether it's for individuals, groups or families, we've a spectrum of vehicles to cater to all your travel requirements. All you need to do is to provide us your details including flight landing time and hotel or accommodation address at the time of booking, which will be confirmed instantly. You can be now assured that as soon as you clear the immigration formalities and come out of the airport, a friendly, neatly dressed driver will greet you at the arrival area. Settle into our clean, air-conditioned vehicle and enjoy a smooth and unworried transfer to your hotel, private residence or preferred location in Dubai."
+    },
+    itinerary: [],
+    tourTimings: ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"],
+    inclusions: [
+      "Transfers in Air conditioned, well maintained and comfortable vehicle",
+      "Airport parking charges included",
+      "One-way transfer service"
+    ],
+    exclusions: ["All personal expenses spent for tip, gratuity etc as part of this ride"],
+    bookingPolicy: [
+      "Please carry a valid ID/Passport along with you during the transfer",
+      "Provide detailed information on your Flight timings for easy Pickup",
+      "Oversize and excess baggage is subject to availability of storage space",
+      "If guests fail to report within the given time it will be a NO Show with no refund",
+      "Limousine and Luxury transfers available at extra charges",
+      "No eating, drinking, and smoking inside the vehicle",
+      "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children aged from 3 to 10 years will be considered as child and charged child rate",
+      "Children above age 10 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
+  },
+  "dubai-airport-pickup-zone1-12-seater": {
+    id: "dubai-airport-pickup-zone1-12-seater",
+    title: "Dubai Airport Pick Up to Zone 1 - 12 Seater",
+    shortDescription: "Book our flawless and best-priced Airport Pick Up services in a spacious 12-seater vehicle for groups and families.",
+    location: "Dubai, UAE",
+    city: "dubai",
+    basePrice: 4000,
+    childPrice: 4000,
+    duration: "Transfer",
+    rating: 4.9,
+    reviews: 654,
+    pricePerVehicle: true,
+    vehicleCapacity: 12,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop", title: "Dubai Airport Transfer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Eliminates all confusions and stress locating a safe and reliable transport",
+      "Meet and greet by friendly and experienced driver",
+      "Spacious 12-seater air-conditioned vehicle",
+      "Perfect for large groups and families"
+    ],
+    description: {
+      overview: "Book our flawless and best-priced Airport Pick Up services to eliminate all expenses and tensions of finding a cab as you touch down the Dubai International Airport.",
+      whatToExpect: "Whether it's for individuals, groups or families, we've a spectrum of vehicles to cater to all your travel requirements. All you need to do is to provide us your details including flight landing time and hotel or accommodation address at the time of booking, which will be confirmed instantly. You can be now assured that as soon as you clear the immigration formalities and come out of the airport, a friendly, neatly dressed driver will greet you at the arrival area. Settle into our clean, air-conditioned vehicle and enjoy a smooth and unworried transfer to your hotel, private residence or preferred location in Dubai."
+    },
+    itinerary: [],
+    tourTimings: ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"],
+    inclusions: [
+      "Transfers in Air conditioned, well maintained and comfortable mini bus or van",
+      "Airport parking charges included",
+      "One-way transfer service"
+    ],
+    exclusions: ["All personal expenses spent for tip, gratuity etc as part of this ride"],
+    bookingPolicy: [
+      "Please carry a valid ID/Passport along with you during the transfer",
+      "Provide detailed information on your Flight timings for easy Pickup",
+      "Oversize and excess baggage is subject to availability of storage space",
+      "If guests fail to report within the given time it will be a NO Show with no refund",
+      "Limousine and Luxury transfers available at extra charges",
+      "No eating, drinking, and smoking inside the vehicle",
+      "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children aged from 3 to 10 years will be considered as child and charged child rate",
+      "Children above age 10 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
+  },
+  "dubai-airport-pickup-zone1-4-seater": {
+    id: "dubai-airport-pickup-zone1-4-seater",
+    title: "Dubai Airport Pick Up to Zone 1 - 4 Seater",
+    shortDescription: "Book our flawless and best-priced Airport Pick Up services in a comfortable 4-seater sedan.",
+    location: "Dubai, UAE",
+    city: "dubai",
+    basePrice: 3300,
+    childPrice: 3300,
+    duration: "Transfer",
+    rating: 4.8,
+    reviews: 432,
+    pricePerVehicle: true,
+    vehicleCapacity: 4,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop", title: "Dubai Airport Transfer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Eliminates all confusions and stress locating a safe and reliable transport",
+      "Meet and greet by friendly and experienced driver",
+      "Comfortable 4-seater sedan",
+      "Baggage assistance included"
+    ],
+    description: {
+      overview: "Book our flawless and best-priced Airport Pick Up services to eliminate all expenses and tensions of finding a cab as you touch down the Dubai International Airport.",
+      whatToExpect: "Whether it's for individuals, groups or families, we've a spectrum of vehicles to cater to all your travel requirements. All you need to do is to provide us your details including flight landing time and hotel or accommodation address at the time of booking, which will be confirmed instantly. You can be now assured that as soon as you clear the immigration formalities and come out of the airport, a friendly, neatly dressed driver will greet you at the arrival area. Settle into our clean, air-conditioned vehicle and enjoy a smooth and unworried transfer to your hotel, private residence or preferred location in Dubai."
+    },
+    itinerary: [],
+    tourTimings: ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"],
+    inclusions: [
+      "Transfers in Air conditioned, well maintained and comfortable vehicle",
+      "Airport parking charges included",
+      "One-way transfer service"
+    ],
+    exclusions: ["All personal expenses spent for tip, gratuity etc as part of this ride"],
+    bookingPolicy: [
+      "Please carry a valid ID/Passport along with you during the transfer",
+      "Provide detailed information on your Flight timings for easy Pickup",
+      "Oversize and excess baggage is subject to availability of storage space",
+      "If guests fail to report within the given time it will be a NO Show with no refund",
+      "Limousine and Luxury transfers available at extra charges",
+      "No eating, drinking, and smoking inside the vehicle",
+      "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children aged from 3 to 10 years will be considered as child and charged child rate",
+      "Children above age 10 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
+  },
+  "dubai-airport-pickup-zone2-7-seater": {
+    id: "dubai-airport-pickup-zone2-7-seater",
+    title: "Dubai Airport Pick Up to Zone 2 - 7 Seater",
+    shortDescription: "Book our flawless and best-priced Airport Pick Up services to Zone 2 (JBR, Marina, Palm Jumeirah).",
+    location: "Dubai, UAE",
+    city: "dubai",
+    basePrice: 3500,
+    childPrice: 3500,
+    duration: "Transfer",
+    rating: 4.9,
+    reviews: 723,
+    pricePerVehicle: true,
+    vehicleCapacity: 7,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Airport Transfer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Covers JBR, Marina, Palm Jumeirah areas",
+      "Meet and greet by friendly and experienced driver",
+      "Fully air-conditioned and comfortable vehicle",
+      "Baggage assistance included"
+    ],
+    description: {
+      overview: "Book our flawless and best-priced Airport Pick Up services to eliminate all expenses and tensions of finding a cab as you touch down the Dubai International Airport.",
+      whatToExpect: "Whether it's for individuals, groups or families, we've a spectrum of vehicles to cater to all your travel requirements. All you need to do is to provide us your details including flight landing time and hotel or accommodation address at the time of booking, which will be confirmed instantly. You can be now assured that as soon as you clear the immigration formalities and come out of the airport, a friendly, neatly dressed driver will greet you at the arrival area. Settle into our clean, air-conditioned vehicle and enjoy a smooth and unworried transfer to your hotel, private residence or preferred location in Dubai."
+    },
+    itinerary: [],
+    tourTimings: ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"],
+    inclusions: [
+      "Transfers in Air conditioned, well maintained and comfortable vehicle",
+      "Airport parking charges included",
+      "One-way transfer service"
+    ],
+    exclusions: ["All personal expenses spent for tip, gratuity etc as part of this ride"],
+    bookingPolicy: [
+      "Please carry a valid ID/Passport along with you during the transfer",
+      "Provide detailed information on your Flight timings for easy Pickup",
+      "Oversize and excess baggage is subject to availability of storage space",
+      "If guests fail to report within the given time it will be a NO Show with no refund",
+      "Limousine and Luxury transfers available at extra charges",
+      "No eating, drinking, and smoking inside the vehicle",
+      "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children aged from 3 to 10 years will be considered as child and charged child rate",
+      "Children above age 10 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
+  },
+  "dubai-airport-pickup-zone2-12-seater": {
+    id: "dubai-airport-pickup-zone2-12-seater",
+    title: "Dubai Airport Pick Up to Zone 2 - 12 Seater",
+    shortDescription: "Book our flawless and best-priced Airport Pick Up services to Zone 2 in a spacious 12-seater vehicle.",
+    location: "Dubai, UAE",
+    city: "dubai",
+    basePrice: 4200,
+    childPrice: 4200,
+    duration: "Transfer",
+    rating: 4.8,
+    reviews: 512,
+    pricePerVehicle: true,
+    vehicleCapacity: 12,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop", title: "Dubai Airport Transfer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Covers JBR, Marina, Palm Jumeirah areas",
+      "Meet and greet by friendly and experienced driver",
+      "Spacious 12-seater air-conditioned vehicle",
+      "Perfect for large groups and families"
+    ],
+    description: {
+      overview: "Book our flawless and best-priced Airport Pick Up services to eliminate all expenses and tensions of finding a cab as you touch down the Dubai International Airport.",
+      whatToExpect: "Whether it's for individuals, groups or families, we've a spectrum of vehicles to cater to all your travel requirements. All you need to do is to provide us your details including flight landing time and hotel or accommodation address at the time of booking, which will be confirmed instantly. You can be now assured that as soon as you clear the immigration formalities and come out of the airport, a friendly, neatly dressed driver will greet you at the arrival area. Settle into our clean, air-conditioned vehicle and enjoy a smooth and unworried transfer to your hotel, private residence or preferred location in Dubai."
+    },
+    itinerary: [],
+    tourTimings: ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"],
+    inclusions: [
+      "Transfers in Air conditioned, well maintained and comfortable mini bus or van",
+      "Airport parking charges included",
+      "One-way transfer service"
+    ],
+    exclusions: ["All personal expenses spent for tip, gratuity etc as part of this ride"],
+    bookingPolicy: [
+      "Please carry a valid ID/Passport along with you during the transfer",
+      "Provide detailed information on your Flight timings for easy Pickup",
+      "Oversize and excess baggage is subject to availability of storage space",
+      "If guests fail to report within the given time it will be a NO Show with no refund",
+      "Limousine and Luxury transfers available at extra charges",
+      "No eating, drinking, and smoking inside the vehicle",
+      "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children aged from 3 to 10 years will be considered as child and charged child rate",
+      "Children above age 10 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
+  },
+  "dubai-airport-pickup-zone3-7-seater": {
+    id: "dubai-airport-pickup-zone3-7-seater",
+    title: "Dubai Airport Pick Up to Zone 3 - 7 Seater",
+    shortDescription: "Book our flawless and best-priced Airport Pick Up services to Zone 3 (JVC, Sports City, Motor City).",
+    location: "Dubai, UAE",
+    city: "dubai",
+    basePrice: 4000,
+    childPrice: 4000,
+    duration: "Transfer",
+    rating: 4.9,
+    reviews: 389,
+    pricePerVehicle: true,
+    vehicleCapacity: 7,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Airport Transfer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Covers JVC, Sports City, Motor City areas",
+      "Meet and greet by friendly and experienced driver",
+      "Fully air-conditioned and comfortable vehicle",
+      "Baggage assistance included"
+    ],
+    description: {
+      overview: "Book our flawless and best-priced Airport Pick Up services to eliminate all expenses and tensions of finding a cab as you touch down the Dubai International Airport.",
+      whatToExpect: "Whether it's for individuals, groups or families, we've a spectrum of vehicles to cater to all your travel requirements. All you need to do is to provide us your details including flight landing time and hotel or accommodation address at the time of booking, which will be confirmed instantly. You can be now assured that as soon as you clear the immigration formalities and come out of the airport, a friendly, neatly dressed driver will greet you at the arrival area. Settle into our clean, air-conditioned vehicle and enjoy a smooth and unworried transfer to your hotel, private residence or preferred location in Dubai."
+    },
+    itinerary: [],
+    tourTimings: ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"],
+    inclusions: [
+      "Transfers in Air conditioned, well maintained and comfortable vehicle",
+      "Airport parking charges included",
+      "One-way transfer service"
+    ],
+    exclusions: ["All personal expenses spent for tip, gratuity etc as part of this ride"],
+    bookingPolicy: [
+      "Please carry a valid ID/Passport along with you during the transfer",
+      "Provide detailed information on your Flight timings for easy Pickup",
+      "Oversize and excess baggage is subject to availability of storage space",
+      "If guests fail to report within the given time it will be a NO Show with no refund",
+      "Limousine and Luxury transfers available at extra charges",
+      "No eating, drinking, and smoking inside the vehicle",
+      "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children aged from 3 to 10 years will be considered as child and charged child rate",
+      "Children above age 10 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
+  },
+  "dubai-airport-pickup-zone3-12-seater": {
+    id: "dubai-airport-pickup-zone3-12-seater",
+    title: "Dubai Airport Pick Up to Zone 3 - 12 Seater",
+    shortDescription: "Book our flawless and best-priced Airport Pick Up services to Zone 3 in a spacious 12-seater vehicle.",
+    location: "Dubai, UAE",
+    city: "dubai",
+    basePrice: 4200,
+    childPrice: 4200,
+    duration: "Transfer",
+    rating: 4.8,
+    reviews: 298,
+    pricePerVehicle: true,
+    vehicleCapacity: 12,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop", title: "Dubai Airport Transfer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Covers JVC, Sports City, Motor City areas",
+      "Meet and greet by friendly and experienced driver",
+      "Spacious 12-seater air-conditioned vehicle",
+      "Perfect for large groups and families"
+    ],
+    description: {
+      overview: "Book our flawless and best-priced Airport Pick Up services to eliminate all expenses and tensions of finding a cab as you touch down the Dubai International Airport.",
+      whatToExpect: "Whether it's for individuals, groups or families, we've a spectrum of vehicles to cater to all your travel requirements. All you need to do is to provide us your details including flight landing time and hotel or accommodation address at the time of booking, which will be confirmed instantly. You can be now assured that as soon as you clear the immigration formalities and come out of the airport, a friendly, neatly dressed driver will greet you at the arrival area. Settle into our clean, air-conditioned vehicle and enjoy a smooth and unworried transfer to your hotel, private residence or preferred location in Dubai."
+    },
+    itinerary: [],
+    tourTimings: ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"],
+    inclusions: [
+      "Transfers in Air conditioned, well maintained and comfortable mini bus or van",
+      "Airport parking charges included",
+      "One-way transfer service"
+    ],
+    exclusions: ["All personal expenses spent for tip, gratuity etc as part of this ride"],
+    bookingPolicy: [
+      "Please carry a valid ID/Passport along with you during the transfer",
+      "Provide detailed information on your Flight timings for easy Pickup",
+      "Oversize and excess baggage is subject to availability of storage space",
+      "If guests fail to report within the given time it will be a NO Show with no refund",
+      "Limousine and Luxury transfers available at extra charges",
+      "No eating, drinking, and smoking inside the vehicle",
+      "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children aged from 3 to 10 years will be considered as child and charged child rate",
+      "Children above age 10 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
+  },
+  "dubai-airport-pickup-zone5-7-seater": {
+    id: "dubai-airport-pickup-zone5-7-seater",
+    title: "Dubai Airport Pick Up to Zone 5 - 7 Seater",
+    shortDescription: "Book our flawless and best-priced Airport Pick Up services to Zone 5 (Abu Dhabi, Al Ain).",
+    location: "Dubai, UAE",
+    city: "dubai",
+    basePrice: 7200,
+    childPrice: 7200,
+    duration: "Transfer",
+    rating: 4.9,
+    reviews: 267,
+    pricePerVehicle: true,
+    vehicleCapacity: 7,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Airport Transfer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Covers Abu Dhabi and Al Ain areas",
+      "Meet and greet by friendly and experienced driver",
+      "Fully air-conditioned and comfortable vehicle",
+      "Long distance transfer included"
+    ],
+    description: {
+      overview: "Book our flawless and best-priced Airport Pick Up services to eliminate all expenses and tensions of finding a cab as you touch down the Dubai International Airport.",
+      whatToExpect: "Whether it's for individuals, groups or families, we've a spectrum of vehicles to cater to all your travel requirements. All you need to do is to provide us your details including flight landing time and hotel or accommodation address at the time of booking, which will be confirmed instantly. You can be now assured that as soon as you clear the immigration formalities and come out of the airport, a friendly, neatly dressed driver will greet you at the arrival area. Settle into our clean, air-conditioned vehicle and enjoy a smooth and unworried transfer to your hotel, private residence or preferred location in Abu Dhabi or Al Ain."
+    },
+    itinerary: [],
+    tourTimings: ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"],
+    inclusions: [
+      "Transfers in Air conditioned, well maintained and comfortable vehicle",
+      "Airport parking charges included",
+      "One-way transfer service to Zone 5"
+    ],
+    exclusions: ["All personal expenses spent for tip, gratuity etc as part of this ride"],
+    bookingPolicy: [
+      "Please carry a valid ID/Passport along with you during the transfer",
+      "Provide detailed information on your Flight timings for easy Pickup",
+      "Oversize and excess baggage is subject to availability of storage space",
+      "If guests fail to report within the given time it will be a NO Show with no refund",
+      "Limousine and Luxury transfers available at extra charges",
+      "No eating, drinking, and smoking inside the vehicle",
+      "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children aged from 3 to 10 years will be considered as child and charged child rate",
+      "Children above age 10 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
+  },
+  "dubai-airport-pickup-zone5-12-seater": {
+    id: "dubai-airport-pickup-zone5-12-seater",
+    title: "Dubai Airport Pick Up to Zone 5 - 12 Seater",
+    shortDescription: "Book our flawless and best-priced Airport Pick Up services to Zone 5 in a spacious 12-seater vehicle.",
+    location: "Dubai, UAE",
+    city: "dubai",
+    basePrice: 8900,
+    childPrice: 8900,
+    duration: "Transfer",
+    rating: 4.8,
+    reviews: 198,
+    pricePerVehicle: true,
+    vehicleCapacity: 12,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop", title: "Dubai Airport Transfer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Covers Abu Dhabi and Al Ain areas",
+      "Meet and greet by friendly and experienced driver",
+      "Spacious 12-seater air-conditioned vehicle",
+      "Perfect for large groups traveling to Zone 5"
+    ],
+    description: {
+      overview: "Book our flawless and best-priced Airport Pick Up services to eliminate all expenses and tensions of finding a cab as you touch down the Dubai International Airport.",
+      whatToExpect: "Whether it's for individuals, groups or families, we've a spectrum of vehicles to cater to all your travel requirements. All you need to do is to provide us your details including flight landing time and hotel or accommodation address at the time of booking, which will be confirmed instantly. You can be now assured that as soon as you clear the immigration formalities and come out of the airport, a friendly, neatly dressed driver will greet you at the arrival area. Settle into our clean, air-conditioned vehicle and enjoy a smooth and unworried transfer to your hotel, private residence or preferred location in Abu Dhabi or Al Ain."
+    },
+    itinerary: [],
+    tourTimings: ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"],
+    inclusions: [
+      "Transfers in Air conditioned, well maintained and comfortable mini bus or van",
+      "Airport parking charges included",
+      "One-way transfer service to Zone 5"
+    ],
+    exclusions: ["All personal expenses spent for tip, gratuity etc as part of this ride"],
+    bookingPolicy: [
+      "Please carry a valid ID/Passport along with you during the transfer",
+      "Provide detailed information on your Flight timings for easy Pickup",
+      "Oversize and excess baggage is subject to availability of storage space",
+      "If guests fail to report within the given time it will be a NO Show with no refund",
+      "Limousine and Luxury transfers available at extra charges",
+      "No eating, drinking, and smoking inside the vehicle",
+      "Keep 3 hrs difference between your arrival and Pickup to avoid any inconvenience"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children aged from 3 to 10 years will be considered as child and charged child rate",
+      "Children above age 10 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
   }
 };
