@@ -15,7 +15,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b" style={{ backgroundColor: '#EAF3FF' }}>
+    <header className="sticky top-14 md:top-16 z-50 w-full border-b" style={{ backgroundColor: '#EAF3FF' }}>
       {/* Top Bar */}
       <div className="container px-4 md:px-6">
         <div className="flex h-16 items-center justify-between gap-4">
