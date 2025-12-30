@@ -147,7 +147,7 @@ const Header = () => {
               <div className="h-px bg-border my-2" />
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
                 <Castle className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/dubai" className="w-full font-medium">Dubai</Link>
+                <Link to="/dubai/transfers" className="w-full font-medium">Dubai</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
                 <TreePine className="h-5 w-5 mr-3 text-primary" />
@@ -262,7 +262,7 @@ const Header = () => {
                 <div className="h-px bg-border my-1" />
                 <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
                   <Castle className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/dubai" className="w-full">Dubai</Link>
+                  <Link to="/dubai/transfers" className="w-full">Dubai</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
                   <TreePine className="h-4 w-4 mr-2 text-primary" />
