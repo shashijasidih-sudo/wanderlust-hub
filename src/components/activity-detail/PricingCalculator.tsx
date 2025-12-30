@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Calendar, Users, Minus, Plus, Clock } from "lucide-react";
+import { Calendar, Users, Minus, Plus, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
@@ -9,15 +9,27 @@ interface PricingCalculatorProps {
   childPrice: number;
   activityName: string;
   tourTimings: string[];
+  pricePerVehicle?: boolean;
+  vehicleCapacity?: number;
 }
 
-const PricingCalculator = ({ basePrice, childPrice, activityName, tourTimings }: PricingCalculatorProps) => {
-  const [adults, setAdults] = useState(2);
+const PricingCalculator = ({ 
+  basePrice, 
+  childPrice, 
+  activityName, 
+  tourTimings,
+  pricePerVehicle = false,
+  vehicleCapacity = 5
+}: PricingCalculatorProps) => {
+  const [adults, setAdults] = useState(pricePerVehicle ? 1 : 2);
   const [children, setChildren] = useState(0);
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
+  const [vehicles, setVehicles] = useState(1);
 
-  const totalPrice = adults * basePrice + children * childPrice;
+  const totalPrice = pricePerVehicle 
+    ? vehicles * basePrice 
+    : adults * basePrice + children * childPrice;
 
   const handleBookNow = () => {
     if (!selectedDate) {
@@ -66,7 +78,7 @@ const PricingCalculator = ({ basePrice, childPrice, activityName, tourTimings }:
         <div className="space-y-2">
           <label className="text-sm font-medium flex items-center gap-2">
             <Clock className="h-4 w-4 text-primary" />
-            Tour Timing
+            {pricePerVehicle ? "Pickup Time" : "Tour Timing"}
           </label>
           <select
             value={selectedTime}
@@ -80,75 +92,126 @@ const PricingCalculator = ({ basePrice, childPrice, activityName, tourTimings }:
           </select>
         </div>
 
-        <div className="space-y-4">
-          <label className="text-sm font-medium flex items-center gap-2">
-            <Users className="h-4 w-4 text-primary" />
-            Number of Guests
-          </label>
-          
-          <div className="flex items-center justify-between p-4 bg-accent/50 rounded-lg">
-            <div className="flex-1">
-              <p className="font-medium">No. of Adults (≥12 yrs)</p>
-              <p className="text-sm text-muted-foreground">₹{basePrice.toLocaleString()} per person</p>
+        {pricePerVehicle ? (
+          <div className="space-y-4">
+            <label className="text-sm font-medium flex items-center gap-2">
+              <Car className="h-4 w-4 text-primary" />
+              Number of Vehicles
+            </label>
+            
+            <div className="flex items-center justify-between p-4 bg-primary/10 rounded-lg border-2 border-primary/30">
+              <div className="flex-1">
+                <p className="font-medium">Private Vehicle ({vehicleCapacity} Seater)</p>
+                <p className="text-sm text-muted-foreground">₹{basePrice.toLocaleString()} per vehicle</p>
+                <p className="text-xs text-primary mt-1">Fits up to {vehicleCapacity} passengers (adults + children)</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setVehicles(Math.max(1, vehicles - 1))}
+                  className="h-8 w-8"
+                >
+                  <Minus className="h-4 w-4" />
+                </Button>
+                <span className="w-8 text-center font-semibold">{vehicles}</span>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setVehicles(Math.min(5, vehicles + 1))}
+                  className="h-8 w-8"
+                >
+                  <Plus className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
-            <div className="flex items-center gap-3">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setAdults(Math.max(1, adults - 1))}
-                className="h-8 w-8"
-              >
-                <Minus className="h-4 w-4" />
-              </Button>
-              <span className="w-8 text-center font-semibold">{adults}</span>
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setAdults(Math.min(10, adults + 1))}
-                className="h-8 w-8"
-              >
-                <Plus className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
 
-          <div className="flex items-center justify-between p-4 bg-accent/50 rounded-lg">
-            <div className="flex-1">
-              <p className="font-medium">No. of Child (2-11 yrs)</p>
-              <p className="text-sm text-muted-foreground">₹{childPrice.toLocaleString()} per child</p>
-            </div>
-            <div className="flex items-center gap-3">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setChildren(Math.max(0, children - 1))}
-                className="h-8 w-8"
-              >
-                <Minus className="h-4 w-4" />
-              </Button>
-              <span className="w-8 text-center font-semibold">{children}</span>
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setChildren(Math.min(10, children + 1))}
-                className="h-8 w-8"
-              >
-                <Plus className="h-4 w-4" />
-              </Button>
+            <div className="bg-accent/50 rounded-lg p-4">
+              <p className="text-sm text-muted-foreground">
+                <strong>Note:</strong> Price is per vehicle, not per person. Each {vehicleCapacity}-seater vehicle can accommodate up to {vehicleCapacity} passengers including children.
+              </p>
             </div>
           </div>
-        </div>
+        ) : (
+          <div className="space-y-4">
+            <label className="text-sm font-medium flex items-center gap-2">
+              <Users className="h-4 w-4 text-primary" />
+              Number of Guests
+            </label>
+            
+            <div className="flex items-center justify-between p-4 bg-accent/50 rounded-lg">
+              <div className="flex-1">
+                <p className="font-medium">No. of Adults (≥12 yrs)</p>
+                <p className="text-sm text-muted-foreground">₹{basePrice.toLocaleString()} per person</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setAdults(Math.max(1, adults - 1))}
+                  className="h-8 w-8"
+                >
+                  <Minus className="h-4 w-4" />
+                </Button>
+                <span className="w-8 text-center font-semibold">{adults}</span>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setAdults(Math.min(10, adults + 1))}
+                  className="h-8 w-8"
+                >
+                  <Plus className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between p-4 bg-accent/50 rounded-lg">
+              <div className="flex-1">
+                <p className="font-medium">No. of Child (2-11 yrs)</p>
+                <p className="text-sm text-muted-foreground">₹{childPrice.toLocaleString()} per child</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setChildren(Math.max(0, children - 1))}
+                  className="h-8 w-8"
+                >
+                  <Minus className="h-4 w-4" />
+                </Button>
+                <span className="w-8 text-center font-semibold">{children}</span>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setChildren(Math.min(10, children + 1))}
+                  className="h-8 w-8"
+                >
+                  <Plus className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
 
         <div className="border-t border-border pt-4 space-y-2">
-          <div className="flex justify-between text-sm">
-            <span>Adults ({adults} × INR {basePrice.toLocaleString()})</span>
-            <span>INR {(adults * basePrice).toLocaleString()}</span>
-          </div>
-          {children > 0 && (
+          {pricePerVehicle ? (
             <div className="flex justify-between text-sm">
-              <span>Children ({children} × INR {childPrice.toLocaleString()})</span>
-              <span>INR {(children * childPrice).toLocaleString()}</span>
+              <span>Vehicle ({vehicles} × INR {basePrice.toLocaleString()})</span>
+              <span>INR {(vehicles * basePrice).toLocaleString()}</span>
             </div>
+          ) : (
+            <>
+              <div className="flex justify-between text-sm">
+                <span>Adults ({adults} × INR {basePrice.toLocaleString()})</span>
+                <span>INR {(adults * basePrice).toLocaleString()}</span>
+              </div>
+              {children > 0 && (
+                <div className="flex justify-between text-sm">
+                  <span>Children ({children} × INR {childPrice.toLocaleString()})</span>
+                  <span>INR {(children * childPrice).toLocaleString()}</span>
+                </div>
+              )}
+            </>
           )}
           <div className="flex justify-between text-xl font-bold pt-2 border-t border-border">
             <span>Total</span>

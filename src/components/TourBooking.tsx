@@ -95,7 +95,10 @@ const TourBooking = ({ tourData }: TourBookingProps) => {
                   </div>
                   <div>
                     <span className="font-semibold">From:</span>
-                    <span className="text-primary ml-2 text-lg font-bold">₹{tourData.basePrice.toLocaleString()}</span>
+                    <span className="text-primary ml-2 text-lg font-bold">
+                      ₹{tourData.basePrice.toLocaleString()}
+                      {tourData.pricePerVehicle && <span className="text-sm font-normal text-muted-foreground"> /vehicle</span>}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -122,6 +125,8 @@ const TourBooking = ({ tourData }: TourBookingProps) => {
                 childPrice={tourData.childPrice}
                 activityName={tourData.title}
                 tourTimings={tourData.tourTimings}
+                pricePerVehicle={tourData.pricePerVehicle}
+                vehicleCapacity={tourData.vehicleCapacity}
               />
             </div>
           </div>
