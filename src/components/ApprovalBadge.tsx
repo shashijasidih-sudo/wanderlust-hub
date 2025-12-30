@@ -17,13 +17,15 @@ const ApprovalBadge = () => {
           {/* Approval Text */}
           <div className="flex items-center gap-2">
             <Shield className="h-4 w-4 text-green-600 hidden sm:block" />
-            <p className="text-xs md:text-sm text-gray-700 font-medium text-center">
-              <span className="text-green-700 font-semibold">Approved by NIDHI</span>
-              <span className="hidden sm:inline"> – National Integrated Database of Hospitality Industry</span>
-              <span className="block sm:inline sm:ml-1 text-gray-600 text-[10px] md:text-xs">
+            <div className="text-xs md:text-sm text-gray-700 font-medium text-center">
+              <div>
+                <span className="text-green-700 font-semibold">Approved by NIDHI</span>
+                <span className="hidden sm:inline"> – National Integrated Database of Hospitality Industry</span>
+              </div>
+              <div className="text-gray-600 text-[10px] md:text-xs">
                 An initiative by the Ministry of Tourism, Government of India
-              </span>
-            </p>
+              </div>
+            </div>
           </div>
           
           {/* NIDHI Logo */}
