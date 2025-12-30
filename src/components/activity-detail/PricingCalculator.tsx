@@ -131,6 +131,63 @@ const PricingCalculator = ({
                 <strong>Note:</strong> Price is per vehicle, not per person. Each {vehicleCapacity}-seater vehicle can accommodate up to {vehicleCapacity} passengers including children.
               </p>
             </div>
+
+            <div className="space-y-3">
+              <label className="text-sm font-medium flex items-center gap-2">
+                <Users className="h-4 w-4 text-primary" />
+                Passenger Details (for information only)
+              </label>
+              
+              <div className="flex items-center justify-between p-3 bg-accent/30 rounded-lg">
+                <div className="flex-1">
+                  <p className="font-medium text-sm">No. of Adults (≥12 yrs)</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={() => setAdults(Math.max(0, adults - 1))}
+                    className="h-8 w-8"
+                  >
+                    <Minus className="h-4 w-4" />
+                  </Button>
+                  <span className="w-8 text-center font-semibold">{adults}</span>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={() => setAdults(Math.min(vehicles * vehicleCapacity, adults + 1))}
+                    className="h-8 w-8"
+                  >
+                    <Plus className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between p-3 bg-accent/30 rounded-lg">
+                <div className="flex-1">
+                  <p className="font-medium text-sm">No. of Children (2-11 yrs)</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={() => setChildren(Math.max(0, children - 1))}
+                    className="h-8 w-8"
+                  >
+                    <Minus className="h-4 w-4" />
+                  </Button>
+                  <span className="w-8 text-center font-semibold">{children}</span>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={() => setChildren(Math.min(vehicles * vehicleCapacity, children + 1))}
+                    className="h-8 w-8"
+                  >
+                    <Plus className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         ) : (
           <div className="space-y-4">
