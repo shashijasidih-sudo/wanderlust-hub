@@ -3852,5 +3852,297 @@ export const toursData: Record<string, TourData> = {
     cancellationPolicy: ["100% charge for cancellations after booking"],
     childPolicy: ["Under 2: Free", "3-12: Child rate", "Above 12: Adult rate"],
     faqs: []
+  },
+  "singapore-airport-pickup-5-seater": {
+    id: "singapore-airport-pickup-5-seater",
+    title: "Private Singapore Airport Pick Up - 5 Seater",
+    shortDescription: "Start your worry-free Singapore visit with our private airport pickup service in a comfortable 5-seater vehicle.",
+    location: "Singapore",
+    city: "singapore",
+    basePrice: 4000,
+    childPrice: 4000,
+    duration: "Transfer",
+    rating: 4.9,
+    reviews: 856,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop", title: "Private Transfer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Airport Pick up from Changi Airport",
+      "Ride in a clean comfortable 5-seater vehicle",
+      "Hotel Drop off within designated areas",
+      "Experienced drivers familiar with Singapore routes"
+    ],
+    description: {
+      overview: "Start your worry-free Singapore visit with our private airport pickup service.",
+      whatToExpect: "Whether you're traveling solo, with family, or in a group, we cater to your unique travel needs. Our well-trained and polite team ensures reliable transfers with experienced drivers familiar with all Singapore routes. Provide accurate flight and pick-up details for a seamless and smooth service. Enjoy a stress-free start to your Singapore journey with us."
+    },
+    itinerary: [],
+    tourTimings: ["07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30"],
+    inclusions: ["Airport Pick up", "Ride in a clean comfortable vehicle", "Hotel Drop off"],
+    exclusions: ["All personal expenses spent for shopping, drinks and dining etc on-site during the tour"],
+    bookingPolicy: [
+      "Please bring a valid photo ID/passport with you as it is required to be displayed at the entrance",
+      "Guests are kindly requested to be ready 15 minutes before the pickup time to avoid any delays",
+      "Please ensure to provide accurate details, including the hotel address, during the booking process",
+      "If the guest fails to report within the designated time, it will be considered a No Show with no refund",
+      "Select pickup timing 2.5 hours after the flight landing time",
+      "Transfers provided from: Geylang lor 1-22, Little India, Orchard, Tanjong Pagar, Chinatown, Village Hotel Bugis",
+      "Private Transfers waiting time: 15 Minutes"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children above age 3 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
+  },
+  "singapore-airport-pickup-10-seater": {
+    id: "singapore-airport-pickup-10-seater",
+    title: "Private Singapore Airport Pick Up - 10 Seater",
+    shortDescription: "Start your worry-free Singapore visit with our private airport pickup service in a spacious 10-seater vehicle.",
+    location: "Singapore",
+    city: "singapore",
+    basePrice: 8000,
+    childPrice: 8000,
+    duration: "Transfer",
+    rating: 4.9,
+    reviews: 654,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop", title: "Private Transfer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Airport Pick up from Changi Airport",
+      "Ride in a clean comfortable 10-seater vehicle",
+      "Hotel Drop off within designated areas",
+      "Perfect for families and groups"
+    ],
+    description: {
+      overview: "Start your worry-free Singapore visit with our private airport pickup service.",
+      whatToExpect: "Whether you're traveling solo, with family, or in a group, we cater to your unique travel needs. Our well-trained and polite team ensures reliable transfers with experienced drivers familiar with all Singapore routes. Provide accurate flight and pick-up details for a seamless and smooth service. Enjoy a stress-free start to your Singapore journey with us."
+    },
+    itinerary: [],
+    tourTimings: ["07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30"],
+    inclusions: ["Airport Pick up", "Ride in a clean comfortable vehicle", "Hotel Drop off"],
+    exclusions: ["All personal expenses spent for shopping, drinks and dining etc on-site during the tour"],
+    bookingPolicy: [
+      "Please bring a valid photo ID/passport with you as it is required to be displayed at the entrance",
+      "Guests are kindly requested to be ready 15 minutes before the pickup time to avoid any delays",
+      "Please ensure to provide accurate details, including the hotel address, during the booking process",
+      "If the guest fails to report within the designated time, it will be considered a No Show with no refund",
+      "Select pickup timing 2.5 hours after the flight landing time",
+      "Transfers provided from: Geylang lor 1-22, Little India, Orchard, Tanjong Pagar, Chinatown, Village Hotel Bugis",
+      "Private Transfers waiting time: 15 Minutes"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children above age 3 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
+  },
+  "singapore-airport-dropoff-5-seater": {
+    id: "singapore-airport-dropoff-5-seater",
+    title: "Private Singapore Airport Drop Off - 5 Seater",
+    shortDescription: "Enjoy stress-free airport drop off services at the end of your Singapore holiday in a comfortable 5-seater vehicle.",
+    location: "Singapore",
+    city: "singapore",
+    basePrice: 4000,
+    childPrice: 4000,
+    duration: "Transfer",
+    rating: 4.8,
+    reviews: 723,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop", title: "Airport Drop Off" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Hotel Pick up from designated areas",
+      "Travel in a well-maintained private 5-seater vehicle",
+      "Changi Airport Drop off",
+      "Experienced and punctual drivers"
+    ],
+    description: {
+      overview: "Enjoy stress-free airport drop off services at the end of your Singapore holiday.",
+      whatToExpect: "We offer private transfers for all group sizes, with instant confirmation and printable vouchers. Provide your flight details and hotel address for a smooth booking process. An experienced driver will pick you up at your hotel and transfer you to Changi Airport on time."
+    },
+    itinerary: [],
+    tourTimings: ["07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30"],
+    inclusions: ["Hotel Pick up", "Travel in a well-maintained private vehicle", "Airport Drop off"],
+    exclusions: ["All personal expenses spent for shopping, drinks and dining etc on-site during the tour"],
+    bookingPolicy: [
+      "Please bring a valid photo ID/passport with you as it is required to be displayed at the entrance",
+      "Guests are kindly requested to be ready in the hotel lobby 15 minutes before the pickup time",
+      "Please ensure to provide accurate details, including the hotel address, during the booking process",
+      "If the guest fails to report within the designated time, it will be considered a No Show with no refund",
+      "Transfers provided from: Geylang lor 1-22, Little India, Orchard, Tanjong Pagar, Chinatown, Village Hotel Bugis",
+      "Private Transfers waiting time: 15 Minutes"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 72 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 72 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children above age 3 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
+  },
+  "singapore-airport-dropoff-10-seater": {
+    id: "singapore-airport-dropoff-10-seater",
+    title: "Private Singapore Airport Drop Off - 10 Seater",
+    shortDescription: "Enjoy stress-free airport drop off services at the end of your Singapore holiday in a spacious 10-seater vehicle.",
+    location: "Singapore",
+    city: "singapore",
+    basePrice: 8000,
+    childPrice: 8000,
+    duration: "Transfer",
+    rating: 4.8,
+    reviews: 512,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop", title: "Airport Drop Off" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Hotel Pick up from designated areas",
+      "Travel in a well-maintained private 10-seater vehicle",
+      "Changi Airport Drop off",
+      "Perfect for families and groups"
+    ],
+    description: {
+      overview: "Enjoy stress-free airport drop off services at the end of your Singapore holiday.",
+      whatToExpect: "We offer private transfers for all group sizes, with instant confirmation and printable vouchers. Provide your flight details and hotel address for a smooth booking process. An experienced driver will pick you up at your hotel and transfer you to Changi Airport on time."
+    },
+    itinerary: [],
+    tourTimings: ["07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30"],
+    inclusions: ["Hotel Pick up", "Travel in a well-maintained private vehicle", "Airport Drop off"],
+    exclusions: ["All personal expenses spent for shopping, drinks and dining etc on-site during the tour"],
+    bookingPolicy: [
+      "Please bring a valid photo ID/passport with you as it is required to be displayed at the entrance",
+      "Guests are kindly requested to be ready in the hotel lobby 15 minutes before the pickup time",
+      "Please ensure to provide accurate details, including the hotel address, during the booking process",
+      "If the guest fails to report within the designated time, it will be considered a No Show with no refund",
+      "Transfers provided from: Geylang lor 1-22, Little India, Orchard, Tanjong Pagar, Chinatown, Village Hotel Bugis",
+      "Private Transfers waiting time: 15 Minutes"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 96 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 96 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children above age 3 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
+  },
+  "singapore-airport-night-pickup-5-seater": {
+    id: "singapore-airport-night-pickup-5-seater",
+    title: "Private Singapore Airport Night Pick Up - 5 Seater",
+    shortDescription: "Late night or early morning arrival? Our night transfer service ensures a smooth pickup in a comfortable 5-seater vehicle.",
+    location: "Singapore",
+    city: "singapore",
+    basePrice: 5000,
+    childPrice: 5000,
+    duration: "Transfer",
+    rating: 4.9,
+    reviews: 432,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&auto=format&fit=crop", title: "Night Transfer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Airport Pick up during night hours",
+      "Ride in a clean comfortable 5-seater vehicle",
+      "Hotel Drop off within designated areas",
+      "Available 10 PM to 6 AM"
+    ],
+    description: {
+      overview: "Start your worry-free Singapore visit with our night airport pickup service.",
+      whatToExpect: "Whether you're traveling solo, with family, or in a group, we cater to your unique travel needs. Our well-trained and polite team ensures reliable transfers with experienced drivers familiar with all Singapore routes. Provide accurate flight and pick-up details for a seamless and smooth service. Enjoy a stress-free start to your Singapore journey with us."
+    },
+    itinerary: [],
+    tourTimings: ["00:05", "00:30", "01:00", "01:30", "02:00", "02:30", "03:30", "04:00", "04:30", "05:00", "05:30", "06:00", "22:00", "22:30", "23:00", "23:30"],
+    inclusions: ["Airport Pick up", "Ride in a clean comfortable vehicle", "Hotel Drop off"],
+    exclusions: ["All personal expenses spent for shopping, drinks and dining etc on-site during the tour"],
+    bookingPolicy: [
+      "Please bring a valid photo ID/passport with you as it is required to be displayed at the entrance",
+      "Guests are kindly requested to be ready 15 minutes before the pickup time to avoid any delays",
+      "Please ensure to provide accurate details, including the hotel address, during the booking process",
+      "If the guest fails to report within the designated time, it will be considered a No Show with no refund",
+      "Select pickup timing 2.5 hours after the flight landing time",
+      "Transfers provided from: Geylang lor 1-22, Little India, Orchard, Tanjong Pagar, Chinatown, Village Hotel Bugis",
+      "Private Transfers waiting time: 15 Minutes"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 96 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 96 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children above age 3 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
+  },
+  "singapore-airport-night-pickup-10-seater": {
+    id: "singapore-airport-night-pickup-10-seater",
+    title: "Private Singapore Airport Night Pick Up - 10 Seater",
+    shortDescription: "Late night or early morning arrival? Our night transfer service ensures a smooth pickup in a spacious 10-seater vehicle.",
+    location: "Singapore",
+    city: "singapore",
+    basePrice: 10000,
+    childPrice: 10000,
+    duration: "Transfer",
+    rating: 4.9,
+    reviews: 321,
+    heroImages: [
+      { src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop", title: "Night Transfer" }
+    ],
+    galleryImages: [],
+    highlights: [
+      "Airport Pick up during night hours",
+      "Ride in a clean comfortable 10-seater vehicle",
+      "Hotel Drop off within designated areas",
+      "Perfect for families and groups"
+    ],
+    description: {
+      overview: "Start your worry-free Singapore visit with our night airport pickup service.",
+      whatToExpect: "Whether you're traveling solo, with family, or in a group, we cater to your unique travel needs. Our well-trained and polite team ensures reliable transfers with experienced drivers familiar with all Singapore routes. Provide accurate flight and pick-up details for a seamless and smooth service. Enjoy a stress-free start to your Singapore journey with us."
+    },
+    itinerary: [],
+    tourTimings: ["00:05", "00:30", "01:00", "01:30", "02:00", "02:30", "03:30", "04:00", "04:30", "05:00", "05:30", "06:00", "22:00", "22:30", "23:00", "23:30"],
+    inclusions: ["Airport Pick up", "Ride in a clean comfortable vehicle", "Hotel Drop off"],
+    exclusions: ["All personal expenses spent for shopping, drinks and dining etc on-site during the tour"],
+    bookingPolicy: [
+      "Please bring a valid photo ID/passport with you as it is required to be displayed at the entrance",
+      "Guests are kindly requested to be ready 15 minutes before the pickup time to avoid any delays",
+      "Please ensure to provide accurate details, including the hotel address, during the booking process",
+      "If the guest fails to report within the designated time, it will be considered a No Show with no refund",
+      "Select pickup timing 2.5 hours after the flight landing time",
+      "Transfers provided from: Geylang lor 1-22, Little India, Orchard, Tanjong Pagar, Chinatown, Village Hotel Bugis",
+      "Private Transfers waiting time: 15 Minutes"
+    ],
+    cancellationPolicy: [
+      "All Cancellations made 96 hours prior to the Tour departure time NO charges will be applicable",
+      "If Cancellation made within 96 hours to your Tour departure time 100% charges will be applicable",
+      "If eligible for Refund your Amount will be returned back to your Account within 7 working days"
+    ],
+    childPolicy: [
+      "Children under 3 years will be considered as infant and entry will be free of cost",
+      "Children above age 3 will be considered as an adult and charged adult rate"
+    ],
+    faqs: []
   }
 };

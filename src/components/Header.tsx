@@ -151,7 +151,7 @@ const Header = () => {
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
                 <TreePine className="h-5 w-5 mr-3 text-primary" />
-                <a href="#singapore" className="w-full font-medium">Singapore</a>
+                <Link to="/singapore/transfers" className="w-full font-medium">Singapore</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -266,7 +266,7 @@ const Header = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
                   <TreePine className="h-4 w-4 mr-2 text-primary" />
-                  <a href="#singapore" className="w-full">Singapore</a>
+                  <Link to="/singapore/transfers" className="w-full">Singapore</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
