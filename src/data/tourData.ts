@@ -15,6 +15,14 @@ import bangkokSkywalk2 from "@/assets/bangkok-skywalk-2.jpg";
 import bangkokSkywalk3 from "@/assets/bangkok-skywalk-3.jpg";
 import emerald1 from "@/assets/emerald-1.jpg";
 
+export interface CustomerReview {
+  name: string;
+  date: string;
+  rating: number;
+  comment: string;
+  helpful: number;
+}
+
 export interface TourData {
   id: string;
   title: string;
@@ -56,6 +64,7 @@ export interface TourData {
     question: string;
     answer: string;
   }[];
+  customerReviews?: CustomerReview[];
 }
 
 export const toursData: Record<string, TourData> = {
@@ -3904,7 +3913,13 @@ export const toursData: Record<string, TourData> = {
       "Children under 3 years will be considered as infant and entry will be free of cost",
       "Children above age 3 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Rajesh Menon", date: "3 days ago", rating: 5, comment: "Excellent airport pickup service! Driver was waiting at the arrival hall with my name on a board. Very professional and the car was spotless. Made our Singapore trip start on a great note.", helpful: 28 },
+      { name: "Sunita Agarwal", date: "1 week ago", rating: 5, comment: "Smooth and hassle-free transfer from Changi Airport to our hotel in Orchard. The driver helped with all our luggage and was very friendly. Highly recommend for families!", helpful: 22 },
+      { name: "Amit Joshi", date: "2 weeks ago", rating: 4, comment: "Good service overall. Driver was punctual and the vehicle was comfortable. Only minor issue was finding the meeting point, but everything else was perfect.", helpful: 15 },
+      { name: "Priya Nair", date: "3 weeks ago", rating: 5, comment: "Best airport transfer experience! After a long flight, having someone ready to pick us up was such a relief. Clean car, polite driver, and quick ride to Little India.", helpful: 19 }
+    ]
   },
   "singapore-airport-pickup-10-seater": {
     id: "singapore-airport-pickup-10-seater",
@@ -3955,7 +3970,13 @@ export const toursData: Record<string, TourData> = {
       "Children under 3 years will be considered as infant and entry will be free of cost",
       "Children above age 3 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Vikram Reddy", date: "2 days ago", rating: 5, comment: "Perfect for our family of 8! The 10-seater van was spacious and comfortable. Driver was waiting right on time and helped with all our bags. Great start to our Singapore vacation!", helpful: 31 },
+      { name: "Neha Gupta", date: "1 week ago", rating: 5, comment: "Booked this for our group trip and it was worth every penny. Clean vehicle, professional driver, and smooth ride from Changi to Marina Bay area.", helpful: 24 },
+      { name: "Sanjay Patel", date: "2 weeks ago", rating: 5, comment: "Excellent service for large groups! We had 9 people with lots of luggage and everything fit perfectly. Driver was very helpful and knew all the routes.", helpful: 18 },
+      { name: "Kavitha Krishnan", date: "3 weeks ago", rating: 4, comment: "Very good experience. Spacious vehicle, friendly driver. The booking process was simple and confirmation was instant. Would use again!", helpful: 14 }
+    ]
   },
   "singapore-airport-dropoff-5-seater": {
     id: "singapore-airport-dropoff-5-seater",
@@ -4005,7 +4026,13 @@ export const toursData: Record<string, TourData> = {
       "Children under 3 years will be considered as infant and entry will be free of cost",
       "Children above age 3 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Arjun Sharma", date: "4 days ago", rating: 5, comment: "Stress-free airport drop off! Driver arrived 15 minutes early and got us to Changi with plenty of time to spare. Very reliable service.", helpful: 26 },
+      { name: "Meera Iyer", date: "1 week ago", rating: 5, comment: "Perfect end to our Singapore trip. Clean car, punctual driver, and smooth ride to the airport. Will definitely book again on our next visit.", helpful: 21 },
+      { name: "Rohit Verma", date: "2 weeks ago", rating: 5, comment: "Great service! Driver helped us with heavy luggage and made sure we reached the correct terminal. Very professional and courteous.", helpful: 17 },
+      { name: "Ananya Das", date: "3 weeks ago", rating: 4, comment: "Good experience overall. Driver was on time and the car was comfortable. Easy booking process and received confirmation immediately.", helpful: 13 }
+    ]
   },
   "singapore-airport-dropoff-10-seater": {
     id: "singapore-airport-dropoff-10-seater",
@@ -4055,7 +4082,13 @@ export const toursData: Record<string, TourData> = {
       "Children under 3 years will be considered as infant and entry will be free of cost",
       "Children above age 3 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Suresh Kumar", date: "3 days ago", rating: 5, comment: "Excellent for our large family! The 10-seater was perfect for 8 of us plus all our luggage. Driver was very helpful and got us to Changi smoothly.", helpful: 29 },
+      { name: "Deepa Nair", date: "1 week ago", rating: 5, comment: "Booked for our group and couldn't be happier. Spacious van, professional driver, and arrived at the airport with lots of time. Highly recommend!", helpful: 23 },
+      { name: "Karthik Rajan", date: "2 weeks ago", rating: 5, comment: "Perfect for large groups! Very comfortable ride to the airport. Driver was punctual and helped with all the bags. Great value for money.", helpful: 18 },
+      { name: "Lakshmi Venkat", date: "3 weeks ago", rating: 4, comment: "Very good service. The van was clean and spacious. Driver arrived on time and was very polite. Would definitely use again.", helpful: 15 }
+    ]
   },
   "singapore-airport-night-pickup-5-seater": {
     id: "singapore-airport-night-pickup-5-seater",
@@ -4106,7 +4139,13 @@ export const toursData: Record<string, TourData> = {
       "Children under 3 years will be considered as infant and entry will be free of cost",
       "Children above age 3 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Rahul Kapoor", date: "2 days ago", rating: 5, comment: "Our flight landed at 2 AM and the driver was already waiting! So grateful for this late-night service. Clean car and friendly driver made our arrival so easy.", helpful: 32 },
+      { name: "Pooja Mehta", date: "1 week ago", rating: 5, comment: "Excellent night transfer service! After a long red-eye flight, having someone ready to pick us up was a blessing. Very professional and punctual.", helpful: 25 },
+      { name: "Gaurav Singh", date: "2 weeks ago", rating: 5, comment: "Late night arrival and the driver was right there on time. Very comfortable ride to our hotel. Highly recommend for anyone with night flights!", helpful: 19 },
+      { name: "Shreya Bose", date: "3 weeks ago", rating: 4, comment: "Good service for early morning pickup. Driver was waiting and the car was clean. Only small wait to find the meeting point but otherwise perfect.", helpful: 14 }
+    ]
   },
   "singapore-airport-night-pickup-10-seater": {
     id: "singapore-airport-night-pickup-10-seater",
@@ -4157,7 +4196,13 @@ export const toursData: Record<string, TourData> = {
       "Children under 3 years will be considered as infant and entry will be free of cost",
       "Children above age 3 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Nitin Malhotra", date: "3 days ago", rating: 5, comment: "Perfect for our family group! Flight landed at midnight and the 10-seater van was waiting. Spacious, comfortable, and driver was very helpful with luggage.", helpful: 28 },
+      { name: "Rekha Jain", date: "1 week ago", rating: 5, comment: "Excellent late night service for our big group. Van was clean and comfortable. Driver was punctual despite the late hour. Highly recommend!", helpful: 22 },
+      { name: "Anil Saxena", date: "2 weeks ago", rating: 5, comment: "Great option for families arriving late. The 10-seater fit all of us perfectly. Driver knew the route well and got us to the hotel quickly.", helpful: 17 },
+      { name: "Divya Rao", date: "3 weeks ago", rating: 4, comment: "Very good night transfer service. Spacious vehicle for our group of 8. Driver was waiting right on time. Would book again.", helpful: 14 }
+    ]
   },
   "dubai-airport-pickup-zone1-7-seater": {
     id: "dubai-airport-pickup-zone1-7-seater",
@@ -4213,7 +4258,13 @@ export const toursData: Record<string, TourData> = {
       "Children aged from 3 to 10 years will be considered as child and charged child rate",
       "Children above age 10 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Mohammed Ali", date: "2 days ago", rating: 5, comment: "Excellent airport pickup in Dubai! Driver was waiting with my name board right outside arrivals. Clean and comfortable 7-seater, perfect for our family of 5. Smooth ride to Deira.", helpful: 34 },
+      { name: "Fatima Khan", date: "1 week ago", rating: 5, comment: "Very professional service! After a long flight, having someone ready was such a relief. Driver helped with all our bags and the AC was a blessing in Dubai heat.", helpful: 28 },
+      { name: "Ahmed Hassan", date: "2 weeks ago", rating: 5, comment: "Best airport transfer in Dubai. Driver was punctual, vehicle was spotless, and we reached Downtown in no time. Will definitely use again!", helpful: 21 },
+      { name: "Aisha Begum", date: "3 weeks ago", rating: 4, comment: "Good service overall. Driver was friendly and professional. Car was comfortable and clean. Only small delay finding the pickup point but otherwise perfect.", helpful: 16 }
+    ]
   },
   "dubai-airport-pickup-zone1-12-seater": {
     id: "dubai-airport-pickup-zone1-12-seater",
@@ -4269,7 +4320,13 @@ export const toursData: Record<string, TourData> = {
       "Children aged from 3 to 10 years will be considered as child and charged child rate",
       "Children above age 10 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Rashid Ibrahim", date: "3 days ago", rating: 5, comment: "Perfect for our large group of 10! The 12-seater van was spacious and comfortable. Driver was very helpful with all our luggage. Great value for groups traveling together!", helpful: 32 },
+      { name: "Zainab Qureshi", date: "1 week ago", rating: 5, comment: "Excellent service for our family reunion group. Van was clean and driver was professional. Made our Dubai arrival stress-free!", helpful: 26 },
+      { name: "Yusuf Malik", date: "2 weeks ago", rating: 5, comment: "Highly recommend for large groups! Driver was waiting right on time and the 12-seater was perfect for our group. Comfortable ride to our hotel.", helpful: 19 },
+      { name: "Nadia Syed", date: "3 weeks ago", rating: 4, comment: "Good experience with the 12-seater transfer. Spacious vehicle, friendly driver. Booking was easy and confirmation was instant.", helpful: 14 }
+    ]
   },
   "dubai-airport-pickup-zone1-4-seater": {
     id: "dubai-airport-pickup-zone1-4-seater",
@@ -4325,7 +4382,13 @@ export const toursData: Record<string, TourData> = {
       "Children aged from 3 to 10 years will be considered as child and charged child rate",
       "Children above age 10 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Imran Sheikh", date: "2 days ago", rating: 5, comment: "Great sedan for our small family! Clean car, professional driver, and smooth ride from Dubai Airport to Downtown. Perfect for couples or small families.", helpful: 27 },
+      { name: "Salma Ansari", date: "1 week ago", rating: 5, comment: "Excellent 4-seater service! Driver was waiting at arrivals with a name board. Very comfortable sedan and quick transfer to Bur Dubai.", helpful: 22 },
+      { name: "Tariq Hussain", date: "2 weeks ago", rating: 4, comment: "Good service for a solo traveler or couple. Car was clean and driver was punctual. Value for money if you don't need a larger vehicle.", helpful: 15 },
+      { name: "Hiba Farooq", date: "3 weeks ago", rating: 5, comment: "Perfect for our trip! Just the two of us and the sedan was more than enough. Driver helped with luggage and got us to our hotel quickly.", helpful: 18 }
+    ]
   },
   "dubai-airport-pickup-zone2-7-seater": {
     id: "dubai-airport-pickup-zone2-7-seater",
@@ -4381,7 +4444,13 @@ export const toursData: Record<string, TourData> = {
       "Children aged from 3 to 10 years will be considered as child and charged child rate",
       "Children above age 10 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Khalid Mahmood", date: "3 days ago", rating: 5, comment: "Smooth transfer to JBR! Driver was very professional and the 7-seater was perfect for our family of 5 with luggage. Loved the views on the way to Marina.", helpful: 29 },
+      { name: "Mariam Nawaz", date: "1 week ago", rating: 5, comment: "Excellent service to Palm Jumeirah! Driver knew the exact location of our hotel. Clean vehicle and comfortable ride after a long flight.", helpful: 24 },
+      { name: "Hassan Raza", date: "2 weeks ago", rating: 5, comment: "Great pickup to Zone 2! The journey to Marina was smooth and driver pointed out landmarks along the way. Highly recommend!", helpful: 18 },
+      { name: "Sana Ahmed", date: "3 weeks ago", rating: 4, comment: "Good experience overall. Vehicle was comfortable and driver was polite. Small wait at the airport but otherwise smooth transfer to JBR.", helpful: 13 }
+    ]
   },
   "dubai-airport-pickup-zone2-12-seater": {
     id: "dubai-airport-pickup-zone2-12-seater",
@@ -4437,7 +4506,13 @@ export const toursData: Record<string, TourData> = {
       "Children aged from 3 to 10 years will be considered as child and charged child rate",
       "Children above age 10 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Omar Farhan", date: "4 days ago", rating: 5, comment: "Great 12-seater service to Marina! Perfect for our extended family of 10. Driver was professional and the van was very comfortable. Excellent value!", helpful: 30 },
+      { name: "Layla Abbas", date: "1 week ago", rating: 5, comment: "Smooth ride to Palm Jumeirah in the big van. Plenty of space for everyone and all our luggage. Driver was friendly and helpful!", helpful: 24 },
+      { name: "Bilal Rehman", date: "2 weeks ago", rating: 5, comment: "Perfect for large groups visiting JBR! The 12-seater was spacious and air-conditioned. Driver knew the best routes. Highly recommend!", helpful: 18 },
+      { name: "Amina Yousuf", date: "3 weeks ago", rating: 4, comment: "Good experience with the group transfer to Zone 2. Comfortable ride and professional driver. Would book again for future trips.", helpful: 13 }
+    ]
   },
   "dubai-airport-pickup-zone3-7-seater": {
     id: "dubai-airport-pickup-zone3-7-seater",
@@ -4493,7 +4568,13 @@ export const toursData: Record<string, TourData> = {
       "Children aged from 3 to 10 years will be considered as child and charged child rate",
       "Children above age 10 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Samir Khan", date: "3 days ago", rating: 5, comment: "Excellent transfer to JVC! Driver was waiting right on time and knew exactly where our hotel was in Sports City. Comfortable 7-seater and smooth ride.", helpful: 26 },
+      { name: "Reem Al-Rashid", date: "1 week ago", rating: 5, comment: "Great service to Motor City! Clean vehicle and professional driver. The ride was comfortable and we reached our destination quickly.", helpful: 21 },
+      { name: "Faisal Iqbal", date: "2 weeks ago", rating: 5, comment: "Smooth pickup to Zone 3! Driver helped with all our bags and the AC was refreshing. Will definitely book again for our next visit.", helpful: 17 },
+      { name: "Noura Hassan", date: "3 weeks ago", rating: 4, comment: "Good experience overall. Vehicle was clean and comfortable. Small delay at pickup but driver communicated well. Good value for Zone 3.", helpful: 12 }
+    ]
   },
   "dubai-airport-pickup-zone3-12-seater": {
     id: "dubai-airport-pickup-zone3-12-seater",
@@ -4549,7 +4630,13 @@ export const toursData: Record<string, TourData> = {
       "Children aged from 3 to 10 years will be considered as child and charged child rate",
       "Children above age 10 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Waleed Ahmad", date: "2 days ago", rating: 5, comment: "Perfect 12-seater for our cricket team! All 11 of us fit comfortably with our gear. Smooth ride to Sports City. Driver was excellent!", helpful: 28 },
+      { name: "Dania Malik", date: "1 week ago", rating: 5, comment: "Great for large groups going to JVC! The van was spacious and clean. Driver arrived right on time. Highly recommend for families!", helpful: 22 },
+      { name: "Junaid Abbas", date: "2 weeks ago", rating: 5, comment: "Excellent service to Motor City. 12-seater was perfect for our group of 9 with all luggage. Professional driver and comfortable ride.", helpful: 16 },
+      { name: "Hafsa Qasim", date: "3 weeks ago", rating: 4, comment: "Good value for Zone 3 group transfer. Spacious vehicle and friendly driver. Would use again for group trips.", helpful: 12 }
+    ]
   },
   "dubai-airport-pickup-zone5-7-seater": {
     id: "dubai-airport-pickup-zone5-7-seater",
@@ -4605,7 +4692,13 @@ export const toursData: Record<string, TourData> = {
       "Children aged from 3 to 10 years will be considered as child and charged child rate",
       "Children above age 10 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Adil Sharif", date: "3 days ago", rating: 5, comment: "Excellent long-distance transfer to Abu Dhabi! Driver was very professional and the 7-seater was comfortable for the journey. Worth every dirham!", helpful: 31 },
+      { name: "Maha Al-Suwaidi", date: "1 week ago", rating: 5, comment: "Smooth ride from Dubai Airport to Al Ain! Driver knew the route well and we arrived safely. Great service for Zone 5 transfers.", helpful: 25 },
+      { name: "Rizwan Shah", date: "2 weeks ago", rating: 5, comment: "Perfect for our trip to Abu Dhabi. Vehicle was comfortable for the long journey and driver was experienced. Highly recommend!", helpful: 19 },
+      { name: "Sara Khalil", date: "3 weeks ago", rating: 4, comment: "Good service for the long trip to Zone 5. Driver was punctual and vehicle was clean. Comfortable for the distance covered.", helpful: 14 }
+    ]
   },
   "dubai-airport-pickup-zone5-12-seater": {
     id: "dubai-airport-pickup-zone5-12-seater",
@@ -4661,7 +4754,13 @@ export const toursData: Record<string, TourData> = {
       "Children aged from 3 to 10 years will be considered as child and charged child rate",
       "Children above age 10 will be considered as an adult and charged adult rate"
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      { name: "Asad Mirza", date: "2 days ago", rating: 5, comment: "Perfect 12-seater for our extended family trip to Abu Dhabi! Everyone was comfortable during the long journey. Driver was excellent and knew the best route.", helpful: 29 },
+      { name: "Fatima Zahra", date: "1 week ago", rating: 5, comment: "Great for large groups going to Zone 5! The van was spacious and AC was perfect for the long trip to Al Ain. Highly recommend!", helpful: 23 },
+      { name: "Tariq Mehmood", date: "2 weeks ago", rating: 5, comment: "Excellent service for our group of 10 to Abu Dhabi. Comfortable van, professional driver, and smooth journey. Best value for Zone 5!", helpful: 18 },
+      { name: "Huda Ali", date: "3 weeks ago", rating: 4, comment: "Good experience for the long-distance transfer. Spacious 12-seater and experienced driver. Would book again for Zone 5 trips.", helpful: 14 }
+    ]
   },
   "dubai-airport-pickup-zone2-4-seater": {
     id: "dubai-airport-pickup-zone2-4-seater",
