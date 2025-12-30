@@ -3915,10 +3915,10 @@ export const toursData: Record<string, TourData> = {
     ],
     faqs: [],
     customerReviews: [
-      { name: "Rajesh Menon", date: "3 days ago", rating: 5, comment: "Excellent airport pickup service! Driver was waiting at the arrival hall with my name on a board. Very professional and the car was spotless. Made our Singapore trip start on a great note.", helpful: 28 },
-      { name: "Sunita Agarwal", date: "1 week ago", rating: 5, comment: "Smooth and hassle-free transfer from Changi Airport to our hotel in Orchard. The driver helped with all our luggage and was very friendly. Highly recommend for families!", helpful: 22 },
-      { name: "Amit Joshi", date: "2 weeks ago", rating: 4, comment: "Good service overall. Driver was punctual and the vehicle was comfortable. Only minor issue was finding the meeting point, but everything else was perfect.", helpful: 15 },
-      { name: "Priya Nair", date: "3 weeks ago", rating: 5, comment: "Best airport transfer experience! After a long flight, having someone ready to pick us up was such a relief. Clean car, polite driver, and quick ride to Little India.", helpful: 19 }
+      { name: "Vivek Sharma", date: "3 days ago", rating: 5, comment: "Seamless pickup from Changi Terminal 3! Driver tracked our flight and was waiting right when we cleared immigration. The sedan was spotless and air-conditioned. Perfect start to our Singapore honeymoon.", helpful: 34 },
+      { name: "Rashida Khan", date: "1 week ago", rating: 5, comment: "Very impressed with the professionalism. Driver greeted us warmly and helped with all our bags. Quick 25-minute ride to our Orchard Road hotel. Will definitely use again.", helpful: 27 },
+      { name: "Harish Iyer", date: "2 weeks ago", rating: 5, comment: "After 8 hours of flying, this pickup was a blessing! Driver was punctual, car was comfortable, and we reached Little India smoothly. Great value for a private transfer.", helpful: 21 },
+      { name: "Kavitha Subramanian", date: "3 weeks ago", rating: 4, comment: "Reliable service for our family of 4. Driver was patient while we collected baggage. Only small delay at the meeting point but communication was excellent throughout.", helpful: 16 }
     ]
   },
   "singapore-airport-pickup-10-seater": {
@@ -3972,10 +3972,10 @@ export const toursData: Record<string, TourData> = {
     ],
     faqs: [],
     customerReviews: [
-      { name: "Vikram Reddy", date: "2 days ago", rating: 5, comment: "Perfect for our family of 8! The 10-seater van was spacious and comfortable. Driver was waiting right on time and helped with all our bags. Great start to our Singapore vacation!", helpful: 31 },
-      { name: "Neha Gupta", date: "1 week ago", rating: 5, comment: "Booked this for our group trip and it was worth every penny. Clean vehicle, professional driver, and smooth ride from Changi to Marina Bay area.", helpful: 24 },
-      { name: "Sanjay Patel", date: "2 weeks ago", rating: 5, comment: "Excellent service for large groups! We had 9 people with lots of luggage and everything fit perfectly. Driver was very helpful and knew all the routes.", helpful: 18 },
-      { name: "Kavitha Krishnan", date: "3 weeks ago", rating: 4, comment: "Very good experience. Spacious vehicle, friendly driver. The booking process was simple and confirmation was instant. Would use again!", helpful: 14 }
+      { name: "Ramesh Venkatesh", date: "2 days ago", rating: 5, comment: "Brilliant for our joint family trip! The 10-seater comfortably fit 9 of us with 6 large suitcases. Driver was incredibly helpful and the ride from Changi to Sentosa was smooth.", helpful: 36 },
+      { name: "Lakshmi Narayanan", date: "1 week ago", rating: 5, comment: "Booked for our office team outing and everyone was impressed. Spacious van, professional driver who knew all the shortcuts. Reached Marina Bay Sands in 30 minutes flat!", helpful: 28 },
+      { name: "Imran Hussain", date: "2 weeks ago", rating: 5, comment: "Excellent choice for large groups. Clean van with working AC, courteous driver who helped with heavy bags. Great value compared to booking multiple cabs.", helpful: 22 },
+      { name: "Shalini Deshmukh", date: "3 weeks ago", rating: 4, comment: "Good experience overall. Van was spacious and well-maintained. Small wait at Terminal 2 but driver communicated well. Would recommend for big families.", helpful: 17 }
     ]
   },
   "singapore-airport-dropoff-5-seater": {
@@ -4028,10 +4028,10 @@ export const toursData: Record<string, TourData> = {
     ],
     faqs: [],
     customerReviews: [
-      { name: "Arjun Sharma", date: "4 days ago", rating: 5, comment: "Stress-free airport drop off! Driver arrived 15 minutes early and got us to Changi with plenty of time to spare. Very reliable service.", helpful: 26 },
-      { name: "Meera Iyer", date: "1 week ago", rating: 5, comment: "Perfect end to our Singapore trip. Clean car, punctual driver, and smooth ride to the airport. Will definitely book again on our next visit.", helpful: 21 },
-      { name: "Rohit Verma", date: "2 weeks ago", rating: 5, comment: "Great service! Driver helped us with heavy luggage and made sure we reached the correct terminal. Very professional and courteous.", helpful: 17 },
-      { name: "Ananya Das", date: "3 weeks ago", rating: 4, comment: "Good experience overall. Driver was on time and the car was comfortable. Easy booking process and received confirmation immediately.", helpful: 13 }
+      { name: "Mahesh Chandra", date: "4 days ago", rating: 5, comment: "Punctual drop-off service! Driver arrived at our Orchard hotel 20 minutes early. Helped us load bags and got us to Changi Terminal 1 with time to spare for duty-free shopping.", helpful: 31 },
+      { name: "Geeta Krishnamurthy", date: "1 week ago", rating: 5, comment: "Perfect ending to our Singapore holiday. Clean sedan, courteous driver who knew the fastest route. Reached airport in just 35 minutes from Chinatown.", helpful: 25 },
+      { name: "Waseem Sheikh", date: "2 weeks ago", rating: 5, comment: "Very reliable service! Driver confirmed pickup the night before and was waiting in the lobby right on time. Smooth ride with no traffic issues.", helpful: 19 },
+      { name: "Padmini Ranganathan", date: "3 weeks ago", rating: 4, comment: "Good service for airport transfer. Driver was helpful with our shopping bags from Orchard. Only minor wait in lobby but otherwise excellent experience.", helpful: 14 }
     ]
   },
   "singapore-airport-dropoff-10-seater": {
@@ -4084,10 +4084,10 @@ export const toursData: Record<string, TourData> = {
     ],
     faqs: [],
     customerReviews: [
-      { name: "Suresh Kumar", date: "3 days ago", rating: 5, comment: "Excellent for our large family! The 10-seater was perfect for 8 of us plus all our luggage. Driver was very helpful and got us to Changi smoothly.", helpful: 29 },
-      { name: "Deepa Nair", date: "1 week ago", rating: 5, comment: "Booked for our group and couldn't be happier. Spacious van, professional driver, and arrived at the airport with lots of time. Highly recommend!", helpful: 23 },
-      { name: "Karthik Rajan", date: "2 weeks ago", rating: 5, comment: "Perfect for large groups! Very comfortable ride to the airport. Driver was punctual and helped with all the bags. Great value for money.", helpful: 18 },
-      { name: "Lakshmi Venkat", date: "3 weeks ago", rating: 4, comment: "Very good service. The van was clean and spacious. Driver arrived on time and was very polite. Would definitely use again.", helpful: 15 }
+      { name: "Naresh Agrawal", date: "3 days ago", rating: 5, comment: "Outstanding service for our extended family! The 10-seater van accommodated all 9 of us with lots of luggage from shopping. Driver was super friendly and got us to Terminal 3 on time.", helpful: 33 },
+      { name: "Sarita Bhardwaj", date: "1 week ago", rating: 5, comment: "Booked for our women's group trip and everything was perfect. Van was immaculate, driver was respectful and punctual. Reached Changi with 3 hours to spare!", helpful: 26 },
+      { name: "Ayesha Siddiqui", date: "2 weeks ago", rating: 5, comment: "Great for large families! Spacious and comfortable van. Driver helped load all our Mustafa Centre shopping bags. Highly recommend for groups.", helpful: 20 },
+      { name: "Sudhir Menon", date: "3 weeks ago", rating: 4, comment: "Reliable drop-off service. Van was clean with good AC. Driver arrived early and was very patient while we checked out. Would book again.", helpful: 16 }
     ]
   },
   "singapore-airport-night-pickup-5-seater": {
@@ -4141,10 +4141,10 @@ export const toursData: Record<string, TourData> = {
     ],
     faqs: [],
     customerReviews: [
-      { name: "Rahul Kapoor", date: "2 days ago", rating: 5, comment: "Our flight landed at 2 AM and the driver was already waiting! So grateful for this late-night service. Clean car and friendly driver made our arrival so easy.", helpful: 32 },
-      { name: "Pooja Mehta", date: "1 week ago", rating: 5, comment: "Excellent night transfer service! After a long red-eye flight, having someone ready to pick us up was a blessing. Very professional and punctual.", helpful: 25 },
-      { name: "Gaurav Singh", date: "2 weeks ago", rating: 5, comment: "Late night arrival and the driver was right there on time. Very comfortable ride to our hotel. Highly recommend for anyone with night flights!", helpful: 19 },
-      { name: "Shreya Bose", date: "3 weeks ago", rating: 4, comment: "Good service for early morning pickup. Driver was waiting and the car was clean. Only small wait to find the meeting point but otherwise perfect.", helpful: 14 }
+      { name: "Anand Chakraborty", date: "2 days ago", rating: 5, comment: "Our Mumbai flight landed at 1:30 AM and the driver was already at the arrival hall! After a tiring journey, this seamless pickup was exactly what we needed. Comfortable ride to Tanjong Pagar.", helpful: 38 },
+      { name: "Deepika Pillai", date: "1 week ago", rating: 5, comment: "Fantastic midnight service! Driver tracked our delayed flight and adjusted timing accordingly. So professional and the car was spotless despite the late hour.", helpful: 29 },
+      { name: "Faisal Ahmed", date: "2 weeks ago", rating: 5, comment: "Best night transfer service! Landed at 3 AM and driver was waiting with a name board. Quick, comfortable ride to Bugis. Essential for red-eye flights.", helpful: 23 },
+      { name: "Mridula Gopinath", date: "3 weeks ago", rating: 4, comment: "Reliable early morning pickup at 5 AM. Driver was punctual and the sedan was clean. Small confusion at Terminal 4 meeting point but resolved quickly. Good value.", helpful: 17 }
     ]
   },
   "singapore-airport-night-pickup-10-seater": {
@@ -4198,10 +4198,10 @@ export const toursData: Record<string, TourData> = {
     ],
     faqs: [],
     customerReviews: [
-      { name: "Nitin Malhotra", date: "3 days ago", rating: 5, comment: "Perfect for our family group! Flight landed at midnight and the 10-seater van was waiting. Spacious, comfortable, and driver was very helpful with luggage.", helpful: 28 },
-      { name: "Rekha Jain", date: "1 week ago", rating: 5, comment: "Excellent late night service for our big group. Van was clean and comfortable. Driver was punctual despite the late hour. Highly recommend!", helpful: 22 },
-      { name: "Anil Saxena", date: "2 weeks ago", rating: 5, comment: "Great option for families arriving late. The 10-seater fit all of us perfectly. Driver knew the route well and got us to the hotel quickly.", helpful: 17 },
-      { name: "Divya Rao", date: "3 weeks ago", rating: 4, comment: "Very good night transfer service. Spacious vehicle for our group of 8. Driver was waiting right on time. Would book again.", helpful: 14 }
+      { name: "Gopal Sundaram", date: "3 days ago", rating: 5, comment: "Lifesaver for our family! Flight from Chennai landed at 11:45 PM and the 10-seater was waiting. Fit all 8 of us plus luggage easily. Driver was so patient and helpful.", helpful: 35 },
+      { name: "Usha Raghavan", date: "1 week ago", rating: 5, comment: "Excellent midnight transfer for our tour group! Van was spacious with cold AC. Driver navigated to Clarke Quay hotel perfectly. Worth every rupee for peace of mind.", helpful: 27 },
+      { name: "Zaheer Abbas", date: "2 weeks ago", rating: 5, comment: "Our delayed flight landed at 2 AM and driver still waited. Amazing service! The 10-seater was comfortable for our tired group. Highly recommend for night arrivals.", helpful: 21 },
+      { name: "Bhavna Kulkarni", date: "3 weeks ago", rating: 4, comment: "Good night service for large groups. Van was clean and driver was friendly. Small delay in locating the van but driver communicated well via WhatsApp.", helpful: 16 }
     ]
   },
   "dubai-airport-pickup-zone1-7-seater": {
