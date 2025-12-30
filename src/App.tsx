@@ -251,15 +251,36 @@ const App = () => (
           <Route path="/singapore/airport-night-pickup-5-seater" element={<SingaporeAirportNightPickup5 />} />
           <Route path="/singapore/airport-night-pickup-10-seater" element={<SingaporeAirportNightPickup10 />} />
           <Route path="/dubai/transfers" element={<DubaiTransfers />} />
+          <Route path="/dubai/airport-pickup-zone1-4-seater" element={<DubaiAirportPickupZone1_4Seater />} />
           <Route path="/dubai/airport-pickup-zone1-7-seater" element={<DubaiAirportPickupZone1_7Seater />} />
           <Route path="/dubai/airport-pickup-zone1-12-seater" element={<DubaiAirportPickupZone1_12Seater />} />
-          <Route path="/dubai/airport-pickup-zone1-4-seater" element={<DubaiAirportPickupZone1_4Seater />} />
+          <Route path="/dubai/airport-pickup-zone2-4-seater" element={<DubaiAirportPickupZone2_4Seater />} />
           <Route path="/dubai/airport-pickup-zone2-7-seater" element={<DubaiAirportPickupZone2_7Seater />} />
           <Route path="/dubai/airport-pickup-zone2-12-seater" element={<DubaiAirportPickupZone2_12Seater />} />
+          <Route path="/dubai/airport-pickup-zone3-4-seater" element={<DubaiAirportPickupZone3_4Seater />} />
           <Route path="/dubai/airport-pickup-zone3-7-seater" element={<DubaiAirportPickupZone3_7Seater />} />
           <Route path="/dubai/airport-pickup-zone3-12-seater" element={<DubaiAirportPickupZone3_12Seater />} />
+          <Route path="/dubai/airport-pickup-zone4-4-seater" element={<DubaiAirportPickupZone4_4Seater />} />
+          <Route path="/dubai/airport-pickup-zone4-7-seater" element={<DubaiAirportPickupZone4_7Seater />} />
+          <Route path="/dubai/airport-pickup-zone4-12-seater" element={<DubaiAirportPickupZone4_12Seater />} />
+          <Route path="/dubai/airport-pickup-zone5-4-seater" element={<DubaiAirportPickupZone5_4Seater />} />
           <Route path="/dubai/airport-pickup-zone5-7-seater" element={<DubaiAirportPickupZone5_7Seater />} />
           <Route path="/dubai/airport-pickup-zone5-12-seater" element={<DubaiAirportPickupZone5_12Seater />} />
+          <Route path="/dubai/airport-dropoff-zone1-4-seater" element={<DubaiAirportDropoffZone1_4Seater />} />
+          <Route path="/dubai/airport-dropoff-zone1-7-seater" element={<DubaiAirportDropoffZone1_7Seater />} />
+          <Route path="/dubai/airport-dropoff-zone1-12-seater" element={<DubaiAirportDropoffZone1_12Seater />} />
+          <Route path="/dubai/airport-dropoff-zone2-4-seater" element={<DubaiAirportDropoffZone2_4Seater />} />
+          <Route path="/dubai/airport-dropoff-zone2-7-seater" element={<DubaiAirportDropoffZone2_7Seater />} />
+          <Route path="/dubai/airport-dropoff-zone2-12-seater" element={<DubaiAirportDropoffZone2_12Seater />} />
+          <Route path="/dubai/airport-dropoff-zone3-4-seater" element={<DubaiAirportDropoffZone3_4Seater />} />
+          <Route path="/dubai/airport-dropoff-zone3-7-seater" element={<DubaiAirportDropoffZone3_7Seater />} />
+          <Route path="/dubai/airport-dropoff-zone3-12-seater" element={<DubaiAirportDropoffZone3_12Seater />} />
+          <Route path="/dubai/airport-dropoff-zone4-4-seater" element={<DubaiAirportDropoffZone4_4Seater />} />
+          <Route path="/dubai/airport-dropoff-zone4-7-seater" element={<DubaiAirportDropoffZone4_7Seater />} />
+          <Route path="/dubai/airport-dropoff-zone4-12-seater" element={<DubaiAirportDropoffZone4_12Seater />} />
+          <Route path="/dubai/airport-dropoff-zone5-4-seater" element={<DubaiAirportDropoffZone5_4Seater />} />
+          <Route path="/dubai/airport-dropoff-zone5-7-seater" element={<DubaiAirportDropoffZone5_7Seater />} />
+          <Route path="/dubai/airport-dropoff-zone5-12-seater" element={<DubaiAirportDropoffZone5_12Seater />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

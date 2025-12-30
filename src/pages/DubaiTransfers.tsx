@@ -4,35 +4,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Clock, Users, Plane, Car, MapPin } from "lucide-react";
+import { Star, Clock, Users, Plane, Car, MapPin, ArrowUp, ArrowDown } from "lucide-react";
 
 const transfers = [
+  // Zone 1 Pickups
   {
     id: 1,
-    title: "Dubai Airport Pick Up to Zone 1 - 7 Seater",
-    price: 3000,
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop",
-    rating: 4.9,
-    reviews: 856,
-    duration: "Transfer",
-    capacity: "Up to 7 passengers",
-    slug: "/dubai/airport-pickup-zone1-7-seater",
-    category: "zone1"
-  },
-  {
-    id: 2,
-    title: "Dubai Airport Pick Up to Zone 1 - 12 Seater",
-    price: 4000,
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
-    rating: 4.9,
-    reviews: 654,
-    duration: "Transfer",
-    capacity: "Up to 12 passengers",
-    slug: "/dubai/airport-pickup-zone1-12-seater",
-    category: "zone1"
-  },
-  {
-    id: 3,
     title: "Dubai Airport Pick Up to Zone 1 - 4 Seater",
     price: 3300,
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop",
@@ -41,10 +18,91 @@ const transfers = [
     duration: "Transfer",
     capacity: "Up to 4 passengers",
     slug: "/dubai/airport-pickup-zone1-4-seater",
-    category: "zone1"
+    category: "zone1",
+    type: "pickup"
   },
   {
+    id: 2,
+    title: "Dubai Airport Pick Up to Zone 1 - 7 Seater",
+    price: 3000,
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop",
+    rating: 4.9,
+    reviews: 856,
+    duration: "Transfer",
+    capacity: "Up to 7 passengers",
+    slug: "/dubai/airport-pickup-zone1-7-seater",
+    category: "zone1",
+    type: "pickup"
+  },
+  {
+    id: 3,
+    title: "Dubai Airport Pick Up to Zone 1 - 12 Seater",
+    price: 4000,
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
+    rating: 4.9,
+    reviews: 654,
+    duration: "Transfer",
+    capacity: "Up to 12 passengers",
+    slug: "/dubai/airport-pickup-zone1-12-seater",
+    category: "zone1",
+    type: "pickup"
+  },
+  // Zone 1 Dropoffs
+  {
     id: 4,
+    title: "Dubai Airport Drop-Off from Zone 1 - 4 Seater",
+    price: 3300,
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 312,
+    duration: "Transfer",
+    capacity: "Up to 4 passengers",
+    slug: "/dubai/airport-dropoff-zone1-4-seater",
+    category: "zone1",
+    type: "dropoff"
+  },
+  {
+    id: 5,
+    title: "Dubai Airport Drop-Off from Zone 1 - 7 Seater",
+    price: 3000,
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop",
+    rating: 4.9,
+    reviews: 723,
+    duration: "Transfer",
+    capacity: "Up to 7 passengers",
+    slug: "/dubai/airport-dropoff-zone1-7-seater",
+    category: "zone1",
+    type: "dropoff"
+  },
+  {
+    id: 6,
+    title: "Dubai Airport Drop-Off from Zone 1 - 12 Seater",
+    price: 4000,
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 498,
+    duration: "Transfer",
+    capacity: "Up to 12 passengers",
+    slug: "/dubai/airport-dropoff-zone1-12-seater",
+    category: "zone1",
+    type: "dropoff"
+  },
+  // Zone 2 Pickups
+  {
+    id: 7,
+    title: "Dubai Airport Pick Up to Zone 2 - 4 Seater",
+    price: 3400,
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 356,
+    duration: "Transfer",
+    capacity: "Up to 4 passengers",
+    slug: "/dubai/airport-pickup-zone2-4-seater",
+    category: "zone2",
+    type: "pickup"
+  },
+  {
+    id: 8,
     title: "Dubai Airport Pick Up to Zone 2 - 7 Seater",
     price: 3500,
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop",
@@ -53,10 +111,11 @@ const transfers = [
     duration: "Transfer",
     capacity: "Up to 7 passengers",
     slug: "/dubai/airport-pickup-zone2-7-seater",
-    category: "zone2"
+    category: "zone2",
+    type: "pickup"
   },
   {
-    id: 5,
+    id: 9,
     title: "Dubai Airport Pick Up to Zone 2 - 12 Seater",
     price: 4200,
     image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
@@ -65,10 +124,65 @@ const transfers = [
     duration: "Transfer",
     capacity: "Up to 12 passengers",
     slug: "/dubai/airport-pickup-zone2-12-seater",
-    category: "zone2"
+    category: "zone2",
+    type: "pickup"
+  },
+  // Zone 2 Dropoffs
+  {
+    id: 10,
+    title: "Dubai Airport Drop-Off from Zone 2 - 4 Seater",
+    price: 3400,
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 289,
+    duration: "Transfer",
+    capacity: "Up to 4 passengers",
+    slug: "/dubai/airport-dropoff-zone2-4-seater",
+    category: "zone2",
+    type: "dropoff"
   },
   {
-    id: 6,
+    id: 11,
+    title: "Dubai Airport Drop-Off from Zone 2 - 7 Seater",
+    price: 3500,
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop",
+    rating: 4.9,
+    reviews: 612,
+    duration: "Transfer",
+    capacity: "Up to 7 passengers",
+    slug: "/dubai/airport-dropoff-zone2-7-seater",
+    category: "zone2",
+    type: "dropoff"
+  },
+  {
+    id: 12,
+    title: "Dubai Airport Drop-Off from Zone 2 - 12 Seater",
+    price: 4200,
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 421,
+    duration: "Transfer",
+    capacity: "Up to 12 passengers",
+    slug: "/dubai/airport-dropoff-zone2-12-seater",
+    category: "zone2",
+    type: "dropoff"
+  },
+  // Zone 3 Pickups
+  {
+    id: 13,
+    title: "Dubai Airport Pick Up to Zone 3 - 4 Seater",
+    price: 3900,
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 278,
+    duration: "Transfer",
+    capacity: "Up to 4 passengers",
+    slug: "/dubai/airport-pickup-zone3-4-seater",
+    category: "zone3",
+    type: "pickup"
+  },
+  {
+    id: 14,
     title: "Dubai Airport Pick Up to Zone 3 - 7 Seater",
     price: 4000,
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop",
@@ -77,10 +191,11 @@ const transfers = [
     duration: "Transfer",
     capacity: "Up to 7 passengers",
     slug: "/dubai/airport-pickup-zone3-7-seater",
-    category: "zone3"
+    category: "zone3",
+    type: "pickup"
   },
   {
-    id: 7,
+    id: 15,
     title: "Dubai Airport Pick Up to Zone 3 - 12 Seater",
     price: 4200,
     image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
@@ -89,10 +204,145 @@ const transfers = [
     duration: "Transfer",
     capacity: "Up to 12 passengers",
     slug: "/dubai/airport-pickup-zone3-12-seater",
-    category: "zone3"
+    category: "zone3",
+    type: "pickup"
+  },
+  // Zone 3 Dropoffs
+  {
+    id: 16,
+    title: "Dubai Airport Drop-Off from Zone 3 - 4 Seater",
+    price: 3900,
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 234,
+    duration: "Transfer",
+    capacity: "Up to 4 passengers",
+    slug: "/dubai/airport-dropoff-zone3-4-seater",
+    category: "zone3",
+    type: "dropoff"
   },
   {
-    id: 8,
+    id: 17,
+    title: "Dubai Airport Drop-Off from Zone 3 - 7 Seater",
+    price: 4000,
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop",
+    rating: 4.9,
+    reviews: 345,
+    duration: "Transfer",
+    capacity: "Up to 7 passengers",
+    slug: "/dubai/airport-dropoff-zone3-7-seater",
+    category: "zone3",
+    type: "dropoff"
+  },
+  {
+    id: 18,
+    title: "Dubai Airport Drop-Off from Zone 3 - 12 Seater",
+    price: 4200,
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 256,
+    duration: "Transfer",
+    capacity: "Up to 12 passengers",
+    slug: "/dubai/airport-dropoff-zone3-12-seater",
+    category: "zone3",
+    type: "dropoff"
+  },
+  // Zone 4 Pickups
+  {
+    id: 19,
+    title: "Dubai Airport Pick Up to Zone 4 - 4 Seater",
+    price: 5500,
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 187,
+    duration: "Transfer",
+    capacity: "Up to 4 passengers",
+    slug: "/dubai/airport-pickup-zone4-4-seater",
+    category: "zone4",
+    type: "pickup"
+  },
+  {
+    id: 20,
+    title: "Dubai Airport Pick Up to Zone 4 - 7 Seater",
+    price: 5700,
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop",
+    rating: 4.9,
+    reviews: 245,
+    duration: "Transfer",
+    capacity: "Up to 7 passengers",
+    slug: "/dubai/airport-pickup-zone4-7-seater",
+    category: "zone4",
+    type: "pickup"
+  },
+  {
+    id: 21,
+    title: "Dubai Airport Pick Up to Zone 4 - 12 Seater",
+    price: 6000,
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 178,
+    duration: "Transfer",
+    capacity: "Up to 12 passengers",
+    slug: "/dubai/airport-pickup-zone4-12-seater",
+    category: "zone4",
+    type: "pickup"
+  },
+  // Zone 4 Dropoffs
+  {
+    id: 22,
+    title: "Dubai Airport Drop-Off from Zone 4 - 4 Seater",
+    price: 5500,
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 156,
+    duration: "Transfer",
+    capacity: "Up to 4 passengers",
+    slug: "/dubai/airport-dropoff-zone4-4-seater",
+    category: "zone4",
+    type: "dropoff"
+  },
+  {
+    id: 23,
+    title: "Dubai Airport Drop-Off from Zone 4 - 7 Seater",
+    price: 5700,
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop",
+    rating: 4.9,
+    reviews: 212,
+    duration: "Transfer",
+    capacity: "Up to 7 passengers",
+    slug: "/dubai/airport-dropoff-zone4-7-seater",
+    category: "zone4",
+    type: "dropoff"
+  },
+  {
+    id: 24,
+    title: "Dubai Airport Drop-Off from Zone 4 - 12 Seater",
+    price: 6000,
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 145,
+    duration: "Transfer",
+    capacity: "Up to 12 passengers",
+    slug: "/dubai/airport-dropoff-zone4-12-seater",
+    category: "zone4",
+    type: "dropoff"
+  },
+  // Zone 5 Pickups
+  {
+    id: 25,
+    title: "Dubai Airport Pick Up to Zone 5 - 4 Seater",
+    price: 7200,
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 145,
+    duration: "Transfer",
+    capacity: "Up to 4 passengers",
+    slug: "/dubai/airport-pickup-zone5-4-seater",
+    category: "zone5",
+    type: "pickup"
+  },
+  {
+    id: 26,
     title: "Dubai Airport Pick Up to Zone 5 - 7 Seater",
     price: 7200,
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop",
@@ -101,10 +351,11 @@ const transfers = [
     duration: "Transfer",
     capacity: "Up to 7 passengers",
     slug: "/dubai/airport-pickup-zone5-7-seater",
-    category: "zone5"
+    category: "zone5",
+    type: "pickup"
   },
   {
-    id: 9,
+    id: 27,
     title: "Dubai Airport Pick Up to Zone 5 - 12 Seater",
     price: 8900,
     image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
@@ -113,16 +364,59 @@ const transfers = [
     duration: "Transfer",
     capacity: "Up to 12 passengers",
     slug: "/dubai/airport-pickup-zone5-12-seater",
-    category: "zone5"
+    category: "zone5",
+    type: "pickup"
+  },
+  // Zone 5 Dropoffs
+  {
+    id: 28,
+    title: "Dubai Airport Drop-Off from Zone 5 - 4 Seater",
+    price: 7200,
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 123,
+    duration: "Transfer",
+    capacity: "Up to 4 passengers",
+    slug: "/dubai/airport-dropoff-zone5-4-seater",
+    category: "zone5",
+    type: "dropoff"
+  },
+  {
+    id: 29,
+    title: "Dubai Airport Drop-Off from Zone 5 - 7 Seater",
+    price: 7200,
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop",
+    rating: 4.9,
+    reviews: 234,
+    duration: "Transfer",
+    capacity: "Up to 7 passengers",
+    slug: "/dubai/airport-dropoff-zone5-7-seater",
+    category: "zone5",
+    type: "dropoff"
+  },
+  {
+    id: 30,
+    title: "Dubai Airport Drop-Off from Zone 5 - 12 Seater",
+    price: 8900,
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 167,
+    duration: "Transfer",
+    capacity: "Up to 12 passengers",
+    slug: "/dubai/airport-dropoff-zone5-12-seater",
+    category: "zone5",
+    type: "dropoff"
   }
 ];
 
 const DubaiTransfers = () => {
+  const [filterZone, setFilterZone] = useState<string>("all");
   const [filterType, setFilterType] = useState<string>("all");
 
   const filteredTransfers = transfers.filter(transfer => {
-    if (filterType === "all") return true;
-    return transfer.category === filterType;
+    const zoneMatch = filterZone === "all" || transfer.category === filterZone;
+    const typeMatch = filterType === "all" || transfer.type === filterType;
+    return zoneMatch && typeMatch;
   });
 
   return (
@@ -153,7 +447,7 @@ const DubaiTransfers = () => {
               <span className="text-amber-400">Airport Transfers</span>
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-xl mb-6">
-              Hassle-free airport pickups with professional drivers across all Dubai zones
+              Hassle-free airport pickups and drop-offs with professional drivers across all Dubai zones
             </p>
             <div className="flex flex-wrap gap-4 text-white/70 text-sm">
               <div className="flex items-center gap-2">
@@ -175,42 +469,90 @@ const DubaiTransfers = () => {
 
       <main className="flex-1 container px-4 py-8">
         {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-3 mb-8">
-          <Button 
-            variant={filterType === "all" ? "default" : "outline"}
-            onClick={() => setFilterType("all")}
-          >
-            All Zones
-          </Button>
-          <Button 
-            variant={filterType === "zone1" ? "default" : "outline"}
-            onClick={() => setFilterType("zone1")}
-          >
-            <MapPin className="h-4 w-4 mr-2" />
-            Zone 1
-          </Button>
-          <Button 
-            variant={filterType === "zone2" ? "default" : "outline"}
-            onClick={() => setFilterType("zone2")}
-          >
-            <MapPin className="h-4 w-4 mr-2" />
-            Zone 2
-          </Button>
-          <Button 
-            variant={filterType === "zone3" ? "default" : "outline"}
-            onClick={() => setFilterType("zone3")}
-          >
-            <MapPin className="h-4 w-4 mr-2" />
-            Zone 3
-          </Button>
-          <Button 
-            variant={filterType === "zone5" ? "default" : "outline"}
-            onClick={() => setFilterType("zone5")}
-          >
-            <MapPin className="h-4 w-4 mr-2" />
-            Zone 5
-          </Button>
+        <div className="space-y-4 mb-8">
+          {/* Transfer Type Filter */}
+          <div className="flex flex-wrap gap-3">
+            <span className="text-sm font-medium text-muted-foreground self-center mr-2">Type:</span>
+            <Button 
+              variant={filterType === "all" ? "default" : "outline"}
+              onClick={() => setFilterType("all")}
+              size="sm"
+            >
+              All Transfers
+            </Button>
+            <Button 
+              variant={filterType === "pickup" ? "default" : "outline"}
+              onClick={() => setFilterType("pickup")}
+              size="sm"
+            >
+              <ArrowDown className="h-4 w-4 mr-2" />
+              Airport Pickup
+            </Button>
+            <Button 
+              variant={filterType === "dropoff" ? "default" : "outline"}
+              onClick={() => setFilterType("dropoff")}
+              size="sm"
+            >
+              <ArrowUp className="h-4 w-4 mr-2" />
+              Airport Drop-off
+            </Button>
+          </div>
+          
+          {/* Zone Filter */}
+          <div className="flex flex-wrap gap-3">
+            <span className="text-sm font-medium text-muted-foreground self-center mr-2">Zone:</span>
+            <Button 
+              variant={filterZone === "all" ? "default" : "outline"}
+              onClick={() => setFilterZone("all")}
+              size="sm"
+            >
+              All Zones
+            </Button>
+            <Button 
+              variant={filterZone === "zone1" ? "default" : "outline"}
+              onClick={() => setFilterZone("zone1")}
+              size="sm"
+            >
+              <MapPin className="h-4 w-4 mr-2" />
+              Zone 1
+            </Button>
+            <Button 
+              variant={filterZone === "zone2" ? "default" : "outline"}
+              onClick={() => setFilterZone("zone2")}
+              size="sm"
+            >
+              <MapPin className="h-4 w-4 mr-2" />
+              Zone 2
+            </Button>
+            <Button 
+              variant={filterZone === "zone3" ? "default" : "outline"}
+              onClick={() => setFilterZone("zone3")}
+              size="sm"
+            >
+              <MapPin className="h-4 w-4 mr-2" />
+              Zone 3
+            </Button>
+            <Button 
+              variant={filterZone === "zone4" ? "default" : "outline"}
+              onClick={() => setFilterZone("zone4")}
+              size="sm"
+            >
+              <MapPin className="h-4 w-4 mr-2" />
+              Zone 4
+            </Button>
+            <Button 
+              variant={filterZone === "zone5" ? "default" : "outline"}
+              onClick={() => setFilterZone("zone5")}
+              size="sm"
+            >
+              <MapPin className="h-4 w-4 mr-2" />
+              Zone 5
+            </Button>
+          </div>
         </div>
+
+        {/* Results Count */}
+        <p className="text-muted-foreground mb-4">{filteredTransfers.length} transfers available</p>
 
         {/* Transfer Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -223,8 +565,17 @@ const DubaiTransfers = () => {
                     alt={transfer.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 left-3 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    {transfer.category.replace('zone', 'Zone ')}
+                  <div className="absolute top-3 left-3 flex gap-2">
+                    <span className="bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      {transfer.category.replace('zone', 'Zone ')}
+                    </span>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      transfer.type === 'pickup' 
+                        ? 'bg-green-500 text-white' 
+                        : 'bg-blue-500 text-white'
+                    }`}>
+                      {transfer.type === 'pickup' ? 'Pickup' : 'Drop-off'}
+                    </span>
                   </div>
                 </div>
                 <CardContent className="p-4">
@@ -273,6 +624,7 @@ const DubaiTransfers = () => {
                 <li>• Zone 1: Deira, Bur Dubai, Downtown</li>
                 <li>• Zone 2: JBR, Marina, Palm Jumeirah</li>
                 <li>• Zone 3: JVC, Sports City, Motor City</li>
+                <li>• Zone 4: Dubai South, DWC Area</li>
                 <li>• Zone 5: Abu Dhabi, Al Ain</li>
               </ul>
             </div>
