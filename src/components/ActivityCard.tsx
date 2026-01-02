@@ -27,7 +27,9 @@ const ActivityCard = ({
 
   const handleCardClick = () => {
     if (slug) {
-      navigate(`/${slug}`);
+      // Handle both cases: slugs with or without leading slash
+      const path = slug.startsWith('/') ? slug : `/${slug}`;
+      navigate(path);
     }
   };
 
