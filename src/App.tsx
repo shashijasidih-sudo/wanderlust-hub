@@ -149,6 +149,7 @@ import DubaiAirportDropoffZone4_12Seater from "./pages/DubaiAirportDropoffZone4_
 import DubaiAirportDropoffZone5_4Seater from "./pages/DubaiAirportDropoffZone5_4Seater";
 import DubaiAirportDropoffZone5_7Seater from "./pages/DubaiAirportDropoffZone5_7Seater";
 import DubaiAirportDropoffZone5_12Seater from "./pages/DubaiAirportDropoffZone5_12Seater";
+import Auth from "./pages/Auth";
 
 const queryClient = new QueryClient();
 
@@ -304,6 +305,7 @@ const App = () => (
           <Route path="/dubai/airport-dropoff-zone5-4-seater" element={<DubaiAirportDropoffZone5_4Seater />} />
           <Route path="/dubai/airport-dropoff-zone5-7-seater" element={<DubaiAirportDropoffZone5_7Seater />} />
           <Route path="/dubai/airport-dropoff-zone5-12-seater" element={<DubaiAirportDropoffZone5_12Seater />} />
+          <Route path="/auth" element={<Auth />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
