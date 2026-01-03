@@ -59,10 +59,12 @@ const Header = () => {
             <Button variant="ghost" size="icon" className="hidden md:inline-flex">
               <ShoppingCart className="h-5 w-5" />
             </Button>
-            <Button variant="default" size="sm" className="hidden md:flex items-center gap-2">
-              <User className="h-4 w-4" />
-              Sign Up / Login
-            </Button>
+            <Link to="/auth">
+              <Button variant="default" size="sm" className="hidden md:flex items-center gap-2">
+                <User className="h-4 w-4" />
+                Sign Up / Login
+              </Button>
+            </Link>
             <Button 
               variant="ghost" 
               size="icon"
@@ -315,10 +317,12 @@ const Header = () => {
                 <ShoppingCart className="h-5 w-5" />
               </Button>
             </div>
-            <Button variant="default" className="w-full">
-              <User className="h-4 w-4 mr-2" />
-              Sign Up / Login
-            </Button>
+            <Link to="/auth" className="w-full">
+              <Button variant="default" className="w-full">
+                <User className="h-4 w-4 mr-2" />
+                Sign Up / Login
+              </Button>
+            </Link>
           </nav>
         </div>
       )}
