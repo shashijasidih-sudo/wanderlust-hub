@@ -1,18 +1,56 @@
-import { Menu, IndianRupee, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket } from "lucide-react";
+import { Menu, IndianRupee, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket, LogOut, CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/yellodae-logo.png";
 import SearchInput from "./SearchInput";
+import { supabase } from "@/integrations/supabase/client";
+import { User as SupabaseUser } from "@supabase/supabase-js";
+import { useToast } from "@/hooks/use-toast";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [user, setUser] = useState<SupabaseUser | null>(null);
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  useEffect(() => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        setUser(session?.user ?? null);
+      }
+    );
+
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleLogout = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      toast({
+        title: "Logout Failed",
+        description: error.message,
+        variant: "destructive",
+      });
+    } else {
+      toast({
+        title: "Logged Out",
+        description: "You have been successfully logged out.",
+      });
+      navigate("/");
+    }
+  };
 
   return (
     <header className="sticky top-14 md:top-16 z-50 w-full border-b" style={{ backgroundColor: '#EAF3FF' }}>
@@ -59,12 +97,49 @@ const Header = () => {
             <Button variant="ghost" size="icon" className="hidden md:inline-flex">
               <ShoppingCart className="h-5 w-5" />
             </Button>
-            <Link to="/auth">
-              <Button variant="default" size="sm" className="hidden md:flex items-center gap-2">
-                <User className="h-4 w-4" />
-                Sign Up / Login
-              </Button>
-            </Link>
+            {user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="default" size="sm" className="hidden md:flex items-center gap-2">
+                    <User className="h-4 w-4" />
+                    {user.email?.split('@')[0] || 'My Account'}
+                    <ChevronDown className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[180px]" align="end">
+                  <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
+                    <Link to="/profile" className="flex items-center w-full">
+                      <User className="h-4 w-4 mr-2" />
+                      Profile
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
+                    <Link to="/my-bookings" className="flex items-center w-full">
+                      <CalendarDays className="h-4 w-4 mr-2" />
+                      My Bookings
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
+                    <Link to="/wishlist" className="flex items-center w-full">
+                      <Heart className="h-4 w-4 mr-2" />
+                      Wishlist
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem className="cursor-pointer hover:bg-destructive/10 text-destructive" onClick={handleLogout}>
+                    <LogOut className="h-4 w-4 mr-2" />
+                    Log Out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link to="/auth">
+                <Button variant="default" size="sm" className="hidden md:flex items-center gap-2">
+                  <User className="h-4 w-4" />
+                  Sign Up / Login
+                </Button>
+              </Link>
+            )}
             <Button 
               variant="ghost" 
               size="icon"
@@ -317,12 +392,39 @@ const Header = () => {
                 <ShoppingCart className="h-5 w-5" />
               </Button>
             </div>
-            <Link to="/auth" className="w-full">
-              <Button variant="default" className="w-full">
-                <User className="h-4 w-4 mr-2" />
-                Sign Up / Login
-              </Button>
-            </Link>
+            {user ? (
+              <div className="flex flex-col gap-2 w-full">
+                <Link to="/profile" className="w-full">
+                  <Button variant="outline" className="w-full justify-start">
+                    <User className="h-4 w-4 mr-2" />
+                    Profile
+                  </Button>
+                </Link>
+                <Link to="/my-bookings" className="w-full">
+                  <Button variant="outline" className="w-full justify-start">
+                    <CalendarDays className="h-4 w-4 mr-2" />
+                    My Bookings
+                  </Button>
+                </Link>
+                <Link to="/wishlist" className="w-full">
+                  <Button variant="outline" className="w-full justify-start">
+                    <Heart className="h-4 w-4 mr-2" />
+                    Wishlist
+                  </Button>
+                </Link>
+                <Button variant="destructive" className="w-full justify-start" onClick={handleLogout}>
+                  <LogOut className="h-4 w-4 mr-2" />
+                  Log Out
+                </Button>
+              </div>
+            ) : (
+              <Link to="/auth" className="w-full">
+                <Button variant="default" className="w-full">
+                  <User className="h-4 w-4 mr-2" />
+                  Sign Up / Login
+                </Button>
+              </Link>
+            )}
           </nav>
         </div>
       )}
