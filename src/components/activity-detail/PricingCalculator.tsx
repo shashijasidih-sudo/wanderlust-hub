@@ -3,6 +3,7 @@ import { Calendar, Users, Minus, Plus, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
+import BookingModal from "@/components/BookingModal";
 
 interface PricingCalculatorProps {
   basePrice: number;
@@ -11,6 +12,7 @@ interface PricingCalculatorProps {
   tourTimings: string[];
   pricePerVehicle?: boolean;
   vehicleCapacity?: number;
+  tourSlug?: string;
 }
 
 const PricingCalculator = ({ 
@@ -19,13 +21,15 @@ const PricingCalculator = ({
   activityName, 
   tourTimings,
   pricePerVehicle = false,
-  vehicleCapacity = 5
+  vehicleCapacity = 5,
+  tourSlug = ""
 }: PricingCalculatorProps) => {
   const [adults, setAdults] = useState(pricePerVehicle ? 1 : 2);
   const [children, setChildren] = useState(0);
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [vehicles, setVehicles] = useState(1);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   const totalPrice = pricePerVehicle 
     ? vehicles * basePrice 
@@ -40,7 +44,7 @@ const PricingCalculator = ({
       toast.error("Please select a tour timing");
       return;
     }
-    toast.success("Booking initiated! Redirecting to checkout...");
+    setIsBookingModalOpen(true);
   };
 
   const handleAddToCart = () => {
@@ -316,6 +320,15 @@ const PricingCalculator = ({
           </p>
         </div>
       </CardContent>
+
+      <BookingModal
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
+        tourName={activityName}
+        tourSlug={tourSlug}
+        pricePerAdult={basePrice}
+        pricePerChild={childPrice}
+      />
     </Card>
   );
 };
