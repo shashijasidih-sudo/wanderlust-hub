@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import HeroSlider from "./activity-detail/HeroSlider";
@@ -20,6 +21,10 @@ interface TourBookingProps {
 
 const TourBooking = ({ tourData }: TourBookingProps) => {
   const itineraryRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+  
+  // Get the current path as the tour slug (remove leading slash)
+  const tourSlug = location.pathname.slice(1);
 
   const scrollToItinerary = () => {
     itineraryRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -127,6 +132,7 @@ const TourBooking = ({ tourData }: TourBookingProps) => {
                 tourTimings={tourData.tourTimings}
                 pricePerVehicle={tourData.pricePerVehicle}
                 vehicleCapacity={tourData.vehicleCapacity}
+                tourSlug={tourSlug}
               />
             </div>
           </div>

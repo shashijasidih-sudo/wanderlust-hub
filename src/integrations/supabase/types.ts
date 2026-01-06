@@ -14,6 +14,71 @@ export type Database = {
   }
   public: {
     Tables: {
+      bookings: {
+        Row: {
+          adults: number
+          children: number
+          contact_email: string
+          contact_name: string
+          contact_phone: string | null
+          created_at: string
+          currency: string
+          id: string
+          special_requests: string | null
+          status: Database["public"]["Enums"]["booking_status"]
+          total_price: number
+          tour_date: string
+          tour_name: string
+          tour_slug: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          adults?: number
+          children?: number
+          contact_email: string
+          contact_name: string
+          contact_phone?: string | null
+          created_at?: string
+          currency?: string
+          id?: string
+          special_requests?: string | null
+          status?: Database["public"]["Enums"]["booking_status"]
+          total_price: number
+          tour_date: string
+          tour_name: string
+          tour_slug: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          adults?: number
+          children?: number
+          contact_email?: string
+          contact_name?: string
+          contact_phone?: string | null
+          created_at?: string
+          currency?: string
+          id?: string
+          special_requests?: string | null
+          status?: Database["public"]["Enums"]["booking_status"]
+          total_price?: number
+          tour_date?: string
+          tour_name?: string
+          tour_slug?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "bookings_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       profiles: {
         Row: {
           created_at: string
@@ -43,7 +108,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      booking_status: "pending" | "confirmed" | "cancelled" | "completed"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -170,6 +235,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      booking_status: ["pending", "confirmed", "cancelled", "completed"],
+    },
   },
 } as const
