@@ -4,10 +4,22 @@ import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, CalendarDays, MapPin, Search, Users, Clock } from "lucide-react";
+import { Loader2, CalendarDays, Search, Users, XCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { format } from "date-fns";
+import { useToast } from "@/hooks/use-toast";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 interface Booking {
   id: string;
@@ -33,7 +45,38 @@ const statusColors: Record<string, string> = {
 const MyBookings = () => {
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [cancellingId, setCancellingId] = useState<string | null>(null);
   const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleCancelBooking = async (bookingId: string, tourName: string) => {
+    setCancellingId(bookingId);
+    try {
+      const { error } = await supabase
+        .from("bookings")
+        .update({ status: "cancelled" })
+        .eq("id", bookingId);
+
+      if (error) throw error;
+
+      setBookings(prev =>
+        prev.map(b => (b.id === bookingId ? { ...b, status: "cancelled" as const } : b))
+      );
+
+      toast({
+        title: "Booking Cancelled",
+        description: `Your booking for ${tourName} has been cancelled.`,
+      });
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: error.message || "Failed to cancel booking. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setCancellingId(null);
+    }
+  };
 
   useEffect(() => {
     const checkAuthAndFetchBookings = async () => {
@@ -152,6 +195,44 @@ const MyBookings = () => {
                             ₹{booking.total_price.toLocaleString()}
                           </div>
                         </div>
+
+                        {booking.status === "pending" && (
+                          <div className="mt-4 pt-4 border-t">
+                            <AlertDialog>
+                              <AlertDialogTrigger asChild>
+                                <Button
+                                  variant="destructive"
+                                  size="sm"
+                                  disabled={cancellingId === booking.id}
+                                >
+                                  {cancellingId === booking.id ? (
+                                    <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                                  ) : (
+                                    <XCircle className="h-4 w-4 mr-2" />
+                                  )}
+                                  Cancel Booking
+                                </Button>
+                              </AlertDialogTrigger>
+                              <AlertDialogContent>
+                                <AlertDialogHeader>
+                                  <AlertDialogTitle>Cancel Booking?</AlertDialogTitle>
+                                  <AlertDialogDescription>
+                                    Are you sure you want to cancel your booking for "{booking.tour_name}"? This action cannot be undone.
+                                  </AlertDialogDescription>
+                                </AlertDialogHeader>
+                                <AlertDialogFooter>
+                                  <AlertDialogCancel>Keep Booking</AlertDialogCancel>
+                                  <AlertDialogAction
+                                    onClick={() => handleCancelBooking(booking.id, booking.tour_name)}
+                                    className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                                  >
+                                    Yes, Cancel
+                                  </AlertDialogAction>
+                                </AlertDialogFooter>
+                              </AlertDialogContent>
+                            </AlertDialog>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </CardContent>
