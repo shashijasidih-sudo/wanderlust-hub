@@ -100,6 +100,36 @@ export type Database = {
         }
         Relationships: []
       }
+      wishlists: {
+        Row: {
+          created_at: string
+          id: string
+          tour_image: string | null
+          tour_name: string
+          tour_price: number | null
+          tour_slug: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          tour_image?: string | null
+          tour_name: string
+          tour_price?: number | null
+          tour_slug: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          tour_image?: string | null
+          tour_name?: string
+          tour_price?: number | null
+          tour_slug?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
