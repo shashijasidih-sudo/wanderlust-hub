@@ -20,6 +20,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface Booking {
   id: string;
@@ -42,12 +43,24 @@ const statusColors: Record<string, string> = {
   completed: "bg-blue-100 text-blue-800 border-blue-200",
 };
 
+type StatusFilter = "all" | "pending" | "confirmed" | "cancelled" | "completed";
+
 const MyBookings = () => {
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [cancellingId, setCancellingId] = useState<string | null>(null);
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
   const navigate = useNavigate();
   const { toast } = useToast();
+
+  const filteredBookings = statusFilter === "all" 
+    ? bookings 
+    : bookings.filter(b => b.status === statusFilter);
+
+  const getStatusCount = (status: StatusFilter) => {
+    if (status === "all") return bookings.length;
+    return bookings.filter(b => b.status === status).length;
+  };
 
   const handleCancelBooking = async (bookingId: string, tourName: string) => {
     setCancellingId(bookingId);
@@ -124,17 +137,41 @@ const MyBookings = () => {
       <Header />
       <main className="container px-4 md:px-6 py-8 mt-16">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8 flex items-center gap-3">
+          <h1 className="text-3xl font-bold mb-6 flex items-center gap-3">
             <CalendarDays className="h-8 w-8 text-primary" />
             My Bookings
           </h1>
 
-          {bookings.length === 0 ? (
+          <Tabs value={statusFilter} onValueChange={(v) => setStatusFilter(v as StatusFilter)} className="mb-6">
+            <TabsList className="grid w-full grid-cols-5">
+              <TabsTrigger value="all" className="text-xs sm:text-sm">
+                All ({getStatusCount("all")})
+              </TabsTrigger>
+              <TabsTrigger value="pending" className="text-xs sm:text-sm">
+                Pending ({getStatusCount("pending")})
+              </TabsTrigger>
+              <TabsTrigger value="confirmed" className="text-xs sm:text-sm">
+                Confirmed ({getStatusCount("confirmed")})
+              </TabsTrigger>
+              <TabsTrigger value="cancelled" className="text-xs sm:text-sm">
+                Cancelled ({getStatusCount("cancelled")})
+              </TabsTrigger>
+              <TabsTrigger value="completed" className="text-xs sm:text-sm">
+                Completed ({getStatusCount("completed")})
+              </TabsTrigger>
+            </TabsList>
+          </Tabs>
+
+          {filteredBookings.length === 0 ? (
             <Card>
               <CardHeader>
-                <CardTitle>Your Upcoming & Past Bookings</CardTitle>
+                <CardTitle>
+                  {statusFilter === "all" ? "Your Upcoming & Past Bookings" : `${statusFilter.charAt(0).toUpperCase() + statusFilter.slice(1)} Bookings`}
+                </CardTitle>
                 <CardDescription>
-                  View and manage all your tour bookings
+                  {statusFilter === "all" 
+                    ? "View and manage all your tour bookings" 
+                    : `No ${statusFilter} bookings found`}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -142,22 +179,28 @@ const MyBookings = () => {
                   <div className="rounded-full bg-muted p-6 mb-4">
                     <CalendarDays className="h-12 w-12 text-muted-foreground" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">No Bookings Yet</h3>
+                  <h3 className="text-lg font-semibold mb-2">
+                    {bookings.length === 0 ? "No Bookings Yet" : `No ${statusFilter} Bookings`}
+                  </h3>
                   <p className="text-muted-foreground mb-6 max-w-md">
-                    You haven't made any bookings yet. Start exploring our amazing tours and activities!
+                    {bookings.length === 0 
+                      ? "You haven't made any bookings yet. Start exploring our amazing tours and activities!"
+                      : `You don't have any ${statusFilter} bookings at the moment.`}
                   </p>
-                  <Link to="/thailand">
-                    <Button>
-                      <Search className="mr-2 h-4 w-4" />
-                      Explore Tours
-                    </Button>
-                  </Link>
+                  {bookings.length === 0 && (
+                    <Link to="/thailand">
+                      <Button>
+                        <Search className="mr-2 h-4 w-4" />
+                        Explore Tours
+                      </Button>
+                    </Link>
+                  )}
                 </div>
               </CardContent>
             </Card>
           ) : (
             <div className="space-y-4">
-              {bookings.map((booking) => (
+              {filteredBookings.map((booking) => (
                 <Card key={booking.id} className="overflow-hidden">
                   <CardContent className="p-0">
                     <div className="flex flex-col md:flex-row">
