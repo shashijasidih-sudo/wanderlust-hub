@@ -1,37 +1,93 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Loader2, Heart, Search } from "lucide-react";
+import { Heart, Loader2, Trash2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
+
+interface WishlistItem {
+  id: string;
+  tour_slug: string;
+  tour_name: string;
+  tour_image: string | null;
+  tour_price: number | null;
+  created_at: string;
+}
 
 const Wishlist = () => {
-  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(true);
+  const [wishlistItems, setWishlistItems] = useState<WishlistItem[]>([]);
 
   useEffect(() => {
-    const checkAuth = async () => {
+    const checkAuthAndFetchWishlist = async () => {
       const { data: { session } } = await supabase.auth.getSession();
+      
       if (!session) {
         navigate("/auth");
         return;
       }
+
+      const { data, error } = await supabase
+        .from("wishlists")
+        .select("*")
+        .order("created_at", { ascending: false });
+
+      if (error) {
+        toast({
+          title: "Error",
+          description: "Failed to load wishlist",
+          variant: "destructive",
+        });
+      } else {
+        setWishlistItems(data || []);
+      }
+
       setIsLoading(false);
     };
 
-    checkAuth();
+    checkAuthAndFetchWishlist();
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      if (!session) {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
+      if (event === "SIGNED_OUT") {
         navigate("/auth");
       }
     });
 
     return () => subscription.unsubscribe();
-  }, [navigate]);
+  }, [navigate, toast]);
+
+  const handleRemoveFromWishlist = async (id: string, tourName: string) => {
+    try {
+      const { error } = await supabase
+        .from("wishlists")
+        .delete()
+        .eq("id", id);
+
+      if (error) throw error;
+
+      setWishlistItems(prev => prev.filter(item => item.id !== id));
+      toast({
+        title: "Removed from wishlist",
+        description: `${tourName} has been removed from your wishlist.`,
+      });
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: error.message || "Failed to remove from wishlist",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const handleViewTour = (slug: string) => {
+    const path = slug.startsWith('/') ? slug : `/${slug}`;
+    navigate(path);
+  };
 
   if (isLoading) {
     return (
@@ -44,40 +100,73 @@ const Wishlist = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="container px-4 md:px-6 py-8 mt-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8 flex items-center gap-3">
-            <Heart className="h-8 w-8 text-primary" />
-            My Wishlist
-          </h1>
-          
-          <Card>
-            <CardHeader>
-              <CardTitle>Saved Tours & Activities</CardTitle>
-              <CardDescription>
-                Keep track of tours you want to book later
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-col items-center justify-center py-12 text-center">
-                <div className="rounded-full bg-muted p-6 mb-4">
-                  <Heart className="h-12 w-12 text-muted-foreground" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Your Wishlist is Empty</h3>
-                <p className="text-muted-foreground mb-6 max-w-md">
-                  Save your favorite tours and activities to easily find them later. Click the heart icon on any tour to add it here!
-                </p>
-                <Link to="/thailand">
-                  <Button>
-                    <Search className="mr-2 h-4 w-4" />
-                    Discover Tours
-                  </Button>
-                </Link>
-              </div>
+      
+      <main className="container px-4 py-8 md:py-12 mt-16">
+        <h1 className="text-3xl font-bold mb-8 flex items-center gap-3">
+          <Heart className="h-8 w-8 text-primary" />
+          My Wishlist
+        </h1>
+
+        {wishlistItems.length === 0 ? (
+          <Card className="p-8 text-center">
+            <CardContent className="flex flex-col items-center gap-4 pt-6">
+              <Heart className="h-16 w-16 text-muted-foreground" />
+              <h2 className="text-xl font-semibold">Your wishlist is empty</h2>
+              <p className="text-muted-foreground">
+                Start exploring tours and save your favorites here!
+              </p>
+              <Button onClick={() => navigate("/thailand")}>
+                Discover Tours
+              </Button>
             </CardContent>
           </Card>
-        </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {wishlistItems.map((item) => (
+              <Card key={item.id} className="overflow-hidden group hover:shadow-card-hover transition-all">
+                <div className="relative h-48">
+                  <img 
+                    src={item.tour_image || "/placeholder.svg"} 
+                    alt={item.tour_name}
+                    className="w-full h-full object-cover cursor-pointer group-hover:scale-105 transition-transform duration-300"
+                    onClick={() => handleViewTour(item.tour_slug)}
+                  />
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="absolute top-2 right-2 bg-white/80 hover:bg-white rounded-full"
+                    onClick={() => handleRemoveFromWishlist(item.id, item.tour_name)}
+                  >
+                    <Trash2 className="h-4 w-4 text-red-500" />
+                  </Button>
+                </div>
+                <CardContent className="p-4">
+                  <h3 
+                    className="font-semibold text-lg mb-2 cursor-pointer hover:text-primary transition-colors line-clamp-2"
+                    onClick={() => handleViewTour(item.tour_slug)}
+                  >
+                    {item.tour_name}
+                  </h3>
+                  <div className="flex items-center justify-between">
+                    {item.tour_price && (
+                      <p className="text-lg font-bold text-primary">
+                        INR {item.tour_price.toLocaleString('en-IN')}
+                      </p>
+                    )}
+                    <Button 
+                      size="sm"
+                      onClick={() => handleViewTour(item.tour_slug)}
+                    >
+                      View Tour
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        )}
       </main>
+
       <Footer />
     </div>
   );

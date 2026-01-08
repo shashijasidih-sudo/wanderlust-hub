@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Star, CheckCircle } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useNavigate } from "react-router-dom";
+import WishlistButton from "./WishlistButton";
 
 interface ActivityCardProps {
   title: string;
@@ -46,9 +47,18 @@ const ActivityCard = ({
               Recommended
             </div>
           )}
-          <button className="absolute top-2 right-2 bg-[#F15A24] text-white font-bold px-4 py-1.5 rounded-tl-none rounded-tr-lg rounded-bl-lg rounded-br-none shadow-md hover:bg-[#d94d1c] transition-colors">
-            BOOK NOW
-          </button>
+          <div className="absolute top-2 right-2 flex gap-2">
+            <WishlistButton
+              tourSlug={slug || ''}
+              tourName={title}
+              tourImage={image}
+              tourPrice={price}
+              size="sm"
+            />
+            <button className="bg-[#F15A24] text-white font-bold px-4 py-1.5 rounded-tl-none rounded-tr-lg rounded-bl-lg rounded-br-none shadow-md hover:bg-[#d94d1c] transition-colors">
+              BOOK NOW
+            </button>
+          </div>
         </div>
         
         <div className="flex-1 p-4 flex flex-col">
@@ -119,9 +129,18 @@ const ActivityCard = ({
             Recommended
           </div>
         )}
-        <button className="absolute top-2 right-2 bg-[#F15A24] text-white font-bold px-4 py-1.5 rounded-tl-none rounded-tr-lg rounded-bl-lg rounded-br-none shadow-md hover:bg-[#d94d1c] transition-colors">
-          BOOK NOW
-        </button>
+        <div className="absolute top-2 right-2 flex gap-2">
+          <WishlistButton
+            tourSlug={slug || ''}
+            tourName={title}
+            tourImage={image}
+            tourPrice={price}
+            size="sm"
+          />
+          <button className="bg-[#F15A24] text-white font-bold px-4 py-1.5 rounded-tl-none rounded-tr-lg rounded-bl-lg rounded-br-none shadow-md hover:bg-[#d94d1c] transition-colors">
+            BOOK NOW
+          </button>
+        </div>
       </div>
       
       <div className="p-4">
