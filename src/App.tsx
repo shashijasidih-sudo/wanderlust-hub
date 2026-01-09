@@ -154,18 +154,10 @@ import Profile from "./pages/Profile";
 import MyBookings from "./pages/MyBookings";
 import Wishlist from "./pages/Wishlist";
 import BangkokTransfers from "./pages/BangkokTransfers";
-import BangkokBkkAirportPickupSedan from "./pages/BangkokBkkAirportPickupSedan";
-import BangkokBkkAirportPickupSuv from "./pages/BangkokBkkAirportPickupSuv";
-import BangkokBkkAirportPickupVan from "./pages/BangkokBkkAirportPickupVan";
-import BangkokDmkAirportPickupSedan from "./pages/BangkokDmkAirportPickupSedan";
-import BangkokDmkAirportPickupSuv from "./pages/BangkokDmkAirportPickupSuv";
-import BangkokDmkAirportPickupVan from "./pages/BangkokDmkAirportPickupVan";
-import BangkokBkkAirportDropoffSedan from "./pages/BangkokBkkAirportDropoffSedan";
-import BangkokBkkAirportDropoffSuv from "./pages/BangkokBkkAirportDropoffSuv";
-import BangkokBkkAirportDropoffVan from "./pages/BangkokBkkAirportDropoffVan";
-import BangkokTempleTourAirportSedan from "./pages/BangkokTempleTourAirportSedan";
-import BangkokTempleTourAirportSuv from "./pages/BangkokTempleTourAirportSuv";
-import BangkokTempleTourAirportVan from "./pages/BangkokTempleTourAirportVan";
+import BangkokBkkAirportPickup from "./pages/BangkokBkkAirportPickup";
+import BangkokDmkAirportPickup from "./pages/BangkokDmkAirportPickup";
+import BangkokBkkAirportDropoff from "./pages/BangkokBkkAirportDropoff";
+import BangkokTempleTourAirport from "./pages/BangkokTempleTourAirport";
 
 const queryClient = new QueryClient();
 
@@ -326,18 +318,10 @@ const App = () => (
           <Route path="/my-bookings" element={<MyBookings />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/bangkok/transfers" element={<BangkokTransfers />} />
-          <Route path="/bangkok/bkk-airport-pickup-sedan" element={<BangkokBkkAirportPickupSedan />} />
-          <Route path="/bangkok/bkk-airport-pickup-suv" element={<BangkokBkkAirportPickupSuv />} />
-          <Route path="/bangkok/bkk-airport-pickup-van" element={<BangkokBkkAirportPickupVan />} />
-          <Route path="/bangkok/dmk-airport-pickup-sedan" element={<BangkokDmkAirportPickupSedan />} />
-          <Route path="/bangkok/dmk-airport-pickup-suv" element={<BangkokDmkAirportPickupSuv />} />
-          <Route path="/bangkok/dmk-airport-pickup-van" element={<BangkokDmkAirportPickupVan />} />
-          <Route path="/bangkok/bkk-airport-dropoff-sedan" element={<BangkokBkkAirportDropoffSedan />} />
-          <Route path="/bangkok/bkk-airport-dropoff-suv" element={<BangkokBkkAirportDropoffSuv />} />
-          <Route path="/bangkok/bkk-airport-dropoff-van" element={<BangkokBkkAirportDropoffVan />} />
-          <Route path="/bangkok/temple-tour-airport-sedan" element={<BangkokTempleTourAirportSedan />} />
-          <Route path="/bangkok/temple-tour-airport-suv" element={<BangkokTempleTourAirportSuv />} />
-          <Route path="/bangkok/temple-tour-airport-van" element={<BangkokTempleTourAirportVan />} />
+          <Route path="/bangkok/bkk-airport-pickup" element={<BangkokBkkAirportPickup />} />
+          <Route path="/bangkok/dmk-airport-pickup" element={<BangkokDmkAirportPickup />} />
+          <Route path="/bangkok/bkk-airport-dropoff" element={<BangkokBkkAirportDropoff />} />
+          <Route path="/bangkok/temple-tour-airport" element={<BangkokTempleTourAirport />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
