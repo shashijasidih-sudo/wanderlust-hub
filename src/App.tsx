@@ -158,6 +158,14 @@ import BangkokBkkAirportPickup from "./pages/BangkokBkkAirportPickup";
 import BangkokDmkAirportPickup from "./pages/BangkokDmkAirportPickup";
 import BangkokBkkAirportDropoff from "./pages/BangkokBkkAirportDropoff";
 import BangkokTempleTourAirport from "./pages/BangkokTempleTourAirport";
+import BangkokDmkAirportDropoff from "./pages/BangkokDmkAirportDropoff";
+import BangkokTempleTourDmkAirport from "./pages/BangkokTempleTourDmkAirport";
+import BangkokSafariWorldBkkAirport from "./pages/BangkokSafariWorldBkkAirport";
+import BangkokSafariWorldDmkAirport from "./pages/BangkokSafariWorldDmkAirport";
+import BangkokCityHourlyRental from "./pages/BangkokCityHourlyRental";
+import BangkokToPattaya from "./pages/BangkokToPattaya";
+import BangkokCityTourPattaya from "./pages/BangkokCityTourPattaya";
+import BangkokTigerTopiaPattaya from "./pages/BangkokTigerTopiaPattaya";
 
 const queryClient = new QueryClient();
 
@@ -321,7 +329,15 @@ const App = () => (
           <Route path="/bangkok/bkk-airport-pickup" element={<BangkokBkkAirportPickup />} />
           <Route path="/bangkok/dmk-airport-pickup" element={<BangkokDmkAirportPickup />} />
           <Route path="/bangkok/bkk-airport-dropoff" element={<BangkokBkkAirportDropoff />} />
+          <Route path="/bangkok/dmk-airport-dropoff" element={<BangkokDmkAirportDropoff />} />
           <Route path="/bangkok/temple-tour-airport" element={<BangkokTempleTourAirport />} />
+          <Route path="/bangkok/temple-tour-dmk-airport" element={<BangkokTempleTourDmkAirport />} />
+          <Route path="/bangkok/safari-world-bkk-airport" element={<BangkokSafariWorldBkkAirport />} />
+          <Route path="/bangkok/safari-world-dmk-airport" element={<BangkokSafariWorldDmkAirport />} />
+          <Route path="/bangkok/city-hourly-rental" element={<BangkokCityHourlyRental />} />
+          <Route path="/bangkok/to-pattaya" element={<BangkokToPattaya />} />
+          <Route path="/bangkok/city-tour-pattaya" element={<BangkokCityTourPattaya />} />
+          <Route path="/bangkok/tiger-topia-pattaya" element={<BangkokTigerTopiaPattaya />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
