@@ -219,7 +219,7 @@ const Header = () => {
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
                 <Ship className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/pattaya" className="w-full font-medium">Pattaya</Link>
+                <Link to="/pattaya/transfers" className="w-full font-medium">Pattaya</Link>
               </DropdownMenuItem>
               <div className="h-px bg-border my-2" />
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">

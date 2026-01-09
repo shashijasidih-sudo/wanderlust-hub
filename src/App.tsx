@@ -166,6 +166,18 @@ import BangkokCityHourlyRental from "./pages/BangkokCityHourlyRental";
 import BangkokToPattaya from "./pages/BangkokToPattaya";
 import BangkokCityTourPattaya from "./pages/BangkokCityTourPattaya";
 import BangkokTigerTopiaPattaya from "./pages/BangkokTigerTopiaPattaya";
+import PattayaTransfers from "./pages/PattayaTransfers";
+import PattayaBkkAirportPickup from "./pages/PattayaBkkAirportPickup";
+import PattayaBkkTigerTopiaPickup from "./pages/PattayaBkkTigerTopiaPickup";
+import PattayaDmkAirportPickup from "./pages/PattayaDmkAirportPickup";
+import PattayaDmkTigerTopiaPickup from "./pages/PattayaDmkTigerTopiaPickup";
+import PattayaBkkAirportDropoff from "./pages/PattayaBkkAirportDropoff";
+import PattayaTempleTourBkkAirport from "./pages/PattayaTempleTourBkkAirport";
+import PattayaSafariWorldBkkAirport from "./pages/PattayaSafariWorldBkkAirport";
+import PattayaDmkAirportDropoff from "./pages/PattayaDmkAirportDropoff";
+import PattayaTempleTourDmkAirport from "./pages/PattayaTempleTourDmkAirport";
+import PattayaIndraSquareDmkAirport from "./pages/PattayaIndraSquareDmkAirport";
+import PattayaCityHourlyRental from "./pages/PattayaCityHourlyRental";
 
 const queryClient = new QueryClient();
 
@@ -338,6 +350,18 @@ const App = () => (
           <Route path="/bangkok/to-pattaya" element={<BangkokToPattaya />} />
           <Route path="/bangkok/city-tour-pattaya" element={<BangkokCityTourPattaya />} />
           <Route path="/bangkok/tiger-topia-pattaya" element={<BangkokTigerTopiaPattaya />} />
+          <Route path="/pattaya/transfers" element={<PattayaTransfers />} />
+          <Route path="/pattaya/bkk-airport-pickup" element={<PattayaBkkAirportPickup />} />
+          <Route path="/pattaya/bkk-tiger-topia-pickup" element={<PattayaBkkTigerTopiaPickup />} />
+          <Route path="/pattaya/dmk-airport-pickup" element={<PattayaDmkAirportPickup />} />
+          <Route path="/pattaya/dmk-tiger-topia-pickup" element={<PattayaDmkTigerTopiaPickup />} />
+          <Route path="/pattaya/bkk-airport-dropoff" element={<PattayaBkkAirportDropoff />} />
+          <Route path="/pattaya/temple-tour-bkk-airport" element={<PattayaTempleTourBkkAirport />} />
+          <Route path="/pattaya/safari-world-bkk-airport" element={<PattayaSafariWorldBkkAirport />} />
+          <Route path="/pattaya/dmk-airport-dropoff" element={<PattayaDmkAirportDropoff />} />
+          <Route path="/pattaya/temple-tour-dmk-airport" element={<PattayaTempleTourDmkAirport />} />
+          <Route path="/pattaya/indra-square-dmk-airport" element={<PattayaIndraSquareDmkAirport />} />
+          <Route path="/pattaya/city-hourly-rental" element={<PattayaCityHourlyRental />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
