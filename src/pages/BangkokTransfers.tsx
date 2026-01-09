@@ -7,165 +7,69 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star, Clock, Users, Plane, Car, Building2, MapPin } from "lucide-react";
 
 const transfers = [
-  // Suvarnabhumi Airport (BKK) Pickups
   {
     id: 1,
-    title: "BKK Airport to Bangkok Hotel - Sedan (3 Pax)",
+    title: "BKK Airport to Bangkok Hotel",
+    subtitle: "Suvarnabhumi International Airport Pickup",
     price: 2700,
+    priceLabel: "From",
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop",
     rating: 4.9,
     reviews: 856,
     duration: "Transfer",
-    capacity: "Up to 3 passengers",
-    slug: "/bangkok/bkk-airport-pickup-sedan",
+    capacity: "Sedan / SUV / Van",
+    slug: "/bangkok/bkk-airport-pickup",
     type: "pickup",
-    category: "airport"
+    category: "airport",
+    vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"]
   },
   {
     id: 2,
-    title: "BKK Airport to Bangkok Hotel - SUV (4 Pax)",
-    price: 2900,
-    image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&auto=format&fit=crop",
-    rating: 4.9,
-    reviews: 654,
-    duration: "Transfer",
-    capacity: "Up to 4 passengers",
-    slug: "/bangkok/bkk-airport-pickup-suv",
-    type: "pickup",
-    category: "airport"
-  },
-  {
-    id: 3,
-    title: "BKK Airport to Bangkok Hotel - Van (10 Pax)",
-    price: 3300,
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
-    rating: 4.9,
-    reviews: 523,
-    duration: "Transfer",
-    capacity: "Up to 10 passengers",
-    slug: "/bangkok/bkk-airport-pickup-van",
-    type: "pickup",
-    category: "airport"
-  },
-  // Don Mueang Airport (DMK) Pickups
-  {
-    id: 4,
-    title: "DMK Airport to Bangkok Hotel - Sedan (3 Pax)",
+    title: "DMK Airport to Bangkok Hotel",
+    subtitle: "Don Mueang International Airport Pickup",
     price: 2700,
-    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop",
+    priceLabel: "From",
+    image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&auto=format&fit=crop",
     rating: 4.8,
     reviews: 445,
     duration: "Transfer",
-    capacity: "Up to 3 passengers",
-    slug: "/bangkok/dmk-airport-pickup-sedan",
+    capacity: "Sedan / SUV / Van",
+    slug: "/bangkok/dmk-airport-pickup",
     type: "pickup",
-    category: "airport"
+    category: "airport",
+    vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"]
   },
   {
-    id: 5,
-    title: "DMK Airport to Bangkok Hotel - SUV (4 Pax)",
-    price: 2900,
-    image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&auto=format&fit=crop",
-    rating: 4.8,
-    reviews: 378,
-    duration: "Transfer",
-    capacity: "Up to 4 passengers",
-    slug: "/bangkok/dmk-airport-pickup-suv",
-    type: "pickup",
-    category: "airport"
-  },
-  {
-    id: 6,
-    title: "DMK Airport to Bangkok Hotel - Van (10 Pax)",
-    price: 3300,
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
-    rating: 4.8,
-    reviews: 312,
-    duration: "Transfer",
-    capacity: "Up to 10 passengers",
-    slug: "/bangkok/dmk-airport-pickup-van",
-    type: "pickup",
-    category: "airport"
-  },
-  // Suvarnabhumi Airport (BKK) Dropoffs
-  {
-    id: 7,
-    title: "Bangkok Hotel to BKK Airport - Sedan (3 Pax)",
+    id: 3,
+    title: "Bangkok Hotel to BKK Airport",
+    subtitle: "Suvarnabhumi International Airport Dropoff",
     price: 2200,
+    priceLabel: "From",
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
     rating: 4.8,
     reviews: 723,
     duration: "Transfer",
-    capacity: "Up to 3 passengers",
-    slug: "/bangkok/bkk-airport-dropoff-sedan",
+    capacity: "Sedan / SUV / Van",
+    slug: "/bangkok/bkk-airport-dropoff",
     type: "dropoff",
-    category: "airport"
+    category: "airport",
+    vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"]
   },
   {
-    id: 8,
-    title: "Bangkok Hotel to BKK Airport - SUV (4 Pax)",
-    price: 2600,
-    image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&auto=format&fit=crop",
-    rating: 4.8,
-    reviews: 512,
-    duration: "Transfer",
-    capacity: "Up to 4 passengers",
-    slug: "/bangkok/bkk-airport-dropoff-suv",
-    type: "dropoff",
-    category: "airport"
-  },
-  {
-    id: 9,
-    title: "Bangkok Hotel to BKK Airport - Van (10 Pax)",
-    price: 2900,
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
-    rating: 4.8,
-    reviews: 432,
-    duration: "Transfer",
-    capacity: "Up to 10 passengers",
-    slug: "/bangkok/bkk-airport-dropoff-van",
-    type: "dropoff",
-    category: "airport"
-  },
-  // Temple Tour + Airport Dropoff
-  {
-    id: 10,
-    title: "Bangkok 2-Temple Tour + BKK Airport Drop - Sedan",
+    id: 4,
+    title: "Bangkok 2-Temple Tour + BKK Airport Drop",
+    subtitle: "Temple Tour with Airport Transfer",
     price: 5100,
+    priceLabel: "From",
     image: "https://images.unsplash.com/photo-1563492065567-7a0b2e7d1a3e?w=800&auto=format&fit=crop",
     rating: 4.9,
     reviews: 289,
     duration: "3 Hrs + Transfer",
-    capacity: "Up to 3 passengers",
-    slug: "/bangkok/temple-tour-airport-sedan",
+    capacity: "Sedan / SUV / Van",
+    slug: "/bangkok/temple-tour-airport",
     type: "citytour",
-    category: "citytour"
-  },
-  {
-    id: 11,
-    title: "Bangkok 2-Temple Tour + BKK Airport Drop - SUV",
-    price: 5600,
-    image: "https://images.unsplash.com/photo-1563492065567-7a0b2e7d1a3e?w=800&auto=format&fit=crop",
-    rating: 4.9,
-    reviews: 245,
-    duration: "3 Hrs + Transfer",
-    capacity: "Up to 4 passengers",
-    slug: "/bangkok/temple-tour-airport-suv",
-    type: "citytour",
-    category: "citytour"
-  },
-  {
-    id: 12,
-    title: "Bangkok 2-Temple Tour + BKK Airport Drop - Van",
-    price: 6200,
-    image: "https://images.unsplash.com/photo-1563492065567-7a0b2e7d1a3e?w=800&auto=format&fit=crop",
-    rating: 4.9,
-    reviews: 198,
-    duration: "3 Hrs + Transfer",
-    capacity: "Up to 10 passengers",
-    slug: "/bangkok/temple-tour-airport-van",
-    type: "citytour",
-    category: "citytour"
+    category: "citytour",
+    vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"]
   }
 ];
 
@@ -260,7 +164,7 @@ const BangkokTransfers = () => {
         </div>
 
         {/* Transfer Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredTransfers.map((transfer) => (
             <Link key={transfer.id} to={transfer.slug}>
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer h-full">
@@ -287,9 +191,10 @@ const BangkokTransfers = () => {
                   )}
                 </div>
                 <CardContent className="p-4">
-                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                  <h3 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors line-clamp-2">
                     {transfer.title}
                   </h3>
+                  <p className="text-sm text-muted-foreground mb-3">{transfer.subtitle}</p>
                   
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                     <div className="flex items-center gap-1">
@@ -302,6 +207,15 @@ const BangkokTransfers = () => {
                     </div>
                   </div>
 
+                  {/* Vehicle Options */}
+                  <div className="flex flex-wrap gap-1 mb-3">
+                    {transfer.vehicles.map((vehicle, index) => (
+                      <span key={index} className="text-xs bg-muted px-2 py-1 rounded">
+                        {vehicle}
+                      </span>
+                    ))}
+                  </div>
+
                   <div className="flex items-center gap-1 mb-3">
                     <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                     <span className="font-medium">{transfer.rating}</span>
@@ -310,7 +224,7 @@ const BangkokTransfers = () => {
 
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className="text-xs text-muted-foreground">From</span>
+                      <span className="text-xs text-muted-foreground">{transfer.priceLabel}</span>
                       <p className="text-xl font-bold text-primary">₹{transfer.price.toLocaleString()}</p>
                     </div>
                     <Button size="sm">Book Now</Button>
