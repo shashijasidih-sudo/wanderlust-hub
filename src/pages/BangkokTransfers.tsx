@@ -7,70 +7,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star, Clock, Users, Plane, Car, Building2, MapPin } from "lucide-react";
 
 const transfers = [
-  {
-    id: 1,
-    title: "BKK Airport to Bangkok Hotel",
-    subtitle: "Suvarnabhumi International Airport Pickup",
-    price: 2700,
-    priceLabel: "From",
-    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop",
-    rating: 4.9,
-    reviews: 856,
-    duration: "Transfer",
-    capacity: "Sedan / SUV / Van",
-    slug: "/bangkok/bkk-airport-pickup",
-    type: "pickup",
-    category: "airport",
-    vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"]
-  },
-  {
-    id: 2,
-    title: "DMK Airport to Bangkok Hotel",
-    subtitle: "Don Mueang International Airport Pickup",
-    price: 2700,
-    priceLabel: "From",
-    image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&auto=format&fit=crop",
-    rating: 4.8,
-    reviews: 445,
-    duration: "Transfer",
-    capacity: "Sedan / SUV / Van",
-    slug: "/bangkok/dmk-airport-pickup",
-    type: "pickup",
-    category: "airport",
-    vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"]
-  },
-  {
-    id: 3,
-    title: "Bangkok Hotel to BKK Airport",
-    subtitle: "Suvarnabhumi International Airport Dropoff",
-    price: 2200,
-    priceLabel: "From",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
-    rating: 4.8,
-    reviews: 723,
-    duration: "Transfer",
-    capacity: "Sedan / SUV / Van",
-    slug: "/bangkok/bkk-airport-dropoff",
-    type: "dropoff",
-    category: "airport",
-    vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"]
-  },
-  {
-    id: 4,
-    title: "Bangkok 2-Temple Tour + BKK Airport Drop",
-    subtitle: "Temple Tour with Airport Transfer",
-    price: 5100,
-    priceLabel: "From",
-    image: "https://images.unsplash.com/photo-1563492065567-7a0b2e7d1a3e?w=800&auto=format&fit=crop",
-    rating: 4.9,
-    reviews: 289,
-    duration: "3 Hrs + Transfer",
-    capacity: "Sedan / SUV / Van",
-    slug: "/bangkok/temple-tour-airport",
-    type: "citytour",
-    category: "citytour",
-    vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"]
-  }
+  { id: 1, title: "BKK Airport to Bangkok Hotel", subtitle: "Suvarnabhumi International Airport Pickup", price: 2700, priceLabel: "From", image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop", rating: 4.9, reviews: 856, duration: "Transfer", capacity: "Sedan / SUV / Van", slug: "/bangkok/bkk-airport-pickup", type: "pickup", category: "airport", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },
+  { id: 2, title: "DMK Airport to Bangkok Hotel", subtitle: "Don Mueang International Airport Pickup", price: 2700, priceLabel: "From", image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&auto=format&fit=crop", rating: 4.8, reviews: 445, duration: "Transfer", capacity: "Sedan / SUV / Van", slug: "/bangkok/dmk-airport-pickup", type: "pickup", category: "airport", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },
+  { id: 3, title: "Bangkok Hotel to BKK Airport", subtitle: "Suvarnabhumi International Airport Dropoff", price: 2200, priceLabel: "From", image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop", rating: 4.8, reviews: 723, duration: "Transfer", capacity: "Sedan / SUV / Van", slug: "/bangkok/bkk-airport-dropoff", type: "dropoff", category: "airport", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },
+  { id: 4, title: "Bangkok Hotel to DMK Airport", subtitle: "Don Mueang International Airport Dropoff", price: 2700, priceLabel: "From", image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop", rating: 4.8, reviews: 312, duration: "Transfer", capacity: "Sedan / SUV / Van", slug: "/bangkok/dmk-airport-dropoff", type: "dropoff", category: "airport", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },
+  { id: 5, title: "2-Temple Tour + BKK Airport Drop", subtitle: "Temple Tour with BKK Airport Transfer", price: 5100, priceLabel: "From", image: "https://images.unsplash.com/photo-1563492065567-7a0b2e7d1a3e?w=800&auto=format&fit=crop", rating: 4.9, reviews: 289, duration: "3 Hrs + Transfer", capacity: "Sedan / SUV / Van", slug: "/bangkok/temple-tour-airport", type: "citytour", category: "citytour", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },
+  { id: 6, title: "2-Temple Tour + DMK Airport Drop", subtitle: "Temple Tour with DMK Airport Transfer", price: 5100, priceLabel: "From", image: "https://images.unsplash.com/photo-1563492065567-7a0b2e7d1a3e?w=800&auto=format&fit=crop", rating: 4.9, reviews: 178, duration: "3 Hrs + Transfer", capacity: "Sedan / SUV / Van", slug: "/bangkok/temple-tour-dmk-airport", type: "citytour", category: "citytour", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },
+  { id: 7, title: "Safari World + BKK Airport Drop", subtitle: "Safari World Visit with BKK Airport Transfer", price: 5200, priceLabel: "From", image: "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&auto=format&fit=crop", rating: 4.8, reviews: 156, duration: "Safari + Transfer", capacity: "Sedan / SUV / Van", slug: "/bangkok/safari-world-bkk-airport", type: "citytour", category: "citytour", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },
+  { id: 8, title: "Safari World + DMK Airport Drop", subtitle: "Safari World Visit with DMK Airport Transfer", price: 5900, priceLabel: "From", image: "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&auto=format&fit=crop", rating: 4.8, reviews: 98, duration: "Safari + Transfer", capacity: "Sedan / SUV / Van", slug: "/bangkok/safari-world-dmk-airport", type: "citytour", category: "citytour", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },
+  { id: 9, title: "Bangkok City Hourly Rental (4 Hrs)", subtitle: "Private Car Hire within Bangkok City", price: 4500, priceLabel: "From", image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop", rating: 4.9, reviews: 234, duration: "4 Hours", capacity: "Sedan / SUV / Van", slug: "/bangkok/city-hourly-rental", type: "citytour", category: "citytour", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },
+  { id: 10, title: "Bangkok to Pattaya Hotel", subtitle: "Direct Private Transfer to Pattaya", price: 3800, priceLabel: "From", image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", rating: 4.9, reviews: 567, duration: "2.5 Hrs", capacity: "Sedan / SUV / Van", slug: "/bangkok/to-pattaya", type: "intercity", category: "intercity", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },
+  { id: 11, title: "Bangkok City Tour + Pattaya Drop", subtitle: "Temple Tour then Transfer to Pattaya", price: 5600, priceLabel: "From", image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", rating: 4.9, reviews: 189, duration: "Tour + 2.5 Hrs", capacity: "Sedan / SUV / Van", slug: "/bangkok/city-tour-pattaya", type: "intercity", category: "intercity", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },
+  { id: 12, title: "Tiger Topia Zoo + Pattaya Drop", subtitle: "Tiger Topia Visit then Pattaya Hotel Drop", price: 5500, priceLabel: "From", image: "https://images.unsplash.com/photo-1549480017-d76466a4b7e8?w=800&auto=format&fit=crop", rating: 4.8, reviews: 145, duration: "7 Hrs Total", capacity: "Sedan / SUV / Van", slug: "/bangkok/tiger-topia-pattaya", type: "intercity", category: "intercity", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] }
 ];
 
 const BangkokTransfers = () => {
