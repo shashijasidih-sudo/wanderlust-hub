@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Button } from "./ui/button";
@@ -10,10 +10,10 @@ import { Label } from "./ui/label";
 import { Calendar } from "./ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { format } from "date-fns";
-import { CalendarIcon, Clock, MapPin, Phone, ChevronDown, ChevronUp, Luggage, Users } from "lucide-react";
+import { CalendarIcon, Clock, MapPin, Phone, ChevronDown, ChevronUp, ShoppingCart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
+import { useCart } from "@/contexts/CartContext";
 import {
   Accordion,
   AccordionContent,
@@ -62,7 +62,9 @@ interface TransferBookingProps {
 
 const TransferBooking = ({ transferData }: TransferBookingProps) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const tourSlug = location.pathname.slice(1);
+  const { addToCart, cartCount } = useCart();
   
   const [selectedVehicle, setSelectedVehicle] = useState<string | null>(null);
   const [numberOfPersons, setNumberOfPersons] = useState(0);
@@ -71,10 +73,6 @@ const TransferBooking = ({ transferData }: TransferBookingProps) => {
   const [pickupLocation, setPickupLocation] = useState("");
   const [dropLocation, setDropLocation] = useState("");
   const [roomNo, setRoomNo] = useState("");
-  const [contactName, setContactName] = useState("");
-  const [contactEmail, setContactEmail] = useState("");
-  const [contactPhone, setContactPhone] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   if (!transferData) {
     return (
@@ -101,77 +99,59 @@ const TransferBooking = ({ transferData }: TransferBookingProps) => {
     }
   };
 
-  const handleBooking = async () => {
+  const validateAndPrepareBooking = () => {
     if (!selectedVehicle) {
       toast.error("Please select a vehicle type");
-      return;
+      return null;
     }
     if (numberOfPersons === 0) {
       toast.error("Please select number of persons");
-      return;
+      return null;
     }
     if (!pickupDate) {
       toast.error("Please select pickup date");
-      return;
+      return null;
     }
     if (!pickupTime) {
       toast.error("Please select pickup time");
-      return;
+      return null;
     }
     if (!pickupLocation) {
       toast.error("Please enter pickup location");
-      return;
-    }
-    if (!contactName || !contactEmail) {
-      toast.error("Please fill in contact information");
-      return;
+      return null;
     }
 
-    setIsSubmitting(true);
+    return {
+      id: `${transferData.id}-${Date.now()}`,
+      transferId: transferData.id,
+      title: transferData.title,
+      vehicleId: selectedVehicle,
+      vehicleName: selectedVehicleData?.name || "",
+      capacity: selectedVehicleData?.capacity || "",
+      price: totalPrice,
+      numberOfPersons,
+      pickupDate: format(pickupDate, "yyyy-MM-dd"),
+      pickupTime,
+      pickupLocation,
+      dropLocation,
+      roomNo,
+      slug: tourSlug,
+    };
+  };
 
-    try {
-      const { data: { user } } = await supabase.auth.getUser();
-      
-      if (!user) {
-        toast.error("Please login to make a booking");
-        setIsSubmitting(false);
-        return;
-      }
+  const handleAddToCart = () => {
+    const bookingData = validateAndPrepareBooking();
+    if (bookingData) {
+      addToCart(bookingData);
+      toast.success("Added to cart successfully!");
+    }
+  };
 
-      const { error } = await supabase.from("bookings").insert({
-        user_id: user.id,
-        tour_slug: tourSlug,
-        tour_name: `${transferData.title} - ${selectedVehicleData?.name}`,
-        tour_date: format(pickupDate, "yyyy-MM-dd"),
-        adults: numberOfPersons,
-        children: 0,
-        total_price: totalPrice,
-        contact_name: contactName,
-        contact_email: contactEmail,
-        contact_phone: contactPhone,
-        special_requests: `Pickup: ${pickupLocation}, Drop: ${dropLocation || "N/A"}, Room: ${roomNo || "N/A"}, Time: ${pickupTime}`,
-        currency: "INR"
-      });
-
-      if (error) throw error;
-
-      toast.success("Booking submitted successfully!");
-      // Reset form
-      setSelectedVehicle(null);
-      setNumberOfPersons(0);
-      setPickupDate(undefined);
-      setPickupTime("");
-      setPickupLocation("");
-      setDropLocation("");
-      setRoomNo("");
-      setContactName("");
-      setContactEmail("");
-      setContactPhone("");
-    } catch (error) {
-      console.error("Booking error:", error);
-      toast.error("Failed to submit booking. Please try again.");
-    } finally {
-      setIsSubmitting(false);
+  const handleBookNow = () => {
+    const bookingData = validateAndPrepareBooking();
+    if (bookingData) {
+      addToCart(bookingData);
+      navigate("/customer-information");
     }
   };
 
@@ -355,7 +335,7 @@ const TransferBooking = ({ transferData }: TransferBookingProps) => {
                 </div>
 
                 <div>
-                  <Label className="text-primary font-semibold">Drop Hotel Name <span className="text-destructive">*</span></Label>
+                  <Label className="text-primary font-semibold">Drop Hotel Name</Label>
                   <div className="relative mt-2">
                     <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
                     <Input
@@ -367,53 +347,28 @@ const TransferBooking = ({ transferData }: TransferBookingProps) => {
                   </div>
                 </div>
               </div>
-
-              {/* Contact Information */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t">
-                <div>
-                  <Label className="text-primary font-semibold">Contact Name <span className="text-destructive">*</span></Label>
-                  <Input
-                    value={contactName}
-                    onChange={(e) => setContactName(e.target.value)}
-                    className="mt-2"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div>
-                  <Label className="text-primary font-semibold">Email <span className="text-destructive">*</span></Label>
-                  <Input
-                    type="email"
-                    value={contactEmail}
-                    onChange={(e) => setContactEmail(e.target.value)}
-                    className="mt-2"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <Label className="text-primary font-semibold">Phone</Label>
-                  <div className="relative mt-2">
-                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
-                    <Input
-                      value={contactPhone}
-                      onChange={(e) => setContactPhone(e.target.value)}
-                      className="pl-10"
-                      placeholder="+91 XXXXXXXXXX"
-                    />
-                  </div>
-                </div>
-              </div>
             </CardContent>
           </Card>
 
-          {/* Book Now Button */}
-          <Button
-            size="lg"
-            className="w-full py-6 text-lg"
-            onClick={handleBooking}
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Processing..." : "Book Now"}
-          </Button>
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button
+              size="lg"
+              variant="outline"
+              className="flex-1 py-6 text-lg"
+              onClick={handleAddToCart}
+            >
+              <ShoppingCart className="mr-2 h-5 w-5" />
+              Add to Cart {cartCount > 0 && `(${cartCount})`}
+            </Button>
+            <Button
+              size="lg"
+              className="flex-1 py-6 text-lg"
+              onClick={handleBookNow}
+            >
+              Book Now
+            </Button>
+          </div>
 
           {/* Transfer Details Accordion */}
           <div className="mt-8">

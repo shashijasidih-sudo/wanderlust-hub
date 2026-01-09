@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartProvider } from "@/contexts/CartContext";
 import ApprovalBadge from "@/components/ApprovalBadge";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -178,17 +179,21 @@ import PattayaDmkAirportDropoff from "./pages/PattayaDmkAirportDropoff";
 import PattayaTempleTourDmkAirport from "./pages/PattayaTempleTourDmkAirport";
 import PattayaIndraSquareDmkAirport from "./pages/PattayaIndraSquareDmkAirport";
 import PattayaCityHourlyRental from "./pages/PattayaCityHourlyRental";
+import CustomerInformation from "./pages/CustomerInformation";
+import PaymentInformation from "./pages/PaymentInformation";
+import BookingConfirmed from "./pages/BookingConfirmed";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ApprovalBadge />
-        <Routes>
+    <CartProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <ApprovalBadge />
+          <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/thailand" element={<Thailand />} />
           <Route path="/bangkok" element={<Bangkok />} />
@@ -362,11 +367,15 @@ const App = () => (
           <Route path="/pattaya/temple-tour-dmk-airport" element={<PattayaTempleTourDmkAirport />} />
           <Route path="/pattaya/indra-square-dmk-airport" element={<PattayaIndraSquareDmkAirport />} />
           <Route path="/pattaya/city-hourly-rental" element={<PattayaCityHourlyRental />} />
+          <Route path="/customer-information" element={<CustomerInformation />} />
+          <Route path="/payment-information" element={<PaymentInformation />} />
+          <Route path="/booking-confirmed" element={<BookingConfirmed />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
+    </CartProvider>
   </QueryClientProvider>
 );
 
