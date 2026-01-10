@@ -2816,5 +2816,174 @@ Extra time beyond 9 hours: 500 THB per hour (payable directly to the driver).`,
       "You can change the booking date 72 hours in advance for free.",
       "If you want to cancel the booking, you can do so 72 hours in advance. If you cancel the booking less than 72 hours in advance, no refund will be given."
     ]
+  },
+  // PHUKET TRANSFERS
+  "phuket-hkt-airport-pickup": {
+    id: "phuket-hkt-airport-pickup",
+    title: "Phuket International Airport {HKT} to Phuket Hotel Private",
+    shortDescription: "Private airport transfer from Phuket Airport to your hotel",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    duration: "1 Hr 10 Min",
+    rating: 4.9,
+    reviews: 567,
+    vehicles: [
+      { id: "sedan", name: "Sedan Car", capacity: "1 - 3", bigBags: 2, handBags: 3, price: 3000, image: vehicleImages.sedan },
+      { id: "suv", name: "Mini SUV", capacity: "1 - 4", bigBags: 4, handBags: 4, price: 3200, image: vehicleImages.suv },
+      { id: "van", name: "Mini Van", capacity: "1 - 10", bigBags: 10, handBags: 10, price: 3600, image: vehicleImages.van }
+    ],
+    highlights: ["Reliable Pick-Up at Exit Gate 2 with your name card", "24/7 Service with night surcharge (12AM-6AM)", "Flexible Luggage Options", "Real-Time Support via Call/WhatsApp +66 6 274 30 007", "Easy Rescheduling up to 72 hours in advance"],
+    description: "Private transfer from Phuket International Airport to your hotel. Driver waits at Exit Gate 2 (International) or Exit A (Domestic). Distance: 47 km, approximately 1 hour 10 minutes.",
+    about: "Phuket International Airport (HKT) is 47 km from Patong Beach area and takes about 1 hour 10 minutes by car.",
+    baggagePolicy: ["Sedan: 2 large bags + 3 hand bags", "Mini SUV: 4 large bags + 4 hand bags", "Mini Van: 10 large bags + 10 hand bags", "Extra bag: 500 THB"],
+    cancellationPolicy: ["Night surcharge 300 THB (12AM-6AM)", "Driver waits up to 3 hours", "Free cancellation 72 hours prior"],
+    termsConditions: ["Flight delay/cancellation - contact support for rebooking", "No refund for no-shows"]
+  },
+  "phuket-hkt-airport-city-tour": {
+    id: "phuket-hkt-airport-city-tour",
+    title: "HKT Airport + 4 Hour City Tour to Phuket Hotel Private",
+    shortDescription: "Airport pickup with 4-hour Phuket city tour and hotel drop",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    duration: "5 Hrs Total",
+    rating: 4.9,
+    reviews: 345,
+    vehicles: [
+      { id: "sedan", name: "Sedan Car", capacity: "1 - 3", bigBags: 2, handBags: 3, price: 5900, image: vehicleImages.sedan },
+      { id: "suv", name: "Mini SUV", capacity: "1 - 4", bigBags: 4, handBags: 4, price: 6500, image: vehicleImages.suv },
+      { id: "van", name: "Mini Van", capacity: "1 - 10", bigBags: 10, handBags: 10, price: 7500, image: vehicleImages.van }
+    ],
+    highlights: ["Airport pickup + 4-hour city tour", "Visit Chalong Temple, Phuket Old Town, Karon View Point, Honey Bee Farm", "Tiger Kingdom visit (ticket not included)", "Overtime: 500 THB per hour"],
+    description: "Pick up from HKT Airport, enjoy a 4-hour Phuket city tour visiting Chalong Temple, Phuket Old Town, Karon View Point, and Honey Bee Farm, then drop at your hotel.",
+    about: "Tour includes 4 popular attractions. Tiger Kingdom ticket not included - purchase at venue.",
+    baggagePolicy: ["Sedan: 2 large + 3 hand bags", "SUV: 4 large + 4 hand bags", "Van: 10 large + 10 hand bags"],
+    cancellationPolicy: ["Night surcharge 300 THB", "Free cancellation 72 hours prior"],
+    termsConditions: ["Overtime: 500 THB/hour", "Big Buddha optional +300 THB"]
+  },
+  "phuket-hkt-airport-dropoff": {
+    id: "phuket-hkt-airport-dropoff",
+    title: "Phuket Hotel to Phuket International Airport {HKT} Private",
+    shortDescription: "Private transfer from your Phuket hotel to the airport",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    duration: "45 Min",
+    rating: 4.8,
+    reviews: 456,
+    vehicles: [
+      { id: "sedan", name: "Sedan Car", capacity: "1 - 3", bigBags: 2, handBags: 3, price: 2700, image: vehicleImages.sedan },
+      { id: "suv", name: "Mini SUV", capacity: "1 - 4", bigBags: 4, handBags: 4, price: 3000, image: vehicleImages.suv },
+      { id: "van", name: "Mini Van", capacity: "1 - 10", bigBags: 10, handBags: 10, price: 3200, image: vehicleImages.van }
+    ],
+    highlights: ["Distance: 45 km from hotel to airport", "Travel Time: ~45 minutes", "Arrive 3 hours before flight", "Driver waits 10-15 minutes only"],
+    description: "Distance from Phuket hotel to HKT airport is ~45 km, taking about 45 minutes. Leave 3 hours 45 minutes before flight.",
+    about: "Phuket Hotel → HKT Airport: 45 km, ~45 minutes by car.",
+    baggagePolicy: ["Sedan: 2 large + 3 hand bags", "SUV: 4 large + 4 hand bags", "Van: 10 large + 10 hand bags"],
+    cancellationPolicy: ["Driver waits 10-15 minutes", "Free cancellation 72 hours prior"],
+    termsConditions: ["No-show = no refund", "Reschedule 36 hours in advance"]
+  },
+  "phuket-city-tour-hkt-airport": {
+    id: "phuket-city-tour-hkt-airport",
+    title: "Phuket Hotel + City Tour to HKT Airport Drop Private",
+    shortDescription: "4-hour Phuket city tour followed by airport drop",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    duration: "5 Hrs Total",
+    rating: 4.9,
+    reviews: 234,
+    vehicles: [
+      { id: "sedan", name: "Sedan Car", capacity: "1 - 3", bigBags: 2, handBags: 3, price: 5900, image: vehicleImages.sedan },
+      { id: "suv", name: "Mini SUV", capacity: "1 - 4", bigBags: 4, handBags: 4, price: 6400, image: vehicleImages.suv },
+      { id: "van", name: "Mini Van", capacity: "1 - 10", bigBags: 10, handBags: 10, price: 6600, image: vehicleImages.van }
+    ],
+    highlights: ["4-hour city tour + airport transfer", "Visit Chalong Temple, Old Town, Tiger Kingdom, Karon View Point", "Leave hotel 8 hours before flight", "Overtime: 500 THB/hour"],
+    description: "Enjoy a 4-hour Phuket city tour then transfer to HKT Airport. Tour + 1hr transfer + 3hr buffer = leave 8 hours before flight.",
+    about: "4-hour tour covering Chalong Temple, Phuket Old Town, Tiger Kingdom (ticket not included), and Karon View Point.",
+    baggagePolicy: ["Sedan: 2 large + 3 hand bags", "SUV: 4 large + 4 hand bags", "Van: 10 large + 10 hand bags"],
+    cancellationPolicy: ["Free cancellation 72 hours prior"],
+    termsConditions: ["Tiger Kingdom ticket not included", "Big Buddha optional +300 THB", "Overtime 500 THB/hour"]
+  },
+  "phuket-city-hourly-rental": {
+    id: "phuket-city-hourly-rental",
+    title: "Phuket City Hourly Rental (4 Hours) Private",
+    shortDescription: "Private car hire for 4 hours within Phuket City",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    duration: "4 Hours",
+    rating: 4.9,
+    reviews: 312,
+    vehicles: [
+      { id: "sedan", name: "Sedan Car", capacity: "1 - 3", bigBags: 2, handBags: 3, price: 4300, image: vehicleImages.sedan },
+      { id: "suv", name: "Mini SUV", capacity: "1 - 4", bigBags: 4, handBags: 4, price: 4900, image: vehicleImages.suv },
+      { id: "van", name: "Mini Van", capacity: "1 - 10", bigBags: 10, handBags: 10, price: 5400, image: vehicleImages.van }
+    ],
+    highlights: ["Beaches: Patong, Kata, Karon, Freedom Beach", "Sightseeing: Big Buddha, Chalong Temple, Old Town", "Wildlife: Tiger Kingdom, Elephant Sanctuaries", "Entertainment: Simon Cabaret, FantaSea Show"],
+    description: "4-hour private car rental within Phuket City. Valid only within city limits. Overtime: 500 THB/hour. Big Buddha +300 THB.",
+    about: "Explore Phuket's beaches, temples, wildlife attractions and entertainment venues.",
+    baggagePolicy: ["Sedan: 2 large + 3 hand bags", "SUV: 4 large + 4 hand bags", "Van: 10 large + 10 hand bags"],
+    cancellationPolicy: ["No refund for no-shows", "Free cancellation 72 hours prior"],
+    termsConditions: ["Within Phuket City only", "Extra charge for outside city", "No attraction tickets included"]
+  },
+  "phuket-to-krabi": {
+    id: "phuket-to-krabi",
+    title: "Phuket Hotel To Krabi Hotel Drop Private",
+    shortDescription: "Private transfer from Phuket to Krabi hotel",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    duration: "3 Hrs",
+    rating: 4.9,
+    reviews: 423,
+    vehicles: [
+      { id: "sedan", name: "Sedan Car", capacity: "1 - 3", bigBags: 2, handBags: 3, price: 6800, image: vehicleImages.sedan },
+      { id: "suv", name: "Mini SUV", capacity: "1 - 4", bigBags: 4, handBags: 4, price: 7000, image: vehicleImages.suv },
+      { id: "van", name: "Mini Van", capacity: "1 - 10", bigBags: 10, handBags: 10, price: 7900, image: vehicleImages.van }
+    ],
+    highlights: ["Door-to-door service", "180 km journey, ~3 hours", "No stops during transfer", "Professional driver"],
+    description: "Direct transfer from Phuket hotel to Krabi hotel. Distance: 180 km, ~3 hours. No stops during journey.",
+    about: "Phuket to Krabi: 180 km, about 3 hours 15 minutes by car. Hilly route.",
+    baggagePolicy: ["Sedan: 2 large + 3 hand bags", "SUV: 4 large + 4 hand bags", "Van: 10 large + 10 hand bags"],
+    cancellationPolicy: ["Driver waits 10-15 minutes", "Free cancellation 72 hours prior"],
+    termsConditions: ["No refund for no-shows", "Weather delays not our responsibility"]
+  },
+  "phuket-city-tour-krabi": {
+    id: "phuket-city-tour-krabi",
+    title: "Phuket Hotel + 4 Hour City Tour to Krabi Hotel Private",
+    shortDescription: "4-hour Phuket tour followed by Krabi hotel drop",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    duration: "7 Hrs Total",
+    rating: 4.9,
+    reviews: 189,
+    vehicles: [
+      { id: "sedan", name: "Sedan Car", capacity: "1 - 3", bigBags: 2, handBags: 3, price: 9500, image: vehicleImages.sedan },
+      { id: "suv", name: "Mini SUV", capacity: "1 - 4", bigBags: 4, handBags: 4, price: 9900, image: vehicleImages.suv },
+      { id: "van", name: "Mini Van", capacity: "1 - 10", bigBags: 10, handBags: 10, price: 10900, image: vehicleImages.van }
+    ],
+    highlights: ["4-hour Phuket City Tour included", "Visit Chalong Temple, Old Town, Honey Farm, Tiger Kingdom", "Door-to-door to Krabi hotel", "Total: 7 hours"],
+    description: "4-hour Phuket tour + 3-hour transfer to Krabi = 7 hours total. Overtime: 500 THB/hour.",
+    about: "Tour Phuket's highlights then continue to your Krabi hotel.",
+    baggagePolicy: ["Sedan: 2 large + 3 hand bags", "SUV: 4 large + 4 hand bags", "Van: 10 large + 10 hand bags"],
+    cancellationPolicy: ["Free cancellation 72 hours prior"],
+    termsConditions: ["Tiger Kingdom ticket not included", "Overtime 500 THB/hour"]
+  },
+  "phuket-krabi-city-tour": {
+    id: "phuket-krabi-city-tour",
+    title: "Phuket Hotel + 6 Hour Krabi City Tour to Krabi Hotel Private",
+    shortDescription: "6-hour Krabi city tour followed by Krabi hotel drop",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    duration: "9 Hrs Total",
+    rating: 4.9,
+    reviews: 98,
+    vehicles: [
+      { id: "sedan", name: "Sedan Car", capacity: "1 - 3", bigBags: 2, handBags: 3, price: 13600, image: vehicleImages.sedan },
+      { id: "suv", name: "Mini SUV", capacity: "1 - 4", bigBags: 4, handBags: 4, price: 12800, image: vehicleImages.suv },
+      { id: "van", name: "Mini Van", capacity: "1 - 10", bigBags: 10, handBags: 10, price: 14700, image: vehicleImages.van }
+    ],
+    highlights: ["6-hour Krabi City Tour included", "Visit Emerald Pool, Hot Spring Waterfalls, Tiger Cave Temple", "National Park fee 600 THB/person not included", "Total: 9 hours"],
+    description: "Transfer to Krabi with a 6-hour city tour. Visit Emerald Pool, Hot Spring, Tiger Cave Temple. Total 9 hours.",
+    about: "3-hour transfer + 6-hour Krabi tour = 9 hours. National Park fee 600 THB/person.",
+    baggagePolicy: ["Sedan: 2 large + 3 hand bags", "SUV: 4 large + 4 hand bags", "Van: 10 large + 10 hand bags"],
+    cancellationPolicy: ["Free cancellation 72 hours prior"],
+    termsConditions: ["National Park fee not included", "Overtime 500 THB/hour"]
   }
 };
