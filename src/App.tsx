@@ -191,6 +191,15 @@ import KrabiKbvAonangPickup from "./pages/KrabiKbvAonangPickup";
 import KrabiPhuketToKrabi from "./pages/KrabiPhuketToKrabi";
 import KrabiPhuketCityTourKrabi from "./pages/KrabiPhuketCityTourKrabi";
 import KrabiPhuketKrabiCityTour from "./pages/KrabiPhuketKrabiCityTour";
+import PhuketTransfers from "./pages/PhuketTransfers";
+import PhuketHktAirportPickup from "./pages/PhuketHktAirportPickup";
+import PhuketHktAirportCityTour from "./pages/PhuketHktAirportCityTour";
+import PhuketHktAirportDropoff from "./pages/PhuketHktAirportDropoff";
+import PhuketCityTourHktAirport from "./pages/PhuketCityTourHktAirport";
+import PhuketCityHourlyRental from "./pages/PhuketCityHourlyRental";
+import PhuketToKrabi from "./pages/PhuketToKrabi";
+import PhuketCityTourKrabi from "./pages/PhuketCityTourKrabi";
+import PhuketKrabiCityTour from "./pages/PhuketKrabiCityTour";
 import CustomerInformation from "./pages/CustomerInformation";
 import PaymentInformation from "./pages/PaymentInformation";
 import BookingConfirmed from "./pages/BookingConfirmed";
@@ -391,6 +400,15 @@ const App = () => (
           <Route path="/krabi/phuket-to-krabi" element={<KrabiPhuketToKrabi />} />
           <Route path="/krabi/phuket-city-tour-krabi" element={<KrabiPhuketCityTourKrabi />} />
           <Route path="/krabi/phuket-krabi-city-tour" element={<KrabiPhuketKrabiCityTour />} />
+          <Route path="/phuket/transfers" element={<PhuketTransfers />} />
+          <Route path="/phuket/hkt-airport-pickup" element={<PhuketHktAirportPickup />} />
+          <Route path="/phuket/hkt-airport-city-tour" element={<PhuketHktAirportCityTour />} />
+          <Route path="/phuket/hkt-airport-dropoff" element={<PhuketHktAirportDropoff />} />
+          <Route path="/phuket/city-tour-hkt-airport" element={<PhuketCityTourHktAirport />} />
+          <Route path="/phuket/city-hourly-rental" element={<PhuketCityHourlyRental />} />
+          <Route path="/phuket/phuket-to-krabi" element={<PhuketToKrabi />} />
+          <Route path="/phuket/city-tour-krabi" element={<PhuketCityTourKrabi />} />
+          <Route path="/phuket/krabi-city-tour" element={<PhuketKrabiCityTour />} />
           <Route path="/customer-information" element={<CustomerInformation />} />
           <Route path="/payment-information" element={<PaymentInformation />} />
           <Route path="/booking-confirmed" element={<BookingConfirmed />} />

@@ -211,7 +211,7 @@ const Header = () => {
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
                 <Fish className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/phuket" className="w-full font-medium">Phuket</Link>
+                <Link to="/phuket/transfers" className="w-full font-medium">Phuket</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
                 <Anchor className="h-5 w-5 mr-3 text-primary" />
@@ -326,7 +326,7 @@ const Header = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
                   <Fish className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/phuket" className="w-full">Phuket</Link>
+                  <Link to="/phuket/transfers" className="w-full">Phuket</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
                   <Anchor className="h-4 w-4 mr-2 text-primary" />
