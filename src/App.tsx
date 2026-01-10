@@ -200,6 +200,7 @@ import PhuketCityHourlyRental from "./pages/PhuketCityHourlyRental";
 import PhuketToKrabi from "./pages/PhuketToKrabi";
 import PhuketCityTourKrabi from "./pages/PhuketCityTourKrabi";
 import PhuketKrabiCityTour from "./pages/PhuketKrabiCityTour";
+import ThailandTransfers from "./pages/ThailandTransfers";
 import CustomerInformation from "./pages/CustomerInformation";
 import PaymentInformation from "./pages/PaymentInformation";
 import BookingConfirmed from "./pages/BookingConfirmed";
@@ -409,6 +410,7 @@ const App = () => (
           <Route path="/phuket/phuket-to-krabi" element={<PhuketToKrabi />} />
           <Route path="/phuket/city-tour-krabi" element={<PhuketCityTourKrabi />} />
           <Route path="/phuket/krabi-city-tour" element={<PhuketKrabiCityTour />} />
+          <Route path="/thailand/transfers" element={<ThailandTransfers />} />
           <Route path="/customer-information" element={<CustomerInformation />} />
           <Route path="/payment-information" element={<PaymentInformation />} />
           <Route path="/booking-confirmed" element={<BookingConfirmed />} />
