@@ -215,7 +215,7 @@ const Header = () => {
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
                 <Anchor className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/krabi" className="w-full font-medium">Krabi</Link>
+                <Link to="/krabi/transfers" className="w-full font-medium">Krabi</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
                 <Ship className="h-5 w-5 mr-3 text-primary" />
@@ -330,7 +330,7 @@ const Header = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
                   <Anchor className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/krabi" className="w-full">Krabi</Link>
+                  <Link to="/krabi/transfers" className="w-full">Krabi</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
                   <Ship className="h-4 w-4 mr-2 text-primary" />

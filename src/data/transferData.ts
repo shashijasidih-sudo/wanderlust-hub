@@ -1886,5 +1886,935 @@ Shopping destinations: Central Festival Pattaya, Terminal 21 Pattaya, Royal Gard
       "Your booking time starts from the pick-up time. Please be ready in your hotel lobby at the scheduled time.",
       "If your tour is disrupted or shortened due to bad weather or rain, no refund will be provided as the service is on an hourly basis."
     ]
+  },
+  // KRABI TRANSFERS
+  "krabi-kbv-airport-phuket-pickup": {
+    id: "krabi-kbv-airport-phuket-pickup",
+    title: "Krabi International Airport {KBV} To Phuket Hotel Drop Private",
+    shortDescription: "Private airport transfer from Krabi Airport to your Phuket hotel",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    duration: "3.75 Hrs",
+    rating: 4.9,
+    reviews: 356,
+    vehicles: [
+      {
+        id: "sedan",
+        name: "Sedan Car",
+        capacity: "1 - 3",
+        bigBags: 2,
+        handBags: 3,
+        price: 6600,
+        image: vehicleImages.sedan
+      },
+      {
+        id: "suv",
+        name: "Mini SUV",
+        capacity: "1 - 4",
+        bigBags: 4,
+        handBags: 4,
+        price: 6800,
+        image: vehicleImages.suv
+      },
+      {
+        id: "van",
+        name: "Mini Van",
+        capacity: "1 - 10",
+        bigBags: 10,
+        handBags: 10,
+        price: 7000,
+        image: vehicleImages.van
+      }
+    ],
+    highlights: [
+      "Reliable Pick-Up – Always on time, professional staff wait inside exit gate no. 15 with your name card.",
+      "24/7 Service – Available day and night. Night-time pick-up available (12:00 AM – 6:00 AM) with a minimal surcharge.",
+      "Flexible Luggage Options – Choose from Sedan, Mini SUV, or Mini Van based on your baggage needs.",
+      "Real-Time Support – Instant assistance via Call or WhatsApp at +66 6 274 30 007",
+      "Easy Rescheduling – Change your pick-up date/time up to 48 hours in advance.",
+      "Other charges – All toll tax and fuel are included in this trip"
+    ],
+    description: `Upon arrival at Krabi Airport, go directly to the Immigration Department and obtain your visa.
+After completing immigration formalities, collect your checked baggage from the designated carousel.
+If you have a visa, you do not need to go to the Immigration Department; you can collect your checked baggage directly from the carousel.
+After collecting your baggage, proceed to Exits 15 and 16.
+Our guide will be waiting for you outside Exits 15 and 16, and will have an identification card with your name on it.
+If you cannot find your identification card or our guide, please contact our support staff at +91 7061710810 (call and WhatsApp). Please send a photo of your current location via WhatsApp so our airport team can assist you immediately.
+After meeting our guide, if you need to use the restroom, you must go to the airport. This is your private car; This will take you directly from the airport to your hotel in Phuket, without any stops along the way.
+The distance from Krabi International Airport to your Phuket hotel is 180 km and takes approximately 3 hours and 45 minutes by car.
+Weather and Traffic: Bad weather or heavy traffic may cause delays. We will not be responsible for such delays.
+Baggage Reminder: After your trip, please ensure you unload all your luggage from your vehicle. We will not be responsible for any luggage left behind.
+No-Show Policy: If your flight is cancelled or delayed, you must inform us. If you do not inform us and do not arrive within 3 hours of the deadline, the booking will be considered a no-show and no refund will be given.
+Free Cancellation: Free cancellation is available up to 48 hours before the pick-up time.
+Date Change: Any changes to the scheduled date must be made at least 48 hours before the pick-up time.`,
+    about: `Krabi International Airport
+Address: 133 Phet Kasem Rd, Nuea Khlong, Nuea Khlong District, Krabi 81130
+
+The distance from Krabi International Airport to Phuket is 180 kilometers and it takes about 3 hours and 15 minutes to travel by car.
+
+Arrival Instructions – Krabi Airport:
+Upon arrival at Krabi Airport, proceed directly to Immigration to obtain your visa.
+After completing immigration formalities, collect your checked baggage from the designated carousel.
+Once you have your luggage, head towards Exit Gate No.15
+Our guide will be waiting for you inside Exit Gate No. 15, holding a name card with your name on it.
+If you do not see your name card or are unable to locate our guide, please contact our support staff at +66 6 274 30 007 (Call & WhatsApp). Kindly send a photo of your current location via WhatsApp so that our airport team can assist you promptly.`,
+    baggagePolicy: [
+      "Sedan Car: Maximum capacity – 2 large bags and 3 hand bags",
+      "Mini SUV Car: Maximum capacity – 4 large bags and 4 hand bags",
+      "Mini Van: Maximum capacity – 10 large bags and 10 hand bags",
+      "⚠️ Important: If you are carrying more baggage than the allowed limit for your selected vehicle, an additional charge of 500 THB per extra bag may apply."
+    ],
+    cancellationPolicy: [
+      "For pick-ups scheduled between 12:00 AM and 6:00 AM, an additional night-time surcharge of 300 THB must be paid directly to the driver.",
+      "The driver will wait at the airport for up to 3 hours from your flight's arrival time, as mentioned in your voucher.",
+      "Free cancellation is available up to 72 hours prior to the scheduled pick-up time.",
+      "Changes to the pick-up date can also be made up to 72 hours in advance of the scheduled time."
+    ],
+    termsConditions: [
+      "If your flight is canceled or delayed, no one will be charged separately.",
+      "If your flight is cancelled, you can send information about the new flight on this WhatsApp number +66 6 274 30 007 and get a new booking voucher for which there is no charge.",
+      "If your flight is cancelled and you are not going to Phuket, you will not get a refund."
+    ]
+  },
+  "krabi-phuket-kbv-airport-dropoff": {
+    id: "krabi-phuket-kbv-airport-dropoff",
+    title: "Phuket Hotel to Krabi International Airport {KBV} Private",
+    shortDescription: "Private transfer from your Phuket hotel to Krabi Airport",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    duration: "3 Hrs",
+    rating: 4.8,
+    reviews: 234,
+    vehicles: [
+      {
+        id: "sedan",
+        name: "Sedan Car",
+        capacity: "1 - 3",
+        bigBags: 2,
+        handBags: 3,
+        price: 6800,
+        image: vehicleImages.sedan
+      },
+      {
+        id: "suv",
+        name: "Mini SUV",
+        capacity: "1 - 4",
+        bigBags: 4,
+        handBags: 4,
+        price: 7000,
+        image: vehicleImages.suv
+      },
+      {
+        id: "van",
+        name: "Mini Van",
+        capacity: "1 - 10",
+        bigBags: 10,
+        handBags: 10,
+        price: 7500,
+        image: vehicleImages.van
+      }
+    ],
+    highlights: [
+      "Distance: Approx. 175 km from Phuket Hotel to Krabi Airport.",
+      "Travel Time: Around 3 Hours under normal traffic conditions.",
+      "Airport Reporting: Please reach the airport at least 3 hours before your flight for check-in and security clearance.",
+      "Important Note: Traffic congestion or heavy rain may cause delays. We strongly recommend leaving for the airport on time to avoid last-minute stress."
+    ],
+    description: `Distance & Travel Time: The journey from your Phuket hotel to Krabi International Airport is ~175 km and takes about 3 hours under normal traffic.
+Airport Arrival: Please plan to reach the airport at least 3 hours before your flight time.
+Departure Planning: With a 3-hour drive + 3-hour airport buffer, we recommend leaving your hotel at least 6 hours before your scheduled departure.
+Traffic & Weather: Delays may occur due to traffic or rain. Please leave on time.
+Pick-Up Readiness: Check out and be ready in the hotel lobby at your scheduled pick-up time.
+Driver Waiting Time: The driver will wait 10–15 minutes. If you are late, the driver will leave; your booking will be treated as a no-show and no refund will be provided.
+Change of Pick-Up Time: You can reschedule free of charge by sending a WhatsApp message to +66 63 370 1999 at least 24 hours in advance.
+Support Contact: Support Staff (Call & WhatsApp): +66 6 274 30 007`,
+    about: `Phuket Hotel → Krabi International Airport
+
+Distance: 175 kilometers
+Travel Time: Approximately 3 Hours by car
+Travel Tip: Always leave early and plan to reach the airport at least 3 hours before your flight, as traffic or rain may cause delays.`,
+    baggagePolicy: [
+      "Sedan Car: Maximum capacity – 2 large bags and 3 hand bags",
+      "Mini SUV Car: Maximum capacity – 4 large bags and 4 hand bags",
+      "Mini Van: Maximum capacity – 10 large bags and 10 hand bags",
+      "⚠️ Important: If you are carrying more baggage than the allowed limit for your selected vehicle, an additional charge of 500 THB per extra bag may apply."
+    ],
+    cancellationPolicy: [
+      "For pick-ups scheduled between 12:00 AM and 6:00 AM, an additional night-time surcharge of 300 THB must be paid directly to the driver.",
+      "The driver will wait at the hotel for 10-15 minutes only.",
+      "Free cancellation is available up to 72 hours prior to the scheduled pick-up time.",
+      "Changes to the pick-up date can also be made up to 72 hours in advance of the scheduled time."
+    ],
+    termsConditions: [
+      "The distance from your Phuket hotel to Krabi International Airport is 175 km, and it takes about 3 Hours to travel.",
+      "Please plan to reach the airport at least 3 hours before your flight time.",
+      "Delays may occur due to traffic or rain, so it is important to leave for the airport on time.",
+      "Please check out of your hotel and be ready in the hotel lobby at your scheduled pick-up time.",
+      "The driver will wait for you for 10–15 minutes only.",
+      "If you are late, the driver will leave, your booking will be treated as a no-show, and no refund will be provided.",
+      "If you wish to change your pick-up time, you can do so free of charge by sending a WhatsApp message to +66 63 370 1999 at least 24 hours in advance."
+    ]
+  },
+  "krabi-hotel-kbv-airport": {
+    id: "krabi-hotel-kbv-airport",
+    title: "Krabi Hotel to Krabi International Airport {KBV} Drop Private",
+    shortDescription: "Private transfer from your Krabi hotel to Krabi Airport",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    duration: "45 Mins",
+    rating: 4.9,
+    reviews: 445,
+    vehicles: [
+      {
+        id: "sedan",
+        name: "Sedan Car",
+        capacity: "1 - 3",
+        bigBags: 2,
+        handBags: 3,
+        price: 2400,
+        image: vehicleImages.sedan
+      },
+      {
+        id: "suv",
+        name: "Mini SUV",
+        capacity: "1 - 4",
+        bigBags: 4,
+        handBags: 4,
+        price: 2800,
+        image: vehicleImages.suv
+      },
+      {
+        id: "van",
+        name: "Mini Van",
+        capacity: "1 - 10",
+        bigBags: 10,
+        handBags: 10,
+        price: 3000,
+        image: vehicleImages.van
+      }
+    ],
+    highlights: [
+      "Distance: Approx. 25 km from Krabi Hotel to Krabi Airport.",
+      "Travel Time: Around 45 minutes under normal traffic conditions.",
+      "Airport Reporting: Please reach the airport at least 3 hours before your flight for check-in and security clearance.",
+      "Important Note: Traffic congestion or heavy rain may cause delays. We strongly recommend leaving for the airport on time to avoid last-minute stress."
+    ],
+    description: `Krabi Airport Transfer Guidelines
+Distance & Travel Time: Your hotel to Krabi International Airport is ~25 km and takes about 45 minutes under normal traffic.
+Airport Arrival: Please plan to reach the airport at least 3 hours before your flight.
+Departure Planning: With a 45 Minutes drive + 3-hour airport buffer, we recommend leaving your hotel at least 4 hours before departure
+Traffic & Weather: Delays can occur due to traffic or rain. Please leave on time.
+Pick-Up Readiness: Check out and be ready in the hotel lobby at your scheduled pick-up time.
+Driver Waiting Time: The driver will wait 10–15 minutes. If you are late, the driver will leave; your booking will be treated as a no-show and no refund will be provided.
+Change of Pick-Up Time: You can reschedule free of charge by emailing support@pattayacitytourcoltd.com at least 24 hours in advance.
+Support Contact: Support Staff (Call & WhatsApp): +66 6 274 30 007`,
+    about: `Krabi Hotel → Krabi International Airport
+
+Distance: 25 kilometers
+Travel Time: Approximately 45 minutes by car
+Travel Tip: Always leave early and plan to reach the airport at least 3 hours before your flight, as traffic or rain may cause delays.`,
+    baggagePolicy: [
+      "Sedan Car: Maximum capacity – 2 large bags and 3 hand bags",
+      "Mini SUV Car: Maximum capacity – 4 large bags and 4 hand bags",
+      "Mini Van: Maximum capacity – 10 large bags and 10 hand bags",
+      "⚠️ Important: If you are carrying more baggage than the allowed limit for your selected vehicle, an additional charge of 500 THB per extra bag may apply."
+    ],
+    cancellationPolicy: [
+      "For pick-ups scheduled between 12:00 AM and 6:00 AM, an additional night-time surcharge of 300 THB must be paid directly to the driver.",
+      "The driver will wait at the hotel for 10-15 minutes only.",
+      "Free cancellation is available up to 72 hours prior to the scheduled pick-up time.",
+      "Changes to the pick-up date can also be made up to 72 hours in advance of the scheduled time."
+    ],
+    termsConditions: [
+      "The distance from your Krabi hotel to Krabi International Airport is 25 km, and it takes about 45 minutes to travel.",
+      "Please plan to reach the airport at least 3 hours before your flight time.",
+      "Delays may occur due to traffic or rain, so it is important to leave for the airport on time.",
+      "Please check out of your hotel and be ready in the hotel lobby at your scheduled pick-up time.",
+      "The driver will wait for you for 10–15 minutes only.",
+      "If you are late, the driver will leave, your booking will be treated as a no-show, and no refund will be provided.",
+      "If you wish to change your pick-up time, you can do so free of charge by sending a WhatsApp message to +66 63 370 1999 at least 24 hours in advance."
+    ]
+  },
+  "krabi-to-phuket": {
+    id: "krabi-to-phuket",
+    title: "Krabi Hotel To Phuket Hotel Drop Private",
+    shortDescription: "Private transfer from your Krabi hotel to Phuket hotel",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    duration: "3 Hrs",
+    rating: 4.9,
+    reviews: 312,
+    vehicles: [
+      {
+        id: "sedan",
+        name: "Sedan Car",
+        capacity: "1 - 3",
+        bigBags: 2,
+        handBags: 3,
+        price: 6800,
+        image: vehicleImages.sedan
+      },
+      {
+        id: "suv",
+        name: "Mini SUV",
+        capacity: "1 - 4",
+        bigBags: 4,
+        handBags: 4,
+        price: 7000,
+        image: vehicleImages.suv
+      },
+      {
+        id: "van",
+        name: "Mini Van",
+        capacity: "1 - 10",
+        bigBags: 10,
+        handBags: 10,
+        price: 7900,
+        image: vehicleImages.van
+      }
+    ],
+    highlights: [
+      "Comfortable private car transfer",
+      "Approx. 180 km journey – 3 hours travel time",
+      "Door-to-door service from your Krabi hotel to Phuket hotel",
+      "No stops during the trip for a faster journey",
+      "Professional driver with local route knowledge"
+    ],
+    description: `Driver Waiting Time: The driver will wait in the hotel lobby for a maximum of 10–15 minutes only.
+Travel Distance & Duration: The distance from Krabi to Phuket is approximately 180 km and takes about 3 hours by car.
+No-Show Policy: In case of delay or no-show, no refund will be provided.
+No Stops During Transfer: There are no halts during the journey. Please ensure you have eaten and used the restroom before departure from your Krabi hotel.
+Free Cancellation: Allowed up to 48 hours before the pick-up time.
+Date Changes: Any changes to the scheduled date must be made at least 48 hours before the pick-up time.
+Important Notes: We are not responsible for delays caused by bad weather.
+Support Contact: +66 6 337 01 999 (Call & WhatsApp).`,
+    about: `Krabi Hotel to Phuket Hotel
+The distance from Krabi to Phuket is 180 kilometers and it takes about 3 hours and 15 minutes to travel by car.`,
+    baggagePolicy: [
+      "Sedan Car: Max 2 large bags + 3 handbags",
+      "Mini SUV Car: Max 4 large bags + 4 handbags",
+      "Mini Van: Max 10 large bags + 10 handbags",
+      "⚠️ Important Notice: If your baggage exceeds the allowed limit for your selected vehicle, an additional charge of 500 THB per extra bag may apply."
+    ],
+    cancellationPolicy: [
+      "For pickups scheduled between 12:00 AM and 6:00 AM, an additional night-time surcharge of 300 THB must be paid directly to the driver.",
+      "The driver will wait at the hotel for 10-15 minutes only.",
+      "Free cancellation is available up to 72 hours prior to the scheduled pick-up time.",
+      "Changes to the pick-up date can also be made up to 72 hours in advance of the scheduled time."
+    ],
+    termsConditions: [
+      "The distance from Krabi to Phuket is 180 km and takes about 3 hours.",
+      "The road from Krabi to Phuket is hilly, and sometimes it may take longer due to rain.",
+      "If you cancel the booking at the time of pickup for any reason, it will be considered a no-show booking, and you will not get any refund.",
+      "If there is any delay due to bad weather, we will not be responsible for it.",
+      "You can change the booking date 48 hours in advance for free.",
+      "If you want to cancel the booking, you can do it 48 hours in advance. If you cancel the booking less than 48 hours before, no refund will be given."
+    ]
+  },
+  "krabi-phuket-city-tour": {
+    id: "krabi-phuket-city-tour",
+    title: "Krabi Hotel to Phuket City Tour 4 Hours to Phuket Hotel Private",
+    shortDescription: "Private 4-hour Phuket city tour followed by hotel drop-off",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    duration: "7 Hrs Total",
+    rating: 4.9,
+    reviews: 189,
+    vehicles: [
+      {
+        id: "sedan",
+        name: "Sedan Car",
+        capacity: "1 - 3",
+        bigBags: 2,
+        handBags: 3,
+        price: 9500,
+        image: vehicleImages.sedan
+      },
+      {
+        id: "suv",
+        name: "Mini SUV",
+        capacity: "1 - 4",
+        bigBags: 4,
+        handBags: 4,
+        price: 9900,
+        image: vehicleImages.suv
+      },
+      {
+        id: "van",
+        name: "Mini Van",
+        capacity: "1 - 10",
+        bigBags: 10,
+        handBags: 10,
+        price: 10900,
+        image: vehicleImages.van
+      }
+    ],
+    highlights: [
+      "Comfortable private car transfer",
+      "Approx. 180 km journey – 3 hours travel time",
+      "4-hour Phuket City Tour included",
+      "Visit Chalong Temple, Phuket Old Town, Honey Farm, Tiger Kingdom",
+      "Door-to-door service from your Krabi hotel to Phuket hotel"
+    ],
+    description: `Krabi Hotel to Phuket City Tour to Phuket Hotel Transfer
+Driver Waiting Time: The driver will wait in the hotel lobby for a maximum of 10–15 minutes only.
+Travel Distance & Duration: The distance from Krabi to Phuket is approximately 180 km and takes about 3 hours by car.
+No-Show Policy: In case of delay or no-show, no refund will be provided.
+No Stops During Transfer: There are no halts during the journey. Please ensure you have eaten and used the restroom before departure from your Krabi hotel.
+Free Cancellation: Allowed up to 48 hours before the pick-up time.
+Date Changes: Any changes to the scheduled date must be made at least 48 hours before the pick-up time.
+Important Notes: We are not responsible for delays caused by bad weather.
+Support Contact: +66 6 337 01 999 (Call & WhatsApp).
+
+Phuket City Tour Details:
+Tour Duration: 4 hours
+Itinerary: Chalong Temple, Phuket Old Town, Honey Farm, and Tiger Kingdom (Ticket to Tiger Kingdom is not included in the package).
+Please manage your time accordingly to cover all locations within the 4 hours.
+Overtime Charges: If the tour exceeds 4 hours, the driver will charge 500 THB per additional hour, payable directly.`,
+    about: `Krabi to Phuket with City Tour
+The distance from Krabi to Phuket is 180 kilometers and it takes about 3 hours to travel by car. The 4-hour Phuket city tour adds to the journey for a total of approximately 7 hours.`,
+    baggagePolicy: [
+      "Sedan Car: Max 2 large bags + 3 handbags",
+      "Mini SUV Car: Max 4 large bags + 4 handbags",
+      "Mini Van: Max 10 large bags + 10 handbags",
+      "⚠️ Important Notice: If your baggage exceeds the allowed limit for your selected vehicle, an additional charge of 500 THB per extra bag may apply."
+    ],
+    cancellationPolicy: [
+      "For pickups scheduled between 12:00 AM and 6:00 AM, an additional night-time surcharge of 300 THB must be paid directly to the driver.",
+      "The driver will wait at the hotel for 10-15 minutes only.",
+      "Free cancellation is available up to 72 hours prior to the scheduled pick-up time.",
+      "Changes to the pick-up date can also be made up to 72 hours in advance of the scheduled time."
+    ],
+    termsConditions: [
+      "The distance from Krabi to Phuket is 180 km and takes about 3 hours.",
+      "The road from Krabi to Phuket is hilly, and sometimes it may take longer due to rain.",
+      "If you cancel the booking at the time of pickup for any reason, it will be considered a no-show booking, and you will not get any refund.",
+      "The distance from Krabi to Phuket is 3 hours, and if you want to do a 4-hour Phuket city tour on the way, you will have a total of 7 hours. If it takes longer, the driver will charge you 500 Thai baht for 1 hour, which you will have to pay.",
+      "If there is any delay due to bad weather, we will not be responsible for it.",
+      "You can change the booking date 48 hours in advance for free.",
+      "If you want to cancel the booking, you can do it 48 hours in advance. If you cancel the booking less than 48 hours before, no refund will be given."
+    ]
+  },
+  "krabi-hkt-airport-pickup": {
+    id: "krabi-hkt-airport-pickup",
+    title: "Phuket International Airport {HKT} to Krabi Hotel Private",
+    shortDescription: "Private airport transfer from Phuket Airport to your Krabi hotel",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    duration: "2.5 Hrs",
+    rating: 4.8,
+    reviews: 278,
+    vehicles: [
+      {
+        id: "sedan",
+        name: "Sedan Car",
+        capacity: "1 - 3",
+        bigBags: 2,
+        handBags: 3,
+        price: 6500,
+        image: vehicleImages.sedan
+      },
+      {
+        id: "suv",
+        name: "Mini SUV",
+        capacity: "1 - 4",
+        bigBags: 4,
+        handBags: 4,
+        price: 7200,
+        image: vehicleImages.suv
+      },
+      {
+        id: "van",
+        name: "Mini Van",
+        capacity: "1 - 10",
+        bigBags: 10,
+        handBags: 10,
+        price: 7700,
+        image: vehicleImages.van
+      }
+    ],
+    highlights: [
+      "Reliable Pick-Up – Always on time, professional staff wait exit gate no. 2 with your name card.",
+      "24/7 Service – Available day and night. Night-time pick-up available (12:00 AM – 6:00 AM) with a minimal surcharge.",
+      "Flexible Luggage Options – Choose from Sedan, Mini SUV, or Mini Van based on your baggage needs.",
+      "Real-Time Support – Instant assistance via Call or WhatsApp at +66 6 274 30 007",
+      "Easy Rescheduling – Change your pick-up date/time up to 72 hours in advance.",
+      "Other charges – All toll tax and fuel are included in this trip"
+    ],
+    description: `Upon arrival at Phuket International Airport, go directly to the Immigration Department and obtain your visa.
+After completing immigration formalities, collect your checked baggage from the designated carousel.
+After collecting your baggage, proceed to the exit gate.
+International Arrivals: Our guide will be waiting outside Exit 2 with a name card.
+Domestic Arrivals: Our guide will be waiting outside Exit A with a name card.
+Our guide will be waiting for you inside the exit gate, and will have an identification card with your name on it.
+If you cannot find your identification card or our guide, please contact our support staff at +91 7061710810 (call and WhatsApp). Please send a photo of your current location via WhatsApp so our airport team can assist you immediately.
+After meeting our guide, if you need to use the restroom, you must go to the airport. This is your private car; It will take you directly from the airport to your hotel in Krabi, without any stops along the way.
+The distance from Phuket International Airport to your Krabi hotel is 149 km and takes approximately 2 hours and 30 minutes by car.
+Weather and Traffic: Bad weather or heavy traffic may cause delays. We will not be responsible for such delays.
+Baggage Reminder: After your trip, please ensure you unload all your luggage from your vehicle. We will not be responsible for any luggage left behind.
+No-Show Policy: If your flight is cancelled or delayed, you must inform us. If you do not inform us and do not arrive within 3 hours of the deadline, the booking will be considered a no-show and no refund will be given.
+Free Cancellation: Free cancellation is available up to 72 hours before the pick-up time.
+Date Change: Any changes to the scheduled date must be made at least 72 hours before the pick-up time.
+Support Staff Contact (Call/WhatsApp): +91 7061710810`,
+    about: `Phuket International Airport
+Address: 222, Mai Khao, Thalang District, Phuket 83110
+
+The distance from Phuket International Airport to Ao Nang is 149 kilometers and it takes about 2 hours and 30 minutes to travel by car.
+
+Phuket International Airport Arrival Instructions:
+1. Upon Arrival: Proceed directly to the Immigration Department to obtain your visa.
+2. Baggage Claim: After completing immigration formalities, collect your checked luggage from the assigned baggage carousel.
+3. Exit & Meet Your Guide: Once you have your luggage, proceed to the exit gate.
+- International Arrivals: Our guide will be waiting outside Exit Gate No. 2, holding an ID card with your name.
+- Domestic Arrivals: Our guide will be waiting outside Exit Gate No. 1, holding an ID card with your name.
+
+If you cannot find your name card or guide: Please contact our support staff at +91 7061710810 (Call & WhatsApp). Send a photo of your current location via WhatsApp so our airport team can locate and assist you promptly.
+
+Night Pick-Up Charges: For pick-ups between 12:00 AM – 6:00 AM, an additional 300 THB is payable directly to the driver.
+
+Driver Waiting Time: Your driver will wait at the airport for up to 3 hours from your flight arrival time, as per your booking voucher.`,
+    baggagePolicy: [
+      "Sedan Car: Maximum capacity – 2 large bags and 3 hand bags",
+      "Mini SUV Car: Maximum capacity – 4 large bags and 4 hand bags",
+      "Mini Van: Maximum capacity – 10 large bags and 10 hand bags",
+      "⚠️ Important: If you are carrying more baggage than the allowed limit for your selected vehicle, an additional charge of 500 THB per extra bag may apply."
+    ],
+    cancellationPolicy: [
+      "For pick-ups scheduled between 12:00 AM and 6:00 AM, an additional night-time surcharge of 300 THB must be paid directly to the driver.",
+      "The driver will wait at the airport for up to 3 hours from your flight's arrival time, as mentioned in your voucher.",
+      "Free cancellation is available up to 72 hours prior to the scheduled pick-up time.",
+      "Changes to the pick-up date can also be made up to 72 hours in advance of the scheduled time."
+    ],
+    termsConditions: [
+      "If your flight is canceled or delayed, no one will be charged separately.",
+      "If your flight is cancelled, you can send information about the new flight on this WhatsApp number +91 7061710810 and get a new booking voucher for which there is no charge.",
+      "If your flight is cancelled and you are not going to Krabi, you will not get a refund."
+    ]
+  },
+  "krabi-hkt-airport-dropoff": {
+    id: "krabi-hkt-airport-dropoff",
+    title: "Krabi Hotel to Phuket International Airport {HKT} Drop Private",
+    shortDescription: "Private transfer from your Krabi hotel to Phuket Airport",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    duration: "2.5 Hrs",
+    rating: 4.8,
+    reviews: 198,
+    vehicles: [
+      {
+        id: "sedan",
+        name: "Sedan Car",
+        capacity: "1 - 3",
+        bigBags: 2,
+        handBags: 3,
+        price: 6500,
+        image: vehicleImages.sedan
+      },
+      {
+        id: "suv",
+        name: "Mini SUV",
+        capacity: "1 - 4",
+        bigBags: 4,
+        handBags: 4,
+        price: 7200,
+        image: vehicleImages.suv
+      },
+      {
+        id: "van",
+        name: "Mini Van",
+        capacity: "1 - 10",
+        bigBags: 10,
+        handBags: 10,
+        price: 7700,
+        image: vehicleImages.van
+      }
+    ],
+    highlights: [
+      "Distance: Approx. 145 km from Krabi Hotel to Phuket Airport.",
+      "Travel Time: Around 2.5 Hours under normal traffic conditions.",
+      "Airport Reporting: Please reach the airport at least 3 hours before your flight for check-in and security clearance.",
+      "Important Note: Traffic congestion or heavy rain may cause delays. We strongly recommend leaving for the airport on time to avoid last-minute stress."
+    ],
+    description: `Krabi Hotel → Phuket Airport Transfer
+Distance & Travel Time: From your Krabi hotel to Phuket International Airport is ~145 km and takes about 2.5 hours under normal traffic.
+Airport Arrival: Please plan to reach the airport at least 3 hours before your flight time.
+Departure Planning: With a 2.5-hour drive + 3-hour airport buffer, we recommend leaving your hotel at least 5.5–6 hours before departure.
+Traffic & Weather: Delays can occur due to traffic or rain. Please leave on time.
+Pick-Up Readiness: Check out and be ready in the hotel lobby at your scheduled pick-up time.
+Driver Waiting Time: The driver will wait 10–15 minutes. If you are late, the driver will leave; your booking will be treated as a no-show and no refund will be provided.
+Change of Pick-Up Time: You can reschedule free of charge by sending a WhatsApp message to +66 63 370 1999 at least 24 hours in advance.
+Support Contact: Support Staff (Call & WhatsApp): +66 6 274 30 007`,
+    about: `Krabi Hotel → Phuket International Airport
+
+Distance: 145 kilometers
+Travel Time: Approximately 2.5 Hours by car
+Travel Tip: Always leave early and plan to reach the airport at least 3 hours before your flight, as traffic or rain may cause delays.`,
+    baggagePolicy: [
+      "Sedan Car: Maximum capacity – 2 large bags and 3 hand bags",
+      "Mini SUV Car: Maximum capacity – 4 large bags and 4 hand bags",
+      "Mini Van: Maximum capacity – 10 large bags and 10 hand bags",
+      "⚠️ Important: If you are carrying more baggage than the allowed limit for your selected vehicle, an additional charge of 500 THB per extra bag may apply."
+    ],
+    cancellationPolicy: [
+      "For pick-ups scheduled between 12:00 AM and 6:00 AM, an additional night-time surcharge of 300 THB must be paid directly to the driver.",
+      "The driver will wait at the hotel for 10-15 minutes only.",
+      "Free cancellation is available up to 72 hours prior to the scheduled pick-up time.",
+      "Changes to the pick-up date can also be made up to 72 hours in advance of the scheduled time."
+    ],
+    termsConditions: [
+      "If your flight is canceled or delayed, no one will be charged separately.",
+      "If your flight is cancelled, you can send information about the new flight on this WhatsApp number +91 7061710810 and get a new booking voucher for which there is no charge.",
+      "If your flight is cancelled and you are not going to Phuket, you will not get a refund."
+    ]
+  },
+  "krabi-kbv-aonang-pickup": {
+    id: "krabi-kbv-aonang-pickup",
+    title: "Krabi International Airport {KBV} To Ao Nang Krabi Hotel Drop Private",
+    shortDescription: "Private airport transfer from Krabi Airport to your Ao Nang hotel",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    duration: "45 Mins",
+    rating: 4.9,
+    reviews: 567,
+    vehicles: [
+      {
+        id: "sedan",
+        name: "Sedan Car",
+        capacity: "1 - 3",
+        bigBags: 2,
+        handBags: 3,
+        price: 2400,
+        image: vehicleImages.sedan
+      },
+      {
+        id: "suv",
+        name: "Mini SUV",
+        capacity: "1 - 4",
+        bigBags: 4,
+        handBags: 4,
+        price: 2800,
+        image: vehicleImages.suv
+      },
+      {
+        id: "van",
+        name: "Mini Van",
+        capacity: "1 - 10",
+        bigBags: 10,
+        handBags: 10,
+        price: 3000,
+        image: vehicleImages.van
+      }
+    ],
+    highlights: [
+      "Reliable Pick-Up – Always on time, professional staff wait exit gate no. 15 & 16 with your name card.",
+      "24/7 Service – Available day and night. Night-time pick-up available (12:00 AM – 6:00 AM) with a minimal surcharge.",
+      "Flexible Luggage Options – Choose from Sedan, Mini SUV, or Mini Van based on your baggage needs.",
+      "Real-Time Support – Instant assistance via Call or WhatsApp at +66 6 274 30 007",
+      "Easy Rescheduling – Change your pick-up date/time up to 48 hours in advance.",
+      "Other charges – All toll tax and fuel are included in this trip"
+    ],
+    description: `Upon arrival at Krabi Airport, go directly to the Immigration Department and obtain your visa.
+After completing immigration formalities, collect your checked baggage from the designated carousel.
+If you have a visa, you do not need to go to the Immigration Department; you can collect your checked baggage directly from the carousel.
+After collecting your baggage, proceed to Exit 15 & 16.
+Our guide will be waiting for you outside Exit 15 & 16, and will have an identification card with your name on it.
+If you cannot find your identification card or our guide, please contact our support staff at +91 7061710810 (call and WhatsApp). Please send a photo of your current location via WhatsApp so our airport team can assist you immediately.
+After meeting our guide, if you need to use the restroom, you must go to the airport. This is your private car; It will take you directly from the airport to your hotel in Krabi, without any stops along the way.
+Krabi International Airport is 25 km from Ao Nang Krabi Hotel and takes approximately 45 minutes by car.
+Weather and Traffic: Delays may occur due to bad weather or heavy traffic. We will not be responsible for such delays.
+Baggage Reminder: After your trip, please ensure you unload all your luggage from your vehicle. We will not be responsible for any luggage left behind.
+No-Show Policy: If your flight is cancelled or delayed, you must inform us. If you do not inform us and do not arrive within 3 hours of the deadline, the booking will be considered a no-show and no refund will be given.
+Free Cancellation: Free cancellation is available up to 48 hours before the pick-up time.
+Date Change: Any changes to the scheduled date must be made at least 48 hours before the pick-up time.`,
+    about: `Krabi International Airport to Ao Nang
+
+Distance: 25 kilometers
+Travel Time: Approximately 45 minutes by car
+
+Arrival Instructions – Krabi Airport:
+Upon arrival at Krabi Airport, proceed directly to Immigration to obtain your visa.
+After completing immigration formalities, collect your checked baggage from the designated carousel.
+Once you have your luggage, head towards Exit Gate No. 15 & 16.
+Our guide will be waiting for you outside Exit Gate No. 15 & 16, holding a name card with your name on it.
+If you do not see your name card or are unable to locate our guide, please contact our support staff at +66 6 274 30 007 (Call & WhatsApp).`,
+    baggagePolicy: [
+      "Sedan Car: Maximum capacity – 2 large bags and 3 hand bags",
+      "Mini SUV Car: Maximum capacity – 4 large bags and 4 hand bags",
+      "Mini Van: Maximum capacity – 10 large bags and 10 hand bags",
+      "⚠️ Important: If you are carrying more baggage than the allowed limit for your selected vehicle, an additional charge of 500 THB per extra bag may apply."
+    ],
+    cancellationPolicy: [
+      "For pick-ups scheduled between 12:00 AM and 6:00 AM, an additional night-time surcharge of 300 THB must be paid directly to the driver.",
+      "The driver will wait at the airport for up to 3 hours from your flight's arrival time, as mentioned in your voucher.",
+      "Free cancellation is available up to 72 hours prior to the scheduled pick-up time.",
+      "Changes to the pick-up date can also be made up to 72 hours in advance of the scheduled time."
+    ],
+    termsConditions: [
+      "If your flight is canceled or delayed, no one will be charged separately.",
+      "If your flight is cancelled, you can send information about the new flight on this WhatsApp number +91 7061710810 and get a new booking voucher for which there is no charge.",
+      "If your flight is cancelled and you are not going to Krabi, you will not get a refund."
+    ]
+  },
+  "krabi-phuket-to-krabi": {
+    id: "krabi-phuket-to-krabi",
+    title: "Phuket Hotel To Krabi Hotel Drop Private",
+    shortDescription: "Private transfer from your Phuket hotel to Krabi hotel",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    duration: "3 Hrs",
+    rating: 4.9,
+    reviews: 423,
+    vehicles: [
+      {
+        id: "sedan",
+        name: "Sedan Car",
+        capacity: "1 - 3",
+        bigBags: 2,
+        handBags: 3,
+        price: 6800,
+        image: vehicleImages.sedan
+      },
+      {
+        id: "suv",
+        name: "Mini SUV",
+        capacity: "1 - 4",
+        bigBags: 4,
+        handBags: 4,
+        price: 7000,
+        image: vehicleImages.suv
+      },
+      {
+        id: "van",
+        name: "Mini Van",
+        capacity: "1 - 10",
+        bigBags: 10,
+        handBags: 10,
+        price: 7900,
+        image: vehicleImages.van
+      }
+    ],
+    highlights: [
+      "Comfortable private car transfer",
+      "Approx. 180 km journey – 3 hours travel time",
+      "Door-to-door service from your Phuket hotel to Krabi hotel",
+      "No stops during the trip for a faster journey",
+      "Professional driver with local route knowledge"
+    ],
+    description: `Driver Waiting Time: The driver will wait in the hotel lobby for a maximum of 10–15 minutes only.
+Travel Distance & Duration: The distance from Phuket to Krabi is approximately 180 km and takes about 3 hours by car.
+No-Show Policy: In case of delay or no arrival, no refund will be provided.
+No Stops During Transfer: No halts are permitted during the journey. Please ensure you have eaten and used the restroom before departure.
+Important Note: We are not responsible for delays caused by bad weather.
+Free Cancellation: Up to 72 hours before the scheduled pick-up time.
+Date Changes: Must be made at least 72 hours before the scheduled pick-up time.
+Support Contact: +91 7061710810 (Call & WhatsApp)`,
+    about: `Phuket Hotel to Krabi Hotel
+The distance from Phuket to Krabi is 180 kilometers and it takes about 3 hours and 15 minutes to travel by car.`,
+    baggagePolicy: [
+      "Sedan Car: Max 2 large bags + 3 handbags",
+      "Mini SUV Car: Max 4 large bags + 4 handbags",
+      "Mini Van: Max 10 large bags + 10 handbags",
+      "⚠️ Important Notice: If your baggage exceeds the allowed limit for your selected vehicle, an additional charge of 500 THB per extra bag may apply."
+    ],
+    cancellationPolicy: [
+      "For pickups scheduled between 12:00 AM and 6:00 AM, an additional night-time surcharge of 300 THB must be paid directly to the driver.",
+      "The driver will wait at the hotel for 10-15 minutes only.",
+      "Free cancellation is available up to 72 hours prior to the scheduled pick-up time.",
+      "Changes to the pick-up date can also be made up to 72 hours in advance of the scheduled time."
+    ],
+    termsConditions: [
+      "The distance from Phuket to Krabi is 180 km and takes about 3 hours.",
+      "The route from Phuket to Krabi is hilly, and sometimes it may take longer due to rain.",
+      "If there is any delay due to bad weather, we will not be responsible for it.",
+      "If you cancel the booking at the time of pickup for any reason, it will be considered a no-show booking, and you will not get any refund.",
+      "You can change the booking date 72 hours in advance for free.",
+      "If you want to cancel the booking, you can do so 72 hours in advance. If you cancel the booking less than 72 hours in advance, no refund will be given."
+    ]
+  },
+  "krabi-phuket-city-tour-krabi": {
+    id: "krabi-phuket-city-tour-krabi",
+    title: "Phuket Hotel to Phuket City Tour 4 Hours to Krabi Hotel Private",
+    shortDescription: "Private 4-hour Phuket city tour followed by Krabi hotel drop-off",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    duration: "7 Hrs Total",
+    rating: 4.9,
+    reviews: 156,
+    vehicles: [
+      {
+        id: "sedan",
+        name: "Sedan Car",
+        capacity: "1 - 3",
+        bigBags: 2,
+        handBags: 3,
+        price: 9500,
+        image: vehicleImages.sedan
+      },
+      {
+        id: "suv",
+        name: "Mini SUV",
+        capacity: "1 - 4",
+        bigBags: 4,
+        handBags: 4,
+        price: 9900,
+        image: vehicleImages.suv
+      },
+      {
+        id: "van",
+        name: "Mini Van",
+        capacity: "1 - 10",
+        bigBags: 10,
+        handBags: 10,
+        price: 10900,
+        image: vehicleImages.van
+      }
+    ],
+    highlights: [
+      "Comfortable private car transfer",
+      "Approx. 180 km journey – 3 hours travel time",
+      "4-hour Phuket City Tour included",
+      "Visit Chalong Temple, Phuket Old Town, Honey Farm, Tiger Kingdom",
+      "Door-to-door service from your Phuket hotel to Krabi hotel"
+    ],
+    description: `Phuket Hotel to Phuket City Tour to Krabi Hotel Transfer
+Driver Waiting Time: The driver will wait in the hotel lobby for a maximum of 10–15 minutes only.
+Travel Distance & Duration: The distance from Phuket to Krabi is approximately 180 km and takes about 3 hours by car.
+No-Show Policy: In case of delay or no-show, no refund will be provided.
+No Stops During Transfer: There are no halts during the journey. Please ensure you have eaten and used the restroom before departure from your Phuket hotel.
+Free Cancellation: Allowed up to 72 hours before the pick-up time.
+Date Changes: Any changes to the scheduled date must be made at least 72 hours before the pick-up time.
+Important Notes: We are not responsible for delays caused by bad weather.
+Support Contact: +91 7061710810 (Call & WhatsApp).
+
+Phuket City Tour Details:
+Tour Duration: 4 hours
+Itinerary: Chalong Temple, Phuket Old Town, Honey Farm, and Tiger Kingdom (Ticket to Tiger Kingdom is not included in the package).
+Please manage your time accordingly to cover all locations within the 4 hours.
+Overtime Charges: If the tour exceeds 4 hours, the driver will charge 500 THB per additional hour, payable directly.`,
+    about: `Phuket ↔ Krabi Transfer & Tour Policy
+Distance & Duration:
+Distance: Approx. 180 km
+Travel Time: About 3 hours
+Route: Hilly roads – travel time may be longer during rain or bad weather.
+Note: We are not responsible for delays caused by weather conditions.
+
+Tour Options During Transfer:
+Phuket City Tour (4 hours) + Transfer to Krabi
+Total duration: 7 hours from pick-up time.
+Extra time beyond 7 hours: 500 THB per hour (payable directly to the driver).`,
+    baggagePolicy: [
+      "Sedan Car: Max 2 large bags + 3 handbags",
+      "Mini SUV Car: Max 4 large bags + 4 handbags",
+      "Mini Van: Max 10 large bags + 10 handbags",
+      "⚠️ Important Notice: If your baggage exceeds the allowed limit for your selected vehicle, an additional charge of 500 THB per extra bag may apply."
+    ],
+    cancellationPolicy: [
+      "For pickups scheduled between 12:00 AM and 6:00 AM, an additional night-time surcharge of 300 THB must be paid directly to the driver.",
+      "The driver will wait at the hotel for 10-15 minutes only.",
+      "Free cancellation is available up to 72 hours prior to the scheduled pick-up time.",
+      "Changes to the pick-up date can also be made up to 72 hours in advance of the scheduled time."
+    ],
+    termsConditions: [
+      "The distance from Phuket to Krabi is 180 km and takes about 3 hours.",
+      "The route from Phuket to Krabi is hilly, and sometimes it may take longer due to rain.",
+      "If there is any delay due to bad weather, we will not be responsible for it.",
+      "If you cancel the booking at the time of pickup for any reason, it will be considered a no-show booking, and you will not get any refund.",
+      "The distance from Phuket to Krabi is 3 hours, and if you want to take a 4-hour Phuket city tour on the way, you will have a total of 7 hours. If it takes longer, the driver will charge you 500 Thai baht for 1 hour, which you have to pay.",
+      "You can change the booking date 72 hours in advance for free.",
+      "If you want to cancel the booking, you can do so 72 hours in advance. If you cancel the booking less than 72 hours in advance, no refund will be given."
+    ]
+  },
+  "krabi-phuket-krabi-city-tour": {
+    id: "krabi-phuket-krabi-city-tour",
+    title: "Phuket Hotel to Krabi City Tour 6 Hours to Krabi Hotel Drop Private",
+    shortDescription: "Private 6-hour Krabi city tour followed by Krabi hotel drop-off",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    duration: "9 Hrs Total",
+    rating: 4.9,
+    reviews: 98,
+    vehicles: [
+      {
+        id: "sedan",
+        name: "Sedan Car",
+        capacity: "1 - 3",
+        bigBags: 2,
+        handBags: 3,
+        price: 13600,
+        image: vehicleImages.sedan
+      },
+      {
+        id: "suv",
+        name: "Mini SUV",
+        capacity: "1 - 4",
+        bigBags: 4,
+        handBags: 4,
+        price: 12800,
+        image: vehicleImages.suv
+      },
+      {
+        id: "van",
+        name: "Mini Van",
+        capacity: "1 - 10",
+        bigBags: 10,
+        handBags: 10,
+        price: 14700,
+        image: vehicleImages.van
+      }
+    ],
+    highlights: [
+      "Comfortable private car transfer",
+      "Approx. 180 km journey – 3 hours travel time",
+      "6-hour Krabi City Tour included",
+      "Visit Emerald Pool, Hot Spring Waterfalls, Tiger Cave Temple",
+      "Door-to-door service from your Phuket hotel to Krabi hotel"
+    ],
+    description: `Phuket Hotel to Krabi City Tour to Krabi Hotel Transfer
+Driver Waiting Time: The driver will wait in the hotel lobby for a maximum of 10–15 minutes only.
+Travel Distance & Duration: Phuket to Krabi is approximately 180 km and takes about 3 hours by car.
+No-Show Policy: In case of delay or no-show, no refund will be provided.
+No Stops During Transfer: There are no halts during the journey. Please ensure you have eaten and used the restroom before departure from your Phuket hotel.
+Important Notes: We are not responsible for delays caused by bad weather.
+Free Cancellation: Allowed up to 72 hours before the pick-up time.
+Date Changes: Any changes to the scheduled date must be made at least 72 hours before the pick-up time.
+Support Contact: +91 7061710810 (Call & WhatsApp)
+
+Krabi City Tour - Tour Duration: 6 hours
+Itinerary: Emerald Pool - Hot Spring Waterfalls - Tiger Cave Temple
+(National Park fee not included – 600 THB per person)
+Time Management: Please plan your visit so all locations can be covered within the 6-hour limit.
+Overtime Charges: If the tour exceeds 6 hours, 500 THB per additional hour (payable directly to the driver).`,
+    about: `Phuket ↔ Krabi Transfer & Tour Policy
+Distance & Duration:
+Distance: Approx. 180 km
+Travel Time: About 3 hours
+Route: Hilly roads – travel time may be longer during rain or bad weather.
+Note: We are not responsible for delays caused by weather conditions.
+
+Tour Options During Transfer:
+Krabi City Tour (6 hours) + Transfer to Krabi
+Total duration: 9 hours from pick-up time.
+Extra time beyond 9 hours: 500 THB per hour (payable directly to the driver).`,
+    baggagePolicy: [
+      "Sedan Car: Max 2 large bags + 3 handbags",
+      "Mini SUV Car: Max 4 large bags + 4 handbags",
+      "Mini Van: Max 10 large bags + 10 handbags",
+      "⚠️ Important Notice: If your baggage exceeds the allowed limit for your selected vehicle, an additional charge of 500 THB per extra bag may apply."
+    ],
+    cancellationPolicy: [
+      "For pickups scheduled between 12:00 AM and 6:00 AM, an additional night-time surcharge of 300 THB must be paid directly to the driver.",
+      "The driver will wait at the hotel for 10-15 minutes only.",
+      "Free cancellation is available up to 72 hours prior to the scheduled pick-up time.",
+      "Changes to the pick-up date can also be made up to 72 hours in advance of the scheduled time."
+    ],
+    termsConditions: [
+      "The distance from Phuket to Krabi is 180 km and takes about 3 hours.",
+      "The route from Phuket to Krabi is hilly, and sometimes it may take longer due to rain.",
+      "If there is any delay due to bad weather, we will not be responsible for it.",
+      "If you cancel the booking at the time of pickup for any reason, it will be considered a no-show booking, and you will not get any refund.",
+      "The distance from Phuket to Krabi is 3 hours, and if you want to take a 6-hour Krabi city tour on the way, you will have a total of 9 hours. If it takes longer, the driver will charge you 500 Thai baht for 1 hour, which you have to pay.",
+      "You can change the booking date 72 hours in advance for free.",
+      "If you want to cancel the booking, you can do so 72 hours in advance. If you cancel the booking less than 72 hours in advance, no refund will be given."
+    ]
   }
 };
