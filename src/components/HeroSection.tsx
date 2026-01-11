@@ -1,7 +1,11 @@
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import heroImage from "@/assets/hero-beach.jpg";
+import { useState, useEffect } from "react";
+import heroImage1 from "@/assets/hero-beach.jpg";
+import heroImage2 from "@/assets/phi-phi-boat.jpeg";
+import heroImage3 from "@/assets/james-bond-island-hero.jpg";
+import heroImage4 from "@/assets/elephant-safari-hero.jpg";
 import { useNavigate } from "react-router-dom";
 import {
   Select,
@@ -11,19 +15,54 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4];
+
 const HeroSection = () => {
   const navigate = useNavigate();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
   
   const handleCityChange = (value: string) => {
     navigate(value);
   };
 
-  return <section className="relative h-[600px] md:h-[700px] w-full overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center" style={{
-      backgroundImage: `url(${heroImage})`
-    }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
+  return (
+    <section className="relative h-[600px] md:h-[700px] w-full overflow-hidden">
+      {/* Background Images with Crossfade */}
+      {heroImages.map((image, index) => (
+        <div
+          key={index}
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
+          style={{
+            backgroundImage: `url(${image})`,
+            opacity: index === currentImageIndex ? 1 : 0,
+          }}
+        />
+      ))}
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
+
+      {/* Image Indicators */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentImageIndex(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentImageIndex
+                ? "bg-white scale-110"
+                : "bg-white/50 hover:bg-white/70"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
 
       {/* Content */}
@@ -66,11 +105,15 @@ const HeroSection = () => {
 
         {/* Categories */}
         <div className="mt-8 flex flex-wrap gap-3 justify-center animate-fade-in">
-          {["Thailand Transfers", "Dubai Transfers", "Singapore Transfers"].map(category => <Button key={category} variant="secondary" className="bg-white/90 hover:bg-white backdrop-blur-sm">
+          {["Thailand Transfers", "Dubai Transfers", "Singapore Transfers"].map(category => (
+            <Button key={category} variant="secondary" className="bg-white/90 hover:bg-white backdrop-blur-sm">
               {category}
-            </Button>)}
+            </Button>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
