@@ -2,10 +2,10 @@ import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState, useEffect } from "react";
-import heroImage1 from "@/assets/hero-beach.jpg";
-import heroImage2 from "@/assets/phi-phi-boat.jpeg";
-import heroImage3 from "@/assets/james-bond-island-hero.jpg";
-import heroImage4 from "@/assets/elephant-safari-hero.jpg";
+import heroImage1 from "@/assets/hero-thailand-beach.jpg";
+import heroImage2 from "@/assets/hero-thailand-temple.jpg";
+import heroImage3 from "@/assets/hero-thailand-adventure.jpg";
+import heroImage4 from "@/assets/hero-thailand-island.jpg";
 import { useNavigate } from "react-router-dom";
 import {
   Select,
