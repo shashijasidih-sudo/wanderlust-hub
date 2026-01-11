@@ -66,7 +66,7 @@ const HeroSection = () => {
 
         {/* Categories */}
         <div className="mt-8 flex flex-wrap gap-3 justify-center animate-fade-in">
-          {["Thai Transfers", "Dubai Transfers", "Singapore Transfers"].map(category => <Button key={category} variant="secondary" className="bg-white/90 hover:bg-white backdrop-blur-sm">
+          {["Thailand Transfers", "Dubai Transfers", "Singapore Transfers"].map(category => <Button key={category} variant="secondary" className="bg-white/90 hover:bg-white backdrop-blur-sm">
               {category}
             </Button>)}
         </div>
