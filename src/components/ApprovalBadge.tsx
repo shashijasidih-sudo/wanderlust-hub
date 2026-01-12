@@ -20,11 +20,12 @@ const ApprovalBadge = () => {
             <Shield className="h-4 w-4 text-green-600 hidden sm:block" />
             <div className="text-xs md:text-sm text-gray-700 font-medium text-center">
               <div>
-                <span className="text-green-700 font-semibold">Approved by NIDHI</span>
-                <span className="hidden sm:inline"> – National Integrated Database of Hospitality Industry</span>
+                <span className="text-green-700 font-semibold">NIDHI Approved</span>
+                <span className="mx-1 text-gray-400 hidden sm:inline">|</span>
+                <span className="text-blue-700 font-semibold hidden sm:inline">UDYAM Certified MSME</span>
               </div>
               <div className="text-gray-600 text-[10px] md:text-xs">
-                An initiative by the Ministry of Tourism, Government of India
+                Ministry of Tourism, Govt. of India
               </div>
             </div>
           </div>
