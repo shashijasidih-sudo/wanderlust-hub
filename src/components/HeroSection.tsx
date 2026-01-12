@@ -105,11 +105,27 @@ const HeroSection = () => {
 
         {/* Categories */}
         <div className="mt-8 flex flex-wrap gap-3 justify-center animate-fade-in">
-          {["Thailand Transfers", "Dubai Transfers", "Singapore Transfers"].map(category => (
-            <Button key={category} variant="secondary" className="bg-white/90 hover:bg-white backdrop-blur-sm">
-              {category}
-            </Button>
-          ))}
+          <Button 
+            variant="secondary" 
+            className="bg-white/90 hover:bg-white backdrop-blur-sm"
+            onClick={() => navigate("/thailand/transfers")}
+          >
+            Thailand Transfers
+          </Button>
+          <Button 
+            variant="secondary" 
+            className="bg-white/90 hover:bg-white backdrop-blur-sm"
+            onClick={() => navigate("/dubai/transfers")}
+          >
+            Dubai Transfers
+          </Button>
+          <Button 
+            variant="secondary" 
+            className="bg-white/90 hover:bg-white backdrop-blur-sm"
+            onClick={() => navigate("/singapore/transfers")}
+          >
+            Singapore Transfers
+          </Button>
         </div>
       </div>
     </section>

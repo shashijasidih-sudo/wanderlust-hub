@@ -119,37 +119,17 @@ import SingaporeAirportDropoff5 from "./pages/SingaporeAirportDropoff5";
 import SingaporeAirportDropoff10 from "./pages/SingaporeAirportDropoff10";
 import SingaporeAirportNightPickup5 from "./pages/SingaporeAirportNightPickup5";
 import SingaporeAirportNightPickup10 from "./pages/SingaporeAirportNightPickup10";
-import DubaiTransfers from "./pages/DubaiTransfers";
-import DubaiAirportPickupZone1_4Seater from "./pages/DubaiAirportPickupZone1_4Seater";
-import DubaiAirportPickupZone1_7Seater from "./pages/DubaiAirportPickupZone1_7Seater";
-import DubaiAirportPickupZone1_12Seater from "./pages/DubaiAirportPickupZone1_12Seater";
-import DubaiAirportPickupZone2_4Seater from "./pages/DubaiAirportPickupZone2_4Seater";
-import DubaiAirportPickupZone2_7Seater from "./pages/DubaiAirportPickupZone2_7Seater";
-import DubaiAirportPickupZone2_12Seater from "./pages/DubaiAirportPickupZone2_12Seater";
-import DubaiAirportPickupZone3_4Seater from "./pages/DubaiAirportPickupZone3_4Seater";
-import DubaiAirportPickupZone3_7Seater from "./pages/DubaiAirportPickupZone3_7Seater";
-import DubaiAirportPickupZone3_12Seater from "./pages/DubaiAirportPickupZone3_12Seater";
-import DubaiAirportPickupZone4_4Seater from "./pages/DubaiAirportPickupZone4_4Seater";
-import DubaiAirportPickupZone4_7Seater from "./pages/DubaiAirportPickupZone4_7Seater";
-import DubaiAirportPickupZone4_12Seater from "./pages/DubaiAirportPickupZone4_12Seater";
-import DubaiAirportPickupZone5_4Seater from "./pages/DubaiAirportPickupZone5_4Seater";
-import DubaiAirportPickupZone5_7Seater from "./pages/DubaiAirportPickupZone5_7Seater";
-import DubaiAirportPickupZone5_12Seater from "./pages/DubaiAirportPickupZone5_12Seater";
-import DubaiAirportDropoffZone1_4Seater from "./pages/DubaiAirportDropoffZone1_4Seater";
-import DubaiAirportDropoffZone1_7Seater from "./pages/DubaiAirportDropoffZone1_7Seater";
-import DubaiAirportDropoffZone1_12Seater from "./pages/DubaiAirportDropoffZone1_12Seater";
-import DubaiAirportDropoffZone2_4Seater from "./pages/DubaiAirportDropoffZone2_4Seater";
-import DubaiAirportDropoffZone2_7Seater from "./pages/DubaiAirportDropoffZone2_7Seater";
-import DubaiAirportDropoffZone2_12Seater from "./pages/DubaiAirportDropoffZone2_12Seater";
-import DubaiAirportDropoffZone3_4Seater from "./pages/DubaiAirportDropoffZone3_4Seater";
-import DubaiAirportDropoffZone3_7Seater from "./pages/DubaiAirportDropoffZone3_7Seater";
-import DubaiAirportDropoffZone3_12Seater from "./pages/DubaiAirportDropoffZone3_12Seater";
-import DubaiAirportDropoffZone4_4Seater from "./pages/DubaiAirportDropoffZone4_4Seater";
-import DubaiAirportDropoffZone4_7Seater from "./pages/DubaiAirportDropoffZone4_7Seater";
-import DubaiAirportDropoffZone4_12Seater from "./pages/DubaiAirportDropoffZone4_12Seater";
-import DubaiAirportDropoffZone5_4Seater from "./pages/DubaiAirportDropoffZone5_4Seater";
-import DubaiAirportDropoffZone5_7Seater from "./pages/DubaiAirportDropoffZone5_7Seater";
-import DubaiAirportDropoffZone5_12Seater from "./pages/DubaiAirportDropoffZone5_12Seater";
+import DubaiTransfersNew from "./pages/DubaiTransfersNew";
+import DubaiAirportPickupZone1 from "./pages/DubaiAirportPickupZone1";
+import DubaiAirportDropoffZone1 from "./pages/DubaiAirportDropoffZone1";
+import DubaiAirportPickupZone2 from "./pages/DubaiAirportPickupZone2";
+import DubaiAirportDropoffZone2 from "./pages/DubaiAirportDropoffZone2";
+import DubaiAirportPickupZone3 from "./pages/DubaiAirportPickupZone3";
+import DubaiAirportDropoffZone3 from "./pages/DubaiAirportDropoffZone3";
+import DubaiAirportPickupZone4 from "./pages/DubaiAirportPickupZone4";
+import DubaiAirportDropoffZone4 from "./pages/DubaiAirportDropoffZone4";
+import DubaiAirportPickupZone5 from "./pages/DubaiAirportPickupZone5";
+import DubaiAirportDropoffZone5 from "./pages/DubaiAirportDropoffZone5";
 import Auth from "./pages/Auth";
 import Profile from "./pages/Profile";
 import MyBookings from "./pages/MyBookings";
@@ -329,37 +309,17 @@ const App = () => (
           <Route path="/singapore/airport-dropoff-10-seater" element={<SingaporeAirportDropoff10 />} />
           <Route path="/singapore/airport-night-pickup-5-seater" element={<SingaporeAirportNightPickup5 />} />
           <Route path="/singapore/airport-night-pickup-10-seater" element={<SingaporeAirportNightPickup10 />} />
-          <Route path="/dubai/transfers" element={<DubaiTransfers />} />
-          <Route path="/dubai/airport-pickup-zone1-4-seater" element={<DubaiAirportPickupZone1_4Seater />} />
-          <Route path="/dubai/airport-pickup-zone1-7-seater" element={<DubaiAirportPickupZone1_7Seater />} />
-          <Route path="/dubai/airport-pickup-zone1-12-seater" element={<DubaiAirportPickupZone1_12Seater />} />
-          <Route path="/dubai/airport-pickup-zone2-4-seater" element={<DubaiAirportPickupZone2_4Seater />} />
-          <Route path="/dubai/airport-pickup-zone2-7-seater" element={<DubaiAirportPickupZone2_7Seater />} />
-          <Route path="/dubai/airport-pickup-zone2-12-seater" element={<DubaiAirportPickupZone2_12Seater />} />
-          <Route path="/dubai/airport-pickup-zone3-4-seater" element={<DubaiAirportPickupZone3_4Seater />} />
-          <Route path="/dubai/airport-pickup-zone3-7-seater" element={<DubaiAirportPickupZone3_7Seater />} />
-          <Route path="/dubai/airport-pickup-zone3-12-seater" element={<DubaiAirportPickupZone3_12Seater />} />
-          <Route path="/dubai/airport-pickup-zone4-4-seater" element={<DubaiAirportPickupZone4_4Seater />} />
-          <Route path="/dubai/airport-pickup-zone4-7-seater" element={<DubaiAirportPickupZone4_7Seater />} />
-          <Route path="/dubai/airport-pickup-zone4-12-seater" element={<DubaiAirportPickupZone4_12Seater />} />
-          <Route path="/dubai/airport-pickup-zone5-4-seater" element={<DubaiAirportPickupZone5_4Seater />} />
-          <Route path="/dubai/airport-pickup-zone5-7-seater" element={<DubaiAirportPickupZone5_7Seater />} />
-          <Route path="/dubai/airport-pickup-zone5-12-seater" element={<DubaiAirportPickupZone5_12Seater />} />
-          <Route path="/dubai/airport-dropoff-zone1-4-seater" element={<DubaiAirportDropoffZone1_4Seater />} />
-          <Route path="/dubai/airport-dropoff-zone1-7-seater" element={<DubaiAirportDropoffZone1_7Seater />} />
-          <Route path="/dubai/airport-dropoff-zone1-12-seater" element={<DubaiAirportDropoffZone1_12Seater />} />
-          <Route path="/dubai/airport-dropoff-zone2-4-seater" element={<DubaiAirportDropoffZone2_4Seater />} />
-          <Route path="/dubai/airport-dropoff-zone2-7-seater" element={<DubaiAirportDropoffZone2_7Seater />} />
-          <Route path="/dubai/airport-dropoff-zone2-12-seater" element={<DubaiAirportDropoffZone2_12Seater />} />
-          <Route path="/dubai/airport-dropoff-zone3-4-seater" element={<DubaiAirportDropoffZone3_4Seater />} />
-          <Route path="/dubai/airport-dropoff-zone3-7-seater" element={<DubaiAirportDropoffZone3_7Seater />} />
-          <Route path="/dubai/airport-dropoff-zone3-12-seater" element={<DubaiAirportDropoffZone3_12Seater />} />
-          <Route path="/dubai/airport-dropoff-zone4-4-seater" element={<DubaiAirportDropoffZone4_4Seater />} />
-          <Route path="/dubai/airport-dropoff-zone4-7-seater" element={<DubaiAirportDropoffZone4_7Seater />} />
-          <Route path="/dubai/airport-dropoff-zone4-12-seater" element={<DubaiAirportDropoffZone4_12Seater />} />
-          <Route path="/dubai/airport-dropoff-zone5-4-seater" element={<DubaiAirportDropoffZone5_4Seater />} />
-          <Route path="/dubai/airport-dropoff-zone5-7-seater" element={<DubaiAirportDropoffZone5_7Seater />} />
-          <Route path="/dubai/airport-dropoff-zone5-12-seater" element={<DubaiAirportDropoffZone5_12Seater />} />
+          <Route path="/dubai/transfers" element={<DubaiTransfersNew />} />
+          <Route path="/dubai/airport-pickup-zone1" element={<DubaiAirportPickupZone1 />} />
+          <Route path="/dubai/airport-dropoff-zone1" element={<DubaiAirportDropoffZone1 />} />
+          <Route path="/dubai/airport-pickup-zone2" element={<DubaiAirportPickupZone2 />} />
+          <Route path="/dubai/airport-dropoff-zone2" element={<DubaiAirportDropoffZone2 />} />
+          <Route path="/dubai/airport-pickup-zone3" element={<DubaiAirportPickupZone3 />} />
+          <Route path="/dubai/airport-dropoff-zone3" element={<DubaiAirportDropoffZone3 />} />
+          <Route path="/dubai/airport-pickup-zone4" element={<DubaiAirportPickupZone4 />} />
+          <Route path="/dubai/airport-dropoff-zone4" element={<DubaiAirportDropoffZone4 />} />
+          <Route path="/dubai/airport-pickup-zone5" element={<DubaiAirportPickupZone5 />} />
+          <Route path="/dubai/airport-dropoff-zone5" element={<DubaiAirportDropoffZone5 />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/my-bookings" element={<MyBookings />} />
