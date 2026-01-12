@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { MapPin, Users, Heart, Globe, Shield, Clock, Star, Sparkles } from "lucide-react";
+import { MapPin, Users, Heart, Globe, Shield, Clock, Star, Sparkles, Award, FileCheck, Building2, ExternalLink } from "lucide-react";
 import bangkokImg from "@/assets/city-bangkok.jpg";
 import phuketImg from "@/assets/city-phuket.jpg";
 import krabiImg from "@/assets/city-krabi.jpg";
@@ -231,6 +231,134 @@ const AboutUs = () => {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Credentials & Trust Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-background to-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <Award className="w-4 h-4" />
+              Verified & Trusted
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Our <span className="text-primary">Credentials</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Yellodae is a government-registered and verified tour operator, ensuring complete trust and transparency
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* NIDHI Registration */}
+            <a 
+              href="/certificates/nidhi-certificate.pdf" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-background rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50 hover:border-green-500/30 hover:-translate-y-2"
+            >
+              <div className="flex items-start justify-between mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <Building2 className="w-8 h-8 text-white" />
+                </div>
+                <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-foreground">NIDHI Registered</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Ministry of Tourism, Government of India
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-muted-foreground">NIDHI ID:</span>
+                  <span className="font-mono font-semibold text-foreground">EBR000108</span>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-muted-foreground">Issue Date:</span>
+                  <span className="font-semibold text-foreground">10/03/2025</span>
+                </div>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border">
+                <span className="inline-flex items-center gap-2 text-sm text-blue-600 font-medium">
+                  View Certificate
+                  <FileCheck className="w-4 h-4" />
+                </span>
+              </div>
+            </a>
+
+            {/* UDYAM MSME Registration */}
+            <a 
+              href="/certificates/udyam-certificate.pdf" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-background rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50 hover:border-green-500/30 hover:-translate-y-2"
+            >
+              <div className="flex items-start justify-between mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-foreground">UDYAM MSME Certified</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Ministry of MSME, Government of India
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-muted-foreground">UDYAM No:</span>
+                  <span className="font-mono font-semibold text-foreground text-xs">UDYAM-BR-26-0210753</span>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-muted-foreground">Enterprise Type:</span>
+                  <span className="font-semibold text-foreground">Micro</span>
+                </div>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border">
+                <span className="inline-flex items-center gap-2 text-sm text-orange-600 font-medium">
+                  View Certificate
+                  <FileCheck className="w-4 h-4" />
+                </span>
+              </div>
+            </a>
+
+            {/* GST Registration */}
+            <div className="group bg-background rounded-2xl p-8 shadow-lg border border-border/50">
+              <div className="flex items-start justify-between mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <FileCheck className="w-8 h-8 text-white" />
+                </div>
+                <div className="bg-green-500/10 text-green-600 px-3 py-1 rounded-full text-xs font-medium">
+                  Active
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-foreground">GST Registered</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Goods & Services Tax, India
+              </p>
+              <div className="space-y-2">
+                <div className="text-sm">
+                  <span className="text-muted-foreground block mb-1">GSTIN:</span>
+                  <span className="font-mono font-bold text-foreground text-lg tracking-wide">10BKOPM6410M2Z2</span>
+                </div>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border">
+                <span className="inline-flex items-center gap-2 text-sm text-green-600 font-medium">
+                  <Shield className="w-4 h-4" />
+                  Tax Compliant Business
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Trust Badge */}
+          <div className="mt-12 text-center">
+            <div className="inline-flex items-center gap-4 bg-muted/50 px-6 py-4 rounded-full">
+              <Shield className="w-6 h-6 text-green-600" />
+              <span className="text-muted-foreground">
+                All registrations are verifiable with respective government authorities
+              </span>
+            </div>
           </div>
         </div>
       </section>
