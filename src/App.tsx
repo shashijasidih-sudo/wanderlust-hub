@@ -112,13 +112,10 @@ import SingaporeZoo from "./pages/SingaporeZoo";
 import RainforestWildAsia from "./pages/RainforestWildAsia";
 import BigBusDiscover from "./pages/BigBusDiscover";
 import BigBusNight from "./pages/BigBusNight";
-import SingaporeTransfers from "./pages/SingaporeTransfers";
-import SingaporeAirportPickup5 from "./pages/SingaporeAirportPickup5";
-import SingaporeAirportPickup10 from "./pages/SingaporeAirportPickup10";
-import SingaporeAirportDropoff5 from "./pages/SingaporeAirportDropoff5";
-import SingaporeAirportDropoff10 from "./pages/SingaporeAirportDropoff10";
-import SingaporeAirportNightPickup5 from "./pages/SingaporeAirportNightPickup5";
-import SingaporeAirportNightPickup10 from "./pages/SingaporeAirportNightPickup10";
+import SingaporeTransfersNew from "./pages/SingaporeTransfersNew";
+import SingaporeAirportPickup from "./pages/SingaporeAirportPickup";
+import SingaporeAirportDropoff from "./pages/SingaporeAirportDropoff";
+import SingaporeAirportNightPickup from "./pages/SingaporeAirportNightPickup";
 import DubaiTransfersNew from "./pages/DubaiTransfersNew";
 import DubaiAirportPickupZone1 from "./pages/DubaiAirportPickupZone1";
 import DubaiAirportDropoffZone1 from "./pages/DubaiAirportDropoffZone1";
@@ -302,13 +299,10 @@ const App = () => (
           <Route path="/singapore/rainforest-wild-asia" element={<RainforestWildAsia />} />
           <Route path="/singapore/big-bus-discover" element={<BigBusDiscover />} />
           <Route path="/singapore/big-bus-night" element={<BigBusNight />} />
-          <Route path="/singapore/transfers" element={<SingaporeTransfers />} />
-          <Route path="/singapore/airport-pickup-5-seater" element={<SingaporeAirportPickup5 />} />
-          <Route path="/singapore/airport-pickup-10-seater" element={<SingaporeAirportPickup10 />} />
-          <Route path="/singapore/airport-dropoff-5-seater" element={<SingaporeAirportDropoff5 />} />
-          <Route path="/singapore/airport-dropoff-10-seater" element={<SingaporeAirportDropoff10 />} />
-          <Route path="/singapore/airport-night-pickup-5-seater" element={<SingaporeAirportNightPickup5 />} />
-          <Route path="/singapore/airport-night-pickup-10-seater" element={<SingaporeAirportNightPickup10 />} />
+          <Route path="/singapore/transfers" element={<SingaporeTransfersNew />} />
+          <Route path="/singapore/airport-pickup" element={<SingaporeAirportPickup />} />
+          <Route path="/singapore/airport-dropoff" element={<SingaporeAirportDropoff />} />
+          <Route path="/singapore/airport-night-pickup" element={<SingaporeAirportNightPickup />} />
           <Route path="/dubai/transfers" element={<DubaiTransfersNew />} />
           <Route path="/dubai/airport-pickup-zone1" element={<DubaiAirportPickupZone1 />} />
           <Route path="/dubai/airport-dropoff-zone1" element={<DubaiAirportDropoffZone1 />} />
