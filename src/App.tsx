@@ -181,6 +181,7 @@ import ThailandTransfers from "./pages/ThailandTransfers";
 import CustomerInformation from "./pages/CustomerInformation";
 import PaymentInformation from "./pages/PaymentInformation";
 import BookingConfirmed from "./pages/BookingConfirmed";
+import Cart from "./pages/Cart";
 
 const queryClient = new QueryClient();
 
@@ -368,6 +369,7 @@ const App = () => (
           <Route path="/customer-information" element={<CustomerInformation />} />
           <Route path="/payment-information" element={<PaymentInformation />} />
           <Route path="/booking-confirmed" element={<BookingConfirmed />} />
+          <Route path="/cart" element={<Cart />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
