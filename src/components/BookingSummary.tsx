@@ -31,8 +31,8 @@ const BookingSummary = () => {
                     {index + 1}. {item.title}
                   </p>
                   <div className="flex justify-between text-sm text-muted-foreground">
-                    <span>{item.vehicleName} ({item.capacity} person)</span>
-                    <span>₹{item.price.toLocaleString()}</span>
+                    <span>{item.vehicleName} ({item.capacity} person) × {item.quantity}</span>
+                    <span>₹{(item.price * item.quantity).toLocaleString()}</span>
                   </div>
                 </div>
               ))}

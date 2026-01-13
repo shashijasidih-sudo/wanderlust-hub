@@ -79,6 +79,69 @@ export type Database = {
           },
         ]
       }
+      cart_items: {
+        Row: {
+          capacity: string
+          created_at: string
+          drop_location: string
+          id: string
+          number_of_persons: number
+          pickup_date: string | null
+          pickup_location: string
+          pickup_time: string | null
+          price: number
+          quantity: number
+          room_no: string | null
+          slug: string
+          title: string
+          transfer_id: string
+          updated_at: string
+          user_id: string
+          vehicle_id: string
+          vehicle_name: string
+        }
+        Insert: {
+          capacity: string
+          created_at?: string
+          drop_location: string
+          id?: string
+          number_of_persons?: number
+          pickup_date?: string | null
+          pickup_location: string
+          pickup_time?: string | null
+          price: number
+          quantity?: number
+          room_no?: string | null
+          slug: string
+          title: string
+          transfer_id: string
+          updated_at?: string
+          user_id: string
+          vehicle_id: string
+          vehicle_name: string
+        }
+        Update: {
+          capacity?: string
+          created_at?: string
+          drop_location?: string
+          id?: string
+          number_of_persons?: number
+          pickup_date?: string | null
+          pickup_location?: string
+          pickup_time?: string | null
+          price?: number
+          quantity?: number
+          room_no?: string | null
+          slug?: string
+          title?: string
+          transfer_id?: string
+          updated_at?: string
+          user_id?: string
+          vehicle_id?: string
+          vehicle_name?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string
