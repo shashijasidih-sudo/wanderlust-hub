@@ -1,19 +1,32 @@
 import { useCart } from "@/contexts/CartContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Trash2, ShoppingCart, ArrowRight, Car } from "lucide-react";
+import { Trash2, ShoppingCart, ArrowRight, Car, Minus, Plus, Loader2 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { format } from "date-fns";
 
 const Cart = () => {
-  const { cartItems, removeFromCart, clearCart, getCartTotal } = useCart();
+  const { cartItems, removeFromCart, updateQuantity, clearCart, getCartTotal, isLoading } = useCart();
   const navigate = useNavigate();
 
   const handleProceedToCheckout = () => {
     navigate("/customer-information");
   };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <div className="container mx-auto px-4 py-16 text-center">
+          <Loader2 className="h-12 w-12 animate-spin mx-auto text-primary" />
+          <p className="mt-4 text-muted-foreground">Loading your cart...</p>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   if (cartItems.length === 0) {
     return (
@@ -43,6 +56,8 @@ const Cart = () => {
       </div>
     );
   }
+
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <div className="min-h-screen bg-background">
@@ -121,11 +136,43 @@ const Cart = () => {
                         )}
                       </div>
                       
-                      <div className="mt-4 pt-4 border-t flex justify-between items-center">
-                        <Link to={`/${item.slug}`} className="text-primary text-sm hover:underline">
-                          View Details
-                        </Link>
-                        <p className="text-xl font-bold text-primary">₹{item.price.toLocaleString()}</p>
+                      <div className="mt-4 pt-4 border-t flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                        {/* Quantity Selector */}
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm text-muted-foreground mr-2">Qty:</span>
+                          <Button
+                            variant="outline"
+                            size="icon"
+                            className="h-8 w-8"
+                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                            disabled={item.quantity <= 1}
+                          >
+                            <Minus className="h-4 w-4" />
+                          </Button>
+                          <span className="w-8 text-center font-semibold">{item.quantity}</span>
+                          <Button
+                            variant="outline"
+                            size="icon"
+                            className="h-8 w-8"
+                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                          >
+                            <Plus className="h-4 w-4" />
+                          </Button>
+                        </div>
+                        
+                        <div className="flex items-center gap-4">
+                          <Link to={`/${item.slug}`} className="text-primary text-sm hover:underline">
+                            View Details
+                          </Link>
+                          <div className="text-right">
+                            <p className="text-sm text-muted-foreground">
+                              ₹{item.price.toLocaleString()} × {item.quantity}
+                            </p>
+                            <p className="text-xl font-bold text-primary">
+                              ₹{(item.price * item.quantity).toLocaleString()}
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -145,16 +192,16 @@ const Cart = () => {
                   {cartItems.map((item) => (
                     <div key={item.id} className="flex justify-between text-sm">
                       <span className="text-muted-foreground truncate mr-2">
-                        {item.vehicleName}
+                        {item.vehicleName} × {item.quantity}
                       </span>
-                      <span>₹{item.price.toLocaleString()}</span>
+                      <span>₹{(item.price * item.quantity).toLocaleString()}</span>
                     </div>
                   ))}
                 </div>
                 
                 <div className="border-t pt-4">
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Subtotal ({cartItems.length} items)</span>
+                    <span className="text-muted-foreground">Subtotal ({totalItems} items)</span>
                     <span>₹{getCartTotal().toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between text-sm mt-2">
