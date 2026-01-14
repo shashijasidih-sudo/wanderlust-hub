@@ -4,20 +4,28 @@ import { User } from "@supabase/supabase-js";
 
 export interface CartItem {
   id: string;
-  transferId: string;
+  itemType: 'transfer' | 'activity';
   title: string;
-  vehicleId: string;
-  vehicleName: string;
-  capacity: string;
   price: number;
   quantity: number;
-  numberOfPersons: number;
-  pickupDate: string;
-  pickupTime: string;
-  pickupLocation: string;
-  dropLocation: string;
-  roomNo: string;
   slug: string;
+  // Transfer-specific fields
+  transferId?: string;
+  vehicleId?: string;
+  vehicleName?: string;
+  capacity?: string;
+  numberOfPersons?: number;
+  pickupDate?: string;
+  pickupTime?: string;
+  pickupLocation?: string;
+  dropLocation?: string;
+  roomNo?: string;
+  // Activity-specific fields
+  adults?: number;
+  children?: number;
+  childPrice?: number;
+  selectedDate?: string;
+  selectedTime?: string;
 }
 
 interface CartContextType {
@@ -51,7 +59,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
           await mergeCartsOnLogin(newUser.id);
         } else if (!newUser && previousUser) {
           // User logged out - keep local cart in localStorage
-          const localCart = localStorage.getItem("transferCart");
+          const localCart = localStorage.getItem("cartItems");
           if (localCart) {
             setCartItems(JSON.parse(localCart));
           } else {
@@ -68,7 +76,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
         fetchCartFromSupabase(session.user.id);
       } else {
         // Load from localStorage for guests
-        const saved = localStorage.getItem("transferCart");
+        const saved = localStorage.getItem("cartItems");
         if (saved) {
           setCartItems(JSON.parse(saved));
         }
@@ -81,7 +89,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   // Save to localStorage when cart changes (for guests)
   useEffect(() => {
     if (!user) {
-      localStorage.setItem("transferCart", JSON.stringify(cartItems));
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
     }
   }, [cartItems, user]);
 
@@ -97,20 +105,28 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
       const items: CartItem[] = (data || []).map(item => ({
         id: item.id,
-        transferId: item.transfer_id,
+        itemType: (item.item_type as 'transfer' | 'activity') || 'transfer',
         title: item.title,
-        vehicleId: item.vehicle_id,
-        vehicleName: item.vehicle_name,
-        capacity: item.capacity,
         price: Number(item.price),
         quantity: item.quantity,
-        numberOfPersons: item.number_of_persons,
-        pickupDate: item.pickup_date || '',
-        pickupTime: item.pickup_time || '',
-        pickupLocation: item.pickup_location,
-        dropLocation: item.drop_location,
-        roomNo: item.room_no || '',
         slug: item.slug,
+        // Transfer fields
+        transferId: item.transfer_id || undefined,
+        vehicleId: item.vehicle_id || undefined,
+        vehicleName: item.vehicle_name || undefined,
+        capacity: item.capacity || undefined,
+        numberOfPersons: item.number_of_persons,
+        pickupDate: item.pickup_date || undefined,
+        pickupTime: item.pickup_time || undefined,
+        pickupLocation: item.pickup_location || undefined,
+        dropLocation: item.drop_location || undefined,
+        roomNo: item.room_no || undefined,
+        // Activity fields
+        adults: item.adults || undefined,
+        children: item.children || undefined,
+        childPrice: item.child_price ? Number(item.child_price) : undefined,
+        selectedDate: item.selected_date || undefined,
+        selectedTime: item.selected_time || undefined,
       }));
 
       setCartItems(items);
@@ -125,7 +141,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     setIsLoading(true);
     try {
       // Get local cart items
-      const localCartStr = localStorage.getItem("transferCart");
+      const localCartStr = localStorage.getItem("cartItems");
       const localItems: CartItem[] = localCartStr ? JSON.parse(localCartStr) : [];
 
       // Get Supabase cart items
@@ -138,33 +154,45 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
       // Add local items to Supabase (if not already present)
       for (const localItem of localItems) {
-        const existsInSupabase = supabaseItems?.some(
-          si => si.transfer_id === localItem.transferId && si.vehicle_id === localItem.vehicleId
-        );
+        const existsInSupabase = supabaseItems?.some(si => {
+          if (localItem.itemType === 'transfer') {
+            return si.transfer_id === localItem.transferId && si.vehicle_id === localItem.vehicleId;
+          } else {
+            return si.slug === localItem.slug && si.item_type === 'activity';
+          }
+        });
 
         if (!existsInSupabase) {
           await supabase.from('cart_items').insert({
             user_id: userId,
-            transfer_id: localItem.transferId,
+            item_type: localItem.itemType,
             title: localItem.title,
-            vehicle_id: localItem.vehicleId,
-            vehicle_name: localItem.vehicleName,
-            capacity: localItem.capacity,
             price: localItem.price,
             quantity: localItem.quantity || 1,
-            number_of_persons: localItem.numberOfPersons,
+            slug: localItem.slug,
+            // Transfer fields
+            transfer_id: localItem.transferId || null,
+            vehicle_id: localItem.vehicleId || null,
+            vehicle_name: localItem.vehicleName || null,
+            capacity: localItem.capacity || null,
+            number_of_persons: localItem.numberOfPersons || 1,
             pickup_date: localItem.pickupDate || null,
             pickup_time: localItem.pickupTime || null,
-            pickup_location: localItem.pickupLocation,
-            drop_location: localItem.dropLocation,
+            pickup_location: localItem.pickupLocation || null,
+            drop_location: localItem.dropLocation || null,
             room_no: localItem.roomNo || null,
-            slug: localItem.slug,
+            // Activity fields
+            adults: localItem.adults || 0,
+            children: localItem.children || 0,
+            child_price: localItem.childPrice || 0,
+            selected_date: localItem.selectedDate || null,
+            selected_time: localItem.selectedTime || null,
           });
         }
       }
 
       // Clear localStorage after merge
-      localStorage.removeItem("transferCart");
+      localStorage.removeItem("cartItems");
 
       // Fetch updated cart
       await fetchCartFromSupabase(userId);
@@ -188,20 +216,28 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
           .from('cart_items')
           .insert({
             user_id: user.id,
-            transfer_id: newItem.transferId,
+            item_type: newItem.itemType,
             title: newItem.title,
-            vehicle_id: newItem.vehicleId,
-            vehicle_name: newItem.vehicleName,
-            capacity: newItem.capacity,
             price: newItem.price,
             quantity: newItem.quantity,
-            number_of_persons: newItem.numberOfPersons,
+            slug: newItem.slug,
+            // Transfer fields
+            transfer_id: newItem.transferId || null,
+            vehicle_id: newItem.vehicleId || null,
+            vehicle_name: newItem.vehicleName || null,
+            capacity: newItem.capacity || null,
+            number_of_persons: newItem.numberOfPersons || 1,
             pickup_date: newItem.pickupDate || null,
             pickup_time: newItem.pickupTime || null,
-            pickup_location: newItem.pickupLocation,
-            drop_location: newItem.dropLocation,
+            pickup_location: newItem.pickupLocation || null,
+            drop_location: newItem.dropLocation || null,
             room_no: newItem.roomNo || null,
-            slug: newItem.slug,
+            // Activity fields
+            adults: newItem.adults || 0,
+            children: newItem.children || 0,
+            child_price: newItem.childPrice || 0,
+            selected_date: newItem.selectedDate || null,
+            selected_time: newItem.selectedTime || null,
           })
           .select()
           .single();
@@ -211,20 +247,26 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
         if (data) {
           setCartItems(prev => [...prev, {
             id: data.id,
-            transferId: data.transfer_id,
+            itemType: (data.item_type as 'transfer' | 'activity') || 'transfer',
             title: data.title,
-            vehicleId: data.vehicle_id,
-            vehicleName: data.vehicle_name,
-            capacity: data.capacity,
             price: Number(data.price),
             quantity: data.quantity,
-            numberOfPersons: data.number_of_persons,
-            pickupDate: data.pickup_date || '',
-            pickupTime: data.pickup_time || '',
-            pickupLocation: data.pickup_location,
-            dropLocation: data.drop_location,
-            roomNo: data.room_no || '',
             slug: data.slug,
+            transferId: data.transfer_id || undefined,
+            vehicleId: data.vehicle_id || undefined,
+            vehicleName: data.vehicle_name || undefined,
+            capacity: data.capacity || undefined,
+            numberOfPersons: data.number_of_persons,
+            pickupDate: data.pickup_date || undefined,
+            pickupTime: data.pickup_time || undefined,
+            pickupLocation: data.pickup_location || undefined,
+            dropLocation: data.drop_location || undefined,
+            roomNo: data.room_no || undefined,
+            adults: data.adults || undefined,
+            children: data.children || undefined,
+            childPrice: data.child_price ? Number(data.child_price) : undefined,
+            selectedDate: data.selected_date || undefined,
+            selectedTime: data.selected_time || undefined,
           }]);
         }
       } catch (error) {

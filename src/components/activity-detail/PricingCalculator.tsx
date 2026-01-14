@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 import BookingModal from "@/components/BookingModal";
+import { useCart } from "@/contexts/CartContext";
 
 interface PricingCalculatorProps {
   basePrice: number;
@@ -24,6 +25,7 @@ const PricingCalculator = ({
   vehicleCapacity = 5,
   tourSlug = ""
 }: PricingCalculatorProps) => {
+  const { addToCart } = useCart();
   const [adults, setAdults] = useState(pricePerVehicle ? 1 : 2);
   const [children, setChildren] = useState(0);
   const [selectedDate, setSelectedDate] = useState("");
@@ -47,7 +49,7 @@ const PricingCalculator = ({
     setIsBookingModalOpen(true);
   };
 
-  const handleAddToCart = () => {
+  const handleAddToCart = async () => {
     if (!selectedDate) {
       toast.error("Please select a date");
       return;
@@ -56,6 +58,20 @@ const PricingCalculator = ({
       toast.error("Please select a tour timing");
       return;
     }
+
+    await addToCart({
+      itemType: 'activity',
+      title: activityName,
+      price: totalPrice,
+      slug: tourSlug,
+      adults: pricePerVehicle ? adults : adults,
+      children: children,
+      childPrice: childPrice,
+      selectedDate: selectedDate,
+      selectedTime: selectedTime,
+      numberOfPersons: adults + children,
+    });
+    
     toast.success("Added to cart successfully!");
   };
 

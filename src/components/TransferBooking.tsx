@@ -123,6 +123,7 @@ const TransferBooking = ({ transferData }: TransferBookingProps) => {
 
     return {
       id: `${transferData.id}-${Date.now()}`,
+      itemType: 'transfer' as const,
       transferId: transferData.id,
       title: transferData.title,
       vehicleId: selectedVehicle,
