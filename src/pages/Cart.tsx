@@ -1,11 +1,205 @@
-import { useCart } from "@/contexts/CartContext";
+import { useCart, CartItem } from "@/contexts/CartContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Trash2, ShoppingCart, ArrowRight, Car, Minus, Plus, Loader2 } from "lucide-react";
+import { Trash2, ShoppingCart, ArrowRight, Car, Minus, Plus, Loader2, MapPin, Ticket } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { format } from "date-fns";
+
+const TransferCartItem = ({ item, onRemove, onUpdateQuantity }: { 
+  item: CartItem; 
+  onRemove: (id: string) => void;
+  onUpdateQuantity: (id: string, quantity: number) => void;
+}) => (
+  <Card className="overflow-hidden">
+    <CardContent className="p-0">
+      <div className="flex flex-col md:flex-row">
+        <div className="bg-primary/10 p-6 flex items-center justify-center md:w-32">
+          <Car className="h-12 w-12 text-primary" />
+        </div>
+        
+        <div className="flex-1 p-4">
+          <div className="flex justify-between items-start">
+            <div>
+              <h3 className="font-semibold text-lg">{item.title}</h3>
+              <p className="text-primary font-medium">{item.vehicleName}</p>
+            </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => onRemove(item.id)}
+              className="text-destructive hover:bg-destructive/10"
+            >
+              <Trash2 className="h-5 w-5" />
+            </Button>
+          </div>
+          
+          <div className="grid grid-cols-2 gap-4 mt-4 text-sm">
+            <div>
+              <span className="text-muted-foreground">Capacity:</span>
+              <p className="font-medium">{item.capacity}</p>
+            </div>
+            <div>
+              <span className="text-muted-foreground">Passengers:</span>
+              <p className="font-medium">{item.numberOfPersons}</p>
+            </div>
+            <div>
+              <span className="text-muted-foreground">Date:</span>
+              <p className="font-medium">
+                {item.pickupDate ? format(new Date(item.pickupDate), "dd MMM yyyy") : "Not set"}
+              </p>
+            </div>
+            <div>
+              <span className="text-muted-foreground">Time:</span>
+              <p className="font-medium">{item.pickupTime || "Not set"}</p>
+            </div>
+            <div className="col-span-2">
+              <span className="text-muted-foreground">Route:</span>
+              <p className="font-medium">{item.pickupLocation} → {item.dropLocation}</p>
+            </div>
+            {item.roomNo && (
+              <div className="col-span-2">
+                <span className="text-muted-foreground">Room/Flight No:</span>
+                <p className="font-medium">{item.roomNo}</p>
+              </div>
+            )}
+          </div>
+          
+          <div className="mt-4 pt-4 border-t flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-muted-foreground mr-2">Qty:</span>
+              <Button
+                variant="outline"
+                size="icon"
+                className="h-8 w-8"
+                onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
+                disabled={item.quantity <= 1}
+              >
+                <Minus className="h-4 w-4" />
+              </Button>
+              <span className="w-8 text-center font-semibold">{item.quantity}</span>
+              <Button
+                variant="outline"
+                size="icon"
+                className="h-8 w-8"
+                onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
+              >
+                <Plus className="h-4 w-4" />
+              </Button>
+            </div>
+            
+            <div className="flex items-center gap-4">
+              <Link to={`/${item.slug}`} className="text-primary text-sm hover:underline">
+                View Details
+              </Link>
+              <div className="text-right">
+                <p className="text-sm text-muted-foreground">
+                  ₹{item.price.toLocaleString()} × {item.quantity}
+                </p>
+                <p className="text-xl font-bold text-primary">
+                  ₹{(item.price * item.quantity).toLocaleString()}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+);
+
+const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: { 
+  item: CartItem; 
+  onRemove: (id: string) => void;
+  onUpdateQuantity: (id: string, quantity: number) => void;
+}) => (
+  <Card className="overflow-hidden">
+    <CardContent className="p-0">
+      <div className="flex flex-col md:flex-row">
+        <div className="bg-accent p-6 flex items-center justify-center md:w-32">
+          <Ticket className="h-12 w-12 text-primary" />
+        </div>
+        
+        <div className="flex-1 p-4">
+          <div className="flex justify-between items-start">
+            <div>
+              <h3 className="font-semibold text-lg">{item.title}</h3>
+              <p className="text-sm text-muted-foreground">Activity / Tour</p>
+            </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => onRemove(item.id)}
+              className="text-destructive hover:bg-destructive/10"
+            >
+              <Trash2 className="h-5 w-5" />
+            </Button>
+          </div>
+          
+          <div className="grid grid-cols-2 gap-4 mt-4 text-sm">
+            <div>
+              <span className="text-muted-foreground">Adults:</span>
+              <p className="font-medium">{item.adults || 0}</p>
+            </div>
+            <div>
+              <span className="text-muted-foreground">Children:</span>
+              <p className="font-medium">{item.children || 0}</p>
+            </div>
+            <div>
+              <span className="text-muted-foreground">Date:</span>
+              <p className="font-medium">
+                {item.selectedDate ? format(new Date(item.selectedDate), "dd MMM yyyy") : "Not set"}
+              </p>
+            </div>
+            <div>
+              <span className="text-muted-foreground">Time:</span>
+              <p className="font-medium">{item.selectedTime || "Not set"}</p>
+            </div>
+          </div>
+          
+          <div className="mt-4 pt-4 border-t flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-muted-foreground mr-2">Qty:</span>
+              <Button
+                variant="outline"
+                size="icon"
+                className="h-8 w-8"
+                onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
+                disabled={item.quantity <= 1}
+              >
+                <Minus className="h-4 w-4" />
+              </Button>
+              <span className="w-8 text-center font-semibold">{item.quantity}</span>
+              <Button
+                variant="outline"
+                size="icon"
+                className="h-8 w-8"
+                onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
+              >
+                <Plus className="h-4 w-4" />
+              </Button>
+            </div>
+            
+            <div className="flex items-center gap-4">
+              <Link to={`/${item.slug}`} className="text-primary text-sm hover:underline">
+                View Details
+              </Link>
+              <div className="text-right">
+                <p className="text-sm text-muted-foreground">
+                  ₹{item.price.toLocaleString()} × {item.quantity}
+                </p>
+                <p className="text-xl font-bold text-primary">
+                  ₹{(item.price * item.quantity).toLocaleString()}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+);
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity, clearCart, getCartTotal, isLoading } = useCart();
@@ -37,17 +231,17 @@ const Cart = () => {
             <ShoppingCart className="h-24 w-24 mx-auto text-muted-foreground mb-6" />
             <h1 className="text-2xl font-bold mb-4">Your Cart is Empty</h1>
             <p className="text-muted-foreground mb-8">
-              Looks like you haven't added any transfers to your cart yet.
+              Looks like you haven't added any items to your cart yet.
             </p>
             <div className="flex flex-col gap-3">
-              <Link to="/thailand/transfers">
-                <Button className="w-full">Browse Thailand Transfers</Button>
+              <Link to="/thailand">
+                <Button className="w-full">Browse Thailand Tours</Button>
               </Link>
-              <Link to="/dubai/transfers">
-                <Button variant="outline" className="w-full">Browse Dubai Transfers</Button>
+              <Link to="/singapore">
+                <Button variant="outline" className="w-full">Browse Singapore Activities</Button>
               </Link>
-              <Link to="/singapore/transfers">
-                <Button variant="outline" className="w-full">Browse Singapore Transfers</Button>
+              <Link to="/dubai">
+                <Button variant="outline" className="w-full">Browse Dubai Experiences</Button>
               </Link>
             </div>
           </div>
@@ -80,104 +274,21 @@ const Cart = () => {
           {/* Cart Items */}
           <div className="lg:col-span-2 space-y-4">
             {cartItems.map((item) => (
-              <Card key={item.id} className="overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="flex flex-col md:flex-row">
-                    {/* Item Icon */}
-                    <div className="bg-primary/10 p-6 flex items-center justify-center md:w-32">
-                      <Car className="h-12 w-12 text-primary" />
-                    </div>
-                    
-                    {/* Item Details */}
-                    <div className="flex-1 p-4">
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <h3 className="font-semibold text-lg">{item.title}</h3>
-                          <p className="text-primary font-medium">{item.vehicleName}</p>
-                        </div>
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          onClick={() => removeFromCart(item.id)}
-                          className="text-destructive hover:bg-destructive/10"
-                        >
-                          <Trash2 className="h-5 w-5" />
-                        </Button>
-                      </div>
-                      
-                      <div className="grid grid-cols-2 gap-4 mt-4 text-sm">
-                        <div>
-                          <span className="text-muted-foreground">Capacity:</span>
-                          <p className="font-medium">{item.capacity}</p>
-                        </div>
-                        <div>
-                          <span className="text-muted-foreground">Passengers:</span>
-                          <p className="font-medium">{item.numberOfPersons}</p>
-                        </div>
-                        <div>
-                          <span className="text-muted-foreground">Date:</span>
-                          <p className="font-medium">
-                            {item.pickupDate ? format(new Date(item.pickupDate), "dd MMM yyyy") : "Not set"}
-                          </p>
-                        </div>
-                        <div>
-                          <span className="text-muted-foreground">Time:</span>
-                          <p className="font-medium">{item.pickupTime || "Not set"}</p>
-                        </div>
-                        <div className="col-span-2">
-                          <span className="text-muted-foreground">Route:</span>
-                          <p className="font-medium">{item.pickupLocation} → {item.dropLocation}</p>
-                        </div>
-                        {item.roomNo && (
-                          <div className="col-span-2">
-                            <span className="text-muted-foreground">Room/Flight No:</span>
-                            <p className="font-medium">{item.roomNo}</p>
-                          </div>
-                        )}
-                      </div>
-                      
-                      <div className="mt-4 pt-4 border-t flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                        {/* Quantity Selector */}
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm text-muted-foreground mr-2">Qty:</span>
-                          <Button
-                            variant="outline"
-                            size="icon"
-                            className="h-8 w-8"
-                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                            disabled={item.quantity <= 1}
-                          >
-                            <Minus className="h-4 w-4" />
-                          </Button>
-                          <span className="w-8 text-center font-semibold">{item.quantity}</span>
-                          <Button
-                            variant="outline"
-                            size="icon"
-                            className="h-8 w-8"
-                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          >
-                            <Plus className="h-4 w-4" />
-                          </Button>
-                        </div>
-                        
-                        <div className="flex items-center gap-4">
-                          <Link to={`/${item.slug}`} className="text-primary text-sm hover:underline">
-                            View Details
-                          </Link>
-                          <div className="text-right">
-                            <p className="text-sm text-muted-foreground">
-                              ₹{item.price.toLocaleString()} × {item.quantity}
-                            </p>
-                            <p className="text-xl font-bold text-primary">
-                              ₹{(item.price * item.quantity).toLocaleString()}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              item.itemType === 'activity' ? (
+                <ActivityCartItem 
+                  key={item.id} 
+                  item={item} 
+                  onRemove={removeFromCart}
+                  onUpdateQuantity={updateQuantity}
+                />
+              ) : (
+                <TransferCartItem 
+                  key={item.id} 
+                  item={item} 
+                  onRemove={removeFromCart}
+                  onUpdateQuantity={updateQuantity}
+                />
+              )
             ))}
           </div>
 
@@ -192,7 +303,7 @@ const Cart = () => {
                   {cartItems.map((item) => (
                     <div key={item.id} className="flex justify-between text-sm">
                       <span className="text-muted-foreground truncate mr-2">
-                        {item.vehicleName} × {item.quantity}
+                        {item.title} × {item.quantity}
                       </span>
                       <span>₹{(item.price * item.quantity).toLocaleString()}</span>
                     </div>

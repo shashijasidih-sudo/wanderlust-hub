@@ -81,64 +81,82 @@ export type Database = {
       }
       cart_items: {
         Row: {
-          capacity: string
+          adults: number | null
+          capacity: string | null
+          child_price: number | null
+          children: number | null
           created_at: string
-          drop_location: string
+          drop_location: string | null
           id: string
+          item_type: string
           number_of_persons: number
           pickup_date: string | null
-          pickup_location: string
+          pickup_location: string | null
           pickup_time: string | null
           price: number
           quantity: number
           room_no: string | null
+          selected_date: string | null
+          selected_time: string | null
           slug: string
           title: string
-          transfer_id: string
+          transfer_id: string | null
           updated_at: string
           user_id: string
-          vehicle_id: string
-          vehicle_name: string
+          vehicle_id: string | null
+          vehicle_name: string | null
         }
         Insert: {
-          capacity: string
+          adults?: number | null
+          capacity?: string | null
+          child_price?: number | null
+          children?: number | null
           created_at?: string
-          drop_location: string
+          drop_location?: string | null
           id?: string
+          item_type?: string
           number_of_persons?: number
           pickup_date?: string | null
-          pickup_location: string
+          pickup_location?: string | null
           pickup_time?: string | null
           price: number
           quantity?: number
           room_no?: string | null
+          selected_date?: string | null
+          selected_time?: string | null
           slug: string
           title: string
-          transfer_id: string
+          transfer_id?: string | null
           updated_at?: string
           user_id: string
-          vehicle_id: string
-          vehicle_name: string
+          vehicle_id?: string | null
+          vehicle_name?: string | null
         }
         Update: {
-          capacity?: string
+          adults?: number | null
+          capacity?: string | null
+          child_price?: number | null
+          children?: number | null
           created_at?: string
-          drop_location?: string
+          drop_location?: string | null
           id?: string
+          item_type?: string
           number_of_persons?: number
           pickup_date?: string | null
-          pickup_location?: string
+          pickup_location?: string | null
           pickup_time?: string | null
           price?: number
           quantity?: number
           room_no?: string | null
+          selected_date?: string | null
+          selected_time?: string | null
           slug?: string
           title?: string
-          transfer_id?: string
+          transfer_id?: string | null
           updated_at?: string
           user_id?: string
-          vehicle_id?: string
-          vehicle_name?: string
+          vehicle_id?: string | null
+          vehicle_name?: string | null
         }
         Relationships: []
       }
