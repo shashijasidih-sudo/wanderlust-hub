@@ -337,6 +337,14 @@ const Cart = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
                 
+                <Button 
+                  variant="outline"
+                  className="w-full" 
+                  onClick={() => navigate(-1)}
+                >
+                  Continue Shopping
+                </Button>
+                
                 <p className="text-xs text-muted-foreground text-center">
                   Secure checkout powered by trusted payment gateways
                 </p>

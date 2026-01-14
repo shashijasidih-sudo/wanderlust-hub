@@ -5,14 +5,21 @@ import Footer from "@/components/Footer";
 import BookingSteps from "@/components/BookingSteps";
 import BookingSummary from "@/components/BookingSummary";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useCart } from "@/contexts/CartContext";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import { CreditCard, Building2, Wallet, QrCode } from "lucide-react";
+import { CreditCard, QrCode } from "lucide-react";
+
+const RAZORPAY_KEY_ID = "rzp_live_S3jB95uYSfEaEf";
+
+declare global {
+  interface Window {
+    Razorpay: any;
+  }
+}
 
 interface CustomerInfo {
   customerName: string;
@@ -28,10 +35,6 @@ const PaymentInformation = () => {
   const { cartItems, getCartTotal, clearCart } = useCart();
   const [customerInfo, setCustomerInfo] = useState<CustomerInfo | null>(null);
   const [paymentMethod, setPaymentMethod] = useState("credit-card");
-  const [cardNumber, setCardNumber] = useState("");
-  const [cardName, setCardName] = useState("");
-  const [expiryDate, setExpiryDate] = useState("");
-  const [cvv, setCvv] = useState("");
   const [isProcessing, setIsProcessing] = useState(false);
 
   useEffect(() => {
@@ -42,6 +45,17 @@ const PaymentInformation = () => {
       navigate("/customer-information");
     }
   }, [navigate]);
+
+  // Load Razorpay script
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   if (cartItems.length === 0) {
     return (
@@ -59,14 +73,31 @@ const PaymentInformation = () => {
     );
   }
 
-  const handlePayment = async () => {
-    if (paymentMethod === "credit-card") {
-      if (!cardNumber || !cardName || !expiryDate || !cvv) {
-        toast.error("Please fill in all card details");
-        return;
-      }
-    }
+  const saveBookingsToDatabase = async (userId: string, paymentId: string) => {
+    for (const item of cartItems) {
+      const isActivity = item.itemType === 'activity';
+      const { error } = await supabase.from("bookings").insert({
+        user_id: userId,
+        tour_slug: item.slug,
+        tour_name: isActivity ? item.title : `${item.title} - ${item.vehicleName}`,
+        tour_date: isActivity ? item.selectedDate : item.pickupDate,
+        adults: isActivity ? (item.adults || 1) : item.numberOfPersons,
+        children: isActivity ? (item.children || 0) : 0,
+        total_price: item.price * item.quantity,
+        contact_name: customerInfo?.customerName || "",
+        contact_email: customerInfo?.email || "",
+        contact_phone: customerInfo?.phone || "",
+        special_requests: isActivity 
+          ? `Time: ${item.selectedTime || "N/A"}, Qty: ${item.quantity}, Payment ID: ${paymentId}`
+          : `Pickup: ${item.pickupLocation}, Drop: ${item.dropLocation || "N/A"}, Room: ${item.roomNo || "N/A"}, Time: ${item.pickupTime}, Qty: ${item.quantity}, Payment ID: ${paymentId}`,
+        currency: "INR"
+      });
 
+      if (error) throw error;
+    }
+  };
+
+  const handlePayment = async () => {
     setIsProcessing(true);
 
     try {
@@ -75,63 +106,62 @@ const PaymentInformation = () => {
       if (!user) {
         toast.error("Please login to complete booking");
         navigate("/auth");
+        setIsProcessing(false);
         return;
       }
 
-      // Create bookings for each cart item
-      for (const item of cartItems) {
-        const { error } = await supabase.from("bookings").insert({
-          user_id: user.id,
-          tour_slug: item.slug,
-          tour_name: `${item.title} - ${item.vehicleName}`,
-          tour_date: item.pickupDate,
-          adults: item.numberOfPersons,
-          children: 0,
-          total_price: item.price,
-          contact_name: customerInfo?.customerName || "",
-          contact_email: customerInfo?.email || "",
-          contact_phone: customerInfo?.phone || "",
-          special_requests: `Pickup: ${item.pickupLocation}, Drop: ${item.dropLocation || "N/A"}, Room: ${item.roomNo || "N/A"}, Time: ${item.pickupTime}`,
-          currency: "INR"
-        });
-
-        if (error) throw error;
+      if (!window.Razorpay) {
+        toast.error("Payment gateway is loading. Please try again.");
+        setIsProcessing(false);
+        return;
       }
 
-      // Clear cart and session storage
-      clearCart();
-      sessionStorage.removeItem("customerInfo");
-      
-      navigate("/booking-confirmed");
+      const totalAmount = getCartTotal() * 100; // Razorpay expects amount in paise
+
+      const options = {
+        key: RAZORPAY_KEY_ID,
+        amount: totalAmount,
+        currency: "INR",
+        name: "Yellodae Tours",
+        description: `Booking for ${cartItems.length} item(s)`,
+        prefill: {
+          name: customerInfo?.customerName || "",
+          email: customerInfo?.email || "",
+          contact: customerInfo?.phone || "",
+        },
+        theme: {
+          color: "#f97316",
+        },
+        handler: async function (response: { razorpay_payment_id: string }) {
+          try {
+            // Save bookings after successful payment
+            await saveBookingsToDatabase(user.id, response.razorpay_payment_id);
+            
+            // Clear cart and session storage
+            clearCart();
+            sessionStorage.removeItem("customerInfo");
+            
+            toast.success("Payment successful!");
+            navigate("/booking-confirmed");
+          } catch (error) {
+            console.error("Booking save error:", error);
+            toast.error("Payment received but failed to save booking. Please contact support.");
+          }
+        },
+        modal: {
+          ondismiss: function () {
+            setIsProcessing(false);
+          },
+        },
+      };
+
+      const razorpay = new window.Razorpay(options);
+      razorpay.open();
     } catch (error) {
       console.error("Payment error:", error);
-      toast.error("Failed to process booking. Please try again.");
-    } finally {
+      toast.error("Failed to initiate payment. Please try again.");
       setIsProcessing(false);
     }
-  };
-
-  const formatCardNumber = (value: string) => {
-    const v = value.replace(/\s+/g, "").replace(/[^0-9]/gi, "");
-    const matches = v.match(/\d{4,16}/g);
-    const match = (matches && matches[0]) || "";
-    const parts = [];
-    for (let i = 0, len = match.length; i < len; i += 4) {
-      parts.push(match.substring(i, i + 4));
-    }
-    if (parts.length) {
-      return parts.join(" ");
-    } else {
-      return value;
-    }
-  };
-
-  const formatExpiry = (value: string) => {
-    const v = value.replace(/\s+/g, "").replace(/[^0-9]/gi, "");
-    if (v.length >= 2) {
-      return v.substring(0, 2) + "/" + v.substring(2, 4);
-    }
-    return v;
   };
 
   return (
@@ -155,18 +185,7 @@ const PaymentInformation = () => {
                       <CreditCard className="h-5 w-5 text-primary" />
                       <div>
                         <p className="font-semibold">Credit / Debit Card</p>
-                        <p className="text-sm text-muted-foreground">Visa, Mastercard, American Express</p>
-                      </div>
-                    </Label>
-                  </div>
-
-                  <div className="flex items-center space-x-3 border rounded-lg p-4 cursor-pointer hover:bg-muted/50">
-                    <RadioGroupItem value="net-banking" id="net-banking" />
-                    <Label htmlFor="net-banking" className="flex items-center gap-3 cursor-pointer flex-1">
-                      <Building2 className="h-5 w-5 text-primary" />
-                      <div>
-                        <p className="font-semibold">Net Banking</p>
-                        <p className="text-sm text-muted-foreground">All major banks supported</p>
+                        <p className="text-sm text-muted-foreground">Visa, Mastercard, American Express, RuPay</p>
                       </div>
                     </Label>
                   </div>
@@ -177,73 +196,15 @@ const PaymentInformation = () => {
                       <QrCode className="h-5 w-5 text-primary" />
                       <div>
                         <p className="font-semibold">UPI</p>
-                        <p className="text-sm text-muted-foreground">Google Pay, PhonePe, Paytm</p>
-                      </div>
-                    </Label>
-                  </div>
-
-                  <div className="flex items-center space-x-3 border rounded-lg p-4 cursor-pointer hover:bg-muted/50">
-                    <RadioGroupItem value="wallet" id="wallet" />
-                    <Label htmlFor="wallet" className="flex items-center gap-3 cursor-pointer flex-1">
-                      <Wallet className="h-5 w-5 text-primary" />
-                      <div>
-                        <p className="font-semibold">Digital Wallet</p>
-                        <p className="text-sm text-muted-foreground">Paytm Wallet, Amazon Pay</p>
+                        <p className="text-sm text-muted-foreground">Google Pay, PhonePe, Paytm, BHIM</p>
                       </div>
                     </Label>
                   </div>
                 </RadioGroup>
 
-                {paymentMethod === "credit-card" && (
-                  <div className="mt-6 p-4 border rounded-lg space-y-4">
-                    <h3 className="font-semibold">Card Details</h3>
-                    
-                    <div>
-                      <Label>Card Number</Label>
-                      <Input
-                        value={cardNumber}
-                        onChange={(e) => setCardNumber(formatCardNumber(e.target.value))}
-                        placeholder="1234 5678 9012 3456"
-                        maxLength={19}
-                        className="mt-1"
-                      />
-                    </div>
-
-                    <div>
-                      <Label>Name on Card</Label>
-                      <Input
-                        value={cardName}
-                        onChange={(e) => setCardName(e.target.value)}
-                        placeholder="John Doe"
-                        className="mt-1"
-                      />
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <Label>Expiry Date</Label>
-                        <Input
-                          value={expiryDate}
-                          onChange={(e) => setExpiryDate(formatExpiry(e.target.value))}
-                          placeholder="MM/YY"
-                          maxLength={5}
-                          className="mt-1"
-                        />
-                      </div>
-                      <div>
-                        <Label>CVV</Label>
-                        <Input
-                          type="password"
-                          value={cvv}
-                          onChange={(e) => setCvv(e.target.value.replace(/\D/g, "").slice(0, 4))}
-                          placeholder="***"
-                          maxLength={4}
-                          className="mt-1"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                )}
+                <p className="text-sm text-muted-foreground mt-4 p-4 bg-muted/50 rounded-lg">
+                  You will be redirected to Razorpay's secure payment gateway to complete your payment.
+                </p>
 
                 <div className="flex justify-center mt-8">
                   <Button
