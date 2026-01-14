@@ -73,7 +73,7 @@ const Auth = () => {
     }
 
     setIsLoading(true);
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email: email.trim(),
       password,
     });
@@ -88,11 +88,14 @@ const Auth = () => {
           : error.message,
         variant: "destructive",
       });
-    } else {
+    } else if (data.session) {
       toast({
         title: "Welcome back!",
         description: "You have successfully logged in.",
       });
+      // Navigate after successful login - the onAuthStateChange will also trigger
+      // but we navigate here to ensure immediate navigation
+      navigate("/");
     }
   };
 
