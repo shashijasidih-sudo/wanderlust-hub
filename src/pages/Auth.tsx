@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Eye, EyeOff, Loader2, Chrome } from "lucide-react";
+import { Eye, EyeOff, Loader2, Plane, MapPin, Compass, Palmtree, Mountain, Waves, Sun, Camera, Luggage } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { z } from "zod";
 
@@ -22,6 +22,47 @@ const signupSchema = z.object({
   password: z.string().min(6, { message: "Password must be at least 6 characters" }),
   acceptTerms: z.literal(true, { errorMap: () => ({ message: "You must accept the terms and conditions" }) }),
 });
+
+// Floating travel icons component
+const FloatingIcons = () => {
+  const icons = [
+    { Icon: Plane, delay: "0s", duration: "20s", left: "5%", size: 24 },
+    { Icon: MapPin, delay: "2s", duration: "18s", left: "15%", size: 20 },
+    { Icon: Compass, delay: "4s", duration: "22s", left: "25%", size: 22 },
+    { Icon: Palmtree, delay: "1s", duration: "19s", left: "75%", size: 26 },
+    { Icon: Mountain, delay: "3s", duration: "21s", left: "85%", size: 24 },
+    { Icon: Waves, delay: "5s", duration: "17s", left: "45%", size: 20 },
+    { Icon: Sun, delay: "0.5s", duration: "23s", left: "55%", size: 28 },
+    { Icon: Camera, delay: "2.5s", duration: "20s", left: "35%", size: 22 },
+    { Icon: Luggage, delay: "4.5s", duration: "18s", left: "65%", size: 24 },
+  ];
+
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {icons.map(({ Icon, delay, duration, left, size }, index) => (
+        <div
+          key={index}
+          className="absolute animate-float text-primary/20"
+          style={{
+            left,
+            animationDelay: delay,
+            animationDuration: duration,
+          }}
+        >
+          <Icon size={size} />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+// Travel destinations badge
+const DestinationBadge = ({ destination, className }: { destination: string; className?: string }) => (
+  <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary ${className}`}>
+    <MapPin className="w-3 h-3" />
+    {destination}
+  </span>
+);
 
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -92,11 +133,9 @@ const Auth = () => {
       });
     } else if (data.session) {
       toast({
-        title: "Welcome back!",
-        description: "You have successfully logged in.",
+        title: "Welcome back, traveler! ✈️",
+        description: "Ready for your next adventure?",
       });
-      // Navigate after successful login - the onAuthStateChange will also trigger
-      // but we navigate here to ensure immediate navigation
       navigate("/");
     }
   };
@@ -149,8 +188,8 @@ const Auth = () => {
       }
     } else {
       toast({
-        title: "Account Created!",
-        description: "Please check your email to verify your account.",
+        title: "Bon Voyage! 🌴",
+        description: "Check your email to verify your account and start exploring!",
       });
     }
   };
@@ -199,7 +238,7 @@ const Auth = () => {
       });
     } else {
       toast({
-        title: "Reset Link Sent",
+        title: "Reset Link Sent 📧",
         description: "Check your email for a password reset link.",
       });
       setIsForgotPassword(false);
@@ -220,15 +259,17 @@ const Auth = () => {
   // Forgot Password View
   if (isForgotPassword) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-secondary/10 px-4 py-12">
-        <Card className="w-full max-w-md shadow-xl border-border/50">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-secondary/10 px-4 py-12 relative overflow-hidden">
+        <FloatingIcons />
+        <Card className="w-full max-w-md shadow-xl border-border/50 animate-fade-in relative z-10 backdrop-blur-sm bg-card/95">
           <CardHeader className="space-y-1 text-center">
-            <Link to="/" className="text-2xl font-bold text-primary hover:opacity-80 transition-opacity">
+            <Link to="/" className="text-2xl font-bold text-primary hover:opacity-80 transition-opacity flex items-center justify-center gap-2">
+              <Plane className="w-6 h-6" />
               Yellodae
             </Link>
             <CardTitle className="text-2xl font-semibold mt-4">Reset Password</CardTitle>
             <CardDescription>
-              Enter your email address and we'll send you a reset link
+              Enter your email and we'll send you a reset link
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -248,14 +289,17 @@ const Auth = () => {
                 )}
               </div>
 
-              <Button type="submit" className="w-full" disabled={isLoading}>
+              <Button type="submit" className="w-full group" disabled={isLoading}>
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                     Sending...
                   </>
                 ) : (
-                  "Send Reset Link"
+                  <>
+                    Send Reset Link
+                    <Plane className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </>
                 )}
               </Button>
             </form>
@@ -267,9 +311,9 @@ const Auth = () => {
                   setIsForgotPassword(false);
                   clearErrors();
                 }}
-                className="text-primary hover:underline font-medium"
+                className="text-primary hover:underline font-medium inline-flex items-center gap-1"
               >
-                Back to Sign In
+                ← Back to Sign In
               </button>
             </div>
           </CardContent>
@@ -279,34 +323,72 @@ const Auth = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-secondary/10 px-4 py-12">
-      <Card className="w-full max-w-md shadow-xl border-border/50">
-        <CardHeader className="space-y-1 text-center">
-          <Link to="/" className="text-2xl font-bold text-primary hover:opacity-80 transition-opacity">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-secondary/10 px-4 py-12 relative overflow-hidden">
+      <FloatingIcons />
+      
+      {/* Decorative elements */}
+      <div className="absolute top-10 left-10 hidden lg:block animate-fade-in">
+        <div className="flex flex-col gap-2">
+          <DestinationBadge destination="Thailand" />
+          <DestinationBadge destination="Singapore" className="ml-4" />
+          <DestinationBadge destination="Dubai" className="ml-2" />
+        </div>
+      </div>
+      
+      <div className="absolute bottom-10 right-10 hidden lg:block animate-fade-in">
+        <div className="flex flex-col gap-2 items-end">
+          <DestinationBadge destination="Phuket" />
+          <DestinationBadge destination="Krabi" className="mr-4" />
+          <DestinationBadge destination="Pattaya" className="mr-2" />
+        </div>
+      </div>
+
+      <Card className="w-full max-w-md shadow-xl border-border/50 animate-fade-in relative z-10 backdrop-blur-sm bg-card/95">
+        <CardHeader className="space-y-1 text-center pb-2">
+          <Link to="/" className="text-2xl font-bold text-primary hover:opacity-80 transition-opacity flex items-center justify-center gap-2 group">
+            <Plane className="w-6 h-6 group-hover:-rotate-12 transition-transform" />
             Yellodae
           </Link>
+          
+          {!isLogin && (
+            <div className="pt-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 text-sm">
+                <Sun className="w-4 h-4 text-primary animate-pulse" />
+                <span className="font-medium">Your Adventure Awaits!</span>
+                <Palmtree className="w-4 h-4 text-primary" />
+              </div>
+            </div>
+          )}
+          
           <CardTitle className="text-2xl font-semibold mt-4">
-            {isLogin ? "Welcome Back" : "Create Account"}
+            {isLogin ? "Welcome Back, Explorer! 🌍" : "Join Our Travel Community"}
           </CardTitle>
-          <CardDescription>
+          <CardDescription className="text-base">
             {isLogin
-              ? "Enter your credentials to access your account"
-              : "Fill in your details to get started"}
+              ? "Ready to continue your journey?"
+              : "Create your account and unlock amazing destinations"}
           </CardDescription>
         </CardHeader>
+        
         <CardContent>
           <form onSubmit={isLogin ? handleLogin : handleSignup} className="space-y-4">
             {!isLogin && (
-              <div className="space-y-2">
-                <Label htmlFor="fullName">Full Name</Label>
-                <Input
-                  id="fullName"
-                  type="text"
-                  placeholder="John Doe"
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
-                  className={errors.fullName ? "border-destructive" : ""}
-                />
+              <div className="space-y-2 animate-fade-in">
+                <Label htmlFor="fullName" className="flex items-center gap-2">
+                  <span>Full Name</span>
+                  <span className="text-xs text-muted-foreground">(as in passport)</span>
+                </Label>
+                <div className="relative">
+                  <Input
+                    id="fullName"
+                    type="text"
+                    placeholder="John Traveler"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    className={`pl-10 ${errors.fullName ? "border-destructive" : ""}`}
+                  />
+                  <Luggage className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                </div>
                 {errors.fullName && (
                   <p className="text-sm text-destructive">{errors.fullName}</p>
                 )}
@@ -315,14 +397,17 @@ const Auth = () => {
 
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="you@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className={errors.email ? "border-destructive" : ""}
-              />
+              <div className="relative">
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="explorer@adventure.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className={`pl-10 ${errors.email ? "border-destructive" : ""}`}
+                />
+                <Compass className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              </div>
               {errors.email && (
                 <p className="text-sm text-destructive">{errors.email}</p>
               )}
@@ -337,8 +422,9 @@ const Auth = () => {
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className={errors.password ? "border-destructive pr-10" : "pr-10"}
+                  className={`pl-10 pr-10 ${errors.password ? "border-destructive" : ""}`}
                 />
+                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
@@ -378,7 +464,7 @@ const Auth = () => {
             )}
 
             {!isLogin && (
-              <div className="space-y-2">
+              <div className="space-y-2 animate-fade-in">
                 <div className="flex items-start space-x-2">
                   <Checkbox
                     id="terms"
@@ -403,14 +489,17 @@ const Auth = () => {
               </div>
             )}
 
-            <Button type="submit" className="w-full" disabled={isLoading || isGoogleLoading}>
+            <Button type="submit" className="w-full group" disabled={isLoading || isGoogleLoading}>
               {isLoading ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                   {isLogin ? "Signing in..." : "Creating account..."}
                 </>
               ) : (
-                isLogin ? "Sign In" : "Create Account"
+                <>
+                  {isLogin ? "Start Exploring" : "Begin Your Journey"}
+                  <Plane className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </>
               )}
             </Button>
           </form>
@@ -455,18 +544,56 @@ const Auth = () => {
 
           <div className="mt-6 text-center text-sm">
             <span className="text-muted-foreground">
-              {isLogin ? "Don't have an account? " : "Already have an account? "}
+              {isLogin ? "New to Yellodae? " : "Already a traveler? "}
             </span>
             <button
               type="button"
               onClick={toggleMode}
-              className="text-primary hover:underline font-medium"
+              className="text-primary hover:underline font-medium inline-flex items-center gap-1"
             >
-              {isLogin ? "Sign up" : "Sign in"}
+              {isLogin ? (
+                <>
+                  Start your journey <Plane className="w-3 h-3" />
+                </>
+              ) : (
+                "Sign in"
+              )}
             </button>
           </div>
+          
+          {!isLogin && (
+            <div className="mt-4 text-center animate-fade-in">
+              <p className="text-xs text-muted-foreground flex items-center justify-center gap-1">
+                <Camera className="w-3 h-3" />
+                Join 10,000+ travelers exploring the world
+              </p>
+            </div>
+          )}
         </CardContent>
       </Card>
+
+      {/* CSS for floating animation */}
+      <style>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(100vh) rotate(0deg);
+            opacity: 0;
+          }
+          10% {
+            opacity: 1;
+          }
+          90% {
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(-100px) rotate(360deg);
+            opacity: 0;
+          }
+        }
+        .animate-float {
+          animation: float linear infinite;
+        }
+      `}</style>
     </div>
   );
 };
