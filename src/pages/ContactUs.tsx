@@ -160,7 +160,7 @@ const ContactUs = () => {
                     />
                   </div>
                   <Button 
-                    className="w-full bg-muted text-muted-foreground cursor-not-allowed hover:bg-muted" 
+                    className="w-full bg-[#20B2AA] text-white cursor-not-allowed hover:bg-[#20B2AA]" 
                     size="lg" 
                     type="button" 
                     disabled
