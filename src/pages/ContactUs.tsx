@@ -3,14 +3,10 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 const ContactUs = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -23,49 +19,6 @@ const ContactUs = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const { error } = await supabase.functions.invoke('send-contact-email', {
-        body: {
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          phone: formData.phone,
-          subject: formData.subject,
-          message: formData.message
-        }
-      });
-
-      if (error) throw error;
-
-      toast({
-        title: "Message Sent!",
-        description: "We'll get back to you as soon as possible.",
-      });
-
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: ""
-      });
-    } catch (error) {
-      console.error("Error sending message:", error);
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
   };
 
   return (
@@ -146,7 +99,7 @@ const ContactUs = () => {
               {/* Contact Form */}
               <div className="bg-card border rounded-2xl p-6 md:p-8">
                 <h2 className="text-2xl font-bold mb-6">Send Us a Message / Concern</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium mb-2">First Name</label>
@@ -155,7 +108,6 @@ const ContactUs = () => {
                         value={formData.firstName}
                         onChange={handleInputChange}
                         placeholder="John" 
-                        required
                       />
                     </div>
                     <div>
@@ -165,7 +117,6 @@ const ContactUs = () => {
                         value={formData.lastName}
                         onChange={handleInputChange}
                         placeholder="Doe" 
-                        required
                       />
                     </div>
                   </div>
@@ -177,7 +128,6 @@ const ContactUs = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="john@example.com" 
-                      required
                     />
                   </div>
                   <div>
@@ -197,7 +147,6 @@ const ContactUs = () => {
                       value={formData.subject}
                       onChange={handleInputChange}
                       placeholder="How can we help you?" 
-                      required
                     />
                   </div>
                   <div>
@@ -208,14 +157,17 @@ const ContactUs = () => {
                       onChange={handleInputChange}
                       placeholder="Tell us more about your inquiry..." 
                       rows={5}
-                      required
                     />
                   </div>
-                  <Button className="w-full" size="lg" type="submit" disabled={isSubmitting}>
-                    <Send className="h-4 w-4 mr-2" />
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                  <Button 
+                    className="w-full bg-muted text-muted-foreground cursor-not-allowed hover:bg-muted" 
+                    size="lg" 
+                    type="button" 
+                    disabled
+                  >
+                    Send your message in the above format to support@yellodae.com
                   </Button>
-                </form>
+                </div>
               </div>
             </div>
           </div>
