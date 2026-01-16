@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Facebook, Instagram, Twitter, Linkedin, Mail } from "lucide-react";
+import { Facebook, Instagram, Twitter, Linkedin, Mail, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -88,7 +88,51 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-background/20 text-center text-sm text-background/60">
+        {/* WhatsApp & Payment Methods Section */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-8 pb-8 border-b border-background/20">
+          {/* WhatsApp Button */}
+          <a
+            href="https://wa.me/919876543210"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-5 py-2.5 rounded-full font-medium transition-colors"
+          >
+            <MessageCircle className="h-5 w-5" />
+            Chat on WhatsApp
+          </a>
+
+          {/* Payment Methods */}
+          <div className="flex items-center gap-4">
+            <span className="text-background/60 text-sm">We accept:</span>
+            <div className="flex items-center gap-3">
+              {/* Visa */}
+              <div className="bg-white rounded px-2 py-1">
+                <svg viewBox="0 0 48 16" className="h-5 w-auto">
+                  <path fill="#1434CB" d="M19.5 1.5l-2.7 13h-2.2l2.7-13h2.2zm11.1 8.4l1.2-3.2.7 3.2h-1.9zm2.5 4.6h2l-1.8-13h-1.8c-.4 0-.8.2-1 .6l-3.5 12.4h2.5l.5-1.4h3l.1 1.4zm-6.8-4.2c0-3.4-4.7-3.6-4.7-5.1 0-.5.5-.9 1.4-.9.8 0 1.5.1 2.1.4l.4-1.8c-.5-.2-1.3-.4-2.3-.4-2.5 0-4.2 1.3-4.2 3.2 0 1.4 1.2 2.2 2.2 2.6 1 .5 1.3.8 1.3 1.2 0 .7-.8 1-1.5 1-.9 0-1.7-.2-2.4-.5l-.4 1.9c.6.3 1.6.5 2.7.5 2.6 0 4.4-1.3 4.4-3.3l.1.2zM12.5 1.5l-4.1 13H5.9L3.8 4.2c-.1-.5-.2-.6-.6-.8C2.6 3.1 1.6 2.8.5 2.6l.1-.5h4c.5 0 1 .4 1.1.9l1 5.2 2.5-6.1h2.3v-.6z"/>
+                </svg>
+              </div>
+              {/* Mastercard */}
+              <div className="bg-white rounded px-2 py-1">
+                <svg viewBox="0 0 48 30" className="h-5 w-auto">
+                  <circle fill="#EB001B" cx="15" cy="15" r="15"/>
+                  <circle fill="#F79E1B" cx="33" cy="15" r="15"/>
+                  <path fill="#FF5F00" d="M24 4.5a14.9 14.9 0 000 21 14.9 14.9 0 000-21z"/>
+                </svg>
+              </div>
+              {/* PayPal */}
+              <div className="bg-white rounded px-2 py-1">
+                <svg viewBox="0 0 48 16" className="h-5 w-auto">
+                  <path fill="#253B80" d="M17.2 4.9h-3.4c-.2 0-.4.2-.5.4l-1.4 8.8c0 .2.1.3.3.3h1.6c.2 0 .4-.2.5-.4l.4-2.5c0-.2.2-.4.5-.4h1.1c2.3 0 3.6-1.1 4-3.3.2-.9 0-1.7-.4-2.2-.6-.5-1.5-.7-2.7-.7zm.4 3.2c-.2 1.3-1.1 1.3-2 1.3h-.5l.4-2.2c0-.1.1-.2.3-.2h.2c.6 0 1.2 0 1.5.4.2.2.2.5.1.7z"/>
+                  <path fill="#179BD7" d="M27.5 8h-1.6c-.1 0-.2.1-.3.2l-.1.5-.1-.2c-.4-.5-1.2-.7-2-.7-1.9 0-3.5 1.4-3.8 3.4-.2 1 .1 1.9.6 2.6.5.6 1.2.8 2 .8 1.4 0 2.2-.9 2.2-.9l-.1.5c0 .2.1.3.3.3h1.5c.2 0 .4-.2.5-.4l.9-5.7c0-.2-.1-.4-.1-.4zm-2.2 3.3c-.2 1-.9 1.6-1.9 1.6-.5 0-.9-.2-1.1-.4-.2-.3-.3-.7-.2-1.1.1-1 .9-1.7 1.9-1.7.5 0 .9.2 1.1.5.2.2.3.6.2 1.1z"/>
+                  <path fill="#253B80" d="M36.8 8h-1.6c-.2 0-.3.1-.4.2l-2.3 3.4-1-3.3c-.1-.2-.3-.3-.5-.3h-1.6c-.2 0-.3.2-.3.4l1.8 5.4-1.7 2.4c-.1.2 0 .5.2.5h1.6c.2 0 .3-.1.4-.2l5.6-8c.1-.2 0-.5-.2-.5z"/>
+                  <path fill="#179BD7" d="M41.7 4.9h-3.4c-.2 0-.4.2-.5.4l-1.4 8.8c0 .2.1.3.3.3h1.7c.2 0 .3-.1.3-.3l.4-2.6c0-.2.2-.4.5-.4h1.1c2.3 0 3.6-1.1 4-3.3.2-.9 0-1.7-.4-2.2-.6-.5-1.5-.7-2.6-.7zm.4 3.2c-.2 1.3-1.1 1.3-2 1.3h-.5l.4-2.2c0-.1.1-.2.3-.2h.2c.6 0 1.2 0 1.5.4.2.2.2.5.1.7z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center text-sm text-background/60">
           <p>© 2026 Yellodae. All rights reserved.</p>
         </div>
       </div>
