@@ -4,8 +4,70 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactUs = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: ""
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message
+        }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you as soon as possible.",
+      });
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -49,10 +111,8 @@ const ContactUs = () => {
                       <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Call Us</h3>
-                      <p className="text-muted-foreground">+66 2 123 4567 (Thailand)</p>
-                      <p className="text-muted-foreground">+971 4 123 4567 (Dubai)</p>
-                      <p className="text-muted-foreground">+65 6123 4567 (Singapore)</p>
+                      <h3 className="font-semibold mb-1">Call Us / WhatsApp Us</h3>
+                      <p className="text-muted-foreground">+91 7061710810</p>
                     </div>
                   </div>
 
@@ -62,6 +122,7 @@ const ContactUs = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Office Locations</h3>
+                      <p className="text-muted-foreground">Noida, Patna, India</p>
                       <p className="text-muted-foreground">Bangkok, Thailand</p>
                       <p className="text-muted-foreground">Dubai, UAE</p>
                       <p className="text-muted-foreground">Singapore</p>
@@ -84,40 +145,75 @@ const ContactUs = () => {
 
               {/* Contact Form */}
               <div className="bg-card border rounded-2xl p-6 md:p-8">
-                <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-                <form className="space-y-6">
+                <h2 className="text-2xl font-bold mb-6">Send Us a Message / Concern</h2>
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium mb-2">First Name</label>
-                      <Input placeholder="John" />
+                      <Input 
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        placeholder="John" 
+                        required
+                      />
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">Last Name</label>
-                      <Input placeholder="Doe" />
+                      <Input 
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        placeholder="Doe" 
+                        required
+                      />
                     </div>
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2">Email</label>
-                    <Input type="email" placeholder="john@example.com" />
+                    <Input 
+                      type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="john@example.com" 
+                      required
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2">Phone Number</label>
-                    <Input type="tel" placeholder="+1 234 567 890" />
+                    <Input 
+                      type="tel" 
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="+1 234 567 890" 
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2">Subject</label>
-                    <Input placeholder="How can we help you?" />
+                    <Input 
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      placeholder="How can we help you?" 
+                      required
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2">Message</label>
                     <Textarea 
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
                       placeholder="Tell us more about your inquiry..." 
                       rows={5}
+                      required
                     />
                   </div>
-                  <Button className="w-full" size="lg">
+                  <Button className="w-full" size="lg" type="submit" disabled={isSubmitting}>
                     <Send className="h-4 w-4 mr-2" />
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </div>
