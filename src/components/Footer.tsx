@@ -91,13 +91,15 @@ const Footer = () => {
         {/* WhatsApp & Payment Methods Section */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-8 pb-8 border-b border-background/20">
           {/* WhatsApp Button */}
-          <Link
-            to="/contact-us"
+          <a
+            href="https://wa.me/917061710810"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-5 py-2.5 rounded-full font-medium transition-colors"
           >
             <MessageCircle className="h-5 w-5" />
             Chat on WhatsApp
-          </Link>
+          </a>
 
           {/* Payment Methods */}
           <div className="flex items-center gap-4">
