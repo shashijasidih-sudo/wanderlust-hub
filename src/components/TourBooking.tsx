@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import FloatingWhatsApp from "./FloatingWhatsApp";
 import HeroSlider from "./activity-detail/HeroSlider";
 import PhotoGallery from "./activity-detail/PhotoGallery";
 import CustomerReviews from "./activity-detail/CustomerReviews";
@@ -178,6 +179,7 @@ const TourBooking = ({ tourData }: TourBookingProps) => {
       </main>
 
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };

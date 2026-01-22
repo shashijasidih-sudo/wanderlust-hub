@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import FloatingWhatsApp from "./FloatingWhatsApp";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
@@ -448,6 +449,7 @@ const TransferBooking = ({ transferData }: TransferBookingProps) => {
       </main>
 
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
