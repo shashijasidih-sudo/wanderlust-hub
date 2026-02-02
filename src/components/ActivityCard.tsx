@@ -106,6 +106,7 @@ const ActivityCard = ({
               <div className="text-right">
                 <p className="text-xs text-muted-foreground">from</p>
                 <p className="text-2xl font-bold text-foreground">INR {price.toLocaleString('en-IN')}</p>
+                <p className="text-xs text-green-600 font-medium">GST Inclusive</p>
               </div>
               <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                 SELECT
@@ -187,6 +188,7 @@ const ActivityCard = ({
           <div>
             <p className="text-[10px] md:text-xs text-muted-foreground">from</p>
             <p className="text-sm md:text-lg font-bold text-foreground">₹{price.toLocaleString('en-IN')}</p>
+            <p className="text-[8px] md:text-[10px] text-green-600 font-medium">GST Inclusive</p>
           </div>
           <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-[10px] md:text-sm h-7 md:h-9 px-2 md:px-4">
             SELECT
