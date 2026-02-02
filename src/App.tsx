@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "@/contexts/CartContext";
 import ApprovalBadge from "@/components/ApprovalBadge";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Thailand from "./pages/Thailand";
@@ -373,6 +374,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+          <FloatingWhatsApp />
       </BrowserRouter>
     </TooltipProvider>
     </CartProvider>
