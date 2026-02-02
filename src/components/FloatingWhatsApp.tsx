@@ -1,7 +1,11 @@
 const FloatingWhatsApp = () => {
+  const message = encodeURIComponent(
+    "Greetings from Yellodae!!!, We are well known for our travel activities, transfers and packages to destinations- Thailand, Singapore, and Dubai. Kindly, State your question. Our team will surely connect with you. Happy Smart Traveling"
+  );
+
   return (
     <a
-      href="https://wa.me/917061710810"
+      href={`https://wa.me/917061710810?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BD5A] text-white p-4 rounded-full shadow-lg transition-all hover:scale-110"
