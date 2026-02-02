@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ActivityCard from "@/components/ActivityCard";
 import CityNavigation from "@/components/CityNavigation";
+import MobileFilters from "@/components/MobileFilters";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
@@ -58,16 +59,16 @@ const Pattaya = () => {
       <Header />
       
       <div className="container mx-auto px-4 py-8">
-        <div className="bg-card shadow-card rounded-lg p-6 mb-8">
-          <div className="flex items-center justify-between mb-4">
-            <h1 className="text-3xl font-bold text-foreground">Pattaya Tours & Activities</h1>
-            <p className="text-xl text-muted-foreground">{activities.length} Things to do in Pattaya</p>
+        <div className="bg-card shadow-card rounded-lg p-4 md:p-6 mb-8">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+            <h1 className="text-2xl md:text-3xl font-bold text-foreground">Pattaya Tours & Activities</h1>
+            <p className="text-lg md:text-xl text-muted-foreground">{activities.length} Things to do in Pattaya</p>
             <div className="flex items-center gap-4">
               <Select value={sortBy} onValueChange={setSortBy}>
-                <SelectTrigger className="w-48">
+                <SelectTrigger className="w-40 md:w-48">
                   <SelectValue />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="bg-card z-50">
                   <SelectItem value="popular">Most Popular</SelectItem>
                   <SelectItem value="price-low">Price (Low → High)</SelectItem>
                   <SelectItem value="price-high">Price (High → Low)</SelectItem>
@@ -77,7 +78,7 @@ const Pattaya = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <SearchInput placeholder="Search Pattaya activities..." className="flex-1" cityFilter="Pattaya" />
             <Button
               variant={viewMode === 'grid' ? 'default' : 'outline'}
@@ -90,6 +91,7 @@ const Pattaya = () => {
               variant={viewMode === 'list' ? 'default' : 'outline'}
               size="icon"
               onClick={() => setViewMode('list')}
+              className="hidden md:flex"
             >
               <List className="h-5 w-5" />
             </Button>
@@ -98,8 +100,18 @@ const Pattaya = () => {
 
         <CityNavigation currentCity="Pattaya" />
 
+        {/* Mobile Filters */}
+        <MobileFilters
+          priceRange={priceRange}
+          onPriceRangeChange={setPriceRange}
+          minPrice={650}
+          maxPrice={5200}
+          categories={categories}
+        />
+
         <div className="flex gap-8">
-          <aside className="w-80 flex-shrink-0">
+          {/* Desktop Sidebar - Hidden on mobile */}
+          <aside className="hidden lg:block w-80 flex-shrink-0">
             <div className="bg-card shadow-card rounded-lg p-6 space-y-6 sticky top-4">
               <div>
                 <div className="flex items-center gap-2 mb-3">
@@ -149,7 +161,7 @@ const Pattaya = () => {
           </aside>
 
           <main className="flex-1">
-            <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-6'}>
+            <div className={viewMode === 'grid' ? 'grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6' : 'space-y-6'}>
               {paginatedActivities.map((activity, index) => (
                 <ActivityCard
                   key={index}
