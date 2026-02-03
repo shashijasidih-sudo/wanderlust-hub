@@ -42,7 +42,7 @@ const categories = [
 
 const Bangkok = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('popular');
+  const [sortBy, setSortBy] = useState('price-low');
   const [priceRange, setPriceRange] = useState([1600, 11000]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
