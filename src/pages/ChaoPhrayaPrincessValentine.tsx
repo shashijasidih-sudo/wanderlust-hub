@@ -1,19 +1,21 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import valentineCruise1 from "@/assets/valentine-cruise-1.jpg";
+import valentineCruise2 from "@/assets/valentine-cruise-2.jpg";
+import valentineCruise3 from "@/assets/valentine-cruise-3.jpg";
 
 const ChaoPhrayaPrincessValentine = () => {
   const tourData = {
     ...toursData["chao-phraya-princess-valentine"],
     heroImages: [
-      { src: "/placeholder.svg", title: "Valentine's Day Dinner Cruise" },
-      { src: "/placeholder.svg", title: "Romantic Evening" },
-      { src: "/placeholder.svg", title: "Special Celebration" }
+      { src: valentineCruise1, title: "Valentine's Day Dinner Cruise" },
+      { src: valentineCruise2, title: "Romantic Evening on Chao Phraya" },
+      { src: valentineCruise3, title: "Special Celebration" }
     ],
     galleryImages: [
-      { src: "/placeholder.svg", alt: "Romantic table setting" },
-      { src: "/placeholder.svg", alt: "Valentine's menu" },
-      { src: "/placeholder.svg", alt: "Couple dining" },
-      { src: "/placeholder.svg", alt: "River at night" }
+      { src: valentineCruise1, alt: "Luxury cruise ship at night" },
+      { src: valentineCruise2, alt: "Chao Phraya Princess cruise" },
+      { src: valentineCruise3, alt: "Night cruise experience" }
     ]
   };
   return <TourBooking tourData={tourData} />;
