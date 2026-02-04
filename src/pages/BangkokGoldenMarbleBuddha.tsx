@@ -1,19 +1,21 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import bangkokBuddha1 from "@/assets/bangkok-buddha-1.jpg";
+import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
+import bangkokTemple4 from "@/assets/bangkok-temple-4.jpg";
 
 const BangkokGoldenMarbleBuddha = () => {
   const tourData = {
     ...toursData["bangkok-golden-marble-buddha"],
     heroImages: [
-      { src: "/placeholder.svg", title: "Golden Buddha Temple Tour" },
-      { src: "/placeholder.svg", title: "Marble Temple" },
-      { src: "/placeholder.svg", title: "Bangkok Temples" }
+      { src: bangkokBuddha1, title: "Golden Buddha Temple Tour" },
+      { src: bangkokTemple1, title: "Marble Temple" },
+      { src: bangkokTemple4, title: "Bangkok Temples" }
     ],
     galleryImages: [
-      { src: "/placeholder.svg", alt: "Golden Buddha" },
-      { src: "/placeholder.svg", alt: "Marble Temple" },
-      { src: "/placeholder.svg", alt: "Temple architecture" },
-      { src: "/placeholder.svg", alt: "Buddhist statues" }
+      { src: bangkokBuddha1, alt: "Golden Buddha" },
+      { src: bangkokTemple1, alt: "Marble Temple" },
+      { src: bangkokTemple4, alt: "Temple architecture" }
     ]
   };
   return <TourBooking tourData={tourData} />;
