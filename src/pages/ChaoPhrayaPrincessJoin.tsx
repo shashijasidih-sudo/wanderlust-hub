@@ -1,19 +1,21 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import cruiseNight1 from "@/assets/cruise-night-1.jpg";
+import cruiseNight2 from "@/assets/cruise-night-2.jpg";
+import cruiseShip1 from "@/assets/cruise-ship-1.jpg";
 
 const ChaoPhrayaPrincessJoin = () => {
   const tourData = {
     ...toursData["chao-phraya-princess-join"],
     heroImages: [
-      { src: "/placeholder.svg", title: "Chao Phraya Princess Join Tour" },
-      { src: "/placeholder.svg", title: "Group Dinner Cruise" },
-      { src: "/placeholder.svg", title: "Shared Transfer Service" }
+      { src: cruiseNight1, title: "Chao Phraya Princess Dinner Cruise" },
+      { src: cruiseNight2, title: "Evening River Experience" },
+      { src: cruiseShip1, title: "Luxury Cruise Ship" }
     ],
     galleryImages: [
-      { src: "/placeholder.svg", alt: "Cruise boat exterior" },
-      { src: "/placeholder.svg", alt: "Buffet selection" },
-      { src: "/placeholder.svg", alt: "Cultural show" },
-      { src: "/placeholder.svg", alt: "Passengers enjoying views" }
+      { src: cruiseNight1, alt: "Princess cruise at night" },
+      { src: cruiseNight2, alt: "Chao Phraya Princess cruise" },
+      { src: cruiseShip1, alt: "Luxury cruise ship" }
     ]
   };
   return <TourBooking tourData={tourData} />;
