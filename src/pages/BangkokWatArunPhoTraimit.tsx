@@ -1,5 +1,8 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import bangkokTemple3 from "@/assets/bangkok-temple-3.jpg";
+import bangkokCity1 from "@/assets/bangkok-city-1.jpg";
+import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 
 const BangkokWatArunPhoTraimit = () => {
   const baseTourData = toursData["bangkok-wat-arun-pho-traimit"];
@@ -15,7 +18,19 @@ const BangkokWatArunPhoTraimit = () => {
     );
   }
   
-  const tourData = baseTourData;
+  const tourData = {
+    ...baseTourData,
+    heroImages: [
+      { src: bangkokTemple3, title: "Wat Arun Temple at Twilight" },
+      { src: bangkokCity1, title: "Bangkok City and River" },
+      { src: bangkokTemple1, title: "Golden Pagoda Temple" }
+    ],
+    galleryImages: [
+      { src: bangkokTemple3, alt: "Wat Arun at sunset" },
+      { src: bangkokCity1, alt: "Bangkok cityscape" },
+      { src: bangkokTemple1, alt: "Golden pagoda" }
+    ]
+  };
 
   return <TourBooking tourData={tourData} />;
 };
