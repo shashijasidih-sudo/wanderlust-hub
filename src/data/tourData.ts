@@ -687,6 +687,44 @@ export const toursData: Record<string, TourData> = {
     childPolicy: ["Child rate 4-10 years"],
     faqs: [{ question: "How long is the cruise?", answer: "Approximately 2.5 hours on the water." }]
   },
+  "chao-phraya-princess-no-transfer": {
+    id: "chao-phraya-princess-no-transfer",
+    title: "River Cruise by Chao Phraya Princess Admission Ticket With Indian or International Dinner (No Transfer)",
+    shortDescription: "Enjoy an elegant dinner cruise on the Chao Phraya Princess with choice of Indian or International buffet. No transfer included - meet at the pier.",
+    location: "Bangkok, Thailand",
+    city: "bangkok",
+    basePrice: 3150,
+    childPrice: 2898,
+    duration: "2.5 Hours",
+    rating: 4.7,
+    reviews: 1567,
+    heroImages: [],
+    galleryImages: [],
+    highlights: ["Choice of Indian or International buffet", "Multiple departure piers", "Live entertainment", "Panoramic river views", "No transfer - flexible timing"],
+    description: { 
+      overview: "Experience Bangkok's famous Chao Phraya Princess dinner cruise with your choice of authentic Indian cuisine or international buffet. This admission-only ticket lets you choose your preferred departure point - Iconsiam, Asiatique, or Terminal 21 Rama 3.", 
+      whatToExpect: "Enjoy a 2.5-hour cruise along the Chao Phraya River, passing illuminated landmarks including Wat Arun, Grand Palace, and modern Bangkok skyline. Savor delicious food, live music, and cultural performances." 
+    },
+    itinerary: [
+      { time: "06:30 PM", title: "Arrival", description: "Arrive at your chosen pier (Iconsiam, Asiatique, or Terminal 21 Rama 3)" }, 
+      { time: "07:00 PM", title: "Boarding", description: "Board the Chao Phraya Princess" }, 
+      { time: "07:15 PM", title: "Departure", description: "Cruise begins along the river" }, 
+      { time: "07:30 PM", title: "Dinner", description: "Indian or International buffet dinner served" },
+      { time: "08:30 PM", title: "Entertainment", description: "Live music and cultural performances" },
+      { time: "09:30 PM", title: "Return", description: "Cruise ends at departure pier" }
+    ],
+    tourTimings: ["Dinner Cruise from Iconsiam - International Food", "Dinner Cruise from Asiatique - Indian/South Asian Food", "Dinner Cruise from Terminal 21 Rama 3 - Indian Food"],
+    inclusions: ["Dinner cruise admission", "Buffet dinner (Indian or International)", "Live entertainment", "Welcome drink"],
+    exclusions: ["Hotel transfers", "Alcoholic beverages", "Tips", "Personal expenses"],
+    bookingPolicy: ["Self-transfer to pier", "Arrive 30 minutes before departure", "Smart casual dress code", "E-voucher accepted"],
+    cancellationPolicy: ["Free cancellation 24 hours before", "No refund for no-shows"],
+    childPolicy: ["Child rate 4-10 years", "Under 4 free"],
+    faqs: [
+      { question: "What are the pier options?", answer: "You can board at Iconsiam, Asiatique, or Terminal 21 Rama 3 depending on your ticket type." },
+      { question: "Is vegetarian food available?", answer: "Yes, both Indian and International buffets have vegetarian options." },
+      { question: "What is the difference between ticket types?", answer: "Iconsiam and Terminal 21 offer Indian food for Indian nationals, while Asiatique offers International buffet for other nationalities." }
+    ]
+  },
   "maeklong-floating-market": {
     id: "maeklong-floating-market",
     title: "Maeklong Railway Market and Damnoensaduak Floating Market Tour in Bangkok",

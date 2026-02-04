@@ -42,6 +42,7 @@ import AyutthayaSunsetCruise from "./pages/AyutthayaSunsetCruise";
 import ChaoPhrayaPrincessPrivate from "./pages/ChaoPhrayaPrincessPrivate";
 import ChaoPhrayaPrincessValentine from "./pages/ChaoPhrayaPrincessValentine";
 import ChaoPhrayaPrincessJoin from "./pages/ChaoPhrayaPrincessJoin";
+import ChaoPhrayaPrincessNoTransfer from "./pages/ChaoPhrayaPrincessNoTransfer";
 import MaeklongFloatingMarket from "./pages/MaeklongFloatingMarket";
 import BangkokTukTukNight from "./pages/BangkokTukTukNight";
 import DreamWorldBangkok from "./pages/DreamWorldBangkok";
@@ -230,6 +231,7 @@ const App = () => (
           <Route path="/chao-phraya-princess-private" element={<ChaoPhrayaPrincessPrivate />} />
           <Route path="/chao-phraya-princess-valentine" element={<ChaoPhrayaPrincessValentine />} />
           <Route path="/chao-phraya-princess-join" element={<ChaoPhrayaPrincessJoin />} />
+          <Route path="/chao-phraya-princess-no-transfer" element={<ChaoPhrayaPrincessNoTransfer />} />
           <Route path="/maeklong-floating-market" element={<MaeklongFloatingMarket />} />
           <Route path="/bangkok-tuk-tuk-night" element={<BangkokTukTukNight />} />
           <Route path="/dream-world-bangkok" element={<DreamWorldBangkok />} />

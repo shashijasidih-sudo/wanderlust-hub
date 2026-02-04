@@ -36,6 +36,7 @@ const activities = [
   { title: "Chao Phraya Princess Dinner Cruise in Bangkok with Private Transfer", price: 5545, image: "https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=800&auto=format&fit=crop", slug: "chao-phraya-princess-private" },
   { title: "Chao Phraya Princess Dinner Cruise: Valentine's Day Celebration", price: 3150, image: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=800&auto=format&fit=crop", slug: "chao-phraya-princess-valentine" },
   { title: "Chaophraya Princess River Dinner Cruise Over Chaophraya River with Join Transfer", price: 4410, image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&auto=format&fit=crop", slug: "chao-phraya-princess-join" },
+  { title: "River Cruise by Chao Phraya Princess Admission Ticket With Indian or International Dinner (No Transfer)", price: 3150, image: "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&auto=format&fit=crop", slug: "chao-phraya-princess-no-transfer" },
   
   // Other Activities
   { title: "Health Land Gift Voucher: Traditional Thai Massage (120 Min)", price: 2775, image: massageHero, slug: "massage-coupons" },
