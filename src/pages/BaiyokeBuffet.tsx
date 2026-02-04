@@ -1,19 +1,21 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import bangkokCityNight1 from "@/assets/bangkok-city-night-1.jpg";
+import bangkokPagodaSunset1 from "@/assets/bangkok-pagoda-sunset-1.jpg";
+import bangkokCityPurple1 from "@/assets/bangkok-city-purple-1.jpg";
 
 const BaiyokeBuffet = () => {
   const tourData = {
     ...toursData["baiyoke-buffet"],
     heroImages: [
-      { src: "/placeholder.svg", title: "Baiyoke Tower Buffet" },
-      { src: "/placeholder.svg", title: "Panoramic Bangkok Views" },
-      { src: "/placeholder.svg", title: "International Cuisine" }
+      { src: bangkokCityNight1, title: "Baiyoke Tower Buffet" },
+      { src: bangkokPagodaSunset1, title: "Panoramic Bangkok Views" },
+      { src: bangkokCityPurple1, title: "International Cuisine" }
     ],
     galleryImages: [
-      { src: "/placeholder.svg", alt: "City views from 75th floor" },
-      { src: "/placeholder.svg", alt: "Buffet spread" },
-      { src: "/placeholder.svg", alt: "Rotating observation deck" },
-      { src: "/placeholder.svg", alt: "Fine dining" }
+      { src: bangkokCityNight1, alt: "City views from 75th floor" },
+      { src: bangkokPagodaSunset1, alt: "Bangkok at sunset" },
+      { src: bangkokCityPurple1, alt: "Illuminated city at night" }
     ]
   };
   return <TourBooking tourData={tourData} />;

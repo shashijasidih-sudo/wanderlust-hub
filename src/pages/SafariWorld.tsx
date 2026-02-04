@@ -3,6 +3,9 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TourBooking from "@/components/TourBooking";
+import bangkokRiversideTemple1 from "@/assets/bangkok-riverside-temple-1.jpg";
+import bangkokBridgeDay1 from "@/assets/bangkok-bridge-day-1.jpg";
+import bangkokTempleWoman1 from "@/assets/bangkok-temple-woman-1.jpg";
 
 const SafariWorld = () => {
   const navigate = useNavigate();
@@ -24,10 +27,14 @@ const SafariWorld = () => {
     rating: 4.6,
     reviews: 3421,
     heroImages: [
-      { src: "/placeholder.svg", title: "Safari World Adventure" }
+      { src: bangkokRiversideTemple1, title: "Safari World Adventure" },
+      { src: bangkokBridgeDay1, title: "Bangkok Wildlife Experience" },
+      { src: bangkokTempleWoman1, title: "Thailand Adventure" }
     ],
     galleryImages: [
-      { src: "/placeholder.svg", alt: "Safari World" }
+      { src: bangkokRiversideTemple1, alt: "Riverside temple view" },
+      { src: bangkokBridgeDay1, alt: "Bangkok bridge and cityscape" },
+      { src: bangkokTempleWoman1, alt: "Thai temple visit" }
     ],
     highlights: [
       "Safari Park drive-through experience",

@@ -1,19 +1,21 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import floatingMarket1 from "@/assets/floating-market-1.jpg";
+import bangkokRiversideTemple1 from "@/assets/bangkok-riverside-temple-1.jpg";
+import bangkokBridgeDay1 from "@/assets/bangkok-bridge-day-1.jpg";
 
 const MaeklongFloatingMarket = () => {
   const tourData = {
     ...toursData["maeklong-floating-market"],
     heroImages: [
-      { src: "/placeholder.svg", title: "Maeklong Railway Market" },
-      { src: "/placeholder.svg", title: "Damnoen Saduak Floating Market" },
-      { src: "/placeholder.svg", title: "Traditional Thai Markets" }
+      { src: floatingMarket1, title: "Maeklong Railway Market" },
+      { src: bangkokRiversideTemple1, title: "Damnoen Saduak Floating Market" },
+      { src: bangkokBridgeDay1, title: "Traditional Thai Markets" }
     ],
     galleryImages: [
-      { src: "/placeholder.svg", alt: "Train passing through market" },
-      { src: "/placeholder.svg", alt: "Vendors at railway market" },
-      { src: "/placeholder.svg", alt: "Floating market boats" },
-      { src: "/placeholder.svg", alt: "Market vendors" }
+      { src: floatingMarket1, alt: "Floating market boats" },
+      { src: bangkokRiversideTemple1, alt: "Riverside temple" },
+      { src: bangkokBridgeDay1, alt: "Bangkok cityscape" }
     ]
   };
   return <TourBooking tourData={tourData} />;
