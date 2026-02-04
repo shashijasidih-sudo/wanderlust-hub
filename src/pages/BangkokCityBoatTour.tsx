@@ -1,5 +1,8 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import bangkokCity1 from "@/assets/bangkok-city-1.jpg";
+import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
+import bangkokCity2 from "@/assets/bangkok-city-2.jpg";
 
 const BangkokCityBoatTour = () => {
   const baseTourData = toursData["bangkok-city-boat-tour"];
@@ -18,15 +21,14 @@ const BangkokCityBoatTour = () => {
   const tourData = {
     ...baseTourData,
     heroImages: [
-      { src: "/placeholder.svg", title: "Bangkok City Tour by Boat" },
-      { src: "/placeholder.svg", title: "Chao Phraya River Cruise" },
-      { src: "/placeholder.svg", title: "Canal Exploration" }
+      { src: bangkokCity1, title: "Bangkok City Tour by Boat" },
+      { src: bangkokTemple2, title: "Chao Phraya River Cruise" },
+      { src: bangkokCity2, title: "Canal Exploration" }
     ],
     galleryImages: [
-      { src: "/placeholder.svg", alt: "Long-tail boat on river" },
-      { src: "/placeholder.svg", alt: "Riverside temples" },
-      { src: "/placeholder.svg", alt: "Canal houses" },
-      { src: "/placeholder.svg", alt: "Bangkok waterways" }
+      { src: bangkokCity1, alt: "Bangkok cityscape with river" },
+      { src: bangkokTemple2, alt: "Wat Arun temple at night" },
+      { src: bangkokCity2, alt: "Bangkok highway and cityscape" }
     ]
   };
 

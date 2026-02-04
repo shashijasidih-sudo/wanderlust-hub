@@ -1,5 +1,8 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
+import bangkokTemple3 from "@/assets/bangkok-temple-3.jpg";
+import bangkokBuddha1 from "@/assets/bangkok-buddha-1.jpg";
 
 const BangkokThreeTemples = () => {
   const baseTourData = toursData["bangkok-three-temples"];
@@ -15,7 +18,19 @@ const BangkokThreeTemples = () => {
     );
   }
   
-  const tourData = baseTourData;
+  const tourData = {
+    ...baseTourData,
+    heroImages: [
+      { src: bangkokTemple2, title: "Wat Arun Temple at Night" },
+      { src: bangkokTemple3, title: "Wat Arun at Twilight" },
+      { src: bangkokBuddha1, title: "Golden Buddha Statues" }
+    ],
+    galleryImages: [
+      { src: bangkokTemple2, alt: "Wat Arun temple illuminated" },
+      { src: bangkokTemple3, alt: "Wat Arun at sunset" },
+      { src: bangkokBuddha1, alt: "Row of Buddha statues" }
+    ]
+  };
 
   return <TourBooking tourData={tourData} />;
 };
