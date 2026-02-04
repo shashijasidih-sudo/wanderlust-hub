@@ -1,21 +1,21 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
-import grandPalaceTemple1 from "@/assets/grand-palace-temple-1.jpg";
-import grandPalaceBuddha from "@/assets/grand-palace-buddha.jpg";
-import grandPalacePagoda from "@/assets/grand-palace-pagoda.jpg";
+import grandPalaceBridge from "@/assets/grand-palace-bridge.jpg";
+import grandPalaceWatArun from "@/assets/grand-palace-wat-arun.jpg";
+import grandPalaceWatArunTwilight from "@/assets/grand-palace-wat-arun-twilight.jpg";
 
 const BangkokGrandPalaceEmerald = () => {
   const tourData = {
     ...toursData["bangkok-grand-palace-emerald"],
     heroImages: [
-      { src: grandPalaceTemple1, title: "Royal Grand Palace" },
-      { src: grandPalaceBuddha, title: "Emerald Buddha" },
-      { src: grandPalacePagoda, title: "Reclining Buddha" }
+      { src: grandPalaceWatArunTwilight, title: "Royal Grand Palace" },
+      { src: grandPalaceWatArun, title: "Emerald Buddha" },
+      { src: grandPalaceBridge, title: "Bangkok City View" }
     ],
     galleryImages: [
-      { src: grandPalaceTemple1, alt: "Grand Palace golden spires" },
-      { src: grandPalaceBuddha, alt: "Emerald Buddha temple" },
-      { src: grandPalacePagoda, alt: "Reclining Buddha" }
+      { src: grandPalaceWatArunTwilight, alt: "Wat Arun temple at twilight" },
+      { src: grandPalaceWatArun, alt: "Wat Arun temple at night" },
+      { src: grandPalaceBridge, alt: "Chao Phraya River bridge" }
     ]
   };
   return <TourBooking tourData={tourData} />;
