@@ -46,7 +46,7 @@ const TourDescription = ({
                   {idx < tourData.itinerary.length - 1 && <div className="w-0.5 h-full bg-border mt-2"></div>}
                 </div>
                 <div className="pb-6">
-                  <h4 className="font-semibold mb-1">{item.title} ({item.time})</h4>
+                  <h4 className="font-semibold mb-1">{item.title}</h4>
                   <p className="text-sm text-muted-foreground">
                     {item.description}
                   </p>
