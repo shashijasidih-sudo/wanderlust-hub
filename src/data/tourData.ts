@@ -5845,5 +5845,78 @@ export const toursData: Record<string, TourData> = {
     childPolicy: ["Price is per vehicle, not per person"],
     faqs: [],
     customerReviews: []
+  },
+  "massage-coupons": {
+    id: "massage-coupons",
+    title: "Health Land Gift Voucher: Traditional Thai Massage (120 Min)",
+    shortDescription: "Experience the finest traditional Thai massage at Health Land, one of Bangkok's most reputable wellness centers. Redeem your gift voucher for a blissful 2-hour session.",
+    location: "Bangkok, Thailand",
+    city: "bangkok",
+    basePrice: 2775,
+    childPrice: 0,
+    duration: "120 Minutes",
+    rating: 4.9,
+    reviews: 2156,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "120 Minutes Traditional Thai Massage",
+      "Certified Professional Therapists",
+      "Premium Wellness Center Environment",
+      "Valid at Multiple Health Land Locations",
+      "Flexible Redemption Period",
+      "Complimentary Herbal Tea"
+    ],
+    description: {
+      overview: "Health Land is Thailand's premier wellness chain, renowned for its authentic Thai massage techniques and world-class facilities. This gift voucher gives you access to a 120-minute traditional Thai massage experience.",
+      whatToExpect: "Upon arrival at any Health Land branch, present your voucher to redeem your 120-minute traditional Thai massage. The session includes a combination of acupressure, stretching, and energy work that has been practiced in Thailand for centuries.\n\nYour certified therapist will guide you through a deeply relaxing experience that helps improve circulation, reduce muscle tension, and restore energy flow throughout your body. The massage is performed on a comfortable floor mat with you wearing loose-fitting clothes provided by the spa.\n\nHealth Land's facilities feature private treatment rooms, clean and serene environments, and professional staff who ensure your comfort throughout the experience. After your massage, enjoy complimentary herbal tea in the relaxation lounge.\n\nLocations are conveniently situated across Bangkok, including Asoke, Sathorn, Ekkamai, and more. This voucher makes an excellent gift for yourself or loved ones visiting Thailand."
+    },
+    itinerary: [
+      { time: "Arrival", title: "Check-in", description: "Present your voucher at the reception desk and complete registration" },
+      { time: "15 mins", title: "Preparation", description: "Change into provided loose-fitting clothes and store belongings in locker" },
+      { time: "120 mins", title: "Thai Massage", description: "Enjoy your traditional Thai massage with certified therapist" },
+      { time: "After", title: "Relaxation", description: "Unwind with complimentary herbal tea in the lounge" }
+    ],
+    tourTimings: ["10:00 AM", "12:00 PM", "02:00 PM", "04:00 PM", "06:00 PM", "08:00 PM"],
+    inclusions: [
+      "120-minute Traditional Thai Massage",
+      "Use of spa facilities",
+      "Comfortable massage attire",
+      "Complimentary herbal tea",
+      "Locker and storage"
+    ],
+    exclusions: [
+      "Transportation to spa location",
+      "Additional treatments",
+      "Tips for therapist",
+      "Food and beverages (except herbal tea)"
+    ],
+    bookingPolicy: [
+      "Voucher valid for 6 months from purchase date",
+      "Advance booking recommended, especially on weekends",
+      "Walk-ins accepted subject to availability",
+      "Please arrive 15 minutes before your appointment"
+    ],
+    cancellationPolicy: [
+      "Free rescheduling up to 24 hours before appointment",
+      "No refunds for unused vouchers",
+      "Voucher is transferable to another person"
+    ],
+    childPolicy: [
+      "Massage services available for adults only (18+)",
+      "No child tickets available"
+    ],
+    faqs: [
+      { question: "Which Health Land locations can I redeem this voucher?", answer: "The voucher is valid at all Health Land branches in Bangkok including Asoke, Sathorn, Ekkamai, Pinklao, and more." },
+      { question: "Do I need to book in advance?", answer: "We recommend booking 1-2 days in advance, especially for weekends and evenings. Walk-ins are accepted based on availability." },
+      { question: "What should I wear?", answer: "You don't need to bring anything - comfortable loose-fitting clothes will be provided at the spa." },
+      { question: "Is this suitable for first-time massage receivers?", answer: "Absolutely! Traditional Thai massage is suitable for beginners. The therapist will adjust pressure based on your preference." },
+      { question: "How long is the voucher valid?", answer: "The voucher is valid for 6 months from the date of purchase." }
+    ],
+    customerReviews: [
+      { name: "Priya S.", date: "January 15, 2026", rating: 5, comment: "Best massage experience in Bangkok! The therapist was very professional and the facility was spotless.", helpful: 45 },
+      { name: "Michael T.", date: "December 28, 2025", rating: 5, comment: "Incredible value for a 2-hour massage. Health Land lives up to its reputation.", helpful: 32 },
+      { name: "Sakura K.", date: "December 10, 2025", rating: 4, comment: "Very relaxing experience. The herbal tea afterwards was a nice touch.", helpful: 18 }
+    ]
   }
 };
