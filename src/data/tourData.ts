@@ -31,6 +31,7 @@ export interface TourData {
   city: string;
   basePrice: number;
   childPrice: number;
+  singleAdultPrice?: number; // Price when only 1 adult is booking
   duration: string;
   rating: number;
   reviews: number;
@@ -76,6 +77,7 @@ export const toursData: Record<string, TourData> = {
     city: "bangkok",
     basePrice: 10845,
     childPrice: 4413,
+    singleAdultPrice: 13155,
     duration: "Half Day",
     rating: 4.8,
     reviews: 1523,
@@ -158,6 +160,7 @@ export const toursData: Record<string, TourData> = {
     city: "bangkok",
     basePrice: 3570,
     childPrice: 3568,
+    singleAdultPrice: 4685,
     duration: "3 Hours",
     rating: 4.7,
     reviews: 856,
@@ -285,6 +288,7 @@ export const toursData: Record<string, TourData> = {
     city: "bangkok",
     basePrice: 5044,
     childPrice: 1273,
+    singleAdultPrice: 7356,
     duration: "Full Day",
     rating: 4.9,
     reviews: 687,
@@ -354,6 +358,7 @@ export const toursData: Record<string, TourData> = {
     city: "bangkok",
     basePrice: 3642,
     childPrice: 4410,
+    singleAdultPrice: 5292,
     duration: "Half Day",
     rating: 4.6,
     reviews: 523,
@@ -424,6 +429,7 @@ export const toursData: Record<string, TourData> = {
     city: "bangkok",
     basePrice: 2646,
     childPrice: 2646,
+    singleAdultPrice: 4914,
     duration: "Half Day",
     rating: 4.8,
     reviews: 956,
