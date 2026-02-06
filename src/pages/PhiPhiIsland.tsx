@@ -11,6 +11,9 @@ import phiPhi7 from "@/assets/phi-phi-7.jpg";
 import phiPhi8 from "@/assets/phi-phi-8.jpg";
 import phiPhi9 from "@/assets/phi-phi-9.jpg";
 import phiPhi10 from "@/assets/phi-phi-10.jpg";
+import phuketMayaBay from "@/assets/phuket-maya-bay-1.jpg";
+import phuketSpeedboat from "@/assets/phuket-speedboat-1.jpg";
+import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
 
 const PhiPhiIsland = () => {
   console.log("PhiPhiIsland: toursData available?", !!toursData);
@@ -34,9 +37,9 @@ const PhiPhiIsland = () => {
   const tourData = {
     ...baseTourData,
     heroImages: [
-      { src: phiPhiBoat, title: "Phi Phi Island Guided Tour by Big Boat with Normal Transfer" },
-      { src: phiPhi1, title: "Discover Paradise Islands" },
-      { src: phiPhi2, title: "Maya Bay Crystal Waters" }
+      { src: phuketSpeedboat, title: "Phi Phi Island Speedboat Tour" },
+      { src: phuketMayaBay, title: "Maya Bay Paradise" },
+      { src: phuketBoatTour, title: "Island Hopping Adventure" }
     ],
     galleryImages: [
       { src: phiPhi1, alt: "Aerial view of Phi Phi Islands with turquoise waters" },
