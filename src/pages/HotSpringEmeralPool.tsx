@@ -1,21 +1,21 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
-import phuketIslandView from "@/assets/phuket-island-viewpoint-1.jpg";
-import phuketMayaBay from "@/assets/phuket-maya-bay-1.jpg";
-import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
-import phuketKayaks from "@/assets/phuket-kayaks-beach-1.jpg";
-import phuketLongtailBoat from "@/assets/phuket-longtail-boat-1.jpg";
+import krabiTempleWoman from "@/assets/krabi-temple-woman-1.jpg";
+import krabiIslandView from "@/assets/krabi-island-viewpoint-1.jpg";
+import krabiBoatTour from "@/assets/krabi-boat-tour-1.jpg";
+import krabiKayaks from "@/assets/krabi-kayaks-beach-1.jpg";
+import krabiSailboat from "@/assets/krabi-sailboat-1.jpg";
 import emerald1 from "@/assets/emerald-1.jpg";
 
 const HotSpringEmeralPool = () => {
   const baseTourData = toursData["hot-spring-emerald-pool"] || {
     id: "hot-spring-emerald-pool",
-    title: "Hot Spring & Emerald Pool Tour from Krabi",
+    title: "Half Day Emerald Pool + Hot Springs with Lunch",
     shortDescription: "Relax in natural thermal waters and swim in the stunning crystal-clear Emerald Pool surrounded by rainforest.",
     location: "Krabi, Thailand",
     city: "krabi",
-    basePrice: 2500,
-    childPrice: 1500,
+    basePrice: 3140,
+    childPrice: 3140,
     duration: "Half Day",
     rating: 4.7,
     reviews: 892,
@@ -37,8 +37,8 @@ const HotSpringEmeralPool = () => {
       { time: "01:30 PM", title: "Return", description: "Hotel drop-off" }
     ],
     tourTimings: ["08:00 AM"],
-    inclusions: ["Hotel Transfer", "Entrance Fees", "Guide"],
-    exclusions: ["Lunch", "Tips"],
+    inclusions: ["Hotel Transfer", "Entrance Fees", "Guide", "Lunch"],
+    exclusions: ["Tips", "Personal Expenses"],
     bookingPolicy: ["Confirmation within 24 hours"],
     cancellationPolicy: ["Free cancellation up to 48 hours before"],
     childPolicy: ["Child rate for ages 4-11"],
@@ -50,14 +50,14 @@ const HotSpringEmeralPool = () => {
   const tourData = {
     ...baseTourData,
     heroImages: [
-      { src: emerald1, title: "Hot Spring & Emerald Pool" },
-      { src: phuketIslandView, title: "Natural Thermal Waters" },
-      { src: phuketMayaBay, title: "Rainforest Paradise" }
+      { src: krabiTempleWoman, title: "Hot Spring & Emerald Pool" },
+      { src: emerald1, title: "Natural Thermal Waters" },
+      { src: krabiIslandView, title: "Rainforest Paradise" }
     ],
     galleryImages: [
-      { src: phuketBoatTour, alt: "Crystal-clear Emerald Pool" },
-      { src: phuketKayaks, alt: "Hot spring relaxation" },
-      { src: phuketLongtailBoat, alt: "Rainforest nature walk" },
+      { src: krabiBoatTour, alt: "Crystal-clear Emerald Pool" },
+      { src: krabiKayaks, alt: "Hot spring relaxation" },
+      { src: krabiSailboat, alt: "Rainforest nature walk" },
       { src: emerald1, alt: "Therapeutic waters" }
     ]
   };

@@ -11,17 +11,29 @@ import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SearchInput from "@/components/SearchInput";
 
+// Import Krabi images
+import krabiTourBoat from "@/assets/krabi-tour-boat-1.jpg";
+import krabiSailboat from "@/assets/krabi-sailboat-1.jpg";
+import krabiKayaks from "@/assets/krabi-kayaks-beach-1.jpg";
+import krabiIslandView from "@/assets/krabi-island-viewpoint-1.jpg";
+import krabiLongtailBoats from "@/assets/krabi-longtail-boats-1.jpg";
+import krabiBeachWoman from "@/assets/krabi-beach-woman-1.jpg";
+import krabiSpeedboat from "@/assets/krabi-speedboat-1.jpg";
+import krabiBoatTour from "@/assets/krabi-boat-tour-1.jpg";
+import krabiTempleWoman from "@/assets/krabi-temple-woman-1.jpg";
+
 const activities = [
-  { title: "Phi Phi Island by Speedboat with Transfer from Krabi", price: 3800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "phi-phi-island" },
-  { title: "James Bond Island Sightseeing Tour by Long-Tailed Boat", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "james-bond-island" },
-  { title: "Hong Islands by Longtail Boat", price: 2600, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "hong-islands-longtail" },
-  { title: "Hong Island Tour (By Speed Boat)", price: 3500, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "hong-islands-speedboat" },
-  { title: "7 Islands Sunset Tour BBQ with Longtail boat", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "seven-islands-longtail" },
-  { title: "7 Islands Sunset Tour BBQ with Speedboat", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "seven-islands-speedboat" },
-  { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "four-islands-longtail" },
-  { title: "4 Islands by Speedboat", price: 2700, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "four-islands-speedboat" },
-  { title: "Half Day Emerald Pool + Hot Springs with Lunch", price: 2800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "hot-spring" },
-  { title: "Full Day Emerald Pool + Hot Springs + Tiger Cave with Lunch", price: 3000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "hot-spring" },
+  { title: "4 Islands by Longtail Boat (No National Park Fee)", price: 2415, image: krabiLongtailBoats, slug: "four-islands-longtail" },
+  { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 2777, image: krabiKayaks, slug: "four-islands-longtail" },
+  { title: "Half Day Emerald Pool + Hot Springs with Lunch", price: 3140, image: krabiTempleWoman, slug: "hot-spring-emerald-pool" },
+  { title: "Hong Islands by Longtail Boat", price: 3381, image: krabiIslandView, slug: "hong-islands-longtail" },
+  { title: "Full Day Emerald Pool + Hot Springs + Tiger Cave with Lunch", price: 3502, image: krabiTempleWoman, slug: "hot-spring-emerald-pool" },
+  { title: "7 Islands Sunset Tour BBQ with Longtail boat", price: 3743, image: krabiSailboat, slug: "seven-islands-longtail" },
+  { title: "Hong Island Tour (By Speed Boat)", price: 4347, image: krabiSpeedboat, slug: "hong-islands-speedboat" },
+  { title: "4 Islands by Speedboat (With National Park Fee)", price: 4589, image: krabiTourBoat, slug: "four-islands-speedboat" },
+  { title: "Phi Phi Island by Speedboat with Transfer from Krabi", price: 4830, image: krabiBeachWoman, slug: "phi-phi-island" },
+  { title: "7 Islands Sunset Tour BBQ with Speedboat", price: 4830, image: krabiBoatTour, slug: "seven-islands-speedboat" },
+  { title: "James Bond Island Sightseeing Tour by Long-Tailed Boat", price: 4951, image: krabiLongtailBoats, slug: "james-bond-island" },
 ];
 
 const categories = [
@@ -32,7 +44,7 @@ const categories = [
 
 const Krabi = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('popular');
+  const [sortBy, setSortBy] = useState('price-low');
   const [priceRange, setPriceRange] = useState([2000, 7500]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;

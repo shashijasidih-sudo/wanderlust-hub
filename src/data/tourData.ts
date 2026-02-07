@@ -15,6 +15,17 @@ import bangkokSkywalk2 from "@/assets/bangkok-skywalk-2.jpg";
 import bangkokSkywalk3 from "@/assets/bangkok-skywalk-3.jpg";
 import emerald1 from "@/assets/emerald-1.jpg";
 
+// Krabi images
+import krabiTourBoat from "@/assets/krabi-tour-boat-1.jpg";
+import krabiSailboat from "@/assets/krabi-sailboat-1.jpg";
+import krabiKayaks from "@/assets/krabi-kayaks-beach-1.jpg";
+import krabiIslandView from "@/assets/krabi-island-viewpoint-1.jpg";
+import krabiLongtailBoats from "@/assets/krabi-longtail-boats-1.jpg";
+import krabiBeachWoman from "@/assets/krabi-beach-woman-1.jpg";
+import krabiSpeedboat from "@/assets/krabi-speedboat-1.jpg";
+import krabiBoatTour from "@/assets/krabi-boat-tour-1.jpg";
+import krabiTempleWoman from "@/assets/krabi-temple-woman-1.jpg";
+
 export interface CustomerReview {
   name: string;
   date: string;
@@ -1916,21 +1927,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Traditional longtail boat tour to pristine Hong Islands with snorkeling, beach relaxation, and lagoon exploration.",
     location: "Krabi, Thailand",
     city: "krabi",
-    basePrice: 2800,
-    childPrice: 2500,
+    basePrice: 3381,
+    childPrice: 3019,
     duration: "6-7 Hours",
     rating: 4.5,
     reviews: 423,
     heroImages: [
-      { src: jamesBond1, title: "Hong Islands Krabi" },
-      { src: jamesBond2, title: "Pristine Beach Paradise" },
-      { src: jamesBond3, title: "Longtail Boat Journey" }
+      { src: krabiIslandView, title: "Hong Islands Krabi" },
+      { src: krabiLongtailBoats, title: "Pristine Beach Paradise" },
+      { src: krabiKayaks, title: "Longtail Boat Journey" }
     ],
     galleryImages: [
-      { src: jamesBond4, alt: "Hong Island beach" },
-      { src: phiPhi1, alt: "Hong Lagoon kayaking" },
-      { src: phiPhi2, alt: "Snorkeling activity" },
-      { src: phiPhi3, alt: "Crystal clear waters" }
+      { src: krabiBeachWoman, alt: "Hong Island beach" },
+      { src: krabiBoatTour, alt: "Hong Lagoon kayaking" },
+      { src: krabiSailboat, alt: "Snorkeling activity" },
+      { src: krabiTourBoat, alt: "Crystal clear waters" }
     ],
     highlights: [
       "Visit pristine Hong Islands",
@@ -1966,21 +1977,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Fast speedboat tour to Hong Islands visiting multiple locations with extended time for activities and snorkeling.",
     location: "Krabi, Thailand",
     city: "krabi",
-    basePrice: 3500,
-    childPrice: 1750,
+    basePrice: 4347,
+    childPrice: 3743,
     duration: "6-7 Hours",
     rating: 4.6,
     reviews: 512,
     heroImages: [
-      { src: jamesBond1, title: "Hong Islands Speedboat Tour" },
-      { src: jamesBond2, title: "Multiple Island Destinations" },
-      { src: jamesBond3, title: "Premium Island Hopping" }
+      { src: krabiSpeedboat, title: "Hong Islands Speedboat Tour" },
+      { src: krabiTourBoat, title: "Multiple Island Destinations" },
+      { src: krabiIslandView, title: "Premium Island Hopping" }
     ],
     galleryImages: [
-      { src: jamesBond4, alt: "Speedboat adventure" },
-      { src: phiPhi4, alt: "Island hopping" },
-      { src: phiPhi5, alt: "Pakbia Island snorkeling" },
-      { src: phiPhi6, alt: "Hong Lagoon exploration" }
+      { src: krabiBoatTour, alt: "Speedboat adventure" },
+      { src: krabiBeachWoman, alt: "Island hopping" },
+      { src: krabiKayaks, alt: "Pakbia Island snorkeling" },
+      { src: krabiSailboat, alt: "Hong Lagoon exploration" }
     ],
     highlights: [
       "Fast speedboat to Hong Islands",
@@ -2020,21 +2031,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Afternoon sunset tour visiting seven islands with BBQ dinner on beach and seasonal bioluminescent plankton viewing.",
     location: "Krabi, Thailand",
     city: "krabi",
-    basePrice: 3000,
-    childPrice: 1500,
+    basePrice: 3743,
+    childPrice: 2294,
     duration: "5-6 Hours",
     rating: 4.7,
     reviews: 356,
     heroImages: [
-      { src: phiPhi7, title: "Seven Islands Sunset Tour" },
-      { src: phiPhi8, title: "Stunning Sunset Views" },
-      { src: phiPhi1, title: "BBQ Beach Dinner" }
+      { src: krabiSailboat, title: "Seven Islands Sunset Tour" },
+      { src: krabiIslandView, title: "Stunning Sunset Views" },
+      { src: krabiBoatTour, title: "BBQ Beach Dinner" }
     ],
     galleryImages: [
-      { src: phiPhi2, alt: "Tup Island sandbar" },
-      { src: phiPhi3, alt: "Chicken Island snorkeling" },
-      { src: phiPhi4, alt: "Sunset cruise" },
-      { src: phiPhi5, alt: "BBQ seafood dinner" }
+      { src: krabiLongtailBoats, alt: "Tup Island sandbar" },
+      { src: krabiKayaks, alt: "Chicken Island snorkeling" },
+      { src: krabiBeachWoman, alt: "Sunset cruise" },
+      { src: krabiTourBoat, alt: "BBQ seafood dinner" }
     ],
     highlights: [
       "Visit 7 beautiful islands",
@@ -2074,21 +2085,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Premium speedboat sunset tour visiting seven islands with more activities, BBQ dinner, and sunset cruise.",
     location: "Krabi, Thailand",
     city: "krabi",
-    basePrice: 4000,
-    childPrice: 2000,
+    basePrice: 4830,
+    childPrice: 3985,
     duration: "5-6 Hours",
     rating: 4.8,
     reviews: 478,
     heroImages: [
-      { src: phiPhi6, title: "Seven Islands Speedboat Sunset" },
-      { src: phiPhi7, title: "Premium Island Experience" },
-      { src: phiPhi8, title: "Magical Sunset Cruise" }
+      { src: krabiSpeedboat, title: "Seven Islands Speedboat Sunset" },
+      { src: krabiBoatTour, title: "Premium Island Experience" },
+      { src: krabiIslandView, title: "Magical Sunset Cruise" }
     ],
     galleryImages: [
-      { src: phiPhi1, alt: "Speedboat to islands" },
-      { src: phiPhi2, alt: "Phra Nang Cave beach" },
-      { src: phiPhi3, alt: "Railay Beach views" },
-      { src: phiPhi4, alt: "Sunset BBQ feast" }
+      { src: krabiTourBoat, alt: "Speedboat to islands" },
+      { src: krabiBeachWoman, alt: "Phra Nang Cave beach" },
+      { src: krabiLongtailBoats, alt: "Railay Beach views" },
+      { src: krabiSailboat, alt: "Sunset BBQ feast" }
     ],
     highlights: [
       "Fast speedboat to 7 islands",
@@ -2130,21 +2141,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Classic four-islands tour by traditional longtail boat with national park fees included. Visit Krabi's most iconic islands.",
     location: "Krabi, Thailand",
     city: "krabi",
-    basePrice: 2000,
-    childPrice: 1000,
+    basePrice: 2777,
+    childPrice: 2777,
     duration: "7-8 Hours",
     rating: 4.4,
     reviews: 589,
     heroImages: [
-      { src: jamesBond1, title: "Four Islands Longtail Tour" },
-      { src: jamesBond2, title: "Classic Krabi Experience" },
-      { src: jamesBond3, title: "Traditional Boat Journey" }
+      { src: krabiLongtailBoats, title: "Four Islands Longtail Tour" },
+      { src: krabiKayaks, title: "Classic Krabi Experience" },
+      { src: krabiIslandView, title: "Traditional Boat Journey" }
     ],
     galleryImages: [
-      { src: jamesBond4, alt: "Phra Nang Cave Beach" },
-      { src: phiPhi5, alt: "Tup Island sandbar" },
-      { src: phiPhi6, alt: "Chicken Island" },
-      { src: phiPhi7, alt: "Poda Island beach" }
+      { src: krabiBeachWoman, alt: "Phra Nang Cave Beach" },
+      { src: krabiBoatTour, alt: "Tup Island sandbar" },
+      { src: krabiSailboat, alt: "Chicken Island" },
+      { src: krabiTourBoat, alt: "Poda Island beach" }
     ],
     highlights: [
       "Visit 4 iconic Krabi islands",
@@ -2180,25 +2191,25 @@ export const toursData: Record<string, TourData> = {
   },
   "four-islands-speedboat": {
     id: "four-islands-speedboat",
-    title: "4 Islands by Speedboat",
+    title: "4 Islands by Speedboat (With National Park Fee)",
     shortDescription: "Premium four-islands speedboat tour with buffet lunch, extended activities, and comfortable fast travel between islands.",
     location: "Krabi, Thailand",
     city: "krabi",
-    basePrice: 2700,
-    childPrice: 1350,
+    basePrice: 4589,
+    childPrice: 4226,
     duration: "6-7 Hours",
     rating: 4.6,
     reviews: 634,
     heroImages: [
-      { src: jamesBond1, title: "Four Islands Speedboat Tour" },
-      { src: jamesBond2, title: "Fast Island Hopping" },
-      { src: jamesBond3, title: "Premium Krabi Tour" }
+      { src: krabiSpeedboat, title: "Four Islands Speedboat Tour" },
+      { src: krabiTourBoat, title: "Fast Island Hopping" },
+      { src: krabiIslandView, title: "Premium Krabi Tour" }
     ],
     galleryImages: [
-      { src: jamesBond4, alt: "Speedboat island hopping" },
-      { src: phiPhi8, alt: "Phra Nang Cave exploration" },
-      { src: phiPhi1, alt: "Chicken Island snorkeling" },
-      { src: phiPhi2, alt: "Poda Island lunch" }
+      { src: krabiBoatTour, alt: "Speedboat island hopping" },
+      { src: krabiBeachWoman, alt: "Phra Nang Cave exploration" },
+      { src: krabiKayaks, alt: "Chicken Island snorkeling" },
+      { src: krabiLongtailBoats, alt: "Poda Island lunch" }
     ],
     highlights: [
       "Fast speedboat to 4 islands",
