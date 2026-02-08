@@ -2316,21 +2316,22 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "An adults-only guided walking tour exploring Pattaya's famous nightlife scene with food and drinks.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 4200,
+    basePrice: 3745,
     childPrice: 0,
+    singleAdultPrice: 6521,
     duration: "4 Hours",
     rating: 4.4,
     reviews: 345,
     heroImages: [
-      { src: phiPhi1, title: "Pattaya Nightlife" },
-      { src: phiPhi2, title: "Walking Street" },
-      { src: phiPhi3, title: "Food and Drinks" }
+      { src: pattayaBoatTour, title: "Pattaya Nightlife" },
+      { src: pattayaSailboat, title: "Walking Street" },
+      { src: pattayaTempleWoman, title: "Food and Drinks" }
     ],
     galleryImages: [
-      { src: phiPhi4, alt: "Night scene" },
-      { src: phiPhi5, alt: "Street food" },
-      { src: phiPhi6, alt: "Local bars" },
-      { src: phiPhi7, alt: "Entertainment" }
+      { src: pattayaTropicalBeach, alt: "Night scene" },
+      { src: pattayaIslandsBoats, alt: "Street food" },
+      { src: pattayaBoatsBeach, alt: "Local bars" },
+      { src: pattayaWomanSea, alt: "Entertainment" }
     ],
     highlights: [
       "Walking Street Experience",
@@ -2365,21 +2366,22 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Ultimate Pattaya nightlife experience with sunset drinks and guided pub crawl through the best venues.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 5200,
-    childPrice: 0,
+    basePrice: 6280,
+    childPrice: 5071.5,
+    singleAdultPrice: 9905,
     duration: "5 Hours",
     rating: 4.6,
     reviews: 278,
     heroImages: [
-      { src: phiPhi1, title: "Sunset Views" },
-      { src: phiPhi2, title: "Rooftop Bars" },
-      { src: phiPhi3, title: "Pub Crawl" }
+      { src: pattayaBoatsBeach, title: "Sunset Views" },
+      { src: pattayaTropicalBeach, title: "Rooftop Bars" },
+      { src: pattayaLakeTour, title: "Pub Crawl" }
     ],
     galleryImages: [
-      { src: phiPhi4, alt: "Sunset drinks" },
-      { src: phiPhi5, alt: "Club experience" },
-      { src: phiPhi6, alt: "Group fun" },
-      { src: phiPhi7, alt: "Night venues" }
+      { src: pattayaSpeedboat, alt: "Sunset drinks" },
+      { src: pattayaWomanSea, title: "Club experience" },
+      { src: pattayaIslandsBoats, alt: "Group fun" },
+      { src: pattayaBoatTour, alt: "Night venues" }
     ],
     highlights: [
       "Sunset Rooftop Drinks",
