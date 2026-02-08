@@ -26,6 +26,18 @@ import krabiSpeedboat from "@/assets/krabi-speedboat-1.jpg";
 import krabiBoatTour from "@/assets/krabi-boat-tour-1.jpg";
 import krabiTempleWoman from "@/assets/krabi-temple-woman-1.jpg";
 
+// Pattaya images
+import pattayaBoatTour from "@/assets/pattaya-boat-tour-1.jpg";
+import pattayaSailboat from "@/assets/pattaya-sailboat-1.jpg";
+import pattayaBoatsBeach from "@/assets/pattaya-boats-beach-1.jpg";
+import pattayaTropicalBeach from "@/assets/pattaya-tropical-beach-1.jpg";
+import pattayaLongtailBoats from "@/assets/pattaya-longtail-boats-1.jpg";
+import pattayaWomanSea from "@/assets/pattaya-woman-sea-1.jpg";
+import pattayaSpeedboat from "@/assets/pattaya-speedboat-1.jpg";
+import pattayaLakeTour from "@/assets/pattaya-lake-tour-1.jpg";
+import pattayaTempleWoman from "@/assets/pattaya-temple-woman-1.jpg";
+import pattayaIslandsBoats from "@/assets/pattaya-islands-boats-1.jpg";
+
 export interface CustomerReview {
   name: string;
   date: string;
@@ -1512,21 +1524,22 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Comprehensive Pattaya city tour visiting floating market, cultural sites, and landmarks with authentic Thai lunch included.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 2000,
-    childPrice: 1800,
+    basePrice: 2175,
+    childPrice: 1815,
+    singleAdultPrice: 3385,
     duration: "6-7 Hours",
     rating: 4.5,
     reviews: 342,
     heroImages: [
-      { src: phiPhi7, title: "Pattaya Floating Market" },
-      { src: phiPhi8, title: "Traditional Thai Market" },
-      { src: phiPhi1, title: "Sanctuary of Truth" }
+      { src: pattayaBoatTour, title: "Pattaya Floating Market" },
+      { src: pattayaSailboat, title: "Traditional Thai Market" },
+      { src: pattayaLongtailBoats, title: "Sanctuary of Truth" }
     ],
     galleryImages: [
-      { src: phiPhi2, alt: "Floating market vendors" },
-      { src: phiPhi3, alt: "Traditional boats" },
-      { src: phiPhi4, alt: "Big Buddha Hill view" },
-      { src: phiPhi5, alt: "Thai cultural site" }
+      { src: pattayaBoatsBeach, alt: "Floating market vendors" },
+      { src: pattayaTropicalBeach, alt: "Traditional boats" },
+      { src: pattayaTempleWoman, alt: "Big Buddha Hill view" },
+      { src: pattayaWomanSea, alt: "Thai cultural site" }
     ],
     highlights: [
       "Walking Street",
@@ -1568,21 +1581,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Half-day tour visiting Big Buddha Hill for panoramic views and exploring the world's largest gem and jewelry center.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 1400,
+    basePrice: 1207.5,
     childPrice: 0,
     duration: "4-5 Hours",
     rating: 4.3,
     reviews: 256,
     heroImages: [
-      { src: bangkokSkywalk1, title: "Big Buddha Hill Pattaya" },
-      { src: bangkokSkywalk2, title: "Panoramic City Views" },
-      { src: bangkokSkywalk3, title: "Gems Gallery Museum" }
+      { src: pattayaSpeedboat, title: "Big Buddha Hill Pattaya" },
+      { src: pattayaTempleWoman, title: "Panoramic City Views" },
+      { src: pattayaLakeTour, title: "Gems Gallery Museum" }
     ],
     galleryImages: [
-      { src: phiPhi6, alt: "Golden Buddha statue" },
-      { src: phiPhi7, alt: "Pattaya Bay view" },
-      { src: phiPhi8, alt: "Gems and jewelry showcase" },
-      { src: phiPhi1, alt: "Museum exhibition" }
+      { src: pattayaBoatTour, alt: "Golden Buddha statue" },
+      { src: pattayaSailboat, alt: "Pattaya Bay view" },
+      { src: pattayaTropicalBeach, alt: "Gems and jewelry showcase" },
+      { src: pattayaIslandsBoats, alt: "Museum exhibition" }
     ],
     highlights: [
       "Visit Big Buddha on Pratumnak Hill",
@@ -1619,21 +1632,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Full-day beach excursion to Coral Island with pristine beaches, crystal clear waters, and optional water sports activities.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 700,
-    childPrice: 700,
+    basePrice: 603.75,
+    childPrice: 603.75,
     duration: "6-7 Hours",
     rating: 4.4,
     reviews: 489,
     heroImages: [
-      { src: phiPhi2, title: "Coral Island Paradise" },
-      { src: phiPhi3, title: "Crystal Clear Waters" },
-      { src: phiPhi4, title: "Beach Activities" }
+      { src: pattayaBoatsBeach, title: "Coral Island Paradise" },
+      { src: pattayaTropicalBeach, title: "Crystal Clear Waters" },
+      { src: pattayaWomanSea, title: "Beach Activities" }
     ],
     galleryImages: [
-      { src: phiPhi5, alt: "White sandy beach" },
-      { src: phiPhi6, alt: "Snorkeling adventure" },
-      { src: phiPhi7, alt: "Water sports activities" },
-      { src: phiPhi8, alt: "Tropical paradise" }
+      { src: pattayaIslandsBoats, alt: "White sandy beach" },
+      { src: pattayaSailboat, alt: "Snorkeling adventure" },
+      { src: pattayaSpeedboat, alt: "Water sports activities" },
+      { src: pattayaLakeTour, alt: "Tropical paradise" }
     ],
     highlights: [
       "Pristine white sandy beaches",
@@ -1672,21 +1685,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Visit beautiful tropical botanical gardens featuring cultural shows, elephant performances, and international buffet lunch.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 3000,
-    childPrice: 1500,
+    basePrice: 3622.5,
+    childPrice: 3018.75,
     duration: "5-6 Hours",
     rating: 4.7,
     reviews: 612,
     heroImages: [
-      { src: phiPhi1, title: "Nong Nooch Tropical Garden" },
-      { src: phiPhi2, title: "Elephant Show" },
-      { src: phiPhi3, title: "Thai Cultural Performance" }
+      { src: pattayaTempleWoman, title: "Nong Nooch Tropical Garden" },
+      { src: pattayaBoatTour, title: "Elephant Show" },
+      { src: pattayaLakeTour, title: "Thai Cultural Performance" }
     ],
     galleryImages: [
-      { src: phiPhi4, alt: "Beautiful botanical gardens" },
-      { src: phiPhi5, alt: "Elephant performance" },
-      { src: phiPhi6, alt: "Traditional Thai dance" },
-      { src: phiPhi7, alt: "Garden landscapes" }
+      { src: pattayaTropicalBeach, alt: "Beautiful botanical gardens" },
+      { src: pattayaIslandsBoats, alt: "Elephant performance" },
+      { src: pattayaSailboat, alt: "Traditional Thai dance" },
+      { src: pattayaBoatsBeach, alt: "Garden landscapes" }
     ],
     highlights: [
       "Beautiful tropical botanical gardens",
@@ -1724,21 +1737,22 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Interactive dolphin and seal shows in an air-conditioned venue with photo opportunities and educational presentations.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 3100,
-    childPrice: 1550,
+    basePrice: 3650,
+    childPrice: 1935,
+    singleAdultPrice: 4350,
     duration: "3-4 Hours",
     rating: 4.6,
     reviews: 378,
     heroImages: [
-      { src: phiPhi8, title: "Pattaya Dolphinarium" },
-      { src: phiPhi1, title: "Dolphin Performance" },
-      { src: phiPhi2, title: "Marine Life Show" }
+      { src: pattayaLakeTour, title: "Pattaya Dolphinarium" },
+      { src: pattayaSpeedboat, title: "Dolphin Performance" },
+      { src: pattayaBoatTour, title: "Marine Life Show" }
     ],
     galleryImages: [
-      { src: phiPhi3, alt: "Dolphin jumping tricks" },
-      { src: phiPhi4, alt: "Seal show" },
-      { src: phiPhi5, alt: "Interactive experience" },
-      { src: phiPhi6, alt: "Family entertainment" }
+      { src: pattayaTropicalBeach, alt: "Dolphin jumping tricks" },
+      { src: pattayaIslandsBoats, alt: "Seal show" },
+      { src: pattayaSailboat, alt: "Interactive experience" },
+      { src: pattayaBoatsBeach, alt: "Family entertainment" }
     ],
     highlights: [
       "Interactive dolphin show",
@@ -1775,21 +1789,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Experience authentic Muay Thai matches with professional fighters in an electric stadium atmosphere.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 4000,
-    childPrice: 2000,
+    basePrice: 4830,
+    childPrice: 3381,
     duration: "2-3 Hours",
     rating: 4.8,
     reviews: 523,
     heroImages: [
-      { src: phiPhi7, title: "Muay Thai Boxing Match" },
-      { src: phiPhi8, title: "Traditional Wai Kru Ritual" },
-      { src: phiPhi1, title: "Stadium Atmosphere" }
+      { src: pattayaTempleWoman, title: "Muay Thai Boxing Match" },
+      { src: pattayaLakeTour, title: "Traditional Wai Kru Ritual" },
+      { src: pattayaSpeedboat, title: "Stadium Atmosphere" }
     ],
     galleryImages: [
-      { src: phiPhi2, alt: "Professional fighters" },
-      { src: phiPhi3, alt: "Boxing ring action" },
-      { src: phiPhi4, alt: "Pre-fight ceremony" },
-      { src: phiPhi5, alt: "Audience excitement" }
+      { src: pattayaBoatTour, alt: "Professional fighters" },
+      { src: pattayaTropicalBeach, alt: "Boxing ring action" },
+      { src: pattayaSailboat, alt: "Pre-fight ceremony" },
+      { src: pattayaBoatsBeach, alt: "Audience excitement" }
     ],
     highlights: [
       "Authentic Muay Thai matches",
@@ -1824,21 +1838,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "World-famous cabaret show with stunning costumes, professional performers, and spectacular stage production.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 1500,
-    childPrice: 750,
+    basePrice: 2420,
+    childPrice: 2415,
     duration: "3 Hours",
     rating: 4.7,
     reviews: 445,
     heroImages: [
-      { src: phiPhi6, title: "Alcazar Cabaret Show" },
-      { src: phiPhi7, title: "Stunning Stage Production" },
-      { src: phiPhi8, title: "Talented Performers" }
+      { src: pattayaWomanSea, title: "Alcazar Cabaret Show" },
+      { src: pattayaTempleWoman, title: "Stunning Stage Production" },
+      { src: pattayaLakeTour, title: "Talented Performers" }
     ],
     galleryImages: [
-      { src: phiPhi1, alt: "Cabaret dancers" },
-      { src: phiPhi2, alt: "Elaborate costumes" },
-      { src: phiPhi3, alt: "Stage performance" },
-      { src: phiPhi4, alt: "Photo session" }
+      { src: pattayaBoatTour, alt: "Cabaret dancers" },
+      { src: pattayaSailboat, alt: "Elaborate costumes" },
+      { src: pattayaTropicalBeach, alt: "Stage performance" },
+      { src: pattayaIslandsBoats, alt: "Photo session" }
     ],
     highlights: [
       "World-famous cabaret show",
@@ -1874,21 +1888,22 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Explore the four-regions floating market with traditional architecture, local handicrafts, and cultural performances.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 2800,
-    childPrice: 1400,
+    basePrice: 3140,
+    childPrice: 2052.75,
+    singleAdultPrice: 6040,
     duration: "4 Hours",
     rating: 4.4,
     reviews: 289,
     heroImages: [
-      { src: phiPhi5, title: "Pattaya Floating Market" },
-      { src: phiPhi6, title: "Traditional Market Boats" },
-      { src: phiPhi7, title: "Four Regions Concept" }
+      { src: pattayaIslandsBoats, title: "Pattaya Floating Market" },
+      { src: pattayaBoatsBeach, title: "Traditional Market Boats" },
+      { src: pattayaTropicalBeach, title: "Four Regions Concept" }
     ],
     galleryImages: [
-      { src: phiPhi8, alt: "Market canal boats" },
-      { src: phiPhi1, alt: "Traditional architecture" },
-      { src: phiPhi2, alt: "Local handicrafts" },
-      { src: phiPhi3, alt: "Cultural performances" }
+      { src: pattayaLongtailBoats, alt: "Market canal boats" },
+      { src: pattayaBoatTour, alt: "Traditional architecture" },
+      { src: pattayaSailboat, alt: "Local handicrafts" },
+      { src: pattayaWomanSea, alt: "Cultural performances" }
     ],
     highlights: [
       "Four regions floating market",
@@ -2301,21 +2316,22 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "An adults-only guided walking tour exploring Pattaya's famous nightlife scene with food and drinks.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 4200,
+    basePrice: 3745,
     childPrice: 0,
+    singleAdultPrice: 6521,
     duration: "4 Hours",
     rating: 4.4,
     reviews: 345,
     heroImages: [
-      { src: phiPhi1, title: "Pattaya Nightlife" },
-      { src: phiPhi2, title: "Walking Street" },
-      { src: phiPhi3, title: "Food and Drinks" }
+      { src: pattayaBoatTour, title: "Pattaya Nightlife" },
+      { src: pattayaSailboat, title: "Walking Street" },
+      { src: pattayaTempleWoman, title: "Food and Drinks" }
     ],
     galleryImages: [
-      { src: phiPhi4, alt: "Night scene" },
-      { src: phiPhi5, alt: "Street food" },
-      { src: phiPhi6, alt: "Local bars" },
-      { src: phiPhi7, alt: "Entertainment" }
+      { src: pattayaTropicalBeach, alt: "Night scene" },
+      { src: pattayaIslandsBoats, alt: "Street food" },
+      { src: pattayaBoatsBeach, alt: "Local bars" },
+      { src: pattayaWomanSea, alt: "Entertainment" }
     ],
     highlights: [
       "Walking Street Experience",
@@ -2350,21 +2366,22 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Ultimate Pattaya nightlife experience with sunset drinks and guided pub crawl through the best venues.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 5200,
-    childPrice: 0,
+    basePrice: 6280,
+    childPrice: 5071.5,
+    singleAdultPrice: 9905,
     duration: "5 Hours",
     rating: 4.6,
     reviews: 278,
     heroImages: [
-      { src: phiPhi1, title: "Sunset Views" },
-      { src: phiPhi2, title: "Rooftop Bars" },
-      { src: phiPhi3, title: "Pub Crawl" }
+      { src: pattayaBoatsBeach, title: "Sunset Views" },
+      { src: pattayaTropicalBeach, title: "Rooftop Bars" },
+      { src: pattayaLakeTour, title: "Pub Crawl" }
     ],
     galleryImages: [
-      { src: phiPhi4, alt: "Sunset drinks" },
-      { src: phiPhi5, alt: "Club experience" },
-      { src: phiPhi6, alt: "Group fun" },
-      { src: phiPhi7, alt: "Night venues" }
+      { src: pattayaSpeedboat, alt: "Sunset drinks" },
+      { src: pattayaWomanSea, alt: "Club experience" },
+      { src: pattayaIslandsBoats, alt: "Group fun" },
+      { src: pattayaBoatTour, alt: "Night venues" }
     ],
     highlights: [
       "Sunset Rooftop Drinks",

@@ -10,18 +10,26 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SearchInput from "@/components/SearchInput";
+import pattayaBoatTour from "@/assets/pattaya-boat-tour-1.jpg";
+import pattayaSailboat from "@/assets/pattaya-sailboat-1.jpg";
+import pattayaBoatsBeach from "@/assets/pattaya-boats-beach-1.jpg";
+import pattayaTropicalBeach from "@/assets/pattaya-tropical-beach-1.jpg";
+import pattayaLongtailBoats from "@/assets/pattaya-longtail-boats-1.jpg";
+import pattayaWomanSea from "@/assets/pattaya-woman-sea-1.jpg";
+import pattayaSpeedboat from "@/assets/pattaya-speedboat-1.jpg";
+import pattayaIslandsBoats from "@/assets/pattaya-islands-boats-1.jpg";
 
 const activities = [
-  { title: "Discovery Pattaya City Tours with Floating Market and Lunch", price: 1800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "pattaya-floating-market-tour" },
-  { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1200, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "pattaya-big-buddha-gems" },
-  { title: "Coral Island Join Tour with Indian Lunch", price: 650, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "coral-island-pattaya" },
-  { title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "nong-nooch-garden" },
-  { title: "Pattaya Dolphinarium Admission Ticket with Transfer", price: 3100, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "pattaya-dolphinarium" },
-  { title: "Muay Thai Pattaya Admission Ticket", price: 4000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "muay-thai-pattaya" },
-  { title: "Alcazar Show Pattaya Ticket with Transfer", price: 1500, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "alcazar-show-pattaya" },
-  { title: "Pattaya Floating Market Guided Tour with Transfer", price: 2800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "pattaya-floating-market-guided" },
-  { title: "Lost in Nightlight - A Walking, Drinking, and Food Tasting Experience at Pattaya's Red Light District", price: 4200, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "pattaya-nightlife-walking" },
-  { title: "Sunset Club and Pub Crawling Experience at Drinking Street in Pattaya", price: 5200, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "pattaya-pub-crawl" },
+  { title: "Discovery Pattaya City Tours with Floating Market and Lunch", price: 2175, image: pattayaBoatTour, slug: "pattaya-floating-market-tour" },
+  { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1207.5, image: pattayaSailboat, slug: "pattaya-big-buddha-gems" },
+  { title: "Coral Island Join Tour with Indian Lunch", price: 603.75, image: pattayaBoatsBeach, slug: "coral-island-pattaya" },
+  { title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya", price: 3622.5, image: pattayaTropicalBeach, slug: "nong-nooch-garden" },
+  { title: "Pattaya Dolphinarium Admission Ticket with Transfer", price: 3650, image: pattayaSpeedboat, slug: "pattaya-dolphinarium" },
+  { title: "Muay Thai Pattaya Admission Ticket", price: 4830, image: pattayaLongtailBoats, slug: "muay-thai-pattaya" },
+  { title: "Alcazar Show Pattaya Ticket with Transfer", price: 2420, image: pattayaWomanSea, slug: "alcazar-show-pattaya" },
+  { title: "Pattaya Floating Market Guided Tour with Transfer", price: 3140, image: pattayaIslandsBoats, slug: "pattaya-floating-market-guided" },
+  { title: "Lost in Nightlight - A Walking, Drinking, and Food Tasting Experience at Pattaya's Red Light District", price: 3745, image: pattayaBoatTour, slug: "pattaya-nightlife-walking" },
+  { title: "Sunset Club and Pub Crawling Experience at Drinking Street in Pattaya", price: 6280, image: pattayaTropicalBeach, slug: "pattaya-pub-crawl" },
 ];
 
 const categories = [
@@ -32,8 +40,8 @@ const categories = [
 
 const Pattaya = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('popular');
-  const [priceRange, setPriceRange] = useState([650, 5200]);
+  const [sortBy, setSortBy] = useState('price-low');
+  const [priceRange, setPriceRange] = useState([603.75, 6280]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
 
@@ -104,8 +112,8 @@ const Pattaya = () => {
         <MobileFilters
           priceRange={priceRange}
           onPriceRangeChange={setPriceRange}
-          minPrice={650}
-          maxPrice={5200}
+          minPrice={603.75}
+          maxPrice={6280}
           categories={categories}
         />
 
@@ -134,8 +142,8 @@ const Pattaya = () => {
                 <Slider
                   value={priceRange}
                   onValueChange={setPriceRange}
-                  min={650}
-                  max={5200}
+                  min={603.75}
+                  max={6280}
                   step={100}
                   className="mb-2"
                 />
