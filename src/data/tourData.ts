@@ -1737,21 +1737,22 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Interactive dolphin and seal shows in an air-conditioned venue with photo opportunities and educational presentations.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 3100,
-    childPrice: 1550,
+    basePrice: 3650,
+    childPrice: 1935,
+    singleAdultPrice: 4350,
     duration: "3-4 Hours",
     rating: 4.6,
     reviews: 378,
     heroImages: [
-      { src: phiPhi8, title: "Pattaya Dolphinarium" },
-      { src: phiPhi1, title: "Dolphin Performance" },
-      { src: phiPhi2, title: "Marine Life Show" }
+      { src: pattayaLakeTour, title: "Pattaya Dolphinarium" },
+      { src: pattayaSpeedboat, title: "Dolphin Performance" },
+      { src: pattayaBoatTour, title: "Marine Life Show" }
     ],
     galleryImages: [
-      { src: phiPhi3, alt: "Dolphin jumping tricks" },
-      { src: phiPhi4, alt: "Seal show" },
-      { src: phiPhi5, alt: "Interactive experience" },
-      { src: phiPhi6, alt: "Family entertainment" }
+      { src: pattayaTropicalBeach, alt: "Dolphin jumping tricks" },
+      { src: pattayaIslandsBoats, alt: "Seal show" },
+      { src: pattayaSailboat, alt: "Interactive experience" },
+      { src: pattayaBoatsBeach, alt: "Family entertainment" }
     ],
     highlights: [
       "Interactive dolphin show",
@@ -1788,21 +1789,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Experience authentic Muay Thai matches with professional fighters in an electric stadium atmosphere.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 4000,
-    childPrice: 2000,
+    basePrice: 4830,
+    childPrice: 3381,
     duration: "2-3 Hours",
     rating: 4.8,
     reviews: 523,
     heroImages: [
-      { src: phiPhi7, title: "Muay Thai Boxing Match" },
-      { src: phiPhi8, title: "Traditional Wai Kru Ritual" },
-      { src: phiPhi1, title: "Stadium Atmosphere" }
+      { src: pattayaTempleWoman, title: "Muay Thai Boxing Match" },
+      { src: pattayaLakeTour, title: "Traditional Wai Kru Ritual" },
+      { src: pattayaSpeedboat, title: "Stadium Atmosphere" }
     ],
     galleryImages: [
-      { src: phiPhi2, alt: "Professional fighters" },
-      { src: phiPhi3, alt: "Boxing ring action" },
-      { src: phiPhi4, alt: "Pre-fight ceremony" },
-      { src: phiPhi5, alt: "Audience excitement" }
+      { src: pattayaBoatTour, alt: "Professional fighters" },
+      { src: pattayaTropicalBeach, alt: "Boxing ring action" },
+      { src: pattayaSailboat, alt: "Pre-fight ceremony" },
+      { src: pattayaBoatsBeach, alt: "Audience excitement" }
     ],
     highlights: [
       "Authentic Muay Thai matches",
@@ -1837,21 +1838,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "World-famous cabaret show with stunning costumes, professional performers, and spectacular stage production.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 1500,
-    childPrice: 750,
+    basePrice: 2420,
+    childPrice: 2415,
     duration: "3 Hours",
     rating: 4.7,
     reviews: 445,
     heroImages: [
-      { src: phiPhi6, title: "Alcazar Cabaret Show" },
-      { src: phiPhi7, title: "Stunning Stage Production" },
-      { src: phiPhi8, title: "Talented Performers" }
+      { src: pattayaWomanSea, title: "Alcazar Cabaret Show" },
+      { src: pattayaTempleWoman, title: "Stunning Stage Production" },
+      { src: pattayaLakeTour, title: "Talented Performers" }
     ],
     galleryImages: [
-      { src: phiPhi1, alt: "Cabaret dancers" },
-      { src: phiPhi2, alt: "Elaborate costumes" },
-      { src: phiPhi3, alt: "Stage performance" },
-      { src: phiPhi4, alt: "Photo session" }
+      { src: pattayaBoatTour, alt: "Cabaret dancers" },
+      { src: pattayaSailboat, alt: "Elaborate costumes" },
+      { src: pattayaTropicalBeach, alt: "Stage performance" },
+      { src: pattayaIslandsBoats, alt: "Photo session" }
     ],
     highlights: [
       "World-famous cabaret show",
@@ -1887,21 +1888,22 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Explore the four-regions floating market with traditional architecture, local handicrafts, and cultural performances.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 2800,
-    childPrice: 1400,
+    basePrice: 3140,
+    childPrice: 2052.75,
+    singleAdultPrice: 6040,
     duration: "4 Hours",
     rating: 4.4,
     reviews: 289,
     heroImages: [
-      { src: phiPhi5, title: "Pattaya Floating Market" },
-      { src: phiPhi6, title: "Traditional Market Boats" },
-      { src: phiPhi7, title: "Four Regions Concept" }
+      { src: pattayaIslandsBoats, title: "Pattaya Floating Market" },
+      { src: pattayaBoatsBeach, title: "Traditional Market Boats" },
+      { src: pattayaTropicalBeach, title: "Four Regions Concept" }
     ],
     galleryImages: [
-      { src: phiPhi8, alt: "Market canal boats" },
-      { src: phiPhi1, alt: "Traditional architecture" },
-      { src: phiPhi2, alt: "Local handicrafts" },
-      { src: phiPhi3, alt: "Cultural performances" }
+      { src: pattayaLongtailBoats, alt: "Market canal boats" },
+      { src: pattayaBoatTour, alt: "Traditional architecture" },
+      { src: pattayaSailboat, alt: "Local handicrafts" },
+      { src: pattayaWomanSea, alt: "Cultural performances" }
     ],
     highlights: [
       "Four regions floating market",
