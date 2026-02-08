@@ -26,6 +26,18 @@ import krabiSpeedboat from "@/assets/krabi-speedboat-1.jpg";
 import krabiBoatTour from "@/assets/krabi-boat-tour-1.jpg";
 import krabiTempleWoman from "@/assets/krabi-temple-woman-1.jpg";
 
+// Pattaya images
+import pattayaBoatTour from "@/assets/pattaya-boat-tour-1.jpg";
+import pattayaSailboat from "@/assets/pattaya-sailboat-1.jpg";
+import pattayaBoatsBeach from "@/assets/pattaya-boats-beach-1.jpg";
+import pattayaTropicalBeach from "@/assets/pattaya-tropical-beach-1.jpg";
+import pattayaLongtailBoats from "@/assets/pattaya-longtail-boats-1.jpg";
+import pattayaWomanSea from "@/assets/pattaya-woman-sea-1.jpg";
+import pattayaSpeedboat from "@/assets/pattaya-speedboat-1.jpg";
+import pattayaLakeTour from "@/assets/pattaya-lake-tour-1.jpg";
+import pattayaTempleWoman from "@/assets/pattaya-temple-woman-1.jpg";
+import pattayaIslandsBoats from "@/assets/pattaya-islands-boats-1.jpg";
+
 export interface CustomerReview {
   name: string;
   date: string;
@@ -1512,21 +1524,22 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Comprehensive Pattaya city tour visiting floating market, cultural sites, and landmarks with authentic Thai lunch included.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 2000,
-    childPrice: 1800,
+    basePrice: 2175,
+    childPrice: 1815,
+    singleAdultPrice: 3385,
     duration: "6-7 Hours",
     rating: 4.5,
     reviews: 342,
     heroImages: [
-      { src: phiPhi7, title: "Pattaya Floating Market" },
-      { src: phiPhi8, title: "Traditional Thai Market" },
-      { src: phiPhi1, title: "Sanctuary of Truth" }
+      { src: pattayaBoatTour, title: "Pattaya Floating Market" },
+      { src: pattayaSailboat, title: "Traditional Thai Market" },
+      { src: pattayaLongtailBoats, title: "Sanctuary of Truth" }
     ],
     galleryImages: [
-      { src: phiPhi2, alt: "Floating market vendors" },
-      { src: phiPhi3, alt: "Traditional boats" },
-      { src: phiPhi4, alt: "Big Buddha Hill view" },
-      { src: phiPhi5, alt: "Thai cultural site" }
+      { src: pattayaBoatsBeach, alt: "Floating market vendors" },
+      { src: pattayaTropicalBeach, alt: "Traditional boats" },
+      { src: pattayaTempleWoman, alt: "Big Buddha Hill view" },
+      { src: pattayaWomanSea, alt: "Thai cultural site" }
     ],
     highlights: [
       "Walking Street",
@@ -1568,21 +1581,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Half-day tour visiting Big Buddha Hill for panoramic views and exploring the world's largest gem and jewelry center.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 1400,
+    basePrice: 1207.5,
     childPrice: 0,
     duration: "4-5 Hours",
     rating: 4.3,
     reviews: 256,
     heroImages: [
-      { src: bangkokSkywalk1, title: "Big Buddha Hill Pattaya" },
-      { src: bangkokSkywalk2, title: "Panoramic City Views" },
-      { src: bangkokSkywalk3, title: "Gems Gallery Museum" }
+      { src: pattayaSpeedboat, title: "Big Buddha Hill Pattaya" },
+      { src: pattayaTempleWoman, title: "Panoramic City Views" },
+      { src: pattayaLakeTour, title: "Gems Gallery Museum" }
     ],
     galleryImages: [
-      { src: phiPhi6, alt: "Golden Buddha statue" },
-      { src: phiPhi7, alt: "Pattaya Bay view" },
-      { src: phiPhi8, alt: "Gems and jewelry showcase" },
-      { src: phiPhi1, alt: "Museum exhibition" }
+      { src: pattayaBoatTour, alt: "Golden Buddha statue" },
+      { src: pattayaSailboat, alt: "Pattaya Bay view" },
+      { src: pattayaTropicalBeach, alt: "Gems and jewelry showcase" },
+      { src: pattayaIslandsBoats, alt: "Museum exhibition" }
     ],
     highlights: [
       "Visit Big Buddha on Pratumnak Hill",
@@ -1619,21 +1632,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Full-day beach excursion to Coral Island with pristine beaches, crystal clear waters, and optional water sports activities.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 700,
-    childPrice: 700,
+    basePrice: 603.75,
+    childPrice: 603.75,
     duration: "6-7 Hours",
     rating: 4.4,
     reviews: 489,
     heroImages: [
-      { src: phiPhi2, title: "Coral Island Paradise" },
-      { src: phiPhi3, title: "Crystal Clear Waters" },
-      { src: phiPhi4, title: "Beach Activities" }
+      { src: pattayaBoatsBeach, title: "Coral Island Paradise" },
+      { src: pattayaTropicalBeach, title: "Crystal Clear Waters" },
+      { src: pattayaWomanSea, title: "Beach Activities" }
     ],
     galleryImages: [
-      { src: phiPhi5, alt: "White sandy beach" },
-      { src: phiPhi6, alt: "Snorkeling adventure" },
-      { src: phiPhi7, alt: "Water sports activities" },
-      { src: phiPhi8, alt: "Tropical paradise" }
+      { src: pattayaIslandsBoats, alt: "White sandy beach" },
+      { src: pattayaSailboat, alt: "Snorkeling adventure" },
+      { src: pattayaSpeedboat, alt: "Water sports activities" },
+      { src: pattayaLakeTour, alt: "Tropical paradise" }
     ],
     highlights: [
       "Pristine white sandy beaches",
@@ -1672,21 +1685,21 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Visit beautiful tropical botanical gardens featuring cultural shows, elephant performances, and international buffet lunch.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 3000,
-    childPrice: 1500,
+    basePrice: 3622.5,
+    childPrice: 3018.75,
     duration: "5-6 Hours",
     rating: 4.7,
     reviews: 612,
     heroImages: [
-      { src: phiPhi1, title: "Nong Nooch Tropical Garden" },
-      { src: phiPhi2, title: "Elephant Show" },
-      { src: phiPhi3, title: "Thai Cultural Performance" }
+      { src: pattayaTempleWoman, title: "Nong Nooch Tropical Garden" },
+      { src: pattayaBoatTour, title: "Elephant Show" },
+      { src: pattayaLakeTour, title: "Thai Cultural Performance" }
     ],
     galleryImages: [
-      { src: phiPhi4, alt: "Beautiful botanical gardens" },
-      { src: phiPhi5, alt: "Elephant performance" },
-      { src: phiPhi6, alt: "Traditional Thai dance" },
-      { src: phiPhi7, alt: "Garden landscapes" }
+      { src: pattayaTropicalBeach, alt: "Beautiful botanical gardens" },
+      { src: pattayaIslandsBoats, alt: "Elephant performance" },
+      { src: pattayaSailboat, alt: "Traditional Thai dance" },
+      { src: pattayaBoatsBeach, alt: "Garden landscapes" }
     ],
     highlights: [
       "Beautiful tropical botanical gardens",
