@@ -2379,7 +2379,7 @@ export const toursData: Record<string, TourData> = {
     ],
     galleryImages: [
       { src: pattayaSpeedboat, alt: "Sunset drinks" },
-      { src: pattayaWomanSea, title: "Club experience" },
+      { src: pattayaWomanSea, alt: "Club experience" },
       { src: pattayaIslandsBoats, alt: "Group fun" },
       { src: pattayaBoatTour, alt: "Night venues" }
     ],
