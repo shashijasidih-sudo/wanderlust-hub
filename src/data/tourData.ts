@@ -38,6 +38,16 @@ import pattayaLakeTour from "@/assets/pattaya-lake-tour-1.jpg";
 import pattayaTempleWoman from "@/assets/pattaya-temple-woman-1.jpg";
 import pattayaIslandsBoats from "@/assets/pattaya-islands-boats-1.jpg";
 
+// Singapore images
+import singaporeMarinaByNight from "@/assets/singapore-marina-bay-sands-night-1.jpg";
+import singaporeWomanCityscape from "@/assets/singapore-cityscape-woman-1.jpg";
+import singaporeGardensByNight from "@/assets/singapore-gardens-bay-night-1.jpg";
+import singaporeFlyerTwilight from "@/assets/singapore-flyer-twilight-1.jpg";
+import singaporeMarinaByDay from "@/assets/singapore-marina-bay-sands-day-1.jpg";
+import singaporeMerlionNight from "@/assets/singapore-merlion-night-1.jpg";
+import singaporeCoupleWalking from "@/assets/singapore-couple-walking-1.jpg";
+import singaporeTouristsCity from "@/assets/singapore-tourists-city-1.jpg";
+
 export interface CustomerReview {
   name: string;
   date: string;
