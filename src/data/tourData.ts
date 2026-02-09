@@ -3487,15 +3487,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "World-famous cable car offering breathtaking views of Singapore's cityscape.",
     location: "Mount Faber to Sentosa, Singapore",
     city: "singapore",
-    basePrice: 2500,
-    childPrice: 2000,
+    basePrice: 2180,
+    childPrice: 2052.75,
     duration: "30 Minutes",
     rating: 4.7,
     reviews: 1234,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&auto=format&fit=crop", title: "Cable Car" }
+      { src: singaporeMarinaByDay, title: "Cable Car" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByDay, alt: "Marina Views" },
+      { src: singaporeMerlionNight, alt: "Merlion Night" },
+      { src: singaporeFlyerTwilight, alt: "Flyer Twilight" }
+    ],
     highlights: [
       "Mount Faber to Sentosa connection",
       "Panoramic city views",
@@ -3521,15 +3525,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Spectacular outdoor night show with fireworks, water jets and lasers.",
     location: "Sentosa Island, Singapore",
     city: "singapore",
-    basePrice: 1900,
-    childPrice: 1900,
+    basePrice: 2656.5,
+    childPrice: 2052.75,
     duration: "1 Hour",
     rating: 4.6,
     reviews: 987,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&auto=format&fit=crop", title: "Wings of Time" }
+      { src: singaporeGardensByNight, title: "Wings of Time" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeGardensByNight, alt: "Gardens Night" },
+      { src: singaporeMarinaByNight, alt: "Marina Night" },
+      { src: singaporeWomanCityscape, alt: "City Night" }
+    ],
     highlights: [
       "Outdoor night show",
       "Fireworks display",
@@ -3668,15 +3676,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Thrilling water park with rides, snorkeling with tropical fish, and dolphin encounters.",
     location: "Resorts World Sentosa, Singapore",
     city: "singapore",
-    basePrice: 3800,
-    childPrice: 3500,
+    basePrice: 2656.5,
+    childPrice: 4226.25,
     duration: "Full Day",
     rating: 4.7,
     reviews: 2345,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&auto=format&fit=crop", title: "Adventure Cove" }
+      { src: singaporeCoupleWalking, title: "Adventure Cove" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeCoupleWalking, alt: "Water Park" },
+      { src: singaporeTouristsCity, alt: "Tourists" },
+      { src: singaporeMarinaByDay, alt: "Marina Views" }
+    ],
     highlights: [
       "Dueling Racer & Pipeline Plunge",
       "Riptide Rocket",
