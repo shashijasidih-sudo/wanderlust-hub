@@ -27,26 +27,26 @@ import singaporeZoo from "@/assets/singapore-zoo.jpg";
 import singaporeBigBus from "@/assets/singapore-big-bus.jpg";
 
 const activities = [
-  { title: "Singapore City Tour with Guide", price: 1600, image: singaporeCityTour, slug: "singapore/singapore-city-tour" },
-  { title: "Night Safari Singapore Tickets Only", price: 5000, image: singaporeNightSafari, slug: "singapore/night-safari-tickets" },
-  { title: "Night Safari Singapore with Transfer", price: 4900, image: singaporeNightSafari, slug: "singapore/night-safari-transfer" },
-  { title: "Night Safari with Indian Dinner & Transfer", price: 6500, image: singaporeNightSafari, slug: "singapore/night-safari-dinner" },
-  { title: "Sentosa 4D Adventureland - 2 Rides", price: 2100, image: singaporeSentosa4d, slug: "singapore/sentosa-4d-2rides" },
-  { title: "Sentosa 4D Adventureland - 3 Rides", price: 3000, image: singaporeSentosa4d, slug: "singapore/sentosa-4d-3rides" },
-  { title: "Sentosa Cable Car Roundtrip Pass", price: 2500, image: singaporeCableCar, slug: "singapore/sentosa-cable-car" },
-  { title: "Sentosa Wings of Time with Transfers", price: 1900, image: singaporeWingsTime, slug: "singapore/sentosa-wings-time" },
-  { title: "Sentosa Sky Helix", price: 1500, image: singaporeSkyHelix, slug: "singapore/sentosa-sky-helix" },
-  { title: "Singapore River Cruise Tickets", price: 2800, image: singaporeRiverCruise, slug: "singapore/singapore-river-cruise" },
-  { title: "Gardens by the Bay + Flower Dome + Cloud Forest", price: 3100, image: singaporeGardensBay, slug: "singapore/gardens-by-the-bay" },
-  { title: "Adventure Cove Water Park Tickets", price: 3800, image: singaporeAdventureCove, slug: "singapore/adventure-cove" },
-  { title: "Singapore Flyer Ticket", price: 3600, image: singaporeFlyer, slug: "singapore/singapore-flyer" },
-  { title: "Singapore River Safari Tickets", price: 3700, image: singaporeRiverSafari, slug: "singapore/river-safari" },
-  { title: "Universal Studios Weekday Ticket", price: 7000, image: singaporeUniversalStudios, slug: "singapore/universal-studios-weekday" },
-  { title: "Universal Studios Weekend Ticket", price: 7200, image: singaporeUniversalStudios, slug: "singapore/universal-studios-weekend" },
-  { title: "Singapore Zoo + Tram Ride", price: 4000, image: singaporeZoo, slug: "singapore/singapore-zoo" },
-  { title: "Rainforest Wild Asia with Transfer", price: 3800, image: singaporeZoo, slug: "singapore/rainforest-wild-asia" },
-  { title: "Big Bus Singapore - Discover Ticket", price: 4800, image: singaporeBigBus, slug: "singapore/big-bus-discover" },
-  { title: "Big Bus Singapore Night City Tour", price: 5000, image: singaporeBigBus, slug: "singapore/big-bus-night" },
+  { title: "Singapore City Tour with Guide", price: 1815, image: singaporeCityTour, slug: "singapore/singapore-city-tour" },
+  { title: "Night Safari Singapore Tickets Only", price: 4470, image: singaporeNightSafari, slug: "singapore/night-safari-tickets" },
+  { title: "Night Safari Singapore with Transfer", price: 4955, image: singaporeNightSafari, slug: "singapore/night-safari-transfer" },
+  { title: "Night Safari with Indian Dinner & Transfer", price: 6415, image: singaporeNightSafari, slug: "singapore/night-safari-dinner" },
+  { title: "Sentosa 4D Adventureland - 2 Rides", price: 2060, image: singaporeSentosa4d, slug: "singapore/sentosa-4d-2rides" },
+  { title: "Sentosa 4D Adventureland - 3 Rides", price: 2900, image: singaporeSentosa4d, slug: "singapore/sentosa-4d-3rides" },
+  { title: "Sentosa Cable Car Roundtrip Pass", price: 2180, image: singaporeCableCar, slug: "singapore/sentosa-cable-car" },
+  { title: "Sentosa Wings of Time with Transfers", price: 2656.5, image: singaporeWingsTime, slug: "singapore/sentosa-wings-time" },
+  { title: "Sentosa Sky Helix", price: 1811.25, image: singaporeSkyHelix, slug: "singapore/sentosa-sky-helix" },
+  { title: "Singapore River Cruise Tickets", price: 2173.5, image: singaporeRiverCruise, slug: "singapore/singapore-river-cruise" },
+  { title: "Gardens by the Bay + Flower Dome + Cloud Forest", price: 2660, image: singaporeGardensBay, slug: "singapore/gardens-by-the-bay" },
+  { title: "Adventure Cove Water Park Tickets", price: 2656.5, image: singaporeAdventureCove, slug: "singapore/adventure-cove" },
+  { title: "Singapore Flyer Ticket", price: 3381, image: singaporeFlyer, slug: "singapore/singapore-flyer" },
+  { title: "Singapore River Safari Tickets", price: 4467.75, image: singaporeRiverSafari, slug: "singapore/river-safari" },
+  { title: "Universal Studios Weekday Ticket", price: 6762, image: singaporeUniversalStudios, slug: "singapore/universal-studios-weekday" },
+  { title: "Universal Studios Weekend Ticket", price: 7872.9, image: singaporeUniversalStudios, slug: "singapore/universal-studios-weekend" },
+  { title: "Singapore Zoo + Tram Ride", price: 3743.25, image: singaporeZoo, slug: "singapore/singapore-zoo" },
+  { title: "Rainforest Wild Asia with Transfer", price: 3441.375, image: singaporeZoo, slug: "singapore/rainforest-wild-asia" },
+  { title: "Big Bus Singapore - Discover Ticket", price: 4709.25, image: singaporeBigBus, slug: "singapore/big-bus-discover" },
+  { title: "Big Bus Singapore Night City Tour", price: 4709.25, image: singaporeBigBus, slug: "singapore/big-bus-night" },
 ];
 
 const categories = [
@@ -57,8 +57,8 @@ const categories = [
 
 const Singapore = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('popular');
-  const [priceRange, setPriceRange] = useState([1500, 7500]);
+  const [sortBy, setSortBy] = useState('price-low');
+  const [priceRange, setPriceRange] = useState([1500, 15000]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
 
@@ -124,13 +124,13 @@ const Singapore = () => {
         </div>
 
         {/* Mobile Filters */}
-        <MobileFilters
-          priceRange={priceRange}
-          onPriceRangeChange={setPriceRange}
-          minPrice={1500}
-          maxPrice={7500}
-          categories={categories}
-        />
+           <MobileFilters
+           priceRange={priceRange}
+           onPriceRangeChange={setPriceRange}
+           minPrice={1500}
+           maxPrice={15000}
+           categories={categories}
+         />
 
         <div className="flex gap-8">
           {/* Desktop Sidebar - Hidden on mobile */}
@@ -154,14 +154,14 @@ const Singapore = () => {
 
               <div>
                 <h3 className="font-semibold text-foreground mb-3">Price Filter</h3>
-                <Slider
-                  value={priceRange}
-                  onValueChange={setPriceRange}
-                  min={1500}
-                  max={7500}
-                  step={100}
-                  className="mb-2"
-                />
+            <Slider
+                   value={priceRange}
+                   onValueChange={setPriceRange}
+                   min={1500}
+                   max={15000}
+                   step={100}
+                   className="mb-2"
+                 />
                 <p className="text-sm text-muted-foreground">
                   INR {priceRange[0].toLocaleString('en-IN')} – INR {priceRange[1].toLocaleString('en-IN')}
                 </p>
