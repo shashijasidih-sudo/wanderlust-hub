@@ -3242,15 +3242,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Explore iconic landmarks like Suntec City, Fountain of Wealth, Merlion Park, Little India and Chinatown.",
     location: "Singapore",
     city: "singapore",
-    basePrice: 1600,
-    childPrice: 1200,
+    basePrice: 1815,
+    childPrice: 1690.5,
     duration: "Half Day",
     rating: 4.7,
     reviews: 1234,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", title: "Singapore Skyline" }
+      { src: singaporeMarinaByNight, title: "Singapore Skyline" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByDay, alt: "Marina Bay Sands Day" },
+      { src: singaporeWomanCityscape, alt: "Tourist at Singapore" },
+      { src: singaporeMerlionNight, alt: "Merlion at Night" }
+    ],
     highlights: [
       "Suntec City & Fountain of Wealth",
       "Merlion Park",
