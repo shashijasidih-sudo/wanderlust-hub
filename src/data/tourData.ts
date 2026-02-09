@@ -3563,15 +3563,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Exhilarating aerial adventure with stunning panoramic views.",
     location: "Sentosa Island, Singapore",
     city: "singapore",
-    basePrice: 1500,
-    childPrice: 1500,
+    basePrice: 1811.25,
+    childPrice: 1811.25,
     duration: "15 Minutes",
     rating: 4.5,
     reviews: 543,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&auto=format&fit=crop", title: "Sky Helix" }
+      { src: singaporeMarinaByNight, title: "Sky Helix" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByNight, alt: "Marina Night" },
+      { src: singaporeFlyerTwilight, alt: "Flyer Twilight" },
+      { src: singaporeMarinaByDay, alt: "Marina Day" }
+    ],
     highlights: [
       "Highest vantage point in Sentosa",
       "360-degree views",
@@ -3861,15 +3865,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Home to 3500 animals of 300 species with unique climate zones.",
     location: "Mandai, Singapore",
     city: "singapore",
-    basePrice: 4000,
-    childPrice: 3500,
+    basePrice: 3743.25,
+    childPrice: 3622.5,
     duration: "4-5 Hours",
     rating: 4.8,
     reviews: 3456,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "Singapore Zoo" }
+      { src: singaporeMarlionNight, title: "Singapore Zoo" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMerlionNight, alt: "Merlion Night" },
+      { src: singaporeTouristsCity, alt: "Tourists" },
+      { src: singaporeCoupleWalking, alt: "Couple at Zoo" }
+    ],
     highlights: [
       "3500 animals of 300 species",
       "Frozen Tundra for polar bears",
@@ -3896,15 +3904,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Asia's first wildlife adventure park with 36 species roaming freely.",
     location: "Mandai, Singapore",
     city: "singapore",
-    basePrice: 3800,
-    childPrice: 3600,
+    basePrice: 3441.375,
+    childPrice: 3441.375,
     duration: "3-4 Hours",
     rating: 4.7,
     reviews: 876,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "Rainforest Wild Asia" }
+      { src: singaporeWomanCityscape, title: "Rainforest Wild Asia" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeWomanCityscape, alt: "Safari Woman" },
+      { src: singaporeTouristsCity, alt: "Tourists" },
+      { src: singaporeCoupleWalking, alt: "Nature Couple" }
+    ],
     highlights: [
       "36 species roaming freely",
       "The Karsts with langurs",
