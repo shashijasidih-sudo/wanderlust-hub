@@ -3412,15 +3412,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Experience cutting-edge 4D technology with sensory effects for an immersive adventure.",
     location: "Sentosa Island, Singapore",
     city: "singapore",
-    basePrice: 2100,
-    childPrice: 2100,
+    basePrice: 2060,
+    childPrice: 2052.75,
     duration: "2 Hours",
     rating: 4.5,
     reviews: 876,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&auto=format&fit=crop", title: "4D Adventureland" }
+      { src: singaporeCoupleWalking, title: "4D Adventureland" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByDay, alt: "Marina Bay" },
+      { src: singaporeTouristsCity, alt: "City Tourists" },
+      { src: singaporeCoupleWalking, alt: "Couple Adventure" }
+    ],
     highlights: [
       "3D visuals with sensory effects",
       "Wind, water sprays, motion seats",
@@ -3446,15 +3450,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Extended 4D adventure with 3 thrilling rides to choose from.",
     location: "Sentosa Island, Singapore",
     city: "singapore",
-    basePrice: 3000,
-    childPrice: 3000,
+    basePrice: 2900,
+    childPrice: 2898,
     duration: "2.5 Hours",
     rating: 4.6,
     reviews: 654,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&auto=format&fit=crop", title: "4D Adventureland" }
+      { src: singaporeMarinaByNight, title: "4D Adventureland" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeTouristsCity, alt: "City Tourists" },
+      { src: singaporeCoupleWalking, alt: "Couple at Marina" },
+      { src: singaporeMarinaByDay, alt: "Marina Views" }
+    ],
     highlights: [
       "Choose 3 thrilling rides",
       "Full sensory experience",
@@ -3581,15 +3589,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Delightful journey along the iconic Singapore River showcasing picturesque landmarks.",
     location: "Clarke Quay, Singapore",
     city: "singapore",
-    basePrice: 2800,
-    childPrice: 2000,
+    basePrice: 2173.5,
+    childPrice: 2415,
     duration: "40 Minutes",
     rating: 4.7,
     reviews: 1567,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1555217851-6141535bd771?w=800&auto=format&fit=crop", title: "River Cruise" }
+      { src: singaporeMarinaByNight, title: "River Cruise" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByDay, alt: "Marina Bay Sands" },
+      { src: singaporeFlyerTwilight, alt: "Flyer Twilight" },
+      { src: singaporeWomanCityscape, alt: "River View" }
+    ],
     highlights: [
       "Marina Bay Sands views",
       "Singapore Flyer sighting",
@@ -3618,15 +3630,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Stunning 101-hectare oasis featuring 250,000 plants and iconic Supertree Grove.",
     location: "Marina Bay, Singapore",
     city: "singapore",
-    basePrice: 3100,
-    childPrice: 2800,
+    basePrice: 2660,
+    childPrice: 3381,
     duration: "3-4 Hours",
     rating: 4.9,
     reviews: 3456,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?w=800&auto=format&fit=crop", title: "Gardens by the Bay" }
+      { src: singaporeGardensByNight, title: "Gardens by the Bay" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeGardensByNight, alt: "Gardens Night" },
+      { src: singaporeMarinaByDay, alt: "Marina Views" },
+      { src: singaporeCoupleWalking, alt: "Couple at Gardens" }
+    ],
     highlights: [
       "Flower Dome conservatory",
       "Cloud Forest with Jurassic World",
