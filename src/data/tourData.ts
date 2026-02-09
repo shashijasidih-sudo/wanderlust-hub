@@ -38,6 +38,16 @@ import pattayaLakeTour from "@/assets/pattaya-lake-tour-1.jpg";
 import pattayaTempleWoman from "@/assets/pattaya-temple-woman-1.jpg";
 import pattayaIslandsBoats from "@/assets/pattaya-islands-boats-1.jpg";
 
+// Singapore images
+import singaporeMarinaByNight from "@/assets/singapore-marina-bay-sands-night-1.jpg";
+import singaporeWomanCityscape from "@/assets/singapore-cityscape-woman-1.jpg";
+import singaporeGardensByNight from "@/assets/singapore-gardens-bay-night-1.jpg";
+import singaporeFlyerTwilight from "@/assets/singapore-flyer-twilight-1.jpg";
+import singaporeMarinaByDay from "@/assets/singapore-marina-bay-sands-day-1.jpg";
+import singaporeMerlionNight from "@/assets/singapore-merlion-night-1.jpg";
+import singaporeCoupleWalking from "@/assets/singapore-couple-walking-1.jpg";
+import singaporeTouristsCity from "@/assets/singapore-tourists-city-1.jpg";
+
 export interface CustomerReview {
   name: string;
   date: string;
@@ -3232,15 +3242,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Explore iconic landmarks like Suntec City, Fountain of Wealth, Merlion Park, Little India and Chinatown.",
     location: "Singapore",
     city: "singapore",
-    basePrice: 1600,
-    childPrice: 1200,
+    basePrice: 1815,
+    childPrice: 1690.5,
     duration: "Half Day",
     rating: 4.7,
     reviews: 1234,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", title: "Singapore Skyline" }
+      { src: singaporeMarinaByNight, title: "Singapore Skyline" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByDay, alt: "Marina Bay Sands Day" },
+      { src: singaporeWomanCityscape, alt: "Tourist at Singapore" },
+      { src: singaporeMerlionNight, alt: "Merlion at Night" }
+    ],
     highlights: [
       "Suntec City & Fountain of Wealth",
       "Merlion Park",
@@ -3274,15 +3288,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Experience a unique adventure to witness nocturnal animals in their natural settings across 7 climate zones.",
     location: "Mandai, Singapore",
     city: "singapore",
-    basePrice: 5000,
-    childPrice: 4700,
+    basePrice: 4470,
+    childPrice: 4347,
     duration: "3-4 Hours",
     rating: 4.8,
     reviews: 2345,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "Night Safari" }
+      { src: singaporeGardensByNight, title: "Night Safari" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMerlionNight, alt: "Merlion Night" },
+      { src: singaporeGardensByNight, alt: "Gardens by Night" },
+      { src: singaporeWomanCityscape, alt: "City View" }
+    ],
     highlights: [
       "7 climate zones",
       "Tram ride through habitats",
@@ -3313,15 +3331,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Night Safari experience with convenient hotel transfers included.",
     location: "Mandai, Singapore",
     city: "singapore",
-    basePrice: 4900,
-    childPrice: 4600,
+    basePrice: 4955,
+    childPrice: 4830,
     duration: "4-5 Hours",
     rating: 4.8,
     reviews: 1890,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "Night Safari" }
+      { src: singaporeMerlionNight, title: "Night Safari" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeGardensByNight, alt: "Gardens by Night" },
+      { src: singaporeMarinaByNight, alt: "Marina at Night" },
+      { src: singaporeWomanCityscape, alt: "City Photography" }
+    ],
     highlights: [
       "Hotel pickup & drop-off",
       "7 climate zones",
@@ -3390,15 +3412,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Experience cutting-edge 4D technology with sensory effects for an immersive adventure.",
     location: "Sentosa Island, Singapore",
     city: "singapore",
-    basePrice: 2100,
-    childPrice: 2100,
+    basePrice: 2060,
+    childPrice: 2052.75,
     duration: "2 Hours",
     rating: 4.5,
     reviews: 876,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&auto=format&fit=crop", title: "4D Adventureland" }
+      { src: singaporeCoupleWalking, title: "4D Adventureland" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByDay, alt: "Marina Bay" },
+      { src: singaporeTouristsCity, alt: "City Tourists" },
+      { src: singaporeCoupleWalking, alt: "Couple Adventure" }
+    ],
     highlights: [
       "3D visuals with sensory effects",
       "Wind, water sprays, motion seats",
@@ -3424,15 +3450,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Extended 4D adventure with 3 thrilling rides to choose from.",
     location: "Sentosa Island, Singapore",
     city: "singapore",
-    basePrice: 3000,
-    childPrice: 3000,
+    basePrice: 2900,
+    childPrice: 2898,
     duration: "2.5 Hours",
     rating: 4.6,
     reviews: 654,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&auto=format&fit=crop", title: "4D Adventureland" }
+      { src: singaporeMarinaByNight, title: "4D Adventureland" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeTouristsCity, alt: "City Tourists" },
+      { src: singaporeCoupleWalking, alt: "Couple at Marina" },
+      { src: singaporeMarinaByDay, alt: "Marina Views" }
+    ],
     highlights: [
       "Choose 3 thrilling rides",
       "Full sensory experience",
@@ -3457,15 +3487,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "World-famous cable car offering breathtaking views of Singapore's cityscape.",
     location: "Mount Faber to Sentosa, Singapore",
     city: "singapore",
-    basePrice: 2500,
-    childPrice: 2000,
+    basePrice: 2180,
+    childPrice: 2052.75,
     duration: "30 Minutes",
     rating: 4.7,
     reviews: 1234,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&auto=format&fit=crop", title: "Cable Car" }
+      { src: singaporeMarinaByDay, title: "Cable Car" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByDay, alt: "Marina Views" },
+      { src: singaporeMerlionNight, alt: "Merlion Night" },
+      { src: singaporeFlyerTwilight, alt: "Flyer Twilight" }
+    ],
     highlights: [
       "Mount Faber to Sentosa connection",
       "Panoramic city views",
@@ -3491,15 +3525,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Spectacular outdoor night show with fireworks, water jets and lasers.",
     location: "Sentosa Island, Singapore",
     city: "singapore",
-    basePrice: 1900,
-    childPrice: 1900,
+    basePrice: 2656.5,
+    childPrice: 2052.75,
     duration: "1 Hour",
     rating: 4.6,
     reviews: 987,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&auto=format&fit=crop", title: "Wings of Time" }
+      { src: singaporeGardensByNight, title: "Wings of Time" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeGardensByNight, alt: "Gardens Night" },
+      { src: singaporeMarinaByNight, alt: "Marina Night" },
+      { src: singaporeWomanCityscape, alt: "City Night" }
+    ],
     highlights: [
       "Outdoor night show",
       "Fireworks display",
@@ -3525,15 +3563,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Exhilarating aerial adventure with stunning panoramic views.",
     location: "Sentosa Island, Singapore",
     city: "singapore",
-    basePrice: 1500,
-    childPrice: 1500,
+    basePrice: 1811.25,
+    childPrice: 1811.25,
     duration: "15 Minutes",
     rating: 4.5,
     reviews: 543,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&auto=format&fit=crop", title: "Sky Helix" }
+      { src: singaporeMarinaByNight, title: "Sky Helix" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByNight, alt: "Marina Night" },
+      { src: singaporeFlyerTwilight, alt: "Flyer Twilight" },
+      { src: singaporeMarinaByDay, alt: "Marina Day" }
+    ],
     highlights: [
       "Highest vantage point in Sentosa",
       "360-degree views",
@@ -3559,15 +3601,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Delightful journey along the iconic Singapore River showcasing picturesque landmarks.",
     location: "Clarke Quay, Singapore",
     city: "singapore",
-    basePrice: 2800,
-    childPrice: 2000,
+    basePrice: 2173.5,
+    childPrice: 2415,
     duration: "40 Minutes",
     rating: 4.7,
     reviews: 1567,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1555217851-6141535bd771?w=800&auto=format&fit=crop", title: "River Cruise" }
+      { src: singaporeMarinaByNight, title: "River Cruise" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByDay, alt: "Marina Bay Sands" },
+      { src: singaporeFlyerTwilight, alt: "Flyer Twilight" },
+      { src: singaporeWomanCityscape, alt: "River View" }
+    ],
     highlights: [
       "Marina Bay Sands views",
       "Singapore Flyer sighting",
@@ -3596,15 +3642,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Stunning 101-hectare oasis featuring 250,000 plants and iconic Supertree Grove.",
     location: "Marina Bay, Singapore",
     city: "singapore",
-    basePrice: 3100,
-    childPrice: 2800,
+    basePrice: 2660,
+    childPrice: 3381,
     duration: "3-4 Hours",
     rating: 4.9,
     reviews: 3456,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?w=800&auto=format&fit=crop", title: "Gardens by the Bay" }
+      { src: singaporeGardensByNight, title: "Gardens by the Bay" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeGardensByNight, alt: "Gardens Night" },
+      { src: singaporeMarinaByDay, alt: "Marina Views" },
+      { src: singaporeCoupleWalking, alt: "Couple at Gardens" }
+    ],
     highlights: [
       "Flower Dome conservatory",
       "Cloud Forest with Jurassic World",
@@ -3630,15 +3680,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Thrilling water park with rides, snorkeling with tropical fish, and dolphin encounters.",
     location: "Resorts World Sentosa, Singapore",
     city: "singapore",
-    basePrice: 3800,
-    childPrice: 3500,
+    basePrice: 2656.5,
+    childPrice: 4226.25,
     duration: "Full Day",
     rating: 4.7,
     reviews: 2345,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&auto=format&fit=crop", title: "Adventure Cove" }
+      { src: singaporeCoupleWalking, title: "Adventure Cove" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeCoupleWalking, alt: "Water Park" },
+      { src: singaporeTouristsCity, alt: "Tourists" },
+      { src: singaporeMarinaByDay, alt: "Marina Views" }
+    ],
     highlights: [
       "Dueling Racer & Pipeline Plunge",
       "Riptide Rocket",
@@ -3665,15 +3719,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Experience panoramic views from 165 meters high on this giant observation wheel.",
     location: "Marina Bay, Singapore",
     city: "singapore",
-    basePrice: 3600,
-    childPrice: 3200,
+    basePrice: 3381,
+    childPrice: 2173.5,
     duration: "30 Minutes",
     rating: 4.7,
     reviews: 2890,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", title: "Singapore Flyer" }
+      { src: singaporeFlyerTwilight, title: "Singapore Flyer" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeFlyerTwilight, alt: "Flyer Twilight" },
+      { src: singaporeMarinaByDay, alt: "Marina Bay Sands" },
+      { src: singaporeCoupleWalking, alt: "Couple Travelers" }
+    ],
     highlights: [
       "165 meters high",
       "Panoramic city views",
@@ -3699,15 +3757,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Captivating wildlife park with river-themed exhibits and Amazon River Quest boat ride.",
     location: "Mandai, Singapore",
     city: "singapore",
-    basePrice: 3700,
-    childPrice: 3700,
+    basePrice: 4467.75,
+    childPrice: 4467.75,
     duration: "3-4 Hours",
     rating: 4.6,
     reviews: 1234,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "River Safari" }
+      { src: singaporeMarinaByDay, title: "River Safari" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByDay, alt: "Marina Views" },
+      { src: singaporeMerlionNight, alt: "Merlion Night" },
+      { src: singaporeTouristsCity, alt: "City Tourists" }
+    ],
     highlights: [
       "Amazon Flooded Forest",
       "Congo River exhibit",
@@ -3803,15 +3865,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Home to 3500 animals of 300 species with unique climate zones.",
     location: "Mandai, Singapore",
     city: "singapore",
-    basePrice: 4000,
-    childPrice: 3500,
+    basePrice: 3743.25,
+    childPrice: 3622.5,
     duration: "4-5 Hours",
     rating: 4.8,
     reviews: 3456,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "Singapore Zoo" }
+      { src: singaporeMerlionNight, title: "Singapore Zoo" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMerlionNight, alt: "Merlion Night" },
+      { src: singaporeTouristsCity, alt: "Tourists" },
+      { src: singaporeCoupleWalking, alt: "Couple at Zoo" }
+    ],
     highlights: [
       "3500 animals of 300 species",
       "Frozen Tundra for polar bears",
@@ -3838,15 +3904,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Asia's first wildlife adventure park with 36 species roaming freely.",
     location: "Mandai, Singapore",
     city: "singapore",
-    basePrice: 3800,
-    childPrice: 3600,
+    basePrice: 3441.375,
+    childPrice: 3441.375,
     duration: "3-4 Hours",
     rating: 4.7,
     reviews: 876,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "Rainforest Wild Asia" }
+      { src: singaporeWomanCityscape, title: "Rainforest Wild Asia" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeWomanCityscape, alt: "Safari Woman" },
+      { src: singaporeTouristsCity, alt: "Tourists" },
+      { src: singaporeCoupleWalking, alt: "Nature Couple" }
+    ],
     highlights: [
       "36 species roaming freely",
       "The Karsts with langurs",
@@ -3872,15 +3942,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Hop-on-hop-off sightseeing experience covering top attractions.",
     location: "Singapore",
     city: "singapore",
-    basePrice: 4800,
-    childPrice: 4500,
+    basePrice: 4709.25,
+    childPrice: 4709.25,
     duration: "7 Hours",
     rating: 4.6,
     reviews: 1234,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", title: "Big Bus" }
+      { src: singaporeMarinaByNight, title: "Big Bus" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByNight, alt: "Marina Night" },
+      { src: singaporeGardensByNight, alt: "Gardens Night" },
+      { src: singaporeCoupleWalking, alt: "City Tour" }
+    ],
     highlights: [
       "Over 30 stops",
       "Yellow & Red lines",
@@ -3906,15 +3980,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "3-hour guided night tour with satay sampling at Lau Pa Sat.",
     location: "Singapore",
     city: "singapore",
-    basePrice: 5000,
-    childPrice: 4900,
+    basePrice: 4709.25,
+    childPrice: 4709.25,
     duration: "3 Hours",
     rating: 4.7,
     reviews: 987,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", title: "Night Tour" }
+      { src: singaporeGardensByNight, title: "Night Tour" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeGardensByNight, alt: "Gardens Night" },
+      { src: singaporeMerlionNight, alt: "Merlion Night" },
+      { src: singaporeMarinaByNight, alt: "Marina Night" }
+    ],
     highlights: [
       "Open-top double-decker bus",
       "Satay sampling at Lau Pa Sat",
