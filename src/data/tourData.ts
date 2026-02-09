@@ -3288,15 +3288,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Experience a unique adventure to witness nocturnal animals in their natural settings across 7 climate zones.",
     location: "Mandai, Singapore",
     city: "singapore",
-    basePrice: 5000,
-    childPrice: 4700,
+    basePrice: 4470,
+    childPrice: 4347,
     duration: "3-4 Hours",
     rating: 4.8,
     reviews: 2345,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "Night Safari" }
+      { src: singaporeGardensByNight, title: "Night Safari" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMerlionNight, alt: "Merlion Night" },
+      { src: singaporeGardensByNight, alt: "Gardens by Night" },
+      { src: singaporeWomanCityscape, alt: "City View" }
+    ],
     highlights: [
       "7 climate zones",
       "Tram ride through habitats",
@@ -3327,15 +3331,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Night Safari experience with convenient hotel transfers included.",
     location: "Mandai, Singapore",
     city: "singapore",
-    basePrice: 4900,
-    childPrice: 4600,
+    basePrice: 4955,
+    childPrice: 4830,
     duration: "4-5 Hours",
     rating: 4.8,
     reviews: 1890,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "Night Safari" }
+      { src: singaporeMerlionNight, title: "Night Safari" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeGardensByNight, alt: "Gardens by Night" },
+      { src: singaporeMarinaByNight, alt: "Marina at Night" },
+      { src: singaporeWomanCityscape, alt: "City Photography" }
+    ],
     highlights: [
       "Hotel pickup & drop-off",
       "7 climate zones",
@@ -3679,15 +3687,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Experience panoramic views from 165 meters high on this giant observation wheel.",
     location: "Marina Bay, Singapore",
     city: "singapore",
-    basePrice: 3600,
-    childPrice: 3200,
+    basePrice: 3381,
+    childPrice: 2173.5,
     duration: "30 Minutes",
     rating: 4.7,
     reviews: 2890,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", title: "Singapore Flyer" }
+      { src: singaporeFlyerTwilight, title: "Singapore Flyer" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeFlyerTwilight, alt: "Flyer Twilight" },
+      { src: singaporeMarinaByDay, alt: "Marina Bay Sands" },
+      { src: singaporeCoupleWalking, alt: "Couple Travelers" }
+    ],
     highlights: [
       "165 meters high",
       "Panoramic city views",
@@ -3713,15 +3725,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Captivating wildlife park with river-themed exhibits and Amazon River Quest boat ride.",
     location: "Mandai, Singapore",
     city: "singapore",
-    basePrice: 3700,
-    childPrice: 3700,
+    basePrice: 4467.75,
+    childPrice: 4467.75,
     duration: "3-4 Hours",
     rating: 4.6,
     reviews: 1234,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&auto=format&fit=crop", title: "River Safari" }
+      { src: singaporeMarinaByDay, title: "River Safari" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByDay, alt: "Marina Views" },
+      { src: singaporeMerlionNight, alt: "Merlion Night" },
+      { src: singaporeTouristsCity, alt: "City Tourists" }
+    ],
     highlights: [
       "Amazon Flooded Forest",
       "Congo River exhibit",
