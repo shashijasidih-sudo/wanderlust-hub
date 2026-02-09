@@ -10,23 +10,33 @@ import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SearchInput from "@/components/SearchInput";
 
+import dubaiDhowCruise from "@/assets/dubai-dhow-cruise-1.jpg";
+import dubaiDesertWoman from "@/assets/dubai-desert-woman-1.jpg";
+import dubaiDesertCouple2 from "@/assets/dubai-desert-couple-2.jpg";
+import dubaiSkylineSunset from "@/assets/dubai-skyline-sunset-1.jpg";
+import dubaiSkylineNight from "@/assets/dubai-skyline-night-1.jpg";
+import dubaiGlobalVillage from "@/assets/dubai-global-village-1.jpg";
+import dubaiAquariumFish from "@/assets/dubai-aquarium-fish-1.jpg";
+import dubaiCityNight from "@/assets/dubai-city-night-1.jpg";
+import dubaiDesertCouple from "@/assets/dubai-desert-couple-1.jpg";
+
 const activities = [
-  { title: "Dhow Cruise Dinner - Lower Deck with Transfers", price: 1900, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "dubai/dhow-cruise-creek-lower" },
-  { title: "Dhow Cruise Dinner - Upper Deck with Transfers", price: 2100, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", slug: "dubai/dhow-cruise-creek-upper" },
-  { title: "Desert Safari with Shisha on Table", price: 4600, image: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", slug: "dubai/desert-safari-shisha" },
-  { title: "Desert Safari with Sharing Transfer", price: 2900, image: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", slug: "dubai/desert-safari-sharing" },
-  { title: "Dubai City Tour", price: 1600, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "dubai/dubai-city-tour" },
-  { title: "Dubai City Tour with Dubai Mall", price: 2000, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", slug: "dubai/dubai-city-tour-mall" },
-  { title: "Dhow Dinner Cruise Marina - Lower Deck", price: 3000, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", slug: "dubai/dhow-cruise-marina-lower" },
-  { title: "Dhow Dinner Cruise Marina - Upper Deck", price: 3600, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", slug: "dubai/dhow-cruise-marina-upper" },
-  { title: "Global Village Dubai", price: 2700, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "dubai/global-village-dubai" },
-  { title: "Abu Dhabi City Tour", price: 3000, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "dubai/abu-dhabi-city-tour" },
-  { title: "Abu Dhabi City Tour + Ferrari World", price: 8400, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", slug: "dubai/abu-dhabi-ferrari-world" },
-  { title: "Dubai Aquarium + Penguin Cove", price: 3800, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "dubai/dubai-aquarium-penguin" },
-  { title: "Burj Khalifa 124/125 Non-Prime", price: 5000, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", slug: "dubai/burj-khalifa-non-prime" },
-  { title: "Burj Khalifa 124/125 Prime", price: 6000, image: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", slug: "dubai/burj-khalifa-prime" },
-  { title: "Dubai Dolphin & Seal Show", price: 3200, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "dubai/dubai-dolphin-show" },
-  { title: "Miracle Garden Dubai", price: 2700, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", slug: "dubai/miracle-garden-dubai" },
+  { title: "Dhow Cruise Dinner - Lower Deck with Transfers", price: 2070.6, image: dubaiDhowCruise, slug: "dubai/dhow-cruise-creek-lower" },
+  { title: "Dhow Cruise Dinner - Upper Deck with Transfers", price: 2436, image: dubaiDhowCruise, slug: "dubai/dhow-cruise-creek-upper" },
+  { title: "Desert Safari with Shisha on Table", price: 5115.6, image: dubaiDesertWoman, slug: "dubai/desert-safari-shisha" },
+  { title: "Desert Safari with Sharing Transfer", price: 3532.2, image: dubaiDesertCouple2, slug: "dubai/desert-safari-sharing" },
+  { title: "Dubai City Tour", price: 1461.6, image: dubaiSkylineSunset, slug: "dubai/dubai-city-tour" },
+  { title: "Dubai City Tour with Dubai Mall", price: 2070.6, image: dubaiSkylineNight, slug: "dubai/dubai-city-tour-mall" },
+  { title: "Dhow Dinner Cruise Marina - Lower Deck", price: 3654, image: dubaiDhowCruise, slug: "dubai/dhow-cruise-marina-lower" },
+  { title: "Dhow Dinner Cruise Marina - Upper Deck", price: 4384.8, image: dubaiDhowCruise, slug: "dubai/dhow-cruise-marina-upper" },
+  { title: "Global Village Dubai", price: 3288.6, image: dubaiGlobalVillage, slug: "dubai/global-village-dubai" },
+  { title: "Abu Dhabi City Tour", price: 3288.6, image: dubaiSkylineSunset, slug: "dubai/abu-dhabi-city-tour" },
+  { title: "Abu Dhabi City Tour + Ferrari World", price: 9744, image: dubaiSkylineNight, slug: "dubai/abu-dhabi-ferrari-world" },
+  { title: "Dubai Aquarium + Penguin Cove", price: 4019.4, image: dubaiAquariumFish, slug: "dubai/dubai-aquarium-penguin" },
+  { title: "Burj Khalifa 124/125 Non-Prime", price: 6090, image: dubaiSkylineNight, slug: "dubai/burj-khalifa-non-prime" },
+  { title: "Burj Khalifa 124/125 Prime", price: 8526, image: dubaiSkylineSunset, slug: "dubai/burj-khalifa-prime" },
+  { title: "Dubai Dolphin & Seal Show", price: 3532.2, image: dubaiAquariumFish, slug: "dubai/dubai-dolphin-show" },
+  { title: "Miracle Garden Dubai", price: 2557.8, image: dubaiGlobalVillage, slug: "dubai/miracle-garden-dubai" },
 ];
 
 const categories = [
@@ -37,8 +47,8 @@ const categories = [
 
 const Dubai = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('popular');
-  const [priceRange, setPriceRange] = useState([1600, 8500]);
+  const [sortBy, setSortBy] = useState('price-low');
+  const [priceRange, setPriceRange] = useState([1400, 10000]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
 
@@ -107,8 +117,8 @@ const Dubai = () => {
         <MobileFilters
           priceRange={priceRange}
           onPriceRangeChange={setPriceRange}
-          minPrice={1600}
-          maxPrice={8500}
+          minPrice={1400}
+          maxPrice={10000}
           categories={categories}
         />
 
@@ -137,8 +147,8 @@ const Dubai = () => {
                 <Slider
                   value={priceRange}
                   onValueChange={setPriceRange}
-                  min={1600}
-                  max={8500}
+                  min={1400}
+                  max={10000}
                   step={100}
                   className="mb-2"
                 />

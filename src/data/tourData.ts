@@ -40,6 +40,17 @@ import pattayaIslandsBoats from "@/assets/pattaya-islands-boats-1.jpg";
 
 // Singapore images
 import singaporeMarinaByNight from "@/assets/singapore-marina-bay-sands-night-1.jpg";
+
+// Dubai images (after Singapore imports block)
+import dubaiAquariumFish from "@/assets/dubai-aquarium-fish-1.jpg";
+import dubaiGlobalVillage from "@/assets/dubai-global-village-1.jpg";
+import dubaiSkylineSunset from "@/assets/dubai-skyline-sunset-1.jpg";
+import dubaiSkylineNight from "@/assets/dubai-skyline-night-1.jpg";
+import dubaiDesertWoman from "@/assets/dubai-desert-woman-1.jpg";
+import dubaiDesertCouple from "@/assets/dubai-desert-couple-1.jpg";
+import dubaiDesertCouple2 from "@/assets/dubai-desert-couple-2.jpg";
+import dubaiCityNight from "@/assets/dubai-city-night-1.jpg";
+import dubaiDhowCruise from "@/assets/dubai-dhow-cruise-1.jpg";
 import singaporeWomanCityscape from "@/assets/singapore-cityscape-woman-1.jpg";
 import singaporeGardensByNight from "@/assets/singapore-gardens-bay-night-1.jpg";
 import singaporeFlyerTwilight from "@/assets/singapore-flyer-twilight-1.jpg";
@@ -2528,19 +2539,20 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Experience a traditional Arabian dhow cruise on Dubai Creek with a delicious buffet dinner and live entertainment.",
     location: "Dubai Creek, Dubai",
     city: "dubai",
-    basePrice: 1900,
-    childPrice: 1800,
+    basePrice: 2070.6,
+    childPrice: 1948.8,
     duration: "90 Minutes",
     rating: 4.7,
     reviews: 1245,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Creek Cruise" },
-      { src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", title: "Dubai Skyline" },
-      { src: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", title: "Traditional Dhow" }
+      { src: dubaiDhowCruise, title: "Dubai Creek Cruise" },
+      { src: dubaiSkylineNight, title: "Dubai Skyline" },
+      { src: dubaiSkylineSunset, title: "Traditional Dhow" }
     ],
     galleryImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", alt: "Dubai Creek" },
-      { src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", alt: "Dubai at night" }
+      { src: dubaiDhowCruise, alt: "Dubai Creek Cruise" },
+      { src: dubaiSkylineNight, alt: "Dubai at night" },
+      { src: dubaiCityNight, alt: "Dubai City Night" }
     ],
     highlights: [
       "90-minute cruise along Dubai Creek",
@@ -2603,17 +2615,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Enjoy an open-air dining experience on the upper deck of a traditional Arabian dhow cruising Dubai Creek.",
     location: "Dubai Creek, Dubai",
     city: "dubai",
-    basePrice: 2100,
-    childPrice: 2100,
+    basePrice: 2436,
+    childPrice: 2192.4,
     duration: "90 Minutes",
     rating: 4.8,
     reviews: 987,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Creek Night" },
-      { src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", title: "Open Air Cruise" }
+      { src: dubaiDhowCruise, title: "Dubai Creek Night" },
+      { src: dubaiSkylineSunset, title: "Open Air Cruise" }
     ],
     galleryImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", alt: "Dubai Creek" }
+      { src: dubaiDhowCruise, alt: "Dubai Creek Cruise" },
+      { src: dubaiSkylineNight, alt: "Dubai Skyline Night" },
+      { src: dubaiCityNight, alt: "Dubai City Night" }
     ],
     highlights: [
       "Open-air upper deck experience",
@@ -2646,17 +2660,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Premium desert safari experience with private shisha service at your table and thrilling dune bashing.",
     location: "Dubai Desert, UAE",
     city: "dubai",
-    basePrice: 4600,
+    basePrice: 5115.6,
     childPrice: 0,
     duration: "6 Hours",
     rating: 4.9,
     reviews: 2156,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", title: "Desert Safari" },
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Desert" }
+      { src: dubaiDesertWoman, title: "Desert Safari" },
+      { src: dubaiDesertCouple, title: "Dubai Desert" }
     ],
     galleryImages: [
-      { src: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", alt: "Desert dunes" }
+      { src: dubaiDesertWoman, alt: "Desert Safari" },
+      { src: dubaiDesertCouple, alt: "Desert Couple" },
+      { src: dubaiDesertCouple2, alt: "Desert Adventure" }
     ],
     highlights: [
       "Thrilling dune bashing in 4x4 Land Cruiser",
@@ -2715,15 +2731,20 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Classic desert safari experience with dune bashing, camel riding, and BBQ dinner under the stars.",
     location: "Dubai Desert, UAE",
     city: "dubai",
-    basePrice: 2900,
-    childPrice: 2800,
+    basePrice: 3532.2,
+    childPrice: 3410.4,
     duration: "6 Hours",
     rating: 4.8,
     reviews: 3421,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&auto=format&fit=crop", title: "Desert Adventure" }
+      { src: dubaiDesertCouple2, title: "Desert Adventure" },
+      { src: dubaiDesertWoman, title: "Desert Woman" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: dubaiDesertCouple2, alt: "Desert Couple" },
+      { src: dubaiDesertCouple, alt: "Desert Photography" },
+      { src: dubaiDesertWoman, alt: "Desert Woman" }
+    ],
     highlights: [
       "Dune bashing in AC 4x4",
       "Camel riding",
@@ -2757,16 +2778,20 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Comprehensive tour of Dubai's iconic landmarks including Burj Al Arab, Dubai Frame, and traditional souks.",
     location: "Dubai, UAE",
     city: "dubai",
-    basePrice: 1600,
-    childPrice: 1500,
+    basePrice: 1461.6,
+    childPrice: 1827,
     duration: "6 Hours",
     rating: 4.6,
     reviews: 1876,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai City" },
-      { src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", title: "Burj Al Arab" }
+      { src: dubaiSkylineSunset, title: "Dubai City" },
+      { src: dubaiSkylineNight, title: "Dubai Skyline Night" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: dubaiSkylineSunset, alt: "Dubai Skyline Sunset" },
+      { src: dubaiSkylineNight, alt: "Dubai Night" },
+      { src: dubaiCityNight, alt: "Dubai City Night" }
+    ],
     highlights: [
       "Zabeel Palace photo stop",
       "Dubai Frame photo opportunity",
@@ -2804,15 +2829,20 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Complete Dubai city tour including visit to the world-famous Dubai Mall.",
     location: "Dubai, UAE",
     city: "dubai",
-    basePrice: 2000,
-    childPrice: 2000,
+    basePrice: 2070.6,
+    childPrice: 2436,
     duration: "6 Hours",
     rating: 4.7,
     reviews: 1543,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Mall" }
+      { src: dubaiSkylineNight, title: "Dubai Mall" },
+      { src: dubaiGlobalVillage, title: "Dubai Mall Interior" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: dubaiSkylineNight, alt: "Dubai Skyline Night" },
+      { src: dubaiGlobalVillage, alt: "Dubai Mall" },
+      { src: dubaiCityNight, alt: "Dubai City" }
+    ],
     highlights: [
       "All Dubai City Tour highlights",
       "Dubai Mall visit",
@@ -2842,15 +2872,20 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Elegant cruise along Dubai Marina's Venetian-styled canal with international cuisine and stunning views.",
     location: "Dubai Marina, UAE",
     city: "dubai",
-    basePrice: 3000,
-    childPrice: 3000,
+    basePrice: 3654,
+    childPrice: 3654,
     duration: "90 Minutes",
     rating: 4.8,
     reviews: 1654,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", title: "Dubai Marina" }
+      { src: dubaiDhowCruise, title: "Dubai Marina" },
+      { src: dubaiSkylineNight, title: "Dubai Marina Night" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: dubaiDhowCruise, alt: "Dhow Cruise" },
+      { src: dubaiSkylineNight, alt: "Dubai Night" },
+      { src: dubaiCityNight, alt: "Dubai City" }
+    ],
     highlights: [
       "Cruise along Dubai Marina",
       "Venetian-styled canal views",
@@ -2882,15 +2917,20 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Premium open-air dining experience on Dubai Marina with panoramic views of modern Dubai.",
     location: "Dubai Marina, UAE",
     city: "dubai",
-    basePrice: 3600,
-    childPrice: 3600,
+    basePrice: 4384.8,
+    childPrice: 4384.8,
     duration: "90 Minutes",
     rating: 4.9,
     reviews: 1234,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&auto=format&fit=crop", title: "Marina Upper Deck" }
+      { src: dubaiDhowCruise, title: "Marina Upper Deck" },
+      { src: dubaiSkylineSunset, title: "Dubai Sunset" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: dubaiDhowCruise, alt: "Dhow Cruise" },
+      { src: dubaiSkylineSunset, alt: "Dubai Sunset" },
+      { src: dubaiCityNight, alt: "Dubai City Night" }
+    ],
     highlights: [
       "Open-air upper deck",
       "Unobstructed Marina views",
@@ -2920,15 +2960,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Explore 32 pavilions representing 75+ countries at Dubai's largest cultural and entertainment destination.",
     location: "Global Village, Dubai",
     city: "dubai",
-    basePrice: 2700,
-    childPrice: 2600,
+    basePrice: 3288.6,
+    childPrice: 3166.8,
     duration: "Full Day",
     rating: 4.7,
     reviews: 2345,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Global Village" }
+      { src: dubaiGlobalVillage, title: "Global Village" },
+      { src: dubaiCityNight, title: "Global Village Night" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: dubaiGlobalVillage, alt: "Global Village" },
+      { src: dubaiCityNight, alt: "Dubai City Night" }
+    ],
     highlights: [
       "32 pavilions from 75+ countries",
       "Thrilling rides and attractions",
@@ -2961,15 +3005,20 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Explore the UAE capital including the magnificent Sheikh Zayed Grand Mosque and cultural landmarks.",
     location: "Abu Dhabi, UAE",
     city: "dubai",
-    basePrice: 3000,
-    childPrice: 3000,
+    basePrice: 3288.6,
+    childPrice: 3288.6,
     duration: "Full Day",
     rating: 4.8,
     reviews: 1987,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Abu Dhabi" }
+      { src: dubaiSkylineSunset, title: "Abu Dhabi" },
+      { src: dubaiSkylineNight, title: "Abu Dhabi Night" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: dubaiSkylineSunset, alt: "Abu Dhabi Skyline" },
+      { src: dubaiSkylineNight, alt: "Abu Dhabi Night" },
+      { src: dubaiCityNight, alt: "City Night" }
+    ],
     highlights: [
       "Sheikh Zayed Grand Mosque visit",
       "Abu Dhabi Corniche drive",
@@ -3002,15 +3051,20 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Combine Abu Dhabi sightseeing with the thrill of Ferrari World theme park.",
     location: "Abu Dhabi, UAE",
     city: "dubai",
-    basePrice: 8400,
-    childPrice: 8400,
+    basePrice: 9744,
+    childPrice: 9744,
     duration: "Full Day",
     rating: 4.9,
     reviews: 1567,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Ferrari World" }
+      { src: dubaiSkylineNight, title: "Ferrari World" },
+      { src: dubaiSkylineSunset, title: "Abu Dhabi" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: dubaiSkylineNight, alt: "Dubai Skyline" },
+      { src: dubaiSkylineSunset, alt: "Abu Dhabi" },
+      { src: dubaiCityNight, alt: "City Night" }
+    ],
     highlights: [
       "Sheikh Zayed Grand Mosque",
       "Ferrari World Abu Dhabi",
@@ -3043,15 +3097,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Explore one of the world's largest suspended aquariums with 30,000+ aquatic animals.",
     location: "Dubai Mall, Dubai",
     city: "dubai",
-    basePrice: 3800,
-    childPrice: 3500,
+    basePrice: 4019.4,
+    childPrice: 4019.4,
     duration: "2-3 Hours",
     rating: 4.7,
     reviews: 2134,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dubai Aquarium" }
+      { src: dubaiAquariumFish, title: "Dubai Aquarium" },
+      { src: dubaiSkylineNight, title: "Dubai Mall" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: dubaiAquariumFish, alt: "Aquarium Fish" },
+      { src: dubaiSkylineNight, alt: "Dubai Skyline" }
+    ],
     highlights: [
       "10-million liter water tank",
       "30,000+ aquatic animals",
@@ -3084,15 +3142,20 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Visit the world's tallest building during non-prime hours for the best value.",
     location: "Downtown Dubai, UAE",
     city: "dubai",
-    basePrice: 5000,
-    childPrice: 4000,
+    basePrice: 6090,
+    childPrice: 4872,
     duration: "1-2 Hours",
     rating: 4.9,
     reviews: 4567,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Burj Khalifa" }
+      { src: dubaiSkylineNight, title: "Burj Khalifa" },
+      { src: dubaiSkylineSunset, title: "Dubai Skyline" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: dubaiSkylineNight, alt: "Burj Khalifa Night" },
+      { src: dubaiSkylineSunset, alt: "Dubai Sunset" },
+      { src: dubaiCityNight, alt: "Dubai City" }
+    ],
     highlights: [
       "124th & 125th floor access",
       "Panoramic Dubai views",
@@ -3123,15 +3186,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Experience stunning sunset views from the world's tallest building during prime hours.",
     location: "Downtown Dubai, UAE",
     city: "dubai",
-    basePrice: 6000,
-    childPrice: 4200,
+    basePrice: 8526,
+    childPrice: 7308,
     duration: "1-2 Hours",
     rating: 4.9,
     reviews: 3456,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Burj Khalifa Sunset" }
+      { src: dubaiSkylineSunset, title: "Burj Khalifa Sunset" },
+      { src: dubaiSkylineNight, title: "Dubai Night" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: dubaiSkylineSunset, alt: "Burj Khalifa Sunset" },
+      { src: dubaiSkylineNight, alt: "Dubai Skyline Night" }
+    ],
     highlights: [
       "Prime time sunset views",
       "124th & 125th floor access",
@@ -3160,15 +3227,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Interactive dolphin and seal show at Dubai's only fully air-conditioned dolphinarium.",
     location: "Dubai Creek Park, Dubai",
     city: "dubai",
-    basePrice: 3200,
-    childPrice: 2700,
+    basePrice: 3532.2,
+    childPrice: 3532.2,
     duration: "2.5 Hours",
     rating: 4.6,
     reviews: 1234,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Dolphin Show" }
+      { src: dubaiAquariumFish, title: "Dolphin Show" },
+      { src: dubaiSkylineSunset, title: "Dubai" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: dubaiAquariumFish, alt: "Marine Life" },
+      { src: dubaiSkylineSunset, alt: "Dubai Skyline" }
+    ],
     highlights: [
       "45-minute dolphin & seal show",
       "180-degree amphitheatre",
@@ -3199,15 +3270,20 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Visit the world's largest natural flower garden with over 100 million blooming flowers.",
     location: "Al Barsha South, Dubai",
     city: "dubai",
-    basePrice: 2700,
-    childPrice: 2700,
+    basePrice: 2557.8,
+    childPrice: 2557.8,
     duration: "3-4 Hours",
     rating: 4.8,
     reviews: 3456,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop", title: "Miracle Garden" }
+      { src: dubaiGlobalVillage, title: "Miracle Garden" },
+      { src: dubaiCityNight, title: "Dubai Night" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: dubaiGlobalVillage, alt: "Miracle Garden" },
+      { src: dubaiCityNight, alt: "Dubai Night" },
+      { src: dubaiSkylineSunset, alt: "Dubai Sunset" }
+    ],
     highlights: [
       "72,000 square meters of gardens",
       "100+ million blooming flowers",
