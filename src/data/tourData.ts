@@ -3942,15 +3942,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Hop-on-hop-off sightseeing experience covering top attractions.",
     location: "Singapore",
     city: "singapore",
-    basePrice: 4800,
-    childPrice: 4500,
+    basePrice: 4709.25,
+    childPrice: 4709.25,
     duration: "7 Hours",
     rating: 4.6,
     reviews: 1234,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", title: "Big Bus" }
+      { src: singaporeMarinaByNight, title: "Big Bus" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeMarinaByNight, alt: "Marina Night" },
+      { src: singaporeGardensByNight, alt: "Gardens Night" },
+      { src: singaporeCoupleWalking, alt: "City Tour" }
+    ],
     highlights: [
       "Over 30 stops",
       "Yellow & Red lines",
@@ -3976,15 +3980,19 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "3-hour guided night tour with satay sampling at Lau Pa Sat.",
     location: "Singapore",
     city: "singapore",
-    basePrice: 5000,
-    childPrice: 4900,
+    basePrice: 4709.25,
+    childPrice: 4709.25,
     duration: "3 Hours",
     rating: 4.7,
     reviews: 987,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop", title: "Night Tour" }
+      { src: singaporeGardensByNight, title: "Night Tour" }
     ],
-    galleryImages: [],
+    galleryImages: [
+      { src: singaporeGardensByNight, alt: "Gardens Night" },
+      { src: singaporeMerlionNight, alt: "Merlion Night" },
+      { src: singaporeMarinaByNight, alt: "Marina Night" }
+    ],
     highlights: [
       "Open-top double-decker bus",
       "Satay sampling at Lau Pa Sat",
