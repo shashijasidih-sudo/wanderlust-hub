@@ -3871,7 +3871,7 @@ export const toursData: Record<string, TourData> = {
     rating: 4.8,
     reviews: 3456,
     heroImages: [
-      { src: singaporeMarlionNight, title: "Singapore Zoo" }
+      { src: singaporeMerlionNight, title: "Singapore Zoo" }
     ],
     galleryImages: [
       { src: singaporeMerlionNight, alt: "Merlion Night" },
