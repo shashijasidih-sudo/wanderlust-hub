@@ -6,6 +6,11 @@ import { toast } from "sonner";
 import BookingModal from "@/components/BookingModal";
 import { useCart } from "@/contexts/CartContext";
 
+export interface TourOption {
+  label: string;
+  adultPrice: number;
+}
+
 interface PricingCalculatorProps {
   basePrice: number;
   childPrice: number;
@@ -14,7 +19,8 @@ interface PricingCalculatorProps {
   pricePerVehicle?: boolean;
   vehicleCapacity?: number;
   tourSlug?: string;
-  singleAdultPrice?: number; // Price when only 1 adult is booking
+  singleAdultPrice?: number;
+  tourOptions?: TourOption[];
 }
 
 const PricingCalculator = ({ 
@@ -25,7 +31,8 @@ const PricingCalculator = ({
   pricePerVehicle = false,
   vehicleCapacity = 5,
   tourSlug = "",
-  singleAdultPrice
+  singleAdultPrice,
+  tourOptions
 }: PricingCalculatorProps) => {
   const { addToCart } = useCart();
   const [adults, setAdults] = useState(pricePerVehicle ? 1 : 2);
@@ -34,9 +41,14 @@ const PricingCalculator = ({
   const [selectedTime, setSelectedTime] = useState("");
   const [vehicles, setVehicles] = useState(1);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(tourOptions?.[0]?.label || "");
 
   // Calculate adult price based on tiered pricing
   const getAdultPrice = () => {
+    if (tourOptions && selectedOption) {
+      const option = tourOptions.find(o => o.label === selectedOption);
+      if (option) return option.adultPrice;
+    }
     if (pricePerVehicle) return basePrice;
     if (adults === 1 && singleAdultPrice) return singleAdultPrice;
     return basePrice;
@@ -234,11 +246,43 @@ const PricingCalculator = ({
           </div>
         ) : (
           <div className="space-y-4">
+          {tourOptions && tourOptions.length > 0 && (
+              <div className="space-y-3 mb-4">
+                <label className="text-sm font-medium flex items-center gap-2">
+                  🎫 Tour Options
+                </label>
+                <div className="space-y-2">
+                  {tourOptions.map((option, idx) => (
+                    <label
+                      key={idx}
+                      className={`flex items-start gap-3 p-3 rounded-lg border-2 cursor-pointer transition-colors ${
+                        selectedOption === option.label
+                          ? "border-primary bg-primary/10"
+                          : "border-border hover:border-primary/50"
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="tourOption"
+                        value={option.label}
+                        checked={selectedOption === option.label}
+                        onChange={(e) => setSelectedOption(e.target.value)}
+                        className="mt-1 accent-primary"
+                      />
+                      <div className="flex-1">
+                        <p className="font-medium text-sm">{option.label}</p>
+                        <p className="text-sm text-primary font-semibold">₹{option.adultPrice.toLocaleString()} / per adult</p>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <label className="text-sm font-medium flex items-center gap-2">
               <Users className="h-4 w-4 text-primary" />
               Number of Guests
             </label>
-            
             <div className="flex items-center justify-between p-4 bg-accent/50 rounded-lg">
               <div className="flex-1">
                 <p className="font-medium">No. of Adults (≥12 yrs)</p>
