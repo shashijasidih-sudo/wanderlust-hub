@@ -110,6 +110,10 @@ export interface TourData {
     answer: string;
   }[];
   customerReviews?: CustomerReview[];
+  tourOptions?: {
+    label: string;
+    adultPrice: number;
+  }[];
 }
 
 export const toursData: Record<string, TourData> = {
@@ -757,7 +761,12 @@ export const toursData: Record<string, TourData> = {
       { time: "08:30 PM", title: "Entertainment", description: "Live music and cultural performances" },
       { time: "09:30 PM", title: "Return", description: "Cruise ends at departure pier" }
     ],
-    tourTimings: ["Dinner Cruise from Iconsiam - International Food", "Dinner Cruise from Asiatique - Indian/South Asian Food", "Dinner Cruise from Terminal 21 Rama 3 - Indian Food"],
+    tourTimings: ["05:00 PM"],
+    tourOptions: [
+      { label: "Dinner Cruise from Iconsiam - International Food for Other Nationalities", adultPrice: 3150 },
+      { label: "Dinner Cruise from Asiatique - International Food for Nationalities from India, Bangladesh, Nepal, Pakistan, and Sri Lanka", adultPrice: 3530 },
+      { label: "Dinner Cruise from Terminal 21 Rama 3 - Indian Food for Indian Nationality", adultPrice: 3150 }
+    ],
     inclusions: ["Dinner cruise admission", "Buffet dinner (Indian or International)", "Live entertainment", "Welcome drink"],
     exclusions: ["Hotel transfers", "Alcoholic beverages", "Tips", "Personal expenses"],
     bookingPolicy: ["Self-transfer to pier", "Arrive 30 minutes before departure", "Smart casual dress code", "E-voucher accepted"],
