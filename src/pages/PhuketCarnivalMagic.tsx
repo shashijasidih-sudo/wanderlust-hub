@@ -1,10 +1,8 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
-import phuketIslandView from "@/assets/phuket-island-viewpoint-1.jpg";
-import phuketMayaBay from "@/assets/phuket-maya-bay-1.jpg";
-import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
-import phuketKayaks from "@/assets/phuket-kayaks-beach-1.jpg";
-import phuketSpeedboat from "@/assets/phuket-speedboat-1.jpg";
+import phuketCarnival1 from "@/assets/phuket-carnival-1.jpg";
+import phuketCarnival2 from "@/assets/phuket-carnival-2.jpg";
+import phuketCarnival3 from "@/assets/phuket-carnival-3.jpg";
 
 const PhuketCarnivalMagic = () => {
   const baseTourData = toursData["phuket-carnival-magic"];
@@ -12,15 +10,15 @@ const PhuketCarnivalMagic = () => {
   const tourData = {
     ...baseTourData,
     heroImages: [
-      { src: phuketIslandView, title: "Carnival Magic Theme Park" },
-      { src: phuketMayaBay, title: "Carnival Parade Show" },
-      { src: phuketBoatTour, title: "Kingdom of Lights" }
+      { src: phuketCarnival1, title: "Carnival Magic Theme Park" },
+      { src: phuketCarnival2, title: "Carnival Parade Show" },
+      { src: phuketCarnival3, title: "Kingdom of Lights" }
     ],
     galleryImages: [
-      { src: phuketKayaks, alt: "Carnival parade floats" },
-      { src: phuketSpeedboat, alt: "Bird Paradise zone" },
-      { src: phuketIslandView, alt: "Fun fair attractions" },
-      { src: phuketMayaBay, alt: "Evening carnival lights" }
+      { src: phuketCarnival1, alt: "Carnival parade floats" },
+      { src: phuketCarnival2, alt: "Night carnival rides" },
+      { src: phuketCarnival3, alt: "Grand carnival parade" },
+      { src: phuketCarnival1, alt: "Evening carnival lights" }
     ]
   };
   

@@ -18,21 +18,25 @@ import phuketKayaks from "@/assets/phuket-kayaks-beach-1.jpg";
 import phuketIslandView from "@/assets/phuket-island-viewpoint-1.jpg";
 import phuketMayaBay from "@/assets/phuket-maya-bay-1.jpg";
 import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
+import phuketNightMarket from "@/assets/phuket-night-market-1.jpg";
+import dolphinShow1 from "@/assets/dolphin-show-1.jpg";
+import phuketAtv from "@/assets/phuket-atv-1.jpg";
+import phuketCarnival from "@/assets/phuket-carnival-1.jpg";
 
 const activities = [
   { title: "Full Day Tour from Phuket to Phi Phi Island, Maya Bay and Khai Island by Speedboat with National Park Fee", price: 4951, image: phuketSpeedboat, slug: "phi-phi-island" },
-  { title: "From Phuket: Phi Phi Island Guided Tour by Big Boat with Normal Transfer", price: 3985, image: phuketBigBoat, slug: "phi-phi-island" },
-  { title: "Phi Phi Island Tour by Big Boat By Royal Jet Cruiser (First Class)", price: 5555, image: phuketBoatTour, slug: "phi-phi-island" },
-  { title: "Phi Phi-Maya Bay-Khai Full day Tour by Speedboat (Excluded national marine fee)", price: 4347, image: phuketMayaBay, slug: "phi-phi-island" },
-  { title: "Dolphin Bay Phuket Admission Ticket with Transfer", price: 3410, image: phuketIslandView, slug: "dolphin-bay-phuket" },
-  { title: "Phang Nga Bay (James Bond Island) Sea Canoe Tour by Long tail Boat", price: 4468, image: phuketLongtailBoat, slug: "james-bond-island" },
-  { title: "Phang Nga Bay (James Bond Island) Tour with Lunch By Long Tail Boat", price: 3985, image: phuketKayaks, slug: "james-bond-island" },
+  { title: "From Phuket: Phi Phi Island Guided Tour by Big Boat with Normal Transfer", price: 3985, image: phuketBigBoat, slug: "phi-phi-big-boat" },
+  { title: "Phi Phi Island Tour by Big Boat By Royal Jet Cruiser (First Class)", price: 5555, image: phuketBoatTour, slug: "phi-phi-royal-jet" },
+  { title: "Phi Phi-Maya Bay-Khai Full day Tour by Speedboat (Excluded national marine fee)", price: 4347, image: phuketMayaBay, slug: "phi-phi-maya-khai-speedboat" },
+  { title: "Dolphin Bay Phuket Admission Ticket with Transfer", price: 3410, image: dolphinShow1, slug: "dolphin-bay-phuket" },
+  { title: "Phang Nga Bay (James Bond Island) Sea Canoe Tour by Long tail Boat", price: 4470, image: phuketLongtailBoat, slug: "james-bond-island-sea-canoe" },
+  { title: "James Bond Island (Phang Nga Bay) Tour with Lunch By Long Tail Boat", price: 3985, image: phuketKayaks, slug: "james-bond-island" },
   { title: "Phuket City Tour and Tiger Experience: Tiger Only", price: 4589, image: phuketIslandView, slug: "selfie-tigers" },
-  { title: "Phuket City Tour: Sightseeing and Night Market Everyday", price: 2053, image: phuketMayaBay, slug: "phuket-city-night-market" },
-  { title: "Phuket City Tour and Tiger Experience: Tiger + ATV (30 Mins)", price: 5434, image: phuketBoatTour, slug: "selfie-tigers" },
+  { title: "Phuket City Tour: Sightseeing and Night Market Everyday", price: 2053, image: phuketNightMarket, slug: "phuket-city-night-market" },
+  { title: "Phuket City Tour and Tiger Experience: Tiger + ATV (30 Mins)", price: 5435, image: phuketAtv, slug: "selfie-tigers-atv" },
   { title: "5 km Rafting Adventure + Monkey Caves +ATV Ride + Elephant Trekking + Flying Fox + Lunch", price: 7245, image: phuketLongtailBoat, slug: "elephant-safari" },
   { title: "Phuket Simon Cabaret Show Ticket with Join Roundtrip Transfer", price: 2268, image: phuketSpeedboat, slug: "phuket-simon-cabaret" },
-  { title: "Phuket Carnival Magic Admission Ticket with Hotel Transfer", price: 6426, image: phuketIslandView, slug: "phuket-carnival-magic" },
+  { title: "Phuket Carnival Magic Admission Ticket with Hotel Transfer", price: 6426, image: phuketCarnival, slug: "phuket-carnival-magic" },
   { title: "Muslim-Friendly Phuket Tour: A Halal Travel Experience", price: 8820, image: phuketBoatTour, slug: "phuket-muslim-friendly-tour" },
 ];
 
@@ -64,6 +68,27 @@ const Phuket = () => {
   const paginatedActivities = filteredActivities.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
+  );
+
+  const PaginationControls = () => (
+    totalPages > 1 ? (
+      <div className="flex items-center justify-center gap-2">
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          <Button
+            key={page}
+            variant={currentPage === page ? 'default' : 'outline'}
+            onClick={() => setCurrentPage(page)}
+          >
+            {page}
+          </Button>
+        ))}
+        {currentPage < totalPages && (
+          <Button variant="outline" onClick={() => setCurrentPage(currentPage + 1)}>
+            Next →
+          </Button>
+        )}
+      </div>
+    ) : null
   );
 
   return (
@@ -120,6 +145,11 @@ const Phuket = () => {
           maxPrice={8500}
           categories={categories}
         />
+
+        {/* Top Pagination */}
+        <div className="mb-6">
+          <PaginationControls />
+        </div>
 
         <div className="flex gap-8">
           {/* Desktop Sidebar - Hidden on mobile */}
@@ -184,24 +214,10 @@ const Phuket = () => {
               ))}
             </div>
 
-            {totalPages > 1 && (
-              <div className="flex items-center justify-center gap-2 mt-8">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <Button
-                    key={page}
-                    variant={currentPage === page ? 'default' : 'outline'}
-                    onClick={() => setCurrentPage(page)}
-                  >
-                    {page}
-                  </Button>
-                ))}
-                {currentPage < totalPages && (
-                  <Button variant="outline" onClick={() => setCurrentPage(currentPage + 1)}>
-                    Next →
-                  </Button>
-                )}
-              </div>
-            )}
+            {/* Bottom Pagination */}
+            <div className="mt-8">
+              <PaginationControls />
+            </div>
           </main>
         </div>
       </div>

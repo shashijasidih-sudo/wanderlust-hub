@@ -1089,14 +1089,14 @@ export const toursData: Record<string, TourData> = {
       }
     ]
   },
-  "james-bond-island": {
-    id: "james-bond-island",
-    title: "From Phuket/Khao Lak: James Bond Island Longtail Boat Tour",
+  "james-bond-island-sea-canoe": {
+    id: "james-bond-island-sea-canoe",
+    title: "Phang Nga Bay (James Bond Island) Sea Canoe Tour by Long tail Boat",
     shortDescription: "Explore the iconic James Bond Island and Phang Nga Bay's stunning limestone karsts. Enjoy canoeing through sea caves and visit a floating Muslim village.",
     location: "Phang Nga Bay, Thailand",
     city: "phuket",
-    basePrice: 4000,
-    childPrice: 3900,
+    basePrice: 4470,
+    childPrice: 4230,
     duration: "Full Day",
     rating: 4.6,
     reviews: 2156,
@@ -1124,7 +1124,7 @@ export const toursData: Record<string, TourData> = {
       { time: "", title: "Waterfall", description: "Indulge in swimming and relaxation at a refreshing waterfall." },
       { time: "05:00 PM", title: "Return", description: "We will safely transport you back to your hotel, concluding an unforgettable day of exploration and discovery." }
     ],
-    tourTimings: [],
+    tourTimings: ["08:00 AM"],
     inclusions: ["Hotel round-trip transfer", "Professional tour guide", "Lunch", "Accident Insurance", "Life Jacket", "Boat fee", "Entry/Admission - James Bond Island", "Entry/Admission - Waterfall", "Entry/Admission - Wat Suwan Kuha (Cave Temple)"],
     exclusions: ["Exclude National Park Fee", "Any personal expenses", "Accommodation", "Gratuities"],
     bookingPolicy: ["Confirmation will be received within 24 hours of booking", "Please provide hotel name and address for pickup", "Bring swimwear, sunscreen, towel, and camera", "Check-in closes 30 minutes before departure", "Booking reference number required for check-in", "Please arrive at pickup point 10 minutes before departure"],
@@ -1139,6 +1139,47 @@ export const toursData: Record<string, TourData> = {
         question: "What should I bring?",
         answer: "Bring swimwear, sunscreen, hat, sunglasses, camera, and some cash for souvenirs and National Park fees."
       }
+    ]
+  },
+  "james-bond-island": {
+    id: "james-bond-island",
+    title: "James Bond Island (Phang Nga Bay) Tour with Lunch By Long Tail Boat",
+    shortDescription: "Explore the iconic James Bond Island and Phang Nga Bay with a traditional long-tail boat. Enjoy canoeing and visit a floating Muslim village with lunch included.",
+    location: "Phang Nga Bay, Thailand",
+    city: "phuket",
+    basePrice: 3985,
+    childPrice: 3900,
+    duration: "Full Day",
+    rating: 4.6,
+    reviews: 2156,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Visit the famous James Bond Island",
+      "Longtail boat through Phang Nga Bay",
+      "Visit Koh Panyi floating village",
+      "Enjoy Thai lunch with sea views",
+      "Explore mangrove forests"
+    ],
+    description: {
+      overview: "Discover the breathtaking beauty of Phang Nga Bay on this full-day long-tail boat tour with lunch.",
+      whatToExpect: "Cruise through Phang Nga Bay to see spectacular limestone formations. Visit James Bond Island, explore sea caves by longtail boat and visit the unique floating village of Koh Panyee. Lunch is included at the floating village."
+    },
+    itinerary: [
+      { time: "08:30 AM", title: "Hotel Pickup", description: "Pickup from your Phuket hotel" },
+      { time: "09:30 AM", title: "Phang Nga Bay", description: "Arrive at the pier and board long-tail boat" },
+      { time: "10:30 AM", title: "James Bond Island", description: "Visit the famous filming location" },
+      { time: "12:00 PM", title: "Koh Panyee", description: "Lunch at the floating Muslim village" },
+      { time: "03:00 PM", title: "Return", description: "Return cruise and hotel drop-off" }
+    ],
+    tourTimings: ["08:30 AM"],
+    inclusions: ["Hotel Transfer", "Long-tail Boat", "Lunch", "English Guide", "National Park Fee"],
+    exclusions: ["Personal Expenses", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before"],
+    childPolicy: ["Child rate for ages 4-11"],
+    faqs: [
+      { question: "Is canoeing safe for non-swimmers?", answer: "Yes, life jackets are provided and guides paddle the canoes." }
     ]
   },
   "phi-phi-island": {
@@ -1234,7 +1275,7 @@ export const toursData: Record<string, TourData> = {
     location: "Phuket, Thailand",
     city: "phuket",
     basePrice: 3985,
-    childPrice: 3743,
+    childPrice: 3745,
     duration: "Full Day",
     rating: 4.7,
     reviews: 1856,
@@ -1259,19 +1300,20 @@ export const toursData: Record<string, TourData> = {
     ],
     description: {
       overview: "Join this comfortable big boat tour to the world-famous Phi Phi Islands from Phuket. Perfect for those who prefer a more relaxed cruise experience.",
-      whatToExpect: "Enjoy a scenic cruise to the Phi Phi Islands on a spacious big boat. Visit the iconic Maya Bay, explore Phi Phi Don Island, and snorkel in crystal-clear waters. Includes hotel transfers and delicious lunch."
+      whatToExpect: "Stop At: Rassada Pier, Ratsada, Mueang Phuket District, Phuket 83000, Thailand\n07:00 AM - 07:20 AM - Meet at Rassada Pier\nDuration: 30 minutes\nPass By: Ko Phi Phi Lee, Ko Phi Phi Lee, Krabi Province\n08:30 AM - Departure from the pier to Phi Phi Island Group, complimentary coffee, tea, and dessert service.\n09:50 AM - Arrive at Phi Phi Don (direct to Tonsai pier) Package one-day tour.\n10:00 AM - HIGHLIGHT OF THE TOUR\nNov. - Apr. (High Season) Arrival at Phi Phi Ley Island area. Cruise passing by Phi Phi Ley Island for Sightseeing on board such as Viking Cave, Pi-Le Cove, Loh Samah Bay, and Maya Bay. **depending on sea & weather conditions.\n\n11:15 AM - Arrival at Long Beach, Phi Phi Don Island.\n11:30 AM - Swimming at Long Beach.\n12.30 PM - Buffet Lunch at Long Beach. After lunch, relax at leisure.\n02:15 PM - Time to leave the island. Transfer from the beach to Cruiser.\n02:30 PM - Return cruise to Phuket.\n16:30 PM - Arrival at Phuket Rassada Pier\nStop At: Ko Phi Phi Don, Ko Phi Phi Don, Krabi Province\nMay. - Oct. (Low season) Departs for Phi Phi Island by Cruise. Refreshments are served on board. (Please stay on board while shortstop at Phi Phi Tonsai Pier)\n\n11:15 AM - Arrival at Laemtong Beach, Phi Phi Don Island\n11:30 AM - Swimming at Laemtong Beach.\n12:30 PM - Buffet Lunch at Laemtong Beach.\n01:15 PM - Transfer from The beach to Cruiser.\n01.30 PM - Departs from Laemtong. (Please stay on board while shortstop at Tonsai Pier)\n02.30 PM - Departs from Phi Phi Tonsai Pier. Sightseeing on board at Phi Phi Ley Island. Return cruise to Phuket\n04.30 PM - Arrival at Phuket Pier National Park fee @400 THB per pax.\nDuration: 3 hours\nPass By: Viking Cave, Ko Phi Phi Don Thailand\nSightseeing on board around Phi Phi Lay Islands Please note Nov. - Apr. (High Season) Only\nPass By: Loh Samah Bay, Ko Phi Phi Lee Thailand\nSightseeing on board around Phi Phi Lay Islands Please note Nov. - Apr. (High Season) Only\nPass By: Maya Bay, Ko Phi Phi Lee Thailand\nSightseeing on board around Phi Phi Lay Islands Please note Nov. - Apr. (High Season) Only"
     },
     itinerary: [
-      { time: "07:30 AM", title: "Hotel Pickup", description: "Pickup from your Phuket hotel" },
-      { time: "09:00 AM", title: "Departure", description: "Board the big boat and depart for Phi Phi Islands" },
-      { time: "10:30 AM", title: "Maya Bay", description: "Visit the famous Maya Bay beach" },
-      { time: "12:00 PM", title: "Lunch", description: "Enjoy lunch at Phi Phi Don Island" },
-      { time: "02:00 PM", title: "Snorkeling", description: "Snorkel at beautiful coral reefs" },
-      { time: "04:30 PM", title: "Return", description: "Return cruise to Phuket" }
+      { time: "07:00 AM", title: "Meet at Rassada Pier", description: "Meet at Rassada Pier, complimentary coffee, tea, and dessert" },
+      { time: "08:30 AM", title: "Departure", description: "Board the big boat and depart for Phi Phi Islands" },
+      { time: "10:00 AM", title: "Phi Phi Ley Sightseeing", description: "Cruise passing Viking Cave, Pi-Le Cove, Loh Samah Bay, Maya Bay (High Season)" },
+      { time: "11:15 AM", title: "Long Beach / Laemtong Beach", description: "Arrival and swimming at the beach" },
+      { time: "12:30 PM", title: "Buffet Lunch", description: "Enjoy buffet lunch at the beach" },
+      { time: "02:30 PM", title: "Return Cruise", description: "Return cruise to Phuket" },
+      { time: "04:30 PM", title: "Arrival", description: "Arrival at Phuket Rassada Pier" }
     ],
-    tourTimings: ["07:30 AM"],
+    tourTimings: ["07:00 AM"],
     inclusions: ["Hotel Transfer", "Big Boat Cruise", "Lunch", "Snorkeling Equipment", "English Guide"],
-    exclusions: ["National Park Fee", "Personal Expenses"],
+    exclusions: ["National Park Fee (THB 400/- per person)", "Personal Expenses"],
     bookingPolicy: ["Confirmation within 24 hours"],
     cancellationPolicy: ["Free cancellation up to 48 hours before"],
     childPolicy: ["Child rate for ages 4-11"],
@@ -1311,19 +1353,31 @@ export const toursData: Record<string, TourData> = {
     ],
     description: {
       overview: "Travel in luxury to the Phi Phi Islands aboard our Royal Jet Cruiser. Enjoy first-class service, premium amenities, and an unforgettable experience.",
-      whatToExpect: "Board our luxury Royal Jet Cruiser for a first-class journey to Phi Phi Islands. Enjoy premium seating, gourmet lunch, and VIP treatment throughout the day. Visit Maya Bay, snorkel at pristine reefs, and explore Phi Phi Don."
+      whatToExpect: "High Season (Mid October - Mid April)\n\n07:00 - 07:15: Pick-up from the hotel in Phuket. (Pick-up time varies depending on the hotel location) Transfer to Phuket Rassada Pier.\n8:30: Departure for Phi Phi Island by ROYAL JET CRUISER. Refreshments are served on board.\n10:30: Arrival at Long Beach, Phi Phi Don Island. Enjoy free time at leisure. Join the boat trip to snorkel beyond the shore reef, surrounded by colorful tropical fish (National Park Fee applies), or swim and sunbathe on the white long sandy shoreline.\n11:45 - 12:00: Buffet lunch starts at the restaurant by the sea. Thai, International, and Indian Cuisine are served.\n12:45: Get ready and meet up with the guide to move on to Tonsai Pier (Entrance fee 20 THB/pax applies). Spend your afternoon exploring Tonsai, the local town center of Phi Phi Don Island. Various options of shopping booths and cafes are available, as well as multiple photogenic spots.\n14:10: Meet up with the guide @ Tonsai Pier to check in for the Ferry for the return journey.\n14:30: Leaving from Phi Phi Tonsai Pier by Royal Jet Cruiser. Cruise passing by Phi Phi Ley Island for Sightseeing on board, such as Viking Cave, Pi-Le Cove, Loh Samah Bay, Maya Bay. Depending on sea & weather conditions. Return back to Phuket.\n16:45: Arrival at Phuket Rassada Pier. Transfer to the hotel in Phuket.\n\nGreen Season (Mid April - Mid October)\n\n07:00 - 07:15: Pick up from the hotel in Phuket (Pick-up time varies depending on the hotel location). Transfer to Phuket Rassada Pier.\n08:30: Departure from Phi Phi Island by Royal Jet Cruiser, a large and comfortable boat. Refreshments are served on board.\n10:20: Arrive at Phi Phi Ley Island Area. Cruise past Phi Phi Ley Island for sightseeing on board, such as Viking Cave, Pi-Le Cove, Loh Samah Bay, and Maya Bay. (Depending on sea and weather conditions)\n11:00: Arrival at Tonsai Pier, Phi Phi Don Island (Entrance fee 20 THB/pax applies). Free time at leisure for exploring Tonsai, the local town center of Phi Phi Don Island. Various options of shopping booths and cafes are available, as well as multiple photogenic spots.\n11:50: Meet up with the guide at Tonsai Pier to transfer to Laemtong Beach.\n12:30: Arrival at Laemtong Beach, Phi Phi Don Island. Enjoy free time at leisure. Join the boat trip to snorkel beyond the shore reef, surrounded by colorful tropical fish (National Park Fee applies), or swim and sunbathe on the white long sandy shoreline.\n13:30: Buffet lunch starts at the restaurant by the sea. Thai, international, and Indian cuisine are served.\n14:30: Time to leave the island. Transfer from the beach to Royal Jet Cruiser.\n16:45: Arrival at Phuket Rassada Pier. Shared van transfer to the hotel\n\nRemark:\nThe program may be changed depending on the sea, weather, and operational conditions.\nTour price does NOT INCLUDE the National Park Fee. Customers must pay a National Park Fee of THB 400/adult and THB 200/child in cash at the local venue.\nThe tour price does NOT INCLUDE an Entrance fee of 20 THB/pax.\nSome parts of our tour programs are NOT SUITABLE for pregnant ladies, seniors, and people with health problems."
     },
     itinerary: [
-      { time: "07:00 AM", title: "VIP Pickup", description: "Private transfer from your hotel" },
-      { time: "08:30 AM", title: "Board Cruiser", description: "Welcome aboard with refreshments" },
-      { time: "10:30 AM", title: "Maya Bay", description: "Exclusive Maya Bay experience" },
-      { time: "12:30 PM", title: "Gourmet Lunch", description: "Premium buffet lunch" },
-      { time: "02:00 PM", title: "Snorkeling", description: "Best snorkeling locations" },
-      { time: "05:00 PM", title: "Return", description: "Scenic return to Phuket" }
+      { time: "07:00 AM", title: "Hotel Pickup", description: "Pick-up from your Phuket hotel, transfer to Rassada Pier" },
+      { time: "08:30 AM", title: "Departure", description: "Departure by Royal Jet Cruiser with refreshments" },
+      { time: "10:30 AM", title: "Long Beach / Phi Phi Ley", description: "Arrive at beach or Phi Phi Ley sightseeing (season dependent)" },
+      { time: "12:00 PM", title: "Buffet Lunch", description: "Thai, International and Indian Cuisine at seaside restaurant" },
+      { time: "12:45 PM", title: "Tonsai Pier", description: "Explore Tonsai town, shopping and cafes" },
+      { time: "14:30 PM", title: "Return Cruise", description: "Cruise passing Phi Phi Ley Island for sightseeing" },
+      { time: "16:45 PM", title: "Arrival", description: "Arrive at Phuket Rassada Pier and hotel transfer" }
     ],
     tourTimings: ["07:00 AM"],
-    inclusions: ["VIP Transfer", "First Class Seat", "Gourmet Lunch", "Premium Equipment", "Personal Guide"],
-    exclusions: ["National Park Fee"],
+    inclusions: [
+      "Visitors who wish to snorkel at Maya Bay must pay a national park fee of 400 THB for adults and 200 THB for children.",
+      "Personal expenses and gratuities are not included",
+      "Children taller than 120 cm will be charged according to the adult rate.",
+      "Children under the height of 119 cm and below will not be charged."
+    ],
+    exclusions: [
+      "Free entrance for children below 100cm",
+      "Child ticket is only applicable for children 100-140cm (must be between 2-12 years old)",
+      "Children aged 0-2 can join the tour for free provided they do not occupy an additional seat",
+      "Children aged 3-8 would be charged 75% of tours rate.",
+      "Children over 8 would be considered as adult"
+    ],
     bookingPolicy: ["Confirmation within 24 hours"],
     cancellationPolicy: ["Free cancellation up to 48 hours before"],
     childPolicy: ["Child rate for ages 4-11"],
@@ -1338,7 +1392,7 @@ export const toursData: Record<string, TourData> = {
     location: "Phuket, Thailand",
     city: "phuket",
     basePrice: 4347,
-    childPrice: 3743,
+    childPrice: 3745,
     duration: "Full Day",
     rating: 4.6,
     reviews: 2234,
@@ -1376,12 +1430,73 @@ export const toursData: Record<string, TourData> = {
     ],
     tourTimings: ["07:30 AM"],
     inclusions: ["Hotel Transfer", "Speedboat", "Lunch", "Snorkeling Gear", "Guide"],
-    exclusions: ["National Marine Park Fee (฿400)"],
+    exclusions: ["National Park Fee (THB 400/- per person)", "Personal Expenses"],
     bookingPolicy: ["Confirmation within 24 hours"],
     cancellationPolicy: ["Free cancellation up to 48 hours before"],
     childPolicy: ["Child rate for ages 4-11"],
     faqs: [
       { question: "Why is national park fee excluded?", answer: "The fee must be paid in cash at the pier on the day of the tour." }
+    ]
+  },
+  // Selfie with Tigers + ATV
+  "selfie-tigers-atv": {
+    id: "selfie-tigers-atv",
+    title: "Phuket City Tour and Tiger Experience: Tiger + ATV (30 Mins)",
+    shortDescription: "Experience a thrilling ATV ride and get up close with majestic tigers on this exciting Phuket city tour.",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    basePrice: 5435,
+    childPrice: 4950,
+    duration: "Full Day",
+    rating: 4.7,
+    reviews: 623,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "30-minute ATV off-road adventure",
+      "Tiger selfie experience",
+      "Big Buddha viewpoint",
+      "Chalong Temple visit",
+      "Elephant photo opportunity",
+      "Cashew Factory and Honey Farm"
+    ],
+    description: {
+      overview: "Experience a thrilling ATV ride combined with an unforgettable tiger encounter on this action-packed Phuket city tour.",
+      whatToExpect: "Experience a thrilling off-the-road experience by going on a 30 minutes long ATV Ride.\nMeet the adorable giant cats and have a fun time with them, and get a chance to click interesting pictures with them!\nMake amazing memories with the elephants and do not forget to capture these memories with your camera.\nOne of the must-see locations in Phuket is the Big Buddha.\nDo not miss the jaw-dropping panoramic view from the Big Buddha Viewpoint.\nWorship and pay respect while visiting the Chalong Temple.\nThe Perfect spot for the Cashew nut lover is the Cashew Nut Factory in Phuket.\nA visit to the honey farm will give insights into how honey is created.\nCatch a coffee break and relax!\nWant to bring back some souvenirs? The next stop is the perfect place for you to get them"
+    },
+    itinerary: [
+      { time: "09:00 AM", title: "Hotel Pickup", description: "Pickup from your hotel" },
+      { time: "09:30 AM", title: "ATV Adventure", description: "30 minutes ATV off-road ride through jungle trails" },
+      { time: "10:30 AM", title: "Tiger Experience", description: "Meet and take selfies with tigers" },
+      { time: "11:30 AM", title: "Elephant Photos", description: "Photo opportunity with elephants" },
+      { time: "12:00 PM", title: "Big Buddha", description: "Visit Big Buddha and viewpoint" },
+      { time: "01:00 PM", title: "Chalong Temple", description: "Visit Chalong Temple" },
+      { time: "02:00 PM", title: "Cashew & Honey Farm", description: "Visit Cashew Nut Factory and Honey Farm" },
+      { time: "03:00 PM", title: "Return", description: "Drop-off at hotel with souvenir stop" }
+    ],
+    tourTimings: ["07:00 AM", "10:00 AM", "01:00 PM"],
+    inclusions: [
+      "Visit Tiger",
+      "ATV - 30 mins",
+      "Round Trip Transfer",
+      "Insurance",
+      "English Speaking Guide",
+      "Soft Drink",
+      "Big Buddha",
+      "Big Buddha Viewpoint",
+      "Chalong Temple",
+      "Cashew Factory",
+      "Honey Farm",
+      "Picture with Elephant",
+      "A Visit to the Souvenir Shop"
+    ],
+    exclusions: ["Personal Expenses", "Tips", "Meals"],
+    bookingPolicy: ["Confirmation within 24 hours"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before"],
+    childPolicy: ["Child rate for ages 4-11"],
+    faqs: [
+      { question: "Is ATV riding safe?", answer: "Yes, experienced guides lead the ride and safety equipment is provided." },
+      { question: "Is it safe with tigers?", answer: "Yes, experienced handlers supervise all interactions." }
     ]
   },
   // New Phuket Tours
@@ -1426,7 +1541,7 @@ export const toursData: Record<string, TourData> = {
       { time: "12:00 PM", title: "Meet & Greet", description: "Photo opportunity with dolphins and seals" },
       { time: "01:00 PM", title: "Return Transfer", description: "Drop-off back at your hotel" }
     ],
-    tourTimings: ["10:00 AM Show", "02:00 PM Show"],
+    tourTimings: ["11:00 AM", "02:00 PM", "05:00 PM"],
     inclusions: ["Round-trip hotel transfer", "Admission ticket", "All shows", "English-speaking guide"],
     exclusions: ["Personal expenses", "Food and beverages", "Swimming with dolphins (extra cost)", "Tips"],
     bookingPolicy: ["Confirmation within 24 hours", "Children must be accompanied by adults"],
@@ -1529,6 +1644,10 @@ export const toursData: Record<string, TourData> = {
       { time: "09:00 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
     ],
     tourTimings: ["06:00 PM Show", "07:45 PM Show", "09:30 PM Show"],
+    tourOptions: [
+      { label: "Regular Ticket with Roundtrip Transfer from Patong/Kalim", adultPrice: 2268 },
+      { label: "Regular Ticket with Roundtrip Transfer from Indo Chine/Kalima Resort/Karon/Traitrang/Thavorn Palm Beach", adultPrice: 2550 }
+    ],
     inclusions: ["Simon Cabaret admission", "Round-trip transfer", "Reserved seating"],
     exclusions: ["Photo session with performers (extra cost)", "Food and beverages", "Tips"],
     bookingPolicy: ["Confirmation within 24 hours", "Children of all ages welcome"],
@@ -1579,7 +1698,11 @@ export const toursData: Record<string, TourData> = {
       { time: "08:30 PM", title: "Free Time", description: "Continue exploring and shopping" },
       { time: "09:30 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
     ],
-    tourTimings: ["04:00 PM – 09:30 PM (Wed-Sun)"],
+    tourTimings: ["05:30 PM"],
+    tourOptions: [
+      { label: "Park Admission Ticket Only + Transfer from Phuket Hotel", adultPrice: 6426 },
+      { label: "Park Admission Ticket + Buffet Dinner + Transfer from Phuket Hotel", adultPrice: 7185 }
+    ],
     inclusions: ["Round-trip transfer", "Carnival admission", "Access to all themed zones", "Carnival parade show"],
     exclusions: ["Food and beverages", "Games and activities", "Shopping expenses", "Photo packages"],
     bookingPolicy: ["Confirmation within 24 hours", "Operates Wednesday to Sunday", "Arrive early to explore all zones"],
