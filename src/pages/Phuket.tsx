@@ -22,6 +22,7 @@ import phuketNightMarket from "@/assets/phuket-night-market-1.jpg";
 import dolphinShow1 from "@/assets/dolphin-show-1.jpg";
 import phuketAtv from "@/assets/phuket-atv-1.jpg";
 import phuketCarnival from "@/assets/phuket-carnival-1.jpg";
+import phuketMuslimWoman from "@/assets/phuket-muslim-woman-hijab.jpg";
 
 const activities = [
   { title: "Full Day Tour from Phuket to Phi Phi Island, Maya Bay and Khai Island by Speedboat with National Park Fee", price: 4951, image: phuketSpeedboat, slug: "phi-phi-island" },
@@ -37,7 +38,7 @@ const activities = [
   { title: "5 km Rafting Adventure + Monkey Caves +ATV Ride + Elephant Trekking + Flying Fox + Lunch", price: 7245, image: phuketLongtailBoat, slug: "elephant-safari" },
   { title: "Phuket Simon Cabaret Show Ticket with Join Roundtrip Transfer", price: 2268, image: phuketSpeedboat, slug: "phuket-simon-cabaret" },
   { title: "Phuket Carnival Magic Admission Ticket with Hotel Transfer", price: 6426, image: phuketCarnival, slug: "phuket-carnival-magic" },
-  { title: "Muslim-Friendly Phuket Tour: A Halal Travel Experience", price: 8820, image: phuketBoatTour, slug: "phuket-muslim-friendly-tour" },
+  { title: "Muslim-Friendly Phuket Tour: A Halal Travel Experience", price: 8820, image: phuketMuslimWoman, slug: "phuket-muslim-friendly-tour" },
 ];
 
 const categories = [

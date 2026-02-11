@@ -1,10 +1,9 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
-import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
-import phuketIslandView from "@/assets/phuket-island-viewpoint-1.jpg";
-import phuketMayaBay from "@/assets/phuket-maya-bay-1.jpg";
-import phuketLongtailBoat from "@/assets/phuket-longtail-boat-1.jpg";
-import phuketKayaks from "@/assets/phuket-kayaks-beach-1.jpg";
+import phuketMuslimWoman from "@/assets/phuket-muslim-woman-hijab.jpg";
+import phuketWaterfall from "@/assets/phuket-bang-pae-waterfall.jpg";
+import phuketMosque from "@/assets/phuket-mosque-bangTao.jpg";
+import phuketPlaneBeach from "@/assets/phuket-mai-khao-beach-plane.jpg";
 
 const PhuketMuslimFriendlyTour = () => {
   const baseTourData = toursData["phuket-muslim-friendly-tour"];
@@ -12,15 +11,15 @@ const PhuketMuslimFriendlyTour = () => {
   const tourData = {
     ...baseTourData,
     heroImages: [
-      { src: phuketBoatTour, title: "Muslim-Friendly Phuket Tour" },
-      { src: phuketIslandView, title: "Masjid Mukaram Mosque" },
-      { src: phuketMayaBay, title: "Phuket Cultural Sites" }
+      { src: phuketMuslimWoman, title: "Muslim-Friendly Phuket Tour" },
+      { src: phuketWaterfall, title: "Bang Pae Waterfall" },
+      { src: phuketMosque, title: "Bang Tao Mukaram Mosque" }
     ],
     galleryImages: [
-      { src: phuketLongtailBoat, alt: "Halal restaurant" },
-      { src: phuketKayaks, alt: "Mosque visit" },
-      { src: phuketBoatTour, alt: "Phuket attractions" },
-      { src: phuketIslandView, alt: "Cultural experience" }
+      { src: phuketMuslimWoman, alt: "Muslim traveler in Phuket" },
+      { src: phuketWaterfall, alt: "Bang Pae Waterfall" },
+      { src: phuketMosque, alt: "Bang Tao Mukaram Mosque" },
+      { src: phuketPlaneBeach, alt: "Mai Khao Beach with airplane" }
     ]
   };
   
