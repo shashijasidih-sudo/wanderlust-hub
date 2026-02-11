@@ -1716,56 +1716,91 @@ export const toursData: Record<string, TourData> = {
   "phuket-muslim-friendly-tour": {
     id: "phuket-muslim-friendly-tour",
     title: "Muslim-Friendly Phuket Tour: A Halal Travel Experience",
-    shortDescription: "Comprehensive Muslim-friendly tour with halal dining, prayer accommodations, and visits to important mosques and attractions.",
+    shortDescription: "Immersive Muslim-friendly tour with private guide, halal dining, mosque visits, and stunning natural attractions in Phuket",
     location: "Phuket, Thailand",
-    city: "phuket",
+    city: "Phuket",
     basePrice: 8820,
-    childPrice: 0,
-    singleAdultPrice: 11100,
-    duration: "8 Hours",
-    rating: 4.9,
-    reviews: 187,
-    heroImages: [
-      { src: bangkokSkywalk1, title: "Muslim-Friendly Phuket Tour" },
-      { src: bangkokSkywalk2, title: "Masjid Mukaram Mosque" },
-      { src: bangkokSkywalk3, title: "Phuket Cultural Sites" }
-    ],
-    galleryImages: [
-      { src: phiPhi3, alt: "Historic mosque visit" },
-      { src: phiPhi4, alt: "Phuket Old Town" },
-      { src: phiPhi5, alt: "Halal dining experience" },
-      { src: phiPhi6, alt: "Scenic viewpoints" }
-    ],
-    highlights: [
-      "Halal-certified dining experiences",
-      "Prayer time accommodations",
-      "Visit important mosques",
-      "Muslim-friendly tour guide"
-    ],
+    childPrice: 8820,
+    minAdults: 2,
+    twoAdultPrice: 11100,
+    duration: "8 hours",
+    rating: 4.8,
+    reviews: 245,
+    tourTimings: ["09:00 a.m."],
+    highlights: ["Bang Pae Waterfall", "Mai Khao Beach with airplanes", "Halal dining", "Bang Tao Mukaram Mosque", "Private guide"],
     description: {
-      overview: "Explore Phuket with confidence on this specially designed Muslim-friendly tour. Enjoy halal meals, prayer accommodations, visits to important mosques, and modest dress-friendly locations with a knowledgeable Muslim guide.",
-      whatToExpect: "Experience the best of Phuket while adhering to Islamic practices. Visit Masjid Mukaram, explore cultural sites, enjoy halal Thai cuisine, and shop at Muslim-friendly stores, all with flexible prayer breaks throughout the day."
+      overview: "Experience a comprehensive Muslim-friendly tour designed for travelers seeking a respectful and spiritually enriching exploration of Phuket.",
+      whatToExpect: "Visit natural wonders like Bang Pae Waterfall and Mai Khao Beach, enjoy certified halal meals, and experience peaceful moments at an historic mosque with a knowledgeable Muslim guide."
     },
+    heroImages: [],
+    galleryImages: [],
     itinerary: [
-      { time: "08:00 AM", title: "Hotel Pickup", description: "Start your Muslim-friendly Phuket exploration" },
-      { time: "08:30 AM", title: "Masjid Mukaram", description: "Visit Phuket's oldest mosque" },
-      { time: "09:30 AM", title: "Phuket Old Town", description: "Explore Sino-Portuguese architecture" },
-      { time: "11:00 AM", title: "Viewpoint", description: "Panoramic views of Phuket" },
-      { time: "12:00 PM", title: "Halal Lunch", description: "Authentic Thai halal cuisine" },
-      { time: "01:30 PM", title: "Big Buddha", description: "Visit the iconic landmark" },
-      { time: "03:00 PM", title: "Wat Chalong", description: "Explore famous temple (external viewing)" },
-      { time: "04:00 PM", title: "Halal Shopping", description: "Muslim-friendly souvenir shops" },
-      { time: "05:00 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+      { time: "09:00 AM", title: "Hotel Pickup", description: "Private pickup from your hotel" },
+      { time: "10:00 AM", title: "Bang Pae Waterfall", description: "Visit Phuket's largest waterfall with hiking and swimming opportunities" },
+      { time: "12:00 PM", title: "Mai Khao Beach", description: "Experience airplanes landing overhead at this thrilling beach" },
+      { time: "01:00 PM", title: "Halal Lunch", description: "Authentic Thai-Muslim meal at certified halal restaurant" },
+      { time: "02:30 PM", title: "Bang Tao Mukaram Mosque", description: "Visit this beautiful historic mosque for prayer and reflection" },
+      { time: "04:00 PM", title: "Hotel Dropoff", description: "Return to your hotel" }
     ],
-    tourTimings: ["08:00 AM – 05:00 PM"],
-    inclusions: ["Private air-conditioned vehicle", "Muslim guide (English/Arabic)", "Halal lunch and refreshments", "All entrance fees", "Hotel transfers"],
-    exclusions: ["Personal shopping", "Optional activities", "Travel insurance", "Tips"],
-    bookingPolicy: ["Confirmation within 24 hours", "Prayer breaks provided", "All food is halal-certified", "Customizable for prayer times"],
-    cancellationPolicy: ["Free cancellation up to 48 hours before", "50% refund within 48 hours"],
-    childPolicy: ["Children age 3-11 years at discounted rate", "Children under 3 are free", "Family-friendly tour"],
+    inclusions: [
+      "Private Muslim-friendly guide",
+      "Hotel pick-up and drop-off",
+      "Entrance fees to all locations",
+      "Halal lunch at a certified restaurant",
+      "Prayer stop at Bang Tao Mukaram Mosque",
+      "Comfortable, private transportation"
+    ],
+    exclusions: [
+      "Personal expenses and additional purchases",
+      "Optional snacks & drinks at the waterfall or beach",
+      "Gratuities for guide (Optional)"
+    ],
+    bookingPolicy: ["Booking confirmation will be provided via email", "Minimum 2 adults required for this tour"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before tour date", "Full refund if cancelled within deadline"],
+    childPolicy: [
+      "Infants of age 0-3 will not be charged on this tour",
+      "Child rate will be same as adult"
+    ],
     faqs: [
-      { question: "Are prayer mats provided?", answer: "Yes, prayer mats are provided if needed." },
-      { question: "Can the itinerary be adjusted for prayer times?", answer: "Yes, the tour is flexible and can be customized to accommodate prayer times." }
+      {
+        question: "Is the food at the halal restaurant authentic?",
+        answer: "Yes, we partner with certified halal restaurants that serve authentic Thai-Muslim cuisine prepared according to halal standards."
+      },
+      {
+        question: "Can I pray at the mosque?",
+        answer: "Absolutely! Bang Tao Mukaram Mosque welcomes visitors for prayer. Prayer times will be scheduled based on tour timing."
+      },
+      {
+        question: "Is swimming at the waterfall safe?",
+        answer: "Yes, Bang Pae Waterfall has designated safe swimming areas. The waterfall is family-friendly and suitable for all ages."
+      },
+      {
+        question: "What should I wear for mosque visits?",
+        answer: "We recommend modest clothing. Women may bring a hijab if preferred. The mosque provides prayer facilities and space."
+      }
+    ],
+    customerReviews: [
+      {
+        name: "Fatima M.",
+        date: "2 weeks ago",
+        rating: 5,
+        comment: "Perfect tour for Muslim travelers! The guide was knowledgeable and respectful of our faith.",
+        helpful: 48
+      },
+      {
+        name: "Ahmed K.",
+        date: "1 month ago",
+        rating: 5,
+        comment: "The halal lunch was delicious and the mosque visit was very meaningful. Highly recommended!",
+        helpful: 35
+      },
+      {
+        name: "Aisha N.",
+        date: "1 month ago",
+        rating: 4.5,
+        comment: "Great experience with family. The waterfall and airplane beach were amazing highlights.",
+        helpful: 28
+      }
     ]
   },
   // Pattaya Tours
