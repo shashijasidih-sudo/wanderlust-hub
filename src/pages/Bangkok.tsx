@@ -14,15 +14,18 @@ import SearchInput from "@/components/SearchInput";
 // Import local assets
 import bangkokSkywalkHero from "@/assets/bangkok-skywalk-hero.jpg";
 import massageHero from "@/assets/massage-coupon-hero.jpg";
+import floatingMarket1 from "@/assets/floating-market-1.jpg";
+import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
+import ayutthayaSunset1 from "@/assets/ayutthaya-sunset-1.jpg";
 
 const activities = [
-  // Temple & City Tours - Thai temples and city images
-  { title: "Bangkok's Iconic Three Temple Tour with Grand Palace and Canal Tour", price: 10845, image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop", slug: "bangkok-three-temples" },
-  { title: "Bangkok's Famous Three Temple Wat Arun, Wat Pho, and Wat Traimit Private City and Cultural Tour", price: 4915, image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=800&auto=format&fit=crop", slug: "bangkok-wat-arun-pho-traimit" },
+  // Temple & City Tours
+  { title: "Bangkok's Iconic Three Temple Tour with Grand Palace and Canal Tour", price: 10845, image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop", slug: "bangkok-wat-arun-pho-traimit" },
+  { title: "Bangkok's Famous Three Temple Wat Arun, Wat Pho, and Wat Traimit Private City and Cultural Tour", price: 4915, image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=800&auto=format&fit=crop", slug: "bangkok-three-temples" },
   { title: "Bangkok City Tour by Boat from Meeting Point", price: 3570, image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop", slug: "bangkok-city-boat-tour" },
   { title: "Bangkok City and Temple Tours with Gems Gallery", price: 1960, image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&auto=format&fit=crop", slug: "bangkok-city-gems-gallery" },
   { title: "Double World Heritage Bangkok City Tour: Sunset at Wat Arun and Chinatown Street Food Experience (Join-In)", price: 5044, image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=800&auto=format&fit=crop", slug: "bangkok-wat-arun-chinatown" },
-  { title: "Bangkok City and Temple Tour with Golden Buddha, Marble Temple, Mini Reclining Buddha, and Gems Gallery", price: 3642, image: "https://images.unsplash.com/photo-1512553635817-c6ae2c07847c?w=800&auto=format&fit=crop", slug: "bangkok-golden-marble-buddha" },
+  { title: "Bangkok City and Temple Tour with Golden Buddha, Marble Temple, Mini Reclining Buddha, and Gems Gallery", price: 3642, image: bangkokTemple1, slug: "bangkok-golden-marble-buddha" },
   { title: "Ayutthaya Temple Join Tour from Bangkok by Road with Transfer", price: 5922, image: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?w=800&auto=format&fit=crop", slug: "ayutthaya-temple-tour" },
   { title: "The Best of Bangkok: Royal Grand Palace, Emerald Buddha and Reclining Buddha", price: 2646, image: "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=800&auto=format&fit=crop", slug: "bangkok-grand-palace-emerald" },
   
@@ -30,9 +33,9 @@ const activities = [
   { title: "Baiyoke Sky Restaurant Admission Ticket", price: 1478, image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop", slug: "baiyoke-buffet" },
   { title: "Bangkok Sea Life Aquarium and Madame Tussauds Admission Ticket", price: 4215, image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop", slug: "sea-life-madame-tussauds" },
   
-  // Cruise Activities - Ship/Big Cruise images
+  // Cruise Activities
   { title: "Viva Alangka Dinner Cruise from Asiatique with Transfer", price: 4915, image: "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&auto=format&fit=crop", slug: "viva-alangka-cruise" },
-  { title: "Ayutthaya Glittering Tours from Bangkok with Sunset Cruise Experience with transfers", price: 5245, image: "https://images.unsplash.com/photo-1559625481-5c0ac7e4c8b5?w=800&auto=format&fit=crop", slug: "ayutthaya-sunset-cruise" },
+  { title: "Ayutthaya Glittering Tours from Bangkok with Sunset Cruise Experience with transfers", price: 5245, image: ayutthayaSunset1, slug: "ayutthaya-sunset-cruise" },
   { title: "Chao Phraya Princess Dinner Cruise in Bangkok with Private Transfer", price: 5545, image: "https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=800&auto=format&fit=crop", slug: "chao-phraya-princess-private" },
   { title: "Chao Phraya Princess Dinner Cruise: Valentine's Day Celebration", price: 3150, image: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=800&auto=format&fit=crop", slug: "chao-phraya-princess-valentine" },
   { title: "Chaophraya Princess River Dinner Cruise Over Chaophraya River with Join Transfer", price: 4410, image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&auto=format&fit=crop", slug: "chao-phraya-princess-join" },
@@ -42,8 +45,8 @@ const activities = [
   { title: "Health Land Gift Voucher: Traditional Thai Massage (120 Min)", price: 2775, image: massageHero, slug: "massage-coupons" },
   { title: "Bangkok Mahanakhon Sky Walk Admission Ticket", price: 4536, image: bangkokSkywalkHero, slug: "bangkok-skywalk" },
   
-  // Railway and Floating Market - Flower boats images
-  { title: "Maeklong Railway Market and Damnoensaduak Floating Market Tour in Bangkok", price: 3405, image: "https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=800&auto=format&fit=crop", slug: "maeklong-floating-market" },
+  // Railway and Floating Market
+  { title: "Maeklong Railway Market and Damnoensaduak Floating Market Tour in Bangkok (Join Tour)", price: 3405, image: floatingMarket1, slug: "maeklong-floating-market" },
   
   // Other Activities
   { title: "Bangkok Night Tour on TUK-TUK Minimum 2 PAX", price: 5040, image: "https://images.unsplash.com/photo-1534008897995-27a23e859048?w=800&auto=format&fit=crop", slug: "bangkok-tuk-tuk-night" },
@@ -187,6 +190,25 @@ const Bangkok = () => {
           </aside>
 
           <main className="flex-1">
+            {totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 mb-6">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <Button
+                    key={page}
+                    variant={currentPage === page ? 'default' : 'outline'}
+                    onClick={() => setCurrentPage(page)}
+                  >
+                    {page}
+                  </Button>
+                ))}
+                {currentPage < totalPages && (
+                  <Button variant="outline" onClick={() => setCurrentPage(currentPage + 1)}>
+                    Next →
+                  </Button>
+                )}
+              </div>
+            )}
+
             <div className={viewMode === 'grid' ? 'grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6' : 'space-y-6'}>
               {paginatedActivities.map((activity, index) => (
                 <ActivityCard
