@@ -51,6 +51,11 @@ import PhuketCityNightMarket from "./pages/PhuketCityNightMarket";
 import PhuketSimonCabaret from "./pages/PhuketSimonCabaret";
 import PhuketCarnivalMagic from "./pages/PhuketCarnivalMagic";
 import PhuketMuslimFriendlyTour from "./pages/PhuketMuslimFriendlyTour";
+import SelfieWithTigerATV from "./pages/SelfieWithTigerATV";
+import JamesBondIslandSeaCanoe from "./pages/JamesBondIslandSeaCanoe";
+import PhiPhiBigBoat from "./pages/PhiPhiBigBoat";
+import PhiPhiRoyalJet from "./pages/PhiPhiRoyalJet";
+import PhiPhiMayaKhaiSpeedboat from "./pages/PhiPhiMayaKhaiSpeedboat";
 import PattayaFloatingMarketTour from "./pages/PattayaFloatingMarketTour";
 import PattayaBigBuddhaGems from "./pages/PattayaBigBuddhaGems";
 import CoralIslandPattaya from "./pages/CoralIslandPattaya";
@@ -242,6 +247,11 @@ const App = () => (
           <Route path="/phuket-simon-cabaret" element={<PhuketSimonCabaret />} />
           <Route path="/phuket-carnival-magic" element={<PhuketCarnivalMagic />} />
           <Route path="/phuket-muslim-friendly-tour" element={<PhuketMuslimFriendlyTour />} />
+          <Route path="/selfie-tigers-atv" element={<SelfieWithTigerATV />} />
+          <Route path="/james-bond-island-sea-canoe" element={<JamesBondIslandSeaCanoe />} />
+          <Route path="/phi-phi-big-boat" element={<PhiPhiBigBoat />} />
+          <Route path="/phi-phi-royal-jet" element={<PhiPhiRoyalJet />} />
+          <Route path="/phi-phi-maya-khai-speedboat" element={<PhiPhiMayaKhaiSpeedboat />} />
           <Route path="/pattaya-floating-market-tour" element={<PattayaFloatingMarketTour />} />
           <Route path="/pattaya-big-buddha-gems" element={<PattayaBigBuddhaGems />} />
           <Route path="/coral-island-pattaya" element={<CoralIslandPattaya />} />
