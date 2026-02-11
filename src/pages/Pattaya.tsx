@@ -18,18 +18,22 @@ import pattayaLongtailBoats from "@/assets/pattaya-longtail-boats-1.jpg";
 import pattayaWomanSea from "@/assets/pattaya-woman-sea-1.jpg";
 import pattayaSpeedboat from "@/assets/pattaya-speedboat-1.jpg";
 import pattayaIslandsBoats from "@/assets/pattaya-islands-boats-1.jpg";
+import alcazarShow1 from "@/assets/alcazar-show-1.jpg";
+import pattayaNightlife1 from "@/assets/pattaya-nightlife-1.jpg";
+import pattayaNightlife2 from "@/assets/pattaya-nightlife-2.jpg";
+import muayThai1 from "@/assets/muay-thai-1.jpg";
 
 const activities = [
   { title: "Discovery Pattaya City Tours with Floating Market and Lunch", price: 2175, image: pattayaBoatTour, slug: "pattaya-floating-market-tour" },
-  { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1207.5, image: pattayaSailboat, slug: "pattaya-big-buddha-gems" },
+  { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1208, image: pattayaSailboat, slug: "pattaya-big-buddha-gems" },
   { title: "Coral Island Join Tour with Indian Lunch", price: 603.75, image: pattayaBoatsBeach, slug: "coral-island-pattaya" },
   { title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya", price: 3622.5, image: pattayaTropicalBeach, slug: "nong-nooch-garden" },
   { title: "Pattaya Dolphinarium Admission Ticket with Transfer", price: 3650, image: pattayaSpeedboat, slug: "pattaya-dolphinarium" },
-  { title: "Muay Thai Pattaya Admission Ticket", price: 4830, image: pattayaLongtailBoats, slug: "muay-thai-pattaya" },
-  { title: "Alcazar Show Pattaya Ticket with Transfer", price: 2420, image: pattayaWomanSea, slug: "alcazar-show-pattaya" },
+  { title: "Muay Thai Pattaya Admission Ticket", price: 4830, image: muayThai1, slug: "muay-thai-pattaya" },
+  { title: "Alcazar Show Pattaya Ticket with Transfer", price: 2420, image: alcazarShow1, slug: "alcazar-show-pattaya" },
   { title: "Pattaya Floating Market Guided Tour with Transfer", price: 3140, image: pattayaIslandsBoats, slug: "pattaya-floating-market-guided" },
-  { title: "Lost in Nightlight - A Walking, Drinking, and Food Tasting Experience at Pattaya's Red Light District", price: 3745, image: pattayaBoatTour, slug: "pattaya-nightlife-walking" },
-  { title: "Sunset Club and Pub Crawling Experience at Drinking Street in Pattaya", price: 6280, image: pattayaTropicalBeach, slug: "pattaya-pub-crawl" },
+  { title: "Lost in Nightlight - A Walking, Drinking, and Food Tasting Experience at Pattaya's Red Light District", price: 3745, image: pattayaNightlife1, slug: "pattaya-nightlife-walking" },
+  { title: "Sunset Club and Pub Crawling Experience at Drinking Street in Pattaya", price: 6280, image: pattayaNightlife2, slug: "pattaya-pub-crawl" },
 ];
 
 const categories = [

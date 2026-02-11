@@ -24,6 +24,7 @@ interface PricingCalculatorProps {
   twoAdultPrice?: number;
   minAdults?: number;
   tourOptions?: TourOption[];
+  hideChildren?: boolean;
 }
 
 const PricingCalculator = ({ 
@@ -37,7 +38,8 @@ const PricingCalculator = ({
   singleAdultPrice,
   twoAdultPrice,
   minAdults = 1,
-  tourOptions
+  tourOptions,
+  hideChildren = false
 }: PricingCalculatorProps) => {
   const { addToCart } = useCart();
   const effectiveMin = pricePerVehicle ? 1 : Math.max(minAdults, 1);
@@ -341,6 +343,7 @@ const PricingCalculator = ({
               </div>
             </div>
 
+            {!hideChildren && (
             <div className="flex items-center justify-between p-4 bg-accent/50 rounded-lg">
               <div className="flex-1">
                 <p className="font-medium">No. of Child (2-11 yrs)</p>
@@ -366,6 +369,7 @@ const PricingCalculator = ({
                 </Button>
               </div>
             </div>
+            )}
           </div>
         )}
 

@@ -59,6 +59,8 @@ import PattayaDolphinarium from "./pages/PattayaDolphinarium";
 import MuayThaiPattaya from "./pages/MuayThaiPattaya";
 import AlcazarShowPattaya from "./pages/AlcazarShowPattaya";
 import PattayaFloatingMarketGuided from "./pages/PattayaFloatingMarketGuided";
+import PattayaNightlifeWalking from "./pages/PattayaNightlifeWalking";
+import PattayaPubCrawl from "./pages/PattayaPubCrawl";
 import HongIslandsLongtail from "./pages/HongIslandsLongtail";
 import HongIslandsSpeedboat from "./pages/HongIslandsSpeedboat";
 import SevenIslandsLongtail from "./pages/SevenIslandsLongtail";
@@ -247,7 +249,9 @@ const App = () => (
           <Route path="/pattaya-dolphinarium" element={<PattayaDolphinarium />} />
           <Route path="/muay-thai-pattaya" element={<MuayThaiPattaya />} />
           <Route path="/alcazar-show-pattaya" element={<AlcazarShowPattaya />} />
-          <Route path="/pattaya-floating-market-guided" element={<PattayaFloatingMarketGuided />} />
+           <Route path="/pattaya-floating-market-guided" element={<PattayaFloatingMarketGuided />} />
+           <Route path="/pattaya-nightlife-walking" element={<PattayaNightlifeWalking />} />
+           <Route path="/pattaya-pub-crawl" element={<PattayaPubCrawl />} />
           <Route path="/hong-islands-longtail" element={<HongIslandsLongtail />} />
           <Route path="/hong-islands-speedboat" element={<HongIslandsSpeedboat />} />
           <Route path="/seven-islands-longtail" element={<SevenIslandsLongtail />} />

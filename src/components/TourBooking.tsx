@@ -138,6 +138,7 @@ const TourBooking = ({ tourData }: TourBookingProps) => {
                 twoAdultPrice={tourData.twoAdultPrice}
                 minAdults={tourData.minAdults}
                 tourOptions={tourData.tourOptions}
+                hideChildren={tourData.hideChildren}
               />
             </div>
           </div>

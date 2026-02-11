@@ -37,6 +37,15 @@ import pattayaSpeedboat from "@/assets/pattaya-speedboat-1.jpg";
 import pattayaLakeTour from "@/assets/pattaya-lake-tour-1.jpg";
 import pattayaTempleWoman from "@/assets/pattaya-temple-woman-1.jpg";
 import pattayaIslandsBoats from "@/assets/pattaya-islands-boats-1.jpg";
+import alcazarShow1 from "@/assets/alcazar-show-1.jpg";
+import alcazarShow2 from "@/assets/alcazar-show-2.jpg";
+import alcazarShow3 from "@/assets/alcazar-show-3.jpg";
+import pattayaNightlife1 from "@/assets/pattaya-nightlife-1.jpg";
+import pattayaNightlife2 from "@/assets/pattaya-nightlife-2.jpg";
+import pattayaNightlife3 from "@/assets/pattaya-nightlife-3.jpg";
+import muayThai1 from "@/assets/muay-thai-1.jpg";
+import muayThai2 from "@/assets/muay-thai-2.jpg";
+import muayThai3 from "@/assets/muay-thai-3.jpg";
 
 // Singapore images
 import singaporeMarinaByNight from "@/assets/singapore-marina-bay-sands-night-1.jpg";
@@ -117,6 +126,7 @@ export interface TourData {
     adultPrice: number;
     childPrice?: number;
   }[];
+  hideChildren?: boolean;
 }
 
 export const toursData: Record<string, TourData> = {
@@ -1699,8 +1709,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Half-day tour visiting Big Buddha Hill for panoramic views and exploring the world's largest gem and jewelry center.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 1207.5,
-    childPrice: 0,
+    basePrice: 1208,
+    childPrice: 1000,
     duration: "4-5 Hours",
     rating: 4.3,
     reviews: 256,
@@ -1733,7 +1743,7 @@ export const toursData: Record<string, TourData> = {
       { time: "12:30 PM", title: "Free Time", description: "Browse and shop at Gems Gallery" },
       { time: "01:30 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
     ],
-    tourTimings: ["09:00 AM – 01:30 PM"],
+    tourTimings: ["08:00 AM"],
     inclusions: ["Round-trip hotel transfer", "English-speaking guide", "Entrance fees", "Bottled water"],
     exclusions: ["Meals and beverages", "Purchases at Gems Gallery", "Optional activities", "Tips"],
     bookingPolicy: ["Confirmation within 24 hours", "Dress modestly for temple", "No purchase obligation at gallery"],
@@ -1838,7 +1848,7 @@ export const toursData: Record<string, TourData> = {
       { time: "01:30 PM", title: "Free Time", description: "Explore gardens or optional activities" },
       { time: "02:30 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
     ],
-    tourTimings: ["08:30 AM – 02:30 PM"],
+    tourTimings: ["09:00 AM"],
     inclusions: ["Round-trip transfer", "Nong Nooch admission", "Cultural and elephant shows", "Buffet lunch", "Garden tour"],
     exclusions: ["Elephant riding (extra cost)", "Personal expenses", "Optional activities", "Tips"],
     bookingPolicy: ["Confirmation within 24 hours", "Shows run at scheduled times", "Wheelchair accessible"],
@@ -1857,7 +1867,7 @@ export const toursData: Record<string, TourData> = {
     city: "pattaya",
     basePrice: 3650,
     childPrice: 1935,
-    singleAdultPrice: 4350,
+    minAdults: 2,
     duration: "3-4 Hours",
     rating: 4.6,
     reviews: 378,
@@ -1890,7 +1900,11 @@ export const toursData: Record<string, TourData> = {
       { time: "11:30 AM", title: "Photo Session", description: "Optional photos with dolphins" },
       { time: "12:00 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
     ],
-    tourTimings: ["11:00 AM Show", "03:00 PM Show"],
+    tourTimings: ["11:00 AM", "02:00 PM", "05:00 PM"],
+    tourOptions: [
+      { label: "Regular Ticket with Transfer", adultPrice: 3650 },
+      { label: "Deluxe Ticket with Transfer", adultPrice: 4350 }
+    ],
     inclusions: ["Round-trip hotel transfer", "Dolphinarium admission", "Dolphin show", "Seal show"],
     exclusions: ["Swimming with dolphins (extra cost)", "Professional photos", "Food and beverages", "Tips"],
     bookingPolicy: ["Confirmation within 24 hours", "Children must be supervised", "No flash photography during show"],
@@ -1913,14 +1927,14 @@ export const toursData: Record<string, TourData> = {
     rating: 4.8,
     reviews: 523,
     heroImages: [
-      { src: pattayaTempleWoman, title: "Muay Thai Boxing Match" },
-      { src: pattayaLakeTour, title: "Traditional Wai Kru Ritual" },
-      { src: pattayaSpeedboat, title: "Stadium Atmosphere" }
+      { src: muayThai1, title: "Muay Thai Boxing Match" },
+      { src: muayThai2, title: "Traditional Wai Kru Ritual" },
+      { src: muayThai3, title: "Stadium Atmosphere" }
     ],
     galleryImages: [
-      { src: pattayaBoatTour, alt: "Professional fighters" },
-      { src: pattayaTropicalBeach, alt: "Boxing ring action" },
-      { src: pattayaSailboat, alt: "Pre-fight ceremony" },
+      { src: muayThai1, alt: "Professional fighters" },
+      { src: muayThai2, alt: "Boxing ring action" },
+      { src: muayThai3, alt: "Pre-fight ceremony" },
       { src: pattayaBoatsBeach, alt: "Audience excitement" }
     ],
     highlights: [
@@ -1939,7 +1953,7 @@ export const toursData: Record<string, TourData> = {
       { time: "07:15 PM", title: "Fight Matches Begin", description: "Watch professional Muay Thai bouts" },
       { time: "09:30 PM", title: "End of Event", description: "Matches conclude" }
     ],
-    tourTimings: ["Monday, Wednesday, Friday, Saturday 07:00 PM"],
+    tourTimings: ["06:00 PM"],
     inclusions: ["Stadium admission ticket", "Reserved seating", "Multiple fight matches"],
     exclusions: ["Hotel transfer", "Food and beverages", "Betting", "Souvenirs"],
     bookingPolicy: ["Confirmation within 24 hours", "Stadium can get loud", "Betting at own risk"],
@@ -1962,14 +1976,14 @@ export const toursData: Record<string, TourData> = {
     rating: 4.7,
     reviews: 445,
     heroImages: [
-      { src: pattayaWomanSea, title: "Alcazar Cabaret Show" },
-      { src: pattayaTempleWoman, title: "Stunning Stage Production" },
-      { src: pattayaLakeTour, title: "Talented Performers" }
+      { src: alcazarShow1, title: "Alcazar Cabaret Show" },
+      { src: alcazarShow2, title: "Stunning Stage Production" },
+      { src: alcazarShow3, title: "Talented Performers" }
     ],
     galleryImages: [
-      { src: pattayaBoatTour, alt: "Cabaret dancers" },
-      { src: pattayaSailboat, alt: "Elaborate costumes" },
-      { src: pattayaTropicalBeach, alt: "Stage performance" },
+      { src: alcazarShow1, alt: "Cabaret dancers" },
+      { src: alcazarShow2, alt: "Elaborate costumes" },
+      { src: alcazarShow3, alt: "Stage performance" },
       { src: pattayaIslandsBoats, alt: "Photo session" }
     ],
     highlights: [
@@ -2437,18 +2451,20 @@ export const toursData: Record<string, TourData> = {
     basePrice: 3745,
     childPrice: 0,
     singleAdultPrice: 6521,
+    minAdults: 2,
+    hideChildren: true,
     duration: "4 Hours",
     rating: 4.4,
     reviews: 345,
     heroImages: [
-      { src: pattayaBoatTour, title: "Pattaya Nightlife" },
-      { src: pattayaSailboat, title: "Walking Street" },
-      { src: pattayaTempleWoman, title: "Food and Drinks" }
+      { src: pattayaNightlife1, title: "Pattaya Nightlife" },
+      { src: pattayaNightlife2, title: "Walking Street" },
+      { src: pattayaNightlife3, title: "Food and Drinks" }
     ],
     galleryImages: [
-      { src: pattayaTropicalBeach, alt: "Night scene" },
-      { src: pattayaIslandsBoats, alt: "Street food" },
-      { src: pattayaBoatsBeach, alt: "Local bars" },
+      { src: pattayaNightlife1, alt: "Night scene" },
+      { src: pattayaNightlife2, alt: "Street food" },
+      { src: pattayaNightlife3, alt: "Local bars" },
       { src: pattayaWomanSea, alt: "Entertainment" }
     ],
     highlights: [
@@ -2468,7 +2484,7 @@ export const toursData: Record<string, TourData> = {
       { time: "11:00 PM", title: "Drinks", description: "Enjoy drinks at local venues" },
       { time: "12:00 AM", title: "End", description: "Tour concludes" }
     ],
-    tourTimings: ["08:00 PM"],
+    tourTimings: ["07:00 PM"],
     inclusions: ["Guide", "Food Tastings", "3 Drinks", "Walking Tour"],
     exclusions: ["Additional Drinks", "Personal Expenses"],
     bookingPolicy: ["Adults only (18+)", "ID required"],
@@ -2485,20 +2501,22 @@ export const toursData: Record<string, TourData> = {
     location: "Pattaya, Thailand",
     city: "pattaya",
     basePrice: 6280,
-    childPrice: 5071.5,
+    childPrice: 0,
     singleAdultPrice: 9905,
+    minAdults: 2,
+    hideChildren: true,
     duration: "5 Hours",
     rating: 4.6,
     reviews: 278,
     heroImages: [
-      { src: pattayaBoatsBeach, title: "Sunset Views" },
-      { src: pattayaTropicalBeach, title: "Rooftop Bars" },
-      { src: pattayaLakeTour, title: "Pub Crawl" }
+      { src: pattayaNightlife2, title: "Sunset Views" },
+      { src: pattayaNightlife1, title: "Rooftop Bars" },
+      { src: pattayaNightlife3, title: "Pub Crawl" }
     ],
     galleryImages: [
-      { src: pattayaSpeedboat, alt: "Sunset drinks" },
-      { src: pattayaWomanSea, alt: "Club experience" },
-      { src: pattayaIslandsBoats, alt: "Group fun" },
+      { src: pattayaNightlife2, alt: "Sunset drinks" },
+      { src: pattayaNightlife1, alt: "Club experience" },
+      { src: pattayaNightlife3, alt: "Group fun" },
       { src: pattayaBoatTour, alt: "Night venues" }
     ],
     highlights: [
@@ -2517,7 +2535,7 @@ export const toursData: Record<string, TourData> = {
       { time: "09:30 PM", title: "Club Hopping", description: "Visit multiple venues" },
       { time: "11:00 PM", title: "Final Venue", description: "End at top club" }
     ],
-    tourTimings: ["06:00 PM"],
+    tourTimings: ["07:00 PM"],
     inclusions: ["Welcome Drink", "VIP Entry", "Drink at Each Venue", "Guide"],
     exclusions: ["Additional Drinks", "Personal Expenses"],
     bookingPolicy: ["Adults only (18+)", "Dress code applies"],
