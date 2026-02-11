@@ -71,7 +71,9 @@ import HongIslandsSpeedboat from "./pages/HongIslandsSpeedboat";
 import SevenIslandsLongtail from "./pages/SevenIslandsLongtail";
 import SevenIslandsSpeedboat from "./pages/SevenIslandsSpeedboat";
 import FourIslandsLongtail from "./pages/FourIslandsLongtail";
+import FourIslandsLongtailNoParkFee from "./pages/FourIslandsLongtailNoParkFee";
 import FourIslandsSpeedboat from "./pages/FourIslandsSpeedboat";
+import JamesBondIslandKrabi from "./pages/JamesBondIslandKrabi";
 import TourPackages from "./pages/TourPackages";
 import ThailandSmartGuides from "./pages/ThailandSmartGuides";
 import DubaiSmartGuides from "./pages/DubaiSmartGuides";
@@ -267,7 +269,9 @@ const App = () => (
           <Route path="/seven-islands-longtail" element={<SevenIslandsLongtail />} />
           <Route path="/seven-islands-speedboat" element={<SevenIslandsSpeedboat />} />
           <Route path="/four-islands-longtail" element={<FourIslandsLongtail />} />
+          <Route path="/four-islands-longtail-no-park-fee" element={<FourIslandsLongtailNoParkFee />} />
           <Route path="/four-islands-speedboat" element={<FourIslandsSpeedboat />} />
+          <Route path="/james-bond-island-krabi" element={<JamesBondIslandKrabi />} />
           <Route path="/tour-packages" element={<TourPackages />} />
           <Route path="/thailand-smart-guides" element={<ThailandSmartGuides />} />
           <Route path="/dubai-smart-guides" element={<DubaiSmartGuides />} />
