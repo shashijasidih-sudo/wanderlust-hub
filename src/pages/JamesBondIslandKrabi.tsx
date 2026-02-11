@@ -1,10 +1,10 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
 
-const HotSpringEmeralPool = () => {
-  const tourData = toursData["hot-spring-emerald-pool"];
+const JamesBondIslandKrabi = () => {
+  const tourData = toursData["james-bond-island-krabi"];
   
   return <TourBooking tourData={tourData} />;
 };
 
-export default HotSpringEmeralPool;
+export default JamesBondIslandKrabi;

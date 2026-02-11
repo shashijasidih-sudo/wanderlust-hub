@@ -23,17 +23,16 @@ import krabiBoatTour from "@/assets/krabi-boat-tour-1.jpg";
 import krabiTempleWoman from "@/assets/krabi-temple-woman-1.jpg";
 
 const activities = [
-  { title: "4 Islands by Longtail Boat (No National Park Fee)", price: 2415, image: krabiLongtailBoats, slug: "four-islands-longtail" },
-  { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 2777, image: krabiKayaks, slug: "four-islands-longtail" },
-  { title: "Half Day Emerald Pool + Hot Springs with Lunch", price: 3140, image: krabiTempleWoman, slug: "hot-spring-emerald-pool" },
+  { title: "4 Islands by Longtail Boat (No National Park Fee)", price: 2415, image: krabiLongtailBoats, slug: "four-islands-longtail-no-park-fee" },
+  { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 4589, image: krabiKayaks, slug: "four-islands-longtail" },
+  { title: "Emerald Pool + Hot Springs + Tiger Cave with Lunch", price: 3140, image: krabiTempleWoman, slug: "hot-spring-emerald-pool" },
   { title: "Hong Islands by Longtail Boat", price: 3381, image: krabiIslandView, slug: "hong-islands-longtail" },
-  { title: "Full Day Emerald Pool + Hot Springs + Tiger Cave with Lunch", price: 3502, image: krabiTempleWoman, slug: "hot-spring-emerald-pool" },
   { title: "7 Islands Sunset Tour BBQ with Longtail boat", price: 3743, image: krabiSailboat, slug: "seven-islands-longtail" },
   { title: "Hong Island Tour (By Speed Boat)", price: 4347, image: krabiSpeedboat, slug: "hong-islands-speedboat" },
   { title: "4 Islands by Speedboat (With National Park Fee)", price: 4589, image: krabiTourBoat, slug: "four-islands-speedboat" },
   { title: "Phi Phi Island by Speedboat with Transfer from Krabi", price: 4830, image: krabiBeachWoman, slug: "phi-phi-island" },
   { title: "7 Islands Sunset Tour BBQ with Speedboat", price: 4830, image: krabiBoatTour, slug: "seven-islands-speedboat" },
-  { title: "James Bond Island Sightseeing Tour by Long-Tailed Boat", price: 4951, image: krabiLongtailBoats, slug: "james-bond-island" },
+  { title: "James Bond Island (Phang Nga Bay) Tour with Lunch By Long Tail Boat", price: 4951, image: krabiLongtailBoats, slug: "james-bond-island-krabi" },
 ];
 
 const categories = [
@@ -64,6 +63,27 @@ const Krabi = () => {
   const paginatedActivities = filteredActivities.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
+  );
+
+  const PaginationControls = () => (
+    totalPages > 1 ? (
+      <div className="flex items-center justify-center gap-2">
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          <Button
+            key={page}
+            variant={currentPage === page ? 'default' : 'outline'}
+            onClick={() => setCurrentPage(page)}
+          >
+            {page}
+          </Button>
+        ))}
+        {currentPage < totalPages && (
+          <Button variant="outline" onClick={() => setCurrentPage(currentPage + 1)}>
+            Next →
+          </Button>
+        )}
+      </div>
+    ) : null
   );
 
   return (
@@ -120,6 +140,11 @@ const Krabi = () => {
           maxPrice={7500}
           categories={categories}
         />
+
+        {/* Top Pagination */}
+        <div className="mb-6">
+          <PaginationControls />
+        </div>
 
         <div className="flex gap-8">
           {/* Desktop Sidebar - Hidden on mobile */}
@@ -184,24 +209,10 @@ const Krabi = () => {
               ))}
             </div>
 
-            {totalPages > 1 && (
-              <div className="flex items-center justify-center gap-2 mt-8">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <Button
-                    key={page}
-                    variant={currentPage === page ? 'default' : 'outline'}
-                    onClick={() => setCurrentPage(page)}
-                  >
-                    {page}
-                  </Button>
-                ))}
-                {currentPage < totalPages && (
-                  <Button variant="outline" onClick={() => setCurrentPage(currentPage + 1)}>
-                    Next →
-                  </Button>
-                )}
-              </div>
-            )}
+            {/* Bottom Pagination */}
+            <div className="mt-8">
+              <PaginationControls />
+            </div>
           </main>
         </div>
       </div>

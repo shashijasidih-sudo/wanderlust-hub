@@ -2440,14 +2440,68 @@ export const toursData: Record<string, TourData> = {
       { question: "Is the sunset guaranteed?", answer: "Sunset views depend on weather conditions, but the tour operates rain or shine." }
     ]
   },
+  "four-islands-longtail-no-park-fee": {
+    id: "four-islands-longtail-no-park-fee",
+    title: "4 Islands by Longtail Boat (No National Park Fee)",
+    shortDescription: "Classic four-islands tour by traditional longtail boat. National park fees not included - pay locally.",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    basePrice: 2415,
+    childPrice: 2055,
+    duration: "7-8 Hours",
+    rating: 4.4,
+    reviews: 589,
+    heroImages: [
+      { src: krabiLongtailBoats, title: "Four Islands Longtail Tour" },
+      { src: krabiKayaks, title: "Classic Krabi Experience" },
+      { src: krabiIslandView, title: "Traditional Boat Journey" }
+    ],
+    galleryImages: [
+      { src: krabiBeachWoman, alt: "Phra Nang Cave Beach" },
+      { src: krabiBoatTour, alt: "Tup Island sandbar" },
+      { src: krabiSailboat, alt: "Chicken Island" },
+      { src: krabiTourBoat, alt: "Poda Island beach" }
+    ],
+    highlights: [
+      "Visit 4 iconic Krabi islands",
+      "Traditional longtail boat",
+      "Snorkeling and swimming",
+      "Budget-friendly option"
+    ],
+    description: {
+      overview: "Experience Krabi's classic four-islands tour by traditional longtail boat. Visit the famous Phra Nang Cave Beach, walk on Tup Island's connecting sandbar, snorkel at Chicken Island, and relax at beautiful Poda Island.",
+      whatToExpect: "Enjoy an authentic Thai boat experience visiting four of Krabi's most beautiful islands. Explore stunning beaches, swim in crystal clear waters, snorkel among colorful fish, and walk on the unique sandbar connecting Tup and Mor islands."
+    },
+    itinerary: [
+      { time: "08:00 AM", title: "Hotel Pickup", description: "Morning pick up from hotels" },
+      { time: "09:00 AM", title: "Depart to Islands", description: "Traditional longtail boat journey" },
+      { time: "09:45 AM", title: "Phra Nang Cave Beach", description: "Explore the famous cave and beach" },
+      { time: "11:00 AM", title: "Tup Island", description: "Walk on the connecting sandbar" },
+      { time: "12:00 PM", title: "Lunch Break", description: "Lunch box on the beach" },
+      { time: "01:00 PM", title: "Chicken Island", description: "Snorkeling session" },
+      { time: "02:30 PM", title: "Poda Island", description: "Beach relaxation and swimming" },
+      { time: "03:30 PM", title: "Return Journey", description: "Boat back to mainland" },
+      { time: "04:30 PM", title: "Hotel Drop-off", description: "Return to your hotel" }
+    ],
+    tourTimings: ["08:00 AM – 04:30 PM"],
+    inclusions: ["Hotel transfers", "Longtail boat", "Snorkeling equipment", "Life jacket", "Lunch box", "Drinking water and fruit", "Guide", "Basic insurance"],
+    exclusions: ["National park entrance fees (400 THB/adult, 200 THB/child)", "Personal expenses", "Kayak rental", "Underwater camera", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours", "National park fee NOT included - pay locally in cash", "Suitable for all ages"],
+    cancellationPolicy: ["Free cancellation up to 24 hours before", "No refund for weather cancellations"],
+    childPolicy: ["Children age 4-11 years at discounted rate", "Children under 4 are free", "Family-friendly tour"],
+    faqs: [
+      { question: "Are national park fees included?", answer: "No, national park entrance fees are NOT included. You must pay 400 THB per adult and 200 THB per child in cash locally." },
+      { question: "How many people per longtail boat?", answer: "Longtail boats typically accommodate 8-10 passengers comfortably." }
+    ]
+  },
   "four-islands-longtail": {
     id: "four-islands-longtail",
     title: "4 Islands by Longtail Boat (With National Park Fee)",
     shortDescription: "Classic four-islands tour by traditional longtail boat with national park fees included. Visit Krabi's most iconic islands.",
     location: "Krabi, Thailand",
     city: "krabi",
-    basePrice: 2777,
-    childPrice: 2777,
+    basePrice: 4589,
+    childPrice: 4230,
     duration: "7-8 Hours",
     rating: 4.4,
     reviews: 589,
@@ -6412,6 +6466,113 @@ export const toursData: Record<string, TourData> = {
       { name: "Priya S.", date: "January 15, 2026", rating: 5, comment: "Best massage experience in Bangkok! The therapist was very professional and the facility was spotless.", helpful: 45 },
       { name: "Michael T.", date: "December 28, 2025", rating: 5, comment: "Incredible value for a 2-hour massage. Health Land lives up to its reputation.", helpful: 32 },
       { name: "Sakura K.", date: "December 10, 2025", rating: 4, comment: "Very relaxing experience. The herbal tea afterwards was a nice touch.", helpful: 18 }
+    ]
+  },
+  "hot-spring-emerald-pool": {
+    id: "hot-spring-emerald-pool",
+    title: "Emerald Pool + Hot Springs + Tiger Cave with Lunch",
+    shortDescription: "Relax in natural thermal waters and swim in the stunning crystal-clear Emerald Pool surrounded by rainforest.",
+    location: "Krabi, Thailand",
+    city: "krabi",
+    basePrice: 3140,
+    childPrice: 3140,
+    duration: "Full Day",
+    rating: 4.7,
+    reviews: 892,
+    heroImages: [
+      { src: krabiTempleWoman, title: "Hot Spring & Emerald Pool" },
+      { src: emerald1, title: "Natural Thermal Waters" },
+      { src: krabiIslandView, title: "Rainforest Paradise" }
+    ],
+    galleryImages: [
+      { src: krabiBoatTour, alt: "Crystal-clear Emerald Pool" },
+      { src: krabiKayaks, alt: "Hot spring relaxation" },
+      { src: krabiSailboat, alt: "Rainforest nature walk" },
+      { src: emerald1, alt: "Therapeutic waters" }
+    ],
+    highlights: [
+      "Natural hot spring relaxation",
+      "Crystal-clear Emerald Pool",
+      "Rainforest nature walk",
+      "Tiger Cave Temple (Full Day)"
+    ],
+    description: {
+      overview: "Krabi Jungle Tour, This is one of our top suggestions for things you should do in Krabi, Thailand and the number one recommendation for enjoying the underground natural springs that flourish in Krabi province. The water is replenished by a natural streams running into the pool from freshwater sources on the hill above. Hot Springs Waterfall is another unique place with natural mineral water (30 – 40 degree) where everyone can swim and feel the real sanctuary of Rainforest Jungle.",
+      whatToExpect: "Itinerary:\n\nHot Spring Waterfall\n\nRainforest Nature Walking Trail\n\nEmerald Pool\n\nBlue Pool\n\nTiger Cave Temple / Wat Tham Suea (for Full Day tour only)\n\nThai set Lunch"
+    },
+    itinerary: [
+      { time: "08:00 AM", title: "Hotel Pickup", description: "Pickup from Krabi hotel (excluding Railay)" },
+      { time: "09:30 AM", title: "Hot Springs Waterfall", description: "Relax in natural hot springs with mineral water (30-40°C)" },
+      { time: "10:30 AM", title: "Rainforest Nature Walk", description: "Trek through the rainforest walking trail" },
+      { time: "11:30 AM", title: "Emerald Pool & Blue Pool", description: "Swim in crystal-clear emerald and blue waters" },
+      { time: "12:30 PM", title: "Thai Set Lunch", description: "Enjoy Thai set lunch (vegetarian available on request)" },
+      { time: "01:30 PM", title: "Tiger Cave Temple", description: "Visit Wat Tham Suea - Tiger Cave Temple (Full Day only)" },
+      { time: "03:00 PM", title: "Return", description: "Hotel drop-off" }
+    ],
+    tourTimings: ["08:00 AM"],
+    tourOptions: [
+      { label: "Half Day Emerald Pool + Hot Springs with Lunch", adultPrice: 3140, childPrice: 3140 },
+      { label: "Full Day Emerald Pool + Hot Springs + Tiger Cave with Lunch", adultPrice: 3505, childPrice: 3505 }
+    ],
+    inclusions: ["Hotel Transfer (excluding Railay)", "Accident Insurance", "English speaking Guide", "Drinking Water", "Thai set Lunch", "Vegetarian meals available by request"],
+    exclusions: ["National Park Fees: Emerald Pool - Adult 400 THB, Child 200 THB", "Hot Spring - Adult 200 THB, Child 100 THB", "Tiger Cave Temple - Adult 50 THB, Child 50 THB", "National Park fees will be collected by your tour representative when needed", "The company reserves the right to modify the program depending on weather conditions without prior notice", "Personal expenses", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before"],
+    childPolicy: ["Child 3-10 years old"],
+    faqs: [
+      { question: "What should I bring?", answer: "Swimwear, towel, comfortable walking shoes, and sunscreen." },
+      { question: "Is the Tiger Cave Temple included in half day?", answer: "No, Tiger Cave Temple is only included in the Full Day tour option." },
+      { question: "Are National Park fees included?", answer: "No. Emerald Pool: Adult 400 THB, Child 200 THB. Hot Spring: Adult 200 THB, Child 100 THB. Tiger Cave: 50 THB per person." }
+    ]
+  },
+  "james-bond-island-krabi": {
+    id: "james-bond-island-krabi",
+    title: "James Bond Island (Phang Nga Bay) Tour with Lunch By Long Tail Boat",
+    shortDescription: "Explore the iconic James Bond Island and Phang Nga Bay with a traditional long-tail boat from Krabi. Enjoy canoeing and visit a floating Muslim village with lunch included.",
+    location: "Phang Nga Bay, Thailand",
+    city: "krabi",
+    basePrice: 4951,
+    childPrice: 4590,
+    duration: "Full Day",
+    rating: 4.6,
+    reviews: 2156,
+    heroImages: [
+      { src: jamesBond1, title: "James Bond Island" },
+      { src: jamesBond2, title: "Phang Nga Bay" },
+      { src: jamesBond3, title: "Limestone Cliffs" }
+    ],
+    galleryImages: [
+      { src: jamesBond4, alt: "James Bond Island view" },
+      { src: krabiLongtailBoats, alt: "Longtail boat journey" },
+      { src: krabiIslandView, alt: "Phang Nga Bay scenery" },
+      { src: krabiBoatTour, alt: "Floating village" }
+    ],
+    highlights: [
+      "Visit the famous James Bond Island",
+      "Longtail boat through Phang Nga Bay",
+      "Visit Koh Panyi floating village",
+      "Enjoy Thai lunch with sea views",
+      "Explore mangrove forests"
+    ],
+    description: {
+      overview: "Discover the breathtaking beauty of Phang Nga Bay on this full-day long-tail boat tour with lunch from Krabi.",
+      whatToExpect: "Cruise through Phang Nga Bay to see spectacular limestone formations. Visit James Bond Island, explore sea caves by longtail boat and visit the unique floating village of Koh Panyee. Lunch is included at the floating village."
+    },
+    itinerary: [
+      { time: "07:30 AM", title: "Hotel Pickup", description: "Pickup from your Krabi hotel" },
+      { time: "09:00 AM", title: "Phang Nga Bay", description: "Arrive at the pier and board long-tail boat" },
+      { time: "10:30 AM", title: "James Bond Island", description: "Visit the famous filming location" },
+      { time: "12:00 PM", title: "Koh Panyee", description: "Lunch at the floating Muslim village" },
+      { time: "03:00 PM", title: "Return", description: "Return cruise and hotel drop-off" }
+    ],
+    tourTimings: ["07:30 AM"],
+    inclusions: ["Hotel Transfer", "Long-tail Boat", "Lunch", "English Guide", "National Park Fee"],
+    exclusions: ["Personal Expenses", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before"],
+    childPolicy: ["Child rate for ages 4-11"],
+    faqs: [
+      { question: "Is canoeing safe for non-swimmers?", answer: "Yes, life jackets are provided and guides paddle the canoes." }
     ]
   }
 };
