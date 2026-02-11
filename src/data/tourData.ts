@@ -76,6 +76,8 @@ export interface TourData {
   basePrice: number;
   childPrice: number;
   singleAdultPrice?: number; // Price when only 1 adult is booking
+  twoAdultPrice?: number; // Price per adult when exactly 2 adults
+  minAdults?: number; // Minimum number of adults required (default 1)
   duration: string;
   rating: number;
   reviews: number;
@@ -113,6 +115,7 @@ export interface TourData {
   tourOptions?: {
     label: string;
     adultPrice: number;
+    childPrice?: number;
   }[];
 }
 
@@ -125,7 +128,8 @@ export const toursData: Record<string, TourData> = {
     city: "bangkok",
     basePrice: 10845,
     childPrice: 4413,
-    singleAdultPrice: 13155,
+    twoAdultPrice: 13155,
+    minAdults: 2,
     duration: "Half Day",
     rating: 4.8,
     reviews: 1523,
@@ -208,7 +212,8 @@ export const toursData: Record<string, TourData> = {
     city: "bangkok",
     basePrice: 3570,
     childPrice: 3568,
-    singleAdultPrice: 4685,
+    twoAdultPrice: 4685,
+    minAdults: 2,
     duration: "3 Hours",
     rating: 4.7,
     reviews: 856,
@@ -406,7 +411,8 @@ export const toursData: Record<string, TourData> = {
     city: "bangkok",
     basePrice: 3642,
     childPrice: 4410,
-    singleAdultPrice: 5292,
+    twoAdultPrice: 5292,
+    minAdults: 2,
     duration: "Half Day",
     rating: 4.6,
     reviews: 523,
@@ -538,13 +544,13 @@ export const toursData: Record<string, TourData> = {
   },
   "baiyoke-buffet": {
     id: "baiyoke-buffet",
-    title: "All Day Buffet at Baiyoke Floating Market on 75th floor",
-    shortDescription: "Savor the flavors of India and beyond at the Baiyoke Sky Hotel's 'All Day Buffet' on the 75th floor.",
+    title: "Baiyoke Sky Restaurant Admission Ticket",
+    shortDescription: "Visit Bangkok's iconic Baiyoke Sky Hotel for panoramic city views from the Observation Deck or enjoy a delicious lunch at the Bangkok Sky Restaurant.",
     location: "Bangkok, Thailand",
     city: "bangkok",
     basePrice: 1478,
-    childPrice: 3528,
-    duration: "All Day",
+    childPrice: 1478,
+    duration: "2-3 Hours",
     rating: 4.5,
     reviews: 1678,
     heroImages: [
@@ -559,37 +565,45 @@ export const toursData: Record<string, TourData> = {
       { src: emerald1, alt: "Restaurant interior" }
     ],
     highlights: [
-      "All Day Buffet: Indian, Vegetarian, Vegan, Jain",
-      "Free soft drink and tea",
-      "Free entry to Observation Deck on 77th floor",
-      "Free entry to Revolving View Point on 84th floor"
+      "Observation Deck on 77th floor",
+      "Revolving View Point on 84th floor",
+      "Lunch at Bangkok Sky 76th/78th Floor",
+      "Panoramic views of Bangkok"
     ],
     description: {
-      overview: "Savor the flavors of India and beyond at the Baiyoke Sky Hotel's 'All Day Buffet' on the 75th floor.",
-      whatToExpect: "Savor the flavors of India and beyond at the Baiyoke Sky Hotel's 'All Day Buffet' on the 75th floor. Held at the Baiyoke Floating Market Restaurant, this buffet is a one-stop destination for authentic Indian cuisine, along with a wide selection of vegetarian, vegan, and Jain dishes.\n\nEvery dish is prepared with care and without pork or lard, making it the perfect choice for guests with specific dietary preferences. From rich curries to fresh plant-based delicacies, you'll enjoy a world of flavor high above the city of Bangkok."
+      overview: "Visit Bangkok's iconic Baiyoke Sky Hotel for panoramic city views from the Observation Deck or enjoy a delicious lunch at the Bangkok Sky Restaurant.",
+      whatToExpect: "Experience stunning panoramic views of Bangkok from the 77th floor Observation Deck and the 84th floor Revolving View Point at the iconic Baiyoke Sky Hotel. Upgrade to the lunch option for a delicious meal at the Bangkok Sky Restaurant on the 76th/78th floor, featuring a wide selection of Indian, vegetarian, vegan, and Jain dishes prepared with care and without pork or lard."
     },
     itinerary: [],
-    tourTimings: ["All Day"],
+    tourTimings: ["Morning"],
+    tourOptions: [
+      { label: "Observation Deck 77th & 84th Floor Ticket", adultPrice: 1478, childPrice: 1478 },
+      { label: "Lunch at Bangkok Sky 76th/78th Floor Ticket", adultPrice: 2270, childPrice: 2270 }
+    ],
     inclusions: [
-      "All Day Buffet: Indian, Vegetarian, Vegan, Jain",
-      "Baiyoke Floating Market Restaurant on the 75th floor - Admission",
-      "Free soft drink and tea",
-      "Free entry to the Observation Deck on the 77th floor",
-      "Free entry to the Revolving View Point on the 84th floor",
+      "Admission ticket",
+      "Access to Observation Deck on 77th floor",
+      "Access to Revolving View Point on 84th floor",
       "Service charge and government tax"
     ],
     exclusions: [
       "Hotel transfers",
-      "Personal expenses"
+      "Personal expenses",
+      "Meals (unless Lunch option selected)"
     ],
-    bookingPolicy: [],
+    bookingPolicy: [
+      "Present e-ticket at entrance",
+      "Smart casual dress code recommended"
+    ],
     cancellationPolicy: [
       "Free cancellation up to 24 hours before"
     ],
     childPolicy: [
-      "Child rate available"
+      "Child price same as adult price per option"
     ],
-    faqs: []
+    faqs: [
+      { question: "What is the difference between the two options?", answer: "Option 1 includes Observation Deck access only. Option 2 includes lunch at Bangkok Sky Restaurant plus deck access." }
+    ]
   },
   "sea-life-madame-tussauds": {
     id: "sea-life-madame-tussauds",
@@ -623,6 +637,7 @@ export const toursData: Record<string, TourData> = {
     city: "bangkok",
     basePrice: 4915,
     childPrice: 3276,
+    singleAdultPrice: 6476,
     duration: "3 Hours",
     rating: 4.8,
     reviews: 1456,
@@ -631,7 +646,7 @@ export const toursData: Record<string, TourData> = {
     highlights: ["Dinner cruise on Chao Phraya", "International buffet", "Live music and shows", "Illuminated Bangkok views", "Hotel transfers included"],
     description: { overview: "Cruise along Bangkok's iconic river while enjoying dinner and entertainment.", whatToExpect: "Experience Bangkok's illuminated landmarks, enjoy a buffet dinner, and watch live performances." },
     itinerary: [{ time: "05:30 PM", title: "Pickup", description: "Hotel pickup" }, { time: "06:30 PM", title: "Board Cruise", description: "Board at Asiatique" }, { time: "07:00 PM", title: "Departure", description: "Cruise begins" }, { time: "07:30 PM", title: "Dinner", description: "Buffet dinner served" }, { time: "09:00 PM", title: "Return", description: "Cruise ends, transfer to hotel" }],
-    tourTimings: ["07:00 PM – 09:30 PM"],
+    tourTimings: ["05:00 PM – 09:00 PM"],
     inclusions: ["Hotel transfers", "Dinner buffet", "Live entertainment", "Welcome drink"],
     exclusions: ["Alcoholic beverages", "Tips"],
     bookingPolicy: ["Smart casual dress code", "Advance booking required"],
@@ -655,7 +670,7 @@ export const toursData: Record<string, TourData> = {
     highlights: ["Ayutthaya UNESCO sites", "Temple complex tour", "Sunset cruise back to Bangkok", "Lunch included", "Professional guide"],
     description: { overview: "Explore ancient Ayutthaya and return to Bangkok on a scenic sunset cruise.", whatToExpect: "Visit historical temples and enjoy a relaxing river cruise with dinner buffet." },
     itinerary: [{ time: "07:00 AM", title: "Pickup", description: "Hotel pickup Bangkok" }, { time: "09:00 AM", title: "Ayutthaya", description: "Temple tour begins" }, { time: "12:00 PM", title: "Lunch", description: "Local restaurant" }, { time: "02:00 PM", title: "More Temples", description: "Continue exploration" }, { time: "04:00 PM", title: "Board Cruise", description: "Sunset cruise begins" }, { time: "07:00 PM", title: "Bangkok Pier", description: "Arrive and transfer to hotel" }],
-    tourTimings: ["07:00 AM – 08:00 PM"],
+    tourTimings: ["12:30 PM", "01:30 PM"],
     inclusions: ["Round-trip transfer", "Guide", "Lunch", "Sunset cruise with dinner", "Entrance fees"],
     exclusions: ["Beverages", "Tips"],
     bookingPolicy: ["Full day tour", "Comfortable shoes recommended"],
@@ -671,6 +686,7 @@ export const toursData: Record<string, TourData> = {
     city: "bangkok",
     basePrice: 5545,
     childPrice: 3654,
+    singleAdultPrice: 8442,
     duration: "3 Hours",
     rating: 4.7,
     reviews: 1823,
@@ -679,7 +695,7 @@ export const toursData: Record<string, TourData> = {
     highlights: ["Luxury dinner cruise", "International buffet", "Live entertainment", "Private transfers", "Panoramic river views"],
     description: { overview: "Enjoy an elegant evening on the Chao Phraya River with dinner and entertainment.", whatToExpect: "Experience Bangkok's illuminated landmarks from the comfort of a luxury cruise ship." },
     itinerary: [{ time: "05:30 PM", title: "Pickup", description: "Private hotel pickup" }, { time: "06:30 PM", title: "Boarding", description: "Board Princess Cruise" }, { time: "07:00 PM", title: "Departure", description: "Cruise begins" }, { time: "09:30 PM", title: "Return", description: "Dock and transfer to hotel" }],
-    tourTimings: ["07:00 PM – 09:30 PM"],
+    tourTimings: ["05:00 PM – 09:00 PM"],
     inclusions: ["Private transfers", "Buffet dinner", "Live music", "Welcome drink"],
     exclusions: ["Alcoholic drinks", "Tips"],
     bookingPolicy: ["Smart casual attire", "Booking confirmation required"],
@@ -727,7 +743,7 @@ export const toursData: Record<string, TourData> = {
     highlights: ["Join-in group tour", "Buffet dinner", "Live band", "Cultural show", "Hotel pickup and drop-off"],
     description: { overview: "Affordable dinner cruise experience with shared transfers and full entertainment.", whatToExpect: "Enjoy international buffet, live music, and cultural performances while cruising past Bangkok's landmarks." },
     itinerary: [{ time: "05:30 PM", title: "Pickup", description: "Join transfer pickup" }, { time: "06:30 PM", title: "Board", description: "Board Princess Cruise" }, { time: "07:00 PM", title: "Sail", description: "Cruise begins" }, { time: "09:30 PM", title: "End", description: "Return transfer to hotel" }],
-    tourTimings: ["07:00 PM – 09:30 PM"],
+    tourTimings: ["05:00 PM"],
     inclusions: ["Join transfers", "Buffet dinner", "Live entertainment", "Welcome drink"],
     exclusions: ["Premium beverages", "Tips"],
     bookingPolicy: ["Shared transfer", "Multiple pickup points"],
@@ -794,7 +810,7 @@ export const toursData: Record<string, TourData> = {
     highlights: ["Maeklong Railway Market", "See train pass through market", "Damnoen Saduak Floating Market", "Long-tail boat ride", "Local Thai experience"],
     description: { overview: "Experience two of Thailand's most unique markets in one day.", whatToExpect: "Watch vendors quickly move their goods as the train passes, then explore the colorful floating market by boat." },
     itinerary: [{ time: "06:00 AM", title: "Pickup", description: "Early hotel pickup" }, { time: "08:00 AM", title: "Maeklong Market", description: "Witness train passing through market" }, { time: "10:00 AM", title: "Floating Market", description: "Long-tail boat to Damnoen Saduak" }, { time: "12:00 PM", title: "Market Exploration", description: "Shop and lunch" }, { time: "02:00 PM", title: "Return", description: "Drive back to Bangkok" }, { time: "04:00 PM", title: "Hotel Drop-off", description: "Arrive at hotel" }],
-    tourTimings: ["06:00 AM – 04:00 PM"],
+    tourTimings: ["07:00 AM", "09:00 AM"],
     inclusions: ["Round-trip transfer", "Guide", "Long-tail boat ride", "Water"],
     exclusions: ["Meals", "Shopping", "Additional boat rides"],
     bookingPolicy: ["Early departure required", "Bring camera"],
@@ -810,6 +826,7 @@ export const toursData: Record<string, TourData> = {
     city: "bangkok",
     basePrice: 5040,
     childPrice: 0,
+    minAdults: 2,
     duration: "3 Hours",
     rating: 4.7,
     reviews: 1234,
@@ -817,8 +834,8 @@ export const toursData: Record<string, TourData> = {
     galleryImages: [],
     highlights: ["Tuk-tuk adventure", "Night markets", "Illuminated temples", "Street food stops", "Local Bangkok experience"],
     description: { overview: "Experience Bangkok's vibrant nightlife from a traditional tuk-tuk.", whatToExpect: "Visit night markets, see temples lit up at night, and try local street food on this unique tour." },
-    itinerary: [{ time: "06:00 PM", title: "Start", description: "Begin tuk-tuk adventure" }, { time: "06:30 PM", title: "Temples", description: "Visit illuminated temples" }, { time: "07:30 PM", title: "Night Market", description: "Explore local market" }, { time: "08:30 PM", title: "Street Food", description: "Food tasting stops" }, { time: "09:00 PM", title: "End", description: "Tour concludes" }],
-    tourTimings: ["06:00 PM – 09:00 PM"],
+    itinerary: [{ time: "05:30 PM", title: "Start", description: "Begin tuk-tuk adventure" }, { time: "06:00 PM", title: "Temples", description: "Visit illuminated temples" }, { time: "07:00 PM", title: "Night Market", description: "Explore local market" }, { time: "08:00 PM", title: "Street Food", description: "Food tasting stops" }, { time: "09:00 PM", title: "End", description: "Tour concludes" }],
+    tourTimings: ["05:30 PM – 09:00 PM"],
     inclusions: ["Tuk-tuk transport", "Guide", "Some food tastings", "Water"],
     exclusions: ["Hotel transfers", "Additional food purchases", "Shopping"],
     bookingPolicy: ["Minimum 2 people", "Meeting point pickup"],
@@ -828,7 +845,7 @@ export const toursData: Record<string, TourData> = {
   },
   "dream-world-bangkok": {
     id: "dream-world-bangkok",
-    title: "Dream World Bangkok Super Visa Admission Ticket with Transfer",
+    title: "Dream World Bangkok Super Visa Admission Ticket with Lunch + Transfer",
     shortDescription: "Full-day admission to Dream World amusement park with hotel transfers, including all rides and shows.",
     location: "Bangkok, Thailand",
     city: "bangkok",
@@ -842,9 +859,13 @@ export const toursData: Record<string, TourData> = {
     highlights: ["Dream World theme park", "Unlimited rides", "Snow Town", "4D Adventure", "Hotel transfers included"],
     description: { overview: "Spend a fun-filled day at Dream World, Bangkok's premier amusement park.", whatToExpect: "Enjoy thrilling rides, visit Snow Town, watch shows, and explore themed zones with family." },
     itinerary: [{ time: "08:00 AM", title: "Pickup", description: "Hotel pickup" }, { time: "09:00 AM", title: "Arrive", description: "Arrive at Dream World" }, { time: "09:00 AM - 04:00 PM", title: "Free Time", description: "Enjoy all attractions" }, { time: "04:00 PM", title: "Departure", description: "Return transfer begins" }, { time: "05:00 PM", title: "Hotel", description: "Drop-off at hotel" }],
-    tourTimings: ["09:00 AM – 04:00 PM"],
+    tourTimings: ["10:00 AM", "12:00 PM", "02:00 PM", "04:00 PM"],
+    tourOptions: [
+      { label: "Dream World Super Visa Ticket + Join Transfer", adultPrice: 4285 },
+      { label: "Dream World Super Visa Ticket + Lunch + Join Transfer", adultPrice: 4410 }
+    ],
     inclusions: ["Round-trip transfer", "Admission ticket", "Unlimited rides", "Snow Town access"],
-    exclusions: ["Meals", "Locker rental", "Photos"],
+    exclusions: ["Meals (unless Lunch option selected)", "Locker rental", "Photos"],
     bookingPolicy: ["Suitable for all ages", "Height restrictions on some rides"],
     cancellationPolicy: ["Free cancellation 24 hours before"],
     childPolicy: ["Child rate 3-11 years", "Under 3 free"],
@@ -858,6 +879,8 @@ export const toursData: Record<string, TourData> = {
     city: "bangkok",
     basePrice: 4915,
     childPrice: 5379,
+    twoAdultPrice: 5875,
+    minAdults: 2,
     duration: "Half Day",
     rating: 4.8,
     reviews: 1523,
@@ -916,9 +939,72 @@ export const toursData: Record<string, TourData> = {
     ],
     faqs: []
   },
+  "ayutthaya-temple-tour": {
+    id: "ayutthaya-temple-tour",
+    title: "Ayutthaya Temple Join Tour from Bangkok by Road with Transfer",
+    shortDescription: "Explore the ancient capital of Siam on a full-day guided tour from Bangkok. Visit UNESCO World Heritage temples and learn about Thailand's rich history.",
+    location: "Ayutthaya, Thailand",
+    city: "bangkok",
+    basePrice: 5922,
+    childPrice: 5922,
+    duration: "Full Day",
+    rating: 4.8,
+    reviews: 1245,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Ayutthaya UNESCO World Heritage temples",
+      "Professional English-speaking guide",
+      "Round-trip transfer from Bangkok",
+      "Visit multiple temple complexes",
+      "Learn about ancient Siam history"
+    ],
+    description: {
+      overview: "Explore the ancient capital of Siam on a full-day guided tour from Bangkok. Visit UNESCO World Heritage temples and learn about Thailand's rich history.",
+      whatToExpect: "Travel from Bangkok to the ancient city of Ayutthaya, once the thriving capital of Siam. Explore magnificent temple ruins, towering prangs, and serene Buddha statues that tell the story of a glorious past. Your expert guide will bring history to life as you visit multiple temple complexes, each with unique architectural styles and fascinating stories. The tour includes comfortable round-trip transfer from Bangkok and all entrance fees."
+    },
+    itinerary: [
+      { time: "07:00 AM", title: "Hotel Pickup", description: "Pick-up from your Bangkok hotel" },
+      { time: "09:00 AM", title: "Arrive Ayutthaya", description: "Arrive at the ancient city of Ayutthaya" },
+      { time: "09:30 AM", title: "Temple Visits", description: "Begin visiting the UNESCO World Heritage temple complexes" },
+      { time: "12:00 PM", title: "Lunch Break", description: "Enjoy a local Thai lunch" },
+      { time: "01:00 PM", title: "More Temples", description: "Continue exploring Ayutthaya's magnificent ruins" },
+      { time: "03:00 PM", title: "Return Journey", description: "Depart for Bangkok" },
+      { time: "05:00 PM", title: "Hotel Drop-off", description: "Arrive back at your Bangkok hotel" }
+    ],
+    tourTimings: ["07:00 AM"],
+    inclusions: [
+      "Round-trip transfer from Bangkok",
+      "Professional English-speaking guide",
+      "All temple entrance fees",
+      "Lunch",
+      "Air-conditioned vehicle"
+    ],
+    exclusions: [
+      "Personal expenses",
+      "Additional food and drinks",
+      "Tips and gratuities"
+    ],
+    bookingPolicy: [
+      "Confirmation will be received within 24 hours of booking",
+      "Please provide hotel name and address for pickup",
+      "Comfortable walking shoes recommended"
+    ],
+    cancellationPolicy: [
+      "Free cancellation up to 48 hours before the activity",
+      "100% charge for cancellations within 48 hours"
+    ],
+    childPolicy: [
+      "Child rate same as adult rate"
+    ],
+    faqs: [
+      { question: "How long is the drive to Ayutthaya?", answer: "Approximately 1.5 to 2 hours depending on traffic." },
+      { question: "Is lunch included?", answer: "Yes, a local Thai lunch is included in the tour." }
+    ]
+  },
   "bangkok-skywalk": {
     id: "bangkok-skywalk",
-    title: "Bangkok Mahanakhon Skywalk Observation Deck Ticket",
+    title: "Bangkok Mahanakhon Sky Walk Admission Ticket",
     shortDescription: "Experience Bangkok from Thailand's highest observation deck. Walk on the thrilling glass floor and enjoy 360-degree panoramic views of the city skyline.",
     location: "Bangkok, Thailand",
     city: "bangkok",
@@ -948,8 +1034,10 @@ export const toursData: Record<string, TourData> = {
       { time: "+30 min", title: "Rooftop Skywalk", description: "Step onto the glass floor and outdoor deck" },
       { time: "+45 min", title: "Photography", description: "Capture stunning city views and selfies" }
     ],
-    tourTimings: [
-      "10:00 AM – 08:00 PM (Last entry 07:15 PM)"
+    tourTimings: ["10:00 AM"],
+    tourOptions: [
+      { label: "Daytime Skywalk Ticket", adultPrice: 4536 },
+      { label: "Sunset Skywalk Ticket", adultPrice: 5544 }
     ],
     inclusions: [
       "Admission ticket to Mahanakhon Skywalk",

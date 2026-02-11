@@ -9,6 +9,7 @@ import { useCart } from "@/contexts/CartContext";
 export interface TourOption {
   label: string;
   adultPrice: number;
+  childPrice?: number;
 }
 
 interface PricingCalculatorProps {
@@ -20,6 +21,8 @@ interface PricingCalculatorProps {
   vehicleCapacity?: number;
   tourSlug?: string;
   singleAdultPrice?: number;
+  twoAdultPrice?: number;
+  minAdults?: number;
   tourOptions?: TourOption[];
 }
 
@@ -32,10 +35,13 @@ const PricingCalculator = ({
   vehicleCapacity = 5,
   tourSlug = "",
   singleAdultPrice,
+  twoAdultPrice,
+  minAdults = 1,
   tourOptions
 }: PricingCalculatorProps) => {
   const { addToCart } = useCart();
-  const [adults, setAdults] = useState(pricePerVehicle ? 1 : 2);
+  const effectiveMin = pricePerVehicle ? 1 : Math.max(minAdults, 1);
+  const [adults, setAdults] = useState(pricePerVehicle ? 1 : Math.max(effectiveMin, 2));
   const [children, setChildren] = useState(0);
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
@@ -51,14 +57,25 @@ const PricingCalculator = ({
     }
     if (pricePerVehicle) return basePrice;
     if (adults === 1 && singleAdultPrice) return singleAdultPrice;
+    if (adults === 2 && twoAdultPrice) return twoAdultPrice;
     return basePrice;
+  };
+
+  // Calculate child price (may vary by tour option)
+  const getChildPrice = () => {
+    if (tourOptions && selectedOption) {
+      const option = tourOptions.find(o => o.label === selectedOption);
+      if (option?.childPrice !== undefined) return option.childPrice;
+    }
+    return childPrice;
   };
   
   const currentAdultPrice = getAdultPrice();
+  const currentChildPrice = getChildPrice();
   
   const totalPrice = pricePerVehicle 
     ? vehicles * basePrice 
-    : adults * currentAdultPrice + children * childPrice;
+    : adults * currentAdultPrice + children * currentChildPrice;
 
   const handleBookNow = () => {
     if (!selectedDate) {
@@ -288,11 +305,17 @@ const PricingCalculator = ({
                 <p className="font-medium">No. of Adults (≥12 yrs)</p>
                 <p className="text-sm text-muted-foreground">
                   ₹{currentAdultPrice.toLocaleString()} per person
-                  {singleAdultPrice && adults === 1 && (
+                  {!tourOptions && twoAdultPrice && adults === 2 && (
+                    <span className="text-xs ml-1">(2 adults rate)</span>
+                  )}
+                  {!tourOptions && singleAdultPrice && adults === 1 && (
                     <span className="text-xs ml-1">(single adult rate)</span>
                   )}
-                  {singleAdultPrice && adults > 1 && (
+                  {!tourOptions && !twoAdultPrice && singleAdultPrice && adults > 1 && (
                     <span className="text-xs ml-1">(min. 2 adults rate)</span>
+                  )}
+                  {!tourOptions && twoAdultPrice && adults > 2 && (
+                    <span className="text-xs ml-1">(3+ adults rate)</span>
                   )}
                 </p>
               </div>
@@ -300,8 +323,9 @@ const PricingCalculator = ({
                 <Button
                   variant="outline"
                   size="icon"
-                  onClick={() => setAdults(Math.max(1, adults - 1))}
+                  onClick={() => setAdults(Math.max(effectiveMin, adults - 1))}
                   className="h-8 w-8"
+                  disabled={adults <= effectiveMin}
                 >
                   <Minus className="h-4 w-4" />
                 </Button>
@@ -320,7 +344,7 @@ const PricingCalculator = ({
             <div className="flex items-center justify-between p-4 bg-accent/50 rounded-lg">
               <div className="flex-1">
                 <p className="font-medium">No. of Child (2-11 yrs)</p>
-                <p className="text-sm text-muted-foreground">₹{childPrice.toLocaleString()} per child</p>
+                <p className="text-sm text-muted-foreground">₹{currentChildPrice.toLocaleString()} per child</p>
               </div>
               <div className="flex items-center gap-3">
                 <Button
@@ -359,8 +383,8 @@ const PricingCalculator = ({
               </div>
               {children > 0 && (
                 <div className="flex justify-between text-sm">
-                  <span>Children ({children} × INR {childPrice.toLocaleString()})</span>
-                  <span>INR {(children * childPrice).toLocaleString()}</span>
+                  <span>Children ({children} × INR {currentChildPrice.toLocaleString()})</span>
+                  <span>INR {(children * currentChildPrice).toLocaleString()}</span>
                 </div>
               )}
             </>
