@@ -3738,12 +3738,13 @@ export const toursData: Record<string, TourData> = {
   // Singapore Tours
   "singapore-city-tour": {
     id: "singapore-city-tour",
-    title: "Singapore City Tour with Guide",
-    shortDescription: "Explore iconic landmarks like Suntec City, Fountain of Wealth, Merlion Park, Little India and Chinatown.",
+    title: "Singapore City Tour with Guide and Transfer",
+    shortDescription: "Explore iconic landmarks like Suntec City, Fountain of Wealth, Merlion Park, Little India and Chinatown with guide and transfers.",
     location: "Singapore",
     city: "singapore",
     basePrice: 1815,
     childPrice: 1690.5,
+    minAdults: 2,
     duration: "Half Day",
     rating: 4.7,
     reviews: 1234,
@@ -3760,11 +3761,11 @@ export const toursData: Record<string, TourData> = {
       "Merlion Park",
       "Little India exploration",
       "Chinatown & Buddha Temple",
-      "Singapore Flyer view"
+      "Hotel transfers included"
     ],
     description: {
       overview: "Embark on a Singapore city tour with a knowledgeable guide to explore the best of this modern and diverse city.",
-      whatToExpect: "Visit iconic landmarks like Suntec City, Fountain of Wealth and Merlion Park. Experience the cultural vibrancy of Little India and Chinatown. Discover the beauty of Gardens by the Bay and the historical charm of Colonial District. Enjoy a memorable journey filled with fascinating history, stunning architecture, and a taste of Singapore's rich multicultural heritage."
+      whatToExpect: "Visit iconic landmarks like Suntec City, Fountain of Wealth and Merlion Park. Experience the cultural vibrancy of Little India and Chinatown. Discover the beauty of Gardens by the Bay and the historical charm of Colonial District. Enjoy a memorable journey filled with fascinating history, stunning architecture, and a taste of Singapore's rich multicultural heritage. Minimum 2 adults required."
     },
     itinerary: [
       { time: "Start", title: "Little India", description: "Begin tour from Little India" },
@@ -3772,24 +3773,25 @@ export const toursData: Record<string, TourData> = {
       { time: "", title: "Suntec City", description: "Visit Suntec City and Fountain of Wealth" },
       { time: "", title: "Merlion Park", description: "See the iconic Merlion statue" },
       { time: "", title: "Chinatown", description: "Explore Chinatown and Buddha Temple" },
-      { time: "End", title: "Return", description: "Return to Little India" }
+      { time: "End", title: "Return", description: "Return to hotel" }
     ],
     tourTimings: ["09:00 AM", "02:00 PM"],
-    inclusions: ["City tour from Little India", "Suntec City & Fountain of Wealth", "Singapore Flyer view", "Merlion Park", "Duty free shop visit", "Chinatown & Buddha Temple", "Sharing transfers"],
+    inclusions: ["City tour with knowledgeable guide", "Suntec City & Fountain of Wealth", "Merlion Park", "Little India & Chinatown exploration", "Hotel pick-up and drop-off"],
     exclusions: ["Personal expenses for shopping, drinks and dining"],
-    bookingPolicy: ["Be ready in hotel lobby 15 minutes before pickup", "Provide accurate hotel address", "Carry valid ID/passport"],
+    bookingPolicy: ["Minimum 2 adults required", "Be ready in hotel lobby 15 minutes before pickup", "Provide accurate hotel address", "Carry valid ID/passport"],
     cancellationPolicy: ["Free cancellation 84 hours prior", "100% charge within 84 hours"],
     childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
     faqs: []
   },
   "night-safari-tickets": {
     id: "night-safari-tickets",
-    title: "Night Safari Singapore Tickets Only",
+    title: "Night Safari Singapore",
     shortDescription: "Experience a unique adventure to witness nocturnal animals in their natural settings across 7 climate zones.",
     location: "Mandai, Singapore",
     city: "singapore",
     basePrice: 4470,
     childPrice: 4347,
+    minAdults: 1,
     duration: "3-4 Hours",
     rating: 4.8,
     reviews: 2345,
@@ -3818,8 +3820,25 @@ export const toursData: Record<string, TourData> = {
       { time: "", title: "Walking Trails", description: "Explore on foot" }
     ],
     tourTimings: ["7:15 PM onwards"],
-    inclusions: ["Night Safari tickets", "Tram ride"],
-    exclusions: ["Transfers", "Personal expenses"],
+    tourOptions: [
+      {
+        label: "Singapore Night Safari Ticket Only",
+        adultPrice: 4470,
+        childPrice: 4347
+      },
+      {
+        label: "Singapore Night Safari with Sharing Transfers",
+        adultPrice: 4955,
+        childPrice: 4830
+      },
+      {
+        label: "Night Safari Singapore with Indian Dinner & Transfer",
+        adultPrice: 6500,
+        childPrice: 6180
+      }
+    ],
+    inclusions: ["Night Safari tickets", "Tram ride", "Transfers (for applicable options)"],
+    exclusions: ["Personal expenses", "Food (unless Indian dinner option)"],
     bookingPolicy: ["Pre-book slots 72 hours in advance", "Valid photo ID required", "No flash photography"],
     cancellationPolicy: ["100% charge for cancellations after booking"],
     childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
@@ -3874,7 +3893,7 @@ export const toursData: Record<string, TourData> = {
     location: "Mandai, Singapore",
     city: "singapore",
     basePrice: 6500,
-    childPrice: 5800,
+    childPrice: 6180,
     duration: "5-6 Hours",
     rating: 4.9,
     reviews: 1567,
@@ -3908,13 +3927,14 @@ export const toursData: Record<string, TourData> = {
   },
   "sentosa-4d-2rides": {
     id: "sentosa-4d-2rides",
-    title: "Sentosa 4D Adventureland with 2 Rides Tickets Only",
+    title: "Sentosa 4D Adventureland",
     shortDescription: "Experience cutting-edge 4D technology with sensory effects for an immersive adventure.",
     location: "Sentosa Island, Singapore",
     city: "singapore",
     basePrice: 2060,
-    childPrice: 2052.75,
-    duration: "2 Hours",
+    childPrice: 2055,
+    minAdults: 1,
+    duration: "2-3 Hours",
     rating: 4.5,
     reviews: 876,
     heroImages: [
@@ -3928,20 +3948,42 @@ export const toursData: Record<string, TourData> = {
     highlights: [
       "3D visuals with sensory effects",
       "Wind, water sprays, motion seats",
-      "Choose 2 thrilling rides",
+      "Multiple thrilling rides options",
       "Action & adventure themes"
     ],
     description: {
       overview: "4D AdventureLand offers cutting-edge technology combining 3D visuals with sensory effects.",
-      whatToExpect: "Experience wind, water sprays, motion seats, and scents for an immersive experience. Choose any two rides from Pirates 4D, Extreme Log Ride, Haunted Mine Ride, or Desperados."
+      whatToExpect: "Experience wind, water sprays, motion seats, and scents for an immersive experience. Choose rides based on selected option."
     },
     itinerary: [],
     tourTimings: ["10:00 AM - 9:00 PM"],
-    inclusions: ["Sentosa 4D Adventureland admission", "Choice of any 2 rides"],
+    tourOptions: [
+      {
+        label: "Sentosa 4D Adventureland with 2 Rides Tickets Only",
+        adultPrice: 2060,
+        childPrice: 2055
+      },
+      {
+        label: "Sentosa 4D Adventureland with 2 Rides with Transfers",
+        adultPrice: 3750,
+        childPrice: 3745
+      },
+      {
+        label: "Sentosa 4D Adventureland with 3 Rides Tickets Only",
+        adultPrice: 2900,
+        childPrice: 2898
+      },
+      {
+        label: "Sentosa 4D Adventureland with 3 Rides with Transfers",
+        adultPrice: 4590,
+        childPrice: 4588
+      }
+    ],
+    inclusions: ["Sentosa 4D Adventureland admission", "Transfers (for applicable options)", "All rides included"],
     exclusions: ["Personal expenses", "Food"],
-    bookingPolicy: ["Valid photo ID required", "Children under 12 must be accompanied by adult"],
+    bookingPolicy: ["Valid photo ID required", "Children under 12 must be accompanied by adult", "Minimum 2 adults for transfer options"],
     cancellationPolicy: ["100% charge for cancellations after booking"],
-    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
     faqs: []
   },
   "sentosa-4d-3rides": {
@@ -3978,18 +4020,19 @@ export const toursData: Record<string, TourData> = {
     exclusions: ["Personal expenses", "Food"],
     bookingPolicy: ["Valid photo ID required"],
     cancellationPolicy: ["100% charge for cancellations after booking"],
-    childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
     faqs: []
   },
   "sentosa-cable-car": {
     id: "sentosa-cable-car",
-    title: "Sentosa Cable Car Roundtrip Pass Tickets Only",
-    shortDescription: "World-famous cable car offering breathtaking views of Singapore's cityscape.",
+    title: "Sentosa Cable Ride",
+    shortDescription: "World-famous cable car offering breathtaking views of Singapore's cityscape with multiple package options.",
     location: "Mount Faber to Sentosa, Singapore",
     city: "singapore",
     basePrice: 2180,
-    childPrice: 2052.75,
-    duration: "30 Minutes",
+    childPrice: 2055,
+    minAdults: 1,
+    duration: "30-90 Minutes",
     rating: 4.7,
     reviews: 1234,
     heroImages: [
@@ -4004,17 +4047,44 @@ export const toursData: Record<string, TourData> = {
       "Mount Faber to Sentosa connection",
       "Panoramic city views",
       "Marina Bay Sands views",
-      "Merlion sighting"
+      "Wings of Time show option"
     ],
     description: {
-      overview: "The Singapore Cable Car is a world-famous tourist attraction.",
-      whatToExpect: "Enjoy breathtaking vistas of the cityscape, lush landscapes, and picturesque waterfront spots. See iconic landmarks like Marina Bay Sands and the Merlion from above."
+      overview: "The Singapore Cable Car is a world-famous tourist attraction offering multiple experience options.",
+      whatToExpect: "Enjoy breathtaking vistas of the cityscape, lush landscapes, and picturesque waterfront spots. See iconic landmarks like Marina Bay Sands and the Merlion from above. Upgrade to include Wings of Time show and/or Indian buffet dinner."
     },
     itinerary: [],
     tourTimings: ["8:45 AM - 10:00 PM"],
-    inclusions: ["Access to Mount Faber Line", "Access to Sentosa Line", "Roundtrip pass"],
-    exclusions: ["Personal expenses", "Food"],
-    bookingPolicy: ["Valid photo ID required"],
+    tourOptions: [
+      {
+        label: "Sentosa Cable Ride Roundtrip Pass Tickets Only",
+        adultPrice: 2180,
+        childPrice: 2055
+      },
+      {
+        label: "Sentosa Cable Ride Roundtrip Pass With Transfer",
+        adultPrice: 3390,
+        childPrice: 2055
+      },
+      {
+        label: "Sentosa Wings of Time Tickets + Roundtrip Cable car Mt. Faber Line",
+        adultPrice: 2657,
+        childPrice: 2055
+      },
+      {
+        label: "Sentosa Wings of Time Tickets + Roundtrip Cable car Mt. Faber Line + Indian Buffet",
+        adultPrice: 3985,
+        childPrice: 2055
+      },
+      {
+        label: "Sentosa Wings of Time Tickets + Roundtrip Cable car Mt. Faber Line + Indian Buffet with Transfer",
+        adultPrice: 4106,
+        childPrice: 4106
+      }
+    ],
+    inclusions: ["Cable car access", "Wings of Time (for applicable options)", "Indian buffet (for applicable options)", "Transfers (for applicable options)"],
+    exclusions: ["Personal expenses", "Food (unless included in option)"],
+    bookingPolicy: ["Valid photo ID required", "Minimum 2 adults for transfer options"],
     cancellationPolicy: ["100% charge for cancellations after booking"],
     childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
     faqs: []
@@ -4097,12 +4167,13 @@ export const toursData: Record<string, TourData> = {
   },
   "singapore-river-cruise": {
     id: "singapore-river-cruise",
-    title: "Singapore River Cruise Tickets",
+    title: "Singapore River Cruise",
     shortDescription: "Delightful journey along the iconic Singapore River showcasing picturesque landmarks.",
     location: "Clarke Quay, Singapore",
     city: "singapore",
-    basePrice: 2173.5,
+    basePrice: 2174,
     childPrice: 2415,
+    minAdults: 1,
     duration: "40 Minutes",
     rating: 4.7,
     reviews: 1567,
@@ -4129,21 +4200,34 @@ export const toursData: Record<string, TourData> = {
       { time: "40 mins", title: "Cruise", description: "Scenic river cruise with commentary" }
     ],
     tourTimings: ["9:00 AM - 11:00 PM"],
-    inclusions: ["40-minute cruise", "Audio visual commentary in English"],
+    tourOptions: [
+      {
+        label: "Singapore River Cruise Tickets Only",
+        adultPrice: 2174,
+        childPrice: 2415
+      },
+      {
+        label: "Singapore River Cruise Tickets + Private Transfer",
+        adultPrice: 5920,
+        childPrice: 2415
+      }
+    ],
+    inclusions: ["40-minute cruise", "Audio visual commentary in English", "Transfers (for applicable option)"],
     exclusions: ["Personal expenses", "Food"],
-    bookingPolicy: ["Report 15 minutes before", "Boarding at Clarke Quay Jetty", "No re-boarding after disembarking"],
+    bookingPolicy: ["Report 15 minutes before", "Boarding at Clarke Quay Jetty", "No re-boarding after disembarking", "Minimum 2 adults for transfer option"],
     cancellationPolicy: ["100% charge for cancellations after booking"],
     childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
     faqs: []
   },
   "gardens-by-the-bay": {
     id: "gardens-by-the-bay",
-    title: "Gardens by the Bay + Flower Dome + Cloud Forest with Jurassic World",
-    shortDescription: "Stunning 101-hectare oasis featuring 250,000 plants and iconic Supertree Grove.",
+    title: "Gardens by the Bay",
+    shortDescription: "Stunning 101-hectare oasis featuring 250,000 plants and iconic Supertree Grove with flexible package options.",
     location: "Marina Bay, Singapore",
     city: "singapore",
     basePrice: 2660,
-    childPrice: 3381,
+    childPrice: 2660,
+    minAdults: 1,
     duration: "3-4 Hours",
     rating: 4.9,
     reviews: 3456,
@@ -4167,21 +4251,34 @@ export const toursData: Record<string, TourData> = {
     },
     itinerary: [],
     tourTimings: ["9:00 AM - 8:00 PM"],
-    inclusions: ["Gardens by the Bay admission", "Flower Dome entry", "Cloud Forest with Jurassic World"],
-    exclusions: ["Personal expenses", "Food", "Transfers"],
-    bookingPolicy: ["Valid photo ID required", "No re-entry allowed", "Maximum 1 hour per conservatory"],
+    tourOptions: [
+      {
+        label: "Gardens by the Bay + Flower Dome + Cloud Forest with Jurassic World Tickets Only",
+        adultPrice: 2660,
+        childPrice: 2660
+      },
+      {
+        label: "Gardens by the Bay + Flower Dome + Cloud Forest with Jurassic World with Tickets and Transfers",
+        adultPrice: 4046,
+        childPrice: 3381
+      }
+    ],
+    inclusions: ["Gardens by the Bay admission", "Flower Dome entry", "Cloud Forest with Jurassic World", "Transfers (for applicable option)"],
+    exclusions: ["Personal expenses", "Food"],
+    bookingPolicy: ["Valid photo ID required", "No re-entry allowed", "Maximum 1 hour per conservatory", "Minimum 2 adults for transfer option"],
     cancellationPolicy: ["100% charge for cancellations after booking"],
     childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
     faqs: []
   },
   "adventure-cove": {
     id: "adventure-cove",
-    title: "Adventure Cove Water Park Tickets Only",
+    title: "Adventure Cove Water Park",
     shortDescription: "Thrilling water park with rides, snorkeling with tropical fish, and dolphin encounters.",
     location: "Resorts World Sentosa, Singapore",
     city: "singapore",
-    basePrice: 2656.5,
-    childPrice: 4226.25,
+    basePrice: 2657,
+    childPrice: 2657,
+    minAdults: 1,
     duration: "Full Day",
     rating: 4.7,
     reviews: 2345,
@@ -4206,7 +4303,19 @@ export const toursData: Record<string, TourData> = {
     },
     itinerary: [],
     tourTimings: ["10:00 AM - 6:00 PM"],
-    inclusions: ["Adventure Cove Waterpark ticket", "All rides and attractions"],
+    tourOptions: [
+      {
+        label: "Adventure Cove Water Park Tickets Only",
+        adultPrice: 2657,
+        childPrice: 2657
+      },
+      {
+        label: "Adventure Cove Water Park Tickets with Transfers",
+        adultPrice: 3864,
+        childPrice: 3864
+      }
+    ],
+    inclusions: ["Adventure Cove Waterpark ticket", "All rides and attractions", "Transfers (for applicable option)"],
     exclusions: ["Personal expenses", "Food", "Locker rental"],
     bookingPolicy: ["Valid photo ID required", "Children must be accompanied by adult"],
     cancellationPolicy: ["100% charge for cancellations after booking"],
@@ -4253,12 +4362,13 @@ export const toursData: Record<string, TourData> = {
   },
   "river-safari": {
     id: "river-safari",
-    title: "Singapore River Safari Tickets Only",
+    title: "Singapore River Safari",
     shortDescription: "Captivating wildlife park with river-themed exhibits and Amazon River Quest boat ride.",
     location: "Mandai, Singapore",
     city: "singapore",
-    basePrice: 4467.75,
-    childPrice: 4467.75,
+    basePrice: 4468,
+    childPrice: 4468,
+    minAdults: 1,
     duration: "3-4 Hours",
     rating: 4.6,
     reviews: 1234,
@@ -4282,9 +4392,21 @@ export const toursData: Record<string, TourData> = {
     },
     itinerary: [],
     tourTimings: ["10:00 AM - 7:00 PM"],
-    inclusions: ["River Safari admission", "Amazon River Quest boat ride", "Animal shows"],
+    tourOptions: [
+      {
+        label: "Singapore River Safari Tickets Only",
+        adultPrice: 4468,
+        childPrice: 4468
+      },
+      {
+        label: "Singapore River Safari Tickets and Transfers",
+        adultPrice: 5920,
+        childPrice: 5676
+      }
+    ],
+    inclusions: ["River Safari admission", "Amazon River Quest boat ride", "Animal shows", "Transfers (for applicable option)"],
     exclusions: ["Personal expenses", "Food"],
-    bookingPolicy: ["Pre-book slots 72 hours in advance", "Valid photo ID required"],
+    bookingPolicy: ["Pre-book slots 72 hours in advance", "Valid photo ID required", "Minimum 2 adults for transfer option"],
     cancellationPolicy: ["100% charge for cancellations after booking"],
     childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
     faqs: []
