@@ -102,6 +102,7 @@ import BurjKhalifaNonPrime from "./pages/BurjKhalifaNonPrime";
 import BurjKhalifaPrime from "./pages/BurjKhalifaPrime";
 import DubaiDolphinShow from "./pages/DubaiDolphinShow";
 import MiracleGardenDubai from "./pages/MiracleGardenDubai";
+import DubaiFountainShow from "./pages/DubaiFountainShow";
 import Singapore from "./pages/Singapore";
 import SingaporeCityTour from "./pages/SingaporeCityTour";
 import NightSafariTickets from "./pages/NightSafariTickets";
@@ -299,7 +300,8 @@ const App = () => (
           <Route path="/dubai/burj-khalifa-non-prime" element={<BurjKhalifaNonPrime />} />
           <Route path="/dubai/burj-khalifa-prime" element={<BurjKhalifaPrime />} />
           <Route path="/dubai/dubai-dolphin-show" element={<DubaiDolphinShow />} />
-          <Route path="/dubai/miracle-garden-dubai" element={<MiracleGardenDubai />} />
+           <Route path="/dubai/miracle-garden-dubai" element={<MiracleGardenDubai />} />
+           <Route path="/dubai/dubai-fountain-show" element={<DubaiFountainShow />} />
           <Route path="/singapore" element={<Singapore />} />
           <Route path="/singapore/singapore-city-tour" element={<SingaporeCityTour />} />
           <Route path="/singapore/night-safari-tickets" element={<NightSafariTickets />} />

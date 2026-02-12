@@ -53,6 +53,8 @@ import singaporeMarinaByNight from "@/assets/singapore-marina-bay-sands-night-1.
 // Dubai images (after Singapore imports block)
 import dubaiAquariumFish from "@/assets/dubai-aquarium-fish-1.jpg";
 import dubaiGlobalVillage from "@/assets/dubai-global-village-1.jpg";
+import dubaiGlobalVillage2 from "@/assets/dubai-global-village-2.jpg";
+import dubaiGlobalVillage3 from "@/assets/dubai-global-village-3.jpg";
 import dubaiSkylineSunset from "@/assets/dubai-skyline-sunset-1.jpg";
 import dubaiSkylineNight from "@/assets/dubai-skyline-night-1.jpg";
 import dubaiDesertWoman from "@/assets/dubai-desert-woman-1.jpg";
@@ -60,6 +62,7 @@ import dubaiDesertCouple from "@/assets/dubai-desert-couple-1.jpg";
 import dubaiDesertCouple2 from "@/assets/dubai-desert-couple-2.jpg";
 import dubaiCityNight from "@/assets/dubai-city-night-1.jpg";
 import dubaiDhowCruise from "@/assets/dubai-dhow-cruise-1.jpg";
+import dubaiFountainShow from "@/assets/dubai-fountain-show-1.jpg";
 import singaporeWomanCityscape from "@/assets/singapore-cityscape-woman-1.jpg";
 import singaporeGardensByNight from "@/assets/singapore-gardens-bay-night-1.jpg";
 import singaporeFlyerTwilight from "@/assets/singapore-flyer-twilight-1.jpg";
@@ -122,6 +125,11 @@ export interface TourData {
   }[];
   customerReviews?: CustomerReview[];
   tourOptions?: {
+    label: string;
+    adultPrice: number;
+    childPrice?: number;
+  }[];
+  tourAddOns?: {
     label: string;
     adultPrice: number;
     childPrice?: number;
@@ -2862,7 +2870,7 @@ export const toursData: Record<string, TourData> = {
   // Dubai Tours
   "dhow-cruise-creek-lower": {
     id: "dhow-cruise-creek-lower",
-    title: "Dhow Cruise Dinner - Lower Deck with Transfers",
+    title: "Dhow Creek Cruise Dinner - Lower Deck with Transfers",
     shortDescription: "Experience a traditional Arabian dhow cruise on Dubai Creek with a delicious buffet dinner and live entertainment.",
     location: "Dubai Creek, Dubai",
     city: "dubai",
@@ -2931,6 +2939,9 @@ export const toursData: Record<string, TourData> = {
       "Children 3-10 years: Child rate applies",
       "Above 10 years: Adult rate applies"
     ],
+    tourAddOns: [
+      { label: "Dhow Cruise Beverage Package- Add On", adultPrice: 1800, childPrice: 1800 }
+    ],
     faqs: [
       { question: "What time does boarding start?", answer: "Boarding starts between 7:45 PM - 8:00 PM." },
       { question: "Is the cruise air-conditioned?", answer: "Yes, the lower deck is fully air-conditioned." }
@@ -2938,7 +2949,7 @@ export const toursData: Record<string, TourData> = {
   },
   "dhow-cruise-creek-upper": {
     id: "dhow-cruise-creek-upper",
-    title: "Dhow Cruise Dinner - Upper Deck with Transfers",
+    title: "Dhow Creek Cruise Dinner - Upper Deck with Transfers",
     shortDescription: "Enjoy an open-air dining experience on the upper deck of a traditional Arabian dhow cruising Dubai Creek.",
     location: "Dubai Creek, Dubai",
     city: "dubai",
@@ -2979,6 +2990,9 @@ export const toursData: Record<string, TourData> = {
     bookingPolicy: ["Report 30 minutes before departure"],
     cancellationPolicy: ["Free cancellation 72 hours prior", "100% charge within 72 hours"],
     childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
+    tourAddOns: [
+      { label: "Dhow Cruise Beverage Package- Add On", adultPrice: 1800, childPrice: 1800 }
+    ],
     faqs: []
   },
   "desert-safari-shisha": {
@@ -3058,8 +3072,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Classic desert safari experience with dune bashing, camel riding, and BBQ dinner under the stars.",
     location: "Dubai Desert, UAE",
     city: "dubai",
-    basePrice: 3532.2,
-    childPrice: 3410.4,
+    basePrice: 3532,
+    childPrice: 3410,
     duration: "6 Hours",
     rating: 4.8,
     reviews: 3421,
@@ -3079,6 +3093,13 @@ export const toursData: Record<string, TourData> = {
       "BBQ buffet dinner",
       "Live entertainment shows",
       "Shisha corner access"
+    ],
+    tourOptions: [
+      { label: "Desert Safari with Sharing Transfer", adultPrice: 3532, childPrice: 3410 },
+      { label: "Desert Safari with Shisha on Table with Sharing Transfer", adultPrice: 5116, childPrice: 3410 }
+    ],
+    tourAddOns: [
+      { label: "Desert Safari Beverage Package (Add On Only)", adultPrice: 1400 }
     ],
     description: {
       overview: "The classic Dubai desert safari experience with all essential activities included.",
@@ -3105,7 +3126,7 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Comprehensive tour of Dubai's iconic landmarks including Burj Al Arab, Dubai Frame, and traditional souks.",
     location: "Dubai, UAE",
     city: "dubai",
-    basePrice: 1461.6,
+    basePrice: 1462,
     childPrice: 1827,
     duration: "6 Hours",
     rating: 4.6,
@@ -3127,6 +3148,10 @@ export const toursData: Record<string, TourData> = {
       "Spice and Gold Souk visit",
       "Burj Al Arab photo stop",
       "View of Atlantis The Palm"
+    ],
+    tourOptions: [
+      { label: "Dubai City Tour", adultPrice: 1462, childPrice: 1827 },
+      { label: "Dubai City Tour with Dubai Mall with Transfers", adultPrice: 2072, childPrice: 2436 }
     ],
     description: {
       overview: "Discover the best of Dubai on this comprehensive city tour covering historical and modern landmarks.",
@@ -3294,11 +3319,13 @@ export const toursData: Record<string, TourData> = {
     reviews: 2345,
     heroImages: [
       { src: dubaiGlobalVillage, title: "Global Village" },
-      { src: dubaiCityNight, title: "Global Village Night" }
+      { src: dubaiGlobalVillage2, title: "Global Village Entertainment" },
+      { src: dubaiGlobalVillage3, title: "Global Village Night" }
     ],
     galleryImages: [
       { src: dubaiGlobalVillage, alt: "Global Village" },
-      { src: dubaiCityNight, alt: "Dubai City Night" }
+      { src: dubaiGlobalVillage2, alt: "Global Village Entertainment" },
+      { src: dubaiGlobalVillage3, alt: "Global Village Night" }
     ],
     highlights: [
       "32 pavilions from 75+ countries",
@@ -3318,7 +3345,7 @@ export const toursData: Record<string, TourData> = {
       { time: "5:00-10:00 PM", title: "Exploration", description: "Free time to explore" },
       { time: "10:30 PM", title: "Return", description: "Drop-off" }
     ],
-    tourTimings: ["4:00 PM"],
+    tourTimings: [],
     inclusions: ["Transfers", "Entry ticket", "Access to 75+ pavilions"],
     exclusions: ["Food and shopping", "Rides and games", "Souvenirs"],
     bookingPolicy: ["Bring valid photo ID", "Children must wear safety wristband", "No pets allowed", "No outside food"],
@@ -3332,8 +3359,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Explore the UAE capital including the magnificent Sheikh Zayed Grand Mosque and cultural landmarks.",
     location: "Abu Dhabi, UAE",
     city: "dubai",
-    basePrice: 3288.6,
-    childPrice: 3288.6,
+    basePrice: 3290,
+    childPrice: 3290,
     duration: "Full Day",
     rating: 4.8,
     reviews: 1987,
@@ -3352,6 +3379,10 @@ export const toursData: Record<string, TourData> = {
       "Emirates Palace view",
       "BAPS Mandir visit",
       "Islamic Art House"
+    ],
+    tourOptions: [
+      { label: "Abu Dhabi City Tour", adultPrice: 3290, childPrice: 3290 },
+      { label: "Abu Dhabi City Tour + Ferrari World Ticket with Transfer", adultPrice: 9745, childPrice: 9745 }
     ],
     description: {
       overview: "An unforgettable journey through the heart of the UAE capital.",
@@ -3424,8 +3455,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Explore one of the world's largest suspended aquariums with 30,000+ aquatic animals.",
     location: "Dubai Mall, Dubai",
     city: "dubai",
-    basePrice: 4019.4,
-    childPrice: 4019.4,
+    basePrice: 4020,
+    childPrice: 4020,
     duration: "2-3 Hours",
     rating: 4.7,
     reviews: 2134,
@@ -3444,6 +3475,10 @@ export const toursData: Record<string, TourData> = {
       "Penguin Cove experience",
       "Underwater tunnel walk",
       "Sharks and rays"
+    ],
+    tourOptions: [
+      { label: "Dubai Aquarium and Underwater Zoo with Penguin Cove", adultPrice: 4020, childPrice: 4020 },
+      { label: "Dubai Aquarium and Underwater Zoo with Penguin Cove with Transfer", adultPrice: 5360, childPrice: 5360 }
     ],
     description: {
       overview: "One of its kind center-piece of Dubai Mall, home to more than 30,000 aquatic animals.",
@@ -3490,6 +3525,10 @@ export const toursData: Record<string, TourData> = {
       "Interactive displays",
       "Telescopes available"
     ],
+    tourOptions: [
+      { label: "Burj Khalifa- 124th + 125th Floor: Non Prime Hours- Silver (Morning: 07:00 - 11:30 a.m., Night: 20:30 - 23:00 p.m.)", adultPrice: 6090, childPrice: 4872 },
+      { label: "Burj Khalifa- 124th + 125th Floor: Non Prime Hours with Transfers", adultPrice: 6821, childPrice: 6699 }
+    ],
     description: {
       overview: "An unforgettable journey into the heart of Dubai's skyline at the world's tallest building.",
       whatToExpect: "Enter the iconic tower through a lavish lobby. Board high-speed elevators with mesmerizing glimpses of the cityscape through glass panels. Arrive at observation decks with panoramic views from the glittering Arabian Gulf to sprawling desert landscapes."
@@ -3499,7 +3538,7 @@ export const toursData: Record<string, TourData> = {
       { time: "5 Min", title: "Elevator", description: "High-speed ride to top" },
       { time: "1 Hour", title: "Observation", description: "Explore both floors" }
     ],
-    tourTimings: ["Morning: 07:00-11:30", "Night: 20:30-23:00"],
+    tourTimings: ["07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "20:30", "21:00", "21:30", "22:00", "22:30", "23:00"],
     inclusions: ["Entry to 124th & 125th floor", "Observation deck access"],
     exclusions: ["Transfers", "Food", "Souvenirs"],
     bookingPolicy: ["Valid photo ID required", "Booking valid for selected date/time only", "Children must be accompanied"],
@@ -3532,6 +3571,10 @@ export const toursData: Record<string, TourData> = {
       "Golden hour photography",
       "City transformation views"
     ],
+    tourOptions: [
+      { label: "Burj Khalifa- 124th + 125th Floor: Prime Hours", adultPrice: 8526, childPrice: 7308 },
+      { label: "Burj Khalifa- 124th + 125th Floor: Prime Hours with Transfers", adultPrice: 9623, childPrice: 9500 }
+    ],
     description: {
       overview: "Experience Burj Khalifa during the magical prime hours.",
       whatToExpect: "Witness Dubai transform from day to night from the world's highest observation deck. Prime hours offer the best lighting for photography and the magical experience of watching the city light up."
@@ -3540,7 +3583,7 @@ export const toursData: Record<string, TourData> = {
       { time: "Chosen Slot", title: "Entry", description: "Enter at your booked time" },
       { time: "1 Hour", title: "Observation", description: "Explore and photograph" }
     ],
-    tourTimings: ["12:00 PM - 8:00 PM"],
+    tourTimings: ["12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"],
     inclusions: ["Entry to 124th & 125th floor"],
     exclusions: ["Transfers", "Food"],
     bookingPolicy: ["Valid photo ID required", "Booking valid for selected date/time only"],
@@ -3597,8 +3640,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Visit the world's largest natural flower garden with over 100 million blooming flowers.",
     location: "Al Barsha South, Dubai",
     city: "dubai",
-    basePrice: 2557.8,
-    childPrice: 2557.8,
+    basePrice: 2560,
+    childPrice: 2560,
     duration: "3-4 Hours",
     rating: 4.8,
     reviews: 3456,
@@ -3619,6 +3662,10 @@ export const toursData: Record<string, TourData> = {
       "Themed garden sections",
       "Iconic floral structures"
     ],
+    tourOptions: [
+      { label: "Miracle Garden Dubai", adultPrice: 2560, childPrice: 2560 },
+      { label: "Miracle Garden Dubai with Transfer", adultPrice: 4145, childPrice: 4020 }
+    ],
     description: {
       overview: "A botanical paradise spanning 72,000 square meters in the middle of the desert.",
       whatToExpect: "Stroll along manicured themed gardens and pathways, admire unique structures and water features all decked up with vivid arrays of flowers and plants. The garden features over 100 million blooming flowers from 70+ rare, exotic and indigenous floral species. Recognized by Guinness Book of World Records for its astonishing flower wall."
@@ -3636,6 +3683,56 @@ export const toursData: Record<string, TourData> = {
     childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
     faqs: [
       { question: "When is Miracle Garden open?", answer: "The garden is seasonal, typically open from November to May. Check the official website for current dates." }
+    ]
+  },
+  "dubai-fountain-show": {
+    id: "dubai-fountain-show",
+    title: "Dubai Fountain Show with Lake Ride Tickets",
+    shortDescription: "Experience the world's largest choreographed fountain system with an exclusive lake ride on Burj Khalifa Lake.",
+    location: "Downtown Dubai, UAE",
+    city: "dubai",
+    basePrice: 2071,
+    childPrice: 2070,
+    duration: "1 Hour",
+    rating: 4.8,
+    reviews: 2876,
+    heroImages: [
+      { src: dubaiFountainShow, title: "Dubai Fountain Show" },
+      { src: dubaiSkylineNight, title: "Burj Khalifa Lake" }
+    ],
+    galleryImages: [
+      { src: dubaiFountainShow, alt: "Dubai Fountain Show" },
+      { src: dubaiSkylineNight, alt: "Dubai Skyline Night" },
+      { src: dubaiCityNight, alt: "Dubai Night" }
+    ],
+    highlights: [
+      "World's largest choreographed fountain system",
+      "Traditional Abra lake ride on Burj Khalifa Lake",
+      "Stunning views of Burj Khalifa",
+      "Water jets shooting up to 150 meters",
+      "Illuminated fountain performance synchronized with music",
+      "Unique perspective from the water"
+    ],
+    description: {
+      overview: "Witness the spectacular Dubai Fountain, the world's largest choreographed fountain system, set on the 30-acre Burj Khalifa Lake.",
+      whatToExpect: "Board a traditional Abra boat and glide across the Burj Khalifa Lake for an up-close experience of the Dubai Fountain show. Watch as water jets shoot up to 150 meters high, choreographed to music and illuminated by 6,600 lights and 25 color projectors. The show creates a mesmerizing display that combines water, music, and light against the backdrop of the world's tallest building. Each show lasts approximately 5 minutes, and your lake ride gives you the best seats in the house."
+    },
+    itinerary: [
+      { time: "Selected Time", title: "Arrival", description: "Arrive at the boarding point near Dubai Mall waterfront promenade" },
+      { time: "5 Min Before Show", title: "Boarding", description: "Board the traditional Abra boat" },
+      { time: "Show Time", title: "Fountain Show", description: "Enjoy the spectacular fountain performance from the lake" },
+      { time: "After Show", title: "Return", description: "Return to the boarding point" }
+    ],
+    tourTimings: ["17:45", "18:15", "18:45", "19:15", "19:45", "20:15", "20:45", "21:15", "21:45", "22:15", "22:45"],
+    inclusions: ["Lake ride on traditional Abra boat", "Dubai Fountain show viewing", "Life jackets provided", "Spectacular views of Burj Khalifa"],
+    exclusions: ["Transfers to/from hotel", "Food and beverages", "Photography services", "Tips and gratuities"],
+    bookingPolicy: ["Arrive 15 minutes before selected show time", "Valid photo ID required", "Children must be accompanied by an adult", "Subject to weather conditions"],
+    cancellationPolicy: ["Free cancellation 72 hours prior", "100% charge within 72 hours"],
+    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    faqs: [
+      { question: "How long is the fountain show?", answer: "Each fountain show lasts approximately 5 minutes. The lake ride is approximately 25 minutes total." },
+      { question: "What is the best time for the show?", answer: "Evening shows after sunset offer the most spectacular views with the illuminated fountains against the night sky." },
+      { question: "Is the lake ride safe?", answer: "Yes, all boats are equipped with safety gear and life jackets. Professional boatmen operate the traditional Abra boats." }
     ]
   },
   // Singapore Tours

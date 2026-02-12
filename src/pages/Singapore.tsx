@@ -55,6 +55,28 @@ const categories = [
   "Shows & Entertainment", "Water Activities", "Transfers", "Combo Packages"
 ];
 
+const PaginationControls = ({ currentPage, totalPages, onPageChange }: { currentPage: number; totalPages: number; onPageChange: (page: number) => void }) => {
+  if (totalPages <= 1) return null;
+  return (
+    <div className="flex items-center justify-center gap-2 mb-6">
+      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+        <Button
+          key={page}
+          variant={currentPage === page ? 'default' : 'outline'}
+          onClick={() => onPageChange(page)}
+        >
+          {page}
+        </Button>
+      ))}
+      {currentPage < totalPages && (
+        <Button variant="outline" onClick={() => onPageChange(currentPage + 1)}>
+          Next →
+        </Button>
+      )}
+    </div>
+  );
+};
+
 const Singapore = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('price-low');
@@ -124,13 +146,16 @@ const Singapore = () => {
         </div>
 
         {/* Mobile Filters */}
-           <MobileFilters
-           priceRange={priceRange}
-           onPriceRangeChange={setPriceRange}
-           minPrice={1500}
-           maxPrice={15000}
-           categories={categories}
-         />
+        <MobileFilters
+          priceRange={priceRange}
+          onPriceRangeChange={setPriceRange}
+          minPrice={1500}
+          maxPrice={15000}
+          categories={categories}
+        />
+
+        {/* Top Pagination */}
+        <PaginationControls currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
 
         <div className="flex gap-8">
           {/* Desktop Sidebar - Hidden on mobile */}
@@ -154,14 +179,14 @@ const Singapore = () => {
 
               <div>
                 <h3 className="font-semibold text-foreground mb-3">Price Filter</h3>
-            <Slider
-                   value={priceRange}
-                   onValueChange={setPriceRange}
-                   min={1500}
-                   max={15000}
-                   step={100}
-                   className="mb-2"
-                 />
+                <Slider
+                  value={priceRange}
+                  onValueChange={setPriceRange}
+                  min={1500}
+                  max={15000}
+                  step={100}
+                  className="mb-2"
+                />
                 <p className="text-sm text-muted-foreground">
                   INR {priceRange[0].toLocaleString('en-IN')} – INR {priceRange[1].toLocaleString('en-IN')}
                 </p>
@@ -195,24 +220,10 @@ const Singapore = () => {
               ))}
             </div>
 
-            {totalPages > 1 && (
-              <div className="flex items-center justify-center gap-2 mt-8">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <Button
-                    key={page}
-                    variant={currentPage === page ? 'default' : 'outline'}
-                    onClick={() => setCurrentPage(page)}
-                  >
-                    {page}
-                  </Button>
-                ))}
-                {currentPage < totalPages && (
-                  <Button variant="outline" onClick={() => setCurrentPage(currentPage + 1)}>
-                    Next →
-                  </Button>
-                )}
-              </div>
-            )}
+            {/* Bottom Pagination */}
+            <div className="mt-8">
+              <PaginationControls currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
+            </div>
           </main>
         </div>
       </div>
