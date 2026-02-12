@@ -12,6 +12,12 @@ export interface TourOption {
   childPrice?: number;
 }
 
+export interface TourAddOn {
+  label: string;
+  adultPrice: number;
+  childPrice?: number;
+}
+
 interface PricingCalculatorProps {
   basePrice: number;
   childPrice: number;
@@ -24,6 +30,7 @@ interface PricingCalculatorProps {
   twoAdultPrice?: number;
   minAdults?: number;
   tourOptions?: TourOption[];
+  tourAddOns?: TourAddOn[];
   hideChildren?: boolean;
 }
 
@@ -39,6 +46,7 @@ const PricingCalculator = ({
   twoAdultPrice,
   minAdults = 1,
   tourOptions,
+  tourAddOns,
   hideChildren = false
 }: PricingCalculatorProps) => {
   const { addToCart } = useCart();
@@ -50,6 +58,7 @@ const PricingCalculator = ({
   const [vehicles, setVehicles] = useState(1);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(tourOptions?.[0]?.label || "");
+  const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
 
   // Calculate adult price based on tiered pricing
   const getAdultPrice = () => {
@@ -74,10 +83,17 @@ const PricingCalculator = ({
   
   const currentAdultPrice = getAdultPrice();
   const currentChildPrice = getChildPrice();
+
+  // Calculate add-on total
+  const addOnTotal = tourAddOns
+    ? tourAddOns
+        .filter(a => selectedAddOns.includes(a.label))
+        .reduce((sum, a) => sum + (adults * a.adultPrice) + (children * (a.childPrice ?? 0)), 0)
+    : 0;
   
   const totalPrice = pricePerVehicle 
     ? vehicles * basePrice 
-    : adults * currentAdultPrice + children * currentChildPrice;
+    : adults * currentAdultPrice + children * currentChildPrice + addOnTotal;
 
   const handleBookNow = () => {
     if (!selectedDate) {
@@ -298,6 +314,43 @@ const PricingCalculator = ({
               </div>
             )}
 
+            {tourAddOns && tourAddOns.length > 0 && (
+              <div className="space-y-3 mb-4">
+                <label className="text-sm font-medium flex items-center gap-2">
+                  ➕ Add-Ons
+                </label>
+                <div className="space-y-2">
+                  {tourAddOns.map((addOn, idx) => (
+                    <label
+                      key={idx}
+                      className={`flex items-start gap-3 p-3 rounded-lg border-2 cursor-pointer transition-colors ${
+                        selectedAddOns.includes(addOn.label)
+                          ? "border-primary bg-primary/10"
+                          : "border-border hover:border-primary/50"
+                      }`}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={selectedAddOns.includes(addOn.label)}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setSelectedAddOns([...selectedAddOns, addOn.label]);
+                          } else {
+                            setSelectedAddOns(selectedAddOns.filter(a => a !== addOn.label));
+                          }
+                        }}
+                        className="mt-1 accent-primary"
+                      />
+                      <div className="flex-1">
+                        <p className="font-medium text-sm">{addOn.label}</p>
+                        <p className="text-sm text-primary font-semibold">₹{addOn.adultPrice.toLocaleString()} / per adult</p>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <label className="text-sm font-medium flex items-center gap-2">
               <Users className="h-4 w-4 text-primary" />
               Number of Guests
@@ -389,6 +442,12 @@ const PricingCalculator = ({
                 <div className="flex justify-between text-sm">
                   <span>Children ({children} × INR {currentChildPrice.toLocaleString()})</span>
                   <span>INR {(children * currentChildPrice).toLocaleString()}</span>
+                </div>
+              )}
+              {addOnTotal > 0 && (
+                <div className="flex justify-between text-sm">
+                  <span>Add-Ons</span>
+                  <span>INR {addOnTotal.toLocaleString()}</span>
                 </div>
               )}
             </>

@@ -19,12 +19,13 @@ import dubaiGlobalVillage from "@/assets/dubai-global-village-1.jpg";
 import dubaiAquariumFish from "@/assets/dubai-aquarium-fish-1.jpg";
 import dubaiCityNight from "@/assets/dubai-city-night-1.jpg";
 import dubaiDesertCouple from "@/assets/dubai-desert-couple-1.jpg";
+import dubaiFountainShow from "@/assets/dubai-fountain-show-1.jpg";
 
 const activities = [
-  { title: "Dhow Cruise Dinner - Lower Deck with Transfers", price: 2070.6, image: dubaiDhowCruise, slug: "dubai/dhow-cruise-creek-lower" },
-  { title: "Dhow Cruise Dinner - Upper Deck with Transfers", price: 2436, image: dubaiDhowCruise, slug: "dubai/dhow-cruise-creek-upper" },
-  { title: "Desert Safari with Shisha on Table", price: 5115.6, image: dubaiDesertWoman, slug: "dubai/desert-safari-shisha" },
+  { title: "Dhow Creek Cruise Dinner - Lower Deck with Transfers", price: 2070.6, image: dubaiDhowCruise, slug: "dubai/dhow-cruise-creek-lower" },
+  { title: "Dhow Creek Cruise Dinner - Upper Deck with Transfers", price: 2436, image: dubaiDhowCruise, slug: "dubai/dhow-cruise-creek-upper" },
   { title: "Desert Safari with Sharing Transfer", price: 3532.2, image: dubaiDesertCouple2, slug: "dubai/desert-safari-sharing" },
+  { title: "Desert Safari with Shisha on Table", price: 5115.6, image: dubaiDesertWoman, slug: "dubai/desert-safari-shisha" },
   { title: "Dubai City Tour", price: 1461.6, image: dubaiSkylineSunset, slug: "dubai/dubai-city-tour" },
   { title: "Dubai City Tour with Dubai Mall", price: 2070.6, image: dubaiSkylineNight, slug: "dubai/dubai-city-tour-mall" },
   { title: "Dhow Dinner Cruise Marina - Lower Deck", price: 3654, image: dubaiDhowCruise, slug: "dubai/dhow-cruise-marina-lower" },
@@ -37,6 +38,7 @@ const activities = [
   { title: "Burj Khalifa 124/125 Prime", price: 8526, image: dubaiSkylineSunset, slug: "dubai/burj-khalifa-prime" },
   { title: "Dubai Dolphin & Seal Show", price: 3532.2, image: dubaiAquariumFish, slug: "dubai/dubai-dolphin-show" },
   { title: "Miracle Garden Dubai", price: 2557.8, image: dubaiGlobalVillage, slug: "dubai/miracle-garden-dubai" },
+  { title: "Dubai Fountain Show with Lake Ride Tickets", price: 2071, image: dubaiFountainShow, slug: "dubai/dubai-fountain-show" },
 ];
 
 const categories = [
@@ -44,6 +46,28 @@ const categories = [
   "Boat & Cruise Tours", "Theme Parks", "Wildlife & Zoo", "Nightlife",
   "Shows & Entertainment", "Water Activities", "Transfers", "Special Experiences"
 ];
+
+const PaginationControls = ({ currentPage, totalPages, onPageChange }: { currentPage: number; totalPages: number; onPageChange: (page: number) => void }) => {
+  if (totalPages <= 1) return null;
+  return (
+    <div className="flex items-center justify-center gap-2 mb-6">
+      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+        <Button
+          key={page}
+          variant={currentPage === page ? 'default' : 'outline'}
+          onClick={() => onPageChange(page)}
+        >
+          {page}
+        </Button>
+      ))}
+      {currentPage < totalPages && (
+        <Button variant="outline" onClick={() => onPageChange(currentPage + 1)}>
+          Next →
+        </Button>
+      )}
+    </div>
+  );
+};
 
 const Dubai = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -122,6 +146,9 @@ const Dubai = () => {
           categories={categories}
         />
 
+        {/* Top Pagination */}
+        <PaginationControls currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
+
         <div className="flex gap-8">
           {/* Desktop Sidebar - Hidden on mobile */}
           <aside className="hidden lg:block w-80 flex-shrink-0">
@@ -185,24 +212,10 @@ const Dubai = () => {
               ))}
             </div>
 
-            {totalPages > 1 && (
-              <div className="flex items-center justify-center gap-2 mt-8">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <Button
-                    key={page}
-                    variant={currentPage === page ? 'default' : 'outline'}
-                    onClick={() => setCurrentPage(page)}
-                  >
-                    {page}
-                  </Button>
-                ))}
-                {currentPage < totalPages && (
-                  <Button variant="outline" onClick={() => setCurrentPage(currentPage + 1)}>
-                    Next →
-                  </Button>
-                )}
-              </div>
-            )}
+            {/* Bottom Pagination */}
+            <div className="mt-8">
+              <PaginationControls currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
+            </div>
           </main>
         </div>
       </div>
