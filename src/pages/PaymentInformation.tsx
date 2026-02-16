@@ -116,12 +116,58 @@ const PaymentInformation = () => {
         return;
       }
 
-      const totalAmount = getCartTotal() * 100; // Razorpay expects amount in paise
+      const totalAmountPaise = getCartTotal() * 100; // Razorpay expects amount in paise
 
+      // 1️⃣ Insert payment row in Supabase
+      const { data: paymentRow, error: paymentError } = await supabase
+        .from("payments")
+        .insert({
+          user_id: user.id,
+          amount: totalAmountPaise,
+          status: "created",
+          currency: "INR",
+        })
+        .select()
+        .single();
+
+      if (paymentError || !paymentRow) {
+        console.error("Payment row insert error:", paymentError);
+        toast.error("Unable to start payment. Please try again.");
+        setIsProcessing(false);
+        return;
+      }
+
+      // 2️⃣ Create Razorpay order via edge function
+      const orderRes = await fetch(
+        `https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/create-razorpay-order`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ amount: totalAmountPaise, currency: "INR" }),
+        }
+      );
+
+      const order = await orderRes.json();
+
+      if (!orderRes.ok || !order.id) {
+        console.error("Razorpay order creation failed:", order);
+        toast.error("Failed to create payment order. Please try again.");
+        setIsProcessing(false);
+        return;
+      }
+
+      // 3️⃣ Save Razorpay order ID into the payment row
+      await supabase
+        .from("payments")
+        .update({ razorpay_order_id: order.id })
+        .eq("id", paymentRow.id);
+
+      // 4️⃣ Open Razorpay checkout
       const options = {
         key: RAZORPAY_KEY_ID,
-        amount: totalAmount,
+        amount: totalAmountPaise,
         currency: "INR",
+        order_id: order.id,
         name: "Yellodae Tours",
         description: `Booking for ${cartItems.length} item(s)`,
         prefill: {
@@ -134,6 +180,15 @@ const PaymentInformation = () => {
         },
         handler: async function (response: { razorpay_payment_id: string }) {
           try {
+            // Update payment row with razorpay_payment_id
+            await supabase
+              .from("payments")
+              .update({
+                razorpay_payment_id: response.razorpay_payment_id,
+                status: "paid",
+              })
+              .eq("id", paymentRow.id);
+
             // Save bookings after successful payment
             await saveBookingsToDatabase(user.id, response.razorpay_payment_id);
             
