@@ -157,6 +157,17 @@ const PaymentInformation = () => {
 
       const totalAmountPaise = getCartTotal() * 100; // Razorpay expects amount in paise
 
+      // Build booking metadata for Razorpay notes
+      const services = cartItems.map(item => item.title).join(", ");
+      const firstItem = cartItems[0];
+      const bookingDate = firstItem?.itemType === 'activity' 
+        ? firstItem.selectedDate || "" 
+        : firstItem?.pickupDate || "";
+      const city = firstItem?.slug?.split("/")[0] || "";
+      const pickupTime = firstItem?.itemType === 'activity'
+        ? firstItem.selectedTime || ""
+        : firstItem?.pickupTime || "";
+
       // 1️⃣ Insert payment row in Supabase
       const { data: paymentRow, error: paymentError } = await supabase
         .from("payments")
@@ -182,7 +193,16 @@ const PaymentInformation = () => {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ amount: totalAmountPaise, currency: "INR" }),
+          body: JSON.stringify({
+            amount: totalAmountPaise,
+            currency: "INR",
+            customer_name: customerInfo?.customerName || user.user_metadata?.full_name || "Guest User",
+            customer_email: customerInfo?.email || user.email || "",
+            services,
+            booking_date: bookingDate,
+            city,
+            pickup_time: pickupTime,
+          }),
         }
       );
 

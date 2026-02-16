@@ -11,7 +11,7 @@ serve(async (req) => {
   }
 
   try {
-    const { amount, currency = "INR" } = await req.json();
+    const { amount, currency = "INR", customer_name, customer_email, services, booking_date, city, pickup_time } = await req.json();
 
     if (!amount || amount <= 0) {
       return new Response(
@@ -43,6 +43,14 @@ serve(async (req) => {
         amount,
         currency,
         receipt: `receipt_${Date.now()}`,
+        notes: {
+          customer_name: customer_name || "",
+          customer_email: customer_email || "",
+          services: services || "",
+          booking_date: booking_date || "",
+          city: city || "",
+          pickup_time: pickup_time || "",
+        },
       }),
     });
 
