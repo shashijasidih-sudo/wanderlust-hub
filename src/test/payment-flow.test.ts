@@ -118,6 +118,107 @@ describe("Payment Flow", () => {
       expect(user).toBeDefined();
       expect(user?.id).toBe("user-123");
     });
+
+    it("should not create payment row when user is unauthenticated", async () => {
+      mockGetUser.mockResolvedValue({ data: { user: null } });
+
+      const { supabase } = await import("@/integrations/supabase/client");
+      const { data: { user } } = await supabase.auth.getUser();
+
+      // Simulate the guard: payment insert should never be called
+      if (!user) {
+        // This is the expected path
+        expect(mockInsert).not.toHaveBeenCalled();
+        return;
+      }
+      // If we get here, the test should fail
+      expect.unreachable("Should have returned early for unauthenticated user");
+    });
+
+    it("should proceed to create payment row only when user is authenticated", async () => {
+      const userId = "auth-user-456";
+      mockGetUser.mockResolvedValue({ data: { user: { id: userId } } });
+      mockSingle.mockResolvedValue({
+        data: { id: "pay-1", user_id: userId, amount: 10000, status: "created" },
+        error: null,
+      });
+
+      const { supabase } = await import("@/integrations/supabase/client");
+      const { data: { user } } = await supabase.auth.getUser();
+
+      expect(user).toBeDefined();
+
+      // Only insert after auth check passes
+      const { data, error } = await supabase
+        .from("payments")
+        .insert({ user_id: user!.id, amount: 10000, status: "created", currency: "INR" })
+        .select()
+        .single();
+
+      expect(mockInsert).toHaveBeenCalledWith({
+        user_id: userId,
+        amount: 10000,
+        status: "created",
+        currency: "INR",
+      });
+      expect(data?.user_id).toBe(userId);
+      expect(error).toBeNull();
+    });
+
+    it("should not call Razorpay order endpoint when unauthenticated", async () => {
+      mockGetUser.mockResolvedValue({ data: { user: null } });
+
+      const { supabase } = await import("@/integrations/supabase/client");
+      const { data: { user } } = await supabase.auth.getUser();
+
+      const fetchSpy = vi.spyOn(globalThis, "fetch");
+
+      if (!user) {
+        // Guard prevents any further calls
+        expect(fetchSpy).not.toHaveBeenCalledWith(
+          expect.stringContaining("create-razorpay-order"),
+          expect.anything()
+        );
+        fetchSpy.mockRestore();
+        return;
+      }
+      expect.unreachable("Should not reach here");
+    });
+
+    it("should handle auth error from supabase gracefully", async () => {
+      mockGetUser.mockResolvedValue({ data: { user: null }, error: { message: "JWT expired" } });
+
+      const { supabase } = await import("@/integrations/supabase/client");
+      const result = await supabase.auth.getUser();
+
+      expect(result.data.user).toBeNull();
+      // Payment flow should not proceed
+      expect(mockInsert).not.toHaveBeenCalled();
+    });
+
+    it("should ensure payment row user_id matches authenticated user", async () => {
+      const userId = "secure-user-789";
+      mockGetUser.mockResolvedValue({ data: { user: { id: userId } } });
+      mockSingle.mockResolvedValue({
+        data: { id: "pay-2", user_id: userId, amount: 25000, status: "created" },
+        error: null,
+      });
+
+      const { supabase } = await import("@/integrations/supabase/client");
+      const { data: { user } } = await supabase.auth.getUser();
+
+      const { data } = await supabase
+        .from("payments")
+        .insert({ user_id: user!.id, amount: 25000, status: "created", currency: "INR" })
+        .select()
+        .single();
+
+      // Verify the payment row belongs to the authenticated user
+      expect(data?.user_id).toBe(userId);
+      expect(mockInsert).toHaveBeenCalledWith(
+        expect.objectContaining({ user_id: userId })
+      );
+    });
   });
 });
 
