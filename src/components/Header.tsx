@@ -15,6 +15,7 @@ import SearchInput from "./SearchInput";
 import { supabase } from "@/integrations/supabase/client";
 import { User as SupabaseUser } from "@supabase/supabase-js";
 import { useToast } from "@/hooks/use-toast";
+import { useCurrency, CURRENCIES } from "@/contexts/CurrencyContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,6 +23,7 @@ const Header = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const { cartCount } = useCart();
+  const { currency, setCurrency, currencySymbol } = useCurrency();
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
@@ -86,11 +88,15 @@ const Header = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50">
-                <DropdownMenuItem className="cursor-pointer">₹ INR - Indian Rupee</DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">฿ THB - Thai Baht</DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">$ USD - US Dollar</DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">د.إ AED - UAE Dirham</DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">S$ SGD - Singapore Dollar</DropdownMenuItem>
+                {CURRENCIES.map(c => (
+                  <DropdownMenuItem
+                    key={c.code}
+                    className={`cursor-pointer ${currency === c.code ? "bg-primary/10 font-semibold" : ""}`}
+                    onClick={() => setCurrency(c.code)}
+                  >
+                    {c.symbol} {c.code} - {c.name}
+                  </DropdownMenuItem>
+                ))}
               </DropdownMenuContent>
             </DropdownMenu>
             <Link to="/wishlist">
@@ -125,9 +131,9 @@ const Header = () => {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                    <Link to="/my-bookings" className="flex items-center w-full">
+                    <Link to="/booking-history" className="flex items-center w-full">
                       <CalendarDays className="h-4 w-4 mr-2" />
-                      My Bookings
+                      Booking History
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
