@@ -46,6 +46,45 @@ const PaymentInformation = () => {
     }
   }, [navigate]);
 
+  // Realtime listener for payment status (handles QR/webhook-based payments)
+  useEffect(() => {
+    let channel: ReturnType<typeof supabase.channel> | null = null;
+
+    const setupListener = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+
+      channel = supabase
+        .channel("payment-status")
+        .on(
+          "postgres_changes",
+          {
+            event: "UPDATE",
+            schema: "public",
+            table: "payments",
+            filter: `user_id=eq.${user.id}`,
+          },
+          (payload: any) => {
+            if (payload.new.status === "paid") {
+              clearCart();
+              sessionStorage.removeItem("customerInfo");
+              toast.success("✅ Payment Successful!");
+              navigate("/booking-confirmed");
+            }
+          }
+        )
+        .subscribe();
+    };
+
+    setupListener();
+
+    return () => {
+      if (channel) {
+        supabase.removeChannel(channel);
+      }
+    };
+  }, [navigate, clearCart]);
+
   // Load Razorpay script
   useEffect(() => {
     const script = document.createElement("script");
