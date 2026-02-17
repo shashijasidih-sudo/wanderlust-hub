@@ -323,6 +323,10 @@ const App = () => (
             <Route path="/phuket/krabi-city-tour" element={<PhuketKrabiCityTour />} />
             <Route path="/thailand/transfers" element={<ThailandTransfers />} />
           </Route>
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/my-bookings" element={<MyBookings />} />
+          <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/customer-information" element={<CustomerInformation />} />
           <Route path="/payment-information" element={<PaymentInformation />} />
           <Route path="/booking-confirmed" element={<BookingConfirmed />} />
