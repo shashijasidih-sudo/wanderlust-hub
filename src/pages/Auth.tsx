@@ -450,7 +450,7 @@ const Auth = () => {
       </div>
 
       {/* Right side — Collage Grid */}
-      <div className="hidden lg:flex lg:w-1/2 relative bg-muted p-3 flex-col">
+      <div className="hidden lg:flex lg:w-1/2 relative bg-muted p-4 flex-col">
         <div className="grid grid-cols-2 grid-rows-3 gap-3 flex-1 min-h-0">
           {[
             { src: img1, alt: "Phi Phi Island boat tour" },
@@ -460,16 +460,17 @@ const Auth = () => {
             { src: img5, alt: "Maya Bay Phuket" },
             { src: img6, alt: "Bangkok Skywalk cityscape" },
           ].map((img, i) => (
-            <div key={i} className="relative overflow-hidden rounded-xl">
+            <div key={i} className="relative overflow-hidden rounded-2xl shadow-md min-h-[160px]">
               <img
                 src={img.src}
                 alt={img.alt}
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
           ))}
         </div>
-        <div className="mt-3 text-center">
+        <div className="mt-4 text-center">
           <p className="text-lg font-bold text-foreground">
             Discover breathtaking destinations across Asia
           </p>
