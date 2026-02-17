@@ -219,12 +219,12 @@ const Auth = () => {
     if (isForgotPassword) {
       return (
         <div className="space-y-6">
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight text-foreground">Reset your password</h1>
-            <p className="mt-2 text-muted-foreground">
-              Enter your email and we'll send you a reset link
-            </p>
-          </div>
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-foreground">Reset Password</h1>
+          <p className="mt-2 text-muted-foreground">
+            Enter your email and we'll send you a reset link
+          </p>
+        </div>
 
           <form onSubmit={handleForgotPassword} className="space-y-5">
             <div className="space-y-2">
@@ -266,13 +266,10 @@ const Auth = () => {
       <div className="space-y-6">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            {isLogin ? "Sign in to your account" : "Create your account"}
+            {isLogin ? "Welcome Back, Explorer! 🌍" : "Join Our Travel Community"}
           </h1>
           <p className="mt-2 text-muted-foreground">
-            {isLogin ? "Don't have an account yet? " : "Already have an account? "}
-            <button type="button" onClick={toggleMode} className="text-primary hover:underline font-medium">
-              {isLogin ? "Sign up" : "Sign in"}
-            </button>
+            {isLogin ? "Ready to continue your journey?" : "Create your account and unlock amazing destinations"}
           </p>
         </div>
 
@@ -369,11 +366,14 @@ const Auth = () => {
             </div>
           )}
 
-          <Button type="submit" className="w-full h-12 text-base font-semibold" disabled={isLoading || isGoogleLoading}>
+          <Button type="submit" className="w-full h-12 text-base font-semibold group" disabled={isLoading || isGoogleLoading}>
             {isLoading ? (
               <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> {isLogin ? "Signing in..." : "Creating account..."}</>
             ) : (
-              isLogin ? "Sign in" : "Create account"
+              <>
+                {isLogin ? "Start Exploring" : "Begin Your Journey"}
+                <Plane className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              </>
             )}
           </Button>
         </form>
@@ -381,7 +381,7 @@ const Auth = () => {
         <div className="relative">
           <Separator />
           <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-3 text-sm text-muted-foreground">
-            or sign in with
+            or continue with
           </span>
         </div>
 
@@ -401,8 +401,27 @@ const Auth = () => {
               <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
             </svg>
           )}
-          Google
+          Continue with Google
         </Button>
+
+        <div className="text-center text-sm">
+          <span className="text-muted-foreground">
+            {isLogin ? "New to Yellodae? " : "Already a traveler? "}
+          </span>
+          <button type="button" onClick={toggleMode} className="text-primary hover:underline font-medium inline-flex items-center gap-1">
+            {isLogin ? (
+              <>Start your journey <Plane className="w-3 h-3" /></>
+            ) : (
+              "Sign in"
+            )}
+          </button>
+        </div>
+
+        {!isLogin && (
+          <p className="text-center text-xs text-muted-foreground">
+            Join 10,000+ travelers exploring the world
+          </p>
+        )}
       </div>
     );
   };
