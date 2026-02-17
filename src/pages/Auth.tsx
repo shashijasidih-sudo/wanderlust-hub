@@ -9,7 +9,12 @@ import { useToast } from "@/hooks/use-toast";
 import { Eye, EyeOff, Loader2, Plane } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { z } from "zod";
-import heroImage from "@/assets/auth-travel-collage.jpg";
+import img1 from "@/assets/phi-phi-3.jpg";
+import img2 from "@/assets/elephant-1.jpg";
+import img3 from "@/assets/bangkok-temple-2.jpg";
+import img4 from "@/assets/krabi-kayaks-beach-1.jpg";
+import img5 from "@/assets/phuket-maya-bay-1.jpg";
+import img6 from "@/assets/bangkok-skywalk-hero.jpg";
 
 const loginSchema = z.object({
   email: z.string().trim().email({ message: "Invalid email address" }),
@@ -444,19 +449,31 @@ const Auth = () => {
         </div>
       </div>
 
-      {/* Right side — Image */}
-      <div className="hidden lg:block lg:w-1/2 relative">
-        <img
-          src={heroImage}
-          alt="Beautiful tropical beach destination"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-        <div className="absolute bottom-12 left-12 right-12 text-white">
-          <p className="text-2xl font-bold leading-snug">
+      {/* Right side — Collage Grid */}
+      <div className="hidden lg:flex lg:w-1/2 relative bg-muted p-3 flex-col">
+        <div className="grid grid-cols-2 grid-rows-3 gap-3 flex-1 min-h-0">
+          {[
+            { src: img1, alt: "Phi Phi Island boat tour" },
+            { src: img2, alt: "Elephant safari adventure" },
+            { src: img3, alt: "Bangkok golden temple" },
+            { src: img4, alt: "Krabi beach kayaking" },
+            { src: img5, alt: "Maya Bay Phuket" },
+            { src: img6, alt: "Bangkok Skywalk cityscape" },
+          ].map((img, i) => (
+            <div key={i} className="relative overflow-hidden rounded-xl">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="mt-3 text-center">
+          <p className="text-lg font-bold text-foreground">
             Discover breathtaking destinations across Asia
           </p>
-          <p className="mt-2 text-white/80 text-sm">
+          <p className="text-sm text-muted-foreground">
             Thailand · Singapore · Dubai · and more
           </p>
         </div>
