@@ -56,6 +56,9 @@ const Header = () => {
     }
   };
 
+  const menuItemClass = "cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3 flex items-center w-full";
+  const mobileMenuItemClass = "cursor-pointer hover:bg-primary/10 flex items-center w-full";
+
   return (
     <header className="sticky top-14 md:top-16 z-50 w-full border-b" style={{ backgroundColor: '#EAF3FF' }}>
       {/* Top Bar */}
@@ -181,34 +184,48 @@ const Header = () => {
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[240px] p-2">
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Palmtree className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/thailand" className="w-full font-medium">Thailand (All Cities)</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/thailand">
+                  <Palmtree className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Thailand (All Cities)</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Building2 className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/bangkok" className="w-full font-medium">Bangkok</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/bangkok">
+                  <Building2 className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Bangkok</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Ship className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/pattaya" className="w-full font-medium">Pattaya</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/pattaya">
+                  <Ship className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Pattaya</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Fish className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/phuket" className="w-full font-medium">Phuket</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/phuket">
+                  <Fish className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Phuket</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Anchor className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/krabi" className="w-full font-medium">Krabi</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/krabi">
+                  <Anchor className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Krabi</span>
+                </Link>
               </DropdownMenuItem>
               <div className="h-px bg-border my-2" />
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Castle className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/dubai" className="w-full font-medium">Dubai</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/dubai">
+                  <Castle className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Dubai</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <TreePine className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/singapore" className="w-full font-medium">Singapore</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/singapore">
+                  <TreePine className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Singapore</span>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -218,34 +235,48 @@ const Header = () => {
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[240px] p-2">
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Palmtree className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/thailand/transfers" className="w-full font-medium">Thailand</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/thailand/transfers">
+                  <Palmtree className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Thailand</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Building2 className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/bangkok/transfers" className="w-full font-medium">Bangkok</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/bangkok/transfers">
+                  <Building2 className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Bangkok</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Fish className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/phuket/transfers" className="w-full font-medium">Phuket</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/phuket/transfers">
+                  <Fish className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Phuket</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Anchor className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/krabi/transfers" className="w-full font-medium">Krabi</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/krabi/transfers">
+                  <Anchor className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Krabi</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Ship className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/pattaya/transfers" className="w-full font-medium">Pattaya</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/pattaya/transfers">
+                  <Ship className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Pattaya</span>
+                </Link>
               </DropdownMenuItem>
               <div className="h-px bg-border my-2" />
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Castle className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/dubai/transfers" className="w-full font-medium">Dubai</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/dubai/transfers">
+                  <Castle className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Dubai</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <TreePine className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/singapore/transfers" className="w-full font-medium">Singapore</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/singapore/transfers">
+                  <TreePine className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Singapore</span>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -258,25 +289,35 @@ const Header = () => {
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[260px] p-2">
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Palmtree className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/thailand-smart-guides" className="w-full font-medium">Thailand Smart Guides</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/thailand-smart-guides">
+                  <Palmtree className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Thailand Smart Guides</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <TreePine className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/singapore-smart-guides" className="w-full font-medium">Singapore Smart Guides</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/singapore-smart-guides">
+                  <TreePine className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Singapore Smart Guides</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Castle className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/dubai-smart-guides" className="w-full font-medium">Dubai Smart Guides</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/dubai-smart-guides">
+                  <Castle className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Dubai Smart Guides</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Droplet className="h-5 w-5 mr-3 text-primary" />
-                <Link to="/netherlands-smart-guides" className="w-full font-medium">Netherlands Smart Guides</Link>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/netherlands-smart-guides">
+                  <Droplet className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Netherlands Smart Guides</span>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3">
-                <Tent className="h-5 w-5 mr-3 text-primary" />
-                <a href="#australia" className="w-full font-medium">Australia Smart Guides</a>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <a href="#australia">
+                  <Tent className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Australia Smart Guides</span>
+                </a>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -296,34 +337,48 @@ const Header = () => {
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Palmtree className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/thailand" className="w-full">Thailand (All Cities)</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/thailand" onClick={() => setIsMenuOpen(false)}>
+                    <Palmtree className="h-4 w-4 mr-2 text-primary" />
+                    Thailand (All Cities)
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Building2 className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/bangkok" className="w-full">Bangkok</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/bangkok" onClick={() => setIsMenuOpen(false)}>
+                    <Building2 className="h-4 w-4 mr-2 text-primary" />
+                    Bangkok
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Ship className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/pattaya" className="w-full">Pattaya</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/pattaya" onClick={() => setIsMenuOpen(false)}>
+                    <Ship className="h-4 w-4 mr-2 text-primary" />
+                    Pattaya
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Fish className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/phuket" className="w-full">Phuket</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/phuket" onClick={() => setIsMenuOpen(false)}>
+                    <Fish className="h-4 w-4 mr-2 text-primary" />
+                    Phuket
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Anchor className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/krabi" className="w-full">Krabi</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/krabi" onClick={() => setIsMenuOpen(false)}>
+                    <Anchor className="h-4 w-4 mr-2 text-primary" />
+                    Krabi
+                  </Link>
                 </DropdownMenuItem>
                 <div className="h-px bg-border my-1" />
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Castle className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/dubai" className="w-full">Dubai</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/dubai" onClick={() => setIsMenuOpen(false)}>
+                    <Castle className="h-4 w-4 mr-2 text-primary" />
+                    Dubai
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <TreePine className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/singapore" className="w-full">Singapore</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/singapore" onClick={() => setIsMenuOpen(false)}>
+                    <TreePine className="h-4 w-4 mr-2 text-primary" />
+                    Singapore
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -333,38 +388,52 @@ const Header = () => {
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Palmtree className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/thailand/transfers" className="w-full">Thailand</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/thailand/transfers" onClick={() => setIsMenuOpen(false)}>
+                    <Palmtree className="h-4 w-4 mr-2 text-primary" />
+                    Thailand
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Building2 className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/bangkok/transfers" className="w-full">Bangkok</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/bangkok/transfers" onClick={() => setIsMenuOpen(false)}>
+                    <Building2 className="h-4 w-4 mr-2 text-primary" />
+                    Bangkok
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Fish className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/phuket/transfers" className="w-full">Phuket</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/phuket/transfers" onClick={() => setIsMenuOpen(false)}>
+                    <Fish className="h-4 w-4 mr-2 text-primary" />
+                    Phuket
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Anchor className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/krabi/transfers" className="w-full">Krabi</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/krabi/transfers" onClick={() => setIsMenuOpen(false)}>
+                    <Anchor className="h-4 w-4 mr-2 text-primary" />
+                    Krabi
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Ship className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/pattaya" className="w-full">Pattaya</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/pattaya/transfers" onClick={() => setIsMenuOpen(false)}>
+                    <Ship className="h-4 w-4 mr-2 text-primary" />
+                    Pattaya
+                  </Link>
                 </DropdownMenuItem>
                 <div className="h-px bg-border my-1" />
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Castle className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/dubai/transfers" className="w-full">Dubai</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/dubai/transfers" onClick={() => setIsMenuOpen(false)}>
+                    <Castle className="h-4 w-4 mr-2 text-primary" />
+                    Dubai
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <TreePine className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/singapore/transfers" className="w-full">Singapore</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/singapore/transfers" onClick={() => setIsMenuOpen(false)}>
+                    <TreePine className="h-4 w-4 mr-2 text-primary" />
+                    Singapore
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary" onClick={() => setIsMenuOpen(false)}>
               Tours & Packages
             </Link>
             <DropdownMenu>
@@ -373,25 +442,35 @@ const Header = () => {
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Palmtree className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/thailand-smart-guides" className="w-full">Thailand Smart Guides</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/thailand-smart-guides" onClick={() => setIsMenuOpen(false)}>
+                    <Palmtree className="h-4 w-4 mr-2 text-primary" />
+                    Thailand Smart Guides
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <TreePine className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/singapore-smart-guides" className="w-full">Singapore Smart Guides</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/singapore-smart-guides" onClick={() => setIsMenuOpen(false)}>
+                    <TreePine className="h-4 w-4 mr-2 text-primary" />
+                    Singapore Smart Guides
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Castle className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/dubai-smart-guides" className="w-full">Dubai Smart Guides</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/dubai-smart-guides" onClick={() => setIsMenuOpen(false)}>
+                    <Castle className="h-4 w-4 mr-2 text-primary" />
+                    Dubai Smart Guides
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Droplet className="h-4 w-4 mr-2 text-primary" />
-                  <Link to="/netherlands-smart-guides" className="w-full">Netherlands Smart Guides</Link>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/netherlands-smart-guides" onClick={() => setIsMenuOpen(false)}>
+                    <Droplet className="h-4 w-4 mr-2 text-primary" />
+                    Netherlands Smart Guides
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-primary/10">
-                  <Tent className="h-4 w-4 mr-2 text-primary" />
-                  <a href="#australia" className="w-full">Australia Smart Guides</a>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <a href="#australia">
+                    <Tent className="h-4 w-4 mr-2 text-primary" />
+                    Australia Smart Guides
+                  </a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
