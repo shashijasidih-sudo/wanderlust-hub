@@ -77,6 +77,8 @@ import FourIslandsSpeedboat from "./pages/FourIslandsSpeedboat";
 import JamesBondIslandKrabi from "./pages/JamesBondIslandKrabi";
 import TourPackages from "./pages/TourPackages";
 import ThailandSmartGuides from "./pages/ThailandSmartGuides";
+import BlogAirportTransferThailand from "./pages/BlogAirportTransferThailand";
+import BlogPhiPhiIslandTours from "./pages/BlogPhiPhiIslandTours";
 import DubaiSmartGuides from "./pages/DubaiSmartGuides";
 import SingaporeSmartGuides from "./pages/SingaporeSmartGuides";
 import NetherlandsSmartGuides from "./pages/NetherlandsSmartGuides";
@@ -275,6 +277,8 @@ const App = () => (
             <Route path="/four-islands-speedboat" element={<FourIslandsSpeedboat />} />
             <Route path="/james-bond-island-krabi" element={<JamesBondIslandKrabi />} />
             <Route path="/thailand-smart-guides" element={<ThailandSmartGuides />} />
+            <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
+            <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
             <Route path="/bangkok/transfers" element={<BangkokTransfers />} />
             <Route path="/bangkok/bkk-airport-pickup" element={<BangkokBkkAirportPickup />} />
             <Route path="/bangkok/dmk-airport-pickup" element={<BangkokDmkAirportPickup />} />
