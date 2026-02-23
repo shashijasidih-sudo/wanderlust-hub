@@ -283,12 +283,6 @@ const App = () => (
             <Route path="/thailand-smart-guides" element={<ThailandSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
-            <Route path="/dubai-smart-guides" element={<DubaiSmartGuides />} />
-            <Route path="/blog/airport-transfer-booking-dubai" element={<BlogDubaiAirportTransfer />} />
-            <Route path="/blog/desert-safari-deals-dubai" element={<BlogDubaiDesertSafari />} />
-            <Route path="/singapore-smart-guides" element={<SingaporeSmartGuides />} />
-            <Route path="/blog/airport-transfer-booking-singapore" element={<BlogSingaporeAirportTransfer />} />
-            <Route path="/blog/sentosa-activities-singapore" element={<BlogSentosaActivities />} />
             <Route path="/netherlands-smart-guides" element={<NetherlandsSmartGuides />} />
             <Route path="/bangkok/transfers" element={<BangkokTransfers />} />
             <Route path="/bangkok/bkk-airport-pickup" element={<BangkokBkkAirportPickup />} />
@@ -338,6 +332,72 @@ const App = () => (
             <Route path="/phuket/krabi-city-tour" element={<PhuketKrabiCityTour />} />
             <Route path="/thailand/transfers" element={<ThailandTransfers />} />
           </Route>
+          {/* Dubai routes */}
+          <Route path="/dubai-smart-guides" element={<DubaiSmartGuides />} />
+          <Route path="/blog/airport-transfer-booking-dubai" element={<BlogDubaiAirportTransfer />} />
+          <Route path="/blog/desert-safari-deals-dubai" element={<BlogDubaiDesertSafari />} />
+          <Route path="/dubai" element={<Dubai />} />
+          <Route path="/desert-safari" element={<DesertSafari />} />
+          <Route path="/desert-safari-shisha" element={<DesertSafariShisha />} />
+          <Route path="/desert-safari-sharing" element={<DesertSafariSharing />} />
+          <Route path="/dhow-cruise" element={<DhowCruise />} />
+          <Route path="/dhow-cruise-creek-lower" element={<DhowCruiseCreekLower />} />
+          <Route path="/dhow-cruise-creek-upper" element={<DhowCruiseCreekUpper />} />
+          <Route path="/dhow-cruise-marina-lower" element={<DhowCruiseMarinaLower />} />
+          <Route path="/dhow-cruise-marina-upper" element={<DhowCruiseMarinaUpper />} />
+          <Route path="/atlantis-palm" element={<AtlantisPalm />} />
+          <Route path="/dubai-city-tour" element={<DubaiCityTour />} />
+          <Route path="/dubai-city-tour-mall" element={<DubaiCityTourMall />} />
+          <Route path="/global-village-dubai" element={<GlobalVillageDubai />} />
+          <Route path="/abu-dhabi-city-tour" element={<AbuDhabiCityTour />} />
+          <Route path="/abu-dhabi-ferrari-world" element={<AbuDhabiFerrariWorld />} />
+          <Route path="/dubai-aquarium-penguin" element={<DubaiAquariumPenguin />} />
+          <Route path="/burj-khalifa-non-prime" element={<BurjKhalifaNonPrime />} />
+          <Route path="/burj-khalifa-prime" element={<BurjKhalifaPrime />} />
+          <Route path="/dubai-dolphin-show" element={<DubaiDolphinShow />} />
+          <Route path="/miracle-garden-dubai" element={<MiracleGardenDubai />} />
+          <Route path="/dubai-fountain-show" element={<DubaiFountainShow />} />
+          <Route path="/sentosa-island" element={<SentosaIsland />} />
+          <Route path="/dubai/transfers" element={<DubaiTransfersNew />} />
+          <Route path="/dubai/airport-pickup-zone-1" element={<DubaiAirportPickupZone1 />} />
+          <Route path="/dubai/airport-dropoff-zone-1" element={<DubaiAirportDropoffZone1 />} />
+          <Route path="/dubai/airport-pickup-zone-2" element={<DubaiAirportPickupZone2 />} />
+          <Route path="/dubai/airport-dropoff-zone-2" element={<DubaiAirportDropoffZone2 />} />
+          <Route path="/dubai/airport-pickup-zone-3" element={<DubaiAirportPickupZone3 />} />
+          <Route path="/dubai/airport-dropoff-zone-3" element={<DubaiAirportDropoffZone3 />} />
+          <Route path="/dubai/airport-pickup-zone-4" element={<DubaiAirportPickupZone4 />} />
+          <Route path="/dubai/airport-dropoff-zone-4" element={<DubaiAirportDropoffZone4 />} />
+          <Route path="/dubai/airport-pickup-zone-5" element={<DubaiAirportPickupZone5 />} />
+          <Route path="/dubai/airport-dropoff-zone-5" element={<DubaiAirportDropoffZone5 />} />
+          {/* Singapore routes */}
+          <Route path="/singapore-smart-guides" element={<SingaporeSmartGuides />} />
+          <Route path="/blog/airport-transfer-booking-singapore" element={<BlogSingaporeAirportTransfer />} />
+          <Route path="/blog/sentosa-activities-singapore" element={<BlogSentosaActivities />} />
+          <Route path="/singapore" element={<Singapore />} />
+          <Route path="/singapore-city-tour" element={<SingaporeCityTour />} />
+          <Route path="/night-safari-tickets" element={<NightSafariTickets />} />
+          <Route path="/night-safari-transfer" element={<NightSafariTransfer />} />
+          <Route path="/night-safari-dinner" element={<NightSafariDinner />} />
+          <Route path="/sentosa-4d-2-rides" element={<Sentosa4D2Rides />} />
+          <Route path="/sentosa-4d-3-rides" element={<Sentosa4D3Rides />} />
+          <Route path="/sentosa-cable-car" element={<SentosaCableCar />} />
+          <Route path="/sentosa-wings-time" element={<SentosaWingsTime />} />
+          <Route path="/sentosa-sky-helix" element={<SentosaSkyHelix />} />
+          <Route path="/singapore-river-cruise" element={<SingaporeRiverCruise />} />
+          <Route path="/gardens-by-the-bay" element={<GardensByTheBay />} />
+          <Route path="/adventure-cove" element={<AdventureCove />} />
+          <Route path="/singapore-flyer" element={<SingaporeFlyer />} />
+          <Route path="/river-safari" element={<RiverSafari />} />
+          <Route path="/universal-studios-weekday" element={<UniversalStudiosWeekday />} />
+          <Route path="/universal-studios-weekend" element={<UniversalStudiosWeekend />} />
+          <Route path="/singapore-zoo" element={<SingaporeZoo />} />
+          <Route path="/rainforest-wild-asia" element={<RainforestWildAsia />} />
+          <Route path="/big-bus-discover" element={<BigBusDiscover />} />
+          <Route path="/big-bus-night" element={<BigBusNight />} />
+          <Route path="/singapore/transfers" element={<SingaporeTransfersNew />} />
+          <Route path="/singapore/airport-pickup" element={<SingaporeAirportPickup />} />
+          <Route path="/singapore/airport-dropoff" element={<SingaporeAirportDropoff />} />
+          <Route path="/singapore/airport-night-pickup" element={<SingaporeAirportNightPickup />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/my-bookings" element={<MyBookings />} />
