@@ -1,5 +1,6 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Calendar, Clock, ArrowRight, User } from "lucide-react";
+import { Calendar, Clock, ArrowRight, User, ChevronLeft, ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -24,6 +25,15 @@ import skyHelixImg from "@/assets/singapore-sky-helix.jpg";
 import adventureCoveImg from "@/assets/singapore-adventure-cove.jpg";
 import cityTourImg from "@/assets/singapore-city-tour.jpg";
 import bigBusImg from "@/assets/singapore-big-bus.jpg";
+import gardensBayNightImg from "@/assets/singapore-gardens-bay-night-1.jpg";
+import merlionImg from "@/assets/singapore-merlion-night-1.jpg";
+
+const heroSlides = [
+  { image: marinaBayImg, title: "Explore Singapore", subtitle: "A dazzling city-state where tradition meets innovation" },
+  { image: gardensBayNightImg, title: "Gardens by the Bay", subtitle: "Supertrees, Cloud Forest & Flower Dome" },
+  { image: merlionImg, title: "Iconic Landmarks", subtitle: "Merlion, Marina Bay Sands & Singapore Flyer" },
+  { image: universalImg, title: "Theme Park Fun", subtitle: "Universal Studios, Sentosa & Adventure Cove" },
+];
 
 const blogArticles = [
   {
@@ -183,12 +193,53 @@ const blogArticles = [
 ];
 
 const SingaporeSmartGuides = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => setCurrentSlide((s) => (s + 1) % heroSlides.length), 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       
       <main className="flex-1 bg-secondary/30">
-        <div className="container px-4 py-6">
+        {/* Hero Carousel */}
+        <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
+          {heroSlides.map((slide, i) => (
+            <div key={i} className={`absolute inset-0 transition-opacity duration-700 ${i === currentSlide ? "opacity-100" : "opacity-0"}`}>
+              <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+            </div>
+          ))}
+          <div className="absolute inset-0 flex items-end pb-10 px-6 md:px-12">
+            <div>
+              <h1 className="text-3xl md:text-5xl font-bold text-white mb-2">{heroSlides[currentSlide].title}</h1>
+              <p className="text-white/80 text-lg">{heroSlides[currentSlide].subtitle}</p>
+            </div>
+          </div>
+          <button onClick={() => setCurrentSlide((s) => (s - 1 + heroSlides.length) % heroSlides.length)} className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full">
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button onClick={() => setCurrentSlide((s) => (s + 1) % heroSlides.length)} className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full">
+            <ChevronRight className="h-5 w-5" />
+          </button>
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            {heroSlides.map((_, i) => (
+              <button key={i} onClick={() => setCurrentSlide(i)} className={`w-2.5 h-2.5 rounded-full transition-all ${i === currentSlide ? "bg-white w-6" : "bg-white/50"}`} />
+            ))}
+          </div>
+        </div>
+
+        {/* SEO Summary */}
+        <div className="container px-4 py-8">
+          <div className="max-w-3xl mx-auto text-center mb-8">
+            <p className="text-muted-foreground leading-relaxed">
+              Discover our expert Singapore travel guides — from Sentosa Island adventures and Gardens by the Bay tips to Night Safari planning, Changi Airport transfers, and hawker food trails. Whether you're visiting for the first time or exploring deeper, our curated guides ensure you experience the best of the Lion City.
+            </p>
+          </div>
+
           <Breadcrumb className="mb-6">
             <BreadcrumbList>
               <BreadcrumbItem>

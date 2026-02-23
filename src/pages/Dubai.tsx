@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ActivityCard from "@/components/ActivityCard";
 import MobileFilters from "@/components/MobileFilters";
+import QuickBookWidget from "@/components/QuickBookWidget";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
@@ -98,6 +99,19 @@ const Dubai = () => {
       <Header />
       
       <div className="container mx-auto px-4 py-8">
+        {/* Quick Book Widget */}
+        <QuickBookWidget
+          title="⚡ Quick Book Top Dubai Activities"
+          items={[
+            { title: "Desert Safari with Sharing Transfer", price: 3532, image: dubaiDesertCouple2, slug: "/desert-safari-sharing", rating: 4.8, badge: "Bestseller" },
+            { title: "Burj Khalifa 124/125 Non-Prime", price: 6090, image: dubaiSkylineNight, slug: "/burj-khalifa-non-prime", rating: 4.9, badge: "Iconic" },
+            { title: "Dhow Creek Cruise Dinner", price: 2071, image: dubaiDhowCruise, slug: "/dhow-cruise-creek-lower", rating: 4.7 },
+            { title: "Dubai City Tour", price: 1462, image: dubaiSkylineSunset, slug: "/dubai-city-tour", rating: 4.6 },
+            { title: "Global Village Dubai", price: 3289, image: dubaiGlobalVillage, slug: "/global-village-dubai", rating: 4.5 },
+            { title: "Dubai Fountain Show + Lake Ride", price: 2071, image: dubaiFountainShow, slug: "/dubai-fountain-show", rating: 4.8, badge: "Popular" },
+          ]}
+        />
+
         <div className="bg-card shadow-card rounded-lg p-4 md:p-6 mb-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
             <h1 className="text-2xl md:text-3xl font-bold text-foreground">Dubai Tours & Activities</h1>
