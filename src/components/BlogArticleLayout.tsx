@@ -31,11 +31,14 @@ interface BlogArticleProps {
   keywords: string[];
   sections: BlogSection[];
   relatedLinks?: { title: string; link: string }[];
+  guidesLink?: string;
+  guidesLabel?: string;
 }
 
 const BlogArticleLayout = ({
   title, description, heroImage, heroAlt, author, date,
   readTime, category, keywords, sections, relatedLinks,
+  guidesLink = "/thailand-smart-guides", guidesLabel = "Thailand Guides",
 }: BlogArticleProps) => {
   const handleShare = () => {
     if (navigator.share) {
@@ -73,7 +76,7 @@ const BlogArticleLayout = ({
             <BreadcrumbList>
               <BreadcrumbItem><BreadcrumbLink asChild><Link to="/">Home</Link></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
-              <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand-smart-guides">Thailand Guides</Link></BreadcrumbLink></BreadcrumbItem>
+              <BreadcrumbItem><BreadcrumbLink asChild><Link to={guidesLink}>{guidesLabel}</Link></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem><BreadcrumbPage>{title}</BreadcrumbPage></BreadcrumbItem>
             </BreadcrumbList>
@@ -82,7 +85,7 @@ const BlogArticleLayout = ({
           <div className="max-w-3xl mx-auto">
             {/* Share */}
             <div className="flex justify-between items-center mb-8">
-              <Link to="/thailand-smart-guides" className="flex items-center gap-2 text-primary hover:underline text-sm font-medium">
+              <Link to={guidesLink} className="flex items-center gap-2 text-primary hover:underline text-sm font-medium">
                 <ArrowLeft className="h-4 w-4" /> Back to Guides
               </Link>
               <Button variant="outline" size="sm" onClick={handleShare}>
