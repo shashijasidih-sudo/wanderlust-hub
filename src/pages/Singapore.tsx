@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ActivityCard from "@/components/ActivityCard";
 import MobileFilters from "@/components/MobileFilters";
+import QuickBookWidget from "@/components/QuickBookWidget";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
@@ -103,6 +104,19 @@ const Singapore = () => {
       <Header />
       
       <div className="container mx-auto px-4 py-8">
+        {/* Quick Book Widget */}
+        <QuickBookWidget
+          title="⚡ Quick Book Top Singapore Activities"
+          items={[
+            { title: "Universal Studios Weekday", price: 6762, image: singaporeUniversalStudios, slug: "/universal-studios-weekday", rating: 4.9, badge: "Bestseller" },
+            { title: "Gardens by the Bay", price: 2660, image: singaporeGardensBay, slug: "/gardens-by-the-bay", rating: 4.8, badge: "Iconic" },
+            { title: "Night Safari Singapore", price: 4470, image: singaporeNightSafari, slug: "/night-safari-tickets", rating: 4.7 },
+            { title: "Singapore City Tour", price: 1815, image: singaporeCityTour, slug: "/singapore-city-tour", rating: 4.6 },
+            { title: "Sentosa Cable Ride", price: 2180, image: singaporeCableCar, slug: "/sentosa-cable-car", rating: 4.5 },
+            { title: "Singapore River Cruise", price: 2174, image: singaporeRiverCruise, slug: "/singapore-river-cruise", rating: 4.7, badge: "Popular" },
+          ]}
+        />
+
         <div className="bg-card shadow-card rounded-lg p-4 md:p-6 mb-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
             <h1 className="text-2xl md:text-3xl font-bold text-foreground">Singapore Tours & Activities</h1>

@@ -9,6 +9,7 @@ import ApprovalBadge from "@/components/ApprovalBadge";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import RoutesHealthCheck from "./pages/RoutesHealthCheck";
 import Thailand from "./pages/Thailand";
 import Bangkok from "./pages/Bangkok";
 import Pattaya from "./pages/Pattaya";
@@ -407,6 +408,7 @@ const App = () => (
           <Route path="/booking-confirmed" element={<BookingConfirmed />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/booking-history" element={<BookingHistory />} />
+          <Route path="/routes-health-check" element={<RoutesHealthCheck />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
