@@ -12,14 +12,48 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import marinaBayImg from "@/assets/singapore-marina-bay-sands-night-1.jpg";
+import universalImg from "@/assets/singapore-universal-studios.jpg";
+import gardensBayImg from "@/assets/singapore-gardens-bay.jpg";
+import flyerImg from "@/assets/singapore-flyer.jpg";
+import nightSafariImg from "@/assets/singapore-night-safari.jpg";
+import cableCarImg from "@/assets/singapore-cable-car.jpg";
+import zooImg from "@/assets/singapore-zoo.jpg";
+import riverCruiseImg from "@/assets/singapore-river-cruise.jpg";
+import skyHelixImg from "@/assets/singapore-sky-helix.jpg";
+import adventureCoveImg from "@/assets/singapore-adventure-cove.jpg";
+import cityTourImg from "@/assets/singapore-city-tour.jpg";
+import bigBusImg from "@/assets/singapore-big-bus.jpg";
 
 const blogArticles = [
+  {
+    id: 0,
+    title: "Complete Guide to Airport Transfer Booking in Singapore",
+    description: "Everything about Singapore Changi Airport transfers — types, popular areas, tips, and the best platform for hassle-free arrival.",
+    category: "Singapore Transfers",
+    image: marinaBayImg,
+    author: "Yellodae Travel Expert",
+    date: "Feb 18, 2026",
+    readTime: "8 min read",
+    slug: "/blog/airport-transfer-booking-singapore"
+  },
+  {
+    id: -1,
+    title: "Complete Guide to Sentosa Activities in Singapore",
+    description: "Discover the best Sentosa Island activities — Universal Studios, SEA Aquarium, Adventure Cove, Sky Helix, and more.",
+    category: "Theme Parks & Activities",
+    image: universalImg,
+    author: "Yellodae Island Expert",
+    date: "Feb 21, 2026",
+    readTime: "10 min read",
+    slug: "/blog/sentosa-activities-singapore"
+  },
   {
     id: 1,
     title: "Sentosa Island: The Ultimate Guide",
     description: "Everything you need to know about Singapore's premier resort island, from beaches to theme parks.",
     category: "Islands",
-    image: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800",
+    image: adventureCoveImg,
     author: "Island Expert",
     date: "Nov 25, 2024",
     readTime: "10 min read",
@@ -30,7 +64,7 @@ const blogArticles = [
     title: "Marina Bay Sands: Complete Experience Guide",
     description: "From the infinity pool to the casino, discover everything Marina Bay Sands has to offer.",
     category: "Landmarks",
-    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800",
+    image: flyerImg,
     author: "Luxury Travel",
     date: "Nov 22, 2024",
     readTime: "8 min read",
@@ -41,7 +75,7 @@ const blogArticles = [
     title: "Hawker Centers: Singapore's Food Paradise",
     description: "Navigate the best hawker centers and discover must-try local dishes at affordable prices.",
     category: "Food Tours",
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800",
+    image: cityTourImg,
     author: "Food Blogger",
     date: "Nov 20, 2024",
     readTime: "12 min read",
@@ -52,7 +86,7 @@ const blogArticles = [
     title: "Gardens by the Bay: A Complete Guide",
     description: "Explore the Supertree Grove, Cloud Forest, and Flower Dome in this iconic attraction.",
     category: "Nature",
-    image: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800",
+    image: gardensBayImg,
     author: "Nature Guide",
     date: "Nov 18, 2024",
     readTime: "9 min read",
@@ -63,7 +97,7 @@ const blogArticles = [
     title: "Chinatown & Little India Walking Tour",
     description: "Discover Singapore's multicultural heritage through its vibrant ethnic neighborhoods.",
     category: "Cultural Sites",
-    image: "https://images.unsplash.com/photo-1496939376851-89342e90adcd?w=800",
+    image: bigBusImg,
     author: "Culture Guide",
     date: "Nov 15, 2024",
     readTime: "7 min read",
@@ -74,7 +108,7 @@ const blogArticles = [
     title: "Singapore Zoo & Night Safari Guide",
     description: "Experience one of the world's best zoos and the famous night safari adventure.",
     category: "Wildlife",
-    image: "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800",
+    image: zooImg,
     author: "Wildlife Expert",
     date: "Nov 12, 2024",
     readTime: "11 min read",
@@ -85,7 +119,7 @@ const blogArticles = [
     title: "Universal Studios Singapore Guide",
     description: "Tips, tricks, and must-ride attractions at Southeast Asia's only Universal Studios.",
     category: "Theme Parks",
-    image: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800",
+    image: universalImg,
     author: "Theme Park Fan",
     date: "Nov 10, 2024",
     readTime: "8 min read",
@@ -96,7 +130,7 @@ const blogArticles = [
     title: "Orchard Road Shopping Guide",
     description: "Navigate Singapore's famous shopping belt with tips on the best malls and deals.",
     category: "Shopping",
-    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800",
+    image: riverCruiseImg,
     author: "Style Expert",
     date: "Nov 8, 2024",
     readTime: "6 min read",
@@ -107,7 +141,7 @@ const blogArticles = [
     title: "Singapore's Best Rooftop Bars",
     description: "Enjoy stunning skyline views with craft cocktails at these top rooftop venues.",
     category: "Nightlife",
-    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800",
+    image: marinaBayImg,
     author: "Night Owl",
     date: "Nov 5, 2024",
     readTime: "7 min read",
@@ -118,7 +152,7 @@ const blogArticles = [
     title: "Pulau Ubin: Singapore's Last Kampong",
     description: "Escape to this rustic island for cycling, nature trails, and a glimpse of old Singapore.",
     category: "Nature",
-    image: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800",
+    image: cableCarImg,
     author: "Nature Lover",
     date: "Nov 2, 2024",
     readTime: "8 min read",
@@ -129,7 +163,7 @@ const blogArticles = [
     title: "Singapore's Street Art Scene",
     description: "Discover hidden murals and colorful street art in neighborhoods across the city.",
     category: "Cultural Sites",
-    image: "https://images.unsplash.com/photo-1496939376851-89342e90adcd?w=800",
+    image: nightSafariImg,
     author: "Art Explorer",
     date: "Oct 30, 2024",
     readTime: "6 min read",
@@ -140,7 +174,7 @@ const blogArticles = [
     title: "Budget Singapore: Travel Without Breaking the Bank",
     description: "How to experience the best of Singapore on a budget with free attractions and cheap eats.",
     category: "Budget Travel",
-    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800",
+    image: skyHelixImg,
     author: "Budget Traveler",
     date: "Oct 28, 2024",
     readTime: "10 min read",

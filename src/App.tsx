@@ -80,7 +80,11 @@ import ThailandSmartGuides from "./pages/ThailandSmartGuides";
 import BlogAirportTransferThailand from "./pages/BlogAirportTransferThailand";
 import BlogPhiPhiIslandTours from "./pages/BlogPhiPhiIslandTours";
 import DubaiSmartGuides from "./pages/DubaiSmartGuides";
+import BlogDubaiAirportTransfer from "./pages/BlogDubaiAirportTransfer";
+import BlogDubaiDesertSafari from "./pages/BlogDubaiDesertSafari";
 import SingaporeSmartGuides from "./pages/SingaporeSmartGuides";
+import BlogSingaporeAirportTransfer from "./pages/BlogSingaporeAirportTransfer";
+import BlogSentosaActivities from "./pages/BlogSentosaActivities";
 import NetherlandsSmartGuides from "./pages/NetherlandsSmartGuides";
 import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -279,6 +283,13 @@ const App = () => (
             <Route path="/thailand-smart-guides" element={<ThailandSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
+            <Route path="/dubai-smart-guides" element={<DubaiSmartGuides />} />
+            <Route path="/blog/airport-transfer-booking-dubai" element={<BlogDubaiAirportTransfer />} />
+            <Route path="/blog/desert-safari-deals-dubai" element={<BlogDubaiDesertSafari />} />
+            <Route path="/singapore-smart-guides" element={<SingaporeSmartGuides />} />
+            <Route path="/blog/airport-transfer-booking-singapore" element={<BlogSingaporeAirportTransfer />} />
+            <Route path="/blog/sentosa-activities-singapore" element={<BlogSentosaActivities />} />
+            <Route path="/netherlands-smart-guides" element={<NetherlandsSmartGuides />} />
             <Route path="/bangkok/transfers" element={<BangkokTransfers />} />
             <Route path="/bangkok/bkk-airport-pickup" element={<BangkokBkkAirportPickup />} />
             <Route path="/bangkok/dmk-airport-pickup" element={<BangkokDmkAirportPickup />} />
