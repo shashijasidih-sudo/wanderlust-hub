@@ -18,8 +18,32 @@ import elephantImg from "@/assets/elephant-1.jpg";
 import bangkokSkywalkImg from "@/assets/bangkok-skywalk-1.jpg";
 import massageImg from "@/assets/massage-1.jpg";
 import tigerImg from "@/assets/tiger-1.jpg";
+import bangkokCityImg from "@/assets/bangkok-city-1.jpg";
+import phiPhiBoatImg from "@/assets/phi-phi-boat.jpeg";
 
 const blogArticles = [
+  {
+    id: 0,
+    title: "Complete Guide to Airport Transfer Booking in Thailand",
+    description: "Everything about airport transfers in Thailand — routes, types, tips, and the best platform to book your Suvarnabhumi, Phuket, or Krabi transfer.",
+    category: "Thailand Transfers",
+    image: bangkokCityImg,
+    author: "Yellodae Travel Expert",
+    date: "Feb 19, 2026",
+    readTime: "8 min read",
+    slug: "/blog/airport-transfer-booking-thailand"
+  },
+  {
+    id: -1,
+    title: "Complete Guide to Phi Phi Island Tours in Thailand",
+    description: "Plan the perfect Phi Phi Island tour — speedboat, longtail, or luxury private tours. Maya Bay, snorkelling, and everything you need to know.",
+    category: "Island Adventures",
+    image: phiPhiBoatImg,
+    author: "Yellodae Island Expert",
+    date: "Feb 22, 2026",
+    readTime: "10 min read",
+    slug: "/blog/phi-phi-island-tours-thailand"
+  },
   {
     id: 1,
     title: "Top 10 Beaches to Visit in Thailand",
