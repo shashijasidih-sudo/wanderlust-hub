@@ -333,42 +333,44 @@ const App = () => (
             <Route path="/phuket/krabi-city-tour" element={<PhuketKrabiCityTour />} />
             <Route path="/thailand/transfers" element={<ThailandTransfers />} />
           </Route>
-          {/* Dubai routes */}
-          <Route path="/dubai-smart-guides" element={<DubaiSmartGuides />} />
-          <Route path="/blog/airport-transfer-booking-dubai" element={<BlogDubaiAirportTransfer />} />
-          <Route path="/blog/desert-safari-deals-dubai" element={<BlogDubaiDesertSafari />} />
-          <Route path="/dubai" element={<Dubai />} />
-          <Route path="/desert-safari" element={<DesertSafari />} />
-          <Route path="/desert-safari-shisha" element={<DesertSafariShisha />} />
-          <Route path="/desert-safari-sharing" element={<DesertSafariSharing />} />
-          <Route path="/dhow-cruise" element={<DhowCruise />} />
-          <Route path="/dhow-cruise-creek-lower" element={<DhowCruiseCreekLower />} />
-          <Route path="/dhow-cruise-creek-upper" element={<DhowCruiseCreekUpper />} />
-          <Route path="/dhow-cruise-marina-lower" element={<DhowCruiseMarinaLower />} />
-          <Route path="/dhow-cruise-marina-upper" element={<DhowCruiseMarinaUpper />} />
-          <Route path="/atlantis-palm" element={<AtlantisPalm />} />
-          <Route path="/dubai-city-tour" element={<DubaiCityTour />} />
-          <Route path="/dubai-city-tour-mall" element={<DubaiCityTourMall />} />
-          <Route path="/global-village-dubai" element={<GlobalVillageDubai />} />
-          <Route path="/abu-dhabi-city-tour" element={<AbuDhabiCityTour />} />
-          <Route path="/abu-dhabi-ferrari-world" element={<AbuDhabiFerrariWorld />} />
-          <Route path="/dubai-aquarium-penguin" element={<DubaiAquariumPenguin />} />
-          <Route path="/burj-khalifa-non-prime" element={<BurjKhalifaNonPrime />} />
-          <Route path="/burj-khalifa-prime" element={<BurjKhalifaPrime />} />
-          <Route path="/dubai-dolphin-show" element={<DubaiDolphinShow />} />
-          <Route path="/miracle-garden-dubai" element={<MiracleGardenDubai />} />
-          <Route path="/dubai-fountain-show" element={<DubaiFountainShow />} />
-          <Route path="/dubai/transfers" element={<DubaiTransfersNew />} />
-          <Route path="/dubai/airport-pickup-zone-1" element={<DubaiAirportPickupZone1 />} />
-          <Route path="/dubai/airport-dropoff-zone-1" element={<DubaiAirportDropoffZone1 />} />
-          <Route path="/dubai/airport-pickup-zone-2" element={<DubaiAirportPickupZone2 />} />
-          <Route path="/dubai/airport-dropoff-zone-2" element={<DubaiAirportDropoffZone2 />} />
-          <Route path="/dubai/airport-pickup-zone-3" element={<DubaiAirportPickupZone3 />} />
-          <Route path="/dubai/airport-dropoff-zone-3" element={<DubaiAirportDropoffZone3 />} />
-          <Route path="/dubai/airport-pickup-zone-4" element={<DubaiAirportPickupZone4 />} />
-          <Route path="/dubai/airport-dropoff-zone-4" element={<DubaiAirportDropoffZone4 />} />
-          <Route path="/dubai/airport-pickup-zone-5" element={<DubaiAirportPickupZone5 />} />
-          <Route path="/dubai/airport-dropoff-zone-5" element={<DubaiAirportDropoffZone5 />} />
+          {/* Dubai routes with MailerLite */}
+          <Route element={<MailerLiteLayout />}>
+            <Route path="/dubai-smart-guides" element={<DubaiSmartGuides />} />
+            <Route path="/blog/airport-transfer-booking-dubai" element={<BlogDubaiAirportTransfer />} />
+            <Route path="/blog/desert-safari-deals-dubai" element={<BlogDubaiDesertSafari />} />
+            <Route path="/dubai" element={<Dubai />} />
+            <Route path="/desert-safari" element={<DesertSafari />} />
+            <Route path="/desert-safari-shisha" element={<DesertSafariShisha />} />
+            <Route path="/desert-safari-sharing" element={<DesertSafariSharing />} />
+            <Route path="/dhow-cruise" element={<DhowCruise />} />
+            <Route path="/dhow-cruise-creek-lower" element={<DhowCruiseCreekLower />} />
+            <Route path="/dhow-cruise-creek-upper" element={<DhowCruiseCreekUpper />} />
+            <Route path="/dhow-cruise-marina-lower" element={<DhowCruiseMarinaLower />} />
+            <Route path="/dhow-cruise-marina-upper" element={<DhowCruiseMarinaUpper />} />
+            <Route path="/atlantis-palm" element={<AtlantisPalm />} />
+            <Route path="/dubai-city-tour" element={<DubaiCityTour />} />
+            <Route path="/dubai-city-tour-mall" element={<DubaiCityTourMall />} />
+            <Route path="/global-village-dubai" element={<GlobalVillageDubai />} />
+            <Route path="/abu-dhabi-city-tour" element={<AbuDhabiCityTour />} />
+            <Route path="/abu-dhabi-ferrari-world" element={<AbuDhabiFerrariWorld />} />
+            <Route path="/dubai-aquarium-penguin" element={<DubaiAquariumPenguin />} />
+            <Route path="/burj-khalifa-non-prime" element={<BurjKhalifaNonPrime />} />
+            <Route path="/burj-khalifa-prime" element={<BurjKhalifaPrime />} />
+            <Route path="/dubai-dolphin-show" element={<DubaiDolphinShow />} />
+            <Route path="/miracle-garden-dubai" element={<MiracleGardenDubai />} />
+            <Route path="/dubai-fountain-show" element={<DubaiFountainShow />} />
+            <Route path="/dubai/transfers" element={<DubaiTransfersNew />} />
+            <Route path="/dubai/airport-pickup-zone-1" element={<DubaiAirportPickupZone1 />} />
+            <Route path="/dubai/airport-dropoff-zone-1" element={<DubaiAirportDropoffZone1 />} />
+            <Route path="/dubai/airport-pickup-zone-2" element={<DubaiAirportPickupZone2 />} />
+            <Route path="/dubai/airport-dropoff-zone-2" element={<DubaiAirportDropoffZone2 />} />
+            <Route path="/dubai/airport-pickup-zone-3" element={<DubaiAirportPickupZone3 />} />
+            <Route path="/dubai/airport-dropoff-zone-3" element={<DubaiAirportDropoffZone3 />} />
+            <Route path="/dubai/airport-pickup-zone-4" element={<DubaiAirportPickupZone4 />} />
+            <Route path="/dubai/airport-dropoff-zone-4" element={<DubaiAirportDropoffZone4 />} />
+            <Route path="/dubai/airport-pickup-zone-5" element={<DubaiAirportPickupZone5 />} />
+            <Route path="/dubai/airport-dropoff-zone-5" element={<DubaiAirportDropoffZone5 />} />
+          </Route>
           {/* Singapore routes with MailerLite */}
           <Route element={<MailerLiteLayout />}>
             <Route path="/singapore-smart-guides" element={<SingaporeSmartGuides />} />
