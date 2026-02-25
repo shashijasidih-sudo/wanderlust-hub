@@ -20,6 +20,22 @@ const MailerLiteLayout = () => {
         ((window as any).ml.q = (window as any).ml.q || []).push(arguments);
       };
     (window as any).ml("account", "2066738");
+
+    // Cleanup on unmount: remove script and MailerLite artifacts
+    return () => {
+      const scriptEl = document.querySelector(
+        'script[src="https://assets.mailerlite.com/js/universal.js"]'
+      );
+      if (scriptEl) scriptEl.remove();
+
+      // Remove MailerLite injected elements (popups, forms, etc.)
+      document.querySelectorAll('[class*="ml-"], [id*="mlb2"]').forEach((el) => el.remove());
+
+      // Clean up global MailerLite state
+      delete (window as any).ml;
+      delete (window as any).ml_account;
+      delete (window as any).ml_webform_success;
+    };
   }, []);
 
   return <Outlet />;
