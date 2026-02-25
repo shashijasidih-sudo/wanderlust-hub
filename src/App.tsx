@@ -360,16 +360,16 @@ const App = () => (
             <Route path="/miracle-garden-dubai" element={<MiracleGardenDubai />} />
             <Route path="/dubai-fountain-show" element={<DubaiFountainShow />} />
             <Route path="/dubai/transfers" element={<DubaiTransfersNew />} />
-            <Route path="/dubai/airport-pickup-zone-1" element={<DubaiAirportPickupZone1 />} />
-            <Route path="/dubai/airport-dropoff-zone-1" element={<DubaiAirportDropoffZone1 />} />
-            <Route path="/dubai/airport-pickup-zone-2" element={<DubaiAirportPickupZone2 />} />
-            <Route path="/dubai/airport-dropoff-zone-2" element={<DubaiAirportDropoffZone2 />} />
-            <Route path="/dubai/airport-pickup-zone-3" element={<DubaiAirportPickupZone3 />} />
-            <Route path="/dubai/airport-dropoff-zone-3" element={<DubaiAirportDropoffZone3 />} />
-            <Route path="/dubai/airport-pickup-zone-4" element={<DubaiAirportPickupZone4 />} />
-            <Route path="/dubai/airport-dropoff-zone-4" element={<DubaiAirportDropoffZone4 />} />
-            <Route path="/dubai/airport-pickup-zone-5" element={<DubaiAirportPickupZone5 />} />
-            <Route path="/dubai/airport-dropoff-zone-5" element={<DubaiAirportDropoffZone5 />} />
+            <Route path="/dubai/airport-pickup-zone1" element={<DubaiAirportPickupZone1 />} />
+            <Route path="/dubai/airport-dropoff-zone1" element={<DubaiAirportDropoffZone1 />} />
+            <Route path="/dubai/airport-pickup-zone2" element={<DubaiAirportPickupZone2 />} />
+            <Route path="/dubai/airport-dropoff-zone2" element={<DubaiAirportDropoffZone2 />} />
+            <Route path="/dubai/airport-pickup-zone3" element={<DubaiAirportPickupZone3 />} />
+            <Route path="/dubai/airport-dropoff-zone3" element={<DubaiAirportDropoffZone3 />} />
+            <Route path="/dubai/airport-pickup-zone4" element={<DubaiAirportPickupZone4 />} />
+            <Route path="/dubai/airport-dropoff-zone4" element={<DubaiAirportDropoffZone4 />} />
+            <Route path="/dubai/airport-pickup-zone5" element={<DubaiAirportPickupZone5 />} />
+            <Route path="/dubai/airport-dropoff-zone5" element={<DubaiAirportDropoffZone5 />} />
           </Route>
           {/* Singapore routes with MailerLite */}
           <Route element={<MailerLiteLayout />}>
