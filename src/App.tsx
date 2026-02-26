@@ -203,6 +203,7 @@ import PaymentInformation from "./pages/PaymentInformation";
 import BookingConfirmed from "./pages/BookingConfirmed";
 import Cart from "./pages/Cart";
 import BookingHistory from "./pages/BookingHistory";
+import QuickPay from "./pages/QuickPay";
 import MailerLiteLayout from "./components/MailerLiteLayout";
 
 const queryClient = new QueryClient();
@@ -412,6 +413,7 @@ const App = () => (
           <Route path="/booking-confirmed" element={<BookingConfirmed />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/booking-history" element={<BookingHistory />} />
+          <Route path="/quick-pay" element={<QuickPay />} />
           <Route path="/routes-health-check" element={<RoutesHealthCheck />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
