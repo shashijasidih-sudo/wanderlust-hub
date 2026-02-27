@@ -83,6 +83,8 @@ import BlogPhiPhiIslandTours from "./pages/BlogPhiPhiIslandTours";
 import DubaiSmartGuides from "./pages/DubaiSmartGuides";
 import BlogDubaiAirportTransfer from "./pages/BlogDubaiAirportTransfer";
 import BlogDubaiDesertSafari from "./pages/BlogDubaiDesertSafari";
+import BlogDubaiMarinaCruise from "./pages/BlogDubaiMarinaCruise";
+import BlogBurjKhalifaTickets from "./pages/BlogBurjKhalifaTickets";
 import SingaporeSmartGuides from "./pages/SingaporeSmartGuides";
 import BlogSingaporeAirportTransfer from "./pages/BlogSingaporeAirportTransfer";
 import BlogSentosaActivities from "./pages/BlogSentosaActivities";
@@ -339,6 +341,8 @@ const App = () => (
             <Route path="/dubai-smart-guides" element={<DubaiSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-dubai" element={<BlogDubaiAirportTransfer />} />
             <Route path="/blog/desert-safari-deals-dubai" element={<BlogDubaiDesertSafari />} />
+            <Route path="/blog/dubai-marina-cruise" element={<BlogDubaiMarinaCruise />} />
+            <Route path="/blog/burj-khalifa-tickets-dubai" element={<BlogBurjKhalifaTickets />} />
             <Route path="/dubai" element={<Dubai />} />
             <Route path="/desert-safari" element={<DesertSafari />} />
             <Route path="/desert-safari-shisha" element={<DesertSafariShisha />} />
