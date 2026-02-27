@@ -55,6 +55,28 @@ const blogArticles = [
     slug: "/blog/desert-safari-deals-dubai"
   },
   {
+    id: -2,
+    title: "Complete Guide to Dubai Marina Cruise in Dubai",
+    description: "Everything about Dubai Marina cruise booking — types of cruises, what to expect onboard, best timings, and tips for the best experience.",
+    category: "Dubai Cruises",
+    image: dhowImg,
+    author: "Yellodae Travel Expert",
+    date: "Feb 26, 2026",
+    readTime: "9 min read",
+    slug: "/blog/dubai-marina-cruise"
+  },
+  {
+    id: -3,
+    title: "Complete Guide to Burj Khalifa Tickets in Dubai",
+    description: "Ticket types, step-by-step booking guide, best viewing times, and tips for visiting the world's tallest building.",
+    category: "Dubai Landmarks",
+    image: fountainImg,
+    author: "Yellodae Travel Expert",
+    date: "Feb 27, 2026",
+    readTime: "8 min read",
+    slug: "/blog/burj-khalifa-tickets-dubai"
+  },
+  {
     id: 1,
     title: "Ultimate Guide to Dubai's Desert Safari",
     description: "Experience the thrill of dune bashing, camel rides, and traditional Bedouin camps under the stars.",
