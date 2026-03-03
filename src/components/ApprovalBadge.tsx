@@ -1,4 +1,4 @@
-import motLogo from "@/assets/ministry-of-tourism-logo.jpg";
+import motLogo from "@/assets/ministry-of-tourism-logo-new.png";
 import nidhiLogo from "@/assets/nidhi-logo.jpg";
 import { Shield, BadgeCheck, Award } from "lucide-react";
 
