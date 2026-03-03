@@ -32,6 +32,23 @@ const handleBookNow = () => {
   const win = window as any;
   if (typeof win.ml === "function") {
     win.ml("show", "0WJ5rh", true);
+  } else {
+    // Fallback: init MailerLite and retry
+    win.ml = win.ml || function () {
+      (win.ml.q = win.ml.q || []).push(arguments);
+    };
+    win.ml("account", "2066738");
+    const script = document.createElement("script");
+    script.src = "https://assets.mailerlite.com/js/universal.js";
+    script.async = true;
+    script.onload = () => {
+      setTimeout(() => {
+        if (typeof win.ml === "function") {
+          win.ml("show", "0WJ5rh", true);
+        }
+      }, 500);
+    };
+    document.head.appendChild(script);
   }
 };
 
