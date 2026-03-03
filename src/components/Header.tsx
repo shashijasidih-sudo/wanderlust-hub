@@ -1,6 +1,6 @@
 import { Menu, IndianRupee, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket, LogOut, CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "@/contexts/CartContext";
 import {
@@ -12,48 +12,25 @@ import {
 } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/yellodae-logo.png";
 import SearchInput from "./SearchInput";
-import { supabase } from "@/integrations/supabase/client";
-import { User as SupabaseUser } from "@supabase/supabase-js";
+import { useAuth } from "@/lib/auth";
 import { useToast } from "@/hooks/use-toast";
 import { useCurrency, CURRENCIES } from "@/contexts/CurrencyContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [user, setUser] = useState<SupabaseUser | null>(null);
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
   const { cartCount } = useCart();
   const { currency, setCurrency, currencySymbol } = useCurrency();
 
-  useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (event, session) => {
-        setUser(session?.user ?? null);
-      }
-    );
-
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
+  const handleLogout = () => {
+    logout();
+    toast({
+      title: "Logged Out",
+      description: "You have been successfully logged out.",
     });
-
-    return () => subscription.unsubscribe();
-  }, []);
-
-  const handleLogout = async () => {
-    const { error } = await supabase.auth.signOut();
-    if (error) {
-      toast({
-        title: "Logout Failed",
-        description: error.message,
-        variant: "destructive",
-      });
-    } else {
-      toast({
-        title: "Logged Out",
-        description: "You have been successfully logged out.",
-      });
-      navigate("/");
-    }
+    navigate("/");
   };
 
   const menuItemClass = "cursor-pointer hover:bg-primary/10 rounded-md transition-colors px-3 py-3 flex items-center w-full";
@@ -67,12 +44,7 @@ const Header = () => {
           {/* Logo & Brand Name */}
           <Link to="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
             <img src={logo} alt="Yellodae Logo" className="h-14 w-14 object-contain" />
-            <div
-              className="text-2xl font-bold"
-              style={{
-                color: 'rgb(25, 25, 112)'
-              }}
-            >
+            <div className="text-2xl font-bold" style={{ color: 'rgb(25, 25, 112)' }}>
               Yellodae
             </div>
           </Link>
