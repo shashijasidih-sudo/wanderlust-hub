@@ -1,10 +1,12 @@
+import { useState, useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Star, Hotel, Plane, Ship, Users } from "lucide-react";
+import { MapPin, Calendar, Star, Hotel, Plane, Ship, Users, X } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 import phiPhi1 from "@/assets/phi-phi-1.jpg";
 import pattayaBoats from "@/assets/pattaya-boats-beach-1.jpg";
@@ -28,31 +30,26 @@ interface PackageInfo {
   highlights: string[];
 }
 
-const handleBookNow = () => {
-  const win = window as any;
-  if (typeof win.ml === "function") {
-    win.ml("show", "0WJ5rh", true);
-  } else {
-    // Fallback: init MailerLite and retry
-    win.ml = win.ml || function () {
-      (win.ml.q = win.ml.q || []).push(arguments);
-    };
-    win.ml("account", "2066738");
-    const script = document.createElement("script");
-    script.src = "https://assets.mailerlite.com/js/universal.js";
-    script.async = true;
-    script.onload = () => {
-      setTimeout(() => {
-        if (typeof win.ml === "function") {
-          win.ml("show", "0WJ5rh", true);
-        }
-      }, 500);
-    };
-    document.head.appendChild(script);
-  }
+const MailerLiteEmbed = ({ formId }: { formId: string }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    // Insert the MailerLite embedded div
+    containerRef.current.innerHTML = `<div class="ml-embedded" data-form="${formId}"></div>`;
+    
+    // Re-trigger MailerLite to pick up the new embedded form
+    const win = window as any;
+    if (typeof win.ml === "function") {
+      // MailerLite scans for new embedded forms on account init
+      win.ml("account", "2066738");
+    }
+  }, [formId]);
+
+  return <div ref={containerRef} className="min-h-[400px]" />;
 };
 
-const PackageCard = ({ pkg }: { pkg: PackageInfo }) => (
+const PackageCard = ({ pkg, onBookNow }: { pkg: PackageInfo; onBookNow: (title: string) => void }) => (
   <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
     <div className="relative h-56 overflow-hidden">
       <img
@@ -91,7 +88,7 @@ const PackageCard = ({ pkg }: { pkg: PackageInfo }) => (
             <Users className="h-3 w-3" /> per person
           </div>
         </div>
-        <Button onClick={handleBookNow}>Book Now</Button>
+        <Button onClick={() => onBookNow(pkg.title)}>Book Now</Button>
       </div>
     </CardContent>
   </Card>
@@ -196,7 +193,7 @@ const dubaiPackages: PackageInfo[] = [
   },
 ];
 
-const SectionBlock = ({ title, icon, packages: pkgs }: { title: string; icon: React.ReactNode; packages: PackageInfo[] }) => (
+const SectionBlock = ({ title, icon, packages: pkgs, onBookNow }: { title: string; icon: React.ReactNode; packages: PackageInfo[]; onBookNow: (title: string) => void }) => (
   <section className="py-10">
     <div className="container px-4 md:px-6">
       <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-2">
@@ -204,7 +201,7 @@ const SectionBlock = ({ title, icon, packages: pkgs }: { title: string; icon: Re
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {pkgs.map((pkg) => (
-          <PackageCard key={pkg.id} pkg={pkg} />
+          <PackageCard key={pkg.id} pkg={pkg} onBookNow={onBookNow} />
         ))}
       </div>
     </div>
@@ -212,6 +209,14 @@ const SectionBlock = ({ title, icon, packages: pkgs }: { title: string; icon: Re
 );
 
 const TourPackages = () => {
+  const [bookingOpen, setBookingOpen] = useState(false);
+  const [bookingTitle, setBookingTitle] = useState("");
+
+  const handleBookNow = (title: string) => {
+    setBookingTitle(title);
+    setBookingOpen(true);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -231,11 +236,11 @@ const TourPackages = () => {
           </div>
         </section>
 
-        <SectionBlock title="Thailand Packages" icon={<Plane className="h-6 w-6 text-primary" />} packages={thailandPackages} />
+        <SectionBlock title="Thailand Packages" icon={<Plane className="h-6 w-6 text-primary" />} packages={thailandPackages} onBookNow={handleBookNow} />
         <div className="border-t" />
-        <SectionBlock title="Singapore Packages" icon={<Ship className="h-6 w-6 text-primary" />} packages={singaporePackages} />
+        <SectionBlock title="Singapore Packages" icon={<Ship className="h-6 w-6 text-primary" />} packages={singaporePackages} onBookNow={handleBookNow} />
         <div className="border-t" />
-        <SectionBlock title="Dubai Packages" icon={<Hotel className="h-6 w-6 text-primary" />} packages={dubaiPackages} />
+        <SectionBlock title="Dubai Packages" icon={<Hotel className="h-6 w-6 text-primary" />} packages={dubaiPackages} onBookNow={handleBookNow} />
 
         {/* Testimonials */}
         <section className="py-12 bg-muted/30">
@@ -245,6 +250,16 @@ const TourPackages = () => {
         </section>
       </main>
       <Footer />
+
+      {/* MailerLite Booking Dialog */}
+      <Dialog open={bookingOpen} onOpenChange={setBookingOpen}>
+        <DialogContent className="max-w-lg max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Book: {bookingTitle}</DialogTitle>
+          </DialogHeader>
+          {bookingOpen && <MailerLiteEmbed formId="0WJ5rh" />}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
