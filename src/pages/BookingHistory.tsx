@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/lib/auth";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -60,30 +60,27 @@ const BookingHistory = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const { formatPrice } = useCurrency();
+  const { user } = useAuth();
+
+  useEffect(() => {
+    if (!user) { navigate("/auth"); return; }
+    // Placeholder — GET /api/bookings?user_id=...
+    setBookings([]);
+    setIsLoading(false);
+  }, [user, navigate]);
 
   const toggleSort = (field: SortField) => {
-    if (sortField === field) {
-      setSortDir(d => (d === "asc" ? "desc" : "asc"));
-    } else {
-      setSortField(field);
-      setSortDir("desc");
-    }
+    if (sortField === field) setSortDir(d => d === "asc" ? "desc" : "asc");
+    else { setSortField(field); setSortDir("desc"); }
   };
 
   const filteredBookings = useMemo(() => {
     let result = bookings;
-
-    if (statusFilter !== "all") {
-      result = result.filter(b => b.status === statusFilter);
-    }
-
+    if (statusFilter !== "all") result = result.filter(b => b.status === statusFilter);
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
-      result = result.filter(b =>
-        b.tour_name.toLowerCase().includes(q) || b.contact_name.toLowerCase().includes(q)
-      );
+      result = result.filter(b => b.tour_name.toLowerCase().includes(q) || b.contact_name.toLowerCase().includes(q));
     }
-
     if (dateFrom || dateTo) {
       result = result.filter(b => {
         const d = parseISO(b.tour_date);
@@ -93,7 +90,6 @@ const BookingHistory = () => {
         return true;
       });
     }
-
     result.sort((a, b) => {
       let cmp = 0;
       if (sortField === "total_price") cmp = a.total_price - b.total_price;
@@ -102,7 +98,6 @@ const BookingHistory = () => {
       else cmp = new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
       return sortDir === "asc" ? cmp : -cmp;
     });
-
     return result;
   }, [bookings, statusFilter, searchQuery, dateFrom, dateTo, sortField, sortDir]);
 
@@ -113,72 +108,33 @@ const BookingHistory = () => {
 
   const handleCancelBooking = async (bookingId: string, tourName: string) => {
     setCancellingId(bookingId);
-    try {
-      const { error } = await supabase.from("bookings").update({ status: "cancelled" }).eq("id", bookingId);
-      if (error) throw error;
-      setBookings(prev => prev.map(b => (b.id === bookingId ? { ...b, status: "cancelled" as const } : b)));
-      toast({ title: "Booking Cancelled", description: `Your booking for ${tourName} has been cancelled.` });
-    } catch (error: any) {
-      toast({ title: "Error", description: error.message || "Failed to cancel booking.", variant: "destructive" });
-    } finally {
-      setCancellingId(null);
-    }
+    // Placeholder — PATCH /api/bookings/:id
+    await new Promise(r => setTimeout(r, 500));
+    setBookings(prev => prev.map(b => b.id === bookingId ? { ...b, status: "cancelled" as const } : b));
+    toast({ title: "Booking Cancelled", description: `Your booking for ${tourName} has been cancelled.` });
+    setCancellingId(null);
   };
 
   const handleDownloadReceipt = (booking: Booking) => {
     const receipt = [
-      "YELLODAE TOURS - BOOKING RECEIPT",
-      "================================",
-      `Booking ID: ${booking.id}`,
-      `Tour: ${booking.tour_name}`,
+      "YELLODAE TOURS - BOOKING RECEIPT", "================================",
+      `Booking ID: ${booking.id}`, `Tour: ${booking.tour_name}`,
       `Date: ${format(new Date(booking.tour_date), "MMM dd, yyyy")}`,
-      `Adults: ${booking.adults}`,
-      `Children: ${booking.children}`,
-      `Total: ${formatPrice(booking.total_price)}`,
-      `Status: ${booking.status.toUpperCase()}`,
+      `Adults: ${booking.adults}`, `Children: ${booking.children}`,
+      `Total: ${formatPrice(booking.total_price)}`, `Status: ${booking.status.toUpperCase()}`,
       `Booked on: ${format(new Date(booking.created_at), "MMM dd, yyyy")}`,
-      `Contact: ${booking.contact_name}`,
-      "================================",
+      `Contact: ${booking.contact_name}`, "================================",
       "Thank you for choosing Yellodae Tours!",
     ].join("\n");
-
     const blob = new Blob([receipt], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `receipt-${booking.id.slice(0, 8)}.txt`;
-    a.click();
+    const a = document.createElement("a"); a.href = url;
+    a.download = `receipt-${booking.id.slice(0, 8)}.txt`; a.click();
     URL.revokeObjectURL(url);
   };
 
-  useEffect(() => {
-    const checkAuthAndFetch = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) { navigate("/auth"); return; }
-
-      const { data, error } = await supabase
-        .from("bookings").select("*").eq("user_id", session.user.id)
-        .order("created_at", { ascending: false });
-
-      if (error) console.error("Error fetching bookings:", error);
-      else setBookings(data || []);
-      setIsLoading(false);
-    };
-
-    checkAuthAndFetch();
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_, session) => {
-      if (!session) navigate("/auth");
-    });
-    return () => subscription.unsubscribe();
-  }, [navigate]);
-
   if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      </div>
-    );
+    return <div className="min-h-screen flex items-center justify-center"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>;
   }
 
   const SortButton = ({ field, label }: { field: SortField; label: string }) => (
@@ -194,8 +150,7 @@ const BookingHistory = () => {
       <main className="container px-4 md:px-6 py-8 mt-16">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-3xl font-bold mb-6 flex items-center gap-3">
-            <CalendarDays className="h-8 w-8 text-primary" />
-            Booking History
+            <CalendarDays className="h-8 w-8 text-primary" /> Booking History
           </h1>
 
           <Tabs value={statusFilter} onValueChange={(v) => setStatusFilter(v as StatusFilter)} className="mb-4">
@@ -208,16 +163,10 @@ const BookingHistory = () => {
             </TabsList>
           </Tabs>
 
-          {/* Search & Date Filter Row */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input
-                placeholder="Search by tour or contact name..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-9"
-              />
+              <Input placeholder="Search by tour or contact name..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-9" />
             </div>
             <Popover>
               <PopoverTrigger asChild>
@@ -231,160 +180,26 @@ const BookingHistory = () => {
                   <p className="text-sm font-medium">Tour Date Range</p>
                   <Calendar mode="single" selected={dateFrom} onSelect={setDateFrom} />
                   <Calendar mode="single" selected={dateTo} onSelect={setDateTo} />
-                  <Button variant="ghost" size="sm" onClick={() => { setDateFrom(undefined); setDateTo(undefined); }}>
-                    Clear Dates
-                  </Button>
+                  <Button variant="ghost" size="sm" onClick={() => { setDateFrom(undefined); setDateTo(undefined); }}>Clear Dates</Button>
                 </div>
               </PopoverContent>
             </Popover>
           </div>
 
-          {filteredBookings.length === 0 ? (
-            <Card>
-              <CardHeader>
-                <CardTitle>{statusFilter === "all" ? "Booking History" : `${statusFilter.charAt(0).toUpperCase() + statusFilter.slice(1)} Bookings`}</CardTitle>
-                <CardDescription>{bookings.length === 0 ? "View and manage all your tour bookings" : `No matching bookings found`}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-col items-center justify-center py-12 text-center">
-                  <div className="rounded-full bg-muted p-6 mb-4">
-                    <CalendarDays className="h-12 w-12 text-muted-foreground" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">{bookings.length === 0 ? "No Bookings Yet" : "No Results"}</h3>
-                  <p className="text-muted-foreground mb-6 max-w-md">
-                    {bookings.length === 0
-                      ? "You haven't made any bookings yet. Start exploring our amazing tours!"
-                      : "Try adjusting your search or filters."}
-                  </p>
-                  {bookings.length === 0 && (
-                    <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
-          ) : (
-            <>
-              {/* Desktop Table */}
-              <div className="hidden md:block rounded-lg border">
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead><SortButton field="tour_name" label="Tour" /></TableHead>
-                      <TableHead><SortButton field="tour_date" label="Tour Date" /></TableHead>
-                      <TableHead>Guests</TableHead>
-                      <TableHead><SortButton field="total_price" label="Total" /></TableHead>
-                      <TableHead>Status</TableHead>
-                      <TableHead><SortButton field="created_at" label="Booked On" /></TableHead>
-                      <TableHead className="text-right">Actions</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {filteredBookings.map((booking) => (
-                      <TableRow key={booking.id}>
-                        <TableCell>
-                          <Link to={`/${booking.tour_slug}`} className="font-medium hover:text-primary transition-colors">
-                            {booking.tour_name}
-                          </Link>
-                        </TableCell>
-                        <TableCell>{format(new Date(booking.tour_date), "MMM dd, yyyy")}</TableCell>
-                        <TableCell>
-                          <div className="flex items-center gap-1">
-                            <Users className="h-3 w-3 text-muted-foreground" />
-                            {booking.adults}A{booking.children > 0 ? `, ${booking.children}C` : ""}
-                          </div>
-                        </TableCell>
-                        <TableCell className="font-semibold text-primary">{formatPrice(booking.total_price)}</TableCell>
-                        <TableCell>
-                          <Badge className={statusColors[booking.status]}>
-                            {booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}
-                          </Badge>
-                        </TableCell>
-                        <TableCell className="text-muted-foreground">{format(new Date(booking.created_at), "MMM dd, yyyy")}</TableCell>
-                        <TableCell className="text-right space-x-2">
-                          <Button variant="ghost" size="sm" onClick={() => handleDownloadReceipt(booking)}>
-                            <Download className="h-4 w-4" />
-                          </Button>
-                          {booking.status === "pending" && (
-                            <AlertDialog>
-                              <AlertDialogTrigger asChild>
-                                <Button variant="destructive" size="sm" disabled={cancellingId === booking.id}>
-                                  {cancellingId === booking.id ? <Loader2 className="h-4 w-4 animate-spin" /> : <XCircle className="h-4 w-4" />}
-                                </Button>
-                              </AlertDialogTrigger>
-                              <AlertDialogContent>
-                                <AlertDialogHeader>
-                                  <AlertDialogTitle>Cancel Booking?</AlertDialogTitle>
-                                  <AlertDialogDescription>
-                                    Are you sure you want to cancel "{booking.tour_name}"? This cannot be undone.
-                                  </AlertDialogDescription>
-                                </AlertDialogHeader>
-                                <AlertDialogFooter>
-                                  <AlertDialogCancel>Keep</AlertDialogCancel>
-                                  <AlertDialogAction
-                                    onClick={() => handleCancelBooking(booking.id, booking.tour_name)}
-                                    className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
-                                  >
-                                    Yes, Cancel
-                                  </AlertDialogAction>
-                                </AlertDialogFooter>
-                              </AlertDialogContent>
-                            </AlertDialog>
-                          )}
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
+          <Card>
+            <CardHeader>
+              <CardTitle>Booking History</CardTitle>
+              <CardDescription>No bookings found. Backend not connected.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-col items-center justify-center py-12 text-center">
+                <div className="rounded-full bg-muted p-6 mb-4"><CalendarDays className="h-12 w-12 text-muted-foreground" /></div>
+                <h3 className="text-lg font-semibold mb-2">No Bookings Yet</h3>
+                <p className="text-muted-foreground mb-6 max-w-md">You haven't made any bookings yet. Start exploring our amazing tours!</p>
+                <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
               </div>
-
-              {/* Mobile Cards */}
-              <div className="md:hidden space-y-4">
-                {filteredBookings.map((booking) => (
-                  <Card key={booking.id} className="overflow-hidden">
-                    <CardContent className="p-4">
-                      <div className="flex items-start justify-between mb-3">
-                        <Link to={`/${booking.tour_slug}`} className="text-sm font-semibold hover:text-primary transition-colors flex-1 mr-2">
-                          {booking.tour_name}
-                        </Link>
-                        <Badge className={statusColors[booking.status] + " text-xs"}>
-                          {booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}
-                        </Badge>
-                      </div>
-                      <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
-                        <div className="flex items-center gap-1"><CalendarDays className="h-3 w-3" />{format(new Date(booking.tour_date), "MMM dd, yyyy")}</div>
-                        <div className="flex items-center gap-1"><Users className="h-3 w-3" />{booking.adults}A{booking.children > 0 ? `, ${booking.children}C` : ""}</div>
-                      </div>
-                      <div className="flex items-center justify-between mt-3 pt-3 border-t">
-                        <span className="font-semibold text-primary">{formatPrice(booking.total_price)}</span>
-                        <div className="flex gap-2">
-                          <Button variant="ghost" size="sm" onClick={() => handleDownloadReceipt(booking)}><Download className="h-4 w-4" /></Button>
-                          {booking.status === "pending" && (
-                            <AlertDialog>
-                              <AlertDialogTrigger asChild>
-                                <Button variant="destructive" size="sm" disabled={cancellingId === booking.id}>
-                                  <XCircle className="h-4 w-4" />
-                                </Button>
-                              </AlertDialogTrigger>
-                              <AlertDialogContent>
-                                <AlertDialogHeader>
-                                  <AlertDialogTitle>Cancel Booking?</AlertDialogTitle>
-                                  <AlertDialogDescription>Cancel "{booking.tour_name}"?</AlertDialogDescription>
-                                </AlertDialogHeader>
-                                <AlertDialogFooter>
-                                  <AlertDialogCancel>Keep</AlertDialogCancel>
-                                  <AlertDialogAction onClick={() => handleCancelBooking(booking.id, booking.tour_name)} className="bg-destructive text-destructive-foreground hover:bg-destructive/90">Yes, Cancel</AlertDialogAction>
-                                </AlertDialogFooter>
-                              </AlertDialogContent>
-                            </AlertDialog>
-                          )}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </>
-          )}
+            </CardContent>
+          </Card>
         </div>
       </main>
       <Footer />
