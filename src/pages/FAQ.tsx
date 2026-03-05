@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import {
@@ -11,6 +12,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const FAQ = () => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
   const faqCategories = [
     {
       icon: Calendar,
