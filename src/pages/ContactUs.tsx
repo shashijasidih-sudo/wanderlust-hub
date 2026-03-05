@@ -3,8 +3,9 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -21,6 +22,20 @@ const ContactUs = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const handleSubmit = () => {
+    const { firstName, lastName, email, subject, message } = formData;
+    if (!firstName || !email || !subject || !message) {
+      toast.error("Please fill in all required fields (First Name, Email, Subject, Message)");
+      return;
+    }
+    const mailtoSubject = encodeURIComponent(subject);
+    const body = encodeURIComponent(
+      `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${formData.phone}\n\n${message}`
+    );
+    window.location.href = `mailto:Query@yellodae.com?subject=${mailtoSubject}&body=${body}`;
+    toast.success("Opening your email client to send the message!");
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -31,7 +46,7 @@ const ContactUs = () => {
           <div className="container px-4 md:px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Have questions or need assistance? We're here to help make your travel experience unforgettable.
+              Have questions or need assistance with your booking? We're here to help make your travel experience unforgettable.
             </p>
           </div>
         </section>
@@ -54,8 +69,12 @@ const ContactUs = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Email Us</h3>
-                      <p className="text-muted-foreground">support@yellodae.com</p>
-                      <p className="text-muted-foreground">bookings@yellodae.com</p>
+                      <p className="text-muted-foreground">
+                        <a href="mailto:Query@yellodae.com" className="hover:text-primary transition-colors">
+                          Query@yellodae.com
+                        </a>
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-1">For Booking and Travel Related Queries</p>
                     </div>
                   </div>
 
@@ -88,8 +107,8 @@ const ContactUs = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Business Hours</h3>
-                      <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                      <p className="text-muted-foreground">Saturday: 9:00 AM - 1:00 PM</p>
+                      <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM (IST)</p>
+                      <p className="text-muted-foreground">Saturday: 9:00 AM - 1:00 PM (IST)</p>
                       <p className="text-muted-foreground">Sunday: Closed</p>
                     </div>
                   </div>
@@ -98,11 +117,11 @@ const ContactUs = () => {
 
               {/* Contact Form */}
               <div className="bg-card border rounded-2xl p-6 md:p-8">
-                <h2 className="text-2xl font-bold mb-6">Send Us a Message / Concern</h2>
-                <div className="space-y-6">
+                <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+                <div className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium mb-2">First Name</label>
+                      <label className="block text-sm font-medium mb-2">First Name <span className="text-destructive">*</span></label>
                       <Input 
                         name="firstName"
                         value={formData.firstName}
@@ -121,7 +140,7 @@ const ContactUs = () => {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Email</label>
+                    <label className="block text-sm font-medium mb-2">Email <span className="text-destructive">*</span></label>
                     <Input 
                       type="email" 
                       name="email"
@@ -137,36 +156,39 @@ const ContactUs = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      placeholder="+1 234 567 890" 
+                      placeholder="+91 98765 43210" 
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Subject</label>
+                    <label className="block text-sm font-medium mb-2">Subject <span className="text-destructive">*</span></label>
                     <Input 
                       name="subject"
                       value={formData.subject}
                       onChange={handleInputChange}
-                      placeholder="How can we help you?" 
+                      placeholder="Booking enquiry, tour query, feedback..." 
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Message</label>
+                    <label className="block text-sm font-medium mb-2">Message <span className="text-destructive">*</span></label>
                     <Textarea 
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Tell us more about your inquiry..." 
+                      placeholder="Tell us more about your inquiry — include tour names, travel dates, number of travellers, etc." 
                       rows={5}
                     />
                   </div>
                   <Button 
-                    className="w-full bg-primary text-primary-foreground cursor-not-allowed hover:bg-primary" 
+                    className="w-full" 
                     size="lg" 
-                    type="button" 
-                    disabled
+                    onClick={handleSubmit}
                   >
-                    Send your message in the above format to support@yellodae.com
+                    <Send className="w-4 h-4 mr-2" />
+                    Send Message
                   </Button>
+                  <p className="text-xs text-muted-foreground text-center">
+                    Your message will be sent to Query@yellodae.com via your email client.
+                  </p>
                 </div>
               </div>
             </div>
