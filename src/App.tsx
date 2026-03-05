@@ -418,6 +418,13 @@ const App = () => (
           <Route path="/cart" element={<Cart />} />
           <Route path="/booking-history" element={<BookingHistory />} />
           <Route path="/quick-pay" element={<QuickPay />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
           {/* Tour Packages with MailerLite for booking popup */}
           <Route element={<MailerLiteLayout />}>
             <Route path="/tour-packages" element={<TourPackages />} />
