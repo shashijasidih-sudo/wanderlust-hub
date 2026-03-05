@@ -1,13 +1,14 @@
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
-import { useState } from "react";
 import { toast } from "sonner";
 
 const ContactUs = () => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
