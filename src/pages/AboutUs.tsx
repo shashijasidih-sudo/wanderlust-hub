@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -66,6 +67,21 @@ const faqs = [
 ];
 
 const AboutUs = () => {
+  useEffect(() => {
+    document.title = "About Yellodae | Affordable Thailand, Singapore & Dubai Tours";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    const descContent = "Yellodae is a smart travel platform for Indian travelers. Book affordable activities, attraction tickets & private transfers in Thailand, Singapore & Dubai. NIDHI affiliated & Ministry of Tourism approved.";
+    if (metaDesc) {
+      metaDesc.setAttribute("content", descContent);
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content = descContent;
+      document.head.appendChild(meta);
+    }
+    return () => { document.title = "Yellodae"; };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
