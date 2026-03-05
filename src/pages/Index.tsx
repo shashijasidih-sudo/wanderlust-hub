@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ThailandTrending from "@/components/ThailandTrending";
+import SingaporeTrending from "@/components/SingaporeTrending";
+import DubaiTrending from "@/components/DubaiTrending";
 import TrendingActivities from "@/components/TrendingActivities";
 import QuickDestinations from "@/components/QuickDestinations";
 import InstaStories from "@/components/InstaStories";
@@ -18,6 +20,8 @@ const Index = () => {
       <main className="flex-1">
         <HeroSection />
         <ThailandTrending />
+        <SingaporeTrending />
+        <DubaiTrending />
         <TrendingActivities />
         <QuickDestinations />
         <InstaStories />
