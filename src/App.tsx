@@ -80,6 +80,10 @@ import TourPackages from "./pages/TourPackages";
 import ThailandSmartGuides from "./pages/ThailandSmartGuides";
 import BlogAirportTransferThailand from "./pages/BlogAirportTransferThailand";
 import BlogPhiPhiIslandTours from "./pages/BlogPhiPhiIslandTours";
+import BlogBestThailandActivities from "./pages/BlogBestThailandActivities";
+import BlogTopPhuketTours from "./pages/BlogTopPhuketTours";
+import BlogBangkokActivitiesGuide from "./pages/BlogBangkokActivitiesGuide";
+import BlogBestPattayaActivities from "./pages/BlogBestPattayaActivities";
 import DubaiSmartGuides from "./pages/DubaiSmartGuides";
 import BlogDubaiAirportTransfer from "./pages/BlogDubaiAirportTransfer";
 import BlogDubaiDesertSafari from "./pages/BlogDubaiDesertSafari";
@@ -287,6 +291,10 @@ const App = () => (
             <Route path="/thailand-smart-guides" element={<ThailandSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
+            <Route path="/blog/best-thailand-activities" element={<BlogBestThailandActivities />} />
+            <Route path="/blog/top-phuket-island-tours" element={<BlogTopPhuketTours />} />
+            <Route path="/blog/bangkok-activities-guide" element={<BlogBangkokActivitiesGuide />} />
+            <Route path="/blog/best-pattaya-activities" element={<BlogBestPattayaActivities />} />
             <Route path="/netherlands-smart-guides" element={<NetherlandsSmartGuides />} />
             <Route path="/bangkok/transfers" element={<BangkokTransfers />} />
             <Route path="/bangkok/bkk-airport-pickup" element={<BangkokBkkAirportPickup />} />
