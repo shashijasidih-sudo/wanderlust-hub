@@ -65,7 +65,6 @@ const ActivityCards = () => {
 };
 
 const BlogBangkokActivitiesGuide = () => (
-  <>
     <BlogArticleLayout
       title="Bangkok Activities Booking Guide — 15 Best Things to Do in 2026"
       description="The ultimate Bangkok activities booking guide for tourists. Discover 15 must-do experiences including temple tours, dinner cruises, night markets, and wildlife safaris."
@@ -124,9 +123,9 @@ const BlogBangkokActivitiesGuide = () => (
         { type: "paragraph", content: "November to February is ideal with cooler, drier weather (25-32°C). March–May is very hot (35°C+). June–October sees occasional rain but fewer crowds and better prices." },
         { type: "cta", content: "Ready to explore Bangkok? Book your activities at the best prices!", link: "/bangkok", linkText: "🏯 Browse Bangkok Activities" },
       ]}
-    />
-    <ActivityCards />
-  </>
+    >
+      <ActivityCards />
+    </BlogArticleLayout>
 );
 
 export default BlogBangkokActivitiesGuide;

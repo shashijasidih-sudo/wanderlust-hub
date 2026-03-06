@@ -64,7 +64,6 @@ const ActivityCards = () => {
 };
 
 const BlogBestPattayaActivities = () => (
-  <>
     <BlogArticleLayout
       title="Best Pattaya Activities for First-Time Visitors — 2026 Guide"
       description="Discover the top 15 Pattaya activities for first-time visitors. From Coral Island tours to Alcazar Show, floating markets to nightlife, plan your perfect Pattaya trip."
@@ -133,9 +132,9 @@ const BlogBestPattayaActivities = () => (
         { type: "paragraph", content: "November to February offers the best weather with pleasant temperatures and minimal rain. March–May is hot but great for water sports. June–October has occasional rain but fewer tourists and lower prices." },
         { type: "cta", content: "Ready to explore Pattaya? Book your activities at the best prices!", link: "/pattaya", linkText: "🏖️ Browse Pattaya Activities" },
       ]}
-    />
-    <ActivityCards />
-  </>
+    >
+      <ActivityCards />
+    </BlogArticleLayout>
 );
 
 export default BlogBestPattayaActivities;
