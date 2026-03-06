@@ -33,12 +33,14 @@ interface BlogArticleProps {
   relatedLinks?: { title: string; link: string }[];
   guidesLink?: string;
   guidesLabel?: string;
+  children?: React.ReactNode;
 }
 
 const BlogArticleLayout = ({
   title, description, heroImage, heroAlt, author, date,
   readTime, category, keywords, sections, relatedLinks,
   guidesLink = "/thailand-smart-guides", guidesLabel = "Thailand Guides",
+  children,
 }: BlogArticleProps) => {
   const handleShare = () => {
     if (navigator.share) {
@@ -167,6 +169,7 @@ const BlogArticleLayout = ({
             )}
           </div>
         </div>
+        {children}
       </main>
       <Footer />
     </div>
