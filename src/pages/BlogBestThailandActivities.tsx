@@ -145,9 +145,9 @@ const BlogBestThailandActivities = () => (
         ]},
         { type: "cta", content: "Ready to explore Thailand? Browse all activities and book at the best prices!", link: "/thailand", linkText: "🇹🇭 Explore Thailand Activities" },
       ]}
-    />
-    <ActivityCards />
-  </>
+    >
+      <ActivityCards />
+    </BlogArticleLayout>
 );
 
 export default BlogBestThailandActivities;

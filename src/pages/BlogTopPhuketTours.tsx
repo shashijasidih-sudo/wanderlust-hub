@@ -143,9 +143,9 @@ const BlogTopPhuketTours = () => (
         ]},
         { type: "cta", content: "Ready to explore Phuket's stunning islands? Book your tour now!", link: "/phuket", linkText: "🏝️ Browse Phuket Tours" },
       ]}
-    />
-    <ActivityCards />
-  </>
+    >
+      <ActivityCards />
+    </BlogArticleLayout>
 );
 
 export default BlogTopPhuketTours;

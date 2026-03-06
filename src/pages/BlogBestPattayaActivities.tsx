@@ -133,9 +133,9 @@ const BlogBestPattayaActivities = () => (
         { type: "paragraph", content: "November to February offers the best weather with pleasant temperatures and minimal rain. March–May is hot but great for water sports. June–October has occasional rain but fewer tourists and lower prices." },
         { type: "cta", content: "Ready to explore Pattaya? Book your activities at the best prices!", link: "/pattaya", linkText: "🏖️ Browse Pattaya Activities" },
       ]}
-    />
-    <ActivityCards />
-  </>
+    >
+      <ActivityCards />
+    </BlogArticleLayout>
 );
 
 export default BlogBestPattayaActivities;

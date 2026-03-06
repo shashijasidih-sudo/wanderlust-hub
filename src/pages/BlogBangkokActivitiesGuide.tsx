@@ -124,9 +124,9 @@ const BlogBangkokActivitiesGuide = () => (
         { type: "paragraph", content: "November to February is ideal with cooler, drier weather (25-32°C). March–May is very hot (35°C+). June–October sees occasional rain but fewer crowds and better prices." },
         { type: "cta", content: "Ready to explore Bangkok? Book your activities at the best prices!", link: "/bangkok", linkText: "🏯 Browse Bangkok Activities" },
       ]}
-    />
-    <ActivityCards />
-  </>
+    >
+      <ActivityCards />
+    </BlogArticleLayout>
 );
 
 export default BlogBangkokActivitiesGuide;
