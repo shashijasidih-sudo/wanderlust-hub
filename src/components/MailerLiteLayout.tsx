@@ -6,6 +6,7 @@ const MailerLiteLayout = () => {
   const initializedRef = useRef(false);
 
   useEffect(() => {
+    console.log("[MailerLite] Initializing for path:", location.pathname);
     // Full cleanup before (re-)initializing
     const existingScript = document.querySelector(
       'script[src="https://assets.mailerlite.com/js/universal.js"]'
