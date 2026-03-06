@@ -10,22 +10,22 @@ const trendingItems = [
   {
     title: "Best Thailand Activities to Book Online",
     image: heroBeach,
-    slug: "/thailand/smart-guides",
+    slug: "/blog/best-thailand-activities",
   },
   {
     title: "Top Phuket Island Tours for Indian Travelers",
     image: phiPhi,
-    slug: "/phuket",
+    slug: "/blog/top-phuket-island-tours",
   },
   {
     title: "Bangkok Activities Booking Guide",
     image: bangkokTemple,
-    slug: "/bangkok",
+    slug: "/blog/bangkok-activities-guide",
   },
   {
     title: "Best Pattaya Activities for First-Time Visitors",
     image: pattayaBeach,
-    slug: "/pattaya",
+    slug: "/blog/best-pattaya-activities",
   },
 ];
 
