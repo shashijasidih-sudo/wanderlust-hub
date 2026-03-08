@@ -92,6 +92,10 @@ import BlogBurjKhalifaTickets from "./pages/BlogBurjKhalifaTickets";
 import SingaporeSmartGuides from "./pages/SingaporeSmartGuides";
 import BlogSingaporeAirportTransfer from "./pages/BlogSingaporeAirportTransfer";
 import BlogSentosaActivities from "./pages/BlogSentosaActivities";
+import BlogBestSingaporeAttractions from "./pages/BlogBestSingaporeAttractions";
+import BlogTopThingsSingapore from "./pages/BlogTopThingsSingapore";
+import BlogUniversalStudiosSingapore from "./pages/BlogUniversalStudiosSingapore";
+import BlogNightSafariSingapore from "./pages/BlogNightSafariSingapore";
 import NetherlandsSmartGuides from "./pages/NetherlandsSmartGuides";
 import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -295,6 +299,10 @@ const App = () => (
             <Route path="/blog/top-phuket-island-tours" element={<BlogTopPhuketTours />} />
             <Route path="/blog/bangkok-activities-guide" element={<BlogBangkokActivitiesGuide />} />
             <Route path="/blog/best-pattaya-activities" element={<BlogBestPattayaActivities />} />
+            <Route path="/blog/best-singapore-attractions" element={<BlogBestSingaporeAttractions />} />
+            <Route path="/blog/top-things-singapore" element={<BlogTopThingsSingapore />} />
+            <Route path="/blog/universal-studios-singapore-guide" element={<BlogUniversalStudiosSingapore />} />
+            <Route path="/blog/night-safari-singapore-guide" element={<BlogNightSafariSingapore />} />
             <Route path="/netherlands-smart-guides" element={<NetherlandsSmartGuides />} />
             <Route path="/bangkok/transfers" element={<BangkokTransfers />} />
             <Route path="/bangkok/bkk-airport-pickup" element={<BangkokBkkAirportPickup />} />
