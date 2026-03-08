@@ -10,22 +10,22 @@ const trendingItems = [
   {
     title: "Best Singapore Attraction Tickets for Indian Travelers",
     image: gardensBay,
-    slug: "/singapore/smart-guides",
+    slug: "/blog/best-singapore-attractions",
   },
   {
     title: "Top Things to Do in Singapore",
     image: marinaBay,
-    slug: "/singapore",
+    slug: "/blog/top-things-singapore",
   },
   {
     title: "Universal Studios Singapore Ticket Guide",
     image: universalStudios,
-    slug: "/universal-studios-weekday",
+    slug: "/blog/universal-studios-singapore-guide",
   },
   {
     title: "Singapore Night Safari Booking Guide",
     image: nightSafari,
-    slug: "/night-safari-tickets",
+    slug: "/blog/night-safari-singapore-guide",
   },
 ];
 
