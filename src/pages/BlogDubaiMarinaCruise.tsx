@@ -1,8 +1,63 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { MapPin } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroImg from "@/assets/dubai-skyline-night-1.jpg";
 import marinaImg from "@/assets/dubai-city-night-1.jpg";
 import dhowImg from "@/assets/dubai-dhow-cruise-1.jpg";
 import fountainImg from "@/assets/dubai-fountain-show-1.jpg";
+import dubaiDesertCouple2 from "@/assets/dubai-desert-couple-2.jpg";
+import dubaiDesertWoman from "@/assets/dubai-desert-woman-1.jpg";
+import dubaiSkylineSunset from "@/assets/dubai-skyline-sunset-1.jpg";
+import dubaiGlobalVillage from "@/assets/dubai-global-village-1.jpg";
+import dubaiAquariumFish from "@/assets/dubai-aquarium-fish-1.jpg";
+
+const cruiseActivityCards = [
+  { title: "Dhow Creek Cruise - Lower Deck", location: "Dubai Creek", image: dhowImg, slug: "/dhow-cruise-creek-lower" },
+  { title: "Dhow Creek Cruise - Upper Deck", location: "Dubai Creek", image: dhowImg, slug: "/dhow-cruise-creek-upper" },
+  { title: "Dhow Marina Cruise - Lower Deck", location: "Dubai Marina", image: dhowImg, slug: "/dhow-cruise-marina-lower" },
+  { title: "Dhow Marina Cruise - Upper Deck", location: "Dubai Marina", image: dhowImg, slug: "/dhow-cruise-marina-upper" },
+  { title: "Desert Safari with Sharing Transfer", location: "Lahbab Desert", image: dubaiDesertCouple2, slug: "/desert-safari-sharing" },
+  { title: "Desert Safari with Shisha", location: "Lahbab Desert", image: dubaiDesertWoman, slug: "/desert-safari-shisha" },
+  { title: "Burj Khalifa Non-Prime", location: "Downtown Dubai", image: dubaiSkylineSunset, slug: "/burj-khalifa-non-prime" },
+  { title: "Burj Khalifa Prime", location: "Downtown Dubai", image: heroImg, slug: "/burj-khalifa-prime" },
+  { title: "Dubai City Tour", location: "Dubai", image: marinaImg, slug: "/dubai-city-tour" },
+  { title: "Dubai City Tour with Mall", location: "Dubai", image: dubaiSkylineSunset, slug: "/dubai-city-tour-mall" },
+  { title: "Global Village Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/global-village-dubai" },
+  { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: dubaiSkylineSunset, slug: "/abu-dhabi-city-tour" },
+  { title: "Dubai Aquarium + Penguin Cove", location: "Dubai Mall", image: dubaiAquariumFish, slug: "/dubai-aquarium-penguin" },
+  { title: "Dubai Fountain Show + Lake Ride", location: "Downtown Dubai", image: fountainImg, slug: "/dubai-fountain-show" },
+  { title: "Dubai Dolphin & Seal Show", location: "Dubai", image: dubaiAquariumFish, slug: "/dubai-dolphin-show" },
+];
+
+const CruiseActivityCards = () => {
+  const navigate = useNavigate();
+  return (
+    <section className="py-10 bg-muted/30">
+      <div className="container px-4">
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">More Dubai Activities to Book</h2>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 max-w-7xl mx-auto">
+          {cruiseActivityCards.map((a) => (
+            <Card key={a.slug} className="group overflow-hidden cursor-pointer hover:shadow-card-hover transition-all duration-300" onClick={() => navigate(a.slug)}>
+              <div className="relative h-44 overflow-hidden">
+                <img src={a.image} alt={a.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-2 left-2 flex items-center gap-1 text-white text-xs">
+                  <MapPin className="h-3 w-3" />{a.location}
+                </div>
+              </div>
+              <div className="p-3">
+                <h3 className="font-semibold text-sm line-clamp-2 mb-2 group-hover:text-primary transition-colors">{a.title}</h3>
+                <Button size="sm" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground" onClick={(e) => { e.stopPropagation(); navigate(a.slug); }}>Book Now</Button>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const BlogDubaiMarinaCruise = () => {
   return (
@@ -191,7 +246,9 @@ const BlogDubaiMarinaCruise = () => {
           linkText: "🚤 Book Dubai Marina Cruise Now",
         },
       ]}
-    />
+    >
+      <CruiseActivityCards />
+    </BlogArticleLayout>
   );
 };
 
