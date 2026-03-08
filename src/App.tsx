@@ -89,6 +89,7 @@ import BlogDubaiAirportTransfer from "./pages/BlogDubaiAirportTransfer";
 import BlogDubaiDesertSafari from "./pages/BlogDubaiDesertSafari";
 import BlogDubaiMarinaCruise from "./pages/BlogDubaiMarinaCruise";
 import BlogBurjKhalifaTickets from "./pages/BlogBurjKhalifaTickets";
+import BlogBestDubaiActivities from "./pages/BlogBestDubaiActivities";
 import SingaporeSmartGuides from "./pages/SingaporeSmartGuides";
 import BlogSingaporeAirportTransfer from "./pages/BlogSingaporeAirportTransfer";
 import BlogSentosaActivities from "./pages/BlogSentosaActivities";
@@ -354,6 +355,7 @@ const App = () => (
           </Route>
           {/* Dubai routes with MailerLite */}
           <Route element={<MailerLiteLayout />}>
+            <Route path="/blog/best-dubai-activities" element={<BlogBestDubaiActivities />} />
             <Route path="/dubai-smart-guides" element={<DubaiSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-dubai" element={<BlogDubaiAirportTransfer />} />
             <Route path="/blog/desert-safari-deals-dubai" element={<BlogDubaiDesertSafari />} />
