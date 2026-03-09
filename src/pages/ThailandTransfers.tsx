@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Star, Clock, Users, Plane, Car, Building2, MapPin } from "lucide-react";
+import { Plane, Car, Building2, MapPin } from "lucide-react";
+import TransferCard from "@/components/TransferCard";
 
 // Combined transfers from all cities
 const allTransfers = [
@@ -201,82 +200,29 @@ const ThailandTransfers = () => {
         {/* Transfer Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredTransfers.map((transfer) => (
-            <Link key={transfer.id} to={transfer.slug}>
-              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer h-full">
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={transfer.image}
-                    alt={transfer.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  {/* City Badge */}
-                  <div className={`absolute top-3 right-3 ${cityColors[transfer.city]} text-white px-3 py-1 rounded-full text-xs font-medium`}>
+            <TransferCard
+              key={transfer.id}
+              transfer={transfer}
+              badges={
+                <>
+                  <div className={`absolute top-12 right-3 ${cityColors[transfer.city]} text-white px-3 py-1 rounded-full text-xs font-medium`}>
                     {transfer.city}
                   </div>
-                  {/* Type Badge */}
                   {transfer.type === "pickup" && (
-                    <div className="absolute top-3 left-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                      Airport Pickup
-                    </div>
+                    <div className="absolute top-3 left-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">Airport Pickup</div>
                   )}
                   {transfer.type === "dropoff" && (
-                    <div className="absolute top-3 left-3 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Airport Dropoff
-                    </div>
+                    <div className="absolute top-3 left-3 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Airport Dropoff</div>
                   )}
                   {transfer.category === "citytour" && (
-                    <div className="absolute top-3 left-3 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      City Tour + Transfer
-                    </div>
+                    <div className="absolute top-3 left-3 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">City Tour + Transfer</div>
                   )}
                   {transfer.category === "intercity" && transfer.type !== "citytour" && (
-                    <div className="absolute top-3 left-3 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Intercity Transfer
-                    </div>
+                    <div className="absolute top-3 left-3 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">Intercity Transfer</div>
                   )}
-                </div>
-                <CardContent className="p-4">
-                  <h3 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors line-clamp-2">
-                    {transfer.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-3">{transfer.subtitle}</p>
-                  
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                    <div className="flex items-center gap-1">
-                      <Users className="h-4 w-4" />
-                      <span>{transfer.capacity}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      <span>{transfer.duration}</span>
-                    </div>
-                  </div>
-
-                  {/* Vehicle Options */}
-                  <div className="flex flex-wrap gap-1 mb-3">
-                    {transfer.vehicles.map((vehicle, index) => (
-                      <span key={index} className="text-xs bg-muted px-2 py-1 rounded">
-                        {vehicle}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center gap-1 mb-3">
-                    <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    <span className="font-medium">{transfer.rating}</span>
-                    <span className="text-muted-foreground">({transfer.reviews} reviews)</span>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-xs text-muted-foreground">{transfer.priceLabel}</span>
-                      <p className="text-xl font-bold text-primary">₹{transfer.price.toLocaleString()}</p>
-                    </div>
-                    <Button size="sm">Book Now</Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+                </>
+              }
+            />
           ))}
         </div>
 
