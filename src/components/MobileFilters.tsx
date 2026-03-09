@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SlidersHorizontal, Tag } from "lucide-react";
+import { useCurrency } from "@/contexts/CurrencyContext";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
@@ -30,6 +31,7 @@ const MobileFilters = ({
   selectedCategories = [],
   onCategoryChange,
 }: MobileFiltersProps) => {
+  const { formatPrice } = useCurrency();
   const [priceOpen, setPriceOpen] = useState(false);
   const [categoryOpen, setCategoryOpen] = useState(false);
 
@@ -56,7 +58,7 @@ const MobileFilters = ({
               className="mb-4"
             />
             <p className="text-sm text-muted-foreground text-center">
-              INR {priceRange[0].toLocaleString('en-IN')} – INR {priceRange[1].toLocaleString('en-IN')}
+              {formatPrice(priceRange[0])} – {formatPrice(priceRange[1])}
             </p>
             <Button 
               className="w-full mt-4" 

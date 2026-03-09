@@ -3,6 +3,7 @@ import { Star, CheckCircle } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useNavigate } from "react-router-dom";
 import WishlistButton from "./WishlistButton";
+import { useCurrency } from "@/contexts/CurrencyContext";
 
 interface ActivityCardProps {
   title: string;
@@ -25,6 +26,7 @@ const ActivityCard = ({
 }: ActivityCardProps) => {
   const rating = (Math.random() * 1 + 4).toFixed(1);
   const navigate = useNavigate();
+  const { formatPrice } = useCurrency();
 
   const handleCardClick = () => {
     if (slug) {
@@ -105,7 +107,7 @@ const ActivityCard = ({
             <div className="flex items-center gap-4">
               <div className="text-right">
                 <p className="text-xs text-muted-foreground">from</p>
-                <p className="text-2xl font-bold text-foreground">INR {price.toLocaleString('en-IN')}</p>
+                <p className="text-2xl font-bold text-foreground">{formatPrice(price)}</p>
                 <p className="text-xs text-green-600 font-medium">GST Inclusive</p>
               </div>
               <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
@@ -187,7 +189,7 @@ const ActivityCard = ({
         <div className="flex items-center justify-between">
           <div>
             <p className="text-[10px] md:text-xs text-muted-foreground">from</p>
-            <p className="text-sm md:text-lg font-bold text-foreground">₹{price.toLocaleString('en-IN')}</p>
+            <p className="text-sm md:text-lg font-bold text-foreground">{formatPrice(price)}</p>
             <p className="text-[8px] md:text-[10px] text-green-600 font-medium">GST Inclusive</p>
           </div>
           <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-[10px] md:text-sm h-7 md:h-9 px-2 md:px-4">

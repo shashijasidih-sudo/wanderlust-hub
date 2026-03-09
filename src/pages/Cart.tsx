@@ -1,4 +1,5 @@
 import { useCart, CartItem } from "@/contexts/CartContext";
+import { useCurrency } from "@/contexts/CurrencyContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Trash2, ShoppingCart, ArrowRight, Car, Minus, Plus, Loader2, MapPin, Ticket } from "lucide-react";
@@ -11,7 +12,9 @@ const TransferCartItem = ({ item, onRemove, onUpdateQuantity }: {
   item: CartItem; 
   onRemove: (id: string) => void;
   onUpdateQuantity: (id: string, quantity: number) => void;
-}) => (
+}) => {
+  const { formatPrice } = useCurrency();
+  return (
   <Card className="overflow-hidden">
     <CardContent className="p-0">
       <div className="flex flex-col md:flex-row">
@@ -95,10 +98,10 @@ const TransferCartItem = ({ item, onRemove, onUpdateQuantity }: {
               </Link>
               <div className="text-right">
                 <p className="text-sm text-muted-foreground">
-                  ₹{item.price.toLocaleString()} × {item.quantity}
+                  {formatPrice(item.price)} × {item.quantity}
                 </p>
                 <p className="text-xl font-bold text-primary">
-                  ₹{(item.price * item.quantity).toLocaleString()}
+                  {formatPrice(item.price * item.quantity)}
                 </p>
               </div>
             </div>
@@ -107,13 +110,16 @@ const TransferCartItem = ({ item, onRemove, onUpdateQuantity }: {
       </div>
     </CardContent>
   </Card>
-);
+  );
+};
 
 const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: { 
   item: CartItem; 
   onRemove: (id: string) => void;
   onUpdateQuantity: (id: string, quantity: number) => void;
-}) => (
+}) => {
+  const { formatPrice } = useCurrency();
+  return (
   <Card className="overflow-hidden">
     <CardContent className="p-0">
       <div className="flex flex-col md:flex-row">
@@ -187,10 +193,10 @@ const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: {
               </Link>
               <div className="text-right">
                 <p className="text-sm text-muted-foreground">
-                  ₹{item.price.toLocaleString()} × {item.quantity}
+                  {formatPrice(item.price)} × {item.quantity}
                 </p>
                 <p className="text-xl font-bold text-primary">
-                  ₹{(item.price * item.quantity).toLocaleString()}
+                  {formatPrice(item.price * item.quantity)}
                 </p>
               </div>
             </div>
@@ -199,10 +205,12 @@ const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: {
       </div>
     </CardContent>
   </Card>
-);
+  );
+};
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity, clearCart, getCartTotal, isLoading } = useCart();
+  const { formatPrice } = useCurrency();
   const navigate = useNavigate();
 
   const handleProceedToCheckout = () => {
@@ -305,7 +313,7 @@ const Cart = () => {
                       <span className="text-muted-foreground truncate mr-2">
                         {item.title} × {item.quantity}
                       </span>
-                      <span>₹{(item.price * item.quantity).toLocaleString()}</span>
+                      <span>{formatPrice(item.price * item.quantity)}</span>
                     </div>
                   ))}
                 </div>
@@ -313,7 +321,7 @@ const Cart = () => {
                 <div className="border-t pt-4">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Subtotal ({totalItems} items)</span>
-                    <span>₹{getCartTotal().toLocaleString()}</span>
+                    <span>{formatPrice(getCartTotal())}</span>
                   </div>
                   <div className="flex justify-between text-sm mt-2">
                     <span className="text-muted-foreground">Taxes & Fees</span>
@@ -324,7 +332,7 @@ const Cart = () => {
                 <div className="border-t pt-4">
                   <div className="flex justify-between font-bold text-lg">
                     <span>Total</span>
-                    <span className="text-primary">₹{getCartTotal().toLocaleString()}</span>
+                    <span className="text-primary">{formatPrice(getCartTotal())}</span>
                   </div>
                 </div>
                 

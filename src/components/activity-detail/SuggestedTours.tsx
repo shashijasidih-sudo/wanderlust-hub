@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useCurrency } from "@/contexts/CurrencyContext";
 
 interface SuggestedToursProps {
   currentCity: string;
@@ -8,6 +9,7 @@ interface SuggestedToursProps {
 
 const SuggestedTours = ({ currentCity }: SuggestedToursProps) => {
   const navigate = useNavigate();
+  const { formatPrice } = useCurrency();
 
   const suggestions = {
     bangkok: [
@@ -66,7 +68,7 @@ const SuggestedTours = ({ currentCity }: SuggestedToursProps) => {
                 <div>
                   <p className="text-sm text-muted-foreground">from</p>
                   <p className="text-lg font-bold text-primary">
-                    INR {tour.price.toLocaleString()}
+                    {formatPrice(tour.price)}
                   </p>
                 </div>
                 <Button

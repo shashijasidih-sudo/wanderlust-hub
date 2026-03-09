@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useCurrency } from "@/contexts/CurrencyContext";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -176,6 +177,7 @@ const transfers = [
 ];
 
 const DubaiTransfersNew = () => {
+  const { formatPrice } = useCurrency();
   const [filterType, setFilterType] = useState<string>("all");
   const [filterZone, setFilterZone] = useState<string>("all");
 
@@ -372,7 +374,7 @@ const DubaiTransfersNew = () => {
                   <div className="flex items-center justify-between">
                     <div>
                       <span className="text-xs text-muted-foreground">{transfer.priceLabel}</span>
-                      <p className="text-xl font-bold text-primary">₹{transfer.price.toLocaleString()}</p>
+                      <p className="text-xl font-bold text-primary">{formatPrice(transfer.price)}</p>
                     </div>
                     <Button size="sm">Book Now</Button>
                   </div>

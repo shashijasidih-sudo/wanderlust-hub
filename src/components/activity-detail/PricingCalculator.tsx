@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 import BookingModal from "@/components/BookingModal";
 import { useCart } from "@/contexts/CartContext";
+import { useCurrency } from "@/contexts/CurrencyContext";
 
 export interface TourOption {
   label: string;
@@ -50,6 +51,7 @@ const PricingCalculator = ({
   hideChildren = false
 }: PricingCalculatorProps) => {
   const { addToCart } = useCart();
+  const { formatPrice } = useCurrency();
   const effectiveMin = pricePerVehicle ? 1 : Math.max(minAdults, 1);
   const [adults, setAdults] = useState(pricePerVehicle ? 1 : Math.max(effectiveMin, 2));
   const [children, setChildren] = useState(0);
@@ -180,7 +182,7 @@ const PricingCalculator = ({
             <div className="flex items-center justify-between p-4 bg-primary/10 rounded-lg border-2 border-primary/30">
               <div className="flex-1">
                 <p className="font-medium">Private Vehicle ({vehicleCapacity} Seater)</p>
-                <p className="text-sm text-muted-foreground">₹{basePrice.toLocaleString()} per vehicle</p>
+                <p className="text-sm text-muted-foreground">{formatPrice(basePrice)} per vehicle</p>
                 <p className="text-xs text-primary mt-1">Fits up to {vehicleCapacity} passengers (adults + children)</p>
               </div>
               <div className="flex items-center gap-3">
@@ -306,7 +308,7 @@ const PricingCalculator = ({
                       />
                       <div className="flex-1">
                         <p className="font-medium text-sm">{option.label}</p>
-                        <p className="text-sm text-primary font-semibold">₹{option.adultPrice.toLocaleString()} / per adult</p>
+                        <p className="text-sm text-primary font-semibold">{formatPrice(option.adultPrice)} / per adult</p>
                       </div>
                     </label>
                   ))}
@@ -343,7 +345,7 @@ const PricingCalculator = ({
                       />
                       <div className="flex-1">
                         <p className="font-medium text-sm">{addOn.label}</p>
-                        <p className="text-sm text-primary font-semibold">₹{addOn.adultPrice.toLocaleString()} / per adult</p>
+                        <p className="text-sm text-primary font-semibold">{formatPrice(addOn.adultPrice)} / per adult</p>
                       </div>
                     </label>
                   ))}
@@ -359,7 +361,7 @@ const PricingCalculator = ({
               <div className="flex-1">
                 <p className="font-medium">No. of Adults (≥12 yrs)</p>
                 <p className="text-sm text-muted-foreground">
-                  ₹{currentAdultPrice.toLocaleString()} per person
+                  {formatPrice(currentAdultPrice)} per person
                   {!tourOptions && twoAdultPrice && adults === 2 && (
                     <span className="text-xs ml-1">(2 adults rate)</span>
                   )}
@@ -400,7 +402,7 @@ const PricingCalculator = ({
             <div className="flex items-center justify-between p-4 bg-accent/50 rounded-lg">
               <div className="flex-1">
                 <p className="font-medium">No. of Child (2-11 yrs)</p>
-                <p className="text-sm text-muted-foreground">₹{currentChildPrice.toLocaleString()} per child</p>
+                <p className="text-sm text-muted-foreground">{formatPrice(currentChildPrice)} per child</p>
               </div>
               <div className="flex items-center gap-3">
                 <Button
@@ -429,25 +431,25 @@ const PricingCalculator = ({
         <div className="border-t border-border pt-4 space-y-2">
           {pricePerVehicle ? (
             <div className="flex justify-between text-sm">
-              <span>Vehicle ({vehicles} × INR {basePrice.toLocaleString()})</span>
-              <span>INR {(vehicles * basePrice).toLocaleString()}</span>
+              <span>Vehicle ({vehicles} × {formatPrice(basePrice)})</span>
+              <span>{formatPrice(vehicles * basePrice)}</span>
             </div>
           ) : (
             <>
               <div className="flex justify-between text-sm">
-                <span>Adults ({adults} × INR {currentAdultPrice.toLocaleString()})</span>
-                <span>INR {(adults * currentAdultPrice).toLocaleString()}</span>
+                <span>Adults ({adults} × {formatPrice(currentAdultPrice)})</span>
+                <span>{formatPrice(adults * currentAdultPrice)}</span>
               </div>
               {children > 0 && (
                 <div className="flex justify-between text-sm">
-                  <span>Children ({children} × INR {currentChildPrice.toLocaleString()})</span>
-                  <span>INR {(children * currentChildPrice).toLocaleString()}</span>
+                  <span>Children ({children} × {formatPrice(currentChildPrice)})</span>
+                  <span>{formatPrice(children * currentChildPrice)}</span>
                 </div>
               )}
               {addOnTotal > 0 && (
                 <div className="flex justify-between text-sm">
                   <span>Add-Ons</span>
-                  <span>INR {addOnTotal.toLocaleString()}</span>
+                  <span>{formatPrice(addOnTotal)}</span>
                 </div>
               )}
             </>
@@ -457,7 +459,7 @@ const PricingCalculator = ({
               <span>Total</span>
               <span className="text-xs font-normal text-muted-foreground">GST Inclusive</span>
             </div>
-            <span className="text-primary">INR {totalPrice.toLocaleString()}</span>
+            <span className="text-primary">{formatPrice(totalPrice)}</span>
           </div>
         </div>
 

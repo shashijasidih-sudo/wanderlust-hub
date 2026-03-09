@@ -6,9 +6,11 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import { useCart } from "@/contexts/CartContext";
+import { useCurrency } from "@/contexts/CurrencyContext";
 
 const BookingSummary = () => {
   const { cartItems, getCartTotal } = useCart();
+  const { formatPrice } = useCurrency();
 
   if (cartItems.length === 0) {
     return null;
@@ -32,13 +34,13 @@ const BookingSummary = () => {
                   </p>
                   <div className="flex justify-between text-sm text-muted-foreground">
                     <span>{item.vehicleName} ({item.capacity} person) × {item.quantity}</span>
-                    <span>₹{(item.price * item.quantity).toLocaleString()}</span>
+                    <span>{formatPrice(item.price * item.quantity)}</span>
                   </div>
                 </div>
               ))}
               <div className="flex justify-between font-semibold pt-2 border-t">
                 <span>Total Price</span>
-                <span>₹{getCartTotal().toLocaleString()}</span>
+                <span>{formatPrice(getCartTotal())}</span>
               </div>
             </CardContent>
           </AccordionContent>
@@ -54,15 +56,15 @@ const BookingSummary = () => {
             <CardContent className="pt-4 space-y-2">
               <div className="flex justify-between text-sm">
                 <span>Taxi Price</span>
-                <span>₹{getCartTotal().toLocaleString()}</span>
+                <span>{formatPrice(getCartTotal())}</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span>Subtotal</span>
-                <span>₹{getCartTotal().toLocaleString()}</span>
+                <span>{formatPrice(getCartTotal())}</span>
               </div>
               <div className="flex justify-between font-bold text-lg pt-2 border-t">
                 <span>Pay Amount</span>
-                <span>₹{getCartTotal().toLocaleString()}</span>
+                <span>{formatPrice(getCartTotal())}</span>
               </div>
             </CardContent>
           </AccordionContent>

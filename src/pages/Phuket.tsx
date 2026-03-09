@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useCurrency } from "@/contexts/CurrencyContext";
 import { Grid, List, ShoppingCart, Mail } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -48,6 +49,7 @@ const categories = [
 ];
 
 const Phuket = () => {
+  const { formatPrice } = useCurrency();
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('price-low');
   const [priceRange, setPriceRange] = useState([1800, 8500]);
@@ -183,7 +185,7 @@ const Phuket = () => {
                   className="mb-2"
                 />
                 <p className="text-sm text-muted-foreground">
-                  INR {priceRange[0].toLocaleString('en-IN')} – INR {priceRange[1].toLocaleString('en-IN')}
+                  {formatPrice(priceRange[0])} – {formatPrice(priceRange[1])}
                 </p>
               </div>
 

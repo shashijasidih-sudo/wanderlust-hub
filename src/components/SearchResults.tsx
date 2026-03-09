@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Clock } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useCurrency } from "@/contexts/CurrencyContext";
 
 interface SearchResultsProps {
   results: SearchResult[];
@@ -11,6 +12,7 @@ interface SearchResultsProps {
 
 const SearchResults = ({ results, onClose }: SearchResultsProps) => {
   const navigate = useNavigate();
+  const { formatPrice } = useCurrency();
 
   const handleResultClick = (tourId: string) => {
     navigate(`/${tourId}`);
@@ -65,7 +67,7 @@ const SearchResults = ({ results, onClose }: SearchResultsProps) => {
                       <span>{result.tour.duration}</span>
                     </div>
                     <Badge variant="secondary" className="text-xs">
-                      ₹{result.tour.basePrice.toLocaleString()}
+                      {formatPrice(result.tour.basePrice)}
                     </Badge>
                   </div>
                 </div>
