@@ -110,7 +110,8 @@ const TransferCartItem = ({ item, onRemove, onUpdateQuantity }: {
       </div>
     </CardContent>
   </Card>
-);
+  );
+};
 
 const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: { 
   item: CartItem; 
