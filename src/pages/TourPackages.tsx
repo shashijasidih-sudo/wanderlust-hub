@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Star, Hotel, Plane, Ship, Users, X } from "lucide-react";
-import Testimonials from "@/components/Testimonials";
+
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 import phiPhi1 from "@/assets/phi-phi-1.jpg";
