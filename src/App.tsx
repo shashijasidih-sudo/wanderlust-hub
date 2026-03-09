@@ -409,6 +409,8 @@ const App = () => (
             <Route path="/singapore-smart-guides" element={<SingaporeSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-singapore" element={<BlogSingaporeAirportTransfer />} />
             <Route path="/blog/sentosa-activities-singapore" element={<BlogSentosaActivities />} />
+            <Route path="/blog/singapore-combo-pass" element={<BlogSingaporeComboPass />} />
+            <Route path="/blog/singapore-food-experiences" element={<BlogSingaporeFoodExperiences />} />
             <Route path="/singapore" element={<Singapore />} />
             <Route path="/singapore-city-tour" element={<SingaporeCityTour />} />
             <Route path="/night-safari-tickets" element={<NightSafariTickets />} />
