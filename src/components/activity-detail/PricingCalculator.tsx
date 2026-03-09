@@ -345,7 +345,7 @@ const PricingCalculator = ({
                       />
                       <div className="flex-1">
                         <p className="font-medium text-sm">{addOn.label}</p>
-                        <p className="text-sm text-primary font-semibold">{formatPrice(addOn.adultPricer adult</p>
+                        <p className="text-sm text-primary font-semibold">{formatPrice(addOn.adultPrice</p>
                       </div>
                     </label>
                   ))}
@@ -361,8 +361,7 @@ const PricingCalculator = ({
               <div className="flex-1">
                 <p className="font-medium">No. of Adults (≥12 yrs)</p>
                 <p className="text-sm text-muted-foreground">
-                  ₹{cur{formatPrice(currentAdultPriceperson
-                  {!tourOptions && twoAdultPrice && adults === 2 && (
+                  ₹{cur{format{formatPrice(currentAdultPrice           {!tourOptions && twoAdultPrice && adults === 2 && (
                     <span className="text-xs ml-1">(2 adults rate)</span>
                   )}
                   {!tourOptions && singleAdultPrice && adults === 1 && (
@@ -402,7 +401,7 @@ const PricingCalculator = ({
             <div className="flex items-center justify-between p-4 bg-accent/50 rounded-lg">
               <div className="flex-1">
                 <p className="font-medium">No. of Child (2-11 yrs)</p>
-                <p className="text-sm text-muted-foreground">₹{currentChildPrice.toLocaleString()} per child</p>
+                <p className="text-sm text-muted-foreground">₹{currentChi{formatPrice(currentChildPricep>
               </div>
               <div className="flex items-center gap-3">
                 <Button
