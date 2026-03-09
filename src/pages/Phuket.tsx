@@ -49,6 +49,7 @@ const categories = [
 ];
 
 const Phuket = () => {
+  const { formatPrice } = useCurrency();
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('price-low');
   const [priceRange, setPriceRange] = useState([1800, 8500]);
