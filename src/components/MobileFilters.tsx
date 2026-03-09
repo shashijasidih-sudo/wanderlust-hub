@@ -31,6 +31,7 @@ const MobileFilters = ({
   selectedCategories = [],
   onCategoryChange,
 }: MobileFiltersProps) => {
+  const { formatPrice } = useCurrency();
   const [priceOpen, setPriceOpen] = useState(false);
   const [categoryOpen, setCategoryOpen] = useState(false);
 
