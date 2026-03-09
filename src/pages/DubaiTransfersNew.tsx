@@ -177,6 +177,7 @@ const transfers = [
 ];
 
 const DubaiTransfersNew = () => {
+  const { formatPrice } = useCurrency();
   const [filterType, setFilterType] = useState<string>("all");
   const [filterZone, setFilterZone] = useState<string>("all");
 
