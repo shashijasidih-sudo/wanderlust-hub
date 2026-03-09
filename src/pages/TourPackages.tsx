@@ -242,12 +242,6 @@ const TourPackages = () => {
         <div className="border-t" />
         <SectionBlock title="Dubai Packages" icon={<Hotel className="h-6 w-6 text-primary" />} packages={dubaiPackages} onBookNow={handleBookNow} />
 
-        {/* Testimonials */}
-        <section className="py-12 bg-muted/30">
-          <div className="container px-4 md:px-6">
-            <Testimonials />
-          </div>
-        </section>
       </main>
       <Footer />
 
