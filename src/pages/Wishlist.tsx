@@ -17,6 +17,7 @@ interface WishlistItem {
 const Wishlist = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { formatPrice } = useCurrency();
   const [isLoading, setIsLoading] = useState(true);
   const [wishlistItems, setWishlistItems] = useState<WishlistItem[]>([]);
   const { user } = useAuth();
