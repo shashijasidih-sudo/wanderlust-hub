@@ -458,7 +458,7 @@ const PricingCalculator = ({
               <span>Total</span>
               <span className="text-xs font-normal text-muted-foreground">GST Inclusive</span>
             </div>
-            <span className="text-primary">INR {totalPrice.toLocaleString()}</span>
+            <span className="text-primary">{formatPrice(totalPrice)}</span>
           </div>
         </div>
 

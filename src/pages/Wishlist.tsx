@@ -71,7 +71,7 @@ const Wishlist = () => {
                 <CardContent className="p-4">
                   <h3 className="font-semibold text-lg mb-2 cursor-pointer hover:text-primary transition-colors line-clamp-2" onClick={() => handleViewTour(item.tour_slug)}>{item.tour_name}</h3>
                   <div className="flex items-center justify-between">
-                    {item.tour_price && <p className="text-lg font-bold text-primary">INR {item.tour_price.toLocaleString('en-IN')}</p>}
+                    {item.tour_price && <p className="text-lg font-bold text-primary">{formatPrice(item.tour_price)}</p>}
                     <Button size="sm" onClick={() => handleViewTour(item.tour_slug)}>View Tour</Button>
                   </div>
                 </CardContent>
