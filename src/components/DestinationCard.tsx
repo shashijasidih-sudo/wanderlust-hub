@@ -38,7 +38,7 @@ const DestinationCard = ({ image, name, duration, price, link }: DestinationCard
             <Calendar className="h-4 w-4" />
             <span className="text-sm">{duration}</span>
           </div>
-          <p className="text-lg font-semibold text-white mb-3">INR {price.toLocaleString('en-IN')}/- per person</p>
+          <p className="text-lg font-semibold text-white mb-3">{formatPrice(price)}/- per person</p>
           <Button 
             className="bg-primary hover:bg-primary/90 text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >

@@ -67,7 +67,7 @@ const SearchResults = ({ results, onClose }: SearchResultsProps) => {
                       <span>{result.tour.duration}</span>
                     </div>
                     <Badge variant="secondary" className="text-xs">
-                      ₹{result.tour.basePrice.toLocaleString()}
+                      {formatPrice(result.tour.basePrice)}
                     </Badge>
                   </div>
                 </div>

@@ -57,7 +57,7 @@ const MobileFilters = ({
               className="mb-4"
             />
             <p className="text-sm text-muted-foreground text-center">
-              INR {priceRange[0].toLocaleString('en-IN')} – INR {priceRange[1].toLocaleString('en-IN')}
+              {formatPrice(priceRange[0])} – {formatPrice(priceRange[1])}
             </p>
             <Button 
               className="w-full mt-4" 

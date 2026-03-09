@@ -70,6 +70,8 @@ const SuggestedTours = ({ currentCity }: SuggestedToursProps) => {
                   <p className="text-lg font-bold text-primary">
                     INR {tour.price.toLocaleString()}
                   </p>
+                  <p className="text-lg font-bold text-primary">
+                    {formatPrice(tour.price)}
                 </div>
                 <Button
                   size="sm"
