@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star, Clock, Users, Plane, Car, Building2, MapPin } from "lucide-react";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
+import { useCurrency } from "@/contexts/CurrencyContext";
 
 const transfers = [
   { id: 1, title: "BKK Airport to Bangkok Hotel", subtitle: "Suvarnabhumi International Airport Pickup", price: 2700, priceLabel: "From", image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop", rating: 4.9, reviews: 856, duration: "Transfer", capacity: "Sedan / SUV / Van", slug: "/bangkok/bkk-airport-pickup", type: "pickup", category: "airport", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },
@@ -24,6 +25,7 @@ const transfers = [
 ];
 
 const BangkokTransfers = () => {
+  const { formatPrice } = useCurrency();
   const [filterType, setFilterType] = useState<string>("all");
 
   const filteredTransfers = transfers.filter(transfer => {
@@ -175,7 +177,7 @@ const BangkokTransfers = () => {
                   <div className="flex items-center justify-between">
                     <div>
                       <span className="text-xs text-muted-foreground">{transfer.priceLabel}</span>
-                      <p className="text-xl font-bold text-primary">₹{transfer.price.toLocaleString()}</p>
+                      <p className="text-xl font-bold text-primary">{formatPrice(transfer.price)}</p>
                     </div>
                     <Button size="sm">Book Now</Button>
                   </div>
