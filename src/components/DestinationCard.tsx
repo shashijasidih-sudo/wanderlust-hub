@@ -13,6 +13,7 @@ interface DestinationCardProps {
 
 const DestinationCard = ({ image, name, duration, price, link }: DestinationCardProps) => {
   const navigate = useNavigate();
+  const { formatPrice } = useCurrency();
 
   const handleClick = () => {
     if (link && link.startsWith('/')) {
