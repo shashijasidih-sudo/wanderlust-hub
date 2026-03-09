@@ -107,7 +107,7 @@ const ActivityCard = ({
             <div className="flex items-center gap-4">
               <div className="text-right">
                 <p className="text-xs text-muted-foreground">from</p>
-                <p className="text-2xl font-bold text-foreground">INR {price.toLocaleString('en-IN')}</p>
+                <p className="text-2xl font-bold text-foreground">{formatPrice(price)}</p>
                 <p className="text-xs text-green-600 font-medium">GST Inclusive</p>
               </div>
               <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
