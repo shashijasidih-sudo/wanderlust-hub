@@ -332,7 +332,7 @@ const Cart = () => {
                 <div className="border-t pt-4">
                   <div className="flex justify-between font-bold text-lg">
                     <span>Total</span>
-                    <span className="text-primary">₹{getCartTotal().toLocaleString()}</span>
+                    <span className="text-primary">{formatPrice(getCartTotal())}</span>
                   </div>
                 </div>
                 
