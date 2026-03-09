@@ -117,7 +117,9 @@ const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: {
   item: CartItem; 
   onRemove: (id: string) => void;
   onUpdateQuantity: (id: string, quantity: number) => void;
-}) => (
+}) => {
+  const { formatPrice } = useCurrency();
+  return (
   <Card className="overflow-hidden">
     <CardContent className="p-0">
       <div className="flex flex-col md:flex-row">
