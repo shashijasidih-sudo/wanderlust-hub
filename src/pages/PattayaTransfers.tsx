@@ -174,7 +174,7 @@ const PattayaTransfers = () => {
                   <div className="flex items-center justify-between">
                     <div>
                       <span className="text-xs text-muted-foreground">{transfer.priceLabel}</span>
-                      <p className="text-xl font-bold text-primary">₹{transfer.price.toLocaleString()}</p>
+                      <p className="text-xl font-bold text-primary">{formatPrice(transfer.price)}</p>
                     </div>
                     <Button size="sm">Book Now</Button>
                   </div>
