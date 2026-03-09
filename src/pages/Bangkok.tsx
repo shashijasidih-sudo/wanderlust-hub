@@ -171,7 +171,7 @@ const Bangkok = () => {
                   className="mb-2"
                 />
                 <p className="text-sm text-muted-foreground">
-                  INR {priceRange[0].toLocaleString('en-IN')} – INR {priceRange[1].toLocaleString('en-IN')}
+                  {formatPrice(priceRange[0])} – {formatPrice(priceRange[1])}
                 </p>
               </div>
 
