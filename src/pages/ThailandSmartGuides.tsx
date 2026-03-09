@@ -23,6 +23,28 @@ import phiPhiBoatImg from "@/assets/phi-phi-boat.jpeg";
 
 const blogArticles = [
   {
+    id: -3,
+    title: "Complete Guide to Thailand Island Combos",
+    description: "Discover the best Thailand island combos — Phuket + Phi Phi, Krabi combos, Koh Samui packages. Plan your dream tropical escape.",
+    category: "Island Adventures",
+    image: phiPhiImg,
+    author: "Yellodae Travel Expert",
+    date: "Mar 3, 2026",
+    readTime: "10 min read",
+    slug: "/blog/thailand-island-combos"
+  },
+  {
+    id: -4,
+    title: "Complete Guide to Thailand Food Experiences",
+    description: "Discover the best Thailand food experiences — from Bangkok street food to Phuket seafood, floating markets to rooftop dining.",
+    category: "Food Tours",
+    image: bangkokSkywalkImg,
+    author: "Yellodae Travel Expert",
+    date: "Mar 5, 2026",
+    readTime: "11 min read",
+    slug: "/blog/thailand-food-experiences"
+  },
+  {
     id: 0,
     title: "Complete Guide to Airport Transfer Booking in Thailand",
     description: "Everything about airport transfers in Thailand — routes, types, tips, and the best platform to book your Suvarnabhumi, Phuket, or Krabi transfer.",

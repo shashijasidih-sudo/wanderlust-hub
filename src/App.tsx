@@ -97,6 +97,12 @@ import BlogBestSingaporeAttractions from "./pages/BlogBestSingaporeAttractions";
 import BlogTopThingsSingapore from "./pages/BlogTopThingsSingapore";
 import BlogUniversalStudiosSingapore from "./pages/BlogUniversalStudiosSingapore";
 import BlogNightSafariSingapore from "./pages/BlogNightSafariSingapore";
+import BlogSingaporeComboPass from "./pages/BlogSingaporeComboPass";
+import BlogSingaporeFoodExperiences from "./pages/BlogSingaporeFoodExperiences";
+import BlogThailandIslandCombos from "./pages/BlogThailandIslandCombos";
+import BlogThailandFoodExperiences from "./pages/BlogThailandFoodExperiences";
+import BlogDubaiShoppingTours from "./pages/BlogDubaiShoppingTours";
+import BlogDubaiFoodExperiences from "./pages/BlogDubaiFoodExperiences";
 import NetherlandsSmartGuides from "./pages/NetherlandsSmartGuides";
 import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -304,6 +310,8 @@ const App = () => (
             <Route path="/blog/top-things-singapore" element={<BlogTopThingsSingapore />} />
             <Route path="/blog/universal-studios-singapore-guide" element={<BlogUniversalStudiosSingapore />} />
             <Route path="/blog/night-safari-singapore-guide" element={<BlogNightSafariSingapore />} />
+            <Route path="/blog/thailand-island-combos" element={<BlogThailandIslandCombos />} />
+            <Route path="/blog/thailand-food-experiences" element={<BlogThailandFoodExperiences />} />
             <Route path="/netherlands-smart-guides" element={<NetherlandsSmartGuides />} />
             <Route path="/bangkok/transfers" element={<BangkokTransfers />} />
             <Route path="/bangkok/bkk-airport-pickup" element={<BangkokBkkAirportPickup />} />
@@ -361,6 +369,8 @@ const App = () => (
             <Route path="/blog/desert-safari-deals-dubai" element={<BlogDubaiDesertSafari />} />
             <Route path="/blog/dubai-marina-cruise" element={<BlogDubaiMarinaCruise />} />
             <Route path="/blog/burj-khalifa-tickets-dubai" element={<BlogBurjKhalifaTickets />} />
+            <Route path="/blog/dubai-shopping-tours" element={<BlogDubaiShoppingTours />} />
+            <Route path="/blog/dubai-food-experiences" element={<BlogDubaiFoodExperiences />} />
             <Route path="/dubai" element={<Dubai />} />
             <Route path="/desert-safari" element={<DesertSafari />} />
             <Route path="/desert-safari-shisha" element={<DesertSafariShisha />} />
@@ -399,6 +409,8 @@ const App = () => (
             <Route path="/singapore-smart-guides" element={<SingaporeSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-singapore" element={<BlogSingaporeAirportTransfer />} />
             <Route path="/blog/sentosa-activities-singapore" element={<BlogSentosaActivities />} />
+            <Route path="/blog/singapore-combo-pass" element={<BlogSingaporeComboPass />} />
+            <Route path="/blog/singapore-food-experiences" element={<BlogSingaporeFoodExperiences />} />
             <Route path="/singapore" element={<Singapore />} />
             <Route path="/singapore-city-tour" element={<SingaporeCityTour />} />
             <Route path="/night-safari-tickets" element={<NightSafariTickets />} />

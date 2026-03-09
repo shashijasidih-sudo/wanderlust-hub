@@ -37,6 +37,28 @@ const heroSlides = [
 
 const blogArticles = [
   {
+    id: -3,
+    title: "Complete Guide to Singapore Combo Pass",
+    description: "Everything about Singapore Combo Pass — best attractions, pricing, how to book, and tips. Save up to 40% on top attractions.",
+    category: "Singapore Travel Guide",
+    image: gardensBayImg,
+    author: "Yellodae Travel Expert",
+    date: "Mar 2, 2026",
+    readTime: "9 min read",
+    slug: "/blog/singapore-combo-pass"
+  },
+  {
+    id: -4,
+    title: "Complete Guide to Singapore Food Experiences",
+    description: "Discover the best Singapore food experiences — hawker centres, Chinatown tours, Little India flavors, and night food markets.",
+    category: "Food Tours",
+    image: cityTourImg,
+    author: "Yellodae Travel Expert",
+    date: "Mar 6, 2026",
+    readTime: "10 min read",
+    slug: "/blog/singapore-food-experiences"
+  },
+  {
     id: 0,
     title: "Complete Guide to Airport Transfer Booking in Singapore",
     description: "Everything about Singapore Changi Airport transfers — types, popular areas, tips, and the best platform for hassle-free arrival.",
