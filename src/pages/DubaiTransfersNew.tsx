@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Plane, Building2, Car, MapPin } from "lucide-react";
 import { dubaiZones } from "@/data/dubaiTransferData";
 import TransferCard from "@/components/TransferCard";
-import { dubaiZones } from "@/data/dubaiTransferData";
 
 const transfers = [
   // Zone 1
