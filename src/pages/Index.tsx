@@ -29,7 +29,7 @@ const Index = () => {
         <TopThingsToDo />
         <FeaturedDestinations />
         <ActivityCategories />
-        <Testimonials />
+        
       </main>
       <Footer />
     </div>
