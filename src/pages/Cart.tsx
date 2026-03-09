@@ -205,7 +205,8 @@ const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: {
       </div>
     </CardContent>
   </Card>
-);
+  );
+};
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity, clearCart, getCartTotal, isLoading } = useCart();
