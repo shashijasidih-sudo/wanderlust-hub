@@ -40,7 +40,7 @@ const BookingSummary = () => {
               ))}
               <div className="flex justify-between font-semibold pt-2 border-t">
                 <span>Total Price</span>
-                <span>₹{getCartTotal().toLocaleString()}</span>
+                <span>{formatPrice(getCartTotal())}</span>
               </div>
             </CardContent>
           </AccordionContent>
