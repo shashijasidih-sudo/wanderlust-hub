@@ -210,6 +210,7 @@ const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: {
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity, clearCart, getCartTotal, isLoading } = useCart();
+  const { formatPrice } = useCurrency();
   const navigate = useNavigate();
 
   const handleProceedToCheckout = () => {
