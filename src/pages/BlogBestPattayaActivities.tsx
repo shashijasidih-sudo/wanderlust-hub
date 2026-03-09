@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -63,7 +64,12 @@ const ActivityCards = () => {
   );
 };
 
-const BlogBestPattayaActivities = () => (
+const BlogBestPattayaActivities = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
     <BlogArticleLayout
       title="Best Pattaya Activities for First-Time Visitors — 2026 Guide"
       description="Discover the top 15 Pattaya activities for first-time visitors. From Coral Island tours to Alcazar Show, floating markets to nightlife, plan your perfect Pattaya trip."
@@ -135,6 +141,7 @@ const BlogBestPattayaActivities = () => (
     >
       <ActivityCards />
     </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogBestPattayaActivities;

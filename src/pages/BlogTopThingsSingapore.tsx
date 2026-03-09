@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -67,7 +68,12 @@ const ActivityCards = () => {
   );
 };
 
-const BlogTopThingsSingapore = () => (
+const BlogTopThingsSingapore = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
   <BlogArticleLayout
     title="Top Things to Do in Singapore — Complete 2026 Guide"
     description="Discover the best things to do in Singapore from Marina Bay to Sentosa. Activities, attractions, tours & tickets — all bookable online with instant confirmation."
@@ -135,6 +141,7 @@ const BlogTopThingsSingapore = () => (
   >
     <ActivityCards />
   </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogTopThingsSingapore;

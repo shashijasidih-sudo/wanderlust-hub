@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -65,7 +66,12 @@ const ActivityCards = () => {
   );
 };
 
-const BlogUniversalStudiosSingapore = () => (
+const BlogUniversalStudiosSingapore = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
   <BlogArticleLayout
     title="Universal Studios Singapore Ticket Guide 2026"
     description="Everything you need to know about Universal Studios Singapore tickets — prices, best time to visit, top rides, and how to book the cheapest tickets online."
@@ -142,6 +148,7 @@ const BlogUniversalStudiosSingapore = () => (
   >
     <ActivityCards />
   </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogUniversalStudiosSingapore;

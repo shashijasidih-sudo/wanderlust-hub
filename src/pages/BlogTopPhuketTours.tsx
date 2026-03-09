@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -64,7 +65,12 @@ const ActivityCards = () => {
   );
 };
 
-const BlogTopPhuketTours = () => (
+const BlogTopPhuketTours = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
     <BlogArticleLayout
       title="Top Phuket Island Tours for Indian Travelers — 2026 Guide"
       description="Complete guide to the best Phuket island tours and activities for Indian travelers. From Phi Phi Island to James Bond Island, find the perfect tour with prices and booking tips."
@@ -145,6 +151,7 @@ const BlogTopPhuketTours = () => (
     >
       <ActivityCards />
     </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogTopPhuketTours;

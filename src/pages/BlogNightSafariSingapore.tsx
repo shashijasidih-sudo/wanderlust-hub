@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -65,7 +66,12 @@ const ActivityCards = () => {
   );
 };
 
-const BlogNightSafariSingapore = () => (
+const BlogNightSafariSingapore = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
   <BlogArticleLayout
     title="Singapore Night Safari Booking Guide 2026"
     description="Complete guide to Singapore Night Safari — ticket options, what to expect, best time to visit, animal encounters, and how to book the cheapest tickets online."
@@ -131,6 +137,7 @@ const BlogNightSafariSingapore = () => (
   >
     <ActivityCards />
   </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogNightSafariSingapore;
