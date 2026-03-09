@@ -115,52 +115,16 @@ const SingaporeTransfersNew = () => {
             {filteredTransfers.map((transfer) => {
               const IconComponent = transfer.icon;
               return (
-                <Link to={transfer.slug} key={transfer.id}>
-                  <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group h-full">
-                    <div className="relative h-48 overflow-hidden">
-                      <img
-                        src={transfer.image}
-                        alt={transfer.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <Badge className="absolute top-3 left-3 bg-primary text-primary-foreground">
-                        <IconComponent className="h-3 w-3 mr-1" />
-                        {transfer.category === "night" ? "Night" : transfer.type === "pickup" ? "Pickup" : "Dropoff"}
-                      </Badge>
-                    </div>
-                    <CardContent className="p-4">
-                      <h3 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors">
-                        {transfer.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground mb-3">{transfer.subtitle}</p>
-                      
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                        <div className="flex items-center gap-1">
-                          <Users className="h-4 w-4" />
-                          <span>{transfer.capacity}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Clock className="h-4 w-4" />
-                          <span>{transfer.duration}</span>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-1 mb-4">
-                        <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                        <span className="font-medium">{transfer.rating}</span>
-                        <span className="text-muted-foreground">({transfer.reviews} reviews)</span>
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <span className="text-xs text-muted-foreground">Starting from</span>
-                          <p className="text-xl font-bold text-primary">₹{transfer.price.toLocaleString()}</p>
-                        </div>
-                        <Button size="sm">Book Now</Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
+                <TransferCard
+                  key={transfer.id}
+                  transfer={transfer}
+                  badges={
+                    <Badge className="absolute top-3 left-3 bg-primary text-primary-foreground">
+                      <IconComponent className="h-3 w-3 mr-1" />
+                      {transfer.category === "night" ? "Night" : transfer.type === "pickup" ? "Pickup" : "Dropoff"}
+                    </Badge>
+                  }
+                />
               );
             })}
           </div>

@@ -313,72 +313,23 @@ const DubaiTransfersNew = () => {
         {/* Transfer Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredTransfers.map((transfer) => (
-            <Link key={transfer.id} to={transfer.slug}>
-              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer h-full">
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={transfer.image}
-                    alt={transfer.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 left-3 flex gap-2">
-                    <span className="bg-yellow-500 text-white px-2 py-1 rounded text-xs font-medium">
-                      {transfer.zone.replace('zone', 'Zone ')}
-                    </span>
-                    {transfer.type === "pickup" && (
-                      <span className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium">
-                        Pickup
-                      </span>
-                    )}
-                    {transfer.type === "dropoff" && (
-                      <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs font-medium">
-                        Dropoff
-                      </span>
-                    )}
-                  </div>
+            <TransferCard
+              key={transfer.id}
+              transfer={transfer}
+              badges={
+                <div className="absolute top-3 left-3 flex gap-2">
+                  <span className="bg-yellow-500 text-white px-2 py-1 rounded text-xs font-medium">
+                    {transfer.zone.replace('zone', 'Zone ')}
+                  </span>
+                  {transfer.type === "pickup" && (
+                    <span className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium">Pickup</span>
+                  )}
+                  {transfer.type === "dropoff" && (
+                    <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs font-medium">Dropoff</span>
+                  )}
                 </div>
-                <CardContent className="p-4">
-                  <h3 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors line-clamp-2">
-                    {transfer.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-3">{transfer.subtitle}</p>
-                  
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                    <div className="flex items-center gap-1">
-                      <Users className="h-4 w-4" />
-                      <span>{transfer.capacity}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      <span>{transfer.duration}</span>
-                    </div>
-                  </div>
-
-                  {/* Vehicle Options */}
-                  <div className="flex flex-wrap gap-1 mb-3">
-                    {transfer.vehicles.map((vehicle, index) => (
-                      <span key={index} className="text-xs bg-muted px-2 py-1 rounded">
-                        {vehicle}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center gap-1 mb-3">
-                    <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    <span className="font-medium">{transfer.rating}</span>
-                    <span className="text-muted-foreground">({transfer.reviews} reviews)</span>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-xs text-muted-foreground">{transfer.priceLabel}</span>
-                      <p className="text-xl font-bold text-primary">{formatPrice(transfer.price)}</p>
-                    </div>
-                    <Button size="sm">Book Now</Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+              }
+            />
           ))}
         </div>
 
