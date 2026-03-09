@@ -152,6 +152,7 @@ const BlogBestSingaporeAttractions = () => {
   >
     <ActivityCards />
   </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogBestSingaporeAttractions;

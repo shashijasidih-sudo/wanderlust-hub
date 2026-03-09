@@ -146,6 +146,7 @@ const BlogBestDubaiActivities = () => {
   >
     <ActivityCards />
   </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogBestDubaiActivities;
