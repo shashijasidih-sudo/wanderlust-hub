@@ -25,6 +25,7 @@ const transfers = [
 ];
 
 const BangkokTransfers = () => {
+  const { formatPrice } = useCurrency();
   const [filterType, setFilterType] = useState<string>("all");
 
   const filteredTransfers = transfers.filter(transfer => {
