@@ -193,10 +193,10 @@ const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: {
               </Link>
               <div className="text-right">
                 <p className="text-sm text-muted-foreground">
-                  ₹{item.price.toLocaleString()} × {item.quantity}
+                  {formatPrice(item.price)} × {item.quantity}
                 </p>
                 <p className="text-xl font-bold text-primary">
-                  ₹{(item.price * item.quantity).toLocaleString()}
+                  {formatPrice(item.price * item.quantity)}
                 </p>
               </div>
             </div>
