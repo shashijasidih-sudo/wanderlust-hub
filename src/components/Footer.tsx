@@ -2,10 +2,13 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Instagram, Twitter, Linkedin, Mail, MessageCircle } from "lucide-react";
+import Testimonials from "@/components/Testimonials";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background py-12 md:py-16">
+    <>
+      <Testimonials />
+      <footer className="bg-foreground text-background py-12 md:py-16">
       <div className="container px-4 md:px-6">
         {/* Newsletter Section */}
         <div className="mb-12 pb-12 border-b border-background/20">
@@ -156,7 +159,8 @@ const Footer = () => {
           <p>© 2026 Yellodae. All rights reserved.</p>
         </div>
       </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 
