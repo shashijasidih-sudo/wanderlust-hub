@@ -26,6 +26,7 @@ const ActivityCard = ({
 }: ActivityCardProps) => {
   const rating = (Math.random() * 1 + 4).toFixed(1);
   const navigate = useNavigate();
+  const { formatPrice } = useCurrency();
 
   const handleCardClick = () => {
     if (slug) {
