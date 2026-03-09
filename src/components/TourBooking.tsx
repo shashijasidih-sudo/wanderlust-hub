@@ -24,6 +24,7 @@ interface TourBookingProps {
 const TourBooking = ({ tourData }: TourBookingProps) => {
   const itineraryRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
+  const { formatPrice } = useCurrency();
   
   // Get the current path as the tour slug (remove leading slash)
   const tourSlug = location.pathname.slice(1);
