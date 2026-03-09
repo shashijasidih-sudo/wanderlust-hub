@@ -151,6 +151,7 @@ const BlogTopPhuketTours = () => {
     >
       <ActivityCards />
     </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogTopPhuketTours;

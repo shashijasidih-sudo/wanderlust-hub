@@ -141,6 +141,7 @@ const BlogBestPattayaActivities = () => {
     >
       <ActivityCards />
     </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogBestPattayaActivities;

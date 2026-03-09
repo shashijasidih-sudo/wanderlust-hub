@@ -153,6 +153,7 @@ const BlogBestThailandActivities = () => {
     >
       <ActivityCards />
     </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogBestThailandActivities;

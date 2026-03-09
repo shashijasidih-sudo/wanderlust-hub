@@ -132,6 +132,7 @@ const BlogBangkokActivitiesGuide = () => {
     >
       <ActivityCards />
     </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogBangkokActivitiesGuide;
