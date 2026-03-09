@@ -43,6 +43,7 @@ const categories = [
 ];
 
 const Krabi = () => {
+  const { formatPrice } = useCurrency();
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('price-low');
   const [priceRange, setPriceRange] = useState([2000, 7500]);
