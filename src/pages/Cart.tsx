@@ -321,7 +321,7 @@ const Cart = () => {
                 <div className="border-t pt-4">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Subtotal ({totalItems} items)</span>
-                    <span>₹{getCa{formatPrice(getCartTotal()
+                    <span>{formatPrice(getCartTotal())}</span>
                   </div>
                   <div className="flex justify-between text-sm mt-2">
                     <span className="text-muted-foreground">Taxes & Fees</span>
