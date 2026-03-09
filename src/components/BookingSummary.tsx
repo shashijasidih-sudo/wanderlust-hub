@@ -10,6 +10,7 @@ import { useCurrency } from "@/contexts/CurrencyContext";
 
 const BookingSummary = () => {
   const { cartItems, getCartTotal } = useCart();
+  const { formatPrice } = useCurrency();
 
   if (cartItems.length === 0) {
     return null;
