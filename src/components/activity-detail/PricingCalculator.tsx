@@ -361,7 +361,8 @@ const PricingCalculator = ({
               <div className="flex-1">
                 <p className="font-medium">No. of Adults (≥12 yrs)</p>
                 <p className="text-sm text-muted-foreground">
-                  ₹{cur{format{formatPrice(currentAdultPrice           {!tourOptions && twoAdultPrice && adults === 2 && (
+                  {formatPrice(currentAdultPrice)} per person
+                  {!tourOptions && twoAdultPrice && adults === 2 && (
                     <span className="text-xs ml-1">(2 adults rate)</span>
                   )}
                   {!tourOptions && singleAdultPrice && adults === 1 && (
