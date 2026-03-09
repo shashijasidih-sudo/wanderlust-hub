@@ -345,7 +345,7 @@ const PricingCalculator = ({
                       />
                       <div className="flex-1">
                         <p className="font-medium text-sm">{addOn.label}</p>
-                        <p className="text-sm text-primary font-semibold">{formatPrice(addOn.adultPrice)} / per adult</p>
+                        <p className="text-sm text-primary font-semibold">{formatPrice(addOn.adultPricer adult</p>
                       </div>
                     </label>
                   ))}
@@ -361,7 +361,7 @@ const PricingCalculator = ({
               <div className="flex-1">
                 <p className="font-medium">No. of Adults (≥12 yrs)</p>
                 <p className="text-sm text-muted-foreground">
-                  ₹{currentAdultPrice.toLocaleString()} per person
+                  ₹{cur{formatPrice(currentAdultPriceperson
                   {!tourOptions && twoAdultPrice && adults === 2 && (
                     <span className="text-xs ml-1">(2 adults rate)</span>
                   )}
