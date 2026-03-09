@@ -104,7 +104,7 @@ const TourBooking = ({ tourData }: TourBookingProps) => {
                   <div>
                     <span className="font-semibold">From:</span>
                     <span className="text-primary ml-2 text-lg font-bold">
-                      ₹{tourData.basePrice.toLocaleString()}
+                      {formatPrice(tourData.basePrice)}
                       {tourData.pricePerVehicle && <span className="text-sm font-normal text-muted-foreground"> /vehicle</span>}
                     </span>
                   </div>
