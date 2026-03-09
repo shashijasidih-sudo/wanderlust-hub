@@ -10,7 +10,7 @@ import SmartDestinationGuides from "@/components/SmartDestinationGuides";
 import TopThingsToDo from "@/components/TopThingsToDo";
 import FeaturedDestinations from "@/components/FeaturedDestinations";
 import ActivityCategories from "@/components/ActivityCategories";
-import Testimonials from "@/components/Testimonials";
+
 import Footer from "@/components/Footer";
 
 const Index = () => {
