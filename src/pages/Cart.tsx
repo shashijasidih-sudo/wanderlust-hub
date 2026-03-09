@@ -313,7 +313,7 @@ const Cart = () => {
                       <span className="text-muted-foreground truncate mr-2">
                         {item.title} × {item.quantity}
                       </span>
-                      <span>{formatPrice(item.price * item.quantity)}</span>
+                      <span>{formatPrice(item.price * item.quantity
                     </div>
                   ))}
                 </div>
@@ -321,7 +321,7 @@ const Cart = () => {
                 <div className="border-t pt-4">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Subtotal ({totalItems} items)</span>
-                    <span>₹{getCartTotal().toLocaleString()}</span>
+                    <span>₹{getCa{formatPrice(getCartTotal()
                   </div>
                   <div className="flex justify-between text-sm mt-2">
                     <span className="text-muted-foreground">Taxes & Fees</span>
