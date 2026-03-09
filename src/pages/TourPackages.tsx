@@ -1,12 +1,14 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Star, Hotel, Plane, Ship, Users, X } from "lucide-react";
-
+import { MapPin, Calendar, Star, Hotel, Plane, Ship, Users } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
 
 import phiPhi1 from "@/assets/phi-phi-1.jpg";
 import pattayaBoats from "@/assets/pattaya-boats-beach-1.jpg";
