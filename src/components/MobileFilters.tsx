@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SlidersHorizontal, Tag } from "lucide-react";
+import { useCurrency } from "@/contexts/CurrencyContext";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
