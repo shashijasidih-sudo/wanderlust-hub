@@ -345,7 +345,7 @@ const PricingCalculator = ({
                       />
                       <div className="flex-1">
                         <p className="font-medium text-sm">{addOn.label}</p>
-                        <p className="text-sm text-primary font-semibold">₹{addOn.adultPrice.toLocaleString()} / per adult</p>
+                        <p className="text-sm text-primary font-semibold">{formatPrice(addOn.adultPrice)} / per adult</p>
                       </div>
                     </label>
                   ))}
