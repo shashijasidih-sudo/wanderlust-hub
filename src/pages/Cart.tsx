@@ -1,4 +1,5 @@
 import { useCart, CartItem } from "@/contexts/CartContext";
+import { useCurrency } from "@/contexts/CurrencyContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Trash2, ShoppingCart, ArrowRight, Car, Minus, Plus, Loader2, MapPin, Ticket } from "lucide-react";
