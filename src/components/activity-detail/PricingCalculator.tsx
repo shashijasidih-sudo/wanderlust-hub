@@ -181,7 +181,7 @@ const PricingCalculator = ({
             <div className="flex items-center justify-between p-4 bg-primary/10 rounded-lg border-2 border-primary/30">
               <div className="flex-1">
                 <p className="font-medium">Private Vehicle ({vehicleCapacity} Seater)</p>
-                <p className="text-sm text-muted-foreground">₹{basePrice.toLocaleString()} per vehicle</p>
+                <p className="text-sm text-muted-foreground">{formatPrice(basePrice)} per vehicle</p>
                 <p className="text-xs text-primary mt-1">Fits up to {vehicleCapacity} passengers (adults + children)</p>
               </div>
               <div className="flex items-center gap-3">
