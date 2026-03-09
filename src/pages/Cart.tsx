@@ -313,7 +313,7 @@ const Cart = () => {
                       <span className="text-muted-foreground truncate mr-2">
                         {item.title} × {item.quantity}
                       </span>
-                      <span>{formatPrice(item.price * item.quantity
+                      <span>{formatPrice(item.price * item.quantity)}</span>
                     </div>
                   ))}
                 </div>
