@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -31,25 +31,6 @@ interface PackageInfo {
   image: string;
   highlights: string[];
 }
-
-const MailerLiteEmbed = ({ formId }: { formId: string }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-    // Insert the MailerLite embedded div
-    containerRef.current.innerHTML = `<div class="ml-embedded" data-form="${formId}"></div>`;
-    
-    // Re-trigger MailerLite to pick up the new embedded form
-    const win = window as any;
-    if (typeof win.ml === "function") {
-      // MailerLite scans for new embedded forms on account init
-      win.ml("account", "2066738");
-    }
-  }, [formId]);
-
-  return <div ref={containerRef} className="min-h-[400px]" />;
-};
 
 const PackageCard = ({ pkg, onBookNow }: { pkg: PackageInfo; onBookNow: (title: string) => void }) => (
   <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
@@ -213,10 +194,38 @@ const SectionBlock = ({ title, icon, packages: pkgs, onBookNow }: { title: strin
 const TourPackages = () => {
   const [bookingOpen, setBookingOpen] = useState(false);
   const [bookingTitle, setBookingTitle] = useState("");
+  const [formName, setFormName] = useState("");
+  const [formEmail, setFormEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleBookNow = (title: string) => {
     setBookingTitle(title);
+    setFormName("");
+    setFormEmail("");
     setBookingOpen(true);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formName.trim() || !formEmail.trim()) return;
+
+    setIsSubmitting(true);
+
+    const subject = encodeURIComponent(`Package Inquiry: ${bookingTitle}`);
+    const body = encodeURIComponent(
+      `Name: ${formName}\\\\nEmail: ${formEmail}\\\\nPackage Interested In: ${bookingTitle}\\\\n\\\\nPlease build me a quality package!`
+    );
+
+    window.open(`mailto:info@yellodae.com?subject=${subject}&body=${body}`, "_self");
+
+    toast({
+      title: "Request Initiated!",
+      description: "Your email client will open with the details. We'll get back to you shortly!",
+    });
+
+    setIsSubmitting(false);
+    setBookingOpen(false);
   };
 
   return (
@@ -243,17 +252,47 @@ const TourPackages = () => {
         <SectionBlock title="Singapore Packages" icon={<Ship className="h-6 w-6 text-primary" />} packages={singaporePackages} onBookNow={handleBookNow} />
         <div className="border-t" />
         <SectionBlock title="Dubai Packages" icon={<Hotel className="h-6 w-6 text-primary" />} packages={dubaiPackages} onBookNow={handleBookNow} />
-
       </main>
       <Footer />
 
-      {/* MailerLite Booking Dialog */}
+      {/* Booking Form Dialog */}
       <Dialog open={bookingOpen} onOpenChange={setBookingOpen}>
-        <DialogContent className="max-w-lg max-h-[90vh] overflow-y-auto">
+        <DialogContent className="sm:max-w-[420px]">
           <DialogHeader>
-            <DialogTitle>Book: {bookingTitle}</DialogTitle>
+            <DialogTitle className="text-xl">Customize Your Package</DialogTitle>
           </DialogHeader>
-          {bookingOpen && <MailerLiteEmbed formId="0WJ5rh" />}
+          <form onSubmit={handleSubmit} className="space-y-4 pt-2">
+            <div className="space-y-2">
+              <Label htmlFor="booking-name">Name *</Label>
+              <Input
+                id="booking-name"
+                placeholder="Your full name"
+                value={formName}
+                onChange={(e) => setFormName(e.target.value)}
+                required
+                maxLength={100}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="booking-email">Email *</Label>
+              <Input
+                id="booking-email"
+                type="email"
+                placeholder="your.email@example.com"
+                value={formEmail}
+                onChange={(e) => setFormEmail(e.target.value)}
+                required
+                maxLength={255}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>Package You're Interested In</Label>
+              <Input value={bookingTitle} readOnly className="bg-muted" />
+            </div>
+            <Button type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? "Sending..." : "🚀 Build Me a Quality Package"}
+            </Button>
+          </form>
         </DialogContent>
       </Dialog>
     </div>
