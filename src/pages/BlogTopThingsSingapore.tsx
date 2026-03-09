@@ -141,6 +141,7 @@ const BlogTopThingsSingapore = () => {
   >
     <ActivityCards />
   </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogTopThingsSingapore;

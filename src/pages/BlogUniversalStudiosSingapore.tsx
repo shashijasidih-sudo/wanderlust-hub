@@ -148,6 +148,7 @@ const BlogUniversalStudiosSingapore = () => {
   >
     <ActivityCards />
   </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogUniversalStudiosSingapore;

@@ -137,6 +137,7 @@ const BlogNightSafariSingapore = () => {
   >
     <ActivityCards />
   </BlogArticleLayout>
-);
+  );
+};
 
 export default BlogNightSafariSingapore;
