@@ -56,7 +56,7 @@ const BookingSummary = () => {
             <CardContent className="pt-4 space-y-2">
               <div className="flex justify-between text-sm">
                 <span>Taxi Price</span>
-                <span>₹{getCartTotal().toLocaleString()}</span>
+                <span>{formatPrice(getCartTotal())}</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span>Subtotal</span>
