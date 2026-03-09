@@ -9,6 +9,7 @@ interface SuggestedToursProps {
 
 const SuggestedTours = ({ currentCity }: SuggestedToursProps) => {
   const navigate = useNavigate();
+  const { formatPrice } = useCurrency();
 
   const suggestions = {
     bangkok: [
