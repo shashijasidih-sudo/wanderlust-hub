@@ -33,6 +33,28 @@ const heroSlides = [
 
 const blogArticles = [
   {
+    id: -5,
+    title: "Dubai Shopping Tours Experience — Complete Guide",
+    description: "Complete guide to the best Dubai shopping tours — from Dubai Mall to Gold Souk, Mall of Emirates to Global Village.",
+    category: "Dubai Shopping",
+    image: dubaiSkylineSunset,
+    author: "Yellodae Travel Expert",
+    date: "Mar 4, 2026",
+    readTime: "12 min read",
+    slug: "/blog/dubai-shopping-tours"
+  },
+  {
+    id: -6,
+    title: "Complete Guide to Dubai Food Experiences",
+    description: "Discover the best Dubai food experiences — from shawarma to luxury dining, desert BBQ to traditional Emirati cuisine.",
+    category: "Food Tours",
+    image: dubaiCityImg,
+    author: "Yellodae Travel Expert",
+    date: "Mar 7, 2026",
+    readTime: "10 min read",
+    slug: "/blog/dubai-food-experiences"
+  },
+  {
     id: 0,
     title: "Complete Guide to Airport Transfer Booking in Dubai",
     description: "Everything about Dubai airport transfers — types, popular drop locations, pricing, step-by-step booking, and tips for a smooth arrival.",
