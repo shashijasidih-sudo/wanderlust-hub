@@ -369,6 +369,8 @@ const App = () => (
             <Route path="/blog/desert-safari-deals-dubai" element={<BlogDubaiDesertSafari />} />
             <Route path="/blog/dubai-marina-cruise" element={<BlogDubaiMarinaCruise />} />
             <Route path="/blog/burj-khalifa-tickets-dubai" element={<BlogBurjKhalifaTickets />} />
+            <Route path="/blog/dubai-shopping-tours" element={<BlogDubaiShoppingTours />} />
+            <Route path="/blog/dubai-food-experiences" element={<BlogDubaiFoodExperiences />} />
             <Route path="/dubai" element={<Dubai />} />
             <Route path="/desert-safari" element={<DesertSafari />} />
             <Route path="/desert-safari-shisha" element={<DesertSafariShisha />} />
