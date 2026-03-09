@@ -1,12 +1,10 @@
 import { useState } from "react";
-import { useCurrency } from "@/contexts/CurrencyContext";
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Star, Clock, Users, Plane, Car, Building2, MapPin } from "lucide-react";
+import { Plane, Car, Building2, MapPin } from "lucide-react";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
+import TransferCard from "@/components/TransferCard";
 
 const transfers = [
   { id: 1, title: "BKK Airport to Pattaya Hotel", subtitle: "Suvarnabhumi International Airport to Pattaya", price: 3600, priceLabel: "From", image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop", rating: 4.9, reviews: 756, duration: "1.5 Hrs", capacity: "Sedan / SUV / Van", slug: "/pattaya/bkk-airport-pickup", type: "pickup", category: "airport", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },
