@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useLocation } from "react-router-dom";
+import { useCurrency } from "@/contexts/CurrencyContext";
 import Header from "./Header";
 import Footer from "./Footer";
 import FloatingWhatsApp from "./FloatingWhatsApp";
