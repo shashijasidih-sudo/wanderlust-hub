@@ -51,6 +51,7 @@ const PricingCalculator = ({
   hideChildren = false
 }: PricingCalculatorProps) => {
   const { addToCart } = useCart();
+  const { formatPrice } = useCurrency();
   const effectiveMin = pricePerVehicle ? 1 : Math.max(minAdults, 1);
   const [adults, setAdults] = useState(pricePerVehicle ? 1 : Math.max(effectiveMin, 2));
   const [children, setChildren] = useState(0);
