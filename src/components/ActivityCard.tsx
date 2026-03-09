@@ -3,6 +3,7 @@ import { Star, CheckCircle } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useNavigate } from "react-router-dom";
 import WishlistButton from "./WishlistButton";
+import { useCurrency } from "@/contexts/CurrencyContext";
 
 interface ActivityCardProps {
   title: string;
