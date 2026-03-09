@@ -402,7 +402,7 @@ const PricingCalculator = ({
             <div className="flex items-center justify-between p-4 bg-accent/50 rounded-lg">
               <div className="flex-1">
                 <p className="font-medium">No. of Child (2-11 yrs)</p>
-                <p className="text-sm text-muted-foreground">₹{currentChi{formatPrice(currentChildPricep>
+                <p className="text-sm text-muted-foreground">{formatPrice(currentChildPrice)} per child</p>
               </div>
               <div className="flex items-center gap-3">
                 <Button
