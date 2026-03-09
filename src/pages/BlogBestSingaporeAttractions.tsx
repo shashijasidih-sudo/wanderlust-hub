@@ -67,7 +67,12 @@ const ActivityCards = () => {
   );
 };
 
-const BlogBestSingaporeAttractions = () => (
+const BlogBestSingaporeAttractions = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
   <BlogArticleLayout
     title="Best Singapore Attraction Tickets for Indian Travelers 2026"
     description="Complete guide to booking Singapore attraction tickets online — from Gardens by the Bay to Universal Studios. Best prices, instant confirmation, and tips for Indian travelers."
