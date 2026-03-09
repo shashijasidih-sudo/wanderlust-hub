@@ -159,7 +159,8 @@ const Footer = () => {
           <p>© 2026 Yellodae. All rights reserved.</p>
         </div>
       </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 
