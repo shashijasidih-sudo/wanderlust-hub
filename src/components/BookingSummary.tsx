@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import { useCart } from "@/contexts/CartContext";
+import { useCurrency } from "@/contexts/CurrencyContext";
 
 const BookingSummary = () => {
   const { cartItems, getCartTotal } = useCart();
