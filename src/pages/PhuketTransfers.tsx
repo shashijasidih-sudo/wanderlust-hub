@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Star, Clock, Users, Plane, Car, Building2, MapPin } from "lucide-react";
+import { Plane, Car, Building2, MapPin } from "lucide-react";
+import TransferCard from "@/components/TransferCard";
 
 const transfers = [
   { id: 1, title: "HKT Airport to Phuket Hotel", subtitle: "Phuket International Airport Pickup", price: 3000, priceLabel: "From", image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop", rating: 4.9, reviews: 567, duration: "1 Hr 10 Min", capacity: "Sedan / SUV / Van", slug: "/phuket/hkt-airport-pickup", type: "pickup", category: "airport", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },

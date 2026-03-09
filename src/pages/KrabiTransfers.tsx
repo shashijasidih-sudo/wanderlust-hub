@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Star, Clock, Users, Plane, Car, Building2, MapPin } from "lucide-react";
+import { Plane, Car, Building2, MapPin } from "lucide-react";
+import TransferCard from "@/components/TransferCard";
 
 const transfers = [
   { id: 1, title: "KBV Airport to Phuket Hotel", subtitle: "Krabi International Airport to Phuket", price: 6600, priceLabel: "From", image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop", rating: 4.9, reviews: 356, duration: "3.75 Hrs", capacity: "Sedan / SUV / Van", slug: "/krabi/kbv-airport-phuket-pickup", type: "pickup", category: "airport", vehicles: ["Sedan (3 Pax)", "SUV (4 Pax)", "Van (10 Pax)"] },

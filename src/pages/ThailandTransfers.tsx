@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Star, Clock, Users, Plane, Car, Building2, MapPin } from "lucide-react";
+import { Plane, Car, Building2, MapPin } from "lucide-react";
+import TransferCard from "@/components/TransferCard";
 
 // Combined transfers from all cities
 const allTransfers = [

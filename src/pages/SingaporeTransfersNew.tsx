@@ -1,11 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Star, Clock, Users, MapPin, Car, Plane, Moon } from "lucide-react";
-import { Link } from "react-router-dom";
+import { MapPin, Car, Plane, Moon } from "lucide-react";
 import { singaporeTransfersData } from "@/data/singaporeTransferData";
+import TransferCard from "@/components/TransferCard";
 
 const transfers = [
   {

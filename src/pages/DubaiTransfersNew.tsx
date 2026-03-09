@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { useCurrency } from "@/contexts/CurrencyContext";
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Star, Clock, Users, Plane, Building2, Car, MapPin } from "lucide-react";
+import { Plane, Building2, Car, MapPin } from "lucide-react";
+import { dubaiZones } from "@/data/dubaiTransferData";
+import TransferCard from "@/components/TransferCard";
 import { dubaiZones } from "@/data/dubaiTransferData";
 
 const transfers = [
