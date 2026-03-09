@@ -310,6 +310,8 @@ const App = () => (
             <Route path="/blog/top-things-singapore" element={<BlogTopThingsSingapore />} />
             <Route path="/blog/universal-studios-singapore-guide" element={<BlogUniversalStudiosSingapore />} />
             <Route path="/blog/night-safari-singapore-guide" element={<BlogNightSafariSingapore />} />
+            <Route path="/blog/thailand-island-combos" element={<BlogThailandIslandCombos />} />
+            <Route path="/blog/thailand-food-experiences" element={<BlogThailandFoodExperiences />} />
             <Route path="/netherlands-smart-guides" element={<NetherlandsSmartGuides />} />
             <Route path="/bangkok/transfers" element={<BangkokTransfers />} />
             <Route path="/bangkok/bkk-airport-pickup" element={<BangkokBkkAirportPickup />} />
