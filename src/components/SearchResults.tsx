@@ -12,6 +12,7 @@ interface SearchResultsProps {
 
 const SearchResults = ({ results, onClose }: SearchResultsProps) => {
   const navigate = useNavigate();
+  const { formatPrice } = useCurrency();
 
   const handleResultClick = (tourId: string) => {
     navigate(`/${tourId}`);
