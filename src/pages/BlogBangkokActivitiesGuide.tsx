@@ -65,7 +65,12 @@ const ActivityCards = () => {
   );
 };
 
-const BlogBangkokActivitiesGuide = () => (
+const BlogBangkokActivitiesGuide = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
     <BlogArticleLayout
       title="Bangkok Activities Booking Guide — 15 Best Things to Do in 2026"
       description="The ultimate Bangkok activities booking guide for tourists. Discover 15 must-do experiences including temple tours, dinner cruises, night markets, and wildlife safaris."

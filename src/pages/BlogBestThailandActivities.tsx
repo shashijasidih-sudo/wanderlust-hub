@@ -67,7 +67,12 @@ const ActivityCards = () => {
   );
 };
 
-const BlogBestThailandActivities = () => (
+const BlogBestThailandActivities = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
     <BlogArticleLayout
       title="Best Thailand Activities to Book Online in 2026"
       description="Discover the top 15 Thailand activities — from island hopping to temple tours, night markets to wildlife safaris. Book online for the best prices with instant confirmation."

@@ -64,7 +64,12 @@ const ActivityCards = () => {
   );
 };
 
-const BlogBestPattayaActivities = () => (
+const BlogBestPattayaActivities = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
     <BlogArticleLayout
       title="Best Pattaya Activities for First-Time Visitors — 2026 Guide"
       description="Discover the top 15 Pattaya activities for first-time visitors. From Coral Island tours to Alcazar Show, floating markets to nightlife, plan your perfect Pattaya trip."
