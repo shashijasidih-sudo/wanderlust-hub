@@ -430,8 +430,8 @@ const PricingCalculator = ({
         <div className="border-t border-border pt-4 space-y-2">
           {pricePerVehicle ? (
             <div className="flex justify-between text-sm">
-              <span>Vehicle ({vehicles} × INR {basePrice.toLocaleString()})</span>
-              <span>INR {(vehicles * basePrice).toLocaleString()}</span>
+              <span>Vehicle ({vehicles} × {formatPrice(basePrice)})</span>
+              <span>{formatPrice(vehicles * basePrice)}</span>
             </div>
           ) : (
             <>
