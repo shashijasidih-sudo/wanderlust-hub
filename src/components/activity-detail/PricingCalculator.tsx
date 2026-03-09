@@ -448,7 +448,7 @@ const PricingCalculator = ({
               {addOnTotal > 0 && (
                 <div className="flex justify-between text-sm">
                   <span>Add-Ons</span>
-                  <span>INR {addOnTotal.toLocaleString()}</span>
+                  <span>{formatPrice(addOnTotal)}</span>
                 </div>
               )}
             </>
