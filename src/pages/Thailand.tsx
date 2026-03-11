@@ -431,6 +431,7 @@ const Thailand = () => {
                       )}
                     </CardContent>
                   </Card>
+                  </Link>
                 ))}
               </div>
 
