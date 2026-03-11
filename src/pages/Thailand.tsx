@@ -41,6 +41,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Link } from "react-router-dom";
 import thailandNewsletterImg from "@/assets/thailand-newsletter.jpg";
+import { useCurrency } from "@/contexts/CurrencyContext";
 
 const activities = [
   // Bangkok Activities
