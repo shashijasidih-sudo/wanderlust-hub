@@ -367,9 +367,9 @@ const Thailand = () => {
                 : "flex flex-col gap-4 mb-8"
               }>
                 {displayedActivities.map((activity) => (
+                  <Link key={activity.id} to={activity.slug}>
                   <Card 
-                    key={activity.id} 
-                    className={`group cursor-pointer hover:shadow-card-hover transition-all duration-300 ${
+                    className={`group cursor-pointer hover:shadow-card-hover transition-all duration-300 h-full ${
                       viewMode === "list" ? "flex flex-row" : ""
                     }`}
                   >
