@@ -41,6 +41,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Link } from "react-router-dom";
 import thailandNewsletterImg from "@/assets/thailand-newsletter.jpg";
+import { useCurrency } from "@/contexts/CurrencyContext";
 
 const activities = [
   // Bangkok Activities
@@ -144,6 +145,7 @@ const placeholderCities = ["Phuket", "Krabi", "Chiang Mai", "Pattaya", "Bangkok"
 
 const Thailand = () => {
   const navigate = useNavigate();
+  const { formatPrice } = useCurrency();
   const [searchQuery, setSearchQuery] = useState("");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [priceRange, setPriceRange] = useState([0, 5000]);
@@ -365,9 +367,9 @@ const Thailand = () => {
                 : "flex flex-col gap-4 mb-8"
               }>
                 {displayedActivities.map((activity) => (
+                  <Link key={activity.id} to={activity.slug}>
                   <Card 
-                    key={activity.id} 
-                    className={`group cursor-pointer hover:shadow-card-hover transition-all duration-300 ${
+                    className={`group cursor-pointer hover:shadow-card-hover transition-all duration-300 h-full ${
                       viewMode === "list" ? "flex flex-row" : ""
                     }`}
                   >
@@ -415,7 +417,7 @@ const Thailand = () => {
                         <div>
                           <p className="text-xs text-muted-foreground">From</p>
                           <p className="text-xl font-bold text-foreground">
-                            ₹{activity.price.toLocaleString('en-IN')}
+                            {formatPrice(activity.price)}
                           </p>
                           <p className="text-xs text-muted-foreground">per person</p>
                         </div>
@@ -429,6 +431,7 @@ const Thailand = () => {
                       )}
                     </CardContent>
                   </Card>
+                  </Link>
                 ))}
               </div>
 
