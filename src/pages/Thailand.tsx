@@ -417,7 +417,7 @@ const Thailand = () => {
                         <div>
                           <p className="text-xs text-muted-foreground">From</p>
                           <p className="text-xl font-bold text-foreground">
-                            ₹{activity.price.toLocaleString('en-IN')}
+                            {formatPrice(activity.price)}
                           </p>
                           <p className="text-xs text-muted-foreground">per person</p>
                         </div>
