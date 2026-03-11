@@ -145,6 +145,7 @@ const placeholderCities = ["Phuket", "Krabi", "Chiang Mai", "Pattaya", "Bangkok"
 
 const Thailand = () => {
   const navigate = useNavigate();
+  const { formatPrice } = useCurrency();
   const [searchQuery, setSearchQuery] = useState("");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [priceRange, setPriceRange] = useState([0, 5000]);
