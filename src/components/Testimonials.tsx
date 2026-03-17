@@ -1,5 +1,6 @@
 import { Star, Quote, ExternalLink } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import ApprovalBadge from "@/components/ApprovalBadge";
 
 const testimonials = [
   {
