@@ -156,7 +156,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <ApprovalBadge />
+        
         
         <div className="text-center text-sm text-background/60 mt-6">
           <p>© 2026 Yellodae. All rights reserved.</p>
