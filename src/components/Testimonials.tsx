@@ -1,5 +1,6 @@
 import { Star, Quote, ExternalLink } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import ApprovalBadge from "@/components/ApprovalBadge";
 
 const testimonials = [
   {
@@ -132,6 +133,10 @@ const Testimonials = () => {
               <ExternalLink className="h-3.5 w-3.5" />
             </div>
           </a>
+        </div>
+
+        <div className="mt-8 mb-6">
+          <ApprovalBadge />
         </div>
 
         <div className="mt-6 text-center bg-primary/10 rounded-2xl p-8 max-w-4xl mx-auto animate-fade-in">
