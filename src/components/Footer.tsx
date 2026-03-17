@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Instagram, Twitter, Linkedin, Mail, MessageCircle } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
+import ApprovalBadge from "@/components/ApprovalBadge";
 
 const Footer = () => {
   return (
@@ -155,7 +156,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="text-center text-sm text-background/60">
+        <ApprovalBadge />
+        
+        <div className="text-center text-sm text-background/60 mt-6">
           <p>© 2026 Yellodae. All rights reserved.</p>
         </div>
       </div>
