@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Instagram, Twitter, Linkedin, Mail, MessageCircle } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
+import ApprovalBadge from "@/components/ApprovalBadge";
 
 const Footer = () => {
   return (
