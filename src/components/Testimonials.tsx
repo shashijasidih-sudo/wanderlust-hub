@@ -134,6 +134,10 @@ const Testimonials = () => {
           </a>
         </div>
 
+        <div className="mt-8 mb-6">
+          <ApprovalBadge />
+        </div>
+
         <div className="mt-6 text-center bg-primary/10 rounded-2xl p-8 max-w-4xl mx-auto animate-fade-in">
           <div className="max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-2">Best Price Guarantee</h3>
