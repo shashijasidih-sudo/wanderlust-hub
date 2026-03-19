@@ -100,6 +100,7 @@ export function useAuth() {
         setUser({
           id: data.user.id,
           email: data.user.email!,
+          full_name: data.user.user_metadata?.full_name,
         });
       }
     });
