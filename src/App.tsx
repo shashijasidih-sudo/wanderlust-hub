@@ -450,10 +450,7 @@ const App = () => (
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
-          {/* Tour Packages with MailerLite for booking popup */}
-          <Route element={<MailerLiteLayout />}>
-            <Route path="/tour-packages" element={<TourPackages />} />
-          </Route>
+          <Route path="/tour-packages" element={<TourPackages />} />
           <Route path="/routes-health-check" element={<RoutesHealthCheck />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
