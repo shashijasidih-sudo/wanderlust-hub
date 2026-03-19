@@ -33,7 +33,7 @@ const ContactUs = () => {
     const body = encodeURIComponent(
       `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${formData.phone}\n\n${message}`
     );
-    window.location.href = `mailto:Query@yellodae.com?subject=${mailtoSubject}&body=${body}`;
+    window.location.href = `mailto:support@yellodae.com?subject=${mailtoSubject}&body=${body}`;
     toast.success("Opening your email client to send the message!");
   };
 
