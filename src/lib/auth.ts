@@ -22,6 +22,7 @@ export const auth = {
     return {
       id: data.user.id,
       email: data.user.email!,
+      full_name: data.user.user_metadata?.full_name,
     };
   },
 
