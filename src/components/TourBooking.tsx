@@ -22,6 +22,7 @@ interface TourBookingProps {
 }
 
 const TourBooking = ({ tourData }: TourBookingProps) => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
   const itineraryRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const { formatPrice } = useCurrency();
