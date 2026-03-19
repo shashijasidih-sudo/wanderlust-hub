@@ -38,6 +38,7 @@ export const auth = {
     const user: AppUser = {
       id: data.user.id,
       email: data.user.email!,
+      full_name: data.user.user_metadata?.full_name,
     };
     notify(user);
     return user;
