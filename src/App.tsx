@@ -360,9 +360,7 @@ const App = () => (
             <Route path="/phuket/city-tour-krabi" element={<PhuketCityTourKrabi />} />
             <Route path="/phuket/krabi-city-tour" element={<PhuketKrabiCityTour />} />
             <Route path="/thailand/transfers" element={<ThailandTransfers />} />
-          </Route>
-          {/* Dubai routes with MailerLite */}
-          <Route element={<MailerLiteLayout />}>
+          {/* Dubai routes */}
             <Route path="/blog/best-dubai-activities" element={<BlogBestDubaiActivities />} />
             <Route path="/dubai-smart-guides" element={<DubaiSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-dubai" element={<BlogDubaiAirportTransfer />} />
