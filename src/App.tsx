@@ -236,8 +236,7 @@ const App = () => (
           <ApprovalBadge />
           <Routes>
           <Route path="/" element={<Index />} />
-          {/* Thailand routes with MailerLite */}
-          <Route element={<MailerLiteLayout />}>
+          {/* Thailand routes */}
             <Route path="/thailand" element={<Thailand />} />
             <Route path="/bangkok" element={<Bangkok />} />
             <Route path="/pattaya" element={<Pattaya />} />
