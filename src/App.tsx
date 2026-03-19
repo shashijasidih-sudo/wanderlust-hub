@@ -221,7 +221,7 @@ import BookingConfirmed from "./pages/BookingConfirmed";
 import Cart from "./pages/Cart";
 import BookingHistory from "./pages/BookingHistory";
 import QuickPay from "./pages/QuickPay";
-import MailerLiteLayout from "./components/MailerLiteLayout";
+
 
 const queryClient = new QueryClient();
 
