@@ -71,8 +71,8 @@ const ContactUs = () => {
                     <div>
                       <h3 className="font-semibold mb-1">Email Us</h3>
                       <p className="text-muted-foreground">
-                        <a href="mailto:Query@yellodae.com" className="hover:text-primary transition-colors">
-                          Query@yellodae.com
+                        <a href="mailto:support@yellodae.com" className="hover:text-primary transition-colors">
+                          support@yellodae.com
                         </a>
                       </p>
                       <p className="text-sm text-muted-foreground mt-1">For Booking and Travel Related Queries</p>
