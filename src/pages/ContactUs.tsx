@@ -188,7 +188,7 @@ const ContactUs = () => {
                     Send Message
                   </Button>
                   <p className="text-xs text-muted-foreground text-center">
-                    Your message will be sent to support@yellodae.com via your email client.
+                    Your message will be sent to support@yellodae.com.
                   </p>
                 </div>
               </div>
