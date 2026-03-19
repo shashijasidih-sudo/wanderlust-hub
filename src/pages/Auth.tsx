@@ -241,9 +241,9 @@ const Auth = () => {
     <div className="min-h-screen flex">
       <div className="w-full lg:w-1/2 flex flex-col">
         <div className="p-6 lg:p-10">
-          <Link to="/" className="inline-flex items-center gap-2 text-xl font-bold text-primary hover:opacity-80 transition-opacity">
-            <Plane className="w-5 h-5" />
-            Yellodae
+          <Link to="/" className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src={yellodaeLogo} alt="Yellodae" className="h-10 w-auto" />
+            <span className="text-xl font-bold text-primary">Yellodae</span>
           </Link>
         </div>
         <div className="flex-1 flex items-center justify-center px-6 pb-12 lg:px-16 xl:px-24">
