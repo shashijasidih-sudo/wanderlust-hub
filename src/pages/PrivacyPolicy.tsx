@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
                 <li>Communicate with you about your reservations, cancellations, modifications, and travel-related inquiries</li>
                 <li>Process payments securely through our payment partners (Razorpay)</li>
                 <li>Provide customer support via email, phone, and WhatsApp</li>
-                <li>Send promotional offers, newsletters, and travel inspiration (only with your consent, managed via MailerLite)</li>
+                <li>Send promotional offers, newsletters, and travel inspiration (only with your consent)</li>
                 <li>Improve our website, tour offerings, and overall user experience</li>
                 <li>Maintain your wishlist and shopping cart across sessions</li>
                 <li>Comply with legal and regulatory obligations under Indian and international law</li>
