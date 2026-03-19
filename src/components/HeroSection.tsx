@@ -23,6 +23,8 @@ const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4];
 const HeroSection = () => {
   const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [selectedCity, setSelectedCity] = useState("");
+  const [travelDate, setTravelDate] = useState<Date>();
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -31,8 +33,10 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
   
-  const handleCityChange = (value: string) => {
-    navigate(value);
+  const handleStartAdventure = () => {
+    if (selectedCity) {
+      navigate(selectedCity);
+    }
   };
 
   return (
