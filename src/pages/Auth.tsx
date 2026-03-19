@@ -149,6 +149,13 @@ const Auth = () => {
 
     return (
       <div className="space-y-6">
+        {/* Toggle link at the top */}
+        <div className="text-center text-sm">
+          <span className="text-muted-foreground">{isLogin ? "New to Yellodae? " : "Already a traveler? "}</span>
+          <button type="button" onClick={toggleMode} className="text-primary hover:underline font-medium inline-flex items-center gap-1">
+            {isLogin ? <>Sign Up <Plane className="w-3 h-3" /></> : "Sign in"}
+          </button>
+        </div>
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
             {isLogin ? "Welcome Back, Explorer! 🌍" : "Join Our Travel Community"}
@@ -223,12 +230,6 @@ const Auth = () => {
           )}
           Continue with Google
         </Button>
-        <div className="text-center text-sm">
-          <span className="text-muted-foreground">{isLogin ? "New to Yellodae? " : "Already a traveler? "}</span>
-          <button type="button" onClick={toggleMode} className="text-primary hover:underline font-medium inline-flex items-center gap-1">
-            {isLogin ? <>Start your journey <Plane className="w-3 h-3" /></> : "Sign in"}
-          </button>
-        </div>
         {!isLogin && <p className="text-center text-xs text-muted-foreground">Join 10,000+ travelers exploring the world</p>}
       </div>
     );
