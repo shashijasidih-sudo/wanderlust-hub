@@ -111,6 +111,7 @@ export function useAuth() {
           const newUser = {
             id: session.user.id,
             email: session.user.email!,
+            full_name: session.user.user_metadata?.full_name,
           };
           setUser(newUser);
           notify(newUser);
