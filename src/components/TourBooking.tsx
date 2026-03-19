@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import Header from "./Header";
@@ -22,6 +22,7 @@ interface TourBookingProps {
 }
 
 const TourBooking = ({ tourData }: TourBookingProps) => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
   const itineraryRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const { formatPrice } = useCurrency();
