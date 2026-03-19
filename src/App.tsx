@@ -401,9 +401,7 @@ const App = () => (
             <Route path="/dubai/airport-dropoff-zone4" element={<DubaiAirportDropoffZone4 />} />
             <Route path="/dubai/airport-pickup-zone5" element={<DubaiAirportPickupZone5 />} />
             <Route path="/dubai/airport-dropoff-zone5" element={<DubaiAirportDropoffZone5 />} />
-          </Route>
-          {/* Singapore routes with MailerLite */}
-          <Route element={<MailerLiteLayout />}>
+          {/* Singapore routes */}
             <Route path="/singapore-smart-guides" element={<SingaporeSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-singapore" element={<BlogSingaporeAirportTransfer />} />
             <Route path="/blog/sentosa-activities-singapore" element={<BlogSentosaActivities />} />
