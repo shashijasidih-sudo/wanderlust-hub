@@ -85,7 +85,7 @@ const HeroSection = () => {
         <div className="w-full max-w-4xl bg-white rounded-2xl shadow-card-hover p-4 md:p-6 animate-scale-in">
           <div className="flex flex-col md:flex-row gap-4 mb-4">
             <div className="w-full md:w-[60%]">
-              <Select onValueChange={handleCityChange}>
+              <Select value={selectedCity} onValueChange={setSelectedCity}>
                 <SelectTrigger className="w-full h-[52px] text-base">
                   <SelectValue placeholder="Select a city to explore activities..." />
                 </SelectTrigger>
@@ -100,12 +100,38 @@ const HeroSection = () => {
                 </SelectContent>
               </Select>
             </div>
-            <div className="w-full md:w-[40%] flex items-center gap-2 border rounded-lg px-4 h-[52px]">
-              <Calendar className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-              <Input type="date" className="border-0 p-0 focus-visible:ring-0" />
+            <div className="w-full md:w-[40%]">
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className={cn(
+                      "w-full h-[52px] justify-start text-left text-base font-normal",
+                      !travelDate && "text-muted-foreground"
+                    )}
+                  >
+                    <CalendarIcon className="mr-2 h-5 w-5 text-muted-foreground flex-shrink-0" />
+                    {travelDate ? format(travelDate, "PPP") : "Select travel date"}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0" align="start">
+                  <Calendar
+                    mode="single"
+                    selected={travelDate}
+                    onSelect={setTravelDate}
+                    disabled={(date) => date < new Date()}
+                    initialFocus
+                    className={cn("p-3 pointer-events-auto")}
+                  />
+                </PopoverContent>
+              </Popover>
             </div>
           </div>
-          <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold h-12 text-lg">
+          <Button 
+            className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold h-12 text-lg"
+            onClick={handleStartAdventure}
+            disabled={!selectedCity}
+          >
             Start Your Adventure
           </Button>
         </div>
