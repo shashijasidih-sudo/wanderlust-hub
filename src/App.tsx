@@ -433,7 +433,6 @@ const App = () => (
             <Route path="/singapore/airport-pickup" element={<SingaporeAirportPickup />} />
             <Route path="/singapore/airport-dropoff" element={<SingaporeAirportDropoff />} />
             <Route path="/singapore/airport-night-pickup" element={<SingaporeAirportNightPickup />} />
-          </Route>
           <Route path="/auth" element={<Auth />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/my-bookings" element={<MyBookings />} />
