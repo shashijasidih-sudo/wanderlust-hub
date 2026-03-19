@@ -221,7 +221,7 @@ import BookingConfirmed from "./pages/BookingConfirmed";
 import Cart from "./pages/Cart";
 import BookingHistory from "./pages/BookingHistory";
 import QuickPay from "./pages/QuickPay";
-import MailerLiteLayout from "./components/MailerLiteLayout";
+
 
 const queryClient = new QueryClient();
 
@@ -236,8 +236,7 @@ const App = () => (
           <ApprovalBadge />
           <Routes>
           <Route path="/" element={<Index />} />
-          {/* Thailand routes with MailerLite */}
-          <Route element={<MailerLiteLayout />}>
+          {/* Thailand routes */}
             <Route path="/thailand" element={<Thailand />} />
             <Route path="/bangkok" element={<Bangkok />} />
             <Route path="/pattaya" element={<Pattaya />} />
@@ -361,9 +360,7 @@ const App = () => (
             <Route path="/phuket/city-tour-krabi" element={<PhuketCityTourKrabi />} />
             <Route path="/phuket/krabi-city-tour" element={<PhuketKrabiCityTour />} />
             <Route path="/thailand/transfers" element={<ThailandTransfers />} />
-          </Route>
-          {/* Dubai routes with MailerLite */}
-          <Route element={<MailerLiteLayout />}>
+          {/* Dubai routes */}
             <Route path="/blog/best-dubai-activities" element={<BlogBestDubaiActivities />} />
             <Route path="/dubai-smart-guides" element={<DubaiSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-dubai" element={<BlogDubaiAirportTransfer />} />
@@ -404,9 +401,7 @@ const App = () => (
             <Route path="/dubai/airport-dropoff-zone4" element={<DubaiAirportDropoffZone4 />} />
             <Route path="/dubai/airport-pickup-zone5" element={<DubaiAirportPickupZone5 />} />
             <Route path="/dubai/airport-dropoff-zone5" element={<DubaiAirportDropoffZone5 />} />
-          </Route>
-          {/* Singapore routes with MailerLite */}
-          <Route element={<MailerLiteLayout />}>
+          {/* Singapore routes */}
             <Route path="/singapore-smart-guides" element={<SingaporeSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-singapore" element={<BlogSingaporeAirportTransfer />} />
             <Route path="/blog/sentosa-activities-singapore" element={<BlogSentosaActivities />} />
@@ -438,7 +433,6 @@ const App = () => (
             <Route path="/singapore/airport-pickup" element={<SingaporeAirportPickup />} />
             <Route path="/singapore/airport-dropoff" element={<SingaporeAirportDropoff />} />
             <Route path="/singapore/airport-night-pickup" element={<SingaporeAirportNightPickup />} />
-          </Route>
           <Route path="/auth" element={<Auth />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/my-bookings" element={<MyBookings />} />
@@ -456,10 +450,7 @@ const App = () => (
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
-          {/* Tour Packages with MailerLite for booking popup */}
-          <Route element={<MailerLiteLayout />}>
-            <Route path="/tour-packages" element={<TourPackages />} />
-          </Route>
+          <Route path="/tour-packages" element={<TourPackages />} />
           <Route path="/routes-health-check" element={<RoutesHealthCheck />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

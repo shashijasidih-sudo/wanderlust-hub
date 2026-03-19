@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
                 <li>Communicate with you about your reservations, cancellations, modifications, and travel-related inquiries</li>
                 <li>Process payments securely through our payment partners (Razorpay)</li>
                 <li>Provide customer support via email, phone, and WhatsApp</li>
-                <li>Send promotional offers, newsletters, and travel inspiration (only with your consent, managed via MailerLite)</li>
+                <li>Send promotional offers, newsletters, and travel inspiration (only with your consent)</li>
                 <li>Improve our website, tour offerings, and overall user experience</li>
                 <li>Maintain your wishlist and shopping cart across sessions</li>
                 <li>Comply with legal and regulatory obligations under Indian and international law</li>
@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
                 <li><strong className="text-foreground">Tour Operators & Guides:</strong> Local tour operators in Thailand, Singapore, Dubai, and other destinations who fulfil the booked activities</li>
                 <li><strong className="text-foreground">Private Transfer Providers:</strong> Vehicle and driver services for airport pickups, drop-offs, and intercity transfers</li>
                 <li><strong className="text-foreground">Payment Processors:</strong> Razorpay and associated banking partners for secure payment processing</li>
-                <li><strong className="text-foreground">Email & Marketing:</strong> MailerLite for newsletters (only if you've opted in)</li>
+                <li><strong className="text-foreground">Email & Marketing:</strong> Newsletter and promotional email services (only if you've opted in)</li>
                 <li><strong className="text-foreground">Hosting & Infrastructure:</strong> Supabase for secure data storage and authentication</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
