@@ -250,6 +250,7 @@ const App = () => (
             <Route path="/selfie-tigers" element={<SelfieWithTigers />} />
             <Route path="/elephant-safari" element={<ElephantSafari />} />
             <Route path="/hot-spring" element={<HotSpringEmeralPool />} />
+            <Route path="/hot-spring-emerald-pool" element={<HotSpringEmeralPool />} />
             <Route path="/bangkok-skywalk" element={<BangkokSkywalk />} />
             <Route path="/massage-coupons" element={<MassageCoupons />} />
             <Route path="/bangkok-three-temples" element={<BangkokThreeTemples />} />
