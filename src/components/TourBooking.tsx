@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import Header from "./Header";
