@@ -1,12 +1,15 @@
-import { Calendar } from "lucide-react";
+import { Calendar as CalendarIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { useState, useEffect } from "react";
+import { format } from "date-fns";
 import heroImage1 from "@/assets/hero-thailand-beach.jpg";
 import heroImage2 from "@/assets/hero-thailand-temple.jpg";
 import heroImage3 from "@/assets/hero-thailand-adventure.jpg";
 import heroImage4 from "@/assets/hero-thailand-island.jpg";
 import { useNavigate } from "react-router-dom";
+import { cn } from "@/lib/utils";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import {
   Select,
   SelectContent,
