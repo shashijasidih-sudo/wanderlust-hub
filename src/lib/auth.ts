@@ -22,6 +22,7 @@ export const auth = {
     return {
       id: data.user.id,
       email: data.user.email!,
+      full_name: data.user.user_metadata?.full_name,
     };
   },
 
@@ -37,6 +38,7 @@ export const auth = {
     const user: AppUser = {
       id: data.user.id,
       email: data.user.email!,
+      full_name: data.user.user_metadata?.full_name,
     };
     notify(user);
     return user;
@@ -100,6 +102,7 @@ export function useAuth() {
         setUser({
           id: data.user.id,
           email: data.user.email!,
+          full_name: data.user.user_metadata?.full_name,
         });
       }
     });
@@ -110,6 +113,7 @@ export function useAuth() {
           const newUser = {
             id: session.user.id,
             email: session.user.email!,
+            full_name: session.user.user_metadata?.full_name,
           };
           setUser(newUser);
           notify(newUser);
