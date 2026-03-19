@@ -1,5 +1,5 @@
-// Lightweight auth state manager (placeholder for future backend)
 import { useState, useEffect, useCallback } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 export interface AppUser {
   id: string;
@@ -9,74 +9,126 @@ export interface AppUser {
 
 type AuthListener = (user: AppUser | null) => void;
 
-const AUTH_KEY = "app_user";
 const listeners: Set<AuthListener> = new Set();
 
-function getStoredUser(): AppUser | null {
-  try {
-    const raw = localStorage.getItem(AUTH_KEY);
-    return raw ? JSON.parse(raw) : null;
-  } catch {
-    return null;
-  }
-}
-
-function setStoredUser(user: AppUser | null) {
-  if (user) {
-    localStorage.setItem(AUTH_KEY, JSON.stringify(user));
-  } else {
-    localStorage.removeItem(AUTH_KEY);
-  }
+function notify(user: AppUser | null) {
   listeners.forEach((fn) => fn(user));
 }
 
 export const auth = {
-  getUser: (): AppUser | null => getStoredUser(),
+  getUser: async (): Promise<AppUser | null> => {
+    const { data } = await supabase.auth.getUser();
+    if (!data.user) return null;
+    return {
+      id: data.user.id,
+      email: data.user.email!,
+    };
+  },
 
-  signInWithPassword: async (email: string, _password: string): Promise<AppUser> => {
-    // Placeholder — replace with real /api/auth/login
-    const user: AppUser = { id: crypto.randomUUID(), email };
-    setStoredUser(user);
+  signInWithPassword: async (
+    email: string,
+    password: string
+  ): Promise<AppUser> => {
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+    if (error) throw error;
+    const user: AppUser = {
+      id: data.user.id,
+      email: data.user.email!,
+    };
+    notify(user);
     return user;
   },
 
-  signUp: async (email: string, _password: string, fullName: string): Promise<AppUser> => {
-    const user: AppUser = { id: crypto.randomUUID(), email, full_name: fullName };
-    setStoredUser(user);
+  signUp: async (
+    email: string,
+    password: string,
+    fullName: string
+  ): Promise<AppUser> => {
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: {
+          full_name: fullName,
+        },
+      },
+    });
+    if (error) throw error;
+    const user: AppUser = {
+      id: data.user?.id || "",
+      email,
+      full_name: fullName,
+    };
+    notify(user);
     return user;
   },
 
   signInWithGoogle: async () => {
-    // Placeholder — would redirect to /api/auth/google
-    console.log("Google OAuth placeholder");
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+    });
+    if (error) throw error;
   },
 
-  resetPassword: async (_email: string) => {
-    // Placeholder — POST /api/auth/reset-password
-    console.log("Password reset placeholder");
+  resetPassword: async (email: string) => {
+    const { error } = await supabase.auth.resetPasswordForEmail(email);
+    if (error) throw error;
   },
 
-  signOut: () => {
-    setStoredUser(null);
+  signOut: async () => {
+    await supabase.auth.signOut();
+    notify(null);
   },
 
   onAuthStateChange: (fn: AuthListener) => {
     listeners.add(fn);
-    return () => { listeners.delete(fn); };
+    return () => {
+      listeners.delete(fn);
+    };
   },
 };
 
-/** React hook for auth state */
 export function useAuth() {
-  const [user, setUser] = useState<AppUser | null>(auth.getUser());
+  const [user, setUser] = useState<AppUser | null>(null);
 
   useEffect(() => {
-    setUser(auth.getUser());
-    const unsub = auth.onAuthStateChange(setUser);
-    return unsub;
+    supabase.auth.getUser().then(({ data }) => {
+      if (data.user) {
+        setUser({
+          id: data.user.id,
+          email: data.user.email!,
+        });
+      }
+    });
+
+    const { data: listener } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        if (session?.user) {
+          const newUser = {
+            id: session.user.id,
+            email: session.user.email!,
+          };
+          setUser(newUser);
+          notify(newUser);
+        } else {
+          setUser(null);
+          notify(null);
+        }
+      }
+    );
+
+    return () => {
+      listener.subscription.unsubscribe();
+    };
   }, []);
 
-  const logout = useCallback(() => auth.signOut(), []);
+  const logout = useCallback(async () => {
+    await supabase.auth.signOut();
+    setUser(null);
+  }, []);
 
   return { user, logout };
 }
