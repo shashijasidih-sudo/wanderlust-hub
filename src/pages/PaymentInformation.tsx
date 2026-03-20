@@ -10,11 +10,11 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useCart } from "@/contexts/CartContext";
 import { useAuth } from "@/lib/auth";
-import { api } from "@/lib/api";
+import { supabase } from "@/lib/supabaseClient";
 import { toast } from "sonner";
 import { CreditCard, QrCode } from "lucide-react";
 
-const RAZORPAY_KEY_ID = "rzp_live_S3jB95uYSfEaEf";
+const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
 
 declare global {
   interface Window { Razorpay: any; }
