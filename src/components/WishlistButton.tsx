@@ -85,7 +85,7 @@ const WishlistButton = ({ tourSlug, tourName, tourImage, tourPrice, className, s
       disabled={isLoading}
       className={cn("rounded-full bg-white/80 hover:bg-white transition-colors", size === "sm" ? "h-8 w-8" : "h-10 w-10", className)}
     >
-      <Heart style={{ color: "red", fill: isWishlisted ? "red" : "none" }} className={cn(size === "sm" ? "h-4 w-4" : "h-5 w-5")} />
+      <Heart style={{ color: "red", fill: "red" }} className={cn(size === "sm" ? "h-4 w-4" : "h-5 w-5")} />
     </Button>
   );
 };
