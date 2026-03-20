@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useAuth } from "@/lib/auth";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
+import { supabase } from "@/lib/supabaseClient";
 import { addToWishlist, removeFromWishlist, isInWishlist } from "@/services/wishlist";
 
 interface WishlistButtonProps {
@@ -18,22 +18,43 @@ interface WishlistButtonProps {
 const WishlistButton = ({ tourSlug, tourName, tourImage, tourPrice, className, size = "default" }: WishlistButtonProps) => {
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const { user } = useAuth();
+  const [isReady, setIsReady] = useState(false);
+  const [userId, setUserId] = useState<string | null>(null);
   const { toast } = useToast();
 
   useEffect(() => {
-    if (user && tourSlug) {
-      isInWishlist(tourSlug).then(setIsWishlisted);
-    } else {
-      setIsWishlisted(false);
-    }
-  }, [tourSlug, user]);
+    const init = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      const uid = session?.user?.id ?? null;
+      setUserId(uid);
+      setIsReady(true);
+
+      if (uid && tourSlug) {
+        isInWishlist(tourSlug).then(setIsWishlisted);
+      }
+    };
+    init();
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      const uid = session?.user?.id ?? null;
+      setUserId(uid);
+      if (uid && tourSlug) {
+        isInWishlist(tourSlug).then(setIsWishlisted);
+      } else {
+        setIsWishlisted(false);
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, [tourSlug]);
 
   const handleToggleWishlist = async (e: React.MouseEvent) => {
     e.stopPropagation();
     e.preventDefault();
 
-    if (!user) {
+    if (!isReady) return;
+
+    if (!userId) {
       toast({ title: "Please log in", description: "You need to be logged in to save tours to your wishlist.", variant: "destructive" });
       return;
     }
