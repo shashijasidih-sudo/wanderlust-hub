@@ -13,6 +13,7 @@ import { useAuth } from "@/lib/auth";
 import { supabase } from "@/lib/supabaseClient";
 import { toast } from "sonner";
 import { CreditCard, QrCode } from "lucide-react";
+import { saveBooking } from "@/services/bookings";
 
 const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
 
