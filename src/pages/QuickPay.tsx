@@ -49,13 +49,17 @@ const QuickPay = () => {
 
       let order: any;
       try {
-        order = await api.createRazorpayOrder({
-          amount: totalAmountPaise, currency: "INR",
-          customer_name: name.trim(), customer_email: email.trim(),
-          services: description.trim() || "Quick Payment",
-          booking_date: new Date().toISOString().split("T")[0],
-          city: "Direct Payment", pickup_time: "",
+        const { data, error } = await supabase.functions.invoke('create-razorpay-order', {
+          body: {
+            amount: totalAmountPaise, currency: "INR",
+            customer_name: name.trim(), customer_email: email.trim(),
+            services: description.trim() || "Quick Payment",
+            booking_date: new Date().toISOString().split("T")[0],
+            city: "Direct Payment", pickup_time: "",
+          },
         });
+        if (error) throw error;
+        order = data;
       } catch {
         toast.error("Failed to create payment order. Please try again.");
         setIsProcessing(false); return;
