@@ -85,7 +85,7 @@ const PaymentInformation = () => {
       // Create Razorpay order via Edge Function
       let order: any;
       try {
-        const { data, error } = await supabase.functions.invoke('create-razorpay-order', {
+        const { data, error } = await supabase.functions.invoke('create-order', {
           body: {
             amount: totalAmountPaise, currency: "INR",
             customer_name: customerInfo?.customerName || user.full_name || "Guest",
