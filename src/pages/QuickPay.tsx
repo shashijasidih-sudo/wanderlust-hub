@@ -7,9 +7,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { CreditCard, ShieldCheck } from "lucide-react";
-import { api } from "@/lib/api";
+import { supabase } from "@/lib/supabaseClient";
 
-const RAZORPAY_KEY_ID = "rzp_live_S3jB95uYSfEaEf";
+const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
 
 declare global {
   interface Window { Razorpay: any; }
