@@ -106,8 +106,8 @@ const PaymentInformation = () => {
       }
 
       const options = {
-        key: RAZORPAY_KEY_ID,
-        amount: totalAmountPaise,
+        key: "rzp_live_STVnS52vFJiowF",
+        amount: order.amount,
         currency: "INR",
         order_id: order.id,
         name: "Yellodae Tours",
