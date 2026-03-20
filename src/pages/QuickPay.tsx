@@ -49,7 +49,7 @@ const QuickPay = () => {
 
       let order: any;
       try {
-        const { data, error } = await supabase.functions.invoke('create-razorpay-order', {
+        const { data, error } = await supabase.functions.invoke('create-order', {
           body: {
             amount: totalAmountPaise, currency: "INR",
             customer_name: name.trim(), customer_email: email.trim(),
