@@ -7,9 +7,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { CreditCard, ShieldCheck } from "lucide-react";
-import { api } from "@/lib/api";
+import { supabase } from "@/lib/supabaseClient";
 
-const RAZORPAY_KEY_ID = "rzp_live_S3jB95uYSfEaEf";
+const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
 
 declare global {
   interface Window { Razorpay: any; }
@@ -49,13 +49,17 @@ const QuickPay = () => {
 
       let order: any;
       try {
-        order = await api.createRazorpayOrder({
-          amount: totalAmountPaise, currency: "INR",
-          customer_name: name.trim(), customer_email: email.trim(),
-          services: description.trim() || "Quick Payment",
-          booking_date: new Date().toISOString().split("T")[0],
-          city: "Direct Payment", pickup_time: "",
+        const { data, error } = await supabase.functions.invoke('create-razorpay-order', {
+          body: {
+            amount: totalAmountPaise, currency: "INR",
+            customer_name: name.trim(), customer_email: email.trim(),
+            services: description.trim() || "Quick Payment",
+            booking_date: new Date().toISOString().split("T")[0],
+            city: "Direct Payment", pickup_time: "",
+          },
         });
+        if (error) throw error;
+        order = data;
       } catch {
         toast.error("Failed to create payment order. Please try again.");
         setIsProcessing(false); return;

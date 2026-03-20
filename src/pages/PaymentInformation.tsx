@@ -10,11 +10,11 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useCart } from "@/contexts/CartContext";
 import { useAuth } from "@/lib/auth";
-import { api } from "@/lib/api";
+import { supabase } from "@/lib/supabaseClient";
 import { toast } from "sonner";
 import { CreditCard, QrCode } from "lucide-react";
 
-const RAZORPAY_KEY_ID = "rzp_live_S3jB95uYSfEaEf";
+const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
 
 declare global {
   interface Window { Razorpay: any; }
@@ -81,15 +81,19 @@ const PaymentInformation = () => {
       const city = firstItem?.slug?.split("/")[0] || "";
       const pickupTime = firstItem?.itemType === 'activity' ? firstItem.selectedTime || "" : firstItem?.pickupTime || "";
 
-      // Create Razorpay order via placeholder API
+      // Create Razorpay order via Edge Function
       let order: any;
       try {
-        order = await api.createRazorpayOrder({
-          amount: totalAmountPaise, currency: "INR",
-          customer_name: customerInfo?.customerName || user.full_name || "Guest",
-          customer_email: customerInfo?.email || user.email || "",
-          services, booking_date: bookingDate, city, pickup_time: pickupTime,
+        const { data, error } = await supabase.functions.invoke('create-razorpay-order', {
+          body: {
+            amount: totalAmountPaise, currency: "INR",
+            customer_name: customerInfo?.customerName || user.full_name || "Guest",
+            customer_email: customerInfo?.email || user.email || "",
+            services, booking_date: bookingDate, city, pickup_time: pickupTime,
+          },
         });
+        if (error) throw error;
+        order = data;
       } catch {
         toast.error("Failed to create payment order. Please try again.");
         setIsProcessing(false); return;
