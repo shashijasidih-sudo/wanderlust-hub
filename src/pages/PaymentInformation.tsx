@@ -66,89 +66,96 @@ const PaymentInformation = () => {
   const handlePayment = async () => {
     setIsProcessing(true);
     try {
-      if (!user) {
-        toast.error("Please login to complete booking");
-        navigate("/auth"); setIsProcessing(false); return;
-      }
+      const response = await fetch(
+        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/create-order",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            amount: Math.round(getCartTotal() * 100),
+          }),
+        }
+      );
 
-      const totalAmountPaise = Math.round(getCartTotal() * 100);
+      const data = await response.json();
 
-      let data: any;
-      try {
-        const { data: orderData, error } = await supabase.functions.invoke('create-order', {
-          body: { amount: totalAmountPaise, currency: "INR" },
-        });
-        if (error) throw error;
-        data = orderData;
-      } catch (err) {
-        console.error("Order creation failed:", err);
-        toast.error("Order creation failed. Please try again.");
+      if (!response.ok) {
+        console.error("Order error:", data);
+        toast.error("Failed to create payment order");
         setIsProcessing(false);
         return;
       }
 
-      if (!data?.id) {
-        console.error("No order ID returned:", data);
-        toast.error("Order creation failed. Please try again.");
-        setIsProcessing(false);
-        return;
-      }
+      console.log("Order created:", data);
 
       const options = {
         key: "rzp_live_STVnS52vFJiowF",
         amount: data.amount,
         currency: "INR",
+        name: "Yellodae",
+        description: "Booking Payment",
         order_id: data.id,
-        name: "Yellodae Tours",
-        description: `Booking for ${cartItems.length} item(s)`,
-        prefill: {
-          name: customerInfo?.customerName || "",
-          email: customerInfo?.email || "",
-          contact: customerInfo?.phone || "",
-        },
-        theme: { color: "#f97316" },
-        handler: async function (response: any) {
-          try {
-            const firstItem = cartItems[0];
-            const bookingDate = firstItem?.itemType === 'activity' ? firstItem.selectedDate || "" : firstItem?.pickupDate || "";
-            const city = firstItem?.slug?.split("/")[0] || "";
-            const pickupTime = firstItem?.itemType === 'activity' ? firstItem.selectedTime || "" : firstItem?.pickupTime || "";
 
-            await saveBooking({
-              user_id: user!.id,
-              customer_name: customerInfo?.customerName || user!.full_name || "Guest",
-              customer_email: customerInfo?.email || user!.email || "",
-              customer_phone: customerInfo?.phone || "",
-              razorpay_payment_id: response.razorpay_payment_id,
-              razorpay_order_id: response.razorpay_order_id || data.id,
-              amount: getCartTotal(),
-              currency: "INR",
-              status: "confirmed",
-              items: cartItems.map(item => ({
-                title: item.title, price: item.price, slug: item.slug,
-                itemType: item.itemType, quantity: item.quantity || 1,
-                adults: item.adults, children: item.children,
-                selectedDate: item.selectedDate, selectedTime: item.selectedTime,
-                pickupDate: item.pickupDate, pickupTime: item.pickupTime,
-                pickupLocation: item.pickupLocation, vehicleName: item.vehicleName,
-              })),
-              booking_date: bookingDate, city, pickup_time: pickupTime,
-            });
+        handler: async function (response: any) {
+          console.log("Payment success:", response);
+
+          try {
+            if (user) {
+              const firstItem = cartItems[0];
+              const bookingDate = firstItem?.itemType === 'activity' ? firstItem.selectedDate || "" : firstItem?.pickupDate || "";
+              const city = firstItem?.slug?.split("/")[0] || "";
+              const pickupTime = firstItem?.itemType === 'activity' ? firstItem.selectedTime || "" : firstItem?.pickupTime || "";
+
+              await saveBooking({
+                user_id: user.id,
+                customer_name: customerInfo?.customerName || user.full_name || "Guest",
+                customer_email: customerInfo?.email || user.email || "",
+                customer_phone: customerInfo?.phone || "",
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_order_id: response.razorpay_order_id || data.id,
+                amount: getCartTotal(),
+                currency: "INR",
+                status: "confirmed",
+                items: cartItems.map(item => ({
+                  title: item.title, price: item.price, slug: item.slug,
+                  itemType: item.itemType, quantity: item.quantity || 1,
+                  adults: item.adults, children: item.children,
+                  selectedDate: item.selectedDate, selectedTime: item.selectedTime,
+                  pickupDate: item.pickupDate, pickupTime: item.pickupTime,
+                  pickupLocation: item.pickupLocation, vehicleName: item.vehicleName,
+                })),
+                booking_date: bookingDate, city, pickup_time: pickupTime,
+              });
+            }
           } catch (err) {
             console.error("Failed to save booking:", err);
           }
+
           clearCart();
           sessionStorage.removeItem("customerInfo");
           toast.success("Payment successful!");
           navigate("/booking-confirmed");
         },
+
+        prefill: {
+          name: customerInfo?.customerName || "",
+          email: customerInfo?.email || "",
+          contact: customerInfo?.phone || "",
+        },
+
+        theme: {
+          color: "#3399cc",
+        },
+
         modal: { ondismiss: () => setIsProcessing(false) },
       };
 
       const rzp = new (window as any).Razorpay(options);
       rzp.open();
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+      console.error("Payment error:", error);
       toast.error("Something went wrong");
       setIsProcessing(false);
     }
