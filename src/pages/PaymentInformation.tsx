@@ -13,6 +13,7 @@ import { useAuth } from "@/lib/auth";
 import { supabase } from "@/lib/supabaseClient";
 import { toast } from "sonner";
 import { CreditCard, QrCode } from "lucide-react";
+import { saveBooking } from "@/services/bookings";
 
 const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
 
@@ -117,7 +118,40 @@ const PaymentInformation = () => {
           contact: customerInfo?.phone || "",
         },
         theme: { color: "#f97316" },
-        handler: async function (response: { razorpay_payment_id: string }) {
+        handler: async function (response: { razorpay_payment_id: string; razorpay_order_id?: string }) {
+          try {
+            await saveBooking({
+              user_id: user!.id,
+              customer_name: customerInfo?.customerName || user!.full_name || "Guest",
+              customer_email: customerInfo?.email || user!.email || "",
+              customer_phone: customerInfo?.phone || "",
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_order_id: response.razorpay_order_id || order.id,
+              amount: getCartTotal(),
+              currency: "INR",
+              status: "confirmed",
+              items: cartItems.map(item => ({
+                title: item.title,
+                price: item.price,
+                slug: item.slug,
+                itemType: item.itemType,
+                quantity: item.quantity || 1,
+                adults: item.adults,
+                children: item.children,
+                selectedDate: item.selectedDate,
+                selectedTime: item.selectedTime,
+                pickupDate: item.pickupDate,
+                pickupTime: item.pickupTime,
+                pickupLocation: item.pickupLocation,
+                vehicleName: item.vehicleName,
+              })),
+              booking_date: bookingDate,
+              city,
+              pickup_time: pickupTime,
+            });
+          } catch (err) {
+            console.error("Failed to save booking:", err);
+          }
           clearCart();
           sessionStorage.removeItem("customerInfo");
           toast.success("Payment successful!");
