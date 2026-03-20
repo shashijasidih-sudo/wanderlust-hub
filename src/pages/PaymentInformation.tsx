@@ -73,23 +73,23 @@ const PaymentInformation = () => {
 
       const totalAmountPaise = Math.round(getCartTotal() * 100);
 
-      const res = await fetch(
-        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/create-order",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            amount: totalAmountPaise,
-          }),
-        }
-      );
+      let data: any;
+      try {
+        const { data: orderData, error } = await supabase.functions.invoke('create-order', {
+          body: { amount: totalAmountPaise, currency: "INR" },
+        });
+        if (error) throw error;
+        data = orderData;
+      } catch (err) {
+        console.error("Order creation failed:", err);
+        toast.error("Order creation failed. Please try again.");
+        setIsProcessing(false);
+        return;
+      }
 
-      const data = await res.json();
-      if (!res.ok) {
-        console.error(data);
-        toast.error("Order creation failed");
+      if (!data?.id) {
+        console.error("No order ID returned:", data);
+        toast.error("Order creation failed. Please try again.");
         setIsProcessing(false);
         return;
       }
