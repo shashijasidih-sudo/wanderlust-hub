@@ -8,6 +8,7 @@ import { Loader2, CalendarDays, Search, Users, XCircle, ArrowUpDown, Download } 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { format, isWithinInterval, parseISO } from "date-fns";
+import { supabase } from "@/lib/supabaseClient";
 import { useToast } from "@/hooks/use-toast";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import {
