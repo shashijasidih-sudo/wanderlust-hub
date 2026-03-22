@@ -104,33 +104,22 @@ const PaymentInformation = () => {
           console.log("Payment success:", response);
 
           try {
-            if (user) {
-              const firstItem = cartItems[0];
-              const bookingDate = firstItem?.itemType === 'activity' ? firstItem.selectedDate || "" : firstItem?.pickupDate || "";
-              const city = firstItem?.slug?.split("/")[0] || "";
-              const pickupTime = firstItem?.itemType === 'activity' ? firstItem.selectedTime || "" : firstItem?.pickupTime || "";
-
-              await saveBooking({
-                user_id: user.id,
-                customer_name: customerInfo?.customerName || user.full_name || "Guest",
-                customer_email: customerInfo?.email || user.email || "",
-                customer_phone: customerInfo?.phone || "",
-                razorpay_payment_id: response.razorpay_payment_id,
-                razorpay_order_id: response.razorpay_order_id || data.id,
-                amount: getCartTotal(),
-                currency: "INR",
-                status: "confirmed",
-                items: cartItems.map(item => ({
-                  title: item.title, price: item.price, slug: item.slug,
-                  itemType: item.itemType, quantity: item.quantity || 1,
-                  adults: item.adults, children: item.children,
-                  selectedDate: item.selectedDate, selectedTime: item.selectedTime,
-                  pickupDate: item.pickupDate, pickupTime: item.pickupTime,
-                  pickupLocation: item.pickupLocation, vehicleName: item.vehicleName,
-                })),
-                booking_date: bookingDate, city, pickup_time: pickupTime,
-              });
-            }
+            await fetch(
+              "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/save-booking",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
+                  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
+                },
+                body: JSON.stringify({
+                  payment_id: response.razorpay_payment_id,
+                  order_id: response.razorpay_order_id,
+                  amount: Math.round(getCartTotal() * 100),
+                }),
+              }
+            );
           } catch (err) {
             console.error("Failed to save booking:", err);
           }
