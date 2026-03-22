@@ -91,11 +91,11 @@ const BookingHistory = () => {
     if (statusFilter !== "all") result = result.filter(b => b.status === statusFilter);
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
-      result = result.filter(b => b.tour_name.toLowerCase().includes(q) || b.contact_name.toLowerCase().includes(q));
+      result = result.filter(b => b.customer_name?.toLowerCase().includes(q) || b.description?.toLowerCase().includes(q) || b.payment_id?.toLowerCase().includes(q));
     }
     if (dateFrom || dateTo) {
       result = result.filter(b => {
-        const d = parseISO(b.tour_date);
+        const d = parseISO(b.created_at);
         if (dateFrom && dateTo) return isWithinInterval(d, { start: dateFrom, end: dateTo });
         if (dateFrom) return d >= dateFrom;
         if (dateTo) return d <= dateTo;
