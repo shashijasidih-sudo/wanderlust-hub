@@ -104,9 +104,8 @@ const BookingHistory = () => {
     }
     result.sort((a, b) => {
       let cmp = 0;
-      if (sortField === "total_price") cmp = a.total_price - b.total_price;
-      else if (sortField === "tour_name") cmp = a.tour_name.localeCompare(b.tour_name);
-      else if (sortField === "tour_date") cmp = new Date(a.tour_date).getTime() - new Date(b.tour_date).getTime();
+      if (sortField === "amount") cmp = a.amount - b.amount;
+      else if (sortField === "customer_name") cmp = (a.customer_name || "").localeCompare(b.customer_name || "");
       else cmp = new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
       return sortDir === "asc" ? cmp : -cmp;
     });
