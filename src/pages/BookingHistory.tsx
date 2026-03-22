@@ -24,15 +24,14 @@ import { Calendar } from "@/components/ui/calendar";
 
 interface Booking {
   id: string;
-  tour_name: string;
-  tour_slug: string;
-  tour_date: string;
-  adults: number;
-  children: number;
-  total_price: number;
-  currency: string;
-  status: "pending" | "confirmed" | "cancelled" | "completed";
-  contact_name: string;
+  payment_id: string;
+  order_id: string;
+  amount: number;
+  customer_name: string;
+  customer_email: string;
+  customer_phone: string;
+  description: string;
+  status: string;
   created_at: string;
 }
 
