@@ -129,12 +129,13 @@ const BookingHistory = () => {
   const handleDownloadReceipt = (booking: Booking) => {
     const receipt = [
       "YELLODAE TOURS - BOOKING RECEIPT", "================================",
-      `Booking ID: ${booking.id}`, `Tour: ${booking.tour_name}`,
-      `Date: ${format(new Date(booking.tour_date), "MMM dd, yyyy")}`,
-      `Adults: ${booking.adults}`, `Children: ${booking.children}`,
-      `Total: ${formatPrice(booking.total_price)}`, `Status: ${booking.status.toUpperCase()}`,
+      `Booking ID: ${booking.id}`, `Payment ID: ${booking.payment_id}`,
+      `Description: ${booking.description || "Quick Payment"}`,
+      `Amount: ₹${(booking.amount / 100).toLocaleString()}`,
+      `Status: ${(booking.status || "confirmed").toUpperCase()}`,
       `Booked on: ${format(new Date(booking.created_at), "MMM dd, yyyy")}`,
-      `Contact: ${booking.contact_name}`, "================================",
+      `Customer: ${booking.customer_name}`, `Email: ${booking.customer_email}`,
+      `Phone: ${booking.customer_phone}`, "================================",
       "Thank you for choosing Yellodae Tours!",
     ].join("\n");
     const blob = new Blob([receipt], { type: "text/plain" });
