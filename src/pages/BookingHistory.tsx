@@ -43,7 +43,7 @@ const statusColors: Record<string, string> = {
 };
 
 type StatusFilter = "all" | "pending" | "confirmed" | "cancelled" | "completed";
-type SortField = "created_at" | "tour_date" | "total_price" | "tour_name";
+type SortField = "created_at" | "amount" | "customer_name";
 type SortDir = "asc" | "desc";
 
 const BookingHistory = () => {
