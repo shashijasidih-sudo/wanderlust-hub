@@ -8,6 +8,7 @@ import { Loader2, CalendarDays, Search, Users, XCircle, ArrowUpDown, Download } 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { format, isWithinInterval, parseISO } from "date-fns";
+import { supabase } from "@/lib/supabaseClient";
 import { useToast } from "@/hooks/use-toast";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import {
@@ -24,15 +25,14 @@ import { Calendar } from "@/components/ui/calendar";
 
 interface Booking {
   id: string;
-  tour_name: string;
-  tour_slug: string;
-  tour_date: string;
-  adults: number;
-  children: number;
-  total_price: number;
-  currency: string;
-  status: "pending" | "confirmed" | "cancelled" | "completed";
-  contact_name: string;
+  payment_id: string;
+  order_id: string;
+  amount: number;
+  customer_name: string;
+  customer_email: string;
+  customer_phone: string;
+  description: string;
+  status: string;
   created_at: string;
 }
 
@@ -44,7 +44,7 @@ const statusColors: Record<string, string> = {
 };
 
 type StatusFilter = "all" | "pending" | "confirmed" | "cancelled" | "completed";
-type SortField = "created_at" | "tour_date" | "total_price" | "tour_name";
+type SortField = "created_at" | "amount" | "customer_name";
 type SortDir = "asc" | "desc";
 
 const BookingHistory = () => {
@@ -64,9 +64,21 @@ const BookingHistory = () => {
 
   useEffect(() => {
     if (!user) { navigate("/auth"); return; }
-    // Placeholder — GET /api/bookings?user_id=...
-    setBookings([]);
-    setIsLoading(false);
+    const fetchBookings = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("bookings")
+          .select("*")
+          .order("created_at", { ascending: false });
+        if (error) throw error;
+        setBookings(data || []);
+      } catch (err) {
+        console.error("Failed to fetch bookings:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchBookings();
   }, [user, navigate]);
 
   const toggleSort = (field: SortField) => {
@@ -79,11 +91,11 @@ const BookingHistory = () => {
     if (statusFilter !== "all") result = result.filter(b => b.status === statusFilter);
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
-      result = result.filter(b => b.tour_name.toLowerCase().includes(q) || b.contact_name.toLowerCase().includes(q));
+      result = result.filter(b => b.customer_name?.toLowerCase().includes(q) || b.description?.toLowerCase().includes(q) || b.payment_id?.toLowerCase().includes(q));
     }
     if (dateFrom || dateTo) {
       result = result.filter(b => {
-        const d = parseISO(b.tour_date);
+        const d = parseISO(b.created_at);
         if (dateFrom && dateTo) return isWithinInterval(d, { start: dateFrom, end: dateTo });
         if (dateFrom) return d >= dateFrom;
         if (dateTo) return d <= dateTo;
@@ -92,9 +104,8 @@ const BookingHistory = () => {
     }
     result.sort((a, b) => {
       let cmp = 0;
-      if (sortField === "total_price") cmp = a.total_price - b.total_price;
-      else if (sortField === "tour_name") cmp = a.tour_name.localeCompare(b.tour_name);
-      else if (sortField === "tour_date") cmp = new Date(a.tour_date).getTime() - new Date(b.tour_date).getTime();
+      if (sortField === "amount") cmp = a.amount - b.amount;
+      else if (sortField === "customer_name") cmp = (a.customer_name || "").localeCompare(b.customer_name || "");
       else cmp = new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
       return sortDir === "asc" ? cmp : -cmp;
     });
@@ -118,12 +129,13 @@ const BookingHistory = () => {
   const handleDownloadReceipt = (booking: Booking) => {
     const receipt = [
       "YELLODAE TOURS - BOOKING RECEIPT", "================================",
-      `Booking ID: ${booking.id}`, `Tour: ${booking.tour_name}`,
-      `Date: ${format(new Date(booking.tour_date), "MMM dd, yyyy")}`,
-      `Adults: ${booking.adults}`, `Children: ${booking.children}`,
-      `Total: ${formatPrice(booking.total_price)}`, `Status: ${booking.status.toUpperCase()}`,
+      `Booking ID: ${booking.id}`, `Payment ID: ${booking.payment_id}`,
+      `Description: ${booking.description || "Quick Payment"}`,
+      `Amount: ₹${(booking.amount / 100).toLocaleString()}`,
+      `Status: ${(booking.status || "confirmed").toUpperCase()}`,
       `Booked on: ${format(new Date(booking.created_at), "MMM dd, yyyy")}`,
-      `Contact: ${booking.contact_name}`, "================================",
+      `Customer: ${booking.customer_name}`, `Email: ${booking.customer_email}`,
+      `Phone: ${booking.customer_phone}`, "================================",
       "Thank you for choosing Yellodae Tours!",
     ].join("\n");
     const blob = new Blob([receipt], { type: "text/plain" });
@@ -166,7 +178,7 @@ const BookingHistory = () => {
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input placeholder="Search by tour or contact name..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-9" />
+              <Input placeholder="Search by name, description, or payment ID..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-9" />
             </div>
             <Popover>
               <PopoverTrigger asChild>
@@ -186,20 +198,70 @@ const BookingHistory = () => {
             </Popover>
           </div>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Booking History</CardTitle>
-              <CardDescription>No bookings found. Backend not connected.</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-col items-center justify-center py-12 text-center">
-                <div className="rounded-full bg-muted p-6 mb-4"><CalendarDays className="h-12 w-12 text-muted-foreground" /></div>
-                <h3 className="text-lg font-semibold mb-2">No Bookings Yet</h3>
-                <p className="text-muted-foreground mb-6 max-w-md">You haven't made any bookings yet. Start exploring our amazing tours!</p>
-                <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
-              </div>
-            </CardContent>
-          </Card>
+          {filteredBookings.length > 0 ? (
+            <Card>
+              <CardHeader>
+                <CardTitle>Booking History</CardTitle>
+                <CardDescription>{filteredBookings.length} booking(s) found</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="overflow-x-auto">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead><SortButton field="created_at" label="Date" /></TableHead>
+                        <TableHead><SortButton field="customer_name" label="Customer" /></TableHead>
+                        <TableHead>Description</TableHead>
+                        <TableHead><SortButton field="amount" label="Amount" /></TableHead>
+                        <TableHead>Status</TableHead>
+                        <TableHead>Payment ID</TableHead>
+                        <TableHead>Actions</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {filteredBookings.map((booking) => (
+                        <TableRow key={booking.id}>
+                          <TableCell className="whitespace-nowrap">{format(new Date(booking.created_at), "MMM dd, yyyy")}</TableCell>
+                          <TableCell>
+                            <div className="font-medium">{booking.customer_name}</div>
+                            <div className="text-xs text-muted-foreground">{booking.customer_email}</div>
+                          </TableCell>
+                          <TableCell>{booking.description || "Quick Payment"}</TableCell>
+                          <TableCell className="font-semibold">₹{(booking.amount / 100).toLocaleString()}</TableCell>
+                          <TableCell>
+                            <Badge variant="outline" className={statusColors[booking.status || "confirmed"]}>
+                              {(booking.status || "confirmed").charAt(0).toUpperCase() + (booking.status || "confirmed").slice(1)}
+                            </Badge>
+                          </TableCell>
+                          <TableCell className="text-xs font-mono text-muted-foreground">{booking.payment_id?.slice(0, 16)}...</TableCell>
+                          <TableCell>
+                            <Button variant="ghost" size="sm" onClick={() => handleDownloadReceipt(booking)}>
+                              <Download className="h-4 w-4" />
+                            </Button>
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+              </CardContent>
+            </Card>
+          ) : (
+            <Card>
+              <CardHeader>
+                <CardTitle>Booking History</CardTitle>
+                <CardDescription>View and manage all your bookings</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-col items-center justify-center py-12 text-center">
+                  <div className="rounded-full bg-muted p-6 mb-4"><CalendarDays className="h-12 w-12 text-muted-foreground" /></div>
+                  <h3 className="text-lg font-semibold mb-2">No Bookings Yet</h3>
+                  <p className="text-muted-foreground mb-6 max-w-md">You haven't made any bookings yet. Start exploring our amazing tours!</p>
+                  <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
+                </div>
+              </CardContent>
+            </Card>
+          )}
         </div>
       </main>
       <Footer />
