@@ -63,9 +63,21 @@ const BookingHistory = () => {
 
   useEffect(() => {
     if (!user) { navigate("/auth"); return; }
-    // Placeholder — GET /api/bookings?user_id=...
-    setBookings([]);
-    setIsLoading(false);
+    const fetchBookings = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("bookings")
+          .select("*")
+          .order("created_at", { ascending: false });
+        if (error) throw error;
+        setBookings(data || []);
+      } catch (err) {
+        console.error("Failed to fetch bookings:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchBookings();
   }, [user, navigate]);
 
   const toggleSort = (field: SortField) => {
