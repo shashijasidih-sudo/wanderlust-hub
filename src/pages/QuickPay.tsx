@@ -49,16 +49,20 @@ const QuickPay = () => {
 
       let order: any;
       try {
-        const { data, error } = await supabase.functions.invoke('create-order', {
-          body: {
-            amount: totalAmountPaise, currency: "INR",
-            customer_name: name.trim(), customer_email: email.trim(),
-            services: description.trim() || "Quick Payment",
-            booking_date: new Date().toISOString().split("T")[0],
-            city: "Direct Payment", pickup_time: "",
-          },
-        });
-        if (error) throw error;
+        const res = await fetch(
+          "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/create-order",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
+              "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
+            },
+            body: JSON.stringify({ amount: totalAmountPaise }),
+          }
+        );
+        const data = await res.json();
+        if (!res.ok) throw new Error(data?.error || "Order creation failed");
         order = data;
       } catch {
         toast.error("Failed to create payment order. Please try again.");
