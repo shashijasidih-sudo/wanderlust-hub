@@ -403,7 +403,7 @@ const AdminDashboard = () => {
                                   <XCircle className="h-3 w-3 mr-1" /> Cancel
                                 </Button>
                               )}
-                              {(booking.status === "confirmed" || booking.status === "completed" || booking.status === "cancelled") && booking.status !== "refunded" && (
+                              {["confirmed", "completed", "cancelled"].includes(booking.status || "") && (
                                 <Button
                                   variant="outline"
                                   size="sm"
