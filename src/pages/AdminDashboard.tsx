@@ -13,9 +13,13 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
+} from "@/components/ui/select";
+import {
   Loader2, ShieldCheck, CalendarDays, CreditCard, XCircle, CheckCircle,
-  Search, Download, ArrowUpDown, BarChart3, IndianRupee, Users, Clock,
+  Search, Download, ArrowUpDown, BarChart3, IndianRupee, Users, Clock, RefreshCw,
 } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 import { format } from "date-fns";
 
 const ADMIN_EMAILS = ["admin@yellodae.com"];
@@ -33,7 +37,7 @@ interface Booking {
   created_at: string;
 }
 
-type StatusFilter = "all" | "pending" | "confirmed" | "cancelled" | "completed";
+type StatusFilter = "all" | "pending" | "confirmed" | "cancelled" | "completed" | "refunded";
 type SortField = "created_at" | "amount" | "customer_name";
 type SortDir = "asc" | "desc";
 
@@ -42,6 +46,7 @@ const statusColors: Record<string, string> = {
   confirmed: "bg-green-100 text-green-800 border-green-200",
   cancelled: "bg-red-100 text-red-800 border-red-200",
   completed: "bg-blue-100 text-blue-800 border-blue-200",
+  refunded: "bg-purple-100 text-purple-800 border-purple-200",
 };
 
 const AdminDashboard = () => {
@@ -83,15 +88,31 @@ const AdminDashboard = () => {
     const cancelled = bookings.filter(b => b.status === "cancelled").length;
     const pending = bookings.filter(b => b.status === "pending").length;
     const completed = bookings.filter(b => b.status === "completed").length;
+    const refunded = bookings.filter(b => b.status === "refunded").length;
     const totalRevenue = bookings
       .filter(b => b.status === "confirmed" || b.status === "completed")
       .reduce((sum, b) => sum + (b.amount || 0), 0);
-    return { total, confirmed, cancelled, pending, completed, totalRevenue };
+    return { total, confirmed, cancelled, pending, completed, refunded, totalRevenue };
   }, [bookings]);
 
   const toggleSort = (field: SortField) => {
     if (sortField === field) setSortDir(d => d === "asc" ? "desc" : "asc");
     else { setSortField(field); setSortDir("desc"); }
+  };
+
+  const handleStatusUpdate = async (bookingId: string, newStatus: string) => {
+    try {
+      const { error } = await supabase
+        .from("bookings")
+        .update({ status: newStatus })
+        .eq("id", bookingId);
+      if (error) throw error;
+      setBookings(prev => prev.map(b => b.id === bookingId ? { ...b, status: newStatus } : b));
+      toast({ title: "Status updated", description: `Booking marked as ${newStatus}` });
+    } catch (err) {
+      console.error("Failed to update status:", err);
+      toast({ title: "Update failed", description: "Could not update booking status", variant: "destructive" });
+    }
   };
 
   const filteredBookings = useMemo(() => {
@@ -162,11 +183,11 @@ const AdminDashboard = () => {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
             <Card>
               <CardHeader className="pb-2 pt-4 px-4">
                 <CardTitle className="text-xs font-medium text-muted-foreground flex items-center gap-1">
-                  <BarChart3 className="h-3 w-3" /> Total Bookings
+                  <BarChart3 className="h-3 w-3" /> Total
                 </CardTitle>
               </CardHeader>
               <CardContent className="px-4 pb-4">
@@ -223,16 +244,27 @@ const AdminDashboard = () => {
                 <p className="text-2xl font-bold text-blue-600">{stats.completed}</p>
               </CardContent>
             </Card>
+            <Card>
+              <CardHeader className="pb-2 pt-4 px-4">
+                <CardTitle className="text-xs font-medium text-muted-foreground flex items-center gap-1">
+                  <RefreshCw className="h-3 w-3 text-purple-600" /> Refunded
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="px-4 pb-4">
+                <p className="text-2xl font-bold text-purple-600">{stats.refunded}</p>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Filters */}
           <Tabs value={statusFilter} onValueChange={(v) => setStatusFilter(v as StatusFilter)} className="mb-4">
-            <TabsList className="grid w-full grid-cols-5">
+            <TabsList className="grid w-full grid-cols-3 md:grid-cols-6">
               <TabsTrigger value="all" className="text-xs sm:text-sm">All ({stats.total})</TabsTrigger>
               <TabsTrigger value="pending" className="text-xs sm:text-sm">Pending ({stats.pending})</TabsTrigger>
               <TabsTrigger value="confirmed" className="text-xs sm:text-sm">Confirmed ({stats.confirmed})</TabsTrigger>
               <TabsTrigger value="cancelled" className="text-xs sm:text-sm">Cancelled ({stats.cancelled})</TabsTrigger>
               <TabsTrigger value="completed" className="text-xs sm:text-sm">Completed ({stats.completed})</TabsTrigger>
+              <TabsTrigger value="refunded" className="text-xs sm:text-sm">Refunded ({stats.refunded})</TabsTrigger>
             </TabsList>
           </Tabs>
 
@@ -258,12 +290,13 @@ const AdminDashboard = () => {
                       <TableHead><SortButton field="amount" label="Amount" /></TableHead>
                       <TableHead>Status</TableHead>
                       <TableHead>Payment ID</TableHead>
+                      <TableHead>Actions</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {filteredBookings.length === 0 ? (
                       <TableRow>
-                        <TableCell colSpan={7} className="text-center py-8 text-muted-foreground">
+                        <TableCell colSpan={8} className="text-center py-8 text-muted-foreground">
                           No bookings found
                         </TableCell>
                       </TableRow>
@@ -284,6 +317,23 @@ const AdminDashboard = () => {
                             </Badge>
                           </TableCell>
                           <TableCell className="text-xs font-mono text-muted-foreground">{booking.payment_id?.slice(0, 16)}...</TableCell>
+                          <TableCell>
+                            <Select
+                              value={booking.status || "confirmed"}
+                              onValueChange={(value) => handleStatusUpdate(booking.id, value)}
+                            >
+                              <SelectTrigger className="w-[130px] h-8 text-xs">
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="pending">Pending</SelectItem>
+                                <SelectItem value="confirmed">Confirmed</SelectItem>
+                                <SelectItem value="completed">Completed</SelectItem>
+                                <SelectItem value="cancelled">Cancelled</SelectItem>
+                                <SelectItem value="refunded">Refunded</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </TableCell>
                         </TableRow>
                       ))
                     )}
