@@ -138,16 +138,16 @@ const AdminDashboard = () => {
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(b =>
-        b.customer_name?.toLowerCase().includes(q) ||
-        b.customer_email?.toLowerCase().includes(q) ||
-        b.description?.toLowerCase().includes(q) ||
-        b.payment_id?.toLowerCase().includes(q)
+        b.contact_name?.toLowerCase().includes(q) ||
+        b.contact_email?.toLowerCase().includes(q) ||
+        b.tour_name?.toLowerCase().includes(q) ||
+        b.tour_slug?.toLowerCase().includes(q)
       );
     }
     result.sort((a, b) => {
       let cmp = 0;
-      if (sortField === "amount") cmp = (a.amount || 0) - (b.amount || 0);
-      else if (sortField === "customer_name") cmp = (a.customer_name || "").localeCompare(b.customer_name || "");
+      if (sortField === "total_price") cmp = (a.total_price || 0) - (b.total_price || 0);
+      else if (sortField === "contact_name") cmp = (a.contact_name || "").localeCompare(b.contact_name || "");
       else cmp = new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
       return sortDir === "asc" ? cmp : -cmp;
     });
