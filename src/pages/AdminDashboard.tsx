@@ -98,6 +98,21 @@ const AdminDashboard = () => {
     else { setSortField(field); setSortDir("desc"); }
   };
 
+  const handleStatusUpdate = async (bookingId: string, newStatus: string) => {
+    try {
+      const { error } = await supabase
+        .from("bookings")
+        .update({ status: newStatus })
+        .eq("id", bookingId);
+      if (error) throw error;
+      setBookings(prev => prev.map(b => b.id === bookingId ? { ...b, status: newStatus } : b));
+      toast({ title: "Status updated", description: `Booking marked as ${newStatus}` });
+    } catch (err) {
+      console.error("Failed to update status:", err);
+      toast({ title: "Update failed", description: "Could not update booking status", variant: "destructive" });
+    }
+  };
+
   const filteredBookings = useMemo(() => {
     let result = bookings;
     if (statusFilter !== "all") result = result.filter(b => b.status === statusFilter);
