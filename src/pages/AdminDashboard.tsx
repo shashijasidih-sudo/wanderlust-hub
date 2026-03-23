@@ -44,7 +44,7 @@ interface Booking {
 }
 
 type StatusFilter = "all" | "pending" | "confirmed" | "cancelled" | "completed" | "refunded";
-type SortField = "created_at" | "amount" | "customer_name";
+type SortField = "created_at" | "total_price" | "contact_name";
 type SortDir = "asc" | "desc";
 
 const statusColors: Record<string, string> = {
