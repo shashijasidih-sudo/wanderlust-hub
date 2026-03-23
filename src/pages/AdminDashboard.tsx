@@ -26,19 +26,25 @@ const ADMIN_EMAILS = ["admin@yellodae.com"];
 
 interface Booking {
   id: string;
-  payment_id: string;
-  order_id: string;
-  amount: number;
-  customer_name: string;
-  customer_email: string;
-  customer_phone: string;
-  description: string;
+  contact_name: string;
+  contact_email: string;
+  contact_phone: string | null;
+  tour_name: string;
+  tour_slug: string;
+  tour_date: string;
+  total_price: number;
+  currency: string;
+  adults: number;
+  children: number;
+  special_requests: string | null;
   status: string;
   created_at: string;
+  updated_at: string;
+  user_id: string;
 }
 
 type StatusFilter = "all" | "pending" | "confirmed" | "cancelled" | "completed" | "refunded";
-type SortField = "created_at" | "amount" | "customer_name";
+type SortField = "created_at" | "total_price" | "contact_name";
 type SortDir = "asc" | "desc";
 
 const statusColors: Record<string, string> = {
@@ -102,7 +108,7 @@ const AdminDashboard = () => {
     const refunded = bookings.filter(b => b.status === "refunded").length;
     const totalRevenue = bookings
       .filter(b => b.status === "confirmed" || b.status === "completed")
-      .reduce((sum, b) => sum + (b.amount || 0), 0);
+      .reduce((sum, b) => sum + (b.total_price || 0), 0);
     return { total, confirmed, cancelled, pending, completed, refunded, totalRevenue };
   }, [bookings]);
 
@@ -132,16 +138,16 @@ const AdminDashboard = () => {
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(b =>
-        b.customer_name?.toLowerCase().includes(q) ||
-        b.customer_email?.toLowerCase().includes(q) ||
-        b.description?.toLowerCase().includes(q) ||
-        b.payment_id?.toLowerCase().includes(q)
+        b.contact_name?.toLowerCase().includes(q) ||
+        b.contact_email?.toLowerCase().includes(q) ||
+        b.tour_name?.toLowerCase().includes(q) ||
+        b.tour_slug?.toLowerCase().includes(q)
       );
     }
     result.sort((a, b) => {
       let cmp = 0;
-      if (sortField === "amount") cmp = (a.amount || 0) - (b.amount || 0);
-      else if (sortField === "customer_name") cmp = (a.customer_name || "").localeCompare(b.customer_name || "");
+      if (sortField === "total_price") cmp = (a.total_price || 0) - (b.total_price || 0);
+      else if (sortField === "contact_name") cmp = (a.contact_name || "").localeCompare(b.contact_name || "");
       else cmp = new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
       return sortDir === "asc" ? cmp : -cmp;
     });
@@ -149,14 +155,15 @@ const AdminDashboard = () => {
   }, [bookings, statusFilter, searchQuery, sortField, sortDir]);
 
   const handleExportCSV = () => {
-    const headers = ["Date", "Customer", "Email", "Phone", "Description", "Amount (₹)", "Status", "Payment ID"];
+    const headers = ["Date", "Customer", "Email", "Phone", "Tour", "Tour Date", "Adults", "Children", "Amount", "Currency", "Status"];
     const rows = filteredBookings.map(b => [
       format(new Date(b.created_at), "yyyy-MM-dd"),
-      b.customer_name, b.customer_email, b.customer_phone,
-      b.description || "Quick Payment",
-      ((b.amount || 0) / 100).toString(),
-      b.status || "confirmed",
-      b.payment_id,
+      b.contact_name, b.contact_email, b.contact_phone || "",
+      b.tour_name, b.tour_date,
+      b.adults.toString(), b.children.toString(),
+      b.total_price.toString(),
+      b.currency,
+      b.status || "pending",
     ]);
     const csv = [headers, ...rows].map(r => r.map(c => `"${c}"`).join(",")).join("\n");
     const blob = new Blob([csv], { type: "text/csv" });
@@ -212,7 +219,7 @@ const AdminDashboard = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="px-4 pb-4">
-                <p className="text-2xl font-bold">₹{(stats.totalRevenue / 100).toLocaleString()}</p>
+                <p className="text-2xl font-bold">₹{stats.totalRevenue.toLocaleString()}</p>
               </CardContent>
             </Card>
             <Card>
@@ -281,7 +288,7 @@ const AdminDashboard = () => {
 
           <div className="relative mb-6">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-            <Input placeholder="Search by name, email, description, or payment ID..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-9" />
+            <Input placeholder="Search by name, email, or tour name..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-9" />
           </div>
 
           {/* Bookings Table */}
@@ -293,21 +300,22 @@ const AdminDashboard = () => {
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
-                    <TableRow>
+                     <TableRow>
                       <TableHead><SortButton field="created_at" label="Date" /></TableHead>
-                      <TableHead><SortButton field="customer_name" label="Customer" /></TableHead>
+                      <TableHead><SortButton field="contact_name" label="Customer" /></TableHead>
                       <TableHead>Phone</TableHead>
-                      <TableHead>Description</TableHead>
-                      <TableHead><SortButton field="amount" label="Amount" /></TableHead>
+                      <TableHead>Tour</TableHead>
+                      <TableHead>Tour Date</TableHead>
+                      <TableHead>Guests</TableHead>
+                      <TableHead><SortButton field="total_price" label="Amount" /></TableHead>
                       <TableHead>Status</TableHead>
-                      <TableHead>Payment ID</TableHead>
                       <TableHead>Actions</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {filteredBookings.length === 0 ? (
                       <TableRow>
-                        <TableCell colSpan={8} className="text-center py-8 text-muted-foreground">
+                        <TableCell colSpan={9} className="text-center py-8 text-muted-foreground">
                           No bookings found
                         </TableCell>
                       </TableRow>
@@ -316,21 +324,22 @@ const AdminDashboard = () => {
                         <TableRow key={booking.id}>
                           <TableCell className="whitespace-nowrap">{format(new Date(booking.created_at), "MMM dd, yyyy")}</TableCell>
                           <TableCell>
-                            <div className="font-medium">{booking.customer_name}</div>
-                            <div className="text-xs text-muted-foreground">{booking.customer_email}</div>
+                            <div className="font-medium">{booking.contact_name}</div>
+                            <div className="text-xs text-muted-foreground">{booking.contact_email}</div>
                           </TableCell>
-                          <TableCell className="text-sm">{booking.customer_phone}</TableCell>
-                          <TableCell>{booking.description || "Quick Payment"}</TableCell>
-                          <TableCell className="font-semibold">₹{((booking.amount || 0) / 100).toLocaleString()}</TableCell>
+                          <TableCell className="text-sm">{booking.contact_phone || "—"}</TableCell>
+                          <TableCell className="max-w-[200px] truncate">{booking.tour_name}</TableCell>
+                          <TableCell className="whitespace-nowrap">{booking.tour_date}</TableCell>
+                          <TableCell>{booking.adults}A / {booking.children}C</TableCell>
+                          <TableCell className="font-semibold">₹{booking.total_price.toLocaleString()}</TableCell>
                           <TableCell>
-                            <Badge variant="outline" className={statusColors[booking.status || "confirmed"]}>
-                              {(booking.status || "confirmed").charAt(0).toUpperCase() + (booking.status || "confirmed").slice(1)}
+                            <Badge variant="outline" className={statusColors[booking.status || "pending"]}>
+                              {(booking.status || "pending").charAt(0).toUpperCase() + (booking.status || "pending").slice(1)}
                             </Badge>
                           </TableCell>
-                          <TableCell className="text-xs font-mono text-muted-foreground">{booking.payment_id?.slice(0, 16)}...</TableCell>
                           <TableCell>
                             <Select
-                              value={booking.status || "confirmed"}
+                              value={booking.status || "pending"}
                               onValueChange={(value) => handleStatusUpdate(booking.id, value)}
                             >
                               <SelectTrigger className="w-[130px] h-8 text-xs">
