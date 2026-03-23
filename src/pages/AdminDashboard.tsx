@@ -324,6 +324,7 @@ const AdminDashboard = () => {
                         </TableRow>
                       ))
                     )}
+                  </TableBody>
                 </Table>
               </div>
             </CardContent>
