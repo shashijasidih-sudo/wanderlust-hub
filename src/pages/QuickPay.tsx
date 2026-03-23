@@ -80,6 +80,7 @@ const QuickPay = () => {
         handler: async function (response: any) {
           console.log("Payment success:", response);
           try {
+            // Save booking
             await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/save-booking",
               {
@@ -100,8 +101,26 @@ const QuickPay = () => {
                 }),
               }
             );
+
+            // Send confirmation email + PDF
+            await fetch(
+              "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
+                  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
+                },
+                body: JSON.stringify({
+                  email: email.trim(),
+                  bookingId: response.razorpay_payment_id,
+                  amount: amountNum,
+                }),
+              }
+            );
           } catch (err) {
-            console.error("Failed to save booking:", err);
+            console.error("Failed to save booking or send confirmation:", err);
           }
           toast.success(`Payment successful! ID: ${response.razorpay_payment_id}`);
           setAmount(""); setDescription(""); setName(""); setEmail(""); setPhone("");
