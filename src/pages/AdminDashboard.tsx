@@ -37,7 +37,7 @@ interface Booking {
   created_at: string;
 }
 
-type StatusFilter = "all" | "pending" | "confirmed" | "cancelled" | "completed";
+type StatusFilter = "all" | "pending" | "confirmed" | "cancelled" | "completed" | "refunded";
 type SortField = "created_at" | "amount" | "customer_name";
 type SortDir = "asc" | "desc";
 
