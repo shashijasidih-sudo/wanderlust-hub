@@ -91,7 +91,7 @@ const AdminDashboard = () => {
       }
     };
     fetchAllBookings();
-  }, [user, isAdmin, navigate]);
+  }, [authChecked]);
 
   const stats = useMemo(() => {
     const total = bookings.length;
