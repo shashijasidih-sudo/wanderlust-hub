@@ -117,6 +117,14 @@ const Header = () => {
                       Wishlist
                     </Link>
                   </DropdownMenuItem>
+                  {user.email === "admin@yellodae.com" && (
+                    <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
+                      <Link to="/admin" className="flex items-center w-full">
+                        <ShieldCheck className="h-4 w-4 mr-2" />
+                        Admin Dashboard
+                      </Link>
+                    </DropdownMenuItem>
+                  )}
                   <DropdownMenuSeparator />
                   <DropdownMenuItem className="cursor-pointer hover:bg-destructive/10 text-destructive" onClick={handleLogout}>
                     <LogOut className="h-4 w-4 mr-2" />
