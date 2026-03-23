@@ -133,6 +133,41 @@ const AdminDashboard = () => {
     }
   };
 
+  const handleCancelBooking = async (booking: Booking) => {
+    if (!confirm(`Cancel booking for "${booking.contact_name}" - ${booking.tour_name}?`)) return;
+    await handleStatusUpdate(booking.id, "cancelled");
+  };
+
+  const handleRefund = async (booking: Booking) => {
+    if (!confirm(`Process refund for "${booking.contact_name}" - ₹${booking.total_price.toLocaleString()}?`)) return;
+    try {
+      const res = await fetch(
+        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/refund-payment",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "apikey": import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY,
+            "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify({
+            booking_id: booking.id,
+            amount: booking.total_price,
+          }),
+        }
+      );
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(errData.error || "Refund request failed");
+      }
+      await handleStatusUpdate(booking.id, "refunded");
+      toast({ title: "Refund processed", description: `₹${booking.total_price.toLocaleString()} refund initiated` });
+    } catch (err: any) {
+      console.error("Refund failed:", err);
+      toast({ title: "Refund failed", description: err.message || "Could not process refund", variant: "destructive" });
+    }
+  };
+
   const filteredBookings = useMemo(() => {
     let result = bookings;
     if (statusFilter !== "all") result = result.filter(b => b.status === statusFilter);
