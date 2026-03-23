@@ -219,7 +219,7 @@ const AdminDashboard = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="px-4 pb-4">
-                <p className="text-2xl font-bold">₹{(stats.totalRevenue / 100).toLocaleString()}</p>
+                <p className="text-2xl font-bold">₹{stats.totalRevenue.toLocaleString()}</p>
               </CardContent>
             </Card>
             <Card>
