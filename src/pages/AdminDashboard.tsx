@@ -108,7 +108,7 @@ const AdminDashboard = () => {
     const refunded = bookings.filter(b => b.status === "refunded").length;
     const totalRevenue = bookings
       .filter(b => b.status === "confirmed" || b.status === "completed")
-      .reduce((sum, b) => sum + (b.amount || 0), 0);
+      .reduce((sum, b) => sum + (b.total_price || 0), 0);
     return { total, confirmed, cancelled, pending, completed, refunded, totalRevenue };
   }, [bookings]);
 
