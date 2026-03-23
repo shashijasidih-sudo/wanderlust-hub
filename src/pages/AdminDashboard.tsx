@@ -4,6 +4,7 @@ import { useAuth } from "@/lib/auth";
 import { supabase } from "@/lib/supabaseClient";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AdminCharts from "@/components/admin/AdminCharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -273,6 +274,9 @@ const AdminDashboard = () => {
               </CardContent>
             </Card>
           </div>
+
+          {/* Charts */}
+          <AdminCharts bookings={bookings} />
 
           {/* Filters */}
           <Tabs value={statusFilter} onValueChange={(v) => setStatusFilter(v as StatusFilter)} className="mb-4">
