@@ -133,6 +133,41 @@ const AdminDashboard = () => {
     }
   };
 
+  const handleCancelBooking = async (booking: Booking) => {
+    if (!confirm(`Cancel booking for "${booking.contact_name}" - ${booking.tour_name}?`)) return;
+    await handleStatusUpdate(booking.id, "cancelled");
+  };
+
+  const handleRefund = async (booking: Booking) => {
+    if (!confirm(`Process refund for "${booking.contact_name}" - ₹${booking.total_price.toLocaleString()}?`)) return;
+    try {
+      const res = await fetch(
+        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/refund-payment",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "apikey": import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY,
+            "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify({
+            booking_id: booking.id,
+            amount: booking.total_price,
+          }),
+        }
+      );
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(errData.error || "Refund request failed");
+      }
+      await handleStatusUpdate(booking.id, "refunded");
+      toast({ title: "Refund processed", description: `₹${booking.total_price.toLocaleString()} refund initiated` });
+    } catch (err: any) {
+      console.error("Refund failed:", err);
+      toast({ title: "Refund failed", description: err.message || "Could not process refund", variant: "destructive" });
+    }
+  };
+
   const filteredBookings = useMemo(() => {
     let result = bookings;
     if (statusFilter !== "all") result = result.filter(b => b.status === statusFilter);
@@ -342,21 +377,43 @@ const AdminDashboard = () => {
                             </Badge>
                           </TableCell>
                           <TableCell>
-                            <Select
-                              value={booking.status || "pending"}
-                              onValueChange={(value) => handleStatusUpdate(booking.id, value)}
-                            >
-                              <SelectTrigger className="w-[130px] h-8 text-xs">
-                                <SelectValue />
-                              </SelectTrigger>
-                              <SelectContent>
-                                <SelectItem value="pending">Pending</SelectItem>
-                                <SelectItem value="confirmed">Confirmed</SelectItem>
-                                <SelectItem value="completed">Completed</SelectItem>
-                                <SelectItem value="cancelled">Cancelled</SelectItem>
-                                <SelectItem value="refunded">Refunded</SelectItem>
-                              </SelectContent>
-                            </Select>
+                            <div className="flex items-center gap-2">
+                              <Select
+                                value={booking.status || "pending"}
+                                onValueChange={(value) => handleStatusUpdate(booking.id, value)}
+                              >
+                                <SelectTrigger className="w-[120px] h-8 text-xs">
+                                  <SelectValue />
+                                </SelectTrigger>
+                                <SelectContent>
+                                  <SelectItem value="pending">Pending</SelectItem>
+                                  <SelectItem value="confirmed">Confirmed</SelectItem>
+                                  <SelectItem value="completed">Completed</SelectItem>
+                                  <SelectItem value="cancelled">Cancelled</SelectItem>
+                                  <SelectItem value="refunded">Refunded</SelectItem>
+                                </SelectContent>
+                              </Select>
+                              {booking.status !== "cancelled" && booking.status !== "refunded" && (
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  className="h-8 text-xs border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground"
+                                  onClick={() => handleCancelBooking(booking)}
+                                >
+                                  <XCircle className="h-3 w-3 mr-1" /> Cancel
+                                </Button>
+                              )}
+                              {["confirmed", "completed", "cancelled"].includes(booking.status || "") && (
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  className="h-8 text-xs border-purple-500 text-purple-600 hover:bg-purple-500 hover:text-white"
+                                  onClick={() => handleRefund(booking)}
+                                >
+                                  <RefreshCw className="h-3 w-3 mr-1" /> Refund
+                                </Button>
+                              )}
+                            </div>
                           </TableCell>
                         </TableRow>
                       ))
