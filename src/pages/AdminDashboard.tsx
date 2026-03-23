@@ -133,22 +133,54 @@ const AdminDashboard = () => {
     }
   };
 
+  const sendNotificationEmail = async (booking: Booking, type: "cancellation" | "refund") => {
+    try {
+      const anonKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY;
+      await fetch(
+        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "apikey": anonKey,
+            "Authorization": `Bearer ${anonKey}`,
+          },
+          body: JSON.stringify({
+            email: booking.contact_email,
+            customerName: booking.contact_name,
+            tourName: booking.tour_name,
+            tourDate: booking.tour_date,
+            amount: booking.total_price,
+            currency: booking.currency || "INR",
+            bookingId: booking.id,
+            type,
+          }),
+        }
+      );
+    } catch (err) {
+      console.error(`Failed to send ${type} email:`, err);
+    }
+  };
+
   const handleCancelBooking = async (booking: Booking) => {
     if (!confirm(`Cancel booking for "${booking.contact_name}" - ${booking.tour_name}?`)) return;
     await handleStatusUpdate(booking.id, "cancelled");
+    await sendNotificationEmail(booking, "cancellation");
+    toast({ title: "Cancellation email sent", description: `Notification sent to ${booking.contact_email}` });
   };
 
   const handleRefund = async (booking: Booking) => {
     if (!confirm(`Process refund for "${booking.contact_name}" - ₹${booking.total_price.toLocaleString()}?`)) return;
     try {
+      const anonKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY;
       const res = await fetch(
         "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/refund-payment",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "apikey": import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY,
-            "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+            "apikey": anonKey,
+            "Authorization": `Bearer ${anonKey}`,
           },
           body: JSON.stringify({
             booking_id: booking.id,
@@ -161,7 +193,8 @@ const AdminDashboard = () => {
         throw new Error(errData.error || "Refund request failed");
       }
       await handleStatusUpdate(booking.id, "refunded");
-      toast({ title: "Refund processed", description: `₹${booking.total_price.toLocaleString()} refund initiated` });
+      await sendNotificationEmail(booking, "refund");
+      toast({ title: "Refund processed & email sent", description: `₹${booking.total_price.toLocaleString()} refund initiated` });
     } catch (err: any) {
       console.error("Refund failed:", err);
       toast({ title: "Refund failed", description: err.message || "Could not process refund", variant: "destructive" });
