@@ -275,6 +275,9 @@ const AdminDashboard = () => {
             </Card>
           </div>
 
+          {/* Charts */}
+          <AdminCharts bookings={bookings} />
+
           {/* Filters */}
           <Tabs value={statusFilter} onValueChange={(v) => setStatusFilter(v as StatusFilter)} className="mb-4">
             <TabsList className="grid w-full grid-cols-3 md:grid-cols-6">
