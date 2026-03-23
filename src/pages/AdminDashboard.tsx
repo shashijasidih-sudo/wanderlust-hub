@@ -46,6 +46,7 @@ const statusColors: Record<string, string> = {
   confirmed: "bg-green-100 text-green-800 border-green-200",
   cancelled: "bg-red-100 text-red-800 border-red-200",
   completed: "bg-blue-100 text-blue-800 border-blue-200",
+  refunded: "bg-purple-100 text-purple-800 border-purple-200",
 };
 
 const AdminDashboard = () => {
