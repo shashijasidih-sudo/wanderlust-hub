@@ -88,10 +88,11 @@ const AdminDashboard = () => {
     const cancelled = bookings.filter(b => b.status === "cancelled").length;
     const pending = bookings.filter(b => b.status === "pending").length;
     const completed = bookings.filter(b => b.status === "completed").length;
+    const refunded = bookings.filter(b => b.status === "refunded").length;
     const totalRevenue = bookings
       .filter(b => b.status === "confirmed" || b.status === "completed")
       .reduce((sum, b) => sum + (b.amount || 0), 0);
-    return { total, confirmed, cancelled, pending, completed, totalRevenue };
+    return { total, confirmed, cancelled, pending, completed, refunded, totalRevenue };
   }, [bookings]);
 
   const toggleSort = (field: SortField) => {
