@@ -277,7 +277,7 @@ const AdminDashboard = () => {
                       <TableHead><SortButton field="amount" label="Amount" /></TableHead>
                       <TableHead>Status</TableHead>
                       <TableHead>Payment ID</TableHead>
-                    </TableRow>
+                      <TableHead>Actions</TableHead>
                   </TableHeader>
                   <TableBody>
                     {filteredBookings.length === 0 ? (
