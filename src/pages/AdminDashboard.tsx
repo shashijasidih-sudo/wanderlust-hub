@@ -183,11 +183,11 @@ const AdminDashboard = () => {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
             <Card>
               <CardHeader className="pb-2 pt-4 px-4">
                 <CardTitle className="text-xs font-medium text-muted-foreground flex items-center gap-1">
-                  <BarChart3 className="h-3 w-3" /> Total Bookings
+                  <BarChart3 className="h-3 w-3" /> Total
                 </CardTitle>
               </CardHeader>
               <CardContent className="px-4 pb-4">
@@ -242,6 +242,16 @@ const AdminDashboard = () => {
               </CardHeader>
               <CardContent className="px-4 pb-4">
                 <p className="text-2xl font-bold text-blue-600">{stats.completed}</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="pb-2 pt-4 px-4">
+                <CardTitle className="text-xs font-medium text-muted-foreground flex items-center gap-1">
+                  <RefreshCw className="h-3 w-3 text-purple-600" /> Refunded
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="px-4 pb-4">
+                <p className="text-2xl font-bold text-purple-600">{stats.refunded}</p>
               </CardContent>
             </Card>
           </div>
