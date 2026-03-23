@@ -258,12 +258,13 @@ const AdminDashboard = () => {
 
           {/* Filters */}
           <Tabs value={statusFilter} onValueChange={(v) => setStatusFilter(v as StatusFilter)} className="mb-4">
-            <TabsList className="grid w-full grid-cols-5">
+            <TabsList className="grid w-full grid-cols-3 md:grid-cols-6">
               <TabsTrigger value="all" className="text-xs sm:text-sm">All ({stats.total})</TabsTrigger>
               <TabsTrigger value="pending" className="text-xs sm:text-sm">Pending ({stats.pending})</TabsTrigger>
               <TabsTrigger value="confirmed" className="text-xs sm:text-sm">Confirmed ({stats.confirmed})</TabsTrigger>
               <TabsTrigger value="cancelled" className="text-xs sm:text-sm">Cancelled ({stats.cancelled})</TabsTrigger>
               <TabsTrigger value="completed" className="text-xs sm:text-sm">Completed ({stats.completed})</TabsTrigger>
+              <TabsTrigger value="refunded" className="text-xs sm:text-sm">Refunded ({stats.refunded})</TabsTrigger>
             </TabsList>
           </Tabs>
 
