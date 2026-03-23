@@ -54,16 +54,27 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [authChecked, setAuthChecked] = useState(false);
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortField, setSortField] = useState<SortField>("created_at");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
 
+  // Wait for auth to resolve before checking admin status
+  useEffect(() => {
+    const checkAuth = async () => {
+      const { data } = await supabase.auth.getUser();
+      if (!data.user) { navigate("/auth"); return; }
+      if (!ADMIN_EMAILS.includes(data.user.email || "")) { navigate("/"); return; }
+      setAuthChecked(true);
+    };
+    checkAuth();
+  }, [navigate]);
+
   const isAdmin = user && ADMIN_EMAILS.includes(user.email);
 
   useEffect(() => {
-    if (!user) { navigate("/auth"); return; }
-    if (!isAdmin) { navigate("/"); return; }
+    if (!authChecked) return;
 
     const fetchAllBookings = async () => {
       try {
