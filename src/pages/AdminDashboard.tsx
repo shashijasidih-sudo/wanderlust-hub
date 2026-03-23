@@ -278,11 +278,12 @@ const AdminDashboard = () => {
                       <TableHead>Status</TableHead>
                       <TableHead>Payment ID</TableHead>
                       <TableHead>Actions</TableHead>
+                    </TableRow>
                   </TableHeader>
                   <TableBody>
                     {filteredBookings.length === 0 ? (
                       <TableRow>
-                        <TableCell colSpan={7} className="text-center py-8 text-muted-foreground">
+                        <TableCell colSpan={8} className="text-center py-8 text-muted-foreground">
                           No bookings found
                         </TableCell>
                       </TableRow>
@@ -303,10 +304,26 @@ const AdminDashboard = () => {
                             </Badge>
                           </TableCell>
                           <TableCell className="text-xs font-mono text-muted-foreground">{booking.payment_id?.slice(0, 16)}...</TableCell>
+                          <TableCell>
+                            <Select
+                              value={booking.status || "confirmed"}
+                              onValueChange={(value) => handleStatusUpdate(booking.id, value)}
+                            >
+                              <SelectTrigger className="w-[130px] h-8 text-xs">
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="pending">Pending</SelectItem>
+                                <SelectItem value="confirmed">Confirmed</SelectItem>
+                                <SelectItem value="completed">Completed</SelectItem>
+                                <SelectItem value="cancelled">Cancelled</SelectItem>
+                                <SelectItem value="refunded">Refunded</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </TableCell>
                         </TableRow>
                       ))
                     )}
-                  </TableBody>
                 </Table>
               </div>
             </CardContent>
