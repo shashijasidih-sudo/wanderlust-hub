@@ -377,21 +377,43 @@ const AdminDashboard = () => {
                             </Badge>
                           </TableCell>
                           <TableCell>
-                            <Select
-                              value={booking.status || "pending"}
-                              onValueChange={(value) => handleStatusUpdate(booking.id, value)}
-                            >
-                              <SelectTrigger className="w-[130px] h-8 text-xs">
-                                <SelectValue />
-                              </SelectTrigger>
-                              <SelectContent>
-                                <SelectItem value="pending">Pending</SelectItem>
-                                <SelectItem value="confirmed">Confirmed</SelectItem>
-                                <SelectItem value="completed">Completed</SelectItem>
-                                <SelectItem value="cancelled">Cancelled</SelectItem>
-                                <SelectItem value="refunded">Refunded</SelectItem>
-                              </SelectContent>
-                            </Select>
+                            <div className="flex items-center gap-2">
+                              <Select
+                                value={booking.status || "pending"}
+                                onValueChange={(value) => handleStatusUpdate(booking.id, value)}
+                              >
+                                <SelectTrigger className="w-[120px] h-8 text-xs">
+                                  <SelectValue />
+                                </SelectTrigger>
+                                <SelectContent>
+                                  <SelectItem value="pending">Pending</SelectItem>
+                                  <SelectItem value="confirmed">Confirmed</SelectItem>
+                                  <SelectItem value="completed">Completed</SelectItem>
+                                  <SelectItem value="cancelled">Cancelled</SelectItem>
+                                  <SelectItem value="refunded">Refunded</SelectItem>
+                                </SelectContent>
+                              </Select>
+                              {booking.status !== "cancelled" && booking.status !== "refunded" && (
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  className="h-8 text-xs border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground"
+                                  onClick={() => handleCancelBooking(booking)}
+                                >
+                                  <XCircle className="h-3 w-3 mr-1" /> Cancel
+                                </Button>
+                              )}
+                              {(booking.status === "confirmed" || booking.status === "completed" || booking.status === "cancelled") && booking.status !== "refunded" && (
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  className="h-8 text-xs border-purple-500 text-purple-600 hover:bg-purple-500 hover:text-white"
+                                  onClick={() => handleRefund(booking)}
+                                >
+                                  <RefreshCw className="h-3 w-3 mr-1" /> Refund
+                                </Button>
+                              )}
+                            </div>
                           </TableCell>
                         </TableRow>
                       ))
