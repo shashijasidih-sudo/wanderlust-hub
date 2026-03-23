@@ -26,15 +26,21 @@ const ADMIN_EMAILS = ["admin@yellodae.com"];
 
 interface Booking {
   id: string;
-  payment_id: string;
-  order_id: string;
-  amount: number;
-  customer_name: string;
-  customer_email: string;
-  customer_phone: string;
-  description: string;
+  contact_name: string;
+  contact_email: string;
+  contact_phone: string | null;
+  tour_name: string;
+  tour_slug: string;
+  tour_date: string;
+  total_price: number;
+  currency: string;
+  adults: number;
+  children: number;
+  special_requests: string | null;
   status: string;
   created_at: string;
+  updated_at: string;
+  user_id: string;
 }
 
 type StatusFilter = "all" | "pending" | "confirmed" | "cancelled" | "completed" | "refunded";
