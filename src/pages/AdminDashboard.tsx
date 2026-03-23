@@ -155,14 +155,15 @@ const AdminDashboard = () => {
   }, [bookings, statusFilter, searchQuery, sortField, sortDir]);
 
   const handleExportCSV = () => {
-    const headers = ["Date", "Customer", "Email", "Phone", "Description", "Amount (₹)", "Status", "Payment ID"];
+    const headers = ["Date", "Customer", "Email", "Phone", "Tour", "Tour Date", "Adults", "Children", "Amount", "Currency", "Status"];
     const rows = filteredBookings.map(b => [
       format(new Date(b.created_at), "yyyy-MM-dd"),
-      b.customer_name, b.customer_email, b.customer_phone,
-      b.description || "Quick Payment",
-      ((b.amount || 0) / 100).toString(),
-      b.status || "confirmed",
-      b.payment_id,
+      b.contact_name, b.contact_email, b.contact_phone || "",
+      b.tour_name, b.tour_date,
+      b.adults.toString(), b.children.toString(),
+      b.total_price.toString(),
+      b.currency,
+      b.status || "pending",
     ]);
     const csv = [headers, ...rows].map(r => r.map(c => `"${c}"`).join(",")).join("\n");
     const blob = new Blob([csv], { type: "text/csv" });
