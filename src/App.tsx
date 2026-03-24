@@ -167,6 +167,9 @@ import DubaiAirportDropoffZone5 from "./pages/DubaiAirportDropoffZone5";
 import Auth from "./pages/Auth";
 import Profile from "./pages/Profile";
 import MyBookings from "./pages/MyBookings";
+import UserProfile from "./pages/UserProfile";
+import UserBookings from "./pages/UserBookings";
+import UserSettings from "./pages/UserSettings";
 import Wishlist from "./pages/Wishlist";
 import BangkokTransfers from "./pages/BangkokTransfers";
 import BangkokBkkAirportPickup from "./pages/BangkokBkkAirportPickup";
@@ -437,6 +440,9 @@ const App = () => (
           <Route path="/auth" element={<Auth />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/my-bookings" element={<MyBookings />} />
+          <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/user-bookings" element={<UserBookings />} />
+          <Route path="/settings" element={<UserSettings />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/customer-information" element={<CustomerInformation />} />
           <Route path="/payment-information" element={<PaymentInformation />} />

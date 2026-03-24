@@ -1,4 +1,4 @@
-import { Menu, IndianRupee, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket, LogOut, CalendarDays, ShieldCheck } from "lucide-react";
+import { Menu, IndianRupee, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket, LogOut, CalendarDays, ShieldCheck, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -100,21 +100,27 @@ const Header = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[180px]" align="end">
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                    <Link to="/profile" className="flex items-center w-full">
+                    <Link to="/user-profile" className="flex items-center w-full">
                       <User className="h-4 w-4 mr-2" />
                       Profile
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                    <Link to="/booking-history" className="flex items-center w-full">
+                    <Link to="/user-bookings" className="flex items-center w-full">
                       <CalendarDays className="h-4 w-4 mr-2" />
-                      Booking History
+                      My Bookings
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
                     <Link to="/wishlist" className="flex items-center w-full">
                       <Heart className="h-4 w-4 mr-2" />
                       Wishlist
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
+                    <Link to="/settings" className="flex items-center w-full">
+                      <Settings className="h-4 w-4 mr-2" />
+                      Settings
                     </Link>
                   </DropdownMenuItem>
                   {user.email === "admin@yellodae.com" && (
@@ -470,16 +476,22 @@ const Header = () => {
             </div>
             {user ? (
               <div className="flex flex-col gap-2 w-full">
-                <Link to="/profile" className="w-full">
+                <Link to="/user-profile" className="w-full">
                   <Button variant="outline" className="w-full justify-start">
                     <User className="h-4 w-4 mr-2" />
                     Profile
                   </Button>
                 </Link>
-                <Link to="/my-bookings" className="w-full">
+                <Link to="/user-bookings" className="w-full">
                   <Button variant="outline" className="w-full justify-start">
                     <CalendarDays className="h-4 w-4 mr-2" />
                     My Bookings
+                  </Button>
+                </Link>
+                <Link to="/settings" className="w-full">
+                  <Button variant="outline" className="w-full justify-start">
+                    <Settings className="h-4 w-4 mr-2" />
+                    Settings
                   </Button>
                 </Link>
                 <Link to="/wishlist" className="w-full">
