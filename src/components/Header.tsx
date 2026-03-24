@@ -117,6 +117,12 @@ const Header = () => {
                       Wishlist
                     </Link>
                   </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
+                    <Link to="/settings" className="flex items-center w-full">
+                      <Settings className="h-4 w-4 mr-2" />
+                      Settings
+                    </Link>
+                  </DropdownMenuItem>
                   {user.email === "admin@yellodae.com" && (
                     <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
                       <Link to="/admin" className="flex items-center w-full">
