@@ -5,7 +5,7 @@ import { supabase } from "@/lib/supabaseClient";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, CalendarDays, Search, UserIcon, Settings, XCircle } from "lucide-react";
+import { Loader2, CalendarDays, Search, User as UserIcon, Settings, XCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { format } from "date-fns";
