@@ -95,36 +95,40 @@ export const auth = {
 
 export function useAuth() {
   const [user, setUser] = useState<AppUser | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    supabase.auth.getUser().then(({ data }) => {
-      if (data.user) {
-        setUser({
-          id: data.user.id,
-          email: data.user.email!,
-          full_name: data.user.user_metadata?.full_name,
-        });
+    let isMounted = true;
+
+    const syncUser = (authUser: Awaited<ReturnType<typeof supabase.auth.getUser>>["data"]["user"]) => {
+      if (!isMounted) return;
+
+      if (authUser) {
+        const nextUser = {
+          id: authUser.id,
+          email: authUser.email!,
+          full_name: authUser.user_metadata?.full_name,
+        };
+        setUser(nextUser);
+        notify(nextUser);
+      } else {
+        setUser(null);
+        notify(null);
       }
+
+      setIsLoading(false);
+    };
+
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      syncUser(session?.user ?? null);
     });
 
-    const { data: listener } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
-        if (session?.user) {
-          const newUser = {
-            id: session.user.id,
-            email: session.user.email!,
-            full_name: session.user.user_metadata?.full_name,
-          };
-          setUser(newUser);
-          notify(newUser);
-        } else {
-          setUser(null);
-          notify(null);
-        }
-      }
-    );
+    supabase.auth.getUser().then(({ data }) => {
+      syncUser(data.user ?? null);
+    });
 
     return () => {
+      isMounted = false;
       listener.subscription.unsubscribe();
     };
   }, []);
@@ -132,7 +136,8 @@ export function useAuth() {
   const logout = useCallback(async () => {
     await supabase.auth.signOut();
     setUser(null);
+    setIsLoading(false);
   }, []);
 
-  return { user, logout };
+  return { user, logout, isLoading };
 }

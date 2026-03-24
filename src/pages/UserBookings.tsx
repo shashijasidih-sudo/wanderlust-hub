@@ -48,13 +48,17 @@ const UserBookings = () => {
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
   const navigate = useNavigate();
   const { toast } = useToast();
-  const { user } = useAuth();
+  const { user, isLoading: isAuthLoading } = useAuth();
   const { formatPrice } = useCurrency();
 
   useEffect(() => {
-    if (!user) { navigate("/auth"); return; }
+    if (isAuthLoading) return;
+    if (!user) {
+      navigate("/auth");
+      return;
+    }
     fetchBookings();
-  }, [user, navigate]);
+  }, [user, isAuthLoading, navigate]);
 
   const fetchBookings = async () => {
     if (!user) return;
@@ -94,7 +98,7 @@ const UserBookings = () => {
   const filteredBookings = statusFilter === "all" ? bookings : bookings.filter(b => b.status === statusFilter);
   const getStatusCount = (status: StatusFilter) => status === "all" ? bookings.length : bookings.filter(b => b.status === status).length;
 
-  if (isLoading) {
+  if (isAuthLoading || isLoading) {
     return <div className="min-h-screen flex items-center justify-center"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>;
   }
 
