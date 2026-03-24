@@ -87,11 +87,35 @@ const UserBookings = () => {
         .eq("user_id", user!.id);
       if (error) throw error;
       setBookings(prev => prev.map(b => b.id === bookingId ? { ...b, status: "cancelled" } : b));
-      toast({ title: "Booking Cancelled", description: `Your booking for ${tourName} has been cancelled.` });
+      toast({ title: "Booking Cancelled", description: `Your booking for ${tourName} has been cancelled. Refund will be processed within 3–5 days.` });
     } catch (err: any) {
       toast({ title: "Error", description: err.message, variant: "destructive" });
     } finally {
       setCancellingId(null);
+    }
+  };
+
+  const handleAddTestBooking = async () => {
+    if (!user) return;
+    try {
+      const { error } = await supabase.from("bookings").insert({
+        user_id: user.id,
+        tour_name: "Desert Safari Premium",
+        tour_slug: "desert-safari",
+        tour_date: "2026-04-15",
+        adults: 2,
+        children: 1,
+        total_price: 4500,
+        currency: "INR",
+        status: "confirmed",
+        contact_name: user.email?.split("@")[0] || "Test User",
+        contact_email: user.email || "test@example.com",
+      });
+      if (error) throw error;
+      toast({ title: "Test booking added!", description: "Refresh to see it." });
+      fetchBookings();
+    } catch (err: any) {
+      toast({ title: "Error", description: err.message, variant: "destructive" });
     }
   };
 
