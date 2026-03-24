@@ -343,6 +343,33 @@ const AdminDashboard = () => {
             </Card>
           </div>
 
+          {/* Refund Requests Alert */}
+          {stats.cancelled > 0 && (
+            <Card className="mb-6 border-orange-300 bg-orange-50">
+              <CardContent className="p-4 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <RefreshCw className="h-5 w-5 text-orange-600" />
+                  <div>
+                    <p className="font-semibold text-orange-800">
+                      {stats.cancelled} Refund Request{stats.cancelled > 1 ? "s" : ""} Pending
+                    </p>
+                    <p className="text-sm text-orange-600">
+                      Cancelled bookings awaiting refund approval
+                    </p>
+                  </div>
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-orange-400 text-orange-700 hover:bg-orange-100"
+                  onClick={() => setStatusFilter("cancelled")}
+                >
+                  View Requests
+                </Button>
+              </CardContent>
+            </Card>
+          )}
+
           {/* Charts */}
           <AdminCharts bookings={bookings} />
 

@@ -87,11 +87,35 @@ const UserBookings = () => {
         .eq("user_id", user!.id);
       if (error) throw error;
       setBookings(prev => prev.map(b => b.id === bookingId ? { ...b, status: "cancelled" } : b));
-      toast({ title: "Booking Cancelled", description: `Your booking for ${tourName} has been cancelled.` });
+      toast({ title: "Booking Cancelled", description: `Your booking for ${tourName} has been cancelled. Refund will be processed within 3–5 days.` });
     } catch (err: any) {
       toast({ title: "Error", description: err.message, variant: "destructive" });
     } finally {
       setCancellingId(null);
+    }
+  };
+
+  const handleAddTestBooking = async () => {
+    if (!user) return;
+    try {
+      const { error } = await supabase.from("bookings").insert({
+        user_id: user.id,
+        tour_name: "Desert Safari Premium",
+        tour_slug: "desert-safari",
+        tour_date: "2026-04-15",
+        adults: 2,
+        children: 1,
+        total_price: 4500,
+        currency: "INR",
+        status: "confirmed",
+        contact_name: user.email?.split("@")[0] || "Test User",
+        contact_email: user.email || "test@example.com",
+      });
+      if (error) throw error;
+      toast({ title: "Test booking added!", description: "Refresh to see it." });
+      fetchBookings();
+    } catch (err: any) {
+      toast({ title: "Error", description: err.message, variant: "destructive" });
     }
   };
 
@@ -199,7 +223,9 @@ const UserBookings = () => {
                               <AlertDialogHeader>
                                 <AlertDialogTitle>Cancel Booking?</AlertDialogTitle>
                                 <AlertDialogDescription>
-                                  Are you sure you want to cancel your booking for <strong>{booking.tour_name}</strong>? This action cannot be undone.
+                                  Are you sure you want to cancel your booking for <strong>{booking.tour_name}</strong>?
+                                  <br /><br />
+                                  Refund will be processed by admin within 3–5 days.
                                 </AlertDialogDescription>
                               </AlertDialogHeader>
                               <AlertDialogFooter>
@@ -228,7 +254,10 @@ const UserBookings = () => {
                   {statusFilter === "all" ? "You haven't made any bookings yet. Start exploring our tours!" : `You don't have any ${statusFilter} bookings.`}
                 </p>
                 {statusFilter === "all" && (
-                  <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
+                  <div className="flex gap-3">
+                    <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
+                    <Button variant="outline" onClick={handleAddTestBooking}>Add Test Booking</Button>
+                  </div>
                 )}
               </CardContent>
             </Card>
