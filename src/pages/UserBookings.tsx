@@ -223,7 +223,9 @@ const UserBookings = () => {
                               <AlertDialogHeader>
                                 <AlertDialogTitle>Cancel Booking?</AlertDialogTitle>
                                 <AlertDialogDescription>
-                                  Are you sure you want to cancel your booking for <strong>{booking.tour_name}</strong>? This action cannot be undone.
+                                  Are you sure you want to cancel your booking for <strong>{booking.tour_name}</strong>?
+                                  <br /><br />
+                                  Refund will be processed by admin within 3–5 days.
                                 </AlertDialogDescription>
                               </AlertDialogHeader>
                               <AlertDialogFooter>
