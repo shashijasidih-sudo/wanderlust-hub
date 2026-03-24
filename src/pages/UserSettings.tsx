@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
 import { supabase } from "@/lib/supabaseClient";
@@ -23,11 +23,11 @@ const UserSettings = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  useState(() => {
+  useEffect(() => {
     if (!isLoading && !user) {
       navigate("/auth");
     }
-  });
+  }, [isLoading, user, navigate]);
 
   if (isLoading || !user) {
     return <div className="min-h-screen flex items-center justify-center"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>;
@@ -64,7 +64,6 @@ const UserSettings = () => {
         <div className="max-w-2xl mx-auto">
           <h1 className="text-3xl font-bold mb-6">My Account</h1>
 
-          {/* Quick Navigation */}
           <div className="grid grid-cols-3 gap-3 mb-8">
             <Link to="/user-profile">
               <Card className="hover:bg-muted/50 transition-colors cursor-pointer">
