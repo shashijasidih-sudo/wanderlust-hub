@@ -12,7 +12,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const UserSettings = () => {
-  const { user } = useAuth();
+  const { user, isLoading } = useAuth();
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -23,8 +23,13 @@ const UserSettings = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  if (!user) {
-    navigate("/auth");
+  useState(() => {
+    if (!isLoading && !user) {
+      navigate("/auth");
+    }
+  });
+
+  if (isLoading || !user) {
     return <div className="min-h-screen flex items-center justify-center"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>;
   }
 
