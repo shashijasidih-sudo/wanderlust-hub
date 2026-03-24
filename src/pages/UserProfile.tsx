@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const UserProfile = () => {
-  const { user } = useAuth();
+  const { user, isLoading } = useAuth();
   const [fullName, setFullName] = useState("");
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -23,10 +23,14 @@ const UserProfile = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    if (!user) { navigate("/auth"); return; }
+    if (isLoading) return;
+    if (!user) {
+      navigate("/auth");
+      return;
+    }
     setFullName(user.full_name || "");
     fetchProfile();
-  }, [user, navigate]);
+  }, [user, isLoading, navigate]);
 
   const fetchProfile = async () => {
     if (!user) return;

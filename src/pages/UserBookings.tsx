@@ -48,13 +48,17 @@ const UserBookings = () => {
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
   const navigate = useNavigate();
   const { toast } = useToast();
-  const { user } = useAuth();
+  const { user, isLoading: isAuthLoading } = useAuth();
   const { formatPrice } = useCurrency();
 
   useEffect(() => {
-    if (!user) { navigate("/auth"); return; }
+    if (isAuthLoading) return;
+    if (!user) {
+      navigate("/auth");
+      return;
+    }
     fetchBookings();
-  }, [user, navigate]);
+  }, [user, isAuthLoading, navigate]);
 
   const fetchBookings = async () => {
     if (!user) return;
