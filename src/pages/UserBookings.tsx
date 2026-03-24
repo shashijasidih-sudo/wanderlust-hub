@@ -254,7 +254,10 @@ const UserBookings = () => {
                   {statusFilter === "all" ? "You haven't made any bookings yet. Start exploring our tours!" : `You don't have any ${statusFilter} bookings.`}
                 </p>
                 {statusFilter === "all" && (
-                  <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
+                  <div className="flex gap-3">
+                    <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
+                    <Button variant="outline" onClick={handleAddTestBooking}>Add Test Booking</Button>
+                  </div>
                 )}
               </CardContent>
             </Card>
