@@ -440,6 +440,9 @@ const App = () => (
           <Route path="/auth" element={<Auth />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/my-bookings" element={<MyBookings />} />
+          <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/user-bookings" element={<UserBookings />} />
+          <Route path="/settings" element={<UserSettings />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/customer-information" element={<CustomerInformation />} />
           <Route path="/payment-information" element={<PaymentInformation />} />
