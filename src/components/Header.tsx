@@ -100,15 +100,15 @@ const Header = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[180px]" align="end">
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                    <Link to="/profile" className="flex items-center w-full">
+                    <Link to="/user-profile" className="flex items-center w-full">
                       <User className="h-4 w-4 mr-2" />
                       Profile
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                    <Link to="/booking-history" className="flex items-center w-full">
+                    <Link to="/user-bookings" className="flex items-center w-full">
                       <CalendarDays className="h-4 w-4 mr-2" />
-                      Booking History
+                      My Bookings
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
