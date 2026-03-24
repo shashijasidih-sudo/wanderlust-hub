@@ -470,16 +470,22 @@ const Header = () => {
             </div>
             {user ? (
               <div className="flex flex-col gap-2 w-full">
-                <Link to="/profile" className="w-full">
+                <Link to="/user-profile" className="w-full">
                   <Button variant="outline" className="w-full justify-start">
                     <User className="h-4 w-4 mr-2" />
                     Profile
                   </Button>
                 </Link>
-                <Link to="/my-bookings" className="w-full">
+                <Link to="/user-bookings" className="w-full">
                   <Button variant="outline" className="w-full justify-start">
                     <CalendarDays className="h-4 w-4 mr-2" />
                     My Bookings
+                  </Button>
+                </Link>
+                <Link to="/settings" className="w-full">
+                  <Button variant="outline" className="w-full justify-start">
+                    <Settings className="h-4 w-4 mr-2" />
+                    Settings
                   </Button>
                 </Link>
                 <Link to="/wishlist" className="w-full">
