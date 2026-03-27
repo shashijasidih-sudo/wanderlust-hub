@@ -206,23 +206,55 @@ const TourPackages = () => {
     setBookingOpen(true);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formName.trim() || !formEmail.trim()) return;
 
     setIsSubmitting(true);
 
-    const subject = encodeURIComponent(`Package Inquiry: ${bookingTitle}`);
-    const body = encodeURIComponent(
-      `Name: ${formName}\\\\nEmail: ${formEmail}\\\\nPackage Interested In: ${bookingTitle}\\\\n\\\\nPlease build me a quality package!`
-    );
+    const htmlContent = `
+      <h2>New Package Enquiry 🚀</h2>
+      <p><strong>Name:</strong> ${formName}</p>
+      <p><strong>Email:</strong> ${formEmail}</p>
+      <p><strong>Package:</strong> ${bookingTitle}</p>
+    `;
 
-    window.open(`mailto:info@yellodae.com?subject=${subject}&body=${body}`, "_self");
+    try {
+      const response = await fetch(
+        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-email",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            to: "info@yellodae.com",
+            subject: "New Package Enquiry",
+            html: htmlContent,
+            replyTo: formEmail,
+          }),
+        }
+      );
 
-    toast({
-      title: "Request Initiated!",
-      description: "Your email client will open with the details. We'll get back to you shortly!",
-    });
+      const data = await response.json();
+
+      if (data.success) {
+        toast({
+          title: "Enquiry sent successfully 🚀",
+          description: "We'll get back to you shortly!",
+        });
+      } else {
+        toast({
+          title: "Failed to send enquiry ❌",
+          description: "Please try again later.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Something went wrong ❌",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    }
 
     setIsSubmitting(false);
     setBookingOpen(false);
