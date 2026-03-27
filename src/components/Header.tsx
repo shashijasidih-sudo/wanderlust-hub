@@ -308,7 +308,7 @@ const Header = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
-            Travel Essentials
+            Must Have Travel Items
           </a>
         </nav>
       </div>
