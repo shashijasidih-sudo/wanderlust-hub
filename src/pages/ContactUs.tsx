@@ -34,35 +34,38 @@ const ContactUs = () => {
 
     setIsSubmitting(true);
 
-    const htmlContent = `
-      <h2>New Contact Enquiry</h2>
-      <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone:</strong> ${phone}</p>
-      <p><strong>Subject:</strong> ${subject}</p>
-      <p><strong>Message:</strong><br/>${message}</p>
-    `;
-
     try {
-      const { data, error } = await supabase.functions.invoke('send-email', {
-        body: {
-          to: "support@yellodae.com",
-          subject: subject || "Contact Enquiry",
-          html: htmlContent,
-          replyTo: email,
-        },
-      });
+      const response = await fetch(
+        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            to: "support@yellodae.com",
+            subject: subject || "Contact Enquiry",
+            html: `
+              <h2>New Contact Message 📩</h2>
+              <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Phone:</strong> ${phone || "N/A"}</p>
+              <p><strong>Subject:</strong> ${subject || "N/A"}</p>
+              <p><strong>Message:</strong><br/>${message || "N/A"}</p>
+            `,
+            replyTo: email,
+          })
+        }
+      );
 
-      if (error) throw error;
+      const text = await response.text();
+      console.log("Contact Response:", text);
 
-      if (data.success) {
-        toast.success("Message sent successfully ✅");
-        setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
-      } else {
-        toast.error("Failed to send message ❌");
-      }
+      toast.success("Message sent successfully ✅");
+      setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
     } catch (error) {
-      toast.error("Something went wrong ❌");
+      console.error("Contact Error:", error);
+      toast.error("Failed to send message ❌");
     }
 
     setIsSubmitting(false);
