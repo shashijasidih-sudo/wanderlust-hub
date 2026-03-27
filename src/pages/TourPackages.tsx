@@ -224,7 +224,10 @@ const TourPackages = () => {
         "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-email",
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+          },
           body: JSON.stringify({
             to: "info@yellodae.com",
             subject: "New Package Enquiry",
