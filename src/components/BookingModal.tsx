@@ -139,7 +139,7 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               headers: {
                 "Content-Type": "application/json",
                 "apikey": anonKey,
-                "Authorization": `Bearer ${anonKey}`,
+                "Authorization": `Bearer ${accessToken || anonKey}`,
               },
               body: JSON.stringify({
                 payment_id: response.razorpay_payment_id,
