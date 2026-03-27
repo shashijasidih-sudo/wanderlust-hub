@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
 import {
@@ -15,6 +15,14 @@ import { format } from "date-fns";
 import { CalendarIcon, Loader2, Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { z } from "zod";
+import { supabase } from "@/lib/supabaseClient";
+
+const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
+const SUPABASE_FUNCTIONS_URL = "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1";
+
+declare global {
+  interface Window { Razorpay: any; }
+}
 
 const bookingSchema = z.object({
   contactName: z.string().trim().min(2, "Name must be at least 2 characters").max(100),
