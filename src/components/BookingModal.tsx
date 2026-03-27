@@ -15,7 +15,7 @@ import { format } from "date-fns";
 import { CalendarIcon, Loader2, Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { z } from "zod";
-import { supabase } from "@/lib/supabaseClient";
+
 
 const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
 const SUPABASE_FUNCTIONS_URL = "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1";
