@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactUs = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -44,21 +45,16 @@ const ContactUs = () => {
     `;
 
     try {
-      const response = await fetch(
-        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-email",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            to: "support@yellodae.com",
-            subject: subject || "Contact Enquiry",
-            html: htmlContent,
-            replyTo: email,
-          }),
-        }
-      );
+      const { data, error } = await supabase.functions.invoke('send-email', {
+        body: {
+          to: "support@yellodae.com",
+          subject: subject || "Contact Enquiry",
+          html: htmlContent,
+          replyTo: email,
+        },
+      });
 
-      const data = await response.json();
+      if (error) throw error;
 
       if (data.success) {
         toast.success("Message sent successfully ✅");

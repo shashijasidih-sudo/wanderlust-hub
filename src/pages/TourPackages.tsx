@@ -9,6 +9,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 import phiPhi1 from "@/assets/phi-phi-1.jpg";
 import pattayaBoats from "@/assets/pattaya-boats-beach-1.jpg";
@@ -220,21 +221,16 @@ const TourPackages = () => {
     `;
 
     try {
-      const response = await fetch(
-        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-email",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            to: "info@yellodae.com",
-            subject: "New Package Enquiry",
-            html: htmlContent,
-            replyTo: formEmail,
-          }),
-        }
-      );
+      const { data, error } = await supabase.functions.invoke('send-email', {
+        body: {
+          to: "info@yellodae.com",
+          subject: "New Package Enquiry",
+          html: htmlContent,
+          replyTo: formEmail,
+        },
+      });
 
-      const data = await response.json();
+      if (error) throw error;
 
       if (data.success) {
         toast({
