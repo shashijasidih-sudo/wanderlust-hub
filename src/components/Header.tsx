@@ -419,6 +419,9 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+            <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
+              Must Have Travel Items
+            </a>
             <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary" onClick={() => setIsMenuOpen(false)}>
               Tours & Packages
             </Link>
@@ -460,9 +463,6 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
-              Must Have Travel Items
-            </a>
             <div className="flex items-center gap-2 pt-2 border-t">
               <Button variant="ghost" size="icon">
                 <IndianRupee className="h-5 w-5" />
