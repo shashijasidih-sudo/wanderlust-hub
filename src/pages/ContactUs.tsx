@@ -23,18 +23,54 @@ const ContactUs = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = () => {
-    const { firstName, lastName, email, subject, message } = formData;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async () => {
+    const { firstName, lastName, email, phone, subject, message } = formData;
     if (!firstName || !email || !subject || !message) {
       toast.error("Please fill in all required fields (First Name, Email, Subject, Message)");
       return;
     }
-    const mailtoSubject = encodeURIComponent(subject);
-    const body = encodeURIComponent(
-      `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${formData.phone}\n\n${message}`
-    );
-    window.location.href = `mailto:support@yellodae.com?subject=${mailtoSubject}&body=${body}`;
-    toast.success("Opening your email client to send the message!");
+
+    setIsSubmitting(true);
+
+    const htmlContent = `
+      <h2>New Contact Enquiry</h2>
+      <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Subject:</strong> ${subject}</p>
+      <p><strong>Message:</strong><br/>${message}</p>
+    `;
+
+    try {
+      const response = await fetch(
+        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-email",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            to: "support@yellodae.com",
+            subject: subject || "Contact Enquiry",
+            html: htmlContent,
+            replyTo: email,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success("Message sent successfully ✅");
+        setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
+      } else {
+        toast.error("Failed to send message ❌");
+      }
+    } catch (error) {
+      toast.error("Something went wrong ❌");
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
@@ -183,9 +219,10 @@ const ContactUs = () => {
                     className="w-full" 
                     size="lg" 
                     onClick={handleSubmit}
+                    disabled={isSubmitting}
                   >
                     <Send className="w-4 h-4 mr-2" />
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                   <p className="text-xs text-muted-foreground text-center">
                     Your message will be sent to support@yellodae.com.
