@@ -15,10 +15,11 @@ import { format } from "date-fns";
 import { CalendarIcon, Loader2, Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { z } from "zod";
-import { supabase } from "@/lib/supabaseClient";
+
 
 const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
 const SUPABASE_FUNCTIONS_URL = "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso";
 
 declare global {
   interface Window { Razorpay: any; }
@@ -95,19 +96,14 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
     setIsLoading(true);
     try {
       const totalAmountPaise = Math.round(totalPrice * 100);
-      const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
-
-      // Get the user's session token for Authorization
-      const { data: sessionData } = await supabase.auth.getSession();
-      const accessToken = sessionData?.session?.access_token;
 
       // Create Razorpay order
       const orderRes = await fetch(`${SUPABASE_FUNCTIONS_URL}/create-order`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "apikey": anonKey,
-          "Authorization": `Bearer ${accessToken || anonKey}`,
+          "apikey": SUPABASE_ANON_KEY,
+          "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
         },
         body: JSON.stringify({
           amount: totalAmountPaise,
@@ -138,8 +134,8 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
-                "apikey": anonKey,
-                "Authorization": `Bearer ${accessToken || anonKey}`,
+                "apikey": SUPABASE_ANON_KEY,
+                "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
               },
               body: JSON.stringify({
                 payment_id: response.razorpay_payment_id,
@@ -163,8 +159,8 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
-                "apikey": anonKey,
-                "Authorization": `Bearer ${accessToken || anonKey}`,
+                "apikey": SUPABASE_ANON_KEY,
+                "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
               },
               body: JSON.stringify({
                 email: contactEmail,
