@@ -9,7 +9,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+
 
 import phiPhi1 from "@/assets/phi-phi-1.jpg";
 import pattayaBoats from "@/assets/pattaya-boats-beach-1.jpg";
