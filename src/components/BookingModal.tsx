@@ -97,13 +97,17 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
       const totalAmountPaise = Math.round(totalPrice * 100);
       const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
+      // Get the user's session token for Authorization
+      const { data: sessionData } = await supabase.auth.getSession();
+      const accessToken = sessionData?.session?.access_token;
+
       // Create Razorpay order
       const orderRes = await fetch(`${SUPABASE_FUNCTIONS_URL}/create-order`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "apikey": anonKey,
-          "Authorization": `Bearer ${anonKey}`,
+          "Authorization": `Bearer ${accessToken || anonKey}`,
         },
         body: JSON.stringify({
           amount: totalAmountPaise,
