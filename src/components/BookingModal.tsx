@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
 import {
@@ -15,6 +15,14 @@ import { format } from "date-fns";
 import { CalendarIcon, Loader2, Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { z } from "zod";
+import { supabase } from "@/lib/supabaseClient";
+
+const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
+const SUPABASE_FUNCTIONS_URL = "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1";
+
+declare global {
+  interface Window { Razorpay: any; }
+}
 
 const bookingSchema = z.object({
   contactName: z.string().trim().min(2, "Name must be at least 2 characters").max(100),
@@ -49,6 +57,16 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
 
   const totalPrice = (adults * pricePerAdult) + (children * pricePerChild);
 
+  // Load Razorpay script
+  useEffect(() => {
+    if (!document.querySelector('script[src="https://checkout.razorpay.com/v1/checkout.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
@@ -69,14 +87,106 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
       return;
     }
 
-    setIsLoading(true);
-    // Placeholder — POST /api/bookings
-    await new Promise(r => setTimeout(r, 800));
-    setIsLoading(false);
+    if (!window.Razorpay) {
+      toast({ title: "Payment gateway loading", description: "Please try again in a moment.", variant: "destructive" });
+      return;
+    }
 
-    toast({ title: "Booking Successful!", description: "Your booking has been confirmed. Check My Bookings for details." });
-    onClose();
-    navigate("/my-bookings");
+    setIsLoading(true);
+    try {
+      const totalAmountPaise = Math.round(totalPrice * 100);
+      const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+
+      // Create Razorpay order
+      const orderRes = await fetch(`${SUPABASE_FUNCTIONS_URL}/create-order`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "apikey": anonKey,
+          "Authorization": `Bearer ${anonKey}`,
+        },
+        body: JSON.stringify({
+          amount: totalAmountPaise,
+          currency,
+          customer_name: contactName,
+          customer_email: contactEmail,
+          services: tourName,
+          booking_date: format(date, "yyyy-MM-dd"),
+        }),
+      });
+
+      if (!orderRes.ok) throw new Error("Failed to create order");
+      const order = await orderRes.json();
+
+      // Open Razorpay checkout
+      const options = {
+        key: RAZORPAY_KEY_ID,
+        amount: totalAmountPaise,
+        currency,
+        order_id: order.id,
+        name: "Yellodae Tours",
+        description: tourName,
+        prefill: { name: contactName, email: contactEmail, contact: contactPhone },
+        handler: async (response: any) => {
+          try {
+            // Save booking to Supabase
+            await fetch(`${SUPABASE_FUNCTIONS_URL}/save-booking`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "apikey": anonKey,
+                "Authorization": `Bearer ${anonKey}`,
+              },
+              body: JSON.stringify({
+                payment_id: response.razorpay_payment_id,
+                order_id: response.razorpay_order_id,
+                amount: totalAmountPaise,
+                customer_name: contactName,
+                customer_email: contactEmail,
+                customer_phone: contactPhone,
+                tour_name: tourName,
+                tour_slug: tourSlug,
+                tour_date: format(date, "yyyy-MM-dd"),
+                adults,
+                children,
+                special_requests: specialRequests,
+                user_id: user.id,
+              }),
+            });
+
+            // Send confirmation email
+            await fetch(`${SUPABASE_FUNCTIONS_URL}/send-confirmation`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "apikey": anonKey,
+                "Authorization": `Bearer ${anonKey}`,
+              },
+              body: JSON.stringify({
+                email: contactEmail,
+                bookingId: response.razorpay_payment_id,
+                amount: totalPrice,
+              }),
+            }).catch(() => {});
+          } catch (err) {
+            console.error("Failed to save booking:", err);
+          }
+
+          toast({ title: "Payment Successful!", description: `Payment ID: ${response.razorpay_payment_id}` });
+          onClose();
+          navigate("/my-bookings");
+        },
+        modal: { ondismiss: () => setIsLoading(false) },
+      };
+
+      const rzp = new window.Razorpay(options);
+      rzp.open();
+      setIsLoading(false);
+    } catch (error) {
+      console.error("Payment error:", error);
+      toast({ title: "Payment Failed", description: "Could not initiate payment. Please try again.", variant: "destructive" });
+      setIsLoading(false);
+    }
   };
 
   const handleLoginRedirect = () => { onClose(); navigate("/auth"); };
