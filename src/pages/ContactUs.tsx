@@ -219,9 +219,10 @@ const ContactUs = () => {
                     className="w-full" 
                     size="lg" 
                     onClick={handleSubmit}
+                    disabled={isSubmitting}
                   >
                     <Send className="w-4 h-4 mr-2" />
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                   <p className="text-xs text-muted-foreground text-center">
                     Your message will be sent to support@yellodae.com.
