@@ -221,24 +221,16 @@ const TourPackages = () => {
     `;
 
     try {
-      const response = await fetch(
-        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-email",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
-          },
-          body: JSON.stringify({
-            to: "info@yellodae.com",
-            subject: "New Package Enquiry",
-            html: htmlContent,
-            replyTo: formEmail,
-          }),
-        }
-      );
+      const { data, error } = await supabase.functions.invoke('send-email', {
+        body: {
+          to: "info@yellodae.com",
+          subject: "New Package Enquiry",
+          html: htmlContent,
+          replyTo: formEmail,
+        },
+      });
 
-      const data = await response.json();
+      if (error) throw error;
 
       if (data.success) {
         toast({
