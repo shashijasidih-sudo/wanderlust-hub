@@ -266,6 +266,9 @@ const Header = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
+            Must Have Travel Items
+          </a>
           <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary">
             Tours & Packages
           </Link>
@@ -307,9 +310,6 @@ const Header = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
-            Must Have Travel Items
-          </a>
         </nav>
       </div>
 
