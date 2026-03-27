@@ -461,7 +461,7 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
-              Travel Essentials
+              Must Have Travel Items
             </a>
             <div className="flex items-center gap-2 pt-2 border-t">
               <Button variant="ghost" size="icon">
