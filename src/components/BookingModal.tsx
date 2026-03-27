@@ -164,7 +164,7 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               headers: {
                 "Content-Type": "application/json",
                 "apikey": anonKey,
-                "Authorization": `Bearer ${anonKey}`,
+                "Authorization": `Bearer ${accessToken || anonKey}`,
               },
               body: JSON.stringify({
                 email: contactEmail,
