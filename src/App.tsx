@@ -165,6 +165,7 @@ import DubaiAirportDropoffZone4 from "./pages/DubaiAirportDropoffZone4";
 import DubaiAirportPickupZone5 from "./pages/DubaiAirportPickupZone5";
 import DubaiAirportDropoffZone5 from "./pages/DubaiAirportDropoffZone5";
 import Auth from "./pages/Auth";
+import AuthCallback from "./pages/AuthCallback";
 import Profile from "./pages/Profile";
 import MyBookings from "./pages/MyBookings";
 import UserProfile from "./pages/UserProfile";
@@ -438,6 +439,7 @@ const App = () => (
             <Route path="/singapore/airport-dropoff" element={<SingaporeAirportDropoff />} />
             <Route path="/singapore/airport-night-pickup" element={<SingaporeAirportNightPickup />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/auth/callback" element={<AuthCallback />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/my-bookings" element={<MyBookings />} />
           <Route path="/user-profile" element={<UserProfile />} />
