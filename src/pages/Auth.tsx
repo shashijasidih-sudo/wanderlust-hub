@@ -96,9 +96,12 @@ const Auth = () => {
 
   const handleGoogleLogin = async () => {
     setIsGoogleLoading(true);
-    await auth.signInWithGoogle();
-    setIsGoogleLoading(false);
-    toast({ title: "Google Login", description: "Google OAuth is not yet connected to a backend.", variant: "destructive" });
+    try {
+      await auth.signInWithGoogle();
+    } catch (error: any) {
+      setIsGoogleLoading(false);
+      toast({ title: "Google Login Failed", description: error.message || "Could not sign in with Google", variant: "destructive" });
+    }
   };
 
   const handleForgotPassword = async (e: React.FormEvent) => {
