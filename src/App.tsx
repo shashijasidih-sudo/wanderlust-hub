@@ -165,6 +165,7 @@ import DubaiAirportDropoffZone4 from "./pages/DubaiAirportDropoffZone4";
 import DubaiAirportPickupZone5 from "./pages/DubaiAirportPickupZone5";
 import DubaiAirportDropoffZone5 from "./pages/DubaiAirportDropoffZone5";
 import Auth from "./pages/Auth";
+import AuthCallback from "./pages/AuthCallback";
 import Profile from "./pages/Profile";
 import MyBookings from "./pages/MyBookings";
 import UserProfile from "./pages/UserProfile";
