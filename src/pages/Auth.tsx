@@ -98,7 +98,15 @@ const Auth = () => {
   const handleGoogleLogin = async () => {
     setIsGoogleLoading(true);
     try {
-      await auth.signInWithGoogle();
+      await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: window.location.origin + '/auth/callback',
+          queryParams: {
+            prompt: 'select_account'
+          }
+        }
+      });
     } catch (error: any) {
       setIsGoogleLoading(false);
       toast({ title: "Google Login Failed", description: error.message || "Could not sign in with Google", variant: "destructive" });
