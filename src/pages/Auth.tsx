@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { supabase } from "@/lib/supabaseClient";
 import { auth, useAuth } from "@/lib/auth";
 import yellodaeLogo from "@/assets/yellodae-logo.png";
 import { Button } from "@/components/ui/button";
