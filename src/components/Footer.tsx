@@ -41,18 +41,26 @@ const Footer = () => {
               Your trusted partner for unforgettable travel experiences around the world.
             </p>
             <div className="flex gap-3">
-              <Button size="icon" variant="ghost" className="hover:bg-background/10 text-background hover:text-background">
-                <Facebook className="h-5 w-5" />
-              </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-background/10 text-background hover:text-background">
-                <Instagram className="h-5 w-5" />
-              </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-background/10 text-background hover:text-background">
-                <Twitter className="h-5 w-5" />
-              </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-background/10 text-background hover:text-background">
-                <Linkedin className="h-5 w-5" />
-              </Button>
+              <a href="https://www.facebook.com/yellodaetrails/" target="_blank" rel="noopener noreferrer">
+                <Button size="icon" variant="ghost" className="hover:bg-background/10 text-background hover:text-background">
+                  <Facebook className="h-5 w-5" />
+                </Button>
+              </a>
+              <a href="https://www.instagram.com/yellodaetrails" target="_blank" rel="noopener noreferrer">
+                <Button size="icon" variant="ghost" className="hover:bg-background/10 text-background hover:text-background">
+                  <Instagram className="h-5 w-5" />
+                </Button>
+              </a>
+              <a href="https://in.linkedin.com/company/yellodae-trails" target="_blank" rel="noopener noreferrer">
+                <Button size="icon" variant="ghost" className="hover:bg-background/10 text-background hover:text-background">
+                  <Linkedin className="h-5 w-5" />
+                </Button>
+              </a>
+              <a href="https://www.youtube.com/@yellodaetrails" target="_blank" rel="noopener noreferrer">
+                <Button size="icon" variant="ghost" className="hover:bg-background/10 text-background hover:text-background">
+                  <Youtube className="h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </div>
 
