@@ -30,13 +30,13 @@ const SuggestedTours = ({ currentCity }: SuggestedToursProps) => {
       {
         title: "Floating Market Experience",
         price: 2800,
-        image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=400&h=300&fit=crop",
+        image: floatingMarket1,
         link: "/bangkok"
       },
       {
         title: "Chaophraya Dinner Cruise",
         price: 3500,
-        image: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=400&h=300&fit=crop",
+        image: cruiseNight1,
         link: "/bangkok"
       },
     ]

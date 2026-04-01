@@ -18,7 +18,7 @@ import pattayaTropicalBeach from "@/assets/pattaya-tropical-beach-1.jpg";
 import pattayaLongtailBoats from "@/assets/pattaya-longtail-boats-1.jpg";
 import pattayaWomanSea from "@/assets/pattaya-woman-sea-1.jpg";
 import pattayaSpeedboat from "@/assets/pattaya-speedboat-1.jpg";
-import pattayaIslandsBoats from "@/assets/pattaya-islands-boats-1.jpg";
+import pattayaIslandsBoats from "@/assets/floating-market-daylight-2.jpg";
 import alcazarShow1 from "@/assets/alcazar-show-1.jpg";
 import pattayaNightlife1 from "@/assets/pattaya-nightlife-1.jpg";
 import pattayaNightlife2 from "@/assets/pattaya-nightlife-2.jpg";
