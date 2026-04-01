@@ -312,22 +312,22 @@ const Header = () => {
           </DropdownMenu>
           <div className="ml-auto flex items-center gap-1">
             <a href="https://www.facebook.com/yellodaetrails/" target="_blank" rel="noopener noreferrer">
-              <Button size="icon" variant="ghost" className="h-8 w-8 hover:text-primary">
+              <Button size="icon" variant="ghost" className="h-8 w-8 text-[#1877F2] hover:bg-[#1877F2]/10">
                 <Facebook className="h-4 w-4" />
               </Button>
             </a>
             <a href="https://www.instagram.com/yellodaetrails" target="_blank" rel="noopener noreferrer">
-              <Button size="icon" variant="ghost" className="h-8 w-8 hover:text-primary">
+              <Button size="icon" variant="ghost" className="h-8 w-8 text-[#E4405F] hover:bg-[#E4405F]/10">
                 <Instagram className="h-4 w-4" />
               </Button>
             </a>
             <a href="https://in.linkedin.com/company/yellodae-trails" target="_blank" rel="noopener noreferrer">
-              <Button size="icon" variant="ghost" className="h-8 w-8 hover:text-primary">
+              <Button size="icon" variant="ghost" className="h-8 w-8 text-[#0A66C2] hover:bg-[#0A66C2]/10">
                 <Linkedin className="h-4 w-4" />
               </Button>
             </a>
             <a href="https://www.youtube.com/@yellodaetrails" target="_blank" rel="noopener noreferrer">
-              <Button size="icon" variant="ghost" className="h-8 w-8 hover:text-primary">
+              <Button size="icon" variant="ghost" className="h-8 w-8 text-[#FF0000] hover:bg-[#FF0000]/10">
                 <Youtube className="h-4 w-4" />
               </Button>
             </a>
