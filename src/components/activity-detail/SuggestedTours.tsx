@@ -34,7 +34,7 @@ const SuggestedTours = ({ currentCity }: SuggestedToursProps) => {
       {
         title: "Chaophraya Dinner Cruise",
         price: 3500,
-        image: "https://images.unsplash.com/photo-1567086814453-e0d4f7c3078d?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=400&h=300&fit=crop",
         link: "/bangkok"
       },
     ]
