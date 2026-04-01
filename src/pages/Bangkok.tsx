@@ -15,9 +15,11 @@ import SearchInput from "@/components/SearchInput";
 // Import local assets
 import bangkokSkywalkHero from "@/assets/bangkok-skywalk-hero.jpg";
 import massageHero from "@/assets/massage-coupon-hero.jpg";
-import floatingMarket1 from "@/assets/floating-market-1.jpg";
+import floatingMarket1 from "@/assets/floating-market-daylight-1.jpg";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import ayutthayaSunset1 from "@/assets/ayutthaya-sunset-1.jpg";
+import cruiseNight1 from "@/assets/cruise-night-1.jpg";
+import cruiseNight2 from "@/assets/cruise-night-2.jpg";
 
 const activities = [
   // Temple & City Tours
@@ -35,12 +37,12 @@ const activities = [
   { title: "Bangkok Sea Life Aquarium and Madame Tussauds Admission Ticket", price: 4215, image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop", slug: "sea-life-madame-tussauds" },
   
   // Cruise Activities
-  { title: "Viva Alangka Dinner Cruise from Asiatique with Transfer", price: 4915, image: "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&auto=format&fit=crop", slug: "viva-alangka-cruise" },
+  { title: "Viva Alangka Dinner Cruise from Asiatique with Transfer", price: 4915, image: cruiseNight1, slug: "viva-alangka-cruise" },
   { title: "Ayutthaya Glittering Tours from Bangkok with Sunset Cruise Experience with transfers", price: 5245, image: ayutthayaSunset1, slug: "ayutthaya-sunset-cruise" },
-  { title: "Chao Phraya Princess Dinner Cruise in Bangkok with Private Transfer", price: 5545, image: "https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=800&auto=format&fit=crop", slug: "chao-phraya-princess-private" },
-  { title: "Chao Phraya Princess Dinner Cruise: Valentine's Day Celebration", price: 3150, image: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=800&auto=format&fit=crop", slug: "chao-phraya-princess-valentine" },
-  { title: "Chaophraya Princess River Dinner Cruise Over Chaophraya River with Join Transfer", price: 4410, image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&auto=format&fit=crop", slug: "chao-phraya-princess-join" },
-  { title: "River Cruise by Chao Phraya Princess Admission Ticket With Indian or International Dinner (No Transfer)", price: 3150, image: "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&auto=format&fit=crop", slug: "chao-phraya-princess-no-transfer" },
+  { title: "Chao Phraya Princess Dinner Cruise in Bangkok with Private Transfer", price: 5545, image: cruiseNight2, slug: "chao-phraya-princess-private" },
+  { title: "Chao Phraya Princess Dinner Cruise: Valentine's Day Celebration", price: 3150, image: cruiseNight1, slug: "chao-phraya-princess-valentine" },
+  { title: "Chaophraya Princess River Dinner Cruise Over Chaophraya River with Join Transfer", price: 4410, image: cruiseNight2, slug: "chao-phraya-princess-join" },
+  { title: "River Cruise by Chao Phraya Princess Admission Ticket With Indian or International Dinner (No Transfer)", price: 3150, image: cruiseNight1, slug: "chao-phraya-princess-no-transfer" },
   
   // Other Activities
   { title: "Health Land Gift Voucher: Traditional Thai Massage (120 Min)", price: 2775, image: massageHero, slug: "massage-coupons" },
