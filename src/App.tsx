@@ -304,6 +304,7 @@ const App = () => (
             <Route path="/four-islands-longtail-no-park-fee" element={<FourIslandsLongtailNoParkFee />} />
             <Route path="/four-islands-speedboat" element={<FourIslandsSpeedboat />} />
             <Route path="/james-bond-island-krabi" element={<JamesBondIslandKrabi />} />
+            <Route path="/esim-thailand-ais" element={<EsimThailandAis />} />
             <Route path="/thailand-smart-guides" element={<ThailandSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
