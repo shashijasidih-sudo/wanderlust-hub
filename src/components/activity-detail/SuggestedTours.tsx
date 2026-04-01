@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useCurrency } from "@/contexts/CurrencyContext";
+import cruiseNight1 from "@/assets/cruise-night-1.jpg";
+import floatingMarket1 from "@/assets/floating-market-daylight-1.jpg";
 
 interface SuggestedToursProps {
   currentCity: string;
