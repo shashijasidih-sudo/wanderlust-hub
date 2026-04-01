@@ -15,9 +15,11 @@ import SearchInput from "@/components/SearchInput";
 // Import local assets
 import bangkokSkywalkHero from "@/assets/bangkok-skywalk-hero.jpg";
 import massageHero from "@/assets/massage-coupon-hero.jpg";
-import floatingMarket1 from "@/assets/floating-market-1.jpg";
+import floatingMarket1 from "@/assets/floating-market-daylight-1.jpg";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import ayutthayaSunset1 from "@/assets/ayutthaya-sunset-1.jpg";
+import cruiseNight1 from "@/assets/cruise-night-1.jpg";
+import cruiseNight2 from "@/assets/cruise-night-2.jpg";
 
 const activities = [
   // Temple & City Tours
