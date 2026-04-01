@@ -131,6 +131,20 @@ const activities = [
     city: "Krabi",
     slug: "/four-islands-speedboat"
   },
+  {
+    id: 7,
+    title: "5G eSIM Thailand | AIS",
+    image: bangkokImg,
+    rating: 4.8,
+    reviews: 3245,
+    price: 60,
+    duration: "1-30 Days",
+    category: "Essentials",
+    description: "Stay connected across Thailand with a 5G/4G eSIM from AIS. Instant digital activation, no physical SIM needed.",
+    availability: "Available",
+    city: "Thailand",
+    slug: "/esim-thailand-ais"
+  },
 ];
 
 const cities = [

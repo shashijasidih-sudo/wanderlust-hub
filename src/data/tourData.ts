@@ -6793,5 +6793,91 @@ export const toursData: Record<string, TourData> = {
     faqs: [
       { question: "Is canoeing safe for non-swimmers?", answer: "Yes, life jackets are provided and guides paddle the canoes." }
     ]
+  },
+  "esim-thailand-ais": {
+    id: "esim-thailand-ais",
+    title: "5G eSIM Thailand | AIS",
+    shortDescription: "Stay connected across Thailand with a 5G/4G eSIM from AIS. Instant digital activation, no physical SIM needed.",
+    location: "Thailand",
+    city: "bangkok",
+    basePrice: 60,
+    childPrice: 0,
+    duration: "1-30 Days",
+    rating: 4.8,
+    reviews: 3245,
+    hideChildren: true,
+    heroImages: [
+      { src: "", title: "eSIM Thailand Activation" },
+      { src: "", title: "Thailand eSIM Coverage Map" },
+      { src: "", title: "Stay Connected in Thailand" }
+    ],
+    galleryImages: [
+      { src: "", alt: "eSIM Thailand Setup" },
+      { src: "", alt: "Thailand Travel Connectivity" },
+      { src: "", alt: "Using Phone in Bangkok" }
+    ],
+    highlights: [
+      "5G/4G high-speed data across Thailand",
+      "Instant digital activation — no physical SIM required",
+      "1-30 day flexible plans available",
+      "15GB/Day unlimited plans (1Mbps after limit)",
+      "AIS (primary) & True (alternative) network coverage",
+      "Hotspot sharing supported",
+      "Works with 100+ eSIM-enabled devices",
+      "Keep your primary SIM number with dual SIM"
+    ],
+    description: {
+      overview: "An eSIM Thailand is a digital SIM card that lets you add a mobile data plan to your phone without needing a physical SIM. With a Thailand eSIM, you can stay connected as you travel across cities like Bangkok, Phuket and Chiang Mai — no need to visit a SIM card store or worry about roaming fees.",
+      whatToExpect: "Why Choose eSIM for Thailand:\n\n• High-Speed Data: Reliable connectivity through top local networks like AIS.\n• Instant Setup: Activate in 5 minutes — no physical SIM required.\n• Affordable Plans: Transparent pricing with no hidden expensive roaming fees.\n• Wide Compatibility: Works with 100+ eSIM-enabled devices.\n• Hotspot Sharing: You can easily share data with other devices.\n\nCoverage: All of Thailand (Excluding Pattani, Yala (e.g. Betong), Narathiwat, Chana District, Nathawi District, Thepha District and Saba Yoi District).\n\nFor Unlimited plans: 15GB/Day without a speed limit, 1Mbps after the limit.\n\nNetwork: AIS (primary), True (alternative)."
+    },
+    itinerary: [
+      { time: "Step 1", title: "Purchase eSIM Plan", description: "Choose your preferred data plan duration (1-30 days) and complete the purchase." },
+      { time: "Step 2", title: "Receive QR Code", description: "You'll receive a QR code via email instantly after purchase." },
+      { time: "Step 3", title: "Scan & Activate", description: "Scan the QR code on your eSIM-compatible device to install the eSIM profile." },
+      { time: "Step 4", title: "Stay Connected", description: "Enable data roaming and select the eSIM as your data line. Enjoy 5G/4G connectivity across Thailand!" }
+    ],
+    tourTimings: ["Instant Activation"],
+    inclusions: [
+      "5G/4G Data Plan",
+      "AIS Network Coverage",
+      "QR Code for Instant Activation",
+      "Hotspot Sharing",
+      "24/7 Customer Support",
+      "Data Only Plan"
+    ],
+    exclusions: [
+      "Voice calls and SMS",
+      "Physical SIM card",
+      "Coverage in excluded southern districts"
+    ],
+    bookingPolicy: [
+      "eSIM QR code delivered instantly via email after purchase",
+      "Ensure your device is eSIM-compatible before purchasing",
+      "eSIM can be installed before or after arriving in Thailand",
+      "Data plan activates upon first connection to local network"
+    ],
+    cancellationPolicy: [
+      "Non-refundable once QR code has been delivered",
+      "Contact support if you face activation issues"
+    ],
+    childPolicy: [
+      "No age restrictions — this is a digital product"
+    ],
+    faqs: [
+      { question: "How does eSIM Thailand work?", answer: "Thailand eSIM works by digitally adding a mobile plan to your device. After purchase, you receive a QR code which you scan to install the eSIM profile. Once activated, you'll have instant 5G/4G data connectivity across Thailand." },
+      { question: "Is eSIM worth it for Thailand?", answer: "Definitely! An eSIM is the easiest way to stay connected while traveling in Thailand — no need to swap physical SIM cards. Avoid expensive roaming fees while enjoying fast and reliable coverage across Bangkok, Phuket, Chiang Mai and beyond from AIS for a seamless travel experience." },
+      { question: "Can you keep your primary SIM number with a Thailand eSIM?", answer: "Yes. Thanks to the dual SIM functionality of an eSIM, you can keep your local phone number. Your local SIM card stays in your phone, and you add the eSIM Thailand plan for internet access. This lets you enjoy data in Thailand without having to swap out your physical SIM card." },
+      { question: "What devices support eSIM?", answer: "Most modern smartphones support eSIM including iPhone XS and newer, Samsung Galaxy S20 and newer, Google Pixel 3 and newer, and many more. Check your device settings for eSIM compatibility." },
+      { question: "What coverage areas are excluded?", answer: "Coverage is available across all of Thailand except Pattani, Yala (e.g. Betong), Narathiwat, Chana District, Nathawi District, Thepha District and Saba Yoi District." }
+    ],
+    tourOptions: [
+      { label: "1 Day Plan", adultPrice: 60 },
+      { label: "3 Day Plan", adultPrice: 150 },
+      { label: "5 Day Plan", adultPrice: 230 },
+      { label: "7 Day Plan", adultPrice: 300 },
+      { label: "10 Day Plan", adultPrice: 400 },
+      { label: "15 Day Plan", adultPrice: 550 },
+      { label: "30 Day Plan", adultPrice: 900 }
+    ]
   }
 };
