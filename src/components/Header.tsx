@@ -486,6 +486,20 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             <div className="flex items-center gap-2 pt-2 border-t">
+              <a href="https://www.facebook.com/yellodaetrails/" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="text-[#1877F2]"><Facebook className="h-5 w-5" /></Button>
+              </a>
+              <a href="https://www.instagram.com/yellodaetrails" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="text-[#E4405F]"><Instagram className="h-5 w-5" /></Button>
+              </a>
+              <a href="https://in.linkedin.com/company/yellodae-trails" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="text-[#0A66C2]"><Linkedin className="h-5 w-5" /></Button>
+              </a>
+              <a href="https://www.youtube.com/@yellodaetrails" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="text-[#FF0000]"><Youtube className="h-5 w-5" /></Button>
+              </a>
+            </div>
+            <div className="flex items-center gap-2 pt-2 border-t">
               <Button variant="ghost" size="icon">
                 <IndianRupee className="h-5 w-5" />
               </Button>
