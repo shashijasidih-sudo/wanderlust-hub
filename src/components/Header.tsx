@@ -1,4 +1,4 @@
-import { Menu, IndianRupee, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket, LogOut, CalendarDays, ShieldCheck, Settings } from "lucide-react";
+import { Menu, IndianRupee, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket, LogOut, CalendarDays, ShieldCheck, Settings, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -310,6 +310,28 @@ const Header = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          <div className="ml-auto flex items-center gap-1">
+            <a href="https://www.facebook.com/yellodaetrails/" target="_blank" rel="noopener noreferrer">
+              <Button size="icon" variant="ghost" className="h-8 w-8 hover:text-primary">
+                <Facebook className="h-4 w-4" />
+              </Button>
+            </a>
+            <a href="https://www.instagram.com/yellodaetrails" target="_blank" rel="noopener noreferrer">
+              <Button size="icon" variant="ghost" className="h-8 w-8 hover:text-primary">
+                <Instagram className="h-4 w-4" />
+              </Button>
+            </a>
+            <a href="https://in.linkedin.com/company/yellodae-trails" target="_blank" rel="noopener noreferrer">
+              <Button size="icon" variant="ghost" className="h-8 w-8 hover:text-primary">
+                <Linkedin className="h-4 w-4" />
+              </Button>
+            </a>
+            <a href="https://www.youtube.com/@yellodaetrails" target="_blank" rel="noopener noreferrer">
+              <Button size="icon" variant="ghost" className="h-8 w-8 hover:text-primary">
+                <Youtube className="h-4 w-4" />
+              </Button>
+            </a>
+          </div>
         </nav>
       </div>
 
