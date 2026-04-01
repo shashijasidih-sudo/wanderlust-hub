@@ -76,6 +76,7 @@ import FourIslandsLongtail from "./pages/FourIslandsLongtail";
 import FourIslandsLongtailNoParkFee from "./pages/FourIslandsLongtailNoParkFee";
 import FourIslandsSpeedboat from "./pages/FourIslandsSpeedboat";
 import JamesBondIslandKrabi from "./pages/JamesBondIslandKrabi";
+import EsimThailandAis from "./pages/EsimThailandAis";
 import TourPackages from "./pages/TourPackages";
 import ThailandSmartGuides from "./pages/ThailandSmartGuides";
 import BlogAirportTransferThailand from "./pages/BlogAirportTransferThailand";
