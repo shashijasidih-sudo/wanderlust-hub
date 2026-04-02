@@ -147,13 +147,6 @@ const HeroSection = () => {
           <Button 
             variant="secondary" 
             className="bg-white/90 hover:bg-white backdrop-blur-sm"
-            onClick={() => navigate("/dubai/transfers")}
-          >
-            Dubai Transfers
-          </Button>
-          <Button 
-            variant="secondary" 
-            className="bg-white/90 hover:bg-white backdrop-blur-sm"
             onClick={() => navigate("/singapore/transfers")}
           >
             Singapore Transfers
