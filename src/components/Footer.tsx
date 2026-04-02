@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Instagram, Linkedin, Youtube, MessageCircle } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube, MessageCircle } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
 
 
@@ -64,6 +64,11 @@ const Footer = () => {
               <a href="https://www.youtube.com/@yellodaetrails" target="_blank" rel="noopener noreferrer">
                 <Button size="icon" variant="ghost" className="hover:bg-background/10 text-[#FF0000] hover:text-[#FF0000]">
                   <Youtube className="h-5 w-5" />
+                </Button>
+              </a>
+              <a href="https://www.facebook.com/yellodaetrails/" target="_blank" rel="noopener noreferrer">
+                <Button size="icon" variant="ghost" className="hover:bg-background/10 text-[#1877F2] hover:text-[#1877F2]">
+                  <Facebook className="h-5 w-5" />
                 </Button>
               </a>
             </div>
