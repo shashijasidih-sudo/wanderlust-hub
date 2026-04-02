@@ -95,7 +95,6 @@ const HeroSection = () => {
                   <SelectItem value="/pattaya">Pattaya</SelectItem>
                   <SelectItem value="/phuket">Phuket</SelectItem>
                   <SelectItem value="/krabi">Krabi</SelectItem>
-                  <SelectItem value="/dubai">Dubai</SelectItem>
                   <SelectItem value="/singapore">Singapore</SelectItem>
                 </SelectContent>
               </Select>
@@ -144,13 +143,6 @@ const HeroSection = () => {
             onClick={() => navigate("/thailand/transfers")}
           >
             Thailand Transfers
-          </Button>
-          <Button 
-            variant="secondary" 
-            className="bg-white/90 hover:bg-white backdrop-blur-sm"
-            onClick={() => navigate("/dubai/transfers")}
-          >
-            Dubai Transfers
           </Button>
           <Button 
             variant="secondary" 
