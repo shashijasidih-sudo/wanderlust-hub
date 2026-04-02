@@ -128,7 +128,7 @@ const HeroSection = () => {
             </div>
           </div>
           <Button 
-            className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold h-12 text-lg"
+            className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold h-12 text-lg"
             onClick={handleStartAdventure}
             disabled={!selectedCity}
           >
