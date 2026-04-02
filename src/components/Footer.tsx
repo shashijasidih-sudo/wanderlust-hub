@@ -66,6 +66,11 @@ const Footer = () => {
                   <Youtube className="h-5 w-5" />
                 </Button>
               </a>
+              <a href="https://www.facebook.com/yellodaetrails/" target="_blank" rel="noopener noreferrer">
+                <Button size="icon" variant="ghost" className="hover:bg-background/10 text-[#1877F2] hover:text-[#1877F2]">
+                  <Facebook className="h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </div>
 
