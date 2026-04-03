@@ -86,7 +86,7 @@ export interface TourData {
   location: string;
   city: string;
   basePrice: number;
-  childPrice: number;
+  childPrice?: number;
   singleAdultPrice?: number; // Price when only 1 adult is booking
   twoAdultPrice?: number; // Price per adult when exactly 2 adults
   minAdults?: number; // Minimum number of adults required (default 1)
