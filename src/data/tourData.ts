@@ -94,6 +94,8 @@ export interface TourData {
   rating: number;
   reviews: number;
   pricePerVehicle?: boolean;
+  isAdultOnly?: boolean;
+  minimumAdults?: number;
   vehicleCapacity?: number;
   heroImages: {
     src: string;
