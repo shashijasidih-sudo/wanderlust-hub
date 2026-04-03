@@ -65,6 +65,10 @@ import NongNoochGarden from "./pages/NongNoochGarden";
 import PattayaDolphinarium from "./pages/PattayaDolphinarium";
 import MuayThaiPattaya from "./pages/MuayThaiPattaya";
 import AlcazarShowPattaya from "./pages/AlcazarShowPattaya";
+import Imagine79Show from "./pages/Imagine79Show";
+import Show69Pattaya from "./pages/Show69Pattaya";
+import Show89Pattaya from "./pages/Show89Pattaya";
+import BigEyeShowPattaya from "./pages/BigEyeShowPattaya";
 import PattayaFloatingMarketGuided from "./pages/PattayaFloatingMarketGuided";
 import PattayaNightlifeWalking from "./pages/PattayaNightlifeWalking";
 import PattayaPubCrawl from "./pages/PattayaPubCrawl";
@@ -294,6 +298,10 @@ const App = () => (
             <Route path="/pattaya-dolphinarium" element={<PattayaDolphinarium />} />
             <Route path="/muay-thai-pattaya" element={<MuayThaiPattaya />} />
             <Route path="/alcazar-show-pattaya" element={<AlcazarShowPattaya />} />
+            <Route path="/imagine79-show-pattaya" element={<Imagine79Show />} />
+            <Route path="/show-69-pattaya" element={<Show69Pattaya />} />
+            <Route path="/show-89-pattaya" element={<Show89Pattaya />} />
+            <Route path="/big-eye-show-pattaya" element={<BigEyeShowPattaya />} />
             <Route path="/pattaya-floating-market-guided" element={<PattayaFloatingMarketGuided />} />
             <Route path="/pattaya-nightlife-walking" element={<PattayaNightlifeWalking />} />
             <Route path="/pattaya-pub-crawl" element={<PattayaPubCrawl />} />
