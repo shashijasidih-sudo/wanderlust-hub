@@ -298,6 +298,10 @@ const App = () => (
             <Route path="/pattaya-dolphinarium" element={<PattayaDolphinarium />} />
             <Route path="/muay-thai-pattaya" element={<MuayThaiPattaya />} />
             <Route path="/alcazar-show-pattaya" element={<AlcazarShowPattaya />} />
+            <Route path="/imagine79-show-pattaya" element={<Imagine79Show />} />
+            <Route path="/show-69-pattaya" element={<Show69Pattaya />} />
+            <Route path="/show-89-pattaya" element={<Show89Pattaya />} />
+            <Route path="/big-eye-show-pattaya" element={<BigEyeShowPattaya />} />
             <Route path="/pattaya-floating-market-guided" element={<PattayaFloatingMarketGuided />} />
             <Route path="/pattaya-nightlife-walking" element={<PattayaNightlifeWalking />} />
             <Route path="/pattaya-pub-crawl" element={<PattayaPubCrawl />} />

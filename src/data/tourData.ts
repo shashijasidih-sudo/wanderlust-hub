@@ -2130,6 +2130,214 @@ export const toursData: Record<string, TourData> = {
       { question: "How many fights are there?", answer: "Typically 6-8 fights per evening, ranging from amateur to professional levels." }
     ]
   },
+  "imagine79-show-pattaya": {
+    id: "imagine79-show-pattaya",
+    title: "Imagine 79 Show Pattaya with Transfer",
+    shortDescription: "The most scandalous and talked-about adult show in Pattaya. No photos or videos allowed — an experience you won't forget.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 4000,
+    duration: "3 Hours",
+    rating: 4.5,
+    reviews: 312,
+    isAdultOnly: true,
+    minimumAdults: 2,
+    heroImages: [
+      { src: alcazarShow1, title: "Imagine 79 Show Pattaya" },
+      { src: pattayaNightlife1, title: "Pattaya Nightlife Entertainment" },
+      { src: pattayaNightlife2, title: "Adult Show Experience" }
+    ],
+    galleryImages: [
+      { src: alcazarShow1, alt: "Show entrance" },
+      { src: pattayaNightlife1, alt: "Nightlife district" },
+      { src: pattayaNightlife2, alt: "Entertainment area" },
+      { src: pattayaNightlife3, alt: "Pattaya at night" }
+    ],
+    highlights: [
+      "The most scandalous show in Pattaya",
+      "Round-trip hotel transfer included",
+      "Unique adult entertainment experience",
+      "Strictly no photos/videos policy"
+    ],
+    description: {
+      overview: "This show rises the heated discussions among the audience, and the opinions are very different. It probably depends on your attitude to the intimate topics and explicit scenes shown in the public. It is impossible to find photos or videos of this show on the Internet. Taking photos and videos is strictly FORBIDDEN. You will be carefully inspected at the entrance, smartphones and photo cameras will be taken away for the time of the show.",
+      whatToExpect: "Experience the most talked-about adult show in Pattaya. The show features explicit scenes and intimate topics. All electronic devices are confiscated at the entrance and returned after the show."
+    },
+    itinerary: [
+      { time: "07:15 PM", title: "Hotel Pickup", description: "Pick up from Pattaya hotels" },
+      { time: "07:45 PM", title: "Arrive at Venue", description: "Security check and device collection" },
+      { time: "08:00 PM", title: "Show Starts", description: "The Imagine 79 Show begins" },
+      { time: "09:30 PM", title: "Show Ends", description: "Collect your devices" },
+      { time: "10:00 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["08:00 PM"],
+    inclusions: ["Round-trip transfer from Pattaya hotel", "Admission ticket"],
+    exclusions: ["Food and beverages", "Personal expenses", "Tips"],
+    bookingPolicy: ["Minimum booking for 2 people", "Confirmation within 24 hours", "Not available for citizens of China, Hong Kong, Taiwan, Vietnam and Thailand"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before", "No refund within 48 hours"],
+    childPolicy: ["This is an adult-only show", "No children allowed"],
+    faqs: [
+      { question: "Can I take photos during the show?", answer: "No. Taking photos and videos is strictly forbidden. All devices are collected at the entrance." },
+      { question: "Who cannot attend?", answer: "The show is not available to citizens of China, Hong Kong, Taiwan, Vietnam and Thailand." },
+      { question: "What is the minimum booking?", answer: "The current price is for minimum booking of 2 people." }
+    ]
+  },
+  "show-69-pattaya": {
+    id: "show-69-pattaya",
+    title: "Show 69 in Pattaya with Transfer",
+    shortDescription: "Popular adult entertainment show in Pattaya running daily with round-trip hotel transfer included.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 3800,
+    duration: "2.5 Hours",
+    rating: 4.4,
+    reviews: 287,
+    isAdultOnly: true,
+    minimumAdults: 2,
+    heroImages: [
+      { src: pattayaNightlife1, title: "Show 69 Pattaya" },
+      { src: pattayaNightlife2, title: "Adult Entertainment" },
+      { src: pattayaNightlife3, title: "Nightlife Show" }
+    ],
+    galleryImages: [
+      { src: pattayaNightlife1, alt: "Show venue" },
+      { src: pattayaNightlife2, alt: "Entertainment district" },
+      { src: pattayaNightlife3, alt: "Nightlife scene" },
+      { src: alcazarShow1, alt: "Show experience" }
+    ],
+    highlights: [
+      "Daily adult show",
+      "45-minute performance",
+      "Round-trip hotel transfer",
+      "Repeated shows from 6 PM to 10 PM"
+    ],
+    description: {
+      overview: "Show 69 is one of Pattaya's popular adult entertainment shows, running daily with multiple showtimes. The show lasts 45 minutes and is repeated throughout the evening from 6:00 PM till 10:00 PM.",
+      whatToExpect: "Transfer from your hotel in Pattaya around 7:00 PM (exact pickup time confirmed after booking). Return between 8:30-9:30 PM. The show lasts 45 minutes and features adult entertainment."
+    },
+    itinerary: [
+      { time: "06:15 PM", title: "Hotel Pickup", description: "Pick up from Pattaya hotels" },
+      { time: "06:45 PM", title: "Arrive at Venue", description: "Security check and seating" },
+      { time: "07:00 PM", title: "Show Starts", description: "45-minute adult show" },
+      { time: "07:45 PM", title: "Show Ends", description: "Collect your belongings" },
+      { time: "08:30 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["07:00 PM"],
+    inclusions: ["Round-trip transfer from Pattaya hotel", "Admission ticket"],
+    exclusions: ["Food and beverages", "Personal expenses", "Tips"],
+    bookingPolicy: ["Minimum booking for 2 people", "Confirmation within 24 hours", "Not available for citizens of China, Hong Kong, Taiwan, Vietnam and Thailand"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before", "No refund within 48 hours"],
+    childPolicy: ["This is an adult-only show", "No children allowed"],
+    faqs: [
+      { question: "How long is the show?", answer: "The show lasts 45 minutes and is repeated from 6:00 PM till 10:00 PM." },
+      { question: "Can I take photos?", answer: "No. Taking photos and videos during the show is forbidden." },
+      { question: "Who cannot attend?", answer: "The show is not available to citizens of China, Hong Kong, Taiwan, Vietnam and Thailand." }
+    ]
+  },
+  "show-89-pattaya": {
+    id: "show-89-pattaya",
+    title: "Show 89 in Pattaya with Transfer",
+    shortDescription: "Premium adult entertainment show in Pattaya with round-trip hotel transfer. Daily performances.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 6000,
+    duration: "3 Hours",
+    rating: 4.6,
+    reviews: 198,
+    isAdultOnly: true,
+    minimumAdults: 2,
+    heroImages: [
+      { src: pattayaNightlife2, title: "Show 89 Pattaya" },
+      { src: pattayaNightlife1, title: "Premium Adult Show" },
+      { src: pattayaNightlife3, title: "Nightlife Entertainment" }
+    ],
+    galleryImages: [
+      { src: pattayaNightlife2, alt: "Premium show venue" },
+      { src: pattayaNightlife1, alt: "Entertainment area" },
+      { src: pattayaNightlife3, alt: "Night district" },
+      { src: alcazarShow2, alt: "Show experience" }
+    ],
+    highlights: [
+      "Premium adult show experience",
+      "Daily performances",
+      "45-minute show",
+      "Round-trip hotel transfer included"
+    ],
+    description: {
+      overview: "Show 89 is a premium adult entertainment experience in Pattaya, running daily with shows from 6:00 PM till 10:00 PM. Each performance lasts 45 minutes.",
+      whatToExpect: "Transfer from your hotel in Pattaya around 7:00 PM (exact pickup time confirmed after booking). Return between 8:30-9:30 PM. The show lasts 45 minutes and features premium adult entertainment."
+    },
+    itinerary: [
+      { time: "07:15 PM", title: "Hotel Pickup", description: "Pick up from Pattaya hotels" },
+      { time: "07:45 PM", title: "Arrive at Venue", description: "Check-in and seating" },
+      { time: "08:00 PM", title: "Show Starts", description: "45-minute premium adult show" },
+      { time: "08:45 PM", title: "Show Ends", description: "Collect belongings" },
+      { time: "09:30 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["08:00 PM"],
+    inclusions: ["Round-trip transfer from Pattaya hotel", "Admission ticket"],
+    exclusions: ["Food and beverages", "Personal expenses", "Tips"],
+    bookingPolicy: ["Minimum booking for 2 people", "Confirmation within 24 hours", "Not available for citizens of China, Hong Kong, Taiwan, Vietnam and Thailand"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before", "No refund within 48 hours"],
+    childPolicy: ["This is an adult-only show", "No children allowed"],
+    faqs: [
+      { question: "How long is the show?", answer: "The show lasts 45 minutes and is repeated from 6:00 PM till 10:00 PM." },
+      { question: "Can I take photos?", answer: "No. Taking photos and videos during the show is forbidden." },
+      { question: "What is the minimum booking?", answer: "The current price is for minimum booking of 2 people." }
+    ]
+  },
+  "big-eye-show-pattaya": {
+    id: "big-eye-show-pattaya",
+    title: "Big Eye Show in Pattaya with Transfer",
+    shortDescription: "Exciting adult entertainment show in Pattaya with 60-minute performance and round-trip hotel transfer.",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    basePrice: 6000,
+    duration: "3 Hours",
+    rating: 4.5,
+    reviews: 234,
+    isAdultOnly: true,
+    minimumAdults: 2,
+    heroImages: [
+      { src: pattayaNightlife3, title: "Big Eye Show Pattaya" },
+      { src: pattayaNightlife1, title: "Adult Entertainment" },
+      { src: pattayaNightlife2, title: "Nightlife Show" }
+    ],
+    galleryImages: [
+      { src: pattayaNightlife3, alt: "Big Eye show venue" },
+      { src: pattayaNightlife1, alt: "Entertainment district" },
+      { src: pattayaNightlife2, alt: "Night scene" },
+      { src: alcazarShow3, alt: "Show experience" }
+    ],
+    highlights: [
+      "60-minute adult show",
+      "Daily performances",
+      "Shows from 6 PM to 10 PM",
+      "Round-trip hotel transfer included"
+    ],
+    description: {
+      overview: "Big Eye Show is an exciting adult entertainment experience in Pattaya. The show runs daily with performances from 6:00 PM to 10:00 PM, each lasting 60 minutes.",
+      whatToExpect: "Departure between 7:45-8:30 PM. Return between 10:00-10:30 PM. The show starts between 6:00-10:00 PM and lasts 60 minutes. Features adult entertainment content."
+    },
+    itinerary: [
+      { time: "07:45 PM", title: "Hotel Pickup", description: "Pick up from Pattaya hotels" },
+      { time: "08:15 PM", title: "Arrive at Venue", description: "Check-in and seating" },
+      { time: "08:30 PM", title: "Show Starts", description: "60-minute Big Eye Show" },
+      { time: "09:30 PM", title: "Show Ends", description: "Collect belongings" },
+      { time: "10:00 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
+    ],
+    tourTimings: ["08:00 PM"],
+    inclusions: ["Round-trip transfer from Pattaya hotel", "Admission ticket"],
+    exclusions: ["Food and beverages", "Personal expenses", "Tips"],
+    bookingPolicy: ["Minimum booking for 2 people", "Confirmation within 24 hours", "Not available for citizens of China, Hong Kong, Taiwan, Vietnam and Thailand"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before", "No refund within 48 hours"],
+    childPolicy: ["This is an adult-only show", "No children allowed"],
+    faqs: [
+      { question: "How long is the show?", answer: "The Big Eye Show lasts 60 minutes." },
+      { question: "Can I take photos?", answer: "No. Taking photos and videos during the show is forbidden." },
+      { question: "Who cannot attend?", answer: "The show is not available to citizens of China, Hong Kong, Taiwan, Vietnam and Thailand." }
+    ]
+  },
   "alcazar-show-pattaya": {
     id: "alcazar-show-pattaya",
     title: "Alcazar Show Pattaya Ticket with Transfer",
