@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useCurrency } from "@/contexts/CurrencyContext";
-import { Grid, List, ShoppingCart, Mail } from "lucide-react";
+import { Grid, List, ShoppingCart, Mail, Eye } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ActivityCard from "@/components/ActivityCard";
@@ -23,18 +23,29 @@ import alcazarShow1 from "@/assets/alcazar-show-1.jpg";
 import pattayaNightlife1 from "@/assets/pattaya-nightlife-1.jpg";
 import pattayaNightlife2 from "@/assets/pattaya-nightlife-2.jpg";
 import muayThai1 from "@/assets/muay-thai-1.jpg";
+import imagine79Show1 from "@/assets/imagine79-show-1.jpg";
+import show69Pattaya1 from "@/assets/show69-pattaya-1.jpg";
+import show89Pattaya1 from "@/assets/show89-pattaya-1.jpg";
+import bigeyeShowPattaya1 from "@/assets/bigeye-show-pattaya-1.jpg";
 
-const activities = [
+const regularActivities = [
   { title: "Discovery Pattaya City Tours with Floating Market and Lunch", price: 2175, image: pattayaBoatTour, slug: "pattaya-floating-market-tour" },
   { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1208, image: pattayaSailboat, slug: "pattaya-big-buddha-gems" },
   { title: "Coral Island Join Tour with Indian Lunch", price: 603.75, image: pattayaBoatsBeach, slug: "coral-island-pattaya" },
   { title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya", price: 3622.5, image: pattayaTropicalBeach, slug: "nong-nooch-garden" },
   { title: "Pattaya Dolphinarium Admission Ticket with Transfer", price: 3650, image: pattayaSpeedboat, slug: "pattaya-dolphinarium" },
   { title: "Muay Thai Pattaya Admission Ticket", price: 4830, image: muayThai1, slug: "muay-thai-pattaya" },
-  { title: "Alcazar Show Pattaya Ticket with Transfer", price: 2420, image: alcazarShow1, slug: "alcazar-show-pattaya" },
   { title: "Pattaya Floating Market Guided Tour with Transfer", price: 3140, image: pattayaIslandsBoats, slug: "pattaya-floating-market-guided" },
   { title: "Lost in Nightlight - A Walking, Drinking, and Food Tasting Experience at Pattaya's Red Light District", price: 3745, image: pattayaNightlife1, slug: "pattaya-nightlife-walking" },
   { title: "Sunset Club and Pub Crawling Experience at Drinking Street in Pattaya", price: 6280, image: pattayaNightlife2, slug: "pattaya-pub-crawl" },
+];
+
+const adultShowActivities = [
+  { title: "Alcazar Show Pattaya Ticket with Transfer", price: 2420, image: alcazarShow1, slug: "alcazar-show-pattaya" },
+  { title: "Imagine 79 Show Pattaya with Transfer", price: 4000, image: imagine79Show1, slug: "imagine79-show-pattaya" },
+  { title: "Show 69 in Pattaya with Transfer", price: 3800, image: show69Pattaya1, slug: "show-69-pattaya" },
+  { title: "Show 89 in Pattaya with Transfer", price: 6000, image: show89Pattaya1, slug: "show-89-pattaya" },
+  { title: "Big Eye Show in Pattaya with Transfer", price: 6000, image: bigeyeShowPattaya1, slug: "big-eye-show-pattaya" },
 ];
 
 const categories = [
@@ -47,9 +58,26 @@ const Pattaya = () => {
   const { formatPrice } = useCurrency();
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('price-low');
-  const [priceRange, setPriceRange] = useState([603.75, 6280]);
+  const [showAdultShows, setShowAdultShows] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
+
+  const activities = showAdultShows ? adultShowActivities : regularActivities;
+  const minPrice = Math.min(...activities.map(a => a.price));
+  const maxPrice = Math.max(...activities.map(a => a.price));
+  const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
+
+  const handleToggleAdultShows = () => {
+    setShowAdultShows(prev => {
+      const next = !prev;
+      const nextActivities = next ? adultShowActivities : regularActivities;
+      const newMin = Math.min(...nextActivities.map(a => a.price));
+      const newMax = Math.max(...nextActivities.map(a => a.price));
+      setPriceRange([newMin, newMax]);
+      setCurrentPage(1);
+      return next;
+    });
+  };
 
   const sortedActivities = [...activities].sort((a, b) => {
     if (sortBy === 'price-low') return a.price - b.price;
@@ -75,8 +103,10 @@ const Pattaya = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="bg-card shadow-card rounded-lg p-4 md:p-6 mb-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-            <h1 className="text-2xl md:text-3xl font-bold text-foreground">Pattaya Tours & Activities</h1>
-            <p className="text-lg md:text-xl text-muted-foreground">{activities.length} Things to do in Pattaya</p>
+            <h1 className="text-2xl md:text-3xl font-bold text-foreground">
+              {showAdultShows ? "Pattaya Adult Shows" : "Pattaya Tours & Activities"}
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground">{activities.length} {showAdultShows ? "Adult Shows" : "Things to do"} in Pattaya</p>
             <div className="flex items-center gap-4">
               <Select value={sortBy} onValueChange={setSortBy}>
                 <SelectTrigger className="w-40 md:w-48">
@@ -115,13 +145,24 @@ const Pattaya = () => {
         <CityNavigation currentCity="Pattaya" />
 
         {/* Mobile Filters */}
-        <MobileFilters
-          priceRange={priceRange}
-          onPriceRangeChange={setPriceRange}
-          minPrice={603.75}
-          maxPrice={6280}
-          categories={categories}
-        />
+        <div className="flex gap-2 lg:hidden mb-4">
+          <MobileFilters
+            priceRange={priceRange}
+            onPriceRangeChange={setPriceRange}
+            minPrice={minPrice}
+            maxPrice={maxPrice}
+            categories={categories}
+          />
+          <Button
+            variant={showAdultShows ? 'default' : 'outline'}
+            size="sm"
+            className="flex items-center gap-2"
+            onClick={handleToggleAdultShows}
+          >
+            <Eye className="h-4 w-4" />
+            Adult Shows
+          </Button>
+        </div>
 
         <div className="flex gap-8">
           {/* Desktop Sidebar - Hidden on mobile */}
@@ -148,14 +189,26 @@ const Pattaya = () => {
                 <Slider
                   value={priceRange}
                   onValueChange={setPriceRange}
-                  min={603.75}
-                  max={6280}
+                  min={minPrice}
+                  max={maxPrice}
                   step={100}
                   className="mb-2"
                 />
                 <p className="text-sm text-muted-foreground">
                   {formatPrice(priceRange[0])} – {formatPrice(priceRange[1])}
                 </p>
+              </div>
+
+              {/* Adult Shows Toggle */}
+              <div>
+                <Button
+                  variant={showAdultShows ? 'default' : 'outline'}
+                  className="w-full flex items-center gap-2"
+                  onClick={handleToggleAdultShows}
+                >
+                  <Eye className="h-5 w-5" />
+                  {showAdultShows ? "Show All Activities" : "Adult Shows"}
+                </Button>
               </div>
 
               <div>
