@@ -428,7 +428,7 @@ const Header = () => {
                 <div className="h-px bg-border my-1" />
                 <DropdownMenuItem className={`${mobileMenuItemClass} opacity-50 cursor-not-allowed`} onSelect={(e) => { e.preventDefault(); toast({ title: "Dubai Transfers Temporarily Unavailable", description: "⚠️ We will soon update the prices as per the ongoing War Situation", variant: "destructive" }); }}>
                     <Castle className="h-4 w-4 mr-2 text-muted-foreground" />
-                    Dubai ⚠️
+                    Dubai
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/singapore/transfers" onClick={() => setIsMenuOpen(false)}>
