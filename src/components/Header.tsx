@@ -252,7 +252,7 @@ const Header = () => {
               <div className="h-px bg-border my-2" />
               <DropdownMenuItem className={`${menuItemClass} opacity-50 cursor-not-allowed`} onSelect={(e) => { e.preventDefault(); toast({ title: "Dubai Transfers Temporarily Unavailable", description: "⚠️ We will soon update the prices as per the ongoing War Situation", variant: "destructive" }); }}>
                   <Castle className="h-5 w-5 mr-3 text-muted-foreground" />
-                  <span className="font-medium text-muted-foreground">Dubai ⚠️</span>
+                  <span className="font-medium text-muted-foreground">Dubai</span>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
                 <Link to="/singapore/transfers">
