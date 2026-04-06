@@ -127,10 +127,10 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
         name: "Yellodae Tours",
         description: tourName,
         prefill: { name: contactName, email: contactEmail, contact: contactPhone },
-        handler: async (response: any) => {
+          handler: async (response: any) => {
           try {
             // Save booking to Supabase
-            await fetch(`${SUPABASE_FUNCTIONS_URL}/save-booking`, {
+            const saveRes = await fetch(`${SUPABASE_FUNCTIONS_URL}/save-booking`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -154,6 +154,14 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               }),
             });
 
+            if (!saveRes.ok) {
+              const errBody = await saveRes.text();
+              console.error("Save booking failed:", saveRes.status, errBody);
+              toast({ title: "Booking saved with issues", description: "Payment was successful but booking record may not have saved. Please contact support.", variant: "destructive" });
+            } else {
+              console.log("Booking saved successfully");
+            }
+
             // Send confirmation email
             await fetch(`${SUPABASE_FUNCTIONS_URL}/send-confirmation`, {
               method: "POST",
@@ -170,6 +178,7 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
             }).catch(() => {});
           } catch (err) {
             console.error("Failed to save booking:", err);
+            toast({ title: "Booking save error", description: "Payment was successful but booking record failed to save. Please contact support with your Payment ID.", variant: "destructive" });
           }
 
           toast({ title: "Payment Successful!", description: `Payment ID: ${response.razorpay_payment_id}` });
