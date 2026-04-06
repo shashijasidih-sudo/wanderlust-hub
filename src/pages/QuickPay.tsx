@@ -7,7 +7,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { CreditCard, ShieldCheck } from "lucide-react";
-import { supabase } from "@/lib/supabaseClient";
 
 const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
 
