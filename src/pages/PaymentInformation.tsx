@@ -10,12 +10,8 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useCart } from "@/contexts/CartContext";
 import { useAuth } from "@/lib/auth";
-import { supabase } from "@/lib/supabaseClient";
 import { toast } from "sonner";
 import { CreditCard, QrCode } from "lucide-react";
-import { saveBooking } from "@/services/bookings";
-
-const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
 
 declare global {
   interface Window { Razorpay: any; }
@@ -131,7 +127,7 @@ const PaymentInformation = () => {
               }
             );
 
-            // Send confirmation email + PDF
+            // Send confirmation email with invoice & voucher
             await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
               {
@@ -143,8 +139,14 @@ const PaymentInformation = () => {
                 },
                 body: JSON.stringify({
                   email: customerInfo?.email || "",
-                  bookingId: response.razorpay_payment_id,
+                  customer_name: customerInfo?.customerName || "",
+                  tour_name: cartItems.map(i => i.title).join(", "),
+                  tour_date: cartItems[0]?.selectedDate || cartItems[0]?.pickupDate || new Date().toISOString().split("T")[0],
+                  adults: cartItems.reduce((sum, i) => sum + (i.adults || i.quantity || 1), 0),
+                  children: cartItems.reduce((sum, i) => sum + (i.children || 0), 0),
                   amount: getCartTotal(),
+                  currency: "INR",
+                  payment_id: response.razorpay_payment_id,
                 }),
               }
             );

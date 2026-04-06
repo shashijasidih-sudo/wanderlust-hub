@@ -49,7 +49,7 @@ const BookingConfirmed = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  onClick={() => navigate("/my-bookings")}
+                  onClick={() => navigate("/user-bookings")}
                 >
                   View My Bookings
                 </Button>
