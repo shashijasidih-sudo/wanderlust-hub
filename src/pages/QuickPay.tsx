@@ -90,14 +90,18 @@ const QuickPay = () => {
                   "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
                   "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
                 },
-                body: JSON.stringify({
+              body: JSON.stringify({
                   payment_id: response.razorpay_payment_id,
                   order_id: response.razorpay_order_id,
                   amount: totalAmountPaise,
                   customer_name: name.trim(),
                   customer_email: email.trim(),
                   customer_phone: phone.trim(),
-                  description: description.trim() || "Quick Payment",
+                  tour_name: description.trim() || "Quick Payment",
+                  tour_slug: "quick-pay",
+                  tour_date: new Date().toISOString().split("T")[0],
+                  adults: 1,
+                  children: 0,
                 }),
               }
             );

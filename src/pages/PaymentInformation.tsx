@@ -118,6 +118,15 @@ const PaymentInformation = () => {
                   payment_id: response.razorpay_payment_id,
                   order_id: response.razorpay_order_id,
                   amount: Math.round(getCartTotal() * 100),
+                  customer_name: customerInfo?.customerName || "",
+                  customer_email: customerInfo?.email || "",
+                  customer_phone: customerInfo?.phone || "",
+                  tour_name: cartItems.map(i => i.title).join(", "),
+                  tour_slug: cartItems[0]?.slug || "cart-booking",
+                  tour_date: cartItems[0]?.selectedDate || cartItems[0]?.pickupDate || new Date().toISOString().split("T")[0],
+                  adults: cartItems.reduce((sum, i) => sum + (i.adults || i.quantity || 1), 0),
+                  children: cartItems.reduce((sum, i) => sum + (i.children || 0), 0),
+                  user_id: user?.id || "",
                 }),
               }
             );
