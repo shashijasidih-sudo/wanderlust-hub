@@ -162,7 +162,7 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               console.log("Booking saved successfully");
             }
 
-            // Send confirmation email
+            // Send confirmation email with invoice & voucher
             await fetch(`${SUPABASE_FUNCTIONS_URL}/send-confirmation`, {
               method: "POST",
               headers: {
@@ -172,8 +172,14 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               },
               body: JSON.stringify({
                 email: contactEmail,
-                bookingId: response.razorpay_payment_id,
+                customer_name: contactName,
+                tour_name: tourName,
+                tour_date: format(date, "yyyy-MM-dd"),
+                adults,
+                children,
                 amount: totalPrice,
+                currency,
+                payment_id: response.razorpay_payment_id,
               }),
             }).catch(() => {});
           } catch (err) {
@@ -183,7 +189,7 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
 
           toast({ title: "Payment Successful!", description: `Payment ID: ${response.razorpay_payment_id}` });
           onClose();
-          navigate("/my-bookings");
+          navigate("/user-bookings");
         },
         modal: { ondismiss: () => setIsLoading(false) },
       };

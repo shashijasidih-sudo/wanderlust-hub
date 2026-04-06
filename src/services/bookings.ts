@@ -2,37 +2,35 @@ import { supabase } from "../lib/supabaseClient";
 
 export interface BookingData {
   user_id: string;
-  customer_name: string;
-  customer_email: string;
-  customer_phone: string;
-  razorpay_payment_id: string;
-  razorpay_order_id: string;
-  amount: number;
+  contact_name: string;
+  contact_email: string;
+  contact_phone?: string;
+  total_price: number;
   currency: string;
-  status: string;
-  items: any[];
-  booking_date?: string;
-  city?: string;
-  pickup_time?: string;
-  notes?: string;
+  status: "pending" | "confirmed" | "cancelled" | "completed";
+  tour_name: string;
+  tour_slug: string;
+  tour_date: string;
+  adults: number;
+  children: number;
+  special_requests?: string;
 }
 
 export const saveBooking = async (booking: BookingData) => {
   const { data, error } = await supabase.from("bookings").insert([{
     user_id: booking.user_id,
-    customer_name: booking.customer_name,
-    customer_email: booking.customer_email,
-    customer_phone: booking.customer_phone,
-    razorpay_payment_id: booking.razorpay_payment_id,
-    razorpay_order_id: booking.razorpay_order_id,
-    amount: booking.amount,
+    contact_name: booking.contact_name,
+    contact_email: booking.contact_email,
+    contact_phone: booking.contact_phone || null,
+    total_price: booking.total_price,
     currency: booking.currency,
     status: booking.status,
-    items: booking.items,
-    booking_date: booking.booking_date || null,
-    city: booking.city || null,
-    pickup_time: booking.pickup_time || null,
-    notes: booking.notes || null,
+    tour_name: booking.tour_name,
+    tour_slug: booking.tour_slug,
+    tour_date: booking.tour_date,
+    adults: booking.adults,
+    children: booking.children,
+    special_requests: booking.special_requests || null,
   }]).select().single();
 
   if (error) throw error;

@@ -131,7 +131,7 @@ const PaymentInformation = () => {
               }
             );
 
-            // Send confirmation email + PDF
+            // Send confirmation email with invoice & voucher
             await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
               {
@@ -143,8 +143,14 @@ const PaymentInformation = () => {
                 },
                 body: JSON.stringify({
                   email: customerInfo?.email || "",
-                  bookingId: response.razorpay_payment_id,
+                  customer_name: customerInfo?.customerName || "",
+                  tour_name: cartItems.map(i => i.title).join(", "),
+                  tour_date: cartItems[0]?.selectedDate || cartItems[0]?.pickupDate || new Date().toISOString().split("T")[0],
+                  adults: cartItems.reduce((sum, i) => sum + (i.adults || i.quantity || 1), 0),
+                  children: cartItems.reduce((sum, i) => sum + (i.children || 0), 0),
                   amount: getCartTotal(),
+                  currency: "INR",
+                  payment_id: response.razorpay_payment_id,
                 }),
               }
             );

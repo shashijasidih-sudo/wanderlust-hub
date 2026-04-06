@@ -106,7 +106,7 @@ const QuickPay = () => {
               }
             );
 
-            // Send confirmation email + PDF
+            // Send confirmation email with invoice & voucher
             await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
               {
@@ -118,8 +118,14 @@ const QuickPay = () => {
                 },
                 body: JSON.stringify({
                   email: email.trim(),
-                  bookingId: response.razorpay_payment_id,
+                  customer_name: name.trim(),
+                  tour_name: description.trim() || "Quick Payment",
+                  tour_date: new Date().toISOString().split("T")[0],
+                  adults: 1,
+                  children: 0,
                   amount: amountNum,
+                  currency: "INR",
+                  payment_id: response.razorpay_payment_id,
                 }),
               }
             );
