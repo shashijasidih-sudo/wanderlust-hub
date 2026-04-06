@@ -80,6 +80,7 @@ const UserBookings = () => {
   const handleCancelBooking = async (bookingId: string, tourName: string) => {
     setCancellingId(bookingId);
     try {
+      const booking = bookings.find(b => b.id === bookingId);
       const { error } = await supabase
         .from("bookings")
         .update({ status: "cancelled" })
@@ -88,6 +89,89 @@ const UserBookings = () => {
       if (error) throw error;
       setBookings(prev => prev.map(b => b.id === bookingId ? { ...b, status: "cancelled" } : b));
       toast({ title: "Booking Cancelled", description: `Your booking for ${tourName} has been cancelled. Refund will be processed within 3–5 days.` });
+
+      // Send cancellation email to customer and admin
+      if (booking?.contact_email) {
+        const cancellationHtml = `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<body style="margin:0;padding:0;background-color:#f4f4f5;font-family:Arial,Helvetica,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f4f5;padding:32px 16px;">
+    <tr><td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+        <tr><td style="background:linear-gradient(135deg,#f59e0b,#d97706);padding:32px;text-align:center;">
+          <h1 style="color:#ffffff;margin:0;font-size:28px;font-weight:bold;">Yellodae</h1>
+          <p style="color:#fef3c7;margin:8px 0 0;font-size:14px;">Your Travel Partner</p>
+        </td></tr>
+        <tr><td style="padding:32px 32px 16px;text-align:center;">
+          <div style="display:inline-block;background:#fee2e2;border:1px solid #fca5a5;border-radius:50%;width:64px;height:64px;line-height:64px;font-size:32px;margin-bottom:16px;">✕</div>
+          <h2 style="color:#dc2626;margin:0 0 8px;font-size:22px;">Booking Cancelled</h2>
+          <p style="color:#6b7280;margin:0;font-size:14px;">Hi ${booking.contact_name || "Valued Customer"}, your booking has been cancelled.</p>
+        </td></tr>
+        <tr><td style="padding:16px 32px;">
+          <table width="100%" style="background:#f9fafb;border-radius:8px;border:1px solid #e5e7eb;">
+            <tr><td style="padding:20px;">
+              <h3 style="color:#1f2937;margin:0 0 16px;font-size:16px;border-bottom:2px solid #dc2626;padding-bottom:8px;">📋 Cancellation Details</h3>
+              <table width="100%" cellpadding="4" cellspacing="0">
+                <tr><td style="color:#6b7280;font-size:13px;padding:4px 0;">Booking ID</td><td style="color:#1f2937;font-size:13px;font-weight:bold;text-align:right;padding:4px 0;">${bookingId.slice(0, 8)}</td></tr>
+                <tr><td style="color:#6b7280;font-size:13px;padding:4px 0;">Tour / Service</td><td style="color:#1f2937;font-size:13px;font-weight:bold;text-align:right;padding:4px 0;">${booking.tour_name}</td></tr>
+                <tr><td style="color:#6b7280;font-size:13px;padding:4px 0;">Tour Date</td><td style="color:#1f2937;font-size:13px;text-align:right;padding:4px 0;">${booking.tour_date}</td></tr>
+                <tr><td style="color:#6b7280;font-size:13px;padding:4px 0;">Guests</td><td style="color:#1f2937;font-size:13px;text-align:right;padding:4px 0;">${booking.adults} Adult${booking.adults > 1 ? 's' : ''}${booking.children > 0 ? `, ${booking.children} Child${booking.children > 1 ? 'ren' : ''}` : ''}</td></tr>
+                <tr><td colspan="2" style="border-top:1px solid #e5e7eb;padding-top:8px;"></td></tr>
+                <tr><td style="color:#1f2937;font-size:15px;font-weight:bold;padding:4px 0;">Amount Paid</td><td style="color:#dc2626;font-size:18px;font-weight:bold;text-align:right;padding:4px 0;">${booking.currency === "INR" ? "₹" : booking.currency === "USD" ? "$" : booking.currency === "AED" ? "AED " : booking.currency + " "}${Number(booking.total_price).toLocaleString()}</td></tr>
+              </table>
+            </td></tr>
+          </table>
+        </td></tr>
+        <tr><td style="padding:16px 32px;">
+          <table width="100%" style="background:#fef3c7;border-radius:8px;border:1px solid #fbbf24;">
+            <tr><td style="padding:20px;">
+              <h3 style="color:#92400e;margin:0 0 8px;font-size:15px;">💰 Refund Information</h3>
+              <p style="color:#78350f;font-size:13px;margin:0;">Your refund will be processed by our team within <strong>3–5 business days</strong>. The amount will be credited back to your original payment method.</p>
+            </td></tr>
+          </table>
+        </td></tr>
+        <tr><td style="padding:16px 32px;">
+          <p style="color:#6b7280;font-size:13px;margin:0;">If you have any questions, please reach out to us at <a href="mailto:support@yellodae.com" style="color:#f59e0b;">support@yellodae.com</a></p>
+        </td></tr>
+        <tr><td style="background:#1f2937;padding:24px 32px;text-align:center;">
+          <p style="color:#9ca3af;font-size:12px;margin:0 0 8px;">Yellodae Tours & Travels</p>
+          <p style="color:#6b7280;font-size:11px;margin:0;">This is an automated notification. Please do not reply to this email.</p>
+          <p style="color:#6b7280;font-size:11px;margin:8px 0 0;">
+            <a href="https://yellodae.com" style="color:#f59e0b;text-decoration:none;">yellodae.com</a> |
+            <a href="mailto:support@yellodae.com" style="color:#f59e0b;text-decoration:none;">support@yellodae.com</a>
+          </p>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`;
+
+        // Send to customer
+        fetch("https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            to: booking.contact_email,
+            subject: `Booking Cancelled - ${booking.tour_name} | Yellodae`,
+            html: cancellationHtml,
+          }),
+        }).catch(err => console.error("Cancellation email to customer failed:", err));
+
+        // Send to admin
+        fetch("https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            to: "support@yellodae.com",
+            subject: `Booking Cancelled - ${booking.tour_name} | ${booking.contact_name}`,
+            html: cancellationHtml,
+            replyTo: booking.contact_email,
+          }),
+        }).catch(err => console.error("Cancellation email to admin failed:", err));
+      }
     } catch (err: any) {
       toast({ title: "Error", description: err.message, variant: "destructive" });
     } finally {
