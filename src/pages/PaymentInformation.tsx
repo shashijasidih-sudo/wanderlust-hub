@@ -62,6 +62,25 @@ const PaymentInformation = () => {
   const handlePayment = async () => {
     setIsProcessing(true);
     try {
+      const totalAmountPaise = Math.round(getCartTotal() * 100);
+
+      // Save booking data to localStorage BEFORE payment
+      const bookingData = {
+        customer_name: customerInfo?.customerName || "",
+        customer_email: customerInfo?.email || "",
+        customer_phone: customerInfo?.phone || "",
+        tour_name: cartItems.map(i => i.title).join(", "),
+        tour_slug: cartItems[0]?.slug || "cart-booking",
+        tour_date: cartItems[0]?.selectedDate || cartItems[0]?.pickupDate || new Date().toISOString().split("T")[0],
+        adults: cartItems.reduce((sum, i) => sum + (i.adults || i.quantity || 1), 0),
+        children: cartItems.reduce((sum, i) => sum + (i.children || 0), 0),
+        amount: totalAmountPaise,
+        currency: "INR",
+        total_price: getCartTotal(),
+      };
+      localStorage.setItem("booking_data", JSON.stringify(bookingData));
+      console.log("Booking data saved to localStorage before payment:", bookingData);
+
       const response = await fetch(
         "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/create-order",
         {
@@ -71,9 +90,7 @@ const PaymentInformation = () => {
             "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
             "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
           },
-          body: JSON.stringify({
-            amount: Math.round(getCartTotal() * 100),
-          }),
+          body: JSON.stringify({ amount: totalAmountPaise }),
         }
       );
 
@@ -96,38 +113,38 @@ const PaymentInformation = () => {
         description: "Booking Payment",
         order_id: data.id,
 
-        handler: async function (response: any) {
-          console.log("Payment success:", response);
+        handler: async function (resp: any) {
+          console.log("Payment success:", resp);
 
           try {
+            // Retrieve saved booking data
+            const savedData = JSON.parse(localStorage.getItem("booking_data") || "{}");
+            const finalData = {
+              ...savedData,
+              payment_id: resp.razorpay_payment_id,
+              order_id: resp.razorpay_order_id,
+              user_id: user?.id || "",
+            };
+            console.log("FINAL DATA to save:", finalData);
+
             // Save booking
-            await fetch(
+            const saveRes = await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/save-booking",
               {
                 method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                  "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
-                  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
-                },
-                body: JSON.stringify({
-                  payment_id: response.razorpay_payment_id,
-                  order_id: response.razorpay_order_id,
-                  amount: Math.round(getCartTotal() * 100),
-                  customer_name: customerInfo?.customerName || "",
-                  customer_email: customerInfo?.email || "",
-                  customer_phone: customerInfo?.phone || "",
-                  tour_name: cartItems.map(i => i.title).join(", "),
-                  tour_slug: cartItems[0]?.slug || "cart-booking",
-                  tour_date: cartItems[0]?.selectedDate || cartItems[0]?.pickupDate || new Date().toISOString().split("T")[0],
-                  adults: cartItems.reduce((sum, i) => sum + (i.adults || i.quantity || 1), 0),
-                  children: cartItems.reduce((sum, i) => sum + (i.children || 0), 0),
-                  user_id: user?.id || "",
-                }),
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(finalData),
               }
             );
 
-            // Send confirmation email with invoice & voucher
+            if (saveRes.ok) {
+              console.log("Booking saved successfully");
+              localStorage.removeItem("booking_data");
+            } else {
+              console.error("Save booking failed:", await saveRes.text());
+            }
+
+            // Send confirmation email
             await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
               {
@@ -138,18 +155,18 @@ const PaymentInformation = () => {
                   "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
                 },
                 body: JSON.stringify({
-                  email: customerInfo?.email || "",
-                  customer_name: customerInfo?.customerName || "",
-                  tour_name: cartItems.map(i => i.title).join(", "),
-                  tour_date: cartItems[0]?.selectedDate || cartItems[0]?.pickupDate || new Date().toISOString().split("T")[0],
-                  adults: cartItems.reduce((sum, i) => sum + (i.adults || i.quantity || 1), 0),
-                  children: cartItems.reduce((sum, i) => sum + (i.children || 0), 0),
-                  amount: getCartTotal(),
+                  email: savedData.customer_email,
+                  customer_name: savedData.customer_name,
+                  tour_name: savedData.tour_name,
+                  tour_date: savedData.tour_date,
+                  adults: savedData.adults,
+                  children: savedData.children,
+                  amount: savedData.total_price,
                   currency: "INR",
-                  payment_id: response.razorpay_payment_id,
+                  payment_id: resp.razorpay_payment_id,
                 }),
               }
-            );
+            ).catch(() => {});
           } catch (err) {
             console.error("Failed to save booking or send confirmation:", err);
           }
@@ -166,10 +183,7 @@ const PaymentInformation = () => {
           contact: customerInfo?.phone || "",
         },
 
-        theme: {
-          color: "#3399cc",
-        },
-
+        theme: { color: "#3399cc" },
         modal: { ondismiss: () => setIsProcessing(false) },
       };
 

@@ -39,7 +39,7 @@ serve(async (req) => {
     } = body;
 
     // Validate required fields
-    if (!payment_id || !user_id || !tour_name || !tour_slug || !tour_date || !customer_name || !customer_email) {
+    if (!payment_id || !tour_name || !tour_slug || !tour_date || !customer_name || !customer_email) {
       return new Response(JSON.stringify({ error: "Missing required fields" }), {
         status: 400,
         headers: corsHeaders,

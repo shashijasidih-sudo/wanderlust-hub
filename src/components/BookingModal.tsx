@@ -97,6 +97,24 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
     try {
       const totalAmountPaise = Math.round(totalPrice * 100);
 
+      // Save booking data to localStorage BEFORE payment
+      const bookingData = {
+        customer_name: contactName,
+        customer_email: contactEmail,
+        customer_phone: contactPhone,
+        tour_name: tourName,
+        tour_slug: tourSlug,
+        tour_date: format(date, "yyyy-MM-dd"),
+        adults,
+        children,
+        special_requests: specialRequests,
+        amount: totalAmountPaise,
+        currency,
+        total_price: totalPrice,
+      };
+      localStorage.setItem("booking_data", JSON.stringify(bookingData));
+      console.log("Booking data saved to localStorage before payment:", bookingData);
+
       // Create Razorpay order
       const orderRes = await fetch(`${SUPABASE_FUNCTIONS_URL}/create-order`, {
         method: "POST",
@@ -127,31 +145,23 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
         name: "Yellodae Tours",
         description: tourName,
         prefill: { name: contactName, email: contactEmail, contact: contactPhone },
-          handler: async (response: any) => {
+        handler: async (response: any) => {
           try {
+            // Retrieve saved booking data
+            const savedData = JSON.parse(localStorage.getItem("booking_data") || "{}");
+            const finalData = {
+              ...savedData,
+              payment_id: response.razorpay_payment_id,
+              order_id: response.razorpay_order_id,
+              user_id: user.id,
+            };
+            console.log("FINAL DATA to save:", finalData);
+
             // Save booking to Supabase
             const saveRes = await fetch(`${SUPABASE_FUNCTIONS_URL}/save-booking`, {
               method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                "apikey": SUPABASE_ANON_KEY,
-                "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
-              },
-              body: JSON.stringify({
-                payment_id: response.razorpay_payment_id,
-                order_id: response.razorpay_order_id,
-                amount: totalAmountPaise,
-                customer_name: contactName,
-                customer_email: contactEmail,
-                customer_phone: contactPhone,
-                tour_name: tourName,
-                tour_slug: tourSlug,
-                tour_date: format(date, "yyyy-MM-dd"),
-                adults,
-                children,
-                special_requests: specialRequests,
-                user_id: user.id,
-              }),
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(finalData),
             });
 
             if (!saveRes.ok) {
@@ -160,6 +170,7 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               toast({ title: "Booking saved with issues", description: "Payment was successful but booking record may not have saved. Please contact support.", variant: "destructive" });
             } else {
               console.log("Booking saved successfully");
+              localStorage.removeItem("booking_data");
             }
 
             // Send confirmation email with invoice & voucher
@@ -171,14 +182,14 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
                 "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
               },
               body: JSON.stringify({
-                email: contactEmail,
-                customer_name: contactName,
-                tour_name: tourName,
-                tour_date: format(date, "yyyy-MM-dd"),
-                adults,
-                children,
-                amount: totalPrice,
-                currency,
+                email: savedData.customer_email,
+                customer_name: savedData.customer_name,
+                tour_name: savedData.tour_name,
+                tour_date: savedData.tour_date,
+                adults: savedData.adults,
+                children: savedData.children,
+                amount: savedData.total_price,
+                currency: savedData.currency,
                 payment_id: response.razorpay_payment_id,
               }),
             }).catch(() => {});

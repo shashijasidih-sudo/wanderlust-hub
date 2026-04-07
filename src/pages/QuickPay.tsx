@@ -46,6 +46,23 @@ const QuickPay = () => {
 
       const totalAmountPaise = Math.round(amountNum * 100);
 
+      // Save booking data to localStorage BEFORE payment
+      const bookingData = {
+        customer_name: name.trim(),
+        customer_email: email.trim(),
+        customer_phone: phone.trim(),
+        tour_name: description.trim() || "Quick Payment",
+        tour_slug: "quick-pay",
+        tour_date: new Date().toISOString().split("T")[0],
+        adults: 1,
+        children: 0,
+        amount: totalAmountPaise,
+        currency: "INR",
+        total_price: amountNum,
+      };
+      localStorage.setItem("booking_data", JSON.stringify(bookingData));
+      console.log("Booking data saved to localStorage before payment:", bookingData);
+
       let order: any;
       try {
         const res = await fetch(
@@ -79,33 +96,34 @@ const QuickPay = () => {
         handler: async function (response: any) {
           console.log("Payment success:", response);
           try {
+            // Retrieve saved booking data
+            const savedData = JSON.parse(localStorage.getItem("booking_data") || "{}");
+            const finalData = {
+              ...savedData,
+              payment_id: response.razorpay_payment_id,
+              order_id: response.razorpay_order_id,
+              user_id: savedData.user_id || "",
+            };
+            console.log("FINAL DATA to save:", finalData);
+
             // Save booking
-            await fetch(
+            const saveRes = await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/save-booking",
               {
                 method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                  "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
-                  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
-                },
-              body: JSON.stringify({
-                  payment_id: response.razorpay_payment_id,
-                  order_id: response.razorpay_order_id,
-                  amount: totalAmountPaise,
-                  customer_name: name.trim(),
-                  customer_email: email.trim(),
-                  customer_phone: phone.trim(),
-                  tour_name: description.trim() || "Quick Payment",
-                  tour_slug: "quick-pay",
-                  tour_date: new Date().toISOString().split("T")[0],
-                  adults: 1,
-                  children: 0,
-                }),
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(finalData),
               }
             );
 
-            // Send confirmation email with invoice & voucher
+            if (saveRes.ok) {
+              console.log("Booking saved successfully");
+              localStorage.removeItem("booking_data");
+            } else {
+              console.error("Save booking failed:", await saveRes.text());
+            }
+
+            // Send confirmation email
             await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
               {
@@ -116,18 +134,18 @@ const QuickPay = () => {
                   "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
                 },
                 body: JSON.stringify({
-                  email: email.trim(),
-                  customer_name: name.trim(),
-                  tour_name: description.trim() || "Quick Payment",
-                  tour_date: new Date().toISOString().split("T")[0],
-                  adults: 1,
-                  children: 0,
-                  amount: amountNum,
+                  email: savedData.customer_email,
+                  customer_name: savedData.customer_name,
+                  tour_name: savedData.tour_name,
+                  tour_date: savedData.tour_date,
+                  adults: savedData.adults,
+                  children: savedData.children,
+                  amount: savedData.total_price,
                   currency: "INR",
                   payment_id: response.razorpay_payment_id,
                 }),
               }
-            );
+            ).catch(() => {});
           } catch (err) {
             console.error("Failed to save booking or send confirmation:", err);
           }
