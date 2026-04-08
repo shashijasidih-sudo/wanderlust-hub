@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
+import { supabase } from "@/lib/supabaseClient";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -18,8 +19,8 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 interface Booking {
   id: string; tour_name: string; tour_slug: string; tour_date: string;
   adults: number; children: number; total_price: number; currency: string;
-  status: "pending" | "confirmed" | "cancelled" | "completed";
-  contact_name: string; created_at: string;
+  status: string; contact_name: string; created_at: string;
+  contact_email: string; contact_phone: string; payment_id: string;
 }
 
 const statusColors: Record<string, string> = {
@@ -38,27 +39,54 @@ const MyBookings = () => {
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
   const navigate = useNavigate();
   const { toast } = useToast();
-  const { user } = useAuth();
+  const { user, isLoading: authLoading } = useAuth();
 
   useEffect(() => {
+    if (authLoading) return;
     if (!user) { navigate("/auth"); return; }
-    // Placeholder — GET /api/bookings
-    setBookings([]);
-    setIsLoading(false);
-  }, [user, navigate]);
+
+    const fetchBookings = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("bookings")
+          .select("*")
+          .eq("user_id", user.id)
+          .order("created_at", { ascending: false });
+        if (error) throw error;
+        setBookings(data || []);
+      } catch (err) {
+        console.error("Failed to fetch bookings:", err);
+        toast({ title: "Error", description: "Failed to load bookings.", variant: "destructive" });
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchBookings();
+  }, [user, authLoading, navigate]);
 
   const filteredBookings = statusFilter === "all" ? bookings : bookings.filter(b => b.status === statusFilter);
   const getStatusCount = (status: StatusFilter) => status === "all" ? bookings.length : bookings.filter(b => b.status === status).length;
 
   const handleCancelBooking = async (bookingId: string, tourName: string) => {
     setCancellingId(bookingId);
-    await new Promise(r => setTimeout(r, 500));
-    setBookings(prev => prev.map(b => b.id === bookingId ? { ...b, status: "cancelled" as const } : b));
-    toast({ title: "Booking Cancelled", description: `Your booking for ${tourName} has been cancelled.` });
-    setCancellingId(null);
+    try {
+      const { error } = await supabase
+        .from("bookings")
+        .update({ status: "cancelled" })
+        .eq("id", bookingId)
+        .eq("user_id", user!.id);
+      if (error) throw error;
+      setBookings(prev => prev.map(b => b.id === bookingId ? { ...b, status: "cancelled" } : b));
+      toast({ title: "Booking Cancelled", description: `Your booking for ${tourName} has been cancelled.` });
+    } catch (err) {
+      console.error("Cancel failed:", err);
+      toast({ title: "Error", description: "Failed to cancel booking.", variant: "destructive" });
+    } finally {
+      setCancellingId(null);
+    }
   };
 
-  if (isLoading) {
+  if (authLoading || isLoading) {
     return <div className="min-h-screen flex items-center justify-center"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>;
   }
 
@@ -80,20 +108,83 @@ const MyBookings = () => {
             </TabsList>
           </Tabs>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Your Bookings</CardTitle>
-              <CardDescription>View and manage all your tour bookings</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-col items-center justify-center py-12 text-center">
-                <div className="rounded-full bg-muted p-6 mb-4"><CalendarDays className="h-12 w-12 text-muted-foreground" /></div>
-                <h3 className="text-lg font-semibold mb-2">No Bookings Yet</h3>
-                <p className="text-muted-foreground mb-6 max-w-md">You haven't made any bookings yet. Start exploring our amazing tours and activities!</p>
-                <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
-              </div>
-            </CardContent>
-          </Card>
+          {filteredBookings.length > 0 ? (
+            <div className="space-y-4">
+              {filteredBookings.map((booking) => (
+                <Card key={booking.id}>
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                      <div className="flex-1 space-y-1">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h3 className="font-semibold text-lg">{booking.tour_name}</h3>
+                          <Badge variant="outline" className={statusColors[booking.status || "confirmed"]}>
+                            {(booking.status || "confirmed").charAt(0).toUpperCase() + (booking.status || "confirmed").slice(1)}
+                          </Badge>
+                        </div>
+                        <div className="flex items-center gap-4 text-sm text-muted-foreground flex-wrap">
+                          <span className="flex items-center gap-1">
+                            <CalendarDays className="h-3.5 w-3.5" />
+                            {booking.tour_date ? format(new Date(booking.tour_date), "MMM dd, yyyy") : "N/A"}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Users className="h-3.5 w-3.5" />
+                            {booking.adults || 0} Adult{(booking.adults || 0) !== 1 ? "s" : ""}
+                            {booking.children > 0 && `, ${booking.children} Child${booking.children !== 1 ? "ren" : ""}`}
+                          </span>
+                        </div>
+                        <p className="text-sm text-muted-foreground">
+                          Booked on {format(new Date(booking.created_at), "MMM dd, yyyy")}
+                          {booking.contact_name && ` · ${booking.contact_name}`}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <span className="font-bold text-lg">₹{Number(booking.total_price || 0).toLocaleString()}</span>
+                        {booking.status !== "cancelled" && booking.status !== "completed" && (
+                          <AlertDialog>
+                            <AlertDialogTrigger asChild>
+                              <Button variant="outline" size="sm" disabled={cancellingId === booking.id}>
+                                {cancellingId === booking.id ? <Loader2 className="h-4 w-4 animate-spin" /> : <XCircle className="h-4 w-4 mr-1" />}
+                                Cancel
+                              </Button>
+                            </AlertDialogTrigger>
+                            <AlertDialogContent>
+                              <AlertDialogHeader>
+                                <AlertDialogTitle>Cancel Booking?</AlertDialogTitle>
+                                <AlertDialogDescription>
+                                  Are you sure you want to cancel your booking for <strong>{booking.tour_name}</strong>?
+                                </AlertDialogDescription>
+                              </AlertDialogHeader>
+                              <AlertDialogFooter>
+                                <AlertDialogCancel>Keep Booking</AlertDialogCancel>
+                                <AlertDialogAction onClick={() => handleCancelBooking(booking.id, booking.tour_name)}>
+                                  Yes, Cancel
+                                </AlertDialogAction>
+                              </AlertDialogFooter>
+                            </AlertDialogContent>
+                          </AlertDialog>
+                        )}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : (
+            <Card>
+              <CardHeader>
+                <CardTitle>Your Bookings</CardTitle>
+                <CardDescription>View and manage all your tour bookings</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-col items-center justify-center py-12 text-center">
+                  <div className="rounded-full bg-muted p-6 mb-4"><CalendarDays className="h-12 w-12 text-muted-foreground" /></div>
+                  <h3 className="text-lg font-semibold mb-2">No Bookings Yet</h3>
+                  <p className="text-muted-foreground mb-6 max-w-md">You haven't made any bookings yet. Start exploring our amazing tours and activities!</p>
+                  <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
+                </div>
+              </CardContent>
+            </Card>
+          )}
         </div>
       </main>
       <Footer />
