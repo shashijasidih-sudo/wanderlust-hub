@@ -22,25 +22,29 @@ serve(async (req) => {
 
   try {
     const body = await req.json();
+    console.log("Received body:", JSON.stringify(body));
+
     const {
       payment_id,
       order_id,
-      amount,
-      customer_name,
-      customer_email,
-      customer_phone,
+      user_id,
       tour_name,
       tour_slug,
       tour_date,
+      total_price,
+      contact_name,
+      contact_email,
+      contact_phone,
       adults,
       children,
+      currency,
       special_requests,
-      user_id,
     } = body;
 
     // Validate required fields
-    if (!payment_id || !tour_name || !tour_slug || !tour_date || !customer_name || !customer_email) {
-      return new Response(JSON.stringify({ error: "Missing required fields" }), {
+    if (!tour_name || !tour_date || !total_price || !contact_email) {
+      console.error("Missing required fields:", { tour_name, tour_date, total_price, contact_email });
+      return new Response(JSON.stringify({ error: "Missing required fields", details: { tour_name: !!tour_name, tour_date: !!tour_date, total_price: !!total_price, contact_email: !!contact_email } }), {
         status: 400,
         headers: corsHeaders,
       });
@@ -50,19 +54,16 @@ serve(async (req) => {
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    // Convert amount from paise to currency units
-    const totalPrice = Number(amount) / 100;
-
     const { data, error } = await supabase.from("bookings").insert({
-      user_id,
-      contact_name: customer_name,
-      contact_email: customer_email,
-      contact_phone: customer_phone || null,
-      total_price: totalPrice,
-      currency: "INR",
+      user_id: user_id || null,
+      contact_name: contact_name || "",
+      contact_email,
+      contact_phone: contact_phone || null,
+      total_price: Number(total_price),
+      currency: currency || "INR",
       status: "confirmed",
       tour_name,
-      tour_slug,
+      tour_slug: tour_slug || "",
       tour_date,
       adults: adults || 1,
       children: children || 0,
