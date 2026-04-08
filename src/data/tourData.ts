@@ -7082,12 +7082,10 @@ export const toursData: Record<string, TourData> = {
     ],
     tourOptions: [
       { label: "1 Day Plan", adultPrice: 60 },
-      { label: "3 Day Plan", adultPrice: 150 },
-      { label: "5 Day Plan", adultPrice: 230 },
-      { label: "7 Day Plan", adultPrice: 300 },
-      { label: "10 Day Plan", adultPrice: 400 },
-      { label: "15 Day Plan", adultPrice: 550 },
-      { label: "30 Day Plan", adultPrice: 900 }
+      { label: "3 Day Plan", adultPrice: 150 }
+    ],
+    addOns: [
+      { label: "Thailand Guide", adultPrice: 1 }
     ]
   }
 };
