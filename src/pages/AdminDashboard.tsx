@@ -80,24 +80,39 @@ const AdminDashboard = () => {
 
   const isAdmin = user && ADMIN_EMAILS.includes(user.email);
 
+  const fetchAllBookings = async () => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session?.access_token) return;
+
+      const anonKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY;
+      const res = await fetch(
+        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/admin-bookings",
+        {
+          method: "GET",
+          headers: {
+            "Authorization": `Bearer ${session.access_token}`,
+            "apikey": anonKey,
+          },
+        }
+      );
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const result = await res.json();
+      setBookings(result.bookings || []);
+    } catch (err) {
+      console.error("Failed to fetch bookings:", err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   useEffect(() => {
     if (!authChecked) return;
-
-    const fetchAllBookings = async () => {
-      try {
-        const { data, error } = await supabase
-          .from("bookings")
-          .select("*")
-          .order("created_at", { ascending: false });
-        if (error) throw error;
-        setBookings(data || []);
-      } catch (err) {
-        console.error("Failed to fetch bookings:", err);
-      } finally {
-        setIsLoading(false);
-      }
-    };
     fetchAllBookings();
+
+    // Auto-refresh every 30 seconds
+    const interval = setInterval(fetchAllBookings, 30000);
+    return () => clearInterval(interval);
   }, [authChecked]);
 
   const stats = useMemo(() => {
@@ -264,9 +279,14 @@ const AdminDashboard = () => {
             <h1 className="text-3xl font-bold flex items-center gap-3">
               <ShieldCheck className="h-8 w-8 text-primary" /> Admin Dashboard
             </h1>
-            <Button variant="outline" size="sm" onClick={handleExportCSV}>
-              <Download className="h-4 w-4 mr-2" /> Export CSV
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button variant="outline" size="sm" onClick={() => { setIsLoading(true); fetchAllBookings(); }}>
+                <RefreshCw className="h-4 w-4 mr-2" /> Refresh
+              </Button>
+              <Button variant="outline" size="sm" onClick={handleExportCSV}>
+                <Download className="h-4 w-4 mr-2" /> Export CSV
+              </Button>
+            </div>
           </div>
 
           {/* Stats Cards */}
