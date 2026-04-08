@@ -120,10 +120,20 @@ const PaymentInformation = () => {
             // Retrieve saved booking data
             const savedData = JSON.parse(localStorage.getItem("booking_data") || "{}");
             const finalData = {
-              ...savedData,
               payment_id: resp.razorpay_payment_id,
               order_id: resp.razorpay_order_id,
               user_id: user?.id || "",
+              tour_name: savedData.tour_name,
+              tour_slug: savedData.tour_slug,
+              tour_date: savedData.tour_date,
+              total_price: savedData.total_price,
+              contact_name: savedData.customer_name,
+              contact_email: savedData.customer_email,
+              contact_phone: savedData.customer_phone || "",
+              adults: savedData.adults || 1,
+              children: savedData.children || 0,
+              currency: savedData.currency || "INR",
+              special_requests: savedData.special_requests || null,
             };
             console.log("FINAL DATA to save:", finalData);
 
