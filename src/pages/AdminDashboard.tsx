@@ -80,24 +80,39 @@ const AdminDashboard = () => {
 
   const isAdmin = user && ADMIN_EMAILS.includes(user.email);
 
+  const fetchAllBookings = async () => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session?.access_token) return;
+
+      const anonKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY;
+      const res = await fetch(
+        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/admin-bookings",
+        {
+          method: "GET",
+          headers: {
+            "Authorization": `Bearer ${session.access_token}`,
+            "apikey": anonKey,
+          },
+        }
+      );
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const result = await res.json();
+      setBookings(result.bookings || []);
+    } catch (err) {
+      console.error("Failed to fetch bookings:", err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   useEffect(() => {
     if (!authChecked) return;
-
-    const fetchAllBookings = async () => {
-      try {
-        const { data, error } = await supabase
-          .from("bookings")
-          .select("*")
-          .order("created_at", { ascending: false });
-        if (error) throw error;
-        setBookings(data || []);
-      } catch (err) {
-        console.error("Failed to fetch bookings:", err);
-      } finally {
-        setIsLoading(false);
-      }
-    };
     fetchAllBookings();
+
+    // Auto-refresh every 30 seconds
+    const interval = setInterval(fetchAllBookings, 30000);
+    return () => clearInterval(interval);
   }, [authChecked]);
 
   const stats = useMemo(() => {
