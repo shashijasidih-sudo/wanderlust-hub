@@ -7084,7 +7084,7 @@ export const toursData: Record<string, TourData> = {
       { label: "1 Day Plan", adultPrice: 60 },
       { label: "3 Day Plan", adultPrice: 150 }
     ],
-    addOns: [
+    tourAddOns: [
       { label: "Thailand Guide", adultPrice: 1 }
     ]
   }
