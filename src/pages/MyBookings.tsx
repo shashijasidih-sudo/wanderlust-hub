@@ -5,7 +5,7 @@ import { supabase } from "@/lib/supabaseClient";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, CalendarDays, Search, Users, XCircle } from "lucide-react";
+import { Loader2, CalendarDays, Search, Users, XCircle, Eye, MapPin, Phone, Mail, CreditCard, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { format } from "date-fns";
@@ -14,13 +14,18 @@ import {
   AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent,
   AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import {
+  Dialog, DialogContent, DialogHeader, DialogTitle,
+} from "@/components/ui/dialog";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Separator } from "@/components/ui/separator";
 
 interface Booking {
   id: string; tour_name: string; tour_slug: string; tour_date: string;
   adults: number; children: number; total_price: number; currency: string;
   status: string; contact_name: string; created_at: string;
   contact_email: string; contact_phone: string; payment_id: string;
+  special_requests?: string;
 }
 
 const statusColors: Record<string, string> = {
@@ -37,6 +42,7 @@ const MyBookings = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [cancellingId, setCancellingId] = useState<string | null>(null);
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
+  const [viewBooking, setViewBooking] = useState<Booking | null>(null);
   const navigate = useNavigate();
   const { toast } = useToast();
   const { user, isLoading: authLoading } = useAuth();
@@ -137,8 +143,11 @@ const MyBookings = () => {
                           {booking.contact_name && ` · ${booking.contact_name}`}
                         </p>
                       </div>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-2 sm:gap-3">
                         <span className="font-bold text-lg">₹{Number(booking.total_price || 0).toLocaleString()}</span>
+                        <Button variant="outline" size="sm" onClick={() => setViewBooking(booking)}>
+                          <Eye className="h-4 w-4 mr-1" /> View
+                        </Button>
                         {booking.status !== "cancelled" && booking.status !== "completed" && (
                           <AlertDialog>
                             <AlertDialogTrigger asChild>
@@ -188,6 +197,115 @@ const MyBookings = () => {
         </div>
       </main>
       <Footer />
+
+      {/* Booking Details Dialog */}
+      <Dialog open={!!viewBooking} onOpenChange={(open) => !open && setViewBooking(null)}>
+        <DialogContent className="max-w-lg max-h-[85vh] overflow-y-auto">
+          {viewBooking && (
+            <>
+              <DialogHeader>
+                <DialogTitle className="flex items-center gap-2 text-xl">
+                  <MapPin className="h-5 w-5 text-primary" />
+                  {viewBooking.tour_name}
+                </DialogTitle>
+              </DialogHeader>
+
+              <div className="space-y-4 mt-2">
+                {/* Status */}
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-medium text-muted-foreground">Status:</span>
+                  <Badge variant="outline" className={statusColors[viewBooking.status || "confirmed"]}>
+                    {(viewBooking.status || "confirmed").charAt(0).toUpperCase() + (viewBooking.status || "confirmed").slice(1)}
+                  </Badge>
+                </div>
+
+                <Separator />
+
+                {/* Booking Info */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-1">
+                    <p className="text-xs text-muted-foreground font-medium flex items-center gap-1"><CalendarDays className="h-3 w-3" /> Tour Date</p>
+                    <p className="text-sm font-semibold">
+                      {viewBooking.tour_date ? format(new Date(viewBooking.tour_date), "EEEE, MMM dd, yyyy") : "N/A"}
+                    </p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-xs text-muted-foreground font-medium flex items-center gap-1"><Clock className="h-3 w-3" /> Booked On</p>
+                    <p className="text-sm font-semibold">{format(new Date(viewBooking.created_at), "MMM dd, yyyy, hh:mm a")}</p>
+                  </div>
+                </div>
+
+                <Separator />
+
+                {/* Guests */}
+                <div className="space-y-1">
+                  <p className="text-xs text-muted-foreground font-medium flex items-center gap-1"><Users className="h-3 w-3" /> Guests</p>
+                  <p className="text-sm font-semibold">
+                    {viewBooking.adults || 0} Adult{(viewBooking.adults || 0) !== 1 ? "s" : ""}
+                    {viewBooking.children > 0 && `, ${viewBooking.children} Child${viewBooking.children !== 1 ? "ren" : ""}`}
+                  </p>
+                </div>
+
+                <Separator />
+
+                {/* Contact Details */}
+                <div className="space-y-2">
+                  <p className="text-xs text-muted-foreground font-medium">Contact Details</p>
+                  {viewBooking.contact_name && (
+                    <p className="text-sm flex items-center gap-2">
+                      <Users className="h-3.5 w-3.5 text-muted-foreground" /> {viewBooking.contact_name}
+                    </p>
+                  )}
+                  {viewBooking.contact_email && (
+                    <p className="text-sm flex items-center gap-2">
+                      <Mail className="h-3.5 w-3.5 text-muted-foreground" /> {viewBooking.contact_email}
+                    </p>
+                  )}
+                  {viewBooking.contact_phone && (
+                    <p className="text-sm flex items-center gap-2">
+                      <Phone className="h-3.5 w-3.5 text-muted-foreground" /> {viewBooking.contact_phone}
+                    </p>
+                  )}
+                </div>
+
+                <Separator />
+
+                {/* Payment */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-1">
+                    <p className="text-xs text-muted-foreground font-medium flex items-center gap-1"><CreditCard className="h-3 w-3" /> Total Paid</p>
+                    <p className="text-lg font-bold text-primary">₹{Number(viewBooking.total_price || 0).toLocaleString()}</p>
+                  </div>
+                  {viewBooking.payment_id && (
+                    <div className="space-y-1">
+                      <p className="text-xs text-muted-foreground font-medium">Payment ID</p>
+                      <p className="text-sm font-mono break-all">{viewBooking.payment_id}</p>
+                    </div>
+                  )}
+                </div>
+
+                {/* Special Requests */}
+                {viewBooking.special_requests && (
+                  <>
+                    <Separator />
+                    <div className="space-y-1">
+                      <p className="text-xs text-muted-foreground font-medium">Special Requests</p>
+                      <p className="text-sm bg-muted p-3 rounded-md">{viewBooking.special_requests}</p>
+                    </div>
+                  </>
+                )}
+
+                {/* Booking ID */}
+                <Separator />
+                <div className="space-y-1">
+                  <p className="text-xs text-muted-foreground font-medium">Booking Reference</p>
+                  <p className="text-xs font-mono text-muted-foreground">{viewBooking.id}</p>
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
