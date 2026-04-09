@@ -82,23 +82,45 @@ const AdminDashboard = () => {
 
   const fetchAllBookings = async () => {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session?.access_token) return;
+      // Try edge function first, fall back to direct query
+      let fetchedBookings: Booking[] = [];
+      let usedEdgeFunction = false;
 
-      const anonKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY;
-      const res = await fetch(
-        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/admin-bookings",
-        {
-          method: "GET",
-          headers: {
-            "Authorization": `Bearer ${session.access_token}`,
-            "apikey": anonKey,
-          },
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session?.access_token) {
+          const anonKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY;
+          const res = await fetch(
+            `https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/admin-bookings`,
+            {
+              method: "GET",
+              headers: {
+                "Authorization": `Bearer ${session.access_token}`,
+                "apikey": anonKey,
+              },
+            }
+          );
+          if (res.ok) {
+            const result = await res.json();
+            fetchedBookings = result.bookings || [];
+            usedEdgeFunction = true;
+          }
         }
-      );
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const result = await res.json();
-      setBookings(result.bookings || []);
+      } catch {
+        // Edge function unavailable, fall back
+      }
+
+      if (!usedEdgeFunction) {
+        // Direct query fallback — works if RLS allows or for debugging
+        const { data, error } = await supabase
+          .from("bookings")
+          .select("*")
+          .order("created_at", { ascending: false });
+        if (error) throw error;
+        fetchedBookings = data || [];
+      }
+
+      setBookings(fetchedBookings);
     } catch (err) {
       console.error("Failed to fetch bookings:", err);
     } finally {
