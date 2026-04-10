@@ -87,6 +87,7 @@ const PaymentInformation = () => {
         amount: totalAmountPaise,
         currency: "INR",
         total_price: getCartTotal(),
+        item_details: savedItemDetails,
       };
       localStorage.setItem("booking_data", JSON.stringify(bookingData));
       console.log("Booking data saved to localStorage before payment:", bookingData);
