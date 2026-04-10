@@ -277,6 +277,7 @@ const AdminDashboard = () => {
     return filteredBookings.slice(start, start + ITEMS_PER_PAGE);
   }, [filteredBookings, currentPage]);
 
+  const handleExportCSV = () => {
     const headers = ["Date", "Customer", "Email", "Phone", "Tour", "Tour Date", "Adults", "Children", "Amount", "Currency", "Status"];
     const rows = filteredBookings.map(b => [
       format(new Date(b.created_at), "yyyy-MM-dd"),
