@@ -15,6 +15,7 @@ import CustomerSupport from "./activity-detail/CustomerSupport";
 import SuggestedTours from "./activity-detail/SuggestedTours";
 import { Button } from "./ui/button";
 import { ChevronDown, Star, MapPin } from "lucide-react";
+import WishlistButton from "./WishlistButton";
 import { TourData } from "@/data/tourData";
 
 interface TourBookingProps {
