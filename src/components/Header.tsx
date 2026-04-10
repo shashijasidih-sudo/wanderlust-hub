@@ -43,8 +43,8 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Logo & Brand Name */}
           <Link to="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
-            <img src={logo} alt="Yellodae Logo" className="h-14 w-14 object-contain" />
-            <div className="text-2xl font-bold" style={{ color: 'rgb(25, 25, 112)' }}>
+            <img src={logo} alt="Yellodae Logo" className="h-10 w-10 md:h-14 md:w-14 object-contain" />
+            <div className="text-lg md:text-2xl font-bold" style={{ color: 'rgb(25, 25, 112)' }}>
               Yellodae
             </div>
           </Link>
@@ -89,6 +89,55 @@ const Header = () => {
                 )}
               </Button>
             </Link>
+            {/* Mobile Profile Dropdown */}
+            {user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="h-8 w-8 md:hidden">
+                    <User className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[180px]" align="end">
+                  <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
+                    <Link to="/user-profile" className="flex items-center w-full">
+                      <User className="h-4 w-4 mr-2" />
+                      Profile
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
+                    <Link to="/user-bookings" className="flex items-center w-full">
+                      <CalendarDays className="h-4 w-4 mr-2" />
+                      My Bookings
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
+                    <Link to="/settings" className="flex items-center w-full">
+                      <Settings className="h-4 w-4 mr-2" />
+                      Settings
+                    </Link>
+                  </DropdownMenuItem>
+                  {user.email === "admin@yellodae.com" && (
+                    <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
+                      <Link to="/admin" className="flex items-center w-full">
+                        <ShieldCheck className="h-4 w-4 mr-2" />
+                        Admin Dashboard
+                      </Link>
+                    </DropdownMenuItem>
+                  )}
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem className="cursor-pointer hover:bg-destructive/10 text-destructive" onClick={handleLogout}>
+                    <LogOut className="h-4 w-4 mr-2" />
+                    Log Out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link to="/auth" className="md:hidden">
+                <Button variant="ghost" size="icon" className="h-8 w-8">
+                  <User className="h-4 w-4" />
+                </Button>
+              </Link>
+            )}
             {user ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -341,7 +390,7 @@ const Header = () => {
         <div className="md:hidden border-t bg-background p-4 animate-fade-in">
           <nav className="flex flex-col gap-4">
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
+              <DropdownMenuTrigger className="text-base font-medium transition-colors hover:text-primary flex items-center gap-1">
                 Activities to Do
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
@@ -390,7 +439,7 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
+              <DropdownMenuTrigger className="text-base font-medium transition-colors hover:text-primary flex items-center gap-1">
                 Private Transfers
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
@@ -438,14 +487,14 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
+            <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-base font-medium transition-colors hover:text-primary">
               Must Have Travel Items
             </a>
-            <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/tour-packages" className="text-base font-medium transition-colors hover:text-primary" onClick={() => setIsMenuOpen(false)}>
               Tours & Packages
             </Link>
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
+              <DropdownMenuTrigger className="text-base font-medium transition-colors hover:text-primary flex items-center gap-1">
                 Smart Destinations
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
@@ -503,45 +552,6 @@ const Header = () => {
                 <Button variant="ghost" size="icon" className="text-[#FF0000]"><Youtube className="h-5 w-5" /></Button>
               </a>
             </div>
-            {user ? (
-              <div className="flex flex-col gap-2 w-full">
-                <Link to="/user-profile" className="w-full">
-                  <Button variant="outline" className="w-full justify-start">
-                    <User className="h-4 w-4 mr-2" />
-                    Profile
-                  </Button>
-                </Link>
-                <Link to="/user-bookings" className="w-full">
-                  <Button variant="outline" className="w-full justify-start">
-                    <CalendarDays className="h-4 w-4 mr-2" />
-                    My Bookings
-                  </Button>
-                </Link>
-                <Link to="/settings" className="w-full">
-                  <Button variant="outline" className="w-full justify-start">
-                    <Settings className="h-4 w-4 mr-2" />
-                    Settings
-                  </Button>
-                </Link>
-                <Link to="/wishlist" className="w-full">
-                  <Button variant="outline" className="w-full justify-start">
-                    <Heart className="h-4 w-4 mr-2" />
-                    Wishlist
-                  </Button>
-                </Link>
-                <Button variant="destructive" className="w-full justify-start" onClick={handleLogout}>
-                  <LogOut className="h-4 w-4 mr-2" />
-                  Log Out
-                </Button>
-              </div>
-            ) : (
-              <Link to="/auth" className="w-full">
-                <Button variant="default" className="w-full">
-                  <User className="h-4 w-4 mr-2" />
-                  Sign Up / Login
-                </Button>
-              </Link>
-            )}
           </nav>
         </div>
       )}
