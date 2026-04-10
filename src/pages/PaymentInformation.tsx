@@ -145,6 +145,7 @@ const PaymentInformation = () => {
               children: savedData.children || 0,
               currency: savedData.currency || "INR",
               special_requests: savedData.special_requests || null,
+              item_details: savedData.item_details || [],
             };
             console.log("FINAL DATA to save:", finalData);
 
