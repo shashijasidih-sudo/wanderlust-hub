@@ -4,7 +4,7 @@ export const addToWishlist = async (item: any) => {
   const { data: userData } = await supabase.auth.getUser();
   if (!userData.user) throw new Error("Please login first");
 
-  const { error } = await supabase.from("wishlist").insert([
+  const { error } = await supabase.from("wishlists").insert([
     {
       user_id: userData.user.id,
       product_id: item.id,
@@ -20,7 +20,7 @@ export const removeFromWishlist = async (productId: string) => {
   if (!userData.user) throw new Error("Please login first");
 
   const { error } = await supabase
-    .from("wishlist")
+    .from("wishlists")
     .delete()
     .eq("user_id", userData.user.id)
     .eq("product_id", productId);
@@ -33,7 +33,7 @@ export const fetchWishlist = async (): Promise<string[]> => {
   if (!userData.user) return [];
 
   const { data, error } = await supabase
-    .from("wishlist")
+    .from("wishlists")
     .select("product_id")
     .eq("user_id", userData.user.id);
 
@@ -46,7 +46,7 @@ export const isInWishlist = async (productId: string): Promise<boolean> => {
   if (!userData.user) return false;
 
   const { data, error } = await supabase
-    .from("wishlist")
+    .from("wishlists")
     .select("id")
     .eq("user_id", userData.user.id)
     .eq("product_id", productId)

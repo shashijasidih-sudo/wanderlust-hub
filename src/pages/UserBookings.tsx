@@ -179,29 +179,6 @@ const UserBookings = () => {
     }
   };
 
-  const handleAddTestBooking = async () => {
-    if (!user) return;
-    try {
-      const { error } = await supabase.from("bookings").insert({
-        user_id: user.id,
-        tour_name: "Desert Safari Premium",
-        tour_slug: "desert-safari",
-        tour_date: "2026-04-15",
-        adults: 2,
-        children: 1,
-        total_price: 4500,
-        currency: "INR",
-        status: "confirmed",
-        contact_name: user.email?.split("@")[0] || "Test User",
-        contact_email: user.email || "test@example.com",
-      });
-      if (error) throw error;
-      toast({ title: "Test booking added!", description: "Refresh to see it." });
-      fetchBookings();
-    } catch (err: any) {
-      toast({ title: "Error", description: err.message, variant: "destructive" });
-    }
-  };
 
   const filteredBookings = statusFilter === "all" ? bookings : bookings.filter(b => b.status === statusFilter);
   const getStatusCount = (status: StatusFilter) => status === "all" ? bookings.length : bookings.filter(b => b.status === status).length;
@@ -338,10 +315,7 @@ const UserBookings = () => {
                   {statusFilter === "all" ? "You haven't made any bookings yet. Start exploring our tours!" : `You don't have any ${statusFilter} bookings.`}
                 </p>
                 {statusFilter === "all" && (
-                  <div className="flex gap-3">
-                    <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
-                    <Button variant="outline" onClick={handleAddTestBooking}>Add Test Booking</Button>
-                  </div>
+                  <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
                 )}
               </CardContent>
             </Card>
