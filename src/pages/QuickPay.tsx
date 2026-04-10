@@ -125,18 +125,21 @@ const QuickPay = () => {
               console.error("Save booking failed:", await saveRes.text());
             }
 
-            // Build confirmation payload from savedData (before clearing localStorage)
+            // Build confirmation payload using savedData with inline fallbacks
+            const adultCount = savedData.adults || 1;
+            const childCount = savedData.children || 0;
             const confirmPayload = {
-              email: savedData.customer_email,
-              customer_name: savedData.customer_name,
-              tour_name: savedData.tour_name,
-              tour_date: savedData.tour_date,
-              adults: savedData.adults || 1,
-              children: savedData.children || 0,
-              amount: savedData.total_price,
+              email: savedData.customer_email || email.trim(),
+              customer_name: savedData.customer_name || name.trim(),
+              tour_name: savedData.tour_name || description.trim() || "Quick Payment",
+              tour_date: savedData.tour_date || new Date().toISOString().split("T")[0],
+              adults: adultCount,
+              children: childCount,
+              amount: savedData.total_price || amountNum,
               currency: "INR",
               bookingId: bookingId,
               payment_id: response.razorpay_payment_id,
+              guests: `${adultCount} Adult${adultCount > 1 ? "s" : ""}${childCount > 0 ? `, ${childCount} Child${childCount > 1 ? "ren" : ""}` : ""}`,
             };
             console.log("send-confirmation payload:", confirmPayload);
 

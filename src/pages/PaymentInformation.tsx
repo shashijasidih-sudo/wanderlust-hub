@@ -168,18 +168,21 @@ const PaymentInformation = () => {
               console.error("Save booking failed:", await saveRes.text());
             }
 
-            // Build confirmation payload from savedData (before clearing localStorage)
+            // Build confirmation payload using savedData with inline fallbacks
+            const adultCount = savedData.adults || 1;
+            const childCount = savedData.children || 0;
             const confirmPayload = {
-              email: savedData.customer_email,
-              customer_name: savedData.customer_name,
-              tour_name: savedData.tour_name,
-              tour_date: savedData.tour_date,
-              adults: savedData.adults || 1,
-              children: savedData.children || 0,
-              amount: savedData.total_price,
+              email: savedData.customer_email || customerInfo?.email || "",
+              customer_name: savedData.customer_name || customerInfo?.customerName || "",
+              tour_name: savedData.tour_name || cartItems.map(i => i.title).join(", "),
+              tour_date: savedData.tour_date || cartItems[0]?.selectedDate || cartItems[0]?.pickupDate || new Date().toISOString().split("T")[0],
+              adults: adultCount,
+              children: childCount,
+              amount: savedData.total_price || getCartTotal(),
               currency: savedData.currency || "INR",
               bookingId: bookingId,
               payment_id: resp.razorpay_payment_id,
+              guests: `${adultCount} Adult${adultCount > 1 ? "s" : ""}${childCount > 0 ? `, ${childCount} Child${childCount > 1 ? "ren" : ""}` : ""}`,
             };
             console.log("send-confirmation payload:", confirmPayload);
 
