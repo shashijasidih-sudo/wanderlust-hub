@@ -503,17 +503,6 @@ const Header = () => {
                 <Button variant="ghost" size="icon" className="text-[#FF0000]"><Youtube className="h-5 w-5" /></Button>
               </a>
             </div>
-            <div className="flex items-center gap-2 pt-2 border-t">
-              <Button variant="ghost" size="icon">
-                <IndianRupee className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon">
-                <Heart className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon">
-                <ShoppingCart className="h-5 w-5" />
-              </Button>
-            </div>
             {user ? (
               <div className="flex flex-col gap-2 w-full">
                 <Link to="/user-profile" className="w-full">
