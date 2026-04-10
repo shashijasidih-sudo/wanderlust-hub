@@ -17,8 +17,9 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
 import {
-  Loader2, ShieldCheck, CalendarDays, CreditCard, XCircle, CheckCircle,
-  Search, Download, ArrowUpDown, BarChart3, IndianRupee, Users, Clock, RefreshCw,
+  Loader2, ShieldCheck, CreditCard, XCircle, CheckCircle,
+  Search, Download, ArrowUpDown, BarChart3, IndianRupee, Clock, RefreshCw,
+  ChevronLeft, ChevronRight,
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { format } from "date-fns";
