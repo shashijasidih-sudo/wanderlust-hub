@@ -339,15 +339,45 @@ const MyBookings = () => {
                         <span className="text-sm text-right max-w-[60%]">{viewBooking.special_requests || "None"}</span>
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-xs text-muted-foreground">Pickup Location</span>
-                        <span className="text-sm text-muted-foreground">Not specified</span>
-                      </div>
-                      <div className="flex justify-between items-center">
                         <span className="text-xs text-muted-foreground">Booking Source</span>
                         <span className="text-sm">Website</span>
                       </div>
                     </div>
                   </div>
+
+                  {/* Section: Item-Level Pickup Details */}
+                  {viewBooking.item_details && viewBooking.item_details.length > 0 && (
+                    <div>
+                      <h4 className="text-sm font-semibold text-primary flex items-center gap-1.5 mb-3">
+                        <MapPin className="h-4 w-4" /> Pickup & Hotel Details
+                      </h4>
+                      <div className="space-y-3">
+                        {viewBooking.item_details.map((detail, idx) => (
+                          <div key={idx} className="bg-muted/50 rounded-lg p-4 space-y-2">
+                            <p className="text-sm font-semibold flex items-center gap-2">
+                              <span className="flex items-center justify-center h-5 w-5 rounded-full bg-primary text-primary-foreground text-[10px] font-bold">{idx + 1}</span>
+                              {detail.title}
+                            </p>
+                            <Separator />
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                              <div>
+                                <span className="text-[10px] text-muted-foreground uppercase tracking-wide">Hotel Name</span>
+                                <p className="text-sm">{detail.hotelName || "Not specified"}</p>
+                              </div>
+                              <div>
+                                <span className="text-[10px] text-muted-foreground uppercase tracking-wide">Pickup Location</span>
+                                <p className="text-sm">{detail.pickupLocation || "Not specified"}</p>
+                              </div>
+                              <div>
+                                <span className="text-[10px] text-muted-foreground uppercase tracking-wide">Country</span>
+                                <p className="text-sm">{detail.country || "Not specified"}</p>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {/* Section: Activity / Transfer Details (from tourData) */}
                   {tourInfo && (
