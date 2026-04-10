@@ -22,6 +22,11 @@ interface CustomerInfo {
   country: string; address: string; zipCode: string;
 }
 
+interface ItemDetail {
+  itemId: string; title: string; slug: string;
+  hotelName: string; pickupLocation: string; country: string;
+}
+
 const PaymentInformation = () => {
   const navigate = useNavigate();
   const { cartItems, getCartTotal, clearCart } = useCart();
@@ -30,10 +35,15 @@ const PaymentInformation = () => {
   const [paymentMethod, setPaymentMethod] = useState("credit-card");
   const [isProcessing, setIsProcessing] = useState(false);
 
+  const [savedItemDetails, setSavedItemDetails] = useState<ItemDetail[]>([]);
+
   useEffect(() => {
     const savedInfo = sessionStorage.getItem("customerInfo");
     if (savedInfo) setCustomerInfo(JSON.parse(savedInfo));
     else navigate("/customer-information");
+
+    const savedDetails = sessionStorage.getItem("itemDetails");
+    if (savedDetails) setSavedItemDetails(JSON.parse(savedDetails));
   }, [navigate]);
 
   // Load Razorpay script
