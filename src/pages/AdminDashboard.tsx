@@ -56,6 +56,8 @@ const statusColors: Record<string, string> = {
   refunded: "bg-purple-100 text-purple-800 border-purple-200",
 };
 
+const ITEMS_PER_PAGE = 15;
+
 const AdminDashboard = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -66,6 +68,7 @@ const AdminDashboard = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortField, setSortField] = useState<SortField>("created_at");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
+  const [currentPage, setCurrentPage] = useState(1);
 
   // Wait for auth to resolve before checking admin status
   useEffect(() => {
