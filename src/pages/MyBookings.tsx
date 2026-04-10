@@ -5,7 +5,7 @@ import { supabase } from "@/lib/supabaseClient";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, CalendarDays, Search, Users, XCircle, Eye, MapPin, Phone, Mail, CreditCard, Clock } from "lucide-react";
+import { Loader2, CalendarDays, Search, Users, XCircle, Eye, MapPin, Phone, Mail, CreditCard, Clock, FileText, Globe, MessageSquare, Info } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { format } from "date-fns";
@@ -145,8 +145,8 @@ const MyBookings = () => {
                       </div>
                       <div className="flex items-center gap-2 sm:gap-3">
                         <span className="font-bold text-lg">₹{Number(booking.total_price || 0).toLocaleString()}</span>
-                        <Button variant="outline" size="sm" onClick={() => setViewBooking(booking)}>
-                          <Eye className="h-4 w-4 mr-1" /> View
+                        <Button size="sm" onClick={() => setViewBooking(booking)}>
+                          <Eye className="h-4 w-4 mr-1" /> View Booking
                         </Button>
                         {booking.status !== "cancelled" && booking.status !== "completed" && (
                           <AlertDialog>
@@ -206,100 +206,123 @@ const MyBookings = () => {
               <DialogHeader>
                 <DialogTitle className="flex items-center gap-2 text-xl">
                   <MapPin className="h-5 w-5 text-primary" />
-                  {viewBooking.tour_name}
+                  Booking Details
                 </DialogTitle>
               </DialogHeader>
 
-              <div className="space-y-4 mt-2">
-                {/* Status */}
-                <div className="flex items-center gap-2">
-                  <span className="text-sm font-medium text-muted-foreground">Status:</span>
-                  <Badge variant="outline" className={statusColors[viewBooking.status || "confirmed"]}>
-                    {(viewBooking.status || "confirmed").charAt(0).toUpperCase() + (viewBooking.status || "confirmed").slice(1)}
-                  </Badge>
-                </div>
-
-                <Separator />
-
-                {/* Booking Info */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-1">
-                    <p className="text-xs text-muted-foreground font-medium flex items-center gap-1"><CalendarDays className="h-3 w-3" /> Tour Date</p>
-                    <p className="text-sm font-semibold">
-                      {viewBooking.tour_date ? format(new Date(viewBooking.tour_date), "EEEE, MMM dd, yyyy") : "N/A"}
-                    </p>
-                  </div>
-                  <div className="space-y-1">
-                    <p className="text-xs text-muted-foreground font-medium flex items-center gap-1"><Clock className="h-3 w-3" /> Booked On</p>
-                    <p className="text-sm font-semibold">{format(new Date(viewBooking.created_at), "MMM dd, yyyy, hh:mm a")}</p>
-                  </div>
-                </div>
-
-                <Separator />
-
-                {/* Guests */}
-                <div className="space-y-1">
-                  <p className="text-xs text-muted-foreground font-medium flex items-center gap-1"><Users className="h-3 w-3" /> Guests</p>
-                  <p className="text-sm font-semibold">
-                    {viewBooking.adults || 0} Adult{(viewBooking.adults || 0) !== 1 ? "s" : ""}
-                    {viewBooking.children > 0 && `, ${viewBooking.children} Child${viewBooking.children !== 1 ? "ren" : ""}`}
-                  </p>
-                </div>
-
-                <Separator />
-
-                {/* Contact Details */}
-                <div className="space-y-2">
-                  <p className="text-xs text-muted-foreground font-medium">Contact Details</p>
-                  {viewBooking.contact_name && (
-                    <p className="text-sm flex items-center gap-2">
-                      <Users className="h-3.5 w-3.5 text-muted-foreground" /> {viewBooking.contact_name}
-                    </p>
-                  )}
-                  {viewBooking.contact_email && (
-                    <p className="text-sm flex items-center gap-2">
-                      <Mail className="h-3.5 w-3.5 text-muted-foreground" /> {viewBooking.contact_email}
-                    </p>
-                  )}
-                  {viewBooking.contact_phone && (
-                    <p className="text-sm flex items-center gap-2">
-                      <Phone className="h-3.5 w-3.5 text-muted-foreground" /> {viewBooking.contact_phone}
-                    </p>
-                  )}
-                </div>
-
-                <Separator />
-
-                {/* Payment */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-1">
-                    <p className="text-xs text-muted-foreground font-medium flex items-center gap-1"><CreditCard className="h-3 w-3" /> Total Paid</p>
-                    <p className="text-lg font-bold text-primary">₹{Number(viewBooking.total_price || 0).toLocaleString()}</p>
-                  </div>
-                  {viewBooking.payment_id && (
-                    <div className="space-y-1">
-                      <p className="text-xs text-muted-foreground font-medium">Payment ID</p>
-                      <p className="text-sm font-mono break-all">{viewBooking.payment_id}</p>
+              <div className="space-y-5 mt-2">
+                {/* Section: Booking Information */}
+                <div>
+                  <h4 className="text-sm font-semibold text-primary flex items-center gap-1.5 mb-3">
+                    <FileText className="h-4 w-4" /> Booking Information
+                  </h4>
+                  <div className="bg-muted/50 rounded-lg p-4 space-y-3">
+                    <div className="flex justify-between items-start">
+                      <span className="text-xs text-muted-foreground">Booking ID</span>
+                      <span className="text-xs font-mono text-right break-all max-w-[60%]">{viewBooking.id}</span>
                     </div>
-                  )}
-                </div>
-
-                {/* Special Requests */}
-                {viewBooking.special_requests && (
-                  <>
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-muted-foreground">Booking Status</span>
+                      <Badge variant="outline" className={statusColors[viewBooking.status || "confirmed"]}>
+                        {(viewBooking.status || "confirmed").charAt(0).toUpperCase() + (viewBooking.status || "confirmed").slice(1)}
+                      </Badge>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-muted-foreground">Booking Date</span>
+                      <span className="text-sm">{format(new Date(viewBooking.created_at), "MMM dd, yyyy, hh:mm a")}</span>
+                    </div>
                     <Separator />
-                    <div className="space-y-1">
-                      <p className="text-xs text-muted-foreground font-medium">Special Requests</p>
-                      <p className="text-sm bg-muted p-3 rounded-md">{viewBooking.special_requests}</p>
+                    <div className="flex justify-between items-start">
+                      <span className="text-xs text-muted-foreground">Tour / Activity</span>
+                      <span className="text-sm font-semibold text-right max-w-[60%]">{viewBooking.tour_name}</span>
                     </div>
-                  </>
-                )}
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-muted-foreground">Travel Date</span>
+                      <span className="text-sm">{viewBooking.tour_date ? format(new Date(viewBooking.tour_date), "EEEE, MMM dd, yyyy") : "N/A"}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-muted-foreground">Guests</span>
+                      <span className="text-sm">
+                        {viewBooking.adults || 0} Adult{(viewBooking.adults || 0) !== 1 ? "s" : ""}
+                        {viewBooking.children > 0 && `, ${viewBooking.children} Child${viewBooking.children !== 1 ? "ren" : ""}`}
+                      </span>
+                    </div>
+                    <Separator />
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-muted-foreground">Total Amount Paid</span>
+                      <span className="text-lg font-bold text-primary">₹{Number(viewBooking.total_price || 0).toLocaleString()}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-muted-foreground">Payment Status</span>
+                      <Badge variant="outline" className={viewBooking.status === "cancelled" ? "bg-red-100 text-red-800" : "bg-green-100 text-green-800"}>
+                        {viewBooking.status === "cancelled" ? "Refund Initiated" : "Paid"}
+                      </Badge>
+                    </div>
+                    {viewBooking.payment_id && (
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-muted-foreground">Payment Method</span>
+                        <span className="text-sm">Razorpay</span>
+                      </div>
+                    )}
+                    {viewBooking.payment_id && (
+                      <div className="flex justify-between items-start">
+                        <span className="text-xs text-muted-foreground">Payment ID</span>
+                        <span className="text-xs font-mono text-right break-all max-w-[60%]">{viewBooking.payment_id}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
 
-                {/* Booking ID */}
-                <Separator />
-                <div className="space-y-1">
-                  <p className="text-xs text-muted-foreground font-medium">Booking Reference</p>
-                  <p className="text-xs font-mono text-muted-foreground">{viewBooking.id}</p>
+                {/* Section: Customer Information */}
+                <div>
+                  <h4 className="text-sm font-semibold text-primary flex items-center gap-1.5 mb-3">
+                    <Users className="h-4 w-4" /> Customer Information
+                  </h4>
+                  <div className="bg-muted/50 rounded-lg p-4 space-y-3">
+                    {viewBooking.contact_name && (
+                      <div className="flex items-center gap-2">
+                        <Users className="h-3.5 w-3.5 text-muted-foreground" />
+                        <span className="text-sm">{viewBooking.contact_name}</span>
+                      </div>
+                    )}
+                    {viewBooking.contact_email && (
+                      <div className="flex items-center gap-2">
+                        <Mail className="h-3.5 w-3.5 text-muted-foreground" />
+                        <span className="text-sm">{viewBooking.contact_email}</span>
+                      </div>
+                    )}
+                    {viewBooking.contact_phone && (
+                      <div className="flex items-center gap-2">
+                        <Phone className="h-3.5 w-3.5 text-muted-foreground" />
+                        <span className="text-sm">{viewBooking.contact_phone}</span>
+                      </div>
+                    )}
+                    <div className="flex items-center gap-2">
+                      <Globe className="h-3.5 w-3.5 text-muted-foreground" />
+                      <span className="text-sm text-muted-foreground">Country not specified</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Section: Additional Details */}
+                <div>
+                  <h4 className="text-sm font-semibold text-primary flex items-center gap-1.5 mb-3">
+                    <Info className="h-4 w-4" /> Additional Details
+                  </h4>
+                  <div className="bg-muted/50 rounded-lg p-4 space-y-3">
+                    <div className="flex justify-between items-start">
+                      <span className="text-xs text-muted-foreground">Special Requests</span>
+                      <span className="text-sm text-right max-w-[60%]">{viewBooking.special_requests || "None"}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-muted-foreground">Pickup Location</span>
+                      <span className="text-sm text-muted-foreground">Not specified</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-muted-foreground">Booking Source</span>
+                      <span className="text-sm">Website</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </>
