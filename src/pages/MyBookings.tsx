@@ -5,7 +5,7 @@ import { supabase } from "@/lib/supabaseClient";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, CalendarDays, Search, Users, XCircle, Eye, MapPin, Phone, Mail, CreditCard, Clock, FileText, Globe, MessageSquare, Info } from "lucide-react";
+import { Loader2, CalendarDays, Search, Users, XCircle, Eye, MapPin, Phone, Mail, FileText, Globe, Info, CheckCircle, XOctagon, ShieldCheck, Baby, AlertTriangle, BookOpen } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { format } from "date-fns";
@@ -19,6 +19,10 @@ import {
 } from "@/components/ui/dialog";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
+import {
+  Accordion, AccordionContent, AccordionItem, AccordionTrigger,
+} from "@/components/ui/accordion";
+import { toursData } from "@/data/tourData";
 
 interface Booking {
   id: string; tour_name: string; tour_slug: string; tour_date: string;
@@ -200,133 +204,262 @@ const MyBookings = () => {
 
       {/* Booking Details Dialog */}
       <Dialog open={!!viewBooking} onOpenChange={(open) => !open && setViewBooking(null)}>
-        <DialogContent className="max-w-lg max-h-[85vh] overflow-y-auto">
-          {viewBooking && (
-            <>
-              <DialogHeader>
-                <DialogTitle className="flex items-center gap-2 text-xl">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  Booking Details
-                </DialogTitle>
-              </DialogHeader>
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+          {viewBooking && (() => {
+            const tourInfo = toursData[viewBooking.tour_slug] || null;
+            return (
+              <>
+                <DialogHeader>
+                  <DialogTitle className="flex items-center gap-2 text-xl">
+                    <MapPin className="h-5 w-5 text-primary" />
+                    Booking Details
+                  </DialogTitle>
+                </DialogHeader>
 
-              <div className="space-y-5 mt-2">
-                {/* Section: Booking Information */}
-                <div>
-                  <h4 className="text-sm font-semibold text-primary flex items-center gap-1.5 mb-3">
-                    <FileText className="h-4 w-4" /> Booking Information
-                  </h4>
-                  <div className="bg-muted/50 rounded-lg p-4 space-y-3">
-                    <div className="flex justify-between items-start">
-                      <span className="text-xs text-muted-foreground">Booking ID</span>
-                      <span className="text-xs font-mono text-right break-all max-w-[60%]">{viewBooking.id}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">Booking Status</span>
-                      <Badge variant="outline" className={statusColors[viewBooking.status || "confirmed"]}>
-                        {(viewBooking.status || "confirmed").charAt(0).toUpperCase() + (viewBooking.status || "confirmed").slice(1)}
-                      </Badge>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">Booking Date</span>
-                      <span className="text-sm">{format(new Date(viewBooking.created_at), "MMM dd, yyyy, hh:mm a")}</span>
-                    </div>
-                    <Separator />
-                    <div className="flex justify-between items-start">
-                      <span className="text-xs text-muted-foreground">Tour / Activity</span>
-                      <span className="text-sm font-semibold text-right max-w-[60%]">{viewBooking.tour_name}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">Travel Date</span>
-                      <span className="text-sm">{viewBooking.tour_date ? format(new Date(viewBooking.tour_date), "EEEE, MMM dd, yyyy") : "N/A"}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">Guests</span>
-                      <span className="text-sm">
-                        {viewBooking.adults || 0} Adult{(viewBooking.adults || 0) !== 1 ? "s" : ""}
-                        {viewBooking.children > 0 && `, ${viewBooking.children} Child${viewBooking.children !== 1 ? "ren" : ""}`}
-                      </span>
-                    </div>
-                    <Separator />
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">Total Amount Paid</span>
-                      <span className="text-lg font-bold text-primary">₹{Number(viewBooking.total_price || 0).toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">Payment Status</span>
-                      <Badge variant="outline" className={viewBooking.status === "cancelled" ? "bg-red-100 text-red-800" : "bg-green-100 text-green-800"}>
-                        {viewBooking.status === "cancelled" ? "Refund Initiated" : "Paid"}
-                      </Badge>
-                    </div>
-                    {viewBooking.payment_id && (
-                      <div className="flex justify-between items-center">
-                        <span className="text-xs text-muted-foreground">Payment Method</span>
-                        <span className="text-sm">Razorpay</span>
-                      </div>
-                    )}
-                    {viewBooking.payment_id && (
+                <div className="space-y-5 mt-2">
+                  {/* Section: Booking Information */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-primary flex items-center gap-1.5 mb-3">
+                      <FileText className="h-4 w-4" /> Booking Information
+                    </h4>
+                    <div className="bg-muted/50 rounded-lg p-4 space-y-3">
                       <div className="flex justify-between items-start">
-                        <span className="text-xs text-muted-foreground">Payment ID</span>
-                        <span className="text-xs font-mono text-right break-all max-w-[60%]">{viewBooking.payment_id}</span>
+                        <span className="text-xs text-muted-foreground">Booking ID</span>
+                        <span className="text-xs font-mono text-right break-all max-w-[60%]">{viewBooking.id}</span>
                       </div>
-                    )}
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-muted-foreground">Booking Status</span>
+                        <Badge variant="outline" className={statusColors[viewBooking.status || "confirmed"]}>
+                          {(viewBooking.status || "confirmed").charAt(0).toUpperCase() + (viewBooking.status || "confirmed").slice(1)}
+                        </Badge>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-muted-foreground">Booking Date</span>
+                        <span className="text-sm">{format(new Date(viewBooking.created_at), "MMM dd, yyyy, hh:mm a")}</span>
+                      </div>
+                      <Separator />
+                      <div className="flex justify-between items-start">
+                        <span className="text-xs text-muted-foreground">Tour / Activity</span>
+                        <span className="text-sm font-semibold text-right max-w-[60%]">{viewBooking.tour_name}</span>
+                      </div>
+                      {tourInfo && (
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-muted-foreground">Location</span>
+                          <span className="text-sm">{tourInfo.location}</span>
+                        </div>
+                      )}
+                      {tourInfo && (
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-muted-foreground">Duration</span>
+                          <span className="text-sm">{tourInfo.duration}</span>
+                        </div>
+                      )}
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-muted-foreground">Travel Date</span>
+                        <span className="text-sm">{viewBooking.tour_date ? format(new Date(viewBooking.tour_date), "EEEE, MMM dd, yyyy") : "N/A"}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-muted-foreground">Guests</span>
+                        <span className="text-sm">
+                          {viewBooking.adults || 0} Adult{(viewBooking.adults || 0) !== 1 ? "s" : ""}
+                          {viewBooking.children > 0 && `, ${viewBooking.children} Child${viewBooking.children !== 1 ? "ren" : ""}`}
+                        </span>
+                      </div>
+                      <Separator />
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-muted-foreground">Total Amount Paid</span>
+                        <span className="text-lg font-bold text-primary">₹{Number(viewBooking.total_price || 0).toLocaleString()}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-muted-foreground">Payment Status</span>
+                        <Badge variant="outline" className={viewBooking.status === "cancelled" ? "bg-red-100 text-red-800" : "bg-green-100 text-green-800"}>
+                          {viewBooking.status === "cancelled" ? "Refund Initiated" : "Paid"}
+                        </Badge>
+                      </div>
+                      {viewBooking.payment_id && (
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-muted-foreground">Payment Method</span>
+                          <span className="text-sm">Razorpay</span>
+                        </div>
+                      )}
+                      {viewBooking.payment_id && (
+                        <div className="flex justify-between items-start">
+                          <span className="text-xs text-muted-foreground">Payment ID</span>
+                          <span className="text-xs font-mono text-right break-all max-w-[60%]">{viewBooking.payment_id}</span>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
 
-                {/* Section: Customer Information */}
-                <div>
-                  <h4 className="text-sm font-semibold text-primary flex items-center gap-1.5 mb-3">
-                    <Users className="h-4 w-4" /> Customer Information
-                  </h4>
-                  <div className="bg-muted/50 rounded-lg p-4 space-y-3">
-                    {viewBooking.contact_name && (
+                  {/* Section: Customer Information */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-primary flex items-center gap-1.5 mb-3">
+                      <Users className="h-4 w-4" /> Customer Information
+                    </h4>
+                    <div className="bg-muted/50 rounded-lg p-4 space-y-3">
+                      {viewBooking.contact_name && (
+                        <div className="flex items-center gap-2">
+                          <Users className="h-3.5 w-3.5 text-muted-foreground" />
+                          <span className="text-sm">{viewBooking.contact_name}</span>
+                        </div>
+                      )}
+                      {viewBooking.contact_email && (
+                        <div className="flex items-center gap-2">
+                          <Mail className="h-3.5 w-3.5 text-muted-foreground" />
+                          <span className="text-sm">{viewBooking.contact_email}</span>
+                        </div>
+                      )}
+                      {viewBooking.contact_phone && (
+                        <div className="flex items-center gap-2">
+                          <Phone className="h-3.5 w-3.5 text-muted-foreground" />
+                          <span className="text-sm">{viewBooking.contact_phone}</span>
+                        </div>
+                      )}
                       <div className="flex items-center gap-2">
-                        <Users className="h-3.5 w-3.5 text-muted-foreground" />
-                        <span className="text-sm">{viewBooking.contact_name}</span>
+                        <Globe className="h-3.5 w-3.5 text-muted-foreground" />
+                        <span className="text-sm text-muted-foreground">Country not specified</span>
                       </div>
-                    )}
-                    {viewBooking.contact_email && (
-                      <div className="flex items-center gap-2">
-                        <Mail className="h-3.5 w-3.5 text-muted-foreground" />
-                        <span className="text-sm">{viewBooking.contact_email}</span>
-                      </div>
-                    )}
-                    {viewBooking.contact_phone && (
-                      <div className="flex items-center gap-2">
-                        <Phone className="h-3.5 w-3.5 text-muted-foreground" />
-                        <span className="text-sm">{viewBooking.contact_phone}</span>
-                      </div>
-                    )}
-                    <div className="flex items-center gap-2">
-                      <Globe className="h-3.5 w-3.5 text-muted-foreground" />
-                      <span className="text-sm text-muted-foreground">Country not specified</span>
                     </div>
                   </div>
-                </div>
 
-                {/* Section: Additional Details */}
-                <div>
-                  <h4 className="text-sm font-semibold text-primary flex items-center gap-1.5 mb-3">
-                    <Info className="h-4 w-4" /> Additional Details
-                  </h4>
-                  <div className="bg-muted/50 rounded-lg p-4 space-y-3">
-                    <div className="flex justify-between items-start">
-                      <span className="text-xs text-muted-foreground">Special Requests</span>
-                      <span className="text-sm text-right max-w-[60%]">{viewBooking.special_requests || "None"}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">Pickup Location</span>
-                      <span className="text-sm text-muted-foreground">Not specified</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">Booking Source</span>
-                      <span className="text-sm">Website</span>
+                  {/* Section: Additional Details */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-primary flex items-center gap-1.5 mb-3">
+                      <Info className="h-4 w-4" /> Additional Details
+                    </h4>
+                    <div className="bg-muted/50 rounded-lg p-4 space-y-3">
+                      <div className="flex justify-between items-start">
+                        <span className="text-xs text-muted-foreground">Special Requests</span>
+                        <span className="text-sm text-right max-w-[60%]">{viewBooking.special_requests || "None"}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-muted-foreground">Pickup Location</span>
+                        <span className="text-sm text-muted-foreground">Not specified</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-muted-foreground">Booking Source</span>
+                        <span className="text-sm">Website</span>
+                      </div>
                     </div>
                   </div>
+
+                  {/* Section: Activity / Transfer Details (from tourData) */}
+                  {tourInfo && (
+                    <div>
+                      <h4 className="text-sm font-semibold text-primary flex items-center gap-1.5 mb-3">
+                        <BookOpen className="h-4 w-4" /> Activity / Transfer Details
+                      </h4>
+
+                      {/* Description */}
+                      <div className="bg-muted/50 rounded-lg p-4 mb-3">
+                        <p className="text-xs font-semibold text-foreground mb-1">Description</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{tourInfo.description.overview}</p>
+                      </div>
+
+                      {/* Highlights */}
+                      {tourInfo.highlights.length > 0 && (
+                        <div className="bg-muted/50 rounded-lg p-4 mb-3">
+                          <p className="text-xs font-semibold text-foreground mb-2">Highlights</p>
+                          <ul className="space-y-1">
+                            {tourInfo.highlights.map((h, i) => (
+                              <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                                <CheckCircle className="h-3.5 w-3.5 text-green-600 mt-0.5 shrink-0" />
+                                {h}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {/* Inclusions & Exclusions */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+                        {tourInfo.inclusions.length > 0 && (
+                          <div className="bg-green-50 rounded-lg p-4">
+                            <p className="text-xs font-semibold text-green-800 mb-2 flex items-center gap-1"><CheckCircle className="h-3.5 w-3.5" /> Inclusions</p>
+                            <ul className="space-y-1">
+                              {tourInfo.inclusions.map((item, i) => (
+                                <li key={i} className="text-xs text-green-700">• {item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        {tourInfo.exclusions.length > 0 && (
+                          <div className="bg-red-50 rounded-lg p-4">
+                            <p className="text-xs font-semibold text-red-800 mb-2 flex items-center gap-1"><XOctagon className="h-3.5 w-3.5" /> Exclusions</p>
+                            <ul className="space-y-1">
+                              {tourInfo.exclusions.map((item, i) => (
+                                <li key={i} className="text-xs text-red-700">• {item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Policies Accordion */}
+                      <Accordion type="multiple" className="w-full">
+                        {tourInfo.bookingPolicy.length > 0 && (
+                          <AccordionItem value="booking-policy">
+                            <AccordionTrigger className="text-sm py-3">
+                              <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-primary" /> Booking & Information Policy</span>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                              <ul className="space-y-1.5 pl-1">
+                                {tourInfo.bookingPolicy.map((p, i) => (
+                                  <li key={i} className="text-xs text-muted-foreground flex items-start gap-2">
+                                    <span className="text-primary mt-0.5">•</span> {p}
+                                  </li>
+                                ))}
+                              </ul>
+                            </AccordionContent>
+                          </AccordionItem>
+                        )}
+
+                        {tourInfo.cancellationPolicy.length > 0 && (
+                          <AccordionItem value="cancellation-policy">
+                            <AccordionTrigger className="text-sm py-3">
+                              <span className="flex items-center gap-2"><AlertTriangle className="h-4 w-4 text-amber-500" /> Cancellation & Refund Policy</span>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                              <ul className="space-y-1.5 pl-1">
+                                {tourInfo.cancellationPolicy.map((p, i) => (
+                                  <li key={i} className="text-xs text-muted-foreground flex items-start gap-2">
+                                    <span className="text-amber-500 mt-0.5">•</span> {p}
+                                  </li>
+                                ))}
+                              </ul>
+                            </AccordionContent>
+                          </AccordionItem>
+                        )}
+
+                        {tourInfo.childPolicy.length > 0 && (
+                          <AccordionItem value="child-policy">
+                            <AccordionTrigger className="text-sm py-3">
+                              <span className="flex items-center gap-2"><Baby className="h-4 w-4 text-blue-500" /> Child Policy</span>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                              <ul className="space-y-1.5 pl-1">
+                                {tourInfo.childPolicy.map((p, i) => (
+                                  <li key={i} className="text-xs text-muted-foreground flex items-start gap-2">
+                                    <span className="text-blue-500 mt-0.5">•</span> {p}
+                                  </li>
+                                ))}
+                              </ul>
+                            </AccordionContent>
+                          </AccordionItem>
+                        )}
+                      </Accordion>
+                    </div>
+                  )}
+
+                  {!tourInfo && (
+                    <div className="bg-muted/50 rounded-lg p-4 text-center">
+                      <p className="text-sm text-muted-foreground">Detailed activity/transfer information is not available for this booking.</p>
+                    </div>
+                  )}
                 </div>
-              </div>
-            </>
-          )}
+              </>
+            );
+          })()}
         </DialogContent>
       </Dialog>
     </div>
