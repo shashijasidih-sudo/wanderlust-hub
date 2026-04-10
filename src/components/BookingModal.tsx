@@ -158,6 +158,7 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
             console.log("FINAL DATA to save:", finalData);
 
             // Save booking to Supabase
+            let bookingId = "";
             const saveRes = await fetch(`${SUPABASE_FUNCTIONS_URL}/save-booking`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -169,9 +170,27 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               console.error("Save booking failed:", saveRes.status, errBody);
               toast({ title: "Booking saved with issues", description: "Payment was successful but booking record may not have saved. Please contact support.", variant: "destructive" });
             } else {
-              console.log("Booking saved successfully");
-              localStorage.removeItem("booking_data");
+              const saveResult = await saveRes.json();
+              bookingId = saveResult.booking?.id || "";
+              console.log("Booking saved successfully, ID:", bookingId);
             }
+
+            // Build confirmation payload from savedData (before clearing localStorage)
+            const confirmPayload = {
+              email: savedData.customer_email,
+              customer_name: savedData.customer_name,
+              tour_name: savedData.tour_name,
+              tour_date: savedData.tour_date,
+              adults: savedData.adults || 1,
+              children: savedData.children || 0,
+              amount: savedData.total_price,
+              currency: savedData.currency || currency,
+              bookingId: bookingId,
+              payment_id: response.razorpay_payment_id,
+            };
+            console.log("send-confirmation payload:", confirmPayload);
+
+            localStorage.removeItem("booking_data");
 
             // Send confirmation email with invoice & voucher
             await fetch(`${SUPABASE_FUNCTIONS_URL}/send-confirmation`, {
@@ -181,18 +200,8 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
                 "apikey": SUPABASE_ANON_KEY,
                 "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
               },
-              body: JSON.stringify({
-                email: savedData.customer_email,
-                customer_name: savedData.customer_name,
-                tour_name: savedData.tour_name,
-                tour_date: savedData.tour_date,
-                adults: savedData.adults,
-                children: savedData.children,
-                amount: savedData.total_price,
-                currency: savedData.currency,
-                payment_id: response.razorpay_payment_id,
-              }),
-            }).catch(() => {});
+              body: JSON.stringify(confirmPayload),
+            }).catch((err) => console.error("send-confirmation failed:", err));
           } catch (err) {
             console.error("Failed to save booking:", err);
             toast({ title: "Booking save error", description: "Payment was successful but booking record failed to save. Please contact support with your Payment ID.", variant: "destructive" });

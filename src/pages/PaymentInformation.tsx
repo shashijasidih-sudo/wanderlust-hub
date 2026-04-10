@@ -138,6 +138,7 @@ const PaymentInformation = () => {
             console.log("FINAL DATA to save:", finalData);
 
             // Save booking
+            let bookingId = "";
             const saveRes = await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/save-booking",
               {
@@ -148,11 +149,29 @@ const PaymentInformation = () => {
             );
 
             if (saveRes.ok) {
-              console.log("Booking saved successfully");
-              localStorage.removeItem("booking_data");
+              const saveResult = await saveRes.json();
+              bookingId = saveResult.booking?.id || "";
+              console.log("Booking saved successfully, ID:", bookingId);
             } else {
               console.error("Save booking failed:", await saveRes.text());
             }
+
+            // Build confirmation payload from savedData (before clearing localStorage)
+            const confirmPayload = {
+              email: savedData.customer_email,
+              customer_name: savedData.customer_name,
+              tour_name: savedData.tour_name,
+              tour_date: savedData.tour_date,
+              adults: savedData.adults || 1,
+              children: savedData.children || 0,
+              amount: savedData.total_price,
+              currency: savedData.currency || "INR",
+              bookingId: bookingId,
+              payment_id: resp.razorpay_payment_id,
+            };
+            console.log("send-confirmation payload:", confirmPayload);
+
+            localStorage.removeItem("booking_data");
 
             // Send confirmation email
             await fetch(
@@ -164,19 +183,9 @@ const PaymentInformation = () => {
                   "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
                   "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
                 },
-                body: JSON.stringify({
-                  email: savedData.customer_email,
-                  customer_name: savedData.customer_name,
-                  tour_name: savedData.tour_name,
-                  tour_date: savedData.tour_date,
-                  adults: savedData.adults,
-                  children: savedData.children,
-                  amount: savedData.total_price,
-                  currency: "INR",
-                  payment_id: resp.razorpay_payment_id,
-                }),
+                body: JSON.stringify(confirmPayload),
               }
-            ).catch(() => {});
+            ).catch((err) => console.error("send-confirmation failed:", err));
           } catch (err) {
             console.error("Failed to save booking or send confirmation:", err);
           }
