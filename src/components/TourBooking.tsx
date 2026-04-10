@@ -79,9 +79,18 @@ const TourBooking = ({ tourData }: TourBookingProps) => {
                 <span>{tourData.location}</span>
               </div>
               
-              <h1 className="text-2xl md:text-3xl font-bold leading-tight">
-                {tourData.title}
-              </h1>
+              <div className="flex items-center justify-between gap-4">
+                <h1 className="text-2xl md:text-3xl font-bold leading-tight">
+                  {tourData.title}
+                </h1>
+                <WishlistButton
+                  tourSlug={tourSlug}
+                  tourName={tourData.title}
+                  tourImage={safeHeroImages[0]?.src}
+                  tourPrice={tourData.basePrice}
+                  size="default"
+                />
+              </div>
               
               <p className="text-lg text-muted-foreground">
                 {tourData.shortDescription}
