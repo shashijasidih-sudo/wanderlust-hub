@@ -2,7 +2,7 @@ import { useCart, CartItem } from "@/contexts/CartContext";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Trash2, ShoppingCart, ArrowRight, Car, Minus, Plus, Loader2, MapPin, Ticket } from "lucide-react";
+import { Trash2, ShoppingCart, ArrowRight, Car, Minus, Plus, Loader2, Ticket } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -16,94 +16,57 @@ const TransferCartItem = ({ item, onRemove, onUpdateQuantity }: {
   const { formatPrice } = useCurrency();
   return (
   <Card className="overflow-hidden">
-    <CardContent className="p-0">
-      <div className="flex flex-col md:flex-row">
-        <div className="bg-primary/10 p-6 flex items-center justify-center md:w-32">
-          <Car className="h-12 w-12 text-primary" />
+    <CardContent className="p-2 md:p-0">
+      <div className="flex items-start gap-2 md:flex-row">
+        <div className="bg-primary/10 p-2 md:p-6 rounded md:rounded-none flex items-center justify-center shrink-0">
+          <Car className="h-6 w-6 md:h-12 md:w-12 text-primary" />
         </div>
         
-        <div className="flex-1 p-4">
+        <div className="flex-1 min-w-0">
           <div className="flex justify-between items-start">
-            <div>
-              <h3 className="font-semibold text-lg">{item.title}</h3>
-              <p className="text-primary font-medium">{item.vehicleName}</p>
+            <div className="min-w-0">
+              <h3 className="font-semibold text-sm md:text-lg leading-tight truncate">{item.title}</h3>
+              <p className="text-primary text-xs md:text-sm font-medium">{item.vehicleName}</p>
             </div>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => onRemove(item.id)}
-              className="text-destructive hover:bg-destructive/10"
+              className="text-destructive hover:bg-destructive/10 h-6 w-6 md:h-8 md:w-8 shrink-0"
             >
-              <Trash2 className="h-5 w-5" />
+              <Trash2 className="h-3.5 w-3.5 md:h-5 md:w-5" />
             </Button>
           </div>
           
-          <div className="grid grid-cols-2 gap-4 mt-4 text-sm">
-            <div>
-              <span className="text-muted-foreground">Capacity:</span>
-              <p className="font-medium">{item.capacity}</p>
-            </div>
-            <div>
-              <span className="text-muted-foreground">Passengers:</span>
-              <p className="font-medium">{item.numberOfPersons}</p>
-            </div>
-            <div>
-              <span className="text-muted-foreground">Date:</span>
-              <p className="font-medium">
-                {item.pickupDate ? format(new Date(item.pickupDate), "dd MMM yyyy") : "Not set"}
-              </p>
-            </div>
-            <div>
-              <span className="text-muted-foreground">Time:</span>
-              <p className="font-medium">{item.pickupTime || "Not set"}</p>
-            </div>
-            <div className="col-span-2">
-              <span className="text-muted-foreground">Route:</span>
-              <p className="font-medium">{item.pickupLocation} → {item.dropLocation}</p>
-            </div>
-            {item.roomNo && (
-              <div className="col-span-2">
-                <span className="text-muted-foreground">Room/Flight No:</span>
-                <p className="font-medium">{item.roomNo}</p>
-              </div>
-            )}
+          <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-xs text-muted-foreground">
+            <span>{item.capacity} · {item.numberOfPersons} pax</span>
+            <span>{item.pickupDate ? format(new Date(item.pickupDate), "dd MMM") : "No date"} {item.pickupTime || ""}</span>
           </div>
+          <p className="text-xs text-muted-foreground truncate mt-0.5">
+            {item.pickupLocation} → {item.dropLocation}
+          </p>
           
-          <div className="mt-4 pt-4 border-t flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground mr-2">Qty:</span>
-              <Button
-                variant="outline"
-                size="icon"
-                className="h-8 w-8"
+          <div className="mt-1.5 pt-1.5 border-t flex justify-between items-center">
+            <div className="flex items-center gap-1">
+              <Button variant="outline" size="icon" className="h-6 w-6"
                 onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
-                disabled={item.quantity <= 1}
-              >
-                <Minus className="h-4 w-4" />
+                disabled={item.quantity <= 1}>
+                <Minus className="h-3 w-3" />
               </Button>
-              <span className="w-8 text-center font-semibold">{item.quantity}</span>
-              <Button
-                variant="outline"
-                size="icon"
-                className="h-8 w-8"
-                onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
-              >
-                <Plus className="h-4 w-4" />
+              <span className="w-5 text-center text-xs font-semibold">{item.quantity}</span>
+              <Button variant="outline" size="icon" className="h-6 w-6"
+                onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}>
+                <Plus className="h-3 w-3" />
               </Button>
             </div>
             
-            <div className="flex items-center gap-4">
-              <Link to={`/${item.slug}`} className="text-primary text-sm hover:underline">
-                View Details
+            <div className="flex items-center gap-2">
+              <Link to={`/${item.slug}`} className="text-primary text-xs hover:underline hidden sm:inline">
+                Details
               </Link>
-              <div className="text-right">
-                <p className="text-sm text-muted-foreground">
-                  {formatPrice(item.price)} × {item.quantity}
-                </p>
-                <p className="text-xl font-bold text-primary">
-                  {formatPrice(item.price * item.quantity)}
-                </p>
-              </div>
+              <p className="text-sm md:text-lg font-bold text-primary">
+                {formatPrice(item.price * item.quantity)}
+              </p>
             </div>
           </div>
         </div>
@@ -121,84 +84,54 @@ const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: {
   const { formatPrice } = useCurrency();
   return (
   <Card className="overflow-hidden">
-    <CardContent className="p-0">
-      <div className="flex flex-col md:flex-row">
-        <div className="bg-accent p-6 flex items-center justify-center md:w-32">
-          <Ticket className="h-12 w-12 text-primary" />
+    <CardContent className="p-2 md:p-0">
+      <div className="flex items-start gap-2 md:flex-row">
+        <div className="bg-accent p-2 md:p-6 rounded md:rounded-none flex items-center justify-center shrink-0">
+          <Ticket className="h-6 w-6 md:h-12 md:w-12 text-primary" />
         </div>
         
-        <div className="flex-1 p-4">
+        <div className="flex-1 min-w-0">
           <div className="flex justify-between items-start">
-            <div>
-              <h3 className="font-semibold text-lg">{item.title}</h3>
-              <p className="text-sm text-muted-foreground">Activity / Tour</p>
+            <div className="min-w-0">
+              <h3 className="font-semibold text-sm md:text-lg leading-tight truncate">{item.title}</h3>
+              <p className="text-xs text-muted-foreground">Activity / Tour</p>
             </div>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => onRemove(item.id)}
-              className="text-destructive hover:bg-destructive/10"
+              className="text-destructive hover:bg-destructive/10 h-6 w-6 md:h-8 md:w-8 shrink-0"
             >
-              <Trash2 className="h-5 w-5" />
+              <Trash2 className="h-3.5 w-3.5 md:h-5 md:w-5" />
             </Button>
           </div>
           
-          <div className="grid grid-cols-2 gap-4 mt-4 text-sm">
-            <div>
-              <span className="text-muted-foreground">Adults:</span>
-              <p className="font-medium">{item.adults || 0}</p>
-            </div>
-            <div>
-              <span className="text-muted-foreground">Children:</span>
-              <p className="font-medium">{item.children || 0}</p>
-            </div>
-            <div>
-              <span className="text-muted-foreground">Date:</span>
-              <p className="font-medium">
-                {item.selectedDate ? format(new Date(item.selectedDate), "dd MMM yyyy") : "Not set"}
-              </p>
-            </div>
-            <div>
-              <span className="text-muted-foreground">Time:</span>
-              <p className="font-medium">{item.selectedTime || "Not set"}</p>
-            </div>
+          <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-xs text-muted-foreground">
+            <span>{item.adults || 0} Adults, {item.children || 0} Children</span>
+            <span>{item.selectedDate ? format(new Date(item.selectedDate), "dd MMM") : "No date"} {item.selectedTime || ""}</span>
           </div>
           
-          <div className="mt-4 pt-4 border-t flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground mr-2">Qty:</span>
-              <Button
-                variant="outline"
-                size="icon"
-                className="h-8 w-8"
+          <div className="mt-1.5 pt-1.5 border-t flex justify-between items-center">
+            <div className="flex items-center gap-1">
+              <Button variant="outline" size="icon" className="h-6 w-6"
                 onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
-                disabled={item.quantity <= 1}
-              >
-                <Minus className="h-4 w-4" />
+                disabled={item.quantity <= 1}>
+                <Minus className="h-3 w-3" />
               </Button>
-              <span className="w-8 text-center font-semibold">{item.quantity}</span>
-              <Button
-                variant="outline"
-                size="icon"
-                className="h-8 w-8"
-                onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
-              >
-                <Plus className="h-4 w-4" />
+              <span className="w-5 text-center text-xs font-semibold">{item.quantity}</span>
+              <Button variant="outline" size="icon" className="h-6 w-6"
+                onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}>
+                <Plus className="h-3 w-3" />
               </Button>
             </div>
             
-            <div className="flex items-center gap-4">
-              <Link to={`/${item.slug}`} className="text-primary text-sm hover:underline">
-                View Details
+            <div className="flex items-center gap-2">
+              <Link to={`/${item.slug}`} className="text-primary text-xs hover:underline hidden sm:inline">
+                Details
               </Link>
-              <div className="text-right">
-                <p className="text-sm text-muted-foreground">
-                  {formatPrice(item.price)} × {item.quantity}
-                </p>
-                <p className="text-xl font-bold text-primary">
-                  {formatPrice(item.price * item.quantity)}
-                </p>
-              </div>
+              <p className="text-sm md:text-lg font-bold text-primary">
+                {formatPrice(item.price * item.quantity)}
+              </p>
             </div>
           </div>
         </div>
@@ -264,23 +197,23 @@ const Cart = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center justify-between mb-8">
-          <h1 className="text-3xl font-bold">Your Cart</h1>
+      <div className="container mx-auto px-3 md:px-4 py-3 md:py-8">
+        <div className="flex items-center justify-between mb-3 md:mb-8">
+          <h1 className="text-xl md:text-3xl font-bold">Your Cart</h1>
           <Button 
             variant="outline" 
             size="sm" 
             onClick={clearCart}
-            className="text-destructive hover:bg-destructive/10"
+            className="text-destructive hover:bg-destructive/10 h-7 text-xs md:h-9 md:text-sm"
           >
-            <Trash2 className="h-4 w-4 mr-2" />
-            Clear Cart
+            <Trash2 className="h-3 w-3 md:h-4 md:w-4 mr-1" />
+            Clear
           </Button>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-3 md:gap-8">
           {/* Cart Items */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-2 md:space-y-4">
             {cartItems.map((item) => (
               item.itemType === 'activity' ? (
                 <ActivityCartItem 
@@ -303,42 +236,42 @@ const Cart = () => {
           {/* Order Summary */}
           <div className="lg:col-span-1">
             <Card className="sticky top-32">
-              <CardHeader>
-                <CardTitle>Order Summary</CardTitle>
+              <CardHeader className="p-3 md:p-6 pb-1 md:pb-2">
+                <CardTitle className="text-base md:text-lg">Order Summary</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-2">
+              <CardContent className="p-3 md:p-6 pt-1 md:pt-2 space-y-2 md:space-y-4">
+                <div className="space-y-1">
                   {cartItems.map((item) => (
-                    <div key={item.id} className="flex justify-between text-sm">
+                    <div key={item.id} className="flex justify-between text-xs md:text-sm">
                       <span className="text-muted-foreground truncate mr-2">
                         {item.title} × {item.quantity}
                       </span>
-                      <span>{formatPrice(item.price * item.quantity)}</span>
+                      <span className="shrink-0">{formatPrice(item.price * item.quantity)}</span>
                     </div>
                   ))}
                 </div>
                 
-                <div className="border-t pt-4">
-                  <div className="flex justify-between text-sm">
+                <div className="border-t pt-2">
+                  <div className="flex justify-between text-xs md:text-sm">
                     <span className="text-muted-foreground">Subtotal ({totalItems} items)</span>
                     <span>{formatPrice(getCartTotal())}</span>
                   </div>
-                  <div className="flex justify-between text-sm mt-2">
+                  <div className="flex justify-between text-xs md:text-sm mt-1">
                     <span className="text-muted-foreground">Taxes & Fees</span>
                     <span className="text-green-600">Included</span>
                   </div>
                 </div>
                 
-                <div className="border-t pt-4">
-                  <div className="flex justify-between font-bold text-lg">
+                <div className="border-t pt-2">
+                  <div className="flex justify-between font-bold text-base md:text-lg">
                     <span>Total</span>
                     <span className="text-primary">{formatPrice(getCartTotal())}</span>
                   </div>
                 </div>
                 
                 <Button 
-                  className="w-full mt-4" 
-                  size="lg"
+                  className="w-full" 
+                  size="default"
                   onClick={handleProceedToCheckout}
                 >
                   Proceed to Checkout
@@ -348,12 +281,13 @@ const Cart = () => {
                 <Button 
                   variant="outline"
                   className="w-full" 
+                  size="sm"
                   onClick={() => navigate(-1)}
                 >
                   Continue Shopping
                 </Button>
                 
-                <p className="text-xs text-muted-foreground text-center">
+                <p className="text-[10px] md:text-xs text-muted-foreground text-center">
                   Secure checkout powered by trusted payment gateways
                 </p>
               </CardContent>
