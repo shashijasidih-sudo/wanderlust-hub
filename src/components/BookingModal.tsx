@@ -175,18 +175,21 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               console.log("Booking saved successfully, ID:", bookingId);
             }
 
-            // Build confirmation payload from savedData (before clearing localStorage)
+            // Build confirmation payload using save-booking response as primary source, savedData as fallback
+            const adultCount = savedData.adults || 1;
+            const childCount = savedData.children || 0;
             const confirmPayload = {
-              email: savedData.customer_email,
-              customer_name: savedData.customer_name,
-              tour_name: savedData.tour_name,
-              tour_date: savedData.tour_date,
-              adults: savedData.adults || 1,
-              children: savedData.children || 0,
-              amount: savedData.total_price,
+              email: savedData.customer_email || contactEmail,
+              customer_name: savedData.customer_name || contactName,
+              tour_name: savedData.tour_name || tourName,
+              tour_date: savedData.tour_date || (date ? format(date, "yyyy-MM-dd") : ""),
+              adults: adultCount,
+              children: childCount,
+              amount: savedData.total_price || totalPrice,
               currency: savedData.currency || currency,
               bookingId: bookingId,
               payment_id: response.razorpay_payment_id,
+              guests: `${adultCount} Adult${adultCount > 1 ? "s" : ""}${childCount > 0 ? `, ${childCount} Child${childCount > 1 ? "ren" : ""}` : ""}`,
             };
             console.log("send-confirmation payload:", confirmPayload);
 
