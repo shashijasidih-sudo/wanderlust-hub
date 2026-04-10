@@ -150,10 +150,20 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
             // Retrieve saved booking data
             const savedData = JSON.parse(localStorage.getItem("booking_data") || "{}");
             const finalData = {
-              ...savedData,
               payment_id: response.razorpay_payment_id,
               order_id: response.razorpay_order_id,
               user_id: user.id,
+              contact_name: savedData.customer_name || contactName,
+              contact_email: savedData.customer_email || contactEmail,
+              contact_phone: savedData.customer_phone || contactPhone || null,
+              tour_name: savedData.tour_name || tourName,
+              tour_slug: savedData.tour_slug || tourSlug,
+              tour_date: savedData.tour_date || (date ? format(date, "yyyy-MM-dd") : ""),
+              total_price: savedData.total_price || totalPrice,
+              currency: savedData.currency || currency,
+              adults: savedData.adults || adults,
+              children: savedData.children || children,
+              special_requests: savedData.special_requests || specialRequests || null,
             };
             console.log("FINAL DATA to save:", finalData);
 
