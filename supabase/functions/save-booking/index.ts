@@ -68,6 +68,7 @@ serve(async (req) => {
       adults: adults || 1,
       children: children || 0,
       special_requests: special_requests || null,
+      item_details: body.item_details || null,
     }).select().single();
 
     if (error) {

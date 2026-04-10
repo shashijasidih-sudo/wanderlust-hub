@@ -24,12 +24,18 @@ import {
 } from "@/components/ui/accordion";
 import { toursData } from "@/data/tourData";
 
+interface BookingItemDetail {
+  itemId?: string; title: string; slug?: string;
+  hotelName: string; pickupLocation: string; country: string;
+}
+
 interface Booking {
   id: string; tour_name: string; tour_slug: string; tour_date: string;
   adults: number; children: number; total_price: number; currency: string;
   status: string; contact_name: string; created_at: string;
   contact_email: string; contact_phone: string; payment_id: string;
   special_requests?: string;
+  item_details?: BookingItemDetail[] | null;
 }
 
 const statusColors: Record<string, string> = {
