@@ -30,7 +30,7 @@ const Wishlist = () => {
       if (!session?.user) { navigate("/auth"); return; }
 
       const { data, error } = await supabase
-        .from("wishlist")
+        .from("wishlists")
         .select("*")
         .eq("user_id", session.user.id);
 
