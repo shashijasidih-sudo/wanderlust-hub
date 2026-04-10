@@ -17,8 +17,9 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
 import {
-  Loader2, ShieldCheck, CalendarDays, CreditCard, XCircle, CheckCircle,
-  Search, Download, ArrowUpDown, BarChart3, IndianRupee, Users, Clock, RefreshCw,
+  Loader2, ShieldCheck, CreditCard, XCircle, CheckCircle,
+  Search, Download, ArrowUpDown, BarChart3, IndianRupee, Clock, RefreshCw,
+  ChevronLeft, ChevronRight,
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { format } from "date-fns";
@@ -56,6 +57,8 @@ const statusColors: Record<string, string> = {
   refunded: "bg-purple-100 text-purple-800 border-purple-200",
 };
 
+const ITEMS_PER_PAGE = 15;
+
 const AdminDashboard = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -66,6 +69,7 @@ const AdminDashboard = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortField, setSortField] = useState<SortField>("created_at");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
+  const [currentPage, setCurrentPage] = useState(1);
 
   // Wait for auth to resolve before checking admin status
   useEffect(() => {
@@ -264,6 +268,15 @@ const AdminDashboard = () => {
     return result;
   }, [bookings, statusFilter, searchQuery, sortField, sortDir]);
 
+  // Reset page when filters change
+  useEffect(() => { setCurrentPage(1); }, [statusFilter, searchQuery, sortField, sortDir]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredBookings.length / ITEMS_PER_PAGE));
+  const paginatedBookings = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredBookings.slice(start, start + ITEMS_PER_PAGE);
+  }, [filteredBookings, currentPage]);
+
   const handleExportCSV = () => {
     const headers = ["Date", "Customer", "Email", "Phone", "Tour", "Tour Date", "Adults", "Children", "Amount", "Currency", "Status"];
     const rows = filteredBookings.map(b => [
@@ -458,14 +471,14 @@ const AdminDashboard = () => {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {filteredBookings.length === 0 ? (
+                    {paginatedBookings.length === 0 ? (
                       <TableRow>
                         <TableCell colSpan={9} className="text-center py-8 text-muted-foreground">
                           No bookings found
                         </TableCell>
                       </TableRow>
                     ) : (
-                      filteredBookings.map((booking) => (
+                      paginatedBookings.map((booking) => (
                         <TableRow key={booking.id}>
                           <TableCell className="whitespace-nowrap">{format(new Date(booking.created_at), "MMM dd, yyyy")}</TableCell>
                           <TableCell>
@@ -527,6 +540,38 @@ const AdminDashboard = () => {
                   </TableBody>
                 </Table>
               </div>
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="flex items-center justify-between pt-4">
+                  <p className="text-sm text-muted-foreground">
+                    Showing {((currentPage - 1) * ITEMS_PER_PAGE) + 1}–{Math.min(currentPage * ITEMS_PER_PAGE, filteredBookings.length)} of {filteredBookings.length} bookings
+                  </p>
+                  <div className="flex items-center gap-1">
+                    <Button variant="outline" size="sm" disabled={currentPage === 1} onClick={() => setCurrentPage(p => p - 1)}>
+                      <ChevronLeft className="h-4 w-4" />
+                    </Button>
+                    {Array.from({ length: totalPages }, (_, i) => i + 1)
+                      .filter(p => p === 1 || p === totalPages || Math.abs(p - currentPage) <= 1)
+                      .reduce<(number | string)[]>((acc, p, i, arr) => {
+                        if (i > 0 && p - (arr[i - 1] as number) > 1) acc.push("...");
+                        acc.push(p);
+                        return acc;
+                      }, [])
+                      .map((p, i) =>
+                        typeof p === "string" ? (
+                          <span key={`ellipsis-${i}`} className="px-2 text-muted-foreground">…</span>
+                        ) : (
+                          <Button key={p} variant={p === currentPage ? "default" : "outline"} size="sm" className="w-8 h-8 p-0" onClick={() => setCurrentPage(p)}>
+                            {p}
+                          </Button>
+                        )
+                      )}
+                    <Button variant="outline" size="sm" disabled={currentPage === totalPages} onClick={() => setCurrentPage(p => p + 1)}>
+                      <ChevronRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              )}
             </CardContent>
           </Card>
         </div>
