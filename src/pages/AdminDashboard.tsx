@@ -268,7 +268,15 @@ const AdminDashboard = () => {
     return result;
   }, [bookings, statusFilter, searchQuery, sortField, sortDir]);
 
-  const handleExportCSV = () => {
+  // Reset page when filters change
+  useEffect(() => { setCurrentPage(1); }, [statusFilter, searchQuery, sortField, sortDir]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredBookings.length / ITEMS_PER_PAGE));
+  const paginatedBookings = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredBookings.slice(start, start + ITEMS_PER_PAGE);
+  }, [filteredBookings, currentPage]);
+
     const headers = ["Date", "Customer", "Email", "Phone", "Tour", "Tour Date", "Adults", "Children", "Amount", "Currency", "Status"];
     const rows = filteredBookings.map(b => [
       format(new Date(b.created_at), "yyyy-MM-dd"),
