@@ -84,15 +84,37 @@ const AdminDashboard = () => {
     try {
       let fetchedBookings: Booking[] = [];
 
-      // Use supabase.functions.invoke for the admin-bookings edge function
-      const { data, error } = await supabase.functions.invoke('admin-bookings', {
-        method: 'GET',
-      });
+      // Get current session token for auth
+      const { data: sessionData } = await supabase.auth.getSession();
+      const accessToken = sessionData?.session?.access_token;
 
-      if (!error && data?.bookings) {
-        fetchedBookings = data.bookings;
+      if (!accessToken) {
+        console.error("No access token found");
+        setIsLoading(false);
+        return;
+      }
+
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+
+      const response = await fetch(
+        `${supabaseUrl}/functions/v1/admin-bookings`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+            apikey: supabaseAnonKey,
+          },
+        }
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        fetchedBookings = data.bookings || [];
       } else {
-        console.warn("Edge function failed, falling back to direct query:", error);
+        const errorData = await response.json().catch(() => ({}));
+        console.warn("Edge function failed:", response.status, errorData);
         // Direct query fallback
         const { data: directData, error: directError } = await supabase
           .from("bookings")
