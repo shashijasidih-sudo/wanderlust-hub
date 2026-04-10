@@ -9,12 +9,13 @@ import { useToast } from "@/hooks/use-toast";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import { supabase } from "@/lib/supabaseClient";
 import { removeFromWishlist } from "@/services/wishlist";
-import { toursData } from "@/data/tourData";
 
 interface WishlistRow {
   id: string;
-  product_id: string;
-  title: string;
+  tour_slug: string;
+  tour_name: string;
+  tour_image: string | null;
+  tour_price: number | null;
 }
 
 const Wishlist = () => {
@@ -43,10 +44,10 @@ const Wishlist = () => {
     init();
   }, [navigate, toast]);
 
-  const handleRemove = async (productId: string, title: string) => {
+  const handleRemove = async (tourSlug: string, title: string) => {
     try {
-      await removeFromWishlist(productId);
-      setWishlistItems(prev => prev.filter(item => item.product_id !== productId));
+      await removeFromWishlist(tourSlug);
+      setWishlistItems(prev => prev.filter(item => item.tour_slug !== tourSlug));
       toast({ title: "Removed from wishlist", description: `${title} has been removed.` });
     } catch (err: any) {
       toast({ title: "Error", description: err.message, variant: "destructive" });
@@ -79,39 +80,33 @@ const Wishlist = () => {
           </Card>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {wishlistItems.map((item) => {
-              const tour = toursData[item.product_id];
-              const image = tour?.heroImages?.[0]?.src || "/placeholder.svg";
-              const price = tour?.basePrice;
-
-              return (
-                <Card key={item.id} className="overflow-hidden group hover:shadow-lg transition-all">
-                  <div className="relative h-48 cursor-pointer" onClick={() => handleViewTour(item.product_id)}>
-                    <img src={image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="absolute top-2 right-2 bg-white/80 hover:bg-white rounded-full"
-                      onClick={(e) => { e.stopPropagation(); handleRemove(item.product_id, item.title); }}
-                    >
-                      <Trash2 className="h-4 w-4 text-destructive" />
-                    </Button>
+            {wishlistItems.map((item) => (
+              <Card key={item.id} className="overflow-hidden group hover:shadow-lg transition-all">
+                <div className="relative h-48 cursor-pointer" onClick={() => handleViewTour(item.tour_slug)}>
+                  <img src={item.tour_image || "/placeholder.svg"} alt={item.tour_name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="absolute top-2 right-2 bg-white/80 hover:bg-white rounded-full"
+                    onClick={(e) => { e.stopPropagation(); handleRemove(item.tour_slug, item.tour_name); }}
+                  >
+                    <Trash2 className="h-4 w-4 text-destructive" />
+                  </Button>
+                </div>
+                <CardContent className="p-4">
+                  <h3
+                    className="font-semibold text-lg mb-2 cursor-pointer hover:text-primary transition-colors line-clamp-2"
+                    onClick={() => handleViewTour(item.tour_slug)}
+                  >
+                    {item.tour_name}
+                  </h3>
+                  <div className="flex items-center justify-between">
+                    {item.tour_price && <p className="text-lg font-bold text-primary">{formatPrice(item.tour_price)}</p>}
+                    <Button size="sm" onClick={() => handleViewTour(item.tour_slug)}>View Tour</Button>
                   </div>
-                  <CardContent className="p-4">
-                    <h3
-                      className="font-semibold text-lg mb-2 cursor-pointer hover:text-primary transition-colors line-clamp-2"
-                      onClick={() => handleViewTour(item.product_id)}
-                    >
-                      {item.title}
-                    </h3>
-                    <div className="flex items-center justify-between">
-                      {price && <p className="text-lg font-bold text-primary">{formatPrice(price)}</p>}
-                      <Button size="sm" onClick={() => handleViewTour(item.product_id)}>View Tour</Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                </CardContent>
+              </Card>
+            ))}
           </div>
         )}
       </main>
