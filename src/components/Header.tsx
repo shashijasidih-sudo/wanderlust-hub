@@ -55,11 +55,11 @@ const Header = () => {
           </div>
 
           {/* Right Side Icons */}
-          <div className="flex items-center gap-2 md:gap-3">
+          <div className="flex items-center gap-1 md:gap-3">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="hidden md:inline-flex">
-                  <IndianRupee className="h-5 w-5" />
+                <Button variant="ghost" size="icon" className="h-8 w-8 md:h-10 md:w-10">
+                  <IndianRupee className="h-4 w-4 md:h-5 md:w-5" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50">
@@ -75,13 +75,13 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             <Link to="/wishlist">
-              <Button variant="ghost" size="icon" className="hidden md:inline-flex">
-                <Heart className="h-5 w-5" />
+              <Button variant="ghost" size="icon" className="h-8 w-8 md:h-10 md:w-10">
+                <Heart className="h-4 w-4 md:h-5 md:w-5" />
               </Button>
             </Link>
             <Link to="/cart" className="relative">
-              <Button variant="ghost" size="icon" className="hidden md:inline-flex">
-                <ShoppingCart className="h-5 w-5" />
+              <Button variant="ghost" size="icon" className="h-8 w-8 md:h-10 md:w-10">
+                <ShoppingCart className="h-4 w-4 md:h-5 md:w-5" />
                 {cartCount > 0 && (
                   <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                     {cartCount}
@@ -502,17 +502,6 @@ const Header = () => {
               <a href="https://www.youtube.com/@yellodaetrails" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon" className="text-[#FF0000]"><Youtube className="h-5 w-5" /></Button>
               </a>
-            </div>
-            <div className="flex items-center gap-2 pt-2 border-t">
-              <Button variant="ghost" size="icon">
-                <IndianRupee className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon">
-                <Heart className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon">
-                <ShoppingCart className="h-5 w-5" />
-              </Button>
             </div>
             {user ? (
               <div className="flex flex-col gap-2 w-full">
