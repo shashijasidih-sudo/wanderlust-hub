@@ -1,11 +1,11 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
 import { supabase } from "@/lib/supabaseClient";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, CalendarDays, Search, Users, XCircle, Eye, MapPin, Phone, Mail, CreditCard, Clock, FileText, Globe, Info, CheckCircle, XOctagon, ShieldCheck, Baby, AlertTriangle, BookOpen } from "lucide-react";
+import { Loader2, CalendarDays, Search, Users, XCircle, Eye, MapPin, Phone, Mail, FileText, Globe, Info, CheckCircle, XOctagon, ShieldCheck, Baby, AlertTriangle, BookOpen } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { format } from "date-fns";
