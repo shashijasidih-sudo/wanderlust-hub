@@ -540,6 +540,38 @@ const AdminDashboard = () => {
                   </TableBody>
                 </Table>
               </div>
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="flex items-center justify-between pt-4">
+                  <p className="text-sm text-muted-foreground">
+                    Showing {((currentPage - 1) * ITEMS_PER_PAGE) + 1}–{Math.min(currentPage * ITEMS_PER_PAGE, filteredBookings.length)} of {filteredBookings.length} bookings
+                  </p>
+                  <div className="flex items-center gap-1">
+                    <Button variant="outline" size="sm" disabled={currentPage === 1} onClick={() => setCurrentPage(p => p - 1)}>
+                      <ChevronLeft className="h-4 w-4" />
+                    </Button>
+                    {Array.from({ length: totalPages }, (_, i) => i + 1)
+                      .filter(p => p === 1 || p === totalPages || Math.abs(p - currentPage) <= 1)
+                      .reduce<(number | string)[]>((acc, p, i, arr) => {
+                        if (i > 0 && p - (arr[i - 1] as number) > 1) acc.push("...");
+                        acc.push(p);
+                        return acc;
+                      }, [])
+                      .map((p, i) =>
+                        typeof p === "string" ? (
+                          <span key={`ellipsis-${i}`} className="px-2 text-muted-foreground">…</span>
+                        ) : (
+                          <Button key={p} variant={p === currentPage ? "default" : "outline"} size="sm" className="w-8 h-8 p-0" onClick={() => setCurrentPage(p)}>
+                            {p}
+                          </Button>
+                        )
+                      )}
+                    <Button variant="outline" size="sm" disabled={currentPage === totalPages} onClick={() => setCurrentPage(p => p + 1)}>
+                      <ChevronRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              )}
             </CardContent>
           </Card>
         </div>
