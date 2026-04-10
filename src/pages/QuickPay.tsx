@@ -99,10 +99,20 @@ const QuickPay = () => {
             // Retrieve saved booking data
             const savedData = JSON.parse(localStorage.getItem("booking_data") || "{}");
             const finalData = {
-              ...savedData,
               payment_id: response.razorpay_payment_id,
               order_id: response.razorpay_order_id,
               user_id: savedData.user_id || "",
+              contact_name: savedData.customer_name || name.trim(),
+              contact_email: savedData.customer_email || email.trim(),
+              contact_phone: savedData.customer_phone || "",
+              tour_name: savedData.tour_name || description.trim() || "Quick Payment",
+              tour_slug: savedData.tour_slug || "quick-pay",
+              tour_date: savedData.tour_date || new Date().toISOString().split("T")[0],
+              total_price: savedData.total_price || Number(amount),
+              currency: savedData.currency || "INR",
+              adults: savedData.adults || 1,
+              children: savedData.children || 0,
+              special_requests: savedData.special_requests || null,
             };
             console.log("FINAL DATA to save:", finalData);
 
