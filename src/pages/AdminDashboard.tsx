@@ -478,7 +478,7 @@ const AdminDashboard = () => {
                         </TableCell>
                       </TableRow>
                     ) : (
-                      filteredBookings.map((booking) => (
+                      paginatedBookings.map((booking) => (
                         <TableRow key={booking.id}>
                           <TableCell className="whitespace-nowrap">{format(new Date(booking.created_at), "MMM dd, yyyy")}</TableCell>
                           <TableCell>
