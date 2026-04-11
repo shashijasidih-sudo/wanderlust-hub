@@ -185,36 +185,23 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               console.log("Booking saved successfully, ID:", bookingId);
             }
 
-            // Build confirmation payload using save-booking response as primary source, savedData as fallback
-            const adultCount = savedData.adults || 1;
-            const childCount = savedData.children || 0;
-            const confirmPayload = {
-              email: savedData.customer_email || contactEmail,
-              customer_name: savedData.customer_name || contactName,
-              tour_name: savedData.tour_name || tourName,
-              tour_date: savedData.tour_date || (date ? format(date, "yyyy-MM-dd") : ""),
-              adults: adultCount,
-              children: childCount,
-              amount: savedData.total_price || totalPrice,
-              currency: savedData.currency || currency,
-              bookingId: bookingId,
-              payment_id: response.razorpay_payment_id,
-              guests: `${adultCount} Adult${adultCount > 1 ? "s" : ""}${childCount > 0 ? `, ${childCount} Child${childCount > 1 ? "ren" : ""}` : ""}`,
-            };
-            console.log("send-confirmation payload:", confirmPayload);
-
             localStorage.removeItem("booking_data");
 
-            // Send confirmation email with invoice & voucher
-            await fetch(`${SUPABASE_FUNCTIONS_URL}/send-confirmation`, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                "apikey": SUPABASE_ANON_KEY,
-                "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
-              },
-              body: JSON.stringify(confirmPayload),
-            }).catch((err) => console.error("send-confirmation failed:", err));
+            // Send confirmation email using only bookingId (edge function fetches details from DB)
+            if (bookingId) {
+              console.log("Inserted Booking:", { id: bookingId, payment_id: response.razorpay_payment_id });
+              await fetch(`${SUPABASE_FUNCTIONS_URL}/send-confirmation`, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  "apikey": SUPABASE_ANON_KEY,
+                  "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
+                },
+                body: JSON.stringify({ bookingId }),
+              }).catch((err) => console.error("send-confirmation failed:", err));
+            } else {
+              console.warn("No bookingId returned, skipping send-confirmation");
+            }
           } catch (err) {
             console.error("Failed to save booking:", err);
             toast({ title: "Booking save error", description: "Payment was successful but booking record failed to save. Please contact support with your Payment ID.", variant: "destructive" });
