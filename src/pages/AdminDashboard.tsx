@@ -190,19 +190,7 @@ const AdminDashboard = () => {
             "apikey": anonKey,
             "Authorization": `Bearer ${anonKey}`,
           },
-          body: JSON.stringify({
-            email: booking.contact_email,
-            customer_name: booking.contact_name,
-            tour_name: booking.tour_name,
-            tour_date: booking.tour_date,
-            adults: booking.adults || 1,
-            children: booking.children || 0,
-            amount: booking.total_price,
-            currency: booking.currency || "INR",
-            bookingId: booking.id,
-            guests: `${booking.adults || 1} Adult${(booking.adults || 1) > 1 ? "s" : ""}${(booking.children || 0) > 0 ? `, ${booking.children} Child${booking.children > 1 ? "ren" : ""}` : ""}`,
-            type,
-          }),
+          body: JSON.stringify({ bookingId: booking.id, type }),
         }
       );
     } catch (err) {

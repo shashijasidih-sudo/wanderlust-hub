@@ -135,39 +135,27 @@ const QuickPay = () => {
               console.error("Save booking failed:", await saveRes.text());
             }
 
-            // Build confirmation payload using savedData with inline fallbacks
-            const adultCount = savedData.adults || 1;
-            const childCount = savedData.children || 0;
-            const confirmPayload = {
-              email: savedData.customer_email || email.trim(),
-              customer_name: savedData.customer_name || name.trim(),
-              tour_name: savedData.tour_name || description.trim() || "Quick Payment",
-              tour_date: savedData.tour_date || new Date().toISOString().split("T")[0],
-              adults: adultCount,
-              children: childCount,
-              amount: savedData.total_price || amountNum,
-              currency: "INR",
-              bookingId: bookingId,
-              payment_id: response.razorpay_payment_id,
-              guests: `${adultCount} Adult${adultCount > 1 ? "s" : ""}${childCount > 0 ? `, ${childCount} Child${childCount > 1 ? "ren" : ""}` : ""}`,
-            };
-            console.log("send-confirmation payload:", confirmPayload);
-
             localStorage.removeItem("booking_data");
 
-            // Send confirmation email
-            await fetch(
-              "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
-              {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                  "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
-                  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
-                },
-                body: JSON.stringify(confirmPayload),
-              }
-            ).catch((err) => console.error("send-confirmation failed:", err));
+            // Send confirmation email using only bookingId (edge function fetches details from DB)
+            if (bookingId) {
+              console.log("Inserted Booking:", { id: bookingId, payment_id: response.razorpay_payment_id });
+              const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso";
+              await fetch(
+                "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    "apikey": anonKey,
+                    "Authorization": `Bearer ${anonKey}`,
+                  },
+                  body: JSON.stringify({ bookingId }),
+                }
+              ).catch((err) => console.error("send-confirmation failed:", err));
+            } else {
+              console.warn("No bookingId returned, skipping send-confirmation");
+            }
           } catch (err) {
             console.error("Failed to save booking or send confirmation:", err);
           }
