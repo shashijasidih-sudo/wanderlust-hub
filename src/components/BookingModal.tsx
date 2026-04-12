@@ -182,10 +182,13 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               toast({ title: "Booking saved with issues", description: "Payment was successful but booking record may not have saved. Please contact support.", variant: "destructive" });
             } else {
               const saveResult = await saveRes.json();
-              booking = saveResult.booking ?? null;
+              const returnedBooking = Array.isArray(saveResult.booking)
+                ? saveResult.booking[0]
+                : saveResult.booking ?? null;
+              booking = returnedBooking ?? null;
               bookingId = booking?.id || "";
-              console.log("Returned booking:", booking);
-              console.log("Booking ID:", bookingId);
+              console.log("Returned booking:", saveResult.booking);
+              console.log("Booking ID extracted:", bookingId);
             }
 
             localStorage.removeItem("booking_data");

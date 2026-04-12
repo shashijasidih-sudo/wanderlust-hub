@@ -165,10 +165,13 @@ const PaymentInformation = () => {
 
             if (saveRes.ok) {
               const saveResult = await saveRes.json();
-              booking = saveResult.booking ?? null;
+              const returnedBooking = Array.isArray(saveResult.booking)
+                ? saveResult.booking[0]
+                : saveResult.booking ?? null;
+              booking = returnedBooking ?? null;
               bookingId = booking?.id || "";
-              console.log("Returned booking:", booking);
-              console.log("Booking ID:", bookingId);
+              console.log("Returned booking:", saveResult.booking);
+              console.log("Booking ID extracted:", bookingId);
             } else {
               console.error("Save booking failed:", await saveRes.text());
             }
