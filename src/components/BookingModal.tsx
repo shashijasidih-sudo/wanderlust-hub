@@ -168,8 +168,7 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
             console.log("FINAL DATA to save:", finalData);
 
             // Save booking to Supabase
-            let booking: { id?: string } | null = null;
-            let bookingId = "";
+            let bookingId: string | null = null;
             const saveRes = await fetch(`${SUPABASE_FUNCTIONS_URL}/save-booking`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -182,14 +181,21 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               toast({ title: "Booking saved with issues", description: "Payment was successful but booking record may not have saved. Please contact support.", variant: "destructive" });
             } else {
               const saveResult = await saveRes.json();
-              const extracted = extractBookingId(saveResult);
-              booking = extracted.booking;
-              bookingId = extracted.bookingId;
+              console.log("FULL saveResult:", JSON.stringify(saveResult, null, 2));
+              console.log("saveResult.booking:", saveResult?.booking);
+              console.log("saveResult.data:", saveResult?.data);
+              bookingId = extractBookingId(saveResult);
+              console.log("Booking ID extracted:", bookingId);
             }
 
             localStorage.removeItem("booking_data");
 
-            await sendBookingConfirmation(bookingId);
+            if (bookingId) {
+              console.log("Calling send-confirmation...");
+              await sendBookingConfirmation(bookingId);
+            } else {
+              console.error("Booking ID missing — cannot send email");
+            }
           } catch (err) {
             console.error("Failed to save booking:", err);
             toast({ title: "Booking save error", description: "Payment was successful but booking record failed to save. Please contact support with your Payment ID.", variant: "destructive" });
