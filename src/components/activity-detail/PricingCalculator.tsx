@@ -497,8 +497,8 @@ const PricingCalculator = ({
         onClose={() => setIsBookingModalOpen(false)}
         tourName={activityName}
         tourSlug={tourSlug}
-        pricePerAdult={basePrice}
-        pricePerChild={childPrice}
+        pricePerAdult={currentAdultPrice}
+        pricePerChild={currentChildPrice}
       />
     </Card>
   );
