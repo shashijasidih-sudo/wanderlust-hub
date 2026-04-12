@@ -12,8 +12,7 @@ import { useCart } from "@/contexts/CartContext";
 import { useAuth } from "@/lib/auth";
 import { toast } from "sonner";
 import { CreditCard, QrCode } from "lucide-react";
-
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso";
+import { extractBookingId, sendBookingConfirmation } from "@/lib/bookingUtils";
 
 declare global {
   interface Window { Razorpay: any; }
