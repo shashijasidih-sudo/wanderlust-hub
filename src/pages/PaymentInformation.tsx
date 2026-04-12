@@ -13,6 +13,8 @@ import { useAuth } from "@/lib/auth";
 import { toast } from "sonner";
 import { CreditCard, QrCode } from "lucide-react";
 
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso";
+
 declare global {
   interface Window { Razorpay: any; }
 }
@@ -150,6 +152,7 @@ const PaymentInformation = () => {
             console.log("FINAL DATA to save:", finalData);
 
             // Save booking
+            let booking: { id?: string } | null = null;
             let bookingId = "";
             const saveRes = await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/save-booking",
@@ -162,8 +165,10 @@ const PaymentInformation = () => {
 
             if (saveRes.ok) {
               const saveResult = await saveRes.json();
-              bookingId = saveResult.booking?.id || "";
-              console.log("Booking saved successfully, ID:", bookingId);
+              booking = saveResult.booking ?? null;
+              bookingId = booking?.id || "";
+              console.log("Returned booking:", booking);
+              console.log("Booking ID:", bookingId);
             } else {
               console.error("Save booking failed:", await saveRes.text());
             }
@@ -172,9 +177,8 @@ const PaymentInformation = () => {
 
             // Send confirmation email using only bookingId (edge function fetches details from DB)
             if (bookingId) {
-              console.log("Inserted Booking:", { id: bookingId, payment_id: resp.razorpay_payment_id });
+              console.log("Inserted Booking:", booking);
               console.log("Calling send-confirmation with bookingId:", bookingId);
-              const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso";
               try {
                 const confirmRes = await fetch(
                   "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
@@ -182,10 +186,10 @@ const PaymentInformation = () => {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",
-                      "apikey": anonKey,
-                      "Authorization": `Bearer ${anonKey}`,
+                      "apikey": SUPABASE_ANON_KEY,
+                      "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
                     },
-                    body: JSON.stringify({ bookingId: bookingId }),
+                    body: JSON.stringify({ bookingId }),
                   }
                 );
                 const confirmData = await confirmRes.text();

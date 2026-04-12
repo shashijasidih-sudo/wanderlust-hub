@@ -54,7 +54,7 @@ serve(async (req) => {
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    const { data, error } = await supabase.from("bookings").insert({
+    const bookingData = {
       user_id: user_id || null,
       contact_name: contact_name || "",
       contact_email,
@@ -69,7 +69,13 @@ serve(async (req) => {
       children: children || 0,
       special_requests: special_requests || null,
       item_details: body.item_details || null,
-    }).select().single();
+    };
+
+    const { data, error } = await supabase
+      .from("bookings")
+      .insert([bookingData])
+      .select()
+      .single();
 
     if (error) {
       console.error("Database insert error:", error);
@@ -79,7 +85,10 @@ serve(async (req) => {
       });
     }
 
-    console.log("Booking saved successfully:", data.id);
+    const bookingId = data?.id;
+    console.log("Returned booking:", data);
+    console.log("Booking ID:", bookingId);
+    console.log("Booking saved successfully:", bookingId);
 
     return new Response(JSON.stringify({ success: true, booking: data }), {
       status: 200,
