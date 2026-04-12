@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -30,31 +31,52 @@ serve(async (req) => {
       });
     }
 
-    const {
-      email,
-      customer_name,
-      tour_name,
-      tour_date,
-      adults,
-      children,
-      amount,
-      currency,
-      bookingId,
-      payment_id,
-    } = await req.json();
+    const { bookingId } = await req.json();
 
-    const recipientEmail = email;
-    const name = customer_name || "Valued Customer";
-    const tourTitle = tour_name || "Tour Booking";
-    const date = tour_date || "TBD";
-    const adultCount = adults || 1;
-    const childCount = children || 0;
-    const totalAmount = amount || 0;
-    const curr = currency || "INR";
-    const refId = bookingId || payment_id || "N/A";
+    if (!bookingId) {
+      console.error("Missing bookingId in request body");
+      return new Response(JSON.stringify({ error: "Missing bookingId" }), {
+        status: 400,
+        headers: corsHeaders,
+      });
+    }
+
+    console.log("Fetching booking details for ID:", bookingId);
+
+    // Fetch booking details from database
+    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+    const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+    const { data: booking, error: dbError } = await supabase
+      .from("bookings")
+      .select("*")
+      .eq("id", bookingId)
+      .single();
+
+    if (dbError || !booking) {
+      console.error("Failed to fetch booking:", dbError);
+      return new Response(JSON.stringify({ error: "Booking not found", details: dbError?.message }), {
+        status: 404,
+        headers: corsHeaders,
+      });
+    }
+
+    console.log("Booking fetched:", JSON.stringify(booking));
+
+    const recipientEmail = booking.contact_email;
+    const name = booking.contact_name || "Valued Customer";
+    const tourTitle = booking.tour_name || "Tour Booking";
+    const date = booking.tour_date || "TBD";
+    const adultCount = booking.adults || 1;
+    const childCount = booking.children || 0;
+    const totalAmount = booking.total_price || 0;
+    const curr = booking.currency || "INR";
+    const refId = bookingId;
 
     if (!recipientEmail) {
-      return new Response(JSON.stringify({ error: "Missing email" }), {
+      console.error("No contact_email found in booking");
+      return new Response(JSON.stringify({ error: "Missing email in booking record" }), {
         status: 400,
         headers: corsHeaders,
       });
@@ -62,7 +84,6 @@ serve(async (req) => {
 
     const currencySymbol = curr === "INR" ? "₹" : curr === "USD" ? "$" : curr === "AED" ? "AED " : `${curr} `;
 
-    // Invoice + Voucher HTML email
     const invoiceHtml = `
 <!DOCTYPE html>
 <html>
@@ -76,16 +97,12 @@ serve(async (req) => {
     <tr>
       <td align="center">
         <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-          
-          <!-- Header -->
           <tr>
             <td style="background:linear-gradient(135deg,#f59e0b,#d97706);padding:32px;text-align:center;">
               <h1 style="color:#ffffff;margin:0;font-size:28px;font-weight:bold;">Yellodae</h1>
               <p style="color:#fef3c7;margin:8px 0 0;font-size:14px;">Your Travel Partner</p>
             </td>
           </tr>
-
-          <!-- Confirmation Banner -->
           <tr>
             <td style="padding:32px 32px 16px;text-align:center;">
               <div style="display:inline-block;background:#dcfce7;border:1px solid #86efac;border-radius:50%;width:64px;height:64px;line-height:64px;font-size:32px;margin-bottom:16px;">✓</div>
@@ -93,8 +110,6 @@ serve(async (req) => {
               <p style="color:#6b7280;margin:0;font-size:14px;">Thank you for choosing Yellodae, ${name}!</p>
             </td>
           </tr>
-
-          <!-- Invoice Section -->
           <tr>
             <td style="padding:16px 32px;">
               <table width="100%" style="background:#f9fafb;border-radius:8px;border:1px solid #e5e7eb;">
@@ -135,8 +150,6 @@ serve(async (req) => {
               </table>
             </td>
           </tr>
-
-          <!-- Voucher Section -->
           <tr>
             <td style="padding:16px 32px;">
               <table width="100%" style="background:#fffbeb;border-radius:8px;border:2px dashed #f59e0b;">
@@ -155,8 +168,6 @@ serve(async (req) => {
               </table>
             </td>
           </tr>
-
-          <!-- Important Info -->
           <tr>
             <td style="padding:16px 32px;">
               <h3 style="color:#1f2937;font-size:14px;margin:0 0 12px;">📌 Important Information</h3>
@@ -168,8 +179,6 @@ serve(async (req) => {
               </ul>
             </td>
           </tr>
-
-          <!-- Footer -->
           <tr>
             <td style="background:#1f2937;padding:24px 32px;text-align:center;">
               <p style="color:#9ca3af;font-size:12px;margin:0 0 8px;">Yellodae Tours & Travels</p>
@@ -180,7 +189,6 @@ serve(async (req) => {
               </p>
             </td>
           </tr>
-
         </table>
       </td>
     </tr>
@@ -189,6 +197,7 @@ serve(async (req) => {
 </html>`;
 
     // Send via Resend
+    console.log("Sending email to:", recipientEmail);
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -212,6 +221,8 @@ serve(async (req) => {
         headers: corsHeaders,
       });
     }
+
+    console.log("Email sent successfully:", data);
 
     // Also send a copy to admin
     await fetch("https://api.resend.com/emails", {

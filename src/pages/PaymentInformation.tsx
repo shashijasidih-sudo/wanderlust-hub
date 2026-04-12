@@ -173,19 +173,26 @@ const PaymentInformation = () => {
             // Send confirmation email using only bookingId (edge function fetches details from DB)
             if (bookingId) {
               console.log("Inserted Booking:", { id: bookingId, payment_id: resp.razorpay_payment_id });
+              console.log("Calling send-confirmation", bookingId);
               const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso";
-              await fetch(
-                "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
-                {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                    "apikey": anonKey,
-                    "Authorization": `Bearer ${anonKey}`,
-                  },
-                  body: JSON.stringify({ bookingId }),
-                }
-              ).catch((err) => console.error("send-confirmation failed:", err));
+              try {
+                const confirmRes = await fetch(
+                  "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
+                  {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                      "apikey": anonKey,
+                      "Authorization": `Bearer ${anonKey}`,
+                    },
+                    body: JSON.stringify({ bookingId }),
+                  }
+                );
+                const confirmData = await confirmRes.text();
+                console.log("send-confirmation response:", confirmRes.status, confirmData);
+              } catch (err) {
+                console.error("send-confirmation failed:", err);
+              }
             } else {
               console.warn("No bookingId returned, skipping send-confirmation");
             }
