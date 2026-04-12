@@ -140,7 +140,7 @@ const QuickPay = () => {
             // Send confirmation email using only bookingId (edge function fetches details from DB)
             if (bookingId) {
               console.log("Inserted Booking:", { id: bookingId, payment_id: response.razorpay_payment_id });
-              console.log("Calling send-confirmation", bookingId);
+              console.log("Calling send-confirmation with bookingId:", bookingId);
               const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso";
               try {
                 const confirmRes = await fetch(
@@ -152,7 +152,7 @@ const QuickPay = () => {
                       "apikey": anonKey,
                       "Authorization": `Bearer ${anonKey}`,
                     },
-                    body: JSON.stringify({ bookingId }),
+                    body: JSON.stringify({ bookingId: bookingId }),
                   }
                 );
                 const confirmData = await confirmRes.text();

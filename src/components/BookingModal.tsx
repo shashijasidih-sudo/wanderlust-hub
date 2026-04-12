@@ -190,16 +190,16 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
             // Send confirmation email using only bookingId (edge function fetches details from DB)
             if (bookingId) {
               console.log("Inserted Booking:", { id: bookingId, payment_id: response.razorpay_payment_id });
-              console.log("Calling send-confirmation", bookingId);
+              console.log("Calling send-confirmation with bookingId:", bookingId);
               try {
-                const confirmRes = await fetch(`${SUPABASE_FUNCTIONS_URL}/send-confirmation`, {
+                const confirmRes = await fetch("https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
                     "apikey": SUPABASE_ANON_KEY,
                     "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
                   },
-                  body: JSON.stringify({ bookingId }),
+                  body: JSON.stringify({ bookingId: bookingId }),
                 });
                 const confirmData = await confirmRes.text();
                 console.log("send-confirmation response:", confirmRes.status, confirmData);
