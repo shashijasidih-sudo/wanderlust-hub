@@ -2,14 +2,26 @@
  * Extracts booking ID from save-booking edge function response.
  * Handles both array and single object formats.
  */
-export function extractBookingId(saveResult: any): { booking: any; bookingId: string } {
-  const returnedBooking = Array.isArray(saveResult?.booking)
-    ? saveResult.booking[0]
-    : saveResult?.booking ?? null;
-  const bookingId = returnedBooking?.id || "";
-  console.log("Returned booking:", returnedBooking);
-  console.log("Booking ID extracted:", bookingId);
-  return { booking: returnedBooking, bookingId };
+export function extractBookingId(saveResult: any): string | null {
+  console.log("DEBUG saveResult:", saveResult);
+
+  if (Array.isArray(saveResult?.booking) && saveResult.booking.length > 0) {
+    return saveResult.booking[0]?.id || null;
+  }
+
+  if (Array.isArray(saveResult?.data) && saveResult.data.length > 0) {
+    return saveResult.data[0]?.id || null;
+  }
+
+  if (saveResult?.booking?.id) {
+    return saveResult.booking.id;
+  }
+
+  if (saveResult?.id) {
+    return saveResult.id;
+  }
+
+  return null;
 }
 
 const SUPABASE_URL = "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1";

@@ -151,8 +151,7 @@ const PaymentInformation = () => {
             console.log("FINAL DATA to save:", finalData);
 
             // Save booking
-            let booking: { id?: string } | null = null;
-            let bookingId = "";
+            let bookingId: string | null = null;
             const saveRes = await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/save-booking",
               {
@@ -164,16 +163,23 @@ const PaymentInformation = () => {
 
             if (saveRes.ok) {
               const saveResult = await saveRes.json();
-              const extracted = extractBookingId(saveResult);
-              booking = extracted.booking;
-              bookingId = extracted.bookingId;
+              console.log("FULL saveResult:", JSON.stringify(saveResult, null, 2));
+              console.log("saveResult.booking:", saveResult?.booking);
+              console.log("saveResult.data:", saveResult?.data);
+              bookingId = extractBookingId(saveResult);
+              console.log("Booking ID extracted:", bookingId);
             } else {
               console.error("Save booking failed:", await saveRes.text());
             }
 
             localStorage.removeItem("booking_data");
 
-            await sendBookingConfirmation(bookingId);
+            if (bookingId) {
+              console.log("Calling send-confirmation...");
+              await sendBookingConfirmation(bookingId);
+            } else {
+              console.error("Booking ID missing — cannot send email");
+            }
           } catch (err) {
             console.error("Failed to save booking or send confirmation:", err);
           }
