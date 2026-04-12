@@ -15,11 +15,11 @@ import { format } from "date-fns";
 import { CalendarIcon, Loader2, Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { z } from "zod";
-
+import { extractBookingId, sendBookingConfirmation } from "@/lib/bookingUtils";
 
 const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
-const SUPABASE_FUNCTIONS_URL = "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso";
+const SUPABASE_FUNCTIONS_URL = "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1";
 
 declare global {
   interface Window { Razorpay: any; }
@@ -182,39 +182,14 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               toast({ title: "Booking saved with issues", description: "Payment was successful but booking record may not have saved. Please contact support.", variant: "destructive" });
             } else {
               const saveResult = await saveRes.json();
-              const returnedBooking = Array.isArray(saveResult.booking)
-                ? saveResult.booking[0]
-                : saveResult.booking ?? null;
-              booking = returnedBooking ?? null;
-              bookingId = booking?.id || "";
-              console.log("Returned booking:", saveResult.booking);
-              console.log("Booking ID extracted:", bookingId);
+              const extracted = extractBookingId(saveResult);
+              booking = extracted.booking;
+              bookingId = extracted.bookingId;
             }
 
             localStorage.removeItem("booking_data");
 
-            // Send confirmation email using only bookingId (edge function fetches details from DB)
-            if (bookingId) {
-              console.log("Inserted Booking:", booking);
-              console.log("Calling send-confirmation with bookingId:", bookingId);
-              try {
-                const confirmRes = await fetch("https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation", {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                    "apikey": SUPABASE_ANON_KEY,
-                    "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
-                  },
-                  body: JSON.stringify({ bookingId }),
-                });
-                const confirmData = await confirmRes.text();
-                console.log("send-confirmation response:", confirmRes.status, confirmData);
-              } catch (err) {
-                console.error("send-confirmation failed:", err);
-              }
-            } else {
-              console.warn("No bookingId returned, skipping send-confirmation");
-            }
+            await sendBookingConfirmation(bookingId);
           } catch (err) {
             console.error("Failed to save booking:", err);
             toast({ title: "Booking save error", description: "Payment was successful but booking record failed to save. Please contact support with your Payment ID.", variant: "destructive" });
