@@ -168,6 +168,7 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
             console.log("FINAL DATA to save:", finalData);
 
             // Save booking to Supabase
+            let booking: { id?: string } | null = null;
             let bookingId = "";
             const saveRes = await fetch(`${SUPABASE_FUNCTIONS_URL}/save-booking`, {
               method: "POST",
@@ -181,15 +182,17 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               toast({ title: "Booking saved with issues", description: "Payment was successful but booking record may not have saved. Please contact support.", variant: "destructive" });
             } else {
               const saveResult = await saveRes.json();
-              bookingId = saveResult.booking?.id || "";
-              console.log("Booking saved successfully, ID:", bookingId);
+              booking = saveResult.booking ?? null;
+              bookingId = booking?.id || "";
+              console.log("Returned booking:", booking);
+              console.log("Booking ID:", bookingId);
             }
 
             localStorage.removeItem("booking_data");
 
             // Send confirmation email using only bookingId (edge function fetches details from DB)
             if (bookingId) {
-              console.log("Inserted Booking:", { id: bookingId, payment_id: response.razorpay_payment_id });
+              console.log("Inserted Booking:", booking);
               console.log("Calling send-confirmation with bookingId:", bookingId);
               try {
                 const confirmRes = await fetch("https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation", {
@@ -199,7 +202,7 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
                     "apikey": SUPABASE_ANON_KEY,
                     "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
                   },
-                  body: JSON.stringify({ bookingId: bookingId }),
+                  body: JSON.stringify({ bookingId }),
                 });
                 const confirmData = await confirmRes.text();
                 console.log("send-confirmation response:", confirmRes.status, confirmData);
