@@ -190,15 +190,22 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
             // Send confirmation email using only bookingId (edge function fetches details from DB)
             if (bookingId) {
               console.log("Inserted Booking:", { id: bookingId, payment_id: response.razorpay_payment_id });
-              await fetch(`${SUPABASE_FUNCTIONS_URL}/send-confirmation`, {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                  "apikey": SUPABASE_ANON_KEY,
-                  "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
-                },
-                body: JSON.stringify({ bookingId }),
-              }).catch((err) => console.error("send-confirmation failed:", err));
+              console.log("Calling send-confirmation", bookingId);
+              try {
+                const confirmRes = await fetch(`${SUPABASE_FUNCTIONS_URL}/send-confirmation`, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    "apikey": SUPABASE_ANON_KEY,
+                    "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
+                  },
+                  body: JSON.stringify({ bookingId }),
+                });
+                const confirmData = await confirmRes.text();
+                console.log("send-confirmation response:", confirmRes.status, confirmData);
+              } catch (err) {
+                console.error("send-confirmation failed:", err);
+              }
             } else {
               console.warn("No bookingId returned, skipping send-confirmation");
             }
