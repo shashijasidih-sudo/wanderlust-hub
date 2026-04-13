@@ -5,8 +5,9 @@ import { supabase } from "@/lib/supabaseClient";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, CalendarDays, Search, User as UserIcon, Settings, XCircle } from "lucide-react";
+import { Loader2, CalendarDays, Search, User as UserIcon, Settings, XCircle, Eye } from "lucide-react";
 import Header from "@/components/Header";
+import ViewBookingModal from "@/components/ViewBookingModal";
 import Footer from "@/components/Footer";
 import { format } from "date-fns";
 import { useToast } from "@/hooks/use-toast";
@@ -46,6 +47,7 @@ const UserBookings = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [cancellingId, setCancellingId] = useState<string | null>(null);
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
+  const [viewBooking, setViewBooking] = useState<Booking | null>(null);
   const navigate = useNavigate();
   const { toast } = useToast();
   const { user, isLoading: isAuthLoading } = useAuth();
@@ -267,8 +269,17 @@ const UserBookings = () => {
                           </div>
                         </div>
                       </div>
-                      {(booking.status === "pending" || booking.status === "confirmed") && (
-                        <div className="border-t sm:border-t-0 sm:border-l p-4 flex items-center justify-center">
+                      {/* Action buttons */}
+                      <div className="border-t sm:border-t-0 sm:border-l p-4 flex flex-col items-center justify-center gap-2">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="whitespace-nowrap border-primary text-primary hover:bg-primary/5"
+                          onClick={() => setViewBooking(booking)}
+                        >
+                          View & Manage Booking
+                        </Button>
+                        {(booking.status === "pending" || booking.status === "confirmed") && (
                           <AlertDialog>
                             <AlertDialogTrigger asChild>
                               <Button variant="destructive" size="sm" disabled={cancellingId === booking.id}>
@@ -297,8 +308,8 @@ const UserBookings = () => {
                               </AlertDialogFooter>
                             </AlertDialogContent>
                           </AlertDialog>
-                        </div>
-                      )}
+                        )}
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -322,6 +333,13 @@ const UserBookings = () => {
           )}
         </div>
       </main>
+      <ViewBookingModal
+        booking={viewBooking}
+        open={!!viewBooking}
+        onOpenChange={(open) => { if (!open) setViewBooking(null); }}
+        onCancel={handleCancelBooking}
+        cancellingId={cancellingId}
+      />
       <Footer />
     </div>
   );
