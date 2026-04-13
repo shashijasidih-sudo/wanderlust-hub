@@ -88,24 +88,21 @@ const AdminDashboard = () => {
     try {
       let fetchedBookings: Booking[] = [];
 
-      // Get current session token for auth
-      const { data: sessionData } = await supabase.auth.getSession();
-      const accessToken = sessionData?.session?.access_token;
+      const { data: { session } } = await supabase.auth.getSession();
+      const token = session?.access_token;
 
-      if (!accessToken) {
+      if (!token) {
         console.error("No access token found");
         setIsLoading(false);
         return;
       }
 
-      const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY || import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
-
       const response = await fetch(
         "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/admin-bookings",
         {
           headers: {
-            Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-            apikey: SUPABASE_ANON_KEY,
+            Authorization: `Bearer ${token}`,
+            apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
           },
         }
       );
