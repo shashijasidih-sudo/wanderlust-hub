@@ -86,9 +86,30 @@ serve(async (req) => {
     }
 
     const bookingId = data?.id;
-    console.log("Returned booking:", data);
-    console.log("Booking ID:", bookingId);
-    console.log("Booking saved successfully:", bookingId);
+    console.log("Returned booking:", JSON.stringify(data));
+    console.log("Booking saved successfully, ID:", bookingId);
+
+    // Trigger send-confirmation server-side
+    if (bookingId) {
+      console.log("Calling send-confirmation with bookingId:", bookingId);
+      const supabaseFunctionsUrl = `${supabaseUrl}/functions/v1`;
+      try {
+        const confirmRes = await fetch(`${supabaseFunctionsUrl}/send-confirmation`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${supabaseServiceKey}`,
+          },
+          body: JSON.stringify({ bookingId }),
+        });
+        const confirmData = await confirmRes.text();
+        console.log("send-confirmation response:", confirmRes.status, confirmData);
+      } catch (confirmErr) {
+        console.error("send-confirmation call failed:", confirmErr);
+      }
+    } else {
+      console.error("Booking ID missing — email not triggered");
+    }
 
     return new Response(JSON.stringify({ success: true, booking: data }), {
       status: 200,

@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { CreditCard, ShieldCheck } from "lucide-react";
-import { extractBookingId, sendBookingConfirmation } from "@/lib/bookingUtils";
+
 
 const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
 
@@ -118,7 +118,6 @@ const QuickPay = () => {
             console.log("FINAL DATA to save:", finalData);
 
             // Save booking
-            let bookingId: string | null = null;
             const saveRes = await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/save-booking",
               {
@@ -130,23 +129,12 @@ const QuickPay = () => {
 
             if (saveRes.ok) {
               const saveResult = await saveRes.json();
-              console.log("FULL saveResult:", JSON.stringify(saveResult, null, 2));
-              console.log("saveResult.booking:", saveResult?.booking);
-              console.log("saveResult.data:", saveResult?.data);
-              bookingId = extractBookingId(saveResult);
-              console.log("Booking ID extracted:", bookingId);
+              console.log("Booking saved, send-confirmation triggered server-side:", saveResult);
             } else {
               console.error("Save booking failed:", await saveRes.text());
             }
 
             localStorage.removeItem("booking_data");
-
-            if (bookingId) {
-              console.log("Calling send-confirmation...");
-              await sendBookingConfirmation(bookingId);
-            } else {
-              console.error("Booking ID missing — cannot send email");
-            }
           } catch (err) {
             console.error("Failed to save booking or send confirmation:", err);
           }
