@@ -98,20 +98,18 @@ const AdminDashboard = () => {
         return;
       }
 
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+      const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY || import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
       const response = await fetch(
-        `${supabaseUrl}/functions/v1/admin-bookings`,
+        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/admin-bookings",
         {
-          method: "GET",
           headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${accessToken}`,
-            apikey: supabaseAnonKey,
+            Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+            apikey: SUPABASE_ANON_KEY,
           },
         }
       );
+      console.log("Admin bookings response status:", response.status);
 
       if (response.ok) {
         const data = await response.json();
