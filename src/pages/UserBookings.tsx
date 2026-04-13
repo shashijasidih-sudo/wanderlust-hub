@@ -333,6 +333,13 @@ const UserBookings = () => {
           )}
         </div>
       </main>
+      <ViewBookingModal
+        booking={viewBooking}
+        open={!!viewBooking}
+        onOpenChange={(open) => { if (!open) setViewBooking(null); }}
+        onCancel={handleCancelBooking}
+        cancellingId={cancellingId}
+      />
       <Footer />
     </div>
   );
