@@ -113,7 +113,8 @@ const AdminDashboard = () => {
 
       if (response.ok) {
         const data = await response.json();
-        fetchedBookings = data.bookings || [];
+        console.log("Admin bookings data:", data);
+        fetchedBookings = data.bookings || data.data || (Array.isArray(data) ? data : []);
       } else {
         const errorData = await response.json().catch(() => ({}));
         console.warn("Edge function failed:", response.status, errorData);
