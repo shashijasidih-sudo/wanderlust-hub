@@ -168,7 +168,6 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
             console.log("FINAL DATA to save:", finalData);
 
             // Save booking to Supabase
-            let bookingId: string | null = null;
             const saveRes = await fetch(`${SUPABASE_FUNCTIONS_URL}/save-booking`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },

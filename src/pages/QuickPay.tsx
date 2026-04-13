@@ -118,7 +118,6 @@ const QuickPay = () => {
             console.log("FINAL DATA to save:", finalData);
 
             // Save booking
-            let bookingId: string | null = null;
             const saveRes = await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/save-booking",
               {
