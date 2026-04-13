@@ -12,7 +12,7 @@ import { useCart } from "@/contexts/CartContext";
 import { useAuth } from "@/lib/auth";
 import { toast } from "sonner";
 import { CreditCard, QrCode } from "lucide-react";
-import { extractBookingId, sendBookingConfirmation } from "@/lib/bookingUtils";
+
 
 declare global {
   interface Window { Razorpay: any; }
