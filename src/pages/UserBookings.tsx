@@ -269,8 +269,17 @@ const UserBookings = () => {
                           </div>
                         </div>
                       </div>
-                      {(booking.status === "pending" || booking.status === "confirmed") && (
-                        <div className="border-t sm:border-t-0 sm:border-l p-4 flex items-center justify-center">
+                      {/* Action buttons */}
+                      <div className="border-t sm:border-t-0 sm:border-l p-4 flex flex-col items-center justify-center gap-2">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="whitespace-nowrap border-primary text-primary hover:bg-primary/5"
+                          onClick={() => setViewBooking(booking)}
+                        >
+                          View & Manage Booking
+                        </Button>
+                        {(booking.status === "pending" || booking.status === "confirmed") && (
                           <AlertDialog>
                             <AlertDialogTrigger asChild>
                               <Button variant="destructive" size="sm" disabled={cancellingId === booking.id}>
@@ -299,8 +308,8 @@ const UserBookings = () => {
                               </AlertDialogFooter>
                             </AlertDialogContent>
                           </AlertDialog>
-                        </div>
-                      )}
+                        )}
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
