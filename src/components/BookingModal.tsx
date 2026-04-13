@@ -181,21 +181,10 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               toast({ title: "Booking saved with issues", description: "Payment was successful but booking record may not have saved. Please contact support.", variant: "destructive" });
             } else {
               const saveResult = await saveRes.json();
-              console.log("FULL saveResult:", JSON.stringify(saveResult, null, 2));
-              console.log("saveResult.booking:", saveResult?.booking);
-              console.log("saveResult.data:", saveResult?.data);
-              bookingId = extractBookingId(saveResult);
-              console.log("Booking ID extracted:", bookingId);
+              console.log("Booking saved, send-confirmation triggered server-side:", saveResult);
             }
 
             localStorage.removeItem("booking_data");
-
-            if (bookingId) {
-              console.log("Calling send-confirmation...");
-              await sendBookingConfirmation(bookingId);
-            } else {
-              console.error("Booking ID missing — cannot send email");
-            }
           } catch (err) {
             console.error("Failed to save booking:", err);
             toast({ title: "Booking save error", description: "Payment was successful but booking record failed to save. Please contact support with your Payment ID.", variant: "destructive" });
