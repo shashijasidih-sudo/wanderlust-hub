@@ -1,5 +1,5 @@
 import { format } from "date-fns";
-import { Badge } from "@/components/ui/badge";
+
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useCurrency } from "@/contexts/CurrencyContext";
