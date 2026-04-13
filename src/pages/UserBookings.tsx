@@ -47,6 +47,7 @@ const UserBookings = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [cancellingId, setCancellingId] = useState<string | null>(null);
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
+  const [viewBooking, setViewBooking] = useState<Booking | null>(null);
   const navigate = useNavigate();
   const { toast } = useToast();
   const { user, isLoading: isAuthLoading } = useAuth();
