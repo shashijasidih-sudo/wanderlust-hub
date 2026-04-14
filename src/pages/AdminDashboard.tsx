@@ -89,11 +89,21 @@ const AdminDashboard = () => {
       let fetchedBookings: Booking[] = [];
 
       const { data: { session } } = await supabase.auth.getSession();
-      const token = session?.access_token;
+      console.log("Admin session:", session);
 
-      if (!token) {
-        console.error("No access token found");
-        setIsLoading(false);
+      if (!session) {
+        console.error("No session found, redirecting to login");
+        navigate("/auth");
+        return;
+      }
+
+      console.log("Admin access_token:", session.access_token);
+      console.log("Admin user email:", session.user?.email);
+
+      if (!ADMIN_EMAILS.includes(session.user?.email || "")) {
+        console.error("User is not an admin:", session.user?.email);
+        toast({ title: "Admin access only", description: "You do not have admin privileges.", variant: "destructive" });
+        navigate("/");
         return;
       }
 
@@ -101,7 +111,7 @@ const AdminDashboard = () => {
         "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/admin-bookings",
         {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${session.access_token}`,
             apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
           },
         }
@@ -112,6 +122,16 @@ const AdminDashboard = () => {
         const data = await response.json();
         console.log("Admin bookings data:", data);
         fetchedBookings = data.bookings || data.data || (Array.isArray(data) ? data : []);
+      } else if (response.status === 401) {
+        console.error("Unauthorized - invalid or expired token");
+        toast({ title: "Unauthorized", description: "Your session has expired. Please log in again.", variant: "destructive" });
+        navigate("/auth");
+        return;
+      } else if (response.status === 403) {
+        console.error("Forbidden - not an admin");
+        toast({ title: "Admin access only", description: "You do not have permission to view this page.", variant: "destructive" });
+        navigate("/");
+        return;
       } else {
         const errorData = await response.json().catch(() => ({}));
         console.warn("Edge function failed:", response.status, errorData);
