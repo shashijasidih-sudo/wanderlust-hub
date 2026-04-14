@@ -260,19 +260,10 @@ const AdminDashboard = () => {
 
   const sendNotificationEmail = async (booking: Booking, type: "cancellation" | "refund") => {
     try {
-      const anonKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY;
-      await fetch(
-        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "apikey": anonKey,
-            "Authorization": `Bearer ${anonKey}`,
-          },
-          body: JSON.stringify({ bookingId: booking.id, type }),
-        }
-      );
+      await fetchAdminFunction("send-confirmation", {
+        method: "POST",
+        body: JSON.stringify({ bookingId: booking.id, type }),
+      });
     } catch (err) {
       console.error(`Failed to send ${type} email:`, err);
     }
