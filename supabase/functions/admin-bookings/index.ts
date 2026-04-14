@@ -22,21 +22,32 @@ serve(async (req) => {
 
     // Verify the caller is an admin
     const authHeader = req.headers.get("Authorization");
-    if (!authHeader) {
+    if (!authHeader?.startsWith("Bearer ")) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401, headers: corsHeaders });
     }
 
     const token = authHeader.replace("Bearer ", "");
-    const userClient = createClient(supabaseUrl, supabaseAnonKey);
-    const { data: { user }, error: authError } = await userClient.auth.getUser(token);
 
-    if (authError || !user || !ADMIN_EMAILS.includes(user.email || "")) {
+    // Use a client that passes the auth header so getClaims works with Lovable's signing keys
+    const userClient = createClient(supabaseUrl, supabaseAnonKey, {
+      global: { headers: { Authorization: authHeader } },
+    });
+
+    const { data, error: authError } = await userClient.auth.getClaims(token);
+
+    if (authError || !data?.claims) {
+      console.error("Auth error:", authError);
+      return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401, headers: corsHeaders });
+    }
+
+    const userEmail = data.claims.email as string;
+    if (!ADMIN_EMAILS.includes(userEmail)) {
       return new Response(JSON.stringify({ error: "Forbidden" }), { status: 403, headers: corsHeaders });
     }
 
     // Use service role to bypass RLS and fetch ALL bookings
     const adminClient = createClient(supabaseUrl, supabaseServiceKey);
-    const { data, error } = await adminClient
+    const { data: bookings, error } = await adminClient
       .from("bookings")
       .select("*")
       .order("created_at", { ascending: false });
@@ -46,7 +57,7 @@ serve(async (req) => {
       return new Response(JSON.stringify({ error: error.message }), { status: 500, headers: corsHeaders });
     }
 
-    return new Response(JSON.stringify({ bookings: data }), { status: 200, headers: corsHeaders });
+    return new Response(JSON.stringify({ bookings }), { status: 200, headers: corsHeaders });
   } catch (error) {
     console.error("Admin bookings error:", error);
     return new Response(JSON.stringify({ error: "Internal server error" }), { status: 500, headers: corsHeaders });
