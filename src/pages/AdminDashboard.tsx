@@ -40,6 +40,7 @@ interface Booking {
   children: number;
   special_requests: string | null;
   status: string;
+  payment_id?: string;
   created_at: string;
   updated_at: string;
   user_id: string;
@@ -224,26 +225,42 @@ const AdminDashboard = () => {
   const handleRefund = async (booking: Booking) => {
     if (!confirm(`Process refund for "${booking.contact_name}" - ₹${booking.total_price.toLocaleString()}?`)) return;
     try {
-      const anonKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY;
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        toast({ title: "Session expired", description: "Please log in again", variant: "destructive" });
+        navigate("/auth");
+        return;
+      }
+      console.log("Refund session:", session);
+      console.log("Refund access_token:", session.access_token);
+
+      const ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso";
+
       const res = await fetch(
         "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/refund-payment",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "apikey": anonKey,
-            "Authorization": `Bearer ${anonKey}`,
+            "apikey": ANON_KEY,
+            "Authorization": `Bearer ${session.access_token}`,
           },
           body: JSON.stringify({
-            booking_id: booking.id,
+            payment_id: booking.payment_id,
             amount: booking.total_price,
+            booking_id: booking.id,
           }),
         }
       );
+
+      console.log("Refund API response status:", res.status);
+      const resData = await res.json().catch(() => ({}));
+      console.log("Refund API response data:", resData);
+
       if (!res.ok) {
-        const errData = await res.json().catch(() => ({}));
-        throw new Error(errData.error || "Refund request failed");
+        throw new Error(resData.error || `Refund failed with status ${res.status}`);
       }
+
       await handleStatusUpdate(booking.id, "refunded");
       await sendNotificationEmail(booking, "refund");
       toast({ title: "Refund processed & email sent", description: `₹${booking.total_price.toLocaleString()} refund initiated` });
