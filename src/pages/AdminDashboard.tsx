@@ -25,6 +25,11 @@ import { toast } from "@/hooks/use-toast";
 import { format } from "date-fns";
 
 const ADMIN_EMAILS = ["admin@yellodae.com"];
+const FUNCTIONS_BASE_URL = "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1";
+const SUPABASE_ANON_KEY =
+  import.meta.env.VITE_SUPABASE_ANON_KEY ||
+  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso";
 
 interface Booking {
   id: string;
@@ -85,54 +90,112 @@ const AdminDashboard = () => {
 
   const isAdmin = user && ADMIN_EMAILS.includes(user.email);
 
+  const redirectToLogin = (description = "Please log in again.") => {
+    toast({
+      title: "Session expired",
+      description,
+      variant: "destructive",
+    });
+    navigate("/auth");
+  };
+
+  const getFreshAdminSession = async () => {
+    const { error: refreshError } = await supabase.auth.refreshSession();
+
+    if (refreshError) {
+      console.error("Failed to refresh admin session:", refreshError);
+    }
+
+    const {
+      data: { session },
+      error: sessionError,
+    } = await supabase.auth.getSession();
+
+    if (sessionError || !session) {
+      console.error("No active admin session:", sessionError || refreshError);
+      redirectToLogin();
+      return null;
+    }
+
+    if (!ADMIN_EMAILS.includes(session.user?.email || "")) {
+      console.error("User is not an admin:", session.user?.email);
+      toast({
+        title: "Admin access only",
+        description: "You do not have admin privileges.",
+        variant: "destructive",
+      });
+      navigate("/");
+      return null;
+    }
+
+    return session;
+  };
+
+  const fetchAdminFunction = async (path: string, init: RequestInit = {}) => {
+    const runRequest = async () => {
+      const session = await getFreshAdminSession();
+      if (!session) return null;
+
+      const headers = new Headers(init.headers);
+      headers.set("Authorization", `Bearer ${session.access_token}`);
+      headers.set("apikey", SUPABASE_ANON_KEY);
+
+      if (init.body && !headers.has("Content-Type")) {
+        headers.set("Content-Type", "application/json");
+      }
+
+      const response = await fetch(`${FUNCTIONS_BASE_URL}/${path}`, {
+        ...init,
+        headers,
+      });
+
+      return response;
+    };
+
+    let response = await runRequest();
+    if (!response) return null;
+
+    if (response.status === 401) {
+      console.warn(`${path} returned 401. Retrying with a freshly refreshed session.`);
+      response = await runRequest();
+      if (!response) return null;
+    }
+
+    if (response.status === 401) {
+      console.error(`${path} returned 401 after session refresh.`);
+      redirectToLogin();
+      return null;
+    }
+
+    if (response.status === 403) {
+      console.error(`${path} returned 403.`);
+      toast({
+        title: "Admin access only",
+        description: "You do not have permission to view this page.",
+        variant: "destructive",
+      });
+      navigate("/");
+      return null;
+    }
+
+    return response;
+  };
+
   const fetchAllBookings = async () => {
     try {
       let fetchedBookings: Booking[] = [];
 
-      const { data: { session } } = await supabase.auth.getSession();
-      console.log("Admin session:", session);
-
-      if (!session) {
-        console.error("No session found, redirecting to login");
-        navigate("/auth");
+      const response = await fetchAdminFunction("admin-bookings");
+      if (!response) {
         return;
       }
 
-      console.log("Admin access_token:", session.access_token);
-      console.log("Admin user email:", session.user?.email);
-
-      if (!ADMIN_EMAILS.includes(session.user?.email || "")) {
-        console.error("User is not an admin:", session.user?.email);
-        toast({ title: "Admin access only", description: "You do not have admin privileges.", variant: "destructive" });
-        navigate("/");
-        return;
-      }
-
-      const response = await fetch(
-        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/admin-bookings",
-        {
-          headers: {
-            Authorization: `Bearer ${session.access_token}`,
-            apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso",
-          },
-        }
-      );
       console.log("Admin bookings response status:", response.status);
 
       if (response.ok) {
         const data = await response.json();
         console.log("Admin bookings data:", data);
         fetchedBookings = data.bookings || data.data || (Array.isArray(data) ? data : []);
-      } else if (response.status === 401) {
-        console.error("Unauthorized - invalid or expired token");
-        toast({ title: "Unauthorized", description: "Your session has expired. Please log in again.", variant: "destructive" });
-        navigate("/auth");
-        return;
-      } else if (response.status === 403) {
-        console.error("Forbidden - not an admin");
-        toast({ title: "Admin access only", description: "You do not have permission to view this page.", variant: "destructive" });
-        navigate("/");
-        return;
       } else {
         const errorData = await response.json().catch(() => ({}));
         console.warn("Edge function failed:", response.status, errorData);
@@ -197,19 +260,10 @@ const AdminDashboard = () => {
 
   const sendNotificationEmail = async (booking: Booking, type: "cancellation" | "refund") => {
     try {
-      const anonKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY;
-      await fetch(
-        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-confirmation",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "apikey": anonKey,
-            "Authorization": `Bearer ${anonKey}`,
-          },
-          body: JSON.stringify({ bookingId: booking.id, type }),
-        }
-      );
+      await fetchAdminFunction("send-confirmation", {
+        method: "POST",
+        body: JSON.stringify({ bookingId: booking.id, type }),
+      });
     } catch (err) {
       console.error(`Failed to send ${type} email:`, err);
     }
@@ -225,33 +279,18 @@ const AdminDashboard = () => {
   const handleRefund = async (booking: Booking) => {
     if (!confirm(`Process refund for "${booking.contact_name}" - ₹${booking.total_price.toLocaleString()}?`)) return;
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) {
-        toast({ title: "Session expired", description: "Please log in again", variant: "destructive" });
-        navigate("/auth");
+      const res = await fetchAdminFunction("refund-payment", {
+        method: "POST",
+        body: JSON.stringify({
+          payment_id: booking.payment_id,
+          amount: booking.total_price,
+          booking_id: booking.id,
+        }),
+      });
+
+      if (!res) {
         return;
       }
-      console.log("Refund session:", session);
-      console.log("Refund access_token:", session.access_token);
-
-      const ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso";
-
-      const res = await fetch(
-        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/refund-payment",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "apikey": ANON_KEY,
-            "Authorization": `Bearer ${session.access_token}`,
-          },
-          body: JSON.stringify({
-            payment_id: booking.payment_id,
-            amount: booking.total_price,
-            booking_id: booking.id,
-          }),
-        }
-      );
 
       console.log("Refund API response status:", res.status);
       const resData = await res.json().catch(() => ({}));
