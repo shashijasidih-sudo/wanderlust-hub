@@ -275,7 +275,7 @@ const UserBookings = () => {
                           variant="outline"
                           size="sm"
                           className="whitespace-nowrap border-primary text-primary hover:bg-primary/5"
-                          onClick={() => setViewBooking(booking)}
+                          onClick={() => navigate(`/booking/${booking.id}`)}
                         >
                           View & Manage Booking
                         </Button>

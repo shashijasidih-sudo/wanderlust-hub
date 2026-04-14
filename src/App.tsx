@@ -175,6 +175,7 @@ import Profile from "./pages/Profile";
 import MyBookings from "./pages/MyBookings";
 import UserProfile from "./pages/UserProfile";
 import UserBookings from "./pages/UserBookings";
+import BookingDetail from "./pages/BookingDetail";
 import UserSettings from "./pages/UserSettings";
 import Wishlist from "./pages/Wishlist";
 import BangkokTransfers from "./pages/BangkokTransfers";
@@ -454,6 +455,7 @@ const App = () => (
           <Route path="/my-bookings" element={<MyBookings />} />
           <Route path="/user-profile" element={<UserProfile />} />
           <Route path="/user-bookings" element={<UserBookings />} />
+          <Route path="/booking/:id" element={<BookingDetail />} />
           <Route path="/settings" element={<UserSettings />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/customer-information" element={<CustomerInformation />} />
