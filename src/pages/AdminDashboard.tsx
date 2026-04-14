@@ -40,6 +40,7 @@ interface Booking {
   children: number;
   special_requests: string | null;
   status: string;
+  payment_id?: string;
   created_at: string;
   updated_at: string;
   user_id: string;
