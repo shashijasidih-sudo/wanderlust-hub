@@ -100,30 +100,34 @@ const AdminDashboard = () => {
   };
 
   const getFreshAdminSession = async () => {
-    const { error: refreshError } = await supabase.auth.refreshSession();
+    // First check if a session exists at all
+    const { data: { session: existingSession } } = await supabase.auth.getSession();
 
-    if (refreshError) {
-      console.error("Failed to refresh admin session:", refreshError);
-    }
-
-    const {
-      data: { session },
-      error: sessionError,
-    } = await supabase.auth.getSession();
-
-    if (sessionError || !session) {
-      console.error("No active admin session:", sessionError || refreshError);
+    if (!existingSession) {
+      console.error("No session found — redirecting to login");
       redirectToLogin();
       return null;
     }
 
+    // Only refresh if we have an existing session
+    const { data: { session }, error: refreshError } = await supabase.auth.refreshSession();
+
+    if (refreshError || !session) {
+      console.error("Failed to refresh admin session:", refreshError);
+      // Fall back to existing session if refresh fails
+      const finalSession = session || existingSession;
+
+      if (!ADMIN_EMAILS.includes(finalSession.user?.email || "")) {
+        toast({ title: "Admin access only", description: "You do not have admin privileges.", variant: "destructive" });
+        navigate("/");
+        return null;
+      }
+      return finalSession;
+    }
+
     if (!ADMIN_EMAILS.includes(session.user?.email || "")) {
       console.error("User is not an admin:", session.user?.email);
-      toast({
-        title: "Admin access only",
-        description: "You do not have admin privileges.",
-        variant: "destructive",
-      });
+      toast({ title: "Admin access only", description: "You do not have admin privileges.", variant: "destructive" });
       navigate("/");
       return null;
     }
