@@ -18,7 +18,7 @@ serve(async (req) => {
   try {
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-    const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY")!;
+    const supabaseAnonKey = Deno.env.get("ANON_KEY")!;
 
     // Verify the caller is an admin
     const authHeader = req.headers.get("Authorization");
@@ -40,7 +40,7 @@ serve(async (req) => {
       return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401, headers: corsHeaders });
     }
 
-    const userEmail = data.claims.email as string;
+    const userEmail = (data.claims.email as string) || (data.claims.user_metadata?.email as string);
     if (!ADMIN_EMAILS.includes(userEmail)) {
       return new Response(JSON.stringify({ error: "Forbidden" }), { status: 403, headers: corsHeaders });
     }
