@@ -101,24 +101,6 @@ const AdminDashboard = () => {
     navigate("/auth");
   };
 
-  const getFreshAdminSession = async () => {
-    const { data: { session } } = await supabase.auth.getSession();
-
-    if (!session) {
-      console.error("No session found — redirecting to login");
-      redirectToLogin();
-      return null;
-    }
-
-    if (!ADMIN_EMAILS.includes(session.user?.email || "")) {
-      console.error("User is not an admin:", session.user?.email);
-      toast({ title: "Admin access only", description: "You do not have admin privileges.", variant: "destructive" });
-      navigate("/");
-      return null;
-    }
-
-    return session;
-  };
 
   const fetchAdminFunction = async (path: string, init: RequestInit = {}) => {
     const makeRequest = async (accessToken: string) => {
