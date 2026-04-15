@@ -66,7 +66,7 @@ const statusColors: Record<string, string> = {
 const ITEMS_PER_PAGE = 15;
 
 const AdminDashboard = () => {
-  const { user } = useAuth();
+  const { user, isLoading: authLoading } = useAuth();
   const navigate = useNavigate();
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -77,16 +77,18 @@ const AdminDashboard = () => {
   const [sortDir, setSortDir] = useState<SortDir>("desc");
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Wait for auth to resolve before checking admin status
+  // Wait for auth to fully resolve before checking admin status
   useEffect(() => {
+    if (authLoading) return; // Don't check until useAuth finishes loading
+
     const checkAuth = async () => {
-      const { data } = await supabase.auth.getUser();
-      if (!data.user) { navigate("/auth"); return; }
-      if (!ADMIN_EMAILS.includes(data.user.email || "")) { navigate("/"); return; }
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) { navigate("/auth"); return; }
+      if (!ADMIN_EMAILS.includes(session.user?.email || "")) { navigate("/"); return; }
       setAuthChecked(true);
     };
     checkAuth();
-  }, [navigate]);
+  }, [authLoading, navigate]);
 
   const isAdmin = user && ADMIN_EMAILS.includes(user.email);
 
@@ -99,68 +101,52 @@ const AdminDashboard = () => {
     navigate("/auth");
   };
 
-  const getFreshAdminSession = async () => {
-    const { data: { session } } = await supabase.auth.getSession();
 
+  const fetchAdminFunction = async (path: string, init: RequestInit = {}) => {
+    const makeRequest = async (accessToken: string) => {
+      const headers = new Headers(init.headers);
+      headers.set("Authorization", `Bearer ${accessToken}`);
+      headers.set("apikey", SUPABASE_ANON_KEY);
+      if (init.body && !headers.has("Content-Type")) {
+        headers.set("Content-Type", "application/json");
+      }
+      return fetch(`${FUNCTIONS_BASE_URL}/${path}`, { ...init, headers });
+    };
+
+    // Step 1: get current session
+    const { data: { session } } = await supabase.auth.getSession();
     if (!session) {
-      console.error("No session found — redirecting to login");
       redirectToLogin();
       return null;
     }
 
     if (!ADMIN_EMAILS.includes(session.user?.email || "")) {
-      console.error("User is not an admin:", session.user?.email);
       toast({ title: "Admin access only", description: "You do not have admin privileges.", variant: "destructive" });
       navigate("/");
       return null;
     }
 
-    return session;
-  };
+    let response = await makeRequest(session.access_token);
 
-  const fetchAdminFunction = async (path: string, init: RequestInit = {}) => {
-    const runRequest = async () => {
-      const session = await getFreshAdminSession();
-      if (!session) return null;
-
-      const headers = new Headers(init.headers);
-      headers.set("Authorization", `Bearer ${session.access_token}`);
-      headers.set("apikey", SUPABASE_ANON_KEY);
-
-      if (init.body && !headers.has("Content-Type")) {
-        headers.set("Content-Type", "application/json");
-      }
-
-      const response = await fetch(`${FUNCTIONS_BASE_URL}/${path}`, {
-        ...init,
-        headers,
-      });
-
-      return response;
-    };
-
-    let response = await runRequest();
-    if (!response) return null;
-
+    // Step 2: on 401, refresh session once and retry
     if (response.status === 401) {
-      console.warn(`${path} returned 401. Retrying with a freshly refreshed session.`);
-      response = await runRequest();
-      if (!response) return null;
+      console.warn(`${path} returned 401. Refreshing session and retrying once.`);
+      const { data: refreshed } = await supabase.auth.refreshSession();
+      if (!refreshed.session?.access_token) {
+        redirectToLogin("Session expired. Please log in again.");
+        return null;
+      }
+      response = await makeRequest(refreshed.session.access_token);
     }
 
     if (response.status === 401) {
-      console.error(`${path} returned 401 after session refresh.`);
+      console.error(`${path} returned 401 after refresh.`);
       redirectToLogin();
       return null;
     }
 
     if (response.status === 403) {
-      console.error(`${path} returned 403.`);
-      toast({
-        title: "Admin access only",
-        description: "You do not have permission to view this page.",
-        variant: "destructive",
-      });
+      toast({ title: "Admin access only", description: "You do not have permission to view this page.", variant: "destructive" });
       navigate("/");
       return null;
     }
