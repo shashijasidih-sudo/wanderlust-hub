@@ -77,16 +77,18 @@ const AdminDashboard = () => {
   const [sortDir, setSortDir] = useState<SortDir>("desc");
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Wait for auth to resolve before checking admin status
+  // Wait for auth to fully resolve before checking admin status
   useEffect(() => {
+    if (authLoading) return; // Don't check until useAuth finishes loading
+
     const checkAuth = async () => {
-      const { data } = await supabase.auth.getUser();
-      if (!data.user) { navigate("/auth"); return; }
-      if (!ADMIN_EMAILS.includes(data.user.email || "")) { navigate("/"); return; }
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) { navigate("/auth"); return; }
+      if (!ADMIN_EMAILS.includes(session.user?.email || "")) { navigate("/"); return; }
       setAuthChecked(true);
     };
     checkAuth();
-  }, [navigate]);
+  }, [authLoading, navigate]);
 
   const isAdmin = user && ADMIN_EMAILS.includes(user.email);
 
