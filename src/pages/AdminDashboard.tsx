@@ -66,7 +66,7 @@ const statusColors: Record<string, string> = {
 const ITEMS_PER_PAGE = 15;
 
 const AdminDashboard = () => {
-  const { user } = useAuth();
+  const { user, isLoading: authLoading } = useAuth();
   const navigate = useNavigate();
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [isLoading, setIsLoading] = useState(true);
