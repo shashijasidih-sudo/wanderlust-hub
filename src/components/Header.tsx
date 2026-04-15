@@ -215,7 +215,7 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-6 pb-3 border-t pt-3">
           <DropdownMenu>
             <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
-              Activities to Do
+              Activities
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[240px] p-2">
@@ -264,7 +264,7 @@ const Header = () => {
           </DropdownMenu>
           <DropdownMenu>
             <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
-              Private Transfers
+              Airport Transfers
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[240px] p-2">
@@ -312,14 +312,14 @@ const Header = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
-            Must Have Travel Items
+            Travel Essentials
           </a>
           <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary">
             Tours & Packages
           </Link>
           <DropdownMenu>
             <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
-              Smart Destinations
+              Destination Guides
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[260px] p-2">
@@ -391,7 +391,7 @@ const Header = () => {
           <nav className="flex flex-col gap-4">
             <DropdownMenu>
               <DropdownMenuTrigger className="text-base font-medium transition-colors hover:text-primary flex items-center gap-1">
-                Activities to Do
+                Activities
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
@@ -440,7 +440,7 @@ const Header = () => {
             </DropdownMenu>
             <DropdownMenu>
               <DropdownMenuTrigger className="text-base font-medium transition-colors hover:text-primary flex items-center gap-1">
-                Private Transfers
+                Airport Transfers
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
@@ -488,14 +488,14 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-base font-medium transition-colors hover:text-primary">
-              Must Have Travel Items
+              Travel Essentials
             </a>
             <Link to="/tour-packages" className="text-base font-medium transition-colors hover:text-primary" onClick={() => setIsMenuOpen(false)}>
               Tours & Packages
             </Link>
             <DropdownMenu>
               <DropdownMenuTrigger className="text-base font-medium transition-colors hover:text-primary flex items-center gap-1">
-                Smart Destinations
+                Destination Guides
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
