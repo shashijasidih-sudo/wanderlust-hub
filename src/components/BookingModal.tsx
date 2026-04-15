@@ -18,7 +18,7 @@ import { z } from "zod";
 
 
 const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bXpnbWZuaHRucWxlZHd3b2p0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNzE5MzQsImV4cCI6MjA4Mjk0NzkzNH0.-qkr1VSNdsLnFHfqH6P-HOlYtJG69PNHB2WAgxtVlso";
+const SUPABASE_ANON_KEY = "sb_publishable_g-zBlAMHwj9NJLvq13RjWg_BEIq-Frq";
 const SUPABASE_FUNCTIONS_URL = "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1";
 
 declare global {
