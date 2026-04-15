@@ -100,29 +100,12 @@ const AdminDashboard = () => {
   };
 
   const getFreshAdminSession = async () => {
-    // First check if a session exists at all
-    const { data: { session: existingSession } } = await supabase.auth.getSession();
+    const { data: { session } } = await supabase.auth.getSession();
 
-    if (!existingSession) {
+    if (!session) {
       console.error("No session found — redirecting to login");
       redirectToLogin();
       return null;
-    }
-
-    // Only refresh if we have an existing session
-    const { data: { session }, error: refreshError } = await supabase.auth.refreshSession();
-
-    if (refreshError || !session) {
-      console.error("Failed to refresh admin session:", refreshError);
-      // Fall back to existing session if refresh fails
-      const finalSession = session || existingSession;
-
-      if (!ADMIN_EMAILS.includes(finalSession.user?.email || "")) {
-        toast({ title: "Admin access only", description: "You do not have admin privileges.", variant: "destructive" });
-        navigate("/");
-        return null;
-      }
-      return finalSession;
     }
 
     if (!ADMIN_EMAILS.includes(session.user?.email || "")) {
