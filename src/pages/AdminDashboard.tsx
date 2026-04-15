@@ -121,48 +121,50 @@ const AdminDashboard = () => {
   };
 
   const fetchAdminFunction = async (path: string, init: RequestInit = {}) => {
-    const runRequest = async () => {
-      const session = await getFreshAdminSession();
-      if (!session) return null;
-
+    const makeRequest = async (accessToken: string) => {
       const headers = new Headers(init.headers);
-      headers.set("Authorization", `Bearer ${session.access_token}`);
+      headers.set("Authorization", `Bearer ${accessToken}`);
       headers.set("apikey", SUPABASE_ANON_KEY);
-
       if (init.body && !headers.has("Content-Type")) {
         headers.set("Content-Type", "application/json");
       }
-
-      const response = await fetch(`${FUNCTIONS_BASE_URL}/${path}`, {
-        ...init,
-        headers,
-      });
-
-      return response;
+      return fetch(`${FUNCTIONS_BASE_URL}/${path}`, { ...init, headers });
     };
 
-    let response = await runRequest();
-    if (!response) return null;
+    // Step 1: get current session
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session) {
+      redirectToLogin();
+      return null;
+    }
 
+    if (!ADMIN_EMAILS.includes(session.user?.email || "")) {
+      toast({ title: "Admin access only", description: "You do not have admin privileges.", variant: "destructive" });
+      navigate("/");
+      return null;
+    }
+
+    let response = await makeRequest(session.access_token);
+
+    // Step 2: on 401, refresh session once and retry
     if (response.status === 401) {
-      console.warn(`${path} returned 401. Retrying with a freshly refreshed session.`);
-      response = await runRequest();
-      if (!response) return null;
+      console.warn(`${path} returned 401. Refreshing session and retrying once.`);
+      const { data: refreshed } = await supabase.auth.refreshSession();
+      if (!refreshed.session?.access_token) {
+        redirectToLogin("Session expired. Please log in again.");
+        return null;
+      }
+      response = await makeRequest(refreshed.session.access_token);
     }
 
     if (response.status === 401) {
-      console.error(`${path} returned 401 after session refresh.`);
+      console.error(`${path} returned 401 after refresh.`);
       redirectToLogin();
       return null;
     }
 
     if (response.status === 403) {
-      console.error(`${path} returned 403.`);
-      toast({
-        title: "Admin access only",
-        description: "You do not have permission to view this page.",
-        variant: "destructive",
-      });
+      toast({ title: "Admin access only", description: "You do not have permission to view this page.", variant: "destructive" });
       navigate("/");
       return null;
     }
