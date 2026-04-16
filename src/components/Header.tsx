@@ -324,19 +324,19 @@ const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[260px] p-2">
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand-smart-guides">
+                <Link to="/thailand/destination-guides">
                   <Palmtree className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Thailand Smart Guides</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/singapore-smart-guides">
+                <Link to="/singapore/destination-guides">
                   <TreePine className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Singapore Smart Guides</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/dubai-smart-guides">
+                <Link to="/dubai/destination-guides">
                   <Castle className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Dubai Smart Guides</span>
                 </Link>
@@ -500,19 +500,19 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand-smart-guides" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/destination-guides" onClick={() => setIsMenuOpen(false)}>
                     <Palmtree className="h-4 w-4 mr-2 text-primary" />
                     Thailand Smart Guides
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/singapore-smart-guides" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/singapore/destination-guides" onClick={() => setIsMenuOpen(false)}>
                     <TreePine className="h-4 w-4 mr-2 text-primary" />
                     Singapore Smart Guides
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/dubai-smart-guides" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/dubai/destination-guides" onClick={() => setIsMenuOpen(false)}>
                     <Castle className="h-4 w-4 mr-2 text-primary" />
                     Dubai Smart Guides
                   </Link>

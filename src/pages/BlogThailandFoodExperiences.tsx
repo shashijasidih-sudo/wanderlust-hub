@@ -21,21 +21,21 @@ import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
 import ayutthayaSunset from "@/assets/ayutthaya-sunset-1.jpg";
 
 const activityCards = [
-  { title: "Bangkok Three Temples Tour", location: "Bangkok", image: bangkokTemple, slug: "/bangkok-three-temples" },
-  { title: "Maeklong & Floating Market", location: "Bangkok", image: floatingMarket, slug: "/maeklong-floating-market" },
-  { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: bangkokCity2, slug: "/bangkok-tuk-tuk-night" },
-  { title: "Baiyoke Sky Buffet Dinner", location: "Bangkok", image: bangkokSkywalk, slug: "/baiyoke-buffet" },
-  { title: "Ayutthaya Sunset Cruise", location: "Ayutthaya", image: ayutthayaSunset, slug: "/ayutthaya-sunset-cruise" },
-  { title: "Chao Phraya Princess Cruise", location: "Bangkok", image: bangkokPagoda, slug: "/chao-phraya-princess-join" },
-  { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: bangkokCity, slug: "/viva-alangka-cruise" },
-  { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/pattaya-floating-market-tour" },
-  { title: "Pattaya Nightlife Walking", location: "Pattaya", image: pattayaNightlife, slug: "/pattaya-nightlife-walking" },
-  { title: "Grand Palace & Emerald Buddha", location: "Bangkok", image: grandPalace, slug: "/bangkok-grand-palace-emerald" },
-  { title: "Phi Phi Island by Speedboat", location: "Phuket", image: phiPhi, slug: "/phi-phi-island" },
-  { title: "James Bond Island Tour", location: "Phuket", image: jamesBond, slug: "/james-bond-island" },
-  { title: "Elephant Safari Experience", location: "Phuket", image: elephantSafari, slug: "/elephant-safari" },
-  { title: "Thai Massage Coupons", location: "Bangkok", image: massage, slug: "/massage-coupons" },
-  { title: "Dolphin Bay Phuket", location: "Phuket", image: phuketBoatTour, slug: "/dolphin-bay-phuket" },
+  { title: "Bangkok Three Temples Tour", location: "Bangkok", image: bangkokTemple, slug: "/bangkok/three-temples-tour" },
+  { title: "Maeklong & Floating Market", location: "Bangkok", image: floatingMarket, slug: "/bangkok/maeklong-floating-market" },
+  { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: bangkokCity2, slug: "/bangkok/tuk-tuk-night-tour" },
+  { title: "Baiyoke Sky Buffet Dinner", location: "Bangkok", image: bangkokSkywalk, slug: "/bangkok/baiyoke-buffet" },
+  { title: "Ayutthaya Sunset Cruise", location: "Ayutthaya", image: ayutthayaSunset, slug: "/bangkok/ayutthaya-sunset-cruise" },
+  { title: "Chao Phraya Princess Cruise", location: "Bangkok", image: bangkokPagoda, slug: "/bangkok/chao-phraya-princess-with-transfer" },
+  { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: bangkokCity, slug: "/bangkok/viva-alangka-cruise" },
+  { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/pattaya/floating-market-tour" },
+  { title: "Pattaya Nightlife Walking", location: "Pattaya", image: pattayaNightlife, slug: "/pattaya/nightlife-walking-tour" },
+  { title: "Grand Palace & Emerald Buddha", location: "Bangkok", image: grandPalace, slug: "/bangkok/grand-palace-emerald" },
+  { title: "Phi Phi Island by Speedboat", location: "Phuket", image: phiPhi, slug: "/phuket/phi-phi-island-tour" },
+  { title: "James Bond Island Tour", location: "Phuket", image: jamesBond, slug: "/phuket/james-bond-island-tour" },
+  { title: "Elephant Safari Experience", location: "Phuket", image: elephantSafari, slug: "/phuket/elephant-safari" },
+  { title: "Thai Massage Coupons", location: "Bangkok", image: massage, slug: "/bangkok/massage-coupons" },
+  { title: "Dolphin Bay Phuket", location: "Phuket", image: phuketBoatTour, slug: "/phuket/dolphin-bay" },
 ];
 
 const ActivityCards = () => {
@@ -82,7 +82,7 @@ const BlogThailandFoodExperiences = () => {
       readTime="11 min read"
       category="Thailand Travel Guide"
       keywords={["Thailand food experiences", "Thailand food experiences booking", "best Thailand food", "Bangkok street food", "Thai food tour", "Phuket seafood", "Thailand culinary guide", "Yellodae Thailand"]}
-      guidesLink="/thailand-smart-guides"
+      guidesLink="/thailand/destination-guides"
       guidesLabel="Thailand Guides"
       relatedLinks={[
         { title: "Best Thailand Activities to Book Online", link: "/blog/best-thailand-activities" },

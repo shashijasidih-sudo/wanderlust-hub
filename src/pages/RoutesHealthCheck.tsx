@@ -5,13 +5,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const dubaiRoutes = [
-  "/dubai", "/desert-safari", "/desert-safari-shisha", "/desert-safari-sharing",
-  "/dhow-cruise", "/dhow-cruise-creek-lower", "/dhow-cruise-creek-upper",
-  "/dhow-cruise-marina-lower", "/dhow-cruise-marina-upper", "/atlantis-palm",
-  "/dubai-city-tour", "/dubai-city-tour-mall", "/global-village-dubai",
-  "/abu-dhabi-city-tour", "/abu-dhabi-ferrari-world", "/dubai-aquarium-penguin",
-  "/burj-khalifa-non-prime", "/burj-khalifa-prime", "/dubai-dolphin-show",
-  "/miracle-garden-dubai", "/dubai-fountain-show", "/dubai-smart-guides",
+  "/dubai", "/dubai/desert-safari", "/dubai/desert-safari-shisha", "/dubai/desert-safari-sharing",
+  "/dubai/dhow-cruise", "/dubai/dhow-cruise-creek-lower-deck", "/dubai/dhow-cruise-creek-upper-deck",
+  "/dubai/dhow-cruise-marina-lower-deck", "/dubai/dhow-cruise-marina-upper-deck", "/dubai/atlantis-aquaventure",
+  "/dubai/city-tour", "/dubai/city-tour-mall", "/dubai/global-village",
+  "/dubai/abu-dhabi-city-tour", "/dubai/abu-dhabi-ferrari-world", "/dubai/aquarium-penguin",
+  "/dubai/burj-khalifa-non-prime", "/dubai/burj-khalifa-prime", "/dubai/bangkok/dolphin-show",
+  "/dubai/miracle-garden", "/dubai/fountain-show", "/dubai/destination-guides",
   "/blog/airport-transfer-booking-dubai", "/blog/desert-safari-deals-dubai",
   "/dubai/transfers", "/dubai/airport-pickup-zone-1", "/dubai/airport-dropoff-zone-1",
   "/dubai/airport-pickup-zone-2", "/dubai/airport-dropoff-zone-2",
@@ -21,14 +21,14 @@ const dubaiRoutes = [
 ];
 
 const singaporeRoutes = [
-  "/singapore", "/singapore-city-tour", "/night-safari-tickets",
-  "/night-safari-transfer", "/night-safari-dinner", "/sentosa-4d-2-rides",
-  "/sentosa-4d-3-rides", "/sentosa-cable-car", "/sentosa-wings-time",
-  "/sentosa-sky-helix", "/singapore-river-cruise", "/gardens-by-the-bay",
-  "/adventure-cove", "/singapore-flyer", "/river-safari",
-  "/universal-studios-weekday", "/universal-studios-weekend",
-  "/singapore-zoo", "/rainforest-wild-asia", "/big-bus-discover",
-  "/big-bus-night", "/sentosa-island", "/singapore-smart-guides",
+  "/singapore", "/singapore/city-tour", "/singapore/night-safari",
+  "/singapore/night-safari-transfer", "/singapore/night-safari-dinner", "/singapore/sentosa-4d-2-rides",
+  "/singapore/sentosa-4d-3-rides", "/singapore/sentosa-cable-car", "/singapore/sentosa-wings-time",
+  "/singapore/sentosa-sky-helix", "/singapore/river-cruise", "/singapore/gardens-by-the-bay",
+  "/singapore/adventure-cove", "/singapore/flyer", "/singapore/river-safari",
+  "/singapore/universal-studios-weekday", "/singapore/universal-studios-weekend",
+  "/singapore/zoo", "/singapore/rainforest-wild-asia", "/singapore/big-bus-discover",
+  "/singapore/big-bus-night", "/singapore/sentosa-island", "/singapore/destination-guides",
   "/blog/airport-transfer-booking-singapore", "/blog/sentosa-activities-singapore",
   "/singapore/transfers", "/singapore/airport-pickup",
   "/singapore/airport-dropoff", "/singapore/airport-night-pickup",

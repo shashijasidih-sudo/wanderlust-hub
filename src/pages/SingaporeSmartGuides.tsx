@@ -89,7 +89,7 @@ const blogArticles = [
     author: "Island Expert",
     date: "Nov 25, 2024",
     readTime: "10 min read",
-    slug: "/sentosa-island"
+    slug: "/singapore/sentosa-island"
   },
   {
     id: 2,
@@ -155,7 +155,7 @@ const blogArticles = [
     author: "Theme Park Fan",
     date: "Nov 10, 2024",
     readTime: "8 min read",
-    slug: "/sentosa-island"
+    slug: "/singapore/sentosa-island"
   },
   {
     id: 8,

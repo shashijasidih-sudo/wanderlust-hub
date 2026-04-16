@@ -57,7 +57,7 @@ const activities = [
     description: "Experience breathtaking 360° views of Bangkok from the iconic King Power MahaNakhon Skywalk.",
     availability: "Available",
     city: "Bangkok",
-    slug: "/bangkok-skywalk"
+    slug: "/bangkok/skywalk"
   },
   {
     id: 2,
@@ -71,7 +71,7 @@ const activities = [
     description: "Visit Bangkok's most iconic temples including Wat Pho, Wat Arun, and Wat Traimit.",
     availability: "Available",
     city: "Bangkok",
-    slug: "/bangkok-three-temples"
+    slug: "/bangkok/three-temples-tour"
   },
   // Phuket Activities
   {
@@ -86,7 +86,7 @@ const activities = [
     description: "Explore the stunning Phi Phi Islands with snorkeling, swimming, and beach activities.",
     availability: "Available",
     city: "Phuket",
-    slug: "/phi-phi-island"
+    slug: "/phuket/phi-phi-island-tour"
   },
   {
     id: 4,
@@ -100,7 +100,7 @@ const activities = [
     description: "Enjoy Thailand's most famous cabaret show with spectacular costumes and performances.",
     availability: "Available",
     city: "Phuket",
-    slug: "/phuket-simon-cabaret"
+    slug: "/phuket/simon-cabaret"
   },
   // Krabi Activities
   {
@@ -115,7 +115,7 @@ const activities = [
     description: "Visit the famous James Bond Island and explore Phang Nga Bay's stunning limestone karsts.",
     availability: "Available",
     city: "Krabi",
-    slug: "/james-bond-island"
+    slug: "/phuket/james-bond-island-tour"
   },
   {
     id: 6,
@@ -129,7 +129,7 @@ const activities = [
     description: "Discover Krabi's four islands including Phra Nang Beach and Tup Island by speedboat.",
     availability: "Available",
     city: "Krabi",
-    slug: "/four-islands-speedboat"
+    slug: "/krabi/four-islands-speedboat"
   },
   {
     id: 7,
@@ -143,7 +143,7 @@ const activities = [
     description: "Stay connected across Thailand with a 5G/4G eSIM from AIS. Instant digital activation, no physical SIM needed.",
     availability: "Available",
     city: "Thailand",
-    slug: "/esim-thailand-ais"
+    slug: "/thailand/esim-ais"
   },
 ];
 
@@ -492,7 +492,7 @@ const Thailand = () => {
                       <p className="text-sm text-muted-foreground mb-4">
                         Explore pristine beaches and islands
                       </p>
-                      <Link to="/thailand-smart-guides">
+                      <Link to="/thailand/destination-guides">
                         <Button variant="outline" size="sm">View All</Button>
                       </Link>
                     </CardContent>
@@ -504,7 +504,7 @@ const Thailand = () => {
                       <p className="text-sm text-muted-foreground mb-4">
                         Taste authentic Thai cuisine
                       </p>
-                      <Link to="/thailand-smart-guides">
+                      <Link to="/thailand/destination-guides">
                         <Button variant="outline" size="sm">View All</Button>
                       </Link>
                     </CardContent>
@@ -516,7 +516,7 @@ const Thailand = () => {
                       <p className="text-sm text-muted-foreground mb-4">
                         Discover ancient temples and history
                       </p>
-                      <Link to="/thailand-smart-guides">
+                      <Link to="/thailand/destination-guides">
                         <Button variant="outline" size="sm">View All</Button>
                       </Link>
                     </CardContent>
@@ -558,7 +558,7 @@ const Thailand = () => {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Bangkok - Skywalk */}
-                  <Link to="/bangkok-skywalk">
+                  <Link to="/bangkok/skywalk">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -581,7 +581,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Phuket - Phi Phi Island */}
-                  <Link to="/phi-phi-island">
+                  <Link to="/phuket/phi-phi-island-tour">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -604,7 +604,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Krabi - James Bond Island */}
-                  <Link to="/james-bond-island">
+                  <Link to="/phuket/james-bond-island-tour">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -627,7 +627,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Pattaya - Elephant Safari */}
-                  <Link to="/elephant-safari">
+                  <Link to="/phuket/elephant-safari">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -650,7 +650,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Bangkok - Thai Massage */}
-                  <Link to="/massage-coupons">
+                  <Link to="/bangkok/massage-coupons">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -673,7 +673,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Phuket - Tiger Kingdom */}
-                  <Link to="/selfie-tigers">
+                  <Link to="/phuket/selfie-with-tigers">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img

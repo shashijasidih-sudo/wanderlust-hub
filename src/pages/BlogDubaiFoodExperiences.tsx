@@ -17,21 +17,21 @@ import dubaiDesertCouple2 from "@/assets/dubai-desert-couple-2.jpg";
 import dubaiGlobalVillage2 from "@/assets/dubai-global-village-2.jpg";
 
 const activityCards = [
-  { title: "Desert Safari with Sharing", location: "Lahbab Desert", image: dubaiDesertCouple2, slug: "/desert-safari-sharing" },
-  { title: "Desert Safari with Shisha", location: "Lahbab Desert", image: dubaiDesertWoman, slug: "/desert-safari-shisha" },
-  { title: "Dhow Creek Cruise - Lower", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dhow-cruise-creek-lower" },
-  { title: "Dhow Creek Cruise - Upper", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dhow-cruise-creek-upper" },
-  { title: "Dhow Marina Cruise - Lower", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dhow-cruise-marina-lower" },
-  { title: "Dhow Marina Cruise - Upper", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dhow-cruise-marina-upper" },
-  { title: "Dubai City Tour", location: "Dubai", image: dubaiCityNight, slug: "/dubai-city-tour" },
-  { title: "Dubai City Tour with Mall", location: "Dubai", image: dubaiSkylineSunset, slug: "/dubai-city-tour-mall" },
-  { title: "Global Village Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/global-village-dubai" },
-  { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: dubaiSkylineSunset, slug: "/abu-dhabi-city-tour" },
-  { title: "Burj Khalifa Non-Prime", location: "Downtown Dubai", image: dubaiSkylineSunset, slug: "/burj-khalifa-non-prime" },
-  { title: "Burj Khalifa Prime Time", location: "Downtown Dubai", image: dubaiSkyline, slug: "/burj-khalifa-prime" },
-  { title: "Dubai Aquarium + Penguin", location: "Dubai Mall", image: dubaiAquariumFish, slug: "/dubai-aquarium-penguin" },
-  { title: "Dubai Fountain Show + Ride", location: "Downtown Dubai", image: dubaiFountainShow, slug: "/dubai-fountain-show" },
-  { title: "Miracle Garden Dubai", location: "Dubai", image: dubaiGlobalVillage2, slug: "/miracle-garden-dubai" },
+  { title: "Desert Safari with Sharing", location: "Lahbab Desert", image: dubaiDesertCouple2, slug: "/dubai/desert-safari-sharing" },
+  { title: "Desert Safari with Shisha", location: "Lahbab Desert", image: dubaiDesertWoman, slug: "/dubai/desert-safari-shisha" },
+  { title: "Dhow Creek Cruise - Lower", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-creek-lower-deck" },
+  { title: "Dhow Creek Cruise - Upper", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-creek-upper-deck" },
+  { title: "Dhow Marina Cruise - Lower", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-marina-lower-deck" },
+  { title: "Dhow Marina Cruise - Upper", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-marina-upper-deck" },
+  { title: "Dubai City Tour", location: "Dubai", image: dubaiCityNight, slug: "/dubai/city-tour" },
+  { title: "Dubai City Tour with Mall", location: "Dubai", image: dubaiSkylineSunset, slug: "/dubai/city-tour-mall" },
+  { title: "Global Village Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/dubai/global-village" },
+  { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: dubaiSkylineSunset, slug: "/dubai/abu-dhabi-city-tour" },
+  { title: "Burj Khalifa Non-Prime", location: "Downtown Dubai", image: dubaiSkylineSunset, slug: "/dubai/burj-khalifa-non-prime" },
+  { title: "Burj Khalifa Prime Time", location: "Downtown Dubai", image: dubaiSkyline, slug: "/dubai/burj-khalifa-prime" },
+  { title: "Dubai Aquarium + Penguin", location: "Dubai Mall", image: dubaiAquariumFish, slug: "/dubai/aquarium-penguin" },
+  { title: "Dubai Fountain Show + Ride", location: "Downtown Dubai", image: dubaiFountainShow, slug: "/dubai/fountain-show" },
+  { title: "Miracle Garden Dubai", location: "Dubai", image: dubaiGlobalVillage2, slug: "/dubai/miracle-garden" },
 ];
 
 const ActivityCards = () => {
@@ -78,7 +78,7 @@ const BlogDubaiFoodExperiences = () => {
       readTime="10 min read"
       category="Dubai Travel Guide"
       keywords={["Dubai food experiences", "Dubai food tours", "best Dubai food", "Dubai culinary guide", "Emirati cuisine", "Dubai street food", "Dubai dining", "Yellodae Dubai"]}
-      guidesLink="/dubai-smart-guides"
+      guidesLink="/dubai/destination-guides"
       guidesLabel="Dubai Guides"
       relatedLinks={[
         { title: "Top Dubai Activities to Book Online", link: "/blog/best-dubai-activities" },

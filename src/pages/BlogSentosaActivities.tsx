@@ -15,7 +15,7 @@ const BlogSentosaActivities = () => {
       date="Feb 21, 2026"
       readTime="10 min read"
       category="Theme Parks & Activities"
-      guidesLink="/singapore-smart-guides"
+      guidesLink="/singapore/destination-guides"
       guidesLabel="Singapore Guides"
       keywords={[
         "Sentosa activities Singapore",
@@ -31,9 +31,9 @@ const BlogSentosaActivities = () => {
       ]}
       relatedLinks={[
         { title: "Singapore Airport Transfer Guide", link: "/blog/airport-transfer-booking-singapore" },
-        { title: "Universal Studios Weekday", link: "/universal-studios-weekday" },
-        { title: "Sentosa Cable Car", link: "/sentosa-cable-car" },
-        { title: "Sky Helix Sentosa", link: "/sentosa-sky-helix" },
+        { title: "Universal Studios Weekday", link: "/singapore/universal-studios-weekday" },
+        { title: "Sentosa Cable Car", link: "/singapore/sentosa-cable-car" },
+        { title: "Sky Helix Sentosa", link: "/singapore/sentosa-sky-helix" },
       ]}
       sections={[
         {
@@ -173,7 +173,7 @@ const BlogSentosaActivities = () => {
         {
           type: "cta",
           content: "Ready to explore Sentosa? Plan smart, travel better, and create unforgettable memories!",
-          link: "/sentosa-island",
+          link: "/singapore/sentosa-island",
           linkText: "🎢 Book Sentosa Activities Now",
         },
       ]}

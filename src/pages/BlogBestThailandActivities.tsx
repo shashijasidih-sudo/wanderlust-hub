@@ -22,21 +22,21 @@ import nongNooch from "@/assets/pattaya-tropical-beach-1.jpg";
 import cruiseNight from "@/assets/cruise-night-1.jpg";
 
 const activityCards = [
-  { title: "Phi Phi Island, Maya Bay & Khai Island Speedboat", location: "Phuket", image: phiPhi, slug: "/phi-phi-island" },
-  { title: "James Bond Island & Phang Nga Bay Tour", location: "Phuket", image: jamesBond, slug: "/james-bond-island" },
-  { title: "Grand Palace & Emerald Buddha Temple Tour", location: "Bangkok", image: grandPalace, slug: "/bangkok-grand-palace-emerald" },
-  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/safari-world" },
-  { title: "Coral Island & Water Sports Pattaya", location: "Pattaya", image: coralIsland, slug: "/coral-island-pattaya" },
-  { title: "Floating Market & Railway Market Tour", location: "Bangkok", image: floatingMarket, slug: "/maeklong-floating-market" },
-  { title: "Alcazar Cabaret Show Pattaya", location: "Pattaya", image: alcazar, slug: "/alcazar-show-pattaya" },
-  { title: "Dolphin Show Phuket", location: "Phuket", image: dolphinShow, slug: "/dolphin-show" },
-  { title: "Selfie with Tigers", location: "Phuket", image: tigerSelfie, slug: "/selfie-tigers" },
-  { title: "Bangkok King Power Mahanakhon Skywalk", location: "Bangkok", image: bangkokSkywalk, slug: "/bangkok-skywalk" },
-  { title: "Hot Spring & Emerald Pool with Tiger Cave", location: "Krabi", image: hotSpring, slug: "/hot-spring" },
-  { title: "Thai Massage Coupon Packages", location: "Bangkok", image: massage, slug: "/massage-coupons" },
-  { title: "Nong Nooch Tropical Garden", location: "Pattaya", image: nongNooch, slug: "/nong-nooch-garden" },
-  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruiseNight, slug: "/chao-phraya-princess-join" },
-  { title: "Bangkok Three Temples City Tour", location: "Bangkok", image: bangkokTemple, slug: "/bangkok-three-temples" },
+  { title: "Phi Phi Island, Maya Bay & Khai Island Speedboat", location: "Phuket", image: phiPhi, slug: "/phuket/phi-phi-island-tour" },
+  { title: "James Bond Island & Phang Nga Bay Tour", location: "Phuket", image: jamesBond, slug: "/phuket/james-bond-island-tour" },
+  { title: "Grand Palace & Emerald Buddha Temple Tour", location: "Bangkok", image: grandPalace, slug: "/bangkok/grand-palace-emerald" },
+  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/bangkok/safari-world" },
+  { title: "Coral Island & Water Sports Pattaya", location: "Pattaya", image: coralIsland, slug: "/pattaya/coral-island" },
+  { title: "Floating Market & Railway Market Tour", location: "Bangkok", image: floatingMarket, slug: "/bangkok/maeklong-floating-market" },
+  { title: "Alcazar Cabaret Show Pattaya", location: "Pattaya", image: alcazar, slug: "/pattaya/alcazar-show" },
+  { title: "Dolphin Show Phuket", location: "Phuket", image: dolphinShow, slug: "/bangkok/dolphin-show" },
+  { title: "Selfie with Tigers", location: "Phuket", image: tigerSelfie, slug: "/phuket/selfie-with-tigers" },
+  { title: "Bangkok King Power Mahanakhon Skywalk", location: "Bangkok", image: bangkokSkywalk, slug: "/bangkok/skywalk" },
+  { title: "Hot Spring & Emerald Pool with Tiger Cave", location: "Krabi", image: hotSpring, slug: "/phuket/hot-spring-emerald-pool" },
+  { title: "Thai Massage Coupon Packages", location: "Bangkok", image: massage, slug: "/bangkok/massage-coupons" },
+  { title: "Nong Nooch Tropical Garden", location: "Pattaya", image: nongNooch, slug: "/pattaya/nong-nooch-garden" },
+  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruiseNight, slug: "/bangkok/chao-phraya-princess-with-transfer" },
+  { title: "Bangkok Three Temples City Tour", location: "Bangkok", image: bangkokTemple, slug: "/bangkok/three-temples-tour" },
 ];
 
 const ActivityCards = () => {
@@ -83,7 +83,7 @@ const BlogBestThailandActivities = () => {
       readTime="12 min read"
       category="Thailand Travel Guide"
       keywords={["Thailand activities booking online", "best things to do in Thailand", "Thailand tour booking", "Thailand island tours", "Bangkok temple tours", "Phuket activities", "Pattaya tours", "Krabi tours", "Thailand travel guide 2026", "Yellodae Thailand"]}
-      guidesLink="/thailand-smart-guides"
+      guidesLink="/thailand/destination-guides"
       guidesLabel="Thailand Guides"
       relatedLinks={[
         { title: "Top Phuket Island Tours for Indian Travelers", link: "/blog/top-phuket-island-tours" },

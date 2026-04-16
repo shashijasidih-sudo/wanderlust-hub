@@ -22,21 +22,21 @@ import muslimTour from "@/assets/phuket-muslim-woman-hijab.jpg";
 import hotSpring from "@/assets/hot-spring-emerald-hero.jpg";
 
 const activityCards = [
-  { title: "Phi Phi Island, Maya Bay & Khai Island Speedboat", location: "Phuket", image: phiPhi, slug: "/phi-phi-island" },
-  { title: "Phi Phi Island Big Boat Tour", location: "Phuket", image: phiPhiBigBoat, slug: "/phi-phi-big-boat" },
-  { title: "Phi Phi Royal Jet Speedboat Tour", location: "Phuket", image: phiPhiRoyal, slug: "/phi-phi-royal-jet" },
-  { title: "Phi Phi Maya & Khai Speedboat", location: "Phuket", image: phiPhiMaya, slug: "/phi-phi-maya-khai-speedboat" },
-  { title: "James Bond Island & Phang Nga Bay", location: "Phuket", image: jamesBond, slug: "/james-bond-island" },
-  { title: "James Bond Island with Sea Canoe", location: "Phuket", image: jamesBondCanoe, slug: "/james-bond-island-sea-canoe" },
-  { title: "Dolphin Show Phuket", location: "Phuket", image: dolphin, slug: "/dolphin-show" },
-  { title: "Dolphin Bay Phuket", location: "Phuket", image: dolphinBay, slug: "/dolphin-bay-phuket" },
-  { title: "Selfie with Tigers Phuket", location: "Phuket", image: tiger, slug: "/selfie-tigers" },
-  { title: "Selfie with Tigers & ATV Ride", location: "Phuket", image: tigerAtv, slug: "/selfie-tigers-atv" },
-  { title: "Phuket Carnival Magic Show", location: "Phuket", image: carnival, slug: "/phuket-carnival-magic" },
-  { title: "Phuket Simon Cabaret Show", location: "Phuket", image: simonCabaret, slug: "/phuket-simon-cabaret" },
-  { title: "Phuket City Night Market Tour", location: "Phuket", image: nightMarket, slug: "/phuket-city-night-market" },
-  { title: "Phuket Muslim Friendly Tour", location: "Phuket", image: muslimTour, slug: "/phuket-muslim-friendly-tour" },
-  { title: "Hot Spring & Emerald Pool Krabi", location: "Krabi", image: hotSpring, slug: "/hot-spring" },
+  { title: "Phi Phi Island, Maya Bay & Khai Island Speedboat", location: "Phuket", image: phiPhi, slug: "/phuket/phi-phi-island-tour" },
+  { title: "Phi Phi Island Big Boat Tour", location: "Phuket", image: phiPhiBigBoat, slug: "/phuket/phi-phi-big-boat" },
+  { title: "Phi Phi Royal Jet Speedboat Tour", location: "Phuket", image: phiPhiRoyal, slug: "/phuket/phi-phi-royal-jet" },
+  { title: "Phi Phi Maya & Khai Speedboat", location: "Phuket", image: phiPhiMaya, slug: "/phuket/phi-phi-maya-khai-speedboat" },
+  { title: "James Bond Island & Phang Nga Bay", location: "Phuket", image: jamesBond, slug: "/phuket/james-bond-island-tour" },
+  { title: "James Bond Island with Sea Canoe", location: "Phuket", image: jamesBondCanoe, slug: "/phuket/james-bond-island-sea-canoe" },
+  { title: "Dolphin Show Phuket", location: "Phuket", image: dolphin, slug: "/bangkok/dolphin-show" },
+  { title: "Dolphin Bay Phuket", location: "Phuket", image: dolphinBay, slug: "/phuket/dolphin-bay" },
+  { title: "Selfie with Tigers Phuket", location: "Phuket", image: tiger, slug: "/phuket/selfie-with-tigers" },
+  { title: "Selfie with Tigers & ATV Ride", location: "Phuket", image: tigerAtv, slug: "/phuket/selfie-with-tigers-atv" },
+  { title: "Phuket Carnival Magic Show", location: "Phuket", image: carnival, slug: "/phuket/carnival-magic" },
+  { title: "Phuket Simon Cabaret Show", location: "Phuket", image: simonCabaret, slug: "/phuket/simon-cabaret" },
+  { title: "Phuket City Night Market Tour", location: "Phuket", image: nightMarket, slug: "/phuket/city-night-market" },
+  { title: "Phuket Muslim Friendly Tour", location: "Phuket", image: muslimTour, slug: "/phuket/muslim-friendly-tour" },
+  { title: "Hot Spring & Emerald Pool Krabi", location: "Krabi", image: hotSpring, slug: "/phuket/hot-spring-emerald-pool" },
 ];
 
 const ActivityCards = () => {
@@ -81,7 +81,7 @@ const BlogTopPhuketTours = () => {
       readTime="14 min read"
       category="Phuket Travel Guide"
       keywords={["Phuket island tours for Indians", "Phi Phi Island tour from Phuket", "James Bond Island Phuket", "Phuket activities for Indian travelers", "best Phuket tours 2026", "Phuket tour booking online", "Yellodae Phuket"]}
-      guidesLink="/thailand-smart-guides"
+      guidesLink="/thailand/destination-guides"
       guidesLabel="Thailand Guides"
       relatedLinks={[
         { title: "Best Thailand Activities to Book Online", link: "/blog/best-thailand-activities" },

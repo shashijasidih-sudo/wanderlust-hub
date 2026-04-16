@@ -21,21 +21,21 @@ import gardensBayNight from "@/assets/singapore-gardens-bay-night-1.jpg";
 import bigBus from "@/assets/singapore-big-bus.jpg";
 
 const activityCards = [
-  { title: "Gardens by the Bay Tickets", location: "Marina Bay", image: gardensBay, slug: "/gardens-by-the-bay" },
-  { title: "Universal Studios Weekday", location: "Sentosa", image: universalStudios, slug: "/universal-studios-weekday" },
-  { title: "Night Safari with Dinner", location: "Mandai", image: nightSafari, slug: "/night-safari-dinner" },
-  { title: "Singapore City Tour", location: "Singapore", image: cityTour, slug: "/singapore-city-tour" },
-  { title: "Sentosa Cable Car Ride", location: "Sentosa", image: cableCar, slug: "/sentosa-cable-car" },
-  { title: "Singapore Flyer Ticket", location: "Marina Bay", image: flyer, slug: "/singapore-flyer" },
-  { title: "Adventure Cove Water Park", location: "Sentosa", image: adventureCove, slug: "/adventure-cove" },
-  { title: "Singapore River Cruise", location: "Clarke Quay", image: riverCruise, slug: "/singapore-river-cruise" },
-  { title: "Singapore Zoo + Tram Ride", location: "Mandai", image: zoo, slug: "/singapore-zoo" },
-  { title: "Sentosa Wings of Time Show", location: "Sentosa", image: wingsTime, slug: "/sentosa-wings-time" },
-  { title: "Sentosa Sky Helix", location: "Sentosa", image: skyHelix, slug: "/sentosa-sky-helix" },
+  { title: "Gardens by the Bay Tickets", location: "Marina Bay", image: gardensBay, slug: "/singapore/gardens-by-the-bay" },
+  { title: "Universal Studios Weekday", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-weekday" },
+  { title: "Night Safari with Dinner", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-dinner" },
+  { title: "Singapore City Tour", location: "Singapore", image: cityTour, slug: "/singapore/city-tour" },
+  { title: "Sentosa Cable Car Ride", location: "Sentosa", image: cableCar, slug: "/singapore/sentosa-cable-car" },
+  { title: "Singapore Flyer Ticket", location: "Marina Bay", image: flyer, slug: "/singapore/flyer" },
+  { title: "Adventure Cove Water Park", location: "Sentosa", image: adventureCove, slug: "/singapore/adventure-cove" },
+  { title: "Singapore River Cruise", location: "Clarke Quay", image: riverCruise, slug: "/singapore/river-cruise" },
+  { title: "Singapore Zoo + Tram Ride", location: "Mandai", image: zoo, slug: "/singapore/zoo" },
+  { title: "Sentosa Wings of Time Show", location: "Sentosa", image: wingsTime, slug: "/singapore/sentosa-wings-time" },
+  { title: "Sentosa Sky Helix", location: "Sentosa", image: skyHelix, slug: "/singapore/sentosa-sky-helix" },
   { title: "Sentosa 4D Adventureland", location: "Sentosa", image: sentosa4d, slug: "/sentosa-4d-2rides" },
-  { title: "Universal Studios Weekend", location: "Sentosa", image: universalStudios, slug: "/universal-studios-weekend" },
-  { title: "Big Bus Singapore Discover", location: "Singapore", image: bigBus, slug: "/big-bus-discover" },
-  { title: "Night Safari with Transfer", location: "Mandai", image: nightSafari, slug: "/night-safari-transfer" },
+  { title: "Universal Studios Weekend", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-weekend" },
+  { title: "Big Bus Singapore Discover", location: "Singapore", image: bigBus, slug: "/singapore/big-bus-discover" },
+  { title: "Night Safari with Transfer", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-transfer" },
 ];
 
 const ActivityCards = () => {
@@ -82,7 +82,7 @@ const BlogSingaporeComboPass = () => {
       readTime="9 min read"
       category="Singapore Travel Guide"
       keywords={["Singapore combo pass", "Singapore combo pass booking", "best Singapore combo pass", "Singapore attraction tickets", "Singapore travel combo", "Yellodae Singapore"]}
-      guidesLink="/singapore-smart-guides"
+      guidesLink="/singapore/destination-guides"
       guidesLabel="Singapore Guides"
       relatedLinks={[
         { title: "Best Singapore Attraction Tickets", link: "/blog/best-singapore-attractions" },

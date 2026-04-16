@@ -21,21 +21,21 @@ import merlion from "@/assets/singapore-merlion-night-1.jpg";
 import gardensBayNight from "@/assets/singapore-gardens-bay-night-1.jpg";
 
 const activityCards = [
-  { title: "Singapore City Tour", location: "Singapore", image: cityTour, slug: "/singapore-city-tour" },
-  { title: "Gardens by the Bay", location: "Marina Bay", image: gardensBay, slug: "/gardens-by-the-bay" },
-  { title: "Universal Studios Weekday", location: "Sentosa", image: universalStudios, slug: "/universal-studios-weekday" },
-  { title: "Night Safari with Dinner", location: "Mandai", image: nightSafari, slug: "/night-safari-dinner" },
-  { title: "Singapore River Cruise", location: "Clarke Quay", image: riverCruise, slug: "/singapore-river-cruise" },
-  { title: "Sentosa Cable Car", location: "Sentosa", image: cableCar, slug: "/sentosa-cable-car" },
-  { title: "Singapore Flyer Ticket", location: "Marina Bay", image: flyer, slug: "/singapore-flyer" },
-  { title: "Adventure Cove Water Park", location: "Sentosa", image: adventureCove, slug: "/adventure-cove" },
-  { title: "Singapore Zoo + Tram", location: "Mandai", image: zoo, slug: "/singapore-zoo" },
-  { title: "Wings of Time Show", location: "Sentosa", image: wingsTime, slug: "/sentosa-wings-time" },
-  { title: "Sentosa Sky Helix", location: "Sentosa", image: skyHelix, slug: "/sentosa-sky-helix" },
-  { title: "Big Bus Singapore", location: "Singapore", image: bigBus, slug: "/big-bus-discover" },
-  { title: "Night Safari with Transfer", location: "Mandai", image: nightSafari, slug: "/night-safari-transfer" },
-  { title: "Universal Studios Weekend", location: "Sentosa", image: universalStudios, slug: "/universal-studios-weekend" },
-  { title: "Big Bus Night Tour", location: "Singapore", image: bigBus, slug: "/big-bus-night" },
+  { title: "Singapore City Tour", location: "Singapore", image: cityTour, slug: "/singapore/city-tour" },
+  { title: "Gardens by the Bay", location: "Marina Bay", image: gardensBay, slug: "/singapore/gardens-by-the-bay" },
+  { title: "Universal Studios Weekday", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-weekday" },
+  { title: "Night Safari with Dinner", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-dinner" },
+  { title: "Singapore River Cruise", location: "Clarke Quay", image: riverCruise, slug: "/singapore/river-cruise" },
+  { title: "Sentosa Cable Car", location: "Sentosa", image: cableCar, slug: "/singapore/sentosa-cable-car" },
+  { title: "Singapore Flyer Ticket", location: "Marina Bay", image: flyer, slug: "/singapore/flyer" },
+  { title: "Adventure Cove Water Park", location: "Sentosa", image: adventureCove, slug: "/singapore/adventure-cove" },
+  { title: "Singapore Zoo + Tram", location: "Mandai", image: zoo, slug: "/singapore/zoo" },
+  { title: "Wings of Time Show", location: "Sentosa", image: wingsTime, slug: "/singapore/sentosa-wings-time" },
+  { title: "Sentosa Sky Helix", location: "Sentosa", image: skyHelix, slug: "/singapore/sentosa-sky-helix" },
+  { title: "Big Bus Singapore", location: "Singapore", image: bigBus, slug: "/singapore/big-bus-discover" },
+  { title: "Night Safari with Transfer", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-transfer" },
+  { title: "Universal Studios Weekend", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-weekend" },
+  { title: "Big Bus Night Tour", location: "Singapore", image: bigBus, slug: "/singapore/big-bus-night" },
 ];
 
 const ActivityCards = () => {
@@ -82,7 +82,7 @@ const BlogSingaporeFoodExperiences = () => {
       readTime="10 min read"
       category="Singapore Travel Guide"
       keywords={["Singapore food experiences", "Singapore food tours", "hawker centre Singapore", "best Singapore food", "Singapore culinary tour", "Chinatown food Singapore", "Little India food", "Yellodae Singapore"]}
-      guidesLink="/singapore-smart-guides"
+      guidesLink="/singapore/destination-guides"
       guidesLabel="Singapore Guides"
       relatedLinks={[
         { title: "Best Singapore Attraction Tickets", link: "/blog/best-singapore-attractions" },

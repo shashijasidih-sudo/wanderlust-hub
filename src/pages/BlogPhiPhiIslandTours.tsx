@@ -29,9 +29,9 @@ const BlogPhiPhiIslandTours = () => {
       ]}
       relatedLinks={[
         { title: "Airport Transfer Guide", link: "/blog/airport-transfer-booking-thailand" },
-        { title: "Phi Phi Big Boat Tour", link: "/phi-phi-big-boat" },
-        { title: "Phi Phi Royal Jet Speedboat", link: "/phi-phi-royal-jet" },
-        { title: "James Bond Island Tour", link: "/james-bond-island" },
+        { title: "Phi Phi Big Boat Tour", link: "/phuket/phi-phi-big-boat" },
+        { title: "Phi Phi Royal Jet Speedboat", link: "/phuket/phi-phi-royal-jet" },
+        { title: "James Bond Island Tour", link: "/phuket/james-bond-island-tour" },
       ]}
       sections={[
         {
@@ -188,7 +188,7 @@ const BlogPhiPhiIslandTours = () => {
         {
           type: "cta",
           content: "Ready to explore Phi Phi Island? Book your tour now and experience Thailand's most beautiful island!",
-          link: "/phi-phi-island",
+          link: "/phuket/phi-phi-island-tour",
           linkText: "🏝️ Book Phi Phi Tour Now",
         },
       ]}

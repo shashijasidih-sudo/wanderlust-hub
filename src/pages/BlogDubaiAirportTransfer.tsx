@@ -15,7 +15,7 @@ const BlogDubaiAirportTransfer = () => {
       date="Feb 17, 2026"
       readTime="9 min read"
       category="Dubai Transfers"
-      guidesLink="/dubai-smart-guides"
+      guidesLink="/dubai/destination-guides"
       guidesLabel="Dubai Guides"
       keywords={[
         "Dubai airport transfer booking",
@@ -32,8 +32,8 @@ const BlogDubaiAirportTransfer = () => {
       relatedLinks={[
         { title: "Dubai Desert Safari Guide", link: "/blog/desert-safari-deals-dubai" },
         { title: "Dubai Transfers", link: "/dubai/transfers" },
-        { title: "Dubai City Tour", link: "/dubai-city-tour" },
-        { title: "Dhow Cruise Dubai", link: "/dhow-cruise" },
+        { title: "Dubai City Tour", link: "/dubai/city-tour" },
+        { title: "Dhow Cruise Dubai", link: "/dubai/dhow-cruise" },
       ]}
       sections={[
         {
