@@ -140,14 +140,14 @@ const HeroSection = () => {
           <Button 
             variant="secondary" 
             className="bg-white/90 hover:bg-white backdrop-blur-sm"
-            onClick={() => navigate("/thailand/transfers")}
+            onClick={() => navigate("/thailand/budget-airport-transfers")}
           >
             Thailand Transfers
           </Button>
           <Button 
             variant="secondary" 
             className="bg-white/90 hover:bg-white backdrop-blur-sm"
-            onClick={() => navigate("/singapore/transfers")}
+            onClick={() => navigate("/singapore/budget-airport-transfers")}
           >
             Singapore Transfers
           </Button>

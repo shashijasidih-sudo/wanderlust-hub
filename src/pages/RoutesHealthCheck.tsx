@@ -13,7 +13,7 @@ const dubaiRoutes = [
   "/dubai/burj-khalifa-non-prime", "/dubai/burj-khalifa-prime", "/dubai/dolphin-show",
   "/dubai/miracle-garden", "/dubai/fountain-show", "/dubai/destination-guides",
   "/blog/airport-transfer-booking-dubai", "/blog/desert-safari-deals-dubai",
-  "/dubai/transfers", "/dubai/airport-pickup-zone-1", "/dubai/airport-dropoff-zone-1",
+  "/dubai/budget-airport-transfers", "/dubai/airport-pickup-zone-1", "/dubai/airport-dropoff-zone-1",
   "/dubai/airport-pickup-zone-2", "/dubai/airport-dropoff-zone-2",
   "/dubai/airport-pickup-zone-3", "/dubai/airport-dropoff-zone-3",
   "/dubai/airport-pickup-zone-4", "/dubai/airport-dropoff-zone-4",
@@ -30,7 +30,7 @@ const singaporeRoutes = [
   "/singapore/zoo", "/singapore/rainforest-wild-asia", "/singapore/big-bus-discover",
   "/singapore/big-bus-night", "/singapore/sentosa-island", "/singapore/destination-guides",
   "/blog/airport-transfer-booking-singapore", "/blog/sentosa-activities-singapore",
-  "/singapore/transfers", "/singapore/airport-pickup",
+  "/singapore/budget-airport-transfers", "/singapore/airport-pickup",
   "/singapore/airport-dropoff", "/singapore/airport-night-pickup",
 ];
 

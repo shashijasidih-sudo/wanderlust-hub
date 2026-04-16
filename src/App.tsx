@@ -584,6 +584,13 @@ const App = () => (
             <Route path="/bangkok/safari-world-dmk-airport" element={<Navigate to="/bangkok/airport-transfers/safari-world-dmk" replace />} />
             <Route path="/bangkok/temple-tour-airport" element={<Navigate to="/bangkok/airport-transfers/temple-tour-bkk" replace />} />
             <Route path="/bangkok/temple-tour-dmk-airport" element={<Navigate to="/bangkok/airport-transfers/temple-tour-dmk" replace />} />
+            <Route path="/bangkok/transfers" element={<Navigate to="/bangkok/budget-airport-transfers" replace />} />
+            <Route path="/pattaya/transfers" element={<Navigate to="/pattaya/budget-airport-transfers" replace />} />
+            <Route path="/phuket/transfers" element={<Navigate to="/phuket/budget-airport-transfers" replace />} />
+            <Route path="/krabi/transfers" element={<Navigate to="/krabi/budget-airport-transfers" replace />} />
+            <Route path="/thailand/transfers" element={<Navigate to="/thailand/budget-airport-transfers" replace />} />
+            <Route path="/dubai/transfers" element={<Navigate to="/dubai/budget-airport-transfers" replace />} />
+            <Route path="/singapore/transfers" element={<Navigate to="/singapore/budget-airport-transfers" replace />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
