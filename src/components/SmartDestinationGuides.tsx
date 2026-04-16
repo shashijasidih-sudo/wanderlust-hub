@@ -10,19 +10,19 @@ const guides = [
     name: "Thailand",
     description: "Beaches, Temples & Street Food",
     image: thailandImage,
-    link: "/thailand-smart-guides"
+    link: "/thailand/destination-guides"
   },
   {
     name: "Dubai",
     description: "Luxury, Desert & Modern Marvels",
     image: dubaiImage,
-    link: "/dubai-smart-guides"
+    link: "/dubai/destination-guides"
   },
   {
     name: "Singapore",
     description: "Gardens, Culture & Urban Delights",
     image: singaporeImage,
-    link: "/singapore-smart-guides"
+    link: "/singapore/destination-guides"
   },
   {
     name: "Netherlands",

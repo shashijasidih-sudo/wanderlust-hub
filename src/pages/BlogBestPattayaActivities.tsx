@@ -21,21 +21,21 @@ import tigerSelfie from "@/assets/tiger-1.jpg";
 import safariWorld from "@/assets/elephant-safari-hero.jpg";
 
 const activityCards = [
-  { title: "Coral Island & Water Sports", location: "Pattaya", image: coralIsland, slug: "/coral-island-pattaya" },
-  { title: "Alcazar Cabaret Show", location: "Pattaya", image: alcazar, slug: "/alcazar-show-pattaya" },
-  { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/pattaya-floating-market-tour" },
-  { title: "Pattaya Floating Market Guided", location: "Pattaya", image: floatingGuided, slug: "/pattaya-floating-market-guided" },
-  { title: "Nong Nooch Tropical Garden", location: "Pattaya", image: nongNooch, slug: "/nong-nooch-garden" },
-  { title: "Pattaya Dolphinarium", location: "Pattaya", image: dolphinarium, slug: "/pattaya-dolphinarium" },
-  { title: "Muay Thai Live Show", location: "Pattaya", image: muayThai, slug: "/muay-thai-pattaya" },
-  { title: "Pattaya Big Buddha & Gems Gallery", location: "Pattaya", image: bigBuddha, slug: "/pattaya-big-buddha-gems" },
-  { title: "Pattaya Nightlife Walking Tour", location: "Pattaya", image: nightlife, slug: "/pattaya-nightlife-walking" },
-  { title: "Pattaya Pub Crawl", location: "Pattaya", image: pubCrawl, slug: "/pattaya-pub-crawl" },
-  { title: "Elephant Safari Phuket", location: "Phuket", image: elephantSafari, slug: "/elephant-safari" },
-  { title: "Selfie with Tigers", location: "Phuket", image: tigerSelfie, slug: "/selfie-tigers" },
-  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/safari-world" },
-  { title: "Dolphin Show Phuket", location: "Phuket", image: speedboat, slug: "/dolphin-show" },
-  { title: "Alcazar Show + Floating Market Combo", location: "Pattaya", image: alcazar, slug: "/pattaya-floating-market-tour" },
+  { title: "Coral Island & Water Sports", location: "Pattaya", image: coralIsland, slug: "/pattaya/coral-island" },
+  { title: "Alcazar Cabaret Show", location: "Pattaya", image: alcazar, slug: "/pattaya/alcazar-show" },
+  { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/pattaya/floating-market-tour" },
+  { title: "Pattaya Floating Market Guided", location: "Pattaya", image: floatingGuided, slug: "/pattaya/floating-market-guided" },
+  { title: "Nong Nooch Tropical Garden", location: "Pattaya", image: nongNooch, slug: "/pattaya/nong-nooch-garden" },
+  { title: "Pattaya Dolphinarium", location: "Pattaya", image: dolphinarium, slug: "/pattaya/dolphinarium" },
+  { title: "Muay Thai Live Show", location: "Pattaya", image: muayThai, slug: "/pattaya/muay-thai" },
+  { title: "Pattaya Big Buddha & Gems Gallery", location: "Pattaya", image: bigBuddha, slug: "/pattaya/big-buddha-gems" },
+  { title: "Pattaya Nightlife Walking Tour", location: "Pattaya", image: nightlife, slug: "/pattaya/nightlife-walking-tour" },
+  { title: "Pattaya Pub Crawl", location: "Pattaya", image: pubCrawl, slug: "/pattaya/pub-crawl" },
+  { title: "Elephant Safari Phuket", location: "Phuket", image: elephantSafari, slug: "/phuket/elephant-safari" },
+  { title: "Selfie with Tigers", location: "Phuket", image: tigerSelfie, slug: "/phuket/selfie-with-tigers" },
+  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/bangkok/safari-world" },
+  { title: "Dolphin Show Phuket", location: "Phuket", image: speedboat, slug: "/bangkok/dolphin-show" },
+  { title: "Alcazar Show + Floating Market Combo", location: "Pattaya", image: alcazar, slug: "/pattaya/floating-market-tour" },
 ];
 
 const ActivityCards = () => {
@@ -80,7 +80,7 @@ const BlogBestPattayaActivities = () => {
       readTime="13 min read"
       category="Pattaya Travel Guide"
       keywords={["Pattaya activities for first time visitors", "best things to do in Pattaya", "Pattaya tour booking", "Coral Island Pattaya", "Alcazar Show Pattaya", "Pattaya nightlife", "Pattaya travel guide 2026", "Yellodae Pattaya"]}
-      guidesLink="/thailand-smart-guides"
+      guidesLink="/thailand/destination-guides"
       guidesLabel="Thailand Guides"
       relatedLinks={[
         { title: "Best Thailand Activities to Book Online", link: "/blog/best-thailand-activities" },

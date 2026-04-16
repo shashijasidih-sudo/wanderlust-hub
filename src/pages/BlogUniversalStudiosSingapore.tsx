@@ -21,21 +21,21 @@ import riverSafari from "@/assets/singapore-river-safari.jpg";
 import sentosaIsland from "@/assets/singapore-sentosa-4d.jpg";
 
 const activityCards = [
-  { title: "Universal Studios Weekday Ticket", location: "Sentosa", image: universalStudios, slug: "/universal-studios-weekday" },
-  { title: "Universal Studios Weekend Ticket", location: "Sentosa", image: universalStudios, slug: "/universal-studios-weekend" },
-  { title: "Adventure Cove Water Park", location: "Sentosa", image: adventureCove, slug: "/adventure-cove" },
-  { title: "Sentosa Cable Car", location: "Sentosa", image: cableCar, slug: "/sentosa-cable-car" },
-  { title: "Wings of Time Show", location: "Sentosa", image: wingsTime, slug: "/sentosa-wings-time" },
-  { title: "Sentosa Sky Helix", location: "Sentosa", image: skyHelix, slug: "/sentosa-sky-helix" },
+  { title: "Universal Studios Weekday Ticket", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-weekday" },
+  { title: "Universal Studios Weekend Ticket", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-weekend" },
+  { title: "Adventure Cove Water Park", location: "Sentosa", image: adventureCove, slug: "/singapore/adventure-cove" },
+  { title: "Sentosa Cable Car", location: "Sentosa", image: cableCar, slug: "/singapore/sentosa-cable-car" },
+  { title: "Wings of Time Show", location: "Sentosa", image: wingsTime, slug: "/singapore/sentosa-wings-time" },
+  { title: "Sentosa Sky Helix", location: "Sentosa", image: skyHelix, slug: "/singapore/sentosa-sky-helix" },
   { title: "Sentosa 4D Adventureland", location: "Sentosa", image: sentosa4d, slug: "/sentosa-4d-2rides" },
-  { title: "Gardens by the Bay", location: "Marina Bay", image: gardensBay, slug: "/gardens-by-the-bay" },
-  { title: "Night Safari Singapore", location: "Mandai", image: nightSafari, slug: "/night-safari-tickets" },
-  { title: "Singapore Flyer", location: "Marina Bay", image: flyer, slug: "/singapore-flyer" },
-  { title: "Singapore City Tour", location: "Singapore", image: cityTour, slug: "/singapore-city-tour" },
-  { title: "Singapore River Cruise", location: "Clarke Quay", image: riverCruise, slug: "/singapore-river-cruise" },
-  { title: "Singapore Zoo + Tram", location: "Mandai", image: zoo, slug: "/singapore-zoo" },
-  { title: "River Safari Singapore", location: "Mandai", image: riverSafari, slug: "/river-safari" },
-  { title: "Big Bus Discover Tour", location: "Singapore", image: bigBus, slug: "/big-bus-discover" },
+  { title: "Gardens by the Bay", location: "Marina Bay", image: gardensBay, slug: "/singapore/gardens-by-the-bay" },
+  { title: "Night Safari Singapore", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari" },
+  { title: "Singapore Flyer", location: "Marina Bay", image: flyer, slug: "/singapore/flyer" },
+  { title: "Singapore City Tour", location: "Singapore", image: cityTour, slug: "/singapore/city-tour" },
+  { title: "Singapore River Cruise", location: "Clarke Quay", image: riverCruise, slug: "/singapore/river-cruise" },
+  { title: "Singapore Zoo + Tram", location: "Mandai", image: zoo, slug: "/singapore/zoo" },
+  { title: "River Safari Singapore", location: "Mandai", image: riverSafari, slug: "/singapore/river-safari" },
+  { title: "Big Bus Discover Tour", location: "Singapore", image: bigBus, slug: "/singapore/big-bus-discover" },
 ];
 
 const ActivityCards = () => {
@@ -143,7 +143,7 @@ const BlogUniversalStudiosSingapore = () => {
         "Combo deals with other Sentosa attractions",
         "Free cancellation up to 24 hours before",
       ]},
-      { type: "cta", content: "Book your Universal Studios Singapore tickets now at the lowest price!", link: "/universal-studios-weekday", linkText: "🎢 Book USS Tickets Now" },
+      { type: "cta", content: "Book your Universal Studios Singapore tickets now at the lowest price!", link: "/singapore/universal-studios-weekday", linkText: "🎢 Book USS Tickets Now" },
     ]}
   >
     <ActivityCards />

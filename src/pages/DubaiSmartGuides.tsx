@@ -107,7 +107,7 @@ const blogArticles = [
     author: "Desert Expert",
     date: "Nov 25, 2024",
     readTime: "8 min read",
-    slug: "/desert-safari"
+    slug: "/dubai/desert-safari"
   },
   {
     id: 2,
@@ -140,7 +140,7 @@ const blogArticles = [
     author: "Food Critic",
     date: "Nov 18, 2024",
     readTime: "7 min read",
-    slug: "/dhow-cruise"
+    slug: "/dubai/dhow-cruise"
   },
   {
     id: 5,
@@ -173,7 +173,7 @@ const blogArticles = [
     author: "Island Explorer",
     date: "Nov 10, 2024",
     readTime: "8 min read",
-    slug: "/atlantis-palm"
+    slug: "/dubai/atlantis-aquaventure"
   },
   {
     id: 8,

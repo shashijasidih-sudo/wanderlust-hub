@@ -15,21 +15,21 @@ import dubaiDesertCouple2 from "@/assets/dubai-desert-couple-2.jpg";
 import dubaiFountainShow from "@/assets/dubai-fountain-show-1.jpg";
 
 const desertActivityCards = [
-  { title: "Desert Safari with Sharing Transfer", location: "Lahbab Desert", image: dubaiDesertCouple2, slug: "/desert-safari-sharing" },
-  { title: "Desert Safari with Shisha", location: "Lahbab Desert", image: desertImg, slug: "/desert-safari-shisha" },
-  { title: "Burj Khalifa Non-Prime", location: "Downtown Dubai", image: sunsetImg, slug: "/burj-khalifa-non-prime" },
-  { title: "Dhow Creek Cruise - Lower Deck", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dhow-cruise-creek-lower" },
-  { title: "Dhow Marina Cruise - Lower Deck", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dhow-cruise-marina-lower" },
-  { title: "Dubai City Tour", location: "Dubai", image: dubaiCityNight, slug: "/dubai-city-tour" },
-  { title: "Dubai City Tour with Mall", location: "Dubai", image: sunsetImg, slug: "/dubai-city-tour-mall" },
-  { title: "Global Village Dubai", location: "Dubai", image: villageImg, slug: "/global-village-dubai" },
-  { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: sunsetImg, slug: "/abu-dhabi-city-tour" },
-  { title: "Abu Dhabi + Ferrari World", location: "Abu Dhabi", image: dubaiSkylineNight, slug: "/abu-dhabi-ferrari-world" },
-  { title: "Dubai Aquarium + Penguin Cove", location: "Dubai Mall", image: dubaiAquariumFish, slug: "/dubai-aquarium-penguin" },
-  { title: "Dubai Fountain Show + Lake Ride", location: "Downtown Dubai", image: dubaiFountainShow, slug: "/dubai-fountain-show" },
-  { title: "Dubai Dolphin & Seal Show", location: "Dubai", image: dubaiAquariumFish, slug: "/dubai-dolphin-show" },
-  { title: "Miracle Garden Dubai", location: "Dubai", image: villageImg, slug: "/miracle-garden-dubai" },
-  { title: "Burj Khalifa Prime", location: "Downtown Dubai", image: dubaiSkylineNight, slug: "/burj-khalifa-prime" },
+  { title: "Desert Safari with Sharing Transfer", location: "Lahbab Desert", image: dubaiDesertCouple2, slug: "/dubai/desert-safari-sharing" },
+  { title: "Desert Safari with Shisha", location: "Lahbab Desert", image: desertImg, slug: "/dubai/desert-safari-shisha" },
+  { title: "Burj Khalifa Non-Prime", location: "Downtown Dubai", image: sunsetImg, slug: "/dubai/burj-khalifa-non-prime" },
+  { title: "Dhow Creek Cruise - Lower Deck", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-creek-lower-deck" },
+  { title: "Dhow Marina Cruise - Lower Deck", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-marina-lower-deck" },
+  { title: "Dubai City Tour", location: "Dubai", image: dubaiCityNight, slug: "/dubai/city-tour" },
+  { title: "Dubai City Tour with Mall", location: "Dubai", image: sunsetImg, slug: "/dubai/city-tour-mall" },
+  { title: "Global Village Dubai", location: "Dubai", image: villageImg, slug: "/dubai/global-village" },
+  { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: sunsetImg, slug: "/dubai/abu-dhabi-city-tour" },
+  { title: "Abu Dhabi + Ferrari World", location: "Abu Dhabi", image: dubaiSkylineNight, slug: "/dubai/abu-dhabi-ferrari-world" },
+  { title: "Dubai Aquarium + Penguin Cove", location: "Dubai Mall", image: dubaiAquariumFish, slug: "/dubai/aquarium-penguin" },
+  { title: "Dubai Fountain Show + Lake Ride", location: "Downtown Dubai", image: dubaiFountainShow, slug: "/dubai/fountain-show" },
+  { title: "Dubai Dolphin & Seal Show", location: "Dubai", image: dubaiAquariumFish, slug: "/dubai/dolphin-show" },
+  { title: "Miracle Garden Dubai", location: "Dubai", image: villageImg, slug: "/dubai/miracle-garden" },
+  { title: "Burj Khalifa Prime", location: "Downtown Dubai", image: dubaiSkylineNight, slug: "/dubai/burj-khalifa-prime" },
 ];
 
 const DesertActivityCards = () => {
@@ -71,7 +71,7 @@ const BlogDubaiDesertSafari = () => {
       date="Feb 20, 2026"
       readTime="12 min read"
       category="Desert Adventures"
-      guidesLink="/dubai-smart-guides"
+      guidesLink="/dubai/destination-guides"
       guidesLabel="Dubai Guides"
       keywords={[
         "Dubai desert safari deals booking",
@@ -87,9 +87,9 @@ const BlogDubaiDesertSafari = () => {
       ]}
       relatedLinks={[
         { title: "Dubai Airport Transfer Guide", link: "/blog/airport-transfer-booking-dubai" },
-        { title: "Desert Safari Evening", link: "/desert-safari" },
-        { title: "Desert Safari with Shisha", link: "/desert-safari-shisha" },
-        { title: "Dhow Cruise Marina", link: "/dhow-cruise" },
+        { title: "Desert Safari Evening", link: "/dubai/desert-safari" },
+        { title: "Desert Safari with Shisha", link: "/dubai/desert-safari-shisha" },
+        { title: "Dhow Cruise Marina", link: "/dubai/dhow-cruise" },
       ]}
       sections={[
         {
@@ -271,7 +271,7 @@ const BlogDubaiDesertSafari = () => {
         {
           type: "cta",
           content: "Ready for the ultimate desert adventure? Plan smart, travel better, experience more!",
-          link: "/desert-safari",
+          link: "/dubai/desert-safari",
           linkText: "🏜️ Book Desert Safari Now",
         },
       ]}

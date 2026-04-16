@@ -15,7 +15,7 @@ const BlogSingaporeAirportTransfer = () => {
       date="Feb 18, 2026"
       readTime="8 min read"
       category="Singapore Transfers"
-      guidesLink="/singapore-smart-guides"
+      guidesLink="/singapore/destination-guides"
       guidesLabel="Singapore Guides"
       keywords={[
         "Singapore airport transfer booking",
@@ -32,8 +32,8 @@ const BlogSingaporeAirportTransfer = () => {
       relatedLinks={[
         { title: "Sentosa Activities Guide", link: "/blog/sentosa-activities-singapore" },
         { title: "Singapore Transfers", link: "/singapore/transfers" },
-        { title: "Singapore City Tour", link: "/singapore-city-tour" },
-        { title: "Gardens by the Bay", link: "/gardens-by-the-bay" },
+        { title: "Singapore City Tour", link: "/singapore/city-tour" },
+        { title: "Gardens by the Bay", link: "/singapore/gardens-by-the-bay" },
       ]}
       sections={[
         {

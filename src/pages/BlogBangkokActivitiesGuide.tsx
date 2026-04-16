@@ -22,21 +22,21 @@ import seaLife from "@/assets/bangkok-city-purple-1.jpg";
 import massage from "@/assets/massage-coupon-hero.jpg";
 
 const activityCards = [
-  { title: "Grand Palace & Emerald Buddha Temple", location: "Bangkok", image: grandPalace, slug: "/bangkok-grand-palace-emerald" },
-  { title: "Bangkok Three Temples City Tour", location: "Bangkok", image: threeTemples, slug: "/bangkok-three-temples" },
-  { title: "Wat Arun, Pho & Traimit Tour", location: "Bangkok", image: watArun, slug: "/bangkok-wat-arun-pho-traimit" },
-  { title: "Bangkok City & Gems Gallery Tour", location: "Bangkok", image: gemsGallery, slug: "/bangkok-city-gems-gallery" },
-  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/safari-world" },
-  { title: "King Power Mahanakhon Skywalk", location: "Bangkok", image: skywalk, slug: "/bangkok-skywalk" },
-  { title: "Floating Market & Railway Market Tour", location: "Bangkok", image: floatingMarket, slug: "/maeklong-floating-market" },
-  { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: tukTuk, slug: "/bangkok-tuk-tuk-night" },
-  { title: "Dream World Bangkok", location: "Bangkok", image: dreamWorld, slug: "/dream-world-bangkok" },
-  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruise, slug: "/chao-phraya-princess-join" },
-  { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: vivaAlangka, slug: "/viva-alangka-cruise" },
-  { title: "Ayutthaya Temple Tour", location: "Bangkok", image: ayutthaya, slug: "/ayutthaya-temple-tour" },
-  { title: "Baiyoke Sky Buffet", location: "Bangkok", image: baiyoke, slug: "/baiyoke-buffet" },
-  { title: "Sea Life & Madame Tussauds", location: "Bangkok", image: seaLife, slug: "/sea-life-madame-tussauds" },
-  { title: "Thai Massage Coupon Packages", location: "Bangkok", image: massage, slug: "/massage-coupons" },
+  { title: "Grand Palace & Emerald Buddha Temple", location: "Bangkok", image: grandPalace, slug: "/bangkok/grand-palace-emerald" },
+  { title: "Bangkok Three Temples City Tour", location: "Bangkok", image: threeTemples, slug: "/bangkok/three-temples-tour" },
+  { title: "Wat Arun, Pho & Traimit Tour", location: "Bangkok", image: watArun, slug: "/bangkok/wat-arun-pho-traimit" },
+  { title: "Bangkok City & Gems Gallery Tour", location: "Bangkok", image: gemsGallery, slug: "/bangkok/city-gems-gallery" },
+  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/bangkok/safari-world" },
+  { title: "King Power Mahanakhon Skywalk", location: "Bangkok", image: skywalk, slug: "/bangkok/skywalk" },
+  { title: "Floating Market & Railway Market Tour", location: "Bangkok", image: floatingMarket, slug: "/bangkok/maeklong-floating-market" },
+  { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: tukTuk, slug: "/bangkok/tuk-tuk-night-tour" },
+  { title: "Dream World Bangkok", location: "Bangkok", image: dreamWorld, slug: "/bangkok/dream-world" },
+  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruise, slug: "/bangkok/chao-phraya-princess-with-transfer" },
+  { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: vivaAlangka, slug: "/bangkok/viva-alangka-cruise" },
+  { title: "Ayutthaya Temple Tour", location: "Bangkok", image: ayutthaya, slug: "/bangkok/ayutthaya-temple-tour" },
+  { title: "Baiyoke Sky Buffet", location: "Bangkok", image: baiyoke, slug: "/bangkok/baiyoke-buffet" },
+  { title: "Sea Life & Madame Tussauds", location: "Bangkok", image: seaLife, slug: "/bangkok/sea-life-madame-tussauds" },
+  { title: "Thai Massage Coupon Packages", location: "Bangkok", image: massage, slug: "/bangkok/massage-coupons" },
 ];
 
 const ActivityCards = () => {
@@ -81,7 +81,7 @@ const BlogBangkokActivitiesGuide = () => {
       readTime="13 min read"
       category="Bangkok Travel Guide"
       keywords={["Bangkok activities booking", "things to do in Bangkok", "Bangkok temple tour", "Bangkok dinner cruise", "Bangkok safari world", "Bangkok travel guide 2026", "Bangkok tours for Indians", "Yellodae Bangkok"]}
-      guidesLink="/thailand-smart-guides"
+      guidesLink="/thailand/destination-guides"
       guidesLabel="Thailand Guides"
       relatedLinks={[
         { title: "Best Thailand Activities to Book Online", link: "/blog/best-thailand-activities" },

@@ -39,7 +39,7 @@ interface BlogArticleProps {
 const BlogArticleLayout = ({
   title, description, heroImage, heroAlt, author, date,
   readTime, category, keywords, sections, relatedLinks,
-  guidesLink = "/thailand-smart-guides", guidesLabel = "Thailand Guides",
+  guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
   children,
 }: BlogArticleProps) => {
   const handleShare = () => {
