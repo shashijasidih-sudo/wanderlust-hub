@@ -31,7 +31,7 @@ import singaporeBigBus from "@/assets/singapore-big-bus.jpg";
 const activities = [
   { title: "Singapore City Tour with Guide and Transfer", price: 1815, image: singaporeCityTour, slug: "/singapore/city-tour" },
   { title: "Night Safari Singapore", price: 4470, image: singaporeNightSafari, slug: "/singapore/night-safari" },
-  { title: "Sentosa 4D Adventureland", price: 2060, image: singaporeSentosa4d, slug: "singapore/sentosa-4d-2rides" },
+  { title: "Sentosa 4D Adventureland", price: 2060, image: singaporeSentosa4d, slug: "/singapore/sentosa-4d-2-rides" },
   { title: "Sentosa Cable Ride", price: 2180, image: singaporeCableCar, slug: "/singapore/sentosa-cable-car" },
   { title: "Sentosa Wings of Time with Transfers", price: 2656.5, image: singaporeWingsTime, slug: "/singapore/sentosa-wings-time" },
   { title: "Sentosa Sky Helix", price: 1811.25, image: singaporeSkyHelix, slug: "/singapore/sentosa-sky-helix" },
