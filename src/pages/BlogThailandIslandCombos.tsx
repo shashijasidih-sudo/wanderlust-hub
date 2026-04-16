@@ -27,7 +27,7 @@ const activityCards = [
   { title: "Phi Phi Maya Khai Speedboat", location: "Phuket", image: phuketMayaBay, slug: "/phuket/phi-phi-maya-khai-speedboat" },
   { title: "James Bond Island Tour", location: "Phuket", image: jamesBond1, slug: "/phuket/james-bond-island-tour" },
   { title: "James Bond Island Sea Canoe", location: "Phuket", image: jamesBond1, slug: "/phuket/james-bond-island-sea-canoe" },
-  { title: "James Bond Island from Krabi", location: "Krabi", image: jamesBond1, slug: "/krabi/phuket/james-bond-island-tour" },
+  { title: "James Bond Island from Krabi", location: "Krabi", image: jamesBond1, slug: "/krabi/james-bond-island" },
   { title: "4 Islands Longtail Tour", location: "Krabi", image: krabiLongtail, slug: "/krabi/four-islands-longtail" },
   { title: "4 Islands Speedboat Tour", location: "Krabi", image: krabiSpeedboat, slug: "/krabi/four-islands-speedboat" },
   { title: "Hong Islands Longtail", location: "Krabi", image: krabiBoatTour, slug: "/krabi/hong-islands-longtail" },

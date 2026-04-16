@@ -29,7 +29,7 @@ const activityCards = [
   { title: "Dubai Fountain Show + Ride", location: "Downtown Dubai", image: dubaiFountainShow, slug: "/dubai/fountain-show" },
   { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: dubaiSkylineSunset, slug: "/dubai/abu-dhabi-city-tour" },
   { title: "Desert Safari with Shisha", location: "Lahbab Desert", image: dubaiDesertWoman, slug: "/dubai/desert-safari-shisha" },
-  { title: "Dubai Dolphin & Seal Show", location: "Dubai", image: dubaiAquariumFish, slug: "/dubai/bangkok/dolphin-show" },
+  { title: "Dubai Dolphin & Seal Show", location: "Dubai", image: dubaiAquariumFish, slug: "/dubai/dolphin-show" },
   { title: "Miracle Garden Dubai", location: "Dubai", image: dubaiGlobalVillage2, slug: "/dubai/miracle-garden" },
   { title: "Abu Dhabi + Ferrari World", location: "Abu Dhabi", image: dubaiDesertCouple, slug: "/dubai/abu-dhabi-ferrari-world" },
 ];

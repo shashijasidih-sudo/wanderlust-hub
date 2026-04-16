@@ -10,7 +10,7 @@ const dubaiRoutes = [
   "/dubai/dhow-cruise-marina-lower-deck", "/dubai/dhow-cruise-marina-upper-deck", "/dubai/atlantis-aquaventure",
   "/dubai/city-tour", "/dubai/city-tour-mall", "/dubai/global-village",
   "/dubai/abu-dhabi-city-tour", "/dubai/abu-dhabi-ferrari-world", "/dubai/aquarium-penguin",
-  "/dubai/burj-khalifa-non-prime", "/dubai/burj-khalifa-prime", "/dubai/bangkok/dolphin-show",
+  "/dubai/burj-khalifa-non-prime", "/dubai/burj-khalifa-prime", "/dubai/dolphin-show",
   "/dubai/miracle-garden", "/dubai/fountain-show", "/dubai/destination-guides",
   "/blog/airport-transfer-booking-dubai", "/blog/desert-safari-deals-dubai",
   "/dubai/transfers", "/dubai/airport-pickup-zone-1", "/dubai/airport-dropoff-zone-1",
