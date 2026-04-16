@@ -260,7 +260,6 @@ const App = () => (
             <Route path="/phuket/selfie-with-tigers" element={<SelfieWithTigers />} />
             <Route path="/phuket/elephant-safari" element={<ElephantSafari />} />
             <Route path="/phuket/hot-spring-emerald-pool" element={<HotSpringEmeralPool />} />
-            <Route path="/phuket/hot-spring-emerald-pool" element={<HotSpringEmeralPool />} />
             <Route path="/bangkok/skywalk" element={<BangkokSkywalk />} />
             <Route path="/bangkok/massage-coupons" element={<MassageCoupons />} />
             <Route path="/bangkok/three-temples-tour" element={<BangkokThreeTemples />} />
@@ -313,7 +312,7 @@ const App = () => (
             <Route path="/krabi/four-islands-longtail" element={<FourIslandsLongtail />} />
             <Route path="/krabi/four-islands-longtail-no-park-fee" element={<FourIslandsLongtailNoParkFee />} />
             <Route path="/krabi/four-islands-speedboat" element={<FourIslandsSpeedboat />} />
-            <Route path="/krabi/phuket/james-bond-island-tour" element={<JamesBondIslandKrabi />} />
+            <Route path="/krabi/james-bond-island" element={<JamesBondIslandKrabi />} />
             <Route path="/thailand/esim-ais" element={<EsimThailandAis />} />
             <Route path="/thailand/destination-guides" element={<ThailandSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
@@ -403,7 +402,7 @@ const App = () => (
             <Route path="/dubai/aquarium-penguin" element={<DubaiAquariumPenguin />} />
             <Route path="/dubai/burj-khalifa-non-prime" element={<BurjKhalifaNonPrime />} />
             <Route path="/dubai/burj-khalifa-prime" element={<BurjKhalifaPrime />} />
-            <Route path="/dubai/bangkok/dolphin-show" element={<DubaiDolphinShow />} />
+            <Route path="/dubai/dolphin-show" element={<DubaiDolphinShow />} />
             <Route path="/dubai/miracle-garden" element={<MiracleGardenDubai />} />
             <Route path="/dubai/fountain-show" element={<DubaiFountainShow />} />
             <Route path="/dubai/transfers" element={<DubaiTransfersNew />} />
