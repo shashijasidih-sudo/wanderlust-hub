@@ -120,13 +120,13 @@
   <url><loc>https://yellodae.com/singapore/sentosa-island</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
   <!-- Transfers -->
-  <url><loc>https://yellodae.com/thailand/transfers</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/bangkok/transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/krabi/transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/dubai/transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/singapore/transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/bangkok/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/pattaya/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/krabi/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/phuket/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/dubai/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/singapore/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
   <!-- Smart Guides & Blogs -->
   <url><loc>https://yellodae.com/thailand/destination-guides</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>

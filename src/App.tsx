@@ -328,7 +328,7 @@ const App = () => (
             <Route path="/blog/thailand-island-combos" element={<BlogThailandIslandCombos />} />
             <Route path="/blog/thailand-food-experiences" element={<BlogThailandFoodExperiences />} />
             <Route path="/netherlands-smart-guides" element={<NetherlandsSmartGuides />} />
-            <Route path="/bangkok/transfers" element={<BangkokTransfers />} />
+            <Route path="/bangkok/budget-airport-transfers" element={<BangkokTransfers />} />
             <Route path="/bangkok/bkk-airport-pickup" element={<BangkokBkkAirportPickup />} />
             <Route path="/bangkok/dmk-airport-pickup" element={<BangkokDmkAirportPickup />} />
             <Route path="/bangkok/bkk-airport-dropoff" element={<BangkokBkkAirportDropoff />} />
@@ -341,7 +341,7 @@ const App = () => (
             <Route path="/bangkok/to-pattaya" element={<BangkokToPattaya />} />
             <Route path="/bangkok/city-tour-pattaya" element={<BangkokCityTourPattaya />} />
             <Route path="/bangkok/tiger-topia-pattaya" element={<BangkokTigerTopiaPattaya />} />
-            <Route path="/pattaya/transfers" element={<PattayaTransfers />} />
+            <Route path="/pattaya/budget-airport-transfers" element={<PattayaTransfers />} />
             <Route path="/pattaya/bkk-airport-pickup" element={<PattayaBkkAirportPickup />} />
             <Route path="/pattaya/bkk-tiger-topia-pickup" element={<PattayaBkkTigerTopiaPickup />} />
             <Route path="/pattaya/dmk-airport-pickup" element={<PattayaDmkAirportPickup />} />
@@ -353,7 +353,7 @@ const App = () => (
             <Route path="/pattaya/temple-tour-dmk-airport" element={<PattayaTempleTourDmkAirport />} />
             <Route path="/pattaya/indra-square-dmk-airport" element={<PattayaIndraSquareDmkAirport />} />
             <Route path="/pattaya/city-hourly-rental" element={<PattayaCityHourlyRental />} />
-            <Route path="/krabi/transfers" element={<KrabiTransfers />} />
+            <Route path="/krabi/budget-airport-transfers" element={<KrabiTransfers />} />
             <Route path="/krabi/kbv-airport-phuket-pickup" element={<KrabiKbvAirportPhuketPickup />} />
             <Route path="/krabi/phuket-kbv-airport-dropoff" element={<KrabiPhuketKbvAirportDropoff />} />
             <Route path="/krabi/krabi-hotel-kbv-airport" element={<KrabiHotelKbvAirport />} />
@@ -365,7 +365,7 @@ const App = () => (
             <Route path="/krabi/phuket-to-krabi" element={<KrabiPhuketToKrabi />} />
             <Route path="/krabi/phuket-city-tour-krabi" element={<KrabiPhuketCityTourKrabi />} />
             <Route path="/krabi/phuket-krabi-city-tour" element={<KrabiPhuketKrabiCityTour />} />
-            <Route path="/phuket/transfers" element={<PhuketTransfers />} />
+            <Route path="/phuket/budget-airport-transfers" element={<PhuketTransfers />} />
             <Route path="/phuket/hkt-airport-pickup" element={<PhuketHktAirportPickup />} />
             <Route path="/phuket/hkt-airport-city-tour" element={<PhuketHktAirportCityTour />} />
             <Route path="/phuket/hkt-airport-dropoff" element={<PhuketHktAirportDropoff />} />
@@ -374,7 +374,7 @@ const App = () => (
             <Route path="/phuket/phuket-to-krabi" element={<PhuketToKrabi />} />
             <Route path="/phuket/city-tour-krabi" element={<PhuketCityTourKrabi />} />
             <Route path="/phuket/krabi-city-tour" element={<PhuketKrabiCityTour />} />
-            <Route path="/thailand/transfers" element={<ThailandTransfers />} />
+            <Route path="/thailand/budget-airport-transfers" element={<ThailandTransfers />} />
           {/* Dubai routes */}
             <Route path="/blog/best-dubai-activities" element={<BlogBestDubaiActivities />} />
             <Route path="/dubai/destination-guides" element={<DubaiSmartGuides />} />
@@ -405,7 +405,7 @@ const App = () => (
             <Route path="/dubai/dolphin-show" element={<DubaiDolphinShow />} />
             <Route path="/dubai/miracle-garden" element={<MiracleGardenDubai />} />
             <Route path="/dubai/fountain-show" element={<DubaiFountainShow />} />
-            <Route path="/dubai/transfers" element={<DubaiTransfersNew />} />
+            <Route path="/dubai/budget-airport-transfers" element={<DubaiTransfersNew />} />
             <Route path="/dubai/airport-pickup-zone1" element={<DubaiAirportPickupZone1 />} />
             <Route path="/dubai/airport-dropoff-zone1" element={<DubaiAirportDropoffZone1 />} />
             <Route path="/dubai/airport-pickup-zone2" element={<DubaiAirportPickupZone2 />} />
@@ -444,7 +444,7 @@ const App = () => (
             <Route path="/singapore/big-bus-discover" element={<BigBusDiscover />} />
             <Route path="/singapore/big-bus-night" element={<BigBusNight />} />
             <Route path="/singapore/sentosa-island" element={<SentosaIsland />} />
-            <Route path="/singapore/transfers" element={<SingaporeTransfersNew />} />
+            <Route path="/singapore/budget-airport-transfers" element={<SingaporeTransfersNew />} />
             <Route path="/singapore/airport-pickup" element={<SingaporeAirportPickup />} />
             <Route path="/singapore/airport-dropoff" element={<SingaporeAirportDropoff />} />
             <Route path="/singapore/airport-night-pickup" element={<SingaporeAirportNightPickup />} />
@@ -584,6 +584,13 @@ const App = () => (
             <Route path="/bangkok/safari-world-dmk-airport" element={<Navigate to="/bangkok/airport-transfers/safari-world-dmk" replace />} />
             <Route path="/bangkok/temple-tour-airport" element={<Navigate to="/bangkok/airport-transfers/temple-tour-bkk" replace />} />
             <Route path="/bangkok/temple-tour-dmk-airport" element={<Navigate to="/bangkok/airport-transfers/temple-tour-dmk" replace />} />
+            <Route path="/bangkok/transfers" element={<Navigate to="/bangkok/budget-airport-transfers" replace />} />
+            <Route path="/pattaya/transfers" element={<Navigate to="/pattaya/budget-airport-transfers" replace />} />
+            <Route path="/phuket/transfers" element={<Navigate to="/phuket/budget-airport-transfers" replace />} />
+            <Route path="/krabi/transfers" element={<Navigate to="/krabi/budget-airport-transfers" replace />} />
+            <Route path="/thailand/transfers" element={<Navigate to="/thailand/budget-airport-transfers" replace />} />
+            <Route path="/dubai/transfers" element={<Navigate to="/dubai/budget-airport-transfers" replace />} />
+            <Route path="/singapore/transfers" element={<Navigate to="/singapore/budget-airport-transfers" replace />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
