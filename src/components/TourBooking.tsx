@@ -15,6 +15,7 @@ import CustomerSupport from "./activity-detail/CustomerSupport";
 import SuggestedTours from "./activity-detail/SuggestedTours";
 import TravelGuidesSection from "./activity-detail/TravelGuidesSection";
 import TourJsonLd from "./seo/TourJsonLd";
+import BreadcrumbJsonLd from "./seo/BreadcrumbJsonLd";
 import { Button } from "./ui/button";
 import { ChevronDown, Star, MapPin } from "lucide-react";
 import WishlistButton from "./WishlistButton";
