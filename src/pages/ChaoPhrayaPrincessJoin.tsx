@@ -1,6 +1,7 @@
 import TourBooking from "@/components/TourBooking";
 import ChaoPhrayaPrincessSEOContent from "@/components/activity-detail/ChaoPhrayaPrincessSEOContent";
 import { toursData } from "@/data/tourData";
+import { chaoPhrayaPrincessFaqs } from "@/data/chaoPhrayaPrincessFaqs";
 import cruiseNight1 from "@/assets/cruise-night-1.jpg";
 import cruiseNight2 from "@/assets/cruise-night-2.jpg";
 import cruiseShip1 from "@/assets/cruise-ship-1.jpg";
@@ -17,7 +18,8 @@ const ChaoPhrayaPrincessJoin = () => {
       { src: cruiseNight1, alt: "Princess cruise at night" },
       { src: cruiseNight2, alt: "Chao Phraya Princess cruise" },
       { src: cruiseShip1, alt: "Luxury cruise ship" }
-    ]
+    ],
+    faqs: chaoPhrayaPrincessFaqs
   };
   return (
     <TourBooking
