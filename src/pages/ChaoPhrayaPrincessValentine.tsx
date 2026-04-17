@@ -1,5 +1,6 @@
 import TourBooking from "@/components/TourBooking";
 import ChaoPhrayaPrincessValentineSEO from "@/components/activity-detail/ChaoPhrayaPrincessValentineSEO";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { toursData } from "@/data/tourData";
 import { chaoPhrayaPrincessFaqs } from "@/data/chaoPhrayaPrincessFaqs";
 import valentineCruise1 from "@/assets/valentine-cruise-1.jpg";
@@ -22,10 +23,13 @@ const ChaoPhrayaPrincessValentine = () => {
     faqs: chaoPhrayaPrincessFaqs
   };
   return (
-    <TourBooking
-      tourData={tourData}
-      extraContentBeforeReviews={<ChaoPhrayaPrincessValentineSEO />}
-    />
+    <>
+      <FaqJsonLd faqs={chaoPhrayaPrincessFaqs} id="faq-jsonld-cpp-valentine" />
+      <TourBooking
+        tourData={tourData}
+        extraContentBeforeReviews={<ChaoPhrayaPrincessValentineSEO />}
+      />
+    </>
   );
 };
 

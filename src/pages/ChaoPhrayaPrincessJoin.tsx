@@ -1,5 +1,6 @@
 import TourBooking from "@/components/TourBooking";
 import ChaoPhrayaPrincessSEOContent from "@/components/activity-detail/ChaoPhrayaPrincessSEOContent";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { toursData } from "@/data/tourData";
 import { chaoPhrayaPrincessFaqs } from "@/data/chaoPhrayaPrincessFaqs";
 import cruiseNight1 from "@/assets/cruise-night-1.jpg";
@@ -22,10 +23,13 @@ const ChaoPhrayaPrincessJoin = () => {
     faqs: chaoPhrayaPrincessFaqs
   };
   return (
-    <TourBooking
-      tourData={tourData}
-      extraContentBeforeReviews={<ChaoPhrayaPrincessSEOContent />}
-    />
+    <>
+      <FaqJsonLd faqs={chaoPhrayaPrincessFaqs} id="faq-jsonld-cpp-join" />
+      <TourBooking
+        tourData={tourData}
+        extraContentBeforeReviews={<ChaoPhrayaPrincessSEOContent />}
+      />
+    </>
   );
 };
 
