@@ -66,6 +66,15 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
   const safeHeroImages = tourData.heroImages || [];
   const safeGalleryImages = tourData.galleryImages || [];
 
+  // Build breadcrumbs: Home > City > Tour
+  const cityName = tourData.city || tourData.location || "";
+  const citySlug = cityName.toLowerCase().replace(/\s+/g, "-");
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    ...(cityName ? [{ name: cityName, url: `/${citySlug}` }] : []),
+    { name: tourData.title, url: `/${tourSlug}` },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <TourJsonLd
@@ -80,6 +89,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
         duration={tourData.duration}
         id={`tour-jsonld-${tourData.id}`}
       />
+      <BreadcrumbJsonLd items={breadcrumbItems} id={`breadcrumb-jsonld-${tourData.id}`} />
       <Header />
       
       <main className="container mx-auto px-4 py-8">
