@@ -20,9 +20,10 @@ import { TourData } from "@/data/tourData";
 
 interface TourBookingProps {
   tourData: TourData;
+  extraContentBeforeReviews?: React.ReactNode;
 }
 
-const TourBooking = ({ tourData }: TourBookingProps) => {
+const TourBooking = ({ tourData, extraContentBeforeReviews }: TourBookingProps) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const itineraryRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
@@ -172,6 +173,9 @@ const TourBooking = ({ tourData }: TourBookingProps) => {
             {/* Tour Policies (Inclusion, Exclusion, Booking, Cancellation, Child Policy) */}
             <TourPolicies tourData={tourData} />
             
+            {/* Optional extra SEO content before reviews */}
+            {extraContentBeforeReviews}
+
             {/* Customer Reviews */}
             <CustomerReviews 
               reviews={tourData.customerReviews}
