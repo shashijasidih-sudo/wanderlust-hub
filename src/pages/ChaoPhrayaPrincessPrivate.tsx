@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import ChaoPhrayaPrincessPrivateSEO from "@/components/activity-detail/ChaoPhrayaPrincessPrivateSEO";
 import { toursData } from "@/data/tourData";
 import cruiseNight1 from "@/assets/cruise-night-1.jpg";
 import cruiseNight2 from "@/assets/cruise-night-2.jpg";
@@ -18,7 +19,12 @@ const ChaoPhrayaPrincessPrivate = () => {
       { src: watArunTwilight1, alt: "Bangkok skyline at twilight" }
     ]
   };
-  return <TourBooking tourData={tourData} />;
+  return (
+    <TourBooking
+      tourData={tourData}
+      extraContentBeforeReviews={<ChaoPhrayaPrincessPrivateSEO />}
+    />
+  );
 };
 
 export default ChaoPhrayaPrincessPrivate;

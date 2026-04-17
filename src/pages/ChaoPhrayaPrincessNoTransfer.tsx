@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import ChaoPhrayaPrincessNoTransferSEO from "@/components/activity-detail/ChaoPhrayaPrincessNoTransferSEO";
 import { toursData } from "@/data/tourData";
 import cruiseNight2 from "@/assets/cruise-night-2.jpg";
 import cruiseShip1 from "@/assets/cruise-ship-1.jpg";
@@ -18,7 +19,12 @@ const ChaoPhrayaPrincessNoTransfer = () => {
       { src: watArunTwilight1, alt: "Wat Arun at twilight" }
     ]
   };
-  return <TourBooking tourData={tourData} />;
+  return (
+    <TourBooking
+      tourData={tourData}
+      extraContentBeforeReviews={<ChaoPhrayaPrincessNoTransferSEO />}
+    />
+  );
 };
 
 export default ChaoPhrayaPrincessNoTransfer;

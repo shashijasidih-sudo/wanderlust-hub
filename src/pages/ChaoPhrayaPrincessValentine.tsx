@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import ChaoPhrayaPrincessValentineSEO from "@/components/activity-detail/ChaoPhrayaPrincessValentineSEO";
 import { toursData } from "@/data/tourData";
 import valentineCruise1 from "@/assets/valentine-cruise-1.jpg";
 import valentineCruise2 from "@/assets/valentine-cruise-2.jpg";
@@ -18,7 +19,12 @@ const ChaoPhrayaPrincessValentine = () => {
       { src: valentineCruise3, alt: "Night cruise experience" }
     ]
   };
-  return <TourBooking tourData={tourData} />;
+  return (
+    <TourBooking
+      tourData={tourData}
+      extraContentBeforeReviews={<ChaoPhrayaPrincessValentineSEO />}
+    />
+  );
 };
 
 export default ChaoPhrayaPrincessValentine;
