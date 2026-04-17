@@ -1,5 +1,6 @@
 import TourBooking from "@/components/TourBooking";
 import ChaoPhrayaPrincessPrivateSEO from "@/components/activity-detail/ChaoPhrayaPrincessPrivateSEO";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { toursData } from "@/data/tourData";
 import { chaoPhrayaPrincessFaqs } from "@/data/chaoPhrayaPrincessFaqs";
 import cruiseNight1 from "@/assets/cruise-night-1.jpg";
