@@ -1,5 +1,6 @@
 import TourBooking from "@/components/TourBooking";
 import ChaoPhrayaPrincessNoTransferSEO from "@/components/activity-detail/ChaoPhrayaPrincessNoTransferSEO";
+import TravelGuidesSection from "@/components/activity-detail/TravelGuidesSection";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { toursData } from "@/data/tourData";
 import { chaoPhrayaPrincessFaqs } from "@/data/chaoPhrayaPrincessFaqs";
@@ -28,6 +29,7 @@ const ChaoPhrayaPrincessNoTransfer = () => {
       <TourBooking
         tourData={tourData}
         extraContentBeforeReviews={<ChaoPhrayaPrincessNoTransferSEO />}
+        extraContentBeforeSuggested={<TravelGuidesSection />}
       />
     </>
   );

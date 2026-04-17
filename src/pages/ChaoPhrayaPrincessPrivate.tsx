@@ -1,5 +1,6 @@
 import TourBooking from "@/components/TourBooking";
 import ChaoPhrayaPrincessPrivateSEO from "@/components/activity-detail/ChaoPhrayaPrincessPrivateSEO";
+import TravelGuidesSection from "@/components/activity-detail/TravelGuidesSection";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { toursData } from "@/data/tourData";
 import { chaoPhrayaPrincessFaqs } from "@/data/chaoPhrayaPrincessFaqs";
@@ -28,6 +29,7 @@ const ChaoPhrayaPrincessPrivate = () => {
       <TourBooking
         tourData={tourData}
         extraContentBeforeReviews={<ChaoPhrayaPrincessPrivateSEO />}
+        extraContentBeforeSuggested={<TravelGuidesSection />}
       />
     </>
   );
