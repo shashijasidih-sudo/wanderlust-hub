@@ -1,6 +1,7 @@
 import TourBooking from "@/components/TourBooking";
 import ChaoPhrayaPrincessPrivateSEO from "@/components/activity-detail/ChaoPhrayaPrincessPrivateSEO";
 import { toursData } from "@/data/tourData";
+import { chaoPhrayaPrincessFaqs } from "@/data/chaoPhrayaPrincessFaqs";
 import cruiseNight1 from "@/assets/cruise-night-1.jpg";
 import cruiseNight2 from "@/assets/cruise-night-2.jpg";
 import watArunTwilight1 from "@/assets/wat-arun-twilight-1.jpg";
@@ -17,7 +18,8 @@ const ChaoPhrayaPrincessPrivate = () => {
       { src: cruiseNight2, alt: "Princess cruise ship at night" },
       { src: cruiseNight1, alt: "Cruise evening experience" },
       { src: watArunTwilight1, alt: "Bangkok skyline at twilight" }
-    ]
+    ],
+    faqs: chaoPhrayaPrincessFaqs
   };
   return (
     <TourBooking
