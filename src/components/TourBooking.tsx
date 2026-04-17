@@ -13,6 +13,7 @@ import TourDescription from "./activity-detail/TourDescription";
 import FAQSection from "./activity-detail/FAQSection";
 import CustomerSupport from "./activity-detail/CustomerSupport";
 import SuggestedTours from "./activity-detail/SuggestedTours";
+import TravelGuidesSection from "./activity-detail/TravelGuidesSection";
 import { Button } from "./ui/button";
 import { ChevronDown, Star, MapPin } from "lucide-react";
 import WishlistButton from "./WishlistButton";
@@ -196,8 +197,15 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
           </div>
         </div>
 
-        {/* Optional extra content before suggested tours (e.g. Travel Guides) */}
-        {extraContentBeforeSuggested}
+        {/* Travel Guides — auto-rendered by city, or overridden via extraContentBeforeSuggested */}
+        {extraContentBeforeSuggested ?? (() => {
+          const city = (tourData.city || "").toLowerCase();
+          const thaiCities = ["bangkok", "phuket", "pattaya", "krabi", "thailand"];
+          if (thaiCities.includes(city)) return <TravelGuidesSection region="thailand" />;
+          if (city === "singapore") return <TravelGuidesSection region="singapore" />;
+          if (city === "dubai" || city === "abu dhabi") return <TravelGuidesSection region="dubai" />;
+          return null;
+        })()}
 
         {/* Suggested Tours */}
         <div className="mt-12">

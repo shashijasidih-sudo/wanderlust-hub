@@ -3,17 +3,30 @@ import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { thailandGuides } from "@/data/thailandGuides";
+import { singaporeGuides } from "@/data/singaporeGuides";
+import { dubaiGuides } from "@/data/dubaiGuides";
+
+type GuideRegion = "thailand" | "singapore" | "dubai";
 
 interface TravelGuidesSectionProps {
   count?: number;
   title?: string;
+  region?: GuideRegion;
 }
 
-const TravelGuidesSection = ({ count = 4, title = "Travel Guides" }: TravelGuidesSectionProps) => {
+const REGION_CONFIG: Record<GuideRegion, { label: string; viewAll: string; data: typeof thailandGuides }> = {
+  thailand: { label: "Thailand", viewAll: "/thailand/destination-guides", data: thailandGuides },
+  singapore: { label: "Singapore", viewAll: "/singapore/destination-guides", data: singaporeGuides as typeof thailandGuides },
+  dubai: { label: "Dubai", viewAll: "/dubai/destination-guides", data: dubaiGuides as typeof thailandGuides },
+};
+
+const TravelGuidesSection = ({ count = 4, title = "Travel Guides", region = "thailand" }: TravelGuidesSectionProps) => {
+  const config = REGION_CONFIG[region] ?? REGION_CONFIG.thailand;
+
   const picks = useMemo(() => {
-    const shuffled = [...thailandGuides].sort(() => Math.random() - 0.5);
+    const shuffled = [...config.data].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, count);
-  }, [count]);
+  }, [count, config.data]);
 
   return (
     <section className="mt-12">
@@ -21,11 +34,11 @@ const TravelGuidesSection = ({ count = 4, title = "Travel Guides" }: TravelGuide
         <div>
           <h2 className="text-2xl md:text-3xl font-bold text-foreground">{title}</h2>
           <p className="text-muted-foreground mt-1">
-            Handpicked Thailand travel guides to plan your trip like a local
+            Handpicked {config.label} travel guides to plan your trip like a local
           </p>
         </div>
         <Link
-          to="/thailand/destination-guides"
+          to={config.viewAll}
           className="hidden sm:inline-flex items-center gap-1 text-primary text-sm font-medium hover:gap-2 transition-all"
         >
           View all <ArrowRight className="h-4 w-4" />
