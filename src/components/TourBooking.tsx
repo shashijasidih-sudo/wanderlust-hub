@@ -173,6 +173,9 @@ const TourBooking = ({ tourData, extraContentBeforeReviews }: TourBookingProps) 
             {/* Tour Policies (Inclusion, Exclusion, Booking, Cancellation, Child Policy) */}
             <TourPolicies tourData={tourData} />
             
+            {/* Optional extra SEO content before reviews */}
+            {extraContentBeforeReviews}
+
             {/* Customer Reviews */}
             <CustomerReviews 
               reviews={tourData.customerReviews}
