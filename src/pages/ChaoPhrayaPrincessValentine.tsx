@@ -23,10 +23,13 @@ const ChaoPhrayaPrincessValentine = () => {
     faqs: chaoPhrayaPrincessFaqs
   };
   return (
-    <TourBooking
-      tourData={tourData}
-      extraContentBeforeReviews={<ChaoPhrayaPrincessValentineSEO />}
-    />
+    <>
+      <FaqJsonLd faqs={chaoPhrayaPrincessFaqs} id="faq-jsonld-cpp-valentine" />
+      <TourBooking
+        tourData={tourData}
+        extraContentBeforeReviews={<ChaoPhrayaPrincessValentineSEO />}
+      />
+    </>
   );
 };
 

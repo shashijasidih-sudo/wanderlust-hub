@@ -23,10 +23,13 @@ const ChaoPhrayaPrincessNoTransfer = () => {
     faqs: chaoPhrayaPrincessFaqs
   };
   return (
-    <TourBooking
-      tourData={tourData}
-      extraContentBeforeReviews={<ChaoPhrayaPrincessNoTransferSEO />}
-    />
+    <>
+      <FaqJsonLd faqs={chaoPhrayaPrincessFaqs} id="faq-jsonld-cpp-no-transfer" />
+      <TourBooking
+        tourData={tourData}
+        extraContentBeforeReviews={<ChaoPhrayaPrincessNoTransferSEO />}
+      />
+    </>
   );
 };
 

@@ -23,10 +23,13 @@ const ChaoPhrayaPrincessPrivate = () => {
     faqs: chaoPhrayaPrincessFaqs
   };
   return (
-    <TourBooking
-      tourData={tourData}
-      extraContentBeforeReviews={<ChaoPhrayaPrincessPrivateSEO />}
-    />
+    <>
+      <FaqJsonLd faqs={chaoPhrayaPrincessFaqs} id="faq-jsonld-cpp-private" />
+      <TourBooking
+        tourData={tourData}
+        extraContentBeforeReviews={<ChaoPhrayaPrincessPrivateSEO />}
+      />
+    </>
   );
 };
 
