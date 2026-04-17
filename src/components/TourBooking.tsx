@@ -21,9 +21,10 @@ import { TourData } from "@/data/tourData";
 interface TourBookingProps {
   tourData: TourData;
   extraContentBeforeReviews?: React.ReactNode;
+  extraContentBeforeSuggested?: React.ReactNode;
 }
 
-const TourBooking = ({ tourData, extraContentBeforeReviews }: TourBookingProps) => {
+const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested }: TourBookingProps) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const itineraryRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
@@ -194,6 +195,9 @@ const TourBooking = ({ tourData, extraContentBeforeReviews }: TourBookingProps) 
             </div>
           </div>
         </div>
+
+        {/* Optional extra content before suggested tours (e.g. Travel Guides) */}
+        {extraContentBeforeSuggested}
 
         {/* Suggested Tours */}
         <div className="mt-12">
