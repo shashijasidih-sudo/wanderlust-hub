@@ -20,9 +20,10 @@ import { TourData } from "@/data/tourData";
 
 interface TourBookingProps {
   tourData: TourData;
+  extraContentBeforeReviews?: React.ReactNode;
 }
 
-const TourBooking = ({ tourData }: TourBookingProps) => {
+const TourBooking = ({ tourData, extraContentBeforeReviews }: TourBookingProps) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const itineraryRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
