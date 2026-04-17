@@ -14,6 +14,7 @@ import FAQSection from "./activity-detail/FAQSection";
 import CustomerSupport from "./activity-detail/CustomerSupport";
 import SuggestedTours from "./activity-detail/SuggestedTours";
 import TravelGuidesSection from "./activity-detail/TravelGuidesSection";
+import TourJsonLd from "./seo/TourJsonLd";
 import { Button } from "./ui/button";
 import { ChevronDown, Star, MapPin } from "lucide-react";
 import WishlistButton from "./WishlistButton";
@@ -66,6 +67,18 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
 
   return (
     <div className="min-h-screen bg-background">
+      <TourJsonLd
+        name={tourData.title}
+        description={tourData.shortDescription}
+        image={safeHeroImages.map((i) => i.src)}
+        price={tourData.basePrice}
+        priceCurrency="INR"
+        rating={tourData.rating}
+        reviewCount={tourData.reviews}
+        location={tourData.location}
+        duration={tourData.duration}
+        id={`tour-jsonld-${tourData.id}`}
+      />
       <Header />
       
       <main className="container mx-auto px-4 py-8">
