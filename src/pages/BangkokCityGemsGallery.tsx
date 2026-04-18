@@ -1,5 +1,6 @@
 import TourBooking from "@/components/TourBooking";
 import { CityGemsGallerySEO } from "@/components/activity-detail/BangkokActivitySEO";
+import { cityGemsGalleryFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import bangkokBuddha1 from "@/assets/bangkok-buddha-1.jpg";
@@ -17,7 +18,8 @@ const BangkokCityGemsGallery = () => {
       { src: bangkokTemple1, alt: "Golden Pagoda at sunset" },
       { src: bangkokBuddha1, alt: "Golden Buddha statues" },
       { src: bangkokTemple4, alt: "Woman at Thai temple" }
-    ]
+    ],
+    faqs: cityGemsGalleryFaqs,
   };
   return <TourBooking tourData={tourData} extraContentBeforeReviews={<CityGemsGallerySEO />} />;
 };

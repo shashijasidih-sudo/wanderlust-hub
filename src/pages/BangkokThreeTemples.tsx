@@ -1,5 +1,6 @@
 import TourBooking from "@/components/TourBooking";
 import { ThreeTemplesGrandPalaceSEO } from "@/components/activity-detail/BangkokActivitySEO";
+import { threeTemplesGrandPalaceFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
 import bangkokTemple3 from "@/assets/bangkok-temple-3.jpg";
@@ -7,7 +8,7 @@ import bangkokBuddha1 from "@/assets/bangkok-buddha-1.jpg";
 
 const BangkokThreeTemples = () => {
   const baseTourData = toursData["bangkok-three-temples"];
-  
+
   if (!baseTourData) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -18,7 +19,7 @@ const BangkokThreeTemples = () => {
       </div>
     );
   }
-  
+
   const tourData = {
     ...baseTourData,
     heroImages: [
@@ -30,7 +31,8 @@ const BangkokThreeTemples = () => {
       { src: bangkokTemple2, alt: "Wat Arun temple illuminated" },
       { src: bangkokTemple3, alt: "Wat Arun at sunset" },
       { src: bangkokBuddha1, alt: "Row of Buddha statues" }
-    ]
+    ],
+    faqs: threeTemplesGrandPalaceFaqs,
   };
 
   return <TourBooking tourData={tourData} extraContentBeforeReviews={<ThreeTemplesGrandPalaceSEO />} />;

@@ -1,5 +1,6 @@
 import TourBooking from "@/components/TourBooking";
 import { GrandPalaceEmeraldSEO } from "@/components/activity-detail/BangkokActivitySEO";
+import { grandPalaceEmeraldFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import grandPalaceBridge from "@/assets/grand-palace-bridge.jpg";
 import grandPalaceWatArun from "@/assets/grand-palace-wat-arun.jpg";
@@ -17,7 +18,8 @@ const BangkokGrandPalaceEmerald = () => {
       { src: grandPalaceWatArunTwilight, alt: "Wat Arun temple at twilight" },
       { src: grandPalaceWatArun, alt: "Wat Arun temple at night" },
       { src: grandPalaceBridge, alt: "Chao Phraya River bridge" }
-    ]
+    ],
+    faqs: grandPalaceEmeraldFaqs,
   };
   return <TourBooking tourData={tourData} extraContentBeforeReviews={<GrandPalaceEmeraldSEO />} />;
 };
