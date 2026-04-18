@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { AyutthayaSunsetCruiseSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { ayutthayaSunsetCruiseFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import ayutthayaRiverside1 from "@/assets/ayutthaya-riverside-1.jpg";
@@ -20,7 +21,7 @@ const AyutthayaSunsetCruise = () => {
     ],
     faqs: ayutthayaSunsetCruiseFaqs,
   };
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<AyutthayaSunsetCruiseSEO />} />;
 };
 
 export default AyutthayaSunsetCruise;

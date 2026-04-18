@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { VivaAlangkaCruiseSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { vivaAlangkaCruiseFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import cruiseDock1 from "@/assets/cruise-dock-1.jpg";
@@ -20,7 +21,7 @@ const VivaAlangkaCruise = () => {
     ],
     faqs: vivaAlangkaCruiseFaqs,
   };
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<VivaAlangkaCruiseSEO />} />;
 };
 
 export default VivaAlangkaCruise;

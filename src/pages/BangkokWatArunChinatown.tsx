@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { WatArunChinatownSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { watArunChinatownFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
@@ -20,7 +21,7 @@ const BangkokWatArunChinatown = () => {
     ],
     faqs: watArunChinatownFaqs,
   };
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<WatArunChinatownSEO />} />;
 };
 
 export default BangkokWatArunChinatown;

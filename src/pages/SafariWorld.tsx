@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TourBooking from "@/components/TourBooking";
+import { SafariWorldSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { safariWorldFaqs } from "@/data/bangkokActivityFaqs";
 import bangkokRiversideTemple1 from "@/assets/bangkok-riverside-temple-1.jpg";
 import bangkokBridgeDay1 from "@/assets/bangkok-bridge-day-1.jpg";
@@ -72,7 +73,7 @@ const SafariWorld = () => {
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Activities
         </Button>
-        <TourBooking tourData={tourData} />
+        <TourBooking tourData={tourData} extraContentBeforeReviews={<SafariWorldSEO />} />
       </div>
     </div>
   );
