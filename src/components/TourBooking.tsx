@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -17,6 +17,14 @@ import TravelGuidesSection from "./activity-detail/TravelGuidesSection";
 import TourJsonLd from "./seo/TourJsonLd";
 import BreadcrumbJsonLd from "./seo/BreadcrumbJsonLd";
 import { Button } from "./ui/button";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "./ui/breadcrumb";
 import { ChevronDown, Star, MapPin } from "lucide-react";
 import WishlistButton from "./WishlistButton";
 import { TourData } from "@/data/tourData";
