@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { BangkokCityBoatTourSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { toursData } from "@/data/tourData";
 import bangkokCity1 from "@/assets/bangkok-city-1.jpg";
 import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
@@ -32,7 +33,7 @@ const BangkokCityBoatTour = () => {
     ]
   };
 
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<BangkokCityBoatTourSEO />} />;
 };
 
 export default BangkokCityBoatTour;

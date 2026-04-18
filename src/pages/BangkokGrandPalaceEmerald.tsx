@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { GrandPalaceEmeraldSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { toursData } from "@/data/tourData";
 import grandPalaceBridge from "@/assets/grand-palace-bridge.jpg";
 import grandPalaceWatArun from "@/assets/grand-palace-wat-arun.jpg";
@@ -18,7 +19,7 @@ const BangkokGrandPalaceEmerald = () => {
       { src: grandPalaceBridge, alt: "Chao Phraya River bridge" }
     ]
   };
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<GrandPalaceEmeraldSEO />} />;
 };
 
 export default BangkokGrandPalaceEmerald;

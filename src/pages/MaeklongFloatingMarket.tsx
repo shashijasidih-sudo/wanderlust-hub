@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { MaeklongFloatingMarketSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { toursData } from "@/data/tourData";
 import floatingMarket1 from "@/assets/floating-market-1.jpg";
 import bangkokRiversideTemple1 from "@/assets/bangkok-riverside-temple-1.jpg";
@@ -18,7 +19,7 @@ const MaeklongFloatingMarket = () => {
       { src: bangkokBridgeDay1, alt: "Bangkok cityscape" }
     ]
   };
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<MaeklongFloatingMarketSEO />} />;
 };
 
 export default MaeklongFloatingMarket;

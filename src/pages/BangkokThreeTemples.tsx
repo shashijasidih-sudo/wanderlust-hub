@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { ThreeTemplesGrandPalaceSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { toursData } from "@/data/tourData";
 import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
 import bangkokTemple3 from "@/assets/bangkok-temple-3.jpg";
@@ -32,7 +33,7 @@ const BangkokThreeTemples = () => {
     ]
   };
 
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<ThreeTemplesGrandPalaceSEO />} />;
 };
 
 export default BangkokThreeTemples;
