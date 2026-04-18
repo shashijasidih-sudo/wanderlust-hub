@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { SeaLifeMadameTussaudsSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { toursData } from "@/data/tourData";
 import bangkokBridgeTwilight1 from "@/assets/bangkok-bridge-twilight-1.jpg";
 import bangkokCityNight1 from "@/assets/bangkok-city-night-1.jpg";
@@ -18,7 +19,7 @@ const SeaLifeMadameTussauds = () => {
       { src: bangkokCityPurple1, alt: "Illuminated cityscape" }
     ]
   };
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<SeaLifeMadameTussaudsSEO />} />;
 };
 
 export default SeaLifeMadameTussauds;

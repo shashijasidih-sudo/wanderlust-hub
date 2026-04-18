@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { WatArunPhoPhraKaewSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { toursData } from "@/data/tourData";
 import bangkokTemple3 from "@/assets/bangkok-temple-3.jpg";
 import bangkokCity1 from "@/assets/bangkok-city-1.jpg";
@@ -32,7 +33,7 @@ const BangkokWatArunPhoTraimit = () => {
     ]
   };
 
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<WatArunPhoPhraKaewSEO />} />;
 };
 
 export default BangkokWatArunPhoTraimit;
