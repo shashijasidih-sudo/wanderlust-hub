@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -17,6 +17,14 @@ import TravelGuidesSection from "./activity-detail/TravelGuidesSection";
 import TourJsonLd from "./seo/TourJsonLd";
 import BreadcrumbJsonLd from "./seo/BreadcrumbJsonLd";
 import { Button } from "./ui/button";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "./ui/breadcrumb";
 import { ChevronDown, Star, MapPin } from "lucide-react";
 import WishlistButton from "./WishlistButton";
 import { TourData } from "@/data/tourData";
@@ -91,6 +99,33 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
       />
       <BreadcrumbJsonLd items={breadcrumbItems} id={`breadcrumb-jsonld-${tourData.id}`} />
       <Header />
+      
+      {/* Visible Breadcrumb Trail */}
+      <div className="container mx-auto px-4 pt-4 pb-2">
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link to="/">Home</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            {cityName && (
+              <>
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link to={`/${citySlug}`}>{cityName}</Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+              </>
+            )}
+            <BreadcrumbItem>
+              <BreadcrumbPage>{tourData.title}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+      </div>
       
       <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
