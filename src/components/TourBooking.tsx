@@ -100,6 +100,33 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
       <BreadcrumbJsonLd items={breadcrumbItems} id={`breadcrumb-jsonld-${tourData.id}`} />
       <Header />
       
+      {/* Visible Breadcrumb Trail */}
+      <div className="container mx-auto px-4 pt-4 pb-2">
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link to="/">Home</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            {cityName && (
+              <>
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link to={`/${citySlug}`}>{cityName}</Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+              </>
+            )}
+            <BreadcrumbItem>
+              <BreadcrumbPage>{tourData.title}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+      </div>
+      
       <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
