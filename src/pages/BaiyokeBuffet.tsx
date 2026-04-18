@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { baiyokeBuffetFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokCityNight1 from "@/assets/bangkok-city-night-1.jpg";
 import bangkokPagodaSunset1 from "@/assets/bangkok-pagoda-sunset-1.jpg";
@@ -16,7 +17,8 @@ const BaiyokeBuffet = () => {
       { src: bangkokCityNight1, alt: "City views from 75th floor" },
       { src: bangkokPagodaSunset1, alt: "Bangkok at sunset" },
       { src: bangkokCityPurple1, alt: "Illuminated city at night" }
-    ]
+    ],
+    faqs: baiyokeBuffetFaqs,
   };
   return <TourBooking tourData={tourData} />;
 };

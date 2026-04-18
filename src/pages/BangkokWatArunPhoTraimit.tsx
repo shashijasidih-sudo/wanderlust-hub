@@ -1,5 +1,6 @@
 import TourBooking from "@/components/TourBooking";
 import { WatArunPhoPhraKaewSEO } from "@/components/activity-detail/BangkokActivitySEO";
+import { watArunPhoPhraKaewFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokTemple3 from "@/assets/bangkok-temple-3.jpg";
 import bangkokCity1 from "@/assets/bangkok-city-1.jpg";
@@ -7,7 +8,7 @@ import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 
 const BangkokWatArunPhoTraimit = () => {
   const baseTourData = toursData["bangkok-wat-arun-pho-traimit"];
-  
+
   if (!baseTourData) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -18,7 +19,7 @@ const BangkokWatArunPhoTraimit = () => {
       </div>
     );
   }
-  
+
   const tourData = {
     ...baseTourData,
     heroImages: [
@@ -30,7 +31,8 @@ const BangkokWatArunPhoTraimit = () => {
       { src: bangkokTemple3, alt: "Wat Arun at sunset" },
       { src: bangkokCity1, alt: "Bangkok cityscape" },
       { src: bangkokTemple1, alt: "Golden pagoda" }
-    ]
+    ],
+    faqs: watArunPhoPhraKaewFaqs,
   };
 
   return <TourBooking tourData={tourData} extraContentBeforeReviews={<WatArunPhoPhraKaewSEO />} />;

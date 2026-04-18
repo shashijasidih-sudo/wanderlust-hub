@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { dreamWorldFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokTempleWoman1 from "@/assets/bangkok-temple-woman-1.jpg";
 import bangkokBridgeDay1 from "@/assets/bangkok-bridge-day-1.jpg";
@@ -16,7 +17,8 @@ const DreamWorldBangkok = () => {
       { src: bangkokTempleWoman1, alt: "Dream World entrance" },
       { src: bangkokBridgeDay1, alt: "Bangkok cityscape" },
       { src: bangkokPagodaSunset1, alt: "Golden pagoda at sunset" }
-    ]
+    ],
+    faqs: dreamWorldFaqs,
   };
   return <TourBooking tourData={tourData} />;
 };

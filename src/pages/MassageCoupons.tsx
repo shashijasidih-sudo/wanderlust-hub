@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { massageCouponsFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import massageCouponHero from "@/assets/massage-coupon-hero.jpg";
 
@@ -10,7 +11,8 @@ const MassageCoupons = () => {
     ],
     galleryImages: [
       { src: massageCouponHero, alt: "Health Land Thai Massage Experience" }
-    ]
+    ],
+    faqs: massageCouponsFaqs,
   };
   return <TourBooking tourData={tourData} />;
 };

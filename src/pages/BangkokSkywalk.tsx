@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { bangkokSkywalkFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokSkywalk1 from "@/assets/bangkok-skywalk-1.jpg";
 import bangkokSkywalk2 from "@/assets/bangkok-skywalk-2.jpg";
@@ -23,7 +24,8 @@ const BangkokSkywalk = () => {
       { src: bangkokSkywalk3, alt: "Sunset views from rooftop" },
       { src: bangkokSkywalk4, alt: "Observation deck" },
       { src: bangkokSkywalk5, alt: "City skyline at dusk" }
-    ]
+    ],
+    faqs: bangkokSkywalkFaqs,
   };
   return <TourBooking tourData={tourData} />;
 };

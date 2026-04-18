@@ -1,5 +1,6 @@
 import TourBooking from "@/components/TourBooking";
 import { BangkokCityBoatTourSEO } from "@/components/activity-detail/BangkokActivitySEO";
+import { bangkokCityBoatTourFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokCity1 from "@/assets/bangkok-city-1.jpg";
 import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
@@ -7,7 +8,7 @@ import bangkokCity2 from "@/assets/bangkok-city-2.jpg";
 
 const BangkokCityBoatTour = () => {
   const baseTourData = toursData["bangkok-city-boat-tour"];
-  
+
   if (!baseTourData) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -18,7 +19,7 @@ const BangkokCityBoatTour = () => {
       </div>
     );
   }
-  
+
   const tourData = {
     ...baseTourData,
     heroImages: [
@@ -30,7 +31,8 @@ const BangkokCityBoatTour = () => {
       { src: bangkokCity1, alt: "Bangkok cityscape with river" },
       { src: bangkokTemple2, alt: "Wat Arun temple at night" },
       { src: bangkokCity2, alt: "Bangkok highway and cityscape" }
-    ]
+    ],
+    faqs: bangkokCityBoatTourFaqs,
   };
 
   return <TourBooking tourData={tourData} extraContentBeforeReviews={<BangkokCityBoatTourSEO />} />;

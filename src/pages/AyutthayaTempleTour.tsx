@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { ayutthayaTempleTourFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import bangkokTemple3 from "@/assets/bangkok-temple-3.jpg";
@@ -18,7 +19,8 @@ const AyutthayaTempleTour = () => {
       { src: ayutthayaSunset1, alt: "Golden pagoda at sunset" },
       { src: bangkokTemple1, alt: "Golden Pagoda temple" },
       { src: bangkokTemple3, alt: "Temple at twilight" }
-    ]
+    ],
+    faqs: ayutthayaTempleTourFaqs,
   };
   return <TourBooking tourData={tourData} />;
 };

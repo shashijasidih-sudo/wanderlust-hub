@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { vivaAlangkaCruiseFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import cruiseDock1 from "@/assets/cruise-dock-1.jpg";
 import cruiseNight1 from "@/assets/cruise-night-1.jpg";
@@ -16,7 +17,8 @@ const VivaAlangkaCruise = () => {
       { src: cruiseShip1, alt: "Cruise boat at night" },
       { src: cruiseNight1, alt: "Evening cruise experience" },
       { src: cruiseDock1, alt: "River pier dock" }
-    ]
+    ],
+    faqs: vivaAlangkaCruiseFaqs,
   };
   return <TourBooking tourData={tourData} />;
 };
