@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { ayutthayaSunsetCruiseFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import ayutthayaRiverside1 from "@/assets/ayutthaya-riverside-1.jpg";
 import ayutthayaSunset1 from "@/assets/ayutthaya-sunset-1.jpg";
@@ -16,7 +17,8 @@ const AyutthayaSunsetCruise = () => {
       { src: ayutthayaRiverside1, alt: "Ayutthaya riverside temple" },
       { src: ayutthayaSunset1, alt: "Golden pagoda sunset view" },
       { src: watArunTwilight1, alt: "Wat Arun twilight" }
-    ]
+    ],
+    faqs: ayutthayaSunsetCruiseFaqs,
   };
   return <TourBooking tourData={tourData} />;
 };

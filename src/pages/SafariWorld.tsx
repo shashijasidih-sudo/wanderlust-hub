@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TourBooking from "@/components/TourBooking";
+import { safariWorldFaqs } from "@/data/bangkokActivityFaqs";
 import bangkokRiversideTemple1 from "@/assets/bangkok-riverside-temple-1.jpg";
 import bangkokBridgeDay1 from "@/assets/bangkok-bridge-day-1.jpg";
 import bangkokTempleWoman1 from "@/assets/bangkok-temple-woman-1.jpg";
@@ -57,9 +58,7 @@ const SafariWorld = () => {
     bookingPolicy: ["Instant confirmation"],
     cancellationPolicy: ["Free cancellation 24 hours before"],
     childPolicy: ["Children 3-11 years discounted"],
-    faqs: [
-      { question: "What animals can we see?", answer: "Lions, tigers, giraffes, and many more exotic animals." }
-    ]
+    faqs: safariWorldFaqs
   };
 
   return (

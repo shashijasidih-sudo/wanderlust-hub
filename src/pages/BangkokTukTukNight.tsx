@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { tukTukNightFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
 import bangkokCity1 from "@/assets/bangkok-city-1.jpg";
@@ -16,7 +17,8 @@ const BangkokTukTukNight = () => {
       { src: bangkokTemple2, alt: "Illuminated temples at night" },
       { src: bangkokCity1, alt: "Bangkok cityscape" },
       { src: bangkokTemple3, alt: "Wat Arun at twilight" }
-    ]
+    ],
+    faqs: tukTukNightFaqs,
   };
   return <TourBooking tourData={tourData} />;
 };

@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { watArunChinatownFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
 import bangkokCity2 from "@/assets/bangkok-city-2.jpg";
@@ -16,7 +17,8 @@ const BangkokWatArunChinatown = () => {
       { src: bangkokTemple2, alt: "Wat Arun at night" },
       { src: bangkokCity2, alt: "Bangkok highway bridge" },
       { src: bangkokTemple4, alt: "Temple exploration" }
-    ]
+    ],
+    faqs: watArunChinatownFaqs,
   };
   return <TourBooking tourData={tourData} />;
 };
