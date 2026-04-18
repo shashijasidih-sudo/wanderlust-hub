@@ -446,4 +446,310 @@ export const SeaLifeMadameTussaudsSEO = () => (
   />
 );
 
+// =============== Wat Arun, Wat Pho & Wat Phra Kaew (alt Three Temples) ===============
+export const WatArunChinatownSEO = () => (
+  <BangkokActivitySEO
+    title="Bangkok Wat Arun & Chinatown Evening Tour – Complete Guide"
+    sections={[
+      {
+        heading: "Why Book the Wat Arun & Chinatown Evening Tour",
+        body: [
+          "The Bangkok Wat Arun and Chinatown evening tour is a perfect blend of culture, spirituality, and street-food adventure. Travelers begin by witnessing the iconic Temple of Dawn glowing against the Chao Phraya River at sunset, followed by an immersive walk through Bangkok's vibrant Yaowarat Chinatown district.",
+          "This tour suits couples, families, and solo travelers who want to experience Bangkok's heritage and nightlife in a single guided experience. Indian travelers can book online in advance and pay conveniently in INR.",
+        ],
+      },
+      {
+        heading: "What's Included in the Tour",
+        bullets: [
+          "Wat Arun temple entry and guided exploration",
+          "Sunset photography stop along Chao Phraya River",
+          "Chinatown (Yaowarat) walking tour with English-speaking guide",
+          "Hotel pickup and drop-off (selected packages)",
+          "Air-conditioned transportation",
+        ],
+      },
+      {
+        heading: "Best Time to Visit",
+        body: "The ideal time for this experience is between 4:30 PM and 9:30 PM, when Wat Arun lights up at twilight and Chinatown's food stalls come alive. November to February offers the most pleasant evening weather.",
+      },
+      {
+        heading: "Tips for Indian Travelers",
+        body: "Modest clothing covering shoulders and knees is required at Wat Arun. Many Chinatown stalls offer vegetarian and Jain-friendly options — Indian travelers should look for clearly labelled vegetarian carts. INR payment is supported through trusted online platforms.",
+      },
+    ]}
+  />
+);
+
+// =============== Bangkok Tuk-Tuk Night Tour ===============
+export const TukTukNightSEO = () => (
+  <BangkokActivitySEO
+    title="Bangkok Night Tour by Tuk-Tuk – Complete Guide"
+    sections={[
+      {
+        heading: "Why Book the Bangkok Tuk-Tuk Night Tour",
+        body: [
+          "Exploring Bangkok by tuk-tuk after sunset is one of the most authentic and exciting ways to experience the city. The Bangkok Tuk-Tuk Night Tour takes travelers through illuminated temples, bustling local markets, and iconic neighborhoods that look completely different by night.",
+          "It's an ideal pick for first-time visitors and couples who want a fast-paced, photo-rich introduction to Bangkok's after-dark personality. Indian travelers can pre-book in INR for a hassle-free experience.",
+        ],
+      },
+      {
+        heading: "What's Included in the Tour",
+        bullets: [
+          "Private or shared tuk-tuk ride through Bangkok's old town",
+          "Visits to Wat Pho, Wat Arun viewpoint, and the Flower Market",
+          "Local street food tasting stops",
+          "English-speaking guide",
+          "Hotel pickup and drop-off (selected packages)",
+        ],
+      },
+      {
+        heading: "Best Time to Visit",
+        body: "Tours typically run between 6:30 PM and 10:30 PM. The cool dry season (November to February) is the most comfortable time for an open-air tuk-tuk ride.",
+      },
+      {
+        heading: "Tips for Indian Travelers",
+        body: "Carry a light jacket as evenings can feel breezy on a tuk-tuk. Vegetarian and Jain options are available at most food stops if requested in advance. Modest attire is needed for any temple stops, and INR online payment is supported.",
+      },
+    ]}
+  />
+);
+
+// =============== Dream World Bangkok ===============
+export const DreamWorldSEO = () => (
+  <BangkokActivitySEO
+    title="Dream World Bangkok Theme Park – Complete Guide"
+    sections={[
+      {
+        heading: "Why Book Dream World Bangkok",
+        body: [
+          "Dream World Bangkok is one of Thailand's most popular family theme parks, featuring more than 40 thrilling rides, themed lands, and live entertainment. From roller coasters and water rides to a Snow Town with real snow, it's an all-day adventure that suits families with children, teens, and groups of friends.",
+          "Pre-booking your Dream World tickets online is the easiest way to skip ticket counter queues and lock in better rates. Indian travelers can pay in INR before departure.",
+        ],
+      },
+      {
+        heading: "What's Included",
+        bullets: [
+          "Entry ticket to Dream World theme park",
+          "Access to Dream Garden, Fantasy Land, Adventure Land and Hollywood Action zones",
+          "Snow Town experience (jacket included)",
+          "Live shows and parades",
+          "Hotel transfers (selected packages)",
+        ],
+      },
+      {
+        heading: "Best Time to Visit",
+        body: "Dream World is open daily from 10:00 AM to 5:00 PM. Weekdays are the best time to avoid long queues, and the cooler months from November to February make outdoor rides more comfortable.",
+      },
+      {
+        heading: "Tips for Indian Travelers",
+        body: "Carry sunscreen, comfortable shoes, and a change of clothes if you plan to enjoy the water rides. Vegetarian Indian-friendly meals are available at the in-park food court. Lockers are available for valuables, and INR online payment is supported.",
+      },
+    ]}
+  />
+);
+
+// =============== Baiyoke Sky Buffet ===============
+export const BaiyokeBuffetSEO = () => (
+  <BangkokActivitySEO
+    title="Baiyoke Sky Tower Buffet & Observation Deck – Complete Guide"
+    sections={[
+      {
+        heading: "Why Book the Baiyoke Sky Buffet",
+        body: [
+          "Dining at Baiyoke Sky Hotel is a quintessential Bangkok experience — an international buffet served high above the city skyline with panoramic 360° views from one of Thailand's tallest hotel towers.",
+          "The package combines an extensive multi-cuisine buffet with access to the open-air 84th-floor observation deck, making it perfect for couples, families, and groups celebrating special occasions. Indian travelers can pre-book in INR for guaranteed seating.",
+        ],
+      },
+      {
+        heading: "What's Included",
+        bullets: [
+          "International buffet on the 76th or 78th floor (Thai, Chinese, Japanese, Indian, and Western dishes)",
+          "Access to the 77th-floor indoor observation area",
+          "Access to the 84th-floor revolving rooftop observation deck",
+          "Soft drinks and dessert station",
+          "Hotel transfers (selected packages)",
+        ],
+      },
+      {
+        heading: "Best Time to Visit",
+        body: "Sunset slots between 5:30 PM and 7:30 PM are the most popular, offering both daylight and twilight skyline views. Lunch slots are ideal for travelers preferring a quieter experience with shorter waits.",
+      },
+      {
+        heading: "Tips for Indian Travelers",
+        body: "Smart-casual attire is recommended. The buffet typically includes a clearly labelled Indian vegetarian counter — inform staff of Jain or specific dietary needs in advance. Bring a light jacket for the windy rooftop deck. INR online payment is fully supported.",
+      },
+    ]}
+  />
+);
+
+// =============== Safari World Bangkok ===============
+export const SafariWorldSEO = () => (
+  <BangkokActivitySEO
+    title="Safari World & Marine Park Bangkok – Complete Guide"
+    sections={[
+      {
+        heading: "Why Book Safari World Bangkok",
+        body: [
+          "Safari World is Thailand's largest open zoo and marine park, combining a drive-through African-style safari with a Marine Park featuring world-class animal shows. It's one of Bangkok's top family attractions and a favourite among Indian travelers visiting with children.",
+          "Pre-booking online ensures faster entry, better pricing, and a guaranteed shared transfer slot from your Bangkok hotel.",
+        ],
+      },
+      {
+        heading: "What's Included",
+        bullets: [
+          "Entry to Safari Park drive-through (zebras, giraffes, lions, tigers, and more)",
+          "Entry to Marine Park with dolphin, sea lion, orangutan, spy war and cowboy stunt shows",
+          "Shared bus or van for the safari ride",
+          "Hotel transfers from Bangkok (selected packages)",
+          "English-speaking guide",
+        ],
+      },
+      {
+        heading: "Best Time to Visit",
+        body: "The park is open daily from 9:00 AM to 5:00 PM. Arriving early helps you complete both Safari and Marine sections comfortably and catch the most popular shows. November to February offers the most comfortable weather.",
+      },
+      {
+        heading: "Tips for Indian Travelers",
+        body: "Wear comfortable shoes and carry sunscreen — most of the day is spent outdoors. Indian vegetarian meals are available at the in-park restaurants and at the optional buffet add-on. The full circuit takes 6–7 hours, so plan a full day. INR online payment is supported.",
+      },
+    ]}
+  />
+);
+
+// =============== Mahanakhon Skywalk ===============
+export const SkywalkSEO = () => (
+  <BangkokActivitySEO
+    title="Bangkok Mahanakhon Sky Walk – Complete Guide"
+    sections={[
+      {
+        heading: "Why Book the Mahanakhon Sky Walk",
+        body: [
+          "The King Power Mahanakhon Sky Walk is Bangkok's highest 360° observation deck, sitting 314 metres above the city. The highlight is the heart-pounding glass tray on the open-air rooftop where visitors can stand on transparent glass with the city spread directly beneath their feet.",
+          "It's a must-do experience for couples, photographers, and thrill-seekers. Pre-booking online with INR payment skips the on-site ticket queue.",
+        ],
+      },
+      {
+        heading: "What's Included",
+        bullets: [
+          "Entry to the 74th and 75th-floor indoor observation decks",
+          "Access to the 78th-floor open-air rooftop and Glass Tray experience",
+          "High-speed glass-bottom elevator ride",
+          "Use of digital photo booth at the rooftop",
+          "Hotel transfers (selected packages)",
+        ],
+      },
+      {
+        heading: "Best Time to Visit",
+        body: "The Sky Walk is open from 10:00 AM to midnight. Sunset slots between 5:30 PM and 7:00 PM are the most popular, giving both daytime panoramas and dazzling night-time city lights in a single visit.",
+      },
+      {
+        heading: "Tips for Indian Travelers",
+        body: "Wear flat, secure footwear (high heels are not allowed on the Glass Tray). The rooftop can be windy, so secure hats and accessories. Vegetarian snacks and drinks are available at the rooftop bar. The attraction connects directly to BTS Chong Nonsi station, and INR online payment is fully supported.",
+      },
+    ]}
+  />
+);
+
+// =============== Ayutthaya Temple Tour ===============
+export const AyutthayaTempleTourSEO = () => (
+  <BangkokActivitySEO
+    title="Ayutthaya Temple Day Tour from Bangkok – Complete Guide"
+    sections={[
+      {
+        heading: "Why Book the Ayutthaya Temple Tour",
+        body: [
+          "Ayutthaya, the former capital of Siam and a UNESCO World Heritage Site, is one of Thailand's most important historical destinations. This guided day tour from Bangkok takes travelers through ancient temple ruins, royal palaces, and centuries-old Buddha statues that tell the story of the once-powerful Ayutthaya Kingdom.",
+          "It's ideal for culture enthusiasts and Indian travelers interested in Buddhist heritage. Booking online in INR ensures hotel transfers, lunch, and English-speaking guide are pre-arranged.",
+        ],
+      },
+      {
+        heading: "What's Included",
+        bullets: [
+          "Visits to Wat Mahathat (famous Buddha head in tree roots), Wat Phra Si Sanphet, and Wat Lokayasutharam",
+          "Bang Pa-In Royal Summer Palace tour",
+          "English-speaking guide",
+          "Hotel pickup and drop-off from Bangkok",
+          "Lunch at a local Thai restaurant (selected packages)",
+        ],
+      },
+      {
+        heading: "Best Time to Visit",
+        body: "Tours typically depart Bangkok at 7:30–8:00 AM and return by 5:00–6:00 PM. November to February offers the coolest sightseeing weather. Morning starts help avoid the midday heat at open-air ruins.",
+      },
+      {
+        heading: "Tips for Indian Travelers",
+        body: "Modest clothing — covered shoulders and knees — is required for temple visits. Carry a hat, sunscreen, and a refillable water bottle. Vegetarian Thai meals (and Indian options on request) can be arranged at the lunch stop. INR online payment is supported.",
+      },
+    ]}
+  />
+);
+
+// =============== Ayutthaya Sunset Cruise ===============
+export const AyutthayaSunsetCruiseSEO = () => (
+  <BangkokActivitySEO
+    title="Ayutthaya Day Tour with Sunset River Cruise Return – Complete Guide"
+    sections={[
+      {
+        heading: "Why Book the Ayutthaya Sunset Cruise Tour",
+        body: [
+          "This combo tour pairs a guided exploration of Ayutthaya's UNESCO-listed temples with a relaxing sunset river cruise back to Bangkok along the Chao Phraya River. Travelers enjoy the best of both worlds — ancient history by day and a scenic dinner cruise as the sun sets.",
+          "It's a top pick for couples, honeymooners, and families. Indian travelers can book in advance and pay in INR for a stress-free experience.",
+        ],
+      },
+      {
+        heading: "What's Included",
+        bullets: [
+          "Guided tour of major Ayutthaya temples and Bang Pa-In Palace",
+          "Lunch at a local Thai restaurant",
+          "Sunset river cruise from Ayutthaya back to Bangkok",
+          "International buffet dinner on board",
+          "Hotel pickup (drop-off after cruise at River City Pier)",
+        ],
+      },
+      {
+        heading: "Best Time to Visit",
+        body: "Tours operate year-round, but the cool, dry months from November to February are most comfortable for sightseeing and the open-deck cruise. Departure is typically 7:00 AM with return to Bangkok around 7:30–8:00 PM.",
+      },
+      {
+        heading: "Tips for Indian Travelers",
+        body: "Smart-casual clothing works for the cruise; modest temple-appropriate attire is needed for temple visits. The on-board buffet usually includes vegetarian options — inform the operator of Jain or specific dietary needs at the time of booking. INR online payment is supported.",
+      },
+    ]}
+  />
+);
+
+// =============== Viva Alangka Dinner Cruise ===============
+export const VivaAlangkaCruiseSEO = () => (
+  <BangkokActivitySEO
+    title="Viva Alangka Chao Phraya Dinner Cruise – Complete Guide"
+    sections={[
+      {
+        heading: "Why Book the Viva Alangka Dinner Cruise",
+        body: [
+          "The Viva Alangka Cruise is one of Bangkok's most stylish dinner cruises along the Chao Phraya River. With panoramic deck views of the illuminated skyline, Wat Arun, the Grand Palace, and Rama VIII Bridge, it's a romantic evening pick for couples and a memorable group experience.",
+          "Pre-booking online guarantees seating and lets Indian travelers pay securely in INR before arriving in Bangkok.",
+        ],
+      },
+      {
+        heading: "What's Included",
+        bullets: [
+          "2-hour Chao Phraya River dinner cruise",
+          "International buffet dinner with Thai, Indian, Chinese and Western dishes",
+          "Live music and on-board entertainment",
+          "Open-air upper deck access for skyline views",
+          "Hotel transfers (selected packages)",
+        ],
+      },
+      {
+        heading: "Best Time to Visit",
+        body: "Boarding starts around 7:00 PM at Asiatique Pier, with cruising from 7:30 PM to 9:30 PM. The cool season from November to February gives the most pleasant open-deck experience.",
+      },
+      {
+        heading: "Tips for Indian Travelers",
+        body: "Smart-casual attire is recommended. The buffet usually has a clearly labelled vegetarian section — request Jain or specific dietary preferences in advance. Carry a light jacket for the breezy upper deck. INR online payment is fully supported.",
+      },
+    ]}
+  />
+);
+
 export default BangkokActivitySEO;
