@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { CityGemsGallerySEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { toursData } from "@/data/tourData";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import bangkokBuddha1 from "@/assets/bangkok-buddha-1.jpg";
@@ -18,7 +19,7 @@ const BangkokCityGemsGallery = () => {
       { src: bangkokTemple4, alt: "Woman at Thai temple" }
     ]
   };
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<CityGemsGallerySEO />} />;
 };
 
 export default BangkokCityGemsGallery;

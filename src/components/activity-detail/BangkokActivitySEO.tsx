@@ -347,6 +347,59 @@ export const GoldenBuddhaMarbleTempleSEO = () => (
   />
 );
 
+export const CityGemsGallerySEO = () => (
+  <BangkokActivitySEO
+    title="Bangkok City and Temple Tours with Gems Gallery – Complete Guide"
+    sections={[
+      {
+        heading: "Why Book the Bangkok City Tour with Gems Gallery",
+        body: [
+          "The Bangkok City and Temple Tour with Gems Gallery is one of the most convenient half-day sightseeing experiences for first-time visitors. It combines two of Bangkok's most popular temples with a guided visit to a government-licensed gems gallery, all within a comfortable, well-organized itinerary.",
+          "Travelers explore iconic Buddhist landmarks, learn about Thai religious traditions, and get an inside look at Thailand's world-famous gemstone craftsmanship — including sapphires, rubies, and other precious stones for which the country is known.",
+          "Booking this tour in advance ensures hotel transfers, an English-speaking guide, and a structured schedule that lets you experience Bangkok's culture and craftsmanship without planning logistics on your own. Indian travelers can secure tickets online with INR payment options.",
+        ],
+      },
+      {
+        heading: "What's Included",
+        body: "Your Bangkok City and Temple Tour package typically includes guided visits to two major Bangkok temples and entry to a licensed gemstone gallery showcasing Thai jewelry craftsmanship.",
+        bullets: [
+          "Visits to two iconic Bangkok temples",
+          "Guided tour of the Gems Gallery",
+          "Hotel pickup and drop-off services",
+          "English-speaking guide",
+          "Air-conditioned transportation",
+          "Bottled drinking water during the trip",
+        ],
+      },
+      {
+        heading: "Best Time for the Tour",
+        body: [
+          "The best time to take this tour is in the morning between 8:30 AM and 12:30 PM, when temperatures are cooler and temple courtyards are less crowded. Morning light is also ideal for photographing the temples' golden details.",
+          "November to February offers the most pleasant weather for sightseeing in Bangkok, though the tour operates year-round. Weekday departures are recommended for a more relaxed experience.",
+        ],
+      },
+      {
+        heading: "Transfer vs No-Transfer Option",
+        body: "The transfer option includes shared hotel pickup and drop-off from selected Bangkok hotels — ideal for first-time visitors unfamiliar with city traffic. The no-transfer option allows guests to reach the meeting point independently, suitable for travelers staying near central Bangkok.",
+      },
+      {
+        heading: "Tips for Indian Travelers",
+        body: "Strict temple dress code applies — wear full-length trousers or long skirts and shirts that cover the shoulders. Sleeveless tops, shorts, and short dresses are not permitted. The Gems Gallery visit is informational and there is no obligation to purchase. Carry sunscreen, water, and a camera. Vegetarian-friendly food is available near temple areas. INR payments are supported on trusted booking platforms.",
+      },
+      {
+        heading: "Tour Timings",
+        bullets: [
+          "Hotel pickup: Between 7:30 AM and 9:00 AM",
+          "Temple visits begin: Around 8:30 AM",
+          "Gems Gallery visit: ~30–45 minutes",
+          "Total tour duration: Approximately 4 hours",
+          "Tour completion: Around 12:30 PM",
+        ],
+      },
+    ]}
+  />
+);
+
 export const SeaLifeMadameTussaudsSEO = () => (
   <BangkokActivitySEO
     title="Sea Life Bangkok Ocean World & Madame Tussauds Combo – Complete Guide"
