@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { DreamWorldSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { dreamWorldFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokTempleWoman1 from "@/assets/bangkok-temple-woman-1.jpg";
@@ -20,7 +21,7 @@ const DreamWorldBangkok = () => {
     ],
     faqs: dreamWorldFaqs,
   };
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<DreamWorldSEO />} />;
 };
 
 export default DreamWorldBangkok;

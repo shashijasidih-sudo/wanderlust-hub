@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { BaiyokeBuffetSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { baiyokeBuffetFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokCityNight1 from "@/assets/bangkok-city-night-1.jpg";
@@ -20,7 +21,7 @@ const BaiyokeBuffet = () => {
     ],
     faqs: baiyokeBuffetFaqs,
   };
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<BaiyokeBuffetSEO />} />;
 };
 
 export default BaiyokeBuffet;

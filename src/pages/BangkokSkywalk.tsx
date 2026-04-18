@@ -1,4 +1,5 @@
 import TourBooking from "@/components/TourBooking";
+import { SkywalkSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { bangkokSkywalkFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokSkywalk1 from "@/assets/bangkok-skywalk-1.jpg";
@@ -27,7 +28,7 @@ const BangkokSkywalk = () => {
     ],
     faqs: bangkokSkywalkFaqs,
   };
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<SkywalkSEO />} />;
 };
 
 export default BangkokSkywalk;
