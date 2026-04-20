@@ -1,5 +1,7 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import { JamesBondSeaCanoeSEO } from "@/components/activity-detail/PhuketActivitySEO";
+import { jamesBondSeaCanoeFaqs } from "@/data/phuketActivityFaqs";
 import jamesBond1 from "@/assets/james-bond-1.jpg";
 import jamesBond2 from "@/assets/james-bond-2.jpg";
 import jamesBond3 from "@/assets/james-bond-3.jpg";
@@ -11,6 +13,7 @@ const JamesBondIslandSeaCanoe = () => {
   
   const tourData = {
     ...baseTourData,
+    faqs: jamesBondSeaCanoeFaqs,
     heroImages: [
       { src: jamesBond1, title: "James Bond Island Sea Canoe" },
       { src: jamesBond2, title: "Phang Nga Bay Canoeing" },
@@ -24,7 +27,7 @@ const JamesBondIslandSeaCanoe = () => {
     ]
   };
   
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<JamesBondSeaCanoeSEO />} />;
 };
 
 export default JamesBondIslandSeaCanoe;
