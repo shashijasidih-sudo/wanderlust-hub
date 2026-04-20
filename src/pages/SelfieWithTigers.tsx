@@ -1,5 +1,7 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import { TigerKingdomSEO } from "@/components/activity-detail/PhuketActivitySEO";
+import { tigerKingdomFaqs } from "@/data/phuketActivityFaqs";
 import phuketIslandView from "@/assets/phuket-island-viewpoint-1.jpg";
 import phuketMayaBay from "@/assets/phuket-maya-bay-1.jpg";
 import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
@@ -49,6 +51,7 @@ const SelfieWithTigers = () => {
   
   const tourData = {
     ...baseTourData,
+    faqs: tigerKingdomFaqs,
     heroImages: [
       { src: tiger1, title: "Selfie with Tigers Experience" },
       { src: phuketIslandView, title: "Tiger Kingdom Phuket" },
@@ -62,7 +65,7 @@ const SelfieWithTigers = () => {
     ]
   };
   
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<TigerKingdomSEO />} />;
 };
 
 export default SelfieWithTigers;

@@ -1,5 +1,7 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import { SimonCabaretSEO } from "@/components/activity-detail/PhuketActivitySEO";
+import { simonCabaretFaqs } from "@/data/phuketActivityFaqs";
 import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
 import phuketIslandView from "@/assets/phuket-island-viewpoint-1.jpg";
 import phuketMayaBay from "@/assets/phuket-maya-bay-1.jpg";
@@ -11,6 +13,7 @@ const PhuketSimonCabaret = () => {
   
   const tourData = {
     ...baseTourData,
+    faqs: simonCabaretFaqs,
     heroImages: [
       { src: phuketBoatTour, title: "Simon Cabaret Show" },
       { src: phuketIslandView, title: "Spectacular Costumes" },
@@ -24,7 +27,7 @@ const PhuketSimonCabaret = () => {
     ]
   };
   
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<SimonCabaretSEO />} />;
 };
 
 export default PhuketSimonCabaret;

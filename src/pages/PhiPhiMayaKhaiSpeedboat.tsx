@@ -1,5 +1,7 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import { PhiPhiMayaKhaiSpeedboatSEO } from "@/components/activity-detail/PhuketActivitySEO";
+import { phiPhiMayaKhaiSpeedboatFaqs } from "@/data/phuketActivityFaqs";
 import phiPhi1 from "@/assets/phi-phi-1.jpg";
 import phiPhi2 from "@/assets/phi-phi-2.jpg";
 import phiPhi3 from "@/assets/phi-phi-3.jpg";
@@ -12,6 +14,7 @@ const PhiPhiMayaKhaiSpeedboat = () => {
   
   const tourData = {
     ...baseTourData,
+    faqs: phiPhiMayaKhaiSpeedboatFaqs,
     heroImages: [
       { src: phuketSpeedboat, title: "Speedboat Adventure" },
       { src: phuketMayaBay, title: "Maya Bay" },
@@ -25,7 +28,7 @@ const PhiPhiMayaKhaiSpeedboat = () => {
     ]
   };
   
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<PhiPhiMayaKhaiSpeedboatSEO />} />;
 };
 
 export default PhiPhiMayaKhaiSpeedboat;

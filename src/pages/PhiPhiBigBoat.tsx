@@ -1,5 +1,7 @@
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import { PhiPhiBigBoatSEO } from "@/components/activity-detail/PhuketActivitySEO";
+import { phiPhiBigBoatFaqs } from "@/data/phuketActivityFaqs";
 import phiPhi1 from "@/assets/phi-phi-1.jpg";
 import phiPhi2 from "@/assets/phi-phi-2.jpg";
 import phiPhi3 from "@/assets/phi-phi-3.jpg";
@@ -13,6 +15,7 @@ const PhiPhiBigBoat = () => {
   
   const tourData = {
     ...baseTourData,
+    faqs: phiPhiBigBoatFaqs,
     heroImages: [
       { src: phuketBigBoat, title: "Phi Phi Islands Big Boat Tour" },
       { src: phiPhi1, title: "Maya Bay Beach" },
@@ -26,7 +29,7 @@ const PhiPhiBigBoat = () => {
     ]
   };
   
-  return <TourBooking tourData={tourData} />;
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<PhiPhiBigBoatSEO />} />;
 };
 
 export default PhiPhiBigBoat;
