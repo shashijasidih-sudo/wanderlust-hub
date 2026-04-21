@@ -9,6 +9,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuSeparator,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
 } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/yellodae-logo.png";
 import SearchInput from "./SearchInput";
@@ -219,36 +222,44 @@ const Header = () => {
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[240px] p-2">
-              <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand">
+              <DropdownMenuSub>
+                <DropdownMenuSubTrigger className={menuItemClass}>
                   <Palmtree className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Thailand (All Cities)</span>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/bangkok">
-                  <Building2 className="h-5 w-5 mr-3 text-primary" />
-                  <span className="font-medium">Bangkok</span>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/pattaya">
-                  <Ship className="h-5 w-5 mr-3 text-primary" />
-                  <span className="font-medium">Pattaya</span>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/phuket">
-                  <Fish className="h-5 w-5 mr-3 text-primary" />
-                  <span className="font-medium">Phuket</span>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/krabi">
-                  <Anchor className="h-5 w-5 mr-3 text-primary" />
-                  <span className="font-medium">Krabi</span>
-                </Link>
-              </DropdownMenuItem>
+                </DropdownMenuSubTrigger>
+                <DropdownMenuSubContent className="bg-background border shadow-xl z-50 min-w-[220px] p-2">
+                  <DropdownMenuItem asChild className={menuItemClass}>
+                    <Link to="/thailand">
+                      <Palmtree className="h-5 w-5 mr-3 text-primary" />
+                      <span className="font-medium">All Thailand</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild className={menuItemClass}>
+                    <Link to="/bangkok">
+                      <Building2 className="h-5 w-5 mr-3 text-primary" />
+                      <span className="font-medium">Bangkok</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild className={menuItemClass}>
+                    <Link to="/pattaya">
+                      <Ship className="h-5 w-5 mr-3 text-primary" />
+                      <span className="font-medium">Pattaya</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild className={menuItemClass}>
+                    <Link to="/phuket">
+                      <Fish className="h-5 w-5 mr-3 text-primary" />
+                      <span className="font-medium">Phuket</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild className={menuItemClass}>
+                    <Link to="/krabi">
+                      <Anchor className="h-5 w-5 mr-3 text-primary" />
+                      <span className="font-medium">Krabi</span>
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuSubContent>
+              </DropdownMenuSub>
               <div className="h-px bg-border my-2" />
               <DropdownMenuItem className={`${menuItemClass} opacity-50 cursor-not-allowed`} onSelect={(e) => { e.preventDefault(); toast({ title: "Dubai Temporarily Unavailable", description: "⚠️ We will soon update the prices as per the ongoing War Situation", variant: "destructive" }); }}>
                   <Castle className="h-5 w-5 mr-3 text-muted-foreground" />
@@ -398,31 +409,31 @@ const Header = () => {
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/thailand" onClick={() => setIsMenuOpen(false)}>
                     <Palmtree className="h-4 w-4 mr-2 text-primary" />
-                    Thailand (All Cities)
+                    <span className="font-medium">Thailand (All Cities)</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/bangkok" onClick={() => setIsMenuOpen(false)}>
-                    <Building2 className="h-4 w-4 mr-2 text-primary" />
-                    Bangkok
+                    <Building2 className="h-4 w-4 mr-2 ml-4 text-primary" />
+                    <span className="text-muted-foreground">— Bangkok</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/pattaya" onClick={() => setIsMenuOpen(false)}>
-                    <Ship className="h-4 w-4 mr-2 text-primary" />
-                    Pattaya
+                    <Ship className="h-4 w-4 mr-2 ml-4 text-primary" />
+                    <span className="text-muted-foreground">— Pattaya</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/phuket" onClick={() => setIsMenuOpen(false)}>
-                    <Fish className="h-4 w-4 mr-2 text-primary" />
-                    Phuket
+                    <Fish className="h-4 w-4 mr-2 ml-4 text-primary" />
+                    <span className="text-muted-foreground">— Phuket</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/krabi" onClick={() => setIsMenuOpen(false)}>
-                    <Anchor className="h-4 w-4 mr-2 text-primary" />
-                    Krabi
+                    <Anchor className="h-4 w-4 mr-2 ml-4 text-primary" />
+                    <span className="text-muted-foreground">— Krabi</span>
                   </Link>
                 </DropdownMenuItem>
                 <div className="h-px bg-border my-1" />
