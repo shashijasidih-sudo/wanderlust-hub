@@ -1,15 +1,32 @@
 import { useEffect } from "react";
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import { NightSafariTicketsSEO } from "@/components/activity-detail/SingaporeActivitySEO";
+import { nightSafariTicketsFaqs } from "@/data/singaporeActivityFaqs";
+import ns1 from "@/assets/singapore-doc/night-safari-1.jpg";
+import ns2 from "@/assets/singapore-doc/night-safari-2.jpg";
+import ns3 from "@/assets/singapore-doc/night-safari-3.jpg";
 
 const NightSafariTickets = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const tourData = toursData["night-safari-tickets"];
-
-  return <TourBooking tourData={tourData} />;
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  const base = toursData["night-safari-tickets"];
+  const tourData = {
+    ...base,
+    heroImages: [
+      { src: ns1, title: base.title, subtitle: "World's first nocturnal zoo" },
+      { src: ns2, title: base.title, subtitle: "Mandai Wildlife Reserve entrance" },
+      { src: ns3, title: base.title, subtitle: "Live wildlife performances" },
+      ...base.heroImages,
+    ],
+    galleryImages: [
+      { src: ns1, alt: "Night Safari Singapore entrance at night" },
+      { src: ns2, alt: "Night Safari rhino statue welcome" },
+      { src: ns3, alt: "Creatures of the Night live show" },
+      ...base.galleryImages,
+    ],
+    faqs: nightSafariTicketsFaqs,
+  };
+  return <TourBooking tourData={tourData} extraContentBeforeReviews={<NightSafariTicketsSEO />} />;
 };
 
 export default NightSafariTickets;
