@@ -483,6 +483,32 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs }: Tran
               </AccordionItem>
             </Accordion>
           </div>
+
+          {/* SEO Long-form Content */}
+          {seoContent && (
+            <article className="mt-10 prose prose-sm md:prose-base max-w-none prose-headings:text-foreground prose-headings:font-bold prose-h2:text-2xl prose-h3:text-xl prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground">
+              {seoContent}
+            </article>
+          )}
+
+          {/* FAQs */}
+          {faqs && faqs.length > 0 && (
+            <section className="mt-10">
+              <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+              <Accordion type="single" collapsible className="space-y-3">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`faq-${index}`} className="border rounded-lg px-4">
+                    <AccordionTrigger className="text-base font-semibold text-left">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </section>
+          )}
         </div>
       </main>
 
