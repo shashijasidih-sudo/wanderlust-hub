@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import TransferBooking from "@/components/TransferBooking";
+import CanonicalUrl from "@/components/seo/CanonicalUrl";
 import { transfersData } from "@/data/transferData";
 import { bangkokTransferSEO } from "@/data/bangkokTransferSEO";
 
@@ -8,12 +9,15 @@ const BangkokBkkAirportDropoff = () => {
   const id = "bangkok-bkk-airport-dropoff";
   const seo = bangkokTransferSEO[id];
   return (
-    <TransferBooking
-      transferData={transfersData[id]}
-      galleryImages={seo.gallery}
-      seoContent={seo.seoContent}
-      faqs={seo.faqs}
-    />
+    <>
+      <CanonicalUrl path="/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer" />
+      <TransferBooking
+        transferData={transfersData[id]}
+        galleryImages={seo.gallery}
+        seoContent={seo.seoContent}
+        faqs={seo.faqs}
+      />
+    </>
   );
 };
 
