@@ -1,14 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Instagram, Linkedin, Youtube, MessageCircle } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
+import BangkokSmartGuides from "@/components/BangkokSmartGuides";
 
 
 const Footer = () => {
+  const { pathname } = useLocation();
+  const isBangkokPage = pathname === "/bangkok" || pathname.startsWith("/bangkok/");
+
   return (
     <>
       <Testimonials />
+      {isBangkokPage && <BangkokSmartGuides />}
       <footer className="bg-foreground text-background py-12 md:py-16">
       <div className="container px-4 md:px-6">
         {/* Newsletter Section */}
