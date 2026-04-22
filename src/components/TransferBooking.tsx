@@ -175,6 +175,31 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs }: Tran
       <Header />
       
       <main className="container mx-auto px-4 py-8">
+        {/* Photo Gallery */}
+        {galleryImages && galleryImages.length > 0 && (
+          <div className="max-w-4xl mx-auto mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+              {galleryImages.slice(0, 4).map((img, idx) => (
+                <div
+                  key={idx}
+                  className={cn(
+                    "overflow-hidden rounded-lg",
+                    idx === 0 && "col-span-2 row-span-2 md:h-[320px]",
+                    idx !== 0 && "h-[110px] md:h-[156px]"
+                  )}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    loading="lazy"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Title */}
         <div className="text-center mb-8">
           <h1 className="text-2xl md:text-3xl font-bold">{transferData.title}</h1>
