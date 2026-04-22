@@ -128,6 +128,20 @@
   <url><loc>https://yellodae.com/dubai/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://yellodae.com/singapore/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
+  <!-- Bangkok Airport Transfers (SEO-friendly slugs) -->
+  <url><loc>https://yellodae.com/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/bangkok/don-mueang-airport-to-bangkok-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-safari-world-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-to-hotel-transfer-4-hours</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/bangkok/bangkok-city-tour-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
   <!-- Smart Guides & Blogs -->
   <url><loc>https://yellodae.com/thailand/destination-guides</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://yellodae.com/dubai/destination-guides</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
