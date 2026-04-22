@@ -13,4 +13,6 @@ Allow: /
 User-agent: *
 Allow: /
 
+# Sitemap location for search engine discovery
 Sitemap: https://yellodae.com/sitemap.xml
+Host: https://yellodae.com
