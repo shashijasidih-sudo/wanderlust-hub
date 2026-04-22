@@ -57,11 +57,24 @@ export interface TransferData {
   baggagePolicy: string[];
 }
 
-interface TransferBookingProps {
-  transferData: TransferData;
+export interface TransferFAQ {
+  question: string;
+  answer: string;
 }
 
-const TransferBooking = ({ transferData }: TransferBookingProps) => {
+export interface TransferGalleryImage {
+  src: string;
+  alt: string;
+}
+
+interface TransferBookingProps {
+  transferData: TransferData;
+  galleryImages?: TransferGalleryImage[];
+  seoContent?: React.ReactNode;
+  faqs?: TransferFAQ[];
+}
+
+const TransferBooking = ({ transferData, galleryImages, seoContent, faqs }: TransferBookingProps) => {
   const location = useLocation();
   const navigate = useNavigate();
   const tourSlug = location.pathname.slice(1);
@@ -162,6 +175,31 @@ const TransferBooking = ({ transferData }: TransferBookingProps) => {
       <Header />
       
       <main className="container mx-auto px-4 py-8">
+        {/* Photo Gallery */}
+        {galleryImages && galleryImages.length > 0 && (
+          <div className="max-w-4xl mx-auto mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+              {galleryImages.slice(0, 4).map((img, idx) => (
+                <div
+                  key={idx}
+                  className={cn(
+                    "overflow-hidden rounded-lg",
+                    idx === 0 && "col-span-2 row-span-2 md:h-[320px]",
+                    idx !== 0 && "h-[110px] md:h-[156px]"
+                  )}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    loading="lazy"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Title */}
         <div className="text-center mb-8">
           <h1 className="text-2xl md:text-3xl font-bold">{transferData.title}</h1>
@@ -445,6 +483,32 @@ const TransferBooking = ({ transferData }: TransferBookingProps) => {
               </AccordionItem>
             </Accordion>
           </div>
+
+          {/* SEO Long-form Content */}
+          {seoContent && (
+            <article className="mt-10 prose prose-sm md:prose-base max-w-none prose-headings:text-foreground prose-headings:font-bold prose-h2:text-2xl prose-h3:text-xl prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground">
+              {seoContent}
+            </article>
+          )}
+
+          {/* FAQs */}
+          {faqs && faqs.length > 0 && (
+            <section className="mt-10">
+              <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+              <Accordion type="single" collapsible className="space-y-3">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`faq-${index}`} className="border rounded-lg px-4">
+                    <AccordionTrigger className="text-base font-semibold text-left">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </section>
+          )}
         </div>
       </main>
 
