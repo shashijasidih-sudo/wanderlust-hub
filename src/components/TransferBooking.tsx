@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "./Header";
+import BreadcrumbJsonLd from "./seo/BreadcrumbJsonLd";
+import { ChevronRight } from "lucide-react";
 import Footer from "./Footer";
 import FloatingWhatsApp from "./FloatingWhatsApp";
 import { Button } from "./ui/button";
@@ -175,6 +177,42 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs }: Tran
       <Header />
       
       <main className="container mx-auto px-4 py-8">
+        {/* Breadcrumb Sitemap */}
+        {transferData.city?.toLowerCase() === "bangkok" && (
+          <>
+            <BreadcrumbJsonLd
+              items={[
+                { name: "Home", url: "/" },
+                { name: "Bangkok", url: "/bangkok" },
+                { name: "Bangkok Transfers", url: "/bangkok-transfers" },
+                { name: transferData.title, url: location.pathname },
+              ]}
+            />
+            <nav
+              aria-label="Breadcrumb"
+              className="max-w-4xl mx-auto mb-4 text-sm text-muted-foreground"
+            >
+              <ol className="flex flex-wrap items-center gap-1">
+                <li>
+                  <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+                </li>
+                <li aria-hidden="true"><ChevronRight className="h-4 w-4 inline" /></li>
+                <li>
+                  <Link to="/bangkok" className="hover:text-primary transition-colors">Bangkok</Link>
+                </li>
+                <li aria-hidden="true"><ChevronRight className="h-4 w-4 inline" /></li>
+                <li>
+                  <Link to="/bangkok-transfers" className="hover:text-primary transition-colors">Bangkok Transfers</Link>
+                </li>
+                <li aria-hidden="true"><ChevronRight className="h-4 w-4 inline" /></li>
+                <li className="text-foreground font-medium line-clamp-1" aria-current="page">
+                  {transferData.title}
+                </li>
+              </ol>
+            </nav>
+          </>
+        )}
+
         {/* Photo Gallery */}
         {galleryImages && galleryImages.length > 0 && (
           <div className="max-w-4xl mx-auto mb-8">
