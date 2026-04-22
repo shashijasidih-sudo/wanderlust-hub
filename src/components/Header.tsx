@@ -310,15 +310,15 @@ const Header = () => {
                 </Link>
               </DropdownMenuItem>
               <div className="h-px bg-border my-2" />
-              <DropdownMenuItem className={`${menuItemClass} opacity-50 cursor-not-allowed`} onSelect={(e) => { e.preventDefault(); toast({ title: "Dubai Transfers Temporarily Unavailable", description: "⚠️ We will soon update the prices as per the ongoing War Situation", variant: "destructive" }); }}>
-                  <Castle className="h-5 w-5 mr-3 text-muted-foreground" />
-                  <span className="font-medium text-muted-foreground">Dubai</span>
-              </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
                 <Link to="/singapore/budget-airport-transfers">
                   <TreePine className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Singapore</span>
                 </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className={`${menuItemClass} opacity-50 cursor-not-allowed`} onSelect={(e) => { e.preventDefault(); toast({ title: "Dubai Transfers Temporarily Unavailable", description: "⚠️ We will soon update the prices as per the ongoing War Situation", variant: "destructive" }); }}>
+                  <Castle className="h-5 w-5 mr-3 text-muted-foreground" />
+                  <span className="font-medium text-muted-foreground">Dubai</span>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -486,15 +486,15 @@ const Header = () => {
                   </Link>
                 </DropdownMenuItem>
                 <div className="h-px bg-border my-1" />
-                <DropdownMenuItem className={`${mobileMenuItemClass} opacity-50 cursor-not-allowed`} onSelect={(e) => { e.preventDefault(); toast({ title: "Dubai Transfers Temporarily Unavailable", description: "⚠️ We will soon update the prices as per the ongoing War Situation", variant: "destructive" }); }}>
-                    <Castle className="h-4 w-4 mr-2 text-muted-foreground" />
-                    Dubai
-                </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/singapore/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
                     <TreePine className="h-4 w-4 mr-2 text-primary" />
                     Singapore
                   </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className={`${mobileMenuItemClass} opacity-50 cursor-not-allowed`} onSelect={(e) => { e.preventDefault(); toast({ title: "Dubai Transfers Temporarily Unavailable", description: "⚠️ We will soon update the prices as per the ongoing War Situation", variant: "destructive" }); }}>
+                    <Castle className="h-4 w-4 mr-2 text-muted-foreground" />
+                    Dubai
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
