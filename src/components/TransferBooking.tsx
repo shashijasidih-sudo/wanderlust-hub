@@ -486,10 +486,26 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs }: Tran
 
           {/* SEO Long-form Content */}
           {seoContent && (
-            <article className="mt-10 prose prose-sm md:prose-base max-w-none prose-headings:text-foreground prose-headings:font-bold prose-h2:text-2xl prose-h3:text-xl prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground">
-              {seoContent}
-            </article>
+            <Card className="mt-10">
+              <CardContent className="p-6 md:p-8">
+                <article
+                  className="
+                    max-w-none text-foreground
+                    [&_h2]:text-2xl md:[&_h2]:text-3xl [&_h2]:font-bold [&_h2]:text-foreground [&_h2]:mb-4 [&_h2]:mt-0 [&_h2]:leading-tight
+                    [&_h3]:text-xl md:[&_h3]:text-2xl [&_h3]:font-bold [&_h3]:text-foreground [&_h3]:mt-8 [&_h3]:mb-3 [&_h3]:leading-snug
+                    [&_h4]:text-lg md:[&_h4]:text-xl [&_h4]:font-semibold [&_h4]:text-foreground [&_h4]:mt-6 [&_h4]:mb-2
+                    [&_p]:text-base [&_p]:leading-relaxed [&_p]:text-muted-foreground [&_p]:mb-4
+                    [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-5 [&_ul]:space-y-2
+                    [&_li]:text-base [&_li]:leading-relaxed [&_li]:text-muted-foreground [&_li]:marker:text-primary
+                    [&_strong]:text-foreground [&_strong]:font-semibold
+                  "
+                >
+                  {seoContent}
+                </article>
+              </CardContent>
+            </Card>
           )}
+
 
           {/* FAQs */}
           {faqs && faqs.length > 0 && (
