@@ -57,11 +57,24 @@ export interface TransferData {
   baggagePolicy: string[];
 }
 
-interface TransferBookingProps {
-  transferData: TransferData;
+export interface TransferFAQ {
+  question: string;
+  answer: string;
 }
 
-const TransferBooking = ({ transferData }: TransferBookingProps) => {
+export interface TransferGalleryImage {
+  src: string;
+  alt: string;
+}
+
+interface TransferBookingProps {
+  transferData: TransferData;
+  galleryImages?: TransferGalleryImage[];
+  seoContent?: React.ReactNode;
+  faqs?: TransferFAQ[];
+}
+
+const TransferBooking = ({ transferData, galleryImages, seoContent, faqs }: TransferBookingProps) => {
   const location = useLocation();
   const navigate = useNavigate();
   const tourSlug = location.pathname.slice(1);
