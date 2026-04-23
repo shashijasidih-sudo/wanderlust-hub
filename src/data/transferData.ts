@@ -2985,5 +2985,182 @@ Extra time beyond 9 hours: 500 THB per hour (payable directly to the driver).`,
     baggagePolicy: ["Sedan: 2 large + 3 hand bags", "SUV: 4 large + 4 hand bags", "Van: 10 large + 10 hand bags"],
     cancellationPolicy: ["Free cancellation 72 hours prior"],
     termsConditions: ["National Park fee not included", "Overtime 500 THB/hour"]
+  },
+
+  // ===== NEW PATTAYA TRANSFERS =====
+  "pattaya-to-bangkok-hotel": {
+    id: "pattaya-to-bangkok-hotel",
+    title: "Pattaya Hotel To Bangkok Hotel Drop Private",
+    shortDescription: "Private hotel-to-hotel transfer from Pattaya to Bangkok",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    duration: "2 Hrs",
+    rating: 4.8,
+    reviews: 412,
+    vehicles: [
+      { id: "sedan", name: "Sedan Car", capacity: "1 - 3", bigBags: 2, handBags: 3, price: 3500, image: vehicleImages.sedan },
+      { id: "suv", name: "Mini SUV", capacity: "1 - 4", bigBags: 4, handBags: 4, price: 4000, image: vehicleImages.suv },
+      { id: "van", name: "Mini Van", capacity: "1 - 10", bigBags: 10, handBags: 10, price: 5000, image: vehicleImages.van }
+    ],
+    highlights: [
+      "Direct Pattaya hotel pickup",
+      "Door-to-door drop at any Bangkok hotel",
+      "Comfortable air-conditioned vehicles",
+      "Fixed pricing with no hidden charges",
+      "WhatsApp support on +91 7061710810",
+      "Tolls and fuel included"
+    ],
+    description: `Direct private transfer from your Pattaya hotel to your Bangkok hotel.
+Distance: approximately 150 km, travel time 1.5 to 2.5 hours depending on Bangkok traffic.
+Driver waits at your Pattaya hotel lobby at the scheduled pickup time.
+Door-to-door service to any major Bangkok hotel area (Sukhumvit, Siam, Silom, Riverside, etc.).
+Free cancellation up to 72 hours before pickup.`,
+    about: `Pattaya to Bangkok is one of the most popular intercity routes in Thailand. The journey covers approximately 150 km and takes between 1.5 and 2.5 hours depending on traffic.`,
+    baggagePolicy: [
+      "Sedan Car: Maximum capacity – 2 large bags and 3 hand bags",
+      "Mini SUV Car: Maximum capacity – 4 large bags and 4 hand bags",
+      "Mini Van: Maximum capacity – 10 large bags and 10 hand bags",
+      "⚠️ Important: Extra bags may incur a 500 THB per bag charge."
+    ],
+    cancellationPolicy: [
+      "Free cancellation is available up to 72 hours prior to pickup.",
+      "Night pickup (12:00 AM – 6:00 AM) carries a 300 THB surcharge payable to driver.",
+      "No-show after 30 minutes is non-refundable."
+    ],
+    termsConditions: [
+      "Tolls and fuel are included.",
+      "Hotel-to-hotel service only; additional stops on request may carry extra charges.",
+      "Driver waits up to 30 minutes at Pattaya hotel lobby."
+    ]
+  },
+
+  "pattaya-to-bangkok-city-tour": {
+    id: "pattaya-to-bangkok-city-tour",
+    title: "Pattaya Hotel To Bangkok City Tour To Bangkok Hotel Drop Private",
+    shortDescription: "Pattaya pickup, guided Bangkok city tour, then Bangkok hotel drop",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    duration: "8-10 Hrs Total",
+    rating: 4.9,
+    reviews: 156,
+    vehicles: [
+      { id: "sedan", name: "Sedan Car", capacity: "1 - 3", bigBags: 2, handBags: 3, price: 6800, image: vehicleImages.sedan },
+      { id: "suv", name: "Mini SUV", capacity: "1 - 4", bigBags: 4, handBags: 4, price: 7300, image: vehicleImages.suv },
+      { id: "van", name: "Mini Van", capacity: "1 - 10", bigBags: 10, handBags: 10, price: 8400, image: vehicleImages.van }
+    ],
+    highlights: [
+      "Pattaya hotel pickup in the morning",
+      "Bangkok city tour: Wat Arun, Wat Pho, Grand Palace area, Chinatown",
+      "Door-to-door drop at your Bangkok hotel",
+      "Luggage stays safely in the vehicle",
+      "Flexible itinerary on the day"
+    ],
+    description: `Combine your Pattaya–Bangkok transfer with a guided Bangkok city tour.
+Morning pickup from Pattaya hotel, drive to Bangkok (~2 hours), sightseeing stops at Wat Arun, Wat Pho and Grand Palace area, lunch break, then drop at your Bangkok hotel.
+Total duration: typically 8-10 hours.
+Overtime: 500 THB/hour payable directly to the driver.`,
+    about: `A relaxed full-day combo of Pattaya–Bangkok transfer plus the highlights of Bangkok's most photogenic temples and the Chao Phraya riverside.`,
+    baggagePolicy: [
+      "Sedan Car: Maximum capacity – 2 large bags and 3 hand bags",
+      "Mini SUV Car: Maximum capacity – 4 large bags and 4 hand bags",
+      "Mini Van: Maximum capacity – 10 large bags and 10 hand bags"
+    ],
+    cancellationPolicy: [
+      "Free cancellation up to 72 hours prior to pickup.",
+      "Date changes accepted up to 72 hours in advance."
+    ],
+    termsConditions: [
+      "Temple entry fees (where applicable) are paid at the gate.",
+      "Overtime: 500 THB/hour payable to driver.",
+      "Tour itinerary can be adjusted on the day with the driver."
+    ]
+  },
+
+  "bangkok-safari-world-pattaya": {
+    id: "bangkok-safari-world-pattaya",
+    title: "Bangkok Hotel To Bangkok Safari World To Pattaya Hotel Drop Private",
+    shortDescription: "Bangkok hotel pickup, Safari World visit, then Pattaya hotel drop",
+    location: "Bangkok, Thailand",
+    city: "bangkok",
+    duration: "8-10 Hrs Total",
+    rating: 4.9,
+    reviews: 187,
+    vehicles: [
+      { id: "sedan", name: "Sedan Car", capacity: "1 - 3", bigBags: 2, handBags: 3, price: 6500, image: vehicleImages.sedan },
+      { id: "suv", name: "Mini SUV", capacity: "1 - 4", bigBags: 4, handBags: 4, price: 7000, image: vehicleImages.suv },
+      { id: "van", name: "Mini Van", capacity: "1 - 10", bigBags: 10, handBags: 10, price: 8200, image: vehicleImages.van }
+    ],
+    highlights: [
+      "Morning pickup from Bangkok hotel",
+      "Safari Park drive-through and Marine Park shows at Safari World",
+      "Door-to-door drop at your Pattaya hotel",
+      "Luggage stays in the vehicle",
+      "Great for families with kids"
+    ],
+    description: `Bangkok hotel pickup → Safari World (~30-45 min drive) → 4-5 hours at Safari Park and Marine Park → continue to Pattaya (~2 hours) → Pattaya hotel drop.
+Safari World entry tickets are paid separately at the gate.
+Total duration: typically 8-10 hours. Overtime: 500 THB/hour payable to driver.`,
+    about: `Safari World Bangkok is one of the largest open zoos in Southeast Asia, featuring a drive-through Safari Park and a Marine Park with dolphin and sea lion shows.`,
+    baggagePolicy: [
+      "Sedan Car: Maximum capacity – 2 large bags and 3 hand bags",
+      "Mini SUV Car: Maximum capacity – 4 large bags and 4 hand bags",
+      "Mini Van: Maximum capacity – 10 large bags and 10 hand bags"
+    ],
+    cancellationPolicy: [
+      "Free cancellation up to 72 hours prior to pickup.",
+      "Date changes accepted up to 72 hours in advance."
+    ],
+    termsConditions: [
+      "Safari World entry tickets are not included.",
+      "Overtime: 500 THB/hour payable to driver.",
+      "Tour timings can be adjusted on the day with the driver."
+    ]
+  },
+
+  "utapao-airport-to-pattaya": {
+    id: "utapao-airport-to-pattaya",
+    title: "U-Tapao Rayong-Pattaya International Airport (UTP) To Pattaya Hotel Private",
+    shortDescription: "Private airport transfer from U-Tapao Airport to your Pattaya hotel",
+    location: "Pattaya, Thailand",
+    city: "pattaya",
+    duration: "45 Mins",
+    rating: 4.9,
+    reviews: 198,
+    vehicles: [
+      { id: "sedan", name: "Sedan Car", capacity: "1 - 3", bigBags: 2, handBags: 3, price: 1800, image: vehicleImages.sedan },
+      { id: "suv", name: "Mini SUV", capacity: "1 - 4", bigBags: 4, handBags: 4, price: 2200, image: vehicleImages.suv },
+      { id: "van", name: "Mini Van", capacity: "1 - 10", bigBags: 10, handBags: 10, price: 2800, image: vehicleImages.van }
+    ],
+    highlights: [
+      "Closest airport to Pattaya — just 30-45 minutes",
+      "Driver waits at arrival hall with a name card",
+      "Direct hotel drop-off in Pattaya",
+      "24/7 availability with night pickup support",
+      "Fixed INR-friendly pricing",
+      "WhatsApp support before arrival"
+    ],
+    description: `Upon arrival at U-Tapao Rayong-Pattaya International Airport (UTP), proceed to the arrival hall.
+Our driver will be waiting with a name card bearing your name.
+Distance from U-Tapao Airport to Pattaya: approximately 35-45 km, ~30-45 minutes by car.
+For any assistance, contact +91 7061710810 (WhatsApp/Call).
+Free cancellation up to 72 hours before pickup.`,
+    about: `U-Tapao Rayong-Pattaya International Airport (UTP) is the closest airport to Pattaya, located in Rayong province, with a quick 30-45 minute drive to most Pattaya hotel areas.`,
+    baggagePolicy: [
+      "Sedan Car: Maximum capacity – 2 large bags and 3 hand bags",
+      "Mini SUV Car: Maximum capacity – 4 large bags and 4 hand bags",
+      "Mini Van: Maximum capacity – 10 large bags and 10 hand bags",
+      "⚠️ Extra bags may incur a 500 THB per bag charge."
+    ],
+    cancellationPolicy: [
+      "For pickups between 12:00 AM and 6:00 AM, a 300 THB night surcharge is payable to the driver.",
+      "Driver waits up to 3 hours from your flight arrival time.",
+      "Free cancellation is available up to 72 hours prior to pickup.",
+      "Date changes can be made up to 72 hours in advance."
+    ],
+    termsConditions: [
+      "If your flight is canceled or delayed, no extra charge applies.",
+      "Update flight details via WhatsApp +66 6 274 30 007 to receive a revised voucher at no charge.",
+      "If your flight is canceled and you are not traveling to Pattaya, no refund is provided."
+    ]
   }
 };

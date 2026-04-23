@@ -4,9 +4,9 @@ import CanonicalUrl from "@/components/seo/CanonicalUrl";
 import { transfersData } from "@/data/transferData";
 import { pattayaTransferSEO } from "@/data/pattayaTransferSEO";
 
-const PattayaSafariWorldBkkAirport = () => {
+const UtapaoAirportToPattaya = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
-  const id = "pattaya-safari-world-bkk-airport";
+  const id = "utapao-airport-to-pattaya";
   const seo = pattayaTransferSEO[id];
   return (
     <>
@@ -16,4 +16,4 @@ const PattayaSafariWorldBkkAirport = () => {
   );
 };
 
-export default PattayaSafariWorldBkkAirport;
+export default UtapaoAirportToPattaya;

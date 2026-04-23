@@ -1,15 +1,19 @@
 import { useEffect } from "react";
 import TransferBooking from "@/components/TransferBooking";
+import CanonicalUrl from "@/components/seo/CanonicalUrl";
 import { transfersData } from "@/data/transferData";
+import { pattayaTransferSEO } from "@/data/pattayaTransferSEO";
 
 const PattayaDmkTigerTopiaPickup = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const transferData = transfersData["pattaya-dmk-tiger-topia-pickup"];
-
-  return <TransferBooking transferData={transferData} />;
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  const id = "pattaya-dmk-tiger-topia-pickup";
+  const seo = pattayaTransferSEO[id];
+  return (
+    <>
+      <CanonicalUrl path={seo.newSlug} />
+      <TransferBooking transferData={transfersData[id]} galleryImages={seo.gallery} seoContent={seo.seoContent} faqs={seo.faqs} />
+    </>
+  );
 };
 
 export default PattayaDmkTigerTopiaPickup;
