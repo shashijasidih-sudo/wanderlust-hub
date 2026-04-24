@@ -159,6 +159,18 @@
   <url><loc>https://yellodae.com/bangkok/bangkok-hotel-safari-world-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://yellodae.com/pattaya/u-tapao-airport-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
+  <!-- Phuket Airport Transfers (SEO-friendly slugs) -->
+  <url><loc>https://yellodae.com/phuket/phuket-airport-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/phuket/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/phuket/phuket-hotel-to-phuket-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/phuket/phuket-city-tour-to-phuket-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/phuket/phuket-hotel-to-hotel-transfer-4-hours</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/phuket/phuket-hotel-to-krabi-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/phuket/phuket-city-tour-to-krabi-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/phuket/krabi-city-tour-to-krabi-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/phuket/phuket-airport-to-krabi-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/krabi/krabi-hotel-to-krabi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
   <!-- Smart Guides & Blogs -->
   <url><loc>https://yellodae.com/thailand/destination-guides</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://yellodae.com/dubai/destination-guides</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>

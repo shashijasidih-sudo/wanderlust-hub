@@ -4,9 +4,10 @@ import CanonicalUrl from "@/components/seo/CanonicalUrl";
 import { transfersData } from "@/data/transferData";
 import { phuketTransferSEO } from "@/data/phuketTransferSEO";
 
-const PhuketCityTourKrabi = () => {
+// Phuket Airport (HKT) → Krabi Hotel — uses existing krabi-hkt-airport-pickup data
+const PhuketAirportToKrabiHotel = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
-  const id = "phuket-city-tour-krabi";
+  const id = "krabi-hkt-airport-pickup";
   const seo = phuketTransferSEO[id];
   return (
     <>
@@ -16,4 +17,4 @@ const PhuketCityTourKrabi = () => {
   );
 };
 
-export default PhuketCityTourKrabi;
+export default PhuketAirportToKrabiHotel;

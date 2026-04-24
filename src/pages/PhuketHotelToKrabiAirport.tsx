@@ -4,9 +4,10 @@ import CanonicalUrl from "@/components/seo/CanonicalUrl";
 import { transfersData } from "@/data/transferData";
 import { phuketTransferSEO } from "@/data/phuketTransferSEO";
 
-const PhuketCityTourKrabi = () => {
+// Phuket Hotel → Krabi Airport (KBV) — uses existing krabi-phuket-kbv-airport-dropoff data
+const PhuketHotelToKrabiAirport = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
-  const id = "phuket-city-tour-krabi";
+  const id = "krabi-phuket-kbv-airport-dropoff";
   const seo = phuketTransferSEO[id];
   return (
     <>
@@ -16,4 +17,4 @@ const PhuketCityTourKrabi = () => {
   );
 };
 
-export default PhuketCityTourKrabi;
+export default PhuketHotelToKrabiAirport;
