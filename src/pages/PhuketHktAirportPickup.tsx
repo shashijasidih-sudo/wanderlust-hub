@@ -1,15 +1,19 @@
 import { useEffect } from "react";
 import TransferBooking from "@/components/TransferBooking";
+import CanonicalUrl from "@/components/seo/CanonicalUrl";
 import { transfersData } from "@/data/transferData";
+import { phuketTransferSEO } from "@/data/phuketTransferSEO";
 
 const PhuketHktAirportPickup = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const transferData = transfersData["phuket-hkt-airport-pickup"];
-
-  return <TransferBooking transferData={transferData} />;
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  const id = "phuket-hkt-airport-pickup";
+  const seo = phuketTransferSEO[id];
+  return (
+    <>
+      <CanonicalUrl path={seo.newSlug} />
+      <TransferBooking transferData={transfersData[id]} galleryImages={seo.gallery} seoContent={seo.seoContent} faqs={seo.faqs} />
+    </>
+  );
 };
 
 export default PhuketHktAirportPickup;
