@@ -228,6 +228,8 @@ import PhuketCityHourlyRental from "./pages/PhuketCityHourlyRental";
 import PhuketToKrabi from "./pages/PhuketToKrabi";
 import PhuketCityTourKrabi from "./pages/PhuketCityTourKrabi";
 import PhuketKrabiCityTour from "./pages/PhuketKrabiCityTour";
+import PhuketAirportToKrabiHotel from "./pages/PhuketAirportToKrabiHotel";
+import PhuketHotelToKrabiAirport from "./pages/PhuketHotelToKrabiAirport";
 import ThailandTransfers from "./pages/ThailandTransfers";
 import CustomerInformation from "./pages/CustomerInformation";
 import PaymentInformation from "./pages/PaymentInformation";
@@ -401,14 +403,26 @@ const App = () => (
             <Route path="/krabi/phuket-city-tour-krabi" element={<KrabiPhuketCityTourKrabi />} />
             <Route path="/krabi/phuket-krabi-city-tour" element={<KrabiPhuketKrabiCityTour />} />
             <Route path="/phuket/budget-airport-transfers" element={<PhuketTransfers />} />
-            <Route path="/phuket/hkt-airport-pickup" element={<PhuketHktAirportPickup />} />
-            <Route path="/phuket/hkt-airport-city-tour" element={<PhuketHktAirportCityTour />} />
-            <Route path="/phuket/hkt-airport-dropoff" element={<PhuketHktAirportDropoff />} />
-            <Route path="/phuket/city-tour-hkt-airport" element={<PhuketCityTourHktAirport />} />
-            <Route path="/phuket/city-hourly-rental" element={<PhuketCityHourlyRental />} />
-            <Route path="/phuket/phuket-to-krabi" element={<PhuketToKrabi />} />
-            <Route path="/phuket/city-tour-krabi" element={<PhuketCityTourKrabi />} />
-            <Route path="/phuket/krabi-city-tour" element={<PhuketKrabiCityTour />} />
+            {/* Phuket Transfers — SEO-friendly slugs */}
+            <Route path="/phuket/phuket-airport-to-phuket-hotel-transfer" element={<PhuketHktAirportPickup />} />
+            <Route path="/phuket/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer" element={<PhuketHktAirportCityTour />} />
+            <Route path="/phuket/phuket-hotel-to-phuket-airport-transfer" element={<PhuketHktAirportDropoff />} />
+            <Route path="/phuket/phuket-city-tour-to-phuket-airport-transfer" element={<PhuketCityTourHktAirport />} />
+            <Route path="/phuket/phuket-hotel-to-hotel-transfer-4-hours" element={<PhuketCityHourlyRental />} />
+            <Route path="/phuket/phuket-hotel-to-krabi-hotel-transfer" element={<PhuketToKrabi />} />
+            <Route path="/phuket/phuket-city-tour-to-krabi-hotel-transfer" element={<PhuketCityTourKrabi />} />
+            <Route path="/phuket/krabi-city-tour-to-krabi-hotel-transfer" element={<PhuketKrabiCityTour />} />
+            <Route path="/phuket/phuket-airport-to-krabi-hotel-transfer" element={<PhuketAirportToKrabiHotel />} />
+            <Route path="/krabi/krabi-hotel-to-krabi-airport-transfer" element={<PhuketHotelToKrabiAirport />} />
+            {/* Phuket Transfers — legacy redirects */}
+            <Route path="/phuket/hkt-airport-pickup" element={<Navigate to="/phuket/phuket-airport-to-phuket-hotel-transfer" replace />} />
+            <Route path="/phuket/hkt-airport-city-tour" element={<Navigate to="/phuket/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer" replace />} />
+            <Route path="/phuket/hkt-airport-dropoff" element={<Navigate to="/phuket/phuket-hotel-to-phuket-airport-transfer" replace />} />
+            <Route path="/phuket/city-tour-hkt-airport" element={<Navigate to="/phuket/phuket-city-tour-to-phuket-airport-transfer" replace />} />
+            <Route path="/phuket/city-hourly-rental" element={<Navigate to="/phuket/phuket-hotel-to-hotel-transfer-4-hours" replace />} />
+            <Route path="/phuket/phuket-to-krabi" element={<Navigate to="/phuket/phuket-hotel-to-krabi-hotel-transfer" replace />} />
+            <Route path="/phuket/city-tour-krabi" element={<Navigate to="/phuket/phuket-city-tour-to-krabi-hotel-transfer" replace />} />
+            <Route path="/phuket/krabi-city-tour" element={<Navigate to="/phuket/krabi-city-tour-to-krabi-hotel-transfer" replace />} />
             <Route path="/thailand/budget-airport-transfers" element={<ThailandTransfers />} />
           {/* Dubai routes */}
             <Route path="/blog/best-dubai-activities" element={<BlogBestDubaiActivities />} />
