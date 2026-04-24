@@ -360,17 +360,34 @@ const App = () => (
            <Route path="/bangkok/city-tour-pattaya" element={<Navigate to="/bangkok/bangkok-city-tour-to-pattaya-hotel-transfer" replace />} />
            <Route path="/bangkok/tiger-topia-pattaya" element={<Navigate to="/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer" replace />} />
             <Route path="/pattaya/budget-airport-transfers" element={<PattayaTransfers />} />
-            <Route path="/pattaya/bkk-airport-pickup" element={<PattayaBkkAirportPickup />} />
-            <Route path="/pattaya/bkk-tiger-topia-pickup" element={<PattayaBkkTigerTopiaPickup />} />
-            <Route path="/pattaya/dmk-airport-pickup" element={<PattayaDmkAirportPickup />} />
-            <Route path="/pattaya/dmk-tiger-topia-pickup" element={<PattayaDmkTigerTopiaPickup />} />
-            <Route path="/pattaya/bkk-airport-dropoff" element={<PattayaBkkAirportDropoff />} />
-            <Route path="/pattaya/temple-tour-bkk-airport" element={<PattayaTempleTourBkkAirport />} />
-            <Route path="/pattaya/safari-world-bkk-airport" element={<PattayaSafariWorldBkkAirport />} />
-            <Route path="/pattaya/dmk-airport-dropoff" element={<PattayaDmkAirportDropoff />} />
-            <Route path="/pattaya/temple-tour-dmk-airport" element={<PattayaTempleTourDmkAirport />} />
-            <Route path="/pattaya/indra-square-dmk-airport" element={<PattayaIndraSquareDmkAirport />} />
-            <Route path="/pattaya/city-hourly-rental" element={<PattayaCityHourlyRental />} />
+             {/* New SEO-friendly Pattaya transfer slugs */}
+             <Route path="/bangkok/suvarnabhumi-airport-to-pattaya-hotel-transfer" element={<PattayaBkkAirportPickup />} />
+             <Route path="/bangkok/suvarnabhumi-airport-tiger-topia-to-pattaya-hotel-transfer" element={<PattayaBkkTigerTopiaPickup />} />
+             <Route path="/bangkok/don-mueang-airport-to-pattaya-hotel-transfer" element={<PattayaDmkAirportPickup />} />
+             <Route path="/bangkok/don-mueang-airport-tiger-topia-to-pattaya-hotel-transfer" element={<PattayaDmkTigerTopiaPickup />} />
+             <Route path="/pattaya/pattaya-hotel-to-suvarnabhumi-airport-transfer" element={<PattayaBkkAirportDropoff />} />
+             <Route path="/pattaya/pattaya-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer" element={<PattayaTempleTourBkkAirport />} />
+             <Route path="/pattaya/pattaya-hotel-safari-world-to-suvarnabhumi-airport-transfer" element={<PattayaSafariWorldBkkAirport />} />
+             <Route path="/pattaya/pattaya-hotel-to-don-mueang-airport-transfer" element={<PattayaDmkAirportDropoff />} />
+             <Route path="/pattaya/pattaya-hotel-two-temple-tour-to-don-mueang-airport-transfer" element={<PattayaTempleTourDmkAirport />} />
+             <Route path="/pattaya/pattaya-hotel-indra-square-shopping-to-don-mueang-airport-transfer" element={<PattayaIndraSquareDmkAirport />} />
+             <Route path="/pattaya/pattaya-private-car-4-hours" element={<PattayaCityHourlyRental />} />
+             <Route path="/pattaya/pattaya-hotel-to-bangkok-hotel-transfer" element={<PattayaToBangkokHotel />} />
+             <Route path="/pattaya/pattaya-to-bangkok-city-tour-and-hotel-transfer" element={<PattayaToBangkokCityTour />} />
+             <Route path="/bangkok/bangkok-hotel-safari-world-to-pattaya-hotel-transfer" element={<BangkokSafariWorldPattaya />} />
+             <Route path="/pattaya/u-tapao-airport-to-pattaya-hotel-transfer" element={<UtapaoAirportToPattaya />} />
+             {/* Legacy Pattaya transfer slugs → redirect to new SEO slugs */}
+             <Route path="/pattaya/bkk-airport-pickup" element={<Navigate to="/bangkok/suvarnabhumi-airport-to-pattaya-hotel-transfer" replace />} />
+             <Route path="/pattaya/bkk-tiger-topia-pickup" element={<Navigate to="/bangkok/suvarnabhumi-airport-tiger-topia-to-pattaya-hotel-transfer" replace />} />
+             <Route path="/pattaya/dmk-airport-pickup" element={<Navigate to="/bangkok/don-mueang-airport-to-pattaya-hotel-transfer" replace />} />
+             <Route path="/pattaya/dmk-tiger-topia-pickup" element={<Navigate to="/bangkok/don-mueang-airport-tiger-topia-to-pattaya-hotel-transfer" replace />} />
+             <Route path="/pattaya/bkk-airport-dropoff" element={<Navigate to="/pattaya/pattaya-hotel-to-suvarnabhumi-airport-transfer" replace />} />
+             <Route path="/pattaya/temple-tour-bkk-airport" element={<Navigate to="/pattaya/pattaya-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer" replace />} />
+             <Route path="/pattaya/safari-world-bkk-airport" element={<Navigate to="/pattaya/pattaya-hotel-safari-world-to-suvarnabhumi-airport-transfer" replace />} />
+             <Route path="/pattaya/dmk-airport-dropoff" element={<Navigate to="/pattaya/pattaya-hotel-to-don-mueang-airport-transfer" replace />} />
+             <Route path="/pattaya/temple-tour-dmk-airport" element={<Navigate to="/pattaya/pattaya-hotel-two-temple-tour-to-don-mueang-airport-transfer" replace />} />
+             <Route path="/pattaya/indra-square-dmk-airport" element={<Navigate to="/pattaya/pattaya-hotel-indra-square-shopping-to-don-mueang-airport-transfer" replace />} />
+             <Route path="/pattaya/city-hourly-rental" element={<Navigate to="/pattaya/pattaya-private-car-4-hours" replace />} />
             <Route path="/krabi/budget-airport-transfers" element={<KrabiTransfers />} />
             <Route path="/krabi/kbv-airport-phuket-pickup" element={<KrabiKbvAirportPhuketPickup />} />
             <Route path="/krabi/phuket-kbv-airport-dropoff" element={<KrabiPhuketKbvAirportDropoff />} />
