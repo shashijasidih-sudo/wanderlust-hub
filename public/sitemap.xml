@@ -171,6 +171,13 @@
   <url><loc>https://yellodae.com/phuket/phuket-airport-to-krabi-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://yellodae.com/krabi/krabi-hotel-to-krabi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
+  <!-- Krabi Airport Transfers (SEO-friendly slugs) -->
+  <url><loc>https://yellodae.com/krabi/krabi-airport-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/krabi/krabi-hotel-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/krabi/phuket-city-tour-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/krabi/krabi-hotel-to-phuket-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/krabi/krabi-airport-to-ao-nang-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
   <!-- Smart Guides & Blogs -->
   <url><loc>https://yellodae.com/thailand/destination-guides</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://yellodae.com/dubai/destination-guides</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
