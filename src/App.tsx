@@ -391,17 +391,25 @@ const App = () => (
              <Route path="/pattaya/indra-square-dmk-airport" element={<Navigate to="/pattaya/pattaya-hotel-indra-square-shopping-to-don-mueang-airport-transfer" replace />} />
              <Route path="/pattaya/city-hourly-rental" element={<Navigate to="/pattaya/pattaya-private-car-4-hours" replace />} />
             <Route path="/krabi/budget-airport-transfers" element={<KrabiTransfers />} />
-            <Route path="/krabi/kbv-airport-phuket-pickup" element={<KrabiKbvAirportPhuketPickup />} />
-            <Route path="/krabi/phuket-kbv-airport-dropoff" element={<KrabiPhuketKbvAirportDropoff />} />
-            <Route path="/krabi/krabi-hotel-kbv-airport" element={<KrabiHotelKbvAirport />} />
-            <Route path="/krabi/krabi-to-phuket" element={<KrabiToPhuket />} />
-            <Route path="/krabi/krabi-phuket-city-tour" element={<KrabiPhuketCityTour />} />
-            <Route path="/krabi/hkt-airport-krabi-pickup" element={<KrabiHktAirportPickup />} />
-            <Route path="/krabi/krabi-hkt-airport-dropoff" element={<KrabiHktAirportDropoff />} />
-            <Route path="/krabi/kbv-aonang-pickup" element={<KrabiKbvAonangPickup />} />
-            <Route path="/krabi/phuket-to-krabi" element={<KrabiPhuketToKrabi />} />
-            <Route path="/krabi/phuket-city-tour-krabi" element={<KrabiPhuketCityTourKrabi />} />
-            <Route path="/krabi/phuket-krabi-city-tour" element={<KrabiPhuketKrabiCityTour />} />
+            {/* Krabi Transfers — SEO-friendly slugs */}
+            <Route path="/krabi/krabi-airport-to-phuket-hotel-transfer" element={<KrabiKbvAirportPhuketPickup />} />
+            <Route path="/krabi/krabi-hotel-to-krabi-airport-transfer" element={<KrabiHotelKbvAirport />} />
+            <Route path="/krabi/krabi-hotel-to-phuket-hotel-transfer" element={<KrabiToPhuket />} />
+            <Route path="/krabi/phuket-city-tour-to-phuket-hotel-transfer" element={<KrabiPhuketCityTour />} />
+            <Route path="/krabi/krabi-hotel-to-phuket-airport-transfer" element={<KrabiHktAirportDropoff />} />
+            <Route path="/krabi/krabi-airport-to-ao-nang-hotel-transfer" element={<KrabiKbvAonangPickup />} />
+            {/* Krabi Transfers — legacy redirects */}
+            <Route path="/krabi/kbv-airport-phuket-pickup" element={<Navigate to="/krabi/krabi-airport-to-phuket-hotel-transfer" replace />} />
+            <Route path="/krabi/phuket-kbv-airport-dropoff" element={<Navigate to="/phuket/phuket-hotel-to-krabi-airport-transfer" replace />} />
+            <Route path="/krabi/krabi-hotel-kbv-airport" element={<Navigate to="/krabi/krabi-hotel-to-krabi-airport-transfer" replace />} />
+            <Route path="/krabi/krabi-to-phuket" element={<Navigate to="/krabi/krabi-hotel-to-phuket-hotel-transfer" replace />} />
+            <Route path="/krabi/krabi-phuket-city-tour" element={<Navigate to="/krabi/phuket-city-tour-to-phuket-hotel-transfer" replace />} />
+            <Route path="/krabi/hkt-airport-krabi-pickup" element={<Navigate to="/phuket/phuket-airport-to-krabi-hotel-transfer" replace />} />
+            <Route path="/krabi/krabi-hkt-airport-dropoff" element={<Navigate to="/krabi/krabi-hotel-to-phuket-airport-transfer" replace />} />
+            <Route path="/krabi/kbv-aonang-pickup" element={<Navigate to="/krabi/krabi-airport-to-ao-nang-hotel-transfer" replace />} />
+            <Route path="/krabi/phuket-to-krabi" element={<Navigate to="/phuket/phuket-hotel-to-krabi-hotel-transfer" replace />} />
+            <Route path="/krabi/phuket-city-tour-krabi" element={<Navigate to="/phuket/phuket-city-tour-to-krabi-hotel-transfer" replace />} />
+            <Route path="/krabi/phuket-krabi-city-tour" element={<Navigate to="/phuket/krabi-city-tour-to-krabi-hotel-transfer" replace />} />
             <Route path="/phuket/budget-airport-transfers" element={<PhuketTransfers />} />
             {/* Phuket Transfers — SEO-friendly slugs */}
             <Route path="/phuket/phuket-airport-to-phuket-hotel-transfer" element={<PhuketHktAirportPickup />} />
@@ -413,7 +421,7 @@ const App = () => (
             <Route path="/phuket/phuket-city-tour-to-krabi-hotel-transfer" element={<PhuketCityTourKrabi />} />
             <Route path="/phuket/krabi-city-tour-to-krabi-hotel-transfer" element={<PhuketKrabiCityTour />} />
             <Route path="/phuket/phuket-airport-to-krabi-hotel-transfer" element={<PhuketAirportToKrabiHotel />} />
-            <Route path="/krabi/krabi-hotel-to-krabi-airport-transfer" element={<PhuketHotelToKrabiAirport />} />
+            <Route path="/phuket/phuket-hotel-to-krabi-airport-transfer" element={<PhuketHotelToKrabiAirport />} />
             {/* Phuket Transfers — legacy redirects */}
             <Route path="/phuket/hkt-airport-pickup" element={<Navigate to="/phuket/phuket-airport-to-phuket-hotel-transfer" replace />} />
             <Route path="/phuket/hkt-airport-city-tour" element={<Navigate to="/phuket/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer" replace />} />
