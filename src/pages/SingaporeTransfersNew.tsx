@@ -17,7 +17,7 @@ const transfers = [
     reviews: 567,
     duration: "Transfer",
     capacity: "Up to 10 pax",
-    slug: "/singapore/airport-pickup",
+    slug: "/singapore/singapore-airport-pickup",
     type: "pickup",
     category: "airport",
     icon: Plane
@@ -32,7 +32,7 @@ const transfers = [
     reviews: 489,
     duration: "Transfer",
     capacity: "Up to 10 pax",
-    slug: "/singapore/airport-dropoff",
+    slug: "/singapore/singapore-airport-dropoff",
     type: "dropoff",
     category: "airport",
     icon: Plane
@@ -47,7 +47,7 @@ const transfers = [
     reviews: 234,
     duration: "Night Transfer",
     capacity: "Up to 10 pax",
-    slug: "/singapore/airport-night-pickup",
+    slug: "/singapore/singapore-airport-night-pickup",
     type: "pickup",
     category: "night",
     icon: Moon

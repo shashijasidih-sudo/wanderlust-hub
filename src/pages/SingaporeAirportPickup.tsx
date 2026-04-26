@@ -1,15 +1,19 @@
 import { useEffect } from "react";
 import TransferBooking from "@/components/TransferBooking";
+import CanonicalUrl from "@/components/seo/CanonicalUrl";
 import { singaporeTransfersData } from "@/data/singaporeTransferData";
+import { singaporeTransferSEO } from "@/data/singaporeTransferSEO";
 
 const SingaporeAirportPickup = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const transferData = singaporeTransfersData["singapore-airport-pickup"];
-
-  return <TransferBooking transferData={transferData} />;
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  const id = "singapore-airport-pickup";
+  const seo = singaporeTransferSEO[id];
+  return (
+    <>
+      <CanonicalUrl path={seo.newSlug} />
+      <TransferBooking transferData={singaporeTransfersData[id]} galleryImages={seo.gallery} seoContent={seo.seoContent} faqs={seo.faqs} />
+    </>
+  );
 };
 
 export default SingaporeAirportPickup;

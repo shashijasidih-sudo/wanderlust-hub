@@ -178,6 +178,11 @@
   <url><loc>https://yellodae.com/krabi/krabi-hotel-to-phuket-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://yellodae.com/krabi/krabi-airport-to-ao-nang-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
+  <!-- Singapore Airport Transfers (SEO-friendly slugs) -->
+  <url><loc>https://yellodae.com/singapore/singapore-airport-pickup</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/singapore/singapore-airport-dropoff</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/singapore/singapore-airport-night-pickup</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
   <!-- Smart Guides & Blogs -->
   <url><loc>https://yellodae.com/thailand/destination-guides</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://yellodae.com/dubai/destination-guides</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
