@@ -502,9 +502,14 @@ const App = () => (
             <Route path="/singapore/big-bus-night" element={<BigBusNight />} />
             <Route path="/singapore/sentosa-island" element={<SentosaIsland />} />
             <Route path="/singapore/budget-airport-transfers" element={<SingaporeTransfersNew />} />
-            <Route path="/singapore/airport-pickup" element={<SingaporeAirportPickup />} />
-            <Route path="/singapore/airport-dropoff" element={<SingaporeAirportDropoff />} />
-            <Route path="/singapore/airport-night-pickup" element={<SingaporeAirportNightPickup />} />
+            {/* Singapore Transfers — SEO-friendly slugs */}
+            <Route path="/singapore/singapore-airport-pickup" element={<SingaporeAirportPickup />} />
+            <Route path="/singapore/singapore-airport-dropoff" element={<SingaporeAirportDropoff />} />
+            <Route path="/singapore/singapore-airport-night-pickup" element={<SingaporeAirportNightPickup />} />
+            {/* Singapore Transfers — legacy redirects */}
+            <Route path="/singapore/airport-pickup" element={<Navigate to="/singapore/singapore-airport-pickup" replace />} />
+            <Route path="/singapore/airport-dropoff" element={<Navigate to="/singapore/singapore-airport-dropoff" replace />} />
+            <Route path="/singapore/airport-night-pickup" element={<Navigate to="/singapore/singapore-airport-night-pickup" replace />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/auth/callback" element={<AuthCallback />} />
           <Route path="/profile" element={<Profile />} />
