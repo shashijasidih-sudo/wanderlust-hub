@@ -57,7 +57,7 @@ const activities = [
     description: "Experience breathtaking 360° views of Bangkok from the iconic King Power MahaNakhon Skywalk.",
     availability: "Available",
     city: "Bangkok",
-    slug: "/thailand/bangkok/skywalk"
+    slug: "/thailand/bangkok/mahanakhon-skywalk-tickets"
   },
   {
     id: 2,
@@ -71,7 +71,7 @@ const activities = [
     description: "Visit Bangkok's most iconic temples including Wat Pho, Wat Arun, and Wat Traimit.",
     availability: "Available",
     city: "Bangkok",
-    slug: "/thailand/bangkok/three-temples-tour"
+    slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer"
   },
   // Phuket Activities
   {
@@ -558,7 +558,7 @@ const Thailand = () => {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Bangkok - Skywalk */}
-                  <Link to="/thailand/bangkok/skywalk">
+                  <Link to="/thailand/bangkok/mahanakhon-skywalk-tickets">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -650,7 +650,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Bangkok - Thai Massage */}
-                  <Link to="/thailand/bangkok/massage-coupons">
+                  <Link to="/thailand/bangkok/thai-massage-spa-deals-bangkok">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img

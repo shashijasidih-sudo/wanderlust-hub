@@ -163,7 +163,7 @@ const blogArticles = [
     author: "History Buff",
     date: "Nov 5, 2024",
     readTime: "10 min read",
-    slug: "/thailand/bangkok/ayutthaya-temple-tour"
+    slug: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok"
   },
   {
     id: 10,
@@ -185,7 +185,7 @@ const blogArticles = [
     author: "Wellness Expert",
     date: "Oct 30, 2024",
     readTime: "9 min read",
-    slug: "/thailand/bangkok/massage-coupons"
+    slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok"
   },
   {
     id: 12,
