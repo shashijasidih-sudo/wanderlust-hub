@@ -11,6 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SearchInput from "@/components/SearchInput";
+import BookTransfersSection from "@/components/BookTransfersSection";
 
 // Import local assets
 import bangkokSkywalkHero from "@/assets/bangkok-skywalk-hero.jpg";
@@ -245,6 +246,40 @@ const Bangkok = () => {
           </main>
         </div>
       </div>
+
+      <BookTransfersSection
+        city="Bangkok"
+        transfers={[
+          {
+            title: "Suvarnabhumi Airport to Bangkok Hotel",
+            desc: "Private, air-conditioned transfer from BKK airport straight to your Bangkok hotel. 24/7 service with meet & greet.",
+            price: 2700,
+            img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
+            slug: "/thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer",
+          },
+          {
+            title: "Don Mueang Airport to Bangkok Hotel",
+            desc: "Hassle-free DMK airport pickup with professional driver and comfortable sedan or minivan.",
+            price: 2600,
+            img: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=800&auto=format&fit=crop",
+            slug: "/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer",
+          },
+          {
+            title: "Bangkok Hotel to Suvarnabhumi Airport",
+            desc: "Timed departure transfer from your hotel to BKK airport. Punctual pick-up so you never miss your flight.",
+            price: 2700,
+            img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&auto=format&fit=crop",
+            slug: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer",
+          },
+          {
+            title: "Bangkok Hotel to Pattaya Hotel Transfer",
+            desc: "Comfortable private transfer from Bangkok to Pattaya — door-to-door, with luggage assistance.",
+            price: 4200,
+            img: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?w=800&auto=format&fit=crop",
+            slug: "/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer",
+          },
+        ]}
+      />
 
       <Footer />
     </div>

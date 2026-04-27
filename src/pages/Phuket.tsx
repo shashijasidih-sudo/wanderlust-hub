@@ -11,6 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SearchInput from "@/components/SearchInput";
+import BookTransfersSection from "@/components/BookTransfersSection";
 
 import phuketLongtailBoat from "@/assets/phuket-longtail-boat-1.jpg";
 import phuketBigBoat from "@/assets/phuket-big-boat-1.jpg";
@@ -224,6 +225,40 @@ const Phuket = () => {
           </main>
         </div>
       </div>
+
+      <BookTransfersSection
+        city="Phuket"
+        transfers={[
+          {
+            title: "Phuket Airport to Phuket Hotel",
+            desc: "Private HKT airport pickup with meet & greet, straight to your Phuket hotel — 24/7 service.",
+            price: 1500,
+            img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
+            slug: "/thailand/phuket/phuket-airport-to-phuket-hotel-transfer",
+          },
+          {
+            title: "Phuket Hotel to Phuket Airport",
+            desc: "Punctual departure transfer from your Phuket hotel to HKT airport — comfortable and on time.",
+            price: 1500,
+            img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&auto=format&fit=crop",
+            slug: "/thailand/phuket/phuket-hotel-to-phuket-airport-transfer",
+          },
+          {
+            title: "Phuket Airport + City Tour to Hotel",
+            desc: "Combine your HKT airport pickup with a Phuket city tour before reaching your hotel.",
+            price: 3200,
+            img: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=800&auto=format&fit=crop",
+            slug: "/thailand/phuket/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer",
+          },
+          {
+            title: "Phuket Hotel to Krabi Airport",
+            desc: "Long-distance private transfer from Phuket to Krabi airport — comfortable van with luggage space.",
+            price: 4200,
+            img: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?w=800&auto=format&fit=crop",
+            slug: "/thailand/phuket/phuket-hotel-to-krabi-airport-transfer",
+          },
+        ]}
+      />
 
       <Footer />
     </div>
