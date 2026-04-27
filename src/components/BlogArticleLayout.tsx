@@ -54,6 +54,7 @@ interface BlogArticleProps {
 const BlogArticleLayout = ({
   title, description, heroImage, heroAlt, author, date,
   readTime, category, keywords, sections, relatedLinks,
+  relatedActivities, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
   children,
 }: BlogArticleProps) => {
