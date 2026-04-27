@@ -652,11 +652,20 @@ const App = () => (
             <Route path="/thailand/pattaya/transfers" element={<Navigate to="/thailand/pattaya/budget-airport-transfers" replace />} />
             <Route path="/thailand/phuket/transfers" element={<Navigate to="/thailand/phuket/budget-airport-transfers" replace />} />
             <Route path="/thailand/krabi/transfers" element={<Navigate to="/thailand/krabi/budget-airport-transfers" replace />} />
-            <Route path="/thailand/transfers" element={<Navigate to="/thailand/budget-airport-transfers" replace />} />
-            <Route path="/dubai/transfers" element={<Navigate to="/dubai/budget-airport-transfers" replace />} />
-            <Route path="/singapore/transfers" element={<Navigate to="/singapore/budget-airport-transfers" replace />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+             <Route path="/thailand/transfers" element={<Navigate to="/thailand/budget-airport-transfers" replace />} />
+             <Route path="/dubai/transfers" element={<Navigate to="/dubai/budget-airport-transfers" replace />} />
+             <Route path="/singapore/transfers" element={<Navigate to="/singapore/budget-airport-transfers" replace />} />
+             {/* Legacy Thailand city URLs → redirect to /thailand/<city>/* */}
+             <Route path="/bangkok" element={<Navigate to="/thailand/bangkok" replace />} />
+             <Route path="/pattaya" element={<Navigate to="/thailand/pattaya" replace />} />
+             <Route path="/phuket" element={<Navigate to="/thailand/phuket" replace />} />
+             <Route path="/krabi" element={<Navigate to="/thailand/krabi" replace />} />
+             <Route path="/bangkok/*" element={<LegacyCityRedirect city="bangkok" />} />
+             <Route path="/pattaya/*" element={<LegacyCityRedirect city="pattaya" />} />
+             <Route path="/phuket/*" element={<LegacyCityRedirect city="phuket" />} />
+             <Route path="/krabi/*" element={<LegacyCityRedirect city="krabi" />} />
+           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+           <Route path="*" element={<NotFound />} />
         </Routes>
           <FloatingWhatsApp />
       </BrowserRouter>
