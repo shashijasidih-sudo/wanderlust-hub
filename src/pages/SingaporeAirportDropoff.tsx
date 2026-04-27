@@ -11,7 +11,24 @@ const SingaporeAirportDropoff = () => {
   return (
     <>
       <CanonicalUrl path={seo.newSlug} />
-      <TransferBooking transferData={singaporeTransfersData[id]} galleryImages={seo.gallery} seoContent={seo.seoContent} faqs={seo.faqs} />
+      <TransferBooking
+        transferData={singaporeTransfersData[id]}
+        galleryImages={seo.gallery}
+        seoContent={seo.seoContent}
+        faqs={seo.faqs}
+        relatedLinks={[
+          {
+            title: "Singapore Changi Airport Pick Up to Hotel",
+            url: "/singapore/singapore-airport-pickup",
+            description: "Private door-to-door transfer from Changi Airport to your Singapore hotel with meet-and-greet service.",
+          },
+          {
+            title: "Singapore Changi Airport Night Pick Up to Hotel",
+            url: "/singapore/singapore-airport-night-pickup",
+            description: "Safe late-night and early-morning airport transfers from 10:00 PM to 6:30 AM with guaranteed driver availability.",
+          },
+        ]}
+      />
     </>
   );
 };
