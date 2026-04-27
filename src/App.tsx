@@ -141,6 +141,7 @@ import MiracleGardenDubai from "./pages/MiracleGardenDubai";
 import DubaiFountainShow from "./pages/DubaiFountainShow";
 import Singapore from "./pages/Singapore";
 import SingaporeCityTour from "./pages/SingaporeCityTour";
+import SingaporeThingsToDo from "./pages/SingaporeThingsToDo";
 import NightSafariTickets from "./pages/NightSafariTickets";
 import NightSafariTransfer from "./pages/NightSafariTransfer";
 import NightSafariDinner from "./pages/NightSafariDinner";
