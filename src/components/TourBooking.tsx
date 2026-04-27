@@ -16,6 +16,7 @@ import SuggestedTours from "./activity-detail/SuggestedTours";
 import TravelGuidesSection from "./activity-detail/TravelGuidesSection";
 import TourJsonLd from "./seo/TourJsonLd";
 import BreadcrumbJsonLd from "./seo/BreadcrumbJsonLd";
+import CanonicalUrl from "./seo/CanonicalUrl";
 import { Button } from "./ui/button";
 import {
   Breadcrumb,
@@ -85,6 +86,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
 
   return (
     <div className="min-h-screen bg-background">
+      <CanonicalUrl path={location.pathname} />
       <TourJsonLd
         name={tourData.title}
         description={tourData.shortDescription}
