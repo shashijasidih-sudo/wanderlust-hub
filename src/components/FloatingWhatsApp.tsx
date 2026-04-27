@@ -1,6 +1,6 @@
 const FloatingWhatsApp = () => {
   const message = encodeURIComponent(
-    "Greetings from Yellodae!!!, We are well known for our travel activities, transfers and packages to destinations- Thailand, Singapore, and Dubai. Kindly, State your question. Our team will surely connect with you. Happy Smart Traveling"
+    "Hi Yellodae, I have a question about your travel activities, transfers, or packages (Thailand / Singapore / Dubai). Could you please help me?"
   );
 
   return (
