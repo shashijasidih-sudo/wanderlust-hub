@@ -6,7 +6,9 @@ import { ChevronRight, ArrowRight } from "lucide-react";
 import Footer from "./Footer";
 import FloatingWhatsApp from "./FloatingWhatsApp";
 import BookTransfersSection from "./BookTransfersSection";
+import RecommendedActivitiesSection from "./RecommendedActivitiesSection";
 import { getCityTransfers } from "@/data/cityTransfersData";
+import { getCityActivities } from "@/data/cityActivitiesData";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
@@ -596,6 +598,14 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
           )}
         </div>
       </main>
+
+      {(() => {
+        const cityActivities = getCityActivities(transferData.city);
+        if (!cityActivities) return null;
+        return (
+          <RecommendedActivitiesSection city={cityActivities.city} activities={cityActivities.activities} />
+        );
+      })()}
 
       {(() => {
         const cityTransfers = getCityTransfers(transferData.city);
