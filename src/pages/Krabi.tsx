@@ -219,6 +219,40 @@ const Krabi = () => {
         </div>
       </div>
 
+      <BookTransfersSection
+        city="Krabi"
+        transfers={[
+          {
+            title: "Krabi Airport to Ao Nang Hotel",
+            desc: "Private KBV airport pickup with meet & greet, straight to your Ao Nang hotel.",
+            price: 1800,
+            img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
+            slug: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer",
+          },
+          {
+            title: "Krabi Hotel to Krabi Airport",
+            desc: "Punctual departure transfer from your Krabi hotel to KBV airport — comfortable and on time.",
+            price: 1800,
+            img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&auto=format&fit=crop",
+            slug: "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer",
+          },
+          {
+            title: "Krabi Airport to Phuket Hotel",
+            desc: "Long-distance private transfer from KBV airport to your Phuket hotel — door-to-door comfort.",
+            price: 4200,
+            img: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=800&auto=format&fit=crop",
+            slug: "/thailand/krabi/krabi-airport-to-phuket-hotel-transfer",
+          },
+          {
+            title: "Krabi Hotel to Phuket Airport",
+            desc: "Private transfer from Krabi to Phuket airport (HKT) for your onward flight.",
+            price: 4200,
+            img: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?w=800&auto=format&fit=crop",
+            slug: "/thailand/krabi/krabi-hotel-to-phuket-airport-transfer",
+          },
+        ]}
+      />
+
       <Footer />
     </div>
   );

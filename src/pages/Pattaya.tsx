@@ -261,6 +261,40 @@ const Pattaya = () => {
         </div>
       </div>
 
+      <BookTransfersSection
+        city="Pattaya"
+        transfers={[
+          {
+            title: "Suvarnabhumi Airport to Pattaya Hotel",
+            desc: "Private BKK airport pickup straight to your Pattaya hotel — meet & greet, fixed pricing, 24/7.",
+            price: 3800,
+            img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
+            slug: "/thailand/bangkok/suvarnabhumi-airport-to-pattaya-hotel-transfer",
+          },
+          {
+            title: "Don Mueang Airport to Pattaya Hotel",
+            desc: "Hassle-free DMK airport pickup with comfortable sedan or minivan to your Pattaya hotel.",
+            price: 3800,
+            img: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=800&auto=format&fit=crop",
+            slug: "/thailand/bangkok/don-mueang-airport-to-pattaya-hotel-transfer",
+          },
+          {
+            title: "Pattaya Hotel to Suvarnabhumi Airport",
+            desc: "Punctual departure transfer from Pattaya to BKK airport — never miss your flight.",
+            price: 3800,
+            img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&auto=format&fit=crop",
+            slug: "/thailand/pattaya/pattaya-hotel-to-suvarnabhumi-airport-transfer",
+          },
+          {
+            title: "U-Tapao Airport to Pattaya Hotel",
+            desc: "Quick private transfer from UTP airport to your Pattaya hotel with meet & greet service.",
+            price: 2200,
+            img: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?w=800&auto=format&fit=crop",
+            slug: "/thailand/pattaya/u-tapao-airport-to-pattaya-hotel-transfer",
+          },
+        ]}
+      />
+
       <Footer />
     </div>
   );
