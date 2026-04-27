@@ -456,7 +456,11 @@ const BangkokThingsToDo = () => {
         const items = grouped[cat];
         if (!items || items.length === 0) return null;
         return (
-          <section key={cat} className="container mx-auto px-4 py-8">
+          <section
+            key={cat}
+            id={cat.toLowerCase().replace(/&/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}
+            className="container mx-auto px-4 py-8 scroll-mt-20"
+          >
             <header className="mb-6 max-w-3xl">
               <h2 className="text-2xl font-bold md:text-3xl">{cat} in Bangkok</h2>
               <p className="mt-2 text-muted-foreground">{sectionDescriptions[cat]}</p>
