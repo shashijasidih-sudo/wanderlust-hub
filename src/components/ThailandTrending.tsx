@@ -18,6 +18,11 @@ const trendingItems = [
     slug: "/blog/top-phuket-island-tours",
   },
   {
+    title: "Best Things to Do in Bangkok (2025 Guide)",
+    image: bangkokTemple,
+    slug: "/thailand/bangkok/things-to-do",
+  },
+  {
     title: "Bangkok Activities Booking Guide",
     image: bangkokTemple,
     slug: "/blog/bangkok-activities-guide",
@@ -39,7 +44,7 @@ const ThailandTrending = () => {
           Thailand Trending Activities
         </h2>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-6 max-w-7xl mx-auto">
           {trendingItems.map((item) => (
             <Card
               key={item.title}
