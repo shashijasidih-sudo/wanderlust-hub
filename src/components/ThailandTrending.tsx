@@ -23,6 +23,11 @@ const trendingItems = [
     slug: "/thailand/bangkok/things-to-do",
   },
   {
+    title: "Best Things to Do in Pattaya (2026 Guide)",
+    image: pattayaBeach,
+    slug: "/thailand/pattaya/things-to-do",
+  },
+  {
     title: "Bangkok Activities Booking Guide",
     image: bangkokTemple,
     slug: "/blog/bangkok-activities-guide",
@@ -44,7 +49,7 @@ const ThailandTrending = () => {
           Thailand Trending Activities
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-6 max-w-7xl mx-auto">
           {trendingItems.map((item) => (
             <Card
               key={item.title}
