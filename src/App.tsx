@@ -30,6 +30,8 @@ import HotSpringEmeralPool from "./pages/HotSpringEmeralPool";
 import BangkokSkywalk from "./pages/BangkokSkywalk";
 import BangkokThingsToDo from "./pages/BangkokThingsToDo";
 import PattayaThingsToDo from "./pages/PattayaThingsToDo";
+import PhuketThingsToDo from "./pages/PhuketThingsToDo";
+import KrabiThingsToDo from "./pages/KrabiThingsToDo";
 import DhowCruise from "./pages/DhowCruise";
 import AtlantisPalm from "./pages/AtlantisPalm";
 import MassageCoupons from "./pages/MassageCoupons";
@@ -350,14 +352,25 @@ const App = () => (
             <Route path="/thailand/pattaya/pub-crawl" element={<Navigate to="/thailand/pattaya/pattaya-pub-crawl-night-tour" replace />} />
             {/* Pattaya hub page */}
             <Route path="/thailand/pattaya/things-to-do" element={<PattayaThingsToDo />} />
-            <Route path="/thailand/krabi/hong-islands-longtail" element={<HongIslandsLongtail />} />
-            <Route path="/thailand/krabi/hong-islands-speedboat" element={<HongIslandsSpeedboat />} />
-            <Route path="/thailand/krabi/seven-islands-longtail" element={<SevenIslandsLongtail />} />
-            <Route path="/thailand/krabi/seven-islands-speedboat" element={<SevenIslandsSpeedboat />} />
-            <Route path="/thailand/krabi/four-islands-longtail" element={<FourIslandsLongtail />} />
-            <Route path="/thailand/krabi/four-islands-longtail-no-park-fee" element={<FourIslandsLongtailNoParkFee />} />
-            <Route path="/thailand/krabi/four-islands-speedboat" element={<FourIslandsSpeedboat />} />
+            <Route path="/thailand/krabi/hong-island-tour-longtail-boat-with-transfer" element={<HongIslandsLongtail />} />
+            <Route path="/thailand/krabi/hong-island-tour-speedboat-with-transfer" element={<HongIslandsSpeedboat />} />
+            <Route path="/thailand/krabi/7-islands-tour-longtail-boat-with-transfer" element={<SevenIslandsLongtail />} />
+            <Route path="/thailand/krabi/7-islands-tour-speedboat-with-transfer" element={<SevenIslandsSpeedboat />} />
+            <Route path="/thailand/krabi/4-island-tour-longtail-boat-with-transfer" element={<FourIslandsLongtail />} />
+            <Route path="/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer" element={<FourIslandsLongtailNoParkFee />} />
+            <Route path="/thailand/krabi/4-island-tour-speedboat-with-transfer" element={<FourIslandsSpeedboat />} />
             <Route path="/thailand/krabi/james-bond-island" element={<JamesBondIslandKrabi />} />
+            <Route path="/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer" element={<PhiPhiIsland />} />
+            {/* Legacy Krabi activity slugs → redirects to new canonical SEO URLs */}
+            <Route path="/thailand/krabi/hong-islands-longtail" element={<Navigate to="/thailand/krabi/hong-island-tour-longtail-boat-with-transfer" replace />} />
+            <Route path="/thailand/krabi/hong-islands-speedboat" element={<Navigate to="/thailand/krabi/hong-island-tour-speedboat-with-transfer" replace />} />
+            <Route path="/thailand/krabi/seven-islands-longtail" element={<Navigate to="/thailand/krabi/7-islands-tour-longtail-boat-with-transfer" replace />} />
+            <Route path="/thailand/krabi/seven-islands-speedboat" element={<Navigate to="/thailand/krabi/7-islands-tour-speedboat-with-transfer" replace />} />
+            <Route path="/thailand/krabi/four-islands-longtail" element={<Navigate to="/thailand/krabi/4-island-tour-longtail-boat-with-transfer" replace />} />
+            <Route path="/thailand/krabi/four-islands-longtail-no-park-fee" element={<Navigate to="/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer" replace />} />
+            <Route path="/thailand/krabi/four-islands-speedboat" element={<Navigate to="/thailand/krabi/4-island-tour-speedboat-with-transfer" replace />} />
+            {/* Krabi hub page */}
+            <Route path="/thailand/krabi/things-to-do" element={<KrabiThingsToDo />} />
             <Route path="/thailand/esim-ais" element={<EsimThailandAis />} />
             <Route path="/thailand/destination-guides" element={<ThailandSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
