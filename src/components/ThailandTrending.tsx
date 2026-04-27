@@ -18,7 +18,7 @@ const trendingItems = [
     slug: "/blog/top-phuket-island-tours",
   },
   {
-    title: "Best Things to Do in Bangkok (2025 Guide)",
+    title: "Best Things to Do in Bangkok (2026 Guide)",
     image: bangkokTemple,
     slug: "/thailand/bangkok/things-to-do",
   },
