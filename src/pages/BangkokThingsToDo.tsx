@@ -661,6 +661,9 @@ const BangkokThingsToDo = () => {
               <Link to="/thailand/bangkok/transfers">Bangkok Transfers</Link>
             </Button>
             <Button asChild variant="outline">
+              <Link to="/thailand/pattaya/things-to-do">Things to Do in Pattaya</Link>
+            </Button>
+            <Button asChild variant="outline">
               <Link to="/thailand">Thailand Destinations</Link>
             </Button>
           </div>
