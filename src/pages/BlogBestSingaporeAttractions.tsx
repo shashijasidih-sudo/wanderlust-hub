@@ -24,7 +24,7 @@ import marinaBay from "@/assets/singapore-marina-bay-sands-night-1.jpg";
 const activityCards = [
   { title: "Gardens by the Bay Tickets", location: "Marina Bay", image: gardensBay, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
   { title: "Universal Studios Singapore Weekday", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-weekday-tickets" },
-  { title: "Night Safari Singapore with Dinner", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-singapore-tickets-and-transfers-dinner" },
+  { title: "Night Safari Singapore with Dinner", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-dinner" },
   { title: "Singapore City Tour with Guide", location: "Singapore", image: cityTour, slug: "/singapore/singapore-city-tour" },
   { title: "Sentosa Cable Car Ride", location: "Sentosa", image: cableCar, slug: "/singapore/sentosa-cable-car-tickets-and-transfers" },
   { title: "Singapore Flyer Ticket", location: "Marina Bay", image: flyer, slug: "/singapore/singapore-flyer-tickets-and-transfers" },

@@ -112,7 +112,7 @@ const activities: Activity[] = [
     description: "Thrilling water slides, snorkeling with 20,000 fish and a lazy river at RWS.",
     price: 2656.5,
     image: singaporeAdventureCove,
-    slug: "/singapore/adventure-cove-waterpark-tickets-waterpark-tickets",
+    slug: "/singapore/adventure-cove-waterpark-tickets",
     category: "Theme Parks & Water Parks",
   },
 
@@ -122,7 +122,7 @@ const activities: Activity[] = [
     description: "World's first nocturnal wildlife park — tram safari with 900+ animals after dark.",
     price: 4470,
     image: singaporeNightSafari,
-    slug: "/singapore/night-safari-singapore-tickets-and-transfers-singapore-tickets-and-transfers",
+    slug: "/singapore/night-safari-singapore-tickets-and-transfers",
     category: "Wildlife & Safari",
   },
   {
@@ -172,7 +172,7 @@ const activities: Activity[] = [
     description: "See Singapore's iconic landmarks beautifully lit up on this open-top night bus tour.",
     price: 4709.25,
     image: singaporeBigBus,
-    slug: "/singapore/big-bus-night-city-tour-singapore-singapore",
+    slug: "/singapore/big-bus-night-city-tour-singapore",
     category: "City Tours & Sightseeing",
   },
   {
@@ -493,7 +493,7 @@ const SingaporeThingsToDo = () => {
                 { label: "Universal Studios Weekend", to: "/singapore/universal-studios-singapore-weekend-tickets" },
                 { label: "Gardens by the Bay", to: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
                 { label: "Singapore Flyer", to: "/singapore/singapore-flyer-tickets-and-transfers" },
-                { label: "Night Safari Singapore", to: "/singapore/night-safari-singapore-tickets-and-transfers-singapore-tickets-and-transfers" },
+                { label: "Night Safari Singapore", to: "/singapore/night-safari-singapore-tickets-and-transfers" },
                 { label: "Singapore Zoo", to: "/singapore/singapore-zoo-tickets" },
                 { label: "River Wonders Singapore", to: "/singapore/river-wonders-singapore-tickets" },
                 { label: "SkyHelix Sentosa", to: "/singapore/skyhelix-sentosa-tickets" },

@@ -23,7 +23,7 @@ import bigBus from "@/assets/singapore-big-bus.jpg";
 const activityCards = [
   { title: "Gardens by the Bay Tickets", location: "Marina Bay", image: gardensBay, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
   { title: "Universal Studios Weekday", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-weekday-tickets" },
-  { title: "Night Safari with Dinner", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-singapore-tickets-and-transfers-dinner" },
+  { title: "Night Safari with Dinner", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-dinner" },
   { title: "Singapore City Tour", location: "Singapore", image: cityTour, slug: "/singapore/singapore-city-tour" },
   { title: "Sentosa Cable Car Ride", location: "Sentosa", image: cableCar, slug: "/singapore/sentosa-cable-car-tickets-and-transfers" },
   { title: "Singapore Flyer Ticket", location: "Marina Bay", image: flyer, slug: "/singapore/singapore-flyer-tickets-and-transfers" },
@@ -35,7 +35,7 @@ const activityCards = [
   { title: "Sentosa 4D Adventureland", location: "Sentosa", image: sentosa4d, slug: "/sentosa-4d-2rides" },
   { title: "Universal Studios Weekend", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-weekend-tickets" },
   { title: "Big Bus Singapore Discover", location: "Singapore", image: bigBus, slug: "/singapore/big-bus-hop-on-hop-off-singapore-city-tour" },
-  { title: "Night Safari with Transfer", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-singapore-tickets-and-transfers-transfer" },
+  { title: "Night Safari with Transfer", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-transfer" },
 ];
 
 const ActivityCards = () => {

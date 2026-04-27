@@ -22,7 +22,7 @@ const dubaiRoutes = [
 
 const singaporeRoutes = [
   "/singapore", "/singapore/singapore-city-tour", "/singapore/night-safari-singapore-tickets-and-transfers",
-  "/singapore/night-safari-singapore-tickets-and-transfers-transfer", "/singapore/night-safari-singapore-tickets-and-transfers-dinner", "/singapore/sentosa-4d-adventureland-tickets",
+  "/singapore/night-safari-transfer", "/singapore/night-safari-dinner", "/singapore/sentosa-4d-adventureland-tickets",
   "/singapore/sentosa-4d-3-rides", "/singapore/sentosa-cable-car-tickets-and-transfers", "/singapore/wings-of-time-show-sentosa-tickets",
   "/singapore/skyhelix-sentosa-tickets", "/singapore/singapore-river-cruise-tickets-and-transfers", "/singapore/gardens-by-the-bay-tickets-and-transfers",
   "/singapore/adventure-cove-waterpark-tickets", "/singapore/singapore-flyer-tickets-and-transfers", "/singapore/river-wonders-singapore-tickets",

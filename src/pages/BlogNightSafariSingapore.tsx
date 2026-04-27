@@ -22,8 +22,8 @@ import gardensBayNight from "@/assets/singapore-gardens-bay-night-1.jpg";
 
 const activityCards = [
   { title: "Night Safari Tickets Only", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-singapore-tickets-and-transfers" },
-  { title: "Night Safari with Dinner", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-singapore-tickets-and-transfers-dinner" },
-  { title: "Night Safari with Transfer", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-singapore-tickets-and-transfers-transfer" },
+  { title: "Night Safari with Dinner", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-dinner" },
+  { title: "Night Safari with Transfer", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-transfer" },
   { title: "Singapore Zoo + Tram", location: "Mandai", image: zoo, slug: "/singapore/singapore-zoo-tickets" },
   { title: "River Safari Singapore", location: "Mandai", image: riverSafari, slug: "/singapore/river-wonders-singapore-tickets" },
   { title: "Rainforest Wild Asia", location: "Mandai", image: zoo, slug: "/singapore/rainforest-wild-asia-tickets" },
