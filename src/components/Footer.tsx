@@ -8,7 +8,7 @@ import BangkokSmartGuides from "@/components/BangkokSmartGuides";
 
 const Footer = () => {
   const { pathname } = useLocation();
-  const isBangkokPage = pathname === "/bangkok" || pathname.startsWith("/bangkok/");
+  const isBangkokPage = pathname === "/thailand/bangkok" || pathname.startsWith("/thailand/bangkok/");
 
   return (
     <>

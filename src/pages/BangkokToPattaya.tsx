@@ -10,7 +10,7 @@ const BangkokToPattaya = () => {
   const seo = bangkokTransferSEO[id];
   return (
     <>
-      <CanonicalUrl path="/bangkok/bangkok-hotel-to-pattaya-hotel-transfer" />
+      <CanonicalUrl path="/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer" />
       <TransferBooking
         transferData={transfersData[id]}
         galleryImages={seo.gallery}

@@ -108,7 +108,7 @@ const blogArticles = [
     author: "Island Explorer",
     date: "Nov 18, 2024",
     readTime: "9 min read",
-    slug: "/phuket/phi-phi-island-tour"
+    slug: "/thailand/phuket/phi-phi-island-tour"
   },
   {
     id: 5,
@@ -130,7 +130,7 @@ const blogArticles = [
     author: "Wildlife Expert",
     date: "Nov 12, 2024",
     readTime: "11 min read",
-    slug: "/phuket/elephant-safari"
+    slug: "/thailand/phuket/elephant-safari"
   },
   {
     id: 7,
@@ -141,7 +141,7 @@ const blogArticles = [
     author: "Adventure Guide",
     date: "Nov 10, 2024",
     readTime: "8 min read",
-    slug: "/phuket/james-bond-island-tour"
+    slug: "/thailand/phuket/james-bond-island-tour"
   },
   {
     id: 8,
@@ -163,7 +163,7 @@ const blogArticles = [
     author: "History Buff",
     date: "Nov 5, 2024",
     readTime: "10 min read",
-    slug: "/bangkok/ayutthaya-temple-tour"
+    slug: "/thailand/bangkok/ayutthaya-temple-tour"
   },
   {
     id: 10,
@@ -174,7 +174,7 @@ const blogArticles = [
     author: "Local Guide",
     date: "Nov 2, 2024",
     readTime: "7 min read",
-    slug: "/phuket"
+    slug: "/thailand/phuket"
   },
   {
     id: 11,
@@ -185,7 +185,7 @@ const blogArticles = [
     author: "Wellness Expert",
     date: "Oct 30, 2024",
     readTime: "9 min read",
-    slug: "/bangkok/massage-coupons"
+    slug: "/thailand/bangkok/massage-coupons"
   },
   {
     id: 12,

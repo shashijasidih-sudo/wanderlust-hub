@@ -11,7 +11,7 @@ const activities = [
     reviews: 2341,
     price: 3500,
     image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop",
-    slug: "/phuket/phi-phi-island-tour"
+    slug: "/thailand/phuket/phi-phi-island-tour"
   },
   {
     title: "James Bond Island & Phang Nga Bay by Speed boat",
@@ -20,7 +20,7 @@ const activities = [
     reviews: 1987,
     price: 2800,
     image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop",
-    slug: "/phuket/james-bond-island-tour"
+    slug: "/thailand/phuket/james-bond-island-tour"
   },
   {
     title: "Grand Palace & Emerald Buddha Temple Tour",
@@ -29,7 +29,7 @@ const activities = [
     reviews: 3421,
     price: 1200,
     image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop",
-    slug: "/bangkok/grand-palace-emerald"
+    slug: "/thailand/bangkok/grand-palace-emerald"
   },
   {
     title: "Floating Market & Railway Market with River Cruise",
@@ -38,7 +38,7 @@ const activities = [
     reviews: 1654,
     price: 1800,
     image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=800&auto=format&fit=crop",
-    slug: "/bangkok/maeklong-floating-market"
+    slug: "/thailand/bangkok/maeklong-floating-market"
   },
   {
     title: "Coral Island & Water Sports in Pattaya",
@@ -47,7 +47,7 @@ const activities = [
     reviews: 2103,
     price: 1500,
     image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&auto=format&fit=crop",
-    slug: "/pattaya/coral-island"
+    slug: "/thailand/pattaya/coral-island"
   },
   {
     title: "Alcazar Cabaret Show Pattaya",
@@ -56,7 +56,7 @@ const activities = [
     reviews: 2876,
     price: 900,
     image: "https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=800&auto=format&fit=crop",
-    slug: "/pattaya/alcazar-show"
+    slug: "/thailand/pattaya/alcazar-show"
   },
   {
     title: "Four Islands Tour by Longtail Boat",
@@ -65,7 +65,7 @@ const activities = [
     reviews: 1876,
     price: 1400,
     image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&auto=format&fit=crop",
-    slug: "/krabi/four-islands-longtail"
+    slug: "/thailand/krabi/four-islands-longtail"
   },
   {
     title: "Emerald Pool & Hot Springs with Tiger Cave Temple",
@@ -74,7 +74,7 @@ const activities = [
     reviews: 1523,
     price: 1100,
     image: "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&auto=format&fit=crop",
-    slug: "/phuket/hot-spring-emerald-pool"
+    slug: "/thailand/phuket/hot-spring-emerald-pool"
   }
 ];
 

@@ -6,10 +6,10 @@ import kohsamuiImg from "@/assets/city-kohsamui.jpg";
 import pattayaImg from "@/assets/city-pattaya.jpg";
 
 const cities = [
-  { name: "Bangkok", image: bangkokImg, link: "/bangkok" },
-  { name: "Phuket", image: phuketImg, link: "/phuket" },
-  { name: "Krabi", image: krabiImg, link: "/krabi" },
-  { name: "Pattaya", image: pattayaImg, link: "/pattaya" },
+  { name: "Bangkok", image: bangkokImg, link: "/thailand/bangkok" },
+  { name: "Phuket", image: phuketImg, link: "/thailand/phuket" },
+  { name: "Krabi", image: krabiImg, link: "/thailand/krabi" },
+  { name: "Pattaya", image: pattayaImg, link: "/thailand/pattaya" },
   { name: "Koh Samui", image: kohsamuiImg, link: "/thailand" },
 ];
 

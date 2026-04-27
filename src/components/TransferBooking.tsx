@@ -184,7 +184,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
             <BreadcrumbJsonLd
               items={[
                 { name: "Home", url: "/" },
-                { name: "Bangkok", url: "/bangkok" },
+                { name: "Bangkok", url: "/thailand/bangkok" },
                 { name: "Bangkok Transfers", url: "/bangkok-transfers" },
                 { name: transferData.title, url: location.pathname },
               ]}
@@ -199,7 +199,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                 </li>
                 <li aria-hidden="true"><ChevronRight className="h-4 w-4 inline" /></li>
                 <li>
-                  <Link to="/bangkok" className="hover:text-primary transition-colors">Bangkok</Link>
+                  <Link to="/thailand/bangkok" className="hover:text-primary transition-colors">Bangkok</Link>
                 </li>
                 <li aria-hidden="true"><ChevronRight className="h-4 w-4 inline" /></li>
                 <li>

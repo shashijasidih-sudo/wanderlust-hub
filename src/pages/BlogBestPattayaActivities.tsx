@@ -21,21 +21,21 @@ import tigerSelfie from "@/assets/tiger-1.jpg";
 import safariWorld from "@/assets/elephant-safari-hero.jpg";
 
 const activityCards = [
-  { title: "Coral Island & Water Sports", location: "Pattaya", image: coralIsland, slug: "/pattaya/coral-island" },
-  { title: "Alcazar Cabaret Show", location: "Pattaya", image: alcazar, slug: "/pattaya/alcazar-show" },
-  { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/pattaya/floating-market-tour" },
-  { title: "Pattaya Floating Market Guided", location: "Pattaya", image: floatingGuided, slug: "/pattaya/floating-market-guided" },
-  { title: "Nong Nooch Tropical Garden", location: "Pattaya", image: nongNooch, slug: "/pattaya/nong-nooch-garden" },
-  { title: "Pattaya Dolphinarium", location: "Pattaya", image: dolphinarium, slug: "/pattaya/dolphinarium" },
-  { title: "Muay Thai Live Show", location: "Pattaya", image: muayThai, slug: "/pattaya/muay-thai" },
-  { title: "Pattaya Big Buddha & Gems Gallery", location: "Pattaya", image: bigBuddha, slug: "/pattaya/big-buddha-gems" },
-  { title: "Pattaya Nightlife Walking Tour", location: "Pattaya", image: nightlife, slug: "/pattaya/nightlife-walking-tour" },
-  { title: "Pattaya Pub Crawl", location: "Pattaya", image: pubCrawl, slug: "/pattaya/pub-crawl" },
-  { title: "Elephant Safari Phuket", location: "Phuket", image: elephantSafari, slug: "/phuket/elephant-safari" },
-  { title: "Selfie with Tigers", location: "Phuket", image: tigerSelfie, slug: "/phuket/selfie-with-tigers" },
-  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/bangkok/safari-world" },
-  { title: "Dolphin Show Phuket", location: "Phuket", image: speedboat, slug: "/bangkok/dolphin-show" },
-  { title: "Alcazar Show + Floating Market Combo", location: "Pattaya", image: alcazar, slug: "/pattaya/floating-market-tour" },
+  { title: "Coral Island & Water Sports", location: "Pattaya", image: coralIsland, slug: "/thailand/pattaya/coral-island" },
+  { title: "Alcazar Cabaret Show", location: "Pattaya", image: alcazar, slug: "/thailand/pattaya/alcazar-show" },
+  { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/thailand/pattaya/floating-market-tour" },
+  { title: "Pattaya Floating Market Guided", location: "Pattaya", image: floatingGuided, slug: "/thailand/pattaya/floating-market-guided" },
+  { title: "Nong Nooch Tropical Garden", location: "Pattaya", image: nongNooch, slug: "/thailand/pattaya/nong-nooch-garden" },
+  { title: "Pattaya Dolphinarium", location: "Pattaya", image: dolphinarium, slug: "/thailand/pattaya/dolphinarium" },
+  { title: "Muay Thai Live Show", location: "Pattaya", image: muayThai, slug: "/thailand/pattaya/muay-thai" },
+  { title: "Pattaya Big Buddha & Gems Gallery", location: "Pattaya", image: bigBuddha, slug: "/thailand/pattaya/big-buddha-gems" },
+  { title: "Pattaya Nightlife Walking Tour", location: "Pattaya", image: nightlife, slug: "/thailand/pattaya/nightlife-walking-tour" },
+  { title: "Pattaya Pub Crawl", location: "Pattaya", image: pubCrawl, slug: "/thailand/pattaya/pub-crawl" },
+  { title: "Elephant Safari Phuket", location: "Phuket", image: elephantSafari, slug: "/thailand/phuket/elephant-safari" },
+  { title: "Selfie with Tigers", location: "Phuket", image: tigerSelfie, slug: "/thailand/phuket/selfie-with-tigers" },
+  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/thailand/bangkok/safari-world" },
+  { title: "Dolphin Show Phuket", location: "Phuket", image: speedboat, slug: "/thailand/bangkok/dolphin-show" },
+  { title: "Alcazar Show + Floating Market Combo", location: "Pattaya", image: alcazar, slug: "/thailand/pattaya/floating-market-tour" },
 ];
 
 const ActivityCards = () => {
@@ -136,7 +136,7 @@ const BlogBestPattayaActivities = () => {
         { type: "paragraph", content: "Pattaya is easily accessible from Bangkok. Book a private transfer from Suvarnabhumi (BKK) or Don Mueang (DMK) airport directly to your Pattaya hotel. The drive takes about 90 minutes on the motorway. Yellodae offers comfortable airport transfers with meet-and-greet service." },
         { type: "heading", content: "Best Time to Visit Pattaya" },
         { type: "paragraph", content: "November to February offers the best weather with pleasant temperatures and minimal rain. March–May is hot but great for water sports. June–October has occasional rain but fewer tourists and lower prices." },
-        { type: "cta", content: "Ready to explore Pattaya? Book your activities at the best prices!", link: "/pattaya", linkText: "🏖️ Browse Pattaya Activities" },
+        { type: "cta", content: "Ready to explore Pattaya? Book your activities at the best prices!", link: "/thailand/pattaya", linkText: "🏖️ Browse Pattaya Activities" },
       ]}
     >
       <ActivityCards />

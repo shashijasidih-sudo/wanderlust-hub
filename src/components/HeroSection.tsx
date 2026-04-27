@@ -91,10 +91,10 @@ const HeroSection = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="/thailand">Thailand (All Cities)</SelectItem>
-                  <SelectItem value="/bangkok">Bangkok</SelectItem>
-                  <SelectItem value="/pattaya">Pattaya</SelectItem>
-                  <SelectItem value="/phuket">Phuket</SelectItem>
-                  <SelectItem value="/krabi">Krabi</SelectItem>
+                  <SelectItem value="/thailand/bangkok">Bangkok</SelectItem>
+                  <SelectItem value="/thailand/pattaya">Pattaya</SelectItem>
+                  <SelectItem value="/thailand/phuket">Phuket</SelectItem>
+                  <SelectItem value="/thailand/krabi">Krabi</SelectItem>
                   <SelectItem value="/singapore">Singapore</SelectItem>
                 </SelectContent>
               </Select>

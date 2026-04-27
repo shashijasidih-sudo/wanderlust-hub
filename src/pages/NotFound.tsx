@@ -9,9 +9,9 @@ const suggestedDestinations = [
   { name: "Thailand Tours", path: "/thailand", icon: "🇹🇭" },
   { name: "Dubai Tours", path: "/dubai", icon: "🇦🇪" },
   { name: "Singapore Tours", path: "/singapore", icon: "🇸🇬" },
-  { name: "Bangkok Activities", path: "/bangkok", icon: "🏛️" },
-  { name: "Phuket Activities", path: "/phuket", icon: "🏖️" },
-  { name: "Pattaya Activities", path: "/pattaya", icon: "🎡" },
+  { name: "Bangkok Activities", path: "/thailand/bangkok", icon: "🏛️" },
+  { name: "Phuket Activities", path: "/thailand/phuket", icon: "🏖️" },
+  { name: "Pattaya Activities", path: "/thailand/pattaya", icon: "🎡" },
 ];
 
 const NotFound = () => {
@@ -49,16 +49,16 @@ const NotFound = () => {
     suggestedRedirect = "/singapore";
     suggestedLabel = "Singapore Tours";
   } else if (path.includes("bangkok") || path.includes("temple") || path.includes("grand-palace")) {
-    suggestedRedirect = "/bangkok";
+    suggestedRedirect = "/thailand/bangkok";
     suggestedLabel = "Bangkok Activities";
   } else if (path.includes("phuket") || path.includes("phi-phi") || path.includes("james-bond")) {
-    suggestedRedirect = "/phuket";
+    suggestedRedirect = "/thailand/phuket";
     suggestedLabel = "Phuket Activities";
   } else if (path.includes("pattaya") || path.includes("coral") || path.includes("alcazar")) {
-    suggestedRedirect = "/pattaya";
+    suggestedRedirect = "/thailand/pattaya";
     suggestedLabel = "Pattaya Activities";
   } else if (path.includes("krabi") || path.includes("four-island") || path.includes("hong-island")) {
-    suggestedRedirect = "/krabi";
+    suggestedRedirect = "/thailand/krabi";
     suggestedLabel = "Krabi Activities";
   } else if (path.includes("thai")) {
     suggestedRedirect = "/thailand";

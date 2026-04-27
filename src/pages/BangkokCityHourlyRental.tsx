@@ -10,7 +10,7 @@ const BangkokCityHourlyRental = () => {
   const seo = bangkokTransferSEO[id];
   return (
     <>
-      <CanonicalUrl path="/bangkok/bangkok-hotel-to-hotel-transfer-4-hours" />
+      <CanonicalUrl path="/thailand/bangkok/bangkok-hotel-to-hotel-transfer-4-hours" />
       <TransferBooking
         transferData={transfersData[id]}
         galleryImages={seo.gallery}

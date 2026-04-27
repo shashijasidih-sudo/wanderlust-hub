@@ -116,8 +116,8 @@ type SEOEntry = {
 
 export const bangkokTransferSEO: Record<string, SEOEntry> = {
   "bangkok-bkk-airport-pickup": {
-    newSlug: "/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer",
-    oldSlug: "/bangkok/bkk-airport-pickup",
+    newSlug: "/thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer",
+    oldSlug: "/thailand/bangkok/bkk-airport-pickup",
     gallery: airportGallery,
     seoContent: (
       <>
@@ -369,8 +369,8 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
   },
 
   "bangkok-dmk-airport-pickup": {
-    newSlug: "/bangkok/don-mueang-airport-to-bangkok-hotel-transfer",
-    oldSlug: "/bangkok/dmk-airport-pickup",
+    newSlug: "/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer",
+    oldSlug: "/thailand/bangkok/dmk-airport-pickup",
     gallery: airportGallery,
     seoContent: (
       <>
@@ -425,8 +425,8 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
   },
 
   "bangkok-bkk-airport-dropoff": {
-    newSlug: "/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer",
-    oldSlug: "/bangkok/bkk-airport-dropoff",
+    newSlug: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer",
+    oldSlug: "/thailand/bangkok/bkk-airport-dropoff",
     gallery: dropoffGallery,
     seoContent: (
       <>
@@ -479,8 +479,8 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
   },
 
   "bangkok-temple-tour-airport": {
-    newSlug: "/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer",
-    oldSlug: "/bangkok/airport-transfers/temple-tour-bkk",
+    newSlug: "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer",
+    oldSlug: "/thailand/bangkok/airport-transfers/temple-tour-bkk",
     gallery: templeGallery,
     seoContent: (
       <>
@@ -533,8 +533,8 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
   },
 
   "bangkok-safari-world-bkk-airport": {
-    newSlug: "/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer",
-    oldSlug: "/bangkok/airport-transfers/safari-world-bkk",
+    newSlug: "/thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer",
+    oldSlug: "/thailand/bangkok/airport-transfers/safari-world-bkk",
     gallery: safariGallery,
     seoContent: (
       <>
@@ -577,8 +577,8 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
   },
 
   "bangkok-dmk-airport-dropoff": {
-    newSlug: "/bangkok/bangkok-hotel-to-don-mueang-airport-transfer",
-    oldSlug: "/bangkok/dmk-airport-dropoff",
+    newSlug: "/thailand/bangkok/bangkok-hotel-to-don-mueang-airport-transfer",
+    oldSlug: "/thailand/bangkok/dmk-airport-dropoff",
     gallery: dropoffGallery,
     seoContent: (
       <>
@@ -624,8 +624,8 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
   },
 
   "bangkok-temple-tour-dmk-airport": {
-    newSlug: "/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer",
-    oldSlug: "/bangkok/airport-transfers/temple-tour-dmk",
+    newSlug: "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer",
+    oldSlug: "/thailand/bangkok/airport-transfers/temple-tour-dmk",
     gallery: templeGallery,
     seoContent: (
       <>
@@ -669,8 +669,8 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
   },
 
   "bangkok-safari-world-dmk-airport": {
-    newSlug: "/bangkok/bangkok-hotel-safari-world-to-don-mueang-airport-transfer",
-    oldSlug: "/bangkok/airport-transfers/safari-world-dmk",
+    newSlug: "/thailand/bangkok/bangkok-hotel-safari-world-to-don-mueang-airport-transfer",
+    oldSlug: "/thailand/bangkok/airport-transfers/safari-world-dmk",
     gallery: safariGallery,
     seoContent: (
       <>
@@ -713,8 +713,8 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
   },
 
   "bangkok-city-hourly-rental": {
-    newSlug: "/bangkok/bangkok-hotel-to-hotel-transfer-4-hours",
-    oldSlug: "/bangkok/city-hourly-rental",
+    newSlug: "/thailand/bangkok/bangkok-hotel-to-hotel-transfer-4-hours",
+    oldSlug: "/thailand/bangkok/city-hourly-rental",
     gallery: hourlyGallery,
     seoContent: (
       <>
@@ -759,8 +759,8 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
   },
 
   "bangkok-to-pattaya": {
-    newSlug: "/bangkok/bangkok-hotel-to-pattaya-hotel-transfer",
-    oldSlug: "/bangkok/to-pattaya",
+    newSlug: "/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer",
+    oldSlug: "/thailand/bangkok/to-pattaya",
     gallery: pattayaGallery,
     seoContent: (
       <>
@@ -813,8 +813,8 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
   },
 
   "bangkok-city-tour-pattaya": {
-    newSlug: "/bangkok/bangkok-city-tour-to-pattaya-hotel-transfer",
-    oldSlug: "/bangkok/city-tour-pattaya",
+    newSlug: "/thailand/bangkok/bangkok-city-tour-to-pattaya-hotel-transfer",
+    oldSlug: "/thailand/bangkok/city-tour-pattaya",
     gallery: cityTourPattayaGallery,
     seoContent: (
       <>
@@ -860,8 +860,8 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
   },
 
   "bangkok-tiger-topia-pattaya": {
-    newSlug: "/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer",
-    oldSlug: "/bangkok/tiger-topia-pattaya",
+    newSlug: "/thailand/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer",
+    oldSlug: "/thailand/bangkok/tiger-topia-pattaya",
     gallery: tigerTopiaGallery,
     seoContent: (
       <>

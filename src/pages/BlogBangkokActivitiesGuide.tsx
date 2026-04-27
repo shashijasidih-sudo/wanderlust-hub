@@ -22,21 +22,21 @@ import seaLife from "@/assets/bangkok-city-purple-1.jpg";
 import massage from "@/assets/massage-coupon-hero.jpg";
 
 const activityCards = [
-  { title: "Grand Palace & Emerald Buddha Temple", location: "Bangkok", image: grandPalace, slug: "/bangkok/grand-palace-emerald" },
-  { title: "Bangkok Three Temples City Tour", location: "Bangkok", image: threeTemples, slug: "/bangkok/three-temples-tour" },
-  { title: "Wat Arun, Pho & Traimit Tour", location: "Bangkok", image: watArun, slug: "/bangkok/wat-arun-pho-traimit" },
-  { title: "Bangkok City & Gems Gallery Tour", location: "Bangkok", image: gemsGallery, slug: "/bangkok/city-gems-gallery" },
-  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/bangkok/safari-world" },
-  { title: "King Power Mahanakhon Skywalk", location: "Bangkok", image: skywalk, slug: "/bangkok/skywalk" },
-  { title: "Floating Market & Railway Market Tour", location: "Bangkok", image: floatingMarket, slug: "/bangkok/maeklong-floating-market" },
-  { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: tukTuk, slug: "/bangkok/tuk-tuk-night-tour" },
-  { title: "Dream World Bangkok", location: "Bangkok", image: dreamWorld, slug: "/bangkok/dream-world" },
-  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruise, slug: "/bangkok/chao-phraya-princess-with-transfer" },
-  { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: vivaAlangka, slug: "/bangkok/viva-alangka-cruise" },
-  { title: "Ayutthaya Temple Tour", location: "Bangkok", image: ayutthaya, slug: "/bangkok/ayutthaya-temple-tour" },
-  { title: "Baiyoke Sky Buffet", location: "Bangkok", image: baiyoke, slug: "/bangkok/baiyoke-buffet" },
-  { title: "Sea Life & Madame Tussauds", location: "Bangkok", image: seaLife, slug: "/bangkok/sea-life-madame-tussauds" },
-  { title: "Thai Massage Coupon Packages", location: "Bangkok", image: massage, slug: "/bangkok/massage-coupons" },
+  { title: "Grand Palace & Emerald Buddha Temple", location: "Bangkok", image: grandPalace, slug: "/thailand/bangkok/grand-palace-emerald" },
+  { title: "Bangkok Three Temples City Tour", location: "Bangkok", image: threeTemples, slug: "/thailand/bangkok/three-temples-tour" },
+  { title: "Wat Arun, Pho & Traimit Tour", location: "Bangkok", image: watArun, slug: "/thailand/bangkok/wat-arun-pho-traimit" },
+  { title: "Bangkok City & Gems Gallery Tour", location: "Bangkok", image: gemsGallery, slug: "/thailand/bangkok/city-gems-gallery" },
+  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/thailand/bangkok/safari-world" },
+  { title: "King Power Mahanakhon Skywalk", location: "Bangkok", image: skywalk, slug: "/thailand/bangkok/skywalk" },
+  { title: "Floating Market & Railway Market Tour", location: "Bangkok", image: floatingMarket, slug: "/thailand/bangkok/maeklong-floating-market" },
+  { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: tukTuk, slug: "/thailand/bangkok/tuk-tuk-night-tour" },
+  { title: "Dream World Bangkok", location: "Bangkok", image: dreamWorld, slug: "/thailand/bangkok/dream-world" },
+  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruise, slug: "/thailand/bangkok/chao-phraya-princess-with-transfer" },
+  { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: vivaAlangka, slug: "/thailand/bangkok/viva-alangka-cruise" },
+  { title: "Ayutthaya Temple Tour", location: "Bangkok", image: ayutthaya, slug: "/thailand/bangkok/ayutthaya-temple-tour" },
+  { title: "Baiyoke Sky Buffet", location: "Bangkok", image: baiyoke, slug: "/thailand/bangkok/baiyoke-buffet" },
+  { title: "Sea Life & Madame Tussauds", location: "Bangkok", image: seaLife, slug: "/thailand/bangkok/sea-life-madame-tussauds" },
+  { title: "Thai Massage Coupon Packages", location: "Bangkok", image: massage, slug: "/thailand/bangkok/massage-coupons" },
 ];
 
 const ActivityCards = () => {
@@ -127,7 +127,7 @@ const BlogBangkokActivitiesGuide = () => {
         { type: "tip-box", content: "💡 Bangkok Tip: Many Bangkok tours offer hotel pickup from Sukhumvit, Silom, and Khao San Road areas. BTS Skytrain is excellent for getting around the city independently." },
         { type: "heading", content: "Best Time to Visit Bangkok" },
         { type: "paragraph", content: "November to February is ideal with cooler, drier weather (25-32°C). March–May is very hot (35°C+). June–October sees occasional rain but fewer crowds and better prices." },
-        { type: "cta", content: "Ready to explore Bangkok? Book your activities at the best prices!", link: "/bangkok", linkText: "🏯 Browse Bangkok Activities" },
+        { type: "cta", content: "Ready to explore Bangkok? Book your activities at the best prices!", link: "/thailand/bangkok", linkText: "🏯 Browse Bangkok Activities" },
       ]}
     >
       <ActivityCards />
