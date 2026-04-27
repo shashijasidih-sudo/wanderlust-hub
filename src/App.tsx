@@ -539,6 +539,27 @@ const App = () => (
           <Route path="/routes-health-check" element={<RoutesHealthCheck />} />
           <Route path="/admin" element={<AdminDashboard />} />
           {/* 301 Redirects: Old URLs → New SEO-friendly URLs */}
+            {/* Legacy /thailand/bangkok/<old-slug> → new SEO slug */}
+            <Route path="/thailand/bangkok/skywalk" element={<Navigate to="/thailand/bangkok/mahanakhon-skywalk-tickets" replace />} />
+            <Route path="/thailand/bangkok/massage-coupons" element={<Navigate to="/thailand/bangkok/thai-massage-spa-deals-bangkok" replace />} />
+            <Route path="/thailand/bangkok/three-temples-tour" element={<Navigate to="/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" replace />} />
+            <Route path="/thailand/bangkok/wat-arun-pho-traimit" element={<Navigate to="/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" replace />} />
+            <Route path="/thailand/bangkok/city-boat-tour" element={<Navigate to="/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour" replace />} />
+            <Route path="/thailand/bangkok/city-gems-gallery" element={<Navigate to="/thailand/bangkok/gems-gallery-bangkok-tickets" replace />} />
+            <Route path="/thailand/bangkok/wat-arun-chinatown" element={<Navigate to="/thailand/bangkok/wat-arun-chinatown-tour" replace />} />
+            <Route path="/thailand/bangkok/golden-marble-buddha" element={<Navigate to="/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour" replace />} />
+            <Route path="/thailand/bangkok/ayutthaya-temple-tour" element={<Navigate to="/thailand/bangkok/ayutthaya-day-tour-from-bangkok" replace />} />
+            <Route path="/thailand/bangkok/grand-palace-emerald" element={<Navigate to="/thailand/bangkok/grand-palace-wat-phra-kaew-tour" replace />} />
+            <Route path="/thailand/bangkok/sea-life-madame-tussauds" element={<Navigate to="/thailand/bangkok/sea-life-madame-tussauds-tickets" replace />} />
+            <Route path="/thailand/bangkok/viva-alangka-cruise" element={<Navigate to="/thailand/bangkok/viva-alangka-dinner-cruise" replace />} />
+            <Route path="/thailand/bangkok/ayutthaya-sunset-cruise" element={<Navigate to="/thailand/bangkok/ayutthaya-sunset-river-cruise" replace />} />
+            <Route path="/thailand/bangkok/chao-phraya-princess-private" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" replace />} />
+            <Route path="/thailand/bangkok/chao-phraya-princess-valentine" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise" replace />} />
+            <Route path="/thailand/bangkok/chao-phraya-princess-with-transfer" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer" replace />} />
+            <Route path="/thailand/bangkok/maeklong-floating-market" element={<Navigate to="/thailand/bangkok/maeklong-floating-market-tour" replace />} />
+            <Route path="/thailand/bangkok/tuk-tuk-night-tour" element={<Navigate to="/thailand/bangkok/tuk-tuk-night-tour-bangkok" replace />} />
+            <Route path="/thailand/bangkok/dream-world" element={<Navigate to="/thailand/bangkok/dream-world-bangkok-tickets" replace />} />
+            {/* NOTE: /thailand/bangkok/chao-phraya-princess-dinner conflicts with new slug pattern, handled implicitly */}
             <Route path="/safari-world" element={<Navigate to="/thailand/bangkok/safari-world" replace />} />
             <Route path="/dolphin-show" element={<Navigate to="/thailand/bangkok/dolphin-show" replace />} />
             <Route path="/bangkok-skywalk" element={<Navigate to="/thailand/bangkok/mahanakhon-skywalk-tickets" replace />} />
