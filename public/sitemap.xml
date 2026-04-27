@@ -9,68 +9,68 @@
 
   <!-- Thailand -->
   <url><loc>https://yellodae.com/thailand</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://yellodae.com/bangkok</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://yellodae.com/pattaya</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://yellodae.com/phuket</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://yellodae.com/krabi</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
   <!-- Thailand Activities -->
-  <url><loc>https://yellodae.com/bangkok/safari-world</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/phuket/phi-phi-island-tour</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/phuket/james-bond-island-tour</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/bangkok/dolphin-show</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/selfie-with-tigers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/elephant-safari</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/hot-spring-emerald-pool</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/skywalk</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/massage-coupons</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/three-temples-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/wat-arun-pho-traimit</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/city-boat-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/city-gems-gallery</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/wat-arun-chinatown</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/golden-marble-buddha</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/ayutthaya-temple-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/grand-palace-emerald</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/baiyoke-buffet</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/sea-life-madame-tussauds</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/viva-alangka-cruise</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/ayutthaya-sunset-cruise</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/chao-phraya-princess-private</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/chao-phraya-princess-valentine</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/chao-phraya-princess-with-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/chao-phraya-princess-dinner</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/maeklong-floating-market</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/tuk-tuk-night-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/dream-world</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/dolphin-bay</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/city-night-market</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/simon-cabaret</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/carnival-magic</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/muslim-friendly-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/selfie-with-tigers-atv</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/james-bond-island-sea-canoe</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/phi-phi-big-boat</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/phi-phi-royal-jet</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/phi-phi-maya-khai-speedboat</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/floating-market-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/big-buddha-gems</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/coral-island</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/nong-nooch-garden</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/dolphinarium</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/muay-thai</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/alcazar-show</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/floating-market-guided</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/nightlife-walking-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/pub-crawl</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/krabi/hong-islands-longtail</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/krabi/hong-islands-speedboat</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/krabi/seven-islands-longtail</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/krabi/seven-islands-speedboat</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/krabi/four-islands-longtail</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/krabi/four-islands-longtail-no-park-fee</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/krabi/four-islands-speedboat</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/krabi/phuket/james-bond-island-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/safari-world</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/phi-phi-island-tour</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/james-bond-island-tour</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/dolphin-show</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/selfie-with-tigers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/elephant-safari</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/hot-spring-emerald-pool</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/skywalk</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/massage-coupons</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/three-temples-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/wat-arun-pho-traimit</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/city-boat-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/city-gems-gallery</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/wat-arun-chinatown</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/golden-marble-buddha</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/ayutthaya-temple-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/grand-palace-emerald</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/baiyoke-buffet</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/sea-life-madame-tussauds</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/viva-alangka-cruise</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/ayutthaya-sunset-cruise</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/chao-phraya-princess-private</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/chao-phraya-princess-valentine</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/chao-phraya-princess-with-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/chao-phraya-princess-dinner</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/maeklong-floating-market</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/tuk-tuk-night-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/dream-world</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/dolphin-bay</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/city-night-market</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/simon-cabaret</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/carnival-magic</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/muslim-friendly-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/selfie-with-tigers-atv</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/james-bond-island-sea-canoe</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/phi-phi-big-boat</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/phi-phi-royal-jet</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/phi-phi-maya-khai-speedboat</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/floating-market-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/big-buddha-gems</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/coral-island</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/nong-nooch-garden</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/dolphinarium</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/muay-thai</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/alcazar-show</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/floating-market-guided</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/nightlife-walking-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/pub-crawl</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/hong-islands-longtail</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/hong-islands-speedboat</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/seven-islands-longtail</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/seven-islands-speedboat</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/four-islands-longtail</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/four-islands-longtail-no-park-fee</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/four-islands-speedboat</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/phuket/james-bond-island-tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
   <!-- Dubai -->
   <url><loc>https://yellodae.com/dubai</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -121,62 +121,62 @@
 
   <!-- Transfers -->
   <url><loc>https://yellodae.com/thailand/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/bangkok/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/krabi/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://yellodae.com/dubai/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://yellodae.com/singapore/budget-airport-transfers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
   <!-- Bangkok Airport Transfers (SEO-friendly slugs) -->
-  <url><loc>https://yellodae.com/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/bangkok/don-mueang-airport-to-bangkok-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-safari-world-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-to-hotel-transfer-4-hours</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/bangkok/bangkok-city-tour-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/bangkok-hotel-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/bangkok-hotel-safari-world-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/bangkok-hotel-to-hotel-transfer-4-hours</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/bangkok-city-tour-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
   <!-- Pattaya Airport Transfers (SEO-friendly slugs) -->
-  <url><loc>https://yellodae.com/bangkok/suvarnabhumi-airport-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/bangkok/suvarnabhumi-airport-tiger-topia-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/don-mueang-airport-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/bangkok/don-mueang-airport-tiger-topia-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/pattaya-hotel-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/pattaya/pattaya-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/pattaya-hotel-safari-world-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/pattaya-hotel-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/pattaya/pattaya-hotel-two-temple-tour-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/pattaya-hotel-indra-square-shopping-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/pattaya-private-car-4-hours</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/pattaya-hotel-to-bangkok-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/pattaya/pattaya-to-bangkok-city-tour-and-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/bangkok/bangkok-hotel-safari-world-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/pattaya/u-tapao-airport-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/suvarnabhumi-airport-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/suvarnabhumi-airport-tiger-topia-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/don-mueang-airport-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/don-mueang-airport-tiger-topia-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/pattaya-hotel-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/pattaya-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/pattaya-hotel-safari-world-to-suvarnabhumi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/pattaya-hotel-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/pattaya-hotel-two-temple-tour-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/pattaya-hotel-indra-square-shopping-to-don-mueang-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/pattaya-private-car-4-hours</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/pattaya-hotel-to-bangkok-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/pattaya-to-bangkok-city-tour-and-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/bangkok/bangkok-hotel-safari-world-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/pattaya/u-tapao-airport-to-pattaya-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Phuket Airport Transfers (SEO-friendly slugs) -->
-  <url><loc>https://yellodae.com/phuket/phuket-airport-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/phuket/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/phuket-hotel-to-phuket-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/phuket/phuket-city-tour-to-phuket-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/phuket-hotel-to-hotel-transfer-4-hours</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/phuket-hotel-to-krabi-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/phuket/phuket-city-tour-to-krabi-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/krabi-city-tour-to-krabi-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/phuket/phuket-airport-to-krabi-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/krabi/krabi-hotel-to-krabi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/phuket-airport-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/phuket-hotel-to-phuket-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/phuket-city-tour-to-phuket-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/phuket-hotel-to-hotel-transfer-4-hours</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/phuket-hotel-to-krabi-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/phuket-city-tour-to-krabi-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/krabi-city-tour-to-krabi-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/phuket/phuket-airport-to-krabi-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/krabi-hotel-to-krabi-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Krabi Airport Transfers (SEO-friendly slugs) -->
-  <url><loc>https://yellodae.com/krabi/krabi-airport-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/krabi/krabi-hotel-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/krabi/phuket-city-tour-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yellodae.com/krabi/krabi-hotel-to-phuket-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yellodae.com/krabi/krabi-airport-to-ao-nang-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/krabi-airport-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/phuket-city-tour-to-phuket-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/krabi-hotel-to-phuket-airport-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yellodae.com/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Singapore Airport Transfers (SEO-friendly slugs) -->
   <url><loc>https://yellodae.com/singapore/singapore-airport-pickup</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
