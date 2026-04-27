@@ -158,6 +158,7 @@ const cityDisplayNames: Record<string, string> = {
   pattaya: "Pattaya",
   phuket: "Phuket",
   krabi: "Krabi",
+  singapore: "Singapore",
 };
 
 export const getCityTransfers = (city?: string) => {
