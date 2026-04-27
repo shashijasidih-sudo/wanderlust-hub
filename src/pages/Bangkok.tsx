@@ -11,6 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SearchInput from "@/components/SearchInput";
+import BookTransfersSection from "@/components/BookTransfersSection";
 
 // Import local assets
 import bangkokSkywalkHero from "@/assets/bangkok-skywalk-hero.jpg";

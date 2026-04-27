@@ -11,6 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SearchInput from "@/components/SearchInput";
+import BookTransfersSection from "@/components/BookTransfersSection";
 import pattayaBoatTour from "@/assets/floating-market-daylight-1.jpg";
 import pattayaSailboat from "@/assets/pattaya-sailboat-1.jpg";
 import pattayaBoatsBeach from "@/assets/pattaya-boats-beach-1.jpg";

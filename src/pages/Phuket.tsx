@@ -11,6 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SearchInput from "@/components/SearchInput";
+import BookTransfersSection from "@/components/BookTransfersSection";
 
 import phuketLongtailBoat from "@/assets/phuket-longtail-boat-1.jpg";
 import phuketBigBoat from "@/assets/phuket-big-boat-1.jpg";
