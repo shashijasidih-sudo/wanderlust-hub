@@ -74,6 +74,7 @@ interface TransferBookingProps {
   galleryImages?: TransferGalleryImage[];
   seoContent?: React.ReactNode;
   faqs?: TransferFAQ[];
+  relatedLinks?: { title: string; url: string; description?: string }[];
 }
 
 const TransferBooking = ({ transferData, galleryImages, seoContent, faqs }: TransferBookingProps) => {
