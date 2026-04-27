@@ -78,7 +78,7 @@ const activities: Activity[] = [
     description: "Sky-high cable car ride between Mount Faber and Sentosa Island with stunning harbour views.",
     price: 2180,
     image: singaporeCableCar,
-    slug: "/singapore/sentosa-cable-car-tickets-and-transfers-tickets-and-transfers",
+    slug: "/singapore/sentosa-cable-car-tickets-and-transfers",
     category: "Sentosa Island Attractions",
   },
   {
@@ -146,7 +146,7 @@ const activities: Activity[] = [
     description: "Singapore's newest immersive wildlife park exploring South-East Asia's rainforest habitats.",
     price: 3441.375,
     image: singaporeZoo,
-    slug: "/singapore/rainforest-wild-asia-tickets-tickets",
+    slug: "/singapore/rainforest-wild-asia-tickets",
     category: "Wildlife & Safari",
   },
 
@@ -172,7 +172,7 @@ const activities: Activity[] = [
     description: "See Singapore's iconic landmarks beautifully lit up on this open-top night bus tour.",
     price: 4709.25,
     image: singaporeBigBus,
-    slug: "/singapore/big-bus-night-city-tour-singapore-city-tour-singapore",
+    slug: "/singapore/big-bus-night-city-tour-singapore-singapore",
     category: "City Tours & Sightseeing",
   },
   {
@@ -190,7 +190,7 @@ const activities: Activity[] = [
     description: "Visit the iconic Cloud Forest and Flower Dome at Singapore's futuristic garden park.",
     price: 2660,
     image: singaporeGardensBay,
-    slug: "/singapore/gardens-by-the-bay-tickets-and-transfers-tickets-and-transfers",
+    slug: "/singapore/gardens-by-the-bay-tickets-and-transfers",
     category: "Iconic Landmarks",
   },
   {
@@ -491,13 +491,13 @@ const SingaporeThingsToDo = () => {
               {[
                 { label: "Universal Studios Weekday", to: "/singapore/universal-studios-singapore-weekday-tickets" },
                 { label: "Universal Studios Weekend", to: "/singapore/universal-studios-singapore-weekend-tickets" },
-                { label: "Gardens by the Bay", to: "/singapore/gardens-by-the-bay-tickets-and-transfers-tickets-and-transfers" },
+                { label: "Gardens by the Bay", to: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
                 { label: "Singapore Flyer", to: "/singapore/singapore-flyer-tickets-and-transfers" },
                 { label: "Night Safari Singapore", to: "/singapore/night-safari-singapore-tickets-and-transfers-singapore-tickets-and-transfers" },
                 { label: "Singapore Zoo", to: "/singapore/singapore-zoo-tickets" },
                 { label: "River Wonders Singapore", to: "/singapore/river-wonders-singapore-tickets" },
                 { label: "SkyHelix Sentosa", to: "/singapore/skyhelix-sentosa-tickets" },
-                { label: "Sentosa Cable Car", to: "/singapore/sentosa-cable-car-tickets-and-transfers-tickets-and-transfers" },
+                { label: "Sentosa Cable Car", to: "/singapore/sentosa-cable-car-tickets-and-transfers" },
                 { label: "Wings of Time Show", to: "/singapore/wings-of-time-show-sentosa-tickets" },
                 { label: "Singapore River Cruise", to: "/singapore/singapore-river-cruise-tickets-and-transfers" },
                 { label: "Singapore City Tour", to: "/singapore/singapore-city-tour" },
