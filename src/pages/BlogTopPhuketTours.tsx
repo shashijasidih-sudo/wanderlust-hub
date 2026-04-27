@@ -22,21 +22,21 @@ import muslimTour from "@/assets/phuket-muslim-woman-hijab.jpg";
 import hotSpring from "@/assets/hot-spring-emerald-hero.jpg";
 
 const activityCards = [
-  { title: "Phi Phi Island, Maya Bay & Khai Island Speedboat", location: "Phuket", image: phiPhi, slug: "/phuket/phi-phi-island-tour" },
-  { title: "Phi Phi Island Big Boat Tour", location: "Phuket", image: phiPhiBigBoat, slug: "/phuket/phi-phi-big-boat" },
-  { title: "Phi Phi Royal Jet Speedboat Tour", location: "Phuket", image: phiPhiRoyal, slug: "/phuket/phi-phi-royal-jet" },
-  { title: "Phi Phi Maya & Khai Speedboat", location: "Phuket", image: phiPhiMaya, slug: "/phuket/phi-phi-maya-khai-speedboat" },
-  { title: "James Bond Island & Phang Nga Bay", location: "Phuket", image: jamesBond, slug: "/phuket/james-bond-island-tour" },
-  { title: "James Bond Island with Sea Canoe", location: "Phuket", image: jamesBondCanoe, slug: "/phuket/james-bond-island-sea-canoe" },
-  { title: "Dolphin Show Phuket", location: "Phuket", image: dolphin, slug: "/bangkok/dolphin-show" },
-  { title: "Dolphin Bay Phuket", location: "Phuket", image: dolphinBay, slug: "/phuket/dolphin-bay" },
-  { title: "Selfie with Tigers Phuket", location: "Phuket", image: tiger, slug: "/phuket/selfie-with-tigers" },
-  { title: "Selfie with Tigers & ATV Ride", location: "Phuket", image: tigerAtv, slug: "/phuket/selfie-with-tigers-atv" },
-  { title: "Phuket Carnival Magic Show", location: "Phuket", image: carnival, slug: "/phuket/carnival-magic" },
-  { title: "Phuket Simon Cabaret Show", location: "Phuket", image: simonCabaret, slug: "/phuket/simon-cabaret" },
-  { title: "Phuket City Night Market Tour", location: "Phuket", image: nightMarket, slug: "/phuket/city-night-market" },
-  { title: "Phuket Muslim Friendly Tour", location: "Phuket", image: muslimTour, slug: "/phuket/muslim-friendly-tour" },
-  { title: "Hot Spring & Emerald Pool Krabi", location: "Krabi", image: hotSpring, slug: "/phuket/hot-spring-emerald-pool" },
+  { title: "Phi Phi Island, Maya Bay & Khai Island Speedboat", location: "Phuket", image: phiPhi, slug: "/thailand/phuket/phi-phi-island-tour" },
+  { title: "Phi Phi Island Big Boat Tour", location: "Phuket", image: phiPhiBigBoat, slug: "/thailand/phuket/phi-phi-big-boat" },
+  { title: "Phi Phi Royal Jet Speedboat Tour", location: "Phuket", image: phiPhiRoyal, slug: "/thailand/phuket/phi-phi-royal-jet" },
+  { title: "Phi Phi Maya & Khai Speedboat", location: "Phuket", image: phiPhiMaya, slug: "/thailand/phuket/phi-phi-maya-khai-speedboat" },
+  { title: "James Bond Island & Phang Nga Bay", location: "Phuket", image: jamesBond, slug: "/thailand/phuket/james-bond-island-tour" },
+  { title: "James Bond Island with Sea Canoe", location: "Phuket", image: jamesBondCanoe, slug: "/thailand/phuket/james-bond-island-sea-canoe" },
+  { title: "Dolphin Show Phuket", location: "Phuket", image: dolphin, slug: "/thailand/bangkok/dolphin-show" },
+  { title: "Dolphin Bay Phuket", location: "Phuket", image: dolphinBay, slug: "/thailand/phuket/dolphin-bay" },
+  { title: "Selfie with Tigers Phuket", location: "Phuket", image: tiger, slug: "/thailand/phuket/selfie-with-tigers" },
+  { title: "Selfie with Tigers & ATV Ride", location: "Phuket", image: tigerAtv, slug: "/thailand/phuket/selfie-with-tigers-atv" },
+  { title: "Phuket Carnival Magic Show", location: "Phuket", image: carnival, slug: "/thailand/phuket/carnival-magic" },
+  { title: "Phuket Simon Cabaret Show", location: "Phuket", image: simonCabaret, slug: "/thailand/phuket/simon-cabaret" },
+  { title: "Phuket City Night Market Tour", location: "Phuket", image: nightMarket, slug: "/thailand/phuket/city-night-market" },
+  { title: "Phuket Muslim Friendly Tour", location: "Phuket", image: muslimTour, slug: "/thailand/phuket/muslim-friendly-tour" },
+  { title: "Hot Spring & Emerald Pool Krabi", location: "Krabi", image: hotSpring, slug: "/thailand/phuket/hot-spring-emerald-pool" },
 ];
 
 const ActivityCards = () => {
@@ -146,7 +146,7 @@ const BlogTopPhuketTours = () => {
           "Dedicated WhatsApp support for Indian travelers",
           "Genuine reviews from Indian families and couples",
         ]},
-        { type: "cta", content: "Ready to explore Phuket's stunning islands? Book your tour now!", link: "/phuket", linkText: "🏝️ Browse Phuket Tours" },
+        { type: "cta", content: "Ready to explore Phuket's stunning islands? Book your tour now!", link: "/thailand/phuket", linkText: "🏝️ Browse Phuket Tours" },
       ]}
     >
       <ActivityCards />

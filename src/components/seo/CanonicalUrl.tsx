@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 interface CanonicalUrlProps {
-  /** Path beginning with `/`, e.g. "/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer" */
+  /** Path beginning with `/`, e.g. "/thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer" */
   path: string;
   /** Origin override; defaults to https://yellodae.com */
   origin?: string;

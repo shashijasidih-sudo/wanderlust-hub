@@ -21,21 +21,21 @@ import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
 import ayutthayaSunset from "@/assets/ayutthaya-sunset-1.jpg";
 
 const activityCards = [
-  { title: "Bangkok Three Temples Tour", location: "Bangkok", image: bangkokTemple, slug: "/bangkok/three-temples-tour" },
-  { title: "Maeklong & Floating Market", location: "Bangkok", image: floatingMarket, slug: "/bangkok/maeklong-floating-market" },
-  { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: bangkokCity2, slug: "/bangkok/tuk-tuk-night-tour" },
-  { title: "Baiyoke Sky Buffet Dinner", location: "Bangkok", image: bangkokSkywalk, slug: "/bangkok/baiyoke-buffet" },
-  { title: "Ayutthaya Sunset Cruise", location: "Ayutthaya", image: ayutthayaSunset, slug: "/bangkok/ayutthaya-sunset-cruise" },
-  { title: "Chao Phraya Princess Cruise", location: "Bangkok", image: bangkokPagoda, slug: "/bangkok/chao-phraya-princess-with-transfer" },
-  { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: bangkokCity, slug: "/bangkok/viva-alangka-cruise" },
-  { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/pattaya/floating-market-tour" },
-  { title: "Pattaya Nightlife Walking", location: "Pattaya", image: pattayaNightlife, slug: "/pattaya/nightlife-walking-tour" },
-  { title: "Grand Palace & Emerald Buddha", location: "Bangkok", image: grandPalace, slug: "/bangkok/grand-palace-emerald" },
-  { title: "Phi Phi Island by Speedboat", location: "Phuket", image: phiPhi, slug: "/phuket/phi-phi-island-tour" },
-  { title: "James Bond Island Tour", location: "Phuket", image: jamesBond, slug: "/phuket/james-bond-island-tour" },
-  { title: "Elephant Safari Experience", location: "Phuket", image: elephantSafari, slug: "/phuket/elephant-safari" },
-  { title: "Thai Massage Coupons", location: "Bangkok", image: massage, slug: "/bangkok/massage-coupons" },
-  { title: "Dolphin Bay Phuket", location: "Phuket", image: phuketBoatTour, slug: "/phuket/dolphin-bay" },
+  { title: "Bangkok Three Temples Tour", location: "Bangkok", image: bangkokTemple, slug: "/thailand/bangkok/three-temples-tour" },
+  { title: "Maeklong & Floating Market", location: "Bangkok", image: floatingMarket, slug: "/thailand/bangkok/maeklong-floating-market" },
+  { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: bangkokCity2, slug: "/thailand/bangkok/tuk-tuk-night-tour" },
+  { title: "Baiyoke Sky Buffet Dinner", location: "Bangkok", image: bangkokSkywalk, slug: "/thailand/bangkok/baiyoke-buffet" },
+  { title: "Ayutthaya Sunset Cruise", location: "Ayutthaya", image: ayutthayaSunset, slug: "/thailand/bangkok/ayutthaya-sunset-cruise" },
+  { title: "Chao Phraya Princess Cruise", location: "Bangkok", image: bangkokPagoda, slug: "/thailand/bangkok/chao-phraya-princess-with-transfer" },
+  { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: bangkokCity, slug: "/thailand/bangkok/viva-alangka-cruise" },
+  { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/thailand/pattaya/floating-market-tour" },
+  { title: "Pattaya Nightlife Walking", location: "Pattaya", image: pattayaNightlife, slug: "/thailand/pattaya/nightlife-walking-tour" },
+  { title: "Grand Palace & Emerald Buddha", location: "Bangkok", image: grandPalace, slug: "/thailand/bangkok/grand-palace-emerald" },
+  { title: "Phi Phi Island by Speedboat", location: "Phuket", image: phiPhi, slug: "/thailand/phuket/phi-phi-island-tour" },
+  { title: "James Bond Island Tour", location: "Phuket", image: jamesBond, slug: "/thailand/phuket/james-bond-island-tour" },
+  { title: "Elephant Safari Experience", location: "Phuket", image: elephantSafari, slug: "/thailand/phuket/elephant-safari" },
+  { title: "Thai Massage Coupons", location: "Bangkok", image: massage, slug: "/thailand/bangkok/massage-coupons" },
+  { title: "Dolphin Bay Phuket", location: "Phuket", image: phuketBoatTour, slug: "/thailand/phuket/dolphin-bay" },
 ];
 
 const ActivityCards = () => {

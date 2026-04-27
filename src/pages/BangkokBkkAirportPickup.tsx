@@ -10,7 +10,7 @@ const BangkokBkkAirportPickup = () => {
   const seo = bangkokTransferSEO[id];
   return (
     <>
-      <CanonicalUrl path="/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer" />
+      <CanonicalUrl path="/thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer" />
       <TransferBooking
         transferData={transfersData[id]}
         galleryImages={seo.gallery}

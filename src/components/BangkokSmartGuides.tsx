@@ -70,7 +70,7 @@ const bangkokGuides: BangkokGuide[] = [
     image: bangkokTemple1,
     date: "Feb 28, 2026",
     readTime: "9 min read",
-    link: "/bangkok/wat-arun-pho-traimit",
+    link: "/thailand/bangkok/wat-arun-pho-traimit",
   },
   {
     title: "Chao Phraya Dinner Cruise Experience",
@@ -80,7 +80,7 @@ const bangkokGuides: BangkokGuide[] = [
     image: cruiseNight1,
     date: "Mar 2, 2026",
     readTime: "7 min read",
-    link: "/bangkok/chao-phraya-princess-private",
+    link: "/thailand/bangkok/chao-phraya-princess-private",
   },
   {
     title: "Ayutthaya & Sunset Cruise from Bangkok",
@@ -90,7 +90,7 @@ const bangkokGuides: BangkokGuide[] = [
     image: bangkokPagodaSunset,
     date: "Feb 18, 2026",
     readTime: "10 min read",
-    link: "/bangkok/ayutthaya-sunset-cruise",
+    link: "/thailand/bangkok/ayutthaya-sunset-cruise",
   },
   {
     title: "Riverside Bangkok: Where to Stay & What to Do",

@@ -11,10 +11,10 @@ import heroBeach from "@/assets/hero-thailand-beach.jpg";
 import heroTemple from "@/assets/hero-thailand-temple.jpg";
 
 const cities = [
-  { name: "Bangkok", image: bangkokImg, link: "/bangkok", country: "Thailand", tours: "50+ Tours" },
-  { name: "Phuket", image: phuketImg, link: "/phuket", country: "Thailand", tours: "40+ Tours" },
-  { name: "Krabi", image: krabiImg, link: "/krabi", country: "Thailand", tours: "30+ Tours" },
-  { name: "Pattaya", image: pattayaImg, link: "/pattaya", country: "Thailand", tours: "35+ Tours" },
+  { name: "Bangkok", image: bangkokImg, link: "/thailand/bangkok", country: "Thailand", tours: "50+ Tours" },
+  { name: "Phuket", image: phuketImg, link: "/thailand/phuket", country: "Thailand", tours: "40+ Tours" },
+  { name: "Krabi", image: krabiImg, link: "/thailand/krabi", country: "Thailand", tours: "30+ Tours" },
+  { name: "Pattaya", image: pattayaImg, link: "/thailand/pattaya", country: "Thailand", tours: "35+ Tours" },
 ];
 
 const whyBookReasons = [

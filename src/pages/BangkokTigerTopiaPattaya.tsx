@@ -10,7 +10,7 @@ const BangkokTigerTopiaPattaya = () => {
   const seo = bangkokTransferSEO[id];
   return (
     <>
-      <CanonicalUrl path="/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer" />
+      <CanonicalUrl path="/thailand/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer" />
       <TransferBooking
         transferData={transfersData[id]}
         galleryImages={seo.gallery}

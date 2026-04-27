@@ -22,21 +22,21 @@ import nongNooch from "@/assets/pattaya-tropical-beach-1.jpg";
 import cruiseNight from "@/assets/cruise-night-1.jpg";
 
 const activityCards = [
-  { title: "Phi Phi Island, Maya Bay & Khai Island Speedboat", location: "Phuket", image: phiPhi, slug: "/phuket/phi-phi-island-tour" },
-  { title: "James Bond Island & Phang Nga Bay Tour", location: "Phuket", image: jamesBond, slug: "/phuket/james-bond-island-tour" },
-  { title: "Grand Palace & Emerald Buddha Temple Tour", location: "Bangkok", image: grandPalace, slug: "/bangkok/grand-palace-emerald" },
-  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/bangkok/safari-world" },
-  { title: "Coral Island & Water Sports Pattaya", location: "Pattaya", image: coralIsland, slug: "/pattaya/coral-island" },
-  { title: "Floating Market & Railway Market Tour", location: "Bangkok", image: floatingMarket, slug: "/bangkok/maeklong-floating-market" },
-  { title: "Alcazar Cabaret Show Pattaya", location: "Pattaya", image: alcazar, slug: "/pattaya/alcazar-show" },
-  { title: "Dolphin Show Phuket", location: "Phuket", image: dolphinShow, slug: "/bangkok/dolphin-show" },
-  { title: "Selfie with Tigers", location: "Phuket", image: tigerSelfie, slug: "/phuket/selfie-with-tigers" },
-  { title: "Bangkok King Power Mahanakhon Skywalk", location: "Bangkok", image: bangkokSkywalk, slug: "/bangkok/skywalk" },
-  { title: "Hot Spring & Emerald Pool with Tiger Cave", location: "Krabi", image: hotSpring, slug: "/phuket/hot-spring-emerald-pool" },
-  { title: "Thai Massage Coupon Packages", location: "Bangkok", image: massage, slug: "/bangkok/massage-coupons" },
-  { title: "Nong Nooch Tropical Garden", location: "Pattaya", image: nongNooch, slug: "/pattaya/nong-nooch-garden" },
-  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruiseNight, slug: "/bangkok/chao-phraya-princess-with-transfer" },
-  { title: "Bangkok Three Temples City Tour", location: "Bangkok", image: bangkokTemple, slug: "/bangkok/three-temples-tour" },
+  { title: "Phi Phi Island, Maya Bay & Khai Island Speedboat", location: "Phuket", image: phiPhi, slug: "/thailand/phuket/phi-phi-island-tour" },
+  { title: "James Bond Island & Phang Nga Bay Tour", location: "Phuket", image: jamesBond, slug: "/thailand/phuket/james-bond-island-tour" },
+  { title: "Grand Palace & Emerald Buddha Temple Tour", location: "Bangkok", image: grandPalace, slug: "/thailand/bangkok/grand-palace-emerald" },
+  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/thailand/bangkok/safari-world" },
+  { title: "Coral Island & Water Sports Pattaya", location: "Pattaya", image: coralIsland, slug: "/thailand/pattaya/coral-island" },
+  { title: "Floating Market & Railway Market Tour", location: "Bangkok", image: floatingMarket, slug: "/thailand/bangkok/maeklong-floating-market" },
+  { title: "Alcazar Cabaret Show Pattaya", location: "Pattaya", image: alcazar, slug: "/thailand/pattaya/alcazar-show" },
+  { title: "Dolphin Show Phuket", location: "Phuket", image: dolphinShow, slug: "/thailand/bangkok/dolphin-show" },
+  { title: "Selfie with Tigers", location: "Phuket", image: tigerSelfie, slug: "/thailand/phuket/selfie-with-tigers" },
+  { title: "Bangkok King Power Mahanakhon Skywalk", location: "Bangkok", image: bangkokSkywalk, slug: "/thailand/bangkok/skywalk" },
+  { title: "Hot Spring & Emerald Pool with Tiger Cave", location: "Krabi", image: hotSpring, slug: "/thailand/phuket/hot-spring-emerald-pool" },
+  { title: "Thai Massage Coupon Packages", location: "Bangkok", image: massage, slug: "/thailand/bangkok/massage-coupons" },
+  { title: "Nong Nooch Tropical Garden", location: "Pattaya", image: nongNooch, slug: "/thailand/pattaya/nong-nooch-garden" },
+  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruiseNight, slug: "/thailand/bangkok/chao-phraya-princess-with-transfer" },
+  { title: "Bangkok Three Temples City Tour", location: "Bangkok", image: bangkokTemple, slug: "/thailand/bangkok/three-temples-tour" },
 ];
 
 const ActivityCards = () => {

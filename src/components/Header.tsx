@@ -235,25 +235,25 @@ const Header = () => {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild className={menuItemClass}>
-                    <Link to="/bangkok">
+                    <Link to="/thailand/bangkok">
                       <Building2 className="h-5 w-5 mr-3 text-primary" />
                       <span className="font-medium">Bangkok</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild className={menuItemClass}>
-                    <Link to="/pattaya">
+                    <Link to="/thailand/pattaya">
                       <Ship className="h-5 w-5 mr-3 text-primary" />
                       <span className="font-medium">Pattaya</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild className={menuItemClass}>
-                    <Link to="/phuket">
+                    <Link to="/thailand/phuket">
                       <Fish className="h-5 w-5 mr-3 text-primary" />
                       <span className="font-medium">Phuket</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild className={menuItemClass}>
-                    <Link to="/krabi">
+                    <Link to="/thailand/krabi">
                       <Anchor className="h-5 w-5 mr-3 text-primary" />
                       <span className="font-medium">Krabi</span>
                     </Link>
@@ -286,25 +286,25 @@ const Header = () => {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/bangkok/budget-airport-transfers">
+                <Link to="/thailand/bangkok/budget-airport-transfers">
                   <Building2 className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Bangkok</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/phuket/budget-airport-transfers">
+                <Link to="/thailand/phuket/budget-airport-transfers">
                   <Fish className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Phuket</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/krabi/budget-airport-transfers">
+                <Link to="/thailand/krabi/budget-airport-transfers">
                   <Anchor className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Krabi</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/pattaya/budget-airport-transfers">
+                <Link to="/thailand/pattaya/budget-airport-transfers">
                   <Ship className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Pattaya</span>
                 </Link>
@@ -413,25 +413,25 @@ const Header = () => {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/bangkok" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/bangkok" onClick={() => setIsMenuOpen(false)}>
                     <Building2 className="h-4 w-4 mr-2 ml-4 text-primary" />
                     <span className="text-muted-foreground">— Bangkok</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/pattaya" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/pattaya" onClick={() => setIsMenuOpen(false)}>
                     <Ship className="h-4 w-4 mr-2 ml-4 text-primary" />
                     <span className="text-muted-foreground">— Pattaya</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/phuket" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/phuket" onClick={() => setIsMenuOpen(false)}>
                     <Fish className="h-4 w-4 mr-2 ml-4 text-primary" />
                     <span className="text-muted-foreground">— Phuket</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/krabi" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/krabi" onClick={() => setIsMenuOpen(false)}>
                     <Anchor className="h-4 w-4 mr-2 ml-4 text-primary" />
                     <span className="text-muted-foreground">— Krabi</span>
                   </Link>
@@ -462,25 +462,25 @@ const Header = () => {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/bangkok/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/bangkok/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
                     <Building2 className="h-4 w-4 mr-2 text-primary" />
                     Bangkok
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/phuket/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/phuket/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
                     <Fish className="h-4 w-4 mr-2 text-primary" />
                     Phuket
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/krabi/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/krabi/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
                     <Anchor className="h-4 w-4 mr-2 text-primary" />
                     Krabi
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/pattaya/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/pattaya/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
                     <Ship className="h-4 w-4 mr-2 text-primary" />
                     Pattaya
                   </Link>

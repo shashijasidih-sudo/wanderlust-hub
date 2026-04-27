@@ -10,7 +10,7 @@ const BangkokSafariWorldBkkAirport = () => {
   const seo = bangkokTransferSEO[id];
   return (
     <>
-      <CanonicalUrl path="/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer" />
+      <CanonicalUrl path="/thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer" />
       <TransferBooking
         transferData={transfersData[id]}
         galleryImages={seo.gallery}

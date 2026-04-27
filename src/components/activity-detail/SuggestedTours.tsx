@@ -19,25 +19,25 @@ const SuggestedTours = ({ currentCity }: SuggestedToursProps) => {
         title: "Bangkok Temple Walking Tour",
         price: 2300,
         image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=400&h=300&fit=crop",
-        link: "/bangkok"
+        link: "/thailand/bangkok"
       },
       {
         title: "Ayutthiya Day Tour",
         price: 5000,
         image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&h=300&fit=crop",
-        link: "/bangkok"
+        link: "/thailand/bangkok"
       },
       {
         title: "Floating Market Experience",
         price: 2800,
         image: floatingMarket1,
-        link: "/bangkok"
+        link: "/thailand/bangkok"
       },
       {
         title: "Chaophraya Dinner Cruise",
         price: 3500,
         image: cruiseNight1,
-        link: "/bangkok"
+        link: "/thailand/bangkok"
       },
     ]
   };
