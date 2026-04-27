@@ -31,11 +31,11 @@ const activityCards = [
   { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/thailand/pattaya/pattaya-floating-market-tour" },
   { title: "Pattaya Nightlife Walking", location: "Pattaya", image: pattayaNightlife, slug: "/thailand/pattaya/pattaya-nightlife-walking-tour" },
   { title: "Grand Palace & Emerald Buddha", location: "Bangkok", image: grandPalace, slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
-  { title: "Phi Phi Island by Speedboat", location: "Phuket", image: phiPhi, slug: "/thailand/phuket/phi-phi-island-tour" },
-  { title: "James Bond Island Tour", location: "Phuket", image: jamesBond, slug: "/thailand/phuket/james-bond-island-tour" },
+  { title: "Phi Phi Island by Speedboat", location: "Phuket", image: phiPhi, slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
+  { title: "James Bond Island Tour", location: "Phuket", image: jamesBond, slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
   { title: "Elephant Safari Experience", location: "Phuket", image: elephantSafari, slug: "/thailand/phuket/elephant-safari" },
   { title: "Thai Massage Coupons", location: "Bangkok", image: massage, slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok" },
-  { title: "Dolphin Bay Phuket", location: "Phuket", image: phuketBoatTour, slug: "/thailand/phuket/dolphin-bay" },
+  { title: "Dolphin Bay Phuket", location: "Phuket", image: phuketBoatTour, slug: "/thailand/phuket/dolphin-show-phuket-with-transfer" },
 ];
 
 const ActivityCards = () => {

@@ -32,7 +32,7 @@ const activityCards = [
   { title: "Pattaya Nightlife Walking Tour", location: "Pattaya", image: nightlife, slug: "/thailand/pattaya/pattaya-nightlife-walking-tour" },
   { title: "Pattaya Pub Crawl", location: "Pattaya", image: pubCrawl, slug: "/thailand/pattaya/pattaya-pub-crawl-night-tour" },
   { title: "Elephant Safari Phuket", location: "Phuket", image: elephantSafari, slug: "/thailand/phuket/elephant-safari" },
-  { title: "Selfie with Tigers", location: "Phuket", image: tigerSelfie, slug: "/thailand/phuket/selfie-with-tigers" },
+  { title: "Selfie with Tigers", location: "Phuket", image: tigerSelfie, slug: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer" },
   { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/thailand/bangkok/safari-world" },
   { title: "Dolphin Show Phuket", location: "Phuket", image: speedboat, slug: "/thailand/bangkok/dolphin-show" },
   { title: "Alcazar Show + Floating Market Combo", location: "Pattaya", image: alcazar, slug: "/thailand/pattaya/pattaya-floating-market-tour" },

@@ -86,7 +86,7 @@ const activities = [
     description: "Explore the stunning Phi Phi Islands with snorkeling, swimming, and beach activities.",
     availability: "Available",
     city: "Phuket",
-    slug: "/thailand/phuket/phi-phi-island-tour"
+    slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer"
   },
   {
     id: 4,
@@ -100,7 +100,7 @@ const activities = [
     description: "Enjoy Thailand's most famous cabaret show with spectacular costumes and performances.",
     availability: "Available",
     city: "Phuket",
-    slug: "/thailand/phuket/simon-cabaret"
+    slug: "/thailand/phuket/simon-cabaret-show-with-transfer"
   },
   // Krabi Activities
   {
@@ -115,7 +115,7 @@ const activities = [
     description: "Visit the famous James Bond Island and explore Phang Nga Bay's stunning limestone karsts.",
     availability: "Available",
     city: "Krabi",
-    slug: "/thailand/phuket/james-bond-island-tour"
+    slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer"
   },
   {
     id: 6,
@@ -129,7 +129,7 @@ const activities = [
     description: "Discover Krabi's four islands including Phra Nang Beach and Tup Island by speedboat.",
     availability: "Available",
     city: "Krabi",
-    slug: "/thailand/krabi/four-islands-speedboat"
+    slug: "/thailand/krabi/4-island-tour-speedboat-with-transfer"
   },
   {
     id: 7,
@@ -581,7 +581,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Phuket - Phi Phi Island */}
-                  <Link to="/thailand/phuket/phi-phi-island-tour">
+                  <Link to="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -604,7 +604,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Krabi - James Bond Island */}
-                  <Link to="/thailand/phuket/james-bond-island-tour">
+                  <Link to="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -673,7 +673,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Phuket - Tiger Kingdom */}
-                  <Link to="/thailand/phuket/selfie-with-tigers">
+                  <Link to="/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
