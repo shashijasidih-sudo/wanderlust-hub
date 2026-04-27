@@ -315,6 +315,14 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
         <div className="mt-12">
           <SuggestedTours currentCity={tourData.city} />
         </div>
+
+        {/* Compact internal-link strip — guarantees keyword-rich navigation to hubs */}
+        {(() => {
+          const key = (tourData.city || "").toLowerCase().trim() as
+            | "bangkok" | "pattaya" | "phuket" | "krabi" | "singapore";
+          if (!["bangkok", "pattaya", "phuket", "krabi", "singapore"].includes(key)) return null;
+          return <CityExploreLinks city={key} />;
+        })()}
       </main>
 
       <Footer />
