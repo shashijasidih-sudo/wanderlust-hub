@@ -34,7 +34,7 @@ const activityCards = [
   { title: "Hong Islands Speedboat", location: "Krabi", image: krabiKayaks, slug: "/thailand/krabi/hong-islands-speedboat" },
   { title: "7 Islands Longtail Tour", location: "Krabi", image: krabiLongtail, slug: "/thailand/krabi/seven-islands-longtail" },
   { title: "7 Islands Speedboat Tour", location: "Krabi", image: krabiSpeedboat, slug: "/thailand/krabi/seven-islands-speedboat" },
-  { title: "Coral Island Pattaya", location: "Pattaya", image: phuketLongtailBoats, slug: "/thailand/pattaya/coral-island" },
+  { title: "Coral Island Pattaya", location: "Pattaya", image: phuketLongtailBoats, slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" },
   { title: "Hot Spring & Emerald Pool", location: "Krabi", image: krabiIslandView, slug: "/thailand/phuket/hot-spring-emerald-pool" },
 ];
 
