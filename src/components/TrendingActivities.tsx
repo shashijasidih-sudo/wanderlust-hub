@@ -11,7 +11,7 @@ const activities = [
     reviews: 2341,
     price: 3500,
     image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop",
-    slug: "/thailand/phuket/phi-phi-island-tour"
+    slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer"
   },
   {
     title: "James Bond Island & Phang Nga Bay by Speed boat",
@@ -20,7 +20,7 @@ const activities = [
     reviews: 1987,
     price: 2800,
     image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop",
-    slug: "/thailand/phuket/james-bond-island-tour"
+    slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer"
   },
   {
     title: "Grand Palace & Emerald Buddha Temple Tour",
@@ -65,7 +65,7 @@ const activities = [
     reviews: 1876,
     price: 1400,
     image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&auto=format&fit=crop",
-    slug: "/thailand/krabi/four-islands-longtail"
+    slug: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer"
   },
   {
     title: "Emerald Pool & Hot Springs with Tiger Cave Temple",
@@ -74,7 +74,7 @@ const activities = [
     reviews: 1523,
     price: 1100,
     image: "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&auto=format&fit=crop",
-    slug: "/thailand/phuket/hot-spring-emerald-pool"
+    slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer"
   }
 ];
 

@@ -154,6 +154,20 @@ const HeroSection = () => {
           <Button 
             variant="secondary" 
             className="bg-white/90 hover:bg-white backdrop-blur-sm"
+            onClick={() => navigate("/thailand/phuket/things-to-do")}
+          >
+            Things to Do in Phuket
+          </Button>
+          <Button 
+            variant="secondary" 
+            className="bg-white/90 hover:bg-white backdrop-blur-sm"
+            onClick={() => navigate("/thailand/krabi/things-to-do")}
+          >
+            Things to Do in Krabi
+          </Button>
+          <Button 
+            variant="secondary" 
+            className="bg-white/90 hover:bg-white backdrop-blur-sm"
             onClick={() => navigate("/thailand/budget-airport-transfers")}
           >
             Thailand Transfers

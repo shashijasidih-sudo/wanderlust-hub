@@ -36,18 +36,18 @@ const cityActivities: Record<string, Activity[]> = {
     { title: "Alcazar Show Pattaya Ticket with Transfer", price: 1500, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer" },
   ],
   phuket: [
-    { title: "Full Day Tour from Phuket to Phi Phi Island, Maya Bay and Khai Island by Speedboat with National Park Fee", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/thailand/phuket/phi-phi-island-tour" },
-    { title: "Dolphin Bay Phuket Admission Ticket with Transfer", price: 3300, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/thailand/phuket/dolphin-bay" },
-    { title: "Phang Nga Bay (James Bond Island) Sea Canoe Tour by Long tail Boat", price: 3600, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/james-bond-island-tour" },
-    { title: "Phuket City Tour and Tiger Experience: Tiger Only", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/selfie-with-tigers" },
-    { title: "Phuket Simon Cabaret Show Ticket with Join Roundtrip Transfer", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/simon-cabaret" },
+    { title: "Full Day Tour from Phuket to Phi Phi Island, Maya Bay and Khai Island by Speedboat with National Park Fee", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
+    { title: "Dolphin Bay Phuket Admission Ticket with Transfer", price: 3300, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/thailand/phuket/dolphin-show-phuket-with-transfer" },
+    { title: "Phang Nga Bay (James Bond Island) Sea Canoe Tour by Long tail Boat", price: 3600, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
+    { title: "Phuket City Tour and Tiger Experience: Tiger Only", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer" },
+    { title: "Phuket Simon Cabaret Show Ticket with Join Roundtrip Transfer", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/simon-cabaret-show-with-transfer" },
   ],
   krabi: [
-    { title: "Phi Phi Island by Speedboat with Transfer from Krabi", price: 3800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/phi-phi-island-tour" },
-    { title: "James Bond Island Sightseeing Tour by Long-Tailed Boat", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/thailand/phuket/james-bond-island-tour" },
-    { title: "Hong Islands by Longtail Boat", price: 2600, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/krabi/hong-islands-longtail" },
-    { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/krabi/four-islands-longtail" },
-    { title: "Half Day Emerald Pool + Hot Springs with Lunch", price: 2800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/hot-spring-emerald-pool" },
+    { title: "Phi Phi Island by Speedboat with Transfer from Krabi", price: 3800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
+    { title: "James Bond Island Sightseeing Tour by Long-Tailed Boat", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
+    { title: "Hong Islands by Longtail Boat", price: 2600, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer" },
+    { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer" },
+    { title: "Half Day Emerald Pool + Hot Springs with Lunch", price: 2800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer" },
   ],
 };
 
@@ -126,8 +126,8 @@ export function searchAll(query: string): SearchResult[] {
 
   // Search popular destinations
   const destinations = [
-    { name: "Phi Phi Island", path: "/thailand/phuket/phi-phi-island-tour" },
-    { name: "James Bond Island", path: "/thailand/phuket/james-bond-island-tour" },
+    { name: "Phi Phi Island", path: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
+    { name: "James Bond Island", path: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
     { name: "Grand Palace", path: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
     { name: "Wat Arun", path: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
     { name: "Coral Island", path: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" },

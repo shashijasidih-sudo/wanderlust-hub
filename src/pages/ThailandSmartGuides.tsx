@@ -108,7 +108,7 @@ const blogArticles = [
     author: "Island Explorer",
     date: "Nov 18, 2024",
     readTime: "9 min read",
-    slug: "/thailand/phuket/phi-phi-island-tour"
+    slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer"
   },
   {
     id: 5,
@@ -141,7 +141,7 @@ const blogArticles = [
     author: "Adventure Guide",
     date: "Nov 10, 2024",
     readTime: "8 min read",
-    slug: "/thailand/phuket/james-bond-island-tour"
+    slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer"
   },
   {
     id: 8,
