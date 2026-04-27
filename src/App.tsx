@@ -10,6 +10,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import LegacyCityRedirect from "./components/LegacyCityRedirect";
 import RoutesHealthCheck from "./pages/RoutesHealthCheck";
 import Thailand from "./pages/Thailand";
 import Bangkok from "./pages/Bangkok";
