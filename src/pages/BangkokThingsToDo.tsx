@@ -501,6 +501,76 @@ const BangkokThingsToDo = () => {
         )}
       </section>
 
+      {/* You may not want to miss this — Bangkok Transfers */}
+      <section className="container mx-auto px-4 py-10">
+        <header className="mb-6 max-w-3xl">
+          <h2 className="text-2xl font-bold md:text-3xl">You May Not Want to Miss This</h2>
+          <p className="mt-2 text-muted-foreground">
+            Reliable Bangkok airport and city transfers to pair with your activities — pre-book and skip the taxi queue.
+          </p>
+        </header>
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              title: "Suvarnabhumi Airport to Bangkok Hotel",
+              desc: "Private, air-conditioned transfer from BKK airport straight to your Bangkok hotel. 24/7 service with meet & greet.",
+              price: 2900,
+              img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
+              slug: "/thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer",
+            },
+            {
+              title: "Don Mueang Airport to Bangkok Hotel",
+              desc: "Hassle-free DMK airport pickup with professional driver and comfortable sedan or minivan for your group.",
+              price: 2600,
+              img: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=800&auto=format&fit=crop",
+              slug: "/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer",
+            },
+            {
+              title: "Bangkok Hotel to Suvarnabhumi Airport",
+              desc: "Timed departure transfer from your hotel to BKK airport. Punctual pick-up so you never miss your flight.",
+              price: 2900,
+              img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&auto=format&fit=crop",
+              slug: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer",
+            },
+            {
+              title: "Bangkok 4-Hour City Transfer",
+              desc: "Flexible 4-hour private vehicle rental for city tours, shopping runs or hotel-to-hotel moves within Bangkok.",
+              price: 4200,
+              img: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?w=800&auto=format&fit=crop",
+              slug: "/thailand/bangkok/bangkok-hotel-to-hotel-transfer-4-hours",
+            },
+          ].map((t) => (
+            <article key={t.slug} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
+              <Link to={t.slug} className="block aspect-[4/3] overflow-hidden bg-muted">
+                <img
+                  src={t.img}
+                  alt={`${t.title} – Bangkok transfer`}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition group-hover:scale-105"
+                />
+              </Link>
+              <div className="flex flex-1 flex-col gap-3 p-4">
+                <h3 className="line-clamp-2 text-base font-semibold leading-snug">
+                  <Link to={t.slug} className="hover:text-primary">
+                    {t.title}
+                  </Link>
+                </h3>
+                <p className="line-clamp-2 text-sm text-muted-foreground">{t.desc}</p>
+                <div className="mt-auto flex items-center justify-between gap-3 pt-2">
+                  <div className="text-sm">
+                    <span className="text-muted-foreground">From </span>
+                    <span className="text-base font-bold text-primary">{formatPrice(t.price)}</span>
+                  </div>
+                  <Button asChild size="sm">
+                    <Link to={t.slug}>Book Now</Link>
+                  </Button>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       {/* Explore more in Bangkok — internal links */}
       <section className="container mx-auto px-4 py-10">
         <header className="mb-6 max-w-3xl">
