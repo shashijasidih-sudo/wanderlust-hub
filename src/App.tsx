@@ -28,6 +28,7 @@ import SelfieWithTigers from "./pages/SelfieWithTigers";
 import ElephantSafari from "./pages/ElephantSafari";
 import HotSpringEmeralPool from "./pages/HotSpringEmeralPool";
 import BangkokSkywalk from "./pages/BangkokSkywalk";
+import BangkokThingsToDo from "./pages/BangkokThingsToDo";
 import DhowCruise from "./pages/DhowCruise";
 import AtlantisPalm from "./pages/AtlantisPalm";
 import MassageCoupons from "./pages/MassageCoupons";
@@ -259,6 +260,7 @@ const App = () => (
           {/* Thailand routes */}
             <Route path="/thailand" element={<Thailand />} />
             <Route path="/thailand/bangkok" element={<Bangkok />} />
+            <Route path="/thailand/bangkok/things-to-do" element={<BangkokThingsToDo />} />
             <Route path="/thailand/pattaya" element={<Pattaya />} />
             <Route path="/thailand/phuket" element={<Phuket />} />
             <Route path="/thailand/krabi" element={<Krabi />} />
