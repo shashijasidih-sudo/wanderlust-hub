@@ -47,7 +47,7 @@ const activities = [
     reviews: 2103,
     price: 1500,
     image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&auto=format&fit=crop",
-    slug: "/thailand/pattaya/coral-island"
+    slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch"
   },
   {
     title: "Alcazar Cabaret Show Pattaya",
@@ -56,7 +56,7 @@ const activities = [
     reviews: 2876,
     price: 900,
     image: "https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=800&auto=format&fit=crop",
-    slug: "/thailand/pattaya/alcazar-show"
+    slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer"
   },
   {
     title: "Four Islands Tour by Longtail Boat",

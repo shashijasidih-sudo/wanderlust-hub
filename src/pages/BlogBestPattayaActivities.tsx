@@ -21,21 +21,21 @@ import tigerSelfie from "@/assets/tiger-1.jpg";
 import safariWorld from "@/assets/elephant-safari-hero.jpg";
 
 const activityCards = [
-  { title: "Coral Island & Water Sports", location: "Pattaya", image: coralIsland, slug: "/thailand/pattaya/coral-island" },
-  { title: "Alcazar Cabaret Show", location: "Pattaya", image: alcazar, slug: "/thailand/pattaya/alcazar-show" },
-  { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/thailand/pattaya/floating-market-tour" },
-  { title: "Pattaya Floating Market Guided", location: "Pattaya", image: floatingGuided, slug: "/thailand/pattaya/floating-market-guided" },
-  { title: "Nong Nooch Tropical Garden", location: "Pattaya", image: nongNooch, slug: "/thailand/pattaya/nong-nooch-garden" },
-  { title: "Pattaya Dolphinarium", location: "Pattaya", image: dolphinarium, slug: "/thailand/pattaya/dolphinarium" },
-  { title: "Muay Thai Live Show", location: "Pattaya", image: muayThai, slug: "/thailand/pattaya/muay-thai" },
-  { title: "Pattaya Big Buddha & Gems Gallery", location: "Pattaya", image: bigBuddha, slug: "/thailand/pattaya/big-buddha-gems" },
-  { title: "Pattaya Nightlife Walking Tour", location: "Pattaya", image: nightlife, slug: "/thailand/pattaya/nightlife-walking-tour" },
-  { title: "Pattaya Pub Crawl", location: "Pattaya", image: pubCrawl, slug: "/thailand/pattaya/pub-crawl" },
+  { title: "Coral Island & Water Sports", location: "Pattaya", image: coralIsland, slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" },
+  { title: "Alcazar Cabaret Show", location: "Pattaya", image: alcazar, slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer" },
+  { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/thailand/pattaya/pattaya-floating-market-tour" },
+  { title: "Pattaya Floating Market Guided", location: "Pattaya", image: floatingGuided, slug: "/thailand/pattaya/pattaya-floating-market-guided-tour" },
+  { title: "Nong Nooch Tropical Garden", location: "Pattaya", image: nongNooch, slug: "/thailand/pattaya/nong-nooch-tropical-garden-tickets" },
+  { title: "Pattaya Dolphinarium", location: "Pattaya", image: dolphinarium, slug: "/thailand/pattaya/pattaya-dolphinarium-show-tickets" },
+  { title: "Muay Thai Live Show", location: "Pattaya", image: muayThai, slug: "/thailand/pattaya/muay-thai-boxing-show-pattaya" },
+  { title: "Pattaya Big Buddha & Gems Gallery", location: "Pattaya", image: bigBuddha, slug: "/thailand/pattaya/big-buddha-gems-gallery-tour" },
+  { title: "Pattaya Nightlife Walking Tour", location: "Pattaya", image: nightlife, slug: "/thailand/pattaya/pattaya-nightlife-walking-tour" },
+  { title: "Pattaya Pub Crawl", location: "Pattaya", image: pubCrawl, slug: "/thailand/pattaya/pattaya-pub-crawl-night-tour" },
   { title: "Elephant Safari Phuket", location: "Phuket", image: elephantSafari, slug: "/thailand/phuket/elephant-safari" },
   { title: "Selfie with Tigers", location: "Phuket", image: tigerSelfie, slug: "/thailand/phuket/selfie-with-tigers" },
   { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/thailand/bangkok/safari-world" },
   { title: "Dolphin Show Phuket", location: "Phuket", image: speedboat, slug: "/thailand/bangkok/dolphin-show" },
-  { title: "Alcazar Show + Floating Market Combo", location: "Pattaya", image: alcazar, slug: "/thailand/pattaya/floating-market-tour" },
+  { title: "Alcazar Show + Floating Market Combo", location: "Pattaya", image: alcazar, slug: "/thailand/pattaya/pattaya-floating-market-tour" },
 ];
 
 const ActivityCards = () => {

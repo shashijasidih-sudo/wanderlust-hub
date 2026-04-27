@@ -28,12 +28,12 @@ const cityActivities: Record<string, Activity[]> = {
     { title: "Bangkok Mahanakhon Sky Walk Admission Ticket", price: 4500, image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
   ],
   pattaya: [
-    { title: "Discovery Pattaya City Tours with Floating Market and Lunch", price: 1800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/floating-market-tour" },
-    { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1200, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/big-buddha-gems" },
-    { title: "Coral Island Join Tour with Indian Lunch", price: 650, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/coral-island" },
-    { title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/nong-nooch-garden" },
-    { title: "Pattaya Dolphinarium Admission Ticket with Transfer", price: 3100, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/dolphinarium" },
-    { title: "Alcazar Show Pattaya Ticket with Transfer", price: 1500, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/alcazar-show" },
+    { title: "Discovery Pattaya City Tours with Floating Market and Lunch", price: 1800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/pattaya-floating-market-tour" },
+    { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1200, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/big-buddha-gems-gallery-tour" },
+    { title: "Coral Island Join Tour with Indian Lunch", price: 650, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" },
+    { title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/nong-nooch-tropical-garden-tickets" },
+    { title: "Pattaya Dolphinarium Admission Ticket with Transfer", price: 3100, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/pattaya-dolphinarium-show-tickets" },
+    { title: "Alcazar Show Pattaya Ticket with Transfer", price: 1500, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer" },
   ],
   phuket: [
     { title: "Full Day Tour from Phuket to Phi Phi Island, Maya Bay and Khai Island by Speedboat with National Park Fee", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/thailand/phuket/phi-phi-island-tour" },
@@ -130,7 +130,7 @@ export function searchAll(query: string): SearchResult[] {
     { name: "James Bond Island", path: "/thailand/phuket/james-bond-island-tour" },
     { name: "Grand Palace", path: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
     { name: "Wat Arun", path: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
-    { name: "Coral Island", path: "/thailand/pattaya/coral-island" },
+    { name: "Coral Island", path: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" },
   ];
 
   destinations.forEach((dest) => {

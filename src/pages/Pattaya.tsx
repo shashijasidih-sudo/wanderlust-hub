@@ -29,23 +29,23 @@ import show89Pattaya1 from "@/assets/show89-pattaya-1.jpg";
 import bigeyeShowPattaya1 from "@/assets/bigeye-show-pattaya-1.jpg";
 
 const regularActivities = [
-  { title: "Discovery Pattaya City Tours with Floating Market and Lunch", price: 2175, image: pattayaBoatTour, slug: "/thailand/pattaya/floating-market-tour" },
-  { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1208, image: pattayaSailboat, slug: "/thailand/pattaya/big-buddha-gems" },
-  { title: "Coral Island Join Tour with Indian Lunch", price: 603.75, image: pattayaBoatsBeach, slug: "/thailand/pattaya/coral-island" },
-  { title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya", price: 3622.5, image: pattayaTropicalBeach, slug: "/thailand/pattaya/nong-nooch-garden" },
-  { title: "Pattaya Dolphinarium Admission Ticket with Transfer", price: 3650, image: pattayaSpeedboat, slug: "/thailand/pattaya/dolphinarium" },
-  { title: "Muay Thai Pattaya Admission Ticket", price: 4830, image: muayThai1, slug: "/thailand/pattaya/muay-thai" },
-  { title: "Pattaya Floating Market Guided Tour with Transfer", price: 3140, image: pattayaIslandsBoats, slug: "/thailand/pattaya/floating-market-guided" },
-  { title: "Lost in Nightlight - A Walking, Drinking, and Food Tasting Experience at Pattaya's Red Light District", price: 3745, image: pattayaNightlife1, slug: "/thailand/pattaya/nightlife-walking-tour" },
-  { title: "Sunset Club and Pub Crawling Experience at Drinking Street in Pattaya", price: 6280, image: pattayaNightlife2, slug: "/thailand/pattaya/pub-crawl" },
+  { title: "Discovery Pattaya City Tours with Floating Market and Lunch", price: 2175, image: pattayaBoatTour, slug: "/thailand/pattaya/pattaya-floating-market-tour" },
+  { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1208, image: pattayaSailboat, slug: "/thailand/pattaya/big-buddha-gems-gallery-tour" },
+  { title: "Coral Island Join Tour with Indian Lunch", price: 603.75, image: pattayaBoatsBeach, slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" },
+  { title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya", price: 3622.5, image: pattayaTropicalBeach, slug: "/thailand/pattaya/nong-nooch-tropical-garden-tickets" },
+  { title: "Pattaya Dolphinarium Admission Ticket with Transfer", price: 3650, image: pattayaSpeedboat, slug: "/thailand/pattaya/pattaya-dolphinarium-show-tickets" },
+  { title: "Muay Thai Pattaya Admission Ticket", price: 4830, image: muayThai1, slug: "/thailand/pattaya/muay-thai-boxing-show-pattaya" },
+  { title: "Pattaya Floating Market Guided Tour with Transfer", price: 3140, image: pattayaIslandsBoats, slug: "/thailand/pattaya/pattaya-floating-market-guided-tour" },
+  { title: "Lost in Nightlight - A Walking, Drinking, and Food Tasting Experience at Pattaya's Red Light District", price: 3745, image: pattayaNightlife1, slug: "/thailand/pattaya/pattaya-nightlife-walking-tour" },
+  { title: "Sunset Club and Pub Crawling Experience at Drinking Street in Pattaya", price: 6280, image: pattayaNightlife2, slug: "/thailand/pattaya/pattaya-pub-crawl-night-tour" },
 ];
 
 const adultShowActivities = [
-  { title: "Alcazar Show Pattaya Ticket with Transfer", price: 2420, image: alcazarShow1, slug: "/thailand/pattaya/alcazar-show" },
-  { title: "Imagine 79 Show Pattaya with Transfer", price: 4000, image: imagine79Show1, slug: "/thailand/pattaya/imagine79-show" },
-  { title: "Show 69 in Pattaya with Transfer", price: 3800, image: show69Pattaya1, slug: "/thailand/pattaya/show-69" },
-  { title: "Show 89 in Pattaya with Transfer", price: 6000, image: show89Pattaya1, slug: "/thailand/pattaya/show-89" },
-  { title: "Big Eye Show in Pattaya with Transfer", price: 6000, image: bigeyeShowPattaya1, slug: "/thailand/pattaya/big-eye-show" },
+  { title: "Alcazar Show Pattaya Ticket with Transfer", price: 2420, image: alcazarShow1, slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer" },
+  { title: "Imagine 79 Show Pattaya with Transfer", price: 4000, image: imagine79Show1, slug: "/thailand/pattaya/79-show-pattaya-with-transfer" },
+  { title: "Show 69 in Pattaya with Transfer", price: 3800, image: show69Pattaya1, slug: "/thailand/pattaya/69-show-pattaya-with-transfer" },
+  { title: "Show 89 in Pattaya with Transfer", price: 6000, image: show89Pattaya1, slug: "/thailand/pattaya/89-show-pattaya-with-transfer" },
+  { title: "Big Eye Show in Pattaya with Transfer", price: 6000, image: bigeyeShowPattaya1, slug: "/thailand/pattaya/99-show-pattaya-big-eye-with-transfer" },
 ];
 
 const categories = [
