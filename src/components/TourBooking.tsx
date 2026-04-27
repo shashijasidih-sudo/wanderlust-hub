@@ -14,6 +14,8 @@ import FAQSection from "./activity-detail/FAQSection";
 import CustomerSupport from "./activity-detail/CustomerSupport";
 import SuggestedTours from "./activity-detail/SuggestedTours";
 import TravelGuidesSection from "./activity-detail/TravelGuidesSection";
+import BookTransfersSection from "./BookTransfersSection";
+import { getCityTransfers } from "@/data/cityTransfersData";
 import TourJsonLd from "./seo/TourJsonLd";
 import BreadcrumbJsonLd from "./seo/BreadcrumbJsonLd";
 import CanonicalUrl from "./seo/CanonicalUrl";
@@ -266,6 +268,15 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
           if (city === "singapore") return <TravelGuidesSection region="singapore" />;
           if (city === "dubai" || city === "abu dhabi") return <TravelGuidesSection region="dubai" />;
           return null;
+        })()}
+
+        {/* Book Transfers in this city */}
+        {(() => {
+          const cityTransfers = getCityTransfers(tourData.city);
+          if (!cityTransfers) return null;
+          return (
+            <BookTransfersSection city={cityTransfers.city} transfers={cityTransfers.transfers} />
+          );
         })()}
 
         {/* Suggested Tours */}

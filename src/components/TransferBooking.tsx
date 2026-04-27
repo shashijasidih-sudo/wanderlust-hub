@@ -595,6 +595,14 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         </div>
       </main>
 
+      {(() => {
+        const cityTransfers = getCityTransfers(transferData.city);
+        if (!cityTransfers) return null;
+        return (
+          <BookTransfersSection city={cityTransfers.city} transfers={cityTransfers.transfers} />
+        );
+      })()}
+
       <Footer />
       <FloatingWhatsApp />
     </div>
