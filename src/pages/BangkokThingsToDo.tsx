@@ -456,7 +456,11 @@ const BangkokThingsToDo = () => {
         const items = grouped[cat];
         if (!items || items.length === 0) return null;
         return (
-          <section key={cat} className="container mx-auto px-4 py-8">
+          <section
+            key={cat}
+            id={cat.toLowerCase().replace(/&/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}
+            className="container mx-auto px-4 py-8 scroll-mt-20"
+          >
             <header className="mb-6 max-w-3xl">
               <h2 className="text-2xl font-bold md:text-3xl">{cat} in Bangkok</h2>
               <p className="mt-2 text-muted-foreground">{sectionDescriptions[cat]}</p>
@@ -495,6 +499,81 @@ const BangkokThingsToDo = () => {
             </Button>
           </div>
         )}
+      </section>
+
+      {/* Explore more in Bangkok — internal links */}
+      <section className="container mx-auto px-4 py-10">
+        <header className="mb-6 max-w-3xl">
+          <h2 className="text-2xl font-bold md:text-3xl">Explore More in Bangkok</h2>
+          <p className="mt-2 text-muted-foreground">
+            Jump to a top category or book one of Bangkok's most popular
+            attractions directly.
+          </p>
+        </header>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {/* Top categories */}
+          <div className="rounded-xl border border-border bg-card p-6">
+            <h3 className="text-lg font-semibold">Top Bangkok Categories</h3>
+            <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
+              <li>
+                <Link to="/thailand/bangkok/things-to-do#dinner-cruises" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">
+                  Dinner Cruises in Bangkok
+                </Link>
+              </li>
+              <li>
+                <Link to="/thailand/bangkok/things-to-do#temple-cultural-tours" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">
+                  Temple & Cultural Tours
+                </Link>
+              </li>
+              <li>
+                <Link to="/thailand/bangkok/things-to-do#theme-parks-attractions" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">
+                  Theme Parks & Attractions
+                </Link>
+              </li>
+              <li>
+                <Link to="/thailand/bangkok/things-to-do#floating-market-tours" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">
+                  Floating Market Tours
+                </Link>
+              </li>
+              <li>
+                <Link to="/thailand/bangkok/things-to-do#night-tours-experiences" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">
+                  Night Tours & Experiences
+                </Link>
+              </li>
+              <li>
+                <Link to="/thailand/bangkok/transfers" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">
+                  Bangkok Airport & City Transfers
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Popular attractions */}
+          <div className="rounded-xl border border-border bg-card p-6">
+            <h3 className="text-lg font-semibold">Popular Bangkok Attractions</h3>
+            <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {[
+                { label: "Grand Palace & Emerald Buddha", to: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+                { label: "Wat Arun & Chinatown Tour", to: "/thailand/bangkok/wat-arun-chinatown-tour" },
+                { label: "Three Temples City Tour", to: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
+                { label: "Chao Phraya Princess Dinner Cruise", to: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer" },
+                { label: "Mahanakhon Skywalk Tickets", to: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+                { label: "Sea Life & Madame Tussauds", to: "/thailand/bangkok/sea-life-madame-tussauds-tickets" },
+                { label: "Dream World Bangkok Tickets", to: "/thailand/bangkok/dream-world-bangkok-tickets" },
+                { label: "Maeklong Floating Market Tour", to: "/thailand/bangkok/maeklong-floating-market-tour" },
+                { label: "Ayutthaya Day Tour from Bangkok", to: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok" },
+                { label: "Bangkok Tuk-Tuk Night Tour", to: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
+              ].map((l) => (
+                <li key={l.to}>
+                  <Link to={l.to} className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
 
       {/* Internal links block */}
