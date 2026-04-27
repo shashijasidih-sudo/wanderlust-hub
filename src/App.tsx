@@ -7,6 +7,7 @@ import { CartProvider } from "@/contexts/CartContext";
 import { CurrencyProvider } from "@/contexts/CurrencyContext";
 import ApprovalBadge from "@/components/ApprovalBadge";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import RoutesHealthCheck from "./pages/RoutesHealthCheck";
@@ -250,6 +251,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <ApprovalBadge />
           <Routes>
           <Route path="/" element={<Index />} />
