@@ -302,20 +302,37 @@ const App = () => (
             <Route path="/thailand/phuket/phi-phi-big-boat" element={<PhiPhiBigBoat />} />
             <Route path="/thailand/phuket/phi-phi-royal-jet" element={<PhiPhiRoyalJet />} />
             <Route path="/thailand/phuket/phi-phi-maya-khai-speedboat" element={<PhiPhiMayaKhaiSpeedboat />} />
-            <Route path="/thailand/pattaya/floating-market-tour" element={<PattayaFloatingMarketTour />} />
-            <Route path="/thailand/pattaya/big-buddha-gems" element={<PattayaBigBuddhaGems />} />
-            <Route path="/thailand/pattaya/coral-island" element={<CoralIslandPattaya />} />
-            <Route path="/thailand/pattaya/nong-nooch-garden" element={<NongNoochGarden />} />
-            <Route path="/thailand/pattaya/dolphinarium" element={<PattayaDolphinarium />} />
-            <Route path="/thailand/pattaya/muay-thai" element={<MuayThaiPattaya />} />
-            <Route path="/thailand/pattaya/alcazar-show" element={<AlcazarShowPattaya />} />
-            <Route path="/thailand/pattaya/imagine79-show" element={<Imagine79Show />} />
-            <Route path="/thailand/pattaya/show-69" element={<Show69Pattaya />} />
-            <Route path="/thailand/pattaya/show-89" element={<Show89Pattaya />} />
-            <Route path="/thailand/pattaya/big-eye-show" element={<BigEyeShowPattaya />} />
-            <Route path="/thailand/pattaya/floating-market-guided" element={<PattayaFloatingMarketGuided />} />
-            <Route path="/thailand/pattaya/nightlife-walking-tour" element={<PattayaNightlifeWalking />} />
-            <Route path="/thailand/pattaya/pub-crawl" element={<PattayaPubCrawl />} />
+            <Route path="/thailand/pattaya/pattaya-floating-market-tour" element={<PattayaFloatingMarketTour />} />
+            <Route path="/thailand/pattaya/big-buddha-gems-gallery-tour" element={<PattayaBigBuddhaGems />} />
+            <Route path="/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" element={<CoralIslandPattaya />} />
+            <Route path="/thailand/pattaya/nong-nooch-tropical-garden-tickets" element={<NongNoochGarden />} />
+            <Route path="/thailand/pattaya/pattaya-dolphinarium-show-tickets" element={<PattayaDolphinarium />} />
+            <Route path="/thailand/pattaya/muay-thai-boxing-show-pattaya" element={<MuayThaiPattaya />} />
+            <Route path="/thailand/pattaya/alcazar-cabaret-show-with-transfer" element={<AlcazarShowPattaya />} />
+            <Route path="/thailand/pattaya/79-show-pattaya-with-transfer" element={<Imagine79Show />} />
+            <Route path="/thailand/pattaya/69-show-pattaya-with-transfer" element={<Show69Pattaya />} />
+            <Route path="/thailand/pattaya/89-show-pattaya-with-transfer" element={<Show89Pattaya />} />
+            <Route path="/thailand/pattaya/99-show-pattaya-big-eye-with-transfer" element={<BigEyeShowPattaya />} />
+            <Route path="/thailand/pattaya/pattaya-floating-market-guided-tour" element={<PattayaFloatingMarketGuided />} />
+            <Route path="/thailand/pattaya/pattaya-nightlife-walking-tour" element={<PattayaNightlifeWalking />} />
+            <Route path="/thailand/pattaya/pattaya-pub-crawl-night-tour" element={<PattayaPubCrawl />} />
+            {/* Legacy Pattaya activity slugs → redirects to new canonical SEO URLs */}
+            <Route path="/thailand/pattaya/floating-market-tour" element={<Navigate to="/thailand/pattaya/pattaya-floating-market-tour" replace />} />
+            <Route path="/thailand/pattaya/big-buddha-gems" element={<Navigate to="/thailand/pattaya/big-buddha-gems-gallery-tour" replace />} />
+            <Route path="/thailand/pattaya/coral-island" element={<Navigate to="/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" replace />} />
+            <Route path="/thailand/pattaya/nong-nooch-garden" element={<Navigate to="/thailand/pattaya/nong-nooch-tropical-garden-tickets" replace />} />
+            <Route path="/thailand/pattaya/dolphinarium" element={<Navigate to="/thailand/pattaya/pattaya-dolphinarium-show-tickets" replace />} />
+            <Route path="/thailand/pattaya/muay-thai" element={<Navigate to="/thailand/pattaya/muay-thai-boxing-show-pattaya" replace />} />
+            <Route path="/thailand/pattaya/alcazar-show" element={<Navigate to="/thailand/pattaya/alcazar-cabaret-show-with-transfer" replace />} />
+            <Route path="/thailand/pattaya/imagine79-show" element={<Navigate to="/thailand/pattaya/79-show-pattaya-with-transfer" replace />} />
+            <Route path="/thailand/pattaya/show-69" element={<Navigate to="/thailand/pattaya/69-show-pattaya-with-transfer" replace />} />
+            <Route path="/thailand/pattaya/show-89" element={<Navigate to="/thailand/pattaya/89-show-pattaya-with-transfer" replace />} />
+            <Route path="/thailand/pattaya/big-eye-show" element={<Navigate to="/thailand/pattaya/99-show-pattaya-big-eye-with-transfer" replace />} />
+            <Route path="/thailand/pattaya/floating-market-guided" element={<Navigate to="/thailand/pattaya/pattaya-floating-market-guided-tour" replace />} />
+            <Route path="/thailand/pattaya/nightlife-walking-tour" element={<Navigate to="/thailand/pattaya/pattaya-nightlife-walking-tour" replace />} />
+            <Route path="/thailand/pattaya/pub-crawl" element={<Navigate to="/thailand/pattaya/pattaya-pub-crawl-night-tour" replace />} />
+            {/* Pattaya hub page */}
+            <Route path="/thailand/pattaya/things-to-do" element={<PattayaThingsToDo />} />
             <Route path="/thailand/krabi/hong-islands-longtail" element={<HongIslandsLongtail />} />
             <Route path="/thailand/krabi/hong-islands-speedboat" element={<HongIslandsSpeedboat />} />
             <Route path="/thailand/krabi/seven-islands-longtail" element={<SevenIslandsLongtail />} />
