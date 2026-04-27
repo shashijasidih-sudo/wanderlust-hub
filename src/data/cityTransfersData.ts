@@ -121,6 +121,36 @@ export const cityTransfers: Record<string, BookTransferItem[]> = {
       slug: "/thailand/krabi/krabi-hotel-to-phuket-airport-transfer",
     },
   ],
+  singapore: [
+    {
+      title: "Changi Airport to Singapore Hotel",
+      desc: "Private Changi (SIN) airport pickup with meet & greet, straight to your Singapore hotel — 24/7 service.",
+      price: 4000,
+      img: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop",
+      slug: "/singapore/singapore-airport-pickup",
+    },
+    {
+      title: "Singapore Hotel to Changi Airport",
+      desc: "Punctual departure transfer from your hotel to Changi airport — never miss your flight.",
+      price: 4000,
+      img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
+      slug: "/singapore/singapore-airport-dropoff",
+    },
+    {
+      title: "Changi Airport Late-Night Pickup to Hotel",
+      desc: "Late-night and early-morning Changi airport pickup with meet & greet — ideal for red-eye flights.",
+      price: 5000,
+      img: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&auto=format&fit=crop",
+      slug: "/singapore/singapore-airport-night-pickup",
+    },
+    {
+      title: "Sentosa Island to Singapore Hotel Transfer",
+      desc: "Private transfer from Sentosa Island attractions back to your Singapore city hotel.",
+      price: 4000,
+      img: "https://images.unsplash.com/photo-1508964942454-1a56651a54e8?w=800&auto=format&fit=crop",
+      slug: "/singapore/singapore-airport-dropoff",
+    },
+  ],
 };
 
 const cityDisplayNames: Record<string, string> = {
