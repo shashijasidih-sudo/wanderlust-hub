@@ -15,6 +15,7 @@ import CustomerSupport from "./activity-detail/CustomerSupport";
 import SuggestedTours from "./activity-detail/SuggestedTours";
 import TravelGuidesSection from "./activity-detail/TravelGuidesSection";
 import BookTransfersSection from "./BookTransfersSection";
+import CityExploreLinks from "./CityExploreLinks";
 import { getCityTransfers } from "@/data/cityTransfersData";
 import TourJsonLd from "./seo/TourJsonLd";
 import BreadcrumbJsonLd from "./seo/BreadcrumbJsonLd";
