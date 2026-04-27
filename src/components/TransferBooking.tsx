@@ -564,6 +564,34 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
               </Accordion>
             </section>
           )}
+
+          {/* You may also like — Related internal links */}
+          {relatedLinks && relatedLinks.length > 0 && (
+            <section className="mt-10">
+              <h2 className="text-2xl font-bold mb-4">You May Also Like</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {relatedLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    to={link.url}
+                    className="group flex items-center gap-3 rounded-xl border bg-card p-4 transition-all hover:border-primary hover:shadow-md"
+                  >
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                        {link.title}
+                      </h3>
+                      {link.description && (
+                        <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
+                          {link.description}
+                        </p>
+                      )}
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary flex-shrink-0 transition-colors" />
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </main>
 
