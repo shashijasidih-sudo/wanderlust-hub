@@ -31,7 +31,7 @@ const activityCards = [
   { title: "Floating Market & Railway Market Tour", location: "Bangkok", image: floatingMarket, slug: "/thailand/bangkok/maeklong-floating-market-tour" },
   { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: tukTuk, slug: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
   { title: "Dream World Bangkok", location: "Bangkok", image: dreamWorld, slug: "/thailand/bangkok/dream-world-bangkok-tickets" },
-  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruise, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-cruise-with-transfer" },
+  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruise, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer" },
   { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: vivaAlangka, slug: "/thailand/bangkok/viva-alangka-dinner-cruise" },
   { title: "Ayutthaya Temple Tour", location: "Bangkok", image: ayutthaya, slug: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok" },
   { title: "Baiyoke Sky Buffet", location: "Bangkok", image: baiyoke, slug: "/thailand/bangkok/baiyoke-buffet" },

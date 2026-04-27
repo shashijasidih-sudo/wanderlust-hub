@@ -26,7 +26,7 @@ const activityCards = [
   { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: bangkokCity2, slug: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
   { title: "Baiyoke Sky Buffet Dinner", location: "Bangkok", image: bangkokSkywalk, slug: "/thailand/bangkok/baiyoke-buffet" },
   { title: "Ayutthaya Sunset Cruise", location: "Ayutthaya", image: ayutthayaSunset, slug: "/thailand/bangkok/ayutthaya-sunset-river-cruise" },
-  { title: "Chao Phraya Princess Cruise", location: "Bangkok", image: bangkokPagoda, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-cruise-with-transfer" },
+  { title: "Chao Phraya Princess Cruise", location: "Bangkok", image: bangkokPagoda, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer" },
   { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: bangkokCity, slug: "/thailand/bangkok/viva-alangka-dinner-cruise" },
   { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/thailand/pattaya/floating-market-tour" },
   { title: "Pattaya Nightlife Walking", location: "Pattaya", image: pattayaNightlife, slug: "/thailand/pattaya/nightlife-walking-tour" },

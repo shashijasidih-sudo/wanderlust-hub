@@ -555,9 +555,9 @@ const App = () => (
             <Route path="/sea-life-madame-tussauds" element={<Navigate to="/thailand/bangkok/sea-life-madame-tussauds-tickets" replace />} />
             <Route path="/viva-alangka-cruise" element={<Navigate to="/thailand/bangkok/viva-alangka-dinner-cruise" replace />} />
             <Route path="/ayutthaya-sunset-cruise" element={<Navigate to="/thailand/bangkok/ayutthaya-sunset-river-cruise" replace />} />
-            <Route path="/chao-phraya-princess-private" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise-cruise-with-private-transfer" replace />} />
+            <Route path="/chao-phraya-princess-private" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" replace />} />
             <Route path="/chao-phraya-princess-valentine" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise" replace />} />
-            <Route path="/chao-phraya-princess-join" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise-cruise-with-transfer" replace />} />
+            <Route path="/chao-phraya-princess-join" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer" replace />} />
             <Route path="/chao-phraya-princess-no-transfer" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise" replace />} />
             <Route path="/maeklong-floating-market" element={<Navigate to="/thailand/bangkok/maeklong-floating-market-tour" replace />} />
             <Route path="/bangkok-tuk-tuk-night" element={<Navigate to="/thailand/bangkok/tuk-tuk-night-tour-bangkok" replace />} />

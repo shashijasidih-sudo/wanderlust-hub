@@ -35,7 +35,7 @@ const activityCards = [
   { title: "Hot Spring & Emerald Pool with Tiger Cave", location: "Krabi", image: hotSpring, slug: "/thailand/phuket/hot-spring-emerald-pool" },
   { title: "Thai Massage Coupon Packages", location: "Bangkok", image: massage, slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok" },
   { title: "Nong Nooch Tropical Garden", location: "Pattaya", image: nongNooch, slug: "/thailand/pattaya/nong-nooch-garden" },
-  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruiseNight, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-cruise-with-transfer" },
+  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruiseNight, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer" },
   { title: "Bangkok Three Temples City Tour", location: "Bangkok", image: bangkokTemple, slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
 ];
 

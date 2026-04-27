@@ -39,9 +39,9 @@ const activities = [
   // Cruise Activities
   { title: "Viva Alangka Dinner Cruise from Asiatique with Transfer", price: 4915, image: cruiseNight1, slug: "/thailand/bangkok/viva-alangka-dinner-cruise" },
   { title: "Ayutthaya Glittering Tours from Bangkok with Sunset Cruise Experience with transfers", price: 5245, image: ayutthayaSunset1, slug: "/thailand/bangkok/ayutthaya-sunset-river-cruise" },
-  { title: "Chao Phraya Princess Dinner Cruise in Bangkok with Private Transfer", price: 5545, image: cruiseNight2, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-cruise-with-private-transfer" },
+  { title: "Chao Phraya Princess Dinner Cruise in Bangkok with Private Transfer", price: 5545, image: cruiseNight2, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
   { title: "Chao Phraya Princess Dinner Cruise: Valentine's Day Celebration", price: 3150, image: cruiseNight1, slug: "/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise" },
-  { title: "Chaophraya Princess River Dinner Cruise Over Chaophraya River with Join Transfer", price: 4410, image: cruiseNight2, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-cruise-with-transfer" },
+  { title: "Chaophraya Princess River Dinner Cruise Over Chaophraya River with Join Transfer", price: 4410, image: cruiseNight2, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer" },
   { title: "River Cruise by Chao Phraya Princess Admission Ticket With Indian or International Dinner (No Transfer)", price: 3150, image: cruiseNight1, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise" },
   
   // Other Activities
