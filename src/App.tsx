@@ -269,27 +269,27 @@ const App = () => (
             <Route path="/thailand/phuket/selfie-with-tigers" element={<SelfieWithTigers />} />
             <Route path="/thailand/phuket/elephant-safari" element={<ElephantSafari />} />
             <Route path="/thailand/phuket/hot-spring-emerald-pool" element={<HotSpringEmeralPool />} />
-            <Route path="/thailand/bangkok/skywalk" element={<BangkokSkywalk />} />
-            <Route path="/thailand/bangkok/massage-coupons" element={<MassageCoupons />} />
-            <Route path="/thailand/bangkok/three-temples-tour" element={<BangkokThreeTemples />} />
-            <Route path="/thailand/bangkok/wat-arun-pho-traimit" element={<BangkokWatArunPhoTraimit />} />
-            <Route path="/thailand/bangkok/city-boat-tour" element={<BangkokCityBoatTour />} />
-            <Route path="/thailand/bangkok/city-gems-gallery" element={<BangkokCityGemsGallery />} />
-            <Route path="/thailand/bangkok/wat-arun-chinatown" element={<BangkokWatArunChinatown />} />
-            <Route path="/thailand/bangkok/golden-marble-buddha" element={<BangkokGoldenMarbleBuddha />} />
-            <Route path="/thailand/bangkok/ayutthaya-temple-tour" element={<AyutthayaTempleTour />} />
-            <Route path="/thailand/bangkok/grand-palace-emerald" element={<BangkokGrandPalaceEmerald />} />
+            <Route path="/thailand/bangkok/mahanakhon-skywalk-tickets" element={<BangkokSkywalk />} />
+            <Route path="/thailand/bangkok/thai-massage-spa-deals-bangkok" element={<MassageCoupons />} />
+            <Route path="/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" element={<BangkokThreeTemples />} />
+            <Route path="/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" element={<BangkokWatArunPhoTraimit />} />
+            <Route path="/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour" element={<BangkokCityBoatTour />} />
+            <Route path="/thailand/bangkok/gems-gallery-bangkok-tickets" element={<BangkokCityGemsGallery />} />
+            <Route path="/thailand/bangkok/wat-arun-chinatown-tour" element={<BangkokWatArunChinatown />} />
+            <Route path="/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour" element={<BangkokGoldenMarbleBuddha />} />
+            <Route path="/thailand/bangkok/ayutthaya-day-tour-from-bangkok" element={<AyutthayaTempleTour />} />
+            <Route path="/thailand/bangkok/grand-palace-wat-phra-kaew-tour" element={<BangkokGrandPalaceEmerald />} />
             <Route path="/thailand/bangkok/baiyoke-buffet" element={<BaiyokeBuffet />} />
-            <Route path="/thailand/bangkok/sea-life-madame-tussauds" element={<SeaLifeMadameTussauds />} />
-            <Route path="/thailand/bangkok/viva-alangka-cruise" element={<VivaAlangkaCruise />} />
-            <Route path="/thailand/bangkok/ayutthaya-sunset-cruise" element={<AyutthayaSunsetCruise />} />
-            <Route path="/thailand/bangkok/chao-phraya-princess-private" element={<ChaoPhrayaPrincessPrivate />} />
-            <Route path="/thailand/bangkok/chao-phraya-princess-valentine" element={<ChaoPhrayaPrincessValentine />} />
-            <Route path="/thailand/bangkok/chao-phraya-princess-with-transfer" element={<ChaoPhrayaPrincessJoin />} />
-            <Route path="/thailand/bangkok/chao-phraya-princess-dinner" element={<ChaoPhrayaPrincessNoTransfer />} />
-            <Route path="/thailand/bangkok/maeklong-floating-market" element={<MaeklongFloatingMarket />} />
-            <Route path="/thailand/bangkok/tuk-tuk-night-tour" element={<BangkokTukTukNight />} />
-            <Route path="/thailand/bangkok/dream-world" element={<DreamWorldBangkok />} />
+            <Route path="/thailand/bangkok/sea-life-madame-tussauds-tickets" element={<SeaLifeMadameTussauds />} />
+            <Route path="/thailand/bangkok/viva-alangka-dinner-cruise" element={<VivaAlangkaCruise />} />
+            <Route path="/thailand/bangkok/ayutthaya-sunset-river-cruise" element={<AyutthayaSunsetCruise />} />
+            <Route path="/thailand/bangkok/chao-phraya-princess-dinner-cruise-cruise-with-private-transfer" element={<ChaoPhrayaPrincessPrivate />} />
+            <Route path="/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise" element={<ChaoPhrayaPrincessValentine />} />
+            <Route path="/thailand/bangkok/chao-phraya-princess-dinner-cruise-cruise-with-transfer" element={<ChaoPhrayaPrincessJoin />} />
+            <Route path="/thailand/bangkok/chao-phraya-princess-dinner-cruise" element={<ChaoPhrayaPrincessNoTransfer />} />
+            <Route path="/thailand/bangkok/maeklong-floating-market-tour" element={<MaeklongFloatingMarket />} />
+            <Route path="/thailand/bangkok/tuk-tuk-night-tour-bangkok" element={<BangkokTukTukNight />} />
+            <Route path="/thailand/bangkok/dream-world-bangkok-tickets" element={<DreamWorldBangkok />} />
             <Route path="/thailand/phuket/dolphin-bay" element={<DolphinBayPhuket />} />
             <Route path="/thailand/phuket/city-night-market" element={<PhuketCityNightMarket />} />
             <Route path="/thailand/phuket/simon-cabaret" element={<PhuketSimonCabaret />} />
@@ -541,27 +541,27 @@ const App = () => (
           {/* 301 Redirects: Old URLs → New SEO-friendly URLs */}
             <Route path="/safari-world" element={<Navigate to="/thailand/bangkok/safari-world" replace />} />
             <Route path="/dolphin-show" element={<Navigate to="/thailand/bangkok/dolphin-show" replace />} />
-            <Route path="/bangkok-skywalk" element={<Navigate to="/thailand/bangkok/skywalk" replace />} />
-            <Route path="/massage-coupons" element={<Navigate to="/thailand/bangkok/massage-coupons" replace />} />
-            <Route path="/bangkok-three-temples" element={<Navigate to="/thailand/bangkok/three-temples-tour" replace />} />
-            <Route path="/bangkok-wat-arun-pho-traimit" element={<Navigate to="/thailand/bangkok/wat-arun-pho-traimit" replace />} />
-            <Route path="/bangkok-city-boat-tour" element={<Navigate to="/thailand/bangkok/city-boat-tour" replace />} />
-            <Route path="/bangkok-city-gems-gallery" element={<Navigate to="/thailand/bangkok/city-gems-gallery" replace />} />
-            <Route path="/bangkok-wat-arun-chinatown" element={<Navigate to="/thailand/bangkok/wat-arun-chinatown" replace />} />
-            <Route path="/bangkok-golden-marble-buddha" element={<Navigate to="/thailand/bangkok/golden-marble-buddha" replace />} />
-            <Route path="/ayutthaya-temple-tour" element={<Navigate to="/thailand/bangkok/ayutthaya-temple-tour" replace />} />
-            <Route path="/bangkok-grand-palace-emerald" element={<Navigate to="/thailand/bangkok/grand-palace-emerald" replace />} />
+            <Route path="/bangkok-skywalk" element={<Navigate to="/thailand/bangkok/mahanakhon-skywalk-tickets" replace />} />
+            <Route path="/massage-coupons" element={<Navigate to="/thailand/bangkok/thai-massage-spa-deals-bangkok" replace />} />
+            <Route path="/bangkok-three-temples" element={<Navigate to="/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" replace />} />
+            <Route path="/bangkok-wat-arun-pho-traimit" element={<Navigate to="/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" replace />} />
+            <Route path="/bangkok-city-boat-tour" element={<Navigate to="/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour" replace />} />
+            <Route path="/bangkok-city-gems-gallery" element={<Navigate to="/thailand/bangkok/gems-gallery-bangkok-tickets" replace />} />
+            <Route path="/bangkok-wat-arun-chinatown" element={<Navigate to="/thailand/bangkok/wat-arun-chinatown-tour" replace />} />
+            <Route path="/bangkok-golden-marble-buddha" element={<Navigate to="/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour" replace />} />
+            <Route path="/ayutthaya-temple-tour" element={<Navigate to="/thailand/bangkok/ayutthaya-day-tour-from-bangkok" replace />} />
+            <Route path="/bangkok-grand-palace-emerald" element={<Navigate to="/thailand/bangkok/grand-palace-wat-phra-kaew-tour" replace />} />
             <Route path="/baiyoke-buffet" element={<Navigate to="/thailand/bangkok/baiyoke-buffet" replace />} />
-            <Route path="/sea-life-madame-tussauds" element={<Navigate to="/thailand/bangkok/sea-life-madame-tussauds" replace />} />
-            <Route path="/viva-alangka-cruise" element={<Navigate to="/thailand/bangkok/viva-alangka-cruise" replace />} />
-            <Route path="/ayutthaya-sunset-cruise" element={<Navigate to="/thailand/bangkok/ayutthaya-sunset-cruise" replace />} />
-            <Route path="/chao-phraya-princess-private" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-private" replace />} />
-            <Route path="/chao-phraya-princess-valentine" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-valentine" replace />} />
-            <Route path="/chao-phraya-princess-join" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-with-transfer" replace />} />
-            <Route path="/chao-phraya-princess-no-transfer" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner" replace />} />
-            <Route path="/maeklong-floating-market" element={<Navigate to="/thailand/bangkok/maeklong-floating-market" replace />} />
-            <Route path="/bangkok-tuk-tuk-night" element={<Navigate to="/thailand/bangkok/tuk-tuk-night-tour" replace />} />
-            <Route path="/dream-world-bangkok" element={<Navigate to="/thailand/bangkok/dream-world" replace />} />
+            <Route path="/sea-life-madame-tussauds" element={<Navigate to="/thailand/bangkok/sea-life-madame-tussauds-tickets" replace />} />
+            <Route path="/viva-alangka-cruise" element={<Navigate to="/thailand/bangkok/viva-alangka-dinner-cruise" replace />} />
+            <Route path="/ayutthaya-sunset-cruise" element={<Navigate to="/thailand/bangkok/ayutthaya-sunset-river-cruise" replace />} />
+            <Route path="/chao-phraya-princess-private" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise-cruise-with-private-transfer" replace />} />
+            <Route path="/chao-phraya-princess-valentine" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise" replace />} />
+            <Route path="/chao-phraya-princess-join" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise-cruise-with-transfer" replace />} />
+            <Route path="/chao-phraya-princess-no-transfer" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise" replace />} />
+            <Route path="/maeklong-floating-market" element={<Navigate to="/thailand/bangkok/maeklong-floating-market-tour" replace />} />
+            <Route path="/bangkok-tuk-tuk-night" element={<Navigate to="/thailand/bangkok/tuk-tuk-night-tour-bangkok" replace />} />
+            <Route path="/dream-world-bangkok" element={<Navigate to="/thailand/bangkok/dream-world-bangkok-tickets" replace />} />
             <Route path="/phi-phi-island" element={<Navigate to="/thailand/phuket/phi-phi-island-tour" replace />} />
             <Route path="/james-bond-island" element={<Navigate to="/thailand/phuket/james-bond-island-tour" replace />} />
             <Route path="/james-bond-island-sea-canoe" element={<Navigate to="/thailand/phuket/james-bond-island-sea-canoe" replace />} />

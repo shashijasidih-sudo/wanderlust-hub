@@ -29,7 +29,7 @@ const activities = [
     reviews: 3421,
     price: 1200,
     image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop",
-    slug: "/thailand/bangkok/grand-palace-emerald"
+    slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour"
   },
   {
     title: "Floating Market & Railway Market with River Cruise",
@@ -38,7 +38,7 @@ const activities = [
     reviews: 1654,
     price: 1800,
     image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=800&auto=format&fit=crop",
-    slug: "/thailand/bangkok/maeklong-floating-market"
+    slug: "/thailand/bangkok/maeklong-floating-market-tour"
   },
   {
     title: "Coral Island & Water Sports in Pattaya",
