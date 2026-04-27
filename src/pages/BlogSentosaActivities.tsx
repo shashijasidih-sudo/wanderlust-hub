@@ -31,9 +31,9 @@ const BlogSentosaActivities = () => {
       ]}
       relatedLinks={[
         { title: "Singapore Airport Transfer Guide", link: "/blog/airport-transfer-booking-singapore" },
-        { title: "Universal Studios Weekday", link: "/singapore/universal-studios-weekday" },
-        { title: "Sentosa Cable Car", link: "/singapore/sentosa-cable-car" },
-        { title: "Sky Helix Sentosa", link: "/singapore/sentosa-sky-helix" },
+        { title: "Universal Studios Weekday", link: "/singapore/universal-studios-singapore-weekday-tickets" },
+        { title: "Sentosa Cable Car", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
+        { title: "Sky Helix Sentosa", link: "/singapore/skyhelix-sentosa-tickets" },
       ]}
       sections={[
         {

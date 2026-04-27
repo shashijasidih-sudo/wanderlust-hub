@@ -21,14 +21,14 @@ const dubaiRoutes = [
 ];
 
 const singaporeRoutes = [
-  "/singapore", "/singapore/city-tour", "/singapore/night-safari",
-  "/singapore/night-safari-transfer", "/singapore/night-safari-dinner", "/singapore/sentosa-4d-2-rides",
-  "/singapore/sentosa-4d-3-rides", "/singapore/sentosa-cable-car", "/singapore/sentosa-wings-time",
-  "/singapore/sentosa-sky-helix", "/singapore/river-cruise", "/singapore/gardens-by-the-bay",
-  "/singapore/adventure-cove", "/singapore/flyer", "/singapore/river-safari",
-  "/singapore/universal-studios-weekday", "/singapore/universal-studios-weekend",
-  "/singapore/zoo", "/singapore/rainforest-wild-asia", "/singapore/big-bus-discover",
-  "/singapore/big-bus-night", "/singapore/sentosa-island", "/singapore/destination-guides",
+  "/singapore", "/singapore/singapore-city-tour", "/singapore/night-safari-singapore-tickets-and-transfers",
+  "/singapore/night-safari-transfer", "/singapore/night-safari-dinner", "/singapore/sentosa-4d-adventureland-tickets",
+  "/singapore/sentosa-4d-3-rides", "/singapore/sentosa-cable-car-tickets-and-transfers", "/singapore/wings-of-time-show-sentosa-tickets",
+  "/singapore/skyhelix-sentosa-tickets", "/singapore/singapore-river-cruise-tickets-and-transfers", "/singapore/gardens-by-the-bay-tickets-and-transfers",
+  "/singapore/adventure-cove-waterpark-tickets", "/singapore/singapore-flyer-tickets-and-transfers", "/singapore/river-wonders-singapore-tickets",
+  "/singapore/universal-studios-singapore-weekday-tickets", "/singapore/universal-studios-singapore-weekend-tickets",
+  "/singapore/singapore-zoo-tickets", "/singapore/rainforest-wild-asia-tickets", "/singapore/big-bus-hop-on-hop-off-singapore-city-tour",
+  "/singapore/big-bus-night-city-tour-singapore", "/singapore/sentosa-island", "/singapore/destination-guides",
   "/blog/airport-transfer-booking-singapore", "/blog/sentosa-activities-singapore",
   "/singapore/budget-airport-transfers", "/singapore/airport-pickup",
   "/singapore/airport-dropoff", "/singapore/airport-night-pickup",

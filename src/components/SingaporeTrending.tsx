@@ -8,19 +8,19 @@ import nightSafari from "@/assets/singapore-night-safari.jpg";
 
 const trendingItems = [
   {
+    title: "Best Things to Do in Singapore (2026 Guide)",
+    image: marinaBay,
+    slug: "/singapore/things-to-do",
+  },
+  {
     title: "Best Singapore Attraction Tickets for Indian Travelers",
     image: gardensBay,
     slug: "/blog/best-singapore-attractions",
   },
   {
     title: "Top Things to Do in Singapore",
-    image: marinaBay,
-    slug: "/blog/top-things-singapore",
-  },
-  {
-    title: "Universal Studios Singapore Ticket Guide",
     image: universalStudios,
-    slug: "/blog/universal-studios-singapore-guide",
+    slug: "/blog/top-things-singapore",
   },
   {
     title: "Singapore Night Safari Booking Guide",

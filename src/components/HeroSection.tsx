@@ -168,6 +168,13 @@ const HeroSection = () => {
           <Button 
             variant="secondary" 
             className="bg-white/90 hover:bg-white backdrop-blur-sm"
+            onClick={() => navigate("/singapore/things-to-do")}
+          >
+            Things to Do in Singapore
+          </Button>
+          <Button 
+            variant="secondary" 
+            className="bg-white/90 hover:bg-white backdrop-blur-sm"
             onClick={() => navigate("/thailand/budget-airport-transfers")}
           >
             Thailand Transfers

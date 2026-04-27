@@ -141,6 +141,7 @@ import MiracleGardenDubai from "./pages/MiracleGardenDubai";
 import DubaiFountainShow from "./pages/DubaiFountainShow";
 import Singapore from "./pages/Singapore";
 import SingaporeCityTour from "./pages/SingaporeCityTour";
+import SingaporeThingsToDo from "./pages/SingaporeThingsToDo";
 import NightSafariTickets from "./pages/NightSafariTickets";
 import NightSafariTransfer from "./pages/NightSafariTransfer";
 import NightSafariDinner from "./pages/NightSafariDinner";
@@ -532,27 +533,47 @@ const App = () => (
             <Route path="/blog/singapore-combo-pass" element={<BlogSingaporeComboPass />} />
             <Route path="/blog/singapore-food-experiences" element={<BlogSingaporeFoodExperiences />} />
             <Route path="/singapore" element={<Singapore />} />
-            <Route path="/singapore/city-tour" element={<SingaporeCityTour />} />
-            <Route path="/singapore/night-safari" element={<NightSafariTickets />} />
+            <Route path="/singapore/things-to-do" element={<SingaporeThingsToDo />} />
+            {/* Singapore Activities — SEO-friendly slugs */}
+            <Route path="/singapore/singapore-city-tour" element={<SingaporeCityTour />} />
+            <Route path="/singapore/night-safari-singapore-tickets-and-transfers" element={<NightSafariTickets />} />
             <Route path="/singapore/night-safari-transfer" element={<NightSafariTransfer />} />
             <Route path="/singapore/night-safari-dinner" element={<NightSafariDinner />} />
-            <Route path="/singapore/sentosa-4d-2-rides" element={<Sentosa4D2Rides />} />
+            <Route path="/singapore/sentosa-4d-adventureland-tickets" element={<Sentosa4D2Rides />} />
             <Route path="/singapore/sentosa-4d-3-rides" element={<Sentosa4D3Rides />} />
-            <Route path="/singapore/sentosa-cable-car" element={<SentosaCableCar />} />
-            <Route path="/singapore/sentosa-wings-time" element={<SentosaWingsTime />} />
-            <Route path="/singapore/sentosa-sky-helix" element={<SentosaSkyHelix />} />
-            <Route path="/singapore/river-cruise" element={<SingaporeRiverCruise />} />
-            <Route path="/singapore/gardens-by-the-bay" element={<GardensByTheBay />} />
-            <Route path="/singapore/adventure-cove" element={<AdventureCove />} />
-            <Route path="/singapore/flyer" element={<SingaporeFlyer />} />
-            <Route path="/singapore/river-safari" element={<RiverSafari />} />
-            <Route path="/singapore/universal-studios-weekday" element={<UniversalStudiosWeekday />} />
-            <Route path="/singapore/universal-studios-weekend" element={<UniversalStudiosWeekend />} />
-            <Route path="/singapore/zoo" element={<SingaporeZoo />} />
-            <Route path="/singapore/rainforest-wild-asia" element={<RainforestWildAsia />} />
-            <Route path="/singapore/big-bus-discover" element={<BigBusDiscover />} />
-            <Route path="/singapore/big-bus-night" element={<BigBusNight />} />
+            <Route path="/singapore/sentosa-cable-car-tickets-and-transfers" element={<SentosaCableCar />} />
+            <Route path="/singapore/wings-of-time-show-sentosa-tickets" element={<SentosaWingsTime />} />
+            <Route path="/singapore/skyhelix-sentosa-tickets" element={<SentosaSkyHelix />} />
+            <Route path="/singapore/singapore-river-cruise-tickets-and-transfers" element={<SingaporeRiverCruise />} />
+            <Route path="/singapore/gardens-by-the-bay-tickets-and-transfers" element={<GardensByTheBay />} />
+            <Route path="/singapore/adventure-cove-waterpark-tickets" element={<AdventureCove />} />
+            <Route path="/singapore/singapore-flyer-tickets-and-transfers" element={<SingaporeFlyer />} />
+            <Route path="/singapore/river-wonders-singapore-tickets" element={<RiverSafari />} />
+            <Route path="/singapore/universal-studios-singapore-weekday-tickets" element={<UniversalStudiosWeekday />} />
+            <Route path="/singapore/universal-studios-singapore-weekend-tickets" element={<UniversalStudiosWeekend />} />
+            <Route path="/singapore/singapore-zoo-tickets" element={<SingaporeZoo />} />
+            <Route path="/singapore/rainforest-wild-asia-tickets" element={<RainforestWildAsia />} />
+            <Route path="/singapore/big-bus-hop-on-hop-off-singapore-city-tour" element={<BigBusDiscover />} />
+            <Route path="/singapore/big-bus-night-city-tour-singapore" element={<BigBusNight />} />
             <Route path="/singapore/sentosa-island" element={<SentosaIsland />} />
+            {/* Singapore Activities — legacy redirects */}
+            <Route path="/singapore/city-tour" element={<Navigate to="/singapore/singapore-city-tour" replace />} />
+            <Route path="/singapore/night-safari" element={<Navigate to="/singapore/night-safari-singapore-tickets-and-transfers" replace />} />
+            <Route path="/singapore/sentosa-4d-2-rides" element={<Navigate to="/singapore/sentosa-4d-adventureland-tickets" replace />} />
+            <Route path="/singapore/sentosa-cable-car" element={<Navigate to="/singapore/sentosa-cable-car-tickets-and-transfers" replace />} />
+            <Route path="/singapore/sentosa-wings-time" element={<Navigate to="/singapore/wings-of-time-show-sentosa-tickets" replace />} />
+            <Route path="/singapore/sentosa-sky-helix" element={<Navigate to="/singapore/skyhelix-sentosa-tickets" replace />} />
+            <Route path="/singapore/river-cruise" element={<Navigate to="/singapore/singapore-river-cruise-tickets-and-transfers" replace />} />
+            <Route path="/singapore/gardens-by-the-bay" element={<Navigate to="/singapore/gardens-by-the-bay-tickets-and-transfers" replace />} />
+            <Route path="/singapore/adventure-cove" element={<Navigate to="/singapore/adventure-cove-waterpark-tickets" replace />} />
+            <Route path="/singapore/flyer" element={<Navigate to="/singapore/singapore-flyer-tickets-and-transfers" replace />} />
+            <Route path="/singapore/river-safari" element={<Navigate to="/singapore/river-wonders-singapore-tickets" replace />} />
+            <Route path="/singapore/universal-studios-weekday" element={<Navigate to="/singapore/universal-studios-singapore-weekday-tickets" replace />} />
+            <Route path="/singapore/universal-studios-weekend" element={<Navigate to="/singapore/universal-studios-singapore-weekend-tickets" replace />} />
+            <Route path="/singapore/zoo" element={<Navigate to="/singapore/singapore-zoo-tickets" replace />} />
+            <Route path="/singapore/rainforest-wild-asia" element={<Navigate to="/singapore/rainforest-wild-asia-tickets" replace />} />
+            <Route path="/singapore/big-bus-discover" element={<Navigate to="/singapore/big-bus-hop-on-hop-off-singapore-city-tour" replace />} />
+            <Route path="/singapore/big-bus-night" element={<Navigate to="/singapore/big-bus-night-city-tour-singapore" replace />} />
             <Route path="/singapore/budget-airport-transfers" element={<SingaporeTransfersNew />} />
             {/* Singapore Transfers — SEO-friendly slugs */}
             <Route path="/singapore/singapore-airport-pickup" element={<SingaporeAirportPickup />} />
@@ -693,26 +714,26 @@ const App = () => (
             <Route path="/miracle-garden-dubai" element={<Navigate to="/dubai/miracle-garden" replace />} />
             <Route path="/dubai-fountain-show" element={<Navigate to="/dubai/fountain-show" replace />} />
             <Route path="/dubai-smart-guides" element={<Navigate to="/dubai/destination-guides" replace />} />
-            <Route path="/singapore-city-tour" element={<Navigate to="/singapore/city-tour" replace />} />
-            <Route path="/night-safari-tickets" element={<Navigate to="/singapore/night-safari" replace />} />
+            <Route path="/singapore-city-tour" element={<Navigate to="/singapore/singapore-city-tour" replace />} />
+            <Route path="/night-safari-tickets" element={<Navigate to="/singapore/night-safari-singapore-tickets-and-transfers" replace />} />
             <Route path="/night-safari-transfer" element={<Navigate to="/singapore/night-safari-transfer" replace />} />
             <Route path="/night-safari-dinner" element={<Navigate to="/singapore/night-safari-dinner" replace />} />
-            <Route path="/sentosa-4d-2-rides" element={<Navigate to="/singapore/sentosa-4d-2-rides" replace />} />
+            <Route path="/sentosa-4d-2-rides" element={<Navigate to="/singapore/sentosa-4d-adventureland-tickets" replace />} />
             <Route path="/sentosa-4d-3-rides" element={<Navigate to="/singapore/sentosa-4d-3-rides" replace />} />
-            <Route path="/sentosa-cable-car" element={<Navigate to="/singapore/sentosa-cable-car" replace />} />
-            <Route path="/sentosa-wings-time" element={<Navigate to="/singapore/sentosa-wings-time" replace />} />
-            <Route path="/sentosa-sky-helix" element={<Navigate to="/singapore/sentosa-sky-helix" replace />} />
-            <Route path="/singapore-river-cruise" element={<Navigate to="/singapore/river-cruise" replace />} />
-            <Route path="/gardens-by-the-bay" element={<Navigate to="/singapore/gardens-by-the-bay" replace />} />
-            <Route path="/adventure-cove" element={<Navigate to="/singapore/adventure-cove" replace />} />
-            <Route path="/singapore-flyer" element={<Navigate to="/singapore/flyer" replace />} />
-            <Route path="/river-safari" element={<Navigate to="/singapore/river-safari" replace />} />
-            <Route path="/universal-studios-weekday" element={<Navigate to="/singapore/universal-studios-weekday" replace />} />
-            <Route path="/universal-studios-weekend" element={<Navigate to="/singapore/universal-studios-weekend" replace />} />
-            <Route path="/singapore-zoo" element={<Navigate to="/singapore/zoo" replace />} />
-            <Route path="/rainforest-wild-asia" element={<Navigate to="/singapore/rainforest-wild-asia" replace />} />
-            <Route path="/big-bus-discover" element={<Navigate to="/singapore/big-bus-discover" replace />} />
-            <Route path="/big-bus-night" element={<Navigate to="/singapore/big-bus-night" replace />} />
+            <Route path="/sentosa-cable-car" element={<Navigate to="/singapore/sentosa-cable-car-tickets-and-transfers" replace />} />
+            <Route path="/sentosa-wings-time" element={<Navigate to="/singapore/wings-of-time-show-sentosa-tickets" replace />} />
+            <Route path="/sentosa-sky-helix" element={<Navigate to="/singapore/skyhelix-sentosa-tickets" replace />} />
+            <Route path="/singapore-river-cruise" element={<Navigate to="/singapore/singapore-river-cruise-tickets-and-transfers" replace />} />
+            <Route path="/gardens-by-the-bay" element={<Navigate to="/singapore/gardens-by-the-bay-tickets-and-transfers" replace />} />
+            <Route path="/adventure-cove" element={<Navigate to="/singapore/adventure-cove-waterpark-tickets" replace />} />
+            <Route path="/singapore-flyer" element={<Navigate to="/singapore/singapore-flyer-tickets-and-transfers" replace />} />
+            <Route path="/river-safari" element={<Navigate to="/singapore/river-wonders-singapore-tickets" replace />} />
+            <Route path="/universal-studios-weekday" element={<Navigate to="/singapore/universal-studios-singapore-weekday-tickets" replace />} />
+            <Route path="/universal-studios-weekend" element={<Navigate to="/singapore/universal-studios-singapore-weekend-tickets" replace />} />
+            <Route path="/singapore-zoo" element={<Navigate to="/singapore/singapore-zoo-tickets" replace />} />
+            <Route path="/rainforest-wild-asia" element={<Navigate to="/singapore/rainforest-wild-asia-tickets" replace />} />
+            <Route path="/big-bus-discover" element={<Navigate to="/singapore/big-bus-hop-on-hop-off-singapore-city-tour" replace />} />
+            <Route path="/big-bus-night" element={<Navigate to="/singapore/big-bus-night-city-tour-singapore" replace />} />
             <Route path="/sentosa-island" element={<Navigate to="/singapore/sentosa-island" replace />} />
             <Route path="/singapore-smart-guides" element={<Navigate to="/singapore/destination-guides" replace />} />
             <Route path="/thailand/bangkok/safari-world-bkk-airport" element={<Navigate to="/thailand/bangkok/airport-transfers/safari-world-bkk" replace />} />
