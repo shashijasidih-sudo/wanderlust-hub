@@ -147,6 +147,13 @@ const HeroSection = () => {
           <Button 
             variant="secondary" 
             className="bg-white/90 hover:bg-white backdrop-blur-sm"
+            onClick={() => navigate("/thailand/pattaya/things-to-do")}
+          >
+            Things to Do in Pattaya
+          </Button>
+          <Button 
+            variant="secondary" 
+            className="bg-white/90 hover:bg-white backdrop-blur-sm"
             onClick={() => navigate("/thailand/budget-airport-transfers")}
           >
             Thailand Transfers
