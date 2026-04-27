@@ -29,6 +29,7 @@ import ElephantSafari from "./pages/ElephantSafari";
 import HotSpringEmeralPool from "./pages/HotSpringEmeralPool";
 import BangkokSkywalk from "./pages/BangkokSkywalk";
 import BangkokThingsToDo from "./pages/BangkokThingsToDo";
+import PattayaThingsToDo from "./pages/PattayaThingsToDo";
 import DhowCruise from "./pages/DhowCruise";
 import AtlantisPalm from "./pages/AtlantisPalm";
 import MassageCoupons from "./pages/MassageCoupons";
