@@ -86,6 +86,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
 
   return (
     <div className="min-h-screen bg-background">
+      <CanonicalUrl path={location.pathname} />
       <TourJsonLd
         name={tourData.title}
         description={tourData.shortDescription}
