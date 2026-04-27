@@ -19,6 +19,19 @@ interface BlogSection {
   linkText?: string;
 }
 
+interface RelatedActivity {
+  title: string;
+  link: string;
+  image?: string;
+  price?: number;
+}
+
+interface CityHub {
+  city: string;
+  thingsToDoLink: string;
+  transfersLink?: string;
+}
+
 interface BlogArticleProps {
   title: string;
   description: string;
@@ -31,6 +44,8 @@ interface BlogArticleProps {
   keywords: string[];
   sections: BlogSection[];
   relatedLinks?: { title: string; link: string }[];
+  relatedActivities?: RelatedActivity[];
+  cityHub?: CityHub;
   guidesLink?: string;
   guidesLabel?: string;
   children?: React.ReactNode;
@@ -39,6 +54,7 @@ interface BlogArticleProps {
 const BlogArticleLayout = ({
   title, description, heroImage, heroAlt, author, date,
   readTime, category, keywords, sections, relatedLinks,
+  relatedActivities, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
   children,
 }: BlogArticleProps) => {
@@ -164,6 +180,69 @@ const BlogArticleLayout = ({
                       <span className="text-foreground font-medium group-hover:text-primary transition-colors">{rl.title}</span>
                     </Link>
                   ))}
+                </div>
+              </div>
+            )}
+
+            {/* Recommended Activities (keyword-rich internal links) */}
+            {relatedActivities && relatedActivities.length > 0 && (
+              <div className="mt-10 pt-8 border-t border-border">
+                <h4 className="text-lg font-bold text-foreground mb-4">
+                  Recommended Activities {cityHub ? `in ${cityHub.city}` : ""}
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {relatedActivities.map((a) => (
+                    <Link
+                      key={a.link}
+                      to={a.link}
+                      className="group rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all"
+                    >
+                      {a.image && (
+                        <div className="aspect-[4/3] overflow-hidden bg-muted">
+                          <img
+                            src={a.image}
+                            alt={a.title}
+                            loading="lazy"
+                            className="w-full h-full object-cover transition group-hover:scale-105"
+                          />
+                        </div>
+                      )}
+                      <div className="p-4">
+                        <p className="text-foreground font-medium leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                          {a.title}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* City Hub callout */}
+            {cityHub && (
+              <div className="mt-10 pt-8 border-t border-border">
+                <h4 className="text-lg font-bold text-foreground mb-4">
+                  Explore {cityHub.city}
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <Link
+                    to={cityHub.thingsToDoLink}
+                    className="p-4 rounded-xl border border-border hover:border-primary hover:shadow-md transition-all bg-secondary/30"
+                  >
+                    <span className="text-foreground font-semibold">
+                      Top Things to Do in {cityHub.city} →
+                    </span>
+                  </Link>
+                  {cityHub.transfersLink && (
+                    <Link
+                      to={cityHub.transfersLink}
+                      className="p-4 rounded-xl border border-border hover:border-primary hover:shadow-md transition-all bg-secondary/30"
+                    >
+                      <span className="text-foreground font-semibold">
+                        {cityHub.city} Airport Transfers →
+                      </span>
+                    </Link>
+                  )}
                 </div>
               </div>
             )}

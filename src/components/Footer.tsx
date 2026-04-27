@@ -36,16 +36,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
           {/* Company Info */}
-          <div>
+          <div className="col-span-2 sm:col-span-3 lg:col-span-2">
             <h3 className="text-xl font-bold mb-4 bg-hero-gradient bg-clip-text text-transparent">
               Yellodae
             </h3>
             <p className="text-background/80 text-sm mb-4">
               Your trusted partner for unforgettable travel experiences around the world.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap">
               <a href="https://share.google/OzpvI1Fw37najW0tE" target="_blank" rel="noopener noreferrer">
                 <Button size="icon" variant="ghost" className="hover:bg-background/10">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
@@ -79,30 +79,43 @@ const Footer = () => {
             </div>
           </div>
 
-        {/* Quick Links */}
-        <div>
-          <h4 className="font-semibold mb-4">Quick Links</h4>
-          <ul className="space-y-2 text-sm text-background/80">
-            <li><Link to="/thailand" className="hover:text-background transition-colors">Trending Thailand Activities</Link></li>
-            <li><Link to="/dubai" className="hover:text-background transition-colors">Trending Dubai Activities</Link></li>
-            <li><a href="#singapore" className="hover:text-background transition-colors">Trending Singapore Activities</a></li>
-            <li><Link to="/thailand" className="hover:text-background transition-colors">Thailand Transfers</Link></li>
-            <li><a href="#singapore" className="hover:text-background transition-colors">Singapore Transfers</a></li>
-            <li><Link to="/dubai" className="hover:text-background transition-colors">Dubai Transfers</Link></li>
-          </ul>
-        </div>
+          {/* Thailand */}
+          <div>
+            <h4 className="font-semibold mb-4">Thailand</h4>
+            <ul className="space-y-2 text-sm text-background/80">
+              <li><Link to="/thailand/bangkok/things-to-do" className="hover:text-background transition-colors">Bangkok Activities</Link></li>
+              <li><Link to="/thailand/phuket/things-to-do" className="hover:text-background transition-colors">Phuket Tours</Link></li>
+              <li><Link to="/thailand/pattaya/things-to-do" className="hover:text-background transition-colors">Pattaya Tours</Link></li>
+              <li><Link to="/thailand/krabi/things-to-do" className="hover:text-background transition-colors">Krabi Tours</Link></li>
+              <li><Link to="/thailand/budget-airport-transfers" className="hover:text-background transition-colors">Thailand Transfers</Link></li>
+              <li><Link to="/thailand/destination-guides" className="hover:text-background transition-colors">Thailand Smart Guides</Link></li>
+            </ul>
+          </div>
 
-        {/* Support */}
-        <div>
-          <h4 className="font-semibold mb-4">Support</h4>
-          <ul className="space-y-2 text-sm text-background/80">
-            <li><Link to="/thailand/destination-guides" className="hover:text-background transition-colors">Smart Destination Guides</Link></li>
-            <li><Link to="/about-us" className="hover:text-background transition-colors">About Us</Link></li>
-            <li><Link to="/contact-us" className="hover:text-background transition-colors">Contact Us</Link></li>
-            <li><Link to="/quick-pay" className="hover:text-background transition-colors">Pay Now</Link></li>
-            <li><Link to="/faq" className="hover:text-background transition-colors">FAQ</Link></li>
-          </ul>
-        </div>
+          {/* Singapore */}
+          <div>
+            <h4 className="font-semibold mb-4">Singapore</h4>
+            <ul className="space-y-2 text-sm text-background/80">
+              <li><Link to="/singapore/things-to-do" className="hover:text-background transition-colors">Singapore Activities</Link></li>
+              <li><Link to="/singapore/budget-airport-transfers" className="hover:text-background transition-colors">Changi Airport Transfers</Link></li>
+              <li><Link to="/singapore/universal-studios-singapore-weekday-tickets" className="hover:text-background transition-colors">Universal Studios Singapore</Link></li>
+              <li><Link to="/singapore/sentosa-cable-car-tickets-and-transfers" className="hover:text-background transition-colors">Sentosa Cable Car</Link></li>
+              <li><Link to="/singapore/gardens-by-the-bay-tickets-and-transfers" className="hover:text-background transition-colors">Gardens by the Bay</Link></li>
+              <li><Link to="/singapore/night-safari-singapore-tickets-and-transfers" className="hover:text-background transition-colors">Night Safari Singapore</Link></li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h4 className="font-semibold mb-4">Support</h4>
+            <ul className="space-y-2 text-sm text-background/80">
+              <li><Link to="/about-us" className="hover:text-background transition-colors">About Us</Link></li>
+              <li><Link to="/contact-us" className="hover:text-background transition-colors">Contact Us</Link></li>
+              <li><Link to="/quick-pay" className="hover:text-background transition-colors">Pay Now</Link></li>
+              <li><Link to="/faq" className="hover:text-background transition-colors">FAQ</Link></li>
+              <li><Link to="/tour-packages" className="hover:text-background transition-colors">Tour Packages</Link></li>
+            </ul>
+          </div>
 
           {/* Legal */}
           <div>

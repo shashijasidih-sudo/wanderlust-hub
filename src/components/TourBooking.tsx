@@ -15,6 +15,7 @@ import CustomerSupport from "./activity-detail/CustomerSupport";
 import SuggestedTours from "./activity-detail/SuggestedTours";
 import TravelGuidesSection from "./activity-detail/TravelGuidesSection";
 import BookTransfersSection from "./BookTransfersSection";
+import CityExploreLinks from "./CityExploreLinks";
 import { getCityTransfers } from "@/data/cityTransfersData";
 import TourJsonLd from "./seo/TourJsonLd";
 import BreadcrumbJsonLd from "./seo/BreadcrumbJsonLd";
@@ -314,6 +315,14 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
         <div className="mt-12">
           <SuggestedTours currentCity={tourData.city} />
         </div>
+
+        {/* Compact internal-link strip — guarantees keyword-rich navigation to hubs */}
+        {(() => {
+          const key = (tourData.city || "").toLowerCase().trim() as
+            | "bangkok" | "pattaya" | "phuket" | "krabi" | "singapore";
+          if (!["bangkok", "pattaya", "phuket", "krabi", "singapore"].includes(key)) return null;
+          return <CityExploreLinks city={key} />;
+        })()}
       </main>
 
       <Footer />

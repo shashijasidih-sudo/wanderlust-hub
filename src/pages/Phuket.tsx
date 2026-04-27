@@ -12,6 +12,7 @@ import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SearchInput from "@/components/SearchInput";
 import BookTransfersSection from "@/components/BookTransfersSection";
+import CityExploreLinks from "@/components/CityExploreLinks";
 
 import phuketLongtailBoat from "@/assets/phuket-longtail-boat-1.jpg";
 import phuketBigBoat from "@/assets/phuket-big-boat-1.jpg";
@@ -225,6 +226,8 @@ const Phuket = () => {
           </main>
         </div>
       </div>
+
+      <CityExploreLinks city="phuket" />
 
       <BookTransfersSection
         city="Phuket"

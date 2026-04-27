@@ -11,6 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SearchInput from "@/components/SearchInput";
+import CityExploreLinks from "@/components/CityExploreLinks";
 
 // Singapore-specific images
 import singaporeCityTour from "@/assets/singapore-city-tour.jpg";
@@ -240,6 +241,8 @@ const Singapore = () => {
           </main>
         </div>
       </div>
+
+      <CityExploreLinks city="singapore" />
 
       <Footer />
     </div>
