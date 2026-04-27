@@ -5,6 +5,8 @@ import BreadcrumbJsonLd from "./seo/BreadcrumbJsonLd";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import Footer from "./Footer";
 import FloatingWhatsApp from "./FloatingWhatsApp";
+import BookTransfersSection from "./BookTransfersSection";
+import { getCityTransfers } from "@/data/cityTransfersData";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
@@ -594,6 +596,14 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
           )}
         </div>
       </main>
+
+      {(() => {
+        const cityTransfers = getCityTransfers(transferData.city);
+        if (!cityTransfers) return null;
+        return (
+          <BookTransfersSection city={cityTransfers.city} transfers={cityTransfers.transfers} />
+        );
+      })()}
 
       <Footer />
       <FloatingWhatsApp />
