@@ -263,6 +263,8 @@ const Pattaya = () => {
         </div>
       </div>
 
+      <CityExploreLinks city="pattaya" />
+
       <BookTransfersSection
         city="Pattaya"
         transfers={[

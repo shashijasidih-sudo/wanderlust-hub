@@ -12,6 +12,7 @@ import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SearchInput from "@/components/SearchInput";
 import BookTransfersSection from "@/components/BookTransfersSection";
+import CityExploreLinks from "@/components/CityExploreLinks";
 
 // Import Krabi images
 import krabiTourBoat from "@/assets/krabi-tour-boat-1.jpg";
@@ -219,6 +220,8 @@ const Krabi = () => {
           </main>
         </div>
       </div>
+
+      <CityExploreLinks city="krabi" />
 
       <BookTransfersSection
         city="Krabi"
