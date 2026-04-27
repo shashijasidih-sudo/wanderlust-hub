@@ -29,23 +29,23 @@ import singaporeZoo from "@/assets/singapore-zoo.jpg";
 import singaporeBigBus from "@/assets/singapore-big-bus.jpg";
 
 const activities = [
-  { title: "Singapore City Tour with Guide and Transfer", price: 1815, image: singaporeCityTour, slug: "/singapore/city-tour" },
-  { title: "Night Safari Singapore", price: 4470, image: singaporeNightSafari, slug: "/singapore/night-safari" },
-  { title: "Sentosa 4D Adventureland", price: 2060, image: singaporeSentosa4d, slug: "/singapore/sentosa-4d-2-rides" },
-  { title: "Sentosa Cable Ride", price: 2180, image: singaporeCableCar, slug: "/singapore/sentosa-cable-car" },
-  { title: "Sentosa Wings of Time with Transfers", price: 2656.5, image: singaporeWingsTime, slug: "/singapore/sentosa-wings-time" },
-  { title: "Sentosa Sky Helix", price: 1811.25, image: singaporeSkyHelix, slug: "/singapore/sentosa-sky-helix" },
-  { title: "Singapore River Cruise", price: 2173.5, image: singaporeRiverCruise, slug: "/singapore/river-cruise" },
-  { title: "Gardens by the Bay", price: 2660, image: singaporeGardensBay, slug: "/singapore/gardens-by-the-bay" },
-  { title: "Adventure Cove Water Park", price: 2656.5, image: singaporeAdventureCove, slug: "/singapore/adventure-cove" },
-  { title: "Singapore Flyer Ticket", price: 3381, image: singaporeFlyer, slug: "/singapore/flyer" },
-  { title: "Singapore River Safari", price: 4468, image: singaporeRiverSafari, slug: "/singapore/river-safari" },
-  { title: "Universal Studios Weekday Ticket", price: 6762, image: singaporeUniversalStudios, slug: "/singapore/universal-studios-weekday" },
-  { title: "Universal Studios Weekend Ticket", price: 7872.9, image: singaporeUniversalStudios, slug: "/singapore/universal-studios-weekend" },
-  { title: "Singapore Zoo + Tram Ride", price: 3743.25, image: singaporeZoo, slug: "/singapore/zoo" },
-  { title: "Rainforest Wild Asia with Transfer", price: 3441.375, image: singaporeZoo, slug: "/singapore/rainforest-wild-asia" },
-  { title: "Big Bus Singapore - Discover Ticket", price: 4709.25, image: singaporeBigBus, slug: "/singapore/big-bus-discover" },
-  { title: "Big Bus Singapore Night City Tour", price: 4709.25, image: singaporeBigBus, slug: "/singapore/big-bus-night" },
+  { title: "Singapore City Tour with Guide and Transfer", price: 1815, image: singaporeCityTour, slug: "/singapore/singapore-city-tour" },
+  { title: "Night Safari Singapore", price: 4470, image: singaporeNightSafari, slug: "/singapore/night-safari-singapore-tickets-and-transfers" },
+  { title: "Sentosa 4D Adventureland", price: 2060, image: singaporeSentosa4d, slug: "/singapore/sentosa-4d-adventureland-tickets" },
+  { title: "Sentosa Cable Ride", price: 2180, image: singaporeCableCar, slug: "/singapore/sentosa-cable-car-tickets-and-transfers" },
+  { title: "Sentosa Wings of Time with Transfers", price: 2656.5, image: singaporeWingsTime, slug: "/singapore/wings-of-time-show-sentosa-tickets" },
+  { title: "Sentosa Sky Helix", price: 1811.25, image: singaporeSkyHelix, slug: "/singapore/skyhelix-sentosa-tickets" },
+  { title: "Singapore River Cruise", price: 2173.5, image: singaporeRiverCruise, slug: "/singapore/singapore-river-cruise-tickets-and-transfers" },
+  { title: "Gardens by the Bay", price: 2660, image: singaporeGardensBay, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
+  { title: "Adventure Cove Water Park", price: 2656.5, image: singaporeAdventureCove, slug: "/singapore/adventure-cove-waterpark-tickets" },
+  { title: "Singapore Flyer Ticket", price: 3381, image: singaporeFlyer, slug: "/singapore/singapore-flyer-tickets-and-transfers" },
+  { title: "Singapore River Safari", price: 4468, image: singaporeRiverSafari, slug: "/singapore/river-wonders-singapore-tickets" },
+  { title: "Universal Studios Weekday Ticket", price: 6762, image: singaporeUniversalStudios, slug: "/singapore/universal-studios-singapore-weekday-tickets" },
+  { title: "Universal Studios Weekend Ticket", price: 7872.9, image: singaporeUniversalStudios, slug: "/singapore/universal-studios-singapore-weekend-tickets" },
+  { title: "Singapore Zoo + Tram Ride", price: 3743.25, image: singaporeZoo, slug: "/singapore/singapore-zoo-tickets" },
+  { title: "Rainforest Wild Asia with Transfer", price: 3441.375, image: singaporeZoo, slug: "/singapore/rainforest-wild-asia-tickets" },
+  { title: "Big Bus Singapore - Discover Ticket", price: 4709.25, image: singaporeBigBus, slug: "/singapore/big-bus-hop-on-hop-off-singapore-city-tour" },
+  { title: "Big Bus Singapore Night City Tour", price: 4709.25, image: singaporeBigBus, slug: "/singapore/big-bus-night-city-tour-singapore" },
 ];
 
 const categories = [
@@ -110,12 +110,12 @@ const Singapore = () => {
         <QuickBookWidget
           title="⚡ Quick Book Top Singapore Activities"
           items={[
-            { title: "Universal Studios Weekday", price: 6762, image: singaporeUniversalStudios, slug: "/singapore/universal-studios-weekday", rating: 4.9, badge: "Bestseller" },
-            { title: "Gardens by the Bay", price: 2660, image: singaporeGardensBay, slug: "/singapore/gardens-by-the-bay", rating: 4.8, badge: "Iconic" },
-            { title: "Night Safari Singapore", price: 4470, image: singaporeNightSafari, slug: "/singapore/night-safari", rating: 4.7 },
-            { title: "Singapore City Tour", price: 1815, image: singaporeCityTour, slug: "/singapore/city-tour", rating: 4.6 },
-            { title: "Sentosa Cable Ride", price: 2180, image: singaporeCableCar, slug: "/singapore/sentosa-cable-car", rating: 4.5 },
-            { title: "Singapore River Cruise", price: 2174, image: singaporeRiverCruise, slug: "/singapore/river-cruise", rating: 4.7, badge: "Popular" },
+            { title: "Universal Studios Weekday", price: 6762, image: singaporeUniversalStudios, slug: "/singapore/universal-studios-singapore-weekday-tickets", rating: 4.9, badge: "Bestseller" },
+            { title: "Gardens by the Bay", price: 2660, image: singaporeGardensBay, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers", rating: 4.8, badge: "Iconic" },
+            { title: "Night Safari Singapore", price: 4470, image: singaporeNightSafari, slug: "/singapore/night-safari-singapore-tickets-and-transfers", rating: 4.7 },
+            { title: "Singapore City Tour", price: 1815, image: singaporeCityTour, slug: "/singapore/singapore-city-tour", rating: 4.6 },
+            { title: "Sentosa Cable Ride", price: 2180, image: singaporeCableCar, slug: "/singapore/sentosa-cable-car-tickets-and-transfers", rating: 4.5 },
+            { title: "Singapore River Cruise", price: 2174, image: singaporeRiverCruise, slug: "/singapore/singapore-river-cruise-tickets-and-transfers", rating: 4.7, badge: "Popular" },
           ]}
         />
 
