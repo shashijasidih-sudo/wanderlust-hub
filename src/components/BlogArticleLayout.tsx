@@ -19,6 +19,19 @@ interface BlogSection {
   linkText?: string;
 }
 
+interface RelatedActivity {
+  title: string;
+  link: string;
+  image?: string;
+  price?: number;
+}
+
+interface CityHub {
+  city: string;
+  thingsToDoLink: string;
+  transfersLink?: string;
+}
+
 interface BlogArticleProps {
   title: string;
   description: string;
@@ -31,6 +44,8 @@ interface BlogArticleProps {
   keywords: string[];
   sections: BlogSection[];
   relatedLinks?: { title: string; link: string }[];
+  relatedActivities?: RelatedActivity[];
+  cityHub?: CityHub;
   guidesLink?: string;
   guidesLabel?: string;
   children?: React.ReactNode;
