@@ -559,7 +559,7 @@ const App = () => (
             <Route path="/thailand/bangkok/maeklong-floating-market" element={<Navigate to="/thailand/bangkok/maeklong-floating-market-tour" replace />} />
             <Route path="/thailand/bangkok/tuk-tuk-night-tour" element={<Navigate to="/thailand/bangkok/tuk-tuk-night-tour-bangkok" replace />} />
             <Route path="/thailand/bangkok/dream-world" element={<Navigate to="/thailand/bangkok/dream-world-bangkok-tickets" replace />} />
-            {/* NOTE: /thailand/bangkok/chao-phraya-princess-dinner conflicts with new slug pattern, handled implicitly */}
+            <Route path="/thailand/bangkok/chao-phraya-princess-dinner" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise" replace />} />
             <Route path="/safari-world" element={<Navigate to="/thailand/bangkok/safari-world" replace />} />
             <Route path="/dolphin-show" element={<Navigate to="/thailand/bangkok/dolphin-show" replace />} />
             <Route path="/bangkok-skywalk" element={<Navigate to="/thailand/bangkok/mahanakhon-skywalk-tickets" replace />} />
