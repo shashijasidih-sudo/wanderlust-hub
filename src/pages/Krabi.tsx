@@ -26,7 +26,7 @@ import krabiTempleWoman from "@/assets/krabi-temple-woman-1.jpg";
 const activities = [
   { title: "4 Islands by Longtail Boat (No National Park Fee)", price: 2415, image: krabiLongtailBoats, slug: "/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer" },
   { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 4589, image: krabiKayaks, slug: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer" },
-  { title: "Emerald Pool + Hot Springs + Tiger Cave with Lunch", price: 3140, image: krabiTempleWoman, slug: "hot-spring-emerald-pool" },
+  { title: "Emerald Pool + Hot Springs + Tiger Cave with Lunch", price: 3140, image: krabiTempleWoman, slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer" },
   { title: "Hong Islands by Longtail Boat", price: 3381, image: krabiIslandView, slug: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer" },
   { title: "7 Islands Sunset Tour BBQ with Longtail boat", price: 3743, image: krabiSailboat, slug: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer" },
   { title: "Hong Island Tour (By Speed Boat)", price: 4347, image: krabiSpeedboat, slug: "/thailand/krabi/hong-island-tour-speedboat-with-transfer" },
