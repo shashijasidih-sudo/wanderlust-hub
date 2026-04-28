@@ -155,51 +155,68 @@ const ThailandSmartGuides = () => {
             </Link>
           </Card>
 
-          {/* Category Filters */}
-          <div className="flex flex-wrap gap-3 mb-8 justify-center">
-            <Button variant="default">All Guides</Button>
-            <Button variant="outline">Beach Adventures</Button>
-            <Button variant="outline">Food Tours</Button>
-            <Button variant="outline">Cultural Sites</Button>
-            <Button variant="outline">Wildlife</Button>
-          </div>
-
-          {/* Article Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {blogArticles.slice(1).map((article) => (
-              <Card key={article.id} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
-                <Link to={article.slug}>
-                  <div className="aspect-[16/10] overflow-hidden">
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <span className="text-primary font-semibold text-xs uppercase tracking-wide">{article.category}</span>
-                    <h3 className="font-bold text-lg mt-2 mb-3 text-foreground group-hover:text-primary transition-colors line-clamp-2">
-                      {article.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{article.description}</p>
-                    <div className="flex items-center justify-between text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="h-3 w-3" />
-                        {article.date}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
-                        {article.readTime}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 text-primary mt-4 text-sm font-medium group-hover:gap-3 transition-all">
-                      Read More <ArrowRight className="h-4 w-4" />
-                    </div>
-                  </CardContent>
-                </Link>
-              </Card>
+          {/* City Filters */}
+          <div className="flex flex-wrap gap-3 mb-10 justify-center">
+            {CITY_ORDER.map((c) => (
+              <Button
+                key={c.key}
+                variant={activeCity === c.key ? "default" : "outline"}
+                onClick={() => setActiveCity(c.key)}
+              >
+                {c.label}
+              </Button>
             ))}
           </div>
+
+          {/* City-grouped Article Sections */}
+          {visibleGroups.map((group) => (
+            <section key={group.key} className="mb-14">
+              <div className="flex items-end justify-between mb-6 border-b border-border pb-3">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                  {group.label}
+                </h2>
+                <span className="text-sm text-muted-foreground">
+                  {group.articles.length} {group.articles.length === 1 ? "guide" : "guides"}
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {group.articles.map((article) => (
+                  <Card key={article.id} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
+                    <Link to={article.slug}>
+                      <div className="aspect-[16/10] overflow-hidden">
+                        <img
+                          src={article.image}
+                          alt={article.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <CardContent className="p-6">
+                        <span className="text-primary font-semibold text-xs uppercase tracking-wide">{article.category}</span>
+                        <h3 className="font-bold text-lg mt-2 mb-3 text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                          {article.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{article.description}</p>
+                        <div className="flex items-center justify-between text-xs text-muted-foreground">
+                          <span className="flex items-center gap-1">
+                            <Calendar className="h-3 w-3" />
+                            {article.date}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Clock className="h-3 w-3" />
+                            {article.readTime}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2 text-primary mt-4 text-sm font-medium group-hover:gap-3 transition-all">
+                          Read More <ArrowRight className="h-4 w-4" />
+                        </div>
+                      </CardContent>
+                    </Link>
+                  </Card>
+                ))}
+              </div>
+            </section>
+          ))}
 
           {/* Newsletter Section */}
           <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-none">
