@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}
           <div className="col-span-2 sm:col-span-3 lg:col-span-2">
             <h3 className="text-xl font-bold mb-4 bg-hero-gradient bg-clip-text text-transparent">
@@ -89,6 +89,20 @@ const Footer = () => {
               <li><Link to="/thailand/krabi/things-to-do" className="hover:text-background transition-colors">Krabi Tours</Link></li>
               <li><Link to="/thailand/budget-airport-transfers" className="hover:text-background transition-colors">Thailand Transfers</Link></li>
               <li><Link to="/thailand/destination-guides" className="hover:text-background transition-colors">Thailand Smart Guides</Link></li>
+            </ul>
+          </div>
+
+          {/* Koh Samui & Chiang Mai */}
+          <div>
+            <h4 className="font-semibold mb-4">Koh Samui & Chiang Mai</h4>
+            <ul className="space-y-2 text-sm text-background/80">
+              <li><Link to="/thailand/koh-samui/things-to-do" className="hover:text-background transition-colors">Koh Samui Activities</Link></li>
+              <li><Link to="/thailand/koh-samui/full-moon-party-tour" className="hover:text-background transition-colors">Koh Samui Full Moon Party</Link></li>
+              <li><Link to="/thailand/koh-samui/white-orchid-loy-krathong-cruise" className="hover:text-background transition-colors">Loy Krathong Cruise Samui</Link></li>
+              <li><Link to="/thailand/chiang-mai/things-to-do" className="hover:text-background transition-colors">Chiang Mai Activities</Link></li>
+              <li><Link to="/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour" className="hover:text-background transition-colors">Doi Inthanon Full Day Tour</Link></li>
+              <li><Link to="/thailand/chiang-mai/chiang-rai-golden-triangle-tour" className="hover:text-background transition-colors">Chiang Rai Golden Triangle</Link></li>
+              <li><Link to="/thailand/chiang-mai/budget-airport-transfers" className="hover:text-background transition-colors">Chiang Mai Airport Transfers</Link></li>
             </ul>
           </div>
 

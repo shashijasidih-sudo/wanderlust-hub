@@ -66,8 +66,80 @@ const BlogArticleLayout = ({
     }
   };
 
+  // JSON-LD: BlogPosting + BreadcrumbList + ItemList of recommended activities + Place (city hub)
+  const pageUrl = typeof window !== "undefined" ? window.location.href : "";
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
+  const abs = (href: string) =>
+    href.startsWith("http") ? href : `${origin}${href.startsWith("/") ? "" : "/"}${href}`;
+
+  const jsonLd: Record<string, unknown>[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: title,
+      description,
+      image: heroImage,
+      datePublished: date,
+      author: { "@type": "Organization", name: author },
+      publisher: {
+        "@type": "Organization",
+        name: "Yellodae",
+        logo: { "@type": "ImageObject", url: `${origin}/favicon.ico` },
+      },
+      mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+      keywords: keywords.join(", "),
+      articleSection: category,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: origin || "/" },
+        { "@type": "ListItem", position: 2, name: guidesLabel, item: abs(guidesLink) },
+        { "@type": "ListItem", position: 3, name: title, item: pageUrl },
+      ],
+    },
+  ];
+
+  if (relatedActivities && relatedActivities.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: `Recommended Activities${cityHub ? ` in ${cityHub.city}` : ""}`,
+      itemListElement: relatedActivities.map((a, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: abs(a.link),
+        name: a.title,
+        ...(a.image ? { image: a.image } : {}),
+      })),
+    });
+  }
+
+  if (cityHub) {
+    jsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "Place",
+      name: cityHub.city,
+      url: abs(cityHub.thingsToDoLink),
+      ...(cityHub.transfersLink
+        ? {
+            subjectOf: {
+              "@type": "WebPage",
+              name: `${cityHub.city} Airport Transfers`,
+              url: abs(cityHub.transfersLink),
+            },
+          }
+        : {}),
+    });
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="flex-1">
         {/* Hero */}
