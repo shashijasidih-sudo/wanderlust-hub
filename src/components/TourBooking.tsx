@@ -11,6 +11,7 @@ import PricingCalculator from "./activity-detail/PricingCalculator";
 import TourPolicies from "./activity-detail/TourPolicies";
 import TourDescription from "./activity-detail/TourDescription";
 import FAQSection from "./activity-detail/FAQSection";
+import { getSeoFaqsForCity } from "@/data/cityseoFaqs";
 import CustomerSupport from "./activity-detail/CustomerSupport";
 import SuggestedTours from "./activity-detail/SuggestedTours";
 import TravelGuidesSection from "./activity-detail/TravelGuidesSection";
@@ -280,8 +281,11 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
               totalReviews={tourData.reviews}
             />
             
-            {/* FAQ Section */}
-            <FAQSection faqs={tourData.faqs} />
+            {/* FAQ Section — booking FAQs + city-level SEO FAQs (combined JSON-LD) */}
+            <FAQSection
+              faqs={tourData.faqs}
+              seoFaqs={getSeoFaqsForCity(tourData.city)}
+            />
           </div>
 
           {/* Sidebar */}
