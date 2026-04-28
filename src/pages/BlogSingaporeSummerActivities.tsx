@@ -20,12 +20,12 @@ const BlogSingaporeSummerActivities = () => {
   return (
     <BlogArticleLayout
       {...getBlogCityProps("singapore")}
-      title="Best Singapore Summer Activities: Top Outdoor Things to Do in Singapore (2026)"
-      description="From Sentosa beaches and Gardens by the Bay to Night Safari, Marina Bay sunsets and Mount Faber views — the best Singapore summer activities for 2026 travellers."
+      title="Best Singapore Summer Activities 2026"
+      description="Top Singapore summer activities 2026 — Sentosa, Gardens by the Bay, Night Safari, Marina Bay and East Coast Park outdoor experiences."
       heroImage={heroImg}
-      heroAlt="Best Singapore summer activities — Sentosa Island, Gardens by the Bay and Marina Bay outdoor experiences"
+      heroAlt="Best Singapore summer activities 2026 — Sentosa Island, Gardens by the Bay and Marina Bay outdoor experiences"
       author="Yellodae Travel Expert"
-      date="Apr 28, 2026"
+      date="2026-04-28"
       readTime="9 min read"
       category="Singapore Travel Guide"
       keywords={[
