@@ -304,7 +304,6 @@ const BlogThailandAdventureActivities2026 = () => {
           },
         ]}
       />
-    </>
   );
 };
 
