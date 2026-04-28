@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import heroImg from "@/assets/dubai-skyline-night-1.jpg";
 import marinaImg from "@/assets/dubai-city-night-1.jpg";
 import fountainImg from "@/assets/dubai-fountain-show-1.jpg";
@@ -7,6 +8,7 @@ import dhowImg from "@/assets/dubai-dhow-cruise-1.jpg";
 const BlogDubaiAirportTransfer = () => {
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("dubai")}
       title="Complete Guide to Airport Transfer Booking in Dubai"
       description="Everything you need to know about Dubai airport transfers — types, popular drop locations, pricing, step-by-step booking guide, and tips for a smooth arrival."
       heroImage={heroImg}

@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -63,6 +64,7 @@ const DesertActivityCards = () => {
 const BlogDubaiDesertSafari = () => {
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("dubai")}
       title="Complete Guide to Desert Safari Deals in Dubai"
       description="Discover the best desert safari deals in Dubai — morning, evening, overnight & VIP options. Dune bashing, camel rides, BBQ dinner, and live entertainment."
       heroImage={heroImg}

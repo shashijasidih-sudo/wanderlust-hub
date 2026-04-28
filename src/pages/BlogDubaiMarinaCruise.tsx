@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -62,6 +63,7 @@ const CruiseActivityCards = () => {
 const BlogDubaiMarinaCruise = () => {
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("dubai")}
       title="Complete Guide to Dubai Marina Cruise in Dubai"
       description="Everything you need to know about Dubai Marina cruise booking — types of cruises, what to expect onboard, best timings, and how to choose the best Dubai Marina cruise in Dubai."
       heroImage={heroImg}

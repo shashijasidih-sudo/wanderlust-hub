@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -71,6 +72,7 @@ const BlogBestPattayaActivities = () => {
 
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("pattaya")}
       title="Best Pattaya Activities for First-Time Visitors — 2026 Guide"
       description="Discover the top 15 Pattaya activities for first-time visitors. From Coral Island tours to Alcazar Show, floating markets to nightlife, plan your perfect Pattaya trip."
       heroImage={heroImg}

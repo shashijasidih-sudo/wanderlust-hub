@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -73,6 +74,7 @@ const BlogSingaporeFoodExperiences = () => {
 
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("singapore")}
       title="Complete Guide to Singapore Food Experiences — Best Culinary Adventures 2026"
       description="Discover the best Singapore food experiences — from hawker centres to Chinatown food tours, Little India flavors to night food markets. Plan your culinary journey."
       heroImage={merlion}

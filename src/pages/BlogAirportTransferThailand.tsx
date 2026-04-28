@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import heroImg from "@/assets/bangkok-city-1.jpg";
 import phuketImg from "@/assets/phuket-longtail-boats-beach-1.jpg";
 import bangkokImg from "@/assets/bangkok-city-night-1.jpg";
@@ -7,6 +8,7 @@ import krabiImg from "@/assets/krabi-longtail-boats-1.jpg";
 const BlogAirportTransferThailand = () => {
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("thailand")}
       title="Complete Guide to Airport Transfer Booking in Thailand"
       description="Everything you need to know about booking airport transfers in Thailand — from Bangkok to Phuket, Krabi, and beyond. Tips, routes, and the best platform to book."
       heroImage={heroImg}

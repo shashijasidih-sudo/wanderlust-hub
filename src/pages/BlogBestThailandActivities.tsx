@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -74,6 +75,7 @@ const BlogBestThailandActivities = () => {
 
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("thailand")}
       title="Best Thailand Activities to Book Online in 2026"
       description="Discover the top 15 Thailand activities — from island hopping to temple tours, night markets to wildlife safaris. Book online for the best prices with instant confirmation."
       heroImage={heroImg}

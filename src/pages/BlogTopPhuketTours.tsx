@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -72,6 +73,7 @@ const BlogTopPhuketTours = () => {
 
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("phuket")}
       title="Top Phuket Island Tours for Indian Travelers — 2026 Guide"
       description="Complete guide to the best Phuket island tours and activities for Indian travelers. From Phi Phi Island to James Bond Island, find the perfect tour with prices and booking tips."
       heroImage={heroImg}

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -73,6 +74,7 @@ const BlogUniversalStudiosSingapore = () => {
 
   return (
   <BlogArticleLayout
+    {...getBlogCityProps("singapore")}
     title="Universal Studios Singapore Ticket Guide 2026"
     description="Everything you need to know about Universal Studios Singapore tickets — prices, best time to visit, top rides, and how to book the cheapest tickets online."
     heroImage={universalStudios}

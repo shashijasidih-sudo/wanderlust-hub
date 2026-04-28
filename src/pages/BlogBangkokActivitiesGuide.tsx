@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -72,6 +73,7 @@ const BlogBangkokActivitiesGuide = () => {
 
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("bangkok")}
       title="Bangkok Activities Booking Guide — 15 Best Things to Do in 2026"
       description="The ultimate Bangkok activities booking guide for tourists. Discover 15 must-do experiences including temple tours, dinner cruises, night markets, and wildlife safaris."
       heroImage={heroImg}

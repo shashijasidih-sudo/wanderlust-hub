@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -68,6 +69,7 @@ const BlogBestDubaiActivities = () => {
 
   return (
   <BlogArticleLayout
+    {...getBlogCityProps("dubai")}
     title="Top Dubai Activities to Book Online in 2026"
     description="Discover the best Dubai activities — from desert safaris to Burj Khalifa, dhow cruises to city tours. Book online for the best prices with instant confirmation."
     heroImage={dubaiSkyline}

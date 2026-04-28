@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import heroImg from "@/assets/singapore-marina-bay-sands-night-1.jpg";
 import changiImg from "@/assets/singapore-flyer-twilight-1.jpg";
 import gardenImg from "@/assets/singapore-gardens-bay-night-1.jpg";
@@ -7,6 +8,7 @@ import cityImg from "@/assets/singapore-city-tour.jpg";
 const BlogSingaporeAirportTransfer = () => {
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("singapore")}
       title="Complete Guide to Airport Transfer Booking in Singapore"
       description="Everything you need to know about booking airport transfers from Singapore Changi Airport — types, popular routes, tips, and the best platform to book."
       heroImage={heroImg}

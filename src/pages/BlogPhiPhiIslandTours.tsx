@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import heroImg from "@/assets/phi-phi-1.jpg";
 import phiPhi2 from "@/assets/phi-phi-3.jpg";
 import phiPhi3 from "@/assets/phi-phi-5.jpg";
@@ -7,6 +8,7 @@ import phiPhi4 from "@/assets/phi-phi-boat.jpeg";
 const BlogPhiPhiIslandTours = () => {
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("phuket")}
       title="Complete Guide to Phi Phi Island Tours in Thailand"
       description="Plan the perfect Phi Phi Island tour — speedboat, longtail, or luxury private tours. Everything you need to know about visiting Maya Bay, snorkelling, and more."
       heroImage={heroImg}

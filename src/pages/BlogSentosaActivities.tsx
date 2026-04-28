@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import heroImg from "@/assets/singapore-universal-studios.jpg";
 import sentosaImg from "@/assets/singapore-adventure-cove.jpg";
 import skyHelixImg from "@/assets/singapore-sky-helix.jpg";
@@ -7,6 +8,7 @@ import wingsImg from "@/assets/singapore-wings-time.jpg";
 const BlogSentosaActivities = () => {
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("singapore")}
       title="Complete Guide to Sentosa Activities in Singapore"
       description="Discover the best Sentosa Island activities — from Universal Studios and SEA Aquarium to beaches and Sky Helix. Your complete guide to Singapore's playground."
       heroImage={heroImg}

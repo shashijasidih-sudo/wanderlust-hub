@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -73,6 +74,7 @@ const BlogSingaporeComboPass = () => {
 
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("singapore")}
       title="Complete Guide to Singapore Combo Pass — Save Up to 40%"
       description="Everything about Singapore Combo Pass — best attractions, pricing, how to book, and tips. Save up to 40% on Universal Studios, Gardens by the Bay, Night Safari & more."
       heroImage={gardensBayNight}
