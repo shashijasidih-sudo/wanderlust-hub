@@ -7,9 +7,12 @@ import {
   Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList,
   BreadcrumbPage, BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import MidArticleActivities from "@/components/MidArticleActivities";
+
+type MidDestination = "thailand" | "singapore" | "bangkok" | "pattaya" | "phuket" | "krabi";
 
 interface BlogSection {
-  type: "paragraph" | "heading" | "subheading" | "list" | "image" | "cta" | "tip-box";
+  type: "paragraph" | "heading" | "subheading" | "list" | "image" | "cta" | "tip-box" | "mid-activities";
   content?: string;
   items?: string[];
   src?: string;
@@ -17,6 +20,8 @@ interface BlogSection {
   caption?: string;
   link?: string;
   linkText?: string;
+  destination?: MidDestination;
+  heading?: string;
 }
 
 interface RelatedActivity {
@@ -225,6 +230,14 @@ const BlogArticleLayout = ({
                       <div key={i} className="my-6 p-6 bg-secondary/50 border-l-4 border-primary rounded-r-xl">
                         <p className="text-foreground font-medium">{section.content}</p>
                       </div>
+                    );
+                  case "mid-activities":
+                    return (
+                      <MidArticleActivities
+                        key={i}
+                        destination={section.destination || "thailand"}
+                        heading={section.heading}
+                      />
                     );
                   default:
                     return null;
