@@ -69,6 +69,21 @@ const CITY_ORDER: { key: CityKey | "all"; label: string }[] = [
 ];
 
 const ThailandSmartGuides = () => {
+  const [activeCity, setActiveCity] = useState<CityKey | "all">("all");
+
+  const groupedByCity = useMemo(() => {
+    const rest = blogArticles.slice(1);
+    return CITY_ORDER.filter((c) => c.key !== "all").map((c) => ({
+      ...c,
+      articles: rest.filter((a) => a.city === c.key),
+    }));
+  }, []);
+
+  const visibleGroups =
+    activeCity === "all"
+      ? groupedByCity.filter((g) => g.articles.length > 0)
+      : groupedByCity.filter((g) => g.key === activeCity && g.articles.length > 0);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
