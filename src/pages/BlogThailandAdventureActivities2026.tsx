@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getBlogCityProps } from "@/data/blogCityLinks";
 import heroImg from "@/assets/blog/thailand-adventure-2026/hero-thailand-adventure.jpg";
@@ -18,28 +17,8 @@ const BlogThailandAdventureActivities2026 = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const pageTitle =
-    "Thailand Adventure Activities 2026: Ultimate Summer Trip Guide | Yellodae";
-  const metaDescription =
-    "Plan an epic 2026 summer trip with our Thailand adventure activities guide — scuba diving, jungle trekking, rock climbing, rafting, ziplining and more.";
-
   return (
-    <>
-      <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <link
-          rel="canonical"
-          href="https://www.yellodae.com/blog/thailand-adventure-activities-2026"
-        />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content={heroImg} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
-
-      <BlogArticleLayout
+    <BlogArticleLayout
         {...getBlogCityProps("thailand")}
         title="The Ultimate Guide to Adventure Activities in Thailand for an Exciting Summer Trip (2026 Edition)"
         description="Scuba diving, jungle trekking, rock climbing, rafting, ziplining and hidden gems — your complete 2026 summer guide to the best Thailand adventure activities."
