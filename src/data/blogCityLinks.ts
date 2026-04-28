@@ -7,7 +7,9 @@ type CityKey =
   | "krabi"
   | "singapore"
   | "dubai"
-  | "thailand";
+  | "thailand"
+  | "koh-samui"
+  | "chiang-mai";
 
 const cityDisplay: Record<CityKey, string> = {
   bangkok: "Bangkok",
@@ -17,6 +19,8 @@ const cityDisplay: Record<CityKey, string> = {
   singapore: "Singapore",
   dubai: "Dubai",
   thailand: "Thailand",
+  "koh-samui": "Koh Samui",
+  "chiang-mai": "Chiang Mai",
 };
 
 const cityHubLinks: Record<
@@ -51,10 +55,34 @@ const cityHubLinks: Record<
     thingsToDoLink: "/thailand",
     transfersLink: "/thailand/budget-airport-transfers",
   },
+  "koh-samui": {
+    thingsToDoLink: "/thailand/koh-samui/things-to-do",
+    transfersLink: "/thailand/budget-airport-transfers",
+  },
+  "chiang-mai": {
+    thingsToDoLink: "/thailand/chiang-mai/things-to-do",
+    transfersLink: "/thailand/chiang-mai/budget-airport-transfers",
+  },
+};
+
+// Smart similarity map — pulled when a city has no own activities yet.
+// Ordered by closeness (geographic / vibe / traveler intent).
+const similarityMap: Record<CityKey, CityKey[]> = {
+  bangkok: ["pattaya", "phuket", "krabi", "thailand"],
+  pattaya: ["bangkok", "phuket", "krabi", "thailand"],
+  phuket: ["krabi", "koh-samui", "bangkok", "thailand"],
+  krabi: ["phuket", "koh-samui", "bangkok", "thailand"],
+  "koh-samui": ["phuket", "krabi", "pattaya", "bangkok"],
+  "chiang-mai": ["bangkok", "pattaya", "phuket", "thailand"],
+  singapore: ["bangkok", "phuket", "thailand"],
+  dubai: ["singapore", "bangkok"],
+  thailand: ["bangkok", "phuket", "pattaya", "krabi"],
 };
 
 // Fallback activity sets for cities not in cityActivitiesData (Dubai/Thailand-wide)
-const extraActivities: Partial<Record<CityKey, { title: string; link: string; image?: string; price?: number }[]>> = {
+const extraActivities: Partial<
+  Record<CityKey, { title: string; link: string; image?: string; price?: number }[]>
+> = {
   dubai: [
     {
       title: "Burj Khalifa At The Top Tickets",
@@ -101,17 +129,43 @@ const extraActivities: Partial<Record<CityKey, { title: string; link: string; im
   ],
 };
 
+type Activity = { title: string; link: string; image?: string; price?: number };
+
+const normalize = (list: Array<{ title: string; slug?: string; link?: string; img?: string; image?: string; price?: number }>): Activity[] =>
+  list.map((a) => ({
+    title: a.title,
+    link: (a.slug || a.link) as string,
+    image: a.img || a.image,
+    price: a.price,
+  }));
+
+const getOwnActivities = (city: CityKey): Activity[] => {
+  const own = cityActivities[city];
+  if (own && own.length > 0) return normalize(own);
+  const extra = extraActivities[city];
+  if (extra && extra.length > 0) return normalize(extra);
+  return [];
+};
+
+// Smart fallback: pull from similar destinations when the city has nothing of its own.
+const getSimilarActivities = (city: CityKey, target = 6): Activity[] => {
+  const collected: Activity[] = [];
+  const seen = new Set<string>();
+  for (const sim of similarityMap[city] || []) {
+    for (const a of getOwnActivities(sim)) {
+      if (seen.has(a.link)) continue;
+      seen.add(a.link);
+      collected.push(a);
+      if (collected.length >= target) return collected;
+    }
+  }
+  return collected;
+};
+
 export const getBlogCityProps = (city: CityKey) => {
-  const acts = cityActivities[city] || [];
+  const own = getOwnActivities(city);
   const relatedActivities =
-    acts.length > 0
-      ? acts.slice(0, 6).map((a) => ({
-          title: a.title,
-          link: a.slug,
-          image: a.img,
-          price: a.price,
-        }))
-      : extraActivities[city] || [];
+    own.length > 0 ? own.slice(0, 6) : getSimilarActivities(city, 6);
 
   return {
     relatedActivities,
