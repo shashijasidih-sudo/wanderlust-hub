@@ -245,6 +245,14 @@ import Cart from "./pages/Cart";
 import BookingHistory from "./pages/BookingHistory";
 import QuickPay from "./pages/QuickPay";
 import AdminDashboard from "./pages/AdminDashboard";
+import KohSamui from "./pages/KohSamui";
+import ChiangMai from "./pages/ChiangMai";
+import ChiangMaiTransfers from "./pages/ChiangMaiTransfers";
+import KohSamuiWhiteOrchidLoyKrathongCruise from "./pages/KohSamuiWhiteOrchidLoyKrathongCruise";
+import KohSamuiFullMoonParty from "./pages/KohSamuiFullMoonParty";
+import ChiangMaiCityTempleTour from "./pages/ChiangMaiCityTempleTour";
+import ChiangMaiChiangRaiGoldenTriangle from "./pages/ChiangMaiChiangRaiGoldenTriangle";
+import ChiangMaiDoiInthanon from "./pages/ChiangMaiDoiInthanon";
 
 
 const queryClient = new QueryClient();
@@ -268,6 +276,14 @@ const App = () => (
             <Route path="/thailand/pattaya" element={<Pattaya />} />
             <Route path="/thailand/phuket" element={<Phuket />} />
             <Route path="/thailand/krabi" element={<Krabi />} />
+            <Route path="/thailand/koh-samui" element={<KohSamui />} />
+            <Route path="/thailand/chiang-mai" element={<ChiangMai />} />
+            <Route path="/thailand/chiang-mai/budget-airport-transfers" element={<ChiangMaiTransfers />} />
+            <Route path="/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival" element={<KohSamuiWhiteOrchidLoyKrathongCruise />} />
+            <Route path="/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" element={<KohSamuiFullMoonParty />} />
+            <Route path="/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer" element={<ChiangMaiCityTempleTour />} />
+            <Route path="/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip" element={<ChiangMaiChiangRaiGoldenTriangle />} />
+            <Route path="/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour" element={<ChiangMaiDoiInthanon />} />
             <Route path="/thailand/bangkok/safari-world" element={<SafariWorld />} />
             <Route path="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" element={<PhiPhiIsland />} />
             <Route path="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" element={<JamesBondIsland />} />
