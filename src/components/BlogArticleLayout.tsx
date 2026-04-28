@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, User, ArrowLeft, Share2 } from "lucide-react";
 import Header from "@/components/Header";
@@ -7,9 +8,12 @@ import {
   Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList,
   BreadcrumbPage, BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import MidArticleActivities from "@/components/MidArticleActivities";
+
+type MidDestination = "thailand" | "singapore" | "bangkok" | "pattaya" | "phuket" | "krabi";
 
 interface BlogSection {
-  type: "paragraph" | "heading" | "subheading" | "list" | "image" | "cta" | "tip-box";
+  type: "paragraph" | "heading" | "subheading" | "list" | "image" | "cta" | "tip-box" | "mid-activities";
   content?: string;
   items?: string[];
   src?: string;
@@ -17,6 +21,8 @@ interface BlogSection {
   caption?: string;
   link?: string;
   linkText?: string;
+  destination?: MidDestination;
+  heading?: string;
 }
 
 interface RelatedActivity {
@@ -65,6 +71,48 @@ const BlogArticleLayout = ({
       navigator.clipboard.writeText(window.location.href);
     }
   };
+
+  // SEO: title, meta description, canonical, Open Graph, Twitter
+  useEffect(() => {
+    const prevTitle = document.title;
+    const seoTitle = title.length > 60 ? `${title.slice(0, 57)}...` : title;
+    document.title = `${seoTitle} | Yellodae`;
+
+    const upsertMeta = (selector: string, attr: string, attrValue: string, content: string) => {
+      let meta = document.querySelector<HTMLMetaElement>(selector);
+      if (!meta) {
+        meta = document.createElement("meta");
+        meta.setAttribute(attr, attrValue);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute("content", content);
+    };
+
+    const trimmedDesc = description.length > 158 ? `${description.slice(0, 155)}...` : description;
+    upsertMeta('meta[name="description"]', "name", "description", trimmedDesc);
+    upsertMeta('meta[property="og:title"]', "property", "og:title", title);
+    upsertMeta('meta[property="og:description"]', "property", "og:description", trimmedDesc);
+    upsertMeta('meta[property="og:image"]', "property", "og:image", heroImage);
+    upsertMeta('meta[property="og:type"]', "property", "og:type", "article");
+    upsertMeta('meta[property="og:url"]', "property", "og:url", window.location.href);
+    upsertMeta('meta[name="twitter:card"]', "name", "twitter:card", "summary_large_image");
+    upsertMeta('meta[name="twitter:title"]', "name", "twitter:title", title);
+    upsertMeta('meta[name="twitter:description"]', "name", "twitter:description", trimmedDesc);
+    upsertMeta('meta[name="twitter:image"]', "name", "twitter:image", heroImage);
+    upsertMeta('meta[name="keywords"]', "name", "keywords", keywords.join(", "));
+
+    let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement("link");
+      link.setAttribute("rel", "canonical");
+      document.head.appendChild(link);
+    }
+    link.setAttribute("href", window.location.href.split("?")[0].split("#")[0]);
+
+    return () => {
+      document.title = prevTitle;
+    };
+  }, [title, description, heroImage, keywords]);
 
   // JSON-LD: BlogPosting + BreadcrumbList + ItemList of recommended activities + Place (city hub)
   const pageUrl = typeof window !== "undefined" ? window.location.href : "";
@@ -225,6 +273,14 @@ const BlogArticleLayout = ({
                       <div key={i} className="my-6 p-6 bg-secondary/50 border-l-4 border-primary rounded-r-xl">
                         <p className="text-foreground font-medium">{section.content}</p>
                       </div>
+                    );
+                  case "mid-activities":
+                    return (
+                      <MidArticleActivities
+                        key={i}
+                        destination={section.destination || "thailand"}
+                        heading={section.heading}
+                      />
                     );
                   default:
                     return null;
