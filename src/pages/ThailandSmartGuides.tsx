@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, User } from "lucide-react";
 import Header from "@/components/Header";
@@ -23,186 +24,66 @@ import phiPhiBoatImg from "@/assets/phi-phi-boat.jpeg";
 import CityExploreLinks from "@/components/CityExploreLinks";
 
 
-const blogArticles = [
-  {
-    id: -3,
-    title: "Complete Guide to Thailand Island Combos",
-    description: "Discover the best Thailand island combos — Phuket + Phi Phi, Krabi combos, Koh Samui packages. Plan your dream tropical escape.",
-    category: "Island Adventures",
-    image: phiPhiImg,
-    author: "Yellodae Travel Expert",
-    date: "Mar 3, 2026",
-    readTime: "10 min read",
-    slug: "/blog/thailand-island-combos"
-  },
-  {
-    id: -4,
-    title: "Complete Guide to Thailand Food Experiences",
-    description: "Discover the best Thailand food experiences — from Bangkok street food to Phuket seafood, floating markets to rooftop dining.",
-    category: "Food Tours",
-    image: bangkokSkywalkImg,
-    author: "Yellodae Travel Expert",
-    date: "Mar 5, 2026",
-    readTime: "11 min read",
-    slug: "/blog/thailand-food-experiences"
-  },
-  {
-    id: 0,
-    title: "Complete Guide to Airport Transfer Booking in Thailand",
-    description: "Everything about airport transfers in Thailand — routes, types, tips, and the best platform to book your Suvarnabhumi, Phuket, or Krabi transfer.",
-    category: "Thailand Transfers",
-    image: bangkokCityImg,
-    author: "Yellodae Travel Expert",
-    date: "Feb 19, 2026",
-    readTime: "8 min read",
-    slug: "/blog/airport-transfer-booking-thailand"
-  },
-  {
-    id: -1,
-    title: "Complete Guide to Phi Phi Island Tours in Thailand",
-    description: "Plan the perfect Phi Phi Island tour — speedboat, longtail, or luxury private tours. Maya Bay, snorkelling, and everything you need to know.",
-    category: "Island Adventures",
-    image: phiPhiBoatImg,
-    author: "Yellodae Island Expert",
-    date: "Feb 22, 2026",
-    readTime: "10 min read",
-    slug: "/blog/phi-phi-island-tours-thailand"
-  },
-  {
-    id: 1,
-    title: "Top 10 Beaches to Visit in Thailand",
-    description: "Discover the most stunning beaches from Phuket to Krabi, featuring crystal-clear waters and pristine white sand.",
-    category: "Beach Adventures",
-    image: phiPhiImg,
-    author: "Travel Expert",
-    date: "Nov 25, 2024",
-    readTime: "8 min read",
-    slug: "/thailand"
-  },
-  {
-    id: 2,
-    title: "A Complete Guide to Thai Street Food",
-    description: "From Pad Thai to Som Tam, explore the vibrant street food culture that makes Thailand a foodie paradise.",
-    category: "Food Tours",
-    image: bangkokSkywalkImg,
-    author: "Food Blogger",
-    date: "Nov 22, 2024",
-    readTime: "10 min read",
-    slug: "/thailand"
-  },
-  {
-    id: 3,
-    title: "Ancient Temples of Bangkok: A Spiritual Journey",
-    description: "Explore the magnificent temples of Bangkok including Wat Phra Kaew, Wat Arun, and Wat Pho.",
-    category: "Cultural Sites",
-    image: jamesBondImg,
-    author: "Culture Guide",
-    date: "Nov 20, 2024",
-    readTime: "12 min read",
-    slug: "/thailand"
-  },
-  {
-    id: 4,
-    title: "Island Hopping Guide: Phi Phi & Beyond",
-    description: "Plan the perfect island-hopping adventure through Thailand's most beautiful archipelagos.",
-    category: "Beach Adventures",
-    image: phiPhiImg,
-    author: "Island Explorer",
-    date: "Nov 18, 2024",
-    readTime: "9 min read",
-    slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer"
-  },
-  {
-    id: 5,
-    title: "Best Night Markets in Thailand",
-    description: "Navigate the buzzing night markets of Bangkok, Chiang Mai, and Phuket for authentic local experiences.",
-    category: "Food Tours",
-    image: massageImg,
-    author: "Night Owl",
-    date: "Nov 15, 2024",
-    readTime: "7 min read",
-    slug: "/thailand"
-  },
-  {
-    id: 6,
-    title: "Ethical Elephant Sanctuaries in Thailand",
-    description: "A guide to responsible elephant tourism and the best sanctuaries to visit in Thailand.",
-    category: "Wildlife",
-    image: elephantImg,
-    author: "Wildlife Expert",
-    date: "Nov 12, 2024",
-    readTime: "11 min read",
-    slug: "/thailand/phuket/elephant-safari"
-  },
-  {
-    id: 7,
-    title: "Krabi Rock Climbing: A Beginner's Guide",
-    description: "Everything you need to know about rock climbing at Railay Beach and Ton Sai in Krabi.",
-    category: "Beach Adventures",
-    image: jamesBondImg,
-    author: "Adventure Guide",
-    date: "Nov 10, 2024",
-    readTime: "8 min read",
-    slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer"
-  },
-  {
-    id: 8,
-    title: "Thai Cooking Classes: Learn From the Masters",
-    description: "Discover the best cooking classes in Thailand to master authentic Thai cuisine.",
-    category: "Food Tours",
-    image: bangkokSkywalkImg,
-    author: "Chef Marco",
-    date: "Nov 8, 2024",
-    readTime: "6 min read",
-    slug: "/thailand"
-  },
-  {
-    id: 9,
-    title: "Ayutthaya Day Trip: UNESCO Heritage Sites",
-    description: "Plan your perfect day trip to the ancient capital of Ayutthaya from Bangkok.",
-    category: "Cultural Sites",
-    image: tigerImg,
-    author: "History Buff",
-    date: "Nov 5, 2024",
-    readTime: "10 min read",
-    slug: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok"
-  },
-  {
-    id: 10,
-    title: "Phuket's Hidden Gems: Secret Beaches",
-    description: "Escape the crowds and discover Phuket's lesser-known beaches and hidden coves.",
-    category: "Beach Adventures",
-    image: phiPhiImg,
-    author: "Local Guide",
-    date: "Nov 2, 2024",
-    readTime: "7 min read",
-    slug: "/thailand/phuket"
-  },
-  {
-    id: 11,
-    title: "Traditional Thai Massage: Complete Guide",
-    description: "Everything you need to know about experiencing authentic Thai massage therapy.",
-    category: "Cultural Sites",
-    image: massageImg,
-    author: "Wellness Expert",
-    date: "Oct 30, 2024",
-    readTime: "9 min read",
-    slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok"
-  },
-  {
-    id: 12,
-    title: "Bangkok to Chiang Mai: The Ultimate Road Trip",
-    description: "Plan an epic road trip through Thailand's heartland with stops at hidden temples and local markets.",
-    category: "Cultural Sites",
-    image: elephantImg,
-    author: "Road Tripper",
-    date: "Oct 28, 2024",
-    readTime: "14 min read",
-    slug: "/thailand"
-  }
+type CityKey = "bangkok" | "phuket" | "krabi" | "pattaya" | "chiang-mai" | "multi-city";
+
+interface BlogArticle {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  image: string;
+  author: string;
+  date: string;
+  readTime: string;
+  slug: string;
+  city: CityKey;
+}
+
+const blogArticles: BlogArticle[] = [
+  { id: -3, title: "Complete Guide to Thailand Island Combos", description: "Discover the best Thailand island combos — Phuket + Phi Phi, Krabi combos, Koh Samui packages. Plan your dream tropical escape.", category: "Island Adventures", image: phiPhiImg, author: "Yellodae Travel Expert", date: "Mar 3, 2026", readTime: "10 min read", slug: "/blog/thailand-island-combos", city: "multi-city" },
+  { id: -4, title: "Complete Guide to Thailand Food Experiences", description: "Discover the best Thailand food experiences — from Bangkok street food to Phuket seafood, floating markets to rooftop dining.", category: "Food Tours", image: bangkokSkywalkImg, author: "Yellodae Travel Expert", date: "Mar 5, 2026", readTime: "11 min read", slug: "/blog/thailand-food-experiences", city: "multi-city" },
+  { id: 0, title: "Complete Guide to Airport Transfer Booking in Thailand", description: "Everything about airport transfers in Thailand — routes, types, tips, and the best platform to book your Suvarnabhumi, Phuket, or Krabi transfer.", category: "Thailand Transfers", image: bangkokCityImg, author: "Yellodae Travel Expert", date: "Feb 19, 2026", readTime: "8 min read", slug: "/blog/airport-transfer-booking-thailand", city: "multi-city" },
+  { id: -1, title: "Complete Guide to Phi Phi Island Tours in Thailand", description: "Plan the perfect Phi Phi Island tour — speedboat, longtail, or luxury private tours. Maya Bay, snorkelling, and everything you need to know.", category: "Island Adventures", image: phiPhiBoatImg, author: "Yellodae Island Expert", date: "Feb 22, 2026", readTime: "10 min read", slug: "/blog/phi-phi-island-tours-thailand", city: "phuket" },
+  { id: 1, title: "Top 10 Beaches to Visit in Thailand", description: "Discover the most stunning beaches from Phuket to Krabi, featuring crystal-clear waters and pristine white sand.", category: "Beach Adventures", image: phiPhiImg, author: "Travel Expert", date: "Nov 25, 2024", readTime: "8 min read", slug: "/thailand", city: "multi-city" },
+  { id: 2, title: "A Complete Guide to Thai Street Food", description: "From Pad Thai to Som Tam, explore the vibrant street food culture that makes Thailand a foodie paradise.", category: "Food Tours", image: bangkokSkywalkImg, author: "Food Blogger", date: "Nov 22, 2024", readTime: "10 min read", slug: "/thailand", city: "bangkok" },
+  { id: 3, title: "Ancient Temples of Bangkok: A Spiritual Journey", description: "Explore the magnificent temples of Bangkok including Wat Phra Kaew, Wat Arun, and Wat Pho.", category: "Cultural Sites", image: jamesBondImg, author: "Culture Guide", date: "Nov 20, 2024", readTime: "12 min read", slug: "/thailand", city: "bangkok" },
+  { id: 4, title: "Island Hopping Guide: Phi Phi & Beyond", description: "Plan the perfect island-hopping adventure through Thailand's most beautiful archipelagos.", category: "Beach Adventures", image: phiPhiImg, author: "Island Explorer", date: "Nov 18, 2024", readTime: "9 min read", slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer", city: "phuket" },
+  { id: 5, title: "Best Night Markets in Thailand", description: "Navigate the buzzing night markets of Bangkok, Chiang Mai, and Phuket for authentic local experiences.", category: "Food Tours", image: massageImg, author: "Night Owl", date: "Nov 15, 2024", readTime: "7 min read", slug: "/thailand", city: "multi-city" },
+  { id: 6, title: "Ethical Elephant Sanctuaries in Thailand", description: "A guide to responsible elephant tourism and the best sanctuaries to visit in Thailand.", category: "Wildlife", image: elephantImg, author: "Wildlife Expert", date: "Nov 12, 2024", readTime: "11 min read", slug: "/thailand/phuket/elephant-safari", city: "phuket" },
+  { id: 7, title: "Krabi Rock Climbing: A Beginner's Guide", description: "Everything you need to know about rock climbing at Railay Beach and Ton Sai in Krabi.", category: "Beach Adventures", image: jamesBondImg, author: "Adventure Guide", date: "Nov 10, 2024", readTime: "8 min read", slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer", city: "krabi" },
+  { id: 8, title: "Thai Cooking Classes: Learn From the Masters", description: "Discover the best cooking classes in Thailand to master authentic Thai cuisine.", category: "Food Tours", image: bangkokSkywalkImg, author: "Chef Marco", date: "Nov 8, 2024", readTime: "6 min read", slug: "/thailand", city: "bangkok" },
+  { id: 9, title: "Ayutthaya Day Trip: UNESCO Heritage Sites", description: "Plan your perfect day trip to the ancient capital of Ayutthaya from Bangkok.", category: "Cultural Sites", image: tigerImg, author: "History Buff", date: "Nov 5, 2024", readTime: "10 min read", slug: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok", city: "bangkok" },
+  { id: 10, title: "Phuket's Hidden Gems: Secret Beaches", description: "Escape the crowds and discover Phuket's lesser-known beaches and hidden coves.", category: "Beach Adventures", image: phiPhiImg, author: "Local Guide", date: "Nov 2, 2024", readTime: "7 min read", slug: "/thailand/phuket", city: "phuket" },
+  { id: 11, title: "Traditional Thai Massage: Complete Guide", description: "Everything you need to know about experiencing authentic Thai massage therapy.", category: "Cultural Sites", image: massageImg, author: "Wellness Expert", date: "Oct 30, 2024", readTime: "9 min read", slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok", city: "bangkok" },
+  { id: 12, title: "Bangkok to Chiang Mai: The Ultimate Road Trip", description: "Plan an epic road trip through Thailand's heartland with stops at hidden temples and local markets.", category: "Cultural Sites", image: elephantImg, author: "Road Tripper", date: "Oct 28, 2024", readTime: "14 min read", slug: "/thailand", city: "chiang-mai" }
+];
+
+const CITY_ORDER: { key: CityKey | "all"; label: string }[] = [
+  { key: "all", label: "All Cities" },
+  { key: "bangkok", label: "Bangkok" },
+  { key: "phuket", label: "Phuket" },
+  { key: "krabi", label: "Krabi" },
+  { key: "pattaya", label: "Pattaya" },
+  { key: "chiang-mai", label: "Chiang Mai" },
+  { key: "multi-city", label: "Multi-City & Thailand-Wide" },
 ];
 
 const ThailandSmartGuides = () => {
+  const [activeCity, setActiveCity] = useState<CityKey | "all">("all");
+
+  const groupedByCity = useMemo(() => {
+    const rest = blogArticles.slice(1);
+    return CITY_ORDER.filter((c) => c.key !== "all").map((c) => ({
+      ...c,
+      articles: rest.filter((a) => a.city === c.key),
+    }));
+  }, []);
+
+  const visibleGroups =
+    activeCity === "all"
+      ? groupedByCity.filter((g) => g.articles.length > 0)
+      : groupedByCity.filter((g) => g.key === activeCity && g.articles.length > 0);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -274,51 +155,68 @@ const ThailandSmartGuides = () => {
             </Link>
           </Card>
 
-          {/* Category Filters */}
-          <div className="flex flex-wrap gap-3 mb-8 justify-center">
-            <Button variant="default">All Guides</Button>
-            <Button variant="outline">Beach Adventures</Button>
-            <Button variant="outline">Food Tours</Button>
-            <Button variant="outline">Cultural Sites</Button>
-            <Button variant="outline">Wildlife</Button>
-          </div>
-
-          {/* Article Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {blogArticles.slice(1).map((article) => (
-              <Card key={article.id} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
-                <Link to={article.slug}>
-                  <div className="aspect-[16/10] overflow-hidden">
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <span className="text-primary font-semibold text-xs uppercase tracking-wide">{article.category}</span>
-                    <h3 className="font-bold text-lg mt-2 mb-3 text-foreground group-hover:text-primary transition-colors line-clamp-2">
-                      {article.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{article.description}</p>
-                    <div className="flex items-center justify-between text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="h-3 w-3" />
-                        {article.date}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
-                        {article.readTime}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 text-primary mt-4 text-sm font-medium group-hover:gap-3 transition-all">
-                      Read More <ArrowRight className="h-4 w-4" />
-                    </div>
-                  </CardContent>
-                </Link>
-              </Card>
+          {/* City Filters */}
+          <div className="flex flex-wrap gap-3 mb-10 justify-center">
+            {CITY_ORDER.map((c) => (
+              <Button
+                key={c.key}
+                variant={activeCity === c.key ? "default" : "outline"}
+                onClick={() => setActiveCity(c.key)}
+              >
+                {c.label}
+              </Button>
             ))}
           </div>
+
+          {/* City-grouped Article Sections */}
+          {visibleGroups.map((group) => (
+            <section key={group.key} className="mb-14">
+              <div className="flex items-end justify-between mb-6 border-b border-border pb-3">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                  {group.label}
+                </h2>
+                <span className="text-sm text-muted-foreground">
+                  {group.articles.length} {group.articles.length === 1 ? "guide" : "guides"}
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {group.articles.map((article) => (
+                  <Card key={article.id} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
+                    <Link to={article.slug}>
+                      <div className="aspect-[16/10] overflow-hidden">
+                        <img
+                          src={article.image}
+                          alt={article.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <CardContent className="p-6">
+                        <span className="text-primary font-semibold text-xs uppercase tracking-wide">{article.category}</span>
+                        <h3 className="font-bold text-lg mt-2 mb-3 text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                          {article.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{article.description}</p>
+                        <div className="flex items-center justify-between text-xs text-muted-foreground">
+                          <span className="flex items-center gap-1">
+                            <Calendar className="h-3 w-3" />
+                            {article.date}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Clock className="h-3 w-3" />
+                            {article.readTime}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2 text-primary mt-4 text-sm font-medium group-hover:gap-3 transition-all">
+                          Read More <ArrowRight className="h-4 w-4" />
+                        </div>
+                      </CardContent>
+                    </Link>
+                  </Card>
+                ))}
+              </div>
+            </section>
+          ))}
 
           {/* Newsletter Section */}
           <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-none">
