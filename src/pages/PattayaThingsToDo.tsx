@@ -41,6 +41,8 @@ import show69Pattaya1 from "@/assets/show69-pattaya-1.jpg";
 import show89Pattaya1 from "@/assets/show89-pattaya-1.jpg";
 import bigeyeShowPattaya1 from "@/assets/bigeye-show-pattaya-1.jpg";
 import dolphinShow1 from "@/assets/dolphin-show-1.jpg";
+import CityExploreLinks from "@/components/CityExploreLinks";
+
 
 type Category =
   | "City Tours & Sightseeing"
@@ -651,6 +653,7 @@ const PattayaThingsToDo = () => {
         </div>
       </section>
 
+      <CityExploreLinks city="pattaya" />
       <Footer />
       <FloatingWhatsApp />
     </div>

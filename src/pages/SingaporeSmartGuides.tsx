@@ -27,6 +27,8 @@ import cityTourImg from "@/assets/singapore-city-tour.jpg";
 import bigBusImg from "@/assets/singapore-big-bus.jpg";
 import gardensBayNightImg from "@/assets/singapore-gardens-bay-night-1.jpg";
 import merlionImg from "@/assets/singapore-merlion-night-1.jpg";
+import CityExploreLinks from "@/components/CityExploreLinks";
+
 
 const heroSlides = [
   { image: marinaBayImg, title: "Explore Singapore", subtitle: "A dazzling city-state where tradition meets innovation" },
@@ -393,6 +395,7 @@ const SingaporeSmartGuides = () => {
         </div>
       </main>
 
+      <CityExploreLinks city="singapore" />
       <Footer />
     </div>
   );

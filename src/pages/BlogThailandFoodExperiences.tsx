@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -73,6 +74,7 @@ const BlogThailandFoodExperiences = () => {
 
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("thailand")}
       title="Complete Guide to Thailand Food Experiences — Best Culinary Adventures 2026"
       description="Discover the best Thailand food experiences — from Bangkok street food to Phuket seafood, floating markets to rooftop dining. Plan your delicious Thai food journey."
       heroImage={floatingMarket}

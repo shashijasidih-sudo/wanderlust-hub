@@ -33,6 +33,8 @@ import krabiBeachWoman from "@/assets/krabi-beach-woman-1.jpg";
 import krabiSpeedboat from "@/assets/krabi-speedboat-1.jpg";
 import krabiBoatTour from "@/assets/krabi-boat-tour-1.jpg";
 import krabiTempleWoman from "@/assets/krabi-temple-woman-1.jpg";
+import CityExploreLinks from "@/components/CityExploreLinks";
+
 
 type Category =
   | "4 Islands & Day Tours"
@@ -485,6 +487,7 @@ const KrabiThingsToDo = () => {
         </div>
       </section>
 
+      <CityExploreLinks city="krabi" />
       <Footer />
       <FloatingWhatsApp />
     </div>

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -73,6 +74,7 @@ const BlogThailandIslandCombos = () => {
 
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("thailand")}
       title="Complete Guide to Thailand Island Combos — Best Tropical Getaways 2026"
       description="Discover the best Thailand island combos — Phuket + Phi Phi, Krabi combos, Koh Samui packages. Plan your dream tropical escape with expert tips and booking deals."
       heroImage={heroThailandIsland}

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -69,6 +70,7 @@ const BlogDubaiShoppingTours = () => {
 
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("dubai")}
       title="Dubai Shopping Tours Experience — A Complete Guide 2026"
       description="Complete guide to the best Dubai shopping tours — from Dubai Mall to Gold Souk, Mall of Emirates to Global Village. Plan your ultimate shopping experience in Dubai."
       heroImage={dubaiSkyline}

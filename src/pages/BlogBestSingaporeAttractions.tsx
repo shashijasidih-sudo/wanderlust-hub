@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -74,6 +75,7 @@ const BlogBestSingaporeAttractions = () => {
 
   return (
   <BlogArticleLayout
+    {...getBlogCityProps("singapore")}
     title="Best Singapore Attraction Tickets for Indian Travelers 2026"
     description="Complete guide to booking Singapore attraction tickets online — from Gardens by the Bay to Universal Studios. Best prices, instant confirmation, and tips for Indian travelers."
     heroImage={gardensBayNight}

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -75,6 +76,7 @@ const BlogTopThingsSingapore = () => {
 
   return (
   <BlogArticleLayout
+    {...getBlogCityProps("singapore")}
     title="Top Things to Do in Singapore — Complete 2026 Guide"
     description="Discover the best things to do in Singapore from Marina Bay to Sentosa. Activities, attractions, tours & tickets — all bookable online with instant confirmation."
     heroImage={marinaBay}

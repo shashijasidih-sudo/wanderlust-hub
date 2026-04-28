@@ -32,6 +32,8 @@ import ayutthayaSunset1 from "@/assets/ayutthaya-sunset-1.jpg";
 import cruiseNight1 from "@/assets/cruise-night-1.jpg";
 import cruiseNight2 from "@/assets/cruise-night-2.jpg";
 import bangkokCity1 from "@/assets/bangkok-city-1.jpg";
+import CityExploreLinks from "@/components/CityExploreLinks";
+
 
 type Category =
   | "Dinner Cruises"
@@ -691,6 +693,7 @@ const BangkokThingsToDo = () => {
         </div>
       </section>
 
+      <CityExploreLinks city="bangkok" />
       <Footer />
       <FloatingWhatsApp />
     </div>

@@ -38,6 +38,8 @@ import singaporeRiverSafari from "@/assets/singapore-river-safari.jpg";
 import singaporeUniversalStudios from "@/assets/singapore-universal-studios.jpg";
 import singaporeZoo from "@/assets/singapore-zoo.jpg";
 import singaporeBigBus from "@/assets/singapore-big-bus.jpg";
+import CityExploreLinks from "@/components/CityExploreLinks";
+
 
 type Category =
   | "Sentosa Island Attractions"
@@ -541,6 +543,7 @@ const SingaporeThingsToDo = () => {
         </div>
       </section>
 
+      <CityExploreLinks city="singapore" />
       <Footer />
       <FloatingWhatsApp />
     </div>

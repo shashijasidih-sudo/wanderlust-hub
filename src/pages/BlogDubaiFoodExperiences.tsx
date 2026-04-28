@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -69,6 +70,7 @@ const BlogDubaiFoodExperiences = () => {
 
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("dubai")}
       title="Complete Guide to Dubai Food Experiences — Best Culinary Adventures 2026"
       description="Discover the best Dubai food experiences — from shawarma to luxury dining, desert BBQ to traditional Emirati cuisine. Plan your unforgettable culinary journey in Dubai."
       heroImage={dubaiSkyline}

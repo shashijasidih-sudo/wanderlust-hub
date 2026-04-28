@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
@@ -62,6 +63,7 @@ const BurjActivityCards = () => {
 const BlogBurjKhalifaTickets = () => {
   return (
     <BlogArticleLayout
+    {...getBlogCityProps("dubai")}
       title="Complete Guide to Burj Khalifa Tickets in Dubai"
       description="Everything about Dubai Burj Khalifa tickets booking — ticket types, timings, step-by-step booking guide, best viewing times, and tips for visiting the world's tallest building."
       heroImage={heroImg}

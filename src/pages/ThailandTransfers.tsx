@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Plane, Car, Building2, MapPin } from "lucide-react";
 import TransferCard from "@/components/TransferCard";
+import CityExploreLinks from "@/components/CityExploreLinks";
+
 
 // Combined transfers from all cities
 const allTransfers = [
@@ -270,6 +272,7 @@ const ThailandTransfers = () => {
         </div>
       </main>
 
+      <CityExploreLinks city="thailand" />
       <Footer />
     </div>
   );
