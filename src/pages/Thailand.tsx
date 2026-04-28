@@ -42,6 +42,8 @@ import {
 import { Link } from "react-router-dom";
 import thailandNewsletterImg from "@/assets/thailand-newsletter.jpg";
 import { useCurrency } from "@/contexts/CurrencyContext";
+import CityExploreLinks from "@/components/CityExploreLinks";
+
 
 const activities = [
   // Bangkok Activities
@@ -701,6 +703,7 @@ const Thailand = () => {
         </div>
       </main>
 
+      <CityExploreLinks city="thailand" />
       <Footer />
     </div>
   );

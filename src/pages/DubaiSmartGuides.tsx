@@ -23,6 +23,8 @@ import aquariumImg from "@/assets/dubai-aquarium-fish-1.jpg";
 import dubaiSkylineSunset from "@/assets/dubai-skyline-sunset-1.jpg";
 import dubaiGlobalVillage2 from "@/assets/dubai-global-village-2.jpg";
 import dubaiDesertWoman from "@/assets/dubai-desert-woman-1.jpg";
+import CityExploreLinks from "@/components/CityExploreLinks";
+
 
 const heroSlides = [
   { image: dubaiSkylineImg, title: "Discover Dubai", subtitle: "From towering skyscrapers to ancient souks" },
@@ -411,6 +413,7 @@ const DubaiSmartGuides = () => {
         </div>
       </main>
 
+      <CityExploreLinks city="dubai" />
       <Footer />
     </div>
   );

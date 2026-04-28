@@ -36,6 +36,8 @@ import dolphinShow1 from "@/assets/dolphin-show-1.jpg";
 import phuketAtv from "@/assets/phuket-atv-1.jpg";
 import phuketCarnival from "@/assets/phuket-carnival-1.jpg";
 import phuketMuslimWoman from "@/assets/phuket-muslim-woman-hijab.jpg";
+import CityExploreLinks from "@/components/CityExploreLinks";
+
 
 type Category =
   | "Phi Phi & Island Tours"
@@ -519,6 +521,7 @@ const PhuketThingsToDo = () => {
         </div>
       </section>
 
+      <CityExploreLinks city="phuket" />
       <Footer />
       <FloatingWhatsApp />
     </div>

@@ -20,6 +20,8 @@ import massageImg from "@/assets/massage-1.jpg";
 import tigerImg from "@/assets/tiger-1.jpg";
 import bangkokCityImg from "@/assets/bangkok-city-1.jpg";
 import phiPhiBoatImg from "@/assets/phi-phi-boat.jpeg";
+import CityExploreLinks from "@/components/CityExploreLinks";
+
 
 const blogArticles = [
   {
@@ -338,6 +340,7 @@ const ThailandSmartGuides = () => {
         </div>
       </main>
 
+      <CityExploreLinks city="thailand" />
       <Footer />
     </div>
   );

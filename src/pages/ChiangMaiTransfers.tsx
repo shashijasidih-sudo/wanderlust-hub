@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import van from "@/assets/chiang-mai-transfer-van-1.jpg";
+import CityExploreLinks from "@/components/CityExploreLinks";
+
 
 const transfers = [
   {
@@ -62,6 +64,7 @@ const ChiangMaiTransfers = () => {
           ))}
         </div>
       </section>
+      <CityExploreLinks city="chiang-mai" />
       <Footer />
     </div>
   );
