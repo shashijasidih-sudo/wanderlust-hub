@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Compass, Plane, MapPin, BookOpen } from "lucide-react";
 
 interface CityExploreLinksProps {
-  city: "bangkok" | "pattaya" | "phuket" | "krabi" | "singapore";
+  city: "bangkok" | "pattaya" | "phuket" | "krabi" | "singapore" | "koh-samui" | "chiang-mai";
 }
 
 const cityConfig: Record<
@@ -55,6 +55,22 @@ const cityConfig: Record<
     cityHome: "/singapore",
     guideLabel: "Singapore Smart Guides",
     guideHref: "/singapore",
+  },
+  "koh-samui": {
+    name: "Koh Samui",
+    thingsToDo: "/thailand/koh-samui/things-to-do",
+    transfers: "/thailand/budget-airport-transfers",
+    cityHome: "/thailand/koh-samui",
+    guideLabel: "Thailand Smart Guides",
+    guideHref: "/thailand/destination-guides",
+  },
+  "chiang-mai": {
+    name: "Chiang Mai",
+    thingsToDo: "/thailand/chiang-mai/things-to-do",
+    transfers: "/thailand/chiang-mai/budget-airport-transfers",
+    cityHome: "/thailand/chiang-mai",
+    guideLabel: "Thailand Smart Guides",
+    guideHref: "/thailand/destination-guides",
   },
 };
 
