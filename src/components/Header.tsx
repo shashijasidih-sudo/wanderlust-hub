@@ -258,6 +258,18 @@ const Header = () => {
                       <span className="font-medium">Krabi</span>
                     </Link>
                   </DropdownMenuItem>
+                  <DropdownMenuItem asChild className={menuItemClass}>
+                    <Link to="/thailand/koh-samui">
+                      <Palmtree className="h-5 w-5 mr-3 text-primary" />
+                      <span className="font-medium">Koh Samui</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild className={menuItemClass}>
+                    <Link to="/thailand/chiang-mai">
+                      <TreePine className="h-5 w-5 mr-3 text-primary" />
+                      <span className="font-medium">Chiang Mai</span>
+                    </Link>
+                  </DropdownMenuItem>
                 </DropdownMenuSubContent>
               </DropdownMenuSub>
               <div className="h-px bg-border my-2" />
