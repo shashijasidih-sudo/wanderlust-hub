@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { MapPin, Users, Heart, Globe, Shield, Clock, Star, Sparkles, Award, Plane, Ticket, Car, Package, ShoppingBag, CheckCircle } from "lucide-react";
+import { MapPin, Users, Heart, Globe, Shield, Clock, Star, Sparkles, Award, Plane, Ticket, Car, Package, ShoppingBag, CheckCircle, Hotel, Compass, Briefcase, Instagram, Facebook, Mail } from "lucide-react";
 import bangkokImg from "@/assets/city-bangkok.jpg";
 import phuketImg from "@/assets/city-phuket.jpg";
 import krabiImg from "@/assets/city-krabi.jpg";
@@ -17,61 +17,61 @@ const cities = [
   { name: "Pattaya", image: pattayaImg, link: "/thailand/pattaya", country: "Thailand", tours: "35+ Tours" },
 ];
 
-const whyBookReasons = [
-  {
-    icon: Ticket,
-    title: "Affordable Activity Prices",
-    description: "Get competitive prices for Thailand activities, Singapore attraction tickets, and Dubai activities without paying for unnecessary inclusions."
-  },
-  {
-    icon: Package,
-    title: "Flexible Travel Planning",
-    description: "Choose individual activities instead of full packages and build your own travel itinerary."
-  },
-  {
-    icon: Car,
-    title: "Reliable Private Transfers",
-    description: "Book private airport transfers, hotel transfers, and intercity transfers for safe and comfortable transportation."
-  },
+const whatWeDo = [
   {
     icon: Globe,
-    title: "Customized Travel Packages",
-    description: "Our experts design customized international tour packages that match your budget, travel style, and interests."
+    title: "Customized International & Domestic Packages",
+    description: "End-to-end customized international tour packages and domestic holiday experiences tailored to your travel style."
   },
   {
-    icon: ShoppingBag,
-    title: "Travel Essentials Guidance",
-    description: "We recommend travel essentials for international travel that help you pack smarter and travel more comfortably."
+    icon: Users,
+    title: "Couples, Families & Group Holidays",
+    description: "Holiday packages designed for couples, families, and groups with flexible itineraries and trusted partners."
   },
   {
-    icon: Shield,
-    title: "Trust & Certifications",
-    description: "NIDHI affiliated and Ministry of Tourism approved, ensuring professional standards and reliable travel services."
+    icon: Heart,
+    title: "Honeymoon & Romantic Getaways",
+    description: "Curated honeymoon tour packages and romantic getaways across Thailand, Andaman, Bali, Maldives and more."
+  },
+  {
+    icon: Sparkles,
+    title: "Budget-Friendly & Luxury Travel",
+    description: "From smart budget-friendly travel packages to premium luxury travel experiences — your trip, your way."
+  },
+  {
+    icon: Hotel,
+    title: "Hotels, Transfers & Guided Tours",
+    description: "Hotel bookings, private airport transfers, and expertly guided tours bundled into one seamless experience."
+  },
+  {
+    icon: Compass,
+    title: "Personalized Itinerary Planning",
+    description: "Talk to our travel consultants for personalized itinerary planning and one-on-one travel consultation."
   }
 ];
 
 const stats = [
   { number: "10,000+", label: "Happy Travelers" },
-  { number: "200+", label: "Curated Tours" },
-  { number: "3", label: "Countries" },
+  { number: "500+", label: "Tour Packages" },
+  { number: "20+", label: "Destinations" },
   { number: "4.9", label: "Average Rating", icon: Star }
 ];
 
 const faqs = [
-  { q: "Can I book only activities instead of full tour packages?", a: "Yes. Yellodae allows travelers to book individual activities and attraction tickets instead of buying full tour packages." },
-  { q: "Do you offer Thailand activities booking online?", a: "Yes. You can easily complete Thailand activities booking directly through Yellodae." },
-  { q: "Can I book Singapore attraction tickets before my trip?", a: "Yes. Yellodae allows travelers to pre-book Singapore attraction tickets to avoid queues and get better prices." },
-  { q: "Do you offer Dubai activities online booking?", a: "Yes. We provide convenient Dubai activities online booking for many popular attractions and experiences." },
-  { q: "Do you provide airport transfers?", a: "Yes. We offer private airport transfers, hotel transfers, and intercity transportation." },
-  { q: "Do you create customized tour packages?", a: "Yes. Our team designs customized international tour packages tailored to your travel preferences and budget." }
+  { q: "What kind of travel packages does Yellodae Trails offer?", a: "Yellodae Trails offers customized international tour packages, domestic holiday packages, honeymoon getaways, family trips, and budget-friendly travel experiences across destinations like Thailand, Singapore, Vietnam, Andaman, and South Korea." },
+  { q: "Can I customize my tour package with Yellodae Trails?", a: "Yes. Every itinerary on yellodae.com can be fully customized — from hotels and transfers to activities and duration — to match your budget, travel style, and interests." },
+  { q: "Do you offer Thailand and Singapore tour packages?", a: "Absolutely. Thailand tour packages and Singapore holiday packages are among our most popular offerings, including activities, attraction tickets, transfers, and hotel bookings." },
+  { q: "Do you arrange Andaman honeymoon and Vietnam travel packages?", a: "Yes. We design Andaman honeymoon packages and Vietnam travel experiences with handpicked stays, sightseeing, and private transfers for a stress-free journey." },
+  { q: "Can I book hotels and airport transfers separately?", a: "Yes. Beyond full packages, you can book hotels, private airport transfers, and guided tours individually through Yellodae Trails." },
+  { q: "How do I book a tour with Yellodae Trails?", a: "You can browse and book travel packages online at yellodae.com or speak with our travel experts for personalized itinerary planning and travel consultation." }
 ];
 
 const AboutUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "About Yellodae | Affordable Thailand, Singapore & Dubai Tours";
+    document.title = "About Yellodae Trails | Smart Travel, Customized Tour Packages";
     const metaDesc = document.querySelector('meta[name="description"]');
-    const descContent = "Yellodae is a smart travel platform for Indian travelers. Book affordable activities, attraction tickets & private transfers in Thailand, Singapore & Dubai. NIDHI affiliated & Ministry of Tourism approved.";
+    const descContent = "Yellodae Trails is a smart travel company in India offering customized international tour packages, domestic holidays, honeymoon trips & travel consultation via yellodae.com.";
     if (metaDesc) {
       metaDesc.setAttribute("content", descContent);
     } else {
@@ -104,7 +104,7 @@ const AboutUs = () => {
               <span className="text-primary">Yello</span>dae
             </h1>
             <p className="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto leading-relaxed">
-              Your Smart Travel Platform for Affordable International Experiences
+              Smart Travel · Customized Tour Packages · Curated Holidays Across India & the World
             </p>
           </div>
         </div>
@@ -141,11 +141,11 @@ const AboutUs = () => {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
               <div className="relative">
-                <img src={heroTemple} alt="Thailand Temple" className="w-full h-[400px] object-cover rounded-2xl shadow-xl" />
+                <img src={heroTemple} alt="Yellodae Trails customized tour packages" className="w-full h-[400px] object-cover rounded-2xl shadow-xl" />
                 <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
                   <Plane className="w-8 h-8 mb-2" />
-                  <p className="font-bold text-lg">3 Countries</p>
-                  <p className="text-sm opacity-90">Thailand · Singapore · Dubai</p>
+                  <p className="font-bold text-lg">20+ Destinations</p>
+                  <p className="text-sm opacity-90">India · Thailand · Singapore · Vietnam · Korea</p>
                 </div>
               </div>
             </div>
@@ -156,43 +156,40 @@ const AboutUs = () => {
                 Our Story
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
-                Explore More, <span className="text-primary">Spend Less</span>, Plan <span className="text-primary">Smarter</span>
+                Smart Travel, <span className="text-primary">Personalized</span> for You
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                <span className="text-primary font-bold text-xl">Yellodae</span> is a smart travel platform created to help Indian travelers book affordable international activities, attraction tickets, and private transfers in top destinations like <strong className="text-foreground">Thailand, Singapore, and Dubai</strong>.
+                At <span className="text-primary font-bold text-xl">Yellodae Trails</span>, we believe in <strong className="text-foreground">smart travel</strong> — more than just visiting destinations, it's about discovering cultures, creating memories, and experiencing the world in a way that feels uniquely yours. Through our digital platform, <strong className="text-foreground">yellodae.com</strong>, we offer customized travel packages, international tour packages, and domestic holiday experiences designed for modern travelers.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                We specialize in <strong className="text-foreground">Thailand activities booking</strong>, <strong className="text-foreground">Singapore attraction tickets</strong>, and <strong className="text-foreground">Dubai activities online booking</strong>, allowing travelers to easily plan their experiences before arriving at their destination.
+                Founded with a passion for exploration and a commitment to excellence, Yellodae Trails is a growing <strong className="text-foreground">travel company in India</strong> focused on delivering seamless and personalized journeys. We simplify travel planning, making it easy for you to book trips, design itineraries, and explore the best destinations across the world.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Instead of purchasing expensive bundled packages, Yellodae allows you to <strong className="text-foreground">select only the activities you want</strong> and create your own personalized travel itinerary.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                In addition to activities, we provide <strong className="text-foreground">reliable private airport transfers, hotel transfers, and intercity transportation</strong>, ensuring a smooth and comfortable travel experience.
+                Whether you're looking for <strong className="text-foreground">Thailand tour packages</strong>, <strong className="text-foreground">Singapore holiday packages</strong>, <strong className="text-foreground">Vietnam travel experiences</strong>, <strong className="text-foreground">Andaman honeymoon packages</strong>, or unique destinations like <strong className="text-foreground">South Korea tours</strong>, our expert team ensures every detail is perfectly planned.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Book With Yellodae */}
+      {/* What We Do */}
       <section className="py-20 px-4 bg-gradient-to-b from-muted/30 to-muted/60">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <Sparkles className="w-4 h-4" />
-              Why Choose Us
+              <Briefcase className="w-4 h-4" />
+              What We Do
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Why Book With <span className="text-primary">Yellodae</span>
+              End-to-End <span className="text-primary">Travel Solutions</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Smart, affordable, and flexible travel planning for Indian travelers exploring the world.
+              At Yellodae Trails, we specialize in custom travel planning services that go beyond standard offerings — discover, compare, and book the best travel packages online with expert assistance.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyBookReasons.map((reason, index) => (
+            {whatWeDo.map((reason, index) => (
               <div 
                 key={index} 
                 className="group relative bg-background rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50 hover:border-primary/30 hover:-translate-y-2"
@@ -258,7 +255,7 @@ const AboutUs = () => {
           <div className="inline-flex items-center gap-4 bg-muted/50 px-6 py-4 rounded-full">
             <Shield className="w-6 h-6 text-green-600" />
             <span className="text-muted-foreground">
-              NIDHI Affiliated &amp; Ministry of Tourism Approved — Trusted Travel Service Provider
+              Trusted Travel Service Provider — Personalized Planning, Transparent Pricing & 24/7 Support
             </span>
           </div>
         </div>
@@ -290,22 +287,37 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Connect With Us / CTA */}
       <section className="py-20 px-4 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <Globe className="w-4 h-4" />
+            Connect With Us
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Ready to Start Your Journey?
+            Start Your Journey with <span className="text-primary">yellodae.com</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our mission is simple — help travelers explore more while spending less and planning smarter. Your next adventure awaits!
+            Follow Yellodae Trails on social media for travel inspiration, exclusive offers, and updates on the latest tour packages and travel deals.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link to="/thailand" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl">
-              Explore Thailand <MapPin className="w-5 h-5" />
+              Explore Tour Packages <MapPin className="w-5 h-5" />
             </Link>
             <Link to="/contact-us" className="inline-flex items-center justify-center gap-2 bg-background text-foreground px-8 py-4 rounded-full font-semibold border-2 border-border hover:border-primary transition-colors">
-              Contact Us
+              Talk to Our Experts
             </Link>
+          </div>
+          <div className="flex items-center justify-center gap-4">
+            <a href="https://www.instagram.com/yellodaetrails" target="_blank" rel="noopener noreferrer" aria-label="Yellodae Trails on Instagram" className="w-11 h-11 rounded-full bg-background border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a href="https://www.facebook.com/yellodaetrails" target="_blank" rel="noopener noreferrer" aria-label="Yellodae Trails on Facebook" className="w-11 h-11 rounded-full bg-background border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a href="mailto:info@yellodae.com" aria-label="Email Yellodae Trails" className="w-11 h-11 rounded-full bg-background border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+              <Mail className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>
