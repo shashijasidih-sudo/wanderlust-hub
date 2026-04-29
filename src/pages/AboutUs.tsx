@@ -85,10 +85,13 @@ const AboutUs = () => {
     return () => { document.title = "Yellodae"; };
   }, []);
 
+  const faqJsonLd = faqs.map((f) => ({ question: f.q, answer: f.a }));
+
   return (
     <div className="min-h-screen bg-background">
+      <FaqJsonLd faqs={faqJsonLd} id="about-us-faq-jsonld" />
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[500px] overflow-hidden">
         <div className="absolute inset-0">
