@@ -255,7 +255,7 @@ const AboutUs = () => {
           <div className="inline-flex items-center gap-4 bg-muted/50 px-6 py-4 rounded-full">
             <Shield className="w-6 h-6 text-green-600" />
             <span className="text-muted-foreground">
-              NIDHI Affiliated &amp; Ministry of Tourism Approved — Trusted Travel Service Provider
+              Trusted Travel Service Provider — Personalized Planning, Transparent Pricing & 24/7 Support
             </span>
           </div>
         </div>
