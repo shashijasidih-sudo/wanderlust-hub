@@ -287,22 +287,37 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Connect With Us / CTA */}
       <section className="py-20 px-4 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <Globe className="w-4 h-4" />
+            Connect With Us
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Ready to Start Your Journey?
+            Start Your Journey with <span className="text-primary">yellodae.com</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our mission is simple — help travelers explore more while spending less and planning smarter. Your next adventure awaits!
+            Follow Yellodae Trails on social media for travel inspiration, exclusive offers, and updates on the latest tour packages and travel deals.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link to="/thailand" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl">
-              Explore Thailand <MapPin className="w-5 h-5" />
+              Explore Tour Packages <MapPin className="w-5 h-5" />
             </Link>
             <Link to="/contact-us" className="inline-flex items-center justify-center gap-2 bg-background text-foreground px-8 py-4 rounded-full font-semibold border-2 border-border hover:border-primary transition-colors">
-              Contact Us
+              Talk to Our Experts
             </Link>
+          </div>
+          <div className="flex items-center justify-center gap-4">
+            <a href="https://www.instagram.com/yellodaetrails" target="_blank" rel="noopener noreferrer" aria-label="Yellodae Trails on Instagram" className="w-11 h-11 rounded-full bg-background border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a href="https://www.facebook.com/yellodaetrails" target="_blank" rel="noopener noreferrer" aria-label="Yellodae Trails on Facebook" className="w-11 h-11 rounded-full bg-background border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a href="mailto:info@yellodae.com" aria-label="Email Yellodae Trails" className="w-11 h-11 rounded-full bg-background border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+              <Mail className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>
