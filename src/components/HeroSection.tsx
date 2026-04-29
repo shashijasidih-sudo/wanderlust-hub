@@ -135,57 +135,50 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        {/* Categories */}
-        <div className="mt-8 flex flex-wrap gap-3 justify-center animate-fade-in">
-          <Button 
-            variant="secondary" 
-            className="bg-white/90 hover:bg-white backdrop-blur-sm"
-            onClick={() => navigate("/thailand/bangkok/things-to-do")}
-          >
-            Things to Do in Bangkok
-          </Button>
-          <Button 
-            variant="secondary" 
-            className="bg-white/90 hover:bg-white backdrop-blur-sm"
-            onClick={() => navigate("/thailand/pattaya/things-to-do")}
-          >
-            Things to Do in Pattaya
-          </Button>
-          <Button 
-            variant="secondary" 
-            className="bg-white/90 hover:bg-white backdrop-blur-sm"
-            onClick={() => navigate("/thailand/phuket/things-to-do")}
-          >
-            Things to Do in Phuket
-          </Button>
-          <Button 
-            variant="secondary" 
-            className="bg-white/90 hover:bg-white backdrop-blur-sm"
-            onClick={() => navigate("/thailand/krabi/things-to-do")}
-          >
-            Things to Do in Krabi
-          </Button>
-          <Button 
-            variant="secondary" 
-            className="bg-white/90 hover:bg-white backdrop-blur-sm"
-            onClick={() => navigate("/singapore/things-to-do")}
-          >
-            Things to Do in Singapore
-          </Button>
-          <Button 
-            variant="secondary" 
-            className="bg-white/90 hover:bg-white backdrop-blur-sm"
-            onClick={() => navigate("/thailand/budget-airport-transfers")}
-          >
-            Thailand Transfers
-          </Button>
-          <Button 
-            variant="secondary" 
-            className="bg-white/90 hover:bg-white backdrop-blur-sm"
-            onClick={() => navigate("/singapore/budget-airport-transfers")}
-          >
-            Singapore Transfers
-          </Button>
+        {/* Quick destination shortcuts */}
+        <div className="mt-8 animate-fade-in">
+          {/* Mobile-only label */}
+          <p className="text-center text-xs uppercase tracking-widest text-white/80 mb-3 md:hidden">
+            Things to do in
+          </p>
+          <div className="flex flex-wrap gap-2 md:gap-3 justify-center">
+            {[
+              { mobile: "Bangkok", desktop: "Things to Do in Bangkok", to: "/thailand/bangkok/things-to-do" },
+              { mobile: "Pattaya", desktop: "Things to Do in Pattaya", to: "/thailand/pattaya/things-to-do" },
+              { mobile: "Phuket", desktop: "Things to Do in Phuket", to: "/thailand/phuket/things-to-do" },
+              { mobile: "Krabi", desktop: "Things to Do in Krabi", to: "/thailand/krabi/things-to-do" },
+              { mobile: "Singapore", desktop: "Things to Do in Singapore", to: "/singapore/things-to-do" },
+            ].map((item) => (
+              <Button
+                key={item.to}
+                variant="secondary"
+                size="sm"
+                className="bg-white/90 hover:bg-white backdrop-blur-sm rounded-full text-xs md:text-sm h-8 md:h-10 px-3 md:px-4"
+                onClick={() => navigate(item.to)}
+              >
+                <span className="md:hidden">{item.mobile}</span>
+                <span className="hidden md:inline">{item.desktop}</span>
+              </Button>
+            ))}
+            <Button
+              variant="secondary"
+              size="sm"
+              className="bg-white/90 hover:bg-white backdrop-blur-sm rounded-full text-xs md:text-sm h-8 md:h-10 px-3 md:px-4"
+              onClick={() => navigate("/thailand/budget-airport-transfers")}
+            >
+              <span className="md:hidden">TH Transfers</span>
+              <span className="hidden md:inline">Thailand Transfers</span>
+            </Button>
+            <Button
+              variant="secondary"
+              size="sm"
+              className="bg-white/90 hover:bg-white backdrop-blur-sm rounded-full text-xs md:text-sm h-8 md:h-10 px-3 md:px-4"
+              onClick={() => navigate("/singapore/budget-airport-transfers")}
+            >
+              <span className="md:hidden">SG Transfers</span>
+              <span className="hidden md:inline">Singapore Transfers</span>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
