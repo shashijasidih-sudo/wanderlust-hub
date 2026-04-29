@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PlanTripCTA from "@/components/PlanTripCTA";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { MapPin, Users, Heart, Globe, Shield, Clock, Star, Sparkles, Award, Plane, Ticket, Car, Package, ShoppingBag, CheckCircle, Hotel, Compass, Briefcase, Instagram, Facebook, Mail } from "lucide-react";
 import bangkokImg from "@/assets/city-bangkok.jpg";
 import phuketImg from "@/assets/city-phuket.jpg";
@@ -84,10 +85,13 @@ const AboutUs = () => {
     return () => { document.title = "Yellodae"; };
   }, []);
 
+  const faqJsonLd = faqs.map((f) => ({ question: f.q, answer: f.a }));
+
   return (
     <div className="min-h-screen bg-background">
+      <FaqJsonLd faqs={faqJsonLd} id="about-us-faq-jsonld" />
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[500px] overflow-hidden">
         <div className="absolute inset-0">
