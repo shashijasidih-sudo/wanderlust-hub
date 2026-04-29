@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,7 +9,7 @@ import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { toast } from "sonner";
 
 const ContactUs = () => {
-  useEffect(() => { window.scrollTo(0, 0); }, []);
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -17,6 +18,49 @@ const ContactUs = () => {
     subject: "",
     message: ""
   });
+
+  // Prefill from query params (e.g. coming from About Us "Plan My Trip" CTA)
+  useEffect(() => {
+    const name = searchParams.get("name") ?? "";
+    const email = searchParams.get("email") ?? "";
+    const phone = searchParams.get("phone") ?? "";
+    const subject = searchParams.get("subject") ?? "";
+    const interests = searchParams.get("interests") ?? "";
+    const travelDate = searchParams.get("travelDate") ?? "";
+
+    const hasAny = name || email || phone || subject || interests || travelDate;
+    if (!hasAny) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    const [firstName, ...rest] = name.trim().split(/\s+/);
+    const lastName = rest.join(" ");
+
+    const interestList = interests ? interests.split(",").map((i) => i.trim()).filter(Boolean) : [];
+    const messageLines = [
+      interestList.length ? `Travel interests: ${interestList.join(", ")}` : "",
+      travelDate ? `Approx. travel date: ${travelDate}` : "",
+      "",
+      "Please share a customised itinerary, recommended hotels and pricing. Thank you!",
+    ].filter(Boolean);
+
+    setFormData({
+      firstName: firstName || "",
+      lastName: lastName || "",
+      email,
+      phone,
+      subject: subject || (interestList.length ? `Trip enquiry: ${interestList.join(", ")}` : ""),
+      message: messageLines.join("\n"),
+    });
+
+    // Scroll to the form
+    requestAnimationFrame(() => {
+      const el = document.getElementById("contact-form");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      else window.scrollTo(0, 0);
+    });
+  }, [searchParams]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
