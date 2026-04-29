@@ -521,6 +521,7 @@ const SingaporeThingsToDo = () => {
             <Button asChild variant="default"><Link to="/singapore">Singapore City Guide</Link></Button>
             <Button asChild variant="outline"><Link to="/singapore/budget-airport-transfers">Singapore Transfers</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/bangkok/things-to-do">Things to Do in Bangkok</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do">Things to Do in Chiang Mai</Link></Button>
             <Button asChild variant="outline"><Link to="/singapore/destination-guides">Singapore Smart Guides</Link></Button>
           </div>
         </div>

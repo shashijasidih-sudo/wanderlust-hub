@@ -32,6 +32,7 @@ import BangkokThingsToDo from "./pages/BangkokThingsToDo";
 import PattayaThingsToDo from "./pages/PattayaThingsToDo";
 import PhuketThingsToDo from "./pages/PhuketThingsToDo";
 import KrabiThingsToDo from "./pages/KrabiThingsToDo";
+import ChiangMaiThingsToDo from "./pages/ChiangMaiThingsToDo";
 import DhowCruise from "./pages/DhowCruise";
 import AtlantisPalm from "./pages/AtlantisPalm";
 import MassageCoupons from "./pages/MassageCoupons";
@@ -390,6 +391,7 @@ const App = () => (
             <Route path="/thailand/krabi/four-islands-speedboat" element={<Navigate to="/thailand/krabi/4-island-tour-speedboat-with-transfer" replace />} />
             {/* Krabi hub page */}
             <Route path="/thailand/krabi/things-to-do" element={<KrabiThingsToDo />} />
+            <Route path="/thailand/chiang-mai/things-to-do" element={<ChiangMaiThingsToDo />} />
             <Route path="/thailand/esim-ais" element={<EsimThailandAis />} />
             <Route path="/thailand/destination-guides" element={<ThailandSmartGuides />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
