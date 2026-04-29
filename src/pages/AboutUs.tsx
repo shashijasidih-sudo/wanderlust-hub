@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { MapPin, Users, Heart, Globe, Shield, Clock, Star, Sparkles, Award, Plane, Ticket, Car, Package, ShoppingBag, CheckCircle } from "lucide-react";
+import { MapPin, Users, Heart, Globe, Shield, Clock, Star, Sparkles, Award, Plane, Ticket, Car, Package, ShoppingBag, CheckCircle, Hotel, Compass, Briefcase, Instagram, Facebook, Mail } from "lucide-react";
 import bangkokImg from "@/assets/city-bangkok.jpg";
 import phuketImg from "@/assets/city-phuket.jpg";
 import krabiImg from "@/assets/city-krabi.jpg";
@@ -17,61 +17,61 @@ const cities = [
   { name: "Pattaya", image: pattayaImg, link: "/thailand/pattaya", country: "Thailand", tours: "35+ Tours" },
 ];
 
-const whyBookReasons = [
-  {
-    icon: Ticket,
-    title: "Affordable Activity Prices",
-    description: "Get competitive prices for Thailand activities, Singapore attraction tickets, and Dubai activities without paying for unnecessary inclusions."
-  },
-  {
-    icon: Package,
-    title: "Flexible Travel Planning",
-    description: "Choose individual activities instead of full packages and build your own travel itinerary."
-  },
-  {
-    icon: Car,
-    title: "Reliable Private Transfers",
-    description: "Book private airport transfers, hotel transfers, and intercity transfers for safe and comfortable transportation."
-  },
+const whatWeDo = [
   {
     icon: Globe,
-    title: "Customized Travel Packages",
-    description: "Our experts design customized international tour packages that match your budget, travel style, and interests."
+    title: "Customized International & Domestic Packages",
+    description: "End-to-end customized international tour packages and domestic holiday experiences tailored to your travel style."
   },
   {
-    icon: ShoppingBag,
-    title: "Travel Essentials Guidance",
-    description: "We recommend travel essentials for international travel that help you pack smarter and travel more comfortably."
+    icon: Users,
+    title: "Couples, Families & Group Holidays",
+    description: "Holiday packages designed for couples, families, and groups with flexible itineraries and trusted partners."
   },
   {
-    icon: Shield,
-    title: "Trust & Certifications",
-    description: "NIDHI affiliated and Ministry of Tourism approved, ensuring professional standards and reliable travel services."
+    icon: Heart,
+    title: "Honeymoon & Romantic Getaways",
+    description: "Curated honeymoon tour packages and romantic getaways across Thailand, Andaman, Bali, Maldives and more."
+  },
+  {
+    icon: Sparkles,
+    title: "Budget-Friendly & Luxury Travel",
+    description: "From smart budget-friendly travel packages to premium luxury travel experiences — your trip, your way."
+  },
+  {
+    icon: Hotel,
+    title: "Hotels, Transfers & Guided Tours",
+    description: "Hotel bookings, private airport transfers, and expertly guided tours bundled into one seamless experience."
+  },
+  {
+    icon: Compass,
+    title: "Personalized Itinerary Planning",
+    description: "Talk to our travel consultants for personalized itinerary planning and one-on-one travel consultation."
   }
 ];
 
 const stats = [
   { number: "10,000+", label: "Happy Travelers" },
-  { number: "200+", label: "Curated Tours" },
-  { number: "3", label: "Countries" },
+  { number: "500+", label: "Tour Packages" },
+  { number: "20+", label: "Destinations" },
   { number: "4.9", label: "Average Rating", icon: Star }
 ];
 
 const faqs = [
-  { q: "Can I book only activities instead of full tour packages?", a: "Yes. Yellodae allows travelers to book individual activities and attraction tickets instead of buying full tour packages." },
-  { q: "Do you offer Thailand activities booking online?", a: "Yes. You can easily complete Thailand activities booking directly through Yellodae." },
-  { q: "Can I book Singapore attraction tickets before my trip?", a: "Yes. Yellodae allows travelers to pre-book Singapore attraction tickets to avoid queues and get better prices." },
-  { q: "Do you offer Dubai activities online booking?", a: "Yes. We provide convenient Dubai activities online booking for many popular attractions and experiences." },
-  { q: "Do you provide airport transfers?", a: "Yes. We offer private airport transfers, hotel transfers, and intercity transportation." },
-  { q: "Do you create customized tour packages?", a: "Yes. Our team designs customized international tour packages tailored to your travel preferences and budget." }
+  { q: "What kind of travel packages does Yellodae Trails offer?", a: "Yellodae Trails offers customized international tour packages, domestic holiday packages, honeymoon getaways, family trips, and budget-friendly travel experiences across destinations like Thailand, Singapore, Vietnam, Andaman, and South Korea." },
+  { q: "Can I customize my tour package with Yellodae Trails?", a: "Yes. Every itinerary on yellodae.com can be fully customized — from hotels and transfers to activities and duration — to match your budget, travel style, and interests." },
+  { q: "Do you offer Thailand and Singapore tour packages?", a: "Absolutely. Thailand tour packages and Singapore holiday packages are among our most popular offerings, including activities, attraction tickets, transfers, and hotel bookings." },
+  { q: "Do you arrange Andaman honeymoon and Vietnam travel packages?", a: "Yes. We design Andaman honeymoon packages and Vietnam travel experiences with handpicked stays, sightseeing, and private transfers for a stress-free journey." },
+  { q: "Can I book hotels and airport transfers separately?", a: "Yes. Beyond full packages, you can book hotels, private airport transfers, and guided tours individually through Yellodae Trails." },
+  { q: "How do I book a tour with Yellodae Trails?", a: "You can browse and book travel packages online at yellodae.com or speak with our travel experts for personalized itinerary planning and travel consultation." }
 ];
 
 const AboutUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "About Yellodae | Affordable Thailand, Singapore & Dubai Tours";
+    document.title = "About Yellodae Trails | Smart Travel, Customized Tour Packages";
     const metaDesc = document.querySelector('meta[name="description"]');
-    const descContent = "Yellodae is a smart travel platform for Indian travelers. Book affordable activities, attraction tickets & private transfers in Thailand, Singapore & Dubai. NIDHI affiliated & Ministry of Tourism approved.";
+    const descContent = "Yellodae Trails is a smart travel company in India offering customized international tour packages, domestic holidays, honeymoon trips & travel consultation via yellodae.com.";
     if (metaDesc) {
       metaDesc.setAttribute("content", descContent);
     } else {
