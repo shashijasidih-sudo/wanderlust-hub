@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import AboutYellodaeSection from "@/components/AboutYellodaeSection";
 import ThailandTrending from "@/components/ThailandTrending";
 import SingaporeTrending from "@/components/SingaporeTrending";
 import DubaiTrending from "@/components/DubaiTrending";
@@ -19,6 +20,7 @@ const Index = () => {
       <Header />
       <main className="flex-1">
         <HeroSection />
+        <AboutYellodaeSection />
         <ThailandTrending />
         <SingaporeTrending />
         <DubaiTrending />
