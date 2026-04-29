@@ -499,6 +499,7 @@ const PhuketThingsToDo = () => {
             <Button asChild variant="default"><Link to="/thailand/phuket">Phuket City Guide</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/phuket/budget-airport-transfers">Phuket Transfers</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/krabi/things-to-do">Things to Do in Krabi</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do">Things to Do in Chiang Mai</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand">Thailand Destinations</Link></Button>
           </div>
         </div>

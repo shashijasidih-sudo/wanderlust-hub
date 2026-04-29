@@ -465,6 +465,7 @@ const KrabiThingsToDo = () => {
             <Button asChild variant="default"><Link to="/thailand/krabi">Krabi City Guide</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/krabi/budget-airport-transfers">Krabi Transfers</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/phuket/things-to-do">Things to Do in Phuket</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do">Things to Do in Chiang Mai</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand">Thailand Destinations</Link></Button>
           </div>
         </div>
