@@ -104,7 +104,7 @@ const AboutUs = () => {
               <span className="text-primary">Yello</span>dae
             </h1>
             <p className="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto leading-relaxed">
-              Your Smart Travel Platform for Affordable International Experiences
+              Smart Travel · Customized Tour Packages · Curated Holidays Across India & the World
             </p>
           </div>
         </div>
@@ -141,11 +141,11 @@ const AboutUs = () => {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
               <div className="relative">
-                <img src={heroTemple} alt="Thailand Temple" className="w-full h-[400px] object-cover rounded-2xl shadow-xl" />
+                <img src={heroTemple} alt="Yellodae Trails customized tour packages" className="w-full h-[400px] object-cover rounded-2xl shadow-xl" />
                 <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
                   <Plane className="w-8 h-8 mb-2" />
-                  <p className="font-bold text-lg">3 Countries</p>
-                  <p className="text-sm opacity-90">Thailand · Singapore · Dubai</p>
+                  <p className="font-bold text-lg">20+ Destinations</p>
+                  <p className="text-sm opacity-90">India · Thailand · Singapore · Vietnam · Korea</p>
                 </div>
               </div>
             </div>
@@ -156,43 +156,40 @@ const AboutUs = () => {
                 Our Story
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
-                Explore More, <span className="text-primary">Spend Less</span>, Plan <span className="text-primary">Smarter</span>
+                Smart Travel, <span className="text-primary">Personalized</span> for You
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                <span className="text-primary font-bold text-xl">Yellodae</span> is a smart travel platform created to help Indian travelers book affordable international activities, attraction tickets, and private transfers in top destinations like <strong className="text-foreground">Thailand, Singapore, and Dubai</strong>.
+                At <span className="text-primary font-bold text-xl">Yellodae Trails</span>, we believe in <strong className="text-foreground">smart travel</strong> — more than just visiting destinations, it's about discovering cultures, creating memories, and experiencing the world in a way that feels uniquely yours. Through our digital platform, <strong className="text-foreground">yellodae.com</strong>, we offer customized travel packages, international tour packages, and domestic holiday experiences designed for modern travelers.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                We specialize in <strong className="text-foreground">Thailand activities booking</strong>, <strong className="text-foreground">Singapore attraction tickets</strong>, and <strong className="text-foreground">Dubai activities online booking</strong>, allowing travelers to easily plan their experiences before arriving at their destination.
+                Founded with a passion for exploration and a commitment to excellence, Yellodae Trails is a growing <strong className="text-foreground">travel company in India</strong> focused on delivering seamless and personalized journeys. We simplify travel planning, making it easy for you to book trips, design itineraries, and explore the best destinations across the world.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Instead of purchasing expensive bundled packages, Yellodae allows you to <strong className="text-foreground">select only the activities you want</strong> and create your own personalized travel itinerary.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                In addition to activities, we provide <strong className="text-foreground">reliable private airport transfers, hotel transfers, and intercity transportation</strong>, ensuring a smooth and comfortable travel experience.
+                Whether you're looking for <strong className="text-foreground">Thailand tour packages</strong>, <strong className="text-foreground">Singapore holiday packages</strong>, <strong className="text-foreground">Vietnam travel experiences</strong>, <strong className="text-foreground">Andaman honeymoon packages</strong>, or unique destinations like <strong className="text-foreground">South Korea tours</strong>, our expert team ensures every detail is perfectly planned.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Book With Yellodae */}
+      {/* What We Do */}
       <section className="py-20 px-4 bg-gradient-to-b from-muted/30 to-muted/60">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <Sparkles className="w-4 h-4" />
-              Why Choose Us
+              <Briefcase className="w-4 h-4" />
+              What We Do
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Why Book With <span className="text-primary">Yellodae</span>
+              End-to-End <span className="text-primary">Travel Solutions</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Smart, affordable, and flexible travel planning for Indian travelers exploring the world.
+              At Yellodae Trails, we specialize in custom travel planning services that go beyond standard offerings — discover, compare, and book the best travel packages online with expert assistance.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyBookReasons.map((reason, index) => (
+            {whatWeDo.map((reason, index) => (
               <div 
                 key={index} 
                 className="group relative bg-background rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50 hover:border-primary/30 hover:-translate-y-2"
