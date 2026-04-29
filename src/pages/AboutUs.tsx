@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PlanTripCTA from "@/components/PlanTripCTA";
 import { MapPin, Users, Heart, Globe, Shield, Clock, Star, Sparkles, Award, Plane, Ticket, Car, Package, ShoppingBag, CheckCircle, Hotel, Compass, Briefcase, Instagram, Facebook, Mail } from "lucide-react";
 import bangkokImg from "@/assets/city-bangkok.jpg";
 import phuketImg from "@/assets/city-phuket.jpg";
@@ -286,6 +287,9 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      {/* Strong CTA: Plan My Trip */}
+      <PlanTripCTA />
 
       {/* Connect With Us / CTA */}
       <section className="py-20 px-4 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10">
