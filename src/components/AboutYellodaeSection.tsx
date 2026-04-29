@@ -47,33 +47,33 @@ const AboutYellodaeSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
               {/* Floating badge: rating */}
-              <div className="absolute top-4 left-4 bg-background/95 backdrop-blur-sm rounded-xl px-3 py-2 shadow-lg flex items-center gap-2">
+              <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-background/95 backdrop-blur-sm rounded-lg sm:rounded-xl px-2 py-1.5 sm:px-3 sm:py-2 shadow-lg flex items-center gap-1.5 sm:gap-2 max-w-[45%]">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-yellow-500 text-yellow-500" />
+                    <Star key={i} className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 fill-yellow-500 text-yellow-500" />
                   ))}
                 </div>
-                <div className="text-xs">
+                <div className="text-[10px] sm:text-xs">
                   <p className="font-bold leading-none">5.0 Rated</p>
-                  <p className="text-muted-foreground text-[10px]">Google Reviews</p>
+                  <p className="text-muted-foreground text-[9px] sm:text-[10px] hidden sm:block">Google Reviews</p>
                 </div>
               </div>
 
               {/* Floating badge: destinations */}
-              <div className="absolute bottom-4 right-4 bg-background/95 backdrop-blur-sm rounded-xl px-3 py-2 shadow-lg flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-primary/15 text-primary flex items-center justify-center">
-                  <Globe2 className="w-4 h-4" />
+              <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 bg-background/95 backdrop-blur-sm rounded-lg sm:rounded-xl px-2 py-1.5 sm:px-3 sm:py-2 shadow-lg flex items-center gap-1.5 sm:gap-2 max-w-[55%]">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-md sm:rounded-lg bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+                  <Globe2 className="w-3 h-3 sm:w-4 sm:h-4" />
                 </div>
-                <div className="text-xs">
+                <div className="text-[10px] sm:text-xs min-w-0">
                   <p className="font-bold leading-none">20+ Destinations</p>
-                  <p className="text-muted-foreground text-[10px]">India · Thailand · SG · Dubai</p>
+                  <p className="text-muted-foreground text-[9px] sm:text-[10px] truncate hidden sm:block">India · Thailand · SG · Dubai</p>
                 </div>
               </div>
 
               {/* Floating badge: trust */}
-              <div className="absolute -bottom-4 left-6 bg-primary text-primary-foreground rounded-xl px-3 py-2 shadow-xl flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4" />
-                <p className="text-xs font-semibold">Trusted by 10,000+ travelers</p>
+              <div className="absolute -bottom-3 left-3 sm:-bottom-4 sm:left-6 bg-primary text-primary-foreground rounded-lg sm:rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-xl flex items-center gap-1.5 sm:gap-2 max-w-[calc(100%-1.5rem)]">
+                <ShieldCheck className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+                <p className="text-[10px] sm:text-xs font-semibold whitespace-nowrap">Trusted by 10,000+ travelers</p>
               </div>
             </div>
           </div>
