@@ -195,7 +195,7 @@ const ContactUs = () => {
               </div>
 
               {/* Contact Form */}
-              <div className="bg-card border rounded-2xl p-6 md:p-8">
+              <div id="contact-form" className="bg-card border rounded-2xl p-6 md:p-8 scroll-mt-24">
                 <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
                 <div className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-4">
