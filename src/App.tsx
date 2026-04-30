@@ -99,6 +99,12 @@ import BlogMahanakhonSkywalkGuide from "./pages/BlogMahanakhonSkywalkGuide";
 import BlogSafariWorldGuide from "./pages/BlogSafariWorldGuide";
 import BlogSeaLifeBangkokGuide from "./pages/BlogSeaLifeBangkokGuide";
 import BlogBangkokTempleTourHalfVsFull from "./pages/BlogBangkokTempleTourHalfVsFull";
+import BlogBangkokTripCost from "./pages/BlogBangkokTripCost";
+import BlogBangkokFamilyTripCost from "./pages/BlogBangkokFamilyTripCost";
+import BlogBangkokCoupleTripCost from "./pages/BlogBangkokCoupleTripCost";
+import BlogBangkokFoodCost from "./pages/BlogBangkokFoodCost";
+import BlogBangkokAttractionTicketCosts from "./pages/BlogBangkokAttractionTicketCosts";
+import BlogCheapestTimeToVisitBangkok from "./pages/BlogCheapestTimeToVisitBangkok";
 import BlogAirportTransferThailand from "./pages/BlogAirportTransferThailand";
 import BlogPhiPhiIslandTours from "./pages/BlogPhiPhiIslandTours";
 import BlogBestThailandActivities from "./pages/BlogBestThailandActivities";
@@ -412,6 +418,12 @@ const App = () => (
             <Route path="/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" element={<BlogSafariWorldGuide />} />
             <Route path="/thailand/bangkok/destination-guides/activity/sea-life-bangkok-guide" element={<BlogSeaLifeBangkokGuide />} />
             <Route path="/thailand/bangkok/destination-guides/activity/bangkok-temple-tour-half-vs-full-day" element={<BlogBangkokTempleTourHalfVsFull />} />
+            <Route path="/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" element={<BlogBangkokTripCost />} />
+            <Route path="/thailand/bangkok/destination-guides/price-cost/bangkok-family-trip-cost" element={<BlogBangkokFamilyTripCost />} />
+            <Route path="/thailand/bangkok/destination-guides/price-cost/bangkok-couple-trip-cost" element={<BlogBangkokCoupleTripCost />} />
+            <Route path="/thailand/bangkok/destination-guides/price-cost/bangkok-food-cost" element={<BlogBangkokFoodCost />} />
+            <Route path="/thailand/bangkok/destination-guides/price-cost/bangkok-attraction-ticket-prices" element={<BlogBangkokAttractionTicketCosts />} />
+            <Route path="/thailand/bangkok/destination-guides/price-cost/cheapest-time-to-visit-bangkok" element={<BlogCheapestTimeToVisitBangkok />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
             <Route path="/blog/best-thailand-activities" element={<BlogBestThailandActivities />} />

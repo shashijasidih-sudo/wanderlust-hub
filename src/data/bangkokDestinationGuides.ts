@@ -6,6 +6,12 @@ import blogMahanakhon from "@/assets/blog-mahanakhon-skywalk.jpg";
 import blogSeaLife from "@/assets/blog-sea-life-aquarium.jpg";
 import blogSafariWorld from "@/assets/blog-safari-world-lions.jpg";
 import blogTemplesSunset from "@/assets/blog-temples-sunset-river.jpg";
+import blogCostBudget from "@/assets/blog-bangkok-cost-budget.jpg";
+import blogFamilyCost from "@/assets/blog-bangkok-family-cost.jpg";
+import blogCoupleCost from "@/assets/blog-bangkok-couple-cost.jpg";
+import blogStreetFoodCost from "@/assets/blog-bangkok-street-food-cost.jpg";
+import blogSafariCost from "@/assets/blog-bangkok-safari-cost.jpg";
+import blogTransportCost from "@/assets/blog-bangkok-transport-cost.jpg";
 
 import bangkokSkywalk from "@/assets/bangkok-skywalk-1.jpg";
 import bangkokTemple from "@/assets/bangkok-temple-1.jpg";
@@ -255,6 +261,68 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     readTime: "11 min read",
     link: "/blog/thailand-food-experiences",
     external: true,
+  },
+
+  // ===================== PRICE / COST BLOGS =====================
+  {
+    title: "Bangkok Trip Cost from India 2026: Full Budget Breakdown",
+    description:
+      "Realistic Bangkok trip cost from India — flights, visa, hotels, food, activities and shopping in one transparent guide.",
+    category: "price-cost",
+    image: blogCostBudget,
+    date: "Apr 29, 2026",
+    readTime: "9 min read",
+    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india",
+  },
+  {
+    title: "Bangkok Family Trip Cost 2026: Family of 4 Budget Guide",
+    description:
+      "How much a 5-day Bangkok family holiday actually costs — flights, hotels and family-friendly activities.",
+    category: "price-cost",
+    image: blogFamilyCost,
+    date: "Apr 28, 2026",
+    readTime: "8 min read",
+    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-family-trip-cost",
+  },
+  {
+    title: "Bangkok Couple Trip Cost 2026: Honeymoon & Romantic Budget",
+    description:
+      "Honeymoon-friendly Bangkok budget — boutique hotels, dinner cruises, rooftop nights and Thai spas.",
+    category: "price-cost",
+    image: blogCoupleCost,
+    date: "Apr 27, 2026",
+    readTime: "8 min read",
+    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-couple-trip-cost",
+  },
+  {
+    title: "How Much Does Food Cost in Bangkok? 2026 Daily Budget",
+    description:
+      "Street food, mid-range restaurants and fine dining prices — exactly what you'll spend per day.",
+    category: "price-cost",
+    image: blogStreetFoodCost,
+    date: "Apr 26, 2026",
+    readTime: "6 min read",
+    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-food-cost",
+  },
+  {
+    title: "Bangkok Attraction Ticket Prices 2026: Full List & Booking Tips",
+    description:
+      "2026 ticket prices for every major Bangkok attraction with online vs counter savings.",
+    category: "price-cost",
+    image: blogSafariCost,
+    date: "Apr 25, 2026",
+    readTime: "7 min read",
+    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-attraction-ticket-prices",
+  },
+  {
+    title: "Cheapest Time to Visit Bangkok in 2026 (Save 30–40%)",
+    description:
+      "Month-by-month breakdown — when flights, hotels and tours hit their lowest prices.",
+    category: "price-cost",
+    image: blogTransportCost,
+    date: "Apr 24, 2026",
+    readTime: "6 min read",
+    link: "/thailand/bangkok/destination-guides/price-cost/cheapest-time-to-visit-bangkok",
   },
 ];
 
