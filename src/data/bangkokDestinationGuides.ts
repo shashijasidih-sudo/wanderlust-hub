@@ -12,6 +12,12 @@ import blogCoupleCost from "@/assets/blog-bangkok-couple-cost.jpg";
 import blogStreetFoodCost from "@/assets/blog-bangkok-street-food-cost.jpg";
 import blogSafariCost from "@/assets/blog-bangkok-safari-cost.jpg";
 import blogTransportCost from "@/assets/blog-bangkok-transport-cost.jpg";
+import blogBkkVsPhuket from "@/assets/blog-bangkok-vs-phuket.jpg";
+import blogBkkVsPattaya from "@/assets/blog-bangkok-vs-pattaya.jpg";
+import blogPrincessVsOrchid from "@/assets/blog-princess-vs-white-orchid.jpg";
+import blogWatArunVsPalace from "@/assets/blog-wat-arun-vs-grand-palace.jpg";
+import blogSafariVsSealife from "@/assets/blog-safari-vs-sealife.jpg";
+import blogBtsVsTaxi from "@/assets/blog-bts-vs-taxi.jpg";
 
 import bangkokSkywalk from "@/assets/bangkok-skywalk-1.jpg";
 import bangkokTemple from "@/assets/bangkok-temple-1.jpg";
@@ -323,6 +329,68 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     date: "Apr 24, 2026",
     readTime: "6 min read",
     link: "/thailand/bangkok/destination-guides/price-cost/cheapest-time-to-visit-bangkok",
+  },
+
+  // ===================== COMPARISON BLOGS =====================
+  {
+    title: "Bangkok vs Phuket: Which Should You Visit First in 2026?",
+    description:
+      "Side-by-side comparison of Bangkok and Phuket — vibe, cost, activities and weather to help you choose.",
+    category: "comparison",
+    image: blogBkkVsPhuket,
+    date: "May 2, 2026",
+    readTime: "9 min read",
+    link: "/thailand/bangkok/destination-guides/comparison/bangkok-vs-phuket",
+  },
+  {
+    title: "Bangkok vs Pattaya: Which City Suits Your Trip in 2026?",
+    description:
+      "Bangkok or Pattaya for your Thailand trip? Compare nightlife, family activities, beaches and costs.",
+    category: "comparison",
+    image: blogBkkVsPattaya,
+    date: "May 1, 2026",
+    readTime: "8 min read",
+    link: "/thailand/bangkok/destination-guides/comparison/bangkok-vs-pattaya",
+  },
+  {
+    title: "Chao Phraya Princess vs White Orchid Cruise: Which Is Better?",
+    description:
+      "Princess vs White Orchid — price, food, entertainment and ambience compared in this honest review.",
+    category: "comparison",
+    image: blogPrincessVsOrchid,
+    date: "Apr 30, 2026",
+    readTime: "9 min read",
+    link: "/thailand/bangkok/destination-guides/comparison/chao-phraya-princess-vs-white-orchid",
+  },
+  {
+    title: "Wat Arun vs Grand Palace: Which Bangkok Temple Is Worth Your Time?",
+    description:
+      "If you only have time for one — Wat Arun or Grand Palace? Compare history, cost, photos and crowds.",
+    category: "comparison",
+    image: blogWatArunVsPalace,
+    date: "Apr 29, 2026",
+    readTime: "7 min read",
+    link: "/thailand/bangkok/destination-guides/comparison/wat-arun-vs-grand-palace",
+  },
+  {
+    title: "Safari World vs Sea Life Bangkok: Which Is Better for Families?",
+    description:
+      "Safari World or Sea Life Bangkok? Tickets, time needed, kids' enjoyment and value compared.",
+    category: "comparison",
+    image: blogSafariVsSealife,
+    date: "Apr 28, 2026",
+    readTime: "8 min read",
+    link: "/thailand/bangkok/destination-guides/comparison/safari-world-vs-sea-life-bangkok",
+  },
+  {
+    title: "BTS Skytrain vs Taxi in Bangkok: Which Is Better in 2026?",
+    description:
+      "Skytrain or taxi in Bangkok? Cost, time, comfort and best use cases compared for Indian travelers.",
+    category: "comparison",
+    image: blogBtsVsTaxi,
+    date: "Apr 27, 2026",
+    readTime: "6 min read",
+    link: "/thailand/bangkok/destination-guides/comparison/bts-vs-taxi-bangkok",
   },
 ];
 
