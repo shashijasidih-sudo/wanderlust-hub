@@ -69,6 +69,7 @@ const CITY_ORDER: { key: CityKey | "all"; label: string }[] = [
 ];
 
 const ThailandSmartGuides = () => {
+  const navigate = useNavigate();
   const [activeCity, setActiveCity] = useState<CityKey | "all">("all");
 
   const groupedByCity = useMemo(() => {
