@@ -324,6 +324,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     readTime: "6 min read",
     link: "/thailand/bangkok/destination-guides/price-cost/cheapest-time-to-visit-bangkok",
   },
+];
 
 export const getBangkokBlogsByCategory = (cat: BangkokBlogCategory) =>
   bangkokBlogs.filter((b) => b.category === cat);
