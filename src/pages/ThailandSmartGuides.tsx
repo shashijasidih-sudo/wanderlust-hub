@@ -162,7 +162,13 @@ const ThailandSmartGuides = () => {
               <Button
                 key={c.key}
                 variant={activeCity === c.key ? "default" : "outline"}
-                onClick={() => setActiveCity(c.key)}
+                onClick={() => {
+                  if (c.key === "bangkok") {
+                    navigate("/thailand/bangkok/destination-guides");
+                    return;
+                  }
+                  setActiveCity(c.key);
+                }}
               >
                 {c.label}
               </Button>
