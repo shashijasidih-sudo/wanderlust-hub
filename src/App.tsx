@@ -403,6 +403,15 @@ const App = () => (
             <Route path="/thailand/chiang-mai/things-to-do" element={<ChiangMaiThingsToDo />} />
             <Route path="/thailand/esim-ais" element={<EsimThailandAis />} />
             <Route path="/thailand/destination-guides" element={<ThailandSmartGuides />} />
+            <Route path="/thailand/bangkok/destination-guides" element={<BangkokDestinationGuides />} />
+            <Route path="/thailand/bangkok/destination-guides/activity/chao-phraya-princess-cruise-review" element={<BlogChaoPhrayaPrincessReview />} />
+            <Route path="/thailand/bangkok/destination-guides/activity/best-dinner-cruises-bangkok-couples" element={<BlogBestDinnerCruisesCouples />} />
+            <Route path="/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" element={<BlogWatArunGuide />} />
+            <Route path="/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" element={<BlogGrandPalaceGuide />} />
+            <Route path="/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" element={<BlogMahanakhonSkywalkGuide />} />
+            <Route path="/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" element={<BlogSafariWorldGuide />} />
+            <Route path="/thailand/bangkok/destination-guides/activity/sea-life-bangkok-guide" element={<BlogSeaLifeBangkokGuide />} />
+            <Route path="/thailand/bangkok/destination-guides/activity/bangkok-temple-tour-half-vs-full-day" element={<BlogBangkokTempleTourHalfVsFull />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
             <Route path="/blog/best-thailand-activities" element={<BlogBestThailandActivities />} />
