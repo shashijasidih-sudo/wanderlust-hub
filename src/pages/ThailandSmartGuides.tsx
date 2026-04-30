@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, User } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -69,6 +69,7 @@ const CITY_ORDER: { key: CityKey | "all"; label: string }[] = [
 ];
 
 const ThailandSmartGuides = () => {
+  const navigate = useNavigate();
   const [activeCity, setActiveCity] = useState<CityKey | "all">("all");
 
   const groupedByCity = useMemo(() => {
@@ -161,7 +162,13 @@ const ThailandSmartGuides = () => {
               <Button
                 key={c.key}
                 variant={activeCity === c.key ? "default" : "outline"}
-                onClick={() => setActiveCity(c.key)}
+                onClick={() => {
+                  if (c.key === "bangkok") {
+                    navigate("/thailand/bangkok/destination-guides");
+                    return;
+                  }
+                  setActiveCity(c.key);
+                }}
               >
                 {c.label}
               </Button>
