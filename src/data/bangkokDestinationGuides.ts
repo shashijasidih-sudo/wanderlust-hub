@@ -6,6 +6,12 @@ import blogMahanakhon from "@/assets/blog-mahanakhon-skywalk.jpg";
 import blogSeaLife from "@/assets/blog-sea-life-aquarium.jpg";
 import blogSafariWorld from "@/assets/blog-safari-world-lions.jpg";
 import blogTemplesSunset from "@/assets/blog-temples-sunset-river.jpg";
+import blogCostBudget from "@/assets/blog-bangkok-cost-budget.jpg";
+import blogFamilyCost from "@/assets/blog-bangkok-family-cost.jpg";
+import blogCoupleCost from "@/assets/blog-bangkok-couple-cost.jpg";
+import blogStreetFoodCost from "@/assets/blog-bangkok-street-food-cost.jpg";
+import blogSafariCost from "@/assets/blog-bangkok-safari-cost.jpg";
+import blogTransportCost from "@/assets/blog-bangkok-transport-cost.jpg";
 
 import bangkokSkywalk from "@/assets/bangkok-skywalk-1.jpg";
 import bangkokTemple from "@/assets/bangkok-temple-1.jpg";
