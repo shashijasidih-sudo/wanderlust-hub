@@ -3,65 +3,90 @@ import heroImg from "@/assets/blog-princess-vs-white-orchid.jpg";
 
 const BlogPrincessVsWhiteOrchid = () => (
   <BlogArticleLayout
-    title="Chao Phraya Princess vs White Orchid Cruise: Which Is Better?"
-    description="Princess vs White Orchid Bangkok dinner cruise — compare price, food, entertainment, ambience and value in this honest 2026 review."
+    title="Chao Phraya Princess vs White Orchid: Which Dinner Cruise Wins?"
+    description="An honest 2026 comparison of Bangkok's two top dinner cruises — Chao Phraya Princess vs White Orchid — by food, music, vessel, views and value."
     heroImage={heroImg}
-    heroAlt="Two Chao Phraya River dinner cruise boats illuminated at night"
+    heroAlt="Chao Phraya Princess and White Orchid dinner cruise ships side by side at night in Bangkok"
     author="Yellodae Travel Expert"
     date="Apr 30, 2026"
-    readTime="9 min read"
+    readTime="11 min read"
     category="Comparison Blogs"
-    keywords={["Chao Phraya Princess vs White Orchid", "Bangkok cruise comparison", "best dinner cruise Bangkok", "White Orchid review", "Princess cruise review"]}
+    keywords={["Chao Phraya Princess vs White Orchid", "Bangkok dinner cruise comparison", "best Bangkok cruise", "Chao Phraya cruise review", "Bangkok river cruise"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
-      { type: "paragraph", content: "Two of Bangkok's most-booked dinner cruises — Chao Phraya Princess and White Orchid. Both run the same river route, both serve buffet dinners, both have live music. So which one's actually worth your money? We compared them, head to head." },
-      { type: "heading", content: "Price Comparison" },
+      { type: "paragraph", content: "A Chao Phraya river dinner cruise is one of those Bangkok experiences nobody skips. You float past the floodlit Wat Arun, the Grand Palace, the Temple of Dawn and the iconic ICONSIAM mall, all while being served a buffet, watching live performances, and catching the cool river breeze. Two operators dominate this market: Chao Phraya Princess and White Orchid. Both are popular, both are on every Bangkok travel agent's brochure, and both look almost identical from the outside. But there are real differences — in food, music, ambience, vessel size and overall value — that can make or break your night. Here's a complete, honest 2026 comparison so you book the right one." },
+
+      { type: "heading", content: "Vessel Size & Capacity" },
+      { type: "paragraph", content: "Chao Phraya Princess operates a fleet of three large vessels — Princess, Wonderful Pearl and Grand Pearl — each accommodating 400–600 guests across two open decks. The vessels feel premium, modern, with proper railings, glass-walled dining halls and ample open-air seating up top. White Orchid is older and smaller, capacity around 250–300 guests, single-deck design with a smaller open area. If you value space, photography angles and a more luxurious feel, Princess wins. If you prefer a slightly more intimate setting, White Orchid has its charm." },
       { type: "list", items: [
-        "Princess: ₹1,800 – ₹2,400 per person (online)",
-        "White Orchid: ₹2,200 – ₹2,800 per person",
-        "Princess slightly cheaper; both negotiable in groups",
+        "Princess: 3 modern vessels, 400–600 capacity, 2 decks",
+        "White Orchid: older single-deck design, 250–300 capacity",
+        "Princess open-air deck is larger — better for photos and sunset views",
+        "Both cruise the same scenic stretch past Wat Arun and the Grand Palace",
       ]},
-      { type: "heading", content: "Food & Buffet" },
+
+      { type: "heading", content: "Food Quality & Buffet Spread" },
+      { type: "paragraph", content: "This is where Princess pulls clearly ahead. The Chao Phraya Princess buffet has 60+ items including a live grill (prawns, salmon, beef), Thai curries, sushi, Indian dal-rice-roti corner (a huge plus for Indian travelers), fresh seafood, salads, dessert station and seasonal fruit. White Orchid offers around 35–40 buffet items with a smaller live grill and fewer Indian-friendly options. Vegetarians and Jain travelers consistently rate Princess higher because there's always a labeled veg corner and plain rice/roti available. If food is a priority, Princess is the safer pick." },
       { type: "list", items: [
-        "Princess: 60+ items, mix of Thai, Indian, Chinese & Western",
-        "White Orchid: 80+ items, more international spread, live grill",
-        "White Orchid wins on buffet variety; Princess wins on Indian options",
+        "Princess: 60+ items, dedicated Indian veg counter, live grill",
+        "White Orchid: 35–40 items, smaller veg selection",
+        "Princess offers separate Jain-friendly options on request",
+        "Both serve unlimited soft drinks; alcohol is à la carte",
       ]},
-      { type: "heading", content: "Boat & Ambience" },
+
+      { type: "heading", content: "Live Music & Entertainment" },
+      { type: "paragraph", content: "White Orchid actually edges ahead here — they feature traditional Thai dance performances mid-cruise, which guests genuinely enjoy. Princess focuses on a live band playing English, Thai and occasionally Bollywood numbers, with a saxophonist or singer wandering between tables. Both ships have a small dance floor toward the end of the cruise. If cultural performance matters to you, White Orchid wins. If you prefer a relaxed live-music background while you eat, Princess feels more sophisticated." },
       { type: "list", items: [
-        "Princess: classic Thai-style boat, intimate vibe",
-        "White Orchid: larger 3-deck boat, more spacious",
-        "Pick Princess for romance; White Orchid for groups",
+        "Princess: live band, English/Thai/Bollywood mix, dance floor",
+        "White Orchid: traditional Thai dance performance + live music",
+        "Both offer photo ops with performers",
+        "Princess hosts birthday/anniversary cake announcements on request",
       ]},
-      { type: "tip-box", content: "Both cruises run the same Chao Phraya route past Wat Arun, ICONSIAM and the Grand Palace — views are equally stunning." },
-      { type: "heading", content: "Entertainment" },
+
+      { type: "tip-box", content: "Always book a Chao Phraya cruise with private transfer included — Bangkok evening traffic can take 60–90 minutes from Sukhumvit, and you don't want to miss boarding. Yellodae's Princess + private transfer combo is the most-booked option from India." },
+
+      { type: "heading", content: "Pricing Comparison" },
+      { type: "paragraph", content: "Princess prices in 2026 start at around ₹2,200 per adult (cruise only) and ₹2,800 with private transfer. White Orchid is slightly cheaper at ₹1,800 per adult cruise-only and ₹2,400 with transfer. The ₹400–₹500 premium for Princess buys you a better vessel, more food variety, and a larger open deck. For couples and special occasions, the upgrade is worth it. For groups on a tight budget who just want the river view experience, White Orchid is fine." },
       { type: "list", items: [
-        "Princess: live band, cultural Thai dance",
-        "White Orchid: live band, DJ on upper deck",
-        "White Orchid feels more party; Princess more dinner-focused",
+        "Princess (cruise only): ~₹2,200 per adult",
+        "Princess + private transfer: ~₹2,800 per adult",
+        "White Orchid (cruise only): ~₹1,800 per adult",
+        "White Orchid + private transfer: ~₹2,400 per adult",
+        "Kids under 4 free on both; 4–10 years 50% off",
       ]},
-      { type: "mid-activities", destination: "bangkok", heading: "Book a Bangkok Dinner Cruise" },
-      { type: "heading", content: "Who Should Pick Which?" },
+
+      { type: "mid-activities", destination: "bangkok", heading: "Book Your Bangkok Cruise" },
+
+      { type: "heading", content: "Boarding Point & Timing" },
+      { type: "paragraph", content: "Princess boards at River City Pier (Si Phraya Pier) — one of Bangkok's most accessible piers with easy taxi access and a small mall to kill time. White Orchid boards from ICONSIAM Pier — gorgeous mall-side pier but heavier evening traffic. Both cruises depart at 19:30 and return by 21:30. Princess arrival recommended by 18:30 for check-in and good seat selection (open-air deck fills first). White Orchid is slightly more relaxed and you can arrive by 18:45." },
+
+      { type: "heading", content: "View & Photography" },
+      { type: "paragraph", content: "Both cruises follow the same iconic loop — past Wat Arun (the highlight, fully illuminated at night), under the Rama VIII bridge, past the Grand Palace and Wat Pho exteriors, and along the modern ICONSIAM and Asiatique waterfronts. Photography-wise, Princess wins thanks to its larger upper open deck — you get unobstructed angles, less crowding around the railings, and better lighting from the deck-level lamps. White Orchid's lower deck means you sometimes shoot through railings or windows." },
+
+      { type: "heading", content: "Best For Which Traveler" },
       { type: "list", items: [
-        "Couples / honeymoon → Princess (more romantic)",
-        "Families / groups → White Orchid (more space)",
-        "Vegetarian Indian travelers → Princess (better Indian veg menu)",
-        "Foodies → White Orchid (bigger spread)",
+        "Couples / honeymooners → Princess (better vibe, more space)",
+        "Families with kids → Princess (more food variety, larger deck)",
+        "Budget groups / first-timers → White Orchid (lower price, same view)",
+        "Indian veg/Jain travelers → Princess (dedicated veg counter)",
+        "Culture lovers → White Orchid (Thai dance performance)",
       ]},
+
       { type: "heading", content: "Final Verdict" },
-      { type: "paragraph", content: "Both are great, but Chao Phraya Princess offers better value for couples and Indian travelers. White Orchid is the upgrade pick for groups who want a bigger boat and more buffet variety. You can't go wrong either way." },
+      { type: "paragraph", content: "For 80% of Indian travelers, Chao Phraya Princess is the better choice — bigger, newer, more food variety, and a much better photo experience. The ₹500 premium over White Orchid is genuinely worth it for couples, honeymooners and families. Choose White Orchid only if you're traveling on a strict budget, or if you specifically want the traditional Thai dance performance experience. Either way, you can't really go wrong — both deliver the iconic Bangkok-by-night-on-the-river feeling that no rooftop bar can match. Book in advance during peak season (Nov–Feb), and always pick the version with private transfer included." },
+
       { type: "cta", content: "Book the Chao Phraya Princess cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer", linkText: "Book Princess Cruise" },
     ]}
     relatedActivities={[
-      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
-      { title: "Princess Cruise (No Transfer)", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise" },
-      { title: "Valentine Cruise Bangkok", link: "/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise" },
+      { title: "Chao Phraya Princess (Private Transfer)", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Chao Phraya Princess (No Transfer)", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise" },
+      { title: "Bangkok City Tour with Boat", link: "/thailand/bangkok/city-tour-with-boat" },
     ]}
     relatedLinks={[
-      { title: "Best Dinner Cruises Bangkok for Couples", link: "/thailand/bangkok/destination-guides/activity/best-dinner-cruises-bangkok-couples" },
-      { title: "Chao Phraya Princess Cruise Review", link: "/thailand/bangkok/destination-guides/activity/chao-phraya-princess-cruise-review" },
+      { title: "Chao Phraya Princess Review", link: "/thailand/bangkok/destination-guides/activity/chao-phraya-princess-review" },
+      { title: "Best Dinner Cruises for Couples", link: "/thailand/bangkok/destination-guides/activity/best-dinner-cruises-couples" },
     ]}
   />
 );
