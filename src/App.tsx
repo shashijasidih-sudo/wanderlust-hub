@@ -111,6 +111,34 @@ import BlogPrincessVsWhiteOrchid from "./pages/BlogPrincessVsWhiteOrchid";
 import BlogWatArunVsGrandPalace from "./pages/BlogWatArunVsGrandPalace";
 import BlogSafariWorldVsSeaLife from "./pages/BlogSafariWorldVsSeaLife";
 import BlogBtsVsTaxiBangkok from "./pages/BlogBtsVsTaxiBangkok";
+// Bangkok itinerary
+import BlogBangkok2DayItinerary from "./pages/BlogBangkok2DayItinerary";
+import BlogBangkok3DayItinerary from "./pages/BlogBangkok3DayItinerary";
+import BlogBangkok4DayItinerary from "./pages/BlogBangkok4DayItinerary";
+import BlogBangkokFamilyItinerary from "./pages/BlogBangkokFamilyItinerary";
+import BlogBangkokCoupleItinerary from "./pages/BlogBangkokCoupleItinerary";
+import BlogBangkokSoloItinerary from "./pages/BlogBangkokSoloItinerary";
+// Bangkok indian audience
+import BlogBangkokVisaForIndians from "./pages/BlogBangkokVisaForIndians";
+import BlogBangkokIndianFood from "./pages/BlogBangkokIndianFood";
+import BlogBangkokCurrencyForIndians from "./pages/BlogBangkokCurrencyForIndians";
+import BlogBangkokHoneymoonForIndians from "./pages/BlogBangkokHoneymoonForIndians";
+import BlogBangkokSafetyForIndians from "./pages/BlogBangkokSafetyForIndians";
+import BlogBangkokIndianFamilyTips from "./pages/BlogBangkokIndianFamilyTips";
+// Bangkok micro
+import BlogBangkokTempleDressCode from "./pages/BlogBangkokTempleDressCode";
+import BlogBangkokBestTimeToVisit from "./pages/BlogBangkokBestTimeToVisit";
+import BlogBangkokMonsoonGuide from "./pages/BlogBangkokMonsoonGuide";
+import BlogBangkokSimCardGuide from "./pages/BlogBangkokSimCardGuide";
+import BlogBangkokTippingGuide from "./pages/BlogBangkokTippingGuide";
+import BlogBangkokShoppingTips from "./pages/BlogBangkokShoppingTips";
+// Bangkok transfers
+import BlogBkkAirportTransfer from "./pages/BlogBkkAirportTransfer";
+import BlogDmkAirportTransfer from "./pages/BlogDmkAirportTransfer";
+import BlogBangkokPattayaTransfer from "./pages/BlogBangkokPattayaTransfer";
+import BlogBangkokAirportRail from "./pages/BlogBangkokAirportRail";
+import BlogBangkokPrivateTransfer from "./pages/BlogBangkokPrivateTransfer";
+import BlogBangkokGrabTaxi from "./pages/BlogBangkokGrabTaxi";
 import BlogAirportTransferThailand from "./pages/BlogAirportTransferThailand";
 import BlogPhiPhiIslandTours from "./pages/BlogPhiPhiIslandTours";
 import BlogBestThailandActivities from "./pages/BlogBestThailandActivities";
