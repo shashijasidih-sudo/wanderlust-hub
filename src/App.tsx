@@ -464,6 +464,34 @@ const App = () => (
             <Route path="/thailand/bangkok/destination-guides/comparison/wat-arun-vs-grand-palace" element={<BlogWatArunVsGrandPalace />} />
             <Route path="/thailand/bangkok/destination-guides/comparison/safari-world-vs-sea-life-bangkok" element={<BlogSafariWorldVsSeaLife />} />
             <Route path="/thailand/bangkok/destination-guides/comparison/bts-vs-taxi-bangkok" element={<BlogBtsVsTaxiBangkok />} />
+            {/* Bangkok Itinerary */}
+            <Route path="/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" element={<BlogBangkok2DayItinerary />} />
+            <Route path="/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" element={<BlogBangkok3DayItinerary />} />
+            <Route path="/thailand/bangkok/destination-guides/itinerary/bangkok-4-day-itinerary" element={<BlogBangkok4DayItinerary />} />
+            <Route path="/thailand/bangkok/destination-guides/itinerary/bangkok-family-itinerary" element={<BlogBangkokFamilyItinerary />} />
+            <Route path="/thailand/bangkok/destination-guides/itinerary/bangkok-couple-itinerary" element={<BlogBangkokCoupleItinerary />} />
+            <Route path="/thailand/bangkok/destination-guides/itinerary/bangkok-solo-itinerary" element={<BlogBangkokSoloItinerary />} />
+            {/* Bangkok Indian Audience */}
+            <Route path="/thailand/bangkok/destination-guides/indian-audience/thailand-visa-for-indians" element={<BlogBangkokVisaForIndians />} />
+            <Route path="/thailand/bangkok/destination-guides/indian-audience/best-indian-restaurants-bangkok" element={<BlogBangkokIndianFood />} />
+            <Route path="/thailand/bangkok/destination-guides/indian-audience/inr-to-thai-baht-guide" element={<BlogBangkokCurrencyForIndians />} />
+            <Route path="/thailand/bangkok/destination-guides/indian-audience/bangkok-honeymoon-for-indians" element={<BlogBangkokHoneymoonForIndians />} />
+            <Route path="/thailand/bangkok/destination-guides/indian-audience/bangkok-safety-for-indians" element={<BlogBangkokSafetyForIndians />} />
+            <Route path="/thailand/bangkok/destination-guides/indian-audience/bangkok-tips-indian-families" element={<BlogBangkokIndianFamilyTips />} />
+            {/* Bangkok Micro */}
+            <Route path="/thailand/bangkok/destination-guides/micro/bangkok-temple-dress-code" element={<BlogBangkokTempleDressCode />} />
+            <Route path="/thailand/bangkok/destination-guides/micro/best-time-to-visit-bangkok" element={<BlogBangkokBestTimeToVisit />} />
+            <Route path="/thailand/bangkok/destination-guides/micro/bangkok-monsoon-guide" element={<BlogBangkokMonsoonGuide />} />
+            <Route path="/thailand/bangkok/destination-guides/micro/bangkok-sim-card-guide" element={<BlogBangkokSimCardGuide />} />
+            <Route path="/thailand/bangkok/destination-guides/micro/bangkok-tipping-guide" element={<BlogBangkokTippingGuide />} />
+            <Route path="/thailand/bangkok/destination-guides/micro/bangkok-shopping-guide" element={<BlogBangkokShoppingTips />} />
+            {/* Bangkok Transfers */}
+            <Route path="/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" element={<BlogBkkAirportTransfer />} />
+            <Route path="/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" element={<BlogDmkAirportTransfer />} />
+            <Route path="/thailand/bangkok/destination-guides/transfer/bangkok-to-pattaya-transfer" element={<BlogBangkokPattayaTransfer />} />
+            <Route path="/thailand/bangkok/destination-guides/transfer/bangkok-airport-rail-link" element={<BlogBangkokAirportRail />} />
+            <Route path="/thailand/bangkok/destination-guides/transfer/bangkok-private-transfer" element={<BlogBangkokPrivateTransfer />} />
+            <Route path="/thailand/bangkok/destination-guides/transfer/grab-vs-taxi-bangkok" element={<BlogBangkokGrabTaxi />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
             <Route path="/blog/best-thailand-activities" element={<BlogBestThailandActivities />} />
