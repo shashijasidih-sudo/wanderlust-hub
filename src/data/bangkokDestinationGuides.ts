@@ -19,6 +19,35 @@ import blogWatArunVsPalace from "@/assets/blog-wat-arun-vs-grand-palace.jpg";
 import blogSafariVsSealife from "@/assets/blog-safari-vs-sealife.jpg";
 import blogBtsVsTaxi from "@/assets/blog-bts-vs-taxi.jpg";
 
+// Itinerary
+import blogBkk2Day from "@/assets/blog-bangkok-2day-itinerary.jpg";
+import blogBkk3Day from "@/assets/blog-bangkok-3day-itinerary.jpg";
+import blogBkk4Day from "@/assets/blog-bangkok-4day-itinerary.jpg";
+import blogBkkFamilyIt from "@/assets/blog-bangkok-family-itinerary.jpg";
+import blogBkkCoupleIt from "@/assets/blog-bangkok-couple-itinerary.jpg";
+import blogBkkSoloIt from "@/assets/blog-bangkok-solo-itinerary.jpg";
+// Indian audience
+import blogBkkVisaIn from "@/assets/blog-bangkok-visa-india.jpg";
+import blogBkkIndianFood from "@/assets/blog-bangkok-indian-food.jpg";
+import blogBkkCurrencyIn from "@/assets/blog-bangkok-currency-india.jpg";
+import blogBkkHoneymoonIn from "@/assets/blog-bangkok-honeymoon-india.jpg";
+import blogBkkSafetyIn from "@/assets/blog-bangkok-safety-india.jpg";
+import blogBkkIndianFamilyTips from "@/assets/blog-bangkok-india-family-tips.jpg";
+// Micro
+import blogBkkTempleDress from "@/assets/blog-bangkok-temple-dress.jpg";
+import blogBkkBestTime from "@/assets/blog-bangkok-best-time-visit.jpg";
+import blogBkkMonsoon from "@/assets/blog-bangkok-monsoon.jpg";
+import blogBkkSim from "@/assets/blog-bangkok-sim-card.jpg";
+import blogBkkTipping from "@/assets/blog-bangkok-tipping.jpg";
+import blogBkkShopping from "@/assets/blog-bangkok-shopping-tips.jpg";
+// Transfers
+import blogBkkAirport from "@/assets/blog-bkk-airport-transfer.jpg";
+import blogDmkAirport from "@/assets/blog-dmk-airport-transfer.jpg";
+import blogBkkPattayaTransfer from "@/assets/blog-bangkok-pattaya-transfer.jpg";
+import blogBkkRail from "@/assets/blog-bangkok-airport-rail.jpg";
+import blogBkkPrivateTransfer from "@/assets/blog-bangkok-private-transfer.jpg";
+import blogBkkGrab from "@/assets/blog-bangkok-grab-taxi.jpg";
+
 import bangkokSkywalk from "@/assets/bangkok-skywalk-1.jpg";
 import bangkokTemple from "@/assets/bangkok-temple-1.jpg";
 import bangkokCity from "@/assets/bangkok-city-1.jpg";
@@ -391,6 +420,254 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     date: "Apr 27, 2026",
     readTime: "6 min read",
     link: "/thailand/bangkok/destination-guides/comparison/bts-vs-taxi-bangkok",
+  },
+
+  // ===================== ITINERARY BLOGS =====================
+  {
+    title: "Bangkok 2-Day Itinerary 2026: Perfect Short Trip Plan",
+    description:
+      "A tested 2-day Bangkok itinerary covering the Grand Palace, Wat Arun, dinner cruise, shopping and rooftop bars — perfect for a quick weekend.",
+    category: "itinerary",
+    image: blogBkk2Day,
+    date: "May 5, 2026",
+    readTime: "10 min read",
+    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary",
+  },
+  {
+    title: "Bangkok 3-Day Itinerary 2026: The Perfect First-Time Plan",
+    description:
+      "Our most-followed 3-day Bangkok itinerary — temples, cruise, Safari World and Mahanakhon Skywalk, balanced perfectly with shopping and food.",
+    category: "itinerary",
+    image: blogBkk3Day,
+    date: "May 4, 2026",
+    readTime: "10 min read",
+    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary",
+  },
+  {
+    title: "Bangkok 4-Day Itinerary 2026: Temples, Markets & Day Trips",
+    description:
+      "A relaxed 4-day Bangkok itinerary including the floating market and Ayutthaya day trip — perfect for travelers who want depth, not just highlights.",
+    category: "itinerary",
+    image: blogBkk4Day,
+    date: "May 3, 2026",
+    readTime: "10 min read",
+    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-4-day-itinerary",
+  },
+  {
+    title: "Bangkok Family Itinerary 2026: Best 5-Day Trip with Kids",
+    description:
+      "A complete 5-day Bangkok family itinerary with Safari World, Sea Life, Dream World and kid-friendly cruise — built for families with children aged 5–14.",
+    category: "itinerary",
+    image: blogBkkFamilyIt,
+    date: "May 2, 2026",
+    readTime: "10 min read",
+    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-family-itinerary",
+  },
+  {
+    title: "Bangkok Couple Itinerary 2026: Perfect 4-Night Romantic Trip",
+    description:
+      "A romantic 4-night Bangkok couple itinerary — sunset cruises, rooftop bars, couple spas and boutique hotels designed for honeymooners and date trips.",
+    category: "itinerary",
+    image: blogBkkCoupleIt,
+    date: "May 1, 2026",
+    readTime: "10 min read",
+    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-couple-itinerary",
+  },
+  {
+    title: "Bangkok Solo Itinerary 2026: Safe & Fun 4-Day Plan",
+    description:
+      "A complete solo travel itinerary for Bangkok — safe neighborhoods, affordable hostels, food walks, day tours and the best ways to meet other travelers.",
+    category: "itinerary",
+    image: blogBkkSoloIt,
+    date: "Apr 30, 2026",
+    readTime: "10 min read",
+    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-solo-itinerary",
+  },
+
+  // ===================== INDIAN AUDIENCE BLOGS =====================
+  {
+    title: "Thailand Visa for Indians 2026: Bangkok Trip Visa Guide",
+    description:
+      "Complete 2026 Thailand visa guide for Indian passport holders — visa-free entry, e-Visa, visa-on-arrival, documents, costs and common mistakes.",
+    category: "indian-audience",
+    image: blogBkkVisaIn,
+    date: "May 6, 2026",
+    readTime: "10 min read",
+    link: "/thailand/bangkok/destination-guides/indian-audience/thailand-visa-for-indians",
+  },
+  {
+    title: "Best Indian Restaurants in Bangkok 2026: Pure Veg & Jain Friendly",
+    description:
+      "The best Indian restaurants in Bangkok — pure vegetarian, Jain-friendly and South Indian options across Sukhumvit, Pahurat and Silom areas.",
+    category: "indian-audience",
+    image: blogBkkIndianFood,
+    date: "May 5, 2026",
+    readTime: "10 min read",
+    link: "/thailand/bangkok/destination-guides/indian-audience/best-indian-restaurants-bangkok",
+  },
+  {
+    title: "INR to Thai Baht 2026: Bangkok Currency Guide for Indians",
+    description:
+      "Complete Bangkok currency guide for Indian travelers — INR to THB rate, where to exchange, ATM tips, credit cards and how much cash to carry.",
+    category: "indian-audience",
+    image: blogBkkCurrencyIn,
+    date: "May 4, 2026",
+    readTime: "10 min read",
+    link: "/thailand/bangkok/destination-guides/indian-audience/inr-to-thai-baht-guide",
+  },
+  {
+    title: "Bangkok Honeymoon Guide 2026: Best Plan for Indian Couples",
+    description:
+      "Complete Bangkok honeymoon guide for Indian couples — best resorts, romantic experiences, packages, costs and 5-night itinerary tested by 1000+ couples.",
+    category: "indian-audience",
+    image: blogBkkHoneymoonIn,
+    date: "May 3, 2026",
+    readTime: "10 min read",
+    link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-honeymoon-for-indians",
+  },
+  {
+    title: "Is Bangkok Safe for Indian Tourists 2026? Honest Safety Guide",
+    description:
+      "Honest 2026 Bangkok safety guide for Indian travelers including women — common scams, safe neighborhoods, transport tips and emergency contacts.",
+    category: "indian-audience",
+    image: blogBkkSafetyIn,
+    date: "May 2, 2026",
+    readTime: "10 min read",
+    link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-safety-for-indians",
+  },
+  {
+    title: "Bangkok Tips for Indian Families 2026: 15 Things to Know",
+    description:
+      "15 must-know tips for Indian families visiting Bangkok — vegetarian food, kid-friendly attractions, hotel picks, weather and senior parent travel advice.",
+    category: "indian-audience",
+    image: blogBkkIndianFamilyTips,
+    date: "May 1, 2026",
+    readTime: "10 min read",
+    link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-tips-indian-families",
+  },
+
+  // ===================== MICRO BLOGS =====================
+  {
+    title: "Bangkok Temple Dress Code 2026: What to Wear (and Avoid)",
+    description:
+      "What to wear at Bangkok temples — Grand Palace dress code, allowed clothing, banned items and rental options if you forget.",
+    category: "micro",
+    image: blogBkkTempleDress,
+    date: "May 6, 2026",
+    readTime: "5 min read",
+    link: "/thailand/bangkok/destination-guides/micro/bangkok-temple-dress-code",
+  },
+  {
+    title: "Best Time to Visit Bangkok 2026: Month-by-Month Guide",
+    description:
+      "Best time to visit Bangkok — month-by-month weather, prices, festivals and the ideal months for first-time Indian travelers.",
+    category: "micro",
+    image: blogBkkBestTime,
+    date: "May 5, 2026",
+    readTime: "6 min read",
+    link: "/thailand/bangkok/destination-guides/micro/best-time-to-visit-bangkok",
+  },
+  {
+    title: "Bangkok in Monsoon 2026: Should You Visit in Rain Season?",
+    description:
+      "Bangkok monsoon guide — what to expect June to October, what's open, what's affected and is it worth visiting in the rainy season.",
+    category: "micro",
+    image: blogBkkMonsoon,
+    date: "May 4, 2026",
+    readTime: "6 min read",
+    link: "/thailand/bangkok/destination-guides/micro/bangkok-monsoon-guide",
+  },
+  {
+    title: "Bangkok SIM Card 2026: Best Tourist Plans for Indian Travelers",
+    description:
+      "Best Bangkok tourist SIM card options 2026 — DTAC, AIS, TrueMove plans, eSIM alternatives, prices and where to buy from India.",
+    category: "micro",
+    image: blogBkkSim,
+    date: "May 3, 2026",
+    readTime: "6 min read",
+    link: "/thailand/bangkok/destination-guides/micro/bangkok-sim-card-guide",
+  },
+  {
+    title: "Bangkok Tipping Guide 2026: How Much to Tip Where",
+    description:
+      "Bangkok tipping etiquette — how much to tip taxis, restaurants, hotels, spas, tours and tour guides in 2026.",
+    category: "micro",
+    image: blogBkkTipping,
+    date: "May 2, 2026",
+    readTime: "5 min read",
+    link: "/thailand/bangkok/destination-guides/micro/bangkok-tipping-guide",
+  },
+  {
+    title: "Bangkok Shopping Guide 2026: Best Markets, Malls & Bargaining",
+    description:
+      "Best Bangkok shopping spots — Chatuchak, Platinum, MBK, Pratunam, ICONSIAM — plus bargaining tips and what to buy.",
+    category: "micro",
+    image: blogBkkShopping,
+    date: "May 1, 2026",
+    readTime: "7 min read",
+    link: "/thailand/bangkok/destination-guides/micro/bangkok-shopping-guide",
+  },
+
+  // ===================== TRANSFER BLOGS =====================
+  {
+    title: "Suvarnabhumi (BKK) Airport Transfer 2026: Best Options & Costs",
+    description:
+      "Complete Suvarnabhumi airport to Bangkok hotel transfer guide — taxi, Grab, Airport Rail Link, private cab and prices.",
+    category: "transfer",
+    image: blogBkkAirport,
+    date: "May 6, 2026",
+    readTime: "8 min read",
+    link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer",
+  },
+  {
+    title: "Don Mueang (DMK) Airport Transfer 2026: How to Reach Bangkok",
+    description:
+      "Don Mueang DMK airport to Bangkok hotel transfer guide — taxi, Grab, A1 bus, train and prices for budget travelers.",
+    category: "transfer",
+    image: blogDmkAirport,
+    date: "May 5, 2026",
+    readTime: "8 min read",
+    link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer",
+  },
+  {
+    title: "Bangkok to Pattaya Transfer 2026: Bus, Taxi & Private Car",
+    description:
+      "Bangkok to Pattaya transfer options — bus, minivan, private cab, taxi and direct from Suvarnabhumi airport, prices and journey times.",
+    category: "transfer",
+    image: blogBkkPattayaTransfer,
+    date: "May 4, 2026",
+    readTime: "8 min read",
+    link: "/thailand/bangkok/destination-guides/transfer/bangkok-to-pattaya-transfer",
+  },
+  {
+    title: "Bangkok Airport Rail Link 2026: Cheapest Way to City Center",
+    description:
+      "Bangkok Airport Rail Link guide — route, stations, ticket prices, schedule and whether it beats taxi for budget travelers.",
+    category: "transfer",
+    image: blogBkkRail,
+    date: "May 3, 2026",
+    readTime: "7 min read",
+    link: "/thailand/bangkok/destination-guides/transfer/bangkok-airport-rail-link",
+  },
+  {
+    title: "Bangkok Private Transfer 2026: Is It Worth the Extra Cost?",
+    description:
+      "Bangkok private transfer guide — when to book, costs, sedan vs SUV, top operators and whether it's worth the premium over taxi.",
+    category: "transfer",
+    image: blogBkkPrivateTransfer,
+    date: "May 2, 2026",
+    readTime: "7 min read",
+    link: "/thailand/bangkok/destination-guides/transfer/bangkok-private-transfer",
+  },
+  {
+    title: "Grab vs Taxi in Bangkok 2026: Which Should You Use?",
+    description:
+      "Grab vs taxi in Bangkok — pricing comparison, safety, language barriers, when to use which and tips for first-time travelers.",
+    category: "transfer",
+    image: blogBkkGrab,
+    date: "May 1, 2026",
+    readTime: "7 min read",
+    link: "/thailand/bangkok/destination-guides/transfer/grab-vs-taxi-bangkok",
   },
 ];
 
