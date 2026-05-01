@@ -19,6 +19,35 @@ import blogWatArunVsPalace from "@/assets/blog-wat-arun-vs-grand-palace.jpg";
 import blogSafariVsSealife from "@/assets/blog-safari-vs-sealife.jpg";
 import blogBtsVsTaxi from "@/assets/blog-bts-vs-taxi.jpg";
 
+// Itinerary
+import blogBkk2Day from "@/assets/blog-bangkok-2day-itinerary.jpg";
+import blogBkk3Day from "@/assets/blog-bangkok-3day-itinerary.jpg";
+import blogBkk4Day from "@/assets/blog-bangkok-4day-itinerary.jpg";
+import blogBkkFamilyIt from "@/assets/blog-bangkok-family-itinerary.jpg";
+import blogBkkCoupleIt from "@/assets/blog-bangkok-couple-itinerary.jpg";
+import blogBkkSoloIt from "@/assets/blog-bangkok-solo-itinerary.jpg";
+// Indian audience
+import blogBkkVisaIn from "@/assets/blog-bangkok-visa-india.jpg";
+import blogBkkIndianFood from "@/assets/blog-bangkok-indian-food.jpg";
+import blogBkkCurrencyIn from "@/assets/blog-bangkok-currency-india.jpg";
+import blogBkkHoneymoonIn from "@/assets/blog-bangkok-honeymoon-india.jpg";
+import blogBkkSafetyIn from "@/assets/blog-bangkok-safety-india.jpg";
+import blogBkkIndianFamilyTips from "@/assets/blog-bangkok-india-family-tips.jpg";
+// Micro
+import blogBkkTempleDress from "@/assets/blog-bangkok-temple-dress.jpg";
+import blogBkkBestTime from "@/assets/blog-bangkok-best-time-visit.jpg";
+import blogBkkMonsoon from "@/assets/blog-bangkok-monsoon.jpg";
+import blogBkkSim from "@/assets/blog-bangkok-sim-card.jpg";
+import blogBkkTipping from "@/assets/blog-bangkok-tipping.jpg";
+import blogBkkShopping from "@/assets/blog-bangkok-shopping-tips.jpg";
+// Transfers
+import blogBkkAirport from "@/assets/blog-bkk-airport-transfer.jpg";
+import blogDmkAirport from "@/assets/blog-dmk-airport-transfer.jpg";
+import blogBkkPattayaTransfer from "@/assets/blog-bangkok-pattaya-transfer.jpg";
+import blogBkkRail from "@/assets/blog-bangkok-airport-rail.jpg";
+import blogBkkPrivateTransfer from "@/assets/blog-bangkok-private-transfer.jpg";
+import blogBkkGrab from "@/assets/blog-bangkok-grab-taxi.jpg";
+
 import bangkokSkywalk from "@/assets/bangkok-skywalk-1.jpg";
 import bangkokTemple from "@/assets/bangkok-temple-1.jpg";
 import bangkokCity from "@/assets/bangkok-city-1.jpg";
