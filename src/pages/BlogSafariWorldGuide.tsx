@@ -4,20 +4,28 @@ import giraffeImg from "@/assets/blog-giraffe-feeding.jpg";
 
 const BlogSafariWorldGuide = () => (
   <BlogArticleLayout
-    title="Safari World Bangkok Guide: Shows, Tickets & Timings (2026)"
-    description="Drive-through safari, marine park, dolphin and orangutan shows, plus the famous giraffe feeding deck — plan a perfect family day at Safari World."
+    /* SEO — Primary: safari world bangkok tickets | Intent: Transactional */
+    title="Safari World Bangkok 2026: Tickets, Shows & Timings"
+    description="Safari World Bangkok tickets 2026, combo prices with Marine Park, dolphin show timings and giraffe feeding tips for families travelling from India."
     heroImage={heroImg}
     heroAlt="Lions climbing on a safari vehicle inside Safari World Bangkok"
     author="Yellodae Travel Expert"
     date="Apr 23, 2026"
     readTime="10 min read"
     category="Activity Blogs"
-    keywords={["Safari World Bangkok", "Safari World tickets", "Marine Park Bangkok", "Bangkok with kids", "dolphin show Bangkok"]}
+    keywords={[
+      "safari world bangkok tickets",
+      "safari world marine park combo",
+      "safari world dolphin show timings",
+      "safari world giraffe feeding deck",
+      "safari world bangkok with hotel transfer",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer",
     }}
     sections={[
       {
@@ -96,10 +104,14 @@ const BlogSafariWorldGuide = () => (
     ]}
     relatedActivities={[
       { title: "Safari World Bangkok with Transfer", link: "/thailand/bangkok/safari-world" },
-      { title: "Dream World Bangkok", link: "/thailand/bangkok/dream-world-bangkok" },
-      { title: "Sea Life Bangkok + Madame Tussauds", link: "/thailand/bangkok/sea-life-bangkok-madame-tussauds" },
+      { title: "Dream World Bangkok Tickets", link: "/thailand/bangkok/dream-world-bangkok-tickets" },
+      { title: "Sea Life Bangkok + Madame Tussauds Combo", link: "/thailand/bangkok/sea-life-madame-tussauds-tickets" },
+      { title: "Dolphin Show Bangkok", link: "/thailand/bangkok/dolphin-show" },
     ]}
     relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Safari World to Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer" },
+      { title: "Safari World vs Sea Life Bangkok Comparison", link: "/thailand/bangkok/destination-guides/comparison/safari-world-vs-sea-life-bangkok" },
       { title: "Sea Life Bangkok: Is It Worth It?", link: "/thailand/bangkok/destination-guides/activity/sea-life-bangkok-guide" },
     ]}
   />

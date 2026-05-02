@@ -5,8 +5,9 @@ import watArunImg from "@/assets/blog-wat-arun-sunset.jpg";
 
 const BlogChaoPhrayaPrincessReview = () => (
   <BlogArticleLayout
-    title="Chao Phraya Princess Dinner Cruise Review: Is It Worth It in 2026?"
-    description="An honest review of Bangkok's most popular dinner cruise — food, views, entertainment, pricing and who should (and shouldn't) book it."
+    /* SEO — Primary: chao phraya princess cruise review | Intent: Commercial */
+    title="Chao Phraya Princess Cruise Review 2026: Worth It?"
+    description="Honest 2026 Chao Phraya Princess cruise review for Indian travellers — food, views, pricing and who should book the Bangkok dinner cruise."
     heroImage={heroImg}
     heroAlt="Chao Phraya Princess dinner cruise lit up at night on the river"
     author="Yellodae Travel Expert"
@@ -14,18 +15,18 @@ const BlogChaoPhrayaPrincessReview = () => (
     readTime="9 min read"
     category="Activity Blogs"
     keywords={[
-      "Chao Phraya Princess cruise review",
-      "Bangkok dinner cruise",
-      "Chao Phraya River cruise",
-      "Wat Arun cruise",
-      "Bangkok romantic dinner",
+      "chao phraya princess cruise review",
+      "chao phraya princess buffet menu",
+      "princess cruise bangkok price india",
+      "wat arun view dinner cruise",
+      "bangkok river cruise honest review",
     ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",
-      transfersLink: "/thailand/bangkok/budget-airport-transfers",
+      transfersLink: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer",
     }}
     sections={[
       {
@@ -133,22 +134,16 @@ const BlogChaoPhrayaPrincessReview = () => (
       },
     ]}
     relatedActivities={[
-      {
-        title: "Chao Phraya Princess Cruise — Private Transfer",
-        link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer",
-      },
-      {
-        title: "Chao Phraya Princess — No Transfer",
-        link: "/thailand/bangkok/chao-phraya-princess-cruise-no-transfer",
-      },
-      {
-        title: "Viva Alangka Luxury Dinner Cruise",
-        link: "/thailand/bangkok/viva-alangka-cruise",
-      },
+      { title: "Chao Phraya Princess Cruise with Private Transfer", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Chao Phraya Princess Valentine Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise" },
+      { title: "Viva Alangka Luxury Dinner Cruise", link: "/thailand/bangkok/viva-alangka-dinner-cruise" },
+      { title: "Wat Arun, Wat Pho & Golden Buddha Tour", link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
     ]}
     relatedLinks={[
+      { title: "Bangkok Things to Do — All Activities", link: "/thailand/bangkok/things-to-do" },
+      { title: "Bangkok Hotel to Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer" },
+      { title: "Princess vs White Orchid Cruise Comparison", link: "/thailand/bangkok/destination-guides/comparison/chao-phraya-princess-vs-white-orchid" },
       { title: "Best Dinner Cruises in Bangkok for Couples", link: "/thailand/bangkok/destination-guides/activity/best-dinner-cruises-bangkok-couples" },
-      { title: "Bangkok Activities Booking Guide", link: "/blog/bangkok-activities-guide" },
     ]}
   />
 );

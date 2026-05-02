@@ -3,20 +3,28 @@ import heroImg from "@/assets/blog-temples-sunset-river.jpg";
 
 const BlogBangkokTempleTourHalfVsFull = () => (
   <BlogArticleLayout
-    title="Bangkok Half-Day vs Full-Day Temple Tour: Which to Choose?"
-    description="Compare Bangkok temple tour formats by time, depth, cost and energy — and pick the right experience for your trip."
+    /* SEO — Primary: bangkok temple tour half day or full day | Intent: Commercial */
+    title="Bangkok Temple Tour: Half-Day or Full-Day? (2026)"
+    description="Half-day or full-day Bangkok temple tour in 2026? Compare time, cost, energy and coverage to pick the right format for your itinerary from India."
     heroImage={heroImg}
     heroAlt="Bangkok temple complex by the river at sunset"
     author="Yellodae Travel Expert"
     date="Apr 21, 2026"
     readTime="7 min read"
     category="Activity Blogs"
-    keywords={["Bangkok temple tour", "half day vs full day Bangkok", "Bangkok city tour", "Wat Pho Wat Arun tour", "Grand Palace tour"]}
+    keywords={[
+      "bangkok temple tour half day or full day",
+      "best bangkok city tour duration",
+      "three temples tour vs grand palace",
+      "wat pho wat arun guided tour",
+      "bangkok temple tour with hotel pickup",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/temple-tour-airport",
     }}
     sections={[
       {

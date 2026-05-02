@@ -3,20 +3,28 @@ import heroImg from "@/assets/blog-sea-life-aquarium.jpg";
 
 const BlogSeaLifeBangkokGuide = () => (
   <BlogArticleLayout
-    title="Sea Life Bangkok: Is It Worth It? Tickets & Tips (2026)"
-    description="What to expect inside Bangkok's biggest aquarium — combo tickets, photography tips and the best time to visit Sea Life Bangkok."
+    /* SEO — Primary: sea life bangkok ticket price | Intent: Transactional */
+    title="Sea Life Bangkok 2026: Ticket Price & Combo Tips"
+    description="Sea Life Bangkok ticket price 2026, Madame Tussauds combo savings, photo tips and whether the Siam Paragon aquarium is worth it for Indian families."
     heroImage={heroImg}
     heroAlt="Underwater tunnel with marine life at Sea Life Bangkok aquarium"
     author="Yellodae Travel Expert"
     date="Apr 22, 2026"
     readTime="8 min read"
     category="Activity Blogs"
-    keywords={["Sea Life Bangkok", "Sea Life ticket price", "Bangkok aquarium", "Madame Tussauds Bangkok combo", "Bangkok with kids"]}
+    keywords={[
+      "sea life bangkok ticket price",
+      "sea life madame tussauds combo bangkok",
+      "siam paragon aquarium tickets",
+      "underwater tunnel bangkok experience",
+      "sea life bangkok worth it for kids",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/bangkok-hotel-to-don-mueang-airport-transfer",
     }}
     sections={[
       {
@@ -97,13 +105,16 @@ const BlogSeaLifeBangkokGuide = () => (
       },
     ]}
     relatedActivities={[
-      { title: "Sea Life Bangkok + Madame Tussauds", link: "/thailand/bangkok/sea-life-bangkok-madame-tussauds" },
-      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/king-power-mahanakhon-skywalk-tickets" },
+      { title: "Sea Life + Madame Tussauds Combo Tickets", link: "/thailand/bangkok/sea-life-madame-tussauds-tickets" },
+      { title: "King Power Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
       { title: "Safari World Bangkok with Transfer", link: "/thailand/bangkok/safari-world" },
+      { title: "Dream World Bangkok Tickets", link: "/thailand/bangkok/dream-world-bangkok-tickets" },
     ]}
     relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Bangkok Hotel to Don Mueang Airport Transfer", link: "/thailand/bangkok/bangkok-hotel-to-don-mueang-airport-transfer" },
+      { title: "Safari World vs Sea Life Bangkok Comparison", link: "/thailand/bangkok/destination-guides/comparison/safari-world-vs-sea-life-bangkok" },
       { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
-      { title: "Mahanakhon Skywalk Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
     ]}
   />
 );

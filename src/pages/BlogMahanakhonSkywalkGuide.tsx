@@ -3,20 +3,28 @@ import heroImg from "@/assets/blog-mahanakhon-skywalk.jpg";
 
 const BlogMahanakhonSkywalkGuide = () => (
   <BlogArticleLayout
-    title="Mahanakhon Skywalk Tickets: Price, Sunset Timing & Tips (2026)"
-    description="Bangkok's highest glass-floor observation deck — pricing, the best time to go, what to wear and the most thrilling photo spots."
+    /* SEO — Primary: mahanakhon skywalk ticket price | Intent: Transactional */
+    title="Mahanakhon Skywalk 2026: Ticket Price & Sunset Tips"
+    description="Mahanakhon Skywalk ticket price 2026, best sunset timing, glass-floor tips and online booking advice for Bangkok's highest observation deck."
     heroImage={heroImg}
     heroAlt="Visitors on the glass floor of Mahanakhon Skywalk overlooking Bangkok skyline"
     author="Yellodae Travel Expert"
     date="Apr 24, 2026"
     readTime="7 min read"
     category="Activity Blogs"
-    keywords={["Mahanakhon Skywalk", "King Power Mahanakhon tickets", "Bangkok observation deck", "Mahanakhon glass floor", "Bangkok views"]}
+    keywords={[
+      "mahanakhon skywalk ticket price",
+      "king power mahanakhon sunset booking",
+      "mahanakhon glass floor experience",
+      "bangkok 78th floor observation deck",
+      "mahanakhon skywalk online vs counter price",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer",
     }}
     sections={[
       {
@@ -84,11 +92,14 @@ const BlogMahanakhonSkywalkGuide = () => (
       },
     ]}
     relatedActivities={[
-      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/king-power-mahanakhon-skywalk-tickets" },
-      { title: "Sea Life Bangkok + Madame Tussauds Combo", link: "/thailand/bangkok/sea-life-bangkok-madame-tussauds" },
-      { title: "Bangkok City Tour with Boat", link: "/thailand/bangkok/city-tour-with-boat" },
+      { title: "King Power Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Sea Life Bangkok + Madame Tussauds Combo", link: "/thailand/bangkok/sea-life-madame-tussauds-tickets" },
+      { title: "Chao Phraya River Boat City Tour", link: "/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour" },
+      { title: "Baiyoke Sky Buffet Bangkok", link: "/thailand/bangkok/baiyoke-buffet" },
     ]}
     relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Bangkok Hotel to Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer" },
       { title: "Sea Life Bangkok: Is It Worth It?", link: "/thailand/bangkok/destination-guides/activity/sea-life-bangkok-guide" },
     ]}
   />
