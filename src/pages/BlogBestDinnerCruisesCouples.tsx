@@ -117,11 +117,15 @@ const BlogBestDinnerCruisesCouples = () => (
       },
     ]}
     relatedActivities={[
-      { title: "Chao Phraya Princess Valentine Cruise", link: "/thailand/bangkok/chao-phraya-princess-cruise-valentine" },
-      { title: "Chao Phraya Princess — Private Transfer", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
-      { title: "Viva Alangka Luxury Dinner Cruise", link: "/thailand/bangkok/viva-alangka-cruise" },
+      { title: "Chao Phraya Princess Valentine Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise" },
+      { title: "Chao Phraya Princess Cruise with Private Transfer", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Viva Alangka Luxury Dinner Cruise", link: "/thailand/bangkok/viva-alangka-dinner-cruise" },
+      { title: "Chao Phraya River Boat Bangkok City Tour", link: "/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour" },
     ]}
     relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Bangkok Hotel to Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer" },
+      { title: "Princess vs White Orchid Cruise Comparison", link: "/thailand/bangkok/destination-guides/comparison/chao-phraya-princess-vs-white-orchid" },
       { title: "Chao Phraya Princess Cruise — Honest Review", link: "/thailand/bangkok/destination-guides/activity/chao-phraya-princess-cruise-review" },
     ]}
   />
