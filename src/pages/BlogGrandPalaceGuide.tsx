@@ -3,20 +3,28 @@ import heroImg from "@/assets/blog-grand-palace-spires.jpg";
 
 const BlogGrandPalaceGuide = () => (
   <BlogArticleLayout
-    title="Grand Palace Bangkok Guide: Tickets, Dress Code & Tips (2026)"
-    description="Skip queues and dress-code denials with this complete Grand Palace planning guide — entry fees, what to wear, and what to see inside."
+    /* SEO — Primary: grand palace bangkok dress code | Intent: Informational */
+    title="Grand Palace Bangkok 2026: Dress Code & Ticket Guide"
+    description="Grand Palace Bangkok dress code, 2026 ticket price, opening hours and Indian-friendly tips so you don't get turned away at the entrance."
     heroImage={heroImg}
     heroAlt="Grand Palace Bangkok with golden spires and ornate Thai architecture"
     author="Yellodae Travel Expert"
     date="Apr 25, 2026"
     readTime="9 min read"
     category="Activity Blogs"
-    keywords={["Grand Palace Bangkok", "Grand Palace dress code", "Grand Palace ticket price", "Wat Phra Kaew", "Bangkok must-visit"]}
+    keywords={[
+      "grand palace bangkok dress code",
+      "grand palace 500 thb ticket",
+      "wat phra kaew emerald buddha",
+      "grand palace timings sunday",
+      "what to wear grand palace indian",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer",
     }}
     sections={[
       {
@@ -85,12 +93,15 @@ const BlogGrandPalaceGuide = () => (
       },
     ]}
     relatedActivities={[
-      { title: "Grand Palace + Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-emerald-buddha-tour" },
+      { title: "Grand Palace & Wat Phra Kaew Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Three Temples Bangkok City Tour with Transfer", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
       { title: "Wat Arun, Wat Pho & Golden Buddha Tour", link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
-      { title: "Three Temples Tour with Transfer", link: "/thailand/bangkok/three-temples-tour-with-transfer" },
+      { title: "Golden Marble Buddha & Bangkok City Tour", link: "/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour" },
     ]}
     relatedLinks={[
-      { title: "Wat Arun Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Bangkok Hotel + Two Temple Tour to Don Mueang Transfer", link: "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer" },
+      { title: "Wat Arun vs Grand Palace Comparison", link: "/thailand/bangkok/destination-guides/comparison/wat-arun-vs-grand-palace" },
       { title: "Bangkok Half-Day vs Full-Day Temple Tour", link: "/thailand/bangkok/destination-guides/activity/bangkok-temple-tour-half-vs-full-day" },
     ]}
   />

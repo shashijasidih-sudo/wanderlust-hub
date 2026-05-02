@@ -3,20 +3,28 @@ import heroImg from "@/assets/blog-wat-arun-sunset.jpg";
 
 const BlogWatArunGuide = () => (
   <BlogArticleLayout
-    title="Wat Arun Bangkok Guide: Tickets, Timings & Photo Spots (2026)"
-    description="Everything about the Temple of Dawn — entry fee, opening hours, dress code, the best time to visit and the most photogenic angles."
+    /* SEO — Primary: wat arun bangkok ticket price | Intent: Informational */
+    title="Wat Arun Bangkok 2026: Ticket Price, Timings & Photos"
+    description="Wat Arun ticket price 2026, opening hours, dress code and the best sunset photo spots at Bangkok's Temple of Dawn — planned for Indian travellers."
     heroImage={heroImg}
     heroAlt="Wat Arun Temple of Dawn at sunset on the Chao Phraya River"
     author="Yellodae Travel Expert"
     date="Apr 26, 2026"
     readTime="7 min read"
     category="Activity Blogs"
-    keywords={["Wat Arun guide", "Temple of Dawn Bangkok", "Wat Arun ticket price", "Wat Arun photography", "Bangkok temples"]}
+    keywords={[
+      "wat arun bangkok ticket price",
+      "temple of dawn timings",
+      "wat arun sunset photo spots",
+      "wat arun dress code india",
+      "how to reach wat arun from sukhumvit",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer",
     }}
     sections={[
       {
@@ -75,10 +83,13 @@ const BlogWatArunGuide = () => (
     relatedActivities={[
       { title: "Wat Arun, Wat Pho & Golden Buddha Tour", link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
       { title: "Wat Arun + Chinatown Walking Tour", link: "/thailand/bangkok/wat-arun-chinatown-tour" },
-      { title: "Three Temples Tour with Transfer", link: "/thailand/bangkok/three-temples-tour-with-transfer" },
+      { title: "Three Temples Bangkok City Tour with Transfer", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
+      { title: "Chao Phraya Princess Dinner Cruise (Wat Arun by Night)", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer" },
     ]}
     relatedLinks={[
-      { title: "Grand Palace Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Bangkok Hotel + Two Temple Tour to Suvarnabhumi Transfer", link: "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer" },
+      { title: "Wat Arun vs Grand Palace Comparison", link: "/thailand/bangkok/destination-guides/comparison/wat-arun-vs-grand-palace" },
       { title: "Bangkok Half-Day vs Full-Day Temple Tour", link: "/thailand/bangkok/destination-guides/activity/bangkok-temple-tour-half-vs-full-day" },
     ]}
   />
