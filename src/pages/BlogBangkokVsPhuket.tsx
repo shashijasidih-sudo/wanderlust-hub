@@ -3,18 +3,29 @@ import heroImg from "@/assets/blog-bangkok-vs-phuket.jpg";
 
 const BlogBangkokVsPhuket = () => (
   <BlogArticleLayout
-    title="Bangkok vs Phuket: Which Should You Visit First in 2026?"
-    description="A side-by-side comparison of Bangkok and Phuket — vibe, cost, activities, weather and who each city suits best for first-time travelers."
+    /* SEO — Primary: bangkok vs phuket | Intent: Informational */
+    title="Bangkok vs Phuket 2026: Which to Visit First from India"
+    description="Bangkok or Phuket first? Compare vibe, cost, activities, weather and connectivity from India in this honest 2026 side-by-side guide."
     heroImage={heroImg}
     heroAlt="Split image of Bangkok skyline and Phuket beach with longtail boats"
     author="Yellodae Travel Expert"
     date="May 2, 2026"
     readTime="11 min read"
     category="Comparison Blogs"
-    keywords={["Bangkok vs Phuket", "Bangkok or Phuket", "Thailand first trip", "Bangkok Phuket comparison", "Thailand travel guide"]}
+    keywords={[
+      "bangkok vs phuket",
+      "bangkok or phuket first trip",
+      "phuket vs bangkok cost india",
+      "bangkok phuket combo itinerary",
+      "phuket weather best time",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Bangkok or Phuket — it's the eternal Thailand dilemma every first-time traveler from India faces. One offers ancient temples, glittering malls, world-class street food and chaotic-but-magical urban energy. The other delivers turquoise water, palm-fringed beaches, hopping islands and a laid-back tropical pace. Both are world-famous, both are easy to reach, and both attract over a million Indian visitors a year. So which one deserves your limited holiday days first? In this honest, side-by-side guide we break down vibe, cost, activities, weather, food and the kind of traveler each city suits best — so by the end you'll know exactly where to land first." },
       
@@ -81,9 +92,12 @@ const BlogBangkokVsPhuket = () => (
     relatedActivities={[
       { title: "Bangkok City Tour with Boat", link: "/thailand/bangkok/city-tour-with-boat" },
       { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
-      { title: "Three Temples Tour", link: "/thailand/bangkok/three-temples-tour-with-transfer" },
+      { title: "Three Temples Bangkok City Tour", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
+      { title: "Mahanakhon SkyWalk Bangkok", link: "/thailand/bangkok/mahanakhon-skywalk" },
     ]}
     relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport to Bangkok Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
       { title: "Bangkok Trip Cost from India", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
       { title: "Cheapest Time to Visit Bangkok", link: "/thailand/bangkok/destination-guides/price-cost/cheapest-time-to-visit-bangkok" },
     ]}

@@ -3,18 +3,29 @@ import heroImg from "@/assets/blog-safari-vs-sealife.jpg";
 
 const BlogSafariWorldVsSeaLife = () => (
   <BlogArticleLayout
-    title="Safari World vs Sea Life Bangkok: Which Is Better for Families?"
-    description="Safari World or Sea Life Bangkok? Compare tickets, time needed, kids' enjoyment and value in this honest 2026 family guide."
+    /* SEO — Primary: safari world vs sea life bangkok | Intent: Commercial */
+    title="Safari World vs Sea Life Bangkok 2026: Which for Families?"
+    description="Safari World or Sea Life Bangkok in 2026? Compare tickets, time, kids' age fit and value — an honest family pick guide for Indian travellers."
     heroImage={heroImg}
     heroAlt="Safari World giraffe and Sea Life Bangkok aquarium sharks side by side"
     author="Yellodae Travel Expert"
     date="Apr 28, 2026"
     readTime="11 min read"
     category="Comparison Blogs"
-    keywords={["Safari World vs Sea Life", "Bangkok with kids", "best Bangkok family attraction", "Safari World tickets", "Sea Life Bangkok review"]}
+    keywords={[
+      "safari world vs sea life bangkok",
+      "bangkok with kids best attraction",
+      "safari world bangkok ticket price india",
+      "sea life bangkok review",
+      "bangkok family day out",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/safari-world-to-suvarnabhumi-airport-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Traveling to Bangkok with kids? Safari World and Sea Life are the two top family attractions everyone debates between. They're very different experiences — Safari World is a sprawling outdoor zoo-and-marine park combo on the city's outskirts, while Sea Life is a compact, world-class indoor aquarium right in central Siam. Both are loved by Indian families, both cost roughly the same per family, and both deliver memorable photos. So how do you choose? This honest 2026 comparison breaks down everything — tickets, time, age suitability, weather, location, and the experience itself." },
 
@@ -79,8 +90,11 @@ const BlogSafariWorldVsSeaLife = () => (
       { title: "Safari World + Marine Park", link: "/thailand/bangkok/safari-world-marine-park" },
       { title: "Sea Life Bangkok + Madame Tussauds", link: "/thailand/bangkok/sea-life-bangkok-madame-tussauds" },
       { title: "Bangkok City Tour with Boat", link: "/thailand/bangkok/city-tour-with-boat" },
+      { title: "Three Temples Bangkok City Tour", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
     ]}
     relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Safari World to Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/safari-world-to-suvarnabhumi-airport-transfer" },
       { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
       { title: "Sea Life Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/sea-life-bangkok-guide" },
       { title: "Bangkok Family Trip Cost", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-family-trip-cost" },

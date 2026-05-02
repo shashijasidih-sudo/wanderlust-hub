@@ -3,18 +3,29 @@ import heroImg from "@/assets/blog-wat-arun-vs-grand-palace.jpg";
 
 const BlogWatArunVsGrandPalace = () => (
   <BlogArticleLayout
-    title="Wat Arun vs Grand Palace: Which Bangkok Temple Should You Visit First?"
-    description="Honest 2026 comparison of Wat Arun and the Grand Palace — entry fees, time needed, photo spots, dress code and which to visit first."
+    /* SEO — Primary: wat arun vs grand palace | Intent: Informational */
+    title="Wat Arun vs Grand Palace 2026: Which to Visit First"
+    description="Wat Arun or Grand Palace first? 2026 comparison of fees, time, dress code and photo spots — written for Indian travellers in Bangkok."
     heroImage={heroImg}
     heroAlt="Wat Arun spires at sunset and the Grand Palace gold rooftops side by side"
     author="Yellodae Travel Expert"
     date="Apr 29, 2026"
     readTime="11 min read"
     category="Comparison Blogs"
-    keywords={["Wat Arun vs Grand Palace", "Bangkok temple comparison", "best Bangkok temple", "Grand Palace tickets", "Wat Arun guide"]}
+    keywords={[
+      "wat arun vs grand palace",
+      "bangkok temple comparison india",
+      "grand palace ticket price 2026",
+      "wat arun sunset best time",
+      "bangkok temples dress code",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Wat Arun and the Grand Palace are the two most famous landmarks in Bangkok — and most travelers want to do both. But if you only have one morning free, or you're suffering from temple fatigue, which one deserves your time? They look superficially similar from photos, but the experience is wildly different. Grand Palace is grand, golden, royal and crowded. Wat Arun is quieter, riverside, photogenic and steeper. Here's an honest 2026 comparison so you choose the right one for your style of travel." },
 
@@ -83,11 +94,14 @@ const BlogWatArunVsGrandPalace = () => (
       { type: "cta", content: "Book a Bangkok temple tour", link: "/thailand/bangkok/three-temples-tour-with-transfer", linkText: "Book Three Temples Tour" },
     ]}
     relatedActivities={[
-      { title: "Three Temples Tour with Transfer", link: "/thailand/bangkok/three-temples-tour-with-transfer" },
-      { title: "Wat Arun + Wat Pho + Golden Buddha Tour", link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
-      { title: "Grand Palace + Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-emerald-buddha-tour" },
+      { title: "Three Temples Bangkok City Tour", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
+      { title: "Wat Arun, Wat Pho & Golden Buddha Tour", link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
+      { title: "Grand Palace & Wat Phra Kaew Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Golden Marble Buddha & Bangkok City Tour", link: "/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour" },
     ]}
     relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Temple Tour to Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer" },
       { title: "Wat Arun Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
       { title: "Grand Palace Guide", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
       { title: "Half-Day vs Full-Day Temple Tour", link: "/thailand/bangkok/destination-guides/activity/bangkok-temple-tour-half-vs-full-day" },
