@@ -73,24 +73,42 @@ const BlogThailandFoodExperiences = () => {
   }, []);
 
   return (
+    /* SEO — Primary: thailand food experiences | Intent: Informational */
     <BlogArticleLayout
     {...getBlogCityProps("thailand")}
-      title="Complete Guide to Thailand Food Experiences — Best Culinary Adventures 2026"
-      description="Discover the best Thailand food experiences — from Bangkok street food to Phuket seafood, floating markets to rooftop dining. Plan your delicious Thai food journey."
+      title="Thailand Food Experiences 2026: Street Food to Rooftop Guide"
+      description="A complete Thailand food experiences guide for 2026 — Bangkok street food, floating markets, Phuket seafood and rooftop dining curated for Indian travellers."
       heroImage={floatingMarket}
       heroAlt="Thailand floating market with vendors cooking food on traditional boats"
       author="Yellodae Travel Expert"
       date="Mar 5, 2026"
       readTime="11 min read"
       category="Thailand Travel Guide"
-      keywords={["Thailand food experiences", "Thailand food experiences booking", "best Thailand food", "Bangkok street food", "Thai food tour", "Phuket seafood", "Thailand culinary guide", "Yellodae Thailand"]}
+      keywords={[
+        "thailand food experiences",
+        "bangkok street food guide",
+        "floating market food tour",
+        "thai food tour for indians",
+        "best food tours in thailand",
+      ]}
       guidesLink="/thailand/destination-guides"
       guidesLabel="Thailand Guides"
+      cityHub={{
+        city: "Bangkok",
+        thingsToDoLink: "/thailand/bangkok/things-to-do",
+        transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+      }}
+      relatedActivities={[
+        { title: "Maeklong Floating Market Tour", link: "/thailand/bangkok/maeklong-floating-market-tour" },
+        { title: "Bangkok Tuk Tuk Night Food Tour", link: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
+        { title: "Baiyoke Sky Buffet Dinner", link: "/thailand/bangkok/baiyoke-buffet" },
+        { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      ]}
       relatedLinks={[
-        { title: "Best Thailand Activities to Book Online", link: "/blog/best-thailand-activities" },
-        { title: "Thailand Island Combos Guide", link: "/blog/thailand-island-combos" },
-        { title: "Bangkok Activities Booking Guide", link: "/blog/bangkok-activities-guide" },
-        { title: "Best Pattaya Activities Guide", link: "/blog/best-pattaya-activities" },
+        { title: "How Much Does Food Cost in Bangkok?", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-food-cost" },
+        { title: "Best Indian Food in Bangkok", link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-indian-food" },
+        { title: "Best Dinner Cruises in Bangkok for Couples", link: "/thailand/bangkok/destination-guides/activity/best-dinner-cruises-bangkok-couples" },
+        { title: "Top Things to Do in Bangkok", link: "/thailand/bangkok/things-to-do" },
       ]}
       sections={[
         { type: "paragraph", content: "Thailand is one of the most exciting destinations in the world for food lovers. From vibrant street markets to authentic local restaurants, the Thailand food experiences are rich in flavour, culture, and tradition. Whether you are tasting spicy curries, fresh seafood, tropical fruits, or famous Thai street food, every meal in Thailand feels like an adventure." },
