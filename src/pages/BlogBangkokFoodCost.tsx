@@ -2,19 +2,36 @@ import BlogArticleLayout from "@/components/BlogArticleLayout";
 import heroImg from "@/assets/blog-bangkok-street-food-cost.jpg";
 
 const BlogBangkokFoodCost = () => (
+  /* SEO — Primary: bangkok food cost per day | Intent: Informational */
   <BlogArticleLayout
-    title="How Much Does Food Cost in Bangkok? 2026 Daily Budget"
-    description="Bangkok food cost in 2026 — street food, mid-range restaurants and fine dining prices in INR with realistic daily food budget."
+    title="Bangkok Food Cost 2026: Daily Budget for Indian Travellers"
+    description="Bangkok food cost in 2026 — street food, mid-range and rooftop dining prices in INR with a realistic daily food budget for Indian travellers."
     heroImage={heroImg}
     heroAlt="Bangkok street food market at night with vibrant lights and stalls"
     author="Yellodae Travel Expert"
     date="Apr 26, 2026"
     readTime="6 min read"
     category="Price / Cost Blogs"
-    keywords={["Bangkok food cost", "Bangkok street food price", "Bangkok daily food budget", "Thailand food expenses"]}
+    keywords={[
+      "bangkok food cost per day",
+      "bangkok street food prices",
+      "bangkok meal budget for indians",
+      "rooftop dining cost bangkok",
+      "thailand food expenses 2026",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
+    relatedActivities={[
+      { title: "Bangkok Tuk Tuk Night Food Tour", link: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
+      { title: "Maeklong Floating Market Tour", link: "/thailand/bangkok/maeklong-floating-market-tour" },
+      { title: "Baiyoke Sky Buffet Dinner", link: "/thailand/bangkok/baiyoke-buffet" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+    ]}
     sections={[
       { type: "paragraph", content: "Bangkok is famously cheap for food — if you eat smart. Here's exactly what you'll pay per meal in 2026 across street food, sit-down restaurants and rooftop dining." },
       { type: "heading", content: "Daily Food Budget Per Person" },

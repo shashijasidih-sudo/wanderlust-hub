@@ -2,19 +2,36 @@ import BlogArticleLayout from "@/components/BlogArticleLayout";
 import heroImg from "@/assets/blog-bangkok-transport-cost.jpg";
 
 const BlogCheapestTimeToVisitBangkok = () => (
+  /* SEO — Primary: cheapest time to visit bangkok | Intent: Informational */
   <BlogArticleLayout
-    title="Cheapest Time to Visit Bangkok in 2026 (Save 30–40%)"
-    description="When are flights, hotels and tours cheapest in Bangkok? Month-by-month price guide for 2026 and the best low-season travel windows."
+    title="Cheapest Time to Visit Bangkok 2026: Save 30–40% from India"
+    description="Cheapest time to visit Bangkok in 2026 — month-by-month flight, hotel and tour pricing for Indian travellers and the best low-season windows."
     heroImage={heroImg}
     heroAlt="Bangkok BTS Skytrain station with travelers"
     author="Yellodae Travel Expert"
     date="Apr 24, 2026"
     readTime="6 min read"
     category="Price / Cost Blogs"
-    keywords={["cheapest time to visit Bangkok", "Bangkok low season", "best time to book Bangkok", "Bangkok off season"]}
+    keywords={[
+      "cheapest time to visit bangkok",
+      "bangkok low season months",
+      "bangkok off season travel",
+      "best time to book bangkok flights",
+      "bangkok monsoon travel deals",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
+    relatedActivities={[
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Maeklong Floating Market Tour", link: "/thailand/bangkok/maeklong-floating-market-tour" },
+    ]}
     sections={[
       { type: "paragraph", content: "Bangkok flight and hotel prices swing wildly month-to-month. Time your trip right and you'll save 30–40% on the same itinerary." },
       { type: "heading", content: "Cheapest Months — Low Season" },

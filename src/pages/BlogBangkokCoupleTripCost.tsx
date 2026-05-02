@@ -2,19 +2,36 @@ import BlogArticleLayout from "@/components/BlogArticleLayout";
 import heroImg from "@/assets/blog-bangkok-couple-cost.jpg";
 
 const BlogBangkokCoupleTripCost = () => (
+  /* SEO — Primary: bangkok couple trip cost | Intent: Commercial */
   <BlogArticleLayout
-    title="Bangkok Couple Trip Cost 2026: Honeymoon & Romantic Budget"
-    description="A complete Bangkok couple trip cost guide for 2026 — honeymoon packages, romantic dinners, rooftop bars and luxury hotel pricing."
+    title="Bangkok Couple Trip Cost 2026: Honeymoon Budget from India"
+    description="Bangkok couple trip cost 2026 — romantic hotels, dinner cruise, rooftop bars and honeymoon package budget for Indian couples in INR."
     heroImage={heroImg}
     heroAlt="Romantic couple on Chao Phraya river cruise at night with Bangkok skyline"
     author="Yellodae Travel Expert"
     date="Apr 27, 2026"
     readTime="8 min read"
     category="Price / Cost Blogs"
-    keywords={["Bangkok couple trip cost", "Bangkok honeymoon budget", "Bangkok romantic trip", "Thailand couple package"]}
+    keywords={[
+      "bangkok couple trip cost",
+      "bangkok honeymoon budget india",
+      "bangkok romantic package price",
+      "bangkok honeymoon cost in rupees",
+      "couple holiday bangkok 5 days",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
+    relatedActivities={[
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Mahanakhon Skywalk Sunset Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Wat Arun, Pho & Traimit Tour", link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
+      { title: "Thai Couple Spa & Massage Deals", link: "/thailand/bangkok/thai-massage-spa-deals-bangkok" },
+    ]}
     sections={[
       { type: "paragraph", content: "Bangkok is one of Asia's most affordable romantic getaways. Here's the 2026 budget for couples — including honeymoon-worthy hotels, dinner cruises and rooftop nights." },
       { type: "heading", content: "Total Trip Cost — Couple (5 Days)" },
