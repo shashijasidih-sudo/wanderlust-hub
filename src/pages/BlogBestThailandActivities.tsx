@@ -74,24 +74,42 @@ const BlogBestThailandActivities = () => {
   }, []);
 
   return (
+    /* SEO — Primary: best thailand activities to book online | Intent: Commercial */
     <BlogArticleLayout
     {...getBlogCityProps("thailand")}
-      title="Best Thailand Activities to Book Online in 2026"
-      description="Discover the top 15 Thailand activities — from island hopping to temple tours, night markets to wildlife safaris. Book online for the best prices with instant confirmation."
+      title="Best Thailand Activities 2026: 15 Top Tours to Book Online"
+      description="Top 15 Thailand activities to book online in 2026 — island hopping, temples, cabaret shows and wildlife safaris across Bangkok, Phuket, Krabi and Pattaya."
       heroImage={heroImg}
       heroAlt="Thailand adventure — temples, beaches and islands"
       author="Yellodae Travel Expert"
       date="Mar 5, 2026"
       readTime="12 min read"
       category="Thailand Travel Guide"
-      keywords={["Thailand activities booking online", "best things to do in Thailand", "Thailand tour booking", "Thailand island tours", "Bangkok temple tours", "Phuket activities", "Pattaya tours", "Krabi tours", "Thailand travel guide 2026", "Yellodae Thailand"]}
+      keywords={[
+        "best thailand activities to book online",
+        "top thailand tours 2026",
+        "thailand island hopping packages",
+        "thailand activities for indians",
+        "thailand tour booking",
+      ]}
       guidesLink="/thailand/destination-guides"
       guidesLabel="Thailand Guides"
+      cityHub={{
+        city: "Bangkok",
+        thingsToDoLink: "/thailand/bangkok/things-to-do",
+        transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+      }}
+      relatedActivities={[
+        { title: "Phi Phi Island, Maya Bay & Khai Speedboat", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
+        { title: "James Bond Island & Phang Nga Bay", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
+        { title: "Coral Island Pattaya with Indian Lunch", link: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" },
+        { title: "Alcazar Cabaret Show Pattaya", link: "/thailand/pattaya/alcazar-cabaret-show-with-transfer" },
+      ]}
       relatedLinks={[
-        { title: "Top Phuket Island Tours for Indian Travelers", link: "/blog/top-phuket-island-tours" },
         { title: "Bangkok Activities Booking Guide", link: "/blog/bangkok-activities-guide" },
-        { title: "Best Pattaya Activities for First-Time Visitors", link: "/blog/best-pattaya-activities" },
-        { title: "Phi Phi Island Tours Complete Guide", link: "/blog/phi-phi-island-tours-thailand" },
+        { title: "Bangkok Trip Cost from India", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
+        { title: "Bangkok vs Phuket — Which Should You Pick?", link: "/thailand/bangkok/destination-guides/comparison/bangkok-vs-phuket" },
+        { title: "Top Things to Do in Bangkok", link: "/thailand/bangkok/things-to-do" },
       ]}
       sections={[
         { type: "paragraph", content: "Thailand is one of the most popular travel destinations in the world, and for good reason. From stunning tropical islands to ancient temples, vibrant night markets to thrilling wildlife encounters — Thailand offers something for every traveler. Whether you're visiting Bangkok, Phuket, Pattaya, or Krabi, there are incredible activities waiting for you at every turn." },
