@@ -2,19 +2,36 @@ import BlogArticleLayout from "@/components/BlogArticleLayout";
 import heroImg from "@/assets/blog-bangkok-safari-cost.jpg";
 
 const BlogBangkokAttractionTicketCosts = () => (
+  /* SEO — Primary: bangkok attraction ticket prices | Intent: Transactional */
   <BlogArticleLayout
-    title="Bangkok Attraction Ticket Prices 2026: Full List & Booking Tips"
-    description="Updated 2026 ticket prices for every major Bangkok attraction — Grand Palace, Wat Arun, Safari World, Sea Life, Mahanakhon Skywalk and more."
+    title="Bangkok Ticket Prices 2026: Attractions Cost & Online Discounts"
+    description="2026 Bangkok attraction ticket prices — Grand Palace, Wat Arun, Safari World, Sea Life and Mahanakhon Skywalk with online vs counter rates."
     heroImage={heroImg}
     heroAlt="Safari World Bangkok entrance with family"
     author="Yellodae Travel Expert"
     date="Apr 25, 2026"
     readTime="7 min read"
     category="Price / Cost Blogs"
-    keywords={["Bangkok ticket prices", "Bangkok attractions cost", "Safari World ticket price", "Grand Palace entry fee"]}
+    keywords={[
+      "bangkok attraction ticket prices 2026",
+      "safari world ticket price india",
+      "grand palace entry fee",
+      "mahanakhon skywalk ticket cost",
+      "sea life bangkok ticket online",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
+    relatedActivities={[
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+      { title: "Sea Life & Madame Tussauds Tickets", link: "/thailand/bangkok/sea-life-madame-tussauds-tickets" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+    ]}
     sections={[
       { type: "paragraph", content: "Here's the complete 2026 list of Bangkok attraction ticket prices — at-the-counter rates and the much cheaper online prices, so you know exactly what to pre-book." },
       { type: "heading", content: "Temple & Cultural Tickets" },
