@@ -2,19 +2,36 @@ import BlogArticleLayout from "@/components/BlogArticleLayout";
 import heroImg from "@/assets/blog-bangkok-cost-budget.jpg";
 
 const BlogBangkokTripCost = () => (
+  /* SEO — Primary: bangkok trip cost from india | Intent: Commercial */
   <BlogArticleLayout
     title="Bangkok Trip Cost from India 2026: Full Budget Breakdown"
-    description="A realistic Bangkok trip cost from India in 2026 — flights, visa, hotels, food, activities and shopping with budget, mid-range and luxury estimates."
+    description="Realistic Bangkok trip cost from India 2026 — flights, visa, hotels, food, activities and shopping with budget, mid-range and luxury per-person estimates."
     heroImage={heroImg}
     heroAlt="Bangkok skyline at sunset with Thai baht currency in foreground"
     author="Yellodae Travel Expert"
     date="Apr 29, 2026"
     readTime="9 min read"
     category="Price / Cost Blogs"
-    keywords={["Bangkok trip cost from India", "Bangkok budget 2026", "Bangkok travel cost", "Thailand trip cost", "Bangkok package price"]}
+    keywords={[
+      "bangkok trip cost from india",
+      "bangkok 5 day budget",
+      "bangkok package price india 2026",
+      "thailand trip cost in rupees",
+      "bangkok travel expenses for indians",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
+    relatedActivities={[
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+    ]}
     sections={[
       { type: "paragraph", content: "Wondering how much a Bangkok trip from India actually costs in 2026? Here's a transparent, no-fluff breakdown across budget, mid-range and luxury travelers — including flights, visa, hotels, food, activities and shopping." },
       { type: "heading", content: "Total Trip Cost — At a Glance (5 Days / 4 Nights, Per Person)" },
