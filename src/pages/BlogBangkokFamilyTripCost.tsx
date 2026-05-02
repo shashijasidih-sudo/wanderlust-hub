@@ -2,19 +2,36 @@ import BlogArticleLayout from "@/components/BlogArticleLayout";
 import heroImg from "@/assets/blog-bangkok-family-cost.jpg";
 
 const BlogBangkokFamilyTripCost = () => (
+  /* SEO — Primary: bangkok family trip cost | Intent: Commercial */
   <BlogArticleLayout
-    title="Bangkok Family Trip Cost 2026: Family of 4 Budget Guide"
-    description="Realistic Bangkok family trip cost for a family of 4 from India in 2026 — flights, hotels, family-friendly activities and food, all-in budget."
+    title="Bangkok Family Trip Cost 2026: Family of 4 Budget from India"
+    description="Realistic Bangkok family trip cost for a family of 4 from India 2026 — flights, kid-friendly hotels, Safari World and Sea Life budgets included."
     heroImage={heroImg}
     heroAlt="Indian family at Bangkok Grand Palace"
     author="Yellodae Travel Expert"
     date="Apr 28, 2026"
     readTime="8 min read"
     category="Price / Cost Blogs"
-    keywords={["Bangkok family trip cost", "Bangkok family of 4 budget", "Bangkok with kids cost", "family Thailand budget"]}
+    keywords={[
+      "bangkok family trip cost",
+      "bangkok family of 4 budget india",
+      "bangkok with kids cost",
+      "bangkok family package price",
+      "thailand family holiday budget",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
+    relatedActivities={[
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+      { title: "Sea Life & Madame Tussauds Tickets", link: "/thailand/bangkok/sea-life-madame-tussauds-tickets" },
+      { title: "Dream World Bangkok Tickets", link: "/thailand/bangkok/dream-world-bangkok-tickets" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+    ]}
     sections={[
       { type: "paragraph", content: "Planning a Bangkok holiday for the family? Here's the realistic 2026 cost for a family of 4 (2 adults + 2 kids) from India — covering everything from flights to Safari World tickets." },
       { type: "heading", content: "Total Trip Cost — Family of 4 (5 Days)" },
