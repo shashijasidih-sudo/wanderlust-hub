@@ -72,24 +72,42 @@ const BlogBangkokActivitiesGuide = () => {
   }, []);
 
   return (
+    /* SEO — Primary: bangkok activities booking | Intent: Commercial */
     <BlogArticleLayout
     {...getBlogCityProps("bangkok")}
-      title="Bangkok Activities Booking Guide — 15 Best Things to Do in 2026"
-      description="The ultimate Bangkok activities booking guide for tourists. Discover 15 must-do experiences including temple tours, dinner cruises, night markets, and wildlife safaris."
+      title="Bangkok Activities 2026: 15 Best Things to Book Online"
+      description="Bangkok activities booking guide for Indian travellers — 15 best tours, temple visits, dinner cruises and Safari World, all bookable online for 2026."
       heroImage={heroImg}
       heroAlt="Bangkok temple with golden spires and intricate architecture"
       author="Yellodae Bangkok Expert"
       date="Mar 5, 2026"
       readTime="13 min read"
       category="Bangkok Travel Guide"
-      keywords={["Bangkok activities booking", "things to do in Bangkok", "Bangkok temple tour", "Bangkok dinner cruise", "Bangkok safari world", "Bangkok travel guide 2026", "Bangkok tours for Indians", "Yellodae Bangkok"]}
+      keywords={[
+        "bangkok activities booking",
+        "best things to do in bangkok 2026",
+        "bangkok tours for indians",
+        "bangkok temple and cruise tours",
+        "book bangkok activities online",
+      ]}
       guidesLink="/thailand/destination-guides"
       guidesLabel="Thailand Guides"
+      cityHub={{
+        city: "Bangkok",
+        thingsToDoLink: "/thailand/bangkok/things-to-do",
+        transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+      }}
+      relatedActivities={[
+        { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+        { title: "Three Temples Bangkok City Tour", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
+        { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+        { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+      ]}
       relatedLinks={[
-        { title: "Best Thailand Activities to Book Online", link: "/blog/best-thailand-activities" },
-        { title: "Top Phuket Island Tours for Indian Travelers", link: "/blog/top-phuket-island-tours" },
-        { title: "Best Pattaya Activities for First-Time Visitors", link: "/blog/best-pattaya-activities" },
-        { title: "Airport Transfer Booking Guide Thailand", link: "/blog/airport-transfer-booking-thailand" },
+        { title: "Bangkok Trip Cost from India", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
+        { title: "Best Dinner Cruises in Bangkok for Couples", link: "/thailand/bangkok/destination-guides/activity/best-dinner-cruises-bangkok-couples" },
+        { title: "Bangkok 3-Day Itinerary", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
+        { title: "Top Things to Do in Bangkok", link: "/thailand/bangkok/things-to-do" },
       ]}
       sections={[
         { type: "paragraph", content: "Bangkok, Thailand's vibrant capital, is a city that perfectly blends ancient traditions with modern excitement. From glittering golden temples to world-class rooftop bars, bustling street markets to serene river cruises — Bangkok is a destination that never fails to amaze. This guide covers the 15 best activities to book in Bangkok, helping you plan the perfect trip." },
