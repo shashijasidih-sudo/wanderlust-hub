@@ -3,8 +3,9 @@ import heroImg from "@/assets/blog-cruise-couples-watarun.jpg";
 
 const BlogBestDinnerCruisesCouples = () => (
   <BlogArticleLayout
-    title="Best Dinner Cruises in Bangkok for Couples (2026)"
-    description="The most romantic Chao Phraya dinner cruises compared — Princess, luxury cruises and White Orchid — by food, vibe, privacy and value."
+    /* SEO — Primary: best dinner cruise bangkok couples | Intent: Commercial */
+    title="Best Dinner Cruise in Bangkok for Couples (2026)"
+    description="The best Bangkok dinner cruise for couples in 2026 — Princess, Viva Alangka and Valentine cruise compared on romance, food and value for honeymooners."
     heroImage={heroImg}
     heroAlt="Couple on a romantic dinner cruise with Wat Arun in the background"
     author="Yellodae Travel Expert"
@@ -12,16 +13,18 @@ const BlogBestDinnerCruisesCouples = () => (
     readTime="8 min read"
     category="Activity Blogs"
     keywords={[
-      "best Bangkok dinner cruise for couples",
-      "romantic dinner cruise Bangkok",
-      "Chao Phraya Princess vs White Orchid",
-      "luxury river cruise Bangkok",
+      "best dinner cruise bangkok couples",
+      "bangkok honeymoon cruise chao phraya",
+      "viva alangka vs princess cruise",
+      "valentine dinner cruise bangkok",
+      "romantic things to do bangkok at night",
     ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer",
     }}
     sections={[
       {

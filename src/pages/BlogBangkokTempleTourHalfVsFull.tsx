@@ -88,13 +88,16 @@ const BlogBangkokTempleTourHalfVsFull = () => (
       },
     ]}
     relatedActivities={[
+      { title: "Three Temples Bangkok City Tour with Transfer", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
       { title: "Wat Arun, Wat Pho & Golden Buddha Tour", link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
-      { title: "Three Temples Tour with Transfer", link: "/thailand/bangkok/three-temples-tour-with-transfer" },
-      { title: "Grand Palace + Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-emerald-buddha-tour" },
+      { title: "Grand Palace & Wat Phra Kaew Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Golden Marble Buddha & Bangkok City Tour", link: "/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour" },
     ]}
     relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Temple Tour to Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/temple-tour-airport" },
+      { title: "Wat Arun vs Grand Palace Comparison", link: "/thailand/bangkok/destination-guides/comparison/wat-arun-vs-grand-palace" },
       { title: "Wat Arun Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
-      { title: "Grand Palace Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
     ]}
   />
 );
