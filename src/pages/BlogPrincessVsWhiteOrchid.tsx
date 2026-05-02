@@ -3,18 +3,29 @@ import heroImg from "@/assets/blog-princess-vs-white-orchid.jpg";
 
 const BlogPrincessVsWhiteOrchid = () => (
   <BlogArticleLayout
-    title="Chao Phraya Princess vs White Orchid: Which Dinner Cruise Wins?"
-    description="An honest 2026 comparison of Bangkok's two top dinner cruises — Chao Phraya Princess vs White Orchid — by food, music, vessel, views and value."
+    /* SEO — Primary: chao phraya princess vs white orchid | Intent: Commercial */
+    title="Chao Phraya Princess vs White Orchid 2026: Which Wins?"
+    description="Chao Phraya Princess vs White Orchid dinner cruise compared in 2026 — food, music, vessel, views and price for Indian travellers in Bangkok."
     heroImage={heroImg}
     heroAlt="Chao Phraya Princess and White Orchid dinner cruise ships side by side at night in Bangkok"
     author="Yellodae Travel Expert"
     date="Apr 30, 2026"
     readTime="11 min read"
     category="Comparison Blogs"
-    keywords={["Chao Phraya Princess vs White Orchid", "Bangkok dinner cruise comparison", "best Bangkok cruise", "Chao Phraya cruise review", "Bangkok river cruise"]}
+    keywords={[
+      "chao phraya princess vs white orchid",
+      "bangkok dinner cruise comparison",
+      "best chao phraya cruise india",
+      "white orchid cruise review",
+      "bangkok river cruise veg food",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/chaophraya-princess-cruise-to-suvarnabhumi-airport-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "A Chao Phraya river dinner cruise is one of those Bangkok experiences nobody skips. You float past the floodlit Wat Arun, the Grand Palace, the Temple of Dawn and the iconic ICONSIAM mall, all while being served a buffet, watching live performances, and catching the cool river breeze. Two operators dominate this market: Chao Phraya Princess and White Orchid. Both are popular, both are on every Bangkok travel agent's brochure, and both look almost identical from the outside. But there are real differences — in food, music, ambience, vessel size and overall value — that can make or break your night. Here's a complete, honest 2026 comparison so you book the right one." },
 
@@ -82,9 +93,12 @@ const BlogPrincessVsWhiteOrchid = () => (
     relatedActivities={[
       { title: "Chao Phraya Princess (Private Transfer)", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
       { title: "Chao Phraya Princess (No Transfer)", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise" },
+      { title: "Chao Phraya Princess Valentine Special", link: "/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise" },
       { title: "Bangkok City Tour with Boat", link: "/thailand/bangkok/city-tour-with-boat" },
     ]}
     relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Cruise to Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/chaophraya-princess-cruise-to-suvarnabhumi-airport-transfer" },
       { title: "Chao Phraya Princess Review", link: "/thailand/bangkok/destination-guides/activity/chao-phraya-princess-review" },
       { title: "Best Dinner Cruises for Couples", link: "/thailand/bangkok/destination-guides/activity/best-dinner-cruises-couples" },
     ]}

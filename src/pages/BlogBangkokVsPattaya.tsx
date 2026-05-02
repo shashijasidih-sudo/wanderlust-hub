@@ -3,18 +3,29 @@ import heroImg from "@/assets/blog-bangkok-vs-pattaya.jpg";
 
 const BlogBangkokVsPattaya = () => (
   <BlogArticleLayout
-    title="Bangkok vs Pattaya: Which City Suits Your Trip in 2026?"
-    description="Bangkok or Pattaya for your Thailand trip? Compare nightlife, family activities, beaches, costs and travel time in this honest 2026 guide."
+    /* SEO — Primary: bangkok vs pattaya | Intent: Informational */
+    title="Bangkok vs Pattaya 2026: Which to Pick for Your Trip"
+    description="Bangkok or Pattaya in 2026? Compare nightlife, family activities, beaches, costs and travel time — written for Indian travellers planning Thailand."
     heroImage={heroImg}
     heroAlt="Bangkok temples at night versus Pattaya beach at sunset"
     author="Yellodae Travel Expert"
     date="May 1, 2026"
     readTime="11 min read"
     category="Comparison Blogs"
-    keywords={["Bangkok vs Pattaya", "Bangkok or Pattaya", "Pattaya travel guide", "Thailand first trip", "Bangkok Pattaya distance"]}
+    keywords={[
+      "bangkok vs pattaya",
+      "bangkok or pattaya for first time",
+      "bangkok pattaya combo itinerary india",
+      "pattaya vs bangkok for family",
+      "bangkok to pattaya distance",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Bangkok and Pattaya are just two hours apart by road, which is why most Indian travelers club them together on their first Thailand trip. But if your holiday is short — say four or five days — and you have to pick just one, the choice gets tricky. Bangkok offers culture, food and shopping at a scale Pattaya can't match. Pattaya offers beaches, islands, water sports and cabaret shows that Bangkok simply doesn't have. In this honest 2026 comparison we break down both cities across vibe, cost, family-friendliness, nightlife, and travel logistics so you can plan a trip that maximizes every day." },
 
@@ -88,9 +99,12 @@ const BlogBangkokVsPattaya = () => (
     relatedActivities={[
       { title: "Bangkok City Tour with Boat", link: "/thailand/bangkok/city-tour-with-boat" },
       { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
-      { title: "Safari World Bangkok", link: "/thailand/bangkok/safari-world-marine-park" },
+      { title: "Safari World + Marine Park", link: "/thailand/bangkok/safari-world-marine-park" },
+      { title: "Three Temples Bangkok City Tour", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
     ]}
     relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Bangkok to Pattaya Hotel Transfer", link: "/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer" },
       { title: "Bangkok vs Phuket", link: "/thailand/bangkok/destination-guides/comparison/bangkok-vs-phuket" },
       { title: "Bangkok Family Trip Cost", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-family-trip-cost" },
     ]}

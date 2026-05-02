@@ -3,18 +3,29 @@ import heroImg from "@/assets/blog-bts-vs-taxi.jpg";
 
 const BlogBtsVsTaxiBangkok = () => (
   <BlogArticleLayout
-    title="BTS Skytrain vs Taxi in Bangkok: Which Is Better in 2026?"
-    description="Skytrain or taxi in Bangkok? Compare cost, time, comfort and best use cases for Indian travelers in this practical 2026 transport guide."
+    /* SEO — Primary: bangkok bts vs taxi | Intent: Informational */
+    title="Bangkok BTS vs Taxi 2026: Cost, Speed & When to Use"
+    description="BTS Skytrain, taxi or Grab in Bangkok? Compare cost, speed, comfort and best use cases — a practical 2026 transport guide for Indian travellers."
     heroImage={heroImg}
     heroAlt="Bangkok BTS Skytrain at sunset and a yellow Bangkok taxi side by side"
     author="Yellodae Travel Expert"
     date="Apr 27, 2026"
     readTime="11 min read"
     category="Comparison Blogs"
-    keywords={["Bangkok BTS vs taxi", "Bangkok transport", "Bangkok Skytrain guide", "Grab Bangkok", "Bangkok travel tips"]}
+    keywords={[
+      "bangkok bts vs taxi",
+      "bangkok skytrain guide india",
+      "grab vs taxi bangkok",
+      "how to get around bangkok",
+      "bangkok mrt vs bts",
+    ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Bangkok traffic is genuinely legendary — the kind that makes Mumbai monsoon traffic look like a relaxed Sunday drive. Getting around smartly can literally save you 2–3 hours a day during peak hours. The good news? Bangkok has some of Asia's best public transport. The BTS Skytrain glides above the gridlock, the metered taxis are cheap, and Grab (the local Uber) is everywhere. So which one should you actually use, and when? This practical 2026 guide breaks down cost, speed, comfort, safety and the exact use cases each mode wins. Master this and your Bangkok trip will feel effortless." },
 
@@ -82,10 +93,13 @@ const BlogBtsVsTaxiBangkok = () => (
     ]}
     relatedActivities={[
       { title: "Bangkok City Tour with Boat", link: "/thailand/bangkok/city-tour-with-boat" },
-      { title: "Three Temples Tour with Transfer", link: "/thailand/bangkok/three-temples-tour-with-transfer" },
+      { title: "Three Temples Bangkok City Tour", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
       { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Mahanakhon SkyWalk Bangkok", link: "/thailand/bangkok/mahanakhon-skywalk" },
     ]}
     relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport to Bangkok Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
       { title: "Bangkok Trip Cost from India", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
       { title: "Bangkok Attraction Ticket Prices", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-attraction-ticket-prices" },
     ]}
