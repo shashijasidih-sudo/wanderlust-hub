@@ -15,7 +15,11 @@ const BlogBangkokAirportRail = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Transfer Guides", link: "/thailand/bangkok/destination-guides#transfer" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "The Bangkok Airport Rail Link (ARL) is the cheapest, traffic-proof way from Suvarnabhumi to the city — 45 baht (~₹110), 30 minutes flat. For solo travelers or couples with light luggage, it's a no-brainer. Here's everything you need to know about routes, stations, schedules and whether it actually beats a taxi." },
       { type: "heading", content: "Route & Stations" },
@@ -36,6 +40,18 @@ const BlogBangkokAirportRail = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "The Bangkok Airport Rail Link is one of Asia's best airport transfer bargains — 45 baht for a 30-minute ride that beats traffic. Use it if you're solo with light luggage and your hotel is BTS/MRT-connected. Otherwise the public taxi or pre-booked private transfer is more comfortable. Smart travelers know when to pick which." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Sea Life & Madame Tussauds Tickets", link: "/thailand/bangkok/sea-life-madame-tussauds-tickets" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
+      { title: "BTS vs Taxi in Bangkok", link: "/thailand/bangkok/destination-guides/comparison/bts-vs-taxi-bangkok" },
     ]}
   />
 );

@@ -15,7 +15,11 @@ const BlogBangkokIndianFood = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Indian Traveller Guides", link: "/thailand/bangkok/destination-guides#indian-audience" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "If you're an Indian traveler worrying \"will I find vegetarian food in Bangkok?\" — relax. Bangkok has more pure-veg, Jain-friendly and South Indian restaurants than most Tier-2 Indian cities, especially in Sukhumvit, Pahurat (Little India) and Silom. This guide rounds up the absolute best — places with idli-dosa breakfasts, sattvik Jain thalis without onion-garlic, North Indian Punjabi dhabas and even pure-veg Mughlai. Save this list before flying — your stomach will thank you." },
       { type: "heading", content: "Pahurat: Bangkok's Little India" },
@@ -38,6 +42,18 @@ const BlogBangkokIndianFood = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok is one of Asia's most vegetarian-friendly big cities — pure veg, Jain, South Indian, North Indian, Mughlai, you'll find it all. Save this list, mix Indian meals into your Bangkok itinerary 1–2 times a day if you crave home food, and use the rest of the time to safely explore Thai vegetarian dishes. You will not go hungry." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Bangkok Tuk Tuk Night Food Tour", link: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
+      { title: "Baiyoke Sky Buffet Dinner", link: "/thailand/bangkok/baiyoke-buffet" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Maeklong Floating Market Tour", link: "/thailand/bangkok/maeklong-floating-market-tour" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Bangkok Food Cost Guide", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-food-cost" },
+      { title: "Tips for Indian Families in Bangkok", link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-tips-indian-families" },
     ]}
   />
 );

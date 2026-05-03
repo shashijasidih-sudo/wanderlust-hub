@@ -15,7 +15,11 @@ const BlogBangkokShoppingTips = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Quick Tips & Micro Guides", link: "/thailand/bangkok/destination-guides#micro" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Bangkok is one of the world's great shopping cities — sprawling weekend markets, multi-floor mega malls and entire streets dedicated to specific categories. From ₹200 t-shirts at Chatuchak to ₹50,000 luxury handbags at ICONSIAM, every budget gets covered. Here's the cheat sheet on where to shop, what to buy and how to bargain like a local." },
       { type: "heading", content: "Chatuchak Weekend Market" },
@@ -38,6 +42,18 @@ const BlogBangkokShoppingTips = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok shopping rewards planning. Pick 1 market day (Chatuchak Saturday morning), 1 mall day (Siam Paragon + Platinum) and 1 luxury mall (ICONSIAM) for variety. Bargain at markets, accept fixed prices at malls and pack a half-empty suitcase — you'll fill it. Have fun and bring snacks for the long shopping days." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Bangkok Tuk Tuk Night Food Tour", link: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
+      { title: "Baiyoke Sky Buffet Dinner", link: "/thailand/bangkok/baiyoke-buffet" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "INR to Thai Baht Guide", link: "/thailand/bangkok/destination-guides/indian-audience/inr-to-thai-baht-guide" },
+      { title: "Best Time to Visit Bangkok", link: "/thailand/bangkok/destination-guides/micro/best-time-to-visit-bangkok" },
     ]}
   />
 );

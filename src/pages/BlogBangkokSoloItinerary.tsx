@@ -15,7 +15,11 @@ const BlogBangkokSoloItinerary = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Bangkok is one of the easiest cities in Asia to travel solo — safe, affordable, social and packed with experiences that work brilliantly on your own. This 4-day Bangkok solo itinerary is built around walkable neighborhoods, hostel meet-ups, group day tours and food walks where you'll inevitably make travel friends. It's especially well-tested for solo female travelers from India, where safety and ease are non-negotiable. Read on for the exact plan." },
       { type: "heading", content: "Day 1: Arrival + Khao San Road Wander" },
@@ -38,6 +42,18 @@ const BlogBangkokSoloItinerary = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok is one of the world's great solo travel cities — cheap, safe, social, walkable and bursting with energy. This 4-day plan gives you the highlights, plenty of social space to make friends, and enough downtime to actually enjoy being alone. Solo female travelers from India should absolutely consider Bangkok as a first international solo trip — the bar to entry is low and the rewards are huge." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Three Temples Bangkok City Tour", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Bangkok Tuk Tuk Night Food Tour", link: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
+      { title: "Bangkok City Tour with Boat", link: "/thailand/bangkok/city-tour-with-boat" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Bangkok Safety for Indians", link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-safety-for-indians" },
+      { title: "BTS vs Taxi in Bangkok", link: "/thailand/bangkok/destination-guides/comparison/bts-vs-taxi-bangkok" },
     ]}
   />
 );

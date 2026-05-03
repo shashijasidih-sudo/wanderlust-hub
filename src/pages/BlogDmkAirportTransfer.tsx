@@ -15,7 +15,11 @@ const BlogDmkAirportTransfer = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Transfer Guides", link: "/thailand/bangkok/destination-guides#transfer" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Don Mueang (DMK) is Bangkok's older domestic and budget airline airport — most Air Asia, Nok Air and Thai Lion flights land here. It's smaller, north of the city, and a bit further from central Bangkok than Suvarnabhumi. Getting to your hotel is straightforward if you pick the right option for your budget and luggage." },
       { type: "heading", content: "Option 1: Public Taxi" },
@@ -36,6 +40,18 @@ const BlogDmkAirportTransfer = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Don Mueang to Bangkok is easy and cheap — pick the A1 bus if you're a budget backpacker, a public taxi or Grab for general travelers, and a pre-booked private transfer for families or late-night flights. The airport is smaller and faster to exit than Suvarnabhumi — you'll often be in a cab within 15 minutes of landing." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Don Mueang Airport Transfer", link: "/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
+      { title: "Bangkok Private Transfer", link: "/thailand/bangkok/destination-guides/transfer/bangkok-private-transfer" },
     ]}
   />
 );

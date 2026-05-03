@@ -15,7 +15,11 @@ const BlogBangkokTippingGuide = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Quick Tips & Micro Guides", link: "/thailand/bangkok/destination-guides#micro" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Tipping in Bangkok isn't mandatory like in the US, but it's appreciated almost everywhere — and small tips genuinely improve service. The amounts are tiny by Indian standards (20–50 baht goes a long way) and the etiquette is simple. Here's exactly how much to tip in every common situation." },
       { type: "heading", content: "Restaurants" },
@@ -36,6 +40,18 @@ const BlogBangkokTippingGuide = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Tipping in Bangkok is low-pressure compared to Western cities — 20–50 baht in most situations, slightly more for excellent personal service. It's not expected at street food or taxis (beyond rounding up). Carry small notes, tip when service was genuinely good and you'll fit right in." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Thai Couple Spa & Massage Deals", link: "/thailand/bangkok/thai-massage-spa-deals-bangkok" },
+      { title: "Bangkok Tuk Tuk Night Food Tour", link: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
+      { title: "Baiyoke Sky Buffet Dinner", link: "/thailand/bangkok/baiyoke-buffet" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "INR to Thai Baht Guide", link: "/thailand/bangkok/destination-guides/indian-audience/inr-to-thai-baht-guide" },
+      { title: "Bangkok Food Cost", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-food-cost" },
     ]}
   />
 );

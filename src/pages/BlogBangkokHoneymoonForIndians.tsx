@@ -15,7 +15,11 @@ const BlogBangkokHoneymoonForIndians = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Indian Traveller Guides", link: "/thailand/bangkok/destination-guides#indian-audience" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Bangkok is one of the top three honeymoon destinations Indian couples pick after marriage — affordable, romantic, easy to reach, and packed with experiences that go far beyond just temples and shopping. This complete Bangkok honeymoon guide for Indian couples covers everything: best honeymoon resorts, must-do romantic experiences, how much it really costs, and a tested 5-night itinerary that hundreds of newlywed couples have used. Whether it's a standalone Bangkok honeymoon or a Bangkok-Phuket combo, this is the playbook." },
       { type: "heading", content: "Best Honeymoon Hotels in Bangkok" },
@@ -38,6 +42,18 @@ const BlogBangkokHoneymoonForIndians = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok is an underrated honeymoon destination for Indian couples — significantly cheaper than Maldives or Bali, more variety than a pure beach trip, and stocked with romantic experiences that genuinely impress. Pair it with Phuket for the perfect Thailand honeymoon combo, follow this guide and you'll have one of the most memorable trips of your life. Book early, plan slowly and email \"honeymoon\" — the rest is magic." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Thai Couple Spa & Massage Deals", link: "/thailand/bangkok/thai-massage-spa-deals-bangkok" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Wat Arun, Wat Pho & Golden Buddha Tour", link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Bangkok Couple Itinerary", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-couple-itinerary" },
+      { title: "Bangkok Couple Trip Cost", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-couple-trip-cost" },
     ]}
   />
 );
