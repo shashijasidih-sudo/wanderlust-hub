@@ -23,6 +23,7 @@ const BlogChaoPhrayaPrincessReview = () => (
     ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Activity Guides", link: "/thailand/bangkok/destination-guides#activity" }}
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",

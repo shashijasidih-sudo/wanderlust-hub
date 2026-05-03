@@ -14,6 +14,7 @@ const BlogBangkokPattayaTransfer = () => (
     keywords={["Bangkok to Pattaya","Bangkok Pattaya transfer","Suvarnabhumi to Pattaya","Pattaya bus from Bangkok","Bangkok Pattaya private cab"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Transfer Guides", link: "/thailand/bangkok/destination-guides#transfer" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Bangkok to Pattaya is one of Thailand's most-traveled tourist routes — 147 km, 90–120 minutes by car. Whether you're combining Bangkok with a Pattaya beach extension or coming straight from the airport, here are all your transfer options with real 2026 prices and travel times." },

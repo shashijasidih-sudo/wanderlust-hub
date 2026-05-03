@@ -14,6 +14,7 @@ const BlogBangkokShoppingTips = () => (
     keywords={["Bangkok shopping","Chatuchak weekend market","Platinum Fashion Mall","MBK Bangkok","Bangkok bargaining tips"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Quick Tips & Micro Guides", link: "/thailand/bangkok/destination-guides#micro" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Bangkok is one of the world's great shopping cities — sprawling weekend markets, multi-floor mega malls and entire streets dedicated to specific categories. From ₹200 t-shirts at Chatuchak to ₹50,000 luxury handbags at ICONSIAM, every budget gets covered. Here's the cheat sheet on where to shop, what to buy and how to bargain like a local." },

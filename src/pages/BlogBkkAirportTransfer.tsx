@@ -14,6 +14,7 @@ const BlogBkkAirportTransfer = () => (
     keywords={["Suvarnabhumi airport transfer","BKK airport to Bangkok","Bangkok airport taxi","Airport rail link Bangkok","Bangkok airport transfer price"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Transfer Guides", link: "/thailand/bangkok/destination-guides#transfer" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Suvarnabhumi (BKK) is Bangkok's main international airport — most Indian flights land here. Getting to your hotel is easy and cheap if you know your options. This guide breaks down all four (taxi, Grab, Airport Rail Link, pre-booked private transfer), the real prices and which one to pick based on your group size, time of arrival and luggage." },

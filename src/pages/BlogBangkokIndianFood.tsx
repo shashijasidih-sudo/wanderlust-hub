@@ -14,6 +14,7 @@ const BlogBangkokIndianFood = () => (
     keywords={["Indian restaurants Bangkok","vegetarian food Bangkok","Jain food Bangkok","South Indian Bangkok","Pure veg Bangkok"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Indian Traveller Guides", link: "/thailand/bangkok/destination-guides#indian-audience" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "If you're an Indian traveler worrying \"will I find vegetarian food in Bangkok?\" — relax. Bangkok has more pure-veg, Jain-friendly and South Indian restaurants than most Tier-2 Indian cities, especially in Sukhumvit, Pahurat (Little India) and Silom. This guide rounds up the absolute best — places with idli-dosa breakfasts, sattvik Jain thalis without onion-garlic, North Indian Punjabi dhabas and even pure-veg Mughlai. Save this list before flying — your stomach will thank you." },

@@ -14,6 +14,7 @@ const BlogBangkokMonsoonGuide = () => (
     keywords={["Bangkok monsoon","Bangkok in rainy season","Bangkok June July August","Bangkok rain","Visit Bangkok monsoon"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Quick Tips & Micro Guides", link: "/thailand/bangkok/destination-guides#micro" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Bangkok in monsoon (June to October) gets a bad rap — but the truth is more nuanced. It rains, yes, but rarely all day. Hotels are 30–40% cheaper. Temples are emptier. The city looks lush and beautiful. So is monsoon Bangkok worth it? Quick answer: yes, if you plan smartly. Long answer: read on." },

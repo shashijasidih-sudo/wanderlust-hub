@@ -14,6 +14,7 @@ const BlogBangkok4DayItinerary = () => (
     keywords={["Bangkok 4 day itinerary","Bangkok floating market","Ayutthaya day trip","Bangkok 4 days plan","Bangkok extended trip"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Four days in Bangkok is the magic number — enough to do the iconic stuff without rushing, plus a full day for a floating market and another for a UNESCO temple ruins day trip to Ayutthaya. This is the itinerary we recommend when travelers ask \"how long should I stay in Bangkok?\" because it gives you depth without burnout. You'll see the Grand Palace, Wat Arun, Maeklong Railway Market, Damnoen Saduak Floating Market, Ayutthaya's ancient ruins, do a Chao Phraya cruise, hit Safari World OR Mahanakhon Skywalk, and still have time to shop. Let's plan it." },

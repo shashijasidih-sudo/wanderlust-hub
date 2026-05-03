@@ -14,6 +14,7 @@ const BlogBangkokGrabTaxi = () => (
     keywords={["Grab vs taxi Bangkok","Grab Bangkok","Bangkok taxi tips","Grab app Thailand","Bangkok ride share"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Transfer Guides", link: "/thailand/bangkok/destination-guides#transfer" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Grab is Southeast Asia's Uber — and in Bangkok, it competes head-on with the city's metered pink/yellow taxis. Both work, both are safe, but the price, language barrier and reliability differ. Here's the practical comparison so you pick the right one for each ride." },

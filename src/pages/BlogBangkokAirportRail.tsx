@@ -14,6 +14,7 @@ const BlogBangkokAirportRail = () => (
     keywords={["Bangkok airport rail link","ARL Bangkok","Suvarnabhumi train to city","Phaya Thai airport train","Bangkok cheapest airport transfer"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Transfer Guides", link: "/thailand/bangkok/destination-guides#transfer" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "The Bangkok Airport Rail Link (ARL) is the cheapest, traffic-proof way from Suvarnabhumi to the city — 45 baht (~₹110), 30 minutes flat. For solo travelers or couples with light luggage, it's a no-brainer. Here's everything you need to know about routes, stations, schedules and whether it actually beats a taxi." },

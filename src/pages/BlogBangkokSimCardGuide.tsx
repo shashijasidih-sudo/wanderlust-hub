@@ -14,6 +14,7 @@ const BlogBangkokSimCardGuide = () => (
     keywords={["Bangkok SIM card","Thailand tourist SIM","DTAC AIS TrueMove tourist","Thailand eSIM","Bangkok internet for Indians"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Quick Tips & Micro Guides", link: "/thailand/bangkok/destination-guides#micro" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Staying connected in Bangkok is dirt cheap — a tourist SIM with unlimited 4G/5G costs about 300 baht (₹750) for 8 days. The bigger question is which carrier, where to buy and whether to grab an eSIM from India before flying. Here's the no-fluff answer." },

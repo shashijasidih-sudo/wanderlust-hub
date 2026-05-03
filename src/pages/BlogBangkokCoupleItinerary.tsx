@@ -14,6 +14,7 @@ const BlogBangkokCoupleItinerary = () => (
     keywords={["Bangkok couple itinerary","Bangkok honeymoon","Bangkok romantic trip","Bangkok for couples","Bangkok dinner cruise couple"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Bangkok is criminally underrated as a couples destination. Beyond the temples and shopping, it's a city of rooftop bars at sunset, candle-lit Chao Phraya cruises, world-class couple spas and boutique riverside hotels. This 4-night Bangkok couple itinerary is built for honeymooners, anniversary trips and date weekends — alternating big-romance moments (sunset cruise, sky bar) with downtime (long couple massages, slow brunches). Skip the kids' parks and overcrowded markets; this is a curated romantic plan for two." },

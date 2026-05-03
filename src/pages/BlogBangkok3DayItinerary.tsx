@@ -14,6 +14,7 @@ const BlogBangkok3DayItinerary = () => (
     keywords={["Bangkok 3 day itinerary","Bangkok first trip","3 days Bangkok","Bangkok travel plan","Bangkok itinerary India"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Three days is the sweet spot for a first Bangkok trip — long enough to cover the headline attractions, short enough to keep the energy high. This is the exact 3-day Bangkok itinerary we've refined over hundreds of bookings, designed for the typical Indian first-timer who wants temples, a Chao Phraya cruise, family-friendly fun and shopping without burning out. You'll hit the Grand Palace, Wat Arun, Wat Pho, Mahanakhon Skywalk, Safari World and an evening cruise — plus enough food stops to keep everyone happy. Save it, book it, follow it." },

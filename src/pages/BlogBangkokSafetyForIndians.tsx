@@ -14,6 +14,7 @@ const BlogBangkokSafetyForIndians = () => (
     keywords={["Bangkok safety India","Is Bangkok safe","Bangkok solo female safety","Bangkok scams","Bangkok safe for Indians"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Indian Traveller Guides", link: "/thailand/bangkok/destination-guides#indian-audience" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Bangkok is, statistically, one of the safest big cities in Asia for Indian tourists — far safer than Delhi or Mumbai by violent-crime metrics. But \"safe\" doesn't mean \"scam-free,\" and a few specific traps catch first-time Indian travelers every week. This honest 2026 guide covers exactly what's safe, what's not, the top 5 scams to avoid, solo female safety tips, transport advice and emergency contacts. Read it before you fly — 10 minutes of awareness will save you 10,000 baht of trouble." },
