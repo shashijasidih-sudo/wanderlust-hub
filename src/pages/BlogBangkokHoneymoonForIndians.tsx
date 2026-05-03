@@ -14,6 +14,7 @@ const BlogBangkokHoneymoonForIndians = () => (
     keywords={["Bangkok honeymoon","Bangkok honeymoon for Indians","Thailand honeymoon","Bangkok couple package","Bangkok romantic trip India"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Indian Traveller Guides", link: "/thailand/bangkok/destination-guides#indian-audience" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Bangkok is one of the top three honeymoon destinations Indian couples pick after marriage — affordable, romantic, easy to reach, and packed with experiences that go far beyond just temples and shopping. This complete Bangkok honeymoon guide for Indian couples covers everything: best honeymoon resorts, must-do romantic experiences, how much it really costs, and a tested 5-night itinerary that hundreds of newlywed couples have used. Whether it's a standalone Bangkok honeymoon or a Bangkok-Phuket combo, this is the playbook." },

@@ -14,6 +14,7 @@ const BlogBangkokPrivateTransfer = () => (
     keywords={["Bangkok private transfer","Bangkok private cab","Suvarnabhumi private transfer","Bangkok chauffeur","Bangkok airport private car"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Transfer Guides", link: "/thailand/bangkok/destination-guides#transfer" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Pre-booked private transfers in Bangkok cost about ₹600–₹1,000 more than a regular taxi — but they buy you door-to-door comfort, fixed pricing, an English-speaking driver and a name placard at arrivals. Worth it? Sometimes definitely yes, sometimes definitely no. Here's exactly when it's worth booking and when it's overkill." },

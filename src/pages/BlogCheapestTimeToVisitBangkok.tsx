@@ -21,6 +21,7 @@ const BlogCheapestTimeToVisitBangkok = () => (
     ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Price & Cost Guides", link: "/thailand/bangkok/destination-guides#price-cost" }}
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",

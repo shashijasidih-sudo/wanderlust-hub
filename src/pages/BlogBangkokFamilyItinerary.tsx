@@ -14,6 +14,7 @@ const BlogBangkokFamilyItinerary = () => (
     keywords={["Bangkok family itinerary","Bangkok with kids","Bangkok family trip","Bangkok family vacation","Safari World Dream World Bangkok"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "A Bangkok family trip lives or dies by pacing — too many temples and the kids revolt, too many parks and the adults get bored. This 5-day Bangkok family itinerary alternates kid-heavy days (Safari World, Sea Life, Dream World) with culture-light days (a quick temple morning, a relaxed cruise) so everyone wins. It's been refined for Indian families with children aged 5 to 14 and includes vegetarian-friendly food picks, kid-tested attractions and stroller/easy-walking-friendly tips. Bookmark this — it's the one your friends will ask you for after your trip." },

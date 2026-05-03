@@ -14,6 +14,7 @@ const BlogBangkokIndianFamilyTips = () => (
     keywords={["Bangkok tips Indian family","Bangkok family travel India","Bangkok with parents India","Indian family Bangkok guide","Bangkok family vacation tips"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Indian Traveller Guides", link: "/thailand/bangkok/destination-guides#indian-audience" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Indian families travel to Bangkok very differently from solo backpackers or Western tourists — multi-generational groups, vegetarian/Jain food needs, senior parents, kids, lots of luggage and high expectations on hotel comfort. This 15-point Bangkok guide is built specifically for Indian family travelers, with answers to the exact questions Yellodae customers ask the most. Save it, share it with the family WhatsApp, and check it before booking." },

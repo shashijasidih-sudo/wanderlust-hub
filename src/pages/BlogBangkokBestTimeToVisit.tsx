@@ -14,6 +14,7 @@ const BlogBangkokBestTimeToVisit = () => (
     keywords={["Best time to visit Bangkok","Bangkok weather","Bangkok in winter","Bangkok monsoon","When to go Bangkok"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Quick Tips & Micro Guides", link: "/thailand/bangkok/destination-guides#micro" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Bangkok is a year-round destination, but the experience varies dramatically depending on when you go. November to February is the cool, dry, perfect-weather window. March to May is brutally hot. June to October is the wet monsoon season. This quick month-by-month guide tells you exactly when to book — and when to avoid." },

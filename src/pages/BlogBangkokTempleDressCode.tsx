@@ -14,6 +14,7 @@ const BlogBangkokTempleDressCode = () => (
     keywords={["Bangkok temple dress code","Grand Palace dress code","What to wear Bangkok temple","Wat Arun dress code","Bangkok temple clothing"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Quick Tips & Micro Guides", link: "/thailand/bangkok/destination-guides#micro" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Bangkok temple dress codes are strict — and a lot of first-time travelers get turned away at the Grand Palace gate every single day. The rules are simple but specific, and they apply at the Grand Palace, Wat Pho, Wat Arun and almost every active wat in the city. Here's exactly what's allowed, what's banned and what to do if you forget." },

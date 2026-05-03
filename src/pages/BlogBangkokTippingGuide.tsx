@@ -14,6 +14,7 @@ const BlogBangkokTippingGuide = () => (
     keywords={["Bangkok tipping","Thailand tipping guide","Tipping in Bangkok","How much to tip Thailand","Bangkok tipping etiquette"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Quick Tips & Micro Guides", link: "/thailand/bangkok/destination-guides#micro" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Tipping in Bangkok isn't mandatory like in the US, but it's appreciated almost everywhere — and small tips genuinely improve service. The amounts are tiny by Indian standards (20–50 baht goes a long way) and the etiquette is simple. Here's exactly how much to tip in every common situation." },

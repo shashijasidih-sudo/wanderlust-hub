@@ -14,6 +14,7 @@ const BlogBangkokCurrencyForIndians = () => (
     keywords={["INR to Thai baht","Bangkok currency India","Thai baht exchange India","Bangkok ATM India","Bangkok cash India"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Indian Traveller Guides", link: "/thailand/bangkok/destination-guides#indian-audience" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Thailand uses the Thai Baht (THB), and getting your currency right will save you 4–5% on every transaction in Bangkok. This guide breaks down the current INR-to-THB rate (around 2.4–2.6 INR per 1 baht as of early 2026), where to exchange, how much cash to carry, ATM strategies that avoid 200-baht withdrawal fees, and which credit cards work best in Thailand. Read it before you fly — currency mistakes can quietly add up to ₹3,000–₹5,000 in extra costs across a 5-day trip." },

@@ -14,6 +14,7 @@ const BlogBangkok2DayItinerary = () => (
     keywords={["Bangkok 2 day itinerary","Bangkok weekend trip","Bangkok short trip","Bangkok 48 hours","Bangkok travel plan"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Only 48 hours in Bangkok? You can still cover the city's biggest icons, eat phenomenally well, shop till midnight and end with a rooftop view that will live rent-free in your head forever. The trick is sequencing — start cultural and west-side, end commercial and east-side, and never schedule more than two big things in a single half-day. This 2-day Bangkok itinerary is the exact plan we've handed to hundreds of short-trip travelers from India, and it works whether you're flying in for a weekend break or stopping over en route to Phuket. Read on for a minute-by-minute plan that respects Bangkok traffic, your stomach and your jet lag." },

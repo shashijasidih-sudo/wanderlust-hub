@@ -14,6 +14,7 @@ const BlogBangkokVisaForIndians = () => (
     keywords={["Thailand visa for Indians","Bangkok visa India","Thailand e-visa","Thailand visa on arrival","Thailand visa free Indians"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Indian Traveller Guides", link: "/thailand/bangkok/destination-guides#indian-audience" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Good news for Indian travelers planning a Bangkok trip in 2026 — Thailand has extended visa-free entry for Indian passport holders for tourism stays of up to 60 days. That makes Thailand one of the easiest international destinations for Indians right now. But \"visa-free\" doesn't mean \"document-free,\" and a few specific requirements still trip up first-timers at immigration. This complete 2026 guide covers what you need, what you don't, common myths and the exact paperwork to carry to avoid the dreaded secondary screening at Suvarnabhumi." },

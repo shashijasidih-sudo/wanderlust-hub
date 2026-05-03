@@ -14,6 +14,7 @@ const BlogBangkokSoloItinerary = () => (
     keywords={["Bangkok solo travel","Bangkok solo itinerary","Solo female Bangkok","Bangkok backpacker","Bangkok solo trip India"]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
     cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
     sections={[
       { type: "paragraph", content: "Bangkok is one of the easiest cities in Asia to travel solo — safe, affordable, social and packed with experiences that work brilliantly on your own. This 4-day Bangkok solo itinerary is built around walkable neighborhoods, hostel meet-ups, group day tours and food walks where you'll inevitably make travel friends. It's especially well-tested for solo female travelers from India, where safety and ease are non-negotiable. Read on for the exact plan." },
