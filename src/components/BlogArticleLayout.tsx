@@ -59,7 +59,7 @@ interface BlogArticleProps {
   category: string;
   keywords: string[];
   sections: BlogSection[];
-  relatedLinks?: { title: string; link: string }[];
+  relatedLinks?: { title: string; link: string; image?: string }[];
   relatedActivities?: RelatedActivity[];
   cityHub?: CityHub;
   guidesLink?: string;
