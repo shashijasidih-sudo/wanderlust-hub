@@ -151,16 +151,36 @@ const BlogArticleLayout = ({
       keywords: keywords.join(", "),
       articleSection: category,
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: origin || "/" },
-        { "@type": "ListItem", position: 2, name: guidesLabel, item: abs(guidesLink) },
-        { "@type": "ListItem", position: 3, name: title, item: pageUrl },
-      ],
-    },
+    (() => {
+      const crumbs: { name: string; url: string }[] = [
+        { name: "Home", url: origin || "/" },
+        { name: guidesLabel, url: abs(guidesLink) },
+      ];
+      if (subCategory) crumbs.push({ name: subCategory.label, url: abs(subCategory.link) });
+      crumbs.push({ name: title, url: pageUrl });
+      return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: crumbs.map((c, i) => ({
+          "@type": "ListItem", position: i + 1, name: c.name, item: c.url,
+        })),
+      };
+    })(),
   ];
+
+  if (comparisonItems && comparisonItems.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: `Compared in: ${title}`,
+      itemListElement: comparisonItems.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: c.name,
+        ...(c.link ? { url: abs(c.link) } : {}),
+      })),
+    });
+  }
 
   if (relatedActivities && relatedActivities.length > 0) {
     jsonLd.push({
