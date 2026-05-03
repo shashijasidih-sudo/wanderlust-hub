@@ -249,7 +249,13 @@ const BlogArticleLayout = ({
               <BreadcrumbSeparator />
               <BreadcrumbItem><BreadcrumbLink asChild><Link to={guidesLink}>{guidesLabel}</Link></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
-              <BreadcrumbItem><BreadcrumbPage>{title}</BreadcrumbPage></BreadcrumbItem>
+              {subCategory && (
+                <>
+                  <BreadcrumbItem><BreadcrumbLink asChild><Link to={subCategory.link}>{subCategory.label}</Link></BreadcrumbLink></BreadcrumbItem>
+                  <BreadcrumbSeparator />
+                </>
+              )}
+              <BreadcrumbItem><BreadcrumbPage className="line-clamp-1">{title}</BreadcrumbPage></BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
 
