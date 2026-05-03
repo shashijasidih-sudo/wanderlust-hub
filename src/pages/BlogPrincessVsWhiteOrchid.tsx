@@ -21,6 +21,11 @@ const BlogPrincessVsWhiteOrchid = () => (
     ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Comparison Guides", link: "/thailand/bangkok/destination-guides#comparison" }}
+    comparisonItems={[
+      { name: "Chao Phraya Princess Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { name: "White Orchid River Cruise" },
+    ]}
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",

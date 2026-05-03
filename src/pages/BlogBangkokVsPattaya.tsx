@@ -21,6 +21,11 @@ const BlogBangkokVsPattaya = () => (
     ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Comparison Guides", link: "/thailand/bangkok/destination-guides#comparison" }}
+    comparisonItems={[
+      { name: "Bangkok", link: "/thailand/bangkok/things-to-do" },
+      { name: "Pattaya", link: "/thailand/pattaya/things-to-do" },
+    ]}
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",

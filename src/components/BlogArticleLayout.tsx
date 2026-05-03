@@ -38,6 +38,16 @@ interface CityHub {
   transfersLink?: string;
 }
 
+interface SubCategory {
+  label: string;
+  link: string;
+}
+
+interface ComparisonItem {
+  name: string;
+  link?: string;
+}
+
 interface BlogArticleProps {
   title: string;
   description: string;
@@ -54,6 +64,8 @@ interface BlogArticleProps {
   cityHub?: CityHub;
   guidesLink?: string;
   guidesLabel?: string;
+  subCategory?: SubCategory;
+  comparisonItems?: ComparisonItem[];
   children?: React.ReactNode;
 }
 
@@ -62,6 +74,7 @@ const BlogArticleLayout = ({
   readTime, category, keywords, sections, relatedLinks,
   relatedActivities, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
+  subCategory, comparisonItems,
   children,
 }: BlogArticleProps) => {
   const handleShare = () => {
@@ -138,16 +151,36 @@ const BlogArticleLayout = ({
       keywords: keywords.join(", "),
       articleSection: category,
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: origin || "/" },
-        { "@type": "ListItem", position: 2, name: guidesLabel, item: abs(guidesLink) },
-        { "@type": "ListItem", position: 3, name: title, item: pageUrl },
-      ],
-    },
+    (() => {
+      const crumbs: { name: string; url: string }[] = [
+        { name: "Home", url: origin || "/" },
+        { name: guidesLabel, url: abs(guidesLink) },
+      ];
+      if (subCategory) crumbs.push({ name: subCategory.label, url: abs(subCategory.link) });
+      crumbs.push({ name: title, url: pageUrl });
+      return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: crumbs.map((c, i) => ({
+          "@type": "ListItem", position: i + 1, name: c.name, item: c.url,
+        })),
+      };
+    })(),
   ];
+
+  if (comparisonItems && comparisonItems.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: `Compared in: ${title}`,
+      itemListElement: comparisonItems.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: c.name,
+        ...(c.link ? { url: abs(c.link) } : {}),
+      })),
+    });
+  }
 
   if (relatedActivities && relatedActivities.length > 0) {
     jsonLd.push({
@@ -216,7 +249,13 @@ const BlogArticleLayout = ({
               <BreadcrumbSeparator />
               <BreadcrumbItem><BreadcrumbLink asChild><Link to={guidesLink}>{guidesLabel}</Link></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
-              <BreadcrumbItem><BreadcrumbPage>{title}</BreadcrumbPage></BreadcrumbItem>
+              {subCategory && (
+                <>
+                  <BreadcrumbItem><BreadcrumbLink asChild><Link to={subCategory.link}>{subCategory.label}</Link></BreadcrumbLink></BreadcrumbItem>
+                  <BreadcrumbSeparator />
+                </>
+              )}
+              <BreadcrumbItem><BreadcrumbPage className="line-clamp-1">{title}</BreadcrumbPage></BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
 

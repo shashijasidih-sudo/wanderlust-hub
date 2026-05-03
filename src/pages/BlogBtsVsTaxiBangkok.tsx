@@ -21,6 +21,11 @@ const BlogBtsVsTaxiBangkok = () => (
     ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Comparison Guides", link: "/thailand/bangkok/destination-guides#comparison" }}
+    comparisonItems={[
+      { name: "Bangkok BTS Skytrain" },
+      { name: "Bangkok Taxi / Grab" },
+    ]}
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",
