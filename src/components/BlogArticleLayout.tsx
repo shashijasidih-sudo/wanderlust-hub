@@ -38,6 +38,16 @@ interface CityHub {
   transfersLink?: string;
 }
 
+interface SubCategory {
+  label: string;
+  link: string;
+}
+
+interface ComparisonItem {
+  name: string;
+  link?: string;
+}
+
 interface BlogArticleProps {
   title: string;
   description: string;
@@ -54,6 +64,8 @@ interface BlogArticleProps {
   cityHub?: CityHub;
   guidesLink?: string;
   guidesLabel?: string;
+  subCategory?: SubCategory;
+  comparisonItems?: ComparisonItem[];
   children?: React.ReactNode;
 }
 
@@ -62,6 +74,7 @@ const BlogArticleLayout = ({
   readTime, category, keywords, sections, relatedLinks,
   relatedActivities, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
+  subCategory, comparisonItems,
   children,
 }: BlogArticleProps) => {
   const handleShare = () => {
