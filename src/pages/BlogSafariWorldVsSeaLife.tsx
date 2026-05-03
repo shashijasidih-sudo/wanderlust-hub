@@ -21,6 +21,11 @@ const BlogSafariWorldVsSeaLife = () => (
     ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Comparison Guides", link: "/thailand/bangkok/destination-guides#comparison" }}
+    comparisonItems={[
+      { name: "Safari World Bangkok", link: "/thailand/bangkok/safari-world-marine-park" },
+      { name: "Sea Life Bangkok Ocean World" },
+    ]}
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",

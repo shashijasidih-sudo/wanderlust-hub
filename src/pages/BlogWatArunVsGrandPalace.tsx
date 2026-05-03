@@ -21,6 +21,11 @@ const BlogWatArunVsGrandPalace = () => (
     ]}
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
+    subCategory={{ label: "Comparison Guides", link: "/thailand/bangkok/destination-guides#comparison" }}
+    comparisonItems={[
+      { name: "Wat Arun (Temple of Dawn)" },
+      { name: "Grand Palace & Wat Phra Kaew", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+    ]}
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do",
