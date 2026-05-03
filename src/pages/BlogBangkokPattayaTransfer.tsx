@@ -15,7 +15,11 @@ const BlogBangkokPattayaTransfer = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Transfer Guides", link: "/thailand/bangkok/destination-guides#transfer" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Bangkok to Pattaya is one of Thailand's most-traveled tourist routes — 147 km, 90–120 minutes by car. Whether you're combining Bangkok with a Pattaya beach extension or coming straight from the airport, here are all your transfer options with real 2026 prices and travel times." },
       { type: "heading", content: "Option 1: Public Bus (Ekkamai Terminal)" },
@@ -38,6 +42,18 @@ const BlogBangkokPattayaTransfer = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok to Pattaya is among Thailand's easiest transfers — bus for budget, private cab for comfort, direct airport transfer if you're skipping Bangkok. Pick based on your group size and time of day, pre-book if it's your first time, and you'll be at the beach in under 2.5 hours from anywhere in Bangkok." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Bangkok to Pattaya Transfer", link: "/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer" },
+      { title: "Bangkok vs Pattaya Comparison", link: "/thailand/bangkok/destination-guides/comparison/bangkok-vs-pattaya" },
+      { title: "Bangkok 4-Day Itinerary", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-4-day-itinerary" },
     ]}
   />
 );

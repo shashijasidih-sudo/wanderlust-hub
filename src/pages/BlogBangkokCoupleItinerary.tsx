@@ -15,7 +15,11 @@ const BlogBangkokCoupleItinerary = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Bangkok is criminally underrated as a couples destination. Beyond the temples and shopping, it's a city of rooftop bars at sunset, candle-lit Chao Phraya cruises, world-class couple spas and boutique riverside hotels. This 4-night Bangkok couple itinerary is built for honeymooners, anniversary trips and date weekends — alternating big-romance moments (sunset cruise, sky bar) with downtime (long couple massages, slow brunches). Skip the kids' parks and overcrowded markets; this is a curated romantic plan for two." },
       { type: "heading", content: "Day 1: Arrival + Rooftop Sunset" },
@@ -38,6 +42,18 @@ const BlogBangkokCoupleItinerary = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok for couples is one of Asia's best-kept secrets — affordable luxury, world-class dining, romantic riverside views and spas that will ruin every massage you get back home. This 4-night plan hits the city's most romantic corners while keeping plenty of slow time built in. Follow it for a honeymoon, anniversary or just a long-overdue weekend with your favorite person." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Thai Couple Spa & Massage Deals", link: "/thailand/bangkok/thai-massage-spa-deals-bangkok" },
+      { title: "Wat Arun, Wat Pho & Golden Buddha Tour", link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Bangkok Couple Trip Cost", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-couple-trip-cost" },
+      { title: "Bangkok Honeymoon for Indians", link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-honeymoon-for-indians" },
     ]}
   />
 );

@@ -15,7 +15,11 @@ const BlogBangkokSafetyForIndians = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Indian Traveller Guides", link: "/thailand/bangkok/destination-guides#indian-audience" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Bangkok is, statistically, one of the safest big cities in Asia for Indian tourists — far safer than Delhi or Mumbai by violent-crime metrics. But \"safe\" doesn't mean \"scam-free,\" and a few specific traps catch first-time Indian travelers every week. This honest 2026 guide covers exactly what's safe, what's not, the top 5 scams to avoid, solo female safety tips, transport advice and emergency contacts. Read it before you fly — 10 minutes of awareness will save you 10,000 baht of trouble." },
       { type: "heading", content: "Overall Safety Rating" },
@@ -38,6 +42,18 @@ const BlogBangkokSafetyForIndians = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok is genuinely safe for Indian tourists — including solo women — as long as you avoid the well-documented tuk-tuk-and-gem-shop traps and stick to BTS/Grab for transport. Statistically your chances of any safety incident are lower in Bangkok than in your hometown. Stay aware, follow these basics and your Bangkok trip will be remembered for the right reasons." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Three Temples Bangkok City Tour", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "BTS vs Taxi in Bangkok", link: "/thailand/bangkok/destination-guides/comparison/bts-vs-taxi-bangkok" },
+      { title: "Bangkok Solo Itinerary", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-solo-itinerary" },
     ]}
   />
 );

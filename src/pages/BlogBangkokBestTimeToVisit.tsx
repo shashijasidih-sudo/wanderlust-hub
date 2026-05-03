@@ -15,7 +15,11 @@ const BlogBangkokBestTimeToVisit = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Quick Tips & Micro Guides", link: "/thailand/bangkok/destination-guides#micro" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Bangkok is a year-round destination, but the experience varies dramatically depending on when you go. November to February is the cool, dry, perfect-weather window. March to May is brutally hot. June to October is the wet monsoon season. This quick month-by-month guide tells you exactly when to book — and when to avoid." },
       { type: "heading", content: "The Sweet Spot: November to February" },
@@ -36,6 +40,18 @@ const BlogBangkokBestTimeToVisit = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok works year-round, but if you want the iconic photos with blue skies and dry pavements, target November to February. Avoid April for the heat and September for the rain unless you're chasing low prices. Pick your window, book early and pack accordingly." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Cheapest Time to Visit Bangkok", link: "/thailand/bangkok/destination-guides/price-cost/cheapest-time-to-visit-bangkok" },
+      { title: "Bangkok Monsoon Guide", link: "/thailand/bangkok/destination-guides/micro/bangkok-monsoon-guide" },
     ]}
   />
 );

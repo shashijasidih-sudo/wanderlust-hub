@@ -15,7 +15,11 @@ const BlogBangkokFamilyItinerary = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "A Bangkok family trip lives or dies by pacing — too many temples and the kids revolt, too many parks and the adults get bored. This 5-day Bangkok family itinerary alternates kid-heavy days (Safari World, Sea Life, Dream World) with culture-light days (a quick temple morning, a relaxed cruise) so everyone wins. It's been refined for Indian families with children aged 5 to 14 and includes vegetarian-friendly food picks, kid-tested attractions and stroller/easy-walking-friendly tips. Bookmark this — it's the one your friends will ask you for after your trip." },
       { type: "heading", content: "Day 1: Easy Arrival + Sea Life Aquarium" },
@@ -38,6 +42,18 @@ const BlogBangkokFamilyItinerary = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "A Bangkok family trip can be either the best holiday of your life or absolute chaos — the difference is the itinerary. This 5-day plan paces kid-heavy days against culture-light ones, picks attractions kids actually enjoy, and avoids classic mistakes like Grand Palace at noon. Follow it, pre-book your tours and you'll have one of those rare family trips where kids AND parents come home happy." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+      { title: "Sea Life & Madame Tussauds Tickets", link: "/thailand/bangkok/sea-life-madame-tussauds-tickets" },
+      { title: "Dream World Bangkok Tickets", link: "/thailand/bangkok/dream-world-bangkok-tickets" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Bangkok Family Trip Cost", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-family-trip-cost" },
+      { title: "Tips for Indian Families in Bangkok", link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-tips-indian-families" },
     ]}
   />
 );

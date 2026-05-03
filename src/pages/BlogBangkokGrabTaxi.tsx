@@ -15,7 +15,11 @@ const BlogBangkokGrabTaxi = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Transfer Guides", link: "/thailand/bangkok/destination-guides#transfer" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Grab is Southeast Asia's Uber — and in Bangkok, it competes head-on with the city's metered pink/yellow taxis. Both work, both are safe, but the price, language barrier and reliability differ. Here's the practical comparison so you pick the right one for each ride." },
       { type: "heading", content: "What is Grab?" },
@@ -38,6 +42,18 @@ const BlogBangkokGrabTaxi = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Grab and taxis both work in Bangkok — pick based on time of day, your comfort level and how lost-in-translation you are. Grab is the safer first choice for tourists; metered taxis are cheaper for confident travelers. Use GrabTaxi when you can — best of both worlds. Your phone is your best transport tool in Bangkok." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Bangkok Tuk Tuk Night Food Tour", link: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "BTS vs Taxi in Bangkok", link: "/thailand/bangkok/destination-guides/comparison/bts-vs-taxi-bangkok" },
+      { title: "Bangkok Private Transfer", link: "/thailand/bangkok/destination-guides/transfer/bangkok-private-transfer" },
     ]}
   />
 );

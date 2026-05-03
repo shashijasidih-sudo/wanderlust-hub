@@ -15,7 +15,11 @@ const BlogBangkok4DayItinerary = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Four days in Bangkok is the magic number — enough to do the iconic stuff without rushing, plus a full day for a floating market and another for a UNESCO temple ruins day trip to Ayutthaya. This is the itinerary we recommend when travelers ask \"how long should I stay in Bangkok?\" because it gives you depth without burnout. You'll see the Grand Palace, Wat Arun, Maeklong Railway Market, Damnoen Saduak Floating Market, Ayutthaya's ancient ruins, do a Chao Phraya cruise, hit Safari World OR Mahanakhon Skywalk, and still have time to shop. Let's plan it." },
       { type: "heading", content: "Day 1: Temples & Sunset Cruise" },
@@ -36,6 +40,18 @@ const BlogBangkok4DayItinerary = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Four days in Bangkok turns a sightseeing trip into a real travel experience. You'll see the temples everyone talks about, ride a longtail through a floating market like in the movies, walk among UNESCO ruins in Ayutthaya, watch the city light up from a glass-floor skywalk and still have time to shop and eat your way through Sukhumvit. This is the itinerary we recommend most often — it balances energy and depth perfectly. Start booking your activities early; the day trips sell out fastest." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+      { title: "Maeklong Floating Market Tour", link: "/thailand/bangkok/maeklong-floating-market-tour" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Bangkok to Pattaya Transfer", link: "/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer" },
+      { title: "Bangkok 3-Day Itinerary", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
+      { title: "Bangkok vs Pattaya Comparison", link: "/thailand/bangkok/destination-guides/comparison/bangkok-vs-pattaya" },
     ]}
   />
 );

@@ -15,7 +15,11 @@ const BlogBangkok2DayItinerary = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Only 48 hours in Bangkok? You can still cover the city's biggest icons, eat phenomenally well, shop till midnight and end with a rooftop view that will live rent-free in your head forever. The trick is sequencing — start cultural and west-side, end commercial and east-side, and never schedule more than two big things in a single half-day. This 2-day Bangkok itinerary is the exact plan we've handed to hundreds of short-trip travelers from India, and it works whether you're flying in for a weekend break or stopping over en route to Phuket. Read on for a minute-by-minute plan that respects Bangkok traffic, your stomach and your jet lag." },
       { type: "heading", content: "Day 1 Morning: Grand Palace & Wat Pho" },
@@ -38,6 +42,18 @@ const BlogBangkok2DayItinerary = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Two days in Bangkok will leave you wanting more — and that's exactly the point. This itinerary delivers the city's biggest icons (Grand Palace, Wat Arun, Mahanakhon, Chao Phraya) without any wasted travel time, plus enough food and shopping to feel like a real holiday. Tag a 3rd day if you can squeeze it for Safari World or a floating market day trip — but if 48 hours is all you have, follow this plan exactly and you'll leave Bangkok with zero regrets." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Wat Arun, Wat Pho & Golden Buddha Tour", link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Bangkok 3-Day Itinerary", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
+      { title: "Bangkok Trip Cost from India", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
     ]}
   />
 );

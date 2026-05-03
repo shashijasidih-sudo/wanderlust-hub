@@ -15,7 +15,11 @@ const BlogBangkokSimCardGuide = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Quick Tips & Micro Guides", link: "/thailand/bangkok/destination-guides#micro" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Staying connected in Bangkok is dirt cheap — a tourist SIM with unlimited 4G/5G costs about 300 baht (₹750) for 8 days. The bigger question is which carrier, where to buy and whether to grab an eSIM from India before flying. Here's the no-fluff answer." },
       { type: "heading", content: "Top 3 Carriers" },
@@ -36,6 +40,18 @@ const BlogBangkokSimCardGuide = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok connectivity is among the cheapest in Asia. Grab a DTAC or AIS tourist SIM at the airport for ~₹750 and you're set for 8 days of unlimited 4G — perfect for Maps, WhatsApp, Grab and Insta uploads. eSIMs work fine too if you prefer landing pre-connected. Indian roaming is overkill for short Bangkok trips." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Bangkok Tuk Tuk Night Food Tour", link: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Bangkok Tipping Guide", link: "/thailand/bangkok/destination-guides/micro/bangkok-tipping-guide" },
+      { title: "Bangkok Trip Cost from India", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
     ]}
   />
 );

@@ -15,7 +15,11 @@ const BlogBangkokVisaForIndians = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Indian Traveller Guides", link: "/thailand/bangkok/destination-guides#indian-audience" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Good news for Indian travelers planning a Bangkok trip in 2026 — Thailand has extended visa-free entry for Indian passport holders for tourism stays of up to 60 days. That makes Thailand one of the easiest international destinations for Indians right now. But \"visa-free\" doesn't mean \"document-free,\" and a few specific requirements still trip up first-timers at immigration. This complete 2026 guide covers what you need, what you don't, common myths and the exact paperwork to carry to avoid the dreaded secondary screening at Suvarnabhumi." },
       { type: "heading", content: "Visa-Free Entry: What It Means" },
@@ -38,6 +42,18 @@ const BlogBangkokVisaForIndians = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Thailand is currently the easiest big international destination for Indian travelers — visa-free, friendly immigration and minimal paperwork. As long as you carry the basics (passport, return ticket, hotel booking, some funds proof), Bangkok immigration takes 60 seconds. Don't overthink this one — book your flight, book your hotel and go." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Bangkok Trip Cost from India", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
+      { title: "INR to Thai Baht Guide", link: "/thailand/bangkok/destination-guides/indian-audience/inr-to-thai-baht-guide" },
     ]}
   />
 );

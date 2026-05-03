@@ -15,7 +15,11 @@ const BlogBangkokMonsoonGuide = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Quick Tips & Micro Guides", link: "/thailand/bangkok/destination-guides#micro" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Bangkok in monsoon (June to October) gets a bad rap — but the truth is more nuanced. It rains, yes, but rarely all day. Hotels are 30–40% cheaper. Temples are emptier. The city looks lush and beautiful. So is monsoon Bangkok worth it? Quick answer: yes, if you plan smartly. Long answer: read on." },
       { type: "heading", content: "What Monsoon Bangkok Really Looks Like" },
@@ -36,6 +40,18 @@ const BlogBangkokMonsoonGuide = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok in monsoon isn't the disaster many travel guides paint it as. Yes, you'll get wet. Yes, a tour might get rescheduled. But you'll also get half-price luxury hotels, near-empty temples and a moodier, more beautiful version of the city. Pack smart, plan flexibly and you might enjoy this trip more than the dry-season one." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Sea Life & Madame Tussauds Tickets", link: "/thailand/bangkok/sea-life-madame-tussauds-tickets" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Best Time to Visit Bangkok", link: "/thailand/bangkok/destination-guides/micro/best-time-to-visit-bangkok" },
+      { title: "Cheapest Time to Visit Bangkok", link: "/thailand/bangkok/destination-guides/price-cost/cheapest-time-to-visit-bangkok" },
     ]}
   />
 );

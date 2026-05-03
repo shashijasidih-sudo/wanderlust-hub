@@ -15,7 +15,11 @@ const BlogBangkokIndianFamilyTips = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Indian Traveller Guides", link: "/thailand/bangkok/destination-guides#indian-audience" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Indian families travel to Bangkok very differently from solo backpackers or Western tourists — multi-generational groups, vegetarian/Jain food needs, senior parents, kids, lots of luggage and high expectations on hotel comfort. This 15-point Bangkok guide is built specifically for Indian family travelers, with answers to the exact questions Yellodae customers ask the most. Save it, share it with the family WhatsApp, and check it before booking." },
       { type: "heading", content: "1. Best Time to Travel as a Family" },
@@ -54,6 +58,18 @@ const BlogBangkokIndianFamilyTips = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok is one of the easiest international destinations for Indian families — affordable, vegetarian-friendly, kid-friendly, senior-friendly and packed with experiences everyone genuinely enjoys. Follow these 15 tips, pre-book the big four (cruise, Safari World, airport transfer, floating market) and you'll come home with a family WhatsApp full of happy photos and zero horror stories." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+      { title: "Sea Life & Madame Tussauds Tickets", link: "/thailand/bangkok/sea-life-madame-tussauds-tickets" },
+      { title: "Dream World Bangkok Tickets", link: "/thailand/bangkok/dream-world-bangkok-tickets" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Bangkok Family Itinerary", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-family-itinerary" },
+      { title: "Bangkok Family Trip Cost", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-family-trip-cost" },
     ]}
   />
 );

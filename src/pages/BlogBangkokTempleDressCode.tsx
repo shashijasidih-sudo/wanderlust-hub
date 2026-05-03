@@ -15,7 +15,11 @@ const BlogBangkokTempleDressCode = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Quick Tips & Micro Guides", link: "/thailand/bangkok/destination-guides#micro" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Bangkok temple dress codes are strict — and a lot of first-time travelers get turned away at the Grand Palace gate every single day. The rules are simple but specific, and they apply at the Grand Palace, Wat Pho, Wat Arun and almost every active wat in the city. Here's exactly what's allowed, what's banned and what to do if you forget." },
       { type: "heading", content: "The Universal Rule" },
@@ -38,6 +42,18 @@ const BlogBangkokTempleDressCode = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Temple dress codes in Bangkok aren't a suggestion — at the Grand Palace especially, they will firmly turn you away. Follow the cover-shoulders-and-knees rule, carry a dupatta as backup, and you'll never face an issue. Indian traditional outfits work beautifully and produce some of the best photos of your trip." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Wat Arun, Wat Pho & Golden Buddha Tour", link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
+      { title: "Three Temples Bangkok City Tour", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
+      { title: "Golden Marble Buddha & Bangkok City Tour", link: "/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Wat Arun vs Grand Palace", link: "/thailand/bangkok/destination-guides/comparison/wat-arun-vs-grand-palace" },
+      { title: "Bangkok Temple Tour: Half vs Full Day", link: "/thailand/bangkok/destination-guides/activity/bangkok-temple-tour-half-vs-full-day" },
     ]}
   />
 );

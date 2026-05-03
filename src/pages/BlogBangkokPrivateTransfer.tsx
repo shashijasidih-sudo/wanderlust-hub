@@ -15,7 +15,11 @@ const BlogBangkokPrivateTransfer = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Transfer Guides", link: "/thailand/bangkok/destination-guides#transfer" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Pre-booked private transfers in Bangkok cost about ₹600–₹1,000 more than a regular taxi — but they buy you door-to-door comfort, fixed pricing, an English-speaking driver and a name placard at arrivals. Worth it? Sometimes definitely yes, sometimes definitely no. Here's exactly when it's worth booking and when it's overkill." },
       { type: "heading", content: "What's Included" },
@@ -38,6 +42,18 @@ const BlogBangkokPrivateTransfer = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Private airport transfer in Bangkok is a small luxury that pays for itself the moment you're tired, jet-lagged or traveling with people who can't easily handle a taxi argument at midnight. Solo backpackers don't need it. Families, first-timers and late-night arrivers absolutely should. Book ahead, share your flight number and you'll roll up to your hotel relaxed." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Bangkok to Pattaya Transfer", link: "/thailand/bangkok/destination-guides/transfer/bangkok-to-pattaya-transfer" },
+      { title: "Grab vs Taxi in Bangkok", link: "/thailand/bangkok/destination-guides/transfer/grab-vs-taxi-bangkok" },
     ]}
   />
 );

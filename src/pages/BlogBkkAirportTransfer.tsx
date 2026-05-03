@@ -15,7 +15,11 @@ const BlogBkkAirportTransfer = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Transfer Guides", link: "/thailand/bangkok/destination-guides#transfer" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Suvarnabhumi (BKK) is Bangkok's main international airport — most Indian flights land here. Getting to your hotel is easy and cheap if you know your options. This guide breaks down all four (taxi, Grab, Airport Rail Link, pre-booked private transfer), the real prices and which one to pick based on your group size, time of arrival and luggage." },
       { type: "heading", content: "Option 1: Public Taxi (Cheapest)" },
@@ -36,6 +40,18 @@ const BlogBkkAirportTransfer = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Suvarnabhumi to your Bangkok hotel is cheap and easy — pick the option that matches your travel style. Solo backpackers, take the Airport Rail Link. Couples and small groups, take Grab. Families and first-timers, pre-book a private transfer. Whatever you pick, avoid the random touts in arrivals and you'll be at your hotel in under an hour." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Bangkok Hotel to Suvarnabhumi (Departure)", link: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer" },
+      { title: "Don Mueang Airport Transfer", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
+      { title: "Bangkok Airport Rail Link Guide", link: "/thailand/bangkok/destination-guides/transfer/bangkok-airport-rail-link" },
     ]}
   />
 );

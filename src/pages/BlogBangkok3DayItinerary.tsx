@@ -15,7 +15,11 @@ const BlogBangkok3DayItinerary = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Three days is the sweet spot for a first Bangkok trip — long enough to cover the headline attractions, short enough to keep the energy high. This is the exact 3-day Bangkok itinerary we've refined over hundreds of bookings, designed for the typical Indian first-timer who wants temples, a Chao Phraya cruise, family-friendly fun and shopping without burning out. You'll hit the Grand Palace, Wat Arun, Wat Pho, Mahanakhon Skywalk, Safari World and an evening cruise — plus enough food stops to keep everyone happy. Save it, book it, follow it." },
       { type: "heading", content: "Day 1: Cultural Bangkok (Temples & Cruise)" },
@@ -36,6 +40,18 @@ const BlogBangkok3DayItinerary = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Three days, three completely different sides of Bangkok — culture, family adventure and modern city. This itinerary is balanced, well-paced and tested by hundreds of Indian families and couples. You'll leave with full memory cards, full stomachs and a deep urge to come back for more. Add Pattaya or Phuket on the back end if you have an extra 4 nights, but as a standalone trip these 3 days will absolutely satisfy." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Bangkok 4-Day Itinerary", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-4-day-itinerary" },
+      { title: "Bangkok Trip Cost from India", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
     ]}
   />
 );

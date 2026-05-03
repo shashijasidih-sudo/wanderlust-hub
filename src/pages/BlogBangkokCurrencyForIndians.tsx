@@ -15,7 +15,11 @@ const BlogBangkokCurrencyForIndians = () => (
     guidesLink="/thailand/bangkok/destination-guides"
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Indian Traveller Guides", link: "/thailand/bangkok/destination-guides#indian-audience" }}
-    cityHub={{ city: "Bangkok", thingsToDoLink: "/thailand/bangkok/things-to-do" }}
+    cityHub={{
+      city: "Bangkok",
+      thingsToDoLink: "/thailand/bangkok/things-to-do",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    }}
     sections={[
       { type: "paragraph", content: "Thailand uses the Thai Baht (THB), and getting your currency right will save you 4–5% on every transaction in Bangkok. This guide breaks down the current INR-to-THB rate (around 2.4–2.6 INR per 1 baht as of early 2026), where to exchange, how much cash to carry, ATM strategies that avoid 200-baht withdrawal fees, and which credit cards work best in Thailand. Read it before you fly — currency mistakes can quietly add up to ₹3,000–₹5,000 in extra costs across a 5-day trip." },
       { type: "heading", content: "Current INR to THB Rate (2026)" },
@@ -38,6 +42,18 @@ const BlogBangkokCurrencyForIndians = () => (
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok currency is straightforward once you know the rules: convert to USD in India, exchange USD to baht at SuperRich, carry a forex-free Niyo/Fi card for daily spending and keep ~₹25,000 cash equivalent for street use. Skip airport exchanges, decline DCC, and you'll save ₹3,000–₹5,000 over a typical Bangkok trip — money better spent on a dinner cruise." },
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+    ]}
+    relatedActivities={[
+      { title: "Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+      { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world" },
+    ]}
+    relatedLinks={[
+      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
+      { title: "Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
+      { title: "Bangkok Trip Cost from India", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
+      { title: "Bangkok Tipping Guide", link: "/thailand/bangkok/destination-guides/micro/bangkok-tipping-guide" },
     ]}
   />
 );
