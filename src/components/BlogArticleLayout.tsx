@@ -9,6 +9,7 @@ import {
   BreadcrumbPage, BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import MidArticleActivities from "@/components/MidArticleActivities";
+import { getBlogLinkImage, getCityImage } from "@/lib/blogLinkImages";
 
 type MidDestination = "thailand" | "singapore" | "bangkok" | "pattaya" | "phuket" | "krabi";
 
@@ -59,7 +60,7 @@ interface BlogArticleProps {
   category: string;
   keywords: string[];
   sections: BlogSection[];
-  relatedLinks?: { title: string; link: string }[];
+  relatedLinks?: { title: string; link: string; image?: string }[];
   relatedActivities?: RelatedActivity[];
   cityHub?: CityHub;
   guidesLink?: string;
@@ -342,11 +343,28 @@ const BlogArticleLayout = ({
               <div className="mt-10 pt-8 border-t border-border">
                 <h4 className="text-lg font-bold text-foreground mb-4">Related Guides</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {relatedLinks.map((rl) => (
-                    <Link key={rl.link} to={rl.link} className="p-4 rounded-xl border border-border hover:border-primary hover:shadow-md transition-all group">
-                      <span className="text-foreground font-medium group-hover:text-primary transition-colors">{rl.title}</span>
-                    </Link>
-                  ))}
+                  {relatedLinks.map((rl) => {
+                    const img = rl.image || getBlogLinkImage(rl.link);
+                    return (
+                      <Link
+                        key={rl.link}
+                        to={rl.link}
+                        className="group flex items-center gap-3 rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all"
+                      >
+                        <div className="w-24 h-20 flex-shrink-0 overflow-hidden bg-muted">
+                          <img
+                            src={img}
+                            alt={rl.title}
+                            loading="lazy"
+                            className="w-full h-full object-cover transition group-hover:scale-105"
+                          />
+                        </div>
+                        <span className="flex-1 pr-3 text-foreground font-medium group-hover:text-primary transition-colors line-clamp-2 text-sm">
+                          {rl.title}
+                        </span>
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             )}
@@ -358,61 +376,85 @@ const BlogArticleLayout = ({
                   Recommended Activities {cityHub ? `in ${cityHub.city}` : ""}
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {relatedActivities.map((a) => (
-                    <Link
-                      key={a.link}
-                      to={a.link}
-                      className="group rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all"
-                    >
-                      {a.image && (
+                  {relatedActivities.map((a) => {
+                    const img = a.image || getBlogLinkImage(a.link);
+                    return (
+                      <Link
+                        key={a.link}
+                        to={a.link}
+                        className="group rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all"
+                      >
                         <div className="aspect-[4/3] overflow-hidden bg-muted">
                           <img
-                            src={a.image}
+                            src={img}
                             alt={a.title}
                             loading="lazy"
                             className="w-full h-full object-cover transition group-hover:scale-105"
                           />
                         </div>
-                      )}
-                      <div className="p-4">
-                        <p className="text-foreground font-medium leading-snug line-clamp-2 group-hover:text-primary transition-colors">
-                          {a.title}
-                        </p>
-                      </div>
-                    </Link>
-                  ))}
+                        <div className="p-4">
+                          <p className="text-foreground font-medium leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                            {a.title}
+                          </p>
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             )}
 
             {/* City Hub callout */}
-            {cityHub && (
-              <div className="mt-10 pt-8 border-t border-border">
-                <h4 className="text-lg font-bold text-foreground mb-4">
-                  Explore {cityHub.city}
-                </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Link
-                    to={cityHub.thingsToDoLink}
-                    className="p-4 rounded-xl border border-border hover:border-primary hover:shadow-md transition-all bg-secondary/30"
-                  >
-                    <span className="text-foreground font-semibold">
-                      Top Things to Do in {cityHub.city} →
-                    </span>
-                  </Link>
-                  {cityHub.transfersLink && (
+            {cityHub && (() => {
+              const cityImgs = getCityImage(cityHub.city);
+              return (
+                <div className="mt-10 pt-8 border-t border-border">
+                  <h4 className="text-lg font-bold text-foreground mb-4">
+                    Explore {cityHub.city}
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <Link
-                      to={cityHub.transfersLink}
-                      className="p-4 rounded-xl border border-border hover:border-primary hover:shadow-md transition-all bg-secondary/30"
+                      to={cityHub.thingsToDoLink}
+                      className="group rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all"
                     >
-                      <span className="text-foreground font-semibold">
-                        {cityHub.city} Airport Transfers →
-                      </span>
+                      <div className="aspect-[16/9] overflow-hidden bg-muted">
+                        <img
+                          src={cityImgs.thingsToDo}
+                          alt={`Top things to do in ${cityHub.city}`}
+                          loading="lazy"
+                          className="w-full h-full object-cover transition group-hover:scale-105"
+                        />
+                      </div>
+                      <div className="p-4 bg-secondary/30">
+                        <span className="text-foreground font-semibold group-hover:text-primary transition-colors">
+                          Top Things to Do in {cityHub.city} →
+                        </span>
+                      </div>
                     </Link>
-                  )}
+                    {cityHub.transfersLink && (
+                      <Link
+                        to={cityHub.transfersLink}
+                        className="group rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all"
+                      >
+                        <div className="aspect-[16/9] overflow-hidden bg-muted">
+                          <img
+                            src={cityImgs.transfers}
+                            alt={`${cityHub.city} airport transfers`}
+                            loading="lazy"
+                            className="w-full h-full object-cover transition group-hover:scale-105"
+                          />
+                        </div>
+                        <div className="p-4 bg-secondary/30">
+                          <span className="text-foreground font-semibold group-hover:text-primary transition-colors">
+                            {cityHub.city} Airport Transfers →
+                          </span>
+                        </div>
+                      </Link>
+                    )}
+                  </div>
                 </div>
-              </div>
-            )}
+              );
+            })()}
           </div>
         </div>
         {children}
