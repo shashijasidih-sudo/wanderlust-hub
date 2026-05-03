@@ -9,6 +9,7 @@ import {
   BreadcrumbPage, BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import MidArticleActivities from "@/components/MidArticleActivities";
+import { getBlogLinkImage, getCityImage } from "@/lib/blogLinkImages";
 
 type MidDestination = "thailand" | "singapore" | "bangkok" | "pattaya" | "phuket" | "krabi";
 
