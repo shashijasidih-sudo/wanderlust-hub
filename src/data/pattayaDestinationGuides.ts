@@ -14,6 +14,8 @@ import imgFloatingMarket from "@/assets/floating-market-1.jpg";
 import imgBigEyeShow from "@/assets/bigeye-show-pattaya-1.jpg";
 import imgPhuketSpeedboat from "@/assets/phuket-speedboat-1.jpg";
 import imgBangkokVsPattaya from "@/assets/blog-bangkok-vs-pattaya.jpg";
+import imgPattayaWoman from "@/assets/pattaya-woman-sea-1.jpg";
+import imgPattayaNightlife from "@/assets/pattaya-nightlife-1.jpg";
 
 export type PattayaBlogCategory =
   | "activity"
@@ -289,6 +291,69 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     date: "May 4, 2026",
     readTime: "7 min read",
     link: "/thailand/pattaya/destination-guides/comparison/speedboat-vs-ferry-coral-island",
+  },
+  {
+    title: "Pattaya 2 Days Itinerary 2026: Perfect Weekend Plan",
+    description: "Tested 2-day Pattaya plan — arrival, city, nightlife, Coral Island and water sports for a quick weekend from Bangkok.",
+    category: "itinerary",
+    image: imgPattayaActivityPrices,
+    date: "May 5, 2026",
+    readTime: "9 min read",
+    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary",
+  },
+  {
+    title: "Pattaya 3 Days Itinerary 2026: Activities + Island + Shows",
+    description: "Balanced 3-day plan covering Coral Island, Sanctuary of Truth, Nong Nooch and a cabaret show — the sweet-spot Pattaya itinerary.",
+    category: "itinerary",
+    image: imgPattaya3Day,
+    date: "May 5, 2026",
+    readTime: "11 min read",
+    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary",
+  },
+  {
+    title: "Bangkok + Pattaya 5 Days Itinerary 2026: Most Popular Route",
+    description: "The most popular Thailand itinerary — 2 days Bangkok culture & shopping + 3 days Pattaya beaches, Coral Island and nightlife.",
+    category: "itinerary",
+    image: imgBangkokVsPattaya,
+    date: "May 5, 2026",
+    readTime: "12 min read",
+    link: "/thailand/pattaya/destination-guides/itinerary/bangkok-pattaya-5-days-itinerary",
+  },
+  {
+    title: "Pattaya Honeymoon Itinerary 2026: 4 Days Romantic Plan",
+    description: "4-day Pattaya honeymoon — romantic dinners, private Coral Island, Sanctuary of Truth at sunset and luxury options.",
+    category: "itinerary",
+    image: imgPattayaWoman,
+    date: "May 5, 2026",
+    readTime: "11 min read",
+    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-honeymoon-itinerary",
+  },
+  {
+    title: "Pattaya Family Itinerary 2026: 4 Days Plan with Kids",
+    description: "Kid-friendly 4-day plan — Coral Island, Nong Nooch, Underwater World and Ramayana Water Park with safe family hotels.",
+    category: "itinerary",
+    image: imgRamayana,
+    date: "May 5, 2026",
+    readTime: "11 min read",
+    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-family-itinerary",
+  },
+  {
+    title: "Pattaya Nightlife Itinerary 2026: 2 Nights Plan (Safe & Smart)",
+    description: "Balanced 2-night plan — Soi Buakhao bars on Night 1, Walking Street + clubs on Night 2 with safety tips and budget.",
+    category: "itinerary",
+    image: imgPattayaNightlife,
+    date: "May 5, 2026",
+    readTime: "9 min read",
+    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-nightlife-itinerary",
+  },
+  {
+    title: "Pattaya + Coral Island Itinerary 2026: Best Combo Plan",
+    description: "The perfect 2–3 day Pattaya + Coral Island combo — beaches, water sports, city sights and budget tips for a balanced trip.",
+    category: "itinerary",
+    image: imgCoralIslandPrice,
+    date: "May 5, 2026",
+    readTime: "10 min read",
+    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-coral-island-combo-itinerary",
   },
 ];
 
