@@ -147,6 +147,24 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     readTime: "7 min read",
     link: "/thailand/pattaya/destination-guides/price-cost/sanctuary-of-truth-ticket-price",
   },
+  {
+    title: "Coral Island Pattaya Guide 2026: Beaches, Activities & Tips",
+    description: "Complete Coral Island (Koh Larn) guide — beaches, water sports, ferry vs speedboat, timings and what to pack.",
+    category: "activity",
+    image: imgCoralIslandPrice,
+    date: "May 3, 2026",
+    readTime: "8 min read",
+    link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide",
+  },
+  {
+    title: "Sanctuary of Truth Pattaya Guide 2026: Architecture, Tips & Timings",
+    description: "Visitor guide to Pattaya's all-wood Sanctuary of Truth — history, architecture, dress code, timings and add-ons.",
+    category: "activity",
+    image: imgSanctuaryTruth,
+    date: "May 3, 2026",
+    readTime: "8 min read",
+    link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide",
+  },
 ];
 
 export const getPattayaBlogsByCategory = (cat: PattayaBlogCategory) =>

@@ -99,6 +99,8 @@ import BlogAlcazarVsTiffanyShowPrice from "./pages/BlogAlcazarVsTiffanyShowPrice
 import BlogPattayaWaterSportsPrice from "./pages/BlogPattayaWaterSportsPrice";
 import BlogPattaya3DaysTripCost from "./pages/BlogPattaya3DaysTripCost";
 import BlogSanctuaryOfTruthTicketPrice from "./pages/BlogSanctuaryOfTruthTicketPrice";
+import BlogCoralIslandPattayaGuide from "./pages/BlogCoralIslandPattayaGuide";
+import BlogSanctuaryOfTruthGuide from "./pages/BlogSanctuaryOfTruthGuide";
 import BlogChaoPhrayaPrincessReview from "./pages/BlogChaoPhrayaPrincessReview";
 import BlogBestDinnerCruisesCouples from "./pages/BlogBestDinnerCruisesCouples";
 import BlogWatArunGuide from "./pages/BlogWatArunGuide";
@@ -508,6 +510,8 @@ const App = () => (
             <Route path="/thailand/pattaya/destination-guides/price-cost/pattaya-water-sports-price-guide" element={<BlogPattayaWaterSportsPrice />} />
             <Route path="/thailand/pattaya/destination-guides/price-cost/pattaya-3-days-trip-cost" element={<BlogPattaya3DaysTripCost />} />
             <Route path="/thailand/pattaya/destination-guides/price-cost/sanctuary-of-truth-ticket-price" element={<BlogSanctuaryOfTruthTicketPrice />} />
+            <Route path="/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" element={<BlogCoralIslandPattayaGuide />} />
+            <Route path="/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" element={<BlogSanctuaryOfTruthGuide />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
             <Route path="/blog/best-thailand-activities" element={<BlogBestThailandActivities />} />
