@@ -91,6 +91,7 @@ import EsimThailandAis from "./pages/EsimThailandAis";
 import TourPackages from "./pages/TourPackages";
 import ThailandSmartGuides from "./pages/ThailandSmartGuides";
 import BangkokDestinationGuides from "./pages/BangkokDestinationGuides";
+import PattayaDestinationGuides from "./pages/PattayaDestinationGuides";
 import BlogChaoPhrayaPrincessReview from "./pages/BlogChaoPhrayaPrincessReview";
 import BlogBestDinnerCruisesCouples from "./pages/BlogBestDinnerCruisesCouples";
 import BlogWatArunGuide from "./pages/BlogWatArunGuide";
@@ -492,6 +493,7 @@ const App = () => (
             <Route path="/thailand/bangkok/destination-guides/transfer/bangkok-airport-rail-link" element={<BlogBangkokAirportRail />} />
             <Route path="/thailand/bangkok/destination-guides/transfer/bangkok-private-transfer" element={<BlogBangkokPrivateTransfer />} />
             <Route path="/thailand/bangkok/destination-guides/transfer/grab-vs-taxi-bangkok" element={<BlogBangkokGrabTaxi />} />
+            <Route path="/thailand/pattaya/destination-guides" element={<PattayaDestinationGuides />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
             <Route path="/blog/best-thailand-activities" element={<BlogBestThailandActivities />} />
