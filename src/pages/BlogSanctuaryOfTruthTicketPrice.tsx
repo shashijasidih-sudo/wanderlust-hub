@@ -1,0 +1,89 @@
+import BlogArticleLayout from "@/components/BlogArticleLayout";
+import heroImg from "@/assets/pattaya-temple-woman-1.jpg";
+
+const BlogSanctuaryOfTruthTicketPrice = () => (
+  <BlogArticleLayout
+    title="Sanctuary of Truth Ticket Price 2026 + Hidden Costs (Pattaya)"
+    description="Sanctuary of Truth Pattaya 2026 — ticket price, what's included, hidden charges (elephant ride, boat ride, photos, transport) and budget tips."
+    heroImage={heroImg}
+    heroAlt="Sanctuary of Truth wooden temple in Pattaya, Thailand"
+    author="Yellodae Travel Expert"
+    date="May 2, 2026"
+    readTime="7 min read"
+    category="Price / Cost Blogs"
+    keywords={[
+      "sanctuary of truth ticket price",
+      "sanctuary of truth pattaya cost",
+      "sanctuary of truth hidden charges",
+      "sanctuary of truth india price",
+      "pattaya cultural attraction price",
+    ]}
+    guidesLink="/thailand/pattaya/destination-guides"
+    guidesLabel="Pattaya Destination Guides"
+    subCategory={{ label: "Price & Cost Guides", link: "/thailand/pattaya/destination-guides#price-cost" }}
+    cityHub={{
+      city: "Pattaya",
+      thingsToDoLink: "/thailand/pattaya/things-to-do",
+      transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer",
+    }}
+    relatedActivities={[
+      { title: "Sanctuary of Truth Tickets", link: "/thailand/pattaya/sanctuary-of-truth" },
+      { title: "Nong Nooch Tropical Garden", link: "/thailand/pattaya/nong-nooch-garden" },
+      { title: "Coral Island Speedboat Tour", link: "/thailand/pattaya/coral-island-tour" },
+    ]}
+    sections={[
+      { type: "paragraph", content: "The Sanctuary of Truth is one of Pattaya's most unique attractions — a giant all-wooden temple carved without a single nail. But the ticket price is higher than most Pattaya attractions, and there are real hidden costs you should plan for." },
+      { type: "heading", content: "Ticket Price (2026)" },
+      { type: "list", items: [
+        "Adults: ₹1,200 – ₹1,500",
+        "Children: ₹800 – ₹1,200",
+      ]},
+      { type: "heading", content: "What's Included" },
+      { type: "list", items: [
+        "Entry to the entire wooden structure",
+        "Mandatory guided tour",
+        "Access to viewing areas and outer garden",
+        "Cultural and architectural insights",
+      ]},
+      { type: "heading", content: "Timings" },
+      { type: "list", items: [
+        "Open: 8:00 AM – 6:00 PM",
+        "Last entry: ~5:00 PM",
+        "Best time: morning for fewer crowds, evening for photos",
+      ]},
+      { type: "mid-activities", destination: "pattaya", heading: "Pair Sanctuary of Truth with These" },
+      { type: "heading", content: "Why the Ticket Costs More" },
+      { type: "list", items: [
+        "Hand-carved structure with ongoing construction",
+        "Heritage + cultural educational value",
+        "Guided tour included (rare in Pattaya attractions)",
+      ]},
+      { type: "heading", content: "Hidden Costs to Plan For" },
+      { type: "list", items: [
+        "Elephant ride: ₹300 – ₹600",
+        "Boat ride (sea-side view): ₹300 – ₹600",
+        "Professional photography: ₹200 – ₹500",
+        "Souvenirs (wooden crafts): ₹500+",
+        "Taxi / Grab to and from the site: ₹200 – ₹500",
+        "Private transfer round-trip: ₹800 – ₹1,500",
+      ]},
+      { type: "tip-box", content: "Skip the elephant ride for both ethical and budget reasons — the boat ride gives a far better view of the structure for the same price." },
+      { type: "heading", content: "Total Cost Breakdown" },
+      { type: "list", items: [
+        "Basic visit (entry + transport): ₹1,500 – ₹2,000",
+        "Standard visit (entry + transport + boat ride): ₹2,000 – ₹2,800",
+        "Full experience (entry + boat + photos + souvenirs): ₹3,000+",
+      ]},
+      { type: "heading", content: "Is It Worth It?" },
+      { type: "paragraph", content: "If you appreciate architecture, craftsmanship and culture — yes, it's one of Pattaya's most memorable stops. If you only have 2 days and prefer beaches and shows, skip it and prioritize Coral Island + cabaret." },
+      { type: "cta", content: "Book Sanctuary of Truth tickets", link: "/thailand/pattaya/sanctuary-of-truth", linkText: "View Tickets" },
+    ]}
+    relatedLinks={[
+      { title: "Pattaya Activity Prices: Full List", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-activity-prices" },
+      { title: "Pattaya Trip Cost from India", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-trip-cost" },
+      { title: "Pattaya 3 Days Trip Cost", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-3-days-trip-cost" },
+    ]}
+  />
+);
+
+export default BlogSanctuaryOfTruthTicketPrice;
