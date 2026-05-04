@@ -107,6 +107,12 @@ import BlogNongNoochGardenPattayaGuide from "./pages/BlogNongNoochGardenPattayaG
 import BlogRamayanaWaterParkPattayaGuide from "./pages/BlogRamayanaWaterParkPattayaGuide";
 import BlogUnderwaterWorldPattayaGuide from "./pages/BlogUnderwaterWorldPattayaGuide";
 import BlogPattayaFloatingMarketGuide from "./pages/BlogPattayaFloatingMarketGuide";
+import BlogAdultShowsPattayaComparison from "./pages/BlogAdultShowsPattayaComparison";
+import BlogAlcazarVsTiffanyShow from "./pages/BlogAlcazarVsTiffanyShow";
+import BlogCoralIslandTourVsKohLarnDIY from "./pages/BlogCoralIslandTourVsKohLarnDIY";
+import BlogPattayaVsPhuket from "./pages/BlogPattayaVsPhuket";
+import BlogRamayanaVsCartoonNetwork from "./pages/BlogRamayanaVsCartoonNetwork";
+import BlogSpeedboatVsFerryCoralIsland from "./pages/BlogSpeedboatVsFerryCoralIsland";
 import BlogChaoPhrayaPrincessReview from "./pages/BlogChaoPhrayaPrincessReview";
 import BlogBestDinnerCruisesCouples from "./pages/BlogBestDinnerCruisesCouples";
 import BlogWatArunGuide from "./pages/BlogWatArunGuide";
@@ -524,6 +530,13 @@ const App = () => (
             <Route path="/thailand/pattaya/destination-guides/activity/ramayana-water-park-guide" element={<BlogRamayanaWaterParkPattayaGuide />} />
             <Route path="/thailand/pattaya/destination-guides/activity/underwater-world-pattaya-guide" element={<BlogUnderwaterWorldPattayaGuide />} />
             <Route path="/thailand/pattaya/destination-guides/activity/pattaya-floating-market-guide" element={<BlogPattayaFloatingMarketGuide />} />
+            <Route path="/thailand/pattaya/destination-guides/comparison/adult-shows-pattaya-comparison" element={<BlogAdultShowsPattayaComparison />} />
+            <Route path="/thailand/pattaya/destination-guides/comparison/alcazar-vs-tiffany-show" element={<BlogAlcazarVsTiffanyShow />} />
+            <Route path="/thailand/pattaya/destination-guides/comparison/coral-island-tour-vs-koh-larn-diy" element={<BlogCoralIslandTourVsKohLarnDIY />} />
+            <Route path="/thailand/pattaya/destination-guides/comparison/pattaya-vs-phuket" element={<BlogPattayaVsPhuket />} />
+            <Route path="/thailand/pattaya/destination-guides/comparison/ramayana-vs-cartoon-network-water-park" element={<BlogRamayanaVsCartoonNetwork />} />
+            <Route path="/thailand/pattaya/destination-guides/comparison/speedboat-vs-ferry-coral-island" element={<BlogSpeedboatVsFerryCoralIsland />} />
+            <Route path="/thailand/pattaya/destination-guides/comparison/bangkok-vs-pattaya" element={<BlogBangkokVsPattaya />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
             <Route path="/blog/best-thailand-activities" element={<BlogBestThailandActivities />} />
