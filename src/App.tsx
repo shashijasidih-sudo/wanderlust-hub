@@ -518,6 +518,12 @@ const App = () => (
             <Route path="/thailand/pattaya/destination-guides/price-cost/sanctuary-of-truth-ticket-price" element={<BlogSanctuaryOfTruthTicketPrice />} />
             <Route path="/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" element={<BlogCoralIslandPattayaGuide />} />
             <Route path="/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" element={<BlogSanctuaryOfTruthGuide />} />
+            <Route path="/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" element={<BlogAlcazarShowPattayaGuide />} />
+            <Route path="/thailand/pattaya/destination-guides/activity/tiffany-show-pattaya-review" element={<BlogTiffanyShowPattayaReview />} />
+            <Route path="/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" element={<BlogNongNoochGardenPattayaGuide />} />
+            <Route path="/thailand/pattaya/destination-guides/activity/ramayana-water-park-guide" element={<BlogRamayanaWaterParkPattayaGuide />} />
+            <Route path="/thailand/pattaya/destination-guides/activity/underwater-world-pattaya-guide" element={<BlogUnderwaterWorldPattayaGuide />} />
+            <Route path="/thailand/pattaya/destination-guides/activity/pattaya-floating-market-guide" element={<BlogPattayaFloatingMarketGuide />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
             <Route path="/blog/best-thailand-activities" element={<BlogBestThailandActivities />} />
