@@ -11,6 +11,9 @@ import imgNongNooch from "@/assets/pattaya-tropical-beach-1.jpg";
 import imgRamayana from "@/assets/pattaya-lake-tour-1.jpg";
 import imgUnderwaterWorld from "@/assets/blog-sea-life-aquarium.jpg";
 import imgFloatingMarket from "@/assets/floating-market-1.jpg";
+import imgBigEyeShow from "@/assets/bigeye-show-pattaya-1.jpg";
+import imgPhuketSpeedboat from "@/assets/phuket-speedboat-1.jpg";
+import imgBangkokVsPattaya from "@/assets/blog-bangkok-vs-pattaya.jpg";
 
 export type PattayaBlogCategory =
   | "activity"
@@ -223,6 +226,69 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     date: "May 4, 2026",
     readTime: "7 min read",
     link: "/thailand/pattaya/destination-guides/activity/pattaya-floating-market-guide",
+  },
+  {
+    title: "Big Eye vs Show 69 vs Show 89 Pattaya: Honest Comparison (2026)",
+    description: "Non-explicit comparison of Pattaya's adult-themed shows — prices, experience, safety and better cabaret alternatives.",
+    category: "comparison",
+    image: imgBigEyeShow,
+    date: "May 4, 2026",
+    readTime: "8 min read",
+    link: "/thailand/pattaya/destination-guides/comparison/adult-shows-pattaya-comparison",
+  },
+  {
+    title: "Alcazar vs Tiffany Show Pattaya: Which One Should You Choose?",
+    description: "Side-by-side cabaret comparison — ticket prices, seating, performance quality and which Pattaya show suits you best.",
+    category: "comparison",
+    image: imgAlcazarVsTiffany,
+    date: "May 4, 2026",
+    readTime: "9 min read",
+    link: "/thailand/pattaya/destination-guides/comparison/alcazar-vs-tiffany-show",
+  },
+  {
+    title: "Coral Island Tour vs Koh Larn DIY: Which is Better? (2026)",
+    description: "Pattaya Coral Island package tour vs self-planned Koh Larn — cost, water sports, transfers, food and best fit for you.",
+    category: "comparison",
+    image: imgCoralIslandPrice,
+    date: "May 4, 2026",
+    readTime: "9 min read",
+    link: "/thailand/pattaya/destination-guides/comparison/coral-island-tour-vs-koh-larn-diy",
+  },
+  {
+    title: "Pattaya vs Phuket: Which is Better for Indian Travelers? (2026)",
+    description: "Pattaya vs Phuket honest comparison — cost, beaches, nightlife, food, family vs couple suitability and which to pick.",
+    category: "comparison",
+    image: imgPhuketSpeedboat,
+    date: "May 4, 2026",
+    readTime: "10 min read",
+    link: "/thailand/pattaya/destination-guides/comparison/pattaya-vs-phuket",
+  },
+  {
+    title: "Bangkok vs Pattaya: Where Should You Spend More Time? (2026)",
+    description: "Bangkok vs Pattaya travel-time strategy — culture, beaches, nightlife, food, shopping and the perfect combo plan.",
+    category: "comparison",
+    image: imgBangkokVsPattaya,
+    date: "May 4, 2026",
+    readTime: "9 min read",
+    link: "/thailand/pattaya/destination-guides/comparison/bangkok-vs-pattaya",
+  },
+  {
+    title: "Ramayana vs Cartoon Network Water Park Pattaya: Which is Better?",
+    description: "Compare Pattaya's two big water parks — tickets, rides, food, kid-friendliness and which one to pick for your group.",
+    category: "comparison",
+    image: imgRamayana,
+    date: "May 4, 2026",
+    readTime: "9 min read",
+    link: "/thailand/pattaya/destination-guides/comparison/ramayana-vs-cartoon-network-water-park",
+  },
+  {
+    title: "Speedboat vs Ferry to Coral Island Pattaya: Which is Better?",
+    description: "Speedboat or public ferry to Koh Larn — cost, time, comfort, safety and which option fits your day-trip plan.",
+    category: "comparison",
+    image: imgPattayaTripCost,
+    date: "May 4, 2026",
+    readTime: "7 min read",
+    link: "/thailand/pattaya/destination-guides/comparison/speedboat-vs-ferry-coral-island",
   },
 ];
 
