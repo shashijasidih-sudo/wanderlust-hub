@@ -6,6 +6,11 @@ import imgAlcazarVsTiffany from "@/assets/alcazar-show-1.jpg";
 import imgPattayaWaterSports from "@/assets/pattaya-boats-beach-1.jpg";
 import imgPattaya3Day from "@/assets/pattaya-boat-tour-1.jpg";
 import imgSanctuaryTruth from "@/assets/pattaya-temple-woman-1.jpg";
+import imgTiffanyShow from "@/assets/show89-pattaya-1.jpg";
+import imgNongNooch from "@/assets/pattaya-tropical-beach-1.jpg";
+import imgRamayana from "@/assets/pattaya-lake-tour-1.jpg";
+import imgUnderwaterWorld from "@/assets/blog-sea-life-aquarium.jpg";
+import imgFloatingMarket from "@/assets/floating-market-1.jpg";
 
 export type PattayaBlogCategory =
   | "activity"
@@ -164,6 +169,60 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     date: "May 3, 2026",
     readTime: "8 min read",
     link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide",
+  },
+  {
+    title: "Alcazar Cabaret Show Pattaya: Seating, Tickets & What to Expect",
+    description: "Ticket prices, seating categories, performance highlights, after-show photos and pro tips for Pattaya's most-loved cabaret.",
+    category: "activity",
+    image: imgAlcazarVsTiffany,
+    date: "May 4, 2026",
+    readTime: "8 min read",
+    link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide",
+  },
+  {
+    title: "Tiffany Show Pattaya Review: Tickets, Seating & Which Show is Better",
+    description: "Honest Tiffany Show review — ticket prices, seating, production quality and a clear Tiffany vs Alcazar verdict.",
+    category: "activity",
+    image: imgTiffanyShow,
+    date: "May 4, 2026",
+    readTime: "8 min read",
+    link: "/thailand/pattaya/destination-guides/activity/tiffany-show-pattaya-review",
+  },
+  {
+    title: "Nong Nooch Tropical Garden Pattaya: Shows, Tickets & Best Route",
+    description: "Entry tickets, cultural & elephant shows, skywalk, food and a half-day plan for Pattaya's biggest botanical garden.",
+    category: "activity",
+    image: imgNongNooch,
+    date: "May 4, 2026",
+    readTime: "9 min read",
+    link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide",
+  },
+  {
+    title: "Ramayana Water Park Pattaya: Rides, Tickets & Tips",
+    description: "Top rides, ticket prices, hidden costs, smart day plan and pro tips for Asia's largest water park near Pattaya.",
+    category: "activity",
+    image: imgRamayana,
+    date: "May 4, 2026",
+    readTime: "9 min read",
+    link: "/thailand/pattaya/destination-guides/activity/ramayana-water-park-guide",
+  },
+  {
+    title: "Underwater World Pattaya: Is It Worth Visiting?",
+    description: "Tunnel walk, shark feeding, ticket prices and an honest worth-it verdict for Pattaya's family-friendly aquarium.",
+    category: "activity",
+    image: imgUnderwaterWorld,
+    date: "May 4, 2026",
+    readTime: "7 min read",
+    link: "/thailand/pattaya/destination-guides/activity/underwater-world-pattaya-guide",
+  },
+  {
+    title: "Pattaya Floating Market Guide: Shopping, Food & Entry Tips",
+    description: "Entry tickets, must-try food, shopping tips, boat ride cost and a perfect 2-hour plan for the Four Regions Floating Market.",
+    category: "activity",
+    image: imgFloatingMarket,
+    date: "May 4, 2026",
+    readTime: "7 min read",
+    link: "/thailand/pattaya/destination-guides/activity/pattaya-floating-market-guide",
   },
 ];
 
