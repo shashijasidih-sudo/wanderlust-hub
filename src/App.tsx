@@ -113,6 +113,13 @@ import BlogCoralIslandTourVsKohLarnDIY from "./pages/BlogCoralIslandTourVsKohLar
 import BlogPattayaVsPhuket from "./pages/BlogPattayaVsPhuket";
 import BlogRamayanaVsCartoonNetwork from "./pages/BlogRamayanaVsCartoonNetwork";
 import BlogSpeedboatVsFerryCoralIsland from "./pages/BlogSpeedboatVsFerryCoralIsland";
+import BlogPattaya2DayItinerary from "./pages/BlogPattaya2DayItinerary";
+import BlogPattaya3DaysItinerary from "./pages/BlogPattaya3DaysItinerary";
+import BlogBangkokPattaya5DaysItinerary from "./pages/BlogBangkokPattaya5DaysItinerary";
+import BlogPattayaHoneymoonItinerary from "./pages/BlogPattayaHoneymoonItinerary";
+import BlogPattayaFamilyItinerary from "./pages/BlogPattayaFamilyItinerary";
+import BlogPattayaNightlifeItinerary from "./pages/BlogPattayaNightlifeItinerary";
+import BlogPattayaCoralIslandComboItinerary from "./pages/BlogPattayaCoralIslandComboItinerary";
 import BlogChaoPhrayaPrincessReview from "./pages/BlogChaoPhrayaPrincessReview";
 import BlogBestDinnerCruisesCouples from "./pages/BlogBestDinnerCruisesCouples";
 import BlogWatArunGuide from "./pages/BlogWatArunGuide";
@@ -537,6 +544,13 @@ const App = () => (
             <Route path="/thailand/pattaya/destination-guides/comparison/ramayana-vs-cartoon-network-water-park" element={<BlogRamayanaVsCartoonNetwork />} />
             <Route path="/thailand/pattaya/destination-guides/comparison/speedboat-vs-ferry-coral-island" element={<BlogSpeedboatVsFerryCoralIsland />} />
             <Route path="/thailand/pattaya/destination-guides/comparison/bangkok-vs-pattaya" element={<BlogBangkokVsPattaya />} />
+            <Route path="/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" element={<BlogPattaya2DayItinerary />} />
+            <Route path="/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" element={<BlogPattaya3DaysItinerary />} />
+            <Route path="/thailand/pattaya/destination-guides/itinerary/bangkok-pattaya-5-days-itinerary" element={<BlogBangkokPattaya5DaysItinerary />} />
+            <Route path="/thailand/pattaya/destination-guides/itinerary/pattaya-honeymoon-itinerary" element={<BlogPattayaHoneymoonItinerary />} />
+            <Route path="/thailand/pattaya/destination-guides/itinerary/pattaya-family-itinerary" element={<BlogPattayaFamilyItinerary />} />
+            <Route path="/thailand/pattaya/destination-guides/itinerary/pattaya-nightlife-itinerary" element={<BlogPattayaNightlifeItinerary />} />
+            <Route path="/thailand/pattaya/destination-guides/itinerary/pattaya-coral-island-combo-itinerary" element={<BlogPattayaCoralIslandComboItinerary />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
             <Route path="/blog/best-thailand-activities" element={<BlogBestThailandActivities />} />
