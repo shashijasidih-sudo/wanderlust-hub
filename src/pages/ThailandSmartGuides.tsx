@@ -167,6 +167,10 @@ const ThailandSmartGuides = () => {
                     navigate("/thailand/bangkok/destination-guides");
                     return;
                   }
+                  if (c.key === "pattaya") {
+                    navigate("/thailand/pattaya/destination-guides");
+                    return;
+                  }
                   setActiveCity(c.key);
                 }}
               >
