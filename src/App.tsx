@@ -92,6 +92,13 @@ import TourPackages from "./pages/TourPackages";
 import ThailandSmartGuides from "./pages/ThailandSmartGuides";
 import BangkokDestinationGuides from "./pages/BangkokDestinationGuides";
 import PattayaDestinationGuides from "./pages/PattayaDestinationGuides";
+import BlogPattayaTripCost from "./pages/BlogPattayaTripCost";
+import BlogCoralIslandPattayaPriceGuide from "./pages/BlogCoralIslandPattayaPriceGuide";
+import BlogPattayaActivityPrices from "./pages/BlogPattayaActivityPrices";
+import BlogAlcazarVsTiffanyShowPrice from "./pages/BlogAlcazarVsTiffanyShowPrice";
+import BlogPattayaWaterSportsPrice from "./pages/BlogPattayaWaterSportsPrice";
+import BlogPattaya3DaysTripCost from "./pages/BlogPattaya3DaysTripCost";
+import BlogSanctuaryOfTruthTicketPrice from "./pages/BlogSanctuaryOfTruthTicketPrice";
 import BlogChaoPhrayaPrincessReview from "./pages/BlogChaoPhrayaPrincessReview";
 import BlogBestDinnerCruisesCouples from "./pages/BlogBestDinnerCruisesCouples";
 import BlogWatArunGuide from "./pages/BlogWatArunGuide";
@@ -494,6 +501,13 @@ const App = () => (
             <Route path="/thailand/bangkok/destination-guides/transfer/bangkok-private-transfer" element={<BlogBangkokPrivateTransfer />} />
             <Route path="/thailand/bangkok/destination-guides/transfer/grab-vs-taxi-bangkok" element={<BlogBangkokGrabTaxi />} />
             <Route path="/thailand/pattaya/destination-guides" element={<PattayaDestinationGuides />} />
+            <Route path="/thailand/pattaya/destination-guides/price-cost/pattaya-trip-cost" element={<BlogPattayaTripCost />} />
+            <Route path="/thailand/pattaya/destination-guides/price-cost/coral-island-pattaya-price-guide" element={<BlogCoralIslandPattayaPriceGuide />} />
+            <Route path="/thailand/pattaya/destination-guides/price-cost/pattaya-activity-prices" element={<BlogPattayaActivityPrices />} />
+            <Route path="/thailand/pattaya/destination-guides/price-cost/alcazar-vs-tiffany-show-price" element={<BlogAlcazarVsTiffanyShowPrice />} />
+            <Route path="/thailand/pattaya/destination-guides/price-cost/pattaya-water-sports-price-guide" element={<BlogPattayaWaterSportsPrice />} />
+            <Route path="/thailand/pattaya/destination-guides/price-cost/pattaya-3-days-trip-cost" element={<BlogPattaya3DaysTripCost />} />
+            <Route path="/thailand/pattaya/destination-guides/price-cost/sanctuary-of-truth-ticket-price" element={<BlogSanctuaryOfTruthTicketPrice />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
             <Route path="/blog/best-thailand-activities" element={<BlogBestThailandActivities />} />
