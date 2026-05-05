@@ -130,6 +130,11 @@ import BlogPattayaNightlifeSafetyGuide from "./pages/BlogPattayaNightlifeSafetyG
 import BlogPattayaBeachActivitiesTickets from "./pages/BlogPattayaBeachActivitiesTickets";
 import BlogPattayaTravelMistakesToAvoid from "./pages/BlogPattayaTravelMistakesToAvoid";
 import BlogPattayaTempleDressCode from "./pages/BlogPattayaTempleDressCode";
+import BlogBangkokToPattayaTransferGuide from "./pages/BlogBangkokToPattayaTransferGuide";
+import BlogPattayaToBangkokAirportTransfer from "./pages/BlogPattayaToBangkokAirportTransfer";
+import BlogSuvarnabhumiToPattaya from "./pages/BlogSuvarnabhumiToPattaya";
+import BlogDonMueangToPattaya from "./pages/BlogDonMueangToPattaya";
+import BlogPrivateVsSharedTransfersPattaya from "./pages/BlogPrivateVsSharedTransfersPattaya";
 import BlogChaoPhrayaPrincessReview from "./pages/BlogChaoPhrayaPrincessReview";
 import BlogBestDinnerCruisesCouples from "./pages/BlogBestDinnerCruisesCouples";
 import BlogWatArunGuide from "./pages/BlogWatArunGuide";
