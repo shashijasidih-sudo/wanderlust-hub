@@ -27,9 +27,10 @@ const BlogUnderwaterWorldPattayaGuide = () => (
       transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer",
     }}
     relatedActivities={[
-      { title: "Underwater World Pattaya Tickets", link: "/thailand/pattaya/underwater-world" },
-      { title: "Coral Island Speedboat Tour", link: "/thailand/pattaya/coral-island-tour" },
-      { title: "Ramayana Water Park", link: "/thailand/pattaya/ramayana-water-park" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
     ]}
     sections={[
       { type: "paragraph", content: "Underwater World Pattaya is a compact but well-curated aquarium with a 100-metre tunnel where sharks, rays and reef fish glide right above your head. It's an easy 1.5–2 hour visit and a perfect Pattaya activity on a hot afternoon or rainy day." },
@@ -91,10 +92,11 @@ const BlogUnderwaterWorldPattayaGuide = () => (
       { type: "cta", content: "Book Underwater World Pattaya tickets", link: "/thailand/pattaya/underwater-world", linkText: "View Tickets" },
     ]}
     relatedLinks={[
-      { title: "Pattaya Activity Prices: Full List", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-activity-prices" },
-      { title: "Coral Island Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
-      { title: "Ramayana Water Park Guide", link: "/thailand/pattaya/destination-guides/activity/ramayana-water-park-guide" },
-      { title: "Pattaya Trip Cost from India", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-trip-cost" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
     ]}
   />
 );

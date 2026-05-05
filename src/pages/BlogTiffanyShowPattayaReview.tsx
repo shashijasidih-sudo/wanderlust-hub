@@ -27,9 +27,10 @@ const BlogTiffanyShowPattayaReview = () => (
       transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer",
     }}
     relatedActivities={[
-      { title: "Tiffany Show Pattaya Tickets", link: "/thailand/pattaya/tiffany-show" },
-      { title: "Alcazar Cabaret Show", link: "/thailand/pattaya/alcazar-show" },
-      { title: "Coral Island Speedboat Tour", link: "/thailand/pattaya/coral-island-tour" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
     ]}
     sections={[
       { type: "paragraph", content: "Tiffany Show is one of the world's first transgender cabaret shows and is widely regarded as Pattaya's most premium evening experience. Known for its high-end production, themed segments and respectful artistry, it's a fantastic family-friendly night out." },
@@ -91,10 +92,11 @@ const BlogTiffanyShowPattayaReview = () => (
       { type: "cta", content: "Book Tiffany Show Pattaya tickets", link: "/thailand/pattaya/tiffany-show", linkText: "View Tickets" },
     ]}
     relatedLinks={[
-      { title: "Alcazar vs Tiffany Show Price Comparison", link: "/thailand/pattaya/destination-guides/price-cost/alcazar-vs-tiffany-show-price" },
-      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
-      { title: "Pattaya Activity Prices: Full List", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-activity-prices" },
-      { title: "Pattaya 3 Days Trip Cost", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-3-days-trip-cost" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
     ]}
   />
 );

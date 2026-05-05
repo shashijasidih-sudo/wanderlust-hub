@@ -27,10 +27,10 @@ const BlogPattayaTripCost = () => (
       transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer",
     }}
     relatedActivities={[
-      { title: "Coral Island Speedboat Tour", link: "/thailand/pattaya/coral-island-tour" },
-      { title: "Alcazar Cabaret Show Tickets", link: "/thailand/pattaya/alcazar-show" },
-      { title: "Nong Nooch Tropical Garden", link: "/thailand/pattaya/nong-nooch-garden" },
-      { title: "Sanctuary of Truth Tickets", link: "/thailand/pattaya/sanctuary-of-truth" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
     ]}
     sections={[
       { type: "paragraph", content: "Wondering how much a Pattaya trip costs from India in 2026? This guide gives you a transparent budget breakdown — flights, visa, hotels, food, activities and transfers — for budget, mid-range and luxury travelers." },
@@ -90,10 +90,11 @@ const BlogPattayaTripCost = () => (
       { type: "cta", content: "Plan a custom Pattaya package", link: "/thailand/pattaya/things-to-do", linkText: "Explore Pattaya" },
     ]}
     relatedLinks={[
-      { title: "Pattaya 3 Days Trip Cost: Budget vs Luxury", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-3-days-trip-cost" },
-      { title: "Coral Island Pattaya Price Guide", link: "/thailand/pattaya/destination-guides/price-cost/coral-island-pattaya-price-guide" },
-      { title: "Pattaya Activity Prices: Full List", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-activity-prices" },
-      { title: "Pattaya Water Sports Price Guide", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-water-sports-price-guide" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
     ]}
   />
 );

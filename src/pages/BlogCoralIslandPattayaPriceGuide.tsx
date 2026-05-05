@@ -27,9 +27,10 @@ const BlogCoralIslandPattayaPriceGuide = () => (
       transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer",
     }}
     relatedActivities={[
-      { title: "Coral Island Speedboat Tour", link: "/thailand/pattaya/coral-island-tour" },
-      { title: "Pattaya Parasailing & Water Sports", link: "/thailand/pattaya/water-sports" },
-      { title: "Alcazar Cabaret Show Tickets", link: "/thailand/pattaya/alcazar-show" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
     ]}
     sections={[
       { type: "paragraph", content: "Coral Island (Koh Larn) is the most popular day trip from Pattaya — but pricing can swing from ₹300 (budget ferry) to ₹3,000+ (premium speedboat tours). This guide breaks down the real cost so you can pick the right option." },
@@ -83,10 +84,11 @@ const BlogCoralIslandPattayaPriceGuide = () => (
       { type: "cta", content: "Book a Coral Island speedboat tour", link: "/thailand/pattaya/coral-island-tour", linkText: "View Coral Island Tours" },
     ]}
     relatedLinks={[
-      { title: "Pattaya Trip Cost from India", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-trip-cost" },
-      { title: "Pattaya Water Sports Price Guide", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-water-sports-price-guide" },
-      { title: "Pattaya Activity Prices: Full List", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-activity-prices" },
-      { title: "Pattaya 3 Days Trip Cost", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-3-days-trip-cost" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
     ]}
   />
 );

@@ -50,16 +50,17 @@ const BlogPattayaForIndianFamilies = () => (
       { type: "cta", content: "Plan your Pattaya family activities", link: "/thailand/pattaya/things-to-do", linkText: "Explore Pattaya Tours" }
     ]}
     relatedActivities={[
-      { title: "Coral Island Pattaya Tour", link: "/thailand/pattaya/coral-island-pattaya" },
-      { title: "Nong Nooch Tropical Garden", link: "/thailand/pattaya/nong-nooch-tropical-garden" },
-      { title: "Underwater World Pattaya", link: "/thailand/pattaya/underwater-world-pattaya" },
-      { title: "Ramayana Water Park", link: "/thailand/pattaya/ramayana-water-park" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
     ]}
     relatedLinks={[
-      { title: "Pattaya Family Itinerary (4 Days)", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-family-itinerary" },
-      { title: "Indian Restaurants in Pattaya", link: "/thailand/pattaya/destination-guides/indian-audience/indian-restaurants-in-pattaya" },
-      { title: "Is Pattaya Safe for Indian Tourists", link: "/thailand/pattaya/destination-guides/indian-audience/pattaya-safety-for-indians" },
-      { title: "Pattaya Trip Cost from India", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-trip-cost" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
     ]}
   />
 );

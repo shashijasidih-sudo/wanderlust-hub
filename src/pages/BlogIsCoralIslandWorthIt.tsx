@@ -45,16 +45,17 @@ const BlogIsCoralIslandWorthIt = () => (
       { type: "cta", content: "Book your Coral Island tour", link: "/thailand/pattaya/coral-island-pattaya", linkText: "View Coral Island Tour" }
     ]}
     relatedActivities={[
-      { title: "Coral Island Pattaya Tour", link: "/thailand/pattaya/coral-island-pattaya" },
-      { title: "Nong Nooch Tropical Garden", link: "/thailand/pattaya/nong-nooch-tropical-garden" },
-      { title: "Alcazar Cabaret Show", link: "/thailand/pattaya/alcazar-show-pattaya" },
-      { title: "Underwater World Pattaya", link: "/thailand/pattaya/underwater-world-pattaya" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
     ]}
     relatedLinks={[
-      { title: "Coral Island Price Guide", link: "/thailand/pattaya/destination-guides/price-cost/coral-island-pattaya-price-guide" },
-      { title: "Coral Island Tour vs Koh Larn DIY", link: "/thailand/pattaya/destination-guides/comparison/coral-island-tour-vs-koh-larn-diy" },
-      { title: "Speedboat vs Ferry to Coral Island", link: "/thailand/pattaya/destination-guides/comparison/speedboat-vs-ferry-coral-island" },
-      { title: "Best Time to Visit Pattaya", link: "/thailand/pattaya/destination-guides/micro/best-time-to-visit-pattaya" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
     ]}
   />
 );
