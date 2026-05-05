@@ -118,16 +118,17 @@ const BlogBestDinnerCruisesCouples = () => (
       },
     ]}
     relatedActivities={[
-      { title: "Chao Phraya Princess Valentine Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise" },
-      { title: "Chao Phraya Princess Cruise with Private Transfer", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
-      { title: "Viva Alangka Luxury Dinner Cruise", link: "/thailand/bangkok/viva-alangka-dinner-cruise" },
-      { title: "Chao Phraya River Boat Bangkok City Tour", link: "/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
     ]}
     relatedLinks={[
-      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
-      { title: "Bangkok Hotel to Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer" },
-      { title: "Princess vs White Orchid Cruise Comparison", link: "/thailand/bangkok/destination-guides/comparison/chao-phraya-princess-vs-white-orchid" },
-      { title: "Chao Phraya Princess Cruise — Honest Review", link: "/thailand/bangkok/destination-guides/activity/chao-phraya-princess-cruise-review" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
     ]}
   />
 );
