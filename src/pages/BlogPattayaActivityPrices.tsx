@@ -27,11 +27,10 @@ const BlogPattayaActivityPrices = () => (
       transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer",
     }}
     relatedActivities={[
-      { title: "Coral Island Speedboat Tour", link: "/thailand/pattaya/coral-island-tour" },
-      { title: "Alcazar Cabaret Show", link: "/thailand/pattaya/alcazar-show" },
-      { title: "Tiffany's Cabaret Show", link: "/thailand/pattaya/tiffany-show" },
-      { title: "Nong Nooch Tropical Garden", link: "/thailand/pattaya/nong-nooch-garden" },
-      { title: "Sanctuary of Truth Tickets", link: "/thailand/pattaya/sanctuary-of-truth" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
     ]}
     sections={[
       { type: "paragraph", content: "Pattaya is affordable, but activity pricing varies a lot depending on where and how you book. Here's the complete 2026 price list — shows, island tours, water parks, gardens and cultural attractions — so you can plan your day without overpaying." },
@@ -102,11 +101,11 @@ const BlogPattayaActivityPrices = () => (
       { type: "cta", content: "Browse all Pattaya experiences", link: "/thailand/pattaya/things-to-do", linkText: "Explore Pattaya" },
     ]}
     relatedLinks={[
-      { title: "Coral Island Pattaya Price Guide", link: "/thailand/pattaya/destination-guides/price-cost/coral-island-pattaya-price-guide" },
-      { title: "Pattaya Water Sports Price Guide", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-water-sports-price-guide" },
-      { title: "Sanctuary of Truth Ticket Price + Hidden Costs", link: "/thailand/pattaya/destination-guides/price-cost/sanctuary-of-truth-ticket-price" },
-      { title: "Alcazar vs Tiffany Show Price Comparison", link: "/thailand/pattaya/destination-guides/price-cost/alcazar-vs-tiffany-show-price" },
-      { title: "Pattaya Trip Cost from India", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-trip-cost" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
     ]}
   />
 );

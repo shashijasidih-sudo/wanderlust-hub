@@ -47,16 +47,17 @@ const BlogDonMueangToPattaya = () => (
       { type: "cta", content: "Book your Pattaya transfer", link: "/thailand/pattaya", linkText: "Explore Pattaya Services" }
     ]}
     relatedActivities={[
-      { title: "Coral Island Pattaya Tour", link: "/thailand/pattaya/coral-island-pattaya" },
-      { title: "Alcazar Cabaret Show Pattaya", link: "/thailand/pattaya/alcazar-show-pattaya" },
-      { title: "Sanctuary of Truth Pattaya", link: "/thailand/pattaya/sanctuary-of-truth-pattaya" },
-      { title: "Nong Nooch Tropical Garden", link: "/thailand/pattaya/nong-nooch-tropical-garden" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
     ]}
     relatedLinks={[
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
-      { title: "Pattaya to Bangkok Airport Transfer", link: "/thailand/pattaya/destination-guides/transfer/pattaya-to-bangkok-airport-transfer" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
-      { title: "Private vs Shared Transfers in Pattaya", link: "/thailand/pattaya/destination-guides/transfer/private-vs-shared-transfers-pattaya" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
     ]}
   />
 );
