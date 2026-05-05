@@ -14,6 +14,6 @@ User-agent: *
 Allow: /
 
 # Sitemap location for search engine discovery
-# Auto-generated via scripts/generate-sitemap.mjs (last refresh: 2026-05-05)
+# Auto-generated via scripts/generate-sitemap.mjs (last refresh: 2026-05-05, includes Bangkok destination guides)
 Sitemap: https://yellodae.com/sitemap.xml
 Host: https://yellodae.com
