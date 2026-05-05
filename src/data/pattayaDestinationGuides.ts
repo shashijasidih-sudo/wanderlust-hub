@@ -16,6 +16,10 @@ import imgPhuketSpeedboat from "@/assets/phuket-speedboat-1.jpg";
 import imgBangkokVsPattaya from "@/assets/blog-bangkok-vs-pattaya.jpg";
 import imgPattayaWoman from "@/assets/pattaya-woman-sea-1.jpg";
 import imgPattayaNightlife from "@/assets/pattaya-nightlife-1.jpg";
+import imgBangkokPattayaTransfer from "@/assets/blog-bangkok-pattaya-transfer.jpg";
+import imgBkkAirportTransfer from "@/assets/blog-bkk-airport-transfer.jpg";
+import imgDmkAirportTransfer from "@/assets/blog-dmk-airport-transfer.jpg";
+import imgPrivateTransfer from "@/assets/blog-bangkok-private-transfer.jpg";
 
 export type PattayaBlogCategory =
   | "activity"
