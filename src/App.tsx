@@ -130,6 +130,11 @@ import BlogPattayaNightlifeSafetyGuide from "./pages/BlogPattayaNightlifeSafetyG
 import BlogPattayaBeachActivitiesTickets from "./pages/BlogPattayaBeachActivitiesTickets";
 import BlogPattayaTravelMistakesToAvoid from "./pages/BlogPattayaTravelMistakesToAvoid";
 import BlogPattayaTempleDressCode from "./pages/BlogPattayaTempleDressCode";
+import BlogBangkokToPattayaTransferGuide from "./pages/BlogBangkokToPattayaTransferGuide";
+import BlogPattayaToBangkokAirportTransfer from "./pages/BlogPattayaToBangkokAirportTransfer";
+import BlogSuvarnabhumiToPattaya from "./pages/BlogSuvarnabhumiToPattaya";
+import BlogDonMueangToPattaya from "./pages/BlogDonMueangToPattaya";
+import BlogPrivateVsSharedTransfersPattaya from "./pages/BlogPrivateVsSharedTransfersPattaya";
 import BlogChaoPhrayaPrincessReview from "./pages/BlogChaoPhrayaPrincessReview";
 import BlogBestDinnerCruisesCouples from "./pages/BlogBestDinnerCruisesCouples";
 import BlogWatArunGuide from "./pages/BlogWatArunGuide";
@@ -571,6 +576,11 @@ const App = () => (
            <Route path="/thailand/pattaya/destination-guides/micro/pattaya-beach-activities-tickets" element={<BlogPattayaBeachActivitiesTickets />} />
            <Route path="/thailand/pattaya/destination-guides/micro/pattaya-travel-mistakes-to-avoid" element={<BlogPattayaTravelMistakesToAvoid />} />
            <Route path="/thailand/pattaya/destination-guides/micro/pattaya-temple-dress-code" element={<BlogPattayaTempleDressCode />} />
+           <Route path="/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" element={<BlogBangkokToPattayaTransferGuide />} />
+           <Route path="/thailand/pattaya/destination-guides/transfer/pattaya-to-bangkok-airport-transfer" element={<BlogPattayaToBangkokAirportTransfer />} />
+           <Route path="/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" element={<BlogSuvarnabhumiToPattaya />} />
+           <Route path="/thailand/pattaya/destination-guides/transfer/don-mueang-to-pattaya" element={<BlogDonMueangToPattaya />} />
+           <Route path="/thailand/pattaya/destination-guides/transfer/private-vs-shared-transfers-pattaya" element={<BlogPrivateVsSharedTransfersPattaya />} />
             <Route path="/blog/airport-transfer-booking-thailand" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand" element={<BlogPhiPhiIslandTours />} />
             <Route path="/blog/best-thailand-activities" element={<BlogBestThailandActivities />} />

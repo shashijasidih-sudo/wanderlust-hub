@@ -16,6 +16,10 @@ import imgPhuketSpeedboat from "@/assets/phuket-speedboat-1.jpg";
 import imgBangkokVsPattaya from "@/assets/blog-bangkok-vs-pattaya.jpg";
 import imgPattayaWoman from "@/assets/pattaya-woman-sea-1.jpg";
 import imgPattayaNightlife from "@/assets/pattaya-nightlife-1.jpg";
+import imgBangkokPattayaTransfer from "@/assets/blog-bangkok-pattaya-transfer.jpg";
+import imgBkkAirportTransfer from "@/assets/blog-bkk-airport-transfer.jpg";
+import imgDmkAirportTransfer from "@/assets/blog-dmk-airport-transfer.jpg";
+import imgPrivateTransfer from "@/assets/blog-bangkok-private-transfer.jpg";
 
 export type PattayaBlogCategory =
   | "activity"
@@ -444,6 +448,51 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     date: "May 7, 2026",
     readTime: "7 min read",
     link: "/thailand/pattaya/destination-guides/micro/pattaya-temple-dress-code",
+  },
+  {
+    title: "Bangkok to Pattaya Transfer 2026: Taxi, Bus & Private Car Guide",
+    description: "Complete Bangkok to Pattaya transfer guide — taxi, Grab, private car, bus and shared van with real 2026 prices and travel time.",
+    category: "transfer",
+    image: imgBangkokPattayaTransfer,
+    date: "May 8, 2026",
+    readTime: "10 min read",
+    link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer",
+  },
+  {
+    title: "Pattaya to Bangkok Airport Transfer 2026: Best Options & Prices",
+    description: "Pattaya to BKK & DMK airport transfer guide — taxi, private car, bus and shared van with prices and which to pick by flight time.",
+    category: "transfer",
+    image: imgBkkAirportTransfer,
+    date: "May 8, 2026",
+    readTime: "10 min read",
+    link: "/thailand/pattaya/destination-guides/transfer/pattaya-to-bangkok-airport-transfer",
+  },
+  {
+    title: "Suvarnabhumi Airport to Pattaya 2026: Cost, Travel Time & Best Options",
+    description: "BKK Suvarnabhumi to Pattaya transfer — taxi, private transfer, airport bus, shared van. Real prices, travel time and pro tips.",
+    category: "transfer",
+    image: imgBkkAirportTransfer,
+    date: "May 8, 2026",
+    readTime: "10 min read",
+    link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya",
+  },
+  {
+    title: "Don Mueang Airport to Pattaya 2026: Complete Transfer Guide",
+    description: "DMK to Pattaya transfer guide — taxi, private car, shared van and bus combo with real 2026 prices and smart planning tips.",
+    category: "transfer",
+    image: imgDmkAirportTransfer,
+    date: "May 8, 2026",
+    readTime: "10 min read",
+    link: "/thailand/pattaya/destination-guides/transfer/don-mueang-to-pattaya",
+  },
+  {
+    title: "Private vs Shared Transfers in Pattaya 2026: Which is Better?",
+    description: "Private vs shared transfer in Pattaya — cost, comfort, luggage, group size and an honest verdict for families, couples and solo travelers.",
+    category: "transfer",
+    image: imgPrivateTransfer,
+    date: "May 8, 2026",
+    readTime: "9 min read",
+    link: "/thailand/pattaya/destination-guides/transfer/private-vs-shared-transfers-pattaya",
   },
 ];
 
