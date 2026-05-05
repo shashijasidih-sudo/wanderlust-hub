@@ -93,15 +93,17 @@ const BlogMahanakhonSkywalkGuide = () => (
       },
     ]}
     relatedActivities={[
-      { title: "King Power Mahanakhon Skywalk Tickets", link: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
-      { title: "Sea Life Bangkok + Madame Tussauds Combo", link: "/thailand/bangkok/sea-life-madame-tussauds-tickets" },
-      { title: "Chao Phraya River Boat City Tour", link: "/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour" },
-      { title: "Baiyoke Sky Buffet Bangkok", link: "/thailand/bangkok/baiyoke-buffet" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
+      { title: "Sea Life Bangkok: Is It Worth It?", link: "/thailand/bangkok/destination-guides/activity/sea-life-bangkok-guide" },
     ]}
     relatedLinks={[
-      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
-      { title: "Bangkok Hotel to Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer" },
-      { title: "Sea Life Bangkok: Is It Worth It?", link: "/thailand/bangkok/destination-guides/activity/sea-life-bangkok-guide" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
     ]}
   />
 );

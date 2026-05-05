@@ -104,16 +104,17 @@ const BlogSafariWorldGuide = () => (
       },
     ]}
     relatedActivities={[
-      { title: "Safari World Bangkok with Transfer", link: "/thailand/bangkok/safari-world" },
-      { title: "Dream World Bangkok Tickets", link: "/thailand/bangkok/dream-world-bangkok-tickets" },
-      { title: "Sea Life Bangkok + Madame Tussauds Combo", link: "/thailand/bangkok/sea-life-madame-tussauds-tickets" },
-      { title: "Dolphin Show Bangkok", link: "/thailand/bangkok/dolphin-show" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
+      { title: "Sea Life Bangkok: Is It Worth It?", link: "/thailand/bangkok/destination-guides/activity/sea-life-bangkok-guide" },
     ]}
     relatedLinks={[
-      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
-      { title: "Safari World to Suvarnabhumi Airport Transfer", link: "/thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer" },
-      { title: "Safari World vs Sea Life Bangkok Comparison", link: "/thailand/bangkok/destination-guides/comparison/safari-world-vs-sea-life-bangkok" },
-      { title: "Sea Life Bangkok: Is It Worth It?", link: "/thailand/bangkok/destination-guides/activity/sea-life-bangkok-guide" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
     ]}
   />
 );

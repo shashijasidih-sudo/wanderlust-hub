@@ -95,16 +95,17 @@ const BlogBangkokVsPhuket = () => (
       { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" },
     ]}
     relatedActivities={[
-      { title: "Bangkok City Tour with Boat", link: "/thailand/bangkok/city-tour-with-boat" },
-      { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
-      { title: "Three Temples Bangkok City Tour", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
-      { title: "Mahanakhon SkyWalk Bangkok", link: "/thailand/bangkok/mahanakhon-skywalk" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
     ]}
     relatedLinks={[
-      { title: "All Bangkok Things to Do", link: "/thailand/bangkok/things-to-do" },
-      { title: "Suvarnabhumi Airport to Bangkok Transfer", link: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer" },
-      { title: "Bangkok Trip Cost from India", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
-      { title: "Cheapest Time to Visit Bangkok", link: "/thailand/bangkok/destination-guides/price-cost/cheapest-time-to-visit-bangkok" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
     ]}
   />
 );
