@@ -23,6 +23,7 @@ const Blog = () => (
       { type: "list", items: ["All-night party under the full moon","Multiple music zones — EDM, techno, reggae, hip-hop","Fire shows and live performances","Neon body paint culture"] },
       { type: "heading", content: "How to Reach from Koh Samui" },
       { type: "list", items: ["Speedboat transfers — fastest option","Ferry transfers — budget friendly","Pre-booking your return is highly recommended"] },
+      { type: "cta", content: "Skip the queue — pre-book your Koh Samui → Koh Phangan transfer + party entry", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer", linkText: "Reserve Transfer + Entry" },
       { type: "heading", content: "Ticket & Cost Breakdown" },
       { type: "list", items: ["Entry Fee: ₹200 – ₹500","Transfer: ₹1,500 – ₹3,500","Drinks: ₹300 – ₹800","Total Budget: ₹3,000 – ₹7,000"] },
       { type: "heading", content: "What to Wear" },
@@ -51,10 +52,10 @@ const Blog = () => (
       { title: "Full Moon Party Guide for Indians", link: "/thailand/koh-samui/destination-guides/activity/full-moon-party-thailand-guide-for-indians" },
     ]}
     relatedLinks={[
+      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" },
+      { title: "White Orchid Loy Krathong Cruise", link: "/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival" },
       { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
       { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui" },
     ]}
   />
