@@ -14,6 +14,6 @@ User-agent: *
 Allow: /
 
 # Sitemap location for search engine discovery
-# Auto-generated via scripts/generate-sitemap.mjs (last refresh: 2026-05-06, includes Bangkok, Pattaya & Koh Samui destination guides)
+# Auto-generated via scripts/generate-sitemap.mjs (last refresh: 2026-05-06, includes Bangkok, Pattaya, Koh Samui & Chiang Mai destination guides)
 Sitemap: https://yellodae.com/sitemap.xml
 Host: https://yellodae.com
