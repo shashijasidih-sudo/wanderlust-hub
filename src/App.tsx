@@ -359,6 +359,15 @@ import BlogLoyKrathongForIndians from "./pages/BlogLoyKrathongForIndians";
 import ChiangMaiCityTempleTour from "./pages/ChiangMaiCityTempleTour";
 import ChiangMaiChiangRaiGoldenTriangle from "./pages/ChiangMaiChiangRaiGoldenTriangle";
 import ChiangMaiDoiInthanon from "./pages/ChiangMaiDoiInthanon";
+import ChiangMaiDestinationGuides from "./pages/ChiangMaiDestinationGuides";
+import BlogDoiSuthepCompleteGuide from "./pages/BlogDoiSuthepCompleteGuide";
+import BlogChiangRaiDayTripGoldenTriangle from "./pages/BlogChiangRaiDayTripGoldenTriangle";
+import BlogBestDayTripsFromChiangMai from "./pages/BlogBestDayTripsFromChiangMai";
+import BlogChiangMaiTempleTourPriceGuide from "./pages/BlogChiangMaiTempleTourPriceGuide";
+import BlogChiangRaiVsDoiInthanon from "./pages/BlogChiangRaiVsDoiInthanon";
+import BlogChiangMaiTourGuideForIndians from "./pages/BlogChiangMaiTourGuideForIndians";
+import BlogChiangRaiDayTripForIndians from "./pages/BlogChiangRaiDayTripForIndians";
+import BlogVisitDoiSuthepWithoutSteps from "./pages/BlogVisitDoiSuthepWithoutSteps";
 
 
 const queryClient = new QueryClient();
@@ -400,6 +409,15 @@ const App = () => (
             <Route path="/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer" element={<ChiangMaiCityTempleTour />} />
             <Route path="/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip" element={<ChiangMaiChiangRaiGoldenTriangle />} />
             <Route path="/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour" element={<ChiangMaiDoiInthanon />} />
+            <Route path="/thailand/chiang-mai/destination-guides" element={<ChiangMaiDestinationGuides />} />
+            <Route path="/thailand/chiang-mai/destination-guides/activity/doi-suthep-temple-complete-guide" element={<BlogDoiSuthepCompleteGuide />} />
+            <Route path="/thailand/chiang-mai/destination-guides/activity/chiang-rai-day-trip-golden-triangle-long-neck-tribe" element={<BlogChiangRaiDayTripGoldenTriangle />} />
+            <Route path="/thailand/chiang-mai/destination-guides/activity/best-day-trips-from-chiang-mai" element={<BlogBestDayTripsFromChiangMai />} />
+            <Route path="/thailand/chiang-mai/destination-guides/activity/chiang-mai-temple-tour-price-guide-2026" element={<BlogChiangMaiTempleTourPriceGuide />} />
+            <Route path="/thailand/chiang-mai/destination-guides/activity/chiang-rai-vs-doi-inthanon-day-trip" element={<BlogChiangRaiVsDoiInthanon />} />
+            <Route path="/thailand/chiang-mai/destination-guides/activity/chiang-mai-tour-guide-for-indians" element={<BlogChiangMaiTourGuideForIndians />} />
+            <Route path="/thailand/chiang-mai/destination-guides/activity/chiang-rai-day-trip-for-indian-travelers" element={<BlogChiangRaiDayTripForIndians />} />
+            <Route path="/thailand/chiang-mai/destination-guides/activity/visit-doi-suthep-without-climbing-steps" element={<BlogVisitDoiSuthepWithoutSteps />} />
             <Route path="/thailand/bangkok/safari-world" element={<SafariWorld />} />
             <Route path="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" element={<PhiPhiIsland />} />
             <Route path="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" element={<JamesBondIsland />} />

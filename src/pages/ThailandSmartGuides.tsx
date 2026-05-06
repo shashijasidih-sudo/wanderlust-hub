@@ -175,6 +175,10 @@ const ThailandSmartGuides = () => {
                     navigate("/thailand/koh-samui/destination-guides");
                     return;
                   }
+                  if (c.key === "chiang-mai") {
+                    navigate("/thailand/chiang-mai/destination-guides");
+                    return;
+                  }
                   setActiveCity(c.key);
                 }}
               >
