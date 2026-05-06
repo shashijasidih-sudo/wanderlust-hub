@@ -346,6 +346,16 @@ import ChiangMai from "./pages/ChiangMai";
 import ChiangMaiTransfers from "./pages/ChiangMaiTransfers";
 import KohSamuiWhiteOrchidLoyKrathongCruise from "./pages/KohSamuiWhiteOrchidLoyKrathongCruise";
 import KohSamuiFullMoonParty from "./pages/KohSamuiFullMoonParty";
+import KohSamuiDestinationGuides from "./pages/KohSamuiDestinationGuides";
+import BlogWhiteOrchidLoyKrathongCruise from "./pages/BlogWhiteOrchidLoyKrathongCruise";
+import BlogFirstTimeFullMoonPartyKohSamui from "./pages/BlogFirstTimeFullMoonPartyKohSamui";
+import BlogWhatHappensFullMoonParty from "./pages/BlogWhatHappensFullMoonParty";
+import BlogHiddenCostsFullMoonParty from "./pages/BlogHiddenCostsFullMoonParty";
+import BlogFullMoonVsPhuketNightlife from "./pages/BlogFullMoonVsPhuketNightlife";
+import BlogFullMoonVsHalfMoonParty from "./pages/BlogFullMoonVsHalfMoonParty";
+import BlogHowToReachFullMoonParty from "./pages/BlogHowToReachFullMoonParty";
+import BlogFullMoonPartyForIndians from "./pages/BlogFullMoonPartyForIndians";
+import BlogLoyKrathongForIndians from "./pages/BlogLoyKrathongForIndians";
 import ChiangMaiCityTempleTour from "./pages/ChiangMaiCityTempleTour";
 import ChiangMaiChiangRaiGoldenTriangle from "./pages/ChiangMaiChiangRaiGoldenTriangle";
 import ChiangMaiDoiInthanon from "./pages/ChiangMaiDoiInthanon";
@@ -377,6 +387,16 @@ const App = () => (
             <Route path="/thailand/chiang-mai/budget-airport-transfers" element={<ChiangMaiTransfers />} />
             <Route path="/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival" element={<KohSamuiWhiteOrchidLoyKrathongCruise />} />
             <Route path="/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" element={<KohSamuiFullMoonParty />} />
+            <Route path="/thailand/koh-samui/destination-guides" element={<KohSamuiDestinationGuides />} />
+            <Route path="/thailand/koh-samui/destination-guides/activity/white-orchid-river-cruise-loy-krathong-festival-guide" element={<BlogWhiteOrchidLoyKrathongCruise />} />
+            <Route path="/thailand/koh-samui/destination-guides/activity/first-time-full-moon-party-koh-samui-beginner-guide" element={<BlogFirstTimeFullMoonPartyKohSamui />} />
+            <Route path="/thailand/koh-samui/destination-guides/activity/what-happens-at-full-moon-party-thailand" element={<BlogWhatHappensFullMoonParty />} />
+            <Route path="/thailand/koh-samui/destination-guides/activity/hidden-costs-full-moon-party-thailand-2026" element={<BlogHiddenCostsFullMoonParty />} />
+            <Route path="/thailand/koh-samui/destination-guides/activity/koh-samui-full-moon-party-vs-phuket-nightlife" element={<BlogFullMoonVsPhuketNightlife />} />
+            <Route path="/thailand/koh-samui/destination-guides/activity/full-moon-vs-half-moon-party-thailand" element={<BlogFullMoonVsHalfMoonParty />} />
+            <Route path="/thailand/koh-samui/destination-guides/activity/how-to-reach-full-moon-party-from-phuket-and-bangkok" element={<BlogHowToReachFullMoonParty />} />
+            <Route path="/thailand/koh-samui/destination-guides/activity/full-moon-party-thailand-guide-for-indians" element={<BlogFullMoonPartyForIndians />} />
+            <Route path="/thailand/koh-samui/destination-guides/activity/loy-krathong-festival-for-indian-travelers" element={<BlogLoyKrathongForIndians />} />
             <Route path="/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer" element={<ChiangMaiCityTempleTour />} />
             <Route path="/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip" element={<ChiangMaiChiangRaiGoldenTriangle />} />
             <Route path="/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour" element={<ChiangMaiDoiInthanon />} />
