@@ -20,6 +20,7 @@ const Blog = () => (
       { type: "paragraph", content: "Most people think the Full Moon Party is dirt cheap. The entry fee is — but the real bill stacks up fast. Here are the hidden costs to plan for in 2026." },
       { type: "heading", content: "1. Transfer Costs" },
       { type: "paragraph", content: "Booking last-minute transfers means surge prices on peak dates. Pre-book return transfers and choose shared transfers for cheaper options." },
+      { type: "cta", content: "Beat surge pricing — pre-book the bundled Samui → Koh Phangan transfer + party combo", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer", linkText: "Lock 2026 Price" },
       { type: "heading", content: "2. Accommodation" },
       { type: "paragraph", content: "Common mistake: booking late or staying too close to Haad Rin Beach. Smart strategy: book 2–3 weeks in advance and stay slightly away from party zones." },
       { type: "heading", content: "3. Drinks Expenses" },
@@ -51,10 +52,10 @@ const Blog = () => (
       { title: "How to Reach Full Moon Party from Phuket and Bangkok", link: "/thailand/koh-samui/destination-guides/activity/how-to-reach-full-moon-party-from-phuket-and-bangkok" },
     ]}
     relatedLinks={[
+      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" },
       { title: "Bangkok Trip Cost from India 2026", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
       { title: "Pattaya 3 Days Trip Cost", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-3-days-trip-cost" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
       { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui" },
     ]}
   />

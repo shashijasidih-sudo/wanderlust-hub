@@ -32,6 +32,7 @@ const Blog = () => (
       { type: "list", items: ["Flight Phuket → Koh Samui","Ferry → Koh Phangan","Cost: ₹6,000 – ₹10,000"] },
       { type: "heading", content: "Koh Samui to Full Moon Party" },
       { type: "list", items: ["Speedboat: 20–30 mins","Ferry: 45–60 mins","Most travelers stay in Koh Samui and take party transfers"] },
+      { type: "cta", content: "The easiest option: bundled Samui → Koh Phangan return transfer + party entry", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer", linkText: "Book Combo Transfer" },
       { type: "mid-activities", destination: "thailand", heading: "Plan Your Koh Samui Stay" },
       { type: "heading", content: "Best Timing Strategy" },
       { type: "list", items: ["Arrive before sunset","Return early morning (5–7 AM)"] },
@@ -51,8 +52,8 @@ const Blog = () => (
       { title: "Full Moon Party Guide for Indians", link: "/thailand/koh-samui/destination-guides/activity/full-moon-party-thailand-guide-for-indians" },
     ]}
     relatedLinks={[
+      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" },
       { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
       { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
       { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui" },

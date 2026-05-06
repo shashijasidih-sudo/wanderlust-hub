@@ -20,6 +20,7 @@ const Blog = () => (
       { type: "paragraph", content: "The Full Moon Party at Haad Rin Beach is one of the most iconic nightlife experiences on the planet. But what actually happens once you're there? Here's the real, unfiltered breakdown." },
       { type: "heading", content: "Arrival Vibe" },
       { type: "paragraph", content: "By 9 PM the beach is already pulsing — neon paint stalls, food carts and thousands of people. It's chaotic, but exciting." },
+      { type: "cta", content: "Lock in your Samui → Koh Phangan transfer + party entry before peak dates sell out", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer", linkText: "Reserve My Spot" },
       { type: "heading", content: "The Party Atmosphere" },
       { type: "subheading", content: "Music Everywhere" },
       { type: "list", items: ["EDM & techno zones","Hip-hop and reggae corners","Live drum & bass stages"] },
@@ -44,10 +45,10 @@ const Blog = () => (
       { title: "How to Reach Full Moon Party from Phuket and Bangkok", link: "/thailand/koh-samui/destination-guides/activity/how-to-reach-full-moon-party-from-phuket-and-bangkok" },
     ]}
     relatedLinks={[
+      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" },
+      { title: "White Orchid Loy Krathong Cruise", link: "/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival" },
       { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
       { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui" },
     ]}
   />

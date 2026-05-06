@@ -24,6 +24,7 @@ const Blog = () => (
       { type: "list", items: ["Fly India → Bangkok or Phuket","Domestic flight → Koh Samui","Ferry/speedboat → Koh Phangan","Best option: flight to Koh Samui + speedboat transfer","Cost: ₹20,000 – ₹45,000 round trip depending on season"] },
       { type: "heading", content: "Transfers to Full Moon Party" },
       { type: "list", items: ["Speedboat (fastest): ₹2,000 – ₹4,000","Ferry (budget): ₹800 – ₹2,000","Always book your return transfer in advance"] },
+      { type: "cta", content: "Pay in INR — bundled Samui ↔ Koh Phangan return transfer + party entry for Indian travelers", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer", linkText: "Book in INR" },
       { type: "heading", content: "Full Cost Breakdown for Indians (2026)" },
       { type: "list", items: ["Entry Fee: ₹200 – ₹500","Transfers: ₹2,000 – ₹4,000","Drinks: ₹1,000 – ₹2,000","Food: ₹300 – ₹700","Stay (1 night): ₹2,500 – ₹6,000","Total: ₹6,000 – ₹12,000"] },
       { type: "mid-activities", destination: "thailand", heading: "Build Your Koh Samui Trip" },
@@ -49,10 +50,10 @@ const Blog = () => (
       { title: "Loy Krathong Festival Guide for Indians", link: "/thailand/koh-samui/destination-guides/activity/loy-krathong-festival-for-indian-travelers" },
     ]}
     relatedLinks={[
+      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" },
       { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
+      { title: "Bangkok Trip Cost from India 2026", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
       { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui" },
     ]}
   />

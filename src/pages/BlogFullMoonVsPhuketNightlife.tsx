@@ -33,6 +33,7 @@ const Blog = () => (
       { type: "list", items: ["Full Moon: EDM, techno, fire shows","Phuket: EDM, hip-hop, live music, shows — wider variety"] },
       { type: "heading", content: "3. Cost Comparison" },
       { type: "list", items: ["Entry — Full Moon ₹200–₹500 vs Phuket ₹500–₹2,000","Drinks — Full Moon ₹300–₹800 vs Phuket ₹500–₹1,500","Overall — Full Moon = budget, Phuket = moderate to expensive"] },
+      { type: "cta", content: "Picking Full Moon? Book the Samui → Koh Phangan transfer + party entry combo now", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer", linkText: "Reserve Combo" },
       { type: "mid-activities", destination: "thailand", heading: "Plan Your Thailand Nightlife Trip" },
       { type: "heading", content: "4. Crowd & Experience" },
       { type: "list", items: ["Full Moon: Younger, international backpackers","Phuket: Couples, groups, luxury travelers"] },
@@ -52,10 +53,10 @@ const Blog = () => (
       { title: "How to Reach Full Moon Party from Phuket and Bangkok", link: "/thailand/koh-samui/destination-guides/activity/how-to-reach-full-moon-party-from-phuket-and-bangkok" },
     ]}
     relatedLinks={[
+      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" },
       { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
+      { title: "Explore Phuket Tours & Activities", link: "/thailand/phuket" },
       { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui" },
     ]}
   />

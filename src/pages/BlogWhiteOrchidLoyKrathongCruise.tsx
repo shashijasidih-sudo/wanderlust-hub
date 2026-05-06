@@ -33,6 +33,7 @@ const Blog = () => (
       { type: "list", items: ["Grand Palace lit beautifully at night","Wat Arun (Temple of Dawn)","Rama VIII Bridge"] },
       { type: "heading", content: "Price Guide (2026)" },
       { type: "list", items: ["Standard Ticket: ₹2,500 – ₹4,000","Premium Seating: ₹4,500 – ₹6,000","With Transfers: ₹5,000 – ₹7,000"] },
+      { type: "cta", content: "November full-moon dates sell out fast — secure your White Orchid seats now", link: "/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival", linkText: "Reserve Seats" },
       { type: "tip-box", content: "Loy Krathong is peak season. Book 2–3 weeks in advance — the November full-moon cruise sells out fast." },
       { type: "mid-activities", destination: "thailand", heading: "Plan Your Loy Krathong Trip" },
       { type: "heading", content: "Pros & Cons" },
@@ -50,10 +51,10 @@ const Blog = () => (
       { title: "Hidden Costs of Full Moon Party Thailand 2026", link: "/thailand/koh-samui/destination-guides/activity/hidden-costs-full-moon-party-thailand-2026" },
     ]}
     relatedLinks={[
+      { title: "Book the White Orchid Loy Krathong Cruise", link: "/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival" },
+      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" },
       { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
       { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui" },
     ]}
   />
