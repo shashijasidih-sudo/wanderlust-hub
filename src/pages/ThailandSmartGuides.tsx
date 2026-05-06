@@ -24,7 +24,7 @@ import phiPhiBoatImg from "@/assets/phi-phi-boat.jpeg";
 import CityExploreLinks from "@/components/CityExploreLinks";
 
 
-type CityKey = "bangkok" | "phuket" | "krabi" | "pattaya" | "chiang-mai" | "multi-city";
+type CityKey = "bangkok" | "phuket" | "krabi" | "pattaya" | "chiang-mai" | "koh-samui" | "multi-city";
 
 interface BlogArticle {
   id: number;
@@ -61,11 +61,11 @@ const blogArticles: BlogArticle[] = [
 const CITY_ORDER: { key: CityKey | "all"; label: string }[] = [
   { key: "all", label: "All Cities" },
   { key: "bangkok", label: "Bangkok" },
+  { key: "pattaya", label: "Pattaya" },
   { key: "phuket", label: "Phuket" },
   { key: "krabi", label: "Krabi" },
-  { key: "pattaya", label: "Pattaya" },
+  { key: "koh-samui", label: "Koh Samui" },
   { key: "chiang-mai", label: "Chiang Mai" },
-  { key: "multi-city", label: "Multi-City & Thailand-Wide" },
 ];
 
 const ThailandSmartGuides = () => {
@@ -169,6 +169,10 @@ const ThailandSmartGuides = () => {
                   }
                   if (c.key === "pattaya") {
                     navigate("/thailand/pattaya/destination-guides");
+                    return;
+                  }
+                  if (c.key === "koh-samui") {
+                    navigate("/thailand/koh-samui/destination-guides");
                     return;
                   }
                   setActiveCity(c.key);
