@@ -420,6 +420,8 @@ const App = () => (
             <Route path="/thailand/chiang-mai/destination-guides/activity/chiang-mai-tour-guide-for-indians" element={<BlogChiangMaiTourGuideForIndians />} />
             <Route path="/thailand/chiang-mai/destination-guides/activity/chiang-rai-day-trip-for-indian-travelers" element={<BlogChiangRaiDayTripForIndians />} />
             <Route path="/thailand/chiang-mai/destination-guides/activity/visit-doi-suthep-without-climbing-steps" element={<BlogVisitDoiSuthepWithoutSteps />} />
+            <Route path="/thailand/phuket/destination-guides" element={<PhuketDestinationGuides />} />
+            <Route path="/thailand/phuket/destination-guides/comparison/phuket-vs-bali" element={<BlogPhuketVsBali />} />
             <Route path="/thailand/bangkok/safari-world" element={<SafariWorld />} />
             <Route path="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" element={<PhiPhiIsland />} />
             <Route path="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" element={<JamesBondIsland />} />
