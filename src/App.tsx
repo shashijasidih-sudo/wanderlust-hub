@@ -368,6 +368,8 @@ import BlogChiangRaiVsDoiInthanon from "./pages/BlogChiangRaiVsDoiInthanon";
 import BlogChiangMaiTourGuideForIndians from "./pages/BlogChiangMaiTourGuideForIndians";
 import BlogChiangRaiDayTripForIndians from "./pages/BlogChiangRaiDayTripForIndians";
 import BlogVisitDoiSuthepWithoutSteps from "./pages/BlogVisitDoiSuthepWithoutSteps";
+import PhuketDestinationGuides from "./pages/PhuketDestinationGuides";
+import BlogPhuketVsBali from "./pages/BlogPhuketVsBali";
 
 
 const queryClient = new QueryClient();
