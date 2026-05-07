@@ -7,6 +7,13 @@ import imgCityVsIsland from "@/assets/phuket-night-market-1.jpg";
 import imgSharedVsPrivate from "@/assets/blog-bkk-airport-transfer.jpg";
 import imgPhuketVsBali from "@/assets/phuket-longtail-boats-beach-1.jpg";
 import imgLuxuryVsBudget from "@/assets/phuket-island-viewpoint-1.jpg";
+import imgBestPhiPhi from "@/assets/phuket-speedboat-1.jpg";
+import imgMayaBay from "@/assets/phuket-longtail-boats-beach-1.jpg";
+import imgDolphin from "@/assets/dolphin-show-1.jpg";
+import imgBigBuddha from "@/assets/phuket-island-viewpoint-1.jpg";
+import imgJamesBond from "@/assets/james-bond-island-hero.jpg";
+import imgCityTour from "@/assets/phuket-night-market-1.jpg";
+import imgSnorkeling from "@/assets/phuket-big-boat-1.jpg";
 
 export type PhuketBlogCategory =
   | "activity"

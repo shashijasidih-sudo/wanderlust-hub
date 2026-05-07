@@ -370,6 +370,13 @@ import BlogChiangRaiDayTripForIndians from "./pages/BlogChiangRaiDayTripForIndia
 import BlogVisitDoiSuthepWithoutSteps from "./pages/BlogVisitDoiSuthepWithoutSteps";
 import PhuketDestinationGuides from "./pages/PhuketDestinationGuides";
 import BlogPhuketVsBali from "./pages/BlogPhuketVsBali";
+import BlogBestPhiPhiIslandTours from "./pages/BlogBestPhiPhiIslandTours";
+import BlogMayaBayTourGuide from "./pages/BlogMayaBayTourGuide";
+import BlogDolphinShowPhuket from "./pages/BlogDolphinShowPhuket";
+import BlogBigBuddhaPhuketGuide from "./pages/BlogBigBuddhaPhuketGuide";
+import BlogJamesBondIslandTour from "./pages/BlogJamesBondIslandTour";
+import BlogPhuketCityTourGuide from "./pages/BlogPhuketCityTourGuide";
+import BlogPhuketSnorkelingGuide from "./pages/BlogPhuketSnorkelingGuide";
 
 
 const queryClient = new QueryClient();
@@ -422,6 +429,13 @@ const App = () => (
             <Route path="/thailand/chiang-mai/destination-guides/activity/visit-doi-suthep-without-climbing-steps" element={<BlogVisitDoiSuthepWithoutSteps />} />
             <Route path="/thailand/phuket/destination-guides" element={<PhuketDestinationGuides />} />
             <Route path="/thailand/phuket/destination-guides/comparison/phuket-vs-bali" element={<BlogPhuketVsBali />} />
+            <Route path="/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours" element={<BlogBestPhiPhiIslandTours />} />
+            <Route path="/thailand/phuket/destination-guides/activity/maya-bay-tour-guide" element={<BlogMayaBayTourGuide />} />
+            <Route path="/thailand/phuket/destination-guides/activity/dolphin-show-phuket" element={<BlogDolphinShowPhuket />} />
+            <Route path="/thailand/phuket/destination-guides/activity/big-buddha-phuket-guide" element={<BlogBigBuddhaPhuketGuide />} />
+            <Route path="/thailand/phuket/destination-guides/activity/james-bond-island-tour-guide" element={<BlogJamesBondIslandTour />} />
+            <Route path="/thailand/phuket/destination-guides/activity/phuket-city-tour-guide" element={<BlogPhuketCityTourGuide />} />
+            <Route path="/thailand/phuket/destination-guides/activity/snorkeling-in-phuket-guide" element={<BlogPhuketSnorkelingGuide />} />
             <Route path="/thailand/bangkok/safari-world" element={<SafariWorld />} />
             <Route path="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" element={<PhiPhiIsland />} />
             <Route path="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" element={<JamesBondIsland />} />
