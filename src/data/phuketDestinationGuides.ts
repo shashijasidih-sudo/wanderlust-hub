@@ -7,6 +7,13 @@ import imgCityVsIsland from "@/assets/phuket-night-market-1.jpg";
 import imgSharedVsPrivate from "@/assets/blog-bkk-airport-transfer.jpg";
 import imgPhuketVsBali from "@/assets/phuket-longtail-boats-beach-1.jpg";
 import imgLuxuryVsBudget from "@/assets/phuket-island-viewpoint-1.jpg";
+import imgBestPhiPhi from "@/assets/phuket-speedboat-1.jpg";
+import imgMayaBay from "@/assets/phuket-longtail-boats-beach-1.jpg";
+import imgDolphin from "@/assets/dolphin-show-1.jpg";
+import imgBigBuddha from "@/assets/phuket-island-viewpoint-1.jpg";
+import imgJamesBond from "@/assets/james-bond-island-hero.jpg";
+import imgCityTour from "@/assets/phuket-night-market-1.jpg";
+import imgSnorkeling from "@/assets/phuket-big-boat-1.jpg";
 
 export type PhuketBlogCategory =
   | "activity"
@@ -102,6 +109,48 @@ export const phuketBlogs: PhuketBlogEntry[] = [
     description: "Where to splurge and where to save in Phuket — accommodation, transport, island tours and dining compared at every budget tier.",
     category: "comparison", image: imgLuxuryVsBudget, date: "May 7, 2026", readTime: "10 min read",
     link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel",
+  },
+  {
+    title: "Best Phi Phi Island Tours from Phuket (2026 Updated Guide)",
+    description: "Compare speedboat, big boat, luxury and private Phi Phi tours from Phuket — pricing, inclusions and best pick for Indian travelers.",
+    category: "activity", image: imgBestPhiPhi, date: "May 7, 2026", readTime: "11 min read",
+    link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours",
+  },
+  {
+    title: "Maya Bay Tour Guide: Rules, Best Time & What to Expect (2026)",
+    description: "Maya Bay 2026 rules, opening hours, no-swim zones, best time and how to plan a Phi Phi Leh tour from Phuket.",
+    category: "activity", image: imgMayaBay, date: "May 7, 2026", readTime: "9 min read",
+    link: "/thailand/phuket/destination-guides/activity/maya-bay-tour-guide",
+  },
+  {
+    title: "Dolphin Show Phuket: Tickets, Timing & Honest Review (2026)",
+    description: "Phuket Dolphin Show 2026 — ticket price in INR, seat types, timings and is it worth it for families.",
+    category: "activity", image: imgDolphin, date: "May 7, 2026", readTime: "8 min read",
+    link: "/thailand/phuket/destination-guides/activity/dolphin-show-phuket",
+  },
+  {
+    title: "Big Buddha Phuket: Timings, Entry & Complete Visitor Guide (2026)",
+    description: "Big Buddha Phuket 2026 — free entry, timings, dress code, how to reach and best photo spots.",
+    category: "activity", image: imgBigBuddha, date: "May 7, 2026", readTime: "9 min read",
+    link: "/thailand/phuket/destination-guides/activity/big-buddha-phuket-guide",
+  },
+  {
+    title: "James Bond Island Tour from Phuket: Complete Experience Guide (2026)",
+    description: "James Bond Island & Phang Nga Bay 2026 — speedboat vs big boat, sea canoeing, Koh Panyee floating village and cost in INR.",
+    category: "activity", image: imgJamesBond, date: "May 7, 2026", readTime: "10 min read",
+    link: "/thailand/phuket/destination-guides/activity/james-bond-island-tour-guide",
+  },
+  {
+    title: "Phuket City Tour: Big Buddha, Wat Chalong & Old Town Guide (2026)",
+    description: "Phuket City Tour 2026 — full itinerary covering Big Buddha, Wat Chalong, Karon Viewpoint, Old Town and cost in INR.",
+    category: "activity", image: imgCityTour, date: "May 7, 2026", readTime: "9 min read",
+    link: "/thailand/phuket/destination-guides/activity/phuket-city-tour-guide",
+  },
+  {
+    title: "Snorkeling in Phuket: Best Spots, Tours & Cost Guide (2026)",
+    description: "Best snorkeling spots in Phuket 2026 — Coral Island, Phi Phi reefs, Khai Islands — tour options and cost in INR.",
+    category: "activity", image: imgSnorkeling, date: "May 7, 2026", readTime: "10 min read",
+    link: "/thailand/phuket/destination-guides/activity/snorkeling-in-phuket-guide",
   },
 ];
 
