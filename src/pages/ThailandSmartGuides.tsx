@@ -179,6 +179,10 @@ const ThailandSmartGuides = () => {
                     navigate("/thailand/chiang-mai/destination-guides");
                     return;
                   }
+                  if (c.key === "phuket") {
+                    navigate("/thailand/phuket/destination-guides");
+                    return;
+                  }
                   setActiveCity(c.key);
                 }}
               >
