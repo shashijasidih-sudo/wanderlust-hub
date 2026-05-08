@@ -261,7 +261,30 @@ export const phuketBlogs: PhuketBlogEntry[] = [
     category: "price-cost", image: imgPriceCheapestPhiPhi, date: "May 8, 2026", readTime: "10 min read",
     link: "/thailand/phuket/destination-guides/price-cost/cheapest-phi-phi-tour-from-phuket",
   },
-];
+  {
+    title: "Phuket Trip Cost from India 2026: Complete Budget Breakdown (INR)",
+    description: "Real Phuket trip cost from India in 2026 — flights, visa, hotels, food, island tours and transfers compared for budget, mid-range and luxury Indian travelers.",
+    category: "price-cost", image: imgPriceTripCost, date: "May 8, 2026", readTime: "10 min read",
+    link: "/thailand/phuket/destination-guides/price-cost/phuket-trip-cost-from-india",
+  },
+  {
+    title: "Phuket Hotel Price Guide 2026: Cost by Area, Season & Star Rating (INR)",
+    description: "Phuket hotel prices in 2026 — Patong, Karon, Kata, Bangtao, Surin compared with INR per night, season-wise rates and where Indian travelers get best value.",
+    category: "price-cost", image: imgPriceHotel, date: "May 8, 2026", readTime: "9 min read",
+    link: "/thailand/phuket/destination-guides/price-cost/phuket-hotel-price-guide",
+  },
+  {
+    title: "Phuket Food Cost Guide 2026: Street Food vs Restaurants vs Indian Meals (INR)",
+    description: "Real Phuket food cost in 2026 — street food, casual restaurants, Indian/veg meals, beach clubs and per-day food budget for Indian travelers.",
+    category: "price-cost", image: imgPriceFood, date: "May 8, 2026", readTime: "8 min read",
+    link: "/thailand/phuket/destination-guides/price-cost/phuket-food-cost-guide",
+  },
+  {
+    title: "Phuket Tour Package Price Comparison 2026: 3D, 4D, 5D & 7D Plans (INR)",
+    description: "Compare Phuket tour packages in 2026 — 3-day, 4-day, 5-day and 7-day plans with INR pricing, inclusions and the best pick for Indian travelers.",
+    category: "price-cost", image: imgPricePackages, date: "May 8, 2026", readTime: "9 min read",
+    link: "/thailand/phuket/destination-guides/price-cost/phuket-tour-package-price-comparison",
+  },
 
 export const getPhuketBlogsByCategory = (cat: PhuketBlogCategory) =>
   phuketBlogs.filter((b) => b.category === cat);
