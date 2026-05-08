@@ -19,6 +19,7 @@ import imgItin5Days from "@/assets/james-bond-island-hero.jpg";
 import imgItinHoneymoon from "@/assets/phuket-longtail-boats-beach-1.jpg";
 import imgItinKrabiCombo from "@/assets/krabi-longtail-boats-1.jpg";
 import imgItinLuxury from "@/assets/phuket-island-viewpoint-1.jpg";
+import imgTransferAirportPatong from "@/assets/phuket-mai-khao-beach-plane.jpg";
 
 export type PhuketBlogCategory =
   | "activity"
@@ -186,6 +187,12 @@ export const phuketBlogs: PhuketBlogEntry[] = [
     description: "Premium 5–6 day Phuket luxury itinerary — private Phi Phi, beach clubs, sunset yachts, fine dining and signature resorts in INR.",
     category: "itinerary", image: imgItinLuxury, date: "May 8, 2026", readTime: "11 min read",
     link: "/thailand/phuket/destination-guides/itinerary/phuket-luxury-itinerary",
+  },
+  {
+    title: "Phuket Airport to Patong: Best Transfer Options (Taxi, Private, Shared) — 2026 Guide",
+    description: "HKT to Patong in 2026 — taxi, private and shared transfers compared with cost in INR, travel time and the smartest pick for Indian travelers.",
+    category: "transfer", image: imgTransferAirportPatong, date: "May 8, 2026", readTime: "9 min read",
+    link: "/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong",
   },
 ];
 
