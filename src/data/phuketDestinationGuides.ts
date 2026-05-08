@@ -14,6 +14,11 @@ import imgBigBuddha from "@/assets/phuket-island-viewpoint-1.jpg";
 import imgJamesBond from "@/assets/james-bond-island-hero.jpg";
 import imgCityTour from "@/assets/phuket-night-market-1.jpg";
 import imgSnorkeling from "@/assets/phuket-big-boat-1.jpg";
+import imgItin4Days from "@/assets/phi-phi-1.jpg";
+import imgItin5Days from "@/assets/james-bond-island-hero.jpg";
+import imgItinHoneymoon from "@/assets/phuket-longtail-boats-beach-1.jpg";
+import imgItinKrabiCombo from "@/assets/krabi-longtail-boats-1.jpg";
+import imgItinLuxury from "@/assets/phuket-island-viewpoint-1.jpg";
 
 export type PhuketBlogCategory =
   | "activity"
@@ -151,6 +156,36 @@ export const phuketBlogs: PhuketBlogEntry[] = [
     description: "Best snorkeling spots in Phuket 2026 — Coral Island, Phi Phi reefs, Khai Islands — tour options and cost in INR.",
     category: "activity", image: imgSnorkeling, date: "May 7, 2026", readTime: "10 min read",
     link: "/thailand/phuket/destination-guides/activity/snorkeling-in-phuket-guide",
+  },
+  {
+    title: "4 Days Phuket Itinerary: Phi Phi, City Tour & Activities Plan (2026)",
+    description: "Perfectly balanced 4-day Phuket itinerary — Phi Phi, city tour, adventure activities, costs in INR and smart tips for Indian travelers.",
+    category: "itinerary", image: imgItin4Days, date: "May 8, 2026", readTime: "10 min read",
+    link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary",
+  },
+  {
+    title: "5 Days Phuket Itinerary with Phi Phi & James Bond Island (2026)",
+    description: "Ideal 5-day Phuket plan covering Phi Phi, James Bond Island, city tour and adventure — costs in INR and Indian-traveler tips.",
+    category: "itinerary", image: imgItin5Days, date: "May 8, 2026", readTime: "11 min read",
+    link: "/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary",
+  },
+  {
+    title: "Phuket Honeymoon Itinerary (4–5 Days Romantic Plan) — 2026",
+    description: "Romantic 4–5 day Phuket honeymoon itinerary — Phi Phi, sunset cliffs, spa, candlelight dinners and budget in INR for Indian couples.",
+    category: "itinerary", image: imgItinHoneymoon, date: "May 8, 2026", readTime: "10 min read",
+    link: "/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary",
+  },
+  {
+    title: "Phuket + Krabi Combo Itinerary: 6–7 Days Thailand Plan (2026)",
+    description: "Smart 6–7 day Phuket + Krabi combo itinerary — why it works, day-by-day plan, transfer tips and total cost in INR.",
+    category: "itinerary", image: imgItinKrabiCombo, date: "May 8, 2026", readTime: "11 min read",
+    link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary",
+  },
+  {
+    title: "Phuket Luxury Itinerary: Premium Experiences & Resorts (5–6 Days) — 2026",
+    description: "Premium 5–6 day Phuket luxury itinerary — private Phi Phi, beach clubs, sunset yachts, fine dining and signature resorts in INR.",
+    category: "itinerary", image: imgItinLuxury, date: "May 8, 2026", readTime: "11 min read",
+    link: "/thailand/phuket/destination-guides/itinerary/phuket-luxury-itinerary",
   },
 ];
 

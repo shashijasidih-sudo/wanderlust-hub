@@ -377,6 +377,11 @@ import BlogBigBuddhaPhuketGuide from "./pages/BlogBigBuddhaPhuketGuide";
 import BlogJamesBondIslandTour from "./pages/BlogJamesBondIslandTour";
 import BlogPhuketCityTourGuide from "./pages/BlogPhuketCityTourGuide";
 import BlogPhuketSnorkelingGuide from "./pages/BlogPhuketSnorkelingGuide";
+import BlogPhuket4DaysItinerary from "./pages/BlogPhuket4DaysItinerary";
+import BlogPhuket5DaysItinerary from "./pages/BlogPhuket5DaysItinerary";
+import BlogPhuketHoneymoonItinerary from "./pages/BlogPhuketHoneymoonItinerary";
+import BlogPhuketKrabiComboItinerary from "./pages/BlogPhuketKrabiComboItinerary";
+import BlogPhuketLuxuryItinerary from "./pages/BlogPhuketLuxuryItinerary";
 
 
 const queryClient = new QueryClient();
@@ -436,6 +441,11 @@ const App = () => (
             <Route path="/thailand/phuket/destination-guides/activity/james-bond-island-tour-guide" element={<BlogJamesBondIslandTour />} />
             <Route path="/thailand/phuket/destination-guides/activity/phuket-city-tour-guide" element={<BlogPhuketCityTourGuide />} />
             <Route path="/thailand/phuket/destination-guides/activity/snorkeling-in-phuket-guide" element={<BlogPhuketSnorkelingGuide />} />
+            <Route path="/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" element={<BlogPhuket4DaysItinerary />} />
+            <Route path="/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary" element={<BlogPhuket5DaysItinerary />} />
+            <Route path="/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary" element={<BlogPhuketHoneymoonItinerary />} />
+            <Route path="/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary" element={<BlogPhuketKrabiComboItinerary />} />
+            <Route path="/thailand/phuket/destination-guides/itinerary/phuket-luxury-itinerary" element={<BlogPhuketLuxuryItinerary />} />
             <Route path="/thailand/bangkok/safari-world" element={<SafariWorld />} />
             <Route path="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" element={<PhiPhiIsland />} />
             <Route path="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" element={<JamesBondIsland />} />
