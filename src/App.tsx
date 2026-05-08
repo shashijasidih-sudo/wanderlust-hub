@@ -384,6 +384,10 @@ import BlogPhuketKrabiComboItinerary from "./pages/BlogPhuketKrabiComboItinerary
 import BlogPhuketLuxuryItinerary from "./pages/BlogPhuketLuxuryItinerary";
 import BlogPhuketAirportToPatongTransfer from "./pages/BlogPhuketAirportToPatongTransfer";
 import BlogCheapestPhiPhiTourFromPhuket from "./pages/BlogCheapestPhiPhiTourFromPhuket";
+import BlogPhuketTripCostFromIndia from "./pages/BlogPhuketTripCostFromIndia";
+import BlogPhuketHotelPriceGuide from "./pages/BlogPhuketHotelPriceGuide";
+import BlogPhuketFoodCostGuide from "./pages/BlogPhuketFoodCostGuide";
+import BlogPhuketTourPackagePriceComparison from "./pages/BlogPhuketTourPackagePriceComparison";
 
 
 const queryClient = new QueryClient();
