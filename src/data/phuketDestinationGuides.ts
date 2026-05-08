@@ -285,6 +285,7 @@ export const phuketBlogs: PhuketBlogEntry[] = [
     category: "price-cost", image: imgPricePackages, date: "May 8, 2026", readTime: "9 min read",
     link: "/thailand/phuket/destination-guides/price-cost/phuket-tour-package-price-comparison",
   },
+];
 
 export const getPhuketBlogsByCategory = (cat: PhuketBlogCategory) =>
   phuketBlogs.filter((b) => b.category === cat);
