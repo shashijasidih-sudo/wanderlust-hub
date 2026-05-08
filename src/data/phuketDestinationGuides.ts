@@ -20,6 +20,14 @@ import imgItinHoneymoon from "@/assets/phuket-longtail-boats-beach-1.jpg";
 import imgItinKrabiCombo from "@/assets/krabi-longtail-boats-1.jpg";
 import imgItinLuxury from "@/assets/phuket-island-viewpoint-1.jpg";
 import imgTransferAirportPatong from "@/assets/phuket-mai-khao-beach-plane.jpg";
+import imgIndTrip from "@/assets/city-phuket.jpg";
+import imgIndPhiPhi from "@/assets/phuket-phi-phi-harbour-1.jpg";
+import imgIndPackages from "@/assets/phuket-longtail-boat-1.jpg";
+import imgIndFood from "@/assets/phuket-night-market-1.jpg";
+import imgIndBudget from "@/assets/phuket-kayaks-beach-1.jpg";
+import imgIndHoneymoon from "@/assets/phuket-longtail-boats-beach-1.jpg";
+import imgIndVisa from "@/assets/blog-bangkok-visa-india.jpg";
+import imgIndSafety from "@/assets/blog-bangkok-safety-india.jpg";
 
 export type PhuketBlogCategory =
   | "activity"
@@ -193,6 +201,54 @@ export const phuketBlogs: PhuketBlogEntry[] = [
     description: "HKT to Patong in 2026 — taxi, private and shared transfers compared with cost in INR, travel time and the smartest pick for Indian travelers.",
     category: "transfer", image: imgTransferAirportPatong, date: "May 8, 2026", readTime: "9 min read",
     link: "/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong",
+  },
+  {
+    title: "Phuket Trip from India: Complete Travel Guide (Visa, Flights, Budget) — 2026",
+    description: "Complete 2026 Phuket guide for Indian travelers — visa, direct flights, budget breakdown, where to stay, top activities and ideal 4–5 day itinerary in INR.",
+    category: "indian-audience", image: imgIndTrip, date: "May 8, 2026", readTime: "11 min read",
+    link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india",
+  },
+  {
+    title: "Phi Phi Island Tour Guide for Indians (Food, Tips & Cost) — 2026",
+    description: "Phi Phi from Phuket for Indian travelers — speedboat vs big boat, vegetarian/Jain food, ticket cost in INR, with-kids tips and trusted operators.",
+    category: "indian-audience", image: imgIndPhiPhi, date: "May 8, 2026", readTime: "10 min read",
+    link: "/thailand/phuket/destination-guides/indian-audience/phi-phi-tour-for-indians",
+  },
+  {
+    title: "Best Phuket Tour Packages for Indian Travelers (2026 Guide)",
+    description: "Best Phuket tour packages for Indians in 2026 — budget, mid-range and luxury options compared with cost in INR, inclusions and the right pick for your group.",
+    category: "indian-audience", image: imgIndPackages, date: "May 8, 2026", readTime: "11 min read",
+    link: "/thailand/phuket/destination-guides/indian-audience/best-phuket-tour-packages-for-indians",
+  },
+  {
+    title: "Indian Food in Phuket: Best Restaurants & Survival Guide (2026)",
+    description: "Indian food in Phuket 2026 — best North Indian, South Indian, vegetarian & Jain restaurants, meal cost in INR, areas to stay and tips for picky eaters.",
+    category: "indian-audience", image: imgIndFood, date: "May 8, 2026", readTime: "9 min read",
+    link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket",
+  },
+  {
+    title: "Phuket Budget Trip Under ₹50,000: Complete Plan for Indian Travelers (2026)",
+    description: "Phuket under ₹50,000 in 2026 — flights, stay, food, free activities, low-cost tours and a smart 4-day itinerary built for Indian budget travelers.",
+    category: "indian-audience", image: imgIndBudget, date: "May 8, 2026", readTime: "10 min read",
+    link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000",
+  },
+  {
+    title: "Phuket Honeymoon Guide for Indian Couples (2026 Complete Travel Plan)",
+    description: "2026 Phuket honeymoon guide for Indian couples — best resorts, romantic experiences, 5-day itinerary, costs in INR and tips to pick the right area.",
+    category: "indian-audience", image: imgIndHoneymoon, date: "May 8, 2026", readTime: "11 min read",
+    link: "/thailand/phuket/destination-guides/indian-audience/phuket-honeymoon-for-indian-couples",
+  },
+  {
+    title: "Phuket Visa for Indians: Requirements, Fees & Process (2026 Updated Guide)",
+    description: "2026 Phuket visa guide for Indians — VOA vs e-visa, fees in INR, documents, step-by-step process and which option to pick for stress-free entry.",
+    category: "indian-audience", image: imgIndVisa, date: "May 8, 2026", readTime: "9 min read",
+    link: "/thailand/phuket/destination-guides/indian-audience/phuket-visa-for-indians",
+  },
+  {
+    title: "Is Phuket Safe for Indian Tourists? Complete Safety Guide (2026)",
+    description: "Phuket safety guide for Indian travelers in 2026 — common scams, safety tips for couples/families/solo, beach safety, night safety and emergency contacts.",
+    category: "indian-audience", image: imgIndSafety, date: "May 8, 2026", readTime: "10 min read",
+    link: "/thailand/phuket/destination-guides/indian-audience/phuket-safety-for-indians",
   },
 ];
 
