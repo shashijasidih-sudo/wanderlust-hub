@@ -454,6 +454,10 @@ const App = () => (
             <Route path="/thailand/phuket/destination-guides/itinerary/phuket-luxury-itinerary" element={<BlogPhuketLuxuryItinerary />} />
             <Route path="/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong" element={<BlogPhuketAirportToPatongTransfer />} />
             <Route path="/thailand/phuket/destination-guides/price-cost/cheapest-phi-phi-tour-from-phuket" element={<BlogCheapestPhiPhiTourFromPhuket />} />
+            <Route path="/thailand/phuket/destination-guides/price-cost/phuket-trip-cost-from-india" element={<BlogPhuketTripCostFromIndia />} />
+            <Route path="/thailand/phuket/destination-guides/price-cost/phuket-hotel-price-guide" element={<BlogPhuketHotelPriceGuide />} />
+            <Route path="/thailand/phuket/destination-guides/price-cost/phuket-food-cost-guide" element={<BlogPhuketFoodCostGuide />} />
+            <Route path="/thailand/phuket/destination-guides/price-cost/phuket-tour-package-price-comparison" element={<BlogPhuketTourPackagePriceComparison />} />
             <Route path="/thailand/bangkok/safari-world" element={<SafariWorld />} />
             <Route path="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" element={<PhiPhiIsland />} />
             <Route path="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" element={<JamesBondIsland />} />
