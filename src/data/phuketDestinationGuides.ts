@@ -28,6 +28,7 @@ import imgIndBudget from "@/assets/phuket-kayaks-beach-1.jpg";
 import imgIndHoneymoon from "@/assets/phuket-longtail-boats-beach-1.jpg";
 import imgIndVisa from "@/assets/blog-bangkok-visa-india.jpg";
 import imgIndSafety from "@/assets/blog-bangkok-safety-india.jpg";
+import imgPriceCheapestPhiPhi from "@/assets/phuket-big-boat-1.jpg";
 
 export type PhuketBlogCategory =
   | "activity"
@@ -249,6 +250,12 @@ export const phuketBlogs: PhuketBlogEntry[] = [
     description: "Phuket safety guide for Indian travelers in 2026 — common scams, safety tips for couples/families/solo, beach safety, night safety and emergency contacts.",
     category: "indian-audience", image: imgIndSafety, date: "May 8, 2026", readTime: "10 min read",
     link: "/thailand/phuket/destination-guides/indian-audience/phuket-safety-for-indians",
+  },
+  {
+    title: "Cheapest Phi Phi Island Tour from Phuket: 2026 Deals & Budget Guide",
+    description: "Cheapest Phi Phi Island tour from Phuket in 2026 — big boat vs speedboat cost in INR, full budget breakdown, where to book and smart money-saving tips.",
+    category: "price-cost", image: imgPriceCheapestPhiPhi, date: "May 8, 2026", readTime: "10 min read",
+    link: "/thailand/phuket/destination-guides/price-cost/cheapest-phi-phi-tour-from-phuket",
   },
 ];
 
