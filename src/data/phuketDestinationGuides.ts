@@ -29,6 +29,10 @@ import imgIndHoneymoon from "@/assets/phuket-longtail-boats-beach-1.jpg";
 import imgIndVisa from "@/assets/blog-bangkok-visa-india.jpg";
 import imgIndSafety from "@/assets/blog-bangkok-safety-india.jpg";
 import imgPriceCheapestPhiPhi from "@/assets/phuket-big-boat-1.jpg";
+import imgPriceTripCost from "@/assets/city-phuket.jpg";
+import imgPriceHotel from "@/assets/phuket-longtail-boats-beach-1.jpg";
+import imgPriceFood from "@/assets/phuket-night-market-1.jpg";
+import imgPricePackages from "@/assets/phuket-island-viewpoint-1.jpg";
 
 export type PhuketBlogCategory =
   | "activity"
