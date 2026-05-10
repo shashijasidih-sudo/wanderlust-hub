@@ -469,6 +469,9 @@ const App = () => (
             <Route path="/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" element={<BlogMountFujiDayTourFromTokyo />} />
             <Route path="/japan/destination-guides/activity/tokyo-city-tour-guide" element={<BlogTokyoCityTourGuide />} />
             <Route path="/japan/destination-guides/activity/kyoto-temple-tour-guide" element={<BlogKyotoTempleTourGuide />} />
+            <Route path="/japan/destination-guides/price-cost/japan-trip-cost-from-india" element={<BlogJapanTripCostFromIndia />} />
+            <Route path="/japan/destination-guides/price-cost/mount-fuji-tour-cost-from-tokyo" element={<BlogMountFujiTourCostFromTokyo />} />
+            <Route path="/japan/destination-guides/price-cost/tokyo-disneyland-ticket-price-guide" element={<BlogTokyoDisneylandTicketPriceGuide />} />
             <Route path="/thailand/bangkok/safari-world" element={<SafariWorld />} />
             <Route path="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" element={<PhiPhiIsland />} />
             <Route path="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" element={<JamesBondIsland />} />
