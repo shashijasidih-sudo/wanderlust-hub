@@ -1,4 +1,4 @@
-import { Menu, IndianRupee, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket, LogOut, CalendarDays, ShieldCheck, Settings, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Menu, IndianRupee, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket, LogOut, CalendarDays, ShieldCheck, Settings, Instagram, Linkedin, Youtube, Mountain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -371,16 +371,10 @@ const Header = () => {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/netherlands-smart-guides">
-                  <Droplet className="h-5 w-5 mr-3 text-primary" />
-                  <span className="font-medium">Netherlands Smart Guides</span>
+                <Link to="/japan/destination-guides">
+                  <Mountain className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Japan Smart Guides</span>
                 </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild className={menuItemClass}>
-                <a href="#australia">
-                  <Tent className="h-5 w-5 mr-3 text-primary" />
-                  <span className="font-medium">Australia Smart Guides</span>
-                </a>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -565,16 +559,10 @@ const Header = () => {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/netherlands-smart-guides" onClick={() => setIsMenuOpen(false)}>
-                    <Droplet className="h-4 w-4 mr-2 text-primary" />
-                    Netherlands Smart Guides
+                  <Link to="/japan/destination-guides" onClick={() => setIsMenuOpen(false)}>
+                    <Mountain className="h-4 w-4 mr-2 text-primary" />
+                    Japan Smart Guides
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <a href="#australia">
-                    <Tent className="h-4 w-4 mr-2 text-primary" />
-                    Australia Smart Guides
-                  </a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

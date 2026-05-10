@@ -369,6 +369,10 @@ import BlogChiangMaiTourGuideForIndians from "./pages/BlogChiangMaiTourGuideForI
 import BlogChiangRaiDayTripForIndians from "./pages/BlogChiangRaiDayTripForIndians";
 import BlogVisitDoiSuthepWithoutSteps from "./pages/BlogVisitDoiSuthepWithoutSteps";
 import PhuketDestinationGuides from "./pages/PhuketDestinationGuides";
+import JapanDestinationGuides from "./pages/JapanDestinationGuides";
+import BlogMountFujiDayTourFromTokyo from "./pages/BlogMountFujiDayTourFromTokyo";
+import BlogTokyoCityTourGuide from "./pages/BlogTokyoCityTourGuide";
+import BlogKyotoTempleTourGuide from "./pages/BlogKyotoTempleTourGuide";
 import BlogPhuketVsBali from "./pages/BlogPhuketVsBali";
 import BlogBestPhiPhiIslandTours from "./pages/BlogBestPhiPhiIslandTours";
 import BlogMayaBayTourGuide from "./pages/BlogMayaBayTourGuide";
@@ -458,6 +462,10 @@ const App = () => (
             <Route path="/thailand/phuket/destination-guides/price-cost/phuket-hotel-price-guide" element={<BlogPhuketHotelPriceGuide />} />
             <Route path="/thailand/phuket/destination-guides/price-cost/phuket-food-cost-guide" element={<BlogPhuketFoodCostGuide />} />
             <Route path="/thailand/phuket/destination-guides/price-cost/phuket-tour-package-price-comparison" element={<BlogPhuketTourPackagePriceComparison />} />
+            <Route path="/japan/destination-guides" element={<JapanDestinationGuides />} />
+            <Route path="/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" element={<BlogMountFujiDayTourFromTokyo />} />
+            <Route path="/japan/destination-guides/activity/tokyo-city-tour-guide" element={<BlogTokyoCityTourGuide />} />
+            <Route path="/japan/destination-guides/activity/kyoto-temple-tour-guide" element={<BlogKyotoTempleTourGuide />} />
             <Route path="/thailand/bangkok/safari-world" element={<SafariWorld />} />
             <Route path="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" element={<PhiPhiIsland />} />
             <Route path="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" element={<JamesBondIsland />} />
