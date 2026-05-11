@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-mai-khao-beach-plane.jpg";
 
 const BlogPhuketAirportToPatongTransfer = () => (
@@ -162,6 +163,7 @@ const BlogPhuketAirportToPatongTransfer = () => (
       { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
+      internalLinks={getPhuketInternalLinks("")}
   />
 );
 

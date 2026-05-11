@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-longtail-boats-beach-1.jpg";
 
 const BlogPhuketHoneymoonItinerary = () => (
@@ -57,6 +58,7 @@ const BlogPhuketHoneymoonItinerary = () => (
       { title: "Phuket vs Bali for Indians", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-bali" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
+      internalLinks={getPhuketInternalLinks("")}
   />
 );
 

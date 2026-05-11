@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-longtail-boats-beach-1.jpg";
 
 const BlogPhuketHoneymoonForIndianCouples = () => (
@@ -118,6 +119,7 @@ const BlogPhuketHoneymoonForIndianCouples = () => (
       { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india" },
       { title: "Best Phuket Tour Packages for Indians", link: "/thailand/phuket/destination-guides/indian-audience/best-phuket-tour-packages-for-indians" },
     ]}
+      internalLinks={getPhuketInternalLinks("")}
   />
 );
 export default BlogPhuketHoneymoonForIndianCouples;

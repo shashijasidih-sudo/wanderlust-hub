@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-longtail-boats-beach-1.jpg";
 
 const BlogMayaBayTourGuide = () => (
@@ -49,6 +50,7 @@ const BlogMayaBayTourGuide = () => (
       { title: "Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
+      internalLinks={getPhuketInternalLinks("")}
   />
 );
 export default BlogMayaBayTourGuide;

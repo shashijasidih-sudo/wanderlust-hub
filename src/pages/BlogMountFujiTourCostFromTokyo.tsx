@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getJapanInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/japan-mount-fuji-1.jpg";
 
 const BlogMountFujiTourCostFromTokyo = () => (
@@ -128,6 +129,7 @@ const BlogMountFujiTourCostFromTokyo = () => (
       { title: "Tokyo Disneyland Ticket Price Guide: Latest Costs & Tips", link: "/japan/destination-guides/price-cost/tokyo-disneyland-ticket-price-guide" },
       { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide" },
     ]}
+      internalLinks={getJapanInternalLinks("")}
   />
 );
 

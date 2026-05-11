@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-longtail-boat-1.jpg";
 
 const BlogBestPhuketTourPackagesForIndians = () => (
@@ -108,6 +109,7 @@ const BlogBestPhuketTourPackagesForIndians = () => (
       { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000" },
       { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel" },
     ]}
+      internalLinks={getPhuketInternalLinks("")}
   />
 );
 export default BlogBestPhuketTourPackagesForIndians;

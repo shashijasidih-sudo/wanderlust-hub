@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-big-boat-1.jpg";
 
 const BlogPhiPhiSpeedboatVsBigBoat = () => (
@@ -64,6 +65,7 @@ const BlogPhiPhiSpeedboatVsBigBoat = () => (
       { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
+      internalLinks={getPhuketInternalLinks("")}
   />
 );
 

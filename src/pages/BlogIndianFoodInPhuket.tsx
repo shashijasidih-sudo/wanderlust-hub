@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-night-market-1.jpg";
 
 const BlogIndianFoodInPhuket = () => (
@@ -97,6 +98,7 @@ const BlogIndianFoodInPhuket = () => (
       { title: "Is Phuket Safe for Indian Tourists?", link: "/thailand/phuket/destination-guides/indian-audience/phuket-safety-for-indians" },
       { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000" },
     ]}
+      internalLinks={getPhuketInternalLinks("")}
   />
 );
 export default BlogIndianFoodInPhuket;

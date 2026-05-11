@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/city-phuket.jpg";
 
 const BlogPhuketTripFromIndia = () => (
@@ -122,6 +123,7 @@ const BlogPhuketTripFromIndia = () => (
       { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket" },
       { title: "5 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary" },
     ]}
+      internalLinks={getPhuketInternalLinks("")}
   />
 );
 export default BlogPhuketTripFromIndia;

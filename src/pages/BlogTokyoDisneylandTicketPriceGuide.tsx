@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getJapanInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/japan-disneyland-1.jpg";
 
 const BlogTokyoDisneylandTicketPriceGuide = () => (
@@ -118,6 +119,7 @@ const BlogTokyoDisneylandTicketPriceGuide = () => (
       { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide" },
       { title: "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Tips", link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" },
     ]}
+      internalLinks={getJapanInternalLinks("")}
   />
 );
 

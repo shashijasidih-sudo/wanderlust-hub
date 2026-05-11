@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-island-viewpoint-1.jpg";
 
 const BlogPhuketTourPackagePriceComparison = () => (
@@ -101,6 +102,7 @@ const BlogPhuketTourPackagePriceComparison = () => (
       { title: "5 Days Phuket Itinerary with Phi Phi & James Bond", link: "/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary" },
       { title: "Phuket Honeymoon Itinerary (4–5 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary" },
     ]}
+      internalLinks={getPhuketInternalLinks("")}
   />
 );
 

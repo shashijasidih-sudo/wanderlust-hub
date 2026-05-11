@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-kayaks-beach-1.jpg";
 
 const BlogPhuketBudgetTrip50000 = () => (
@@ -108,6 +109,7 @@ const BlogPhuketBudgetTrip50000 = () => (
       { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket" },
       { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" },
     ]}
+      internalLinks={getPhuketInternalLinks("")}
   />
 );
 export default BlogPhuketBudgetTrip50000;
