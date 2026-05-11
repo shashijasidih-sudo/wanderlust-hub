@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/dolphin-show-1.jpg";
 
 const BlogPhuketDolphinVsSafariWorld = () => (
@@ -44,6 +45,7 @@ const BlogPhuketDolphinVsSafariWorld = () => (
       { title: "Bangkok vs Phuket First Trip", link: "/thailand/bangkok/destination-guides/comparison/bangkok-vs-phuket" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/comparison/phuket-dolphin-show-vs-safari-world-bangkok")}
   />
 );
 export default BlogPhuketDolphinVsSafariWorld;

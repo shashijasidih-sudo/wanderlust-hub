@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-night-market-1.jpg";
 
 const BlogPhuketFoodCostGuide = () => (
@@ -83,6 +84,7 @@ const BlogPhuketFoodCostGuide = () => (
       { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000" },
       { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" },
     ]}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/price-cost/phuket-food-cost-guide")}
   />
 );
 

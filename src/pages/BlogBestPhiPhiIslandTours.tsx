@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-speedboat-1.jpg";
 
 const BlogBestPhiPhiIslandTours = () => (
@@ -49,6 +50,7 @@ const BlogBestPhiPhiIslandTours = () => (
       { title: "James Bond vs Phi Phi", link: "/thailand/phuket/destination-guides/comparison/james-bond-island-vs-phi-phi-island" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours")}
   />
 );
 export default BlogBestPhiPhiIslandTours;

@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/city-phuket.jpg";
 
 const BlogPhuketTripCostFromIndia = () => (
@@ -93,6 +94,7 @@ const BlogPhuketTripCostFromIndia = () => (
       { title: "4 Days Phuket Itinerary (2026)", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" },
       { title: "Phuket vs Krabi for Indian Travelers", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians" },
     ]}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/price-cost/phuket-trip-cost-from-india")}
   />
 );
 

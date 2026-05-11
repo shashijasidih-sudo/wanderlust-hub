@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/james-bond-island-hero.jpg";
 
 const BlogJamesBondIslandTour = () => (
@@ -54,6 +55,7 @@ const BlogJamesBondIslandTour = () => (
       { title: "Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/activity/james-bond-island-tour-guide")}
   />
 );
 export default BlogJamesBondIslandTour;

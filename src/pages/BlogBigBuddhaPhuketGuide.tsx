@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-island-viewpoint-1.jpg";
 
 const BlogBigBuddhaPhuketGuide = () => (
@@ -48,6 +49,7 @@ const BlogBigBuddhaPhuketGuide = () => (
       { title: "Phuket Private vs Group Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-private-vs-group-tour" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/activity/big-buddha-phuket-guide")}
   />
 );
 export default BlogBigBuddhaPhuketGuide;

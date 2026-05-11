@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getJapanInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/japan-tokyo-city-1.jpg";
 
 const BlogTokyoCityTourGuide = () => (
@@ -112,6 +113,7 @@ const BlogTokyoCityTourGuide = () => (
       { title: "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Tips", link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" },
       { title: "Kyoto Temple Tour Guide: Fushimi Inari & Golden Pavilion", link: "/japan/destination-guides/activity/kyoto-temple-tour-guide" },
     ]}
+      internalLinks={getJapanInternalLinks("/japan/destination-guides/activity/tokyo-city-tour-guide")}
   />
 );
 

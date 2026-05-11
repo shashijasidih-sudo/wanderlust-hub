@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phi-phi-1.jpg";
 
 const BlogPhuket4DaysItinerary = () => (
@@ -53,6 +54,7 @@ const BlogPhuket4DaysItinerary = () => (
       { title: "Phuket City Tour Guide", link: "/thailand/phuket/destination-guides/activity/phuket-city-tour-guide" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary")}
   />
 );
 

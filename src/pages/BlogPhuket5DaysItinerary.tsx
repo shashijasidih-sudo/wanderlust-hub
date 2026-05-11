@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/james-bond-island-hero.jpg";
 
 const BlogPhuket5DaysItinerary = () => (
@@ -55,6 +56,7 @@ const BlogPhuket5DaysItinerary = () => (
       { title: "James Bond vs Phi Phi", link: "/thailand/phuket/destination-guides/comparison/james-bond-island-vs-phi-phi-island" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary")}
   />
 );
 

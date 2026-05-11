@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-phi-phi-harbour-1.jpg";
 
 const BlogPhiPhiTourForIndians = () => (
@@ -102,6 +103,7 @@ const BlogPhiPhiTourForIndians = () => (
       { title: "Phi Phi Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat" },
       { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket" },
     ]}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/indian-audience/phi-phi-tour-for-indians")}
   />
 );
 export default BlogPhiPhiTourForIndians;

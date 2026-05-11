@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getJapanInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/japan-tokyo-city-1.jpg";
 
 const BlogJapanTripCostFromIndia = () => (
@@ -139,6 +140,7 @@ const BlogJapanTripCostFromIndia = () => (
       { title: "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Tips", link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" },
       { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide" },
     ]}
+      internalLinks={getJapanInternalLinks("/japan/destination-guides/price-cost/japan-trip-cost-from-india")}
   />
 );
 

@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-big-boat-1.jpg";
 
 const BlogCheapestPhiPhiTourFromPhuket = () => (
@@ -138,6 +139,7 @@ const BlogCheapestPhiPhiTourFromPhuket = () => (
       { title: "Phuket Budget Trip Under ₹50,000 (Indian Travelers)", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000" },
       { title: "4 Days Phuket Itinerary (2026)", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" },
     ]}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/price-cost/cheapest-phi-phi-tour-from-phuket")}
   />
 );
 

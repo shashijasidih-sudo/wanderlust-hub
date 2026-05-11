@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/krabi-longtail-boats-1.jpg";
 
 const BlogPhuketKrabiComboItinerary = () => (
@@ -61,6 +62,7 @@ const BlogPhuketKrabiComboItinerary = () => (
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
       { title: "Explore All Krabi Tours", link: "/thailand/krabi" },
     ]}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary")}
   />
 );
 

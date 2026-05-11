@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-longtail-boats-beach-1.jpg";
 
 const BlogPhuketHotelPriceGuide = () => (
@@ -91,6 +92,7 @@ const BlogPhuketHotelPriceGuide = () => (
       { title: "Phuket Honeymoon for Indian Couples", link: "/thailand/phuket/destination-guides/indian-audience/phuket-honeymoon-for-indian-couples" },
       { title: "Phuket Luxury Itinerary (5–6 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-luxury-itinerary" },
     ]}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/price-cost/phuket-hotel-price-guide")}
   />
 );
 

@@ -1,4 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/dolphin-show-1.jpg";
 
 const BlogDolphinShowPhuket = () => (
@@ -43,6 +44,7 @@ const BlogDolphinShowPhuket = () => (
       { title: "Phuket City vs Island Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-city-tour-vs-island-tour" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/activity/dolphin-show-phuket")}
   />
 );
 export default BlogDolphinShowPhuket;
