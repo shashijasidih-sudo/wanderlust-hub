@@ -49,6 +49,15 @@ interface ComparisonItem {
   link?: string;
 }
 
+interface InternalLinkItem { title: string; link: string; image?: string }
+interface InternalLinks {
+  activities: InternalLinkItem[];
+  itineraries: InternalLinkItem[];
+  transfers: InternalLinkItem[];
+  more: InternalLinkItem[];
+  pillar: { title: string; link: string };
+}
+
 interface BlogArticleProps {
   title: string;
   description: string;
@@ -67,6 +76,7 @@ interface BlogArticleProps {
   guidesLabel?: string;
   subCategory?: SubCategory;
   comparisonItems?: ComparisonItem[];
+  internalLinks?: InternalLinks;
   children?: React.ReactNode;
 }
 
@@ -75,7 +85,7 @@ const BlogArticleLayout = ({
   readTime, category, keywords, sections, relatedLinks,
   relatedActivities, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
-  subCategory, comparisonItems,
+  subCategory, comparisonItems, internalLinks,
   children,
 }: BlogArticleProps) => {
   const handleShare = () => {
