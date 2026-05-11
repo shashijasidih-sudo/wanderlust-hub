@@ -465,6 +465,66 @@ const BlogArticleLayout = ({
                 </div>
               );
             })()}
+
+            {/* Internal Links — mandatory linking block */}
+            {internalLinks && (
+              <div className="mt-10 pt-8 border-t border-border space-y-8">
+                <h4 className="text-lg font-bold text-foreground">Continue Exploring</h4>
+
+                {internalLinks.activities.length > 0 && (
+                  <section>
+                    <h5 className="text-base font-semibold text-foreground mb-3">Top Activity Guides</h5>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
+                      {internalLinks.activities.map((l) => (
+                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {internalLinks.itineraries.length > 0 && (
+                  <section>
+                    <h5 className="text-base font-semibold text-foreground mb-3">Plan Your Itinerary</h5>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
+                      {internalLinks.itineraries.map((l) => (
+                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {internalLinks.transfers.length > 0 && (
+                  <section>
+                    <h5 className="text-base font-semibold text-foreground mb-3">Airport & City Transfers</h5>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
+                      {internalLinks.transfers.map((l) => (
+                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {internalLinks.more.length > 0 && (
+                  <section>
+                    <h5 className="text-base font-semibold text-foreground mb-3">More Reads</h5>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
+                      {internalLinks.more.map((l) => (
+                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                <div className="pt-2">
+                  <Link
+                    to={internalLinks.pillar.link}
+                    className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+                  >
+                    Visit the {internalLinks.pillar.title} →
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         </div>
         {children}
