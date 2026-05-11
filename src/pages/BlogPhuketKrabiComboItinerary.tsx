@@ -62,7 +62,7 @@ const BlogPhuketKrabiComboItinerary = () => (
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
       { title: "Explore All Krabi Tours", link: "/thailand/krabi" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary")}
   />
 );
 

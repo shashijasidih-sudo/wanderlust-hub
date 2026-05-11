@@ -58,7 +58,7 @@ const BlogPhuketHoneymoonItinerary = () => (
       { title: "Phuket vs Bali for Indians", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-bali" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary")}
   />
 );
 
