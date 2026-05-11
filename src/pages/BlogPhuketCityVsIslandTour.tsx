@@ -51,7 +51,7 @@ const BlogPhuketCityVsIslandTour = () => (
       { title: "Phuket Private vs Group Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-private-vs-group-tour" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/comparison/phuket-city-tour-vs-island-tour")}
   />
 );
 export default BlogPhuketCityVsIslandTour;

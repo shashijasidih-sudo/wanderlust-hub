@@ -109,7 +109,7 @@ const BlogBestPhuketTourPackagesForIndians = () => (
       { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000" },
       { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/indian-audience/best-phuket-tour-packages-for-indians")}
   />
 );
 export default BlogBestPhuketTourPackagesForIndians;

@@ -115,7 +115,7 @@ const BlogMountFujiDayTourFromTokyo = () => (
       { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide" },
       { title: "Kyoto Temple Tour Guide: Fushimi Inari & Golden Pavilion", link: "/japan/destination-guides/activity/kyoto-temple-tour-guide" },
     ]}
-      internalLinks={getJapanInternalLinks("")}
+      internalLinks={getJapanInternalLinks("/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo")}
   />
 );
 

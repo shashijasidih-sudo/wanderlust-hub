@@ -102,7 +102,7 @@ const BlogPhuketTourPackagePriceComparison = () => (
       { title: "5 Days Phuket Itinerary with Phi Phi & James Bond", link: "/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary" },
       { title: "Phuket Honeymoon Itinerary (4–5 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/price-cost/phuket-tour-package-price-comparison")}
   />
 );
 

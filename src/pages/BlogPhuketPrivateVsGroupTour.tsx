@@ -52,7 +52,7 @@ const BlogPhuketPrivateVsGroupTour = () => (
       { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/comparison/phuket-private-vs-group-tour")}
   />
 );
 export default BlogPhuketPrivateVsGroupTour;

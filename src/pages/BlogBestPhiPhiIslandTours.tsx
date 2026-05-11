@@ -50,7 +50,7 @@ const BlogBestPhiPhiIslandTours = () => (
       { title: "James Bond vs Phi Phi", link: "/thailand/phuket/destination-guides/comparison/james-bond-island-vs-phi-phi-island" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours")}
   />
 );
 export default BlogBestPhiPhiIslandTours;

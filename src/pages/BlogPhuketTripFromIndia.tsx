@@ -123,7 +123,7 @@ const BlogPhuketTripFromIndia = () => (
       { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket" },
       { title: "5 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india")}
   />
 );
 export default BlogPhuketTripFromIndia;

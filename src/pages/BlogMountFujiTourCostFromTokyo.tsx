@@ -129,7 +129,7 @@ const BlogMountFujiTourCostFromTokyo = () => (
       { title: "Tokyo Disneyland Ticket Price Guide: Latest Costs & Tips", link: "/japan/destination-guides/price-cost/tokyo-disneyland-ticket-price-guide" },
       { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide" },
     ]}
-      internalLinks={getJapanInternalLinks("")}
+      internalLinks={getJapanInternalLinks("/japan/destination-guides/price-cost/mount-fuji-tour-cost-from-tokyo")}
   />
 );
 

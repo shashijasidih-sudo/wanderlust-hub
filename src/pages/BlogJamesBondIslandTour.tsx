@@ -55,7 +55,7 @@ const BlogJamesBondIslandTour = () => (
       { title: "Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/activity/james-bond-island-tour-guide")}
   />
 );
 export default BlogJamesBondIslandTour;

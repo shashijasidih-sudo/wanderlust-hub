@@ -92,7 +92,7 @@ const BlogPhuketHotelPriceGuide = () => (
       { title: "Phuket Honeymoon for Indian Couples", link: "/thailand/phuket/destination-guides/indian-audience/phuket-honeymoon-for-indian-couples" },
       { title: "Phuket Luxury Itinerary (5–6 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-luxury-itinerary" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/price-cost/phuket-hotel-price-guide")}
   />
 );
 

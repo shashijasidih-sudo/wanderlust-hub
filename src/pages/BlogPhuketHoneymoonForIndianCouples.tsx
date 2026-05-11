@@ -119,7 +119,7 @@ const BlogPhuketHoneymoonForIndianCouples = () => (
       { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india" },
       { title: "Best Phuket Tour Packages for Indians", link: "/thailand/phuket/destination-guides/indian-audience/best-phuket-tour-packages-for-indians" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/indian-audience/phuket-honeymoon-for-indian-couples")}
   />
 );
 export default BlogPhuketHoneymoonForIndianCouples;

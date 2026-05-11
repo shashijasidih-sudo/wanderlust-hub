@@ -44,7 +44,7 @@ const BlogSharedVsPrivateAirportTransferPhuket = () => (
       { title: "Phuket vs Krabi for Indians", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/comparison/shared-vs-private-airport-transfer-phuket")}
   />
 );
 export default BlogSharedVsPrivateAirportTransferPhuket;

@@ -130,7 +130,7 @@ const BlogPhuketSafetyForIndians = () => (
       { title: "Phuket Airport to Patong Transfer", link: "/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong" },
       { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/indian-audience/phuket-safety-for-indians")}
   />
 );
 export default BlogPhuketSafetyForIndians;

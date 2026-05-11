@@ -163,7 +163,7 @@ const BlogPhuketAirportToPatongTransfer = () => (
       { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
     ]}
-      internalLinks={getPhuketInternalLinks("")}
+      internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong")}
   />
 );
 
