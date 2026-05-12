@@ -2,6 +2,9 @@ import imgItin4Days from "@/assets/krabi-longtail-boats-1.jpg";
 import imgItin5Days from "@/assets/krabi-boat-tour-1.jpg";
 import imgItin3Days from "@/assets/krabi-island-viewpoint-1.jpg";
 import imgItinHoneymoon from "@/assets/krabi-beach-woman-1.jpg";
+import imgIndPackages from "@/assets/krabi-tour-boat-1.jpg";
+import imgIndFood from "@/assets/city-krabi.jpg";
+import imgIndHoneymoon from "@/assets/krabi-sailboat-1.jpg";
 
 export type KrabiBlogCategory =
   | "activity"
@@ -67,6 +70,24 @@ export const krabiBlogs: KrabiBlogEntry[] = [
     description: "Romantic 5-day Krabi honeymoon — Railay, 4 Island Tour, Phi Phi, sunset cruise, spa and budget in INR for Indian couples.",
     category: "itinerary", image: imgItinHoneymoon, date: "May 9, 2026", readTime: "11 min read",
     link: "/thailand/krabi/destination-guides/itinerary/krabi-honeymoon-itinerary",
+  },
+  {
+    title: "Best Krabi Packages for Indian Couples (2026 Guide)",
+    description: "Compare Krabi tour packages for Indian couples in 2026 — budget, mid-range, honeymoon and luxury options with INR pricing, inclusions and smart booking tips.",
+    category: "indian-audience", image: imgIndPackages, date: "May 12, 2026", readTime: "10 min read",
+    link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples",
+  },
+  {
+    title: "Indian Restaurants in Krabi: Where to Eat Vegetarian Food (2026 Guide)",
+    description: "Best Indian, vegetarian and Jain food spots in Krabi for 2026 — restaurants in Ao Nang, prices in INR, breakfast options and smart food tips for Indian travelers.",
+    category: "indian-audience", image: imgIndFood, date: "May 12, 2026", readTime: "9 min read",
+    link: "/thailand/krabi/destination-guides/indian-audience/indian-restaurants-in-krabi",
+  },
+  {
+    title: "Krabi Honeymoon Guide for Indian Couples (2026)",
+    description: "Complete Krabi honeymoon guide for Indian couples in 2026 — best areas to stay, romantic experiences, ideal itinerary, INR budget and smart tips.",
+    category: "indian-audience", image: imgIndHoneymoon, date: "May 12, 2026", readTime: "11 min read",
+    link: "/thailand/krabi/destination-guides/indian-audience/krabi-honeymoon-guide-for-indian-couples",
   },
 ];
 
