@@ -400,6 +400,9 @@ import BlogKrabi4DaysItinerary from "./pages/BlogKrabi4DaysItinerary";
 import BlogKrabi5DaysItinerary from "./pages/BlogKrabi5DaysItinerary";
 import BlogKrabi3DaysItinerary from "./pages/BlogKrabi3DaysItinerary";
 import BlogKrabiHoneymoonItinerary from "./pages/BlogKrabiHoneymoonItinerary";
+import BlogBestKrabiPackagesForIndianCouples from "./pages/BlogBestKrabiPackagesForIndianCouples";
+import BlogIndianRestaurantsInKrabi from "./pages/BlogIndianRestaurantsInKrabi";
+import BlogKrabiHoneymoonGuideForIndianCouples from "./pages/BlogKrabiHoneymoonGuideForIndianCouples";
 
 
 const queryClient = new QueryClient();
@@ -475,6 +478,9 @@ const App = () => (
             <Route path="/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary" element={<BlogKrabi5DaysItinerary />} />
             <Route path="/thailand/krabi/destination-guides/itinerary/krabi-3-days-itinerary" element={<BlogKrabi3DaysItinerary />} />
             <Route path="/thailand/krabi/destination-guides/itinerary/krabi-honeymoon-itinerary" element={<BlogKrabiHoneymoonItinerary />} />
+            <Route path="/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples" element={<BlogBestKrabiPackagesForIndianCouples />} />
+            <Route path="/thailand/krabi/destination-guides/indian-audience/indian-restaurants-in-krabi" element={<BlogIndianRestaurantsInKrabi />} />
+            <Route path="/thailand/krabi/destination-guides/indian-audience/krabi-honeymoon-guide-for-indian-couples" element={<BlogKrabiHoneymoonGuideForIndianCouples />} />
             <Route path="/japan/destination-guides" element={<JapanDestinationGuides />} />
             <Route path="/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" element={<BlogMountFujiDayTourFromTokyo />} />
             <Route path="/japan/destination-guides/activity/tokyo-city-tour-guide" element={<BlogTokyoCityTourGuide />} />
