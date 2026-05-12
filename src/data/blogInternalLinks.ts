@@ -1,5 +1,6 @@
 import { phuketBlogs } from "./phuketDestinationGuides";
 import { japanBlogs } from "./japanDestinationGuides";
+import { krabiBlogs } from "./krabiDestinationGuides";
 
 export interface InternalLink {
   title: string;
@@ -116,5 +117,51 @@ export const getJapanInternalLinks = (currentLink: string): InternalLinkSet => {
     transfers,
     more,
     pillar: { title: "Japan Smart Guides Hub", link: "/japan/destination-guides" },
+  };
+};
+
+// Krabi has only itinerary blogs at launch — fall back to Phuket cross-links
+// for activity, transfer and comparison categories so the linking rule is satisfied.
+const KRABI_ACTIVITY_FALLBACKS: InternalLink[] = [
+  { title: "Best Phi Phi Island Tours from Phuket (also reachable from Krabi)",
+    link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours" },
+  { title: "Maya Bay Tour Guide: Rules, Best Time & What to Expect",
+    link: "/thailand/phuket/destination-guides/activity/maya-bay-tour-guide" },
+  { title: "James Bond Island Tour: Complete Experience Guide",
+    link: "/thailand/phuket/destination-guides/activity/james-bond-island-tour-guide" },
+  { title: "Snorkeling Guide: Best Spots, Tours & Cost",
+    link: "/thailand/phuket/destination-guides/activity/snorkeling-in-phuket-guide" },
+];
+
+const KRABI_TRANSFER_FALLBACKS: InternalLink[] = [
+  { title: "Krabi Airport Transfers: Pickup, Drop & Routes (2026)",
+    link: "/thailand/krabi/budget-airport-transfers" },
+  { title: "Phuket to Krabi: Best Routes, Cost & Travel Time",
+    link: "/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong" },
+];
+
+const KRABI_MORE_FALLBACKS: InternalLink[] = [
+  { title: "Phuket vs Krabi: Which Is Better for Indian Travelers?",
+    link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians" },
+  { title: "Phuket + Krabi Combo Itinerary: 6–7 Days Plan",
+    link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary" },
+  { title: "James Bond Island vs Phi Phi Island Tour",
+    link: "/thailand/phuket/destination-guides/comparison/james-bond-island-vs-phi-phi-island" },
+  { title: "Phi Phi Speedboat vs Big Boat: Which to Pick?",
+    link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat" },
+];
+
+export const getKrabiInternalLinks = (currentLink: string): InternalLinkSet => {
+  const others = krabiBlogs.filter((b) => b.link !== currentLink);
+  const itineraries = pickN(others.filter((b) => b.category === "itinerary"), 2, currentLink + "-it").map(toLink);
+  const activities = KRABI_ACTIVITY_FALLBACKS;
+  const transfers = KRABI_TRANSFER_FALLBACKS;
+  const more = KRABI_MORE_FALLBACKS;
+  return {
+    activities,
+    itineraries,
+    transfers,
+    more,
+    pillar: { title: "Krabi Destination Guides Hub", link: "/thailand/krabi/destination-guides" },
   };
 };
