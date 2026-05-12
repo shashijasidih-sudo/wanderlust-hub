@@ -395,6 +395,11 @@ import BlogPhuketTripCostFromIndia from "./pages/BlogPhuketTripCostFromIndia";
 import BlogPhuketHotelPriceGuide from "./pages/BlogPhuketHotelPriceGuide";
 import BlogPhuketFoodCostGuide from "./pages/BlogPhuketFoodCostGuide";
 import BlogPhuketTourPackagePriceComparison from "./pages/BlogPhuketTourPackagePriceComparison";
+import KrabiDestinationGuides from "./pages/KrabiDestinationGuides";
+import BlogKrabi4DaysItinerary from "./pages/BlogKrabi4DaysItinerary";
+import BlogKrabi5DaysItinerary from "./pages/BlogKrabi5DaysItinerary";
+import BlogKrabi3DaysItinerary from "./pages/BlogKrabi3DaysItinerary";
+import BlogKrabiHoneymoonItinerary from "./pages/BlogKrabiHoneymoonItinerary";
 
 
 const queryClient = new QueryClient();
@@ -465,6 +470,11 @@ const App = () => (
             <Route path="/thailand/phuket/destination-guides/price-cost/phuket-hotel-price-guide" element={<BlogPhuketHotelPriceGuide />} />
             <Route path="/thailand/phuket/destination-guides/price-cost/phuket-food-cost-guide" element={<BlogPhuketFoodCostGuide />} />
             <Route path="/thailand/phuket/destination-guides/price-cost/phuket-tour-package-price-comparison" element={<BlogPhuketTourPackagePriceComparison />} />
+            <Route path="/thailand/krabi/destination-guides" element={<KrabiDestinationGuides />} />
+            <Route path="/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary" element={<BlogKrabi4DaysItinerary />} />
+            <Route path="/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary" element={<BlogKrabi5DaysItinerary />} />
+            <Route path="/thailand/krabi/destination-guides/itinerary/krabi-3-days-itinerary" element={<BlogKrabi3DaysItinerary />} />
+            <Route path="/thailand/krabi/destination-guides/itinerary/krabi-honeymoon-itinerary" element={<BlogKrabiHoneymoonItinerary />} />
             <Route path="/japan/destination-guides" element={<JapanDestinationGuides />} />
             <Route path="/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" element={<BlogMountFujiDayTourFromTokyo />} />
             <Route path="/japan/destination-guides/activity/tokyo-city-tour-guide" element={<BlogTokyoCityTourGuide />} />

@@ -183,6 +183,10 @@ const ThailandSmartGuides = () => {
                     navigate("/thailand/phuket/destination-guides");
                     return;
                   }
+                  if (c.key === "krabi") {
+                    navigate("/thailand/krabi/destination-guides");
+                    return;
+                  }
                   setActiveCity(c.key);
                 }}
               >
