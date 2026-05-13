@@ -91,6 +91,18 @@ export const krabiBlogs: KrabiBlogEntry[] = [
     category: "indian-audience", image: imgIndHoneymoon, date: "May 12, 2026", readTime: "11 min read",
     link: "/thailand/krabi/destination-guides/indian-audience/krabi-honeymoon-guide-for-indian-couples",
   },
+  {
+    title: "Is 4 Island Tour in Krabi Worth It in 2026? (Complete Guide)",
+    description: "Honest 2026 verdict on the Krabi 4 Island Tour — what's included, pros & cons, longtail vs speedboat, INR cost breakdown and who should (and shouldn't) book it.",
+    category: "micro", image: imgMicro4Island, date: "May 13, 2026", readTime: "9 min read",
+    link: "/thailand/krabi/destination-guides/micro/is-4-island-tour-krabi-worth-it",
+  },
+  {
+    title: "Best Time for Island Hopping in Krabi (Month-wise Guide 2026)",
+    description: "Month-by-month Krabi island hopping guide for 2026 — best months for calm seas, snorkeling visibility, lower prices and which months to avoid for boat tours.",
+    category: "micro", image: imgMicroIslandHopping, date: "May 13, 2026", readTime: "10 min read",
+    link: "/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi",
+  },
 ];
 
 export const getKrabiBlogsByCategory = (category: KrabiBlogCategory) =>
