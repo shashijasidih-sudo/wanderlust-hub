@@ -5,6 +5,8 @@ import imgItinHoneymoon from "@/assets/krabi-beach-woman-1.jpg";
 import imgIndPackages from "@/assets/krabi-tour-boat-1.jpg";
 import imgIndFood from "@/assets/city-krabi.jpg";
 import imgIndHoneymoon from "@/assets/krabi-sailboat-1.jpg";
+import imgMicro4Island from "@/assets/krabi-longtail-boats-1.jpg";
+import imgMicroIslandHopping from "@/assets/krabi-boat-tour-1.jpg";
 
 export type KrabiBlogCategory =
   | "activity"
