@@ -403,6 +403,8 @@ import BlogKrabiHoneymoonItinerary from "./pages/BlogKrabiHoneymoonItinerary";
 import BlogBestKrabiPackagesForIndianCouples from "./pages/BlogBestKrabiPackagesForIndianCouples";
 import BlogIndianRestaurantsInKrabi from "./pages/BlogIndianRestaurantsInKrabi";
 import BlogKrabiHoneymoonGuideForIndianCouples from "./pages/BlogKrabiHoneymoonGuideForIndianCouples";
+import BlogIs4IslandTourKrabiWorthIt from "./pages/BlogIs4IslandTourKrabiWorthIt";
+import BlogBestTimeForIslandHoppingInKrabi from "./pages/BlogBestTimeForIslandHoppingInKrabi";
 
 
 const queryClient = new QueryClient();
