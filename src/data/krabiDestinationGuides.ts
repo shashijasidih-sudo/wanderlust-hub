@@ -5,6 +5,8 @@ import imgItinHoneymoon from "@/assets/krabi-beach-woman-1.jpg";
 import imgIndPackages from "@/assets/krabi-tour-boat-1.jpg";
 import imgIndFood from "@/assets/city-krabi.jpg";
 import imgIndHoneymoon from "@/assets/krabi-sailboat-1.jpg";
+import imgMicro4Island from "@/assets/krabi-longtail-boats-1.jpg";
+import imgMicroIslandHopping from "@/assets/krabi-boat-tour-1.jpg";
 
 export type KrabiBlogCategory =
   | "activity"
@@ -88,6 +90,18 @@ export const krabiBlogs: KrabiBlogEntry[] = [
     description: "Complete Krabi honeymoon guide for Indian couples in 2026 — best areas to stay, romantic experiences, ideal itinerary, INR budget and smart tips.",
     category: "indian-audience", image: imgIndHoneymoon, date: "May 12, 2026", readTime: "11 min read",
     link: "/thailand/krabi/destination-guides/indian-audience/krabi-honeymoon-guide-for-indian-couples",
+  },
+  {
+    title: "Is 4 Island Tour in Krabi Worth It in 2026? (Complete Guide)",
+    description: "Honest 2026 verdict on the Krabi 4 Island Tour — what's included, pros & cons, longtail vs speedboat, INR cost breakdown and who should (and shouldn't) book it.",
+    category: "micro", image: imgMicro4Island, date: "May 13, 2026", readTime: "9 min read",
+    link: "/thailand/krabi/destination-guides/micro/is-4-island-tour-krabi-worth-it",
+  },
+  {
+    title: "Best Time for Island Hopping in Krabi (Month-wise Guide 2026)",
+    description: "Month-by-month Krabi island hopping guide for 2026 — best months for calm seas, snorkeling visibility, lower prices and which months to avoid for boat tours.",
+    category: "micro", image: imgMicroIslandHopping, date: "May 13, 2026", readTime: "10 min read",
+    link: "/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi",
   },
 ];
 
