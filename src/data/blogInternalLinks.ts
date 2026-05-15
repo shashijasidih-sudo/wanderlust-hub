@@ -134,10 +134,10 @@ const KRABI_ACTIVITY_FALLBACKS: InternalLink[] = [
 ];
 
 const KRABI_TRANSFER_FALLBACKS: InternalLink[] = [
-  { title: "Krabi Airport Transfers: Pickup, Drop & Routes (2026)",
-    link: "/thailand/krabi/budget-airport-transfers" },
-  { title: "Phuket to Krabi: Best Routes, Cost & Travel Time",
-    link: "/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong" },
+  { title: "Krabi Airport to Ao Nang Transfer Guide",
+    link: "/thailand/krabi/destination-guides/transfer/krabi-airport-to-ao-nang-transfer-guide" },
+  { title: "Phuket to Krabi Transfer Guide (Bus, Ferry, Taxi)",
+    link: "/thailand/krabi/destination-guides/transfer/phuket-to-krabi-transfer-guide" },
 ];
 
 const KRABI_MORE_FALLBACKS: InternalLink[] = [
@@ -155,7 +155,8 @@ export const getKrabiInternalLinks = (currentLink: string): InternalLinkSet => {
   const others = krabiBlogs.filter((b) => b.link !== currentLink);
   const itineraries = pickN(others.filter((b) => b.category === "itinerary"), 2, currentLink + "-it").map(toLink);
   const activities = KRABI_ACTIVITY_FALLBACKS;
-  const transfers = KRABI_TRANSFER_FALLBACKS;
+  const realTransfers = pickN(others.filter((b) => b.category === "transfer"), 2, currentLink + "-tr").map(toLink);
+  const transfers = realTransfers.length === 2 ? realTransfers : [...realTransfers, ...KRABI_TRANSFER_FALLBACKS].slice(0, 2);
   const more = KRABI_MORE_FALLBACKS;
   return {
     activities,

@@ -405,6 +405,10 @@ import BlogIndianRestaurantsInKrabi from "./pages/BlogIndianRestaurantsInKrabi";
 import BlogKrabiHoneymoonGuideForIndianCouples from "./pages/BlogKrabiHoneymoonGuideForIndianCouples";
 import BlogIs4IslandTourKrabiWorthIt from "./pages/BlogIs4IslandTourKrabiWorthIt";
 import BlogBestTimeForIslandHoppingInKrabi from "./pages/BlogBestTimeForIslandHoppingInKrabi";
+import BlogKrabiAirportToAoNangTransfer from "./pages/BlogKrabiAirportToAoNangTransfer";
+import BlogPhuketToKrabiTransferGuide from "./pages/BlogPhuketToKrabiTransferGuide";
+import BlogKrabiToPhiPhiFerryVsSpeedboat from "./pages/BlogKrabiToPhiPhiFerryVsSpeedboat";
+import BlogKrabiSpeedboatVsFerry from "./pages/BlogKrabiSpeedboatVsFerry";
 
 
 const queryClient = new QueryClient();
@@ -484,7 +488,11 @@ const App = () => (
             <Route path="/thailand/krabi/destination-guides/indian-audience/indian-restaurants-in-krabi" element={<BlogIndianRestaurantsInKrabi />} />
             <Route path="/thailand/krabi/destination-guides/indian-audience/krabi-honeymoon-guide-for-indian-couples" element={<BlogKrabiHoneymoonGuideForIndianCouples />} />
             <Route path="/thailand/krabi/destination-guides/micro/is-4-island-tour-krabi-worth-it" element={<BlogIs4IslandTourKrabiWorthIt />} />
-            <Route path="/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi" element={<BlogBestTimeForIslandHoppingInKrabi />} />
+           <Route path="/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi" element={<BlogBestTimeForIslandHoppingInKrabi />} />
+           <Route path="/thailand/krabi/destination-guides/transfer/krabi-airport-to-ao-nang-transfer-guide" element={<BlogKrabiAirportToAoNangTransfer />} />
+           <Route path="/thailand/krabi/destination-guides/transfer/phuket-to-krabi-transfer-guide" element={<BlogPhuketToKrabiTransferGuide />} />
+           <Route path="/thailand/krabi/destination-guides/transfer/krabi-to-phi-phi-ferry-vs-speedboat" element={<BlogKrabiToPhiPhiFerryVsSpeedboat />} />
+           <Route path="/thailand/krabi/destination-guides/transfer/krabi-speedboat-vs-ferry-which-is-faster" element={<BlogKrabiSpeedboatVsFerry />} />
             <Route path="/japan/destination-guides" element={<JapanDestinationGuides />} />
             <Route path="/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" element={<BlogMountFujiDayTourFromTokyo />} />
             <Route path="/japan/destination-guides/activity/tokyo-city-tour-guide" element={<BlogTokyoCityTourGuide />} />
