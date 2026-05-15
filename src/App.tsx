@@ -405,6 +405,10 @@ import BlogIndianRestaurantsInKrabi from "./pages/BlogIndianRestaurantsInKrabi";
 import BlogKrabiHoneymoonGuideForIndianCouples from "./pages/BlogKrabiHoneymoonGuideForIndianCouples";
 import BlogIs4IslandTourKrabiWorthIt from "./pages/BlogIs4IslandTourKrabiWorthIt";
 import BlogBestTimeForIslandHoppingInKrabi from "./pages/BlogBestTimeForIslandHoppingInKrabi";
+import BlogKrabiAirportToAoNangTransfer from "./pages/BlogKrabiAirportToAoNangTransfer";
+import BlogPhuketToKrabiTransferGuide from "./pages/BlogPhuketToKrabiTransferGuide";
+import BlogKrabiToPhiPhiFerryVsSpeedboat from "./pages/BlogKrabiToPhiPhiFerryVsSpeedboat";
+import BlogKrabiSpeedboatVsFerry from "./pages/BlogKrabiSpeedboatVsFerry";
 
 
 const queryClient = new QueryClient();
