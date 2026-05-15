@@ -7,6 +7,10 @@ import imgIndFood from "@/assets/city-krabi.jpg";
 import imgIndHoneymoon from "@/assets/krabi-sailboat-1.jpg";
 import imgMicro4Island from "@/assets/krabi-longtail-boats-1.jpg";
 import imgMicroIslandHopping from "@/assets/krabi-boat-tour-1.jpg";
+import imgTrAoNang from "@/assets/krabi-tour-boat-1.jpg";
+import imgTrPhuketKrabi from "@/assets/krabi-speedboat-1.jpg";
+import imgTrPhiPhi from "@/assets/phi-phi-boat.jpeg";
+import imgTrSpeedboatFerry from "@/assets/phuket-speedboat-1.jpg";
 
 export type KrabiBlogCategory =
   | "activity"
@@ -102,6 +106,30 @@ export const krabiBlogs: KrabiBlogEntry[] = [
     description: "Month-by-month Krabi island hopping guide for 2026 — best months for calm seas, snorkeling visibility, lower prices and which months to avoid for boat tours.",
     category: "micro", image: imgMicroIslandHopping, date: "May 13, 2026", readTime: "10 min read",
     link: "/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi",
+  },
+  {
+    title: "Krabi Airport to Ao Nang Transfer Guide (Taxi, Shuttle, Cost — 2026)",
+    description: "Complete 2026 guide to getting from Krabi Airport to Ao Nang — shared shuttle, private taxi and hotel transfer options with INR cost, travel time and pro tips.",
+    category: "transfer", image: imgTrAoNang, date: "May 14, 2026", readTime: "9 min read",
+    link: "/thailand/krabi/destination-guides/transfer/krabi-airport-to-ao-nang-transfer-guide",
+  },
+  {
+    title: "Phuket to Krabi Transfer Guide (Bus, Ferry, Taxi — 2026)",
+    description: "Compare bus, ferry and private taxi from Phuket to Krabi — INR cost, travel time, comfort and the best pick for Indian travelers in 2026.",
+    category: "transfer", image: imgTrPhuketKrabi, date: "May 14, 2026", readTime: "10 min read",
+    link: "/thailand/krabi/destination-guides/transfer/phuket-to-krabi-transfer-guide",
+  },
+  {
+    title: "Krabi to Phi Phi Transfer: Ferry vs Speedboat (2026 Guide)",
+    description: "Krabi to Phi Phi ferry vs speedboat — cost in INR, travel time, comfort, timings and tips to pick the right transfer in 2026.",
+    category: "transfer", image: imgTrPhiPhi, date: "May 14, 2026", readTime: "9 min read",
+    link: "/thailand/krabi/destination-guides/transfer/krabi-to-phi-phi-ferry-vs-speedboat",
+  },
+  {
+    title: "Krabi Speedboat Transfers vs Ferry: Which is Faster? (2026 Guide)",
+    description: "Krabi speedboat vs ferry compared — speed, INR cost, comfort and which transfer to pick for Phi Phi, Hong Island and other 2026 day tours.",
+    category: "transfer", image: imgTrSpeedboatFerry, date: "May 14, 2026", readTime: "8 min read",
+    link: "/thailand/krabi/destination-guides/transfer/krabi-speedboat-vs-ferry-which-is-faster",
   },
 ];
 

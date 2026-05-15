@@ -134,10 +134,10 @@ const KRABI_ACTIVITY_FALLBACKS: InternalLink[] = [
 ];
 
 const KRABI_TRANSFER_FALLBACKS: InternalLink[] = [
-  { title: "Krabi Airport Transfers: Pickup, Drop & Routes (2026)",
-    link: "/thailand/krabi/budget-airport-transfers" },
-  { title: "Phuket to Krabi: Best Routes, Cost & Travel Time",
-    link: "/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong" },
+  { title: "Krabi Airport to Ao Nang Transfer Guide",
+    link: "/thailand/krabi/destination-guides/transfer/krabi-airport-to-ao-nang-transfer-guide" },
+  { title: "Phuket to Krabi Transfer Guide (Bus, Ferry, Taxi)",
+    link: "/thailand/krabi/destination-guides/transfer/phuket-to-krabi-transfer-guide" },
 ];
 
 const KRABI_MORE_FALLBACKS: InternalLink[] = [
