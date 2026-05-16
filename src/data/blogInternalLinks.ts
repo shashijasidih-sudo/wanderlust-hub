@@ -157,7 +157,12 @@ export const getKrabiInternalLinks = (currentLink: string): InternalLinkSet => {
   const activities = KRABI_ACTIVITY_FALLBACKS;
   const realTransfers = pickN(others.filter((b) => b.category === "transfer"), 2, currentLink + "-tr").map(toLink);
   const transfers = realTransfers.length === 2 ? realTransfers : [...realTransfers, ...KRABI_TRANSFER_FALLBACKS].slice(0, 2);
-  const more = KRABI_MORE_FALLBACKS;
+  const realMore = pickN(
+    others.filter((b) => ["comparison", "indian-audience", "micro"].includes(b.category)),
+    4,
+    currentLink + "-more",
+  ).map(toLink);
+  const more = realMore.length === 4 ? realMore : [...realMore, ...KRABI_MORE_FALLBACKS].slice(0, 4);
   return {
     activities,
     itineraries,
