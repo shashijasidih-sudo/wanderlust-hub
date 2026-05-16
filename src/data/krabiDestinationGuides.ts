@@ -135,6 +135,30 @@ export const krabiBlogs: KrabiBlogEntry[] = [
     category: "transfer", image: imgTrSpeedboatFerry, date: "May 14, 2026", readTime: "8 min read",
     link: "/thailand/krabi/destination-guides/transfer/krabi-speedboat-vs-ferry-which-is-faster",
   },
+  {
+    title: "Krabi vs Phuket: Which is Better for Indian Travelers? (2026 Guide)",
+    description: "Krabi vs Phuket compared for Indian travelers in 2026 — cost in INR, beaches, nightlife, food, transport, safety and which to pick for honeymoon, family or friends.",
+    category: "comparison", image: imgCmpKrabiPhuket, date: "May 15, 2026", readTime: "11 min read",
+    link: "/thailand/krabi/destination-guides/comparison/krabi-vs-phuket-for-indian-travelers",
+  },
+  {
+    title: "4 Island Tour vs Hong Island Tour Krabi: Which is Better? (2026)",
+    description: "Krabi 4 Island Tour vs Hong Island Tour compared — beauty, crowd, cost in INR, activities and which to pick for first-time travelers, couples and families in 2026.",
+    category: "comparison", image: imgCmp4IslandHong, date: "May 15, 2026", readTime: "10 min read",
+    link: "/thailand/krabi/destination-guides/comparison/4-island-vs-hong-island-tour-krabi",
+  },
+  {
+    title: "Krabi vs Phi Phi Stay: Where Should You Stay? (2026 Guide)",
+    description: "Krabi vs Phi Phi stay compared for 2026 — cost in INR, beaches, nightlife, food, activities and the best plan for Indian couples, families and first-time travelers.",
+    category: "comparison", image: imgCmpKrabiPhiPhi, date: "May 15, 2026", readTime: "10 min read",
+    link: "/thailand/krabi/destination-guides/comparison/krabi-vs-phi-phi-where-to-stay",
+  },
+  {
+    title: "Longtail Boat vs Speedboat in Krabi: Which to Choose? (2026)",
+    description: "Krabi longtail boat vs speedboat compared — speed, comfort, INR cost, safety and which boat to pick for 4 Island Tour, Hong Island and Phi Phi trips in 2026.",
+    category: "comparison", image: imgCmpLongtailSpeedboat, date: "May 15, 2026", readTime: "9 min read",
+    link: "/thailand/krabi/destination-guides/comparison/longtail-vs-speedboat-in-krabi",
+  },
 ];
 
 export const getKrabiBlogsByCategory = (category: KrabiBlogCategory) =>
