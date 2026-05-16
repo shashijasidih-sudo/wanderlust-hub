@@ -11,6 +11,10 @@ import imgTrAoNang from "@/assets/krabi-tour-boat-1.jpg";
 import imgTrPhuketKrabi from "@/assets/krabi-speedboat-1.jpg";
 import imgTrPhiPhi from "@/assets/phi-phi-boat.jpeg";
 import imgTrSpeedboatFerry from "@/assets/phuket-speedboat-1.jpg";
+import imgCmpKrabiPhuket from "@/assets/krabi-island-viewpoint-1.jpg";
+import imgCmp4IslandHong from "@/assets/krabi-boat-tour-1.jpg";
+import imgCmpKrabiPhiPhi from "@/assets/krabi-sailboat-1.jpg";
+import imgCmpLongtailSpeedboat from "@/assets/krabi-longtail-boats-1.jpg";
 
 export type KrabiBlogCategory =
   | "activity"

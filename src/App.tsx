@@ -409,6 +409,10 @@ import BlogKrabiAirportToAoNangTransfer from "./pages/BlogKrabiAirportToAoNangTr
 import BlogPhuketToKrabiTransferGuide from "./pages/BlogPhuketToKrabiTransferGuide";
 import BlogKrabiToPhiPhiFerryVsSpeedboat from "./pages/BlogKrabiToPhiPhiFerryVsSpeedboat";
 import BlogKrabiSpeedboatVsFerry from "./pages/BlogKrabiSpeedboatVsFerry";
+import BlogKrabiVsPhuketForIndianTravelers from "./pages/BlogKrabiVsPhuketForIndianTravelers";
+import Blog4IslandVsHongIslandTour from "./pages/Blog4IslandVsHongIslandTour";
+import BlogKrabiVsPhiPhiWhereToStay from "./pages/BlogKrabiVsPhiPhiWhereToStay";
+import BlogLongtailVsSpeedboatKrabi from "./pages/BlogLongtailVsSpeedboatKrabi";
 
 
 const queryClient = new QueryClient();
@@ -492,7 +496,11 @@ const App = () => (
            <Route path="/thailand/krabi/destination-guides/transfer/krabi-airport-to-ao-nang-transfer-guide" element={<BlogKrabiAirportToAoNangTransfer />} />
            <Route path="/thailand/krabi/destination-guides/transfer/phuket-to-krabi-transfer-guide" element={<BlogPhuketToKrabiTransferGuide />} />
            <Route path="/thailand/krabi/destination-guides/transfer/krabi-to-phi-phi-ferry-vs-speedboat" element={<BlogKrabiToPhiPhiFerryVsSpeedboat />} />
-           <Route path="/thailand/krabi/destination-guides/transfer/krabi-speedboat-vs-ferry-which-is-faster" element={<BlogKrabiSpeedboatVsFerry />} />
+          <Route path="/thailand/krabi/destination-guides/transfer/krabi-speedboat-vs-ferry-which-is-faster" element={<BlogKrabiSpeedboatVsFerry />} />
+          <Route path="/thailand/krabi/destination-guides/comparison/krabi-vs-phuket-for-indian-travelers" element={<BlogKrabiVsPhuketForIndianTravelers />} />
+          <Route path="/thailand/krabi/destination-guides/comparison/4-island-vs-hong-island-tour-krabi" element={<Blog4IslandVsHongIslandTour />} />
+          <Route path="/thailand/krabi/destination-guides/comparison/krabi-vs-phi-phi-where-to-stay" element={<BlogKrabiVsPhiPhiWhereToStay />} />
+          <Route path="/thailand/krabi/destination-guides/comparison/longtail-vs-speedboat-in-krabi" element={<BlogLongtailVsSpeedboatKrabi />} />
             <Route path="/japan/destination-guides" element={<JapanDestinationGuides />} />
             <Route path="/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" element={<BlogMountFujiDayTourFromTokyo />} />
             <Route path="/japan/destination-guides/activity/tokyo-city-tour-guide" element={<BlogTokyoCityTourGuide />} />
