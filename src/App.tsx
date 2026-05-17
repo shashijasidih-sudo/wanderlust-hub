@@ -508,6 +508,13 @@ const App = () => (
           <Route path="/thailand/krabi/destination-guides/comparison/4-island-vs-hong-island-tour-krabi" element={<Blog4IslandVsHongIslandTour />} />
           <Route path="/thailand/krabi/destination-guides/comparison/krabi-vs-phi-phi-where-to-stay" element={<BlogKrabiVsPhiPhiWhereToStay />} />
           <Route path="/thailand/krabi/destination-guides/comparison/longtail-vs-speedboat-in-krabi" element={<BlogLongtailVsSpeedboatKrabi />} />
+          <Route path="/thailand/krabi/destination-guides/activity/15-best-things-to-do-in-krabi" element={<BlogKrabi15BestThingsToDo />} />
+          <Route path="/thailand/krabi/destination-guides/activity/4-island-tour-krabi-guide" element={<BlogKrabi4IslandTourGuide />} />
+          <Route path="/thailand/krabi/destination-guides/activity/phi-phi-island-tour-from-krabi" element={<BlogPhiPhiIslandTourFromKrabi />} />
+          <Route path="/thailand/krabi/destination-guides/activity/hong-island-tour-krabi" element={<BlogHongIslandTourKrabi />} />
+          <Route path="/thailand/krabi/destination-guides/activity/krabi-emerald-pool-hot-springs-guide" element={<BlogKrabiEmeraldPoolHotSprings />} />
+          <Route path="/thailand/krabi/destination-guides/activity/krabi-night-markets-guide" element={<BlogKrabiNightMarketsGuide />} />
+          <Route path="/thailand/krabi/destination-guides/activity/kayaking-in-ao-thalane-krabi" element={<BlogKayakingAoThalaneKrabi />} />
             <Route path="/japan/destination-guides" element={<JapanDestinationGuides />} />
             <Route path="/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" element={<BlogMountFujiDayTourFromTokyo />} />
             <Route path="/japan/destination-guides/activity/tokyo-city-tour-guide" element={<BlogTokyoCityTourGuide />} />
