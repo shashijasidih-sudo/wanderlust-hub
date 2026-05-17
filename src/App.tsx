@@ -413,6 +413,13 @@ import BlogKrabiVsPhuketForIndianTravelers from "./pages/BlogKrabiVsPhuketForInd
 import Blog4IslandVsHongIslandTour from "./pages/Blog4IslandVsHongIslandTour";
 import BlogKrabiVsPhiPhiWhereToStay from "./pages/BlogKrabiVsPhiPhiWhereToStay";
 import BlogLongtailVsSpeedboatKrabi from "./pages/BlogLongtailVsSpeedboatKrabi";
+import BlogKrabi15BestThingsToDo from "./pages/BlogKrabi15BestThingsToDo";
+import BlogKrabi4IslandTourGuide from "./pages/BlogKrabi4IslandTourGuide";
+import BlogPhiPhiIslandTourFromKrabi from "./pages/BlogPhiPhiIslandTourFromKrabi";
+import BlogHongIslandTourKrabi from "./pages/BlogHongIslandTourKrabi";
+import BlogKrabiEmeraldPoolHotSprings from "./pages/BlogKrabiEmeraldPoolHotSprings";
+import BlogKrabiNightMarketsGuide from "./pages/BlogKrabiNightMarketsGuide";
+import BlogKayakingAoThalaneKrabi from "./pages/BlogKayakingAoThalaneKrabi";
 
 
 const queryClient = new QueryClient();
