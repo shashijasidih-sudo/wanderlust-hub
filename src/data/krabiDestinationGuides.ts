@@ -15,6 +15,13 @@ import imgCmpKrabiPhuket from "@/assets/krabi-island-viewpoint-1.jpg";
 import imgCmp4IslandHong from "@/assets/krabi-boat-tour-1.jpg";
 import imgCmpKrabiPhiPhi from "@/assets/krabi-sailboat-1.jpg";
 import imgCmpLongtailSpeedboat from "@/assets/krabi-longtail-boats-1.jpg";
+import imgAct15Things from "@/assets/krabi-island-viewpoint-1.jpg";
+import imgAct4Island from "@/assets/krabi-longtail-boats-1.jpg";
+import imgActPhiPhi from "@/assets/phi-phi-boat.jpeg";
+import imgActHongIsland from "@/assets/krabi-boat-tour-1.jpg";
+import imgActEmeraldPool from "@/assets/hot-spring-emerald-hero.jpg";
+import imgActNightMarkets from "@/assets/krabi-temple-woman-1.jpg";
+import imgActKayaking from "@/assets/krabi-kayaks-beach-1.jpg";
 
 export type KrabiBlogCategory =
   | "activity"
@@ -158,6 +165,48 @@ export const krabiBlogs: KrabiBlogEntry[] = [
     description: "Krabi longtail boat vs speedboat compared — speed, comfort, INR cost, safety and which boat to pick for 4 Island Tour, Hong Island and Phi Phi trips in 2026.",
     category: "comparison", image: imgCmpLongtailSpeedboat, date: "May 15, 2026", readTime: "9 min read",
     link: "/thailand/krabi/destination-guides/comparison/longtail-vs-speedboat-in-krabi",
+  },
+  {
+    title: "15 Best Things to Do in Krabi for First-Time Travelers (2026 Guide)",
+    description: "From the 4 Island Tour and Phi Phi to Hong Lagoon, Railay and Tiger Cave Temple — 15 best Krabi experiences for first-time Indian travelers in 2026 with INR tips.",
+    category: "activity", image: imgAct15Things, date: "May 16, 2026", readTime: "11 min read",
+    link: "/thailand/krabi/destination-guides/activity/15-best-things-to-do-in-krabi",
+  },
+  {
+    title: "4 Island Tour Krabi Guide: What to Expect + Hidden Tips (2026)",
+    description: "Complete 2026 guide to the Krabi 4 Island Tour — Phra Nang, Chicken, Tup and Poda Island, longtail vs speedboat, INR cost, inclusions and insider tips.",
+    category: "activity", image: imgAct4Island, date: "May 16, 2026", readTime: "10 min read",
+    link: "/thailand/krabi/destination-guides/activity/4-island-tour-krabi-guide",
+  },
+  {
+    title: "Phi Phi Island Tour from Krabi: Full Day Experience Explained (2026 Guide)",
+    description: "Full day Phi Phi Island tour from Krabi — Maya Bay, Pileh Lagoon, Viking Cave, speedboat vs ferry, INR cost, itinerary and insider tips for 2026.",
+    category: "activity", image: imgActPhiPhi, date: "May 16, 2026", readTime: "11 min read",
+    link: "/thailand/krabi/destination-guides/activity/phi-phi-island-tour-from-krabi",
+  },
+  {
+    title: "Hong Island Tour Krabi: Why It's the Most Beautiful Lagoon in Thailand (2026 Guide)",
+    description: "Hong Island Tour from Krabi — emerald lagoon, viewpoint hike, Lading and Pakbia Island, longtail vs speedboat, INR cost and 2026 itinerary tips.",
+    category: "activity", image: imgActHongIsland, date: "May 16, 2026", readTime: "10 min read",
+    link: "/thailand/krabi/destination-guides/activity/hong-island-tour-krabi",
+  },
+  {
+    title: "Krabi Emerald Pool & Hot Springs Guide: Worth Visiting in 2026?",
+    description: "Krabi Emerald Pool & Hot Springs guide — Khao Phra Bang Khram trails, Tiger Cave Temple combo, entry fees in INR and whether it's worth visiting in 2026.",
+    category: "activity", image: imgActEmeraldPool, date: "May 16, 2026", readTime: "9 min read",
+    link: "/thailand/krabi/destination-guides/activity/krabi-emerald-pool-hot-springs-guide",
+  },
+  {
+    title: "Krabi Night Markets Guide: Food, Shopping & Timings (2026)",
+    description: "Best Krabi night markets in 2026 — Krabi Town Weekend Market, Ao Nang Night Market, Landmark Market, top street foods, prices in INR and timing tips.",
+    category: "activity", image: imgActNightMarkets, date: "May 16, 2026", readTime: "9 min read",
+    link: "/thailand/krabi/destination-guides/activity/krabi-night-markets-guide",
+  },
+  {
+    title: "Kayaking in Ao Thalane Krabi: Mangrove Adventure Guide (2026)",
+    description: "Kayaking in Ao Thalane Krabi — mangrove forests, limestone canyons, hidden lagoons, half-day vs full-day vs sunset tours, INR cost and 2026 tips.",
+    category: "activity", image: imgActKayaking, date: "May 16, 2026", readTime: "9 min read",
+    link: "/thailand/krabi/destination-guides/activity/kayaking-in-ao-thalane-krabi",
   },
 ];
 
