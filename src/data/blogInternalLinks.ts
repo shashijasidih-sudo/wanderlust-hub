@@ -154,7 +154,8 @@ const KRABI_MORE_FALLBACKS: InternalLink[] = [
 export const getKrabiInternalLinks = (currentLink: string): InternalLinkSet => {
   const others = krabiBlogs.filter((b) => b.link !== currentLink);
   const itineraries = pickN(others.filter((b) => b.category === "itinerary"), 2, currentLink + "-it").map(toLink);
-  const activities = KRABI_ACTIVITY_FALLBACKS;
+  const realActivities = pickN(others.filter((b) => b.category === "activity"), 4, currentLink + "-act").map(toLink);
+  const activities = realActivities.length === 4 ? realActivities : [...realActivities, ...KRABI_ACTIVITY_FALLBACKS].slice(0, 4);
   const realTransfers = pickN(others.filter((b) => b.category === "transfer"), 2, currentLink + "-tr").map(toLink);
   const transfers = realTransfers.length === 2 ? realTransfers : [...realTransfers, ...KRABI_TRANSFER_FALLBACKS].slice(0, 2);
   const realMore = pickN(
