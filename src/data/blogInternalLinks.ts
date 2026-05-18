@@ -1,6 +1,7 @@
 import { phuketBlogs } from "./phuketDestinationGuides";
 import { japanBlogs } from "./japanDestinationGuides";
 import { krabiBlogs } from "./krabiDestinationGuides";
+import { singaporeBlogs } from "./singaporeDestinationGuides";
 
 export interface InternalLink {
   title: string;
