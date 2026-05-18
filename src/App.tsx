@@ -198,6 +198,16 @@ import BlogDubaiMarinaCruise from "./pages/BlogDubaiMarinaCruise";
 import BlogBurjKhalifaTickets from "./pages/BlogBurjKhalifaTickets";
 import BlogBestDubaiActivities from "./pages/BlogBestDubaiActivities";
 import SingaporeSmartGuides from "./pages/SingaporeSmartGuides";
+import BlogSingaporeCityTourSharedTransfer from "./pages/BlogSingaporeCityTourSharedTransfer";
+import BlogNightSafariSingaporeGuide from "./pages/BlogNightSafariSingaporeGuide";
+import BlogSentosa4DAdventurelandGuide from "./pages/BlogSentosa4DAdventurelandGuide";
+import BlogSentosaCableCarMountFaberLine from "./pages/BlogSentosaCableCarMountFaberLine";
+import BlogWingsOfTimeSingaporeShow from "./pages/BlogWingsOfTimeSingaporeShow";
+import BlogSingaporeRiverCruiseGuide from "./pages/BlogSingaporeRiverCruiseGuide";
+import BlogGardensByTheBayGuide from "./pages/BlogGardensByTheBayGuide";
+import BlogSingaporeFlyerObservationWheel from "./pages/BlogSingaporeFlyerObservationWheel";
+import BlogUniversalStudiosSingaporeGuide from "./pages/BlogUniversalStudiosSingaporeGuide";
+import BlogBigBusSingaporeHopOnHopOff from "./pages/BlogBigBusSingaporeHopOnHopOff";
 import BlogSingaporeAirportTransfer from "./pages/BlogSingaporeAirportTransfer";
 import BlogSentosaActivities from "./pages/BlogSentosaActivities";
 import BlogBestSingaporeAttractions from "./pages/BlogBestSingaporeAttractions";
@@ -879,6 +889,16 @@ const App = () => (
             <Route path="/dubai/airport-dropoff-zone5" element={<DubaiAirportDropoffZone5 />} />
           {/* Singapore routes */}
             <Route path="/singapore/destination-guides" element={<SingaporeSmartGuides />} />
+            <Route path="/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer" element={<BlogSingaporeCityTourSharedTransfer />} />
+            <Route path="/singapore/destination-guides/activity/night-safari-singapore-guide" element={<BlogNightSafariSingaporeGuide />} />
+            <Route path="/singapore/destination-guides/activity/sentosa-4d-adventureland-guide" element={<BlogSentosa4DAdventurelandGuide />} />
+            <Route path="/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line" element={<BlogSentosaCableCarMountFaberLine />} />
+            <Route path="/singapore/destination-guides/activity/wings-of-time-singapore-show" element={<BlogWingsOfTimeSingaporeShow />} />
+            <Route path="/singapore/destination-guides/activity/singapore-river-cruise-guide" element={<BlogSingaporeRiverCruiseGuide />} />
+            <Route path="/singapore/destination-guides/activity/gardens-by-the-bay-guide" element={<BlogGardensByTheBayGuide />} />
+            <Route path="/singapore/destination-guides/activity/singapore-flyer-observation-wheel" element={<BlogSingaporeFlyerObservationWheel />} />
+            <Route path="/singapore/destination-guides/activity/universal-studios-singapore-guide" element={<BlogUniversalStudiosSingaporeGuide />} />
+            <Route path="/singapore/destination-guides/activity/big-bus-singapore-hop-on-hop-off" element={<BlogBigBusSingaporeHopOnHopOff />} />
             <Route path="/blog/airport-transfer-booking-singapore" element={<BlogSingaporeAirportTransfer />} />
             <Route path="/blog/sentosa-activities-singapore" element={<BlogSentosaActivities />} />
             <Route path="/blog/singapore-combo-pass" element={<BlogSingaporeComboPass />} />
