@@ -1,6 +1,7 @@
 import { phuketBlogs } from "./phuketDestinationGuides";
 import { japanBlogs } from "./japanDestinationGuides";
 import { krabiBlogs } from "./krabiDestinationGuides";
+import { singaporeBlogs } from "./singaporeDestinationGuides";
 
 export interface InternalLink {
   title: string;
@@ -170,5 +171,58 @@ export const getKrabiInternalLinks = (currentLink: string): InternalLinkSet => {
     transfers,
     more,
     pillar: { title: "Krabi Destination Guides Hub", link: "/thailand/krabi/destination-guides" },
+  };
+};
+
+// Singapore — only activity blogs at launch. Use Singapore activity cross-links
+// for itineraries/transfers/more fallbacks so the linking rule is satisfied.
+const SINGAPORE_ITINERARY_FALLBACKS: InternalLink[] = [
+  { title: "Singapore City Tour with Guide & Shared Transfer Itinerary",
+    link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer" },
+  { title: "Big Bus Singapore Hop-On Hop-Off Experience — Routes & Tips",
+    link: "/singapore/destination-guides/activity/big-bus-singapore-hop-on-hop-off" },
+];
+
+const SINGAPORE_TRANSFER_FALLBACKS: InternalLink[] = [
+  { title: "Singapore Airport Transfer Booking Guide",
+    link: "/blog/airport-transfer-booking-singapore" },
+  { title: "Sentosa Cable Car Ride Guide (Mount Faber Line)",
+    link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line" },
+];
+
+const SINGAPORE_MORE_FALLBACKS: InternalLink[] = [
+  { title: "Best Sentosa Activities for First-Time Visitors",
+    link: "/blog/sentosa-activities-singapore" },
+  { title: "Singapore Combo Pass: Is It Worth It?",
+    link: "/blog/singapore-combo-pass" },
+  { title: "Top Singapore Food Experiences for Indian Travelers",
+    link: "/blog/singapore-food-experiences" },
+  { title: "Top Things to Do in Singapore", link: "/singapore/things-to-do" },
+];
+
+export const getSingaporeInternalLinks = (currentLink: string): InternalLinkSet => {
+  const others = singaporeBlogs.filter((b) => b.link !== currentLink);
+  const realActivities = pickN(others.filter((b) => b.category === "activity"), 4, currentLink + "-act").map(toLink);
+  const activities = realActivities.slice(0, 4);
+  const realItineraries = pickN(others.filter((b) => b.category === "itinerary"), 2, currentLink + "-it").map(toLink);
+  const itineraries = realItineraries.length === 2 ? realItineraries : [...realItineraries, ...SINGAPORE_ITINERARY_FALLBACKS].slice(0, 2);
+  const transfers = SINGAPORE_TRANSFER_FALLBACKS;
+  const usedLinks = new Set([
+    ...activities.map((x) => x.link),
+    ...itineraries.map((x) => x.link),
+    ...transfers.map((x) => x.link),
+  ]);
+  const realMore = pickN(
+    others.filter((b) => !usedLinks.has(b.link) && ["comparison", "indian-audience"].includes(b.category)),
+    4,
+    currentLink + "-more",
+  ).map(toLink);
+  const more = realMore.length === 4 ? realMore : [...realMore, ...SINGAPORE_MORE_FALLBACKS].slice(0, 4);
+  return {
+    activities,
+    itineraries,
+    transfers,
+    more,
+    pillar: { title: "Singapore Smart Guides Hub", link: "/singapore/destination-guides" },
   };
 };
