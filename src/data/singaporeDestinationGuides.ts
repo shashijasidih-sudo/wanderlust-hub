@@ -10,6 +10,9 @@ import riverCruiseImg from "@/assets/singapore-river-cruise.jpg";
 import gardensBayImg from "@/assets/singapore-gardens-bay.jpg";
 import flyerImg from "@/assets/singapore-flyer.jpg";
 import bigBusImg from "@/assets/singapore-big-bus.jpg";
+import zooImg from "@/assets/singapore-zoo.jpg";
+import adventureCoveImg from "@/assets/singapore-adventure-cove.jpg";
+import flyerTwilightImg from "@/assets/singapore-flyer-twilight-1.jpg";
 
 export type SingaporeBlogCategory =
   | "indian-audience"
