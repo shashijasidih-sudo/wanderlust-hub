@@ -10,6 +10,9 @@ import riverCruiseImg from "@/assets/singapore-river-cruise.jpg";
 import gardensBayImg from "@/assets/singapore-gardens-bay.jpg";
 import flyerImg from "@/assets/singapore-flyer.jpg";
 import bigBusImg from "@/assets/singapore-big-bus.jpg";
+import zooImg from "@/assets/singapore-zoo.jpg";
+import adventureCoveImg from "@/assets/singapore-adventure-cove.jpg";
+import flyerTwilightImg from "@/assets/singapore-flyer-twilight-1.jpg";
 
 export type SingaporeBlogCategory =
   | "indian-audience"
@@ -114,6 +117,37 @@ export const singaporeBlogs: SingaporeBlogEntry[] = [
     description: "Big Bus Singapore hop-on hop-off guide — Red heritage route, Yellow city route, 24/48-hour passes and how to plan your stops efficiently.",
     category: "activity", image: bigBusImg, date: "May 18, 2026", readTime: "8 min read",
     link: `${ACT}/big-bus-singapore-hop-on-hop-off`,
+  },
+  // Comparison
+  {
+    title: "Night Safari vs Singapore Zoo vs River Wonders — Which Wildlife Experience Is Best?",
+    description: "Mandai showdown — Night Safari vs Singapore Zoo vs River Wonders compared on experience, animals, duration, INR cost and which one to pick.",
+    category: "comparison", image: zooImg, date: "May 19, 2026", readTime: "11 min read",
+    link: "/singapore/destination-guides/comparison/night-safari-vs-singapore-zoo-vs-river-wonders",
+  },
+  {
+    title: "Universal Studios vs Adventure Cove Waterpark — Which Is Better in Singapore?",
+    description: "USS vs Adventure Cove — rides, duration, weather, INR ticket cost and which Sentosa park to choose for thrill-seekers, families and couples.",
+    category: "comparison", image: adventureCoveImg, date: "May 19, 2026", readTime: "11 min read",
+    link: "/singapore/destination-guides/comparison/universal-studios-vs-adventure-cove-singapore",
+  },
+  {
+    title: "Singapore Flyer vs SkyHelix Sentosa — Which View Experience Is Better?",
+    description: "Singapore Flyer vs SkyHelix Sentosa — views, thrill, comfort, photos, INR ticket cost and the right pick for couples, families and first-timers.",
+    category: "comparison", image: flyerTwilightImg, date: "May 19, 2026", readTime: "10 min read",
+    link: "/singapore/destination-guides/comparison/singapore-flyer-vs-skyhelix-sentosa",
+  },
+  {
+    title: "Sentosa Cable Car vs Sentosa Express Monorail — Best Way to Reach Sentosa?",
+    description: "Cable Car vs Sentosa Express Monorail — travel time, cost in INR, comfort and which to pick for first-timers, families and budget travelers.",
+    category: "comparison", image: cableCarImg, date: "May 19, 2026", readTime: "10 min read",
+    link: "/singapore/destination-guides/comparison/sentosa-cable-car-vs-sentosa-monorail",
+  },
+  {
+    title: "Gardens by the Bay vs Singapore Botanic Gardens — Which Garden Should You Visit?",
+    description: "Gardens by the Bay vs UNESCO Singapore Botanic Gardens — concept, attractions, duration, INR cost and how to do both in one day.",
+    category: "comparison", image: gardensBayNightImg, date: "May 19, 2026", readTime: "10 min read",
+    link: "/singapore/destination-guides/comparison/gardens-by-the-bay-vs-singapore-botanic-gardens",
   },
 ];
 

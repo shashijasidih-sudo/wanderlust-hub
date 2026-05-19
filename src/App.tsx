@@ -208,6 +208,11 @@ import BlogGardensByTheBayGuide from "./pages/BlogGardensByTheBayGuide";
 import BlogSingaporeFlyerObservationWheel from "./pages/BlogSingaporeFlyerObservationWheel";
 import BlogUniversalStudiosSingaporeGuide from "./pages/BlogUniversalStudiosSingaporeGuide";
 import BlogBigBusSingaporeHopOnHopOff from "./pages/BlogBigBusSingaporeHopOnHopOff";
+import BlogNightSafariVsZooVsRiverWonders from "./pages/BlogNightSafariVsZooVsRiverWonders";
+import BlogUniversalStudiosVsAdventureCove from "./pages/BlogUniversalStudiosVsAdventureCove";
+import BlogSingaporeFlyerVsSkyHelix from "./pages/BlogSingaporeFlyerVsSkyHelix";
+import BlogSentosaCableCarVsMonorail from "./pages/BlogSentosaCableCarVsMonorail";
+import BlogGardensByTheBayVsBotanicGardens from "./pages/BlogGardensByTheBayVsBotanicGardens";
 import BlogSingaporeAirportTransfer from "./pages/BlogSingaporeAirportTransfer";
 import BlogSentosaActivities from "./pages/BlogSentosaActivities";
 import BlogBestSingaporeAttractions from "./pages/BlogBestSingaporeAttractions";
@@ -899,6 +904,11 @@ const App = () => (
             <Route path="/singapore/destination-guides/activity/singapore-flyer-observation-wheel" element={<BlogSingaporeFlyerObservationWheel />} />
             <Route path="/singapore/destination-guides/activity/universal-studios-singapore-guide" element={<BlogUniversalStudiosSingaporeGuide />} />
             <Route path="/singapore/destination-guides/activity/big-bus-singapore-hop-on-hop-off" element={<BlogBigBusSingaporeHopOnHopOff />} />
+            <Route path="/singapore/destination-guides/comparison/night-safari-vs-singapore-zoo-vs-river-wonders" element={<BlogNightSafariVsZooVsRiverWonders />} />
+            <Route path="/singapore/destination-guides/comparison/universal-studios-vs-adventure-cove-singapore" element={<BlogUniversalStudiosVsAdventureCove />} />
+            <Route path="/singapore/destination-guides/comparison/singapore-flyer-vs-skyhelix-sentosa" element={<BlogSingaporeFlyerVsSkyHelix />} />
+            <Route path="/singapore/destination-guides/comparison/sentosa-cable-car-vs-sentosa-monorail" element={<BlogSentosaCableCarVsMonorail />} />
+            <Route path="/singapore/destination-guides/comparison/gardens-by-the-bay-vs-singapore-botanic-gardens" element={<BlogGardensByTheBayVsBotanicGardens />} />
             <Route path="/blog/airport-transfer-booking-singapore" element={<BlogSingaporeAirportTransfer />} />
             <Route path="/blog/sentosa-activities-singapore" element={<BlogSentosaActivities />} />
             <Route path="/blog/singapore-combo-pass" element={<BlogSingaporeComboPass />} />
