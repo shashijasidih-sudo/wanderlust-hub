@@ -13,6 +13,10 @@ import bigBusImg from "@/assets/singapore-big-bus.jpg";
 import zooImg from "@/assets/singapore-zoo.jpg";
 import adventureCoveImg from "@/assets/singapore-adventure-cove.jpg";
 import flyerTwilightImg from "@/assets/singapore-flyer-twilight-1.jpg";
+import touristsCityImg from "@/assets/singapore-tourists-city-1.jpg";
+import marinaBayDayImg from "@/assets/singapore-marina-bay-sands-day-1.jpg";
+import cityscapeWomanImg from "@/assets/singapore-cityscape-woman-1.jpg";
+import merlionNightImg from "@/assets/singapore-merlion-night-1.jpg";
 
 export type SingaporeBlogCategory =
   | "indian-audience"
