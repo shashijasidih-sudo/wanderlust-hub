@@ -155,6 +155,32 @@ export const singaporeBlogs: SingaporeBlogEntry[] = [
     category: "comparison", image: gardensBayNightImg, date: "May 19, 2026", readTime: "10 min read",
     link: "/singapore/destination-guides/comparison/gardens-by-the-bay-vs-singapore-botanic-gardens",
   },
+  // Itinerary
+  {
+    title: "3 Days Singapore Itinerary with Universal Studios & Sentosa (2026)",
+    description: "Perfect 3-day Singapore itinerary — Marina Bay, Gardens by the Bay, Universal Studios, Sentosa Cable Car and Wings of Time with INR cost tips.",
+    category: "itinerary", image: universalImg, date: "May 20, 2026", readTime: "10 min read",
+    link: "/singapore/destination-guides/itinerary/singapore-3-days-itinerary-with-uss-sentosa",
+  },
+  {
+    title: "4 Days Singapore Itinerary with Night Safari & City Tour (2026)",
+    description: "Relaxed 4-day Singapore itinerary covering city tour, USS, Singapore Zoo, River Wonders, Night Safari and river cruise with INR cost tips.",
+    category: "itinerary", image: nightSafariImg, date: "May 20, 2026", readTime: "11 min read",
+    link: "/singapore/destination-guides/itinerary/singapore-4-days-itinerary-with-night-safari",
+  },
+  {
+    title: "5 Days Singapore Itinerary — Complete Plan with Sentosa, Mandai & City",
+    description: "Detailed 5-day Singapore itinerary — city tour, USS, Sentosa, Singapore Zoo, Night Safari, Gardens by the Bay and shopping with INR cost breakdown.",
+    category: "itinerary", image: marinaBayImg, date: "May 20, 2026", readTime: "12 min read",
+    link: "/singapore/destination-guides/itinerary/singapore-5-days-complete-itinerary",
+  },
+  {
+    title: "Singapore Honeymoon Itinerary (5 Days) — Romantic Plan for Couples",
+    description: "Romantic 5-day Singapore honeymoon — Marina Bay, Sentosa, sunset cable car, river cruise, Wings of Time with INR cost tips for Indian couples.",
+    category: "itinerary", image: coupleWalkingImg, date: "May 20, 2026", readTime: "11 min read",
+    link: "/singapore/destination-guides/itinerary/singapore-honeymoon-itinerary",
+  },
+
   // Indian Audience
   {
     title: "Singapore Trip Cost from India with Activities (2026 Complete Breakdown)",
