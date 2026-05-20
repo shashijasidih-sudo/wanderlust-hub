@@ -217,6 +217,10 @@ import BlogSingaporeTripCostFromIndia from "./pages/BlogSingaporeTripCostFromInd
 import BlogBestSingaporeAttractionsForIndianFamilies from "./pages/BlogBestSingaporeAttractionsForIndianFamilies";
 import BlogSingaporeVisaTourPlanningGuide from "./pages/BlogSingaporeVisaTourPlanningGuide";
 import BlogIsSingaporeExpensiveForIndianTravelers from "./pages/BlogIsSingaporeExpensiveForIndianTravelers";
+import BlogSingapore3DaysItinerary from "./pages/BlogSingapore3DaysItinerary";
+import BlogSingapore4DaysItinerary from "./pages/BlogSingapore4DaysItinerary";
+import BlogSingapore5DaysItinerary from "./pages/BlogSingapore5DaysItinerary";
+import BlogSingaporeHoneymoonItinerary from "./pages/BlogSingaporeHoneymoonItinerary";
 import BlogSingaporeAirportTransfer from "./pages/BlogSingaporeAirportTransfer";
 import BlogSentosaActivities from "./pages/BlogSentosaActivities";
 import BlogBestSingaporeAttractions from "./pages/BlogBestSingaporeAttractions";
