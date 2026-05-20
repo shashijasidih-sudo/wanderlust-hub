@@ -17,6 +17,8 @@ import touristsCityImg from "@/assets/singapore-tourists-city-1.jpg";
 import marinaBayDayImg from "@/assets/singapore-marina-bay-sands-day-1.jpg";
 import cityscapeWomanImg from "@/assets/singapore-cityscape-woman-1.jpg";
 import merlionNightImg from "@/assets/singapore-merlion-night-1.jpg";
+import coupleWalkingImg from "@/assets/singapore-couple-walking-1.jpg";
+
 
 export type SingaporeBlogCategory =
   | "indian-audience"
