@@ -217,6 +217,10 @@ import BlogSingaporeTripCostFromIndia from "./pages/BlogSingaporeTripCostFromInd
 import BlogBestSingaporeAttractionsForIndianFamilies from "./pages/BlogBestSingaporeAttractionsForIndianFamilies";
 import BlogSingaporeVisaTourPlanningGuide from "./pages/BlogSingaporeVisaTourPlanningGuide";
 import BlogIsSingaporeExpensiveForIndianTravelers from "./pages/BlogIsSingaporeExpensiveForIndianTravelers";
+import BlogSingapore3DaysItinerary from "./pages/BlogSingapore3DaysItinerary";
+import BlogSingapore4DaysItinerary from "./pages/BlogSingapore4DaysItinerary";
+import BlogSingapore5DaysItinerary from "./pages/BlogSingapore5DaysItinerary";
+import BlogSingaporeHoneymoonItinerary from "./pages/BlogSingaporeHoneymoonItinerary";
 import BlogSingaporeAirportTransfer from "./pages/BlogSingaporeAirportTransfer";
 import BlogSentosaActivities from "./pages/BlogSentosaActivities";
 import BlogBestSingaporeAttractions from "./pages/BlogBestSingaporeAttractions";
@@ -917,6 +921,10 @@ const App = () => (
             <Route path="/singapore/destination-guides/indian-audience/best-singapore-attractions-for-indian-families" element={<BlogBestSingaporeAttractionsForIndianFamilies />} />
             <Route path="/singapore/destination-guides/indian-audience/singapore-visa-and-tour-planning-guide-for-indians" element={<BlogSingaporeVisaTourPlanningGuide />} />
             <Route path="/singapore/destination-guides/indian-audience/is-singapore-expensive-for-indian-travelers" element={<BlogIsSingaporeExpensiveForIndianTravelers />} />
+            <Route path="/singapore/destination-guides/itinerary/singapore-3-days-itinerary-with-uss-sentosa" element={<BlogSingapore3DaysItinerary />} />
+            <Route path="/singapore/destination-guides/itinerary/singapore-4-days-itinerary-with-night-safari" element={<BlogSingapore4DaysItinerary />} />
+            <Route path="/singapore/destination-guides/itinerary/singapore-5-days-complete-itinerary" element={<BlogSingapore5DaysItinerary />} />
+            <Route path="/singapore/destination-guides/itinerary/singapore-honeymoon-itinerary" element={<BlogSingaporeHoneymoonItinerary />} />
             <Route path="/blog/airport-transfer-booking-singapore" element={<BlogSingaporeAirportTransfer />} />
             <Route path="/blog/sentosa-activities-singapore" element={<BlogSentosaActivities />} />
             <Route path="/blog/singapore-combo-pass" element={<BlogSingaporeComboPass />} />
