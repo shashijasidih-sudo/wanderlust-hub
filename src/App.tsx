@@ -213,6 +213,10 @@ import BlogUniversalStudiosVsAdventureCove from "./pages/BlogUniversalStudiosVsA
 import BlogSingaporeFlyerVsSkyHelix from "./pages/BlogSingaporeFlyerVsSkyHelix";
 import BlogSentosaCableCarVsMonorail from "./pages/BlogSentosaCableCarVsMonorail";
 import BlogGardensByTheBayVsBotanicGardens from "./pages/BlogGardensByTheBayVsBotanicGardens";
+import BlogSingaporeTripCostFromIndia from "./pages/BlogSingaporeTripCostFromIndia";
+import BlogBestSingaporeAttractionsForIndianFamilies from "./pages/BlogBestSingaporeAttractionsForIndianFamilies";
+import BlogSingaporeVisaTourPlanningGuide from "./pages/BlogSingaporeVisaTourPlanningGuide";
+import BlogIsSingaporeExpensiveForIndianTravelers from "./pages/BlogIsSingaporeExpensiveForIndianTravelers";
 import BlogSingaporeAirportTransfer from "./pages/BlogSingaporeAirportTransfer";
 import BlogSentosaActivities from "./pages/BlogSentosaActivities";
 import BlogBestSingaporeAttractions from "./pages/BlogBestSingaporeAttractions";
@@ -909,6 +913,10 @@ const App = () => (
             <Route path="/singapore/destination-guides/comparison/singapore-flyer-vs-skyhelix-sentosa" element={<BlogSingaporeFlyerVsSkyHelix />} />
             <Route path="/singapore/destination-guides/comparison/sentosa-cable-car-vs-sentosa-monorail" element={<BlogSentosaCableCarVsMonorail />} />
             <Route path="/singapore/destination-guides/comparison/gardens-by-the-bay-vs-singapore-botanic-gardens" element={<BlogGardensByTheBayVsBotanicGardens />} />
+            <Route path="/singapore/destination-guides/indian-audience/singapore-trip-cost-from-india-with-activities" element={<BlogSingaporeTripCostFromIndia />} />
+            <Route path="/singapore/destination-guides/indian-audience/best-singapore-attractions-for-indian-families" element={<BlogBestSingaporeAttractionsForIndianFamilies />} />
+            <Route path="/singapore/destination-guides/indian-audience/singapore-visa-and-tour-planning-guide-for-indians" element={<BlogSingaporeVisaTourPlanningGuide />} />
+            <Route path="/singapore/destination-guides/indian-audience/is-singapore-expensive-for-indian-travelers" element={<BlogIsSingaporeExpensiveForIndianTravelers />} />
             <Route path="/blog/airport-transfer-booking-singapore" element={<BlogSingaporeAirportTransfer />} />
             <Route path="/blog/sentosa-activities-singapore" element={<BlogSentosaActivities />} />
             <Route path="/blog/singapore-combo-pass" element={<BlogSingaporeComboPass />} />
