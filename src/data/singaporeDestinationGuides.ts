@@ -13,6 +13,10 @@ import bigBusImg from "@/assets/singapore-big-bus.jpg";
 import zooImg from "@/assets/singapore-zoo.jpg";
 import adventureCoveImg from "@/assets/singapore-adventure-cove.jpg";
 import flyerTwilightImg from "@/assets/singapore-flyer-twilight-1.jpg";
+import touristsCityImg from "@/assets/singapore-tourists-city-1.jpg";
+import marinaBayDayImg from "@/assets/singapore-marina-bay-sands-day-1.jpg";
+import cityscapeWomanImg from "@/assets/singapore-cityscape-woman-1.jpg";
+import merlionNightImg from "@/assets/singapore-merlion-night-1.jpg";
 
 export type SingaporeBlogCategory =
   | "indian-audience"
@@ -148,6 +152,31 @@ export const singaporeBlogs: SingaporeBlogEntry[] = [
     description: "Gardens by the Bay vs UNESCO Singapore Botanic Gardens — concept, attractions, duration, INR cost and how to do both in one day.",
     category: "comparison", image: gardensBayNightImg, date: "May 19, 2026", readTime: "10 min read",
     link: "/singapore/destination-guides/comparison/gardens-by-the-bay-vs-singapore-botanic-gardens",
+  },
+  // Indian Audience
+  {
+    title: "Singapore Trip Cost from India with Activities (2026 Complete Breakdown)",
+    description: "Realistic 2026 Singapore trip cost from India — flights, hotels, food, transfers and activities in INR, with budget, mid-range and luxury sample plans.",
+    category: "indian-audience", image: touristsCityImg, date: "May 20, 2026", readTime: "11 min read",
+    link: "/singapore/destination-guides/indian-audience/singapore-trip-cost-from-india-with-activities",
+  },
+  {
+    title: "Best Singapore Attractions for Indian Families (2026 Guide)",
+    description: "Top family-friendly Singapore attractions for Indian travelers — Universal Studios, Singapore Zoo, Night Safari, Sentosa, Cable Car and a 5-day plan.",
+    category: "indian-audience", image: marinaBayDayImg, date: "May 20, 2026", readTime: "11 min read",
+    link: "/singapore/destination-guides/indian-audience/best-singapore-attractions-for-indian-families",
+  },
+  {
+    title: "Singapore Visa + Tour Planning Guide for Indians (2026 Edition)",
+    description: "Singapore visa for Indians 2026 — documents, fees, processing, best time to visit, where to stay, sample 4-day plan and budget tips.",
+    category: "indian-audience", image: cityscapeWomanImg, date: "May 20, 2026", readTime: "12 min read",
+    link: "/singapore/destination-guides/indian-audience/singapore-visa-and-tour-planning-guide-for-indians",
+  },
+  {
+    title: "Is Singapore Expensive for Indian Travelers? (Complete 2026 Cost Breakdown)",
+    description: "Honest 2026 answer for Indians — category-wise cost breakdown, smart saving tips and budget vs mid-range vs luxury trip totals in INR.",
+    category: "indian-audience", image: merlionNightImg, date: "May 20, 2026", readTime: "12 min read",
+    link: "/singapore/destination-guides/indian-audience/is-singapore-expensive-for-indian-travelers",
   },
 ];
 
