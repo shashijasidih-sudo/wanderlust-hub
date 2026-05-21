@@ -56,6 +56,10 @@ interface InternalLinks {
   transfers: InternalLinkItem[];
   more: InternalLinkItem[];
   pillar: { title: string; link: string };
+  priceCost?: InternalLinkItem[];
+  comparisons?: InternalLinkItem[];
+  indianAudience?: InternalLinkItem[];
+  micro?: InternalLinkItem[];
 }
 
 interface BlogArticleProps {
