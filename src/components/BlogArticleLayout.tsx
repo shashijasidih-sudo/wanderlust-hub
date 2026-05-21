@@ -479,110 +479,59 @@ const BlogArticleLayout = ({
             })()}
 
             {/* Internal Links — mandatory linking block */}
-            {internalLinks && (
-              <div className="mt-10 pt-8 border-t border-border space-y-8">
-                <h4 className="text-lg font-bold text-foreground">Continue Exploring</h4>
+            {internalLinks && (() => {
+              const renderSection = (heading: string, items: InternalLinkItem[]) => (
+                <section>
+                  <h5 className="text-base font-semibold text-foreground mb-3">{heading}</h5>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                    {items.map((l) => (
+                      <li key={l.link}>
+                        <Link
+                          to={l.link}
+                          className="flex items-center gap-3 group rounded-lg hover:bg-muted/40 p-1.5 -m-1.5 transition-colors"
+                        >
+                          {l.image && (
+                            <img
+                              src={l.image}
+                              alt=""
+                              loading="lazy"
+                              className="w-16 h-16 rounded-md object-cover flex-shrink-0"
+                            />
+                          )}
+                          <span className="text-primary group-hover:underline line-clamp-2">
+                            {l.title}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              );
 
-                {internalLinks.activities.length > 0 && (
-                  <section>
-                    <h5 className="text-base font-semibold text-foreground mb-3">Top Activity Guides</h5>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
-                      {internalLinks.activities.map((l) => (
-                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
-                      ))}
-                    </ul>
-                  </section>
-                )}
+              return (
+                <div className="mt-10 pt-8 border-t border-border space-y-8">
+                  <h4 className="text-lg font-bold text-foreground">Continue Exploring</h4>
+                  {internalLinks.activities.length > 0 && renderSection("Top Activity Guides", internalLinks.activities)}
+                  {internalLinks.itineraries.length > 0 && renderSection("Plan Your Itinerary", internalLinks.itineraries)}
+                  {internalLinks.transfers.length > 0 && renderSection("Airport & City Transfers", internalLinks.transfers)}
+                  {internalLinks.priceCost && internalLinks.priceCost.length > 0 && renderSection("Price & Cost Guides", internalLinks.priceCost)}
+                  {internalLinks.comparisons && internalLinks.comparisons.length > 0 && renderSection("Comparisons", internalLinks.comparisons)}
+                  {internalLinks.indianAudience && internalLinks.indianAudience.length > 0 && renderSection("For Indian Travelers", internalLinks.indianAudience)}
+                  {internalLinks.micro && internalLinks.micro.length > 0 && renderSection("Micro Guides & Quick Tips", internalLinks.micro)}
+                  {internalLinks.more.length > 0 && renderSection("More Reads", internalLinks.more)}
 
-                {internalLinks.itineraries.length > 0 && (
-                  <section>
-                    <h5 className="text-base font-semibold text-foreground mb-3">Plan Your Itinerary</h5>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
-                      {internalLinks.itineraries.map((l) => (
-                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
-                      ))}
-                    </ul>
-                  </section>
-                )}
-
-                {internalLinks.transfers.length > 0 && (
-                  <section>
-                    <h5 className="text-base font-semibold text-foreground mb-3">Airport & City Transfers</h5>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
-                      {internalLinks.transfers.map((l) => (
-                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
-                      ))}
-                    </ul>
-                  </section>
-                )}
-
-
-                {internalLinks.priceCost && internalLinks.priceCost.length > 0 && (
-                  <section>
-                    <h5 className="text-base font-semibold text-foreground mb-3">Price & Cost Guides</h5>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
-                      {internalLinks.priceCost.map((l) => (
-                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
-                      ))}
-                    </ul>
-                  </section>
-                )}
-
-                {internalLinks.comparisons && internalLinks.comparisons.length > 0 && (
-                  <section>
-                    <h5 className="text-base font-semibold text-foreground mb-3">Comparisons</h5>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
-                      {internalLinks.comparisons.map((l) => (
-                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
-                      ))}
-                    </ul>
-                  </section>
-                )}
-
-                {internalLinks.indianAudience && internalLinks.indianAudience.length > 0 && (
-                  <section>
-                    <h5 className="text-base font-semibold text-foreground mb-3">For Indian Travelers</h5>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
-                      {internalLinks.indianAudience.map((l) => (
-                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
-                      ))}
-                    </ul>
-                  </section>
-                )}
-
-                {internalLinks.micro && internalLinks.micro.length > 0 && (
-                  <section>
-                    <h5 className="text-base font-semibold text-foreground mb-3">Micro Guides & Quick Tips</h5>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
-                      {internalLinks.micro.map((l) => (
-                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
-                      ))}
-                    </ul>
-                  </section>
-                )}
-
-
-                {internalLinks.more.length > 0 && (
-                  <section>
-                    <h5 className="text-base font-semibold text-foreground mb-3">More Reads</h5>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
-                      {internalLinks.more.map((l) => (
-                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
-                      ))}
-                    </ul>
-                  </section>
-                )}
-
-                <div className="pt-2">
-                  <Link
-                    to={internalLinks.pillar.link}
-                    className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
-                  >
-                    Visit the {internalLinks.pillar.title} →
-                  </Link>
+                  <div className="pt-2">
+                    <Link
+                      to={internalLinks.pillar.link}
+                      className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+                    >
+                      Visit the {internalLinks.pillar.title} →
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            )}
+              );
+            })()}
+
           </div>
         </div>
         {children}
