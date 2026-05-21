@@ -514,6 +514,8 @@ const BlogArticleLayout = ({
                       ))}
                     </ul>
                   </section>
+                )}
+
 
                 {internalLinks.priceCost && internalLinks.priceCost.length > 0 && (
                   <section>
