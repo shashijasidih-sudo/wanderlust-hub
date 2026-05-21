@@ -2,6 +2,7 @@ import { phuketBlogs } from "./phuketDestinationGuides";
 import { japanBlogs } from "./japanDestinationGuides";
 import { krabiBlogs } from "./krabiDestinationGuides";
 import { singaporeBlogs } from "./singaporeDestinationGuides";
+import { bangkokBlogs } from "./bangkokDestinationGuides";
 
 export interface InternalLink {
   title: string;
@@ -15,6 +16,11 @@ export interface InternalLinkSet {
   transfers: InternalLink[];
   more: InternalLink[];
   pillar: { title: string; link: string };
+  // Optional richer category buckets — used by Bangkok hub for full cross-linking
+  priceCost?: InternalLink[];
+  comparisons?: InternalLink[];
+  indianAudience?: InternalLink[];
+  micro?: InternalLink[];
 }
 
 const pickN = <T>(arr: T[], n: number, seed: string): T[] => {
