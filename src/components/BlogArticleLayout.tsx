@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import MidArticleActivities from "@/components/MidArticleActivities";
 import { getBlogLinkImage, getCityImage } from "@/lib/blogLinkImages";
+import { getBangkokInternalLinks } from "@/data/blogInternalLinks";
 
 type MidDestination = "thailand" | "singapore" | "bangkok" | "pattaya" | "phuket" | "krabi";
 
