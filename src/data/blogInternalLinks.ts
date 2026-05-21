@@ -2,6 +2,7 @@ import { phuketBlogs } from "./phuketDestinationGuides";
 import { japanBlogs } from "./japanDestinationGuides";
 import { krabiBlogs } from "./krabiDestinationGuides";
 import { singaporeBlogs } from "./singaporeDestinationGuides";
+import { bangkokBlogs } from "./bangkokDestinationGuides";
 
 export interface InternalLink {
   title: string;
@@ -15,6 +16,11 @@ export interface InternalLinkSet {
   transfers: InternalLink[];
   more: InternalLink[];
   pillar: { title: string; link: string };
+  // Optional richer category buckets — used by Bangkok hub for full cross-linking
+  priceCost?: InternalLink[];
+  comparisons?: InternalLink[];
+  indianAudience?: InternalLink[];
+  micro?: InternalLink[];
 }
 
 const pickN = <T>(arr: T[], n: number, seed: string): T[] => {
@@ -224,5 +230,41 @@ export const getSingaporeInternalLinks = (currentLink: string): InternalLinkSet 
     transfers,
     more,
     pillar: { title: "Singapore Smart Guides Hub", link: "/singapore/destination-guides" },
+  };
+};
+
+// ============================================================================
+// Bangkok — full cross-category internal linking
+// Each blog links out to every other Bangkok category so users (and crawlers)
+// can navigate between Activities, Price & Cost, Transfers, Itineraries,
+// For Indians, Micro Guides and Comparisons.
+// ============================================================================
+export const getBangkokInternalLinks = (currentLink: string): InternalLinkSet => {
+  const others = bangkokBlogs.filter((b) => b.link !== currentLink);
+  const pick = (cat: string, n: number, salt: string) =>
+    pickN(others.filter((b) => b.category === cat), n, currentLink + salt).map(toLink);
+
+  const activities = pick("activity", 4, "-bkk-act");
+  const itineraries = pick("itinerary", 3, "-bkk-it");
+  const transfers = pick("transfer", 3, "-bkk-tr");
+  const priceCost = pick("price-cost", 3, "-bkk-pc");
+  const comparisons = pick("comparison", 3, "-bkk-cmp");
+  const indianAudience = pick("indian-audience", 3, "-bkk-ind");
+  const micro = pick("micro", 3, "-bkk-mc");
+
+  return {
+    activities,
+    itineraries,
+    transfers,
+    priceCost,
+    comparisons,
+    indianAudience,
+    micro,
+    // Keep "more" empty — categories above already cover the full hub
+    more: [],
+    pillar: {
+      title: "Bangkok Destination Guides Hub",
+      link: "/thailand/bangkok/destination-guides",
+    },
   };
 };

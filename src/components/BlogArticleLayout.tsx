@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import MidArticleActivities from "@/components/MidArticleActivities";
 import { getBlogLinkImage, getCityImage } from "@/lib/blogLinkImages";
+import { getBangkokInternalLinks } from "@/data/blogInternalLinks";
 
 type MidDestination = "thailand" | "singapore" | "bangkok" | "pattaya" | "phuket" | "krabi";
 
@@ -56,6 +57,10 @@ interface InternalLinks {
   transfers: InternalLinkItem[];
   more: InternalLinkItem[];
   pillar: { title: string; link: string };
+  priceCost?: InternalLinkItem[];
+  comparisons?: InternalLinkItem[];
+  indianAudience?: InternalLinkItem[];
+  micro?: InternalLinkItem[];
 }
 
 interface BlogArticleProps {
@@ -85,9 +90,16 @@ const BlogArticleLayout = ({
   readTime, category, keywords, sections, relatedLinks,
   relatedActivities, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
-  subCategory, comparisonItems, internalLinks,
+  subCategory, comparisonItems, internalLinks: internalLinksProp,
   children,
 }: BlogArticleProps) => {
+  // Auto-derive internal links for Bangkok hub pages when not explicitly passed
+  const currentPath = typeof window !== "undefined" ? window.location.pathname : "";
+  const internalLinks =
+    internalLinksProp ??
+    (currentPath.startsWith("/thailand/bangkok/destination-guides/")
+      ? getBangkokInternalLinks(currentPath)
+      : undefined);
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({ title, text: description, url: window.location.href });
@@ -503,6 +515,52 @@ const BlogArticleLayout = ({
                     </ul>
                   </section>
                 )}
+
+
+                {internalLinks.priceCost && internalLinks.priceCost.length > 0 && (
+                  <section>
+                    <h5 className="text-base font-semibold text-foreground mb-3">Price & Cost Guides</h5>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
+                      {internalLinks.priceCost.map((l) => (
+                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {internalLinks.comparisons && internalLinks.comparisons.length > 0 && (
+                  <section>
+                    <h5 className="text-base font-semibold text-foreground mb-3">Comparisons</h5>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
+                      {internalLinks.comparisons.map((l) => (
+                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {internalLinks.indianAudience && internalLinks.indianAudience.length > 0 && (
+                  <section>
+                    <h5 className="text-base font-semibold text-foreground mb-3">For Indian Travelers</h5>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
+                      {internalLinks.indianAudience.map((l) => (
+                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {internalLinks.micro && internalLinks.micro.length > 0 && (
+                  <section>
+                    <h5 className="text-base font-semibold text-foreground mb-3">Micro Guides & Quick Tips</h5>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5 text-sm">
+                      {internalLinks.micro.map((l) => (
+                        <li key={l.link}><Link to={l.link} className="text-primary hover:underline">{l.title}</Link></li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
 
                 {internalLinks.more.length > 0 && (
                   <section>
