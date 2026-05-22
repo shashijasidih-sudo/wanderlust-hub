@@ -3,6 +3,9 @@ import { japanBlogs } from "./japanDestinationGuides";
 import { krabiBlogs } from "./krabiDestinationGuides";
 import { singaporeBlogs } from "./singaporeDestinationGuides";
 import { bangkokBlogs } from "./bangkokDestinationGuides";
+import { pattayaBlogs } from "./pattayaDestinationGuides";
+import { chiangMaiBlogs } from "./chiangMaiDestinationGuides";
+import { kohSamuiBlogs } from "./kohSamuiDestinationGuides";
 
 export interface InternalLink {
   title: string;
