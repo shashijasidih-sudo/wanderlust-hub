@@ -3,6 +3,9 @@ import { japanBlogs } from "./japanDestinationGuides";
 import { krabiBlogs } from "./krabiDestinationGuides";
 import { singaporeBlogs } from "./singaporeDestinationGuides";
 import { bangkokBlogs } from "./bangkokDestinationGuides";
+import { pattayaBlogs } from "./pattayaDestinationGuides";
+import { chiangMaiBlogs } from "./chiangMaiDestinationGuides";
+import { kohSamuiBlogs } from "./kohSamuiDestinationGuides";
 
 export interface InternalLink {
   title: string;
@@ -268,3 +271,62 @@ export const getBangkokInternalLinks = (currentLink: string): InternalLinkSet =>
     },
   };
 };
+
+// ============================================================================
+// Generic full cross-category linker — used by Krabi, Pattaya, Phuket,
+// Chiang Mai and Koh Samui destination guide hubs. Mirrors Bangkok behavior:
+// every blog links across all 7 categories that have content. Empty buckets
+// are simply omitted by the layout.
+// ============================================================================
+const buildFullCityLinks = (
+  blogs: Array<{ title: string; link: string; image?: string; category: string }>,
+  currentLink: string,
+  saltPrefix: string,
+  pillar: { title: string; link: string },
+): InternalLinkSet => {
+  const others = blogs.filter((b) => b.link !== currentLink);
+  const pick = (cat: string, n: number, salt: string) =>
+    pickN(others.filter((b) => b.category === cat), n, currentLink + salt).map(toLink);
+
+  return {
+    activities: pick("activity", 4, `-${saltPrefix}-act`),
+    itineraries: pick("itinerary", 3, `-${saltPrefix}-it`),
+    transfers: pick("transfer", 3, `-${saltPrefix}-tr`),
+    priceCost: pick("price-cost", 3, `-${saltPrefix}-pc`),
+    comparisons: pick("comparison", 3, `-${saltPrefix}-cmp`),
+    indianAudience: pick("indian-audience", 3, `-${saltPrefix}-ind`),
+    micro: pick("micro", 3, `-${saltPrefix}-mc`),
+    more: [],
+    pillar,
+  };
+};
+
+export const getKrabiFullInternalLinks = (currentLink: string) =>
+  buildFullCityLinks(krabiBlogs, currentLink, "krb", {
+    title: "Krabi Destination Guides Hub",
+    link: "/thailand/krabi/destination-guides",
+  });
+
+export const getPattayaFullInternalLinks = (currentLink: string) =>
+  buildFullCityLinks(pattayaBlogs, currentLink, "pty", {
+    title: "Pattaya Destination Guides Hub",
+    link: "/thailand/pattaya/destination-guides",
+  });
+
+export const getPhuketFullInternalLinks = (currentLink: string) =>
+  buildFullCityLinks(phuketBlogs, currentLink, "phk", {
+    title: "Phuket Destination Guides Hub",
+    link: "/thailand/phuket/destination-guides",
+  });
+
+export const getChiangMaiFullInternalLinks = (currentLink: string) =>
+  buildFullCityLinks(chiangMaiBlogs, currentLink, "cnx", {
+    title: "Chiang Mai Destination Guides Hub",
+    link: "/thailand/chiang-mai/destination-guides",
+  });
+
+export const getKohSamuiFullInternalLinks = (currentLink: string) =>
+  buildFullCityLinks(kohSamuiBlogs, currentLink, "ksm", {
+    title: "Koh Samui Destination Guides Hub",
+    link: "/thailand/koh-samui/destination-guides",
+  });
