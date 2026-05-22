@@ -98,8 +98,11 @@ const KohSamuiDestinationGuides = () => {
                   {group.blogs.length} {group.blogs.length === 1 ? "guide" : "guides"}
                 </span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {group.blogs.map((blog) => (
+              {(() => {
+                const mid = Math.ceil(group.blogs.length / 2);
+                const first = group.blogs.slice(0, mid);
+                const rest = group.blogs.slice(mid);
+                const renderCard = (blog: typeof group.blogs[number]) => (
                   <Card key={blog.link} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
                     <Link to={blog.link}>
                       <div className="aspect-[16/10] overflow-hidden">
@@ -119,8 +122,39 @@ const KohSamuiDestinationGuides = () => {
                       </CardContent>
                     </Link>
                   </Card>
-                ))}
-              </div>
+                );
+                return (
+                  <>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {first.map(renderCard)}
+                    </div>
+                    <div className="my-10">
+                      <div className="max-w-4xl mx-auto">
+                        <div className="text-center mb-4">
+                          <h3 className="text-xl md:text-2xl font-bold text-foreground">Watch: Koh Samui Travel Highlights</h3>
+                          <p className="text-sm text-muted-foreground mt-1">A quick visual tour to inspire your Koh Samui trip.</p>
+                        </div>
+                        <div className="relative w-full overflow-hidden rounded-2xl shadow-lg" style={{ paddingTop: "56.25%" }}>
+                          <iframe
+                            className="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/J5p0uyyoEjw"
+                            title="Koh Samui Travel Highlights"
+                            frameBorder={0}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    {rest.length > 0 && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {rest.map(renderCard)}
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
             </section>
           ))}
         </div>
