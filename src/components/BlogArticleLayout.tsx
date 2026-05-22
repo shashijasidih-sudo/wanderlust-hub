@@ -102,11 +102,16 @@ const BlogArticleLayout = ({
 }: BlogArticleProps) => {
   // Auto-derive internal links for Bangkok hub pages when not explicitly passed
   const currentPath = typeof window !== "undefined" ? window.location.pathname : "";
-  const internalLinks =
-    internalLinksProp ??
-    (currentPath.startsWith("/thailand/bangkok/destination-guides/")
-      ? getBangkokInternalLinks(currentPath)
-      : undefined);
+  const deriveHubLinks = (path: string) => {
+    if (path.startsWith("/thailand/bangkok/destination-guides/")) return getBangkokInternalLinks(path);
+    if (path.startsWith("/thailand/krabi/destination-guides/")) return getKrabiFullInternalLinks(path);
+    if (path.startsWith("/thailand/pattaya/destination-guides/")) return getPattayaFullInternalLinks(path);
+    if (path.startsWith("/thailand/phuket/destination-guides/")) return getPhuketFullInternalLinks(path);
+    if (path.startsWith("/thailand/chiang-mai/destination-guides/")) return getChiangMaiFullInternalLinks(path);
+    if (path.startsWith("/thailand/koh-samui/destination-guides/")) return getKohSamuiFullInternalLinks(path);
+    return undefined;
+  };
+  const internalLinks = internalLinksProp ?? deriveHubLinks(currentPath);
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({ title, text: description, url: window.location.href });
