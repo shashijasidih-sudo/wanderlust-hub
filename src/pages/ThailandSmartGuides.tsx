@@ -157,11 +157,12 @@ const ThailandSmartGuides = () => {
           </Card>
 
           {/* City Filters */}
-          <div className="flex flex-wrap gap-3 mb-10 justify-center">
+          <div className="grid grid-cols-3 sm:flex sm:flex-wrap gap-2 sm:gap-3 mb-10 sm:justify-center">
             {CITY_ORDER.map((c) => (
               <Button
                 key={c.key}
                 variant={activeCity === c.key ? "default" : "outline"}
+                className="w-full sm:w-auto"
                 onClick={() => {
                   if (c.key === "bangkok") {
                     navigate("/thailand/bangkok/destination-guides");
