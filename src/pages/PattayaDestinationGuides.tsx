@@ -120,7 +120,6 @@ const PattayaDestinationGuides = () => {
                   onClick={() => setActive(c.key)}
                 >
                   {c.short}
-                  <span className="ml-1.5 text-xs opacity-70">({count})</span>
                 </Button>
               );
             })}

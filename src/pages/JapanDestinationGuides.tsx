@@ -110,7 +110,6 @@ const JapanDestinationGuides = () => {
                   disabled={count === 0}
                 >
                   {c.short}
-                  <span className="ml-1.5 text-xs opacity-70">({count})</span>
                 </Button>
               );
             })}
