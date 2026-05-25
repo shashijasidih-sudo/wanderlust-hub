@@ -81,7 +81,7 @@ const ChiangMaiDestinationGuides = () => {
               const count = getChiangMaiBlogsByCategory(c.key).length;
               return (
                 <Button key={c.key} variant={active === c.key ? "default" : "outline"} size="sm" onClick={() => setActive(c.key)}>
-                  {c.short}<span className="ml-1.5 text-xs opacity-70">({count})</span>
+                  {c.short}
                 </Button>
               );
             })}
@@ -95,7 +95,6 @@ const ChiangMaiDestinationGuides = () => {
                   <p className="text-sm text-muted-foreground mt-1">{group.description}</p>
                 </div>
                 <span className="text-sm text-muted-foreground whitespace-nowrap">
-                  {group.blogs.length} {group.blogs.length === 1 ? "guide" : "guides"}
                 </span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -122,7 +122,6 @@ const PhuketDestinationGuides = () => {
                   disabled={count === 0}
                 >
                   {c.short}
-                  <span className="ml-1.5 text-xs opacity-70">({count})</span>
                 </Button>
               );
             })}
@@ -140,10 +139,6 @@ const PhuketDestinationGuides = () => {
                     {group.description}
                   </p>
                 </div>
-                <span className="text-sm text-muted-foreground whitespace-nowrap">
-                  {group.blogs.length}{" "}
-                  {group.blogs.length === 1 ? "guide" : "guides"}
-                </span>
               </div>
 
               {group.blogs.length === 0 ? (
