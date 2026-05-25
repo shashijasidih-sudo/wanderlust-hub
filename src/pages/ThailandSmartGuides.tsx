@@ -61,9 +61,9 @@ const blogArticles: BlogArticle[] = [
 const CITY_ORDER: { key: CityKey | "all"; label: string }[] = [
   { key: "all", label: "All Cities" },
   { key: "bangkok", label: "Bangkok" },
-  { key: "pattaya", label: "Pattaya" },
   { key: "phuket", label: "Phuket" },
   { key: "krabi", label: "Krabi" },
+  { key: "pattaya", label: "Pattaya" },
   { key: "koh-samui", label: "Koh Samui" },
   { key: "chiang-mai", label: "Chiang Mai" },
 ];
