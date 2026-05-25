@@ -137,12 +137,12 @@ const ThailandSmartGuides = () => {
                     {blogArticles[0].title}
                   </h2>
                   <p className="text-muted-foreground mb-6">{blogArticles[0].description}</p>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <User className="h-4 w-4" />
                       {blogArticles[0].author}
                     </span>
-                    <span className="flex items-center gap-1">
+                    <span className="hidden sm:flex items-center gap-1">
                       <Calendar className="h-4 w-4" />
                       {blogArticles[0].date}
                     </span>
