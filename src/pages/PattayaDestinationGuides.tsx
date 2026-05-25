@@ -136,10 +136,6 @@ const PattayaDestinationGuides = () => {
                     {group.description}
                   </p>
                 </div>
-                <span className="text-sm text-muted-foreground whitespace-nowrap">
-                  {group.blogs.length}{" "}
-                  {group.blogs.length === 1 ? "guide" : "guides"}
-                </span>
               </div>
 
               {group.blogs.length === 0 ? (
