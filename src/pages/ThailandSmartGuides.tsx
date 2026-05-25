@@ -226,7 +226,7 @@ const ThailandSmartGuides = () => {
                         </h3>
                         <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{article.description}</p>
                         <div className="flex items-center justify-between text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
+                          <span className="hidden sm:flex items-center gap-1">
                             <Calendar className="h-3 w-3" />
                             {article.date}
                           </span>
