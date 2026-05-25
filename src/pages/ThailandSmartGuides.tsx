@@ -61,9 +61,9 @@ const blogArticles: BlogArticle[] = [
 const CITY_ORDER: { key: CityKey | "all"; label: string }[] = [
   { key: "all", label: "All Cities" },
   { key: "bangkok", label: "Bangkok" },
-  { key: "pattaya", label: "Pattaya" },
   { key: "phuket", label: "Phuket" },
   { key: "krabi", label: "Krabi" },
+  { key: "pattaya", label: "Pattaya" },
   { key: "koh-samui", label: "Koh Samui" },
   { key: "chiang-mai", label: "Chiang Mai" },
 ];
@@ -137,12 +137,12 @@ const ThailandSmartGuides = () => {
                     {blogArticles[0].title}
                   </h2>
                   <p className="text-muted-foreground mb-6">{blogArticles[0].description}</p>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <User className="h-4 w-4" />
                       {blogArticles[0].author}
                     </span>
-                    <span className="flex items-center gap-1">
+                    <span className="hidden sm:flex items-center gap-1">
                       <Calendar className="h-4 w-4" />
                       {blogArticles[0].date}
                     </span>
@@ -157,11 +157,12 @@ const ThailandSmartGuides = () => {
           </Card>
 
           {/* City Filters */}
-          <div className="flex flex-wrap gap-3 mb-10 justify-center">
+          <div className="grid grid-cols-3 sm:flex sm:flex-wrap gap-2 sm:gap-3 mb-10 sm:justify-center">
             {CITY_ORDER.map((c) => (
               <Button
                 key={c.key}
                 variant={activeCity === c.key ? "default" : "outline"}
+                className="w-full sm:w-auto"
                 onClick={() => {
                   if (c.key === "bangkok") {
                     navigate("/thailand/bangkok/destination-guides");
@@ -225,7 +226,7 @@ const ThailandSmartGuides = () => {
                         </h3>
                         <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{article.description}</p>
                         <div className="flex items-center justify-between text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
+                          <span className="hidden sm:flex items-center gap-1">
                             <Calendar className="h-3 w-3" />
                             {article.date}
                           </span>
