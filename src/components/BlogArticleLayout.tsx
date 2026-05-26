@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import Seo from "@/components/seo/Seo";
+
 import { Link } from "react-router-dom";
 import { Calendar, Clock, User, ArrowLeft, Share2 } from "lucide-react";
 import Header from "@/components/Header";
