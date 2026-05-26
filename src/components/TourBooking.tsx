@@ -18,9 +18,8 @@ import TravelGuidesSection from "./activity-detail/TravelGuidesSection";
 import BookTransfersSection from "./BookTransfersSection";
 import CityExploreLinks from "./CityExploreLinks";
 import { getCityTransfers } from "@/data/cityTransfersData";
-import TourJsonLd from "./seo/TourJsonLd";
-import BreadcrumbJsonLd from "./seo/BreadcrumbJsonLd";
-import CanonicalUrl from "./seo/CanonicalUrl";
+import Seo from "./seo/Seo";
+
 import { Button } from "./ui/button";
 import {
   Breadcrumb,
