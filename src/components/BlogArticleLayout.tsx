@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import Seo from "@/components/seo/Seo";
+
 import { Link } from "react-router-dom";
 import { Calendar, Clock, User, ArrowLeft, Share2 } from "lucide-react";
 import Header from "@/components/Header";
@@ -120,53 +122,14 @@ const BlogArticleLayout = ({
     }
   };
 
-  // SEO: title, meta description, canonical, Open Graph, Twitter
-  useEffect(() => {
-    const prevTitle = document.title;
-    const seoTitle = title.length > 60 ? `${title.slice(0, 57)}...` : title;
-    document.title = `${seoTitle} | Yellodae`;
-
-    const upsertMeta = (selector: string, attr: string, attrValue: string, content: string) => {
-      let meta = document.querySelector<HTMLMetaElement>(selector);
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.setAttribute(attr, attrValue);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute("content", content);
-    };
-
-    const trimmedDesc = description.length > 158 ? `${description.slice(0, 155)}...` : description;
-    upsertMeta('meta[name="description"]', "name", "description", trimmedDesc);
-    upsertMeta('meta[property="og:title"]', "property", "og:title", title);
-    upsertMeta('meta[property="og:description"]', "property", "og:description", trimmedDesc);
-    upsertMeta('meta[property="og:image"]', "property", "og:image", heroImage);
-    upsertMeta('meta[property="og:type"]', "property", "og:type", "article");
-    upsertMeta('meta[property="og:url"]', "property", "og:url", window.location.href);
-    upsertMeta('meta[name="twitter:card"]', "name", "twitter:card", "summary_large_image");
-    upsertMeta('meta[name="twitter:title"]', "name", "twitter:title", title);
-    upsertMeta('meta[name="twitter:description"]', "name", "twitter:description", trimmedDesc);
-    upsertMeta('meta[name="twitter:image"]', "name", "twitter:image", heroImage);
-    upsertMeta('meta[name="keywords"]', "name", "keywords", keywords.join(", "));
-
-    let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-    if (!link) {
-      link = document.createElement("link");
-      link.setAttribute("rel", "canonical");
-      document.head.appendChild(link);
-    }
-    link.setAttribute("href", window.location.href.split("?")[0].split("#")[0]);
-
-    return () => {
-      document.title = prevTitle;
-    };
-  }, [title, description, heroImage, keywords]);
-
-  // JSON-LD: BlogPosting + BreadcrumbList + ItemList of recommended activities + Place (city hub)
+  // JSON-LD + per-route SEO via <Seo /> (Helmet-based, no document.head mutation in useEffect)
   const pageUrl = typeof window !== "undefined" ? window.location.href : "";
-  const origin = typeof window !== "undefined" ? window.location.origin : "";
+  const origin = typeof window !== "undefined" ? window.location.origin : "https://yellodae.com";
+  const pathname = typeof window !== "undefined" ? window.location.pathname : "/";
   const abs = (href: string) =>
     href.startsWith("http") ? href : `${origin}${href.startsWith("/") ? "" : "/"}${href}`;
+  const seoTitle = title.length > 60 ? `${title.slice(0, 57)}...` : title;
+  const trimmedDesc = description.length > 158 ? `${description.slice(0, 155)}...` : description;
 
   const jsonLd: Record<string, unknown>[] = [
     {
@@ -182,7 +145,7 @@ const BlogArticleLayout = ({
         name: "Yellodae",
         logo: { "@type": "ImageObject", url: `${origin}/favicon.ico` },
       },
-      mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+      mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl || `${origin}${pathname}` },
       keywords: keywords.join(", "),
       articleSection: category,
     },
@@ -192,7 +155,7 @@ const BlogArticleLayout = ({
         { name: guidesLabel, url: abs(guidesLink) },
       ];
       if (subCategory) crumbs.push({ name: subCategory.label, url: abs(subCategory.link) });
-      crumbs.push({ name: title, url: pageUrl });
+      crumbs.push({ name: title, url: pageUrl || `${origin}${pathname}` });
       return {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -252,10 +215,15 @@ const BlogArticleLayout = ({
 
   return (
     <div className="min-h-screen flex flex-col">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <Seo
+        title={`${seoTitle} | Yellodae`}
+        description={trimmedDesc}
+        path={pathname}
+        type="article"
+        image={heroImage}
+        jsonLd={jsonLd}
       />
+
       <Header />
       <main className="flex-1">
         {/* Hero */}

@@ -18,9 +18,8 @@ import TravelGuidesSection from "./activity-detail/TravelGuidesSection";
 import BookTransfersSection from "./BookTransfersSection";
 import CityExploreLinks from "./CityExploreLinks";
 import { getCityTransfers } from "@/data/cityTransfersData";
-import TourJsonLd from "./seo/TourJsonLd";
-import BreadcrumbJsonLd from "./seo/BreadcrumbJsonLd";
-import CanonicalUrl from "./seo/CanonicalUrl";
+import Seo from "./seo/Seo";
+
 import { Button } from "./ui/button";
 import {
   Breadcrumb,
@@ -109,22 +108,74 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
     { name: tourData.title, url: `/${tourSlug}` },
   ];
 
+  const origin = typeof window !== "undefined" ? window.location.origin : "https://yellodae.com";
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        name: tourData.title,
+        description: tourData.shortDescription,
+        image: safeHeroImages.map((i) => {
+          try { return new URL(i.src, origin).href; } catch { return i.src; }
+        }),
+        url: `${origin}${location.pathname}`,
+        brand: { "@type": "Brand", name: "Yellodae" },
+        ...(tourData.basePrice
+          ? {
+              offers: {
+                "@type": "Offer",
+                price: tourData.basePrice,
+                priceCurrency: "INR",
+                availability: "https://schema.org/InStock",
+                url: `${origin}${location.pathname}`,
+              },
+            }
+          : {}),
+        ...(tourData.rating && tourData.reviews
+          ? {
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: tourData.rating,
+                reviewCount: tourData.reviews,
+                bestRating: 5,
+                worstRating: 1,
+              },
+            }
+          : {}),
+      },
+      {
+        "@type": "TouristTrip",
+        name: tourData.title,
+        description: tourData.shortDescription,
+        url: `${origin}${location.pathname}`,
+        provider: { "@type": "Organization", name: "Yellodae" },
+        ...(tourData.location ? { subjectOf: { "@type": "Place", name: tourData.location } } : {}),
+      },
+    ],
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbItems.map((b, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      name: b.name,
+      item: `${origin}${b.url}`,
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <CanonicalUrl path={location.pathname} />
-      <TourJsonLd
-        name={tourData.title}
+      <Seo
+        title={`${tourData.title} | Yellodae Trails`}
         description={tourData.shortDescription}
-        image={safeHeroImages.map((i) => i.src)}
-        price={tourData.basePrice}
-        priceCurrency="INR"
-        rating={tourData.rating}
-        reviewCount={tourData.reviews}
-        location={tourData.location}
-        duration={tourData.duration}
-        id={`tour-jsonld-${tourData.id}`}
+        path={location.pathname}
+        type="product"
+        image={safeHeroImages[0]?.src}
+        jsonLd={[productSchema, breadcrumbSchema]}
       />
-      <BreadcrumbJsonLd items={breadcrumbItems} id={`breadcrumb-jsonld-${tourData.id}`} />
+
       <Header />
       
       {/* Visible Breadcrumb Trail */}
