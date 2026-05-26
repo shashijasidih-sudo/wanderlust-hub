@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import BreadcrumbJsonLd from "./seo/BreadcrumbJsonLd";
+import Seo from "./seo/Seo";
+
 import { ChevronRight, ArrowRight } from "lucide-react";
 import Footer from "./Footer";
 import FloatingWhatsApp from "./FloatingWhatsApp";
@@ -179,7 +181,34 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title={`${transferData.title} | Yellodae Trails`}
+        description={transferData.shortDescription}
+        path={location.pathname}
+        type="product"
+        image={galleryImages?.[0]?.src}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: "Private Airport Transfer",
+          name: transferData.title,
+          description: transferData.shortDescription,
+          areaServed: transferData.city || transferData.location,
+          provider: { "@type": "Organization", name: "Yellodae" },
+          ...(transferData.vehicles?.[0]?.price
+            ? {
+                offers: {
+                  "@type": "Offer",
+                  price: transferData.vehicles[0].price,
+                  priceCurrency: "INR",
+                  availability: "https://schema.org/InStock",
+                },
+              }
+            : {}),
+        }}
+      />
       <Header />
+
       
       <main className="container mx-auto px-4 py-8">
         {/* Breadcrumb Sitemap */}
