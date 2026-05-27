@@ -12,6 +12,7 @@ import TopThingsToDo from "@/components/TopThingsToDo";
 import FeaturedDestinations from "@/components/FeaturedDestinations";
 import ActivityCategories from "@/components/ActivityCategories";
 import Footer from "@/components/Footer";
+import HomeFAQ from "@/components/HomeFAQ";
 import Seo from "@/components/seo/Seo";
 
 const HOMEPAGE_JSONLD = [
@@ -89,6 +90,7 @@ const Index = () => {
         <TopThingsToDo />
         <FeaturedDestinations />
         <ActivityCategories />
+        <HomeFAQ />
       </main>
       <Footer />
     </div>
