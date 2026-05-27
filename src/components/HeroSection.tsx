@@ -2,10 +2,14 @@ import { Calendar as CalendarIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
-import heroImage1 from "@/assets/hero-thailand-beach.jpg";
-import heroImage2 from "@/assets/hero-thailand-temple.jpg";
-import heroImage3 from "@/assets/hero-thailand-adventure.jpg";
-import heroImage4 from "@/assets/hero-thailand-island.jpg";
+import heroImage1 from "@/assets/hero-thailand-beach.webp";
+import heroImage1Mobile from "@/assets/hero-thailand-beach-mobile.webp";
+import heroImage2 from "@/assets/hero-thailand-temple.webp";
+import heroImage2Mobile from "@/assets/hero-thailand-temple-mobile.webp";
+import heroImage3 from "@/assets/hero-thailand-adventure.webp";
+import heroImage3Mobile from "@/assets/hero-thailand-adventure-mobile.webp";
+import heroImage4 from "@/assets/hero-thailand-island.webp";
+import heroImage4Mobile from "@/assets/hero-thailand-island-mobile.webp";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
@@ -18,7 +22,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4];
+const heroImages = [
+  { full: heroImage1, mobile: heroImage1Mobile, alt: "Thailand beach hero" },
+  { full: heroImage2, mobile: heroImage2Mobile, alt: "Thailand temple hero" },
+  { full: heroImage3, mobile: heroImage3Mobile, alt: "Thailand adventure hero" },
+  { full: heroImage4, mobile: heroImage4Mobile, alt: "Thailand island hero" },
+];
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -41,16 +50,22 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-[600px] md:h-[700px] w-full overflow-hidden">
-      {/* Background Images with Crossfade */}
+      {/* Hero images with crossfade — <picture> for responsive WebP, LCP-discoverable */}
       {heroImages.map((image, index) => (
-        <div
-          key={index}
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
-          style={{
-            backgroundImage: `url(${image})`,
-            opacity: index === currentImageIndex ? 1 : 0,
-          }}
-        />
+        <picture key={index}>
+          <source media="(max-width: 768px)" srcSet={image.mobile} />
+          <img
+            src={image.full}
+            alt={image.alt}
+            width={1920}
+            height={1080}
+            fetchPriority={index === 0 ? "high" : "low"}
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding={index === 0 ? "sync" : "async"}
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
+            style={{ opacity: index === currentImageIndex ? 1 : 0 }}
+          />
+        </picture>
       ))}
       
       {/* Gradient Overlay */}

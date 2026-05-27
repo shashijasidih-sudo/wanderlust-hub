@@ -1,19 +1,22 @@
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import AboutYellodaeSection from "@/components/AboutYellodaeSection";
-import ThailandTrending from "@/components/ThailandTrending";
-import SingaporeTrending from "@/components/SingaporeTrending";
-import SeoDestinationSections from "@/components/SeoDestinationSections";
-import TrendingActivities from "@/components/TrendingActivities";
-import QuickDestinations from "@/components/QuickDestinations";
-import InstaStories from "@/components/InstaStories";
-import SmartDestinationGuides from "@/components/SmartDestinationGuides";
-import TopThingsToDo from "@/components/TopThingsToDo";
-import FeaturedDestinations from "@/components/FeaturedDestinations";
-import ActivityCategories from "@/components/ActivityCategories";
-import Footer from "@/components/Footer";
-import HomeFAQ from "@/components/HomeFAQ";
 import Seo from "@/components/seo/Seo";
+
+// Lazy-load everything below the hero — improves FCP/LCP on mobile.
+const SeoDestinationSections = lazy(() => import("@/components/SeoDestinationSections"));
+const AboutYellodaeSection = lazy(() => import("@/components/AboutYellodaeSection"));
+const ThailandTrending = lazy(() => import("@/components/ThailandTrending"));
+const SingaporeTrending = lazy(() => import("@/components/SingaporeTrending"));
+const TrendingActivities = lazy(() => import("@/components/TrendingActivities"));
+const QuickDestinations = lazy(() => import("@/components/QuickDestinations"));
+const InstaStories = lazy(() => import("@/components/InstaStories"));
+const SmartDestinationGuides = lazy(() => import("@/components/SmartDestinationGuides"));
+const TopThingsToDo = lazy(() => import("@/components/TopThingsToDo"));
+const FeaturedDestinations = lazy(() => import("@/components/FeaturedDestinations"));
+const ActivityCategories = lazy(() => import("@/components/ActivityCategories"));
+const HomeFAQ = lazy(() => import("@/components/HomeFAQ"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const HOMEPAGE_JSONLD = [
   {
@@ -79,23 +82,26 @@ const Index = () => {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <SeoDestinationSections />
-        <AboutYellodaeSection />
-        <ThailandTrending />
-        <SingaporeTrending />
-        <TrendingActivities />
-        <QuickDestinations />
-        <InstaStories />
-        <SmartDestinationGuides />
-        <TopThingsToDo />
-        <FeaturedDestinations />
-        <ActivityCategories />
-        <HomeFAQ />
+        <Suspense fallback={null}>
+          <SeoDestinationSections />
+          <AboutYellodaeSection />
+          <ThailandTrending />
+          <SingaporeTrending />
+          <TrendingActivities />
+          <QuickDestinations />
+          <InstaStories />
+          <SmartDestinationGuides />
+          <TopThingsToDo />
+          <FeaturedDestinations />
+          <ActivityCategories />
+          <HomeFAQ />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 };
 
 export default Index;
-
