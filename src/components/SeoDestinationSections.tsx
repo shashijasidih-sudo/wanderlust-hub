@@ -64,6 +64,7 @@ const sections: Section[] = [
       { title: "Phi Phi from Phuket", href: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer", image: phiPhiImg },
       { title: "James Bond Island", href: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer", image: jamesBondImg },
       { title: "Phuket City Guide", href: "/thailand/phuket/destination-guides", image: phuketImg },
+      { title: "Elephant Safari", href: "/thailand/phuket/elephant-safari", image: jungleImg },
     ],
   },
   {
@@ -75,6 +76,7 @@ const sections: Section[] = [
       { title: "Singapore Itinerary", href: "/singapore/destination-guides", image: singaporeImg },
       { title: "Universal Studios", href: "/singapore/universal-studios-singapore", image: universalImg },
       { title: "Budget Guide", href: "/blog/singapore-combo-pass", image: singaporeCityImg },
+      { title: "Night Safari", href: "/blog/night-safari-singapore-guide", image: kohSamuiImg },
     ],
   },
   {
@@ -86,6 +88,7 @@ const sections: Section[] = [
       { title: "Tokyo Itinerary", href: "/japan/destination-guides/activity/tokyo-city-tour-guide", image: tokyoImg },
       { title: "Osaka Guide", href: "/japan/destination-guides/activity/kyoto-temple-tour-guide", image: kyotoImg },
       { title: "Japan Budget Guide", href: "/japan/destination-guides/price-cost/japan-trip-cost-from-india", image: fujiImg },
+      { title: "Mount Fuji Day Tour", href: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo", image: fujiImg },
     ],
   },
 ];
