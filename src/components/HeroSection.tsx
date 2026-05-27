@@ -50,16 +50,22 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-[600px] md:h-[700px] w-full overflow-hidden">
-      {/* Background Images with Crossfade */}
+      {/* Hero images with crossfade — <picture> for responsive WebP, LCP-discoverable */}
       {heroImages.map((image, index) => (
-        <div
-          key={index}
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
-          style={{
-            backgroundImage: `url(${image})`,
-            opacity: index === currentImageIndex ? 1 : 0,
-          }}
-        />
+        <picture key={index}>
+          <source media="(max-width: 768px)" srcSet={image.mobile} />
+          <img
+            src={image.full}
+            alt={image.alt}
+            width={1920}
+            height={1080}
+            fetchPriority={index === 0 ? "high" : "low"}
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding={index === 0 ? "sync" : "async"}
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
+            style={{ opacity: index === currentImageIndex ? 1 : 0 }}
+          />
+        </picture>
       ))}
       
       {/* Gradient Overlay */}
