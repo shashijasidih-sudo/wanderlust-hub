@@ -79,10 +79,10 @@ const Index = () => {
       <Header />
       <main className="flex-1">
         <HeroSection />
+        <SeoDestinationSections />
         <AboutYellodaeSection />
         <ThailandTrending />
         <SingaporeTrending />
-        <DubaiTrending />
         <TrendingActivities />
         <QuickDestinations />
         <InstaStories />
