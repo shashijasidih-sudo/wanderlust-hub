@@ -1156,7 +1156,7 @@ const App = () => (
              <Route path="/krabi/*" element={<LegacyCityRedirect city="krabi" />} />
            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
            <Route path="*" element={<NotFound />} />
-        </Routes>
+        </Routes></Suspense>
           <FloatingWhatsApp />
       </BrowserRouter>
     </TooltipProvider>
