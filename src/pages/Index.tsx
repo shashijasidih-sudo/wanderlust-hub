@@ -90,6 +90,7 @@ const Index = () => {
         <TopThingsToDo />
         <FeaturedDestinations />
         <ActivityCategories />
+        <HomeFAQ />
       </main>
       <Footer />
     </div>
