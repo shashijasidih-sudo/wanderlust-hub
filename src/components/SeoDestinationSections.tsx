@@ -14,14 +14,14 @@ interface Section {
   cards: CardLink[];
 }
 
-import krabiImg from "@/assets/destination-krabi.jpg";
-import phuketImg from "@/assets/destination-phuket.jpg";
+import krabiImg from "@/assets/city-krabi.jpg";
+import phuketImg from "@/assets/city-phuket.jpg";
 import bangkokImg from "@/assets/bangkok-city-1.jpg";
-import kohSamuiImg from "@/assets/destination-koh-samui.jpg";
-import fourIslandImg from "@/assets/four-island-1.jpg";
+import kohSamuiImg from "@/assets/koh-samui-beach-1.jpg";
+import fourIslandImg from "@/assets/krabi-boat-tour-1.jpg";
 import phiPhiImg from "@/assets/phi-phi-1.jpg";
-import hongIslandImg from "@/assets/hong-island-1.jpg";
-import jungleImg from "@/assets/jungle-1.jpg";
+import hongIslandImg from "@/assets/krabi-island-viewpoint-1.jpg";
+import jungleImg from "@/assets/krabi-temple-woman-1.jpg";
 import jamesBondImg from "@/assets/james-bond-1.jpg";
 import singaporeImg from "@/assets/singapore-marina-bay-sands-night-1.jpg";
 import universalImg from "@/assets/singapore-universal-studios.jpg";
