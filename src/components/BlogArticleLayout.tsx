@@ -114,6 +114,24 @@ const BlogArticleLayout = ({
     return undefined;
   };
   const internalLinks = internalLinksProp ?? deriveHubLinks(currentPath);
+
+  // Destination -> YouTube Short mapping (auto-embedded mid-article)
+  const getYouTubeShortId = (path: string, ttl: string): string | null => {
+    const p = (path + " " + ttl).toLowerCase();
+    if (p.includes("phi-phi") || p.includes("phi phi")) return "OLgqSUAOYzA";
+    if (p.includes("koh-samui") || p.includes("koh samui") || p.includes("full-moon") || p.includes("full moon")) return "8LJJjoR5YFc";
+    if ((p.includes("krabi") && p.includes("pattaya"))) return "rzvQjJRYfrs";
+    if ((p.includes("phuket") && p.includes("pattaya"))) return "4IKk9s0MuIE";
+    if (p.includes("chiang-mai") || p.includes("chiang mai") || p.includes("chiangmai")) return "ydHy61knOgg";
+    if (p.includes("dubai")) return "aKvD1PzYUac";
+    if (p.includes("phuket")) return "bJ3lN2sMl8o";
+    if (p.includes("krabi")) return "rzvQjJRYfrs";
+    if (p.includes("pattaya")) return "4IKk9s0MuIE";
+    if (p.includes("bangkok")) return "0rh5V-q9eHQ";
+    return null;
+  };
+  const ytShortId = getYouTubeShortId(currentPath, title);
+  const ytInjectIndex = ytShortId ? Math.floor(sections.length / 2) : -1;
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({ title, text: description, url: window.location.href });
@@ -276,16 +294,48 @@ const BlogArticleLayout = ({
             {/* Content */}
             <article className="prose prose-lg max-w-none">
               {sections.map((section, i) => {
+                const ytEmbed = i === ytInjectIndex && ytShortId ? (
+                  <div key={`yt-${i}`} className="my-10 flex justify-center">
+                    <div className="w-full max-w-[360px]">
+                      <div className="relative w-full overflow-hidden rounded-2xl shadow-lg bg-black" style={{ paddingBottom: "177.78%" }}>
+                        <iframe
+                          src={`https://www.youtube.com/embed/${ytShortId}?rel=0&modestbranding=1`}
+                          title={`${title} — Watch on YouTube`}
+                          loading="lazy"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                          className="absolute inset-0 w-full h-full border-0"
+                        />
+                      </div>
+                      <p className="text-center text-sm text-muted-foreground mt-3">
+                        Watch on YouTube:{" "}
+                        <a
+                          href={`https://youtube.com/shorts/${ytShortId}?feature=share`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline font-medium"
+                        >
+                          youtube.com/shorts/{ytShortId}
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                ) : null;
+
+                let rendered: JSX.Element | null = null;
                 switch (section.type) {
                   case "heading":
-                    return <h2 key={i} className="text-2xl md:text-3xl font-bold text-foreground mt-10 mb-4">{section.content}</h2>;
+                    rendered = <h2 className="text-2xl md:text-3xl font-bold text-foreground mt-10 mb-4">{section.content}</h2>;
+                    break;
                   case "subheading":
-                    return <h3 key={i} className="text-xl font-semibold text-foreground mt-8 mb-3">{section.content}</h3>;
+                    rendered = <h3 className="text-xl font-semibold text-foreground mt-8 mb-3">{section.content}</h3>;
+                    break;
                   case "paragraph":
-                    return <p key={i} className="text-muted-foreground leading-relaxed mb-4">{section.content}</p>;
+                    rendered = <p className="text-muted-foreground leading-relaxed mb-4">{section.content}</p>;
+                    break;
                   case "list":
-                    return (
-                      <ul key={i} className="space-y-2 mb-6 ml-1">
+                    rendered = (
+                      <ul className="space-y-2 mb-6 ml-1">
                         {section.items?.map((item, j) => (
                           <li key={j} className="flex items-start gap-3 text-muted-foreground">
                             <span className="text-primary font-bold mt-0.5">✓</span>
@@ -294,39 +344,49 @@ const BlogArticleLayout = ({
                         ))}
                       </ul>
                     );
+                    break;
                   case "image":
-                    return (
-                      <figure key={i} className="my-8 rounded-xl overflow-hidden shadow-lg">
+                    rendered = (
+                      <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
                         <img src={section.src} alt={section.alt || ""} className="w-full h-auto object-cover" loading="lazy" />
                         {section.caption && <figcaption className="text-sm text-muted-foreground text-center py-3 bg-secondary/30">{section.caption}</figcaption>}
                       </figure>
                     );
+                    break;
                   case "cta":
-                    return (
-                      <div key={i} className="my-10 p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl text-center">
+                    rendered = (
+                      <div className="my-10 p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl text-center">
                         <p className="text-lg font-semibold text-foreground mb-4">{section.content}</p>
                         <Button asChild size="lg">
                           <Link to={section.link || "/thailand"}>{section.linkText || "Book Now"}</Link>
                         </Button>
                       </div>
                     );
+                    break;
                   case "tip-box":
-                    return (
-                      <div key={i} className="my-6 p-6 bg-secondary/50 border-l-4 border-primary rounded-r-xl">
+                    rendered = (
+                      <div className="my-6 p-6 bg-secondary/50 border-l-4 border-primary rounded-r-xl">
                         <p className="text-foreground font-medium">{section.content}</p>
                       </div>
                     );
+                    break;
                   case "mid-activities":
-                    return (
+                    rendered = (
                       <MidArticleActivities
-                        key={i}
                         destination={section.destination || "thailand"}
                         heading={section.heading}
                       />
                     );
+                    break;
                   default:
-                    return null;
+                    rendered = null;
                 }
+                return (
+                  <div key={i}>
+                    {ytEmbed}
+                    {rendered}
+                  </div>
+                );
               })}
             </article>
 
