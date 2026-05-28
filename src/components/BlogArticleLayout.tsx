@@ -116,22 +116,22 @@ const BlogArticleLayout = ({
   const internalLinks = internalLinksProp ?? deriveHubLinks(currentPath);
 
   // Destination -> YouTube Short mapping (auto-embedded mid-article)
-  const getYouTubeShortId = (path: string, ttl: string): string | null => {
+  const getYouTubeShort = (path: string, ttl: string): { id: string; name: string } | null => {
     const p = (path + " " + ttl).toLowerCase();
-    if (p.includes("phi-phi") || p.includes("phi phi")) return "OLgqSUAOYzA";
-    if (p.includes("koh-samui") || p.includes("koh samui") || p.includes("full-moon") || p.includes("full moon")) return "8LJJjoR5YFc";
-    if ((p.includes("krabi") && p.includes("pattaya"))) return "rzvQjJRYfrs";
-    if ((p.includes("phuket") && p.includes("pattaya"))) return "4IKk9s0MuIE";
-    if (p.includes("chiang-mai") || p.includes("chiang mai") || p.includes("chiangmai")) return "ydHy61knOgg";
-    if (p.includes("dubai")) return "aKvD1PzYUac";
-    if (p.includes("phuket")) return "bJ3lN2sMl8o";
-    if (p.includes("krabi")) return "rzvQjJRYfrs";
-    if (p.includes("pattaya")) return "4IKk9s0MuIE";
-    if (p.includes("bangkok")) return "0rh5V-q9eHQ";
+    if (p.includes("phi-phi") || p.includes("phi phi")) return { id: "OLgqSUAOYzA", name: "Phi Phi" };
+    if (p.includes("koh-samui") || p.includes("koh samui") || p.includes("full-moon") || p.includes("full moon")) return { id: "8LJJjoR5YFc", name: "Koh Samui" };
+    if (p.includes("krabi") && p.includes("pattaya")) return { id: "rzvQjJRYfrs", name: "Krabi & Pattaya" };
+    if (p.includes("phuket") && p.includes("pattaya")) return { id: "4IKk9s0MuIE", name: "Phuket & Pattaya" };
+    if (p.includes("chiang-mai") || p.includes("chiang mai") || p.includes("chiangmai")) return { id: "ydHy61knOgg", name: "Bangkok & Chiang Mai" };
+    if (p.includes("dubai")) return { id: "aKvD1PzYUac", name: "Dubai" };
+    if (p.includes("phuket")) return { id: "bJ3lN2sMl8o", name: "Phuket" };
+    if (p.includes("krabi")) return { id: "rzvQjJRYfrs", name: "Krabi" };
+    if (p.includes("pattaya")) return { id: "4IKk9s0MuIE", name: "Pattaya" };
+    if (p.includes("bangkok")) return { id: "0rh5V-q9eHQ", name: "Bangkok" };
     return null;
   };
-  const ytShortId = getYouTubeShortId(currentPath, title);
-  const ytInjectIndex = ytShortId ? Math.floor(sections.length / 2) : -1;
+  const ytShort = getYouTubeShort(currentPath, title);
+  const ytInjectIndex = ytShort ? Math.floor(sections.length / 2) : -1;
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({ title, text: description, url: window.location.href });
@@ -294,13 +294,13 @@ const BlogArticleLayout = ({
             {/* Content */}
             <article className="prose prose-lg max-w-none">
               {sections.map((section, i) => {
-                const ytEmbed = i === ytInjectIndex && ytShortId ? (
+                const ytEmbed = i === ytInjectIndex && ytShort ? (
                   <div key={`yt-${i}`} className="my-10 flex justify-center">
                     <div className="w-full max-w-[360px]">
                       <div className="relative w-full overflow-hidden rounded-2xl shadow-lg bg-black" style={{ paddingBottom: "177.78%" }}>
                         <iframe
-                          src={`https://www.youtube.com/embed/${ytShortId}?rel=0&modestbranding=1`}
-                          title={`${title} — Watch on YouTube`}
+                          src={`https://www.youtube.com/embed/${ytShort.id}?rel=0&modestbranding=1`}
+                          title={`${ytShort.name} — Watch on YouTube`}
                           loading="lazy"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           allowFullScreen
@@ -308,15 +308,16 @@ const BlogArticleLayout = ({
                         />
                       </div>
                       <p className="text-center text-sm text-muted-foreground mt-3">
-                        Watch on YouTube:{" "}
+                        Watch{" "}
                         <a
-                          href={`https://youtube.com/shorts/${ytShortId}?feature=share`}
+                          href={`https://youtube.com/shorts/${ytShort.id}?feature=share`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-primary hover:underline font-medium"
+                          className="text-primary hover:underline font-semibold"
                         >
-                          youtube.com/shorts/{ytShortId}
-                        </a>
+                          {ytShort.name}
+                        </a>{" "}
+                        on YouTube
                       </p>
                     </div>
                   </div>

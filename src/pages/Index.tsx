@@ -16,6 +16,7 @@ const TopThingsToDo = lazy(() => import("@/components/TopThingsToDo"));
 const FeaturedDestinations = lazy(() => import("@/components/FeaturedDestinations"));
 const ActivityCategories = lazy(() => import("@/components/ActivityCategories"));
 const HomeFAQ = lazy(() => import("@/components/HomeFAQ"));
+const HomeYouTubeSection = lazy(() => import("@/components/HomeYouTubeSection"));
 const Footer = lazy(() => import("@/components/Footer"));
 
 const HOMEPAGE_JSONLD = [
@@ -95,6 +96,7 @@ const Index = () => {
           <FeaturedDestinations />
           <ActivityCategories />
           <HomeFAQ />
+          <HomeYouTubeSection />
         </Suspense>
       </main>
       <Suspense fallback={null}>
