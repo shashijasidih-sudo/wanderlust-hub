@@ -228,7 +228,7 @@ const BlogArticleLayout = ({
       <main className="flex-1">
         {/* Hero */}
         <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
-          <img src={heroImage} alt={heroAlt} className="w-full h-full object-cover" />
+          <img src={heroImage} alt={heroAlt} width={1600} height={900} fetchPriority="high" decoding="async" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 p-6 md:p-12 container">
             <span className="inline-block bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
