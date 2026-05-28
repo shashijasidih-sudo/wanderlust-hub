@@ -114,6 +114,24 @@ const BlogArticleLayout = ({
     return undefined;
   };
   const internalLinks = internalLinksProp ?? deriveHubLinks(currentPath);
+
+  // Destination -> YouTube Short mapping (auto-embedded mid-article)
+  const getYouTubeShortId = (path: string, ttl: string): string | null => {
+    const p = (path + " " + ttl).toLowerCase();
+    if (p.includes("phi-phi") || p.includes("phi phi")) return "OLgqSUAOYzA";
+    if (p.includes("koh-samui") || p.includes("koh samui") || p.includes("full-moon") || p.includes("full moon")) return "8LJJjoR5YFc";
+    if ((p.includes("krabi") && p.includes("pattaya"))) return "rzvQjJRYfrs";
+    if ((p.includes("phuket") && p.includes("pattaya"))) return "4IKk9s0MuIE";
+    if (p.includes("chiang-mai") || p.includes("chiang mai") || p.includes("chiangmai")) return "ydHy61knOgg";
+    if (p.includes("dubai")) return "aKvD1PzYUac";
+    if (p.includes("phuket")) return "bJ3lN2sMl8o";
+    if (p.includes("krabi")) return "rzvQjJRYfrs";
+    if (p.includes("pattaya")) return "4IKk9s0MuIE";
+    if (p.includes("bangkok")) return "0rh5V-q9eHQ";
+    return null;
+  };
+  const ytShortId = getYouTubeShortId(currentPath, title);
+  const ytInjectIndex = ytShortId ? Math.floor(sections.length / 2) : -1;
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({ title, text: description, url: window.location.href });
