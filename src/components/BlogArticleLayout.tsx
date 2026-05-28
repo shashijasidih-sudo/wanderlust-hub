@@ -325,14 +325,17 @@ const BlogArticleLayout = ({
                 let rendered: JSX.Element | null = null;
                 switch (section.type) {
                   case "heading":
-                    return <h2 key={i} className="text-2xl md:text-3xl font-bold text-foreground mt-10 mb-4">{section.content}</h2>;
+                    rendered = <h2 className="text-2xl md:text-3xl font-bold text-foreground mt-10 mb-4">{section.content}</h2>;
+                    break;
                   case "subheading":
-                    return <h3 key={i} className="text-xl font-semibold text-foreground mt-8 mb-3">{section.content}</h3>;
+                    rendered = <h3 className="text-xl font-semibold text-foreground mt-8 mb-3">{section.content}</h3>;
+                    break;
                   case "paragraph":
-                    return <p key={i} className="text-muted-foreground leading-relaxed mb-4">{section.content}</p>;
+                    rendered = <p className="text-muted-foreground leading-relaxed mb-4">{section.content}</p>;
+                    break;
                   case "list":
-                    return (
-                      <ul key={i} className="space-y-2 mb-6 ml-1">
+                    rendered = (
+                      <ul className="space-y-2 mb-6 ml-1">
                         {section.items?.map((item, j) => (
                           <li key={j} className="flex items-start gap-3 text-muted-foreground">
                             <span className="text-primary font-bold mt-0.5">✓</span>
@@ -341,39 +344,49 @@ const BlogArticleLayout = ({
                         ))}
                       </ul>
                     );
+                    break;
                   case "image":
-                    return (
-                      <figure key={i} className="my-8 rounded-xl overflow-hidden shadow-lg">
+                    rendered = (
+                      <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
                         <img src={section.src} alt={section.alt || ""} className="w-full h-auto object-cover" loading="lazy" />
                         {section.caption && <figcaption className="text-sm text-muted-foreground text-center py-3 bg-secondary/30">{section.caption}</figcaption>}
                       </figure>
                     );
+                    break;
                   case "cta":
-                    return (
-                      <div key={i} className="my-10 p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl text-center">
+                    rendered = (
+                      <div className="my-10 p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl text-center">
                         <p className="text-lg font-semibold text-foreground mb-4">{section.content}</p>
                         <Button asChild size="lg">
                           <Link to={section.link || "/thailand"}>{section.linkText || "Book Now"}</Link>
                         </Button>
                       </div>
                     );
+                    break;
                   case "tip-box":
-                    return (
-                      <div key={i} className="my-6 p-6 bg-secondary/50 border-l-4 border-primary rounded-r-xl">
+                    rendered = (
+                      <div className="my-6 p-6 bg-secondary/50 border-l-4 border-primary rounded-r-xl">
                         <p className="text-foreground font-medium">{section.content}</p>
                       </div>
                     );
+                    break;
                   case "mid-activities":
-                    return (
+                    rendered = (
                       <MidArticleActivities
-                        key={i}
                         destination={section.destination || "thailand"}
                         heading={section.heading}
                       />
                     );
+                    break;
                   default:
-                    return null;
+                    rendered = null;
                 }
+                return (
+                  <div key={i}>
+                    {ytEmbed}
+                    {rendered}
+                  </div>
+                );
               })}
             </article>
 
