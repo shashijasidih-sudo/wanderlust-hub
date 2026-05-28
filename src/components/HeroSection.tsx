@@ -32,16 +32,35 @@ const heroImages = [
 const HeroSection = () => {
   const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [extraImagesReady, setExtraImagesReady] = useState(false);
   const [selectedCity, setSelectedCity] = useState("");
   const [travelDate, setTravelDate] = useState<Date>();
-  
+
+  // Defer mounting non-LCP hero images until after first paint / idle so they
+  // don't compete with the LCP image for bandwidth on mobile.
   useEffect(() => {
+    const w = window as Window & {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout?: number }) => number;
+    };
+    let timer: number | undefined;
+    if (w.requestIdleCallback) {
+      w.requestIdleCallback(() => setExtraImagesReady(true), { timeout: 2500 });
+    } else {
+      timer = window.setTimeout(() => setExtraImagesReady(true), 1500);
+    }
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!extraImagesReady) return;
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
-  
+  }, [extraImagesReady]);
+
   const handleStartAdventure = () => {
     if (selectedCity) {
       navigate(selectedCity);
@@ -51,22 +70,25 @@ const HeroSection = () => {
   return (
     <section className="relative h-[600px] md:h-[700px] w-full overflow-hidden">
       {/* Hero images with crossfade — <picture> for responsive WebP, LCP-discoverable */}
-      {heroImages.map((image, index) => (
-        <picture key={index}>
-          <source media="(max-width: 768px)" srcSet={image.mobile} />
-          <img
-            src={image.full}
-            alt={image.alt}
-            width={1920}
-            height={1080}
-            fetchPriority={index === 0 ? "high" : "low"}
-            loading={index === 0 ? "eager" : "lazy"}
-            decoding={index === 0 ? "sync" : "async"}
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-            style={{ opacity: index === currentImageIndex ? 1 : 0 }}
-          />
-        </picture>
-      ))}
+      {heroImages.map((image, index) => {
+        if (index !== 0 && !extraImagesReady) return null;
+        return (
+          <picture key={index}>
+            <source media="(max-width: 768px)" srcSet={image.mobile} />
+            <img
+              src={image.full}
+              alt={image.alt}
+              width={1920}
+              height={1080}
+              fetchPriority={index === 0 ? "high" : "low"}
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding={index === 0 ? "sync" : "async"}
+              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
+              style={{ opacity: index === currentImageIndex ? 1 : 0 }}
+            />
+          </picture>
+        );
+      })}
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
