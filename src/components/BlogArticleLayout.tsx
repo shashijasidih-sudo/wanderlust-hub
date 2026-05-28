@@ -294,6 +294,35 @@ const BlogArticleLayout = ({
             {/* Content */}
             <article className="prose prose-lg max-w-none">
               {sections.map((section, i) => {
+                const ytEmbed = i === ytInjectIndex && ytShortId ? (
+                  <div key={`yt-${i}`} className="my-10 flex justify-center">
+                    <div className="w-full max-w-[360px]">
+                      <div className="relative w-full overflow-hidden rounded-2xl shadow-lg bg-black" style={{ paddingBottom: "177.78%" }}>
+                        <iframe
+                          src={`https://www.youtube.com/embed/${ytShortId}?rel=0&modestbranding=1`}
+                          title={`${title} — Watch on YouTube`}
+                          loading="lazy"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                          className="absolute inset-0 w-full h-full border-0"
+                        />
+                      </div>
+                      <p className="text-center text-sm text-muted-foreground mt-3">
+                        Watch on YouTube:{" "}
+                        <a
+                          href={`https://youtube.com/shorts/${ytShortId}?feature=share`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline font-medium"
+                        >
+                          youtube.com/shorts/{ytShortId}
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                ) : null;
+
+                let rendered: JSX.Element | null = null;
                 switch (section.type) {
                   case "heading":
                     return <h2 key={i} className="text-2xl md:text-3xl font-bold text-foreground mt-10 mb-4">{section.content}</h2>;
