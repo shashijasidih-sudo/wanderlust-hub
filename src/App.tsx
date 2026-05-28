@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { CartProvider } from "@/contexts/CartContext";
 import { CurrencyProvider } from "@/contexts/CurrencyContext";
 import ApprovalBadge from "@/components/ApprovalBadge";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import FloatingWhatsApp from "@/components/DeferredFloatingWhatsApp";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 const NotFound = lazy(() => import("./pages/NotFound"));
