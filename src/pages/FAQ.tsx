@@ -17,15 +17,23 @@ const FAQ = () => {
     {
       icon: Calendar,
       title: "Booking & Reservations",
-      faqs: [
+        {
+          question: "Do I get instant confirmation after booking?",
+          answer: "Yes. All Yellodae Trails bookings are instantly confirmed by email and WhatsApp the moment your payment is successful — no waiting for operator approval. You can use the voucher directly at the venue."
+        },
+        {
+          question: "What is the cancellation policy?",
+          answer: "We offer free cancellation up to 2 days (48 hours) before the start of your travel activity. You'll receive a 100% refund to your original payment method. Cancellations within 48 hours of the activity are non-refundable."
+        },
         {
           question: "How do I book a tour or activity?",
-          answer: "Booking with Yellodae is simple! Browse our activities, select your preferred date and number of participants, and proceed to checkout. You'll receive a confirmation email with all the details within minutes."
+          answer: "Booking with Yellodae is simple! Browse our activities, select your preferred date and number of participants, and proceed to checkout. You'll receive an instant confirmation by email and WhatsApp within minutes."
         },
         {
-          question: "Can I modify or cancel my booking?",
-          answer: "Yes, you can modify or cancel your booking subject to our cancellation policy. Most tours offer free cancellation up to 24-48 hours before the activity. Check the specific tour's cancellation policy for details."
+          question: "Can I modify my booking?",
+          answer: "Yes, you can modify your booking up to 2 days before the activity start date by contacting our 24/7 WhatsApp support on +91 7061710810. Changes are subject to availability."
         },
+
         {
           question: "How far in advance should I book?",
           answer: "We recommend booking at least 2-3 days in advance for popular tours, especially during peak season. However, many of our activities accept last-minute bookings based on availability."
