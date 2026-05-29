@@ -112,20 +112,29 @@ const TravelerExperiences = () => {
                 key={i}
                 className="pl-3 md:pl-4 basis-2/3 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
               >
-                <figure className="rounded-2xl overflow-hidden bg-card shadow-card hover:shadow-card-hover transition-all duration-300 group h-full flex flex-col">
+                <figure
+                  className="rounded-2xl overflow-hidden bg-card shadow-card hover:shadow-card-hover transition-all duration-300 group h-full flex flex-col"
+                  itemScope
+                  itemType="https://schema.org/ImageObject"
+                >
                   <div className="relative aspect-[3/4] overflow-hidden bg-muted">
                     <img
                       src={item.src}
-                      alt={item.caption}
+                      alt={`${item.tag}: ${item.caption} — ${item.location}`}
+                      title={item.caption}
                       loading="lazy"
                       decoding="async"
+                      width={900}
+                      height={1200}
+                      itemProp="contentUrl"
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
                     />
+                    <meta itemProp="contentLocation" content={item.location} />
                     <span className="absolute top-2 left-2 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wide bg-background/90 backdrop-blur text-primary px-2 py-1 rounded-full shadow">
                       {tagIcon(item.tag)} {item.tag}
                     </span>
                   </div>
-                  <figcaption className="p-3 md:p-3.5 flex-1">
+                  <figcaption className="p-3 md:p-3.5 flex-1" itemProp="caption">
                     <p className="text-xs md:text-sm text-foreground leading-snug line-clamp-3">{item.caption}</p>
                     <p className="text-[11px] text-muted-foreground mt-1 flex items-center gap-1">
                       <MapPin className="h-3 w-3" /> {item.location}
@@ -135,13 +144,34 @@ const TravelerExperiences = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-4" />
-          <CarouselNext className="hidden md:flex -right-4" />
+          <CarouselPrevious className="hidden md:flex -left-4" aria-label="Previous traveler photo" />
+          <CarouselNext className="hidden md:flex -right-4" aria-label="Next traveler photo" />
         </Carousel>
 
         <p className="text-center text-xs text-muted-foreground mt-6">
           Photos shared by happy Yellodae Trails guests. Published with permission.
         </p>
+
+        {/* ImageGallery JSON-LD for richer image SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ImageGallery",
+              name: "Real Traveler Experiences — Yellodae Trails",
+              description:
+                "Real photos from Indian travelers on Yellodae Trails trips across Thailand, Dubai and Singapore — airport pickups, activities, itineraries and happy moments.",
+              image: items.map((item) => ({
+                "@type": "ImageObject",
+                contentUrl: item.src,
+                caption: item.caption,
+                contentLocation: item.location,
+                description: `${item.tag} — ${item.caption}`,
+              })),
+            }),
+          }}
+        />
       </div>
     </section>
   );
