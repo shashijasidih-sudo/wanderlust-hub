@@ -148,13 +148,3 @@ const TravelerExperiences = () => {
 };
 
 export default TravelerExperiences;
-
-        <p className="text-center text-xs text-muted-foreground mt-6">
-          Photos shared by happy Yellodae Trails guests. Published with permission.
-        </p>
-      </div>
-    </section>
-  );
-};
-
-export default TravelerExperiences;
