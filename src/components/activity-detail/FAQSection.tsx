@@ -22,13 +22,28 @@ interface FAQSectionProps {
 
 const isHtml = (s: string) => /<\/?[a-z][\s\S]*>/i.test(s);
 
+const TRUST_FAQS: FAQItem[] = [
+  {
+    question: "Do I get instant confirmation after booking?",
+    answer:
+      "Yes. This activity is instantly confirmed by email and WhatsApp the moment your payment is successful — no waiting for operator approval. Show the voucher on your phone at the venue.",
+  },
+  {
+    question: "What is the cancellation policy?",
+    answer:
+      "Free cancellation up to 2 days (48 hours) before the start of the activity — get a 100% refund to your original payment method. Cancellations within 48 hours of the activity are non-refundable.",
+  },
+];
+
 const FAQSection = ({ faqs = [], seoFaqs = [] }: FAQSectionProps) => {
+  const mergedBookingFaqs = [...TRUST_FAQS, ...faqs];
   const all: { item: FAQItem; group: "booking" | "seo"; idx: number }[] = [
-    ...faqs.map((item, idx) => ({ item, group: "booking" as const, idx })),
+    ...mergedBookingFaqs.map((item, idx) => ({ item, group: "booking" as const, idx })),
     ...seoFaqs.map((item, idx) => ({ item, group: "seo" as const, idx })),
   ];
 
   if (all.length === 0) return null;
+
 
   // Combined JSON-LD (booking + SEO) so both surface as rich snippets.
   // Strip HTML from SEO answers for the schema text.

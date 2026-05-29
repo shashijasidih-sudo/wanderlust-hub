@@ -8,10 +8,21 @@ import { Helmet } from "react-helmet-async";
 
 const faqs = [
   {
+    question: "Do I get instant confirmation after booking on Yellodae Trails?",
+    answer:
+      "Yes. Every tour, activity and airport transfer booked on Yellodae Trails is instantly confirmed by email and WhatsApp the moment your payment is successful — no waiting for operator approval. You can directly use the voucher at the venue or with your driver.",
+  },
+  {
+    question: "What is the cancellation policy for tours and activities?",
+    answer:
+      "Yellodae Trails offers free cancellation up to 2 days (48 hours) before the start of your travel activity. Cancel from your account or via WhatsApp and you'll receive a 100% refund to the original payment method. Cancellations within 48 hours of the activity are non-refundable.",
+  },
+  {
     question: "Which international destinations does Yellodae Trails cover for Indian travelers?",
     answer:
       "Yellodae Trails specializes in Thailand (Bangkok, Pattaya, Phuket, Krabi, Koh Samui, Chiang Mai), Singapore, Dubai and Japan — offering curated tours, activities, itineraries and private airport transfers designed specifically for Indian travelers.",
   },
+
   {
     question: "Do I need a visa to visit Thailand, Singapore, Dubai or Japan from India?",
     answer:
