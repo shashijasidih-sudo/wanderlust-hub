@@ -1,21 +1,10 @@
 import { Play } from "lucide-react";
+import LiteYouTubeEmbed from "./LiteYouTubeEmbed";
 
 const videos = [
-  {
-    name: "Koh Samui",
-    url: "https://youtu.be/J5p0uyyoEjw",
-    embed: "https://www.youtube.com/embed/J5p0uyyoEjw?rel=0&modestbranding=1",
-  },
-  {
-    name: "Bangkok",
-    url: "https://youtu.be/ajcdbZHNmeM",
-    embed: "https://www.youtube.com/embed/ajcdbZHNmeM?rel=0&modestbranding=1",
-  },
-  {
-    name: "Dubai",
-    url: "https://youtube.com/shorts/_bdnHy5-p-U?feature=share",
-    embed: "https://www.youtube.com/embed/_bdnHy5-p-U?rel=0&modestbranding=1",
-  },
+  { name: "Koh Samui", id: "J5p0uyyoEjw", url: "https://youtu.be/J5p0uyyoEjw" },
+  { name: "Bangkok", id: "ajcdbZHNmeM", url: "https://youtu.be/ajcdbZHNmeM" },
+  { name: "Dubai", id: "_bdnHy5-p-U", url: "https://youtube.com/shorts/_bdnHy5-p-U?feature=share" },
 ];
 
 const HomeYouTubeSection = () => {
@@ -37,19 +26,7 @@ const HomeYouTubeSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {videos.map((v) => (
             <div key={v.name} className="flex flex-col">
-              <div
-                className="relative w-full overflow-hidden rounded-2xl shadow-card bg-black"
-                style={{ paddingBottom: "177.78%" }}
-              >
-                <iframe
-                  src={v.embed}
-                  title={`${v.name} — Watch on YouTube`}
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
-              </div>
+              <LiteYouTubeEmbed id={v.id} title={`${v.name} — Watch on YouTube`} aspect={177.78} />
               <p className="text-center mt-3">
                 <a
                   href={v.url}
