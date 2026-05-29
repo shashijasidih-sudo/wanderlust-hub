@@ -56,16 +56,6 @@ const items: Item[] = [
   { src: dubaiBurjNight, caption: "Burj Khalifa night view from the fountain plaza — At The Top tickets pre-booked", location: "Downtown Dubai", tag: "Activity" },
   { src: phiPhiFerry, caption: "Father–daughter moment on the Phi Phi ferry deck — every transfer pre-arranged", location: "Phi Phi route, Thailand", tag: "Pickup" },
   { src: dubaiBeach, caption: "Sunset stroll at JBR Beach — chill evening slotted into the Dubai itinerary", location: "JBR, Dubai", tag: "Itinerary" },
-];
-
-const tagIcon = (t: Item["tag"]) => {
-  if (t === "Pickup" || t === "Confirmation") return <Plane className="h-3 w-3" />;
-  if (t === "Itinerary") return <MapPin className="h-3 w-3" />;
-  return <MessageCircle className="h-3 w-3" />;
-};
-
-const TravelerExperiences = () => {
-  { src: dubaiBeach, caption: "Sunset stroll at JBR Beach — chill evening slotted into the Dubai itinerary", location: "JBR, Dubai", tag: "Itinerary" },
   { src: phiPhiHarbourHotel, caption: "Check-in confirmed at Phi Phi Harbour View Hotel — stay, transfers and island tour booked together", location: "Phi Phi Island, Thailand", tag: "Confirmation" },
   { src: bangkokVanPickup, caption: "Happy family received in Bangkok — private VIP van pickup arranged hotel-to-hotel", location: "Bangkok, Thailand", tag: "Pickup" },
   { src: streetFoodCrepe, caption: "Street-food crepe tasting in Phuket — local food walk added to the itinerary on guest request", location: "Phuket Night Market", tag: "Activity" },
