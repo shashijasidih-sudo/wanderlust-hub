@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Instagram, Linkedin, Youtube, MessageCircle } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
+import TravelerExperiences from "@/components/TravelerExperiences";
 import BangkokSmartGuides from "@/components/BangkokSmartGuides";
 
 
@@ -12,6 +13,7 @@ const Footer = () => {
 
   return (
     <>
+      <TravelerExperiences />
       <Testimonials />
       {isBangkokPage && <BangkokSmartGuides />}
       <footer className="bg-foreground text-background py-12 md:py-16">
