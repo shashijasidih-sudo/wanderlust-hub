@@ -176,6 +176,5 @@ const TravelerExperiences = () => {
     </section>
   );
 };
-};
 
 export default TravelerExperiences;
