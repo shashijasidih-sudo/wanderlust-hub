@@ -87,6 +87,8 @@ const Index = () => {
         <Suspense fallback={null}>
           <SeoDestinationSections />
           <AboutYellodaeSection />
+          <TravelerExperiences />
+          <ThailandTrending />
           <ThailandTrending />
           <SingaporeTrending />
           <TrendingActivities />
