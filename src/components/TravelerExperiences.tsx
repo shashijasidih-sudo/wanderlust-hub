@@ -18,6 +18,16 @@ import dubaiBurjNight from "@/assets/travelers/dubai-burj-khalifa-night.jpg";
 import dubaiBeach from "@/assets/travelers/dubai-jbr-beach-sunset.jpg";
 import phuketMittalPickup from "@/assets/travelers/phuket-airport-pickup-mittal.jpg";
 import phuketMittalTransfer from "@/assets/travelers/phuket-private-transfer-mittal.jpg";
+import phiPhiHarbourHotel from "@/assets/travelers/phi-phi-harbour-view-hotel.jpg";
+import bangkokVanPickup from "@/assets/travelers/bangkok-van-pickup-family.jpg";
+import streetFoodCrepe from "@/assets/travelers/thailand-street-food-crepe.jpg";
+import mangoStickyRice from "@/assets/travelers/thailand-mango-sticky-rice.jpg";
+import pattayaAlangka from "@/assets/travelers/pattaya-alangka-cruise-couple.jpg";
+import phuketArrivalSolo from "@/assets/travelers/phuket-airport-arrival-solo.jpg";
+import phuketWelcomeTraveler from "@/assets/travelers/phuket-airport-welcome-traveler.jpg";
+import alangkaZone2 from "@/assets/travelers/alangka-cruise-zone-2-boarding.jpg";
+import bangkokGoldenBuddha from "@/assets/travelers/bangkok-golden-buddha-couple.jpg";
+import thaiFootMassage from "@/assets/travelers/thai-foot-massage-experience.jpg";
 
 type Item = {
   src: string;
@@ -46,6 +56,26 @@ const items: Item[] = [
   { src: dubaiBurjNight, caption: "Burj Khalifa night view from the fountain plaza — At The Top tickets pre-booked", location: "Downtown Dubai", tag: "Activity" },
   { src: phiPhiFerry, caption: "Father–daughter moment on the Phi Phi ferry deck — every transfer pre-arranged", location: "Phi Phi route, Thailand", tag: "Pickup" },
   { src: dubaiBeach, caption: "Sunset stroll at JBR Beach — chill evening slotted into the Dubai itinerary", location: "JBR, Dubai", tag: "Itinerary" },
+];
+
+const tagIcon = (t: Item["tag"]) => {
+  if (t === "Pickup" || t === "Confirmation") return <Plane className="h-3 w-3" />;
+  if (t === "Itinerary") return <MapPin className="h-3 w-3" />;
+  return <MessageCircle className="h-3 w-3" />;
+};
+
+const TravelerExperiences = () => {
+  { src: dubaiBeach, caption: "Sunset stroll at JBR Beach — chill evening slotted into the Dubai itinerary", location: "JBR, Dubai", tag: "Itinerary" },
+  { src: phiPhiHarbourHotel, caption: "Check-in confirmed at Phi Phi Harbour View Hotel — stay, transfers and island tour booked together", location: "Phi Phi Island, Thailand", tag: "Confirmation" },
+  { src: bangkokVanPickup, caption: "Happy family received in Bangkok — private VIP van pickup arranged hotel-to-hotel", location: "Bangkok, Thailand", tag: "Pickup" },
+  { src: streetFoodCrepe, caption: "Street-food crepe tasting in Phuket — local food walk added to the itinerary on guest request", location: "Phuket Night Market", tag: "Activity" },
+  { src: mangoStickyRice, caption: "Authentic Thai mango sticky rice — the must-try dessert moment on our food trail", location: "Thailand street market", tag: "Activity" },
+  { src: pattayaAlangka, caption: "Couple all set to board the Alangka Cruise in Pattaya — dinner cruise tickets pre-booked", location: "Pattaya Beach", tag: "Confirmation" },
+  { src: phuketArrivalSolo, caption: "Solo traveler welcomed at Phuket International — meet & greet plus private cab handled by our team", location: "Phuket Airport", tag: "Pickup" },
+  { src: phuketWelcomeTraveler, caption: "Smooth arrival at Phuket Airport — luggage trolley, customs and onward transfer all coordinated", location: "Phuket International Airport", tag: "Pickup" },
+  { src: alangkaZone2, caption: "Boarding passes for Alangka Cruise Zone 2 — confirmed seats and easy boarding in Pattaya", location: "Pattaya Pier", tag: "Confirmation" },
+  { src: bangkokGoldenBuddha, caption: "Blessings at Bangkok's Golden Buddha (Wat Traimit) — temple circuit thoughtfully planned", location: "Wat Traimit, Bangkok", tag: "Itinerary" },
+  { src: thaiFootMassage, caption: "Traditional Thai foot massage session — wellness add-on slotted right after the city tour", location: "Bangkok wellness studio", tag: "Activity" },
 ];
 
 const tagIcon = (t: Item["tag"]) => {
