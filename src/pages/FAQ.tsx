@@ -17,7 +17,9 @@ const FAQ = () => {
     {
       icon: Calendar,
       title: "Booking & Reservations",
+      faqs: [
         {
+
           question: "Do I get instant confirmation after booking?",
           answer: "Yes. All Yellodae Trails bookings are instantly confirmed by email and WhatsApp the moment your payment is successful — no waiting for operator approval. You can use the voucher directly at the venue."
         },
