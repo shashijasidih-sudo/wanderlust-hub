@@ -10,10 +10,11 @@ import BangkokSmartGuides from "@/components/BangkokSmartGuides";
 const Footer = () => {
   const { pathname } = useLocation();
   const isBangkokPage = pathname === "/thailand/bangkok" || pathname.startsWith("/thailand/bangkok/");
+  const isBlogPage = pathname.startsWith("/blog/");
 
   return (
     <>
-      <TravelerExperiences />
+      {!isBlogPage && <TravelerExperiences />}
       <Testimonials />
       {isBangkokPage && <BangkokSmartGuides />}
       <footer className="bg-foreground text-background py-12 md:py-16">
