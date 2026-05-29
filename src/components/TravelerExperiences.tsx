@@ -1,4 +1,13 @@
 import { MessageCircle, MapPin, Plane } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 import tigerPark from "@/assets/travelers/tiger-park-phuket.jpg";
 import phuketTemple from "@/assets/travelers/phuket-temple-family.jpg";
 import phiPhiBoat from "@/assets/travelers/phi-phi-boat-family.jpg";
