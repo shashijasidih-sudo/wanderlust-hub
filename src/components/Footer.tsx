@@ -11,11 +11,13 @@ const Footer = () => {
   const { pathname } = useLocation();
   const isBangkokPage = pathname === "/thailand/bangkok" || pathname.startsWith("/thailand/bangkok/");
   const isBlogPage = pathname.startsWith("/blog/");
+  const isHomePage = pathname === "/";
 
   return (
     <>
-      {!isBlogPage && <TravelerExperiences />}
+      {!isBlogPage && !isHomePage && <TravelerExperiences />}
       <Testimonials />
+      {isBangkokPage && <BangkokSmartGuides />}
       {isBangkokPage && <BangkokSmartGuides />}
       <footer className="bg-foreground text-background py-12 md:py-16">
       <div className="container px-4 md:px-6">
