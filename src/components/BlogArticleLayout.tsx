@@ -11,6 +11,7 @@ import {
   BreadcrumbPage, BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import MidArticleActivities from "@/components/MidArticleActivities";
+import LiteYouTubeEmbed from "@/components/LiteYouTubeEmbed";
 import { getBlogLinkImage, getCityImage } from "@/lib/blogLinkImages";
 import {
   getBangkokInternalLinks,
@@ -297,16 +298,11 @@ const BlogArticleLayout = ({
                 const ytEmbed = i === ytInjectIndex && ytShort ? (
                   <div key={`yt-${i}`} className="my-10 flex justify-center">
                     <div className="w-full max-w-[360px]">
-                      <div className="relative w-full overflow-hidden rounded-2xl shadow-lg bg-black" style={{ paddingBottom: "177.78%" }}>
-                        <iframe
-                          src={`https://www.youtube.com/embed/${ytShort.id}?rel=0&modestbranding=1`}
-                          title={`${ytShort.name} — Watch on YouTube`}
-                          loading="lazy"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowFullScreen
-                          className="absolute inset-0 w-full h-full border-0"
-                        />
-                      </div>
+                      <LiteYouTubeEmbed
+                        id={ytShort.id}
+                        title={`${ytShort.name} — Watch on YouTube`}
+                        aspect={177.78}
+                      />
                       <p className="text-center text-sm text-muted-foreground mt-3">
                         Watch{" "}
                         <a
@@ -322,6 +318,7 @@ const BlogArticleLayout = ({
                     </div>
                   </div>
                 ) : null;
+
 
                 let rendered: JSX.Element | null = null;
                 switch (section.type) {
