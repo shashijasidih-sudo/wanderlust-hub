@@ -17,6 +17,7 @@ const FeaturedDestinations = lazy(() => import("@/components/FeaturedDestination
 const ActivityCategories = lazy(() => import("@/components/ActivityCategories"));
 const HomeFAQ = lazy(() => import("@/components/HomeFAQ"));
 const HomeYouTubeSection = lazy(() => import("@/components/HomeYouTubeSection"));
+const TravelerExperiences = lazy(() => import("@/components/TravelerExperiences"));
 const Footer = lazy(() => import("@/components/Footer"));
 
 const HOMEPAGE_JSONLD = [
@@ -86,6 +87,8 @@ const Index = () => {
         <Suspense fallback={null}>
           <SeoDestinationSections />
           <AboutYellodaeSection />
+          <TravelerExperiences />
+          <ThailandTrending />
           <ThailandTrending />
           <SingaporeTrending />
           <TrendingActivities />
