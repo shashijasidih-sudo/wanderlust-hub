@@ -1,4 +1,13 @@
 import { MessageCircle, MapPin, Plane } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 import tigerPark from "@/assets/travelers/tiger-park-phuket.jpg";
 import phuketTemple from "@/assets/travelers/phuket-temple-family.jpg";
 import phiPhiBoat from "@/assets/travelers/phi-phi-boat-family.jpg";
@@ -75,6 +84,10 @@ const tagIcon = (t: Item["tag"]) => {
 };
 
 const TravelerExperiences = () => {
+  const autoplay = useRef(
+    Autoplay({ delay: 3500, stopOnInteraction: true, stopOnMouseEnter: true })
+  );
+
   return (
     <section className="py-10 md:py-16 bg-background">
       <div className="container px-4 md:px-6">
@@ -88,33 +101,43 @@ const TravelerExperiences = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-4 [column-fill:_balance]">
-          {items.map((item, i) => (
-            <figure
-              key={i}
-              className="mb-3 md:mb-4 break-inside-avoid rounded-2xl overflow-hidden bg-card shadow-card hover:shadow-card-hover transition-all duration-300 group"
-            >
-              <div className="relative">
-                <img
-                  src={item.src}
-                  alt={item.caption}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500"
-                />
-                <span className="absolute top-2 left-2 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wide bg-background/90 backdrop-blur text-primary px-2 py-1 rounded-full shadow">
-                  {tagIcon(item.tag)} {item.tag}
-                </span>
-              </div>
-              <figcaption className="p-3 md:p-3.5">
-                <p className="text-xs md:text-sm text-foreground leading-snug">{item.caption}</p>
-                <p className="text-[11px] text-muted-foreground mt-1 flex items-center gap-1">
-                  <MapPin className="h-3 w-3" /> {item.location}
-                </p>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+        <Carousel
+          opts={{ align: "start", loop: true }}
+          plugins={[autoplay.current]}
+          className="max-w-6xl mx-auto"
+        >
+          <CarouselContent className="-ml-3 md:-ml-4">
+            {items.map((item, i) => (
+              <CarouselItem
+                key={i}
+                className="pl-3 md:pl-4 basis-2/3 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+              >
+                <figure className="rounded-2xl overflow-hidden bg-card shadow-card hover:shadow-card-hover transition-all duration-300 group h-full flex flex-col">
+                  <div className="relative aspect-[3/4] overflow-hidden bg-muted">
+                    <img
+                      src={item.src}
+                      alt={item.caption}
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
+                    />
+                    <span className="absolute top-2 left-2 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wide bg-background/90 backdrop-blur text-primary px-2 py-1 rounded-full shadow">
+                      {tagIcon(item.tag)} {item.tag}
+                    </span>
+                  </div>
+                  <figcaption className="p-3 md:p-3.5 flex-1">
+                    <p className="text-xs md:text-sm text-foreground leading-snug line-clamp-3">{item.caption}</p>
+                    <p className="text-[11px] text-muted-foreground mt-1 flex items-center gap-1">
+                      <MapPin className="h-3 w-3" /> {item.location}
+                    </p>
+                  </figcaption>
+                </figure>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-4" />
+          <CarouselNext className="hidden md:flex -right-4" />
+        </Carousel>
 
         <p className="text-center text-xs text-muted-foreground mt-6">
           Photos shared by happy Yellodae Trails guests. Published with permission.

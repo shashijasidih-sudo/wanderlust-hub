@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Calendar, Clock, User, ArrowLeft, Share2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TravelerExperiences from "@/components/TravelerExperiences";
 import { Button } from "@/components/ui/button";
 import {
   Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList,
@@ -387,6 +388,11 @@ const BlogArticleLayout = ({
                 );
               })}
             </article>
+
+            {/* Real Traveler Experiences — placed right after Final Verdict / article body */}
+            <div className="mt-10 -mx-4 md:-mx-6 lg:-mx-8">
+              <TravelerExperiences />
+            </div>
 
             {/* Keywords */}
             <div className="mt-12 pt-8 border-t border-border">
