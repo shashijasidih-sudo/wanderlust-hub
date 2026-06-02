@@ -394,6 +394,9 @@ const BlogArticleLayout = ({
               <TravelerExperiences />
             </div>
 
+            {/* Travel Essentials — affiliate/partner curated packing & gear guides */}
+            <TravelEssentials />
+
             {/* Keywords */}
             <div className="mt-12 pt-8 border-t border-border">
               <h4 className="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-wider">Related Topics</h4>
