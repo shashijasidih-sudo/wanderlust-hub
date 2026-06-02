@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TravelEssentials from "@/components/TravelEssentials";
 import { Button } from "@/components/ui/button";
 import { Plane, Car, Building2, MapPin } from "lucide-react";
 import TransferCard from "@/components/TransferCard";
@@ -175,6 +176,10 @@ const KrabiTransfers = () => {
           </div>
         </div>
       </main>
+
+      <section className="container mx-auto px-4 py-8">
+        <TravelEssentials />
+      </section>
 
       <CityExploreLinks city="krabi" />
       <Footer />
