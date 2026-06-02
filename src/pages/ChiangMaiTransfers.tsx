@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TravelEssentials from "@/components/TravelEssentials";
 import { Button } from "@/components/ui/button";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import van from "@/assets/chiang-mai-transfer-van-1.jpg";
@@ -64,6 +65,10 @@ const ChiangMaiTransfers = () => {
           ))}
         </div>
       </section>
+      <section className="container mx-auto px-4 py-8">
+        <TravelEssentials />
+      </section>
+
       <CityExploreLinks city="chiang-mai" />
       <Footer />
     </div>

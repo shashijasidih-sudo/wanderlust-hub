@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TravelEssentials from "@/components/TravelEssentials";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Car, Plane, Moon } from "lucide-react";
@@ -173,6 +174,10 @@ const SingaporeTransfersNew = () => {
           </div>
         </div>
       </main>
+
+      <section className="container mx-auto px-4 py-8">
+        <TravelEssentials />
+      </section>
 
       <Footer />
     </div>
