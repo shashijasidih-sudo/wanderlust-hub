@@ -100,7 +100,7 @@ const activities: Activity[] = [
 
   // Floating Market Tours
   {
-    title: "Discovery Pattaya City Tour with Floating Market & Lunch",
+    title: "Discovery Pattaya City Tours with Floating Market - Join Tour",
     description: "Pattaya floating market tour with city sightseeing and lunch included.",
     price: 2175,
     image: floatingMarket1,

@@ -31,7 +31,7 @@ import show89Pattaya1 from "@/assets/show89-pattaya-1.jpg";
 import bigeyeShowPattaya1 from "@/assets/bigeye-show-pattaya-1.jpg";
 
 const regularActivities = [
-  { title: "Discovery Pattaya City Tours with Floating Market and Lunch", price: 2175, image: pattayaBoatTour, slug: "/thailand/pattaya/pattaya-floating-market-tour" },
+  { title: "Discovery Pattaya City Tours with Floating Market - Join Tour", price: 2175, image: pattayaBoatTour, slug: "/thailand/pattaya/pattaya-floating-market-tour" },
   { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1208, image: pattayaSailboat, slug: "/thailand/pattaya/big-buddha-gems-gallery-tour" },
   { title: "Coral Island Join Tour with Indian Lunch", price: 603.75, image: pattayaBoatsBeach, slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" },
   { title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya", price: 3622.5, image: pattayaTropicalBeach, slug: "/thailand/pattaya/nong-nooch-tropical-garden-tickets" },

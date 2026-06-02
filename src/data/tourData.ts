@@ -1816,7 +1816,7 @@ export const toursData: Record<string, TourData> = {
   // Pattaya Tours
   "pattaya-floating-market-tour": {
     id: "pattaya-floating-market-tour",
-    title: "Discovery Pattaya City Tours with Floating Market and Lunch",
+    title: "Discovery Pattaya City Tours with Floating Market - Join Tour",
     shortDescription: "Comprehensive Pattaya city tour visiting floating market, cultural sites, and landmarks with authentic Thai lunch included.",
     location: "Pattaya, Thailand",
     city: "pattaya",
@@ -1911,7 +1911,7 @@ export const toursData: Record<string, TourData> = {
       { time: "12:30 PM", title: "Free Time", description: "Browse and shop at Gems Gallery" },
       { time: "01:30 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
     ],
-    tourTimings: ["08:00 AM"],
+    tourTimings: ["10:00 AM", "11:30 AM", "02:30 PM"],
     inclusions: ["Round-trip hotel transfer", "English-speaking guide", "Entrance fees", "Bottled water"],
     exclusions: ["Meals and beverages", "Purchases at Gems Gallery", "Optional activities", "Tips"],
     bookingPolicy: ["Confirmation within 24 hours", "Dress modestly for temple", "No purchase obligation at gallery"],
