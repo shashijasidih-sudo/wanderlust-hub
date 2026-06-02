@@ -39,7 +39,10 @@ const Seo = ({
   const pathname =
     path ??
     (typeof window !== "undefined" ? window.location.pathname : "/");
-  const url = `${origin}${pathname}`;
+  // Hosting enforces trailing slash; match it so canonical == final resolved URL (no redirect hop).
+  const normalizedPath =
+    pathname === "/" || pathname.endsWith("/") ? pathname : `${pathname}/`;
+  const url = `${origin}${normalizedPath}`;
   const ogImage = image ?? `${origin}/favicon.png`;
   const ldArray = jsonLd
     ? Array.isArray(jsonLd)
