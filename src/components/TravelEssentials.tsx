@@ -155,12 +155,12 @@ const Card = ({ item }: { item: Item }) => {
 };
 
 const Section = ({ heading, subheading, items }: { heading: string; subheading: string; items: Item[] }) => (
-  <section className="mt-10" aria-label={heading}>
-    <div className="mb-4">
+  <section className="mt-10 -mx-4 sm:mx-0" aria-label={heading}>
+    <div className="mb-4 px-4 sm:px-0">
       <h3 className="text-xl md:text-2xl font-bold text-foreground">{heading}</h3>
       <p className="text-sm text-muted-foreground mt-1">{subheading}</p>
     </div>
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 px-3 sm:px-0">
       {items.map((item) => (
         <Card key={item.href} item={item} />
       ))}
