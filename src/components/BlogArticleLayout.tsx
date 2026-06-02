@@ -6,6 +6,7 @@ import { Calendar, Clock, User, ArrowLeft, Share2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TravelerExperiences from "@/components/TravelerExperiences";
+import TravelEssentials from "@/components/TravelEssentials";
 import { Button } from "@/components/ui/button";
 import {
   Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList,
@@ -393,6 +394,9 @@ const BlogArticleLayout = ({
             <div className="mt-10 -mx-4 md:-mx-6 lg:-mx-8">
               <TravelerExperiences />
             </div>
+
+            {/* Travel Essentials — affiliate/partner curated packing & gear guides */}
+            <TravelEssentials />
 
             {/* Keywords */}
             <div className="mt-12 pt-8 border-t border-border">
