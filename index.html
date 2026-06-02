@@ -20,6 +20,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.png" type="image/png" />
+
+    <!-- Canonical host + protocol enforcement (runs before app boot to avoid redirect chains).
+         Guarantees a single canonical URL: https://yellodae.com — no www, no http, no trailing slash. -->
+    <script>
+      (function () {
+        try {
+          var loc = window.location;
+          var host = loc.hostname;
+          // Only normalize the production domain — leave preview/sandbox hosts untouched.
+          if (host === "yellodae.com" || host === "www.yellodae.com") {
+            var target = null;
+            var path = loc.pathname || "/";
+            // Strip trailing slash (except root) so /page and /page/ resolve to one canonical URL.
+            if (path.length > 1 && path.charAt(path.length - 1) === "/") {
+              path = path.replace(/\/+$/, "") || "/";
+            }
+            var needsHttps = loc.protocol !== "https:";
+            var needsApex = host === "www.yellodae.com";
+            var needsSlashFix = path !== loc.pathname;
+            if (needsHttps || needsApex || needsSlashFix) {
+              target = "https://yellodae.com" + path + loc.search + loc.hash;
+              window.location.replace(target);
+            }
+          }
+        } catch (e) { /* no-op */ }
+      })();
+    </script>
+
     <link rel="preconnect" href="https://chimpstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://chimpstatic.com" />
