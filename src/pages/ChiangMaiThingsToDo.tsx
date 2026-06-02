@@ -2,6 +2,7 @@ import { useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TravelEssentials from "@/components/TravelEssentials";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import CanonicalUrl from "@/components/seo/CanonicalUrl";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
@@ -273,6 +274,11 @@ const ChiangMaiThingsToDo = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Travel Essentials */}
+      <section className="container mx-auto px-4 py-8">
+        <TravelEssentials />
       </section>
 
       {/* FAQ */}
