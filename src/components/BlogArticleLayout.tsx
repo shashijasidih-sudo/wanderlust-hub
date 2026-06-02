@@ -390,13 +390,17 @@ const BlogArticleLayout = ({
               })}
             </article>
 
-            {/* Real Traveler Experiences — placed right after Final Verdict / article body */}
-            <div className="mt-10 -mx-4 md:-mx-6 lg:-mx-8">
+            {/* Real Traveler Experiences — full-bleed beyond the max-w-3xl article column */}
+            <div className="mt-10 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
               <TravelerExperiences />
             </div>
 
-            {/* Travel Essentials — affiliate/partner curated packing & gear guides */}
-            <TravelEssentials />
+            {/* Travel Essentials — full-bleed affiliate/partner curated packing & gear guides */}
+            <div className="mt-10 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+              <div className="container px-4 md:px-6">
+                <TravelEssentials />
+              </div>
+            </div>
 
             {/* Keywords */}
             <div className="mt-12 pt-8 border-t border-border">
