@@ -74,12 +74,13 @@ const canonical = Array.from(
 const today = new Date().toISOString().slice(0, 10);
 
 const body = canonical
-  .map(
-    (p) =>
-      `  <url><loc>${ORIGIN}${p}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>${priorityFor(
-        p
-      )}</priority></url>`
-  )
+  .map((p) => {
+    // Hosting enforces trailing slash — emit it in the sitemap so Google fetches the final URL directly.
+    const withSlash = p === "/" || p.endsWith("/") ? p : `${p}/`;
+    return `  <url><loc>${ORIGIN}${withSlash}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>${priorityFor(
+      p
+    )}</priority></url>`;
+  })
   .join("\n");
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
