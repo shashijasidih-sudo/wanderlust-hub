@@ -379,7 +379,11 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
           if (!["bangkok", "pattaya", "phuket", "krabi", "singapore"].includes(key)) return null;
           return <CityExploreLinks city={key} />;
         })()}
+        <div className="mt-12">
+          <RelatedArticles city={tourData.city} />
+        </div>
       </main>
+
 
       <Footer />
       <FloatingWhatsApp />
