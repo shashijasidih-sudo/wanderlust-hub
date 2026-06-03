@@ -588,6 +588,9 @@ const BlogArticleLayout = ({
           </div>
         </div>
         {children}
+        <div className="max-w-5xl mx-auto px-4">
+          <RelatedArticles city={cityHub?.city} />
+        </div>
       </main>
       <Footer />
     </div>
