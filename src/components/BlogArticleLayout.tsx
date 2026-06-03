@@ -161,7 +161,13 @@ const BlogArticleLayout = ({
       description,
       image: heroImage,
       datePublished: date,
-      author: { "@type": "Organization", name: author },
+      author: {
+        "@type": "Person",
+        name: "Monika Barnwal",
+        description: "Dr. Monika Barnwal is a highly accomplished academic and entrepreneur with significant expertise in Smart Tourism, Digital Marketing, and AI applications within the tourism industry.",
+        jobTitle: "Travel Planning & Destination Specialist",
+        worksFor: { "@type": "Organization", name: "Yellodae" },
+      },
       publisher: {
         "@type": "Organization",
         name: "Yellodae",
