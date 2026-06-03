@@ -645,6 +645,10 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         );
       })()}
 
+      <div className="container mx-auto px-4">
+        <RelatedArticles city={transferData.city} />
+      </div>
+
       <Footer />
       <FloatingWhatsApp />
     </div>
