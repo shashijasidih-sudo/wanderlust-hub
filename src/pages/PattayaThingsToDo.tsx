@@ -43,6 +43,7 @@ import show89Pattaya1 from "@/assets/show89-pattaya-1.jpg";
 import bigeyeShowPattaya1 from "@/assets/bigeye-show-pattaya-1.jpg";
 import dolphinShow1 from "@/assets/dolphin-show-1.jpg";
 import CityExploreLinks from "@/components/CityExploreLinks";
+import RelatedArticles from "@/components/RelatedArticles";
 
 
 type Category =
@@ -663,6 +664,10 @@ const PattayaThingsToDo = () => {
       </section>
 
       <CityExploreLinks city="pattaya" />
+      
+      <section className="container mx-auto px-4">
+        <RelatedArticles city="pattaya" />
+      </section>
       <Footer />
       <FloatingWhatsApp />
     </div>

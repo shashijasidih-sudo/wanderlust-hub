@@ -1,3 +1,4 @@
+import RelatedArticles from "@/components/RelatedArticles";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
@@ -124,6 +125,10 @@ const ChiangMaiDestinationGuides = () => {
           ))}
         </div>
       </main>
+      
+      <section className="container mx-auto px-4">
+        <RelatedArticles city="chiang-mai" />
+      </section>
       <Footer />
     </div>
   );

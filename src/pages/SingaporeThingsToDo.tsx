@@ -40,6 +40,7 @@ import singaporeUniversalStudios from "@/assets/singapore-universal-studios.jpg"
 import singaporeZoo from "@/assets/singapore-zoo.jpg";
 import singaporeBigBus from "@/assets/singapore-big-bus.jpg";
 import CityExploreLinks from "@/components/CityExploreLinks";
+import RelatedArticles from "@/components/RelatedArticles";
 
 
 type Category =
@@ -551,6 +552,10 @@ const SingaporeThingsToDo = () => {
       </section>
 
       <CityExploreLinks city="singapore" />
+      
+      <section className="container mx-auto px-4">
+        <RelatedArticles city="singapore" />
+      </section>
       <Footer />
       <FloatingWhatsApp />
     </div>

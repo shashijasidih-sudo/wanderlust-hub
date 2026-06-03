@@ -38,6 +38,7 @@ import phuketAtv from "@/assets/phuket-atv-1.jpg";
 import phuketCarnival from "@/assets/phuket-carnival-1.jpg";
 import phuketMuslimWoman from "@/assets/phuket-muslim-woman-hijab.jpg";
 import CityExploreLinks from "@/components/CityExploreLinks";
+import RelatedArticles from "@/components/RelatedArticles";
 
 
 type Category =
@@ -529,6 +530,10 @@ const PhuketThingsToDo = () => {
       </section>
 
       <CityExploreLinks city="phuket" />
+      
+      <section className="container mx-auto px-4">
+        <RelatedArticles city="phuket" />
+      </section>
       <Footer />
       <FloatingWhatsApp />
     </div>

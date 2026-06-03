@@ -11,6 +11,7 @@ import BookTransfersSection from "./BookTransfersSection";
 import RecommendedActivitiesSection from "./RecommendedActivitiesSection";
 import { getCityTransfers } from "@/data/cityTransfersData";
 import { getCityActivities } from "@/data/cityActivitiesData";
+import RelatedArticles from "./RelatedArticles";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
@@ -643,6 +644,10 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
           <BookTransfersSection city={cityTransfers.city} transfers={cityTransfers.transfers} />
         );
       })()}
+
+      <div className="container mx-auto px-4">
+        <RelatedArticles city={transferData.city} />
+      </div>
 
       <Footer />
       <FloatingWhatsApp />

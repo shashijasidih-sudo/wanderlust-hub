@@ -179,6 +179,10 @@ const SingaporeTransfersNew = () => {
         <TravelEssentials />
       </section>
 
+      
+      <section className="container mx-auto px-4">
+        <RelatedArticles city="singapore" />
+      </section>
       <Footer />
     </div>
   );
@@ -186,5 +190,6 @@ const SingaporeTransfersNew = () => {
 
 // Add missing import
 import { useState } from "react";
+import RelatedArticles from "@/components/RelatedArticles";
 
 export default SingaporeTransfersNew;

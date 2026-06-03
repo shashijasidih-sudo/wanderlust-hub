@@ -18,6 +18,7 @@ import TravelGuidesSection from "./activity-detail/TravelGuidesSection";
 import BookTransfersSection from "./BookTransfersSection";
 import CityExploreLinks from "./CityExploreLinks";
 import { getCityTransfers } from "@/data/cityTransfersData";
+import RelatedArticles from "./RelatedArticles";
 import Seo from "./seo/Seo";
 
 import { Button } from "./ui/button";
@@ -378,7 +379,11 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
           if (!["bangkok", "pattaya", "phuket", "krabi", "singapore"].includes(key)) return null;
           return <CityExploreLinks city={key} />;
         })()}
+        <div className="mt-12">
+          <RelatedArticles city={tourData.city} />
+        </div>
       </main>
+
 
       <Footer />
       <FloatingWhatsApp />
