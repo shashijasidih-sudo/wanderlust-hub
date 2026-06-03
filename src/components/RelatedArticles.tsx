@@ -127,39 +127,53 @@ const RelatedArticles = ({ city, currentLink, count = 8, title = "Related Articl
   return (
     <section
       aria-labelledby="related-articles-heading"
-      className="mt-12 pt-8 border-t border-border"
+      className="mt-12 pt-10 pb-4 border-t border-border"
     >
-      <div className="flex items-baseline justify-between mb-5 gap-4 flex-wrap">
-        <h2 id="related-articles-heading" className="text-xl md:text-2xl font-bold text-foreground">
-          {title}
-        </h2>
+      <div className="flex items-end justify-between mb-6 gap-4 flex-wrap">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">More to explore</p>
+          <h2 id="related-articles-heading" className="text-2xl md:text-3xl font-bold text-foreground">
+            {title}
+          </h2>
+        </div>
         {hub && (
-          <Link to={hub.link} className="text-sm font-medium text-primary hover:underline">
+          <Link
+            to={hub.link}
+            className="text-sm font-medium text-primary hover:underline whitespace-nowrap"
+          >
             View all {hub.label} →
           </Link>
         )}
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
         {picked.map((b) => {
           const img = b.image || getBlogLinkImage(b.link);
+          const cat = (b.category || "Guide").replace(/-/g, " ");
           return (
             <Link
               key={b.link}
               to={b.link}
-              className="group rounded-xl border border-border overflow-hidden bg-card hover:border-primary hover:shadow-md transition-all"
+              className="group relative block rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-card border border-border"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-muted">
+              <div className="aspect-[4/3] overflow-hidden bg-muted relative">
                 <img
                   src={img}
                   alt={b.title}
                   loading="lazy"
-                  className="w-full h-full object-cover transition group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-              </div>
-              <div className="p-3">
-                <h3 className="text-sm font-semibold text-foreground line-clamp-2 group-hover:text-primary transition-colors">
-                  {b.title}
-                </h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                <span className="absolute top-3 left-3 text-[10px] md:text-xs font-semibold uppercase tracking-wider bg-primary/90 text-primary-foreground px-2 py-1 rounded-full capitalize">
+                  {cat}
+                </span>
+                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+                  <h3 className="text-white font-semibold text-sm md:text-base leading-snug line-clamp-3">
+                    {b.title}
+                  </h3>
+                  <span className="mt-2 inline-flex items-center gap-1 text-xs text-white/90 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                    Read more →
+                  </span>
+                </div>
               </div>
             </Link>
           );
@@ -170,3 +184,4 @@ const RelatedArticles = ({ city, currentLink, count = 8, title = "Related Articl
 };
 
 export default RelatedArticles;
+

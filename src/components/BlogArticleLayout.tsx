@@ -413,36 +413,50 @@ const BlogArticleLayout = ({
               </div>
             </div>
 
-            {/* Related */}
+            {/* Related Guides — full-bleed */}
             {relatedLinks && relatedLinks.length > 0 && (
-              <div className="mt-10 pt-8 border-t border-border">
-                <h4 className="text-lg font-bold text-foreground mb-4">Related Guides</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {relatedLinks.map((rl) => {
-                    const img = rl.image || getBlogLinkImage(rl.link);
-                    return (
-                      <Link
-                        key={rl.link}
-                        to={rl.link}
-                        className="group flex items-center gap-3 rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all"
-                      >
-                        <div className="w-24 h-20 flex-shrink-0 overflow-hidden bg-muted">
-                          <img
-                            src={img}
-                            alt={rl.title}
-                            loading="lazy"
-                            className="w-full h-full object-cover transition group-hover:scale-105"
-                          />
-                        </div>
-                        <span className="flex-1 pr-3 text-foreground font-medium group-hover:text-primary transition-colors line-clamp-2 text-sm">
-                          {rl.title}
-                        </span>
-                      </Link>
-                    );
-                  })}
+              <div className="mt-12 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-b from-secondary/30 to-background py-10">
+                <div className="container mx-auto px-4 md:px-6">
+                  <div className="flex items-end justify-between mb-6 gap-4 flex-wrap">
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">Keep Reading</p>
+                      <h2 className="text-2xl md:text-3xl font-bold text-foreground">Related Guides</h2>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+                    {relatedLinks.map((rl) => {
+                      const img = rl.image || getBlogLinkImage(rl.link);
+                      return (
+                        <Link
+                          key={rl.link}
+                          to={rl.link}
+                          className="group relative block rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-card border border-border"
+                        >
+                          <div className="aspect-[4/3] overflow-hidden bg-muted">
+                            <img
+                              src={img}
+                              alt={rl.title}
+                              loading="lazy"
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                          </div>
+                          <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+                            <h3 className="text-white font-semibold text-sm md:text-base leading-snug line-clamp-3 group-hover:text-primary-foreground transition-colors">
+                              {rl.title}
+                            </h3>
+                            <span className="mt-2 inline-flex items-center gap-1 text-xs text-white/90 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                              Read guide →
+                            </span>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             )}
+
 
             {/* Recommended Activities (keyword-rich internal links) */}
             {relatedActivities && relatedActivities.length > 0 && (
@@ -588,9 +602,12 @@ const BlogArticleLayout = ({
           </div>
         </div>
         {children}
-        <div className="max-w-5xl mx-auto px-4">
-          <RelatedArticles city={cityHub?.city} />
+        <div className="mt-12 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+          <div className="container mx-auto px-4 md:px-6">
+            <RelatedArticles city={cityHub?.city} />
+          </div>
         </div>
+
       </main>
       <Footer />
     </div>
