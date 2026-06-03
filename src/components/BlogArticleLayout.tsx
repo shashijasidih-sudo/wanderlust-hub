@@ -403,13 +403,10 @@ const BlogArticleLayout = ({
               </div>
             </div>
 
-            {/* Keywords */}
-            <div className="mt-12 pt-8 border-t border-border">
-              <h4 className="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-wider">Related Topics</h4>
-              <div className="flex flex-wrap gap-2">
-                {keywords.map((kw) => (
-                  <span key={kw} className="bg-secondary text-secondary-foreground text-xs px-3 py-1.5 rounded-full">{kw}</span>
-                ))}
+            {/* Related Topics — full-bleed 4-column image cards */}
+            <div className="mt-12 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+              <div className="container mx-auto px-4 md:px-6">
+                <RelatedArticles city={cityHub?.city} count={4} title="Related Topics" />
               </div>
             </div>
 
