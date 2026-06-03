@@ -161,7 +161,13 @@ const BlogArticleLayout = ({
       description,
       image: heroImage,
       datePublished: date,
-      author: { "@type": "Organization", name: author },
+      author: {
+        "@type": "Person",
+        name: "Monika Barnwal",
+        description: "Dr. Monika Barnwal is a highly accomplished academic and entrepreneur with significant expertise in Smart Tourism, Digital Marketing, and AI applications within the tourism industry.",
+        jobTitle: "Travel Planning & Destination Specialist",
+        worksFor: { "@type": "Organization", name: "Yellodae" },
+      },
       publisher: {
         "@type": "Organization",
         name: "Yellodae",
@@ -260,7 +266,7 @@ const BlogArticleLayout = ({
               {title}
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-white/80 text-sm">
-              <span className="flex items-center gap-1"><User className="h-4 w-4" />{author}</span>
+              <span className="flex items-center gap-1"><User className="h-4 w-4" />Monika Barnwal</span>
               <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />{date}</span>
               <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{readTime}</span>
             </div>
@@ -390,6 +396,29 @@ const BlogArticleLayout = ({
                 );
               })}
             </article>
+
+            {/* Author Box */}
+            <div className="mt-10 p-6 md:p-8 rounded-2xl border border-border bg-gradient-to-br from-secondary/40 to-background shadow-sm">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl md:text-2xl tracking-wide">
+                  MB
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground">Monika Barnwal</h3>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                      Travel Planning
+                    </span>
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                      Destination Specialist
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm md:text-base text-muted-foreground leading-relaxed">
+                    Dr. Monika Barnwal is a highly accomplished academic and entrepreneur with significant expertise in Smart Tourism, Digital Marketing, and AI applications within the tourism industry.
+                  </p>
+                </div>
+              </div>
+            </div>
 
             {/* Real Traveler Experiences — full-bleed beyond the max-w-3xl article column */}
             <div className="mt-10 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
