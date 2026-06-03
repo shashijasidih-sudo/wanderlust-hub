@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import van from "@/assets/chiang-mai-transfer-van-1.jpg";
 import CityExploreLinks from "@/components/CityExploreLinks";
+import RelatedArticles from "@/components/RelatedArticles";
 
 
 const transfers = [
@@ -70,6 +71,10 @@ const ChiangMaiTransfers = () => {
       </section>
 
       <CityExploreLinks city="chiang-mai" />
+      
+      <section className="container mx-auto px-4">
+        <RelatedArticles city="chiang-mai" />
+      </section>
       <Footer />
     </div>
   );

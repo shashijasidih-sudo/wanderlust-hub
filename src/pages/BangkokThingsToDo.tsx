@@ -34,6 +34,7 @@ import cruiseNight1 from "@/assets/cruise-night-1.jpg";
 import cruiseNight2 from "@/assets/cruise-night-2.jpg";
 import bangkokCity1 from "@/assets/bangkok-city-1.jpg";
 import CityExploreLinks from "@/components/CityExploreLinks";
+import RelatedArticles from "@/components/RelatedArticles";
 
 
 type Category =
@@ -703,6 +704,10 @@ const BangkokThingsToDo = () => {
       </section>
 
       <CityExploreLinks city="bangkok" />
+      
+      <section className="container mx-auto px-4">
+        <RelatedArticles city="bangkok" />
+      </section>
       <Footer />
       <FloatingWhatsApp />
     </div>

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Plane, Car, Building2, MapPin } from "lucide-react";
 import TransferCard from "@/components/TransferCard";
 import CityExploreLinks from "@/components/CityExploreLinks";
+import RelatedArticles from "@/components/RelatedArticles";
 
 
 // Combined transfers from all cities
@@ -278,6 +279,10 @@ const ThailandTransfers = () => {
       </section>
 
       <CityExploreLinks city="thailand" />
+      
+      <section className="container mx-auto px-4">
+        <RelatedArticles city="bangkok" />
+      </section>
       <Footer />
     </div>
   );

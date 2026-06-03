@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Plane, Car, Building2, MapPin } from "lucide-react";
 import TransferCard from "@/components/TransferCard";
 import CityExploreLinks from "@/components/CityExploreLinks";
+import RelatedArticles from "@/components/RelatedArticles";
 
 
 const transfers = [
@@ -180,6 +181,10 @@ const PhuketTransfers = () => {
       </section>
 
       <CityExploreLinks city="phuket" />
+      
+      <section className="container mx-auto px-4">
+        <RelatedArticles city="phuket" />
+      </section>
       <Footer />
     </div>
   );

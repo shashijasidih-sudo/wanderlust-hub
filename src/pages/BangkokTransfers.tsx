@@ -8,6 +8,7 @@ import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
 import TransferCard from "@/components/TransferCard";
 import CityExploreLinks from "@/components/CityExploreLinks";
+import RelatedArticles from "@/components/RelatedArticles";
 
 
 const transfers = [
@@ -180,6 +181,10 @@ const BangkokTransfers = () => {
       </section>
 
       <CityExploreLinks city="bangkok" />
+      
+      <section className="container mx-auto px-4">
+        <RelatedArticles city="bangkok" />
+      </section>
       <Footer />
     </div>
   );

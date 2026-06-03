@@ -30,6 +30,7 @@ import goldenTriangle from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg
 import inthanon from "@/assets/chiang-mai-doi-inthanon-1.jpg";
 import watChediLuang from "@/assets/chiang-mai-wat-chedi-luang-1.jpg";
 import CityExploreLinks from "@/components/CityExploreLinks";
+import RelatedArticles from "@/components/RelatedArticles";
 
 interface Activity {
   title: string;
@@ -302,6 +303,10 @@ const ChiangMaiThingsToDo = () => {
       </section>
 
       <CityExploreLinks city="chiang-mai" />
+      
+      <section className="container mx-auto px-4">
+        <RelatedArticles city="chiang-mai" />
+      </section>
       <Footer />
       <FloatingWhatsApp />
     </div>
