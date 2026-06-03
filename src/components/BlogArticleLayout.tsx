@@ -602,9 +602,12 @@ const BlogArticleLayout = ({
           </div>
         </div>
         {children}
-        <div className="max-w-5xl mx-auto px-4">
-          <RelatedArticles city={cityHub?.city} />
+        <div className="mt-12 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+          <div className="container mx-auto px-4 md:px-6">
+            <RelatedArticles city={cityHub?.city} />
+          </div>
         </div>
+
       </main>
       <Footer />
     </div>
