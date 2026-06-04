@@ -145,7 +145,7 @@ const BlogThailandTripCostFromIndia = () => {
         { type: "subheading", content: "Honeymoon Couple (7 Days): ₹1.2 Lakh – ₹3 Lakh+" },
         { type: "paragraph", content: "Popular honeymoon picks: Phuket, Krabi, Koh Samui and Phi Phi Islands. Couples typically choose private pool villas, sunset cruises, spa treatments and private island tours." },
         { type: "subheading", content: "Family of Four (7 Days): ₹1.6 Lakh – ₹3.5 Lakh" },
-        { type: "paragraph", content: "Family hits include Safari World Bangkok, Sea Life Ocean World, Phuket Fantasea, water parks and island excursions. Pre-booking activity packages and transfers saves significantly." },
+        { type: "paragraph", content: "Family hits include [Safari World Bangkok](/thailand/bangkok/safari-world), Sea Life Ocean World, Phuket Fantasea, water parks and island excursions like the [Phi Phi Island Tour](/thailand/phuket/full-day-phi-phi-island-tour-with-transfer) and [Coral Island Pattaya](/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch). Pre-booking activity packages and [Thailand airport transfers](/thailand/transfers) saves significantly." },
 
         { type: "heading", content: "Hidden Costs Most Travelers Forget" },
         { type: "list", items: [
