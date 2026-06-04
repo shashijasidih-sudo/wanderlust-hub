@@ -98,32 +98,59 @@ interface BlogArticleProps {
   children?: React.ReactNode;
 }
 
-// Parse [text](url) markdown-style links inline. Internal paths use <Link>, external use <a>.
+import { findAutoLink } from "@/data/tourLinkMap";
+
+// Parse [text](url) markdown-style links and auto-link known tour/activity
+// phrases from TOUR_LINK_MAP. Explicit markdown links always win; auto-links
+// fire at most once per phrase per text block to keep prose readable.
 const renderInline = (text: string): React.ReactNode => {
   if (!text) return text;
+  const linkClass = "text-primary font-semibold underline underline-offset-2 hover:text-primary/80";
   const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
   const parts: React.ReactNode[] = [];
+  const usedPaths = new Set<string>();
   let lastIndex = 0;
   let match: RegExpExecArray | null;
   let key = 0;
+
+  const pushPlain = (segment: string) => {
+    // Recursively scan plain-text segments for auto-link phrases.
+    let remaining = segment;
+    while (remaining) {
+      const hit = findAutoLink(remaining);
+      if (!hit || usedPaths.has(hit.path)) {
+        parts.push(remaining);
+        return;
+      }
+      if (hit.index > 0) parts.push(remaining.slice(0, hit.index));
+      usedPaths.add(hit.path);
+      parts.push(
+        <Link key={key++} to={hit.path} className={linkClass}>{hit.label}</Link>
+      );
+      remaining = remaining.slice(hit.index + hit.length);
+    }
+  };
+
   while ((match = regex.exec(text)) !== null) {
-    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+    if (match.index > lastIndex) pushPlain(text.slice(lastIndex, match.index));
     const [, label, href] = match;
     const isInternal = href.startsWith("/");
+    usedPaths.add(href);
     if (isInternal) {
       parts.push(
-        <Link key={key++} to={href} className="text-primary font-semibold underline underline-offset-2 hover:text-primary/80">{label}</Link>
+        <Link key={key++} to={href} className={linkClass}>{label}</Link>
       );
     } else {
       parts.push(
-        <a key={key++} href={href} target="_blank" rel="noopener noreferrer" className="text-primary font-semibold underline underline-offset-2 hover:text-primary/80">{label}</a>
+        <a key={key++} href={href} target="_blank" rel="noopener noreferrer" className={linkClass}>{label}</a>
       );
     }
     lastIndex = match.index + match[0].length;
   }
-  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+  if (lastIndex < text.length) pushPlain(text.slice(lastIndex));
   return parts.length ? parts : text;
 };
+
 
 
 const BlogArticleLayout = ({
