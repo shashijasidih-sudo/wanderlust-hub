@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Seo from "@/components/seo/Seo";
 
 import { Link } from "react-router-dom";
@@ -97,6 +97,34 @@ interface BlogArticleProps {
   internalLinks?: InternalLinks;
   children?: React.ReactNode;
 }
+
+// Parse [text](url) markdown-style links inline. Internal paths use <Link>, external use <a>.
+const renderInline = (text: string): React.ReactNode => {
+  if (!text) return text;
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+    const [, label, href] = match;
+    const isInternal = href.startsWith("/");
+    if (isInternal) {
+      parts.push(
+        <Link key={key++} to={href} className="text-primary font-semibold underline underline-offset-2 hover:text-primary/80">{label}</Link>
+      );
+    } else {
+      parts.push(
+        <a key={key++} href={href} target="_blank" rel="noopener noreferrer" className="text-primary font-semibold underline underline-offset-2 hover:text-primary/80">{label}</a>
+      );
+    }
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+  return parts.length ? parts : text;
+};
+
 
 const BlogArticleLayout = ({
   title, description, heroImage, heroAlt, author, date,
@@ -338,7 +366,7 @@ const BlogArticleLayout = ({
                     rendered = <h3 className="text-xl font-semibold text-foreground mt-8 mb-3">{section.content}</h3>;
                     break;
                   case "paragraph":
-                    rendered = <p className="text-muted-foreground leading-relaxed mb-4">{section.content}</p>;
+                    rendered = <p className="text-muted-foreground leading-relaxed mb-4">{renderInline(section.content || "")}</p>;
                     break;
                   case "list":
                     rendered = (
@@ -346,7 +374,7 @@ const BlogArticleLayout = ({
                         {section.items?.map((item, j) => (
                           <li key={j} className="flex items-start gap-3 text-muted-foreground">
                             <span className="text-primary font-bold mt-0.5">✓</span>
-                            <span>{item}</span>
+                            <span>{renderInline(item)}</span>
                           </li>
                         ))}
                       </ul>

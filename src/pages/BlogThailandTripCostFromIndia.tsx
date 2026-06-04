@@ -92,12 +92,13 @@ const BlogThailandTripCostFromIndia = () => {
 
         { type: "heading", content: "Popular Thailand Tours & Approximate Cost" },
         { type: "list", items: [
-          "Phi Phi Island Tour: ₹2,500 – ₹4,500",
-          "James Bond Island: ₹3,000 – ₹5,000",
-          "Safari World Bangkok: ₹2,000 – ₹4,000",
-          "Coral Island Pattaya: ₹1,500 – ₹3,000",
-          "Alcazar Show Pattaya: ₹1,000 – ₹2,500",
+          "[Phi Phi Island Tour](/thailand/phuket/full-day-phi-phi-island-tour-with-transfer): ₹2,500 – ₹4,500",
+          "[James Bond Island](/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer): ₹3,000 – ₹5,000",
+          "[Safari World Bangkok](/thailand/bangkok/safari-world): ₹2,000 – ₹4,000",
+          "[Coral Island Pattaya](/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch): ₹1,500 – ₹3,000",
+          "[Alcazar Show Pattaya](/thailand/pattaya/alcazar-cabaret-show-with-transfer): ₹1,000 – ₹2,500",
         ]},
+        { type: "paragraph", content: "Book directly: [Phi Phi Island Speedboat Tour](/thailand/phuket/full-day-phi-phi-island-tour-with-transfer), [James Bond Island Tour](/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer), [Safari World Bangkok](/thailand/bangkok/safari-world), [Coral Island Pattaya with Indian Lunch](/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch), and the [Alcazar Cabaret Show Pattaya](/thailand/pattaya/alcazar-cabaret-show-with-transfer)." },
         { type: "cta", content: "Pre-book the iconic Phi Phi Island speedboat from Phuket.", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer", linkText: "Book Phi Phi Island Tour" },
         { type: "cta", content: "Explore Phang Nga Bay's most famous landmark.", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer", linkText: "Book James Bond Island Tour" },
         { type: "cta", content: "Family favourite — animals, dolphins and safari park.", link: "/thailand/bangkok/safari-world", linkText: "Book Safari World Bangkok" },
@@ -144,7 +145,7 @@ const BlogThailandTripCostFromIndia = () => {
         { type: "subheading", content: "Honeymoon Couple (7 Days): ₹1.2 Lakh – ₹3 Lakh+" },
         { type: "paragraph", content: "Popular honeymoon picks: Phuket, Krabi, Koh Samui and Phi Phi Islands. Couples typically choose private pool villas, sunset cruises, spa treatments and private island tours." },
         { type: "subheading", content: "Family of Four (7 Days): ₹1.6 Lakh – ₹3.5 Lakh" },
-        { type: "paragraph", content: "Family hits include Safari World Bangkok, Sea Life Ocean World, Phuket Fantasea, water parks and island excursions. Pre-booking activity packages and transfers saves significantly." },
+        { type: "paragraph", content: "Family hits include [Safari World Bangkok](/thailand/bangkok/safari-world), Sea Life Ocean World, Phuket Fantasea, water parks and island excursions like the [Phi Phi Island Tour](/thailand/phuket/full-day-phi-phi-island-tour-with-transfer) and [Coral Island Pattaya](/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch). Pre-booking activity packages and [Thailand airport transfers](/thailand/transfers) saves significantly." },
 
         { type: "heading", content: "Hidden Costs Most Travelers Forget" },
         { type: "list", items: [
