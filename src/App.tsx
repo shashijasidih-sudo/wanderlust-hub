@@ -232,6 +232,7 @@ const BlogSingaporeComboPass = lazy(() => import("./pages/BlogSingaporeComboPass
 const BlogSingaporeFoodExperiences = lazy(() => import("./pages/BlogSingaporeFoodExperiences"));
 const BlogThailandIslandCombos = lazy(() => import("./pages/BlogThailandIslandCombos"));
 const BlogThailandFoodExperiences = lazy(() => import("./pages/BlogThailandFoodExperiences"));
+const BlogThailandTripCostFromIndia = lazy(() => import("./pages/BlogThailandTripCostFromIndia"));
 const BlogDubaiShoppingTours = lazy(() => import("./pages/BlogDubaiShoppingTours"));
 const BlogDubaiFoodExperiences = lazy(() => import("./pages/BlogDubaiFoodExperiences"));
 const NetherlandsSmartGuides = lazy(() => import("./pages/NetherlandsSmartGuides"));
@@ -761,6 +762,7 @@ const App = () => (
             <Route path="/blog/night-safari-singapore-guide" element={<BlogNightSafariSingapore />} />
             <Route path="/blog/thailand-island-combos" element={<BlogThailandIslandCombos />} />
             <Route path="/blog/thailand-food-experiences" element={<BlogThailandFoodExperiences />} />
+            <Route path="/blog/thailand-trip-cost-from-india" element={<BlogThailandTripCostFromIndia />} />
             <Route path="/netherlands-smart-guides" element={<NetherlandsSmartGuides />} />
            <Route path="/thailand/bangkok/budget-airport-transfers" element={<BangkokTransfers />} />
            {/* New SEO-friendly Bangkok Transfer slugs */}
