@@ -338,7 +338,7 @@ const BlogArticleLayout = ({
                     rendered = <h3 className="text-xl font-semibold text-foreground mt-8 mb-3">{section.content}</h3>;
                     break;
                   case "paragraph":
-                    rendered = <p className="text-muted-foreground leading-relaxed mb-4">{section.content}</p>;
+                    rendered = <p className="text-muted-foreground leading-relaxed mb-4">{renderInline(section.content || "")}</p>;
                     break;
                   case "list":
                     rendered = (
@@ -346,7 +346,7 @@ const BlogArticleLayout = ({
                         {section.items?.map((item, j) => (
                           <li key={j} className="flex items-start gap-3 text-muted-foreground">
                             <span className="text-primary font-bold mt-0.5">✓</span>
-                            <span>{item}</span>
+                            <span>{renderInline(item)}</span>
                           </li>
                         ))}
                       </ul>
