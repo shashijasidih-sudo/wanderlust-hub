@@ -89,7 +89,7 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/buying-guides/best-products/best-cabin-luggage",
     icon: Luggage,
     tag: "Luggage",
-    image: "/__l5e/assets-v1/258d450d-9311-483c-a954-4db4ed076e5e/cabin-luggage.jpg",
+    image: cabinLuggageAsset.url,
     alt: "Sleek modern cabin luggage at the airport terminal",
   },
   {
@@ -97,7 +97,7 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/travel-accessories/safety-products/anti-theft-gear",
     icon: Lock,
     tag: "Anti-Theft",
-    image: "/__l5e/assets-v1/91856846-e6bc-4834-a5e6-2d1c917bb0cf/anti-theft-gear.jpg",
+    image: antiTheftAsset.url,
     alt: "Secure anti-theft travel backpack with hidden zipper",
   },
   {
@@ -105,7 +105,7 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/packing-lists/by-traveler/men-travelers/best-bags-for-men-travelers",
     icon: Briefcase,
     tag: "Men's Bags",
-    image: "/__l5e/assets-v1/21368f85-ff6b-4367-ba2d-1ee6e052f737/men-travel-bags.jpg",
+    image: menTravelBagsAsset.url,
     alt: "Stylish leather travel duffel bag and backpack for men",
   },
   {
@@ -113,7 +113,7 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/travel-accessories/safety-products/money-belts",
     icon: Wallet,
     tag: "Money Belts",
-    image: "/__l5e/assets-v1/3073e79a-c0f0-4409-bd57-f606f5c2d51b/money-belt.jpg",
+    image: moneyBeltAsset.url,
     alt: "Brown leather money belt and travel wallet with cash",
   },
 ];
