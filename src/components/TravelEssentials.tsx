@@ -1,4 +1,8 @@
 import { ExternalLink, Sun, Sparkles, Heart, Compass, Backpack, ShieldCheck, Package, Radar, Luggage, Lock, Briefcase, Wallet } from "lucide-react";
+import cabinLuggageAsset from "@/assets/cabin-luggage.jpg.asset.json";
+import antiTheftAsset from "@/assets/anti-theft-gear.jpg.asset.json";
+import menTravelBagsAsset from "@/assets/men-travel-bags.jpg.asset.json";
+import moneyBeltAsset from "@/assets/money-belt.jpg.asset.json";
 
 type Item = {
   title: string;
