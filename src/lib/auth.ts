@@ -69,13 +69,20 @@ export const auth = {
   },
 
   signInWithGoogle: async () => {
-    const { error } = await supabase.auth.signInWithOAuth({
+    const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
         redirectTo: `${window.location.origin}/auth/callback`,
+        skipBrowserRedirect: true,
+        queryParams: {
+          prompt: "select_account",
+        },
       },
     });
     if (error) throw error;
+    if (data.url) {
+      window.top?.location.assign(data.url);
+    }
   },
 
   resetPassword: async (email: string) => {
