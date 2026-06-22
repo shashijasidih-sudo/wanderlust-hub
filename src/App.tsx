@@ -461,6 +461,7 @@ const App = () => (
           <ApprovalBadge />
           <Suspense fallback={null}><Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/auth/callback" element={<AuthCallback />} />
           {/* Thailand routes */}
             <Route path="/thailand" element={<Thailand />} />
             <Route path="/thailand/bangkok" element={<Bangkok />} />
