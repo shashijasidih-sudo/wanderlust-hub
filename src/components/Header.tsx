@@ -177,7 +177,7 @@ const Header = () => {
                       Settings
                     </Link>
                   </DropdownMenuItem>
-                  {user.email === "admin@yellodae.com" && (
+                  {user.is_admin && (
                     <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
                       <Link to="/admin" className="flex items-center w-full">
                         <ShieldCheck className="h-4 w-4 mr-2" />
