@@ -97,33 +97,47 @@ const Wishlist = () => {
           </Card>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {wishlistItems.map((item) => (
-              <Card key={item.id} className="overflow-hidden group hover:shadow-lg transition-all">
-                <div className="relative h-48 cursor-pointer" onClick={() => handleViewTour(item.tour_slug)}>
-                  <img src={item.tour_image || "/placeholder.svg"} alt={item.tour_name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="absolute top-2 right-2 bg-white/80 hover:bg-white rounded-full"
-                    onClick={(e) => { e.stopPropagation(); handleRemove(item.tour_slug, item.tour_name); }}
-                  >
-                    <Trash2 className="h-4 w-4 text-destructive" />
-                  </Button>
-                </div>
-                <CardContent className="p-4">
-                  <h3
-                    className="font-semibold text-lg mb-2 cursor-pointer hover:text-primary transition-colors line-clamp-2"
-                    onClick={() => handleViewTour(item.tour_slug)}
-                  >
-                    {item.tour_name}
-                  </h3>
-                  <div className="flex items-center justify-between">
-                    {item.tour_price && <p className="text-lg font-bold text-primary">{formatPrice(item.tour_price)}</p>}
-                    <Button size="sm" onClick={() => handleViewTour(item.tour_slug)}>View Tour</Button>
+            {wishlistItems.map((item) => {
+              const tour = resolveTour(item.tour_slug);
+              const img =
+                tour?.heroImages?.[0]?.src ||
+                tour?.galleryImages?.[0]?.src ||
+                item.tour_image ||
+                "/placeholder.svg";
+              return (
+                <Card key={item.id} className="overflow-hidden group hover:shadow-lg transition-all">
+                  <div className="relative h-48 cursor-pointer bg-muted" onClick={() => handleViewTour(item.tour_slug)}>
+                    <img
+                      src={img}
+                      alt={item.tour_name}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      onError={(e) => { (e.target as HTMLImageElement).src = "/placeholder.svg"; }}
+                    />
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="absolute top-2 right-2 bg-white/80 hover:bg-white rounded-full"
+                      onClick={(e) => { e.stopPropagation(); handleRemove(item.tour_slug, item.tour_name); }}
+                    >
+                      <Trash2 className="h-4 w-4 text-destructive" />
+                    </Button>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                  <CardContent className="p-4">
+                    <h3
+                      className="font-semibold text-lg mb-2 cursor-pointer hover:text-primary transition-colors line-clamp-2"
+                      onClick={() => handleViewTour(item.tour_slug)}
+                    >
+                      {item.tour_name}
+                    </h3>
+                    <div className="flex items-center justify-between">
+                      {item.tour_price && <p className="text-lg font-bold text-primary">{formatPrice(item.tour_price)}</p>}
+                      <Button size="sm" onClick={() => handleViewTour(item.tour_slug)}>View Tour</Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         )}
       </main>
