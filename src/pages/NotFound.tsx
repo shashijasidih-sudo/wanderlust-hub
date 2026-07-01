@@ -1,9 +1,10 @@
-import { useLocation, useNavigate, Link } from "react-router-dom";
+import { useLocation, useNavigate, Link, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Home, Search, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { TOUR_ROUTES } from "@/data/tourRoutes";
 
 const suggestedDestinations = [
   { name: "Thailand Tours", path: "/thailand", icon: "🇹🇭" },
