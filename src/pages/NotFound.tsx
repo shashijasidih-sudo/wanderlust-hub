@@ -20,6 +20,15 @@ const NotFound = () => {
   const navigate = useNavigate();
   const [countdown, setCountdown] = useState(15);
 
+  // Auto-recover stale/legacy activity URLs whose last segment matches a
+  // known tour id (e.g. /thailand/phuket/phuket-simon-cabaret).
+  const segments = location.pathname.replace(/\/+$/, "").split("/").filter(Boolean);
+  const lastSegment = segments[segments.length - 1];
+  const canonicalTourRoute = lastSegment ? TOUR_ROUTES[lastSegment] : undefined;
+  if (canonicalTourRoute && canonicalTourRoute !== location.pathname) {
+    return <Navigate to={canonicalTourRoute} replace />;
+  }
+
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
   }, [location.pathname]);
