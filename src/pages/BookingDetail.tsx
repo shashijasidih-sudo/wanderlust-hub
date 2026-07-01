@@ -7,6 +7,8 @@ import { useCurrency } from "@/contexts/CurrencyContext";
 import { toursData, TourData } from "@/data/tourData";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TravelerExperiences from "@/components/TravelerExperiences";
+import BookingRecommendations from "@/components/BookingRecommendations";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -114,40 +116,40 @@ const BookingDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="container px-4 md:px-6 py-8 mt-16">
-        <div className="max-w-5xl mx-auto">
+      <main className="container px-4 md:px-6 py-8 md:py-12 mt-16">
+        <div className="max-w-6xl mx-auto">
           {/* Back button */}
-          <Button variant="ghost" className="mb-4 -ml-2" onClick={() => navigate("/user-bookings")}>
-            <ArrowLeft className="h-4 w-4 mr-2" /> Back to My Bookings
+          <Button variant="ghost" className="mb-6 -ml-2 text-base" onClick={() => navigate("/user-bookings")}>
+            <ArrowLeft className="h-5 w-5 mr-2" /> Back to My Bookings
           </Button>
 
           {/* Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-            <div>
-              <h1 className="text-2xl md:text-3xl font-bold">{booking.tour_name}</h1>
+          <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-10">
+            <div className="space-y-3">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">{booking.tour_name}</h1>
               {tourData && (
-                <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mt-1">
-                  <span className="flex items-center gap-1"><MapPin className="h-3.5 w-3.5" />{tourData.location}</span>
-                  <span className="flex items-center gap-1"><Clock className="h-3.5 w-3.5" />{tourData.duration}</span>
+                <div className="flex flex-wrap gap-4 text-base text-muted-foreground">
+                  <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4" />{tourData.location}</span>
+                  <span className="flex items-center gap-1.5"><Clock className="h-4 w-4" />{tourData.duration}</span>
                   {tourData.rating && (
-                    <span className="flex items-center gap-1"><Star className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />{tourData.rating} ({tourData.reviews} reviews)</span>
+                    <span className="flex items-center gap-1.5"><Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />{tourData.rating} ({tourData.reviews} reviews)</span>
                   )}
                 </div>
               )}
             </div>
-            <Badge variant="outline" className={`${status.color} text-sm px-4 py-1.5 flex items-center gap-1.5 shrink-0`}>
+            <Badge variant="outline" className={`${status.color} text-base px-5 py-2 flex items-center gap-2 shrink-0`}>
               {status.icon} {status.label}
             </Badge>
           </div>
 
           {/* Photo Gallery */}
           {tourData && tourData.galleryImages?.length > 0 && (
-            <Card className="mb-6 overflow-hidden">
-              <CardContent className="p-4">
-                <h2 className="font-semibold text-lg flex items-center gap-2 mb-3">
-                  <ImageIcon className="h-5 w-5 text-primary" /> Photo Gallery
+            <Card className="mb-8 overflow-hidden">
+              <CardContent className="p-5 md:p-6">
+                <h2 className="font-semibold text-xl md:text-2xl flex items-center gap-2 mb-4">
+                  <ImageIcon className="h-6 w-6 text-primary" /> Photo Gallery
                 </h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                   {tourData.galleryImages.slice(0, 8).map((img, i) => (
                     <div
                       key={i}
@@ -169,21 +171,21 @@ const BookingDetail = () => {
             </div>
           )}
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Tour Info */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className="lg:col-span-2 space-y-8">
               {/* Tour Overview */}
               {tourData?.description && (
                 <Card>
-                  <CardContent className="p-5">
-                    <h2 className="font-semibold text-lg flex items-center gap-2 mb-3">
-                      <FileText className="h-5 w-5 text-primary" /> Tour Overview
+                  <CardContent className="p-6 md:p-7">
+                    <h2 className="font-semibold text-xl md:text-2xl flex items-center gap-2 mb-4">
+                      <FileText className="h-6 w-6 text-primary" /> Tour Overview
                     </h2>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">{tourData.description.overview}</p>
+                    <p className="text-base text-muted-foreground leading-relaxed mb-5">{tourData.description.overview}</p>
                     {tourData.description.whatToExpect && (
                       <>
-                        <h3 className="font-semibold text-sm mb-2">What to Expect</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{tourData.description.whatToExpect}</p>
+                        <h3 className="font-semibold text-lg mb-3">What to Expect</h3>
+                        <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">{tourData.description.whatToExpect}</p>
                       </>
                     )}
                   </CardContent>
@@ -193,9 +195,9 @@ const BookingDetail = () => {
               {/* Itinerary */}
               {tourData?.itinerary?.length > 0 && (
                 <Card>
-                  <CardContent className="p-5">
-                    <h2 className="font-semibold text-lg flex items-center gap-2 mb-4">
-                      <Route className="h-5 w-5 text-primary" /> Itinerary
+                  <CardContent className="p-6 md:p-7">
+                    <h2 className="font-semibold text-xl md:text-2xl flex items-center gap-2 mb-5">
+                      <Route className="h-6 w-6 text-primary" /> Itinerary
                     </h2>
                     <div className="space-y-4">
                       {tourData.itinerary.map((step, i) => (
@@ -207,9 +209,9 @@ const BookingDetail = () => {
                             {i < tourData.itinerary.length - 1 && <div className="w-0.5 flex-1 bg-primary/20 mt-1" />}
                           </div>
                           <div className="pb-4">
-                            <p className="text-xs font-semibold text-primary">{step.time}</p>
-                            <h4 className="font-semibold text-sm">{step.title}</h4>
-                            <p className="text-sm text-muted-foreground">{step.description}</p>
+                            <p className="text-sm font-semibold text-primary">{step.time}</p>
+                            <h4 className="font-semibold text-base">{step.title}</h4>
+                            <p className="text-base text-muted-foreground">{step.description}</p>
                           </div>
                         </div>
                       ))}
@@ -221,8 +223,8 @@ const BookingDetail = () => {
               {/* Policies Accordion */}
               {tourData && (
                 <Card>
-                  <CardContent className="p-5">
-                    <h2 className="font-semibold text-lg mb-3">Policies & Information</h2>
+                  <CardContent className="p-6 md:p-7">
+                    <h2 className="font-semibold text-xl md:text-2xl mb-4">Policies & Information</h2>
                     <Accordion type="multiple" className="w-full">
                       {tourData.inclusions?.length > 0 && (
                         <AccordionItem value="inclusions">
@@ -301,45 +303,45 @@ const BookingDetail = () => {
             </div>
 
             {/* Right Column - Booking Summary */}
-            <div className="space-y-6">
+            <div className="space-y-8">
               {/* Booking Details Card */}
               <Card className="sticky top-24">
-                <CardContent className="p-5 space-y-4">
-                  <h2 className="font-semibold text-lg">Booking Details</h2>
-                  <div className="text-xs font-mono text-muted-foreground">ID: {booking.id.slice(0, 8)}</div>
+                <CardContent className="p-6 md:p-7 space-y-5">
+                  <h2 className="font-semibold text-xl md:text-2xl">Booking Details</h2>
+                  <div className="text-sm font-mono text-muted-foreground">ID: {booking.id.slice(0, 8)}</div>
 
                   <Separator />
 
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center gap-2">
-                      <CalendarDays className="h-4 w-4 text-muted-foreground" />
+                  <div className="space-y-4 text-base">
+                    <div className="flex items-center gap-3">
+                      <CalendarDays className="h-5 w-5 text-muted-foreground" />
                       <div>
-                        <p className="text-muted-foreground text-xs">Tour Date</p>
+                        <p className="text-muted-foreground text-sm">Tour Date</p>
                         <p className="font-semibold">{format(new Date(booking.tour_date), "EEE, MMM dd, yyyy")}</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <CalendarDays className="h-4 w-4 text-muted-foreground" />
+                    <div className="flex items-center gap-3">
+                      <CalendarDays className="h-5 w-5 text-muted-foreground" />
                       <div>
-                        <p className="text-muted-foreground text-xs">Booked On</p>
+                        <p className="text-muted-foreground text-sm">Booked On</p>
                         <p className="font-semibold">{format(new Date(booking.created_at), "MMM dd, yyyy")}</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="h-4 w-4 text-muted-foreground" />
+                    <div className="flex items-center gap-3">
+                      <Users className="h-5 w-5 text-muted-foreground" />
                       <div>
-                        <p className="text-muted-foreground text-xs">Guests</p>
+                        <p className="text-muted-foreground text-sm">Guests</p>
                         <p className="font-semibold">
                           {booking.adults} Adult{booking.adults > 1 ? "s" : ""}
                           {booking.children > 0 ? `, ${booking.children} Child${booking.children > 1 ? "ren" : ""}` : ""}
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <CreditCard className="h-4 w-4 text-muted-foreground" />
+                    <div className="flex items-center gap-3">
+                      <CreditCard className="h-5 w-5 text-muted-foreground" />
                       <div>
-                        <p className="text-muted-foreground text-xs">Amount Paid</p>
-                        <p className="font-bold text-primary text-lg">{formatPrice(booking.total_price)}</p>
+                        <p className="text-muted-foreground text-sm">Amount Paid</p>
+                        <p className="font-bold text-primary text-xl">{formatPrice(booking.total_price)}</p>
                       </div>
                     </div>
                   </div>
@@ -348,8 +350,8 @@ const BookingDetail = () => {
 
                   {/* Customer Info */}
                   <div>
-                    <h3 className="font-semibold text-xs text-muted-foreground uppercase tracking-wide mb-2">Customer Information</h3>
-                    <div className="space-y-2 text-sm">
+                    <h3 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-3">Customer Information</h3>
+                    <div className="space-y-2.5 text-base">
                       <div className="flex items-center gap-2"><User className="h-4 w-4 text-muted-foreground" />{booking.contact_name}</div>
                       <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-muted-foreground" /><span className="truncate">{booking.contact_email}</span></div>
                       {booking.contact_phone && <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-muted-foreground" />{booking.contact_phone}</div>}
@@ -414,6 +416,8 @@ const BookingDetail = () => {
           </div>
         </div>
       </main>
+      <TravelerExperiences />
+      <BookingRecommendations city={tourData?.city || booking.tour_slug?.split("/")?.[1]} excludeSlug={booking.tour_slug} />
       <Footer />
     </div>
   );
