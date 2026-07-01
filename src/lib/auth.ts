@@ -1,6 +1,29 @@
 import { useState, useEffect, useCallback } from "react";
 import { supabase } from "./supabaseClient";
 
+async function resolveFullName(userId: string, metadata: any, email?: string): Promise<string | undefined> {
+  try {
+    const { data } = await supabase
+      .from("profiles")
+      .select("full_name")
+      .eq("id", userId)
+      .maybeSingle();
+    const fromProfile = (data as any)?.full_name?.trim();
+    if (fromProfile) return fromProfile;
+  } catch {
+    /* ignore */
+  }
+  const meta = metadata || {};
+  return (
+    meta.full_name?.trim() ||
+    meta.name?.trim() ||
+    meta.user_name?.trim() ||
+    undefined
+  );
+}
+
+
+
 export interface AppUser {
   id: string;
   email: string;
@@ -19,12 +42,14 @@ export const auth = {
   getUser: async (): Promise<AppUser | null> => {
     const { data } = await supabase.auth.getUser();
     if (!data.user) return null;
+    const full_name = await resolveFullName(data.user.id, data.user.user_metadata, data.user.email ?? undefined);
     return {
       id: data.user.id,
       email: data.user.email!,
-      full_name: data.user.user_metadata?.full_name,
+      full_name,
     };
   },
+
 
   signInWithPassword: async (
     email: string,
@@ -35,11 +60,13 @@ export const auth = {
       password,
     });
     if (error) throw error;
+    const full_name = await resolveFullName(data.user.id, data.user.user_metadata, data.user.email ?? undefined);
     const user: AppUser = {
       id: data.user.id,
       email: data.user.email!,
-      full_name: data.user.user_metadata?.full_name,
+      full_name,
     };
+
     notify(user);
     return user;
   },
@@ -113,14 +140,16 @@ export function useAuth() {
   useEffect(() => {
     let isMounted = true;
 
-    const syncUser = (authUser: Awaited<ReturnType<typeof supabase.auth.getUser>>["data"]["user"]) => {
+    const syncUser = async (authUser: Awaited<ReturnType<typeof supabase.auth.getUser>>["data"]["user"]) => {
       if (!isMounted) return;
 
       if (authUser) {
+        const full_name = await resolveFullName(authUser.id, authUser.user_metadata, authUser.email ?? undefined);
+        if (!isMounted) return;
         const nextUser = {
           id: authUser.id,
           email: authUser.email!,
-          full_name: authUser.user_metadata?.full_name,
+          full_name,
         };
         setUser(nextUser);
         notify(nextUser);
@@ -131,6 +160,7 @@ export function useAuth() {
 
       setIsLoading(false);
     };
+
 
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
       syncUser(session?.user ?? null);

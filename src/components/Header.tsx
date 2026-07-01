@@ -18,6 +18,8 @@ import SearchInput from "./SearchInput";
 import { useAuth } from "@/lib/auth";
 import { useToast } from "@/hooks/use-toast";
 import { useCurrency, CURRENCIES } from "@/contexts/CurrencyContext";
+import { getDisplayName } from "@/lib/userDisplay";
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -146,7 +148,7 @@ const Header = () => {
                 <DropdownMenuTrigger asChild>
                   <Button variant="default" size="sm" className="hidden md:flex items-center gap-2">
                     <User className="h-4 w-4" />
-                    {user.email?.split('@')[0] || 'My Account'}
+                    {getDisplayName(user) || 'My Account'}
                     <ChevronDown className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
