@@ -10,243 +10,11 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "14.1"
+    PostgrestVersion: "14.5"
   }
   public: {
     Tables: {
-      bookings: {
-        Row: {
-          adults: number
-          children: number
-          contact_email: string
-          contact_name: string
-          contact_phone: string | null
-          created_at: string
-          currency: string
-          id: string
-          special_requests: string | null
-          status: Database["public"]["Enums"]["booking_status"]
-          total_price: number
-          tour_date: string
-          tour_name: string
-          tour_slug: string
-          updated_at: string
-          user_id: string
-        }
-        Insert: {
-          adults?: number
-          children?: number
-          contact_email: string
-          contact_name: string
-          contact_phone?: string | null
-          created_at?: string
-          currency?: string
-          id?: string
-          special_requests?: string | null
-          status?: Database["public"]["Enums"]["booking_status"]
-          total_price: number
-          tour_date: string
-          tour_name: string
-          tour_slug: string
-          updated_at?: string
-          user_id: string
-        }
-        Update: {
-          adults?: number
-          children?: number
-          contact_email?: string
-          contact_name?: string
-          contact_phone?: string | null
-          created_at?: string
-          currency?: string
-          id?: string
-          special_requests?: string | null
-          status?: Database["public"]["Enums"]["booking_status"]
-          total_price?: number
-          tour_date?: string
-          tour_name?: string
-          tour_slug?: string
-          updated_at?: string
-          user_id?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "bookings_user_id_fkey"
-            columns: ["user_id"]
-            isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      cart_items: {
-        Row: {
-          adults: number | null
-          capacity: string | null
-          child_price: number | null
-          children: number | null
-          created_at: string
-          drop_location: string | null
-          id: string
-          item_type: string
-          number_of_persons: number
-          pickup_date: string | null
-          pickup_location: string | null
-          pickup_time: string | null
-          price: number
-          quantity: number
-          room_no: string | null
-          selected_date: string | null
-          selected_time: string | null
-          slug: string
-          title: string
-          transfer_id: string | null
-          updated_at: string
-          user_id: string
-          vehicle_id: string | null
-          vehicle_name: string | null
-        }
-        Insert: {
-          adults?: number | null
-          capacity?: string | null
-          child_price?: number | null
-          children?: number | null
-          created_at?: string
-          drop_location?: string | null
-          id?: string
-          item_type?: string
-          number_of_persons?: number
-          pickup_date?: string | null
-          pickup_location?: string | null
-          pickup_time?: string | null
-          price: number
-          quantity?: number
-          room_no?: string | null
-          selected_date?: string | null
-          selected_time?: string | null
-          slug: string
-          title: string
-          transfer_id?: string | null
-          updated_at?: string
-          user_id: string
-          vehicle_id?: string | null
-          vehicle_name?: string | null
-        }
-        Update: {
-          adults?: number | null
-          capacity?: string | null
-          child_price?: number | null
-          children?: number | null
-          created_at?: string
-          drop_location?: string | null
-          id?: string
-          item_type?: string
-          number_of_persons?: number
-          pickup_date?: string | null
-          pickup_location?: string | null
-          pickup_time?: string | null
-          price?: number
-          quantity?: number
-          room_no?: string | null
-          selected_date?: string | null
-          selected_time?: string | null
-          slug?: string
-          title?: string
-          transfer_id?: string | null
-          updated_at?: string
-          user_id?: string
-          vehicle_id?: string | null
-          vehicle_name?: string | null
-        }
-        Relationships: []
-      }
-      payments: {
-        Row: {
-          amount: number | null
-          created_at: string | null
-          currency: string | null
-          id: string
-          razorpay_order_id: string | null
-          razorpay_payment_id: string | null
-          status: string | null
-          user_id: string | null
-        }
-        Insert: {
-          amount?: number | null
-          created_at?: string | null
-          currency?: string | null
-          id?: string
-          razorpay_order_id?: string | null
-          razorpay_payment_id?: string | null
-          status?: string | null
-          user_id?: string | null
-        }
-        Update: {
-          amount?: number | null
-          created_at?: string | null
-          currency?: string | null
-          id?: string
-          razorpay_order_id?: string | null
-          razorpay_payment_id?: string | null
-          status?: string | null
-          user_id?: string | null
-        }
-        Relationships: []
-      }
-      profiles: {
-        Row: {
-          created_at: string
-          "Email id": string[] | null
-          full_name: string
-          id: string
-          updated_at: string
-        }
-        Insert: {
-          created_at?: string
-          "Email id"?: string[] | null
-          full_name: string
-          id: string
-          updated_at?: string
-        }
-        Update: {
-          created_at?: string
-          "Email id"?: string[] | null
-          full_name?: string
-          id?: string
-          updated_at?: string
-        }
-        Relationships: []
-      }
-      wishlists: {
-        Row: {
-          created_at: string
-          id: string
-          tour_image: string | null
-          tour_name: string
-          tour_price: number | null
-          tour_slug: string
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          tour_image?: string | null
-          tour_name: string
-          tour_price?: number | null
-          tour_slug: string
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          tour_image?: string | null
-          tour_name?: string
-          tour_price?: number | null
-          tour_slug?: string
-          user_id?: string
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
@@ -255,7 +23,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      booking_status: "pending" | "confirmed" | "cancelled" | "completed"
+      [_ in never]: never
     }
     CompositeTypes: {
       [_ in never]: never
@@ -382,8 +150,6 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {
-      booking_status: ["pending", "confirmed", "cancelled", "completed"],
-    },
+    Enums: {},
   },
 } as const
