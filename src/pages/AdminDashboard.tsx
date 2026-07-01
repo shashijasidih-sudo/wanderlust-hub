@@ -93,13 +93,14 @@ const AdminDashboard = () => {
     const checkAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) { navigate("/auth"); return; }
-      if (!ADMIN_EMAILS.includes(session.user?.email || "")) { navigate("/"); return; }
+      const admin = await isAdminUser(session.user?.id);
+      if (!admin) { navigate("/"); return; }
       setAuthChecked(true);
     };
     checkAuth();
   }, [authLoading, navigate]);
 
-  const isAdmin = user && ADMIN_EMAILS.includes(user.email);
+  const isAdmin = !!user?.is_admin;
 
   const redirectToLogin = (description = "Please log in again.") => {
     toast({
