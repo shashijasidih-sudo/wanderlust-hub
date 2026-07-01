@@ -140,14 +140,16 @@ export function useAuth() {
   useEffect(() => {
     let isMounted = true;
 
-    const syncUser = (authUser: Awaited<ReturnType<typeof supabase.auth.getUser>>["data"]["user"]) => {
+    const syncUser = async (authUser: Awaited<ReturnType<typeof supabase.auth.getUser>>["data"]["user"]) => {
       if (!isMounted) return;
 
       if (authUser) {
+        const full_name = await resolveFullName(authUser.id, authUser.user_metadata, authUser.email ?? undefined);
+        if (!isMounted) return;
         const nextUser = {
           id: authUser.id,
           email: authUser.email!,
-          full_name: authUser.user_metadata?.full_name,
+          full_name,
         };
         setUser(nextUser);
         notify(nextUser);
@@ -158,6 +160,7 @@ export function useAuth() {
 
       setIsLoading(false);
     };
+
 
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
       syncUser(session?.user ?? null);
