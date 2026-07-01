@@ -42,12 +42,14 @@ export const auth = {
   getUser: async (): Promise<AppUser | null> => {
     const { data } = await supabase.auth.getUser();
     if (!data.user) return null;
+    const full_name = await resolveFullName(data.user.id, data.user.user_metadata, data.user.email ?? undefined);
     return {
       id: data.user.id,
       email: data.user.email!,
-      full_name: data.user.user_metadata?.full_name,
+      full_name,
     };
   },
+
 
   signInWithPassword: async (
     email: string,
