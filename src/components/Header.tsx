@@ -18,6 +18,8 @@ import SearchInput from "./SearchInput";
 import { useAuth } from "@/lib/auth";
 import { useToast } from "@/hooks/use-toast";
 import { useCurrency, CURRENCIES } from "@/contexts/CurrencyContext";
+import { getDisplayName } from "@/lib/userDisplay";
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
