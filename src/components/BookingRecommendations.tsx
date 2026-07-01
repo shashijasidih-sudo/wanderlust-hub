@@ -43,20 +43,24 @@ const BookingRecommendations = ({ city, excludeSlug }: Props) => {
     );
   }
 
+  const scrollRowClass =
+    "flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-5 sm:overflow-visible scrollbar-hide";
+  const scrollItemClass = "snap-start shrink-0 w-[78%] xs:w-[70%] sm:w-auto";
+
   return (
-    <section className="container mx-auto px-4 md:px-6 py-8 space-y-14">
+    <section className="container mx-auto px-4 md:px-6 py-8 space-y-12 md:space-y-14">
       {/* Related Activities */}
       {activities.length > 0 && (
         <div>
-          <div className="mb-6">
+          <div className="mb-5 md:mb-6">
             <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">
               You may also like
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+            <h2 className="text-xl md:text-3xl font-bold text-foreground">
               Related Activities in {transferData?.city || city}
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className={scrollRowClass}>
             {activities.map((t) => {
               const route = TOUR_ROUTES[t.id];
               const img = t.heroImages?.[0]?.src;
@@ -64,7 +68,7 @@ const BookingRecommendations = ({ city, excludeSlug }: Props) => {
                 <Link
                   key={t.id}
                   to={route}
-                  className="group block"
+                  className={`group block ${scrollItemClass}`}
                 >
                   <Card className="overflow-hidden h-full hover:shadow-xl transition-all duration-300">
                     <div className="aspect-video overflow-hidden bg-muted">
@@ -77,23 +81,23 @@ const BookingRecommendations = ({ city, excludeSlug }: Props) => {
                         />
                       )}
                     </div>
-                    <CardContent className="p-4 space-y-2">
+                    <CardContent className="p-3 md:p-4 space-y-1.5 md:space-y-2">
                       <div className="flex items-center gap-1 text-xs text-muted-foreground">
                         <MapPin className="h-3 w-3" />
-                        <span>{t.location}</span>
+                        <span className="truncate">{t.location}</span>
                       </div>
-                      <h3 className="font-semibold text-base leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                      <h3 className="font-semibold text-sm md:text-base leading-snug line-clamp-2 group-hover:text-primary transition-colors min-h-[2.5rem]">
                         {t.title}
                       </h3>
-                      <div className="flex items-center justify-between pt-2">
+                      <div className="flex items-center justify-between pt-1 md:pt-2">
                         <div>
-                          <p className="text-xs text-muted-foreground">from</p>
-                          <p className="text-lg font-bold text-primary">
+                          <p className="text-[10px] md:text-xs text-muted-foreground">from</p>
+                          <p className="text-base md:text-lg font-bold text-primary">
                             {formatPrice(t.basePrice)}
                           </p>
                         </div>
                         {t.rating && (
-                          <div className="flex items-center gap-1 text-sm">
+                          <div className="flex items-center gap-1 text-xs md:text-sm">
                             <Star className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
                             <span className="font-semibold">{t.rating}</span>
                           </div>
@@ -111,17 +115,17 @@ const BookingRecommendations = ({ city, excludeSlug }: Props) => {
       {/* Related Transfers */}
       {transfers.length > 0 && (
         <div>
-          <div className="mb-6">
+          <div className="mb-5 md:mb-6">
             <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">
               Getting around
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+            <h2 className="text-xl md:text-3xl font-bold text-foreground">
               Related Transfers in {transferData?.city || city}
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className={scrollRowClass}>
             {transfers.map((t) => (
-              <Link key={t.slug} to={t.slug} className="group block">
+              <Link key={t.slug} to={t.slug} className={`group block ${scrollItemClass}`}>
                 <Card className="overflow-hidden h-full hover:shadow-xl transition-all duration-300">
                   <div className="aspect-video overflow-hidden bg-muted">
                     <img
@@ -131,14 +135,14 @@ const BookingRecommendations = ({ city, excludeSlug }: Props) => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
-                  <CardContent className="p-4 space-y-2">
-                    <h3 className="font-semibold text-base leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                  <CardContent className="p-3 md:p-4 space-y-1.5 md:space-y-2">
+                    <h3 className="font-semibold text-sm md:text-base leading-snug line-clamp-2 group-hover:text-primary transition-colors min-h-[2.5rem]">
                       {t.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">{t.desc}</p>
-                    <div className="flex items-center justify-between pt-2">
-                      <p className="text-lg font-bold text-primary">{formatPrice(t.price)}</p>
-                      <Button size="sm" variant="outline">
+                    <p className="text-xs md:text-sm text-muted-foreground line-clamp-2">{t.desc}</p>
+                    <div className="flex items-center justify-between pt-1 md:pt-2 gap-2">
+                      <p className="text-base md:text-lg font-bold text-primary">{formatPrice(t.price)}</p>
+                      <Button size="sm" variant="outline" className="h-8 px-2 text-xs">
                         Book <ArrowRight className="ml-1 h-3 w-3" />
                       </Button>
                     </div>
