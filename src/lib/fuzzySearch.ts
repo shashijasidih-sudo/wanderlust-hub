@@ -129,10 +129,13 @@ export function fuzzySearchTours(query: string, limit: number = 20, cityFilter?:
   
   const results: SearchResult[] = [];
   
-  // Filter tours by city if cityFilter is provided
+  // Filter tours by city if cityFilter is provided. Also skip tours without
+  // a resolvable route (e.g. transfer SKUs, Dubai suspended pages) so search
+  // results never land on 404.
+  const routable = Object.values(toursData).filter(tour => TOUR_ROUTES[tour.id]);
   const toursToSearch = cityFilter 
-    ? Object.values(toursData).filter(tour => tour.city.toLowerCase() === cityFilter.toLowerCase())
-    : Object.values(toursData);
+    ? routable.filter(tour => tour.city.toLowerCase() === cityFilter.toLowerCase())
+    : routable;
   
   toursToSearch.forEach(tour => {
     let totalScore = 0;
