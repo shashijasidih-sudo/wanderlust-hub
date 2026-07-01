@@ -40,13 +40,23 @@ serve(async (req) => {
       return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401, headers: corsHeaders });
     }
 
-    const userEmail = (data.claims.email as string) || (data.claims.user_metadata?.email as string);
-    if (!ADMIN_EMAILS.includes(userEmail)) {
+    const userId = data.claims.sub as string;
+
+    // Use service role to bypass RLS
+    const adminClient = createClient(supabaseUrl, supabaseServiceKey);
+
+    // Verify admin role via profiles table
+    const { data: profile, error: profileError } = await adminClient
+      .from("profiles")
+      .select("role")
+      .eq("id", userId)
+      .maybeSingle();
+
+    if (profileError || profile?.role !== "admin") {
       return new Response(JSON.stringify({ error: "Forbidden" }), { status: 403, headers: corsHeaders });
     }
 
-    // Use service role to bypass RLS and fetch ALL bookings
-    const adminClient = createClient(supabaseUrl, supabaseServiceKey);
+    // Fetch ALL bookings
     const { data: bookings, error } = await adminClient
       .from("bookings")
       .select("*")
