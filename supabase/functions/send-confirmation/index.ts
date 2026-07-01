@@ -31,9 +31,6 @@ function money(amount: number, curr: string) {
   return `${sym}${Number(amount).toLocaleString("en-IN")}`;
 }
 
-function titleCase(s: string) {
-  return s.replace(/[-_/]+/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()).trim();
-}
 
 function detectDestination(slug: string, tourName: string): string {
   const cities = ["Bangkok", "Phuket", "Pattaya", "Krabi", "Chiang Mai", "Bali", "Dubai", "Singapore", "Abu Dhabi"];
