@@ -56,9 +56,10 @@ function shell(inner: string, previewText: string) {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${BRAND.bg};padding:24px 12px;">
 <tr><td align="center">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 16px rgba(17,24,39,0.06);">
-<tr><td style="background:linear-gradient(135deg,${BRAND.primary},${BRAND.primaryDark});padding:28px 32px;text-align:center;">
-  <img src="${LOGO_URL}" alt="Yellodae" width="140" style="display:inline-block;max-width:140px;height:auto;filter:brightness(0) invert(1);" />
-  <p style="color:#fff7ed;margin:10px 0 0;font-size:13px;letter-spacing:0.5px;">Curated Travel Experiences</p>
+<tr><td style="background:linear-gradient(135deg,${BRAND.primary},${BRAND.primaryDark});padding:32px 32px;text-align:center;">
+  <img src="${LOGO_URL}" alt="Yellodae" width="52" height="52" style="display:inline-block;width:52px;height:52px;border-radius:12px;background:#ffffff;padding:6px;" />
+  <h1 style="color:#ffffff;margin:12px 0 4px;font-size:26px;font-weight:800;letter-spacing:-0.5px;">Yellodae</h1>
+  <p style="color:#fff7ed;margin:0;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;">Curated Travel Experiences</p>
 </td></tr>
 ${inner}
 <tr><td style="background:${BRAND.ink};padding:24px 32px;text-align:center;">
