@@ -116,40 +116,40 @@ const BookingDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="container px-4 md:px-6 py-8 mt-16">
-        <div className="max-w-5xl mx-auto">
+      <main className="container px-4 md:px-6 py-8 md:py-12 mt-16">
+        <div className="max-w-6xl mx-auto">
           {/* Back button */}
-          <Button variant="ghost" className="mb-4 -ml-2" onClick={() => navigate("/user-bookings")}>
-            <ArrowLeft className="h-4 w-4 mr-2" /> Back to My Bookings
+          <Button variant="ghost" className="mb-6 -ml-2 text-base" onClick={() => navigate("/user-bookings")}>
+            <ArrowLeft className="h-5 w-5 mr-2" /> Back to My Bookings
           </Button>
 
           {/* Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-            <div>
-              <h1 className="text-2xl md:text-3xl font-bold">{booking.tour_name}</h1>
+          <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-10">
+            <div className="space-y-3">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">{booking.tour_name}</h1>
               {tourData && (
-                <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mt-1">
-                  <span className="flex items-center gap-1"><MapPin className="h-3.5 w-3.5" />{tourData.location}</span>
-                  <span className="flex items-center gap-1"><Clock className="h-3.5 w-3.5" />{tourData.duration}</span>
+                <div className="flex flex-wrap gap-4 text-base text-muted-foreground">
+                  <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4" />{tourData.location}</span>
+                  <span className="flex items-center gap-1.5"><Clock className="h-4 w-4" />{tourData.duration}</span>
                   {tourData.rating && (
-                    <span className="flex items-center gap-1"><Star className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />{tourData.rating} ({tourData.reviews} reviews)</span>
+                    <span className="flex items-center gap-1.5"><Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />{tourData.rating} ({tourData.reviews} reviews)</span>
                   )}
                 </div>
               )}
             </div>
-            <Badge variant="outline" className={`${status.color} text-sm px-4 py-1.5 flex items-center gap-1.5 shrink-0`}>
+            <Badge variant="outline" className={`${status.color} text-base px-5 py-2 flex items-center gap-2 shrink-0`}>
               {status.icon} {status.label}
             </Badge>
           </div>
 
           {/* Photo Gallery */}
           {tourData && tourData.galleryImages?.length > 0 && (
-            <Card className="mb-6 overflow-hidden">
-              <CardContent className="p-4">
-                <h2 className="font-semibold text-lg flex items-center gap-2 mb-3">
-                  <ImageIcon className="h-5 w-5 text-primary" /> Photo Gallery
+            <Card className="mb-8 overflow-hidden">
+              <CardContent className="p-5 md:p-6">
+                <h2 className="font-semibold text-xl md:text-2xl flex items-center gap-2 mb-4">
+                  <ImageIcon className="h-6 w-6 text-primary" /> Photo Gallery
                 </h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                   {tourData.galleryImages.slice(0, 8).map((img, i) => (
                     <div
                       key={i}
