@@ -24,7 +24,7 @@ const BRAND = {
 };
 
 const SITE = "https://yellodae.com";
-const LOGO_URL = "https://yellodae.com/logo.png"; // served from public/
+const LOGO_URL = "https://yellodae.com/favicon.png";
 
 function money(amount: number, curr: string) {
   const sym = curr === "INR" ? "₹" : curr === "USD" ? "$" : curr === "AED" ? "AED " : curr === "THB" ? "฿" : curr === "SGD" ? "S$" : `${curr} `;
