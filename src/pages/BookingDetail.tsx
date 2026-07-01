@@ -7,6 +7,8 @@ import { useCurrency } from "@/contexts/CurrencyContext";
 import { toursData, TourData } from "@/data/tourData";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TravelerExperiences from "@/components/TravelerExperiences";
+import BookingRecommendations from "@/components/BookingRecommendations";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
