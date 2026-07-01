@@ -24,12 +24,21 @@ import {
 import { toast } from "@/hooks/use-toast";
 import { format } from "date-fns";
 
-const ADMIN_EMAILS = ["admin@yellodae.com"];
 const FUNCTIONS_BASE_URL = "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1";
 const SUPABASE_ANON_KEY =
   import.meta.env.VITE_SUPABASE_ANON_KEY ||
   import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
   "sb_publishable_g-zBlAMHwj9NJLvq13RjWg_BEIq-Frq";
+
+async function isAdminUser(userId: string | undefined): Promise<boolean> {
+  if (!userId) return false;
+  const { data } = await supabase
+    .from("profiles")
+    .select("role")
+    .eq("id", userId)
+    .maybeSingle();
+  return (data as any)?.role === "admin";
+}
 
 interface Booking {
   id: string;
