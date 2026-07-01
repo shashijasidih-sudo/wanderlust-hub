@@ -11,6 +11,8 @@ import { Loader2, User as UserIcon, Mail, Save, Camera, CalendarDays, Settings }
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { getDisplayName } from "@/lib/userDisplay";
+
 
 const UserProfile = () => {
   const { user, isLoading } = useAuth();
