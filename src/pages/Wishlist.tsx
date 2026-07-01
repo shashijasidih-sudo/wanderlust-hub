@@ -82,9 +82,9 @@ const Wishlist = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="container px-4 py-8 md:py-12 mt-16">
-        <h1 className="text-3xl font-bold mb-8 flex items-center gap-3">
-          <Heart className="h-8 w-8 text-primary" /> My Wishlist
+      <main className="container px-3 sm:px-4 py-6 md:py-12 mt-16">
+        <h1 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 flex items-center gap-2 md:gap-3">
+          <Heart className="h-6 w-6 md:h-8 md:w-8 text-primary" /> My Wishlist
         </h1>
         {wishlistItems.length === 0 ? (
           <Card className="p-8 text-center">
@@ -96,7 +96,7 @@ const Wishlist = () => {
             </CardContent>
           </Card>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 md:gap-6">
             {wishlistItems.map((item) => {
               const tour = resolveTour(item.tour_slug);
               const img =
