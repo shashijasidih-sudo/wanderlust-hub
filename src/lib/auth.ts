@@ -68,11 +68,13 @@ export const auth = {
       password,
     });
     if (error) throw error;
-    const full_name = await resolveFullName(data.user.id, data.user.user_metadata, data.user.email ?? undefined);
+    const { full_name, role } = await resolveProfile(data.user.id, data.user.user_metadata);
     const user: AppUser = {
       id: data.user.id,
       email: data.user.email!,
       full_name,
+      role,
+      is_admin: role === "admin",
     };
 
     notify(user);
