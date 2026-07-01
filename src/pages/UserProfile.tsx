@@ -155,7 +155,7 @@ const UserProfile = () => {
                 />
               </div>
               <div className="text-center">
-                <h2 className="text-xl font-semibold">{fullName || "User"}</h2>
+                <h2 className="text-xl font-semibold">{fullName || getDisplayName(user)}</h2>
                 <p className="text-sm text-muted-foreground">{user.email}</p>
               </div>
             </CardContent>
