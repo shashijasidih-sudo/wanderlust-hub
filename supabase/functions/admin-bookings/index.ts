@@ -8,7 +8,7 @@ const corsHeaders = {
   "Content-Type": "application/json",
 };
 
-const ADMIN_EMAILS = ["admin@yellodae.com"];
+
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
