@@ -1,16 +1,1 @@
-project_id = "cymzgmfnhtnqledwwojt"
-
-[functions.create-order]
-verify_jwt = false
-
-[functions.send-email]
-verify_jwt = false
-
-[functions.save-booking]
-verify_jwt = false
-
-[functions.send-confirmation]
-verify_jwt = false
-
-[functions.admin-bookings]
-verify_jwt = false
+project_id = "rjazivctunipyhkcvujf"
