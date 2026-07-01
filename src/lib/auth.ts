@@ -154,12 +154,14 @@ export function useAuth() {
       if (!isMounted) return;
 
       if (authUser) {
-        const full_name = await resolveFullName(authUser.id, authUser.user_metadata, authUser.email ?? undefined);
+        const { full_name, role } = await resolveProfile(authUser.id, authUser.user_metadata);
         if (!isMounted) return;
-        const nextUser = {
+        const nextUser: AppUser = {
           id: authUser.id,
           email: authUser.email!,
           full_name,
+          role,
+          is_admin: role === "admin",
         };
         setUser(nextUser);
         notify(nextUser);
