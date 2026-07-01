@@ -86,16 +86,16 @@ const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: {
   <Card className="overflow-hidden">
     <CardContent className="p-2 md:p-0">
       <div className="flex items-start gap-2 md:flex-row">
-        <div className="bg-accent p-2 md:p-6 rounded md:rounded-none flex items-center justify-center shrink-0">
+        <Link to={`/${item.slug}`} className="bg-accent p-2 md:p-6 rounded md:rounded-none flex items-center justify-center shrink-0 hover:opacity-80 transition-opacity">
           <Ticket className="h-6 w-6 md:h-12 md:w-12 text-primary" />
-        </div>
+        </Link>
         
         <div className="flex-1 min-w-0">
           <div className="flex justify-between items-start">
-            <div className="min-w-0">
+            <Link to={`/${item.slug}`} className="min-w-0 hover:text-primary transition-colors">
               <h3 className="font-semibold text-sm md:text-lg leading-tight truncate">{item.title}</h3>
               <p className="text-xs text-muted-foreground">Activity / Tour</p>
-            </div>
+            </Link>
             <Button
               variant="ghost"
               size="icon"
