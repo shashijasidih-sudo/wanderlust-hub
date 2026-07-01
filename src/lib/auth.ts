@@ -1,33 +1,39 @@
 import { useState, useEffect, useCallback } from "react";
 import { supabase } from "./supabaseClient";
 
-async function resolveFullName(userId: string, metadata: any, email?: string): Promise<string | undefined> {
+async function resolveProfile(
+  userId: string,
+  metadata: any
+): Promise<{ full_name?: string; role?: string }> {
+  let profileName: string | undefined;
+  let role: string | undefined;
   try {
     const { data } = await supabase
       .from("profiles")
-      .select("full_name")
+      .select("full_name, role")
       .eq("id", userId)
       .maybeSingle();
-    const fromProfile = (data as any)?.full_name?.trim();
-    if (fromProfile) return fromProfile;
+    profileName = (data as any)?.full_name?.trim() || undefined;
+    role = (data as any)?.role?.trim() || undefined;
   } catch {
     /* ignore */
   }
   const meta = metadata || {};
-  return (
+  const full_name =
+    profileName ||
     meta.full_name?.trim() ||
     meta.name?.trim() ||
     meta.user_name?.trim() ||
-    undefined
-  );
+    undefined;
+  return { full_name, role };
 }
-
-
 
 export interface AppUser {
   id: string;
   email: string;
   full_name?: string;
+  role?: string;
+  is_admin?: boolean;
 }
 
 type AuthListener = (user: AppUser | null) => void;
