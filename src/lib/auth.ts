@@ -1,6 +1,29 @@
 import { useState, useEffect, useCallback } from "react";
 import { supabase } from "./supabaseClient";
 
+async function resolveFullName(userId: string, metadata: any, email?: string): Promise<string | undefined> {
+  try {
+    const { data } = await supabase
+      .from("profiles")
+      .select("full_name")
+      .eq("id", userId)
+      .maybeSingle();
+    const fromProfile = (data as any)?.full_name?.trim();
+    if (fromProfile) return fromProfile;
+  } catch {
+    /* ignore */
+  }
+  const meta = metadata || {};
+  return (
+    meta.full_name?.trim() ||
+    meta.name?.trim() ||
+    meta.user_name?.trim() ||
+    undefined
+  );
+}
+
+
+
 export interface AppUser {
   id: string;
   email: string;
