@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { fuzzySearchTours } from "@/lib/fuzzySearch";
 import type { SearchResult } from "@/lib/fuzzySearch";
+import { TOUR_ROUTES } from "@/data/tourRoutes";
 
 interface SearchInputProps {
   placeholder?: string;
