@@ -81,9 +81,9 @@ const SearchInput = ({ placeholder = "Search...", className = "", autoFocus = fa
                 key={index}
                 className="px-3 py-2.5 hover:bg-accent cursor-pointer rounded transition-colors border-b border-border/30 last:border-0"
                 onClick={() => {
-                  // All tours now use /city/slug pattern
-                  const city = result.tour.city.toLowerCase();
-                  const path = `/${city}/${result.tour.id}`;
+                  // Use canonical route from generated map; fall back to city/id.
+                  const path = TOUR_ROUTES[result.tour.id]
+                    || `/thailand/${result.tour.city.toLowerCase()}/${result.tour.id}`;
                   navigate(path);
                   setIsOpen(false);
                 }}
