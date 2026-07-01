@@ -100,7 +100,7 @@ serve(async (req) => {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${supabaseServiceKey}`,
           },
-          body: JSON.stringify({ bookingId }),
+          body: JSON.stringify({ bookingId, paymentId: payment_id || null, orderId: order_id || null }),
         });
         const confirmData = await confirmRes.text();
         console.log("send-confirmation response:", confirmRes.status, confirmData);
