@@ -130,7 +130,7 @@ const AdminDashboard = () => {
       return null;
     }
 
-    if (!ADMIN_EMAILS.includes(session.user?.email || "")) {
+    if (!(await isAdminUser(session.user?.id))) {
       toast({ title: "Admin access only", description: "You do not have admin privileges.", variant: "destructive" });
       navigate("/");
       return null;
