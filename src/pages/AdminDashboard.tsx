@@ -24,12 +24,21 @@ import {
 import { toast } from "@/hooks/use-toast";
 import { format } from "date-fns";
 
-const ADMIN_EMAILS = ["admin@yellodae.com"];
 const FUNCTIONS_BASE_URL = "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1";
 const SUPABASE_ANON_KEY =
   import.meta.env.VITE_SUPABASE_ANON_KEY ||
   import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
   "sb_publishable_g-zBlAMHwj9NJLvq13RjWg_BEIq-Frq";
+
+async function isAdminUser(userId: string | undefined): Promise<boolean> {
+  if (!userId) return false;
+  const { data } = await supabase
+    .from("profiles")
+    .select("role")
+    .eq("id", userId)
+    .maybeSingle();
+  return (data as any)?.role === "admin";
+}
 
 interface Booking {
   id: string;
@@ -84,13 +93,14 @@ const AdminDashboard = () => {
     const checkAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) { navigate("/auth"); return; }
-      if (!ADMIN_EMAILS.includes(session.user?.email || "")) { navigate("/"); return; }
+      const admin = await isAdminUser(session.user?.id);
+      if (!admin) { navigate("/"); return; }
       setAuthChecked(true);
     };
     checkAuth();
   }, [authLoading, navigate]);
 
-  const isAdmin = user && ADMIN_EMAILS.includes(user.email);
+  const isAdmin = !!user?.is_admin;
 
   const redirectToLogin = (description = "Please log in again.") => {
     toast({
@@ -120,7 +130,7 @@ const AdminDashboard = () => {
       return null;
     }
 
-    if (!ADMIN_EMAILS.includes(session.user?.email || "")) {
+    if (!(await isAdminUser(session.user?.id))) {
       toast({ title: "Admin access only", description: "You do not have admin privileges.", variant: "destructive" });
       navigate("/");
       return null;

@@ -1,33 +1,39 @@
 import { useState, useEffect, useCallback } from "react";
 import { supabase } from "./supabaseClient";
 
-async function resolveFullName(userId: string, metadata: any, email?: string): Promise<string | undefined> {
+async function resolveProfile(
+  userId: string,
+  metadata: any
+): Promise<{ full_name?: string; role?: string }> {
+  let profileName: string | undefined;
+  let role: string | undefined;
   try {
     const { data } = await supabase
       .from("profiles")
-      .select("full_name")
+      .select("full_name, role")
       .eq("id", userId)
       .maybeSingle();
-    const fromProfile = (data as any)?.full_name?.trim();
-    if (fromProfile) return fromProfile;
+    profileName = (data as any)?.full_name?.trim() || undefined;
+    role = (data as any)?.role?.trim() || undefined;
   } catch {
     /* ignore */
   }
   const meta = metadata || {};
-  return (
+  const full_name =
+    profileName ||
     meta.full_name?.trim() ||
     meta.name?.trim() ||
     meta.user_name?.trim() ||
-    undefined
-  );
+    undefined;
+  return { full_name, role };
 }
-
-
 
 export interface AppUser {
   id: string;
   email: string;
   full_name?: string;
+  role?: string;
+  is_admin?: boolean;
 }
 
 type AuthListener = (user: AppUser | null) => void;
@@ -42,11 +48,13 @@ export const auth = {
   getUser: async (): Promise<AppUser | null> => {
     const { data } = await supabase.auth.getUser();
     if (!data.user) return null;
-    const full_name = await resolveFullName(data.user.id, data.user.user_metadata, data.user.email ?? undefined);
+    const { full_name, role } = await resolveProfile(data.user.id, data.user.user_metadata);
     return {
       id: data.user.id,
       email: data.user.email!,
       full_name,
+      role,
+      is_admin: role === "admin",
     };
   },
 
@@ -60,11 +68,13 @@ export const auth = {
       password,
     });
     if (error) throw error;
-    const full_name = await resolveFullName(data.user.id, data.user.user_metadata, data.user.email ?? undefined);
+    const { full_name, role } = await resolveProfile(data.user.id, data.user.user_metadata);
     const user: AppUser = {
       id: data.user.id,
       email: data.user.email!,
       full_name,
+      role,
+      is_admin: role === "admin",
     };
 
     notify(user);
@@ -144,12 +154,14 @@ export function useAuth() {
       if (!isMounted) return;
 
       if (authUser) {
-        const full_name = await resolveFullName(authUser.id, authUser.user_metadata, authUser.email ?? undefined);
+        const { full_name, role } = await resolveProfile(authUser.id, authUser.user_metadata);
         if (!isMounted) return;
-        const nextUser = {
+        const nextUser: AppUser = {
           id: authUser.id,
           email: authUser.email!,
           full_name,
+          role,
+          is_admin: role === "admin",
         };
         setUser(nextUser);
         notify(nextUser);
