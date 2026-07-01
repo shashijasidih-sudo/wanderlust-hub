@@ -48,11 +48,13 @@ export const auth = {
   getUser: async (): Promise<AppUser | null> => {
     const { data } = await supabase.auth.getUser();
     if (!data.user) return null;
-    const full_name = await resolveFullName(data.user.id, data.user.user_metadata, data.user.email ?? undefined);
+    const { full_name, role } = await resolveProfile(data.user.id, data.user.user_metadata);
     return {
       id: data.user.id,
       email: data.user.email!,
       full_name,
+      role,
+      is_admin: role === "admin",
     };
   },
 
