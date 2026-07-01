@@ -25,7 +25,7 @@ const TransferCartItem = ({ item, onRemove, onUpdateQuantity }: {
         <div className="flex-1 min-w-0">
           <div className="flex justify-between items-start">
             <Link to={`/${item.slug}`} className="min-w-0 hover:text-primary transition-colors">
-              <h3 className="font-semibold text-sm md:text-lg leading-tight truncate">{item.title}</h3>
+              <h3 className="font-semibold text-sm md:text-lg leading-tight line-clamp-2 break-words">{item.title}</h3>
               <p className="text-primary text-xs md:text-sm font-medium">{item.vehicleName}</p>
             </Link>
             <Button
@@ -93,7 +93,7 @@ const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: {
         <div className="flex-1 min-w-0">
           <div className="flex justify-between items-start">
             <Link to={`/${item.slug}`} className="min-w-0 hover:text-primary transition-colors">
-              <h3 className="font-semibold text-sm md:text-lg leading-tight truncate">{item.title}</h3>
+              <h3 className="font-semibold text-sm md:text-lg leading-tight line-clamp-2 break-words">{item.title}</h3>
               <p className="text-xs text-muted-foreground">Activity / Tour</p>
             </Link>
             <Button
