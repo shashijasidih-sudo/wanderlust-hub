@@ -148,7 +148,7 @@ const Header = () => {
                 <DropdownMenuTrigger asChild>
                   <Button variant="default" size="sm" className="hidden md:flex items-center gap-2">
                     <User className="h-4 w-4" />
-                    {user.email?.split('@')[0] || 'My Account'}
+                    {getDisplayName(user) || 'My Account'}
                     <ChevronDown className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
