@@ -56,8 +56,23 @@ const Wishlist = () => {
     }
   };
 
+  const resolveTour = (slug: string) => {
+    // Try to find by exact route match or by trailing id
+    const id = Object.keys(TOUR_ROUTES).find((k) => {
+      const r = TOUR_ROUTES[k];
+      return r === slug || r === `/${slug}` || r.endsWith(`/${slug}`);
+    }) || (toursData[slug] ? slug : undefined);
+    return id ? toursData[id] : undefined;
+  };
+
+  const resolveLink = (slug: string) => {
+    const tour = resolveTour(slug);
+    if (tour && TOUR_ROUTES[tour.id]) return TOUR_ROUTES[tour.id];
+    return slug.startsWith("/") ? slug : `/${slug}`;
+  };
+
   const handleViewTour = (slug: string) => {
-    navigate(slug.startsWith('/') ? slug : `/${slug}`);
+    navigate(resolveLink(slug));
   };
 
   if (isLoading) {
