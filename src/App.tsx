@@ -1159,7 +1159,6 @@ const App = () => (
              <Route path="/phuket/*" element={<LegacyCityRedirect city="phuket" />} />
              <Route path="/krabi/*" element={<LegacyCityRedirect city="krabi" />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<TourIdRedirect />} />
             <Route path="*" element={<NotFound />} />
         </Routes></Suspense>
           <FloatingWhatsApp />
