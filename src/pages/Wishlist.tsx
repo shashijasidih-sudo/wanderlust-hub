@@ -9,6 +9,8 @@ import { useToast } from "@/hooks/use-toast";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import { supabase } from "@/lib/supabaseClient";
 import { removeFromWishlist } from "@/services/wishlist";
+import { toursData } from "@/data/tourData";
+import { TOUR_ROUTES } from "@/data/tourRoutes";
 
 interface WishlistRow {
   id: string;
