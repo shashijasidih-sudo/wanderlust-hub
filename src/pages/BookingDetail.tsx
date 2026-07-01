@@ -416,6 +416,8 @@ const BookingDetail = () => {
           </div>
         </div>
       </main>
+      <TravelerExperiences />
+      <BookingRecommendations city={tourData?.city || booking.tour_slug?.split("/")?.[1]} excludeSlug={booking.tour_slug} />
       <Footer />
     </div>
   );
