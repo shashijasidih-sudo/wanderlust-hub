@@ -12,10 +12,11 @@ const Footer = () => {
   const isBangkokPage = pathname === "/thailand/bangkok" || pathname.startsWith("/thailand/bangkok/");
   const isBlogPage = pathname.startsWith("/blog/");
   const isHomePage = pathname === "/";
+  const isBookingPage = pathname.startsWith("/booking/");
 
   return (
     <>
-      {!isBlogPage && !isHomePage && <TravelerExperiences />}
+      {!isBlogPage && !isHomePage && !isBookingPage && <TravelerExperiences />}
       <Testimonials />
       {isBangkokPage && <BangkokSmartGuides />}
       {isBangkokPage && <BangkokSmartGuides />}
