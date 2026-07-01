@@ -209,9 +209,9 @@ const BookingDetail = () => {
                             {i < tourData.itinerary.length - 1 && <div className="w-0.5 flex-1 bg-primary/20 mt-1" />}
                           </div>
                           <div className="pb-4">
-                            <p className="text-xs font-semibold text-primary">{step.time}</p>
-                            <h4 className="font-semibold text-sm">{step.title}</h4>
-                            <p className="text-sm text-muted-foreground">{step.description}</p>
+                            <p className="text-sm font-semibold text-primary">{step.time}</p>
+                            <h4 className="font-semibold text-base">{step.title}</h4>
+                            <p className="text-base text-muted-foreground">{step.description}</p>
                           </div>
                         </div>
                       ))}
