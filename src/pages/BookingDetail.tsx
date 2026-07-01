@@ -171,21 +171,21 @@ const BookingDetail = () => {
             </div>
           )}
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Tour Info */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className="lg:col-span-2 space-y-8">
               {/* Tour Overview */}
               {tourData?.description && (
                 <Card>
-                  <CardContent className="p-5">
-                    <h2 className="font-semibold text-lg flex items-center gap-2 mb-3">
-                      <FileText className="h-5 w-5 text-primary" /> Tour Overview
+                  <CardContent className="p-6 md:p-7">
+                    <h2 className="font-semibold text-xl md:text-2xl flex items-center gap-2 mb-4">
+                      <FileText className="h-6 w-6 text-primary" /> Tour Overview
                     </h2>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">{tourData.description.overview}</p>
+                    <p className="text-base text-muted-foreground leading-relaxed mb-5">{tourData.description.overview}</p>
                     {tourData.description.whatToExpect && (
                       <>
-                        <h3 className="font-semibold text-sm mb-2">What to Expect</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{tourData.description.whatToExpect}</p>
+                        <h3 className="font-semibold text-lg mb-3">What to Expect</h3>
+                        <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">{tourData.description.whatToExpect}</p>
                       </>
                     )}
                   </CardContent>
@@ -195,9 +195,9 @@ const BookingDetail = () => {
               {/* Itinerary */}
               {tourData?.itinerary?.length > 0 && (
                 <Card>
-                  <CardContent className="p-5">
-                    <h2 className="font-semibold text-lg flex items-center gap-2 mb-4">
-                      <Route className="h-5 w-5 text-primary" /> Itinerary
+                  <CardContent className="p-6 md:p-7">
+                    <h2 className="font-semibold text-xl md:text-2xl flex items-center gap-2 mb-5">
+                      <Route className="h-6 w-6 text-primary" /> Itinerary
                     </h2>
                     <div className="space-y-4">
                       {tourData.itinerary.map((step, i) => (
