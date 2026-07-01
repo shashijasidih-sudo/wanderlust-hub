@@ -303,45 +303,45 @@ const BookingDetail = () => {
             </div>
 
             {/* Right Column - Booking Summary */}
-            <div className="space-y-6">
+            <div className="space-y-8">
               {/* Booking Details Card */}
               <Card className="sticky top-24">
-                <CardContent className="p-5 space-y-4">
-                  <h2 className="font-semibold text-lg">Booking Details</h2>
-                  <div className="text-xs font-mono text-muted-foreground">ID: {booking.id.slice(0, 8)}</div>
+                <CardContent className="p-6 md:p-7 space-y-5">
+                  <h2 className="font-semibold text-xl md:text-2xl">Booking Details</h2>
+                  <div className="text-sm font-mono text-muted-foreground">ID: {booking.id.slice(0, 8)}</div>
 
                   <Separator />
 
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center gap-2">
-                      <CalendarDays className="h-4 w-4 text-muted-foreground" />
+                  <div className="space-y-4 text-base">
+                    <div className="flex items-center gap-3">
+                      <CalendarDays className="h-5 w-5 text-muted-foreground" />
                       <div>
-                        <p className="text-muted-foreground text-xs">Tour Date</p>
+                        <p className="text-muted-foreground text-sm">Tour Date</p>
                         <p className="font-semibold">{format(new Date(booking.tour_date), "EEE, MMM dd, yyyy")}</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <CalendarDays className="h-4 w-4 text-muted-foreground" />
+                    <div className="flex items-center gap-3">
+                      <CalendarDays className="h-5 w-5 text-muted-foreground" />
                       <div>
-                        <p className="text-muted-foreground text-xs">Booked On</p>
+                        <p className="text-muted-foreground text-sm">Booked On</p>
                         <p className="font-semibold">{format(new Date(booking.created_at), "MMM dd, yyyy")}</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="h-4 w-4 text-muted-foreground" />
+                    <div className="flex items-center gap-3">
+                      <Users className="h-5 w-5 text-muted-foreground" />
                       <div>
-                        <p className="text-muted-foreground text-xs">Guests</p>
+                        <p className="text-muted-foreground text-sm">Guests</p>
                         <p className="font-semibold">
                           {booking.adults} Adult{booking.adults > 1 ? "s" : ""}
                           {booking.children > 0 ? `, ${booking.children} Child${booking.children > 1 ? "ren" : ""}` : ""}
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <CreditCard className="h-4 w-4 text-muted-foreground" />
+                    <div className="flex items-center gap-3">
+                      <CreditCard className="h-5 w-5 text-muted-foreground" />
                       <div>
-                        <p className="text-muted-foreground text-xs">Amount Paid</p>
-                        <p className="font-bold text-primary text-lg">{formatPrice(booking.total_price)}</p>
+                        <p className="text-muted-foreground text-sm">Amount Paid</p>
+                        <p className="font-bold text-primary text-xl">{formatPrice(booking.total_price)}</p>
                       </div>
                     </div>
                   </div>
@@ -350,8 +350,8 @@ const BookingDetail = () => {
 
                   {/* Customer Info */}
                   <div>
-                    <h3 className="font-semibold text-xs text-muted-foreground uppercase tracking-wide mb-2">Customer Information</h3>
-                    <div className="space-y-2 text-sm">
+                    <h3 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-3">Customer Information</h3>
+                    <div className="space-y-2.5 text-base">
                       <div className="flex items-center gap-2"><User className="h-4 w-4 text-muted-foreground" />{booking.contact_name}</div>
                       <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-muted-foreground" /><span className="truncate">{booking.contact_email}</span></div>
                       {booking.contact_phone && <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-muted-foreground" />{booking.contact_phone}</div>}
