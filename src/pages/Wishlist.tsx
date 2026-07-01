@@ -82,9 +82,9 @@ const Wishlist = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="container px-4 py-8 md:py-12 mt-16">
-        <h1 className="text-3xl font-bold mb-8 flex items-center gap-3">
-          <Heart className="h-8 w-8 text-primary" /> My Wishlist
+      <main className="container px-3 sm:px-4 py-6 md:py-12 mt-16">
+        <h1 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 flex items-center gap-2 md:gap-3">
+          <Heart className="h-6 w-6 md:h-8 md:w-8 text-primary" /> My Wishlist
         </h1>
         {wishlistItems.length === 0 ? (
           <Card className="p-8 text-center">
@@ -96,7 +96,7 @@ const Wishlist = () => {
             </CardContent>
           </Card>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 md:gap-6">
             {wishlistItems.map((item) => {
               const tour = resolveTour(item.tour_slug);
               const img =
@@ -105,8 +105,8 @@ const Wishlist = () => {
                 item.tour_image ||
                 "/placeholder.svg";
               return (
-                <Card key={item.id} className="overflow-hidden group hover:shadow-lg transition-all">
-                  <div className="relative h-48 cursor-pointer bg-muted" onClick={() => handleViewTour(item.tour_slug)}>
+                <Card key={item.id} className="overflow-hidden group hover:shadow-lg transition-all flex flex-col">
+                  <div className="relative h-32 sm:h-40 md:h-48 cursor-pointer bg-muted" onClick={() => handleViewTour(item.tour_slug)}>
                     <img
                       src={img}
                       alt={item.tour_name}
@@ -117,22 +117,22 @@ const Wishlist = () => {
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="absolute top-2 right-2 bg-white/80 hover:bg-white rounded-full"
+                      className="absolute top-1.5 right-1.5 md:top-2 md:right-2 bg-white/85 hover:bg-white rounded-full h-7 w-7 md:h-9 md:w-9"
                       onClick={(e) => { e.stopPropagation(); handleRemove(item.tour_slug, item.tour_name); }}
                     >
-                      <Trash2 className="h-4 w-4 text-destructive" />
+                      <Trash2 className="h-3.5 w-3.5 md:h-4 md:w-4 text-destructive" />
                     </Button>
                   </div>
-                  <CardContent className="p-4">
+                  <CardContent className="p-3 md:p-4 flex-1 flex flex-col">
                     <h3
-                      className="font-semibold text-lg mb-2 cursor-pointer hover:text-primary transition-colors line-clamp-2"
+                      className="font-semibold text-sm md:text-lg mb-2 cursor-pointer hover:text-primary transition-colors line-clamp-2 flex-1"
                       onClick={() => handleViewTour(item.tour_slug)}
                     >
                       {item.tour_name}
                     </h3>
-                    <div className="flex items-center justify-between">
-                      {item.tour_price && <p className="text-lg font-bold text-primary">{formatPrice(item.tour_price)}</p>}
-                      <Button size="sm" onClick={() => handleViewTour(item.tour_slug)}>View Tour</Button>
+                    <div className="flex items-center justify-between gap-2 mt-auto flex-wrap">
+                      {item.tour_price && <p className="text-sm md:text-lg font-bold text-primary">{formatPrice(item.tour_price)}</p>}
+                      <Button size="sm" className="h-8 px-3 text-xs md:text-sm" onClick={() => handleViewTour(item.tour_slug)}>View</Button>
                     </div>
                   </CardContent>
                 </Card>
