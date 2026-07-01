@@ -223,8 +223,8 @@ const BookingDetail = () => {
               {/* Policies Accordion */}
               {tourData && (
                 <Card>
-                  <CardContent className="p-5">
-                    <h2 className="font-semibold text-lg mb-3">Policies & Information</h2>
+                  <CardContent className="p-6 md:p-7">
+                    <h2 className="font-semibold text-xl md:text-2xl mb-4">Policies & Information</h2>
                     <Accordion type="multiple" className="w-full">
                       {tourData.inclusions?.length > 0 && (
                         <AccordionItem value="inclusions">
