@@ -60,11 +60,13 @@ export const auth = {
       password,
     });
     if (error) throw error;
+    const full_name = await resolveFullName(data.user.id, data.user.user_metadata, data.user.email ?? undefined);
     const user: AppUser = {
       id: data.user.id,
       email: data.user.email!,
-      full_name: data.user.user_metadata?.full_name,
+      full_name,
     };
+
     notify(user);
     return user;
   },
