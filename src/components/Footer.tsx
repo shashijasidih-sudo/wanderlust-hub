@@ -93,7 +93,7 @@ const Footer = () => {
               <li><Link to="/thailand/phuket/things-to-do" className="hover:text-background transition-colors">Phuket Tours</Link></li>
               <li><Link to="/thailand/pattaya/things-to-do" className="hover:text-background transition-colors">Pattaya Tours</Link></li>
               <li><Link to="/thailand/krabi/things-to-do" className="hover:text-background transition-colors">Krabi Tours</Link></li>
-              <li><Link to="/thailand/budget-airport-transfers" className="hover:text-background transition-colors">Thailand Transfers</Link></li>
+              <li><Link to="/thailand/airport-transfers/" className="hover:text-background transition-colors">Thailand Transfers</Link></li>
               <li><Link to="/thailand/destination-guides" className="hover:text-background transition-colors">Thailand Smart Guides</Link></li>
             </ul>
           </div>
@@ -108,7 +108,7 @@ const Footer = () => {
               <li><Link to="/thailand/chiang-mai/things-to-do" className="hover:text-background transition-colors">Chiang Mai Activities</Link></li>
               <li><Link to="/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour" className="hover:text-background transition-colors">Doi Inthanon Full Day Tour</Link></li>
               <li><Link to="/thailand/chiang-mai/chiang-rai-golden-triangle-tour" className="hover:text-background transition-colors">Chiang Rai Golden Triangle</Link></li>
-              <li><Link to="/thailand/chiang-mai/budget-airport-transfers" className="hover:text-background transition-colors">Chiang Mai Airport Transfers</Link></li>
+              <li><Link to="/thailand/chiang-mai-airport-transfers/" className="hover:text-background transition-colors">Chiang Mai Airport Transfers</Link></li>
             </ul>
           </div>
 
