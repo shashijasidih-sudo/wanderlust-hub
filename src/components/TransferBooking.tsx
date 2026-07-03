@@ -252,25 +252,24 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
 
         {/* Photo Gallery */}
         {galleryImages && galleryImages.length > 0 && (
-          <div className="max-w-4xl mx-auto mb-8">
+          <div className="max-w-6xl mx-auto mb-6 md:mb-8">
             {/* Mobile: single hero image */}
-            <div className="md:hidden overflow-hidden rounded-lg">
+            <div className="md:hidden overflow-hidden rounded-xl">
               <img
                 src={galleryImages[0].src}
                 alt={galleryImages[0].alt}
                 loading="lazy"
-                className="w-full h-[220px] object-cover"
+                className="w-full h-[240px] object-cover"
               />
             </div>
             {/* Desktop: 4-image collage */}
-            <div className="hidden md:grid grid-cols-4 gap-2">
+            <div className="hidden md:grid grid-cols-4 grid-rows-2 gap-3 h-[420px]">
               {galleryImages.slice(0, 4).map((img, idx) => (
                 <div
                   key={idx}
                   className={cn(
-                    "overflow-hidden rounded-lg",
-                    idx === 0 && "col-span-2 row-span-2 h-[320px]",
-                    idx !== 0 && "h-[156px]"
+                    "overflow-hidden rounded-xl",
+                    idx === 0 ? "col-span-2 row-span-2" : "col-span-1 row-span-1"
                   )}
                 >
                   <img
@@ -286,16 +285,17 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         )}
 
         {/* Title */}
-        <div className="text-center mb-6">
-          <h1 className="text-2xl md:text-3xl font-bold">{transferData.title}</h1>
+        <div className="max-w-6xl mx-auto text-center mb-5 md:mb-6">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">{transferData.title}</h1>
         </div>
 
-        <div className="max-w-3xl mx-auto mb-8">
+        <div className="max-w-3xl mx-auto mb-6 md:mb-8">
           <TransferHeroBadges variant="light" />
         </div>
 
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto lg:grid lg:grid-cols-3 lg:gap-8">
+          <div className="lg:col-span-2">
           {/* Vehicle Selection */}
           <Card className="mb-6">
             <CardContent className="p-4 md:p-6">
