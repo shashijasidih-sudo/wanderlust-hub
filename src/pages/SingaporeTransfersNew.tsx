@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TransferHeroBadges from "@/components/TransferHeroBadges";
 import TravelEssentials from "@/components/TravelEssentials";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -88,10 +89,14 @@ const SingaporeTransfersNew = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
             Singapore Private Transfers
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl">
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-6">
             Comfortable and reliable private transfers in Singapore with professional drivers
           </p>
+          <div className="w-full max-w-2xl">
+            <TransferHeroBadges cityLabel="Singapore Hotel" />
+          </div>
         </div>
+
       </section>
 
       {/* Main Content */}

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TransferHeroBadges from "@/components/TransferHeroBadges";
 import TravelEssentials from "@/components/TravelEssentials";
 import { Button } from "@/components/ui/button";
 import { useCurrency } from "@/contexts/CurrencyContext";
@@ -45,9 +46,13 @@ const ChiangMaiTransfers = () => {
       <Header />
       <section className="container mx-auto px-4 py-10">
         <h1 className="text-3xl md:text-4xl font-bold mb-3">Chiang Mai Airport Transfers (CNX)</h1>
-        <p className="text-muted-foreground max-w-3xl">
+        <p className="text-muted-foreground max-w-3xl mb-6">
           Private and comfortable transfers between Chiang Mai International Airport (CNX) and your Chiang Mai hotel — choose sedan or mini van.
         </p>
+        <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 p-5 max-w-3xl">
+          <TransferHeroBadges cityLabel="Chiang Mai Hotel" />
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-8">
           {transfers.map((t) => (
             <article key={t.slug} className="flex flex-col rounded-xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-md transition">
