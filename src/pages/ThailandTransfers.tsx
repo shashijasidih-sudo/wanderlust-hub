@@ -7,6 +7,7 @@ import { Plane, Car, Building2, MapPin } from "lucide-react";
 import TransferCard from "@/components/TransferCard";
 import CityExploreLinks from "@/components/CityExploreLinks";
 import RelatedArticles from "@/components/RelatedArticles";
+import TransferHeroBadges from "@/components/TransferHeroBadges";
 
 
 // Combined transfers from all cities
