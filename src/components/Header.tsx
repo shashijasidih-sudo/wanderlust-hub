@@ -224,56 +224,48 @@ const Header = () => {
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[240px] p-2">
-              <DropdownMenuSub>
-                <DropdownMenuSubTrigger className={menuItemClass}>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/thailand">
                   <Palmtree className="h-5 w-5 mr-3 text-primary" />
-                  <span className="font-medium">Thailand (All Cities)</span>
-                </DropdownMenuSubTrigger>
-                <DropdownMenuSubContent className="bg-background border shadow-xl z-50 min-w-[220px] p-2">
-                  <DropdownMenuItem asChild className={menuItemClass}>
-                    <Link to="/thailand">
-                      <Palmtree className="h-5 w-5 mr-3 text-primary" />
-                      <span className="font-medium">All Thailand</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild className={menuItemClass}>
-                    <Link to="/thailand/bangkok">
-                      <Building2 className="h-5 w-5 mr-3 text-primary" />
-                      <span className="font-medium">Bangkok</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild className={menuItemClass}>
-                    <Link to="/thailand/pattaya">
-                      <Ship className="h-5 w-5 mr-3 text-primary" />
-                      <span className="font-medium">Pattaya</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild className={menuItemClass}>
-                    <Link to="/thailand/phuket">
-                      <Fish className="h-5 w-5 mr-3 text-primary" />
-                      <span className="font-medium">Phuket</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild className={menuItemClass}>
-                    <Link to="/thailand/krabi">
-                      <Anchor className="h-5 w-5 mr-3 text-primary" />
-                      <span className="font-medium">Krabi</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild className={menuItemClass}>
-                    <Link to="/thailand/koh-samui">
-                      <Palmtree className="h-5 w-5 mr-3 text-primary" />
-                      <span className="font-medium">Koh Samui</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild className={menuItemClass}>
-                    <Link to="/thailand/chiang-mai">
-                      <TreePine className="h-5 w-5 mr-3 text-primary" />
-                      <span className="font-medium">Chiang Mai</span>
-                    </Link>
-                  </DropdownMenuItem>
-                </DropdownMenuSubContent>
-              </DropdownMenuSub>
+                  <span className="font-medium">Thailand</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/thailand/bangkok">
+                  <Building2 className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Bangkok</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/thailand/phuket">
+                  <Fish className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Phuket</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/thailand/krabi">
+                  <Anchor className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Krabi</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/thailand/pattaya">
+                  <Ship className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Pattaya</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/thailand/chiang-mai">
+                  <TreePine className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Chiang Mai</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/thailand/koh-samui">
+                  <Palmtree className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Koh Samui</span>
+                </Link>
+              </DropdownMenuItem>
               <div className="h-px bg-border my-2" />
               <DropdownMenuItem asChild className={menuItemClass}>
                 <Link to="/singapore">
@@ -423,43 +415,43 @@ const Header = () => {
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/thailand" onClick={() => setIsMenuOpen(false)}>
                     <Palmtree className="h-4 w-4 mr-2 text-primary" />
-                    <span className="font-medium">Thailand (All Cities)</span>
+                    Thailand
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/thailand/bangkok" onClick={() => setIsMenuOpen(false)}>
-                    <Building2 className="h-4 w-4 mr-2 ml-4 text-primary" />
-                    <span className="text-muted-foreground">— Bangkok</span>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/pattaya" onClick={() => setIsMenuOpen(false)}>
-                    <Ship className="h-4 w-4 mr-2 ml-4 text-primary" />
-                    <span className="text-muted-foreground">— Pattaya</span>
+                    <Building2 className="h-4 w-4 mr-2 text-primary" />
+                    Bangkok
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/thailand/phuket" onClick={() => setIsMenuOpen(false)}>
-                    <Fish className="h-4 w-4 mr-2 ml-4 text-primary" />
-                    <span className="text-muted-foreground">— Phuket</span>
+                    <Fish className="h-4 w-4 mr-2 text-primary" />
+                    Phuket
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/thailand/krabi" onClick={() => setIsMenuOpen(false)}>
-                    <Anchor className="h-4 w-4 mr-2 ml-4 text-primary" />
-                    <span className="text-muted-foreground">— Krabi</span>
+                    <Anchor className="h-4 w-4 mr-2 text-primary" />
+                    Krabi
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/koh-samui" onClick={() => setIsMenuOpen(false)}>
-                    <Palmtree className="h-4 w-4 mr-2 ml-4 text-primary" />
-                    <span className="text-muted-foreground">— Koh Samui</span>
+                  <Link to="/thailand/pattaya" onClick={() => setIsMenuOpen(false)}>
+                    <Ship className="h-4 w-4 mr-2 text-primary" />
+                    Pattaya
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/thailand/chiang-mai" onClick={() => setIsMenuOpen(false)}>
-                    <TreePine className="h-4 w-4 mr-2 ml-4 text-primary" />
-                    <span className="text-muted-foreground">— Chiang Mai</span>
+                    <TreePine className="h-4 w-4 mr-2 text-primary" />
+                    Chiang Mai
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/thailand/koh-samui" onClick={() => setIsMenuOpen(false)}>
+                    <Palmtree className="h-4 w-4 mr-2 text-primary" />
+                    Koh Samui
                   </Link>
                 </DropdownMenuItem>
                 <div className="h-px bg-border my-1" />
