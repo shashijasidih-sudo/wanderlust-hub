@@ -294,37 +294,37 @@ const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[240px] p-2">
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand/budget-airport-transfers">
+                <Link to="/thailand/airport-transfers/">
                   <Palmtree className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Thailand</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand/bangkok/budget-airport-transfers">
+                <Link to="/thailand/bangkok-airport-transfers/">
                   <Building2 className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Bangkok</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand/phuket/budget-airport-transfers">
+                <Link to="/thailand/phuket-airport-transfers/">
                   <Fish className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Phuket</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand/krabi/budget-airport-transfers">
+                <Link to="/thailand/krabi-airport-transfers/">
                   <Anchor className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Krabi</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand/pattaya/budget-airport-transfers">
+                <Link to="/thailand/pattaya-transfers/">
                   <Ship className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Pattaya</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand/chiang-mai/budget-airport-transfers">
+                <Link to="/thailand/chiang-mai-airport-transfers/">
                   <TreePine className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Chiang Mai</span>
                 </Link>
@@ -482,37 +482,37 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/airport-transfers/" onClick={() => setIsMenuOpen(false)}>
                     <Palmtree className="h-4 w-4 mr-2 text-primary" />
                     Thailand
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/bangkok/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/bangkok-airport-transfers/" onClick={() => setIsMenuOpen(false)}>
                     <Building2 className="h-4 w-4 mr-2 text-primary" />
                     Bangkok
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/phuket/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/phuket-airport-transfers/" onClick={() => setIsMenuOpen(false)}>
                     <Fish className="h-4 w-4 mr-2 text-primary" />
                     Phuket
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/krabi/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/krabi-airport-transfers/" onClick={() => setIsMenuOpen(false)}>
                     <Anchor className="h-4 w-4 mr-2 text-primary" />
                     Krabi
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/pattaya/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/pattaya-transfers/" onClick={() => setIsMenuOpen(false)}>
                     <Ship className="h-4 w-4 mr-2 text-primary" />
                     Pattaya
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/chiang-mai/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/chiang-mai-airport-transfers/" onClick={() => setIsMenuOpen(false)}>
                     <TreePine className="h-4 w-4 mr-2 text-primary" />
                     Chiang Mai
                   </Link>
