@@ -73,8 +73,13 @@ const BangkokTransfers = () => {
                 "English-speaking Driver",
                 "Pickup from Any Bangkok Hotel",
                 "Book at least 48 hours before departure"
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
+              ].map((item, index) => (
+                <div
+                  key={item}
+                  className={`flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg ${
+                    index === 4 ? "sm:col-span-2" : ""
+                  }`}
+                >
                   <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
                     <Check className="w-3 h-3 text-white" />
                   </div>
