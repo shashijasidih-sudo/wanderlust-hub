@@ -12,6 +12,8 @@ import RecommendedActivitiesSection from "./RecommendedActivitiesSection";
 import { getCityTransfers } from "@/data/cityTransfersData";
 import { getCityActivities } from "@/data/cityActivitiesData";
 import RelatedArticles from "./RelatedArticles";
+import TransferHeroBadges from "./TransferHeroBadges";
+
 import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
