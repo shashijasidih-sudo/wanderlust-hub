@@ -102,12 +102,12 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Koh Samui & Chiang Mai</h4>
             <ul className="space-y-2 text-sm text-background/80">
-              <li><Link to="/thailand/koh-samui/things-to-do" className="hover:text-background transition-colors">Koh Samui Activities</Link></li>
-              <li><Link to="/thailand/koh-samui/full-moon-party-tour" className="hover:text-background transition-colors">Koh Samui Full Moon Party</Link></li>
-              <li><Link to="/thailand/koh-samui/white-orchid-loy-krathong-cruise" className="hover:text-background transition-colors">Loy Krathong Cruise Samui</Link></li>
+              <li><Link to="/thailand/koh-samui" className="hover:text-background transition-colors">Koh Samui Activities</Link></li>
+              <li><Link to="/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" className="hover:text-background transition-colors">Koh Samui Full Moon Party</Link></li>
+              <li><Link to="/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival" className="hover:text-background transition-colors">Loy Krathong Cruise Samui</Link></li>
               <li><Link to="/thailand/chiang-mai/things-to-do" className="hover:text-background transition-colors">Chiang Mai Activities</Link></li>
               <li><Link to="/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour" className="hover:text-background transition-colors">Doi Inthanon Full Day Tour</Link></li>
-              <li><Link to="/thailand/chiang-mai/chiang-rai-golden-triangle-tour" className="hover:text-background transition-colors">Chiang Rai Golden Triangle</Link></li>
+              <li><Link to="/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip" className="hover:text-background transition-colors">Chiang Rai Golden Triangle</Link></li>
               <li><Link to="/thailand/chiang-mai-airport-transfers/" className="hover:text-background transition-colors">Chiang Mai Airport Transfers</Link></li>
             </ul>
           </div>
