@@ -498,12 +498,12 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
             </CardContent>
           </Card>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          {/* Action Buttons — mobile/tablet inline */}
+          <div className="flex flex-col sm:flex-row gap-3 lg:hidden">
             <Button
               size="lg"
               variant="outline"
-              className="flex-1 py-6 text-lg"
+              className="flex-1 py-6 text-base"
               onClick={handleAddToCart}
             >
               <ShoppingCart className="mr-2 h-5 w-5" />
@@ -511,13 +511,78 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
             </Button>
             <Button
               size="lg"
-              className="flex-1 py-6 text-lg"
+              className="flex-1 py-6 text-base"
               onClick={handleBookNow}
             >
               Book Now
             </Button>
           </div>
+          </div>
 
+          {/* Sticky Booking Summary — desktop */}
+          <aside className="hidden lg:block lg:col-span-1">
+            <div className="sticky top-24 space-y-4">
+              <Card className="border-primary/20 shadow-sm">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg">Booking Summary</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start justify-between gap-3 pb-3 border-b">
+                    <div className="min-w-0">
+                      <p className="text-xs text-muted-foreground uppercase tracking-wide">Vehicle</p>
+                      <p className="font-semibold text-sm mt-0.5 truncate">
+                        {selectedVehicleData?.name || "Not selected"}
+                      </p>
+                      {selectedVehicleData && (
+                        <p className="text-xs text-muted-foreground mt-0.5">
+                          {selectedVehicleData.capacity} Persons
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between gap-3 pb-3 border-b">
+                    <div className="min-w-0">
+                      <p className="text-xs text-muted-foreground uppercase tracking-wide">Pickup</p>
+                      <p className="text-sm mt-0.5">
+                        {pickupDate ? format(pickupDate, "MMM d, yyyy") : "—"}
+                        {pickupTime && ` · ${pickupTime}`}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-muted-foreground">Total Price</span>
+                    <span className="text-2xl font-bold text-primary">
+                      ₹{totalPrice.toLocaleString()}
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col gap-2 pt-1">
+                    <Button size="lg" className="w-full" onClick={handleBookNow}>
+                      Book Now
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="w-full"
+                      onClick={handleAddToCart}
+                    >
+                      <ShoppingCart className="mr-2 h-4 w-4" />
+                      Add to Cart {cartCount > 0 && `(${cartCount})`}
+                    </Button>
+                  </div>
+
+                  <p className="text-[11px] text-muted-foreground text-center pt-1">
+                    Free cancellation up to 72 hours before pickup
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </aside>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
           {/* Transfer Details Accordion */}
           <div className="mt-8">
             <Accordion type="multiple" className="space-y-4">
