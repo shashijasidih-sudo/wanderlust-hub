@@ -252,25 +252,24 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
 
         {/* Photo Gallery */}
         {galleryImages && galleryImages.length > 0 && (
-          <div className="max-w-4xl mx-auto mb-8">
+          <div className="max-w-6xl mx-auto mb-6 md:mb-8">
             {/* Mobile: single hero image */}
-            <div className="md:hidden overflow-hidden rounded-lg">
+            <div className="md:hidden overflow-hidden rounded-xl">
               <img
                 src={galleryImages[0].src}
                 alt={galleryImages[0].alt}
                 loading="lazy"
-                className="w-full h-[220px] object-cover"
+                className="w-full h-[240px] object-cover"
               />
             </div>
             {/* Desktop: 4-image collage */}
-            <div className="hidden md:grid grid-cols-4 gap-2">
+            <div className="hidden md:grid grid-cols-4 grid-rows-2 gap-3 h-[420px]">
               {galleryImages.slice(0, 4).map((img, idx) => (
                 <div
                   key={idx}
                   className={cn(
-                    "overflow-hidden rounded-lg",
-                    idx === 0 && "col-span-2 row-span-2 h-[320px]",
-                    idx !== 0 && "h-[156px]"
+                    "overflow-hidden rounded-xl",
+                    idx === 0 ? "col-span-2 row-span-2" : "col-span-1 row-span-1"
                   )}
                 >
                   <img
@@ -286,16 +285,17 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         )}
 
         {/* Title */}
-        <div className="text-center mb-6">
-          <h1 className="text-2xl md:text-3xl font-bold">{transferData.title}</h1>
+        <div className="max-w-6xl mx-auto text-center mb-5 md:mb-6">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">{transferData.title}</h1>
         </div>
 
-        <div className="max-w-3xl mx-auto mb-8">
+        <div className="max-w-3xl mx-auto mb-6 md:mb-8">
           <TransferHeroBadges variant="light" />
         </div>
 
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto lg:grid lg:grid-cols-3 lg:gap-8">
+          <div className="lg:col-span-2">
           {/* Vehicle Selection */}
           <Card className="mb-6">
             <CardContent className="p-4 md:p-6">
@@ -498,12 +498,12 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
             </CardContent>
           </Card>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          {/* Action Buttons — mobile/tablet inline */}
+          <div className="flex flex-col sm:flex-row gap-3 lg:hidden">
             <Button
               size="lg"
               variant="outline"
-              className="flex-1 py-6 text-lg"
+              className="flex-1 py-6 text-base"
               onClick={handleAddToCart}
             >
               <ShoppingCart className="mr-2 h-5 w-5" />
@@ -511,13 +511,78 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
             </Button>
             <Button
               size="lg"
-              className="flex-1 py-6 text-lg"
+              className="flex-1 py-6 text-base"
               onClick={handleBookNow}
             >
               Book Now
             </Button>
           </div>
+          </div>
 
+          {/* Sticky Booking Summary — desktop */}
+          <aside className="hidden lg:block lg:col-span-1">
+            <div className="sticky top-24 space-y-4">
+              <Card className="border-primary/20 shadow-sm">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg">Booking Summary</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start justify-between gap-3 pb-3 border-b">
+                    <div className="min-w-0">
+                      <p className="text-xs text-muted-foreground uppercase tracking-wide">Vehicle</p>
+                      <p className="font-semibold text-sm mt-0.5 truncate">
+                        {selectedVehicleData?.name || "Not selected"}
+                      </p>
+                      {selectedVehicleData && (
+                        <p className="text-xs text-muted-foreground mt-0.5">
+                          {selectedVehicleData.capacity} Persons
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between gap-3 pb-3 border-b">
+                    <div className="min-w-0">
+                      <p className="text-xs text-muted-foreground uppercase tracking-wide">Pickup</p>
+                      <p className="text-sm mt-0.5">
+                        {pickupDate ? format(pickupDate, "MMM d, yyyy") : "—"}
+                        {pickupTime && ` · ${pickupTime}`}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-muted-foreground">Total Price</span>
+                    <span className="text-2xl font-bold text-primary">
+                      ₹{totalPrice.toLocaleString()}
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col gap-2 pt-1">
+                    <Button size="lg" className="w-full" onClick={handleBookNow}>
+                      Book Now
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="w-full"
+                      onClick={handleAddToCart}
+                    >
+                      <ShoppingCart className="mr-2 h-4 w-4" />
+                      Add to Cart {cartCount > 0 && `(${cartCount})`}
+                    </Button>
+                  </div>
+
+                  <p className="text-[11px] text-muted-foreground text-center pt-1">
+                    Free cancellation up to 72 hours before pickup
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </aside>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
           {/* Transfer Details Accordion */}
           <div className="mt-8">
             <Accordion type="multiple" className="space-y-4">
