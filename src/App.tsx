@@ -1147,11 +1147,11 @@ const App = () => (
             <Route path="/thailand/bangkok/safari-world-dmk-airport" element={<Navigate to="/thailand/bangkok/airport-transfers/safari-world-dmk" replace />} />
             <Route path="/thailand/bangkok/temple-tour-airport" element={<Navigate to="/thailand/bangkok/airport-transfers/temple-tour-bkk" replace />} />
             <Route path="/thailand/bangkok/temple-tour-dmk-airport" element={<Navigate to="/thailand/bangkok/airport-transfers/temple-tour-dmk" replace />} />
-            <Route path="/thailand/bangkok/transfers" element={<Navigate to="/thailand/bangkok/budget-airport-transfers" replace />} />
-            <Route path="/thailand/pattaya/transfers" element={<Navigate to="/thailand/pattaya/budget-airport-transfers" replace />} />
-            <Route path="/thailand/phuket/transfers" element={<Navigate to="/thailand/phuket/budget-airport-transfers" replace />} />
-            <Route path="/thailand/krabi/transfers" element={<Navigate to="/thailand/krabi/budget-airport-transfers" replace />} />
-             <Route path="/thailand/transfers" element={<Navigate to="/thailand/budget-airport-transfers" replace />} />
+            <Route path="/thailand/bangkok/transfers" element={<Navigate to="/thailand/bangkok-airport-transfers/" replace />} />
+            <Route path="/thailand/pattaya/transfers" element={<Navigate to="/thailand/pattaya-transfers/" replace />} />
+            <Route path="/thailand/phuket/transfers" element={<Navigate to="/thailand/phuket-airport-transfers/" replace />} />
+            <Route path="/thailand/krabi/transfers" element={<Navigate to="/thailand/krabi-airport-transfers/" replace />} />
+             <Route path="/thailand/transfers" element={<Navigate to="/thailand/airport-transfers/" replace />} />
              <Route path="/dubai/transfers" element={<Navigate to="/dubai/budget-airport-transfers" replace />} />
              <Route path="/singapore/transfers" element={<Navigate to="/singapore/budget-airport-transfers" replace />} />
              {/* Legacy Thailand city URLs → redirect to /thailand/<city>/* */}
