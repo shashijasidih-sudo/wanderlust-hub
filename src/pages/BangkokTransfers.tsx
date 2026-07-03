@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TravelEssentials from "@/components/TravelEssentials";
 import { Button } from "@/components/ui/button";
-import { Plane, Car, Building2, MapPin } from "lucide-react";
+import { Plane, Car, Building2, MapPin, Check } from "lucide-react";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
 import TransferCard from "@/components/TransferCard";
