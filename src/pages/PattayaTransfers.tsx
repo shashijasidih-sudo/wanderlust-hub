@@ -8,6 +8,7 @@ import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import TransferCard from "@/components/TransferCard";
 import CityExploreLinks from "@/components/CityExploreLinks";
 import RelatedArticles from "@/components/RelatedArticles";
+import TransferHeroBadges from "@/components/TransferHeroBadges";
 
 
 const transfers = [
