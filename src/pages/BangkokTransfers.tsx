@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TravelEssentials from "@/components/TravelEssentials";
 import { Button } from "@/components/ui/button";
-import { Plane, Car, Building2, MapPin } from "lucide-react";
+import { Plane, Car, Building2, MapPin, Check } from "lucide-react";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
 import TransferCard from "@/components/TransferCard";
@@ -66,19 +66,26 @@ const BangkokTransfers = () => {
             <p className="text-lg md:text-xl text-white/80 max-w-xl mb-6">
               Airport pickups, hotel transfers & temple tours with professional drivers
             </p>
-            <div className="flex flex-wrap gap-4 text-white/70 text-sm">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full" />
-                <span>24/7 Availability</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full" />
-                <span>Meet & Greet Service</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full" />
-                <span>Licensed Drivers</span>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-white/90 text-sm md:text-base">
+              {[
+                "Private Transfer",
+                "Instant Confirmation",
+                "English-speaking Driver",
+                "Pickup from Any Bangkok Hotel",
+                "Book at least 48 hours before departure"
+              ].map((item, index) => (
+                <div
+                  key={item}
+                  className={`flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg ${
+                    index === 4 ? "sm:col-span-2" : ""
+                  }`}
+                >
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
+                    <Check className="w-3 h-3 text-white" />
+                  </div>
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
