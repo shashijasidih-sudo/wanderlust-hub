@@ -41,7 +41,7 @@ const KrabiTransfers = () => {
       <Header />
       
       {/* Hero Section */}
-      <div className="relative h-[350px] md:h-[450px] overflow-hidden">
+      <div className="relative h-[460px] md:h-[450px] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1920&auto=format&fit=crop')" }}

@@ -40,7 +40,7 @@ const PhuketTransfers = () => {
       <Header />
       
       {/* Hero Section */}
-      <div className="relative h-[350px] md:h-[450px] overflow-hidden">
+      <div className="relative h-[460px] md:h-[450px] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=1920&auto=format&fit=crop')" }}
