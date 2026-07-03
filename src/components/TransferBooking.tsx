@@ -276,9 +276,14 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         )}
 
         {/* Title */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6">
           <h1 className="text-2xl md:text-3xl font-bold">{transferData.title}</h1>
         </div>
+
+        <div className="max-w-3xl mx-auto mb-8">
+          <TransferHeroBadges variant="light" />
+        </div>
+
 
         <div className="max-w-4xl mx-auto">
           {/* Vehicle Selection */}
