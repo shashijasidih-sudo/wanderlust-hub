@@ -253,14 +253,24 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         {/* Photo Gallery */}
         {galleryImages && galleryImages.length > 0 && (
           <div className="max-w-4xl mx-auto mb-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+            {/* Mobile: single hero image */}
+            <div className="md:hidden overflow-hidden rounded-lg">
+              <img
+                src={galleryImages[0].src}
+                alt={galleryImages[0].alt}
+                loading="lazy"
+                className="w-full h-[220px] object-cover"
+              />
+            </div>
+            {/* Desktop: 4-image collage */}
+            <div className="hidden md:grid grid-cols-4 gap-2">
               {galleryImages.slice(0, 4).map((img, idx) => (
                 <div
                   key={idx}
                   className={cn(
                     "overflow-hidden rounded-lg",
-                    idx === 0 && "col-span-2 row-span-2 md:h-[320px]",
-                    idx !== 0 && "h-[110px] md:h-[156px]"
+                    idx === 0 && "col-span-2 row-span-2 h-[320px]",
+                    idx !== 0 && "h-[156px]"
                   )}
                 >
                   <img
@@ -288,48 +298,66 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         <div className="max-w-4xl mx-auto">
           {/* Vehicle Selection */}
           <Card className="mb-6">
-            <CardContent className="p-6">
+            <CardContent className="p-4 md:p-6">
               <div className="space-y-4">
                 {transferData.vehicles.map((vehicle) => (
                   <div
                     key={vehicle.id}
                     className={cn(
-                      "border rounded-lg p-4 cursor-pointer transition-all",
+                      "border rounded-lg p-3 md:p-4 cursor-pointer transition-all",
                       selectedVehicle === vehicle.id
                         ? "border-primary bg-primary/5"
                         : "border-border hover:border-primary/50"
                     )}
                     onClick={() => setSelectedVehicle(vehicle.id)}
                   >
-                    <div className="flex items-center gap-4">
-                      {/* Vehicle Image */}
-                      <div className="w-32 h-20 flex-shrink-0">
-                        <img
-                          src={vehicle.image}
-                          alt={vehicle.name}
-                          className="w-full h-full object-contain"
-                        />
+                    {/* Mobile layout */}
+                    <div className="md:hidden">
+                      <div className="flex items-start gap-3">
+                        <div className="w-20 h-16 flex-shrink-0">
+                          <img src={vehicle.image} alt={vehicle.name} className="w-full h-full object-contain" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-start justify-between gap-2">
+                            <div className="min-w-0">
+                              <h3 className="font-semibold text-base leading-tight truncate">{vehicle.name}</h3>
+                              <p className="text-xs text-muted-foreground">{vehicle.capacity} Persons</p>
+                            </div>
+                            <Checkbox
+                              checked={selectedVehicle === vehicle.id}
+                              onCheckedChange={() => setSelectedVehicle(vehicle.id)}
+                              className="h-5 w-5 flex-shrink-0"
+                            />
+                          </div>
+                          <div className="flex items-center justify-between mt-2 gap-2">
+                            <p className="text-xs text-muted-foreground">
+                              {vehicle.bigBags} Big · {vehicle.handBags} Hand Bag
+                            </p>
+                            <p className="text-base font-bold text-primary whitespace-nowrap">
+                              ₹{vehicle.price.toLocaleString()}
+                            </p>
+                          </div>
+                        </div>
                       </div>
+                    </div>
 
-                      {/* Vehicle Info */}
+                    {/* Desktop layout */}
+                    <div className="hidden md:flex items-center gap-4">
+                      <div className="w-32 h-20 flex-shrink-0">
+                        <img src={vehicle.image} alt={vehicle.name} className="w-full h-full object-contain" />
+                      </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-lg">{vehicle.name}</h3>
                         <p className="text-sm text-muted-foreground">{vehicle.capacity} Persons</p>
                       </div>
-
-                      {/* Baggage Info */}
                       <div className="text-sm">
                         <p className="font-semibold">Bag Allowed</p>
                         <p className="text-muted-foreground">{vehicle.bigBags} Big Bag</p>
                         <p className="text-muted-foreground">{vehicle.handBags} Hand Bag</p>
                       </div>
-
-                      {/* Price */}
                       <div className="text-right">
                         <p className="text-xl font-bold">₹ {vehicle.price.toLocaleString()}</p>
                       </div>
-
-                      {/* Checkbox */}
                       <div className="flex-shrink-0">
                         <Checkbox
                           checked={selectedVehicle === vehicle.id}
