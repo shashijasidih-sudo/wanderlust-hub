@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TransferHeroBadges from "@/components/TransferHeroBadges";
 import TravelEssentials from "@/components/TravelEssentials";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
