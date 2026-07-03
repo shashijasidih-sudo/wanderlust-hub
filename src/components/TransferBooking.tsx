@@ -12,6 +12,8 @@ import RecommendedActivitiesSection from "./RecommendedActivitiesSection";
 import { getCityTransfers } from "@/data/cityTransfersData";
 import { getCityActivities } from "@/data/cityActivitiesData";
 import RelatedArticles from "./RelatedArticles";
+import TransferHeroBadges from "./TransferHeroBadges";
+
 import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
@@ -274,9 +276,14 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         )}
 
         {/* Title */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6">
           <h1 className="text-2xl md:text-3xl font-bold">{transferData.title}</h1>
         </div>
+
+        <div className="max-w-3xl mx-auto mb-8">
+          <TransferHeroBadges variant="light" />
+        </div>
+
 
         <div className="max-w-4xl mx-auto">
           {/* Vehicle Selection */}

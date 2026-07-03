@@ -2,9 +2,10 @@ import { Check } from "lucide-react";
 
 interface TransferHeroBadgesProps {
   cityLabel?: string;
+  variant?: "dark" | "light";
 }
 
-const TransferHeroBadges = ({ cityLabel = "Hotel" }: TransferHeroBadgesProps) => {
+const TransferHeroBadges = ({ cityLabel = "Hotel", variant = "dark" }: TransferHeroBadgesProps) => {
   const items = [
     "Private Transfer",
     "Instant Confirmation",
@@ -13,12 +14,18 @@ const TransferHeroBadges = ({ cityLabel = "Hotel" }: TransferHeroBadgesProps) =>
     "Book at least 48 hours before departure",
   ];
 
+  const isLight = variant === "light";
+  const textClass = isLight ? "text-foreground" : "text-white/90";
+  const chipClass = isLight
+    ? "bg-primary/5 border border-primary/15"
+    : "bg-white/10 backdrop-blur-sm";
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-white/90 text-sm md:text-base">
+    <div className={`grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm md:text-base ${textClass}`}>
       {items.map((item, index) => (
         <div
           key={item}
-          className={`flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg ${
+          className={`flex items-center gap-2 px-3 py-2 rounded-lg ${chipClass} ${
             index === 4 ? "sm:col-span-2" : ""
           }`}
         >
