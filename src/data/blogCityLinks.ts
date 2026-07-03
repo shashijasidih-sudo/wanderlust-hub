@@ -29,19 +29,19 @@ const cityHubLinks: Record<
 > = {
   bangkok: {
     thingsToDoLink: "/thailand/bangkok/things-to-do",
-    transfersLink: "/thailand/bangkok/budget-airport-transfers",
+    transfersLink: "/thailand/bangkok-airport-transfers/",
   },
   pattaya: {
     thingsToDoLink: "/thailand/pattaya/things-to-do",
-    transfersLink: "/thailand/pattaya/budget-airport-transfers",
+    transfersLink: "/thailand/pattaya-transfers/",
   },
   phuket: {
     thingsToDoLink: "/thailand/phuket/things-to-do",
-    transfersLink: "/thailand/phuket/budget-airport-transfers",
+    transfersLink: "/thailand/phuket-airport-transfers/",
   },
   krabi: {
     thingsToDoLink: "/thailand/krabi/things-to-do",
-    transfersLink: "/thailand/krabi/budget-airport-transfers",
+    transfersLink: "/thailand/krabi-airport-transfers/",
   },
   singapore: {
     thingsToDoLink: "/singapore/things-to-do",
@@ -53,15 +53,15 @@ const cityHubLinks: Record<
   },
   thailand: {
     thingsToDoLink: "/thailand",
-    transfersLink: "/thailand/budget-airport-transfers",
+    transfersLink: "/thailand/airport-transfers/",
   },
   "koh-samui": {
     thingsToDoLink: "/thailand/koh-samui/things-to-do",
-    transfersLink: "/thailand/budget-airport-transfers",
+    transfersLink: "/thailand/airport-transfers/",
   },
   "chiang-mai": {
     thingsToDoLink: "/thailand/chiang-mai/things-to-do",
-    transfersLink: "/thailand/chiang-mai/budget-airport-transfers",
+    transfersLink: "/thailand/chiang-mai-airport-transfers/",
   },
 };
 
