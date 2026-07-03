@@ -215,40 +215,63 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
       
       <main className="container mx-auto px-4 py-8">
         {/* Breadcrumb Sitemap */}
-        {transferData.city?.toLowerCase() === "bangkok" && (
-          <>
-            <BreadcrumbJsonLd
-              items={[
-                { name: "Home", url: "/" },
-                { name: "Bangkok", url: "/thailand/bangkok" },
-                { name: "Bangkok Transfers", url: "/bangkok-transfers" },
-                { name: transferData.title, url: location.pathname },
-              ]}
-            />
-            <nav
-              aria-label="Breadcrumb"
-              className="max-w-4xl mx-auto mb-4 text-sm text-muted-foreground"
-            >
-              <ol className="flex flex-wrap items-center gap-1">
-                <li>
-                  <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-                </li>
-                <li aria-hidden="true"><ChevronRight className="h-4 w-4 inline" /></li>
-                <li>
-                  <Link to="/thailand/bangkok" className="hover:text-primary transition-colors">Bangkok</Link>
-                </li>
-                <li aria-hidden="true"><ChevronRight className="h-4 w-4 inline" /></li>
-                <li>
-                  <Link to="/bangkok-transfers" className="hover:text-primary transition-colors">Bangkok Transfers</Link>
-                </li>
-                <li aria-hidden="true"><ChevronRight className="h-4 w-4 inline" /></li>
-                <li className="text-foreground font-medium line-clamp-1" aria-current="page">
-                  {transferData.title}
-                </li>
-              </ol>
-            </nav>
-          </>
-        )}
+        {(() => {
+          const cityKey = transferData.city?.toLowerCase().trim() || "";
+          const cityHomeMap: Record<string, { name: string; url: string }> = {
+            bangkok: { name: "Bangkok", url: "/thailand/bangkok" },
+            phuket: { name: "Phuket", url: "/thailand/phuket" },
+            krabi: { name: "Krabi", url: "/thailand/krabi" },
+            pattaya: { name: "Pattaya", url: "/thailand/pattaya" },
+            "chiang mai": { name: "Chiang Mai", url: "/thailand/chiang-mai" },
+            singapore: { name: "Singapore", url: "/singapore" },
+          };
+          const cityTransfersMap: Record<string, { name: string; url: string }> = {
+            bangkok: { name: "Bangkok Transfers", url: "/thailand/bangkok-airport-transfers/" },
+            phuket: { name: "Phuket Transfers", url: "/thailand/phuket-airport-transfers/" },
+            krabi: { name: "Krabi Transfers", url: "/thailand/krabi-airport-transfers/" },
+            pattaya: { name: "Pattaya Transfers", url: "/thailand/pattaya-transfers/" },
+            "chiang mai": { name: "Chiang Mai Transfers", url: "/thailand/chiang-mai-airport-transfers/" },
+            singapore: { name: "Singapore Transfers", url: "/singapore/budget-airport-transfers" },
+          };
+          const cityHome = cityHomeMap[cityKey];
+          const cityTransfers = cityTransfersMap[cityKey];
+          if (!cityHome || !cityTransfers) return null;
+          return (
+            <>
+              <BreadcrumbJsonLd
+                items={[
+                  { name: "Home", url: "/" },
+                  cityHome,
+                  cityTransfers,
+                  { name: transferData.title, url: location.pathname },
+                ]}
+              />
+              <nav
+                aria-label="Breadcrumb"
+                className="max-w-4xl mx-auto mb-4 text-sm text-muted-foreground"
+              >
+                <ol className="flex flex-wrap items-center gap-1">
+                  <li>
+                    <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+                  </li>
+                  <li aria-hidden="true"><ChevronRight className="h-4 w-4 inline" /></li>
+                  <li>
+                    <Link to={cityHome.url} className="hover:text-primary transition-colors">{cityHome.name}</Link>
+                  </li>
+                  <li aria-hidden="true"><ChevronRight className="h-4 w-4 inline" /></li>
+                  <li>
+                    <Link to={cityTransfers.url} className="hover:text-primary transition-colors">{cityTransfers.name}</Link>
+                  </li>
+                  <li aria-hidden="true"><ChevronRight className="h-4 w-4 inline" /></li>
+                  <li className="text-foreground font-medium line-clamp-1" aria-current="page">
+                    {transferData.title}
+                  </li>
+                </ol>
+              </nav>
+            </>
+          );
+        })()}
+
 
         {/* Photo Gallery */}
         {galleryImages && galleryImages.length > 0 && (
