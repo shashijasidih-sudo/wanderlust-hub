@@ -471,7 +471,8 @@ const App = () => (
             <Route path="/thailand/krabi" element={<Krabi />} />
             <Route path="/thailand/koh-samui" element={<KohSamui />} />
             <Route path="/thailand/chiang-mai" element={<ChiangMai />} />
-            <Route path="/thailand/chiang-mai/budget-airport-transfers" element={<ChiangMaiTransfers />} />
+            <Route path="/thailand/chiang-mai-airport-transfers/" element={<ChiangMaiTransfers />} />
+            <Route path="/thailand/chiang-mai/budget-airport-transfers" element={<Navigate to="/thailand/chiang-mai-airport-transfers/" replace />} />
             <Route path="/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival" element={<KohSamuiWhiteOrchidLoyKrathongCruise />} />
             <Route path="/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" element={<KohSamuiFullMoonParty />} />
             <Route path="/thailand/koh-samui/destination-guides" element={<KohSamuiDestinationGuides />} />
@@ -765,7 +766,8 @@ const App = () => (
             <Route path="/blog/thailand-food-experiences" element={<BlogThailandFoodExperiences />} />
             <Route path="/blog/thailand-trip-cost-from-india" element={<BlogThailandTripCostFromIndia />} />
             <Route path="/netherlands-smart-guides" element={<NetherlandsSmartGuides />} />
-           <Route path="/thailand/bangkok/budget-airport-transfers" element={<BangkokTransfers />} />
+            <Route path="/thailand/bangkok-airport-transfers/" element={<BangkokTransfers />} />
+            <Route path="/thailand/bangkok/budget-airport-transfers" element={<Navigate to="/thailand/bangkok-airport-transfers/" replace />} />
            {/* New SEO-friendly Bangkok Transfer slugs */}
            <Route path="/thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer" element={<BangkokBkkAirportPickup />} />
            <Route path="/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer" element={<BangkokDmkAirportPickup />} />
