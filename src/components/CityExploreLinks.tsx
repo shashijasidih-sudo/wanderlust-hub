@@ -19,7 +19,7 @@ const cityConfig: Record<
   bangkok: {
     name: "Bangkok",
     thingsToDo: "/thailand/bangkok/things-to-do",
-    transfers: "/thailand/budget-airport-transfers",
+    transfers: "/thailand/bangkok-airport-transfers/",
     cityHome: "/thailand/bangkok",
     guideLabel: "Bangkok Smart Guides",
     guideHref: "/thailand/destination-guides",
@@ -27,7 +27,7 @@ const cityConfig: Record<
   pattaya: {
     name: "Pattaya",
     thingsToDo: "/thailand/pattaya/things-to-do",
-    transfers: "/thailand/budget-airport-transfers",
+    transfers: "/thailand/pattaya-transfers/",
     cityHome: "/thailand/pattaya",
     guideLabel: "Pattaya Travel Guide",
     guideHref: "/thailand/destination-guides",
@@ -35,7 +35,7 @@ const cityConfig: Record<
   phuket: {
     name: "Phuket",
     thingsToDo: "/thailand/phuket/things-to-do",
-    transfers: "/thailand/budget-airport-transfers",
+    transfers: "/thailand/phuket-airport-transfers/",
     cityHome: "/thailand/phuket",
     guideLabel: "Phuket Travel Guide",
     guideHref: "/thailand/destination-guides",
@@ -43,7 +43,7 @@ const cityConfig: Record<
   krabi: {
     name: "Krabi",
     thingsToDo: "/thailand/krabi/things-to-do",
-    transfers: "/thailand/budget-airport-transfers",
+    transfers: "/thailand/krabi-airport-transfers/",
     cityHome: "/thailand/krabi",
     guideLabel: "Krabi Travel Guide",
     guideHref: "/thailand/destination-guides",
@@ -59,7 +59,7 @@ const cityConfig: Record<
   "koh-samui": {
     name: "Koh Samui",
     thingsToDo: "/thailand/koh-samui/things-to-do",
-    transfers: "/thailand/budget-airport-transfers",
+    transfers: "/thailand/airport-transfers/",
     cityHome: "/thailand/koh-samui",
     guideLabel: "Thailand Smart Guides",
     guideHref: "/thailand/destination-guides",
@@ -67,7 +67,7 @@ const cityConfig: Record<
   "chiang-mai": {
     name: "Chiang Mai",
     thingsToDo: "/thailand/chiang-mai/things-to-do",
-    transfers: "/thailand/chiang-mai/budget-airport-transfers",
+    transfers: "/thailand/chiang-mai-airport-transfers/",
     cityHome: "/thailand/chiang-mai",
     guideLabel: "Thailand Smart Guides",
     guideHref: "/thailand/destination-guides",
@@ -83,7 +83,7 @@ const cityConfig: Record<
   thailand: {
     name: "Thailand",
     thingsToDo: "/thailand",
-    transfers: "/thailand/budget-airport-transfers",
+    transfers: "/thailand/airport-transfers/",
     cityHome: "/thailand",
     guideLabel: "Thailand Smart Guides",
     guideHref: "/thailand/destination-guides",
