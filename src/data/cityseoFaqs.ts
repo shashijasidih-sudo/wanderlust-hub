@@ -53,7 +53,7 @@ export const cityseoFaqs: Record<string, SeoFaq[]> = {
     },
     {
       question: "How do I get from Bangkok to Pattaya or Phuket?",
-      answer: `Pattaya is a 2-hour drive — book a ${link("/bangkok-to-pattaya", "Bangkok to Pattaya transfer")}. For Phuket, fly from BKK or DMK in around 90 minutes. We also offer ${link("/bangkok-transfers", "Bangkok airport transfers")} for all major routes.`,
+      answer: `Pattaya is a 2-hour drive — book a ${link("/thailand/pattaya-transfers/", "Bangkok to Pattaya transfer")}. For Phuket, fly from BKK or DMK in around 90 minutes. We also offer ${link("/thailand/bangkok-airport-transfers/", "Bangkok airport transfers")} for all major routes.`,
     },
     {
       question: "Can I pay in INR for Bangkok tours?",
