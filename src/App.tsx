@@ -794,8 +794,8 @@ const App = () => (
            <Route path="/thailand/bangkok/to-pattaya" element={<Navigate to="/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer" replace />} />
            <Route path="/thailand/bangkok/city-tour-pattaya" element={<Navigate to="/thailand/bangkok/bangkok-city-tour-to-pattaya-hotel-transfer" replace />} />
            <Route path="/thailand/bangkok/tiger-topia-pattaya" element={<Navigate to="/thailand/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer" replace />} />
-             <Route path="/thailand/pattaya-airport-transfers/" element={<PattayaTransfers />} />
-             <Route path="/thailand/pattaya/budget-airport-transfers" element={<Navigate to="/thailand/pattaya-airport-transfers/" replace />} />
+             <Route path="/thailand/pattaya-transfers/" element={<PattayaTransfers />} />
+             <Route path="/thailand/pattaya/budget-airport-transfers" element={<Navigate to="/thailand/pattaya-transfers/" replace />} />
              {/* New SEO-friendly Pattaya transfer slugs */}
              <Route path="/thailand/bangkok/suvarnabhumi-airport-to-pattaya-hotel-transfer" element={<PattayaBkkAirportPickup />} />
              <Route path="/thailand/bangkok/suvarnabhumi-airport-tiger-topia-to-pattaya-hotel-transfer" element={<PattayaBkkTigerTopiaPickup />} />
