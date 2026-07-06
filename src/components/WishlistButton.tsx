@@ -69,6 +69,12 @@ const WishlistButton = ({ tourSlug, tourName, tourImage, tourPrice, className, s
       } else {
         await addToWishlist({ tourSlug, tourName, tourImage, tourPrice });
         setIsWishlisted(true);
+        trackAddToWishlist({
+          item_id: tourSlug,
+          item_name: tourName,
+          item_category: destinationFromSlug(tourSlug),
+          price: tourPrice || 0,
+        });
         toast({ title: "Added to wishlist", description: `${tourName} has been added to your wishlist.` });
       }
     } catch (err: any) {
