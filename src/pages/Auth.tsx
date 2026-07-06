@@ -12,6 +12,7 @@ import { Eye, EyeOff, Loader2, Plane } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { z } from "zod";
 import heroImage from "@/assets/auth-water-adventure.jpg";
+import { trackLogin, trackSignUp } from "@/lib/analytics";
 
 const loginSchema = z.object({
   email: z.string().trim().email({ message: "Invalid email address" }),
