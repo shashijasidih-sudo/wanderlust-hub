@@ -101,6 +101,21 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
   const [dropLocation, setDropLocation] = useState("");
   const [roomNo, setRoomNo] = useState("");
 
+  // GA4 view_item
+  useEffect(() => {
+    if (!transferData) return;
+    const minPrice = transferData.vehicles?.reduce(
+      (m, v) => (v.price < m ? v.price : m),
+      transferData.vehicles?.[0]?.price ?? 0
+    ) ?? 0;
+    trackViewItem({
+      item_id: tourSlug || transferData.id,
+      item_name: transferData.title,
+      item_category: destinationFromSlug(tourSlug) || transferData.city,
+      price: minPrice,
+    });
+  }, [transferData, tourSlug]);
+
   if (!transferData) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
