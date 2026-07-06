@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useCart, CartItem } from "@/contexts/CartContext";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,12 @@ import { Link, useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { format } from "date-fns";
+import {
+  trackViewCart,
+  trackRemoveFromCart,
+  trackBeginCheckout,
+  destinationFromSlug,
+} from "@/lib/analytics";
 
 const TransferCartItem = ({ item, onRemove, onUpdateQuantity }: { 
   item: CartItem; 
