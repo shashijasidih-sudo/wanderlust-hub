@@ -20,6 +20,7 @@ import CityExploreLinks from "./CityExploreLinks";
 import { getCityTransfers } from "@/data/cityTransfersData";
 import RelatedArticles from "./RelatedArticles";
 import Seo from "./seo/Seo";
+import { trackViewItem, destinationFromSlug } from "@/lib/analytics";
 
 import { Button } from "./ui/button";
 import {
@@ -45,9 +46,20 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
   const itineraryRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const { formatPrice } = useCurrency();
-  
+
   // Get the current path as the tour slug (remove leading slash)
   const tourSlug = location.pathname.slice(1);
+
+  // Fire GA4 view_item once per activity page open
+  useEffect(() => {
+    if (!tourData) return;
+    trackViewItem({
+      item_id: tourSlug || tourData.title,
+      item_name: tourData.title,
+      item_category: destinationFromSlug(tourSlug),
+      price: tourData.basePrice,
+    });
+  }, [tourSlug, tourData]);
 
   const scrollToItinerary = () => {
     itineraryRef.current?.scrollIntoView({ behavior: "smooth" });

@@ -9,6 +9,7 @@ import { CurrencyProvider } from "@/contexts/CurrencyContext";
 import ApprovalBadge from "@/components/ApprovalBadge";
 import FloatingWhatsApp from "@/components/DeferredFloatingWhatsApp";
 import ScrollToTop from "@/components/ScrollToTop";
+import AnalyticsInit from "@/components/AnalyticsInit";
 import Index from "./pages/Index";
 const NotFound = lazy(() => import("./pages/NotFound"));
 import LegacyCityRedirect from "./components/LegacyCityRedirect";
@@ -458,6 +459,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <AnalyticsInit />
           <ApprovalBadge />
           <Suspense fallback={null}><Routes>
           <Route path="/" element={<Index />} />

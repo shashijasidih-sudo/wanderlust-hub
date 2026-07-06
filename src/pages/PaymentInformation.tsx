@@ -12,6 +12,13 @@ import { useCart } from "@/contexts/CartContext";
 import { useAuth } from "@/lib/auth";
 import { toast } from "sonner";
 import { CreditCard, QrCode } from "lucide-react";
+import {
+  trackBeginCheckout,
+  trackAddPaymentInfo,
+  trackPurchase,
+  trackPaymentFailed,
+  destinationFromSlug,
+} from "@/lib/analytics";
 
 
 declare global {
@@ -54,6 +61,25 @@ const PaymentInformation = () => {
     script.async = true;
     document.body.appendChild(script);
     return () => { document.body.removeChild(script); };
+  }, []);
+
+  // Reusable analytics helpers
+  const analyticsItems = () =>
+    cartItems.map((i) => ({
+      item_id: i.slug || i.id,
+      item_name: i.title,
+      item_category: destinationFromSlug(i.slug),
+      price: i.price,
+      quantity: i.quantity,
+    }));
+  const primaryDestination = () => destinationFromSlug(cartItems[0]?.slug);
+
+  // begin_checkout when this page opens with items
+  useEffect(() => {
+    if (cartItems.length > 0) {
+      trackBeginCheckout(getCartTotal(), analyticsItems());
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (cartItems.length === 0) {
@@ -160,12 +186,39 @@ const PaymentInformation = () => {
               }
             );
 
+            let bookingId: string | undefined;
             if (saveRes.ok) {
               const saveResult = await saveRes.json();
               console.log("Booking saved, send-confirmation triggered server-side:", saveResult);
+              bookingId =
+                saveResult?.booking?.id ||
+                saveResult?.booking?.booking_id ||
+                saveResult?.id ||
+                resp.razorpay_payment_id;
             } else {
               console.error("Save booking failed:", await saveRes.text());
+              bookingId = resp.razorpay_payment_id;
             }
+
+            // GA4 purchase — fires ONCE, only after booking saved
+            const nameParts = (customerInfo?.customerName || "").trim().split(/\s+/);
+            await trackPurchase({
+              booking_id: String(bookingId || resp.razorpay_payment_id),
+              total_amount: Number(finalData.total_price) || getCartTotal(),
+              activity_id: finalData.tour_slug,
+              activity_name: finalData.tour_name,
+              destination: primaryDestination(),
+              guests: (finalData.adults || 0) + (finalData.children || 0),
+              travel_date: finalData.tour_date,
+              items: analyticsItems(),
+              user: {
+                email: finalData.contact_email,
+                phone: finalData.contact_phone,
+                first_name: nameParts[0],
+                last_name: nameParts.slice(1).join(" "),
+                country: customerInfo?.country,
+              },
+            });
 
             localStorage.removeItem("booking_data");
           } catch (err) {
@@ -185,10 +238,33 @@ const PaymentInformation = () => {
         },
 
         theme: { color: "#3399cc" },
-        modal: { ondismiss: () => setIsProcessing(false) },
+        modal: {
+          ondismiss: () => {
+            trackPaymentFailed({
+              booking_id: data?.id,
+              activity_name: cartItems.map((i) => i.title).join(", "),
+              destination: primaryDestination(),
+              amount: getCartTotal(),
+              reason: "user_dismissed",
+            });
+            setIsProcessing(false);
+          },
+        },
       };
 
+      // add_payment_info fires immediately before Razorpay popup opens
+      trackAddPaymentInfo(getCartTotal(), analyticsItems(), "razorpay");
+
       const rzp = new (window as any).Razorpay(options);
+      rzp.on("payment.failed", (r: any) => {
+        trackPaymentFailed({
+          booking_id: data?.id,
+          activity_name: cartItems.map((i) => i.title).join(", "),
+          destination: primaryDestination(),
+          amount: getCartTotal(),
+          reason: r?.error?.description || "payment_failed",
+        });
+      });
       rzp.open();
     } catch (error) {
       console.error("Payment error:", error);

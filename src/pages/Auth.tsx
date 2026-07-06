@@ -12,6 +12,7 @@ import { Eye, EyeOff, Loader2, Plane } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { z } from "zod";
 import heroImage from "@/assets/auth-water-adventure.jpg";
+import { trackLogin, trackSignUp } from "@/lib/analytics";
 
 const loginSchema = z.object({
   email: z.string().trim().email({ message: "Invalid email address" }),
@@ -62,6 +63,7 @@ const Auth = () => {
     setIsLoading(true);
     try {
       await auth.signInWithPassword(email.trim(), password);
+      trackLogin("email", email.trim());
       toast({ title: "Welcome back! ✈️", description: "Ready for your next adventure?" });
       navigate("/");
     } catch (error: any) {
@@ -86,6 +88,7 @@ const Auth = () => {
     setIsLoading(true);
     try {
       await auth.signUp(email.trim(), password, fullName.trim());
+      trackSignUp("email", email.trim());
       toast({ title: "Bon Voyage! 🌴", description: "Account created successfully!" });
       navigate("/");
     } catch (error: any) {

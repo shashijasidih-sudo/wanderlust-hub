@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import BookingModal from "@/components/BookingModal";
 import { useCart } from "@/contexts/CartContext";
 import { useCurrency } from "@/contexts/CurrencyContext";
+import { trackAddToCart, destinationFromSlug } from "@/lib/analytics";
 
 export interface TourOption {
   label: string;
@@ -131,7 +132,15 @@ const PricingCalculator = ({
       selectedTime: selectedTime,
       numberOfPersons: adults + children,
     });
-    
+
+    trackAddToCart({
+      item_id: tourSlug || activityName,
+      item_name: activityName,
+      item_category: destinationFromSlug(tourSlug),
+      price: totalPrice,
+      quantity: 1,
+    });
+
     toast.success("Added to cart successfully!");
   };
 

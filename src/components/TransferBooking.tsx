@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import BreadcrumbJsonLd from "./seo/BreadcrumbJsonLd";
@@ -26,6 +26,7 @@ import { CalendarIcon, Clock, MapPin, Phone, ChevronDown, ChevronUp, ShoppingCar
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { useCart } from "@/contexts/CartContext";
+import { trackViewItem, trackAddToCart, destinationFromSlug } from "@/lib/analytics";
 import {
   Accordion,
   AccordionContent,
@@ -100,6 +101,21 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
   const [dropLocation, setDropLocation] = useState("");
   const [roomNo, setRoomNo] = useState("");
 
+  // GA4 view_item
+  useEffect(() => {
+    if (!transferData) return;
+    const minPrice = transferData.vehicles?.reduce(
+      (m, v) => (v.price < m ? v.price : m),
+      transferData.vehicles?.[0]?.price ?? 0
+    ) ?? 0;
+    trackViewItem({
+      item_id: tourSlug || transferData.id,
+      item_name: transferData.title,
+      item_category: destinationFromSlug(tourSlug) || transferData.city,
+      price: minPrice,
+    });
+  }, [transferData, tourSlug]);
+
   if (!transferData) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -170,6 +186,13 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
     const bookingData = validateAndPrepareBooking();
     if (bookingData) {
       addToCart(bookingData);
+      trackAddToCart({
+        item_id: bookingData.transferId,
+        item_name: bookingData.title,
+        item_category: destinationFromSlug(tourSlug) || transferData.city,
+        price: bookingData.price,
+        quantity: 1,
+      });
       toast.success("Added to cart successfully!");
     }
   };
@@ -178,6 +201,13 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
     const bookingData = validateAndPrepareBooking();
     if (bookingData) {
       addToCart(bookingData);
+      trackAddToCart({
+        item_id: bookingData.transferId,
+        item_name: bookingData.title,
+        item_category: destinationFromSlug(tourSlug) || transferData.city,
+        price: bookingData.price,
+        quantity: 1,
+      });
       navigate("/customer-information");
     }
   };
