@@ -186,6 +186,13 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
     const bookingData = validateAndPrepareBooking();
     if (bookingData) {
       addToCart(bookingData);
+      trackAddToCart({
+        item_id: bookingData.transferId,
+        item_name: bookingData.title,
+        item_category: destinationFromSlug(tourSlug) || transferData.city,
+        price: bookingData.price,
+        quantity: 1,
+      });
       toast.success("Added to cart successfully!");
     }
   };
@@ -194,6 +201,13 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
     const bookingData = validateAndPrepareBooking();
     if (bookingData) {
       addToCart(bookingData);
+      trackAddToCart({
+        item_id: bookingData.transferId,
+        item_name: bookingData.title,
+        item_category: destinationFromSlug(tourSlug) || transferData.city,
+        price: bookingData.price,
+        quantity: 1,
+      });
       navigate("/customer-information");
     }
   };
