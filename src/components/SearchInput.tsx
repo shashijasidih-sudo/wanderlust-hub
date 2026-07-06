@@ -85,6 +85,13 @@ const SearchInput = ({ placeholder = "Search...", className = "", autoFocus = fa
                   // Use canonical route from generated map; fall back to city/id.
                   const path = TOUR_ROUTES[result.tour.id]
                     || `/thailand/${result.tour.city.toLowerCase()}/${result.tour.id}`;
+                  trackSearch(searchQuery);
+                  trackSelectItem("search_results", {
+                    item_id: result.tour.id,
+                    item_name: result.tour.title,
+                    item_category: destinationFromSlug(path) || result.tour.city,
+                    price: (result.tour as any).price || 0,
+                  });
                   navigate(path);
                   setIsOpen(false);
                 }}
