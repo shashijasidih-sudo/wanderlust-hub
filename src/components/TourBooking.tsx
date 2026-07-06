@@ -20,6 +20,7 @@ import CityExploreLinks from "./CityExploreLinks";
 import { getCityTransfers } from "@/data/cityTransfersData";
 import RelatedArticles from "./RelatedArticles";
 import Seo from "./seo/Seo";
+import { trackViewItem, destinationFromSlug } from "@/lib/analytics";
 
 import { Button } from "./ui/button";
 import {
