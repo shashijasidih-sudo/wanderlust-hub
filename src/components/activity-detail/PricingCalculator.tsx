@@ -132,7 +132,15 @@ const PricingCalculator = ({
       selectedTime: selectedTime,
       numberOfPersons: adults + children,
     });
-    
+
+    trackAddToCart({
+      item_id: tourSlug || activityName,
+      item_name: activityName,
+      item_category: destinationFromSlug(tourSlug),
+      price: totalPrice,
+      quantity: 1,
+    });
+
     toast.success("Added to cart successfully!");
   };
 
