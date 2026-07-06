@@ -1,4 +1,5 @@
 import { ExternalLink, Sun, Sparkles, Heart, Compass, Backpack, ShieldCheck, Package, Radar, Luggage, Lock, Briefcase, Wallet } from "lucide-react";
+import SafeImage from "@/components/SafeImage";
 import cabinLuggageAsset from "@/assets/cabin-luggage.jpg.asset.json";
 import antiTheftAsset from "@/assets/anti-theft-gear.jpg.asset.json";
 import menTravelBagsAsset from "@/assets/men-travel-bags.jpg.asset.json";
@@ -130,11 +131,9 @@ const Card = ({ item }: { item: Item }) => {
       itemType="https://schema.org/Product"
     >
       <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-        <img
+        <SafeImage
           src={item.image}
           alt={item.alt}
-          loading="lazy"
-          decoding="async"
           width={600}
           height={450}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

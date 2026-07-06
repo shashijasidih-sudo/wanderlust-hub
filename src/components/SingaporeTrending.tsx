@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
+import SafeImage from "./SafeImage";
 import gardensBay from "@/assets/singapore-gardens-bay-night-1.jpg";
 import marinaBay from "@/assets/singapore-marina-bay-sands-night-1.jpg";
 import universalStudios from "@/assets/singapore-universal-studios.jpg";
@@ -47,11 +48,12 @@ const SingaporeTrending = () => {
               onClick={() => navigate(item.slug)}
             >
               <div className="relative h-52 overflow-hidden">
-                <img
+                <SafeImage
                   src={item.image}
                   alt={item.title}
+                  width={600}
+                  height={416}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               </div>

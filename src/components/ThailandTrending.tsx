@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
+import SafeImage from "./SafeImage";
 import heroBeach from "@/assets/hero-thailand-beach.jpg";
 import phiPhi from "@/assets/phi-phi-3.jpg";
 import bangkokTemple from "@/assets/bangkok-temple-3.jpg";
@@ -57,11 +58,12 @@ const ThailandTrending = () => {
               onClick={() => navigate(item.slug)}
             >
               <div className="relative h-52 overflow-hidden">
-                <img
+                <SafeImage
                   src={item.image}
                   alt={item.title}
+                  width={600}
+                  height={416}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               </div>
