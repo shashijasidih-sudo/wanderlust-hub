@@ -88,6 +88,7 @@ const Auth = () => {
     setIsLoading(true);
     try {
       await auth.signUp(email.trim(), password, fullName.trim());
+      trackSignUp("email", email.trim());
       toast({ title: "Bon Voyage! 🌴", description: "Account created successfully!" });
       navigate("/");
     } catch (error: any) {
