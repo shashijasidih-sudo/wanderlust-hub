@@ -63,6 +63,7 @@ const Auth = () => {
     setIsLoading(true);
     try {
       await auth.signInWithPassword(email.trim(), password);
+      trackLogin("email", email.trim());
       toast({ title: "Welcome back! ✈️", description: "Ready for your next adventure?" });
       navigate("/");
     } catch (error: any) {
