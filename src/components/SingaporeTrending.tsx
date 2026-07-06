@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
+import SafeImage from "./SafeImage";
 import gardensBay from "@/assets/singapore-gardens-bay-night-1.jpg";
 import marinaBay from "@/assets/singapore-marina-bay-sands-night-1.jpg";
 import universalStudios from "@/assets/singapore-universal-studios.jpg";
