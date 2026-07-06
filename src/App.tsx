@@ -459,6 +459,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <AnalyticsInit />
           <ApprovalBadge />
           <Suspense fallback={null}><Routes>
           <Route path="/" element={<Index />} />
