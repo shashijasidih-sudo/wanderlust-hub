@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { fuzzySearchTours } from "@/lib/fuzzySearch";
 import type { SearchResult } from "@/lib/fuzzySearch";
 import { TOUR_ROUTES } from "@/data/tourRoutes";
+import { trackSearch, trackSelectItem, destinationFromSlug } from "@/lib/analytics";
 
 interface SearchInputProps {
   placeholder?: string;
