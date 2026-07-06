@@ -63,6 +63,25 @@ const PaymentInformation = () => {
     return () => { document.body.removeChild(script); };
   }, []);
 
+  // Reusable analytics helpers
+  const analyticsItems = () =>
+    cartItems.map((i) => ({
+      item_id: i.slug || i.id,
+      item_name: i.title,
+      item_category: destinationFromSlug(i.slug),
+      price: i.price,
+      quantity: i.quantity,
+    }));
+  const primaryDestination = () => destinationFromSlug(cartItems[0]?.slug);
+
+  // begin_checkout when this page opens with items
+  useEffect(() => {
+    if (cartItems.length > 0) {
+      trackBeginCheckout(getCartTotal(), analyticsItems());
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   if (cartItems.length === 0) {
     return (
       <div className="min-h-screen bg-background">
