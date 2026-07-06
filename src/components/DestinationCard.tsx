@@ -25,13 +25,11 @@ const DestinationCard = ({ image, name, duration, price, link }: DestinationCard
   return (
     <div className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 cursor-pointer" onClick={handleClick}>
       <div className="aspect-square overflow-hidden">
-        <img 
-          src={image} 
+        <SafeImage
+          src={image}
           alt={name}
           width={800}
           height={800}
-          loading="lazy"
-          decoding="async"
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
       </div>
