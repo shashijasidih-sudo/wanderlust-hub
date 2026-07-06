@@ -132,12 +132,35 @@ const QuickPay = () => {
               }
             );
 
+            let bookingId: string | undefined;
             if (saveRes.ok) {
               const saveResult = await saveRes.json();
               console.log("Booking saved, send-confirmation triggered server-side:", saveResult);
+              bookingId =
+                saveResult?.booking?.id ||
+                saveResult?.booking?.booking_id ||
+                saveResult?.id ||
+                response.razorpay_payment_id;
             } else {
               console.error("Save booking failed:", await saveRes.text());
+              bookingId = response.razorpay_payment_id;
             }
+
+            // GA4 purchase — fires ONCE, only after booking saved
+            const nameParts = (finalData.contact_name || "").trim().split(/\s+/);
+            await trackPurchase({
+              booking_id: String(bookingId || response.razorpay_payment_id),
+              total_amount: Number(finalData.total_price) || amountNum,
+              activity_id: finalData.tour_slug,
+              activity_name: finalData.tour_name,
+              guests: 1,
+              user: {
+                email: finalData.contact_email,
+                phone: finalData.contact_phone,
+                first_name: nameParts[0],
+                last_name: nameParts.slice(1).join(" "),
+              },
+            });
 
             localStorage.removeItem("booking_data");
           } catch (err) {
@@ -146,10 +169,36 @@ const QuickPay = () => {
           toast.success(`Payment successful! ID: ${response.razorpay_payment_id}`);
           setAmount(""); setDescription(""); setName(""); setEmail(""); setPhone("");
         },
-        modal: { ondismiss: () => setIsProcessing(false) },
+        modal: {
+          ondismiss: () => {
+            trackPaymentFailed({
+              booking_id: order?.id,
+              activity_name: description.trim() || "Quick Payment",
+              amount: amountNum,
+              reason: "user_dismissed",
+            });
+            setIsProcessing(false);
+          },
+        },
       };
 
+      // add_payment_info immediately before Razorpay popup opens
+      trackAddPaymentInfo(amountNum, [{
+        item_id: "quick-pay",
+        item_name: description.trim() || "Quick Payment",
+        price: amountNum,
+        quantity: 1,
+      }], "razorpay");
+
       const razorpay = new window.Razorpay(options);
+      razorpay.on("payment.failed", (r: any) => {
+        trackPaymentFailed({
+          booking_id: order?.id,
+          activity_name: description.trim() || "Quick Payment",
+          amount: amountNum,
+          reason: r?.error?.description || "payment_failed",
+        });
+      });
       razorpay.open();
     } catch (error) {
       console.error("Payment error:", error);
