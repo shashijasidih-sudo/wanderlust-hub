@@ -26,6 +26,7 @@ import { CalendarIcon, Clock, MapPin, Phone, ChevronDown, ChevronUp, ShoppingCar
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { useCart } from "@/contexts/CartContext";
+import { trackViewItem, trackAddToCart, destinationFromSlug } from "@/lib/analytics";
 import {
   Accordion,
   AccordionContent,
