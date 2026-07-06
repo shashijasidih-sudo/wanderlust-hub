@@ -44,7 +44,7 @@ const ActivityCard = ({
         onClick={handleCardClick}
       >
         <div className="relative w-80 h-64 flex-shrink-0">
-          <img src={image} alt={title} width={640} height={512} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+          <SafeImage src={image} alt={title} width={640} height={512} className="w-full h-full object-cover" />
           {isRecommended && (
             <div className="absolute top-2 left-2 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold">
               Recommended
