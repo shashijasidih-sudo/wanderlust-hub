@@ -258,14 +258,14 @@ const Cart = () => {
                 <ActivityCartItem 
                   key={item.id} 
                   item={item} 
-                  onRemove={removeFromCart}
+                  onRemove={handleRemove}
                   onUpdateQuantity={updateQuantity}
                 />
               ) : (
                 <TransferCartItem 
                   key={item.id} 
                   item={item} 
-                  onRemove={removeFromCart}
+                  onRemove={handleRemove}
                   onUpdateQuantity={updateQuantity}
                 />
               )
