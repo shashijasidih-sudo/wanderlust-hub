@@ -153,7 +153,39 @@ const Cart = () => {
   const { formatPrice } = useCurrency();
   const navigate = useNavigate();
 
+  const cartAnalyticsItems = () =>
+    cartItems.map((i) => ({
+      item_id: i.slug || i.id,
+      item_name: i.title,
+      item_category: destinationFromSlug(i.slug),
+      price: i.price,
+      quantity: i.quantity,
+    }));
+
+  // view_cart on mount when items are present
+  useEffect(() => {
+    if (!isLoading && cartItems.length > 0) {
+      trackViewCart(getCartTotal(), cartAnalyticsItems());
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isLoading, cartItems.length]);
+
+  const handleRemove = (id: string) => {
+    const item = cartItems.find((c) => c.id === id);
+    if (item) {
+      trackRemoveFromCart({
+        item_id: item.slug || item.id,
+        item_name: item.title,
+        item_category: destinationFromSlug(item.slug),
+        price: item.price,
+        quantity: item.quantity,
+      });
+    }
+    removeFromCart(id);
+  };
+
   const handleProceedToCheckout = () => {
+    trackBeginCheckout(getCartTotal(), cartAnalyticsItems());
     navigate("/customer-information");
   };
 
