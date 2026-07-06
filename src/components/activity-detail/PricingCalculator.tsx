@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import BookingModal from "@/components/BookingModal";
 import { useCart } from "@/contexts/CartContext";
 import { useCurrency } from "@/contexts/CurrencyContext";
+import { trackAddToCart, destinationFromSlug } from "@/lib/analytics";
 
 export interface TourOption {
   label: string;
