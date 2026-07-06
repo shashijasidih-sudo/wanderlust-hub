@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
+import SafeImage from "./SafeImage";
 import heroBeach from "@/assets/hero-thailand-beach.jpg";
 import phiPhi from "@/assets/phi-phi-3.jpg";
 import bangkokTemple from "@/assets/bangkok-temple-3.jpg";
