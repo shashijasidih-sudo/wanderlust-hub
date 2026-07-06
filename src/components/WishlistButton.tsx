@@ -5,6 +5,7 @@ import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { supabase } from "@/lib/supabaseClient";
 import { addToWishlist, removeFromWishlist, isInWishlist } from "@/services/wishlist";
+import { trackAddToWishlist, destinationFromSlug } from "@/lib/analytics";
 
 interface WishlistButtonProps {
   tourSlug: string;
