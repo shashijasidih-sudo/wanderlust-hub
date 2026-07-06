@@ -180,14 +180,39 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
               body: JSON.stringify(finalData),
             });
 
+            let bookingId: string | undefined;
             if (!saveRes.ok) {
               const errBody = await saveRes.text();
               console.error("Save booking failed:", saveRes.status, errBody);
               toast({ title: "Booking saved with issues", description: "Payment was successful but booking record may not have saved. Please contact support.", variant: "destructive" });
+              bookingId = response.razorpay_payment_id;
             } else {
               const saveResult = await saveRes.json();
               console.log("Booking saved, send-confirmation triggered server-side:", saveResult);
+              bookingId =
+                saveResult?.booking?.id ||
+                saveResult?.booking?.booking_id ||
+                saveResult?.id ||
+                response.razorpay_payment_id;
             }
+
+            // GA4 purchase — fires ONCE, only after booking saved
+            const nameParts = (contactName || "").trim().split(/\s+/);
+            await trackPurchase({
+              booking_id: String(bookingId || response.razorpay_payment_id),
+              total_amount: totalPrice,
+              activity_id: tourSlug,
+              activity_name: tourName,
+              destination: destinationFromSlug(tourSlug),
+              guests: adults + children,
+              travel_date: finalData.tour_date,
+              user: {
+                email: contactEmail,
+                phone: contactPhone,
+                first_name: nameParts[0],
+                last_name: nameParts.slice(1).join(" "),
+              },
+            });
 
             localStorage.removeItem("booking_data");
           } catch (err) {
@@ -199,10 +224,39 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
           onClose();
           navigate("/user-bookings");
         },
-        modal: { ondismiss: () => setIsLoading(false) },
+        modal: {
+          ondismiss: () => {
+            trackPaymentFailed({
+              booking_id: order?.id,
+              activity_name: tourName,
+              destination: destinationFromSlug(tourSlug),
+              amount: totalPrice,
+              reason: "user_dismissed",
+            });
+            setIsLoading(false);
+          },
+        },
       };
 
+      // add_payment_info fires right before Razorpay popup opens
+      trackAddPaymentInfo(totalPrice, [{
+        item_id: tourSlug,
+        item_name: tourName,
+        item_category: destinationFromSlug(tourSlug),
+        price: totalPrice,
+        quantity: adults + children,
+      }], "razorpay");
+
       const rzp = new window.Razorpay(options);
+      rzp.on("payment.failed", (r: any) => {
+        trackPaymentFailed({
+          booking_id: order?.id,
+          activity_name: tourName,
+          destination: destinationFromSlug(tourSlug),
+          amount: totalPrice,
+          reason: r?.error?.description || "payment_failed",
+        });
+      });
       rzp.open();
       setIsLoading(false);
     } catch (error) {
