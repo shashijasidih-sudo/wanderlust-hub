@@ -131,11 +131,9 @@ const Card = ({ item }: { item: Item }) => {
       itemType="https://schema.org/Product"
     >
       <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-        <img
+        <SafeImage
           src={item.image}
           alt={item.alt}
-          loading="lazy"
-          decoding="async"
           width={600}
           height={450}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
