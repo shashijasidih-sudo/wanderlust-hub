@@ -12,6 +12,13 @@ import { useCart } from "@/contexts/CartContext";
 import { useAuth } from "@/lib/auth";
 import { toast } from "sonner";
 import { CreditCard, QrCode } from "lucide-react";
+import {
+  trackBeginCheckout,
+  trackAddPaymentInfo,
+  trackPurchase,
+  trackPaymentFailed,
+  destinationFromSlug,
+} from "@/lib/analytics";
 
 
 declare global {
