@@ -57,9 +57,11 @@ const TransferCard = ({ transfer, badges }: TransferCardProps) => {
     <Link to={transfer.slug}>
       <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer h-full">
         <div className="relative h-48 overflow-hidden">
-          <img
+          <SafeImage
             src={transfer.image}
             alt={transfer.title}
+            width={600}
+            height={384}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
           />
           {badges}
