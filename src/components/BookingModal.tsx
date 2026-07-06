@@ -15,6 +15,12 @@ import { format } from "date-fns";
 import { CalendarIcon, Loader2, Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { z } from "zod";
+import {
+  trackAddPaymentInfo,
+  trackPurchase,
+  trackPaymentFailed,
+  destinationFromSlug,
+} from "@/lib/analytics";
 
 
 const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
