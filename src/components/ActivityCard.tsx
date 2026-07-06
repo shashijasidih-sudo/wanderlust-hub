@@ -127,7 +127,7 @@ const ActivityCard = ({
       onClick={handleCardClick}
     >
       <div className="relative h-32 md:h-56">
-        <img src={image} alt={title} width={400} height={300} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+        <SafeImage src={image} alt={title} width={400} height={300} className="w-full h-full object-cover" />
         {isRecommended && (
           <div className="absolute top-1 left-1 md:top-2 md:left-2 bg-accent text-accent-foreground px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-semibold">
             Recommended
