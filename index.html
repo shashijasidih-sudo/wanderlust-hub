@@ -72,18 +72,50 @@
     {
       "@context": "https://schema.org",
       "@type": "TravelAgency",
-      "name": "Yellodae",
-      "alternateName": "Yellodae Trails",
+      "@id": "https://yellodae.com/#organization",
+      "name": "Yellodae Trails",
+      "alternateName": ["Yellodae", "Yellodae Trails Pvt. Ltd."],
+      "legalName": "Yellodae Trails",
       "url": "https://yellodae.com",
-      "logo": "https://yellodae.com/favicon.png",
-      "description": "Yellodae Trails is India's trusted travel partner for booking Thailand, Singapore, Dubai and Japan tours, activities, itineraries and private airport transfers — curated for Indian travelers with 24/7 WhatsApp support.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://yellodae.com/yellodae-logo.png",
+        "width": 796,
+        "height": 1125
+      },
+      "image": "https://yellodae.com/yellodae-logo.png",
+      "description": "Yellodae Trails (also known as Yellodae) is India's trusted online travel platform for booking tours, attraction tickets, airport transfers and curated holiday packages across Thailand, Singapore, Dubai and Japan.",
       "telephone": "+917061710810",
       "email": "info@yellodae.com",
+      "foundingDate": "2023",
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "IN"
+        "addressCountry": "IN",
+        "addressRegion": "India"
       },
-      "sameAs": [],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-70617-10810",
+          "contactType": "customer support",
+          "email": "info@yellodae.com",
+          "areaServed": ["IN", "TH", "SG", "AE", "JP"],
+          "availableLanguage": ["English", "Hindi"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-70617-10810",
+          "contactType": "reservations",
+          "availableLanguage": ["English", "Hindi"]
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/yellodaetrails/",
+        "https://www.facebook.com/yellodaetrails",
+        "https://www.youtube.com/@yellodaetrails",
+        "https://in.pinterest.com/yellodaetrails/",
+        "https://www.linkedin.com/company/yellodae-trails/"
+      ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
@@ -96,7 +128,8 @@
         {"@type": "Country", "name": "Thailand"},
         {"@type": "Country", "name": "Singapore"},
         {"@type": "Country", "name": "United Arab Emirates"},
-        {"@type": "Country", "name": "Japan"}
+        {"@type": "Country", "name": "Japan"},
+        {"@type": "Country", "name": "India"}
       ],
       "knowsAbout": [
         "Thailand travel packages for Indians",
@@ -107,6 +140,7 @@
         "Dubai tours and activities",
         "Japan travel itineraries",
         "International airport transfers",
+        "Attraction tickets and skip-the-line passes",
         "Budget travel guides for Indian travelers"
       ],
       "hasOfferCatalog": {
@@ -117,7 +151,8 @@
           {"@type": "Offer", "itemOffered": {"@type": "TouristTrip", "name": "Singapore Tours & Activities for Indians"}},
           {"@type": "Offer", "itemOffered": {"@type": "TouristTrip", "name": "Dubai Tours & Activities for Indians"}},
           {"@type": "Offer", "itemOffered": {"@type": "TouristTrip", "name": "Japan Tours & Activities for Indians"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private Airport Transfers"}}
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private Airport Transfers"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Attraction Tickets & Skip-the-Line Passes"}}
         ]
       }
     }
