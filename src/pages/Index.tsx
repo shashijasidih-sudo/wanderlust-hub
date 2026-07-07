@@ -119,19 +119,38 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Seo
-        title="Book Thailand, Singapore, Dubai & Japan Travel Activities & Transfers for Indians with Ease | Yellodae Trails"
-        description="Plan your dream international trip with Yellodae Trails. Explore Thailand, Krabi, Phuket, Singapore, Dubai & Japan travel packages, travel activities, itineraries, airport transfers and budget guides curated for Indian travelers."
+        title="Yellodae Trails | Thailand, Singapore, Dubai & Japan Tours"
+        description="Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
         path="/"
+        image="https://yellodae.com/yellodae-logo.png"
         jsonLd={HOMEPAGE_JSONLD}
       />
       <Header />
       <main className="flex-1">
         <HeroSection />
+        {/* SEO intro — helps Google associate the brand name with the homepage */}
+        <section aria-label="About Yellodae Trails" className="container mx-auto max-w-5xl px-4 pt-6 pb-2">
+          <h2 className="sr-only">Welcome to Yellodae Trails</h2>
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+            Welcome to <strong className="text-foreground">Yellodae Trails</strong>, India's trusted online travel platform for booking{" "}
+            <Link to="/about-us" className="underline underline-offset-2 hover:text-primary">tours</Link>, attraction tickets,{" "}
+            <Link to="/thailand/bangkok/transfers" className="underline underline-offset-2 hover:text-primary">airport transfers</Link>{" "}
+            and curated travel experiences across{" "}
+            <Link to="/thailand" className="underline underline-offset-2 hover:text-primary">Thailand</Link>,{" "}
+            <Link to="/singapore" className="underline underline-offset-2 hover:text-primary">Singapore</Link>,{" "}
+            <Link to="/dubai" className="underline underline-offset-2 hover:text-primary">Dubai</Link> and{" "}
+            <Link to="/japan" className="underline underline-offset-2 hover:text-primary">Japan</Link>. Yellodae Trails, also known
+            simply as <strong className="text-foreground">Yellodae</strong>, curates holiday packages, transfers and skip-the-line tickets
+            for Indian travellers — with 24/7 WhatsApp support. Learn more{" "}
+            <Link to="/about-us" className="underline underline-offset-2 hover:text-primary">about Yellodae Trails</Link>,{" "}
+            read our <Link to="/blog" className="underline underline-offset-2 hover:text-primary">travel blog</Link>, or{" "}
+            <Link to="/contact-us" className="underline underline-offset-2 hover:text-primary">contact us</Link> to plan your trip.
+          </p>
+        </section>
         <Suspense fallback={null}>
           <SeoDestinationSections />
           <AboutYellodaeSection />
           <TravelerExperiences />
-          <ThailandTrending />
           <ThailandTrending />
           <SingaporeTrending />
           <TrendingActivities />
