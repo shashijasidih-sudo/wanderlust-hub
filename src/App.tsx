@@ -238,6 +238,7 @@ const BlogDubaiShoppingTours = lazy(() => import("./pages/BlogDubaiShoppingTours
 const BlogDubaiFoodExperiences = lazy(() => import("./pages/BlogDubaiFoodExperiences"));
 const NetherlandsSmartGuides = lazy(() => import("./pages/NetherlandsSmartGuides"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
+const WhyYellodae = lazy(() => import("./pages/WhyYellodae"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
@@ -1008,6 +1009,7 @@ const App = () => (
           <Route path="/booking-history" element={<BookingHistory />} />
           <Route path="/quick-pay" element={<QuickPay />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/why-yellodae" element={<WhyYellodae />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
