@@ -124,6 +124,8 @@ const HOMEPAGE_JSONLD = [
     logo: "https://yellodae.com/yellodae-logo.png",
   },
 ];
+
+const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Seo
