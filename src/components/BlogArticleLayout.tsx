@@ -217,11 +217,11 @@ const BlogArticleLayout = ({
       image: heroImage,
       datePublished: date,
       author: {
-        "@type": "Person",
-        name: "Monika Barnwal",
-        description: "Dr. Monika Barnwal is a highly accomplished academic and entrepreneur with significant expertise in Smart Tourism, Digital Marketing, and AI applications within the tourism industry.",
-        jobTitle: "Travel Planning & Destination Specialist",
-        worksFor: { "@type": "Organization", name: "Yellodae" },
+        "@type": "Organization",
+        name: "Yellodae Trails Editorial Team",
+        description: "Yellodae Trails Editorial Team researches and curates travel guides, itineraries and destination tips for Indian travelers visiting Thailand, Singapore, Dubai and Japan.",
+        url: "https://yellodae.com",
+        logo: { "@type": "ImageObject", url: `${origin}/yellodae-logo.png` },
       },
       publisher: {
         "@type": "Organization",
