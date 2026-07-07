@@ -114,6 +114,15 @@ const HOMEPAGE_JSONLD = [
       "query-input": "required name=search_term_string",
     },
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://yellodae.com/#organization",
+    name: "Yellodae Trails",
+    alternateName: "Yellodae",
+    url: "https://yellodae.com",
+    logo: "https://yellodae.com/yellodae-logo.png",
+  },
 ];
 
 const Index = () => {
