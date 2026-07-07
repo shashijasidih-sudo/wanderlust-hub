@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import Seo from "@/components/seo/Seo";
@@ -24,15 +25,52 @@ const HOMEPAGE_JSONLD = [
   {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
-    name: "Yellodae",
-    alternateName: "Yellodae Trails",
+    "@id": "https://yellodae.com/#organization",
+    name: "Yellodae Trails",
+    alternateName: ["Yellodae", "Yellodae Trails Pvt. Ltd."],
+    legalName: "Yellodae Trails",
     url: "https://yellodae.com",
-    logo: "https://yellodae.com/favicon.png",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://yellodae.com/yellodae-logo.png",
+      width: 796,
+      height: 1125,
+    },
+    image: "https://yellodae.com/yellodae-logo.png",
     description:
-      "Yellodae Trails is India's trusted travel partner for booking Thailand, Singapore, Dubai and Japan tours, activities, itineraries and private airport transfers — curated for Indian travelers with 24/7 WhatsApp support.",
+      "Yellodae Trails (also known as Yellodae) is India's trusted online travel platform for booking tours, attraction tickets, airport transfers and curated holiday packages across Thailand, Singapore, Dubai and Japan.",
     telephone: "+917061710810",
     email: "info@yellodae.com",
-    address: { "@type": "PostalAddress", addressCountry: "IN" },
+    foundingDate: "2023",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "IN",
+      addressRegion: "India",
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+91-70617-10810",
+        contactType: "customer support",
+        email: "info@yellodae.com",
+        areaServed: ["IN", "TH", "SG", "AE", "JP"],
+        availableLanguage: ["English", "Hindi"],
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: "+91-70617-10810",
+        contactType: "reservations",
+        contactOption: "TollFree",
+        availableLanguage: ["English", "Hindi"],
+      },
+    ],
+    sameAs: [
+      "https://www.instagram.com/yellodaetrails/",
+      "https://www.facebook.com/yellodaetrails",
+      "https://www.youtube.com/@yellodaetrails",
+      "https://in.pinterest.com/yellodaetrails/",
+      "https://www.linkedin.com/company/yellodae-trails/",
+    ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
@@ -46,6 +84,7 @@ const HOMEPAGE_JSONLD = [
       { "@type": "Country", name: "Singapore" },
       { "@type": "Country", name: "United Arab Emirates" },
       { "@type": "Country", name: "Japan" },
+      { "@type": "Country", name: "India" },
     ],
     knowsAbout: [
       "Thailand travel packages for Indians",
@@ -56,14 +95,19 @@ const HOMEPAGE_JSONLD = [
       "Dubai tours and activities",
       "Japan travel itineraries",
       "International airport transfers",
+      "Attraction tickets and skip-the-line passes",
       "Budget travel guides for Indian travelers",
     ],
   },
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Yellodae",
+    "@id": "https://yellodae.com/#website",
+    name: "Yellodae Trails",
+    alternateName: "Yellodae",
     url: "https://yellodae.com",
+    publisher: { "@id": "https://yellodae.com/#organization" },
+    inLanguage: "en-IN",
     potentialAction: {
       "@type": "SearchAction",
       target: "https://yellodae.com/?q={search_term_string}",
@@ -76,19 +120,38 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Seo
-        title="Book Thailand, Singapore, Dubai & Japan Travel Activities & Transfers for Indians with Ease | Yellodae Trails"
-        description="Plan your dream international trip with Yellodae Trails. Explore Thailand, Krabi, Phuket, Singapore, Dubai & Japan travel packages, travel activities, itineraries, airport transfers and budget guides curated for Indian travelers."
+        title="Yellodae Trails | Thailand, Singapore, Dubai & Japan Tours"
+        description="Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
         path="/"
+        image="https://yellodae.com/yellodae-logo.png"
         jsonLd={HOMEPAGE_JSONLD}
       />
       <Header />
       <main className="flex-1">
         <HeroSection />
+        {/* SEO intro — helps Google associate the brand name with the homepage */}
+        <section aria-label="About Yellodae Trails" className="container mx-auto max-w-5xl px-4 pt-6 pb-2">
+          <h2 className="sr-only">Welcome to Yellodae Trails</h2>
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+            Welcome to <strong className="text-foreground">Yellodae Trails</strong>, India's trusted online travel platform for booking{" "}
+            <Link to="/about-us" className="underline underline-offset-2 hover:text-primary">tours</Link>, attraction tickets,{" "}
+            <Link to="/thailand/bangkok/transfers" className="underline underline-offset-2 hover:text-primary">airport transfers</Link>{" "}
+            and curated travel experiences across{" "}
+            <Link to="/thailand" className="underline underline-offset-2 hover:text-primary">Thailand</Link>,{" "}
+            <Link to="/singapore" className="underline underline-offset-2 hover:text-primary">Singapore</Link>,{" "}
+            <Link to="/dubai" className="underline underline-offset-2 hover:text-primary">Dubai</Link> and{" "}
+            <Link to="/japan" className="underline underline-offset-2 hover:text-primary">Japan</Link>. Yellodae Trails, also known
+            simply as <strong className="text-foreground">Yellodae</strong>, curates holiday packages, transfers and skip-the-line tickets
+            for Indian travellers — with 24/7 WhatsApp support. Learn more{" "}
+            <Link to="/about-us" className="underline underline-offset-2 hover:text-primary">about Yellodae Trails</Link>,{" "}
+            read our <Link to="/blog" className="underline underline-offset-2 hover:text-primary">travel blog</Link>, or{" "}
+            <Link to="/contact-us" className="underline underline-offset-2 hover:text-primary">contact us</Link> to plan your trip.
+          </p>
+        </section>
         <Suspense fallback={null}>
           <SeoDestinationSections />
           <AboutYellodaeSection />
           <TravelerExperiences />
-          <ThailandTrending />
           <ThailandTrending />
           <SingaporeTrending />
           <TrendingActivities />
