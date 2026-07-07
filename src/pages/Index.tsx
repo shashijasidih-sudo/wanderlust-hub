@@ -110,7 +110,7 @@ const HOMEPAGE_JSONLD = [
     inLanguage: "en-IN",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://yellodae.com/?q={search_term_string}",
+      target: "https://yellodae.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   },
@@ -122,6 +122,25 @@ const HOMEPAGE_JSONLD = [
     alternateName: "Yellodae",
     url: "https://yellodae.com",
     logo: "https://yellodae.com/yellodae-logo.png",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://yellodae.com/#localbusiness",
+    name: "Yellodae Trails",
+    alternateName: "Yellodae",
+    url: "https://yellodae.com",
+    telephone: "+917061710810",
+    email: "info@yellodae.com",
+    image: "https://yellodae.com/yellodae-logo.png",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Greater Noida West, Nirala Estate Techzone IV",
+      addressLocality: "Greater Noida",
+      addressRegion: "Uttar Pradesh",
+      postalCode: "201318",
+      addressCountry: "IN",
+    },
   },
 ];
 
