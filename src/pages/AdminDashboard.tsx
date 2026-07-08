@@ -179,15 +179,12 @@ const AdminDashboard = () => {
         return;
       }
 
-      console.log("Admin bookings response status:", response.status);
-
       if (response.ok) {
-        const data = await response.json();
+        const data = response.data;
         console.log("Admin bookings data:", data);
-        fetchedBookings = data.bookings || data.data || (Array.isArray(data) ? data : []);
+        fetchedBookings = data?.bookings || data?.data || (Array.isArray(data) ? data : []);
       } else {
-        const errorData = await response.json().catch(() => ({}));
-        console.warn("Edge function failed:", response.status, errorData);
+        console.warn("Edge function failed:", response.error);
         // Direct query fallback
         const { data: directData, error: directError } = await supabase
           .from("bookings")
@@ -196,6 +193,7 @@ const AdminDashboard = () => {
         if (directError) throw directError;
         fetchedBookings = directData || [];
       }
+
 
       setBookings(fetchedBookings);
     } catch (err) {
