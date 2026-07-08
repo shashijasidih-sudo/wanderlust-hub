@@ -279,13 +279,13 @@ const AdminDashboard = () => {
         return;
       }
 
-      console.log("Refund API response status:", res.status);
-      const resData = await res.json().catch(() => ({}));
+      const resData = res.data || {};
       console.log("Refund API response data:", resData);
 
       if (!res.ok) {
-        throw new Error(resData.error || `Refund failed with status ${res.status}`);
+        throw new Error(resData.error || res.error?.message || `Refund failed`);
       }
+
 
       await handleStatusUpdate(booking.id, "refunded");
       await sendNotificationEmail(booking, "refund");
