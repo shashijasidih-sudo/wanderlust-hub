@@ -37,7 +37,8 @@ async function isAdminUser(userId: string | undefined): Promise<boolean> {
     .select("role")
     .eq("id", userId)
     .maybeSingle();
-  return (data as any)?.role === "admin";
+  const role = (data as any)?.role;
+  return role === "admin" || role === "super_admin";
 }
 
 interface Booking {

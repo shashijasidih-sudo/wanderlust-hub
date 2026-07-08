@@ -54,7 +54,7 @@ export const auth = {
       email: data.user.email!,
       full_name,
       role,
-      is_admin: role === "admin",
+      is_admin: role === "admin" || role === "super_admin",
     };
   },
 
@@ -74,7 +74,7 @@ export const auth = {
       email: data.user.email!,
       full_name,
       role,
-      is_admin: role === "admin",
+      is_admin: role === "admin" || role === "super_admin",
     };
 
     notify(user);
@@ -161,7 +161,7 @@ export function useAuth() {
           email: authUser.email!,
           full_name,
           role,
-          is_admin: role === "admin",
+          is_admin: role === "admin" || role === "super_admin",
         };
         setUser(nextUser);
         notify(nextUser);

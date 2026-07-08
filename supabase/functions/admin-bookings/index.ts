@@ -52,7 +52,7 @@ serve(async (req) => {
       .eq("id", userId)
       .maybeSingle();
 
-    if (profileError || profile?.role !== "admin") {
+    if (profileError || !(profile?.role === "admin" || profile?.role === "super_admin")) {
       return new Response(JSON.stringify({ error: "Forbidden" }), { status: 403, headers: corsHeaders });
     }
 
