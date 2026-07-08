@@ -102,6 +102,31 @@ const QuickPay = () => {
         handler: async function (response: any) {
           console.log("Payment success:", response);
           try {
+            // Server-side signature verification BEFORE trusting the payment
+            const verifyRes = await fetch(
+              "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/verify-payment",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  "apikey": "sb_publishable_g-zBlAMHwj9NJLvq13RjWg_BEIq-Frq",
+                  "Authorization": "Bearer sb_publishable_g-zBlAMHwj9NJLvq13RjWg_BEIq-Frq",
+                },
+                body: JSON.stringify({
+                  razorpay_order_id: response.razorpay_order_id,
+                  razorpay_payment_id: response.razorpay_payment_id,
+                  razorpay_signature: response.razorpay_signature,
+                }),
+              }
+            );
+            const verifyData = await verifyRes.json().catch(() => ({}));
+            if (!verifyRes.ok || !verifyData?.verified) {
+              console.error("Payment signature verification failed:", verifyData);
+              toast.error("Payment could not be verified. Please contact support.");
+              setIsProcessing(false);
+              return;
+            }
+
             // Retrieve saved booking data
             const savedData = JSON.parse(localStorage.getItem("booking_data") || "{}");
             const finalData = {

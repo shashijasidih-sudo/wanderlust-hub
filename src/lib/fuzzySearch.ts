@@ -103,20 +103,36 @@ function createSearchKeywords(tour: TourData): string[] {
   return [...new Set(keywords)]; // Remove duplicates
 }
 
-// Highlight matching text
+// Escape HTML entities to prevent XSS when the output is later rendered
+// with dangerouslySetInnerHTML.
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+// Highlight matching text. Both the source text and query are HTML-escaped
+// before we inject <mark> tags, so untrusted input cannot render as HTML.
 export function highlightText(text: string, query: string): string {
-  if (!query.trim()) return text;
-  
+  const safeText = escapeHtml(text);
+  if (!query.trim()) return safeText;
+
   const words = query.toLowerCase().split(/\s+/);
-  let highlighted = text;
-  
+  let highlighted = safeText;
+
   words.forEach(word => {
     if (word.length < 2) return;
-    
-    const regex = new RegExp(`(${word})`, 'gi');
+    // Escape HTML then escape regex metacharacters so the query is treated
+    // purely as literal text.
+    const safeWord = escapeHtml(word).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    if (!safeWord) return;
+    const regex = new RegExp(`(${safeWord})`, 'gi');
     highlighted = highlighted.replace(regex, '<mark class="bg-yellow-200 dark:bg-yellow-800">$1</mark>');
   });
-  
+
   return highlighted;
 }
 
