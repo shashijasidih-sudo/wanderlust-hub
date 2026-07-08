@@ -109,18 +109,8 @@ const AdminDashboard = () => {
 
 
   const fetchAdminFunction = async (path: string, init: RequestInit = {}) => {
-    const makeRequest = async (accessToken: string) => {
-      const headers = new Headers(init.headers);
-      headers.set("Authorization", `Bearer ${accessToken}`);
-      headers.set("apikey", SUPABASE_ANON_KEY);
-      if (init.body && !headers.has("Content-Type")) {
-        headers.set("Content-Type", "application/json");
-      }
-      return fetch(`${FUNCTIONS_BASE_URL}/${path}`, { ...init, headers });
-    };
-
     // Step 1: get current session
-    const { data: { session } } = await supabase.auth.getSession();
+    let { data: { session } } = await supabase.auth.getSession();
     if (!session) {
       redirectToLogin();
       return null;
@@ -132,33 +122,53 @@ const AdminDashboard = () => {
       return null;
     }
 
-    let response = await makeRequest(session.access_token);
+    const invoke = async () => {
+      const method = (init.method || "GET").toUpperCase();
+      const body = init.body
+        ? (typeof init.body === "string" ? JSON.parse(init.body) : init.body)
+        : undefined;
+      return await supabase.functions.invoke(path, {
+        method: method as any,
+        body,
+      });
+    };
 
-    // Step 2: on 401, refresh session once and retry
-    if (response.status === 401) {
+    let { data, error } = await invoke();
+
+    // Step 2: on auth error, refresh session once and retry
+    const isAuthError = (err: any) =>
+      err && (err.status === 401 || err.context?.status === 401 || /401|unauthor/i.test(err.message || ""));
+
+    if (isAuthError(error)) {
       console.warn(`${path} returned 401. Refreshing session and retrying once.`);
       const { data: refreshed } = await supabase.auth.refreshSession();
       if (!refreshed.session?.access_token) {
         redirectToLogin("Session expired. Please log in again.");
         return null;
       }
-      response = await makeRequest(refreshed.session.access_token);
+      ({ data, error } = await invoke());
     }
 
-    if (response.status === 401) {
+    if (isAuthError(error)) {
       console.error(`${path} returned 401 after refresh.`);
       redirectToLogin();
       return null;
     }
 
-    if (response.status === 403) {
+    if (error?.status === 403 || error?.context?.status === 403) {
       toast({ title: "Admin access only", description: "You do not have permission to view this page.", variant: "destructive" });
       navigate("/");
       return null;
     }
 
-    return response;
+    if (error) {
+      console.error(`${path} error:`, error);
+      return { ok: false, data: null, error };
+    }
+
+    return { ok: true, data, error: null };
   };
+
 
   const fetchAllBookings = async () => {
     try {
