@@ -253,7 +253,7 @@ const AdminDashboard = () => {
     if (!res) return { ok: false, error: "No response from email service" };
     const data = res.data || {};
     if (!res.ok || data.success === false) {
-      const msg = data.error || res.error?.message || `Email service returned ${res.status || "error"}`;
+      const msg = data.error || res.error?.message || `Email service error`;
       console.error(`${type} email failed:`, msg, data);
       return { ok: false, error: typeof msg === "string" ? msg : JSON.stringify(msg) };
     }
