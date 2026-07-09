@@ -246,21 +246,29 @@ const AdminDashboard = () => {
   };
 
   const sendNotificationEmail = async (booking: Booking, type: "cancellation" | "refund") => {
-    try {
-      await fetchAdminFunction("send-confirmation", {
-        method: "POST",
-        body: JSON.stringify({ bookingId: booking.id, type }),
-      });
-    } catch (err) {
-      console.error(`Failed to send ${type} email:`, err);
+    const res = await fetchAdminFunction("send-confirmation", {
+      method: "POST",
+      body: JSON.stringify({ bookingId: booking.id, type }),
+    });
+    if (!res) return { ok: false, error: "No response from email service" };
+    const data = res.data || {};
+    if (!res.ok || data.success === false) {
+      const msg = data.error || res.error?.message || `Email service error`;
+      console.error(`${type} email failed:`, msg, data);
+      return { ok: false, error: typeof msg === "string" ? msg : JSON.stringify(msg) };
     }
+    return { ok: true };
   };
 
   const handleCancelBooking = async (booking: Booking) => {
     if (!confirm(`Cancel booking for "${booking.contact_name}" - ${booking.tour_name}?`)) return;
     await handleStatusUpdate(booking.id, "cancelled");
-    await sendNotificationEmail(booking, "cancellation");
-    toast({ title: "Cancellation email sent", description: `Notification sent to ${booking.contact_email}` });
+    const emailRes = await sendNotificationEmail(booking, "cancellation");
+    if (emailRes.ok) {
+      toast({ title: "Cancellation email sent", description: `Notification sent to ${booking.contact_email}` });
+    } else {
+      toast({ title: "Booking cancelled — email failed", description: emailRes.error, variant: "destructive" });
+    }
   };
 
   const handleRefund = async (booking: Booking) => {
@@ -288,8 +296,12 @@ const AdminDashboard = () => {
 
 
       await handleStatusUpdate(booking.id, "refunded");
-      await sendNotificationEmail(booking, "refund");
-      toast({ title: "Refund processed & email sent", description: `₹${booking.total_price.toLocaleString()} refund initiated` });
+      const emailRes = await sendNotificationEmail(booking, "refund");
+      if (emailRes.ok) {
+        toast({ title: "Refund processed & email sent", description: `₹${booking.total_price.toLocaleString()} refund initiated` });
+      } else {
+        toast({ title: "Refund processed — email failed", description: emailRes.error, variant: "destructive" });
+      }
     } catch (err: any) {
       console.error("Refund failed:", err);
       toast({ title: "Refund failed", description: err.message || "Could not process refund", variant: "destructive" });
