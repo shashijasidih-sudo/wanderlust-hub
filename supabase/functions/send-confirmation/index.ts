@@ -233,8 +233,10 @@ serve(async (req) => {
       return new Response(JSON.stringify({ error: "Email service not configured" }), { status: 500, headers: corsHeaders });
     }
 
-    const { bookingId, paymentId, orderId } = await req.json();
+    const { bookingId, paymentId, orderId, type } = await req.json();
     if (!bookingId) return new Response(JSON.stringify({ error: "Missing bookingId" }), { status: 400, headers: corsHeaders });
+    const emailType: "confirmation" | "cancellation" | "refund" =
+      type === "cancellation" || type === "refund" ? type : "confirmation";
 
     const supabase = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
     const { data: booking, error: dbError } = await supabase.from("bookings").select("*").eq("id", bookingId).single();
