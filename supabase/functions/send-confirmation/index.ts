@@ -293,23 +293,57 @@ serve(async (req) => {
         body: JSON.stringify({ from: "Yellodae <noreply@yellodae.com>", to: [to], subject, html, ...(replyTo ? { reply_to: replyTo } : {}) }),
       });
 
-    const custResp = await sendMail(
-      recipientEmail,
-      `Booking Confirmed · ${tourTitle} · Yellodae`,
-      customerHtml,
-    );
+    // Build subject + body per email type
+    let customerSubject = `Booking Confirmed · ${tourTitle} · Yellodae`;
+    let customerBody = customerHtml;
+    let supportSubject = `🆕 New Booking · ${name} · ${tourTitle}`;
+
+    if (emailType === "cancellation") {
+      customerSubject = `Booking Cancelled · ${tourTitle} · Yellodae`;
+      supportSubject = `❌ Booking Cancelled · ${name} · ${tourTitle}`;
+      customerBody = shell(`
+<tr><td style="padding:36px 32px 8px;text-align:center;">
+  <div style="display:inline-block;background:#fee2e2;border-radius:999px;padding:10px 18px;color:#b91c1c;font-size:12px;font-weight:700;letter-spacing:0.5px;">BOOKING CANCELLED</div>
+  <h1 style="color:${BRAND.ink};margin:18px 0 6px;font-size:24px;font-weight:800;">Your booking has been cancelled</h1>
+  <p style="color:${BRAND.muted};margin:0;font-size:15px;line-height:1.6;">Hi ${name}, your booking for <strong>${tourTitle}</strong> (${tourDate}) has been cancelled. If a payment was made, any eligible refund will be processed separately and you'll receive a confirmation once it's initiated.</p>
+  <p style="color:${BRAND.muted};margin:16px 0 0;font-size:13px;">Booking ID: <span style="font-family:monospace;">${bookingShort}</span> · Amount: ${amount}</p>
+</td></tr>
+<tr><td style="padding:16px 32px 32px;">
+  <div style="background:${BRAND.surface};border-radius:10px;padding:18px 20px;">
+    <p style="margin:0;color:${BRAND.muted};font-size:13px;line-height:1.6;">Questions? Email <a href="mailto:support@yellodae.com" style="color:${BRAND.primaryDark};">support@yellodae.com</a> or WhatsApp <a href="https://wa.me/917061710810" style="color:${BRAND.primaryDark};">+91 7061710810</a>.</p>
+  </div>
+</td></tr>`, `Your booking for ${tourTitle} has been cancelled.`);
+    } else if (emailType === "refund") {
+      customerSubject = `Refund Initiated · ${tourTitle} · Yellodae`;
+      supportSubject = `💸 Refund Issued · ${name} · ${tourTitle}`;
+      customerBody = shell(`
+<tr><td style="padding:36px 32px 8px;text-align:center;">
+  <div style="display:inline-block;background:#dcfce7;border-radius:999px;padding:10px 18px;color:${BRAND.success};font-size:12px;font-weight:700;letter-spacing:0.5px;">REFUND INITIATED</div>
+  <h1 style="color:${BRAND.ink};margin:18px 0 6px;font-size:24px;font-weight:800;">Your refund is on its way</h1>
+  <p style="color:${BRAND.muted};margin:0;font-size:15px;line-height:1.6;">Hi ${name}, a refund of <strong>${amount}</strong> for <strong>${tourTitle}</strong> has been initiated to your original payment method. It typically takes 5–7 business days to reflect in your account.</p>
+  <p style="color:${BRAND.muted};margin:16px 0 0;font-size:13px;">Booking ID: <span style="font-family:monospace;">${bookingShort}</span></p>
+</td></tr>
+<tr><td style="padding:16px 32px 32px;">
+  <div style="background:${BRAND.surface};border-radius:10px;padding:18px 20px;">
+    <p style="margin:0;color:${BRAND.muted};font-size:13px;line-height:1.6;">Questions? Email <a href="mailto:support@yellodae.com" style="color:${BRAND.primaryDark};">support@yellodae.com</a> or WhatsApp <a href="https://wa.me/917061710810" style="color:${BRAND.primaryDark};">+91 7061710810</a>.</p>
+  </div>
+</td></tr>`, `Refund of ${amount} initiated for ${tourTitle}.`);
+    }
+
+    const custResp = await sendMail(recipientEmail, customerSubject, customerBody);
     const custData = await custResp.json();
     if (!custResp.ok) {
-      console.error("Customer email failed:", custData);
-      return new Response(JSON.stringify({ success: false, error: custData }), { status: custResp.status, headers: corsHeaders });
+      console.error(`${emailType} email failed:`, custData);
+      return new Response(JSON.stringify({ success: false, error: custData?.message || custData?.error || "Email provider rejected the request", details: custData }), { status: custResp.status, headers: corsHeaders });
     }
 
     await sendMail(
       "support@yellodae.com",
-      `🆕 New Booking · ${name} · ${tourTitle}`,
+      supportSubject,
       supportHtml,
       recipientEmail,
     ).catch((err) => console.error("Support email failed:", err));
+
 
     return new Response(JSON.stringify({ success: true, data: custData }), { status: 200, headers: corsHeaders });
   } catch (error) {
