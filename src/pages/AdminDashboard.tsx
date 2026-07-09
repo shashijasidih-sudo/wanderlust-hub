@@ -296,8 +296,12 @@ const AdminDashboard = () => {
 
 
       await handleStatusUpdate(booking.id, "refunded");
-      await sendNotificationEmail(booking, "refund");
-      toast({ title: "Refund processed & email sent", description: `₹${booking.total_price.toLocaleString()} refund initiated` });
+      const emailRes = await sendNotificationEmail(booking, "refund");
+      if (emailRes.ok) {
+        toast({ title: "Refund processed & email sent", description: `₹${booking.total_price.toLocaleString()} refund initiated` });
+      } else {
+        toast({ title: "Refund processed — email failed", description: emailRes.error, variant: "destructive" });
+      }
     } catch (err: any) {
       console.error("Refund failed:", err);
       toast({ title: "Refund failed", description: err.message || "Could not process refund", variant: "destructive" });
