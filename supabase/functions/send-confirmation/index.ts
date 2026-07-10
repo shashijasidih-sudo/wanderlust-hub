@@ -321,12 +321,7 @@ serve(async (req) => {
       specialRequests: booking.special_requests || "",
     });
 
-    const sendMail = (to: string, subject: string, html: string, replyTo?: string) =>
-      fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${RESEND_API_KEY}` },
-        body: JSON.stringify({ from: "Yellodae <noreply@yellodae.com>", to: [to], subject, html, ...(replyTo ? { reply_to: replyTo } : {}) }),
-      });
+    const sendMail = smtpSend;
 
     // Build subject + body per email type
     let customerSubject = `Booking Confirmed · ${tourTitle} · Yellodae`;
