@@ -1,5 +1,40 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
+import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
+
+// ---- Hostinger SMTP ----
+const SMTP_HOST = Deno.env.get("SMTP_HOST")?.trim() || "";
+const SMTP_PORT = Number(Deno.env.get("SMTP_PORT")?.trim() || "465");
+const SMTP_USERNAME = Deno.env.get("SMTP_USERNAME")?.trim() || "";
+const SMTP_PASSWORD = Deno.env.get("SMTP_PASSWORD") || "";
+const SMTP_FROM = Deno.env.get("SMTP_FROM")?.trim() || SMTP_USERNAME;
+
+async function smtpSend(to: string, subject: string, html: string, replyTo?: string) {
+  if (!SMTP_HOST || !SMTP_USERNAME || !SMTP_PASSWORD) {
+    throw new Error("SMTP not configured (missing SMTP_HOST/USERNAME/PASSWORD)");
+  }
+  const client = new SMTPClient({
+    connection: {
+      hostname: SMTP_HOST,
+      port: SMTP_PORT,
+      // Port 465 = implicit TLS; 587 = STARTTLS (denomailer negotiates automatically when tls:false)
+      tls: SMTP_PORT === 465,
+      auth: { username: SMTP_USERNAME, password: SMTP_PASSWORD },
+    },
+  });
+  try {
+    await client.send({
+      from: `Yellodae <${SMTP_FROM}>`,
+      to,
+      subject,
+      html,
+      content: "This email requires an HTML-capable client.",
+      ...(replyTo ? { replyTo } : {}),
+    });
+  } finally {
+    await client.close().catch(() => {});
+  }
+}
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -228,9 +263,9 @@ serve(async (req) => {
   if (req.method !== "POST") return new Response(JSON.stringify({ error: "Method not allowed" }), { status: 405, headers: corsHeaders });
 
   try {
-    const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY")?.trim();
-    if (!RESEND_API_KEY) {
-      return new Response(JSON.stringify({ error: "Email service not configured" }), { status: 500, headers: corsHeaders });
+    if (!SMTP_HOST || !SMTP_USERNAME || !SMTP_PASSWORD) {
+      console.error("SMTP not configured", { hasHost: !!SMTP_HOST, hasUser: !!SMTP_USERNAME, hasPass: !!SMTP_PASSWORD });
+      return new Response(JSON.stringify({ error: "Email service not configured (SMTP secrets missing)" }), { status: 500, headers: corsHeaders });
     }
 
     const { bookingId, paymentId, orderId, type } = await req.json();
@@ -286,12 +321,7 @@ serve(async (req) => {
       specialRequests: booking.special_requests || "",
     });
 
-    const sendMail = (to: string, subject: string, html: string, replyTo?: string) =>
-      fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${RESEND_API_KEY}` },
-        body: JSON.stringify({ from: "Yellodae <noreply@yellodae.com>", to: [to], subject, html, ...(replyTo ? { reply_to: replyTo } : {}) }),
-      });
+    const sendMail = smtpSend;
 
     // Build subject + body per email type
     let customerSubject = `Booking Confirmed · ${tourTitle} · Yellodae`;
@@ -330,22 +360,20 @@ serve(async (req) => {
 </td></tr>`, `Refund of ${amount} initiated for ${tourTitle}.`);
     }
 
-    const custResp = await sendMail(recipientEmail, customerSubject, customerBody);
-    const custData = await custResp.json();
-    if (!custResp.ok) {
-      console.error(`${emailType} email failed:`, custData);
-      return new Response(JSON.stringify({ success: false, error: custData?.message || custData?.error || "Email provider rejected the request", details: custData }), { status: custResp.status, headers: corsHeaders });
+    try {
+      await sendMail(recipientEmail, customerSubject, customerBody);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.error(`${emailType} customer SMTP send failed:`, msg);
+      return new Response(JSON.stringify({ success: false, error: `SMTP send failed: ${msg}` }), { status: 502, headers: corsHeaders });
     }
 
-    await sendMail(
-      "support@yellodae.com",
-      supportSubject,
-      supportHtml,
-      recipientEmail,
-    ).catch((err) => console.error("Support email failed:", err));
+    // Support notification — best-effort, doesn't block customer success
+    sendMail("support@yellodae.com", supportSubject, supportHtml, recipientEmail)
+      .catch((err) => console.error("Support SMTP send failed:", err instanceof Error ? err.message : err));
 
 
-    return new Response(JSON.stringify({ success: true, data: custData }), { status: 200, headers: corsHeaders });
+    return new Response(JSON.stringify({ success: true, type: emailType, recipient: recipientEmail }), { status: 200, headers: corsHeaders });
   } catch (error) {
     console.error("Send confirmation error:", error);
     return new Response(JSON.stringify({ success: false, error: error instanceof Error ? error.message : "Unknown error" }), { status: 500, headers: corsHeaders });
