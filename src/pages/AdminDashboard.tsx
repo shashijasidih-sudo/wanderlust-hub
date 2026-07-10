@@ -127,10 +127,17 @@ const AdminDashboard = () => {
       const body = init.body
         ? (typeof init.body === "string" ? JSON.parse(init.body) : init.body)
         : undefined;
-      return await supabase.functions.invoke(path, {
+      console.log(`[AdminDashboard] supabase.functions.invoke("${path}") method=${method}`, {
+        supabaseUrl: (supabase as any)?.supabaseUrl,
+        hasSession: !!session,
+        body,
+      });
+      const result = await supabase.functions.invoke(path, {
         method: method as any,
         body,
       });
+      console.log(`[AdminDashboard] invoke("${path}") result:`, result);
+      return result;
     };
 
     let { data, error } = await invoke();
