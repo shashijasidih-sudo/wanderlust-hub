@@ -373,7 +373,7 @@ serve(async (req) => {
       .catch((err) => console.error("Support SMTP send failed:", err instanceof Error ? err.message : err));
 
 
-    return new Response(JSON.stringify({ success: true, data: custData }), { status: 200, headers: corsHeaders });
+    return new Response(JSON.stringify({ success: true, type: emailType, recipient: recipientEmail }), { status: 200, headers: corsHeaders });
   } catch (error) {
     console.error("Send confirmation error:", error);
     return new Response(JSON.stringify({ success: false, error: error instanceof Error ? error.message : "Unknown error" }), { status: 500, headers: corsHeaders });
