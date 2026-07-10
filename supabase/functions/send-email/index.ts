@@ -57,8 +57,16 @@ serve(async (req) => {
         ...(replyTo ? { replyTo } : {}),
       });
     } finally {
-      await client.close().catch(() => {});
+      try {
+        const maybe = client.close();
+        if (maybe && typeof (maybe as Promise<unknown>).then === "function") {
+          await maybe;
+        }
+      } catch (_) {
+        // ignore close errors
+      }
     }
+
 
     return new Response(JSON.stringify({ success: true, recipient: to }), {
       status: 200,
