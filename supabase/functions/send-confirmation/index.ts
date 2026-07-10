@@ -1,5 +1,40 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
+import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
+
+// ---- Hostinger SMTP ----
+const SMTP_HOST = Deno.env.get("SMTP_HOST")?.trim() || "";
+const SMTP_PORT = Number(Deno.env.get("SMTP_PORT")?.trim() || "465");
+const SMTP_USERNAME = Deno.env.get("SMTP_USERNAME")?.trim() || "";
+const SMTP_PASSWORD = Deno.env.get("SMTP_PASSWORD") || "";
+const SMTP_FROM = Deno.env.get("SMTP_FROM")?.trim() || SMTP_USERNAME;
+
+async function smtpSend(to: string, subject: string, html: string, replyTo?: string) {
+  if (!SMTP_HOST || !SMTP_USERNAME || !SMTP_PASSWORD) {
+    throw new Error("SMTP not configured (missing SMTP_HOST/USERNAME/PASSWORD)");
+  }
+  const client = new SMTPClient({
+    connection: {
+      hostname: SMTP_HOST,
+      port: SMTP_PORT,
+      // Port 465 = implicit TLS; 587 = STARTTLS (denomailer negotiates automatically when tls:false)
+      tls: SMTP_PORT === 465,
+      auth: { username: SMTP_USERNAME, password: SMTP_PASSWORD },
+    },
+  });
+  try {
+    await client.send({
+      from: `Yellodae <${SMTP_FROM}>`,
+      to,
+      subject,
+      html,
+      content: "This email requires an HTML-capable client.",
+      ...(replyTo ? { replyTo } : {}),
+    });
+  } finally {
+    await client.close().catch(() => {});
+  }
+}
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
