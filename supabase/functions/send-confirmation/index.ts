@@ -263,9 +263,9 @@ serve(async (req) => {
   if (req.method !== "POST") return new Response(JSON.stringify({ error: "Method not allowed" }), { status: 405, headers: corsHeaders });
 
   try {
-    const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY")?.trim();
-    if (!RESEND_API_KEY) {
-      return new Response(JSON.stringify({ error: "Email service not configured" }), { status: 500, headers: corsHeaders });
+    if (!SMTP_HOST || !SMTP_USERNAME || !SMTP_PASSWORD) {
+      console.error("SMTP not configured", { hasHost: !!SMTP_HOST, hasUser: !!SMTP_USERNAME, hasPass: !!SMTP_PASSWORD });
+      return new Response(JSON.stringify({ error: "Email service not configured (SMTP secrets missing)" }), { status: 500, headers: corsHeaders });
     }
 
     const { bookingId, paymentId, orderId, type } = await req.json();
