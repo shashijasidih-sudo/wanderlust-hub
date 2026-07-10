@@ -32,9 +32,17 @@ async function smtpSend(to: string, subject: string, html: string, replyTo?: str
       ...(replyTo ? { replyTo } : {}),
     });
   } finally {
-    await client.close().catch(() => {});
+    try {
+      const maybe = client.close();
+      if (maybe && typeof (maybe as Promise<unknown>).then === "function") {
+        await maybe;
+      }
+    } catch (_) {
+      // ignore close errors
+    }
   }
 }
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
