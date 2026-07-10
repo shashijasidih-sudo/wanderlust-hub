@@ -360,19 +360,17 @@ serve(async (req) => {
 </td></tr>`, `Refund of ${amount} initiated for ${tourTitle}.`);
     }
 
-    const custResp = await sendMail(recipientEmail, customerSubject, customerBody);
-    const custData = await custResp.json();
-    if (!custResp.ok) {
-      console.error(`${emailType} email failed:`, custData);
-      return new Response(JSON.stringify({ success: false, error: custData?.message || custData?.error || "Email provider rejected the request", details: custData }), { status: custResp.status, headers: corsHeaders });
+    try {
+      await sendMail(recipientEmail, customerSubject, customerBody);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.error(`${emailType} customer SMTP send failed:`, msg);
+      return new Response(JSON.stringify({ success: false, error: `SMTP send failed: ${msg}` }), { status: 502, headers: corsHeaders });
     }
 
-    await sendMail(
-      "support@yellodae.com",
-      supportSubject,
-      supportHtml,
-      recipientEmail,
-    ).catch((err) => console.error("Support email failed:", err));
+    // Support notification — best-effort, doesn't block customer success
+    sendMail("support@yellodae.com", supportSubject, supportHtml, recipientEmail)
+      .catch((err) => console.error("Support SMTP send failed:", err instanceof Error ? err.message : err));
 
 
     return new Response(JSON.stringify({ success: true, data: custData }), { status: 200, headers: corsHeaders });
