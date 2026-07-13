@@ -278,7 +278,7 @@ export const trackPurchase = async (p: PurchasePayload) => {
     ...(user_data && { user_data }),
   });
 
-  // Google Ads gtag fallback (only if gtag exists on page)
+  // Google Ads conversion (fires only here — after a confirmed, deduped purchase)
   if (typeof window !== "undefined" && typeof window.gtag === "function") {
     try {
       window.gtag("event", "purchase", {
@@ -292,8 +292,15 @@ export const trackPurchase = async (p: PurchasePayload) => {
           quantity: i.quantity,
         })),
       });
+      window.gtag("event", "conversion", {
+        send_to: "AW-11416530867/P7W0CKzL1M8cELPf6cMq",
+        transaction_id: p.booking_id,
+        value: p.total_amount,
+        currency: "INR",
+      });
     } catch {}
   }
+
 };
 
 // ---- Failure & misc events --------------------------------------------
