@@ -71,13 +71,8 @@ const HOMEPAGE_JSONLD = [
       "https://in.pinterest.com/yellodaetrails/",
       "https://www.linkedin.com/company/yellodae-trails/",
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "50",
-      bestRating: "5",
-      worstRating: "1",
-    },
+    // aggregateRating intentionally omitted here — defined once on the
+    // Organization node in index.html to avoid Google "multiple aggregate ratings" error.
     priceRange: "$$",
     areaServed: [
       { "@type": "Country", name: "Thailand" },
