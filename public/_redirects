@@ -6,5 +6,9 @@ http://www.yellodae.com/*     https://yellodae.com/:splat    301!
 # 2) http -> https on apex
 http://yellodae.com/*         https://yellodae.com/:splat    301!
 
-# 3) SPA fallback — every other path serves index.html (no redirect chain)
+# 3) Permanent redirect: /contact and /contact/ -> /contact-us
+/contact         /contact-us    301!
+/contact/        /contact-us    301!
+
+# 4) SPA fallback — every other path serves index.html (no redirect chain)
 /*    /index.html    200
