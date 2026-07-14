@@ -28,7 +28,7 @@ import {
 type MidDestination = "thailand" | "singapore" | "bangkok" | "pattaya" | "phuket" | "krabi";
 
 interface BlogSection {
-  type: "paragraph" | "heading" | "subheading" | "list" | "image" | "cta" | "tip-box" | "mid-activities";
+  type: "paragraph" | "heading" | "subheading" | "list" | "image" | "cta" | "tip-box" | "mid-activities" | "table";
   content?: string;
   items?: string[];
   src?: string;
@@ -38,6 +38,8 @@ interface BlogSection {
   linkText?: string;
   destination?: MidDestination;
   heading?: string;
+  tableHeaders?: string[];
+  tableRows?: string[][];
 }
 
 interface RelatedActivity {
@@ -95,6 +97,7 @@ interface BlogArticleProps {
   subCategory?: SubCategory;
   comparisonItems?: ComparisonItem[];
   internalLinks?: InternalLinks;
+  bodyClassName?: string;
   children?: React.ReactNode;
 }
 
@@ -159,6 +162,7 @@ const BlogArticleLayout = ({
   relatedActivities, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
   subCategory, comparisonItems, internalLinks: internalLinksProp,
+  bodyClassName,
   children,
 }: BlogArticleProps) => {
   // Auto-derive internal links for Bangkok hub pages when not explicitly passed
@@ -357,7 +361,7 @@ const BlogArticleLayout = ({
             </div>
 
             {/* Content */}
-            <article className="prose prose-lg max-w-none">
+            <article className={`prose prose-lg max-w-none ${bodyClassName || ""}`}>
               {sections.map((section, i) => {
                 const ytEmbed = i === ytInjectIndex && ytShort ? (
                   <div key={`yt-${i}`} className="my-10 flex justify-center">
@@ -438,6 +442,34 @@ const BlogArticleLayout = ({
                         destination={section.destination || "thailand"}
                         heading={section.heading}
                       />
+                    );
+                    break;
+                  case "table":
+                    rendered = (
+                      <div className="my-6 overflow-x-auto rounded-lg border border-border">
+                        <table className="w-full text-sm">
+                          {section.tableHeaders && (
+                            <thead className="bg-secondary/60">
+                              <tr>
+                                {section.tableHeaders.map((h, hi) => (
+                                  <th key={hi} className="text-left px-4 py-3 font-semibold text-foreground border-b border-border">{h}</th>
+                                ))}
+                              </tr>
+                            </thead>
+                          )}
+                          <tbody>
+                            {section.tableRows?.map((row, ri) => (
+                              <tr key={ri} className={ri % 2 === 0 ? "bg-background" : "bg-secondary/20"}>
+                                {row.map((cell, ci) => (
+                                  <td key={ci} className="px-4 py-3 border-b border-border align-top">
+                                    {renderInline(cell)}
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
                     );
                     break;
                   default:
