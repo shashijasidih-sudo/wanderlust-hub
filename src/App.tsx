@@ -410,6 +410,7 @@ const BlogBigBuddhaPhuketGuide = lazy(() => import("./pages/BlogBigBuddhaPhuketG
 const BlogJamesBondIslandTour = lazy(() => import("./pages/BlogJamesBondIslandTour"));
 const BlogPhuketCityTourGuide = lazy(() => import("./pages/BlogPhuketCityTourGuide"));
 const BlogPhuketSnorkelingGuide = lazy(() => import("./pages/BlogPhuketSnorkelingGuide"));
+const Blog25BestThingsToDoPhuket = lazy(() => import("./pages/Blog25BestThingsToDoPhuket"));
 const BlogPhuket4DaysItinerary = lazy(() => import("./pages/BlogPhuket4DaysItinerary"));
 const BlogPhuket5DaysItinerary = lazy(() => import("./pages/BlogPhuket5DaysItinerary"));
 const BlogPhuketHoneymoonItinerary = lazy(() => import("./pages/BlogPhuketHoneymoonItinerary"));
@@ -507,6 +508,7 @@ const App = () => (
             <Route path="/thailand/phuket/destination-guides/activity/james-bond-island-tour-guide" element={<BlogJamesBondIslandTour />} />
             <Route path="/thailand/phuket/destination-guides/activity/phuket-city-tour-guide" element={<BlogPhuketCityTourGuide />} />
             <Route path="/thailand/phuket/destination-guides/activity/snorkeling-in-phuket-guide" element={<BlogPhuketSnorkelingGuide />} />
+            <Route path="/thailand/phuket/destination-guides/activity/25-best-things-to-do-in-phuket-2026" element={<Blog25BestThingsToDoPhuket />} />
             <Route path="/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" element={<BlogPhuket4DaysItinerary />} />
             <Route path="/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary" element={<BlogPhuket5DaysItinerary />} />
             <Route path="/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary" element={<BlogPhuketHoneymoonItinerary />} />
