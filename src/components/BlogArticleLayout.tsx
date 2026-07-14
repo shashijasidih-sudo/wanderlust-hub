@@ -97,6 +97,7 @@ interface BlogArticleProps {
   subCategory?: SubCategory;
   comparisonItems?: ComparisonItem[];
   internalLinks?: InternalLinks;
+  bodyClassName?: string;
   children?: React.ReactNode;
 }
 
