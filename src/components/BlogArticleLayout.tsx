@@ -444,6 +444,34 @@ const BlogArticleLayout = ({
                       />
                     );
                     break;
+                  case "table":
+                    rendered = (
+                      <div className="my-6 overflow-x-auto rounded-lg border border-border">
+                        <table className="w-full text-sm">
+                          {section.tableHeaders && (
+                            <thead className="bg-secondary/60">
+                              <tr>
+                                {section.tableHeaders.map((h, hi) => (
+                                  <th key={hi} className="text-left px-4 py-3 font-semibold text-foreground border-b border-border">{h}</th>
+                                ))}
+                              </tr>
+                            </thead>
+                          )}
+                          <tbody>
+                            {section.tableRows?.map((row, ri) => (
+                              <tr key={ri} className={ri % 2 === 0 ? "bg-background" : "bg-secondary/20"}>
+                                {row.map((cell, ci) => (
+                                  <td key={ci} className="px-4 py-3 border-b border-border align-top">
+                                    {renderInline(cell)}
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    );
+                    break;
                   default:
                     rendered = null;
                 }
