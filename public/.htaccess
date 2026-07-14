@@ -2,6 +2,14 @@
   RewriteEngine On
   RewriteBase /
 
+  # Force apex host (non-www) with HTTPS.
+  RewriteCond %{HTTP_HOST} ^www\.yellodae\.com$ [NC,OR]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://yellodae.com%{REQUEST_URI} [R=301,L]
+
+  # Permanent 301: /contact and /contact/ -> /contact-us
+  RewriteRule ^contact/?$ /contact-us [R=301,L]
+
   # Serve existing files and directories normally.
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
