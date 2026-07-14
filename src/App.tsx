@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "@/contexts/CartContext";
 import { CurrencyProvider } from "@/contexts/CurrencyContext";
 import ApprovalBadge from "@/components/ApprovalBadge";
@@ -12,7 +12,6 @@ import ScrollToTop from "@/components/ScrollToTop";
 import AnalyticsInit from "@/components/AnalyticsInit";
 import Index from "./pages/Index";
 const NotFound = lazy(() => import("./pages/NotFound"));
-import LegacyCityRedirect from "./components/LegacyCityRedirect";
 const RoutesHealthCheck = lazy(() => import("./pages/RoutesHealthCheck"));
 const Thailand = lazy(() => import("./pages/Thailand"));
 const Bangkok = lazy(() => import("./pages/Bangkok"));
@@ -475,7 +474,6 @@ const App = () => (
             <Route path="/thailand/koh-samui" element={<KohSamui />} />
             <Route path="/thailand/chiang-mai" element={<ChiangMai />} />
             <Route path="/thailand/chiang-mai-airport-transfers/" element={<ChiangMaiTransfers />} />
-            <Route path="/thailand/chiang-mai/budget-airport-transfers" element={<Navigate to="/thailand/chiang-mai-airport-transfers/" replace />} />
             <Route path="/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival" element={<KohSamuiWhiteOrchidLoyKrathongCruise />} />
             <Route path="/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" element={<KohSamuiFullMoonParty />} />
             <Route path="/thailand/koh-samui/destination-guides" element={<KohSamuiDestinationGuides />} />
@@ -591,19 +589,6 @@ const App = () => (
             <Route path="/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer" element={<PhiPhiRoyalJet />} />
             <Route path="/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer" element={<PhiPhiMayaKhaiSpeedboat />} />
             {/* Legacy Phuket activity slugs → redirects to new canonical SEO URLs */}
-            <Route path="/thailand/phuket/phi-phi-island-tour" element={<Navigate to="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" replace />} />
-            <Route path="/thailand/phuket/james-bond-island-tour" element={<Navigate to="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" replace />} />
-            <Route path="/thailand/phuket/selfie-with-tigers" element={<Navigate to="/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer" replace />} />
-            <Route path="/thailand/phuket/hot-spring-emerald-pool" element={<Navigate to="/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer" replace />} />
-            <Route path="/thailand/phuket/dolphin-bay" element={<Navigate to="/thailand/phuket/dolphin-show-phuket-with-transfer" replace />} />
-            <Route path="/thailand/phuket/city-night-market" element={<Navigate to="/thailand/phuket/phuket-night-market-tour-with-transfer" replace />} />
-            <Route path="/thailand/phuket/simon-cabaret" element={<Navigate to="/thailand/phuket/simon-cabaret-show-with-transfer" replace />} />
-            <Route path="/thailand/phuket/carnival-magic" element={<Navigate to="/thailand/phuket/carnival-magic-show-tickets-with-transfer" replace />} />
-            <Route path="/thailand/phuket/selfie-with-tigers-atv" element={<Navigate to="/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer" replace />} />
-            <Route path="/thailand/phuket/james-bond-island-sea-canoe" element={<Navigate to="/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer" replace />} />
-            <Route path="/thailand/phuket/phi-phi-big-boat" element={<Navigate to="/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer" replace />} />
-            <Route path="/thailand/phuket/phi-phi-royal-jet" element={<Navigate to="/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer" replace />} />
-            <Route path="/thailand/phuket/phi-phi-maya-khai-speedboat" element={<Navigate to="/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer" replace />} />
             {/* Phuket hub page */}
             <Route path="/thailand/phuket/things-to-do" element={<PhuketThingsToDo />} />
             <Route path="/thailand/pattaya/pattaya-floating-market-tour" element={<PattayaFloatingMarketTour />} />
@@ -621,20 +606,6 @@ const App = () => (
             <Route path="/thailand/pattaya/pattaya-nightlife-walking-tour" element={<PattayaNightlifeWalking />} />
             <Route path="/thailand/pattaya/pattaya-pub-crawl-night-tour" element={<PattayaPubCrawl />} />
             {/* Legacy Pattaya activity slugs → redirects to new canonical SEO URLs */}
-            <Route path="/thailand/pattaya/floating-market-tour" element={<Navigate to="/thailand/pattaya/pattaya-floating-market-tour" replace />} />
-            <Route path="/thailand/pattaya/big-buddha-gems" element={<Navigate to="/thailand/pattaya/big-buddha-gems-gallery-tour" replace />} />
-            <Route path="/thailand/pattaya/coral-island" element={<Navigate to="/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" replace />} />
-            <Route path="/thailand/pattaya/nong-nooch-garden" element={<Navigate to="/thailand/pattaya/nong-nooch-tropical-garden-tickets" replace />} />
-            <Route path="/thailand/pattaya/dolphinarium" element={<Navigate to="/thailand/pattaya/pattaya-dolphinarium-show-tickets" replace />} />
-            <Route path="/thailand/pattaya/muay-thai" element={<Navigate to="/thailand/pattaya/muay-thai-boxing-show-pattaya" replace />} />
-            <Route path="/thailand/pattaya/alcazar-show" element={<Navigate to="/thailand/pattaya/alcazar-cabaret-show-with-transfer" replace />} />
-            <Route path="/thailand/pattaya/imagine79-show" element={<Navigate to="/thailand/pattaya/79-show-pattaya-with-transfer" replace />} />
-            <Route path="/thailand/pattaya/show-69" element={<Navigate to="/thailand/pattaya/69-show-pattaya-with-transfer" replace />} />
-            <Route path="/thailand/pattaya/show-89" element={<Navigate to="/thailand/pattaya/89-show-pattaya-with-transfer" replace />} />
-            <Route path="/thailand/pattaya/big-eye-show" element={<Navigate to="/thailand/pattaya/99-show-pattaya-big-eye-with-transfer" replace />} />
-            <Route path="/thailand/pattaya/floating-market-guided" element={<Navigate to="/thailand/pattaya/pattaya-floating-market-guided-tour" replace />} />
-            <Route path="/thailand/pattaya/nightlife-walking-tour" element={<Navigate to="/thailand/pattaya/pattaya-nightlife-walking-tour" replace />} />
-            <Route path="/thailand/pattaya/pub-crawl" element={<Navigate to="/thailand/pattaya/pattaya-pub-crawl-night-tour" replace />} />
             {/* Pattaya hub page */}
             <Route path="/thailand/pattaya/things-to-do" element={<PattayaThingsToDo />} />
             <Route path="/thailand/krabi/hong-island-tour-longtail-boat-with-transfer" element={<HongIslandsLongtail />} />
@@ -647,13 +618,6 @@ const App = () => (
             <Route path="/thailand/krabi/james-bond-island" element={<JamesBondIslandKrabi />} />
             <Route path="/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer" element={<PhiPhiIsland />} />
             {/* Legacy Krabi activity slugs → redirects to new canonical SEO URLs */}
-            <Route path="/thailand/krabi/hong-islands-longtail" element={<Navigate to="/thailand/krabi/hong-island-tour-longtail-boat-with-transfer" replace />} />
-            <Route path="/thailand/krabi/hong-islands-speedboat" element={<Navigate to="/thailand/krabi/hong-island-tour-speedboat-with-transfer" replace />} />
-            <Route path="/thailand/krabi/seven-islands-longtail" element={<Navigate to="/thailand/krabi/7-islands-tour-longtail-boat-with-transfer" replace />} />
-            <Route path="/thailand/krabi/seven-islands-speedboat" element={<Navigate to="/thailand/krabi/7-islands-tour-speedboat-with-transfer" replace />} />
-            <Route path="/thailand/krabi/four-islands-longtail" element={<Navigate to="/thailand/krabi/4-island-tour-longtail-boat-with-transfer" replace />} />
-            <Route path="/thailand/krabi/four-islands-longtail-no-park-fee" element={<Navigate to="/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer" replace />} />
-            <Route path="/thailand/krabi/four-islands-speedboat" element={<Navigate to="/thailand/krabi/4-island-tour-speedboat-with-transfer" replace />} />
             {/* Krabi hub page */}
             <Route path="/thailand/krabi/things-to-do" element={<KrabiThingsToDo />} />
             <Route path="/thailand/chiang-mai/things-to-do" element={<ChiangMaiThingsToDo />} />
@@ -770,7 +734,6 @@ const App = () => (
             <Route path="/blog/thailand-trip-cost-from-india" element={<BlogThailandTripCostFromIndia />} />
             <Route path="/netherlands-smart-guides" element={<NetherlandsSmartGuides />} />
             <Route path="/thailand/bangkok-airport-transfers/" element={<BangkokTransfers />} />
-            <Route path="/thailand/bangkok/budget-airport-transfers" element={<Navigate to="/thailand/bangkok-airport-transfers/" replace />} />
            {/* New SEO-friendly Bangkok Transfer slugs */}
            <Route path="/thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer" element={<BangkokBkkAirportPickup />} />
            <Route path="/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer" element={<BangkokDmkAirportPickup />} />
@@ -785,20 +748,7 @@ const App = () => (
            <Route path="/thailand/bangkok/bangkok-city-tour-to-pattaya-hotel-transfer" element={<BangkokCityTourPattaya />} />
            <Route path="/thailand/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer" element={<BangkokTigerTopiaPattaya />} />
            {/* Legacy Bangkok transfer slugs → redirect to new SEO slugs */}
-           <Route path="/thailand/bangkok/bkk-airport-pickup" element={<Navigate to="/thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer" replace />} />
-           <Route path="/thailand/bangkok/dmk-airport-pickup" element={<Navigate to="/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer" replace />} />
-           <Route path="/thailand/bangkok/bkk-airport-dropoff" element={<Navigate to="/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer" replace />} />
-           <Route path="/thailand/bangkok/dmk-airport-dropoff" element={<Navigate to="/thailand/bangkok/bangkok-hotel-to-don-mueang-airport-transfer" replace />} />
-           <Route path="/thailand/bangkok/airport-transfers/temple-tour-bkk" element={<Navigate to="/thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer" replace />} />
-           <Route path="/thailand/bangkok/airport-transfers/temple-tour-dmk" element={<Navigate to="/thailand/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer" replace />} />
-           <Route path="/thailand/bangkok/airport-transfers/safari-world-bkk" element={<Navigate to="/thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer" replace />} />
-           <Route path="/thailand/bangkok/airport-transfers/safari-world-dmk" element={<Navigate to="/thailand/bangkok/bangkok-hotel-safari-world-to-don-mueang-airport-transfer" replace />} />
-           <Route path="/thailand/bangkok/city-hourly-rental" element={<Navigate to="/thailand/bangkok/bangkok-hotel-to-hotel-transfer-4-hours" replace />} />
-           <Route path="/thailand/bangkok/to-pattaya" element={<Navigate to="/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer" replace />} />
-           <Route path="/thailand/bangkok/city-tour-pattaya" element={<Navigate to="/thailand/bangkok/bangkok-city-tour-to-pattaya-hotel-transfer" replace />} />
-           <Route path="/thailand/bangkok/tiger-topia-pattaya" element={<Navigate to="/thailand/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer" replace />} />
              <Route path="/thailand/pattaya-transfers/" element={<PattayaTransfers />} />
-             <Route path="/thailand/pattaya/budget-airport-transfers" element={<Navigate to="/thailand/pattaya-transfers/" replace />} />
              {/* New SEO-friendly Pattaya transfer slugs */}
              <Route path="/thailand/bangkok/suvarnabhumi-airport-to-pattaya-hotel-transfer" element={<PattayaBkkAirportPickup />} />
              <Route path="/thailand/bangkok/suvarnabhumi-airport-tiger-topia-to-pattaya-hotel-transfer" element={<PattayaBkkTigerTopiaPickup />} />
@@ -816,19 +766,7 @@ const App = () => (
              <Route path="/thailand/bangkok/bangkok-hotel-safari-world-to-pattaya-hotel-transfer" element={<BangkokSafariWorldPattaya />} />
              <Route path="/thailand/pattaya/u-tapao-airport-to-pattaya-hotel-transfer" element={<UtapaoAirportToPattaya />} />
              {/* Legacy Pattaya transfer slugs → redirect to new SEO slugs */}
-             <Route path="/thailand/pattaya/bkk-airport-pickup" element={<Navigate to="/thailand/bangkok/suvarnabhumi-airport-to-pattaya-hotel-transfer" replace />} />
-             <Route path="/thailand/pattaya/bkk-tiger-topia-pickup" element={<Navigate to="/thailand/bangkok/suvarnabhumi-airport-tiger-topia-to-pattaya-hotel-transfer" replace />} />
-             <Route path="/thailand/pattaya/dmk-airport-pickup" element={<Navigate to="/thailand/bangkok/don-mueang-airport-to-pattaya-hotel-transfer" replace />} />
-             <Route path="/thailand/pattaya/dmk-tiger-topia-pickup" element={<Navigate to="/thailand/bangkok/don-mueang-airport-tiger-topia-to-pattaya-hotel-transfer" replace />} />
-             <Route path="/thailand/pattaya/bkk-airport-dropoff" element={<Navigate to="/thailand/pattaya/pattaya-hotel-to-suvarnabhumi-airport-transfer" replace />} />
-             <Route path="/thailand/pattaya/temple-tour-bkk-airport" element={<Navigate to="/thailand/pattaya/pattaya-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer" replace />} />
-             <Route path="/thailand/pattaya/safari-world-bkk-airport" element={<Navigate to="/thailand/pattaya/pattaya-hotel-safari-world-to-suvarnabhumi-airport-transfer" replace />} />
-             <Route path="/thailand/pattaya/dmk-airport-dropoff" element={<Navigate to="/thailand/pattaya/pattaya-hotel-to-don-mueang-airport-transfer" replace />} />
-             <Route path="/thailand/pattaya/temple-tour-dmk-airport" element={<Navigate to="/thailand/pattaya/pattaya-hotel-two-temple-tour-to-don-mueang-airport-transfer" replace />} />
-             <Route path="/thailand/pattaya/indra-square-dmk-airport" element={<Navigate to="/thailand/pattaya/pattaya-hotel-indra-square-shopping-to-don-mueang-airport-transfer" replace />} />
-             <Route path="/thailand/pattaya/city-hourly-rental" element={<Navigate to="/thailand/pattaya/pattaya-private-car-4-hours" replace />} />
              <Route path="/thailand/krabi-airport-transfers/" element={<KrabiTransfers />} />
-             <Route path="/thailand/krabi/budget-airport-transfers" element={<Navigate to="/thailand/krabi-airport-transfers/" replace />} />
             {/* Krabi Transfers — SEO-friendly slugs */}
             <Route path="/thailand/krabi/krabi-airport-to-phuket-hotel-transfer" element={<KrabiKbvAirportPhuketPickup />} />
             <Route path="/thailand/krabi/krabi-hotel-to-krabi-airport-transfer" element={<KrabiHotelKbvAirport />} />
@@ -837,19 +775,7 @@ const App = () => (
             <Route path="/thailand/krabi/krabi-hotel-to-phuket-airport-transfer" element={<KrabiHktAirportDropoff />} />
             <Route path="/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer" element={<KrabiKbvAonangPickup />} />
             {/* Krabi Transfers — legacy redirects */}
-            <Route path="/thailand/krabi/kbv-airport-phuket-pickup" element={<Navigate to="/thailand/krabi/krabi-airport-to-phuket-hotel-transfer" replace />} />
-            <Route path="/thailand/krabi/phuket-kbv-airport-dropoff" element={<Navigate to="/thailand/phuket/phuket-hotel-to-krabi-airport-transfer" replace />} />
-            <Route path="/thailand/krabi/krabi-hotel-kbv-airport" element={<Navigate to="/thailand/krabi/krabi-hotel-to-krabi-airport-transfer" replace />} />
-            <Route path="/thailand/krabi/krabi-to-phuket" element={<Navigate to="/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer" replace />} />
-            <Route path="/thailand/krabi/krabi-phuket-city-tour" element={<Navigate to="/thailand/krabi/phuket-city-tour-to-phuket-hotel-transfer" replace />} />
-            <Route path="/thailand/krabi/hkt-airport-krabi-pickup" element={<Navigate to="/thailand/phuket/phuket-airport-to-krabi-hotel-transfer" replace />} />
-            <Route path="/thailand/krabi/krabi-hkt-airport-dropoff" element={<Navigate to="/thailand/krabi/krabi-hotel-to-phuket-airport-transfer" replace />} />
-            <Route path="/thailand/krabi/kbv-aonang-pickup" element={<Navigate to="/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer" replace />} />
-            <Route path="/thailand/krabi/phuket-to-krabi" element={<Navigate to="/thailand/phuket/phuket-hotel-to-krabi-hotel-transfer" replace />} />
-            <Route path="/thailand/krabi/phuket-city-tour-krabi" element={<Navigate to="/thailand/phuket/phuket-city-tour-to-krabi-hotel-transfer" replace />} />
-            <Route path="/thailand/krabi/phuket-krabi-city-tour" element={<Navigate to="/thailand/phuket/krabi-city-tour-to-krabi-hotel-transfer" replace />} />
              <Route path="/thailand/phuket-airport-transfers/" element={<PhuketTransfers />} />
-             <Route path="/thailand/phuket/budget-airport-transfers" element={<Navigate to="/thailand/phuket-airport-transfers/" replace />} />
             {/* Phuket Transfers — SEO-friendly slugs */}
             <Route path="/thailand/phuket/phuket-airport-to-phuket-hotel-transfer" element={<PhuketHktAirportPickup />} />
             <Route path="/thailand/phuket/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer" element={<PhuketHktAirportCityTour />} />
@@ -862,16 +788,7 @@ const App = () => (
             <Route path="/thailand/phuket/phuket-airport-to-krabi-hotel-transfer" element={<PhuketAirportToKrabiHotel />} />
             <Route path="/thailand/phuket/phuket-hotel-to-krabi-airport-transfer" element={<PhuketHotelToKrabiAirport />} />
             {/* Phuket Transfers — legacy redirects */}
-            <Route path="/thailand/phuket/hkt-airport-pickup" element={<Navigate to="/thailand/phuket/phuket-airport-to-phuket-hotel-transfer" replace />} />
-            <Route path="/thailand/phuket/hkt-airport-city-tour" element={<Navigate to="/thailand/phuket/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer" replace />} />
-            <Route path="/thailand/phuket/hkt-airport-dropoff" element={<Navigate to="/thailand/phuket/phuket-hotel-to-phuket-airport-transfer" replace />} />
-            <Route path="/thailand/phuket/city-tour-hkt-airport" element={<Navigate to="/thailand/phuket/phuket-city-tour-to-phuket-airport-transfer" replace />} />
-            <Route path="/thailand/phuket/city-hourly-rental" element={<Navigate to="/thailand/phuket/phuket-hotel-to-hotel-transfer-4-hours" replace />} />
-            <Route path="/thailand/phuket/phuket-to-krabi" element={<Navigate to="/thailand/phuket/phuket-hotel-to-krabi-hotel-transfer" replace />} />
-            <Route path="/thailand/phuket/city-tour-krabi" element={<Navigate to="/thailand/phuket/phuket-city-tour-to-krabi-hotel-transfer" replace />} />
-            <Route path="/thailand/phuket/krabi-city-tour" element={<Navigate to="/thailand/phuket/krabi-city-tour-to-krabi-hotel-transfer" replace />} />
              <Route path="/thailand/airport-transfers/" element={<ThailandTransfers />} />
-             <Route path="/thailand/budget-airport-transfers" element={<Navigate to="/thailand/airport-transfers/" replace />} />
           {/* Dubai routes */}
             <Route path="/blog/best-dubai-activities" element={<BlogBestDubaiActivities />} />
             <Route path="/dubai/destination-guides" element={<DubaiSmartGuides />} />
@@ -967,32 +884,12 @@ const App = () => (
             <Route path="/singapore/big-bus-night-city-tour-singapore" element={<BigBusNight />} />
             <Route path="/singapore/sentosa-island" element={<SentosaIsland />} />
             {/* Singapore Activities — legacy redirects */}
-            <Route path="/singapore/city-tour" element={<Navigate to="/singapore/singapore-city-tour" replace />} />
-            <Route path="/singapore/night-safari" element={<Navigate to="/singapore/night-safari-singapore-tickets-and-transfers" replace />} />
-            <Route path="/singapore/sentosa-4d-2-rides" element={<Navigate to="/singapore/sentosa-4d-adventureland-tickets" replace />} />
-            <Route path="/singapore/sentosa-cable-car" element={<Navigate to="/singapore/sentosa-cable-car-tickets-and-transfers" replace />} />
-            <Route path="/singapore/sentosa-wings-time" element={<Navigate to="/singapore/wings-of-time-show-sentosa-tickets" replace />} />
-            <Route path="/singapore/sentosa-sky-helix" element={<Navigate to="/singapore/skyhelix-sentosa-tickets" replace />} />
-            <Route path="/singapore/river-cruise" element={<Navigate to="/singapore/singapore-river-cruise-tickets-and-transfers" replace />} />
-            <Route path="/singapore/gardens-by-the-bay" element={<Navigate to="/singapore/gardens-by-the-bay-tickets-and-transfers" replace />} />
-            <Route path="/singapore/adventure-cove" element={<Navigate to="/singapore/adventure-cove-waterpark-tickets" replace />} />
-            <Route path="/singapore/flyer" element={<Navigate to="/singapore/singapore-flyer-tickets-and-transfers" replace />} />
-            <Route path="/singapore/river-safari" element={<Navigate to="/singapore/river-wonders-singapore-tickets" replace />} />
-            <Route path="/singapore/universal-studios-weekday" element={<Navigate to="/singapore/universal-studios-singapore-weekday-tickets" replace />} />
-            <Route path="/singapore/universal-studios-weekend" element={<Navigate to="/singapore/universal-studios-singapore-weekend-tickets" replace />} />
-            <Route path="/singapore/zoo" element={<Navigate to="/singapore/singapore-zoo-tickets" replace />} />
-            <Route path="/singapore/rainforest-wild-asia" element={<Navigate to="/singapore/rainforest-wild-asia-tickets" replace />} />
-            <Route path="/singapore/big-bus-discover" element={<Navigate to="/singapore/big-bus-hop-on-hop-off-singapore-city-tour" replace />} />
-            <Route path="/singapore/big-bus-night" element={<Navigate to="/singapore/big-bus-night-city-tour-singapore" replace />} />
             <Route path="/singapore/budget-airport-transfers" element={<SingaporeTransfersNew />} />
             {/* Singapore Transfers — SEO-friendly slugs */}
             <Route path="/singapore/singapore-airport-pickup" element={<SingaporeAirportPickup />} />
             <Route path="/singapore/singapore-airport-dropoff" element={<SingaporeAirportDropoff />} />
             <Route path="/singapore/singapore-airport-night-pickup" element={<SingaporeAirportNightPickup />} />
             {/* Singapore Transfers — legacy redirects */}
-            <Route path="/singapore/airport-pickup" element={<Navigate to="/singapore/singapore-airport-pickup" replace />} />
-            <Route path="/singapore/airport-dropoff" element={<Navigate to="/singapore/singapore-airport-dropoff" replace />} />
-            <Route path="/singapore/airport-night-pickup" element={<Navigate to="/singapore/singapore-airport-night-pickup" replace />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/auth/callback" element={<AuthCallback />} />
           <Route path="/profile" element={<Profile />} />
@@ -1011,8 +908,6 @@ const App = () => (
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/why-yellodae" element={<WhyYellodae />} />
           <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/contact" element={<Navigate to="/contact-us" replace />} />
-          <Route path="/contact/" element={<Navigate to="/contact-us" replace />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
@@ -1023,152 +918,7 @@ const App = () => (
           <Route path="/admin" element={<AdminDashboard />} />
           {/* 301 Redirects: Old URLs → New SEO-friendly URLs */}
             {/* Legacy /thailand/bangkok/<old-slug> → new SEO slug */}
-            <Route path="/thailand/bangkok/skywalk" element={<Navigate to="/thailand/bangkok/mahanakhon-skywalk-tickets" replace />} />
-            <Route path="/thailand/bangkok/massage-coupons" element={<Navigate to="/thailand/bangkok/thai-massage-spa-deals-bangkok" replace />} />
-            <Route path="/thailand/bangkok/three-temples-tour" element={<Navigate to="/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" replace />} />
-            <Route path="/thailand/bangkok/wat-arun-pho-traimit" element={<Navigate to="/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" replace />} />
-            <Route path="/thailand/bangkok/city-boat-tour" element={<Navigate to="/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour" replace />} />
-            <Route path="/thailand/bangkok/city-gems-gallery" element={<Navigate to="/thailand/bangkok/gems-gallery-bangkok-tickets" replace />} />
-            <Route path="/thailand/bangkok/wat-arun-chinatown" element={<Navigate to="/thailand/bangkok/wat-arun-chinatown-tour" replace />} />
-            <Route path="/thailand/bangkok/golden-marble-buddha" element={<Navigate to="/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour" replace />} />
-            <Route path="/thailand/bangkok/ayutthaya-temple-tour" element={<Navigate to="/thailand/bangkok/ayutthaya-day-tour-from-bangkok" replace />} />
-            <Route path="/thailand/bangkok/grand-palace-emerald" element={<Navigate to="/thailand/bangkok/grand-palace-wat-phra-kaew-tour" replace />} />
-            <Route path="/thailand/bangkok/sea-life-madame-tussauds" element={<Navigate to="/thailand/bangkok/sea-life-madame-tussauds-tickets" replace />} />
-            <Route path="/thailand/bangkok/viva-alangka-cruise" element={<Navigate to="/thailand/bangkok/viva-alangka-dinner-cruise" replace />} />
-            <Route path="/thailand/bangkok/ayutthaya-sunset-cruise" element={<Navigate to="/thailand/bangkok/ayutthaya-sunset-river-cruise" replace />} />
-            <Route path="/thailand/bangkok/chao-phraya-princess-private" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" replace />} />
-            <Route path="/thailand/bangkok/chao-phraya-princess-valentine" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise" replace />} />
-            <Route path="/thailand/bangkok/chao-phraya-princess-with-transfer" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer" replace />} />
-            <Route path="/thailand/bangkok/maeklong-floating-market" element={<Navigate to="/thailand/bangkok/maeklong-floating-market-tour" replace />} />
-            <Route path="/thailand/bangkok/tuk-tuk-night-tour" element={<Navigate to="/thailand/bangkok/tuk-tuk-night-tour-bangkok" replace />} />
-            <Route path="/thailand/bangkok/dream-world" element={<Navigate to="/thailand/bangkok/dream-world-bangkok-tickets" replace />} />
-            <Route path="/thailand/bangkok/chao-phraya-princess-dinner" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise" replace />} />
-            <Route path="/safari-world" element={<Navigate to="/thailand/bangkok/safari-world" replace />} />
-            <Route path="/dolphin-show" element={<Navigate to="/thailand/bangkok/dolphin-show" replace />} />
-            <Route path="/bangkok-skywalk" element={<Navigate to="/thailand/bangkok/mahanakhon-skywalk-tickets" replace />} />
-            <Route path="/massage-coupons" element={<Navigate to="/thailand/bangkok/thai-massage-spa-deals-bangkok" replace />} />
-            <Route path="/bangkok-three-temples" element={<Navigate to="/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" replace />} />
-            <Route path="/bangkok-wat-arun-pho-traimit" element={<Navigate to="/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" replace />} />
-            <Route path="/bangkok-city-boat-tour" element={<Navigate to="/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour" replace />} />
-            <Route path="/bangkok-city-gems-gallery" element={<Navigate to="/thailand/bangkok/gems-gallery-bangkok-tickets" replace />} />
-            <Route path="/bangkok-wat-arun-chinatown" element={<Navigate to="/thailand/bangkok/wat-arun-chinatown-tour" replace />} />
-            <Route path="/bangkok-golden-marble-buddha" element={<Navigate to="/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour" replace />} />
-            <Route path="/ayutthaya-temple-tour" element={<Navigate to="/thailand/bangkok/ayutthaya-day-tour-from-bangkok" replace />} />
-            <Route path="/bangkok-grand-palace-emerald" element={<Navigate to="/thailand/bangkok/grand-palace-wat-phra-kaew-tour" replace />} />
-            <Route path="/baiyoke-buffet" element={<Navigate to="/thailand/bangkok/baiyoke-buffet" replace />} />
-            <Route path="/sea-life-madame-tussauds" element={<Navigate to="/thailand/bangkok/sea-life-madame-tussauds-tickets" replace />} />
-            <Route path="/viva-alangka-cruise" element={<Navigate to="/thailand/bangkok/viva-alangka-dinner-cruise" replace />} />
-            <Route path="/ayutthaya-sunset-cruise" element={<Navigate to="/thailand/bangkok/ayutthaya-sunset-river-cruise" replace />} />
-            <Route path="/chao-phraya-princess-private" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" replace />} />
-            <Route path="/chao-phraya-princess-valentine" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise" replace />} />
-            <Route path="/chao-phraya-princess-join" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer" replace />} />
-            <Route path="/chao-phraya-princess-no-transfer" element={<Navigate to="/thailand/bangkok/chao-phraya-princess-dinner-cruise" replace />} />
-            <Route path="/maeklong-floating-market" element={<Navigate to="/thailand/bangkok/maeklong-floating-market-tour" replace />} />
-            <Route path="/bangkok-tuk-tuk-night" element={<Navigate to="/thailand/bangkok/tuk-tuk-night-tour-bangkok" replace />} />
-            <Route path="/dream-world-bangkok" element={<Navigate to="/thailand/bangkok/dream-world-bangkok-tickets" replace />} />
-            <Route path="/phi-phi-island" element={<Navigate to="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" replace />} />
-            <Route path="/james-bond-island" element={<Navigate to="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" replace />} />
-            <Route path="/james-bond-island-sea-canoe" element={<Navigate to="/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer" replace />} />
-            <Route path="/elephant-safari" element={<Navigate to="/thailand/phuket/elephant-safari" replace />} />
-            <Route path="/hot-spring-emerald-pool" element={<Navigate to="/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer" replace />} />
-            <Route path="/hot-spring" element={<Navigate to="/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer" replace />} />
-            <Route path="/dolphin-bay-phuket" element={<Navigate to="/thailand/phuket/dolphin-show-phuket-with-transfer" replace />} />
-            <Route path="/phuket-city-night-market" element={<Navigate to="/thailand/phuket/phuket-night-market-tour-with-transfer" replace />} />
-            <Route path="/phuket-simon-cabaret" element={<Navigate to="/thailand/phuket/simon-cabaret-show-with-transfer" replace />} />
-            <Route path="/phuket-carnival-magic" element={<Navigate to="/thailand/phuket/carnival-magic-show-tickets-with-transfer" replace />} />
-            <Route path="/phuket-muslim-friendly-tour" element={<Navigate to="/thailand/phuket/muslim-friendly-tour" replace />} />
-            <Route path="/selfie-tigers-atv" element={<Navigate to="/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer" replace />} />
-            <Route path="/selfie-tigers" element={<Navigate to="/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer" replace />} />
-            <Route path="/phi-phi-big-boat" element={<Navigate to="/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer" replace />} />
-            <Route path="/phi-phi-royal-jet" element={<Navigate to="/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer" replace />} />
-            <Route path="/phi-phi-maya-khai-speedboat" element={<Navigate to="/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer" replace />} />
-            <Route path="/pattaya-floating-market-tour" element={<Navigate to="/thailand/pattaya/pattaya-floating-market-tour" replace />} />
-            <Route path="/pattaya-big-buddha-gems" element={<Navigate to="/thailand/pattaya/big-buddha-gems-gallery-tour" replace />} />
-            <Route path="/coral-island-pattaya" element={<Navigate to="/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" replace />} />
-            <Route path="/nong-nooch-garden" element={<Navigate to="/thailand/pattaya/nong-nooch-tropical-garden-tickets" replace />} />
-            <Route path="/pattaya-dolphinarium" element={<Navigate to="/thailand/pattaya/pattaya-dolphinarium-show-tickets" replace />} />
-            <Route path="/muay-thai-pattaya" element={<Navigate to="/thailand/pattaya/muay-thai-boxing-show-pattaya" replace />} />
-            <Route path="/alcazar-show-pattaya" element={<Navigate to="/thailand/pattaya/alcazar-cabaret-show-with-transfer" replace />} />
-            <Route path="/imagine79-show-pattaya" element={<Navigate to="/thailand/pattaya/79-show-pattaya-with-transfer" replace />} />
-            <Route path="/show-69-pattaya" element={<Navigate to="/thailand/pattaya/69-show-pattaya-with-transfer" replace />} />
-            <Route path="/show-89-pattaya" element={<Navigate to="/thailand/pattaya/89-show-pattaya-with-transfer" replace />} />
-            <Route path="/big-eye-show-pattaya" element={<Navigate to="/thailand/pattaya/99-show-pattaya-big-eye-with-transfer" replace />} />
-            <Route path="/pattaya-floating-market-guided" element={<Navigate to="/thailand/pattaya/pattaya-floating-market-guided-tour" replace />} />
-            <Route path="/pattaya-nightlife-walking" element={<Navigate to="/thailand/pattaya/pattaya-nightlife-walking-tour" replace />} />
-            <Route path="/pattaya-pub-crawl" element={<Navigate to="/thailand/pattaya/pattaya-pub-crawl-night-tour" replace />} />
-            <Route path="/hong-islands-longtail" element={<Navigate to="/thailand/krabi/hong-island-tour-longtail-boat-with-transfer" replace />} />
-            <Route path="/hong-islands-speedboat" element={<Navigate to="/thailand/krabi/hong-island-tour-speedboat-with-transfer" replace />} />
-            <Route path="/seven-islands-longtail" element={<Navigate to="/thailand/krabi/7-islands-tour-longtail-boat-with-transfer" replace />} />
-            <Route path="/seven-islands-speedboat" element={<Navigate to="/thailand/krabi/7-islands-tour-speedboat-with-transfer" replace />} />
-            <Route path="/four-islands-longtail-no-park-fee" element={<Navigate to="/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer" replace />} />
-            <Route path="/four-islands-longtail" element={<Navigate to="/thailand/krabi/4-island-tour-longtail-boat-with-transfer" replace />} />
-            <Route path="/four-islands-speedboat" element={<Navigate to="/thailand/krabi/4-island-tour-speedboat-with-transfer" replace />} />
-            <Route path="/james-bond-island-krabi" element={<Navigate to="/thailand/krabi/james-bond-island" replace />} />
-            <Route path="/esim-thailand-ais" element={<Navigate to="/thailand/esim-ais" replace />} />
-            <Route path="/thailand-smart-guides" element={<Navigate to="/thailand/destination-guides" replace />} />
-            <Route path="/desert-safari-shisha" element={<Navigate to="/dubai/desert-safari-shisha" replace />} />
-            <Route path="/desert-safari-sharing" element={<Navigate to="/dubai/desert-safari-sharing" replace />} />
-            <Route path="/desert-safari" element={<Navigate to="/dubai/desert-safari" replace />} />
-            <Route path="/dhow-cruise-creek-lower" element={<Navigate to="/dubai/dhow-cruise-creek-lower-deck" replace />} />
-            <Route path="/dhow-cruise-creek-upper" element={<Navigate to="/dubai/dhow-cruise-creek-upper-deck" replace />} />
-            <Route path="/dhow-cruise-marina-lower" element={<Navigate to="/dubai/dhow-cruise-marina-lower-deck" replace />} />
-            <Route path="/dhow-cruise-marina-upper" element={<Navigate to="/dubai/dhow-cruise-marina-upper-deck" replace />} />
-            <Route path="/dhow-cruise" element={<Navigate to="/dubai/dhow-cruise" replace />} />
-            <Route path="/atlantis-palm" element={<Navigate to="/dubai/atlantis-aquaventure" replace />} />
-            <Route path="/dubai-city-tour-mall" element={<Navigate to="/dubai/city-tour-mall" replace />} />
-            <Route path="/dubai-city-tour" element={<Navigate to="/dubai/city-tour" replace />} />
-            <Route path="/global-village-dubai" element={<Navigate to="/dubai/global-village" replace />} />
-            <Route path="/abu-dhabi-city-tour" element={<Navigate to="/dubai/abu-dhabi-city-tour" replace />} />
-            <Route path="/abu-dhabi-ferrari-world" element={<Navigate to="/dubai/abu-dhabi-ferrari-world" replace />} />
-            <Route path="/dubai-aquarium-penguin" element={<Navigate to="/dubai/aquarium-penguin" replace />} />
-            <Route path="/burj-khalifa-non-prime" element={<Navigate to="/dubai/burj-khalifa-non-prime" replace />} />
-            <Route path="/burj-khalifa-prime" element={<Navigate to="/dubai/burj-khalifa-prime" replace />} />
-            <Route path="/dubai-dolphin-show" element={<Navigate to="/dubai/dolphin-show" replace />} />
-            <Route path="/miracle-garden-dubai" element={<Navigate to="/dubai/miracle-garden" replace />} />
-            <Route path="/dubai-fountain-show" element={<Navigate to="/dubai/fountain-show" replace />} />
-            <Route path="/dubai-smart-guides" element={<Navigate to="/dubai/destination-guides" replace />} />
-            <Route path="/singapore-city-tour" element={<Navigate to="/singapore/singapore-city-tour" replace />} />
-            <Route path="/night-safari-tickets" element={<Navigate to="/singapore/night-safari-singapore-tickets-and-transfers" replace />} />
-            <Route path="/night-safari-transfer" element={<Navigate to="/singapore/night-safari-transfer" replace />} />
-            <Route path="/night-safari-dinner" element={<Navigate to="/singapore/night-safari-dinner" replace />} />
-            <Route path="/sentosa-4d-2-rides" element={<Navigate to="/singapore/sentosa-4d-adventureland-tickets" replace />} />
-            <Route path="/sentosa-4d-3-rides" element={<Navigate to="/singapore/sentosa-4d-3-rides" replace />} />
-            <Route path="/sentosa-cable-car" element={<Navigate to="/singapore/sentosa-cable-car-tickets-and-transfers" replace />} />
-            <Route path="/sentosa-wings-time" element={<Navigate to="/singapore/wings-of-time-show-sentosa-tickets" replace />} />
-            <Route path="/sentosa-sky-helix" element={<Navigate to="/singapore/skyhelix-sentosa-tickets" replace />} />
-            <Route path="/singapore-river-cruise" element={<Navigate to="/singapore/singapore-river-cruise-tickets-and-transfers" replace />} />
-            <Route path="/gardens-by-the-bay" element={<Navigate to="/singapore/gardens-by-the-bay-tickets-and-transfers" replace />} />
-            <Route path="/adventure-cove" element={<Navigate to="/singapore/adventure-cove-waterpark-tickets" replace />} />
-            <Route path="/singapore-flyer" element={<Navigate to="/singapore/singapore-flyer-tickets-and-transfers" replace />} />
-            <Route path="/river-safari" element={<Navigate to="/singapore/river-wonders-singapore-tickets" replace />} />
-            <Route path="/universal-studios-weekday" element={<Navigate to="/singapore/universal-studios-singapore-weekday-tickets" replace />} />
-            <Route path="/universal-studios-weekend" element={<Navigate to="/singapore/universal-studios-singapore-weekend-tickets" replace />} />
-            <Route path="/singapore-zoo" element={<Navigate to="/singapore/singapore-zoo-tickets" replace />} />
-            <Route path="/rainforest-wild-asia" element={<Navigate to="/singapore/rainforest-wild-asia-tickets" replace />} />
-            <Route path="/big-bus-discover" element={<Navigate to="/singapore/big-bus-hop-on-hop-off-singapore-city-tour" replace />} />
-            <Route path="/big-bus-night" element={<Navigate to="/singapore/big-bus-night-city-tour-singapore" replace />} />
-            <Route path="/sentosa-island" element={<Navigate to="/singapore/sentosa-island" replace />} />
-            <Route path="/singapore-smart-guides" element={<Navigate to="/singapore/destination-guides" replace />} />
-            <Route path="/thailand/bangkok/safari-world-bkk-airport" element={<Navigate to="/thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer" replace />} />
-            <Route path="/thailand/bangkok/safari-world-dmk-airport" element={<Navigate to="/thailand/bangkok/bangkok-hotel-safari-world-to-don-mueang-airport-transfer" replace />} />
-            <Route path="/thailand/bangkok/temple-tour-airport" element={<Navigate to="/thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer" replace />} />
-            <Route path="/thailand/bangkok/temple-tour-dmk-airport" element={<Navigate to="/thailand/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer" replace />} />
-            <Route path="/thailand/bangkok/transfers" element={<Navigate to="/thailand/bangkok-airport-transfers/" replace />} />
-            <Route path="/thailand/pattaya/transfers" element={<Navigate to="/thailand/pattaya-transfers/" replace />} />
-            <Route path="/thailand/phuket/transfers" element={<Navigate to="/thailand/phuket-airport-transfers/" replace />} />
-            <Route path="/thailand/krabi/transfers" element={<Navigate to="/thailand/krabi-airport-transfers/" replace />} />
-             <Route path="/thailand/transfers" element={<Navigate to="/thailand/airport-transfers/" replace />} />
-             <Route path="/dubai/transfers" element={<Navigate to="/dubai/budget-airport-transfers" replace />} />
-             <Route path="/singapore/transfers" element={<Navigate to="/singapore/budget-airport-transfers" replace />} />
              {/* Legacy Thailand city URLs → redirect to /thailand/<city>/* */}
-             <Route path="/bangkok" element={<Navigate to="/thailand/bangkok" replace />} />
-             <Route path="/pattaya" element={<Navigate to="/thailand/pattaya" replace />} />
-             <Route path="/phuket" element={<Navigate to="/thailand/phuket" replace />} />
-             <Route path="/krabi" element={<Navigate to="/thailand/krabi" replace />} />
-             <Route path="/bangkok/*" element={<LegacyCityRedirect city="bangkok" />} />
-             <Route path="/pattaya/*" element={<LegacyCityRedirect city="pattaya" />} />
-             <Route path="/phuket/*" element={<LegacyCityRedirect city="phuket" />} />
-             <Route path="/krabi/*" element={<LegacyCityRedirect city="krabi" />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
         </Routes></Suspense>
