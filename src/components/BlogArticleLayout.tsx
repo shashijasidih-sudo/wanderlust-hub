@@ -28,7 +28,7 @@ import {
 type MidDestination = "thailand" | "singapore" | "bangkok" | "pattaya" | "phuket" | "krabi";
 
 interface BlogSection {
-  type: "paragraph" | "heading" | "subheading" | "list" | "image" | "cta" | "tip-box" | "mid-activities";
+  type: "paragraph" | "heading" | "subheading" | "list" | "image" | "cta" | "tip-box" | "mid-activities" | "table";
   content?: string;
   items?: string[];
   src?: string;
@@ -38,6 +38,8 @@ interface BlogSection {
   linkText?: string;
   destination?: MidDestination;
   heading?: string;
+  tableHeaders?: string[];
+  tableRows?: string[][];
 }
 
 interface RelatedActivity {
