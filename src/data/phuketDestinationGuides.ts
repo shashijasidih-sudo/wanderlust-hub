@@ -172,6 +172,12 @@ export const phuketBlogs: PhuketBlogEntry[] = [
     link: "/thailand/phuket/destination-guides/activity/snorkeling-in-phuket-guide",
   },
   {
+    title: "25 Best Things to Do in Phuket in 2026 (Prices & Booking Guide)",
+    description: "Complete 2026 guide to the 25 best activities in Phuket — island tours, attractions, nightlife, transfers, itinerary and cost in INR.",
+    category: "activity", image: imgBestPhiPhi, date: "Jul 14, 2026", readTime: "15 min read",
+    link: "/thailand/phuket/destination-guides/activity/25-best-things-to-do-in-phuket-2026",
+  },
+  {
     title: "4 Days Phuket Itinerary: Phi Phi, City Tour & Activities Plan (2026)",
     description: "Perfectly balanced 4-day Phuket itinerary — Phi Phi, city tour, adventure activities, costs in INR and smart tips for Indian travelers.",
     category: "itinerary", image: imgItin4Days, date: "May 8, 2026", readTime: "10 min read",
