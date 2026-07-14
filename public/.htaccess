@@ -1,20 +1,287 @@
+# ============================================================================
+# Yellodae — Apache .htaccess (auto-generated legacy redirects + SPA fallback)
+# Hosting: Hostinger (Apache) serving public_html/ built by GitHub Actions.
+# ============================================================================
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Force apex host (non-www) with HTTPS.
+  # ------------------------------------------------------------------
+  # 1) Canonical host: force apex (non-www) + HTTPS
+  # ------------------------------------------------------------------
   RewriteCond %{HTTP_HOST} ^www\.yellodae\.com$ [NC,OR]
   RewriteCond %{HTTPS} off
   RewriteRule ^ https://yellodae.com%{REQUEST_URI} [R=301,L]
+</IfModule>
 
-  # Permanent 301: /contact and /contact/ -> /contact-us
-  RewriteRule ^contact/?$ /contact-us [R=301,L]
+# ============================================================================
+# 2) Permanent 301 legacy redirects
+#    Auto-generated from src/App.tsx <Navigate> and <LegacyCityRedirect>.
+#    No chains: every target resolves to a live page in a single hop.
+#    Ordering: RedirectMatch runs before the SPA rewrite below so Apache
+#    issues a real 301 without loading index.html first.
+# ============================================================================
 
-  # Serve existing files and directories normally.
+# ---- Legacy 301 redirects (auto-generated from src/App.tsx <Navigate>) ----
+RedirectMatch 301 ^/thailand/bangkok/airport-transfers/safari-world-bkk/?$ /thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer
+RedirectMatch 301 ^/thailand/bangkok/airport-transfers/safari-world-dmk/?$ /thailand/bangkok/bangkok-hotel-safari-world-to-don-mueang-airport-transfer
+RedirectMatch 301 ^/thailand/bangkok/chao-phraya-princess-with-transfer/?$ /thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer
+RedirectMatch 301 ^/thailand/bangkok/airport-transfers/temple-tour-bkk/?$ /thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer
+RedirectMatch 301 ^/thailand/bangkok/airport-transfers/temple-tour-dmk/?$ /thailand/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer
+RedirectMatch 301 ^/thailand/krabi/four-islands-longtail-no-park-fee/?$ /thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer
+RedirectMatch 301 ^/thailand/bangkok/chao-phraya-princess-valentine/?$ /thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise
+RedirectMatch 301 ^/thailand/bangkok/chao-phraya-princess-private/?$ /thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer
+RedirectMatch 301 ^/thailand/chiang-mai/budget-airport-transfers/?$ /thailand/chiang-mai-airport-transfers/
+RedirectMatch 301 ^/thailand/bangkok/chao-phraya-princess-dinner/?$ /thailand/bangkok/chao-phraya-princess-dinner-cruise
+RedirectMatch 301 ^/thailand/phuket/james-bond-island-sea-canoe/?$ /thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer
+RedirectMatch 301 ^/thailand/phuket/phi-phi-maya-khai-speedboat/?$ /thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer
+RedirectMatch 301 ^/thailand/bangkok/budget-airport-transfers/?$ /thailand/bangkok-airport-transfers/
+RedirectMatch 301 ^/thailand/pattaya/budget-airport-transfers/?$ /thailand/pattaya-transfers/
+RedirectMatch 301 ^/thailand/pattaya/safari-world-bkk-airport/?$ /thailand/pattaya/pattaya-hotel-safari-world-to-suvarnabhumi-airport-transfer
+RedirectMatch 301 ^/thailand/pattaya/indra-square-dmk-airport/?$ /thailand/pattaya/pattaya-hotel-indra-square-shopping-to-don-mueang-airport-transfer
+RedirectMatch 301 ^/thailand/krabi/phuket-kbv-airport-dropoff/?$ /thailand/phuket/phuket-hotel-to-krabi-airport-transfer
+RedirectMatch 301 ^/thailand/bangkok/sea-life-madame-tussauds/?$ /thailand/bangkok/sea-life-madame-tussauds-tickets
+RedirectMatch 301 ^/thailand/bangkok/maeklong-floating-market/?$ /thailand/bangkok/maeklong-floating-market-tour
+RedirectMatch 301 ^/thailand/bangkok/safari-world-bkk-airport/?$ /thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer
+RedirectMatch 301 ^/thailand/bangkok/safari-world-dmk-airport/?$ /thailand/bangkok/bangkok-hotel-safari-world-to-don-mueang-airport-transfer
+RedirectMatch 301 ^/thailand/pattaya/temple-tour-bkk-airport/?$ /thailand/pattaya/pattaya-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer
+RedirectMatch 301 ^/thailand/pattaya/temple-tour-dmk-airport/?$ /thailand/pattaya/pattaya-hotel-two-temple-tour-to-don-mueang-airport-transfer
+RedirectMatch 301 ^/thailand/krabi/kbv-airport-phuket-pickup/?$ /thailand/krabi/krabi-airport-to-phuket-hotel-transfer
+RedirectMatch 301 ^/thailand/krabi/krabi-hkt-airport-dropoff/?$ /thailand/krabi/krabi-hotel-to-phuket-airport-transfer
+RedirectMatch 301 ^/thailand/phuket/budget-airport-transfers/?$ /thailand/phuket-airport-transfers/
+RedirectMatch 301 ^/thailand/bangkok/ayutthaya-sunset-cruise/?$ /thailand/bangkok/ayutthaya-sunset-river-cruise
+RedirectMatch 301 ^/thailand/bangkok/temple-tour-dmk-airport/?$ /thailand/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer
+RedirectMatch 301 ^/thailand/phuket/hot-spring-emerald-pool/?$ /thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer
+RedirectMatch 301 ^/thailand/pattaya/floating-market-guided/?$ /thailand/pattaya/pattaya-floating-market-guided-tour
+RedirectMatch 301 ^/thailand/pattaya/nightlife-walking-tour/?$ /thailand/pattaya/pattaya-nightlife-walking-tour
+RedirectMatch 301 ^/thailand/pattaya/bkk-tiger-topia-pickup/?$ /thailand/bangkok/suvarnabhumi-airport-tiger-topia-to-pattaya-hotel-transfer
+RedirectMatch 301 ^/thailand/pattaya/dmk-tiger-topia-pickup/?$ /thailand/bangkok/don-mueang-airport-tiger-topia-to-pattaya-hotel-transfer
+RedirectMatch 301 ^/thailand/krabi/budget-airport-transfers/?$ /thailand/krabi-airport-transfers/
+RedirectMatch 301 ^/thailand/krabi/hkt-airport-krabi-pickup/?$ /thailand/phuket/phuket-airport-to-krabi-hotel-transfer
+RedirectMatch 301 ^/thailand/phuket/james-bond-island-tour/?$ /thailand/phuket/james-bond-island-speed-boat-tour-with-transfer
+RedirectMatch 301 ^/thailand/phuket/selfie-with-tigers-atv/?$ /thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer
+RedirectMatch 301 ^/thailand/krabi/seven-islands-speedboat/?$ /thailand/krabi/7-islands-tour-speedboat-with-transfer
+RedirectMatch 301 ^/thailand/krabi/krabi-hotel-kbv-airport/?$ /thailand/krabi/krabi-hotel-to-krabi-airport-transfer
+RedirectMatch 301 ^/thailand/bangkok/ayutthaya-temple-tour/?$ /thailand/bangkok/ayutthaya-day-tour-from-bangkok
+RedirectMatch 301 ^/thailand/pattaya/floating-market-tour/?$ /thailand/pattaya/pattaya-floating-market-tour
+RedirectMatch 301 ^/thailand/krabi/hong-islands-speedboat/?$ /thailand/krabi/hong-island-tour-speedboat-with-transfer
+RedirectMatch 301 ^/thailand/krabi/seven-islands-longtail/?$ /thailand/krabi/7-islands-tour-longtail-boat-with-transfer
+RedirectMatch 301 ^/thailand/krabi/four-islands-speedboat/?$ /thailand/krabi/4-island-tour-speedboat-with-transfer
+RedirectMatch 301 ^/thailand/krabi/krabi-phuket-city-tour/?$ /thailand/krabi/phuket-city-tour-to-phuket-hotel-transfer
+RedirectMatch 301 ^/thailand/krabi/phuket-city-tour-krabi/?$ /thailand/phuket/phuket-city-tour-to-krabi-hotel-transfer
+RedirectMatch 301 ^/thailand/krabi/phuket-krabi-city-tour/?$ /thailand/phuket/krabi-city-tour-to-krabi-hotel-transfer
+RedirectMatch 301 ^/thailand/phuket/hkt-airport-city-tour/?$ /thailand/phuket/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer
+RedirectMatch 301 ^/thailand/phuket/city-tour-hkt-airport/?$ /thailand/phuket/phuket-city-tour-to-phuket-airport-transfer
+RedirectMatch 301 ^/thailand/bangkok/wat-arun-pho-traimit/?$ /thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour
+RedirectMatch 301 ^/thailand/bangkok/golden-marble-buddha/?$ /thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour
+RedirectMatch 301 ^/thailand/bangkok/grand-palace-emerald/?$ /thailand/bangkok/grand-palace-wat-phra-kaew-tour
+RedirectMatch 301 ^/thailand/krabi/hong-islands-longtail/?$ /thailand/krabi/hong-island-tour-longtail-boat-with-transfer
+RedirectMatch 301 ^/thailand/krabi/four-islands-longtail/?$ /thailand/krabi/4-island-tour-longtail-boat-with-transfer
+RedirectMatch 301 ^/thailand/bangkok/bkk-airport-dropoff/?$ /thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer
+RedirectMatch 301 ^/thailand/bangkok/dmk-airport-dropoff/?$ /thailand/bangkok/bangkok-hotel-to-don-mueang-airport-transfer
+RedirectMatch 301 ^/thailand/bangkok/tiger-topia-pattaya/?$ /thailand/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer
+RedirectMatch 301 ^/thailand/pattaya/bkk-airport-dropoff/?$ /thailand/pattaya/pattaya-hotel-to-suvarnabhumi-airport-transfer
+RedirectMatch 301 ^/thailand/pattaya/dmk-airport-dropoff/?$ /thailand/pattaya/pattaya-hotel-to-don-mueang-airport-transfer
+RedirectMatch 301 ^/thailand/bangkok/viva-alangka-cruise/?$ /thailand/bangkok/viva-alangka-dinner-cruise
+RedirectMatch 301 ^/thailand/bangkok/temple-tour-airport/?$ /thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer
+RedirectMatch 301 ^/thailand/phuket/phi-phi-island-tour/?$ /thailand/phuket/full-day-phi-phi-island-tour-with-transfer
+RedirectMatch 301 ^/thailand/bangkok/bkk-airport-pickup/?$ /thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer
+RedirectMatch 301 ^/thailand/bangkok/dmk-airport-pickup/?$ /thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer
+RedirectMatch 301 ^/thailand/bangkok/city-hourly-rental/?$ /thailand/bangkok/bangkok-hotel-to-hotel-transfer-4-hours
+RedirectMatch 301 ^/thailand/pattaya/bkk-airport-pickup/?$ /thailand/bangkok/suvarnabhumi-airport-to-pattaya-hotel-transfer
+RedirectMatch 301 ^/thailand/pattaya/dmk-airport-pickup/?$ /thailand/bangkok/don-mueang-airport-to-pattaya-hotel-transfer
+RedirectMatch 301 ^/thailand/pattaya/city-hourly-rental/?$ /thailand/pattaya/pattaya-private-car-4-hours
+RedirectMatch 301 ^/thailand/phuket/hkt-airport-dropoff/?$ /thailand/phuket/phuket-hotel-to-phuket-airport-transfer
+RedirectMatch 301 ^/singapore/universal-studios-weekday/?$ /singapore/universal-studios-singapore-weekday-tickets
+RedirectMatch 301 ^/singapore/universal-studios-weekend/?$ /singapore/universal-studios-singapore-weekend-tickets
+RedirectMatch 301 ^/thailand/bangkok/three-temples-tour/?$ /thailand/bangkok/three-temples-bangkok-city-tour-with-transfer
+RedirectMatch 301 ^/thailand/bangkok/wat-arun-chinatown/?$ /thailand/bangkok/wat-arun-chinatown-tour
+RedirectMatch 301 ^/thailand/bangkok/tuk-tuk-night-tour/?$ /thailand/bangkok/tuk-tuk-night-tour-bangkok
+RedirectMatch 301 ^/thailand/phuket/selfie-with-tigers/?$ /thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer
+RedirectMatch 301 ^/thailand/pattaya/nong-nooch-garden/?$ /thailand/pattaya/nong-nooch-tropical-garden-tickets
+RedirectMatch 301 ^/thailand/bangkok/city-tour-pattaya/?$ /thailand/bangkok/bangkok-city-tour-to-pattaya-hotel-transfer
+RedirectMatch 301 ^/thailand/phuket/hkt-airport-pickup/?$ /thailand/phuket/phuket-airport-to-phuket-hotel-transfer
+RedirectMatch 301 ^/thailand/phuket/city-hourly-rental/?$ /thailand/phuket/phuket-hotel-to-hotel-transfer-4-hours
+RedirectMatch 301 ^/thailand/bangkok/city-gems-gallery/?$ /thailand/bangkok/gems-gallery-bangkok-tickets
+RedirectMatch 301 ^/thailand/phuket/city-night-market/?$ /thailand/phuket/phuket-night-market-tour-with-transfer
+RedirectMatch 301 ^/thailand/phuket/phi-phi-royal-jet/?$ /thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer
+RedirectMatch 301 ^/thailand/budget-airport-transfers/?$ /thailand/airport-transfers/
+RedirectMatch 301 ^/four-islands-longtail-no-park-fee/?$ /thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer
+RedirectMatch 301 ^/thailand/phuket/phi-phi-big-boat/?$ /thailand/phuket/phi-phi-island-big-boat-tour-with-transfer
+RedirectMatch 301 ^/thailand/pattaya/big-buddha-gems/?$ /thailand/pattaya/big-buddha-gems-gallery-tour
+RedirectMatch 301 ^/thailand/krabi/kbv-aonang-pickup/?$ /thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer
+RedirectMatch 301 ^/thailand/bangkok/massage-coupons/?$ /thailand/bangkok/thai-massage-spa-deals-bangkok
+RedirectMatch 301 ^/chao-phraya-princess-no-transfer/?$ /thailand/bangkok/chao-phraya-princess-dinner-cruise
+RedirectMatch 301 ^/thailand/pattaya/imagine79-show/?$ /thailand/pattaya/79-show-pattaya-with-transfer
+RedirectMatch 301 ^/thailand/phuket/phuket-to-krabi/?$ /thailand/phuket/phuket-hotel-to-krabi-hotel-transfer
+RedirectMatch 301 ^/thailand/phuket/city-tour-krabi/?$ /thailand/phuket/phuket-city-tour-to-krabi-hotel-transfer
+RedirectMatch 301 ^/thailand/phuket/krabi-city-tour/?$ /thailand/phuket/krabi-city-tour-to-krabi-hotel-transfer
+RedirectMatch 301 ^/thailand/bangkok/city-boat-tour/?$ /thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour
+RedirectMatch 301 ^/thailand/phuket/carnival-magic/?$ /thailand/phuket/carnival-magic-show-tickets-with-transfer
+RedirectMatch 301 ^/thailand/krabi/krabi-to-phuket/?$ /thailand/krabi/krabi-hotel-to-phuket-hotel-transfer
+RedirectMatch 301 ^/thailand/krabi/phuket-to-krabi/?$ /thailand/phuket/phuket-hotel-to-krabi-hotel-transfer
+RedirectMatch 301 ^/singapore/rainforest-wild-asia/?$ /singapore/rainforest-wild-asia-tickets
+RedirectMatch 301 ^/singapore/airport-night-pickup/?$ /singapore/singapore-airport-night-pickup
+RedirectMatch 301 ^/chao-phraya-princess-valentine/?$ /thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise
+RedirectMatch 301 ^/pattaya-floating-market-guided/?$ /thailand/pattaya/pattaya-floating-market-guided-tour
+RedirectMatch 301 ^/thailand/phuket/simon-cabaret/?$ /thailand/phuket/simon-cabaret-show-with-transfer
+RedirectMatch 301 ^/thailand/pattaya/coral-island/?$ /thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch
+RedirectMatch 301 ^/thailand/pattaya/dolphinarium/?$ /thailand/pattaya/pattaya-dolphinarium-show-tickets
+RedirectMatch 301 ^/thailand/pattaya/alcazar-show/?$ /thailand/pattaya/alcazar-cabaret-show-with-transfer
+RedirectMatch 301 ^/thailand/pattaya/big-eye-show/?$ /thailand/pattaya/99-show-pattaya-big-eye-with-transfer
+RedirectMatch 301 ^/singapore/sentosa-4d-2-rides/?$ /singapore/sentosa-4d-adventureland-tickets
+RedirectMatch 301 ^/singapore/sentosa-wings-time/?$ /singapore/wings-of-time-show-sentosa-tickets
+RedirectMatch 301 ^/singapore/gardens-by-the-bay/?$ /singapore/gardens-by-the-bay-tickets-and-transfers
+RedirectMatch 301 ^/thailand/bangkok/dream-world/?$ /thailand/bangkok/dream-world-bangkok-tickets
+RedirectMatch 301 ^/bangkok-wat-arun-pho-traimit/?$ /thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour
+RedirectMatch 301 ^/bangkok-golden-marble-buddha/?$ /thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour
+RedirectMatch 301 ^/bangkok-grand-palace-emerald/?$ /thailand/bangkok/grand-palace-wat-phra-kaew-tour
+RedirectMatch 301 ^/chao-phraya-princess-private/?$ /thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer
+RedirectMatch 301 ^/pattaya-floating-market-tour/?$ /thailand/pattaya/pattaya-floating-market-tour
+RedirectMatch 301 ^/thailand/phuket/dolphin-bay/?$ /thailand/phuket/dolphin-show-phuket-with-transfer
+RedirectMatch 301 ^/thailand/bangkok/to-pattaya/?$ /thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer
+RedirectMatch 301 ^/singapore/sentosa-cable-car/?$ /singapore/sentosa-cable-car-tickets-and-transfers
+RedirectMatch 301 ^/singapore/sentosa-sky-helix/?$ /singapore/skyhelix-sentosa-tickets
+RedirectMatch 301 ^/james-bond-island-sea-canoe/?$ /thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer
+RedirectMatch 301 ^/phuket-muslim-friendly-tour/?$ /thailand/phuket/muslim-friendly-tour
+RedirectMatch 301 ^/phi-phi-maya-khai-speedboat/?$ /thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer
+RedirectMatch 301 ^/thailand/pattaya/muay-thai/?$ /thailand/pattaya/muay-thai-boxing-show-pattaya
+RedirectMatch 301 ^/thailand/pattaya/pub-crawl/?$ /thailand/pattaya/pattaya-pub-crawl-night-tour
+RedirectMatch 301 ^/singapore/big-bus-discover/?$ /singapore/big-bus-hop-on-hop-off-singapore-city-tour
+RedirectMatch 301 ^/bangkok-wat-arun-chinatown/?$ /thailand/bangkok/wat-arun-chinatown-tour
+RedirectMatch 301 ^/thailand/bangkok/transfers/?$ /thailand/bangkok-airport-transfers/
+RedirectMatch 301 ^/thailand/pattaya/transfers/?$ /thailand/pattaya-transfers/
+RedirectMatch 301 ^/singapore/airport-dropoff/?$ /singapore/singapore-airport-dropoff
+RedirectMatch 301 ^/bangkok-city-gems-gallery/?$ /thailand/bangkok/gems-gallery-bangkok-tickets
+RedirectMatch 301 ^/chao-phraya-princess-join/?$ /thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer
+RedirectMatch 301 ^/pattaya-nightlife-walking/?$ /thailand/pattaya/pattaya-nightlife-walking-tour
+RedirectMatch 301 ^/universal-studios-weekday/?$ /singapore/universal-studios-singapore-weekday-tickets
+RedirectMatch 301 ^/universal-studios-weekend/?$ /singapore/universal-studios-singapore-weekend-tickets
+RedirectMatch 301 ^/thailand/phuket/transfers/?$ /thailand/phuket-airport-transfers/
+RedirectMatch 301 ^/thailand/pattaya/show-69/?$ /thailand/pattaya/69-show-pattaya-with-transfer
+RedirectMatch 301 ^/thailand/pattaya/show-89/?$ /thailand/pattaya/89-show-pattaya-with-transfer
+RedirectMatch 301 ^/singapore/adventure-cove/?$ /singapore/adventure-cove-waterpark-tickets
+RedirectMatch 301 ^/singapore/airport-pickup/?$ /singapore/singapore-airport-pickup
+RedirectMatch 301 ^/thailand/bangkok/skywalk/?$ /thailand/bangkok/mahanakhon-skywalk-tickets
+RedirectMatch 301 ^/sea-life-madame-tussauds/?$ /thailand/bangkok/sea-life-madame-tussauds-tickets
+RedirectMatch 301 ^/maeklong-floating-market/?$ /thailand/bangkok/maeklong-floating-market-tour
+RedirectMatch 301 ^/phuket-city-night-market/?$ /thailand/phuket/phuket-night-market-tour-with-transfer
+RedirectMatch 301 ^/dhow-cruise-marina-lower/?$ /dubai/dhow-cruise-marina-lower-deck
+RedirectMatch 301 ^/dhow-cruise-marina-upper/?$ /dubai/dhow-cruise-marina-upper-deck
+RedirectMatch 301 ^/thailand/krabi/transfers/?$ /thailand/krabi-airport-transfers/
+RedirectMatch 301 ^/singapore/big-bus-night/?$ /singapore/big-bus-night-city-tour-singapore
+RedirectMatch 301 ^/ayutthaya-sunset-cruise/?$ /thailand/bangkok/ayutthaya-sunset-river-cruise
+RedirectMatch 301 ^/hot-spring-emerald-pool/?$ /thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer
+RedirectMatch 301 ^/pattaya-big-buddha-gems/?$ /thailand/pattaya/big-buddha-gems-gallery-tour
+RedirectMatch 301 ^/seven-islands-speedboat/?$ /thailand/krabi/7-islands-tour-speedboat-with-transfer
+RedirectMatch 301 ^/james-bond-island-krabi/?$ /thailand/krabi/james-bond-island
+RedirectMatch 301 ^/dhow-cruise-creek-lower/?$ /dubai/dhow-cruise-creek-lower-deck
+RedirectMatch 301 ^/dhow-cruise-creek-upper/?$ /dubai/dhow-cruise-creek-upper-deck
+RedirectMatch 301 ^/abu-dhabi-ferrari-world/?$ /dubai/abu-dhabi-ferrari-world
+RedirectMatch 301 ^/singapore/night-safari/?$ /singapore/night-safari-singapore-tickets-and-transfers
+RedirectMatch 301 ^/singapore/river-cruise/?$ /singapore/singapore-river-cruise-tickets-and-transfers
+RedirectMatch 301 ^/singapore/river-safari/?$ /singapore/river-wonders-singapore-tickets
+RedirectMatch 301 ^/bangkok-city-boat-tour/?$ /thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour
+RedirectMatch 301 ^/imagine79-show-pattaya/?$ /thailand/pattaya/79-show-pattaya-with-transfer
+RedirectMatch 301 ^/hong-islands-speedboat/?$ /thailand/krabi/hong-island-tour-speedboat-with-transfer
+RedirectMatch 301 ^/seven-islands-longtail/?$ /thailand/krabi/7-islands-tour-longtail-boat-with-transfer
+RedirectMatch 301 ^/four-islands-speedboat/?$ /thailand/krabi/4-island-tour-speedboat-with-transfer
+RedirectMatch 301 ^/dubai-aquarium-penguin/?$ /dubai/aquarium-penguin
+RedirectMatch 301 ^/burj-khalifa-non-prime/?$ /dubai/burj-khalifa-non-prime
+RedirectMatch 301 ^/singapore-river-cruise/?$ /singapore/singapore-river-cruise-tickets-and-transfers
+RedirectMatch 301 ^/singapore-smart-guides/?$ /singapore/destination-guides
+RedirectMatch 301 ^/bangkok-three-temples/?$ /thailand/bangkok/three-temples-bangkok-city-tour-with-transfer
+RedirectMatch 301 ^/ayutthaya-temple-tour/?$ /thailand/bangkok/ayutthaya-day-tour-from-bangkok
+RedirectMatch 301 ^/bangkok-tuk-tuk-night/?$ /thailand/bangkok/tuk-tuk-night-tour-bangkok
+RedirectMatch 301 ^/phuket-carnival-magic/?$ /thailand/phuket/carnival-magic-show-tickets-with-transfer
+RedirectMatch 301 ^/hong-islands-longtail/?$ /thailand/krabi/hong-island-tour-longtail-boat-with-transfer
+RedirectMatch 301 ^/four-islands-longtail/?$ /thailand/krabi/4-island-tour-longtail-boat-with-transfer
+RedirectMatch 301 ^/thailand-smart-guides/?$ /thailand/destination-guides
+RedirectMatch 301 ^/desert-safari-sharing/?$ /dubai/desert-safari-sharing
+RedirectMatch 301 ^/night-safari-transfer/?$ /singapore/night-safari-transfer
+RedirectMatch 301 ^/phuket-simon-cabaret/?$ /thailand/phuket/simon-cabaret-show-with-transfer
+RedirectMatch 301 ^/coral-island-pattaya/?$ /thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch
+RedirectMatch 301 ^/pattaya-dolphinarium/?$ /thailand/pattaya/pattaya-dolphinarium-show-tickets
+RedirectMatch 301 ^/alcazar-show-pattaya/?$ /thailand/pattaya/alcazar-cabaret-show-with-transfer
+RedirectMatch 301 ^/big-eye-show-pattaya/?$ /thailand/pattaya/99-show-pattaya-big-eye-with-transfer
+RedirectMatch 301 ^/desert-safari-shisha/?$ /dubai/desert-safari-shisha
+RedirectMatch 301 ^/dubai-city-tour-mall/?$ /dubai/city-tour-mall
+RedirectMatch 301 ^/global-village-dubai/?$ /dubai/global-village
+RedirectMatch 301 ^/miracle-garden-dubai/?$ /dubai/miracle-garden
+RedirectMatch 301 ^/night-safari-tickets/?$ /singapore/night-safari-singapore-tickets-and-transfers
+RedirectMatch 301 ^/rainforest-wild-asia/?$ /singapore/rainforest-wild-asia-tickets
+RedirectMatch 301 ^/singapore/city-tour/?$ /singapore/singapore-city-tour
+RedirectMatch 301 ^/viva-alangka-cruise/?$ /thailand/bangkok/viva-alangka-dinner-cruise
+RedirectMatch 301 ^/dream-world-bangkok/?$ /thailand/bangkok/dream-world-bangkok-tickets
+RedirectMatch 301 ^/abu-dhabi-city-tour/?$ /dubai/abu-dhabi-city-tour
+RedirectMatch 301 ^/dubai-fountain-show/?$ /dubai/fountain-show
+RedirectMatch 301 ^/singapore-city-tour/?$ /singapore/singapore-city-tour
+RedirectMatch 301 ^/night-safari-dinner/?$ /singapore/night-safari-dinner
+RedirectMatch 301 ^/singapore/transfers/?$ /singapore/budget-airport-transfers
+RedirectMatch 301 ^/dolphin-bay-phuket/?$ /thailand/phuket/dolphin-show-phuket-with-transfer
+RedirectMatch 301 ^/burj-khalifa-prime/?$ /dubai/burj-khalifa-prime
+RedirectMatch 301 ^/dubai-dolphin-show/?$ /dubai/dolphin-show
+RedirectMatch 301 ^/dubai-smart-guides/?$ /dubai/destination-guides
+RedirectMatch 301 ^/sentosa-4d-2-rides/?$ /singapore/sentosa-4d-adventureland-tickets
+RedirectMatch 301 ^/sentosa-4d-3-rides/?$ /singapore/sentosa-4d-3-rides
+RedirectMatch 301 ^/sentosa-wings-time/?$ /singapore/wings-of-time-show-sentosa-tickets
+RedirectMatch 301 ^/gardens-by-the-bay/?$ /singapore/gardens-by-the-bay-tickets-and-transfers
+RedirectMatch 301 ^/thailand/transfers/?$ /thailand/airport-transfers/
+RedirectMatch 301 ^/james-bond-island/?$ /thailand/phuket/james-bond-island-speed-boat-tour-with-transfer
+RedirectMatch 301 ^/selfie-tigers-atv/?$ /thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer
+RedirectMatch 301 ^/phi-phi-royal-jet/?$ /thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer
+RedirectMatch 301 ^/nong-nooch-garden/?$ /thailand/pattaya/nong-nooch-tropical-garden-tickets
+RedirectMatch 301 ^/muay-thai-pattaya/?$ /thailand/pattaya/muay-thai-boxing-show-pattaya
+RedirectMatch 301 ^/pattaya-pub-crawl/?$ /thailand/pattaya/pattaya-pub-crawl-night-tour
+RedirectMatch 301 ^/esim-thailand-ais/?$ /thailand/esim-ais
+RedirectMatch 301 ^/sentosa-cable-car/?$ /singapore/sentosa-cable-car-tickets-and-transfers
+RedirectMatch 301 ^/sentosa-sky-helix/?$ /singapore/skyhelix-sentosa-tickets
+RedirectMatch 301 ^/phi-phi-big-boat/?$ /thailand/phuket/phi-phi-island-big-boat-tour-with-transfer
+RedirectMatch 301 ^/big-bus-discover/?$ /singapore/big-bus-hop-on-hop-off-singapore-city-tour
+RedirectMatch 301 ^/singapore/flyer/?$ /singapore/singapore-flyer-tickets-and-transfers
+RedirectMatch 301 ^/bangkok-skywalk/?$ /thailand/bangkok/mahanakhon-skywalk-tickets
+RedirectMatch 301 ^/massage-coupons/?$ /thailand/bangkok/thai-massage-spa-deals-bangkok
+RedirectMatch 301 ^/elephant-safari/?$ /thailand/phuket/elephant-safari
+RedirectMatch 301 ^/show-69-pattaya/?$ /thailand/pattaya/69-show-pattaya-with-transfer
+RedirectMatch 301 ^/show-89-pattaya/?$ /thailand/pattaya/89-show-pattaya-with-transfer
+RedirectMatch 301 ^/dubai-city-tour/?$ /dubai/city-tour
+RedirectMatch 301 ^/singapore-flyer/?$ /singapore/singapore-flyer-tickets-and-transfers
+RedirectMatch 301 ^/dubai/transfers/?$ /dubai/budget-airport-transfers
+RedirectMatch 301 ^/baiyoke-buffet/?$ /thailand/bangkok/baiyoke-buffet
+RedirectMatch 301 ^/phi-phi-island/?$ /thailand/phuket/full-day-phi-phi-island-tour-with-transfer
+RedirectMatch 301 ^/adventure-cove/?$ /singapore/adventure-cove-waterpark-tickets
+RedirectMatch 301 ^/sentosa-island/?$ /singapore/sentosa-island
+RedirectMatch 301 ^/singapore/zoo/?$ /singapore/singapore-zoo-tickets
+RedirectMatch 301 ^/selfie-tigers/?$ /thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer
+RedirectMatch 301 ^/desert-safari/?$ /dubai/desert-safari
+RedirectMatch 301 ^/atlantis-palm/?$ /dubai/atlantis-aquaventure
+RedirectMatch 301 ^/singapore-zoo/?$ /singapore/singapore-zoo-tickets
+RedirectMatch 301 ^/big-bus-night/?$ /singapore/big-bus-night-city-tour-singapore
+RedirectMatch 301 ^/safari-world/?$ /thailand/bangkok/safari-world
+RedirectMatch 301 ^/dolphin-show/?$ /thailand/bangkok/dolphin-show
+RedirectMatch 301 ^/river-safari/?$ /singapore/river-wonders-singapore-tickets
+RedirectMatch 301 ^/dhow-cruise/?$ /dubai/dhow-cruise
+RedirectMatch 301 ^/hot-spring/?$ /thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer
+RedirectMatch 301 ^/contact//?$ /contact-us
+RedirectMatch 301 ^/contact/?$ /contact-us
+
+# ---- Legacy city wildcard redirects ----
+RedirectMatch 301 ^/bangkok(/.*)?$ /thailand/bangkok$1
+RedirectMatch 301 ^/pattaya(/.*)?$ /thailand/pattaya$1
+RedirectMatch 301 ^/phuket(/.*)?$ /thailand/phuket$1
+RedirectMatch 301 ^/krabi(/.*)?$ /thailand/krabi$1
+
+<IfModule mod_rewrite.c>
+  # ------------------------------------------------------------------
+  # 3) Serve real files/directories (JS, CSS, images, sitemap, etc.) as-is
+  # ------------------------------------------------------------------
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # Let React Router handle deep links such as /auth/callback.
+  # ------------------------------------------------------------------
+  # 4) SPA fallback: hand everything else to React Router (index.html, 200)
+  # ------------------------------------------------------------------
   RewriteRule ^ index.html [L]
 </IfModule>
