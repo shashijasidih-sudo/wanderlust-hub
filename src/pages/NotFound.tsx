@@ -1,24 +1,22 @@
-import { useLocation, useNavigate, Link, Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { Home, Search, MapPin, ArrowRight } from "lucide-react";
+import { useLocation, Link, Navigate } from "react-router-dom";
+import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
+import { Home, Search, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { TOUR_ROUTES } from "@/data/tourRoutes";
 
-const suggestedDestinations = [
-  { name: "Thailand Tours", path: "/thailand", icon: "🇹🇭" },
-  { name: "Dubai Tours", path: "/dubai", icon: "🇦🇪" },
-  { name: "Singapore Tours", path: "/singapore", icon: "🇸🇬" },
-  { name: "Bangkok Activities", path: "/thailand/bangkok", icon: "🏛️" },
-  { name: "Phuket Activities", path: "/thailand/phuket", icon: "🏖️" },
-  { name: "Pattaya Activities", path: "/thailand/pattaya", icon: "🎡" },
+const primaryDestinations = [
+  { name: "Home", path: "/", icon: "🏠" },
+  { name: "Thailand", path: "/thailand", icon: "🇹🇭" },
+  { name: "Singapore", path: "/singapore", icon: "🇸🇬" },
+  { name: "Dubai", path: "/dubai", icon: "🇦🇪" },
+  { name: "Contact Us", path: "/contact-us", icon: "✉️" },
 ];
 
 const NotFound = () => {
   const location = useLocation();
-  const navigate = useNavigate();
-  const [countdown, setCountdown] = useState(15);
 
   // Auto-recover stale/legacy activity URLs whose last segment matches a
   // known tour id (e.g. /thailand/phuket/phuket-simon-cabaret).
@@ -33,54 +31,19 @@ const NotFound = () => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
   }, [location.pathname]);
 
-  // Auto-redirect countdown
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCountdown((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          navigate("/");
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [navigate]);
-
-  // Try to suggest a relevant destination based on the URL
-  const path = location.pathname.toLowerCase();
-  let suggestedRedirect = "/";
-  let suggestedLabel = "Home";
-  if (path.includes("dubai") || path.includes("desert") || path.includes("dhow") || path.includes("burj") || path.includes("abu-dhabi")) {
-    suggestedRedirect = "/dubai";
-    suggestedLabel = "Dubai Tours";
-  } else if (path.includes("singapore") || path.includes("sentosa") || path.includes("universal") || path.includes("night-safari")) {
-    suggestedRedirect = "/singapore";
-    suggestedLabel = "Singapore Tours";
-  } else if (path.includes("bangkok") || path.includes("temple") || path.includes("grand-palace")) {
-    suggestedRedirect = "/thailand/bangkok";
-    suggestedLabel = "Bangkok Activities";
-  } else if (path.includes("phuket") || path.includes("phi-phi") || path.includes("james-bond")) {
-    suggestedRedirect = "/thailand/phuket";
-    suggestedLabel = "Phuket Activities";
-  } else if (path.includes("pattaya") || path.includes("coral") || path.includes("alcazar")) {
-    suggestedRedirect = "/thailand/pattaya";
-    suggestedLabel = "Pattaya Activities";
-  } else if (path.includes("krabi") || path.includes("four-island") || path.includes("hong-island")) {
-    suggestedRedirect = "/thailand/krabi";
-    suggestedLabel = "Krabi Activities";
-  } else if (path.includes("thai")) {
-    suggestedRedirect = "/thailand";
-    suggestedLabel = "Thailand Tours";
-  }
-
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      {/* Signal 404 to crawlers and prerenderers. SPA hosting always returns
+          200 for the HTML shell, but noindex + prerender-status-code lets
+          Googlebot and prerender services treat this as a true 404. */}
+      <Helmet prioritizeSeoTags>
+        <title>Page Not Found (404) | Yellodae Trails</title>
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="prerender-status-code" content="404" />
+      </Helmet>
       <Header />
       <main className="flex-1 flex items-center justify-center py-12 px-4">
         <div className="max-w-2xl w-full text-center">
-          {/* Big 404 */}
           <div className="relative mb-6">
             <h1 className="text-[120px] md:text-[160px] font-black text-primary/10 leading-none select-none">
               404
@@ -93,43 +56,25 @@ const NotFound = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
             Page Not Found
           </h2>
-          <p className="text-muted-foreground mb-2 max-w-md mx-auto">
+          <p className="text-muted-foreground mb-8 max-w-md mx-auto">
             The page <span className="font-mono text-sm bg-secondary px-2 py-0.5 rounded">{location.pathname}</span> doesn't exist or has been moved.
           </p>
-          <p className="text-sm text-muted-foreground mb-8">
-            Redirecting to home in <span className="font-bold text-primary">{countdown}s</span>
-          </p>
 
-          {/* Smart suggestion */}
-          {suggestedRedirect !== "/" && (
-            <div className="mb-8 p-4 bg-primary/5 border border-primary/20 rounded-xl inline-block">
-              <p className="text-sm text-muted-foreground mb-2">Were you looking for?</p>
-              <Button onClick={() => navigate(suggestedRedirect)} className="gap-2">
-                <MapPin className="h-4 w-4" />
-                {suggestedLabel}
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </div>
-          )}
-
-          {/* Action buttons */}
           <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
-            <Button variant="outline" size="lg" onClick={() => navigate("/")}>
-              <Home className="h-4 w-4 mr-2" />
-              Go Home
-            </Button>
-            <Button variant="outline" size="lg" onClick={() => navigate(-1)}>
-              Go Back
+            <Button asChild size="lg">
+              <Link to="/">
+                <Home className="h-4 w-4 mr-2" />
+                Go Home
+              </Link>
             </Button>
           </div>
 
-          {/* Destination grid */}
           <div>
             <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
               Popular Destinations
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              {suggestedDestinations.map((dest) => (
+              {primaryDestinations.map((dest) => (
                 <Link
                   key={dest.path}
                   to={dest.path}
