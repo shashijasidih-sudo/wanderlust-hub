@@ -162,6 +162,7 @@ const BlogArticleLayout = ({
   relatedActivities, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
   subCategory, comparisonItems, internalLinks: internalLinksProp,
+  bodyClassName,
   children,
 }: BlogArticleProps) => {
   // Auto-derive internal links for Bangkok hub pages when not explicitly passed
