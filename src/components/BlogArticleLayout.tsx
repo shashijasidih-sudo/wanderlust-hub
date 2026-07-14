@@ -361,7 +361,7 @@ const BlogArticleLayout = ({
             </div>
 
             {/* Content */}
-            <article className="prose prose-lg max-w-none">
+            <article className={`prose prose-lg max-w-none ${bodyClassName || ""}`}>
               {sections.map((section, i) => {
                 const ytEmbed = i === ytInjectIndex && ytShort ? (
                   <div key={`yt-${i}`} className="my-10 flex justify-center">
