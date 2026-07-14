@@ -1011,6 +1011,8 @@ const App = () => (
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/why-yellodae" element={<WhyYellodae />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/contact" element={<Navigate to="/contact-us" replace />} />
+          <Route path="/contact/" element={<Navigate to="/contact-us" replace />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
