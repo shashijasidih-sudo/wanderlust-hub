@@ -81,12 +81,6 @@ const activities = [
 ];
 
 const TrendingActivities = () => {
-  const navigate = useNavigate();
-
-  const handleActivityClick = (slug: string) => {
-    navigate(slug);
-  };
-
   return (
     <section className="py-8 md:py-12 bg-background">
       <div className="container px-4 md:px-6">
@@ -96,31 +90,34 @@ const TrendingActivities = () => {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 animate-slide-up max-w-7xl mx-auto">
           {activities.map((activity) => (
-            <Card 
+            <Card
               key={activity.title}
-              className="group overflow-hidden cursor-pointer hover:shadow-card-hover transition-all duration-300"
-              onClick={() => handleActivityClick(activity.slug)}
+              className="group overflow-hidden hover:shadow-card-hover transition-all duration-300"
             >
-              <div className="relative h-48 overflow-hidden">
-                <SafeImage
-                  src={activity.image}
-                  alt={activity.title}
-                  width={400}
-                  height={300}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-3 left-3 flex items-center gap-1 text-white">
-                  <MapPin className="h-4 w-4" />
-                  <span className="text-sm font-medium">{activity.location}</span>
+              <Link to={activity.slug} aria-label={activity.title} className="block">
+                <div className="relative h-48 overflow-hidden">
+                  <SafeImage
+                    src={activity.image}
+                    alt={activity.title}
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-3 left-3 flex items-center gap-1 text-white">
+                    <MapPin className="h-4 w-4" />
+                    <span className="text-sm font-medium">{activity.location}</span>
+                  </div>
                 </div>
-              </div>
-              
+              </Link>
+
               <div className="p-4">
                 <h3 className="font-semibold text-base mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-                  {activity.title}
+                  <Link to={activity.slug} className="hover:text-primary">
+                    {activity.title}
+                  </Link>
                 </h3>
-                
+
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex items-center gap-1">
                     <Star className="h-4 w-4 fill-accent text-accent" />
@@ -136,15 +133,12 @@ const TrendingActivities = () => {
                     <span className="text-xs text-muted-foreground">Adult Price:</span>
                     <span className="text-xl font-bold text-primary">₹{activity.price}</span>
                   </div>
-                  <Button 
-                    size="sm" 
+                  <Button
+                    asChild
+                    size="sm"
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleActivityClick(activity.slug);
-                    }}
                   >
-                    Book Now
+                    <Link to={activity.slug}>Book Now</Link>
                   </Button>
                 </div>
               </div>
@@ -157,3 +151,4 @@ const TrendingActivities = () => {
 };
 
 export default TrendingActivities;
+
