@@ -209,6 +209,7 @@ const BlogGardensByTheBayGuide = lazy(() => import("./pages/BlogGardensByTheBayG
 const BlogSingaporeFlyerObservationWheel = lazy(() => import("./pages/BlogSingaporeFlyerObservationWheel"));
 const BlogUniversalStudiosSingaporeGuide = lazy(() => import("./pages/BlogUniversalStudiosSingaporeGuide"));
 const BlogBigBusSingaporeHopOnHopOff = lazy(() => import("./pages/BlogBigBusSingaporeHopOnHopOff"));
+const BlogMarinaBaySands12LocalExperiences = lazy(() => import("./pages/BlogMarinaBaySands12LocalExperiences"));
 const BlogNightSafariVsZooVsRiverWonders = lazy(() => import("./pages/BlogNightSafariVsZooVsRiverWonders"));
 const BlogUniversalStudiosVsAdventureCove = lazy(() => import("./pages/BlogUniversalStudiosVsAdventureCove"));
 const BlogSingaporeFlyerVsSkyHelix = lazy(() => import("./pages/BlogSingaporeFlyerVsSkyHelix"));
@@ -844,6 +845,7 @@ const App = () => (
             <Route path="/singapore/destination-guides/activity/singapore-flyer-observation-wheel" element={<BlogSingaporeFlyerObservationWheel />} />
             <Route path="/singapore/destination-guides/activity/universal-studios-singapore-guide" element={<BlogUniversalStudiosSingaporeGuide />} />
             <Route path="/singapore/destination-guides/activity/big-bus-singapore-hop-on-hop-off" element={<BlogBigBusSingaporeHopOnHopOff />} />
+            <Route path="/singapore/destination-guides/activity/why-everyone-goes-to-marina-bay-sands-12-local-experiences-instead" element={<BlogMarinaBaySands12LocalExperiences />} />
             <Route path="/singapore/destination-guides/comparison/night-safari-vs-singapore-zoo-vs-river-wonders" element={<BlogNightSafariVsZooVsRiverWonders />} />
             <Route path="/singapore/destination-guides/comparison/universal-studios-vs-adventure-cove-singapore" element={<BlogUniversalStudiosVsAdventureCove />} />
             <Route path="/singapore/destination-guides/comparison/singapore-flyer-vs-skyhelix-sentosa" element={<BlogSingaporeFlyerVsSkyHelix />} />
