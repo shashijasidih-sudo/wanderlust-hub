@@ -26,7 +26,7 @@ const Blog25BestThingsToDoPhuket = () => (
     cityHub={{
       city: "Phuket",
       thingsToDoLink: "/thailand/phuket/things-to-do",
-      transfersLink: "/thailand/phuket/transfers",
+      transfersLink: "/thailand/phuket-airport-transfers/",
     }}
     bodyClassName="[&_p]:!text-black [&_li]:!text-black [&_li_span]:!text-black [&_td]:!text-black [&_th]:!text-black"
     sections={[
@@ -41,14 +41,14 @@ const Blog25BestThingsToDoPhuket = () => (
         tableRows: [
           ["[Phi Phi Islands in Big Cruise with transfers](/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer)", "Full Day", "Everyone"],
           ["[James Bond Island with transfers](/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer)", "Full Day", "Families"],
-          ["[Phuket City Tour with transfers](/thailand/phuket/phuket-city-tour)", "Half Day", "First-Time Visitors"],
-          ["[Fantasea Show with transfers](/thailand/phuket/phuket-fantasea-show-with-transfer)", "Evening", "Families"],
+          ["[Phuket City Tour with transfers](/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer)", "Half Day", "First-Time Visitors"],
+          ["[Fantasea Show with transfers](/thailand/phuket/carnival-magic-show-tickets-with-transfer)", "Evening", "Families"],
           ["[Simon Cabaret with transfers](/thailand/phuket/simon-cabaret-show-with-transfer)", "Evening", "Couples"],
           ["[Elephant Sanctuary with transfers](/thailand/phuket/elephant-safari)", "Half Day", "Nature Lovers"],
           ["[ATV Adventure with transfers](/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer)", "2–3 Hours", "Adventure"],
           ["Yacht Cruise with transfers", "Half Day", "Honeymoon"],
-          ["[Airport Transfer](/thailand/phuket/transfers)", "1 Hour", "All Travelers"],
-          ["[Phuket to Krabi Transfer](/thailand/phuket/transfers)", "4 Hour", "All Travelers"],
+          ["[Airport Transfer](/thailand/phuket-airport-transfers/)", "1 Hour", "All Travelers"],
+          ["[Phuket to Krabi Transfer](/thailand/phuket-airport-transfers/)", "4 Hour", "All Travelers"],
         ],
       },
 
@@ -82,14 +82,14 @@ const Blog25BestThingsToDoPhuket = () => (
       { type: "list", items: ["Big Buddha", "Wat Chalong", "Old Phuket Town", "Karon Viewpoint", "Cashew Factory"] },
       { type: "paragraph", content: "Approximate Price: ₹1,500–₹3,000 per person." },
       { type: "tip-box", content: "Travel Tip: Wear comfortable footwear and clothing suitable for visiting temples." },
-      { type: "cta", content: "Explore the Phuket City Tour", link: "/thailand/phuket/phuket-city-tour", linkText: "Book Phuket City Tour" },
+      { type: "cta", content: "Explore the Phuket City Tour", link: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer", linkText: "Book Phuket City Tour" },
 
       { type: "heading", content: "4. Phuket Fantasea Show" },
       { type: "paragraph", content: "One of Thailand's biggest cultural performances featuring stunning stage effects, traditional Thai storytelling, and buffet dining. Phuket FantaSea is one of Thailand's most celebrated evening attractions, combining Thai mythology, culture, music, dance, and cutting-edge stage technology into an unforgettable theatrical performance. The massive cultural theme park also features shopping areas, games, traditional performances, and one of Asia's largest buffet restaurants." },
       { type: "paragraph", content: "Families especially enjoy the colorful costumes, acrobatics, and visual effects that make the show entertaining for all age groups. Arriving early allows enough time to explore the themed village before the performance begins." },
       { type: "paragraph", content: "Best for: Families, couples, groups. Duration: 4–5 hours. Approximate Price: ₹2,000–₹4,500 per person." },
       { type: "tip-box", content: "Travel Tip: Cameras are not permitted inside the theatre, so enjoy the performance without worrying about photography." },
-      { type: "cta", content: "Book Phuket FantaSea Tickets with Transfers", link: "/thailand/phuket/phuket-fantasea-show-with-transfer", linkText: "Book FantaSea Tickets" },
+      { type: "cta", content: "Book Phuket FantaSea Tickets with Transfers", link: "/thailand/phuket/carnival-magic-show-tickets-with-transfer", linkText: "Book FantaSea Tickets" },
       { type: "paragraph", content: "Looking for a more contemporary evening show? Try the [Carnival Magic Show Tickets](/thailand/phuket/carnival-magic-show-tickets-with-transfer)." },
 
       { type: "heading", content: "5. Visit an Ethical Elephant Sanctuary" },
@@ -156,13 +156,13 @@ const Blog25BestThingsToDoPhuket = () => (
       { type: "paragraph", content: "The Big Buddha also provides an opportunity to learn about Buddhism and Thai culture while enjoying one of the island's best viewpoints." },
       { type: "paragraph", content: "Best for: Families, photographers, spiritual travelers. Opening Hours: 6:00 AM – 7:00 PM. Entry Fee: Free (donations welcome)." },
       { type: "tip-box", content: "Travel Tip: Dress modestly by covering your shoulders and knees, as it is an active religious site." },
-      { type: "paragraph", content: "The Big Buddha is included in the [Phuket City Tour](/thailand/phuket/phuket-city-tour)." },
+      { type: "paragraph", content: "The Big Buddha is included in the [Phuket City Tour](/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer)." },
 
       { type: "heading", content: "16. Wat Chalong Temple" },
       { type: "paragraph", content: "The island's most important Buddhist temple. Wat Chalong, officially known as Wat Chaiyathararam, is Phuket's largest and most revered Buddhist temple. Built during the early 19th century, the temple holds great cultural and religious significance for local residents and attracts thousands of visitors every year." },
       { type: "paragraph", content: "The beautifully decorated buildings feature intricate Thai architecture, golden statues, colorful murals, and peaceful gardens. The temple's Grand Pagoda is believed to house a sacred relic of Lord Buddha, making it an important pilgrimage destination." },
       { type: "paragraph", content: "Visitors can observe monks performing daily rituals, light incense, make merit, and admire the peaceful surroundings while learning about Thailand's Buddhist traditions." },
-      { type: "paragraph", content: "Wat Chalong is often included in [Phuket City Tours](/thailand/phuket/phuket-city-tour) because it provides valuable insight into the island's cultural heritage." },
+      { type: "paragraph", content: "Wat Chalong is often included in [Phuket City Tours](/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer) because it provides valuable insight into the island's cultural heritage." },
       { type: "paragraph", content: "Best for: Culture lovers, families, history enthusiasts. Opening Hours: 7:00 AM – 5:00 PM. Entry Fee: Free." },
       { type: "tip-box", content: "Travel Tip: Speak quietly and remove your shoes before entering temple buildings." },
 
@@ -233,18 +233,18 @@ const Blog25BestThingsToDoPhuket = () => (
       { type: "paragraph", content: "Best for: All travelers, families with children, senior citizens, honeymooners. Duration: 45–90 minutes (depending on your hotel location). Approximate Price: ₹1,500–₹3,500 per vehicle." },
       { type: "tip-box", content: "Travel Tip: Book your round-trip airport transfers in advance to save time and often secure better prices." },
       { type: "list", items: ["Fixed pricing", "No taxi negotiation", "English-speaking assistance", "Direct hotel drop-off"] },
-      { type: "cta", content: "Book your Phuket Airport Transfer", link: "/thailand/phuket/transfers", linkText: "Book Phuket Transfer" },
+      { type: "cta", content: "Book your Phuket Airport Transfer", link: "/thailand/phuket-airport-transfers/", linkText: "Book Phuket Transfer" },
 
       { type: "heading", content: "Suggested 5-Day Phuket Itinerary" },
       {
         type: "table",
         tableHeaders: ["Day", "Plan"],
         tableRows: [
-          ["Day 1", "[Airport to Hotel Transfer](/thailand/phuket/transfers) + [Phuket City Tour](/thailand/phuket/phuket-city-tour) + Patong Beach + Bangla Road"],
+          ["Day 1", "[Airport to Hotel Transfer](/thailand/phuket-airport-transfers/) + [Phuket City Tour](/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer) + Patong Beach + Bangla Road"],
           ["Day 2", "[Phi Phi Islands Day trip with Lunch & Transfers](/thailand/phuket/full-day-phi-phi-island-tour-with-transfer) (07:00 a.m. – 05:00 p.m.)"],
-          ["Day 3", "[Dolphin Show](/thailand/phuket/dolphin-show-phuket-with-transfer) + [Fantasea Show](/thailand/phuket/phuket-fantasea-show-with-transfer)"],
+          ["Day 3", "[Dolphin Show](/thailand/phuket/dolphin-show-phuket-with-transfer) + [Fantasea Show](/thailand/phuket/carnival-magic-show-tickets-with-transfer)"],
           ["Day 4", "[James Bond Island in Speedboat with Lunch & Transfers](/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer) + Canoeing"],
-          ["Day 5", "[Elephant Sanctuary](/thailand/phuket/elephant-safari) / Day at Leisure + [Airport Transfer](/thailand/phuket/transfers)"],
+          ["Day 5", "[Elephant Sanctuary](/thailand/phuket/elephant-safari) / Day at Leisure + [Airport Transfer](/thailand/phuket-airport-transfers/)"],
         ],
       },
 
@@ -255,13 +255,13 @@ const Blog25BestThingsToDoPhuket = () => (
         tableRows: [
           ["[Phi Phi Tour](/thailand/phuket/full-day-phi-phi-island-tour-with-transfer)", "3,200–5,500"],
           ["[James Bond Tour](/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer)", "3,500–6,000"],
-          ["[City Tour](/thailand/phuket/phuket-city-tour)", "1,500–3,000"],
-          ["[Fantasea](/thailand/phuket/phuket-fantasea-show-with-transfer)", "2,000–4,500"],
+          ["[City Tour](/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer)", "1,500–3,000"],
+          ["[Fantasea](/thailand/phuket/carnival-magic-show-tickets-with-transfer)", "2,000–4,500"],
           ["[Simon Cabaret](/thailand/phuket/simon-cabaret-show-with-transfer)", "1,000–2,500"],
           ["[Elephant Sanctuary](/thailand/phuket/elephant-safari)", "3,500–6,500"],
           ["[ATV Ride](/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer)", "2,500–5,000"],
           ["Yacht Tour", "6,000–18,000"],
-          ["[Airport Transfer](/thailand/phuket/transfers)", "1,500–3,500"],
+          ["[Airport Transfer](/thailand/phuket-airport-transfers/)", "1,500–3,500"],
           ["Phuket–Krabi Hotel Transfer", "2,500–4,000"],
         ],
       },
@@ -298,8 +298,8 @@ const Blog25BestThingsToDoPhuket = () => (
       { title: "Phi Phi Maya Bay & Khai Island Speedboat", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer" },
       { title: "James Bond Island Speedboat", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
       { title: "James Bond Island Sea Canoe Tour", link: "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer" },
-      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour" },
-      { title: "Phuket FantaSea Show", link: "/thailand/phuket/phuket-fantasea-show-with-transfer" },
+      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer" },
+      { title: "Phuket FantaSea Show", link: "/thailand/phuket/carnival-magic-show-tickets-with-transfer" },
       { title: "Simon Cabaret Show", link: "/thailand/phuket/simon-cabaret-show-with-transfer" },
       { title: "Tiger Kingdom + ATV Adventure", link: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer" },
       { title: "Elephant Safari Phuket", link: "/thailand/phuket/elephant-safari" },
