@@ -65,6 +65,12 @@ const ACT = "/singapore/destination-guides/activity";
 
 export const singaporeBlogs: SingaporeBlogEntry[] = [
   {
+    title: "Why Everyone Goes to Marina Bay Sands… But Locals Recommend These 12 Experiences Instead (2026 Guide)",
+    description: "Skip the tourist queue. 12 local-recommended Singapore experiences beyond Marina Bay Sands — river cruise, Sentosa beaches, Night Safari, Kampong Glam, hawker food, Cloud Forest, Pulau Ubin, Chinatown, Cable Car, Southern Ridges, Jewel Changi and rooftop bars.",
+    category: "activity", image: marinaBayImg, date: "July 15, 2026", readTime: "14 min read",
+    link: `${ACT}/why-everyone-goes-to-marina-bay-sands-12-local-experiences-instead`,
+  },
+  {
     title: "Singapore City Tour with Guide & Shared Transfer Itinerary (2026)",
     description: "Half-day Singapore city tour with shared transfer — Merlion Park, Marina Bay, Chinatown, Little India and Orchard Road. INR pricing, timings and tips.",
     category: "activity", image: cityTourImg, date: "May 18, 2026", readTime: "9 min read",
