@@ -209,6 +209,7 @@ const BlogGardensByTheBayGuide = lazy(() => import("./pages/BlogGardensByTheBayG
 const BlogSingaporeFlyerObservationWheel = lazy(() => import("./pages/BlogSingaporeFlyerObservationWheel"));
 const BlogUniversalStudiosSingaporeGuide = lazy(() => import("./pages/BlogUniversalStudiosSingaporeGuide"));
 const BlogBigBusSingaporeHopOnHopOff = lazy(() => import("./pages/BlogBigBusSingaporeHopOnHopOff"));
+const BlogMarinaBaySands12LocalExperiences = lazy(() => import("./pages/BlogMarinaBaySands12LocalExperiences"));
 const BlogNightSafariVsZooVsRiverWonders = lazy(() => import("./pages/BlogNightSafariVsZooVsRiverWonders"));
 const BlogUniversalStudiosVsAdventureCove = lazy(() => import("./pages/BlogUniversalStudiosVsAdventureCove"));
 const BlogSingaporeFlyerVsSkyHelix = lazy(() => import("./pages/BlogSingaporeFlyerVsSkyHelix"));
