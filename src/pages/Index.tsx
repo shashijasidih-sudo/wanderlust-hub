@@ -167,7 +167,7 @@ const Index = () => {
             simply as <strong className="text-foreground">Yellodae</strong>, curates holiday packages, transfers and skip-the-line tickets
             for Indian travellers — with 24/7 WhatsApp support. Learn more{" "}
             <Link to="/about-us" className="underline underline-offset-2 hover:text-primary">about Yellodae Trails</Link>,{" "}
-            read our <Link to="/blog" className="underline underline-offset-2 hover:text-primary">travel blog</Link>, or{" "}
+            read our <Link to="/thailand/destination-guides" className="underline underline-offset-2 hover:text-primary">travel blog</Link>, or{" "}
             <Link to="/contact-us" className="underline underline-offset-2 hover:text-primary">contact us</Link> to plan your trip.
           </p>
         </section>
