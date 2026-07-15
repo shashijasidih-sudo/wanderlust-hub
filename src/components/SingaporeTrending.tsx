@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import SafeImage from "./SafeImage";
 import gardensBay from "@/assets/singapore-gardens-bay-night-1.jpg";
 import marinaBay from "@/assets/singapore-marina-bay-sands-night-1.jpg";
@@ -31,8 +31,6 @@ const trendingItems = [
 ];
 
 const SingaporeTrending = () => {
-  const navigate = useNavigate();
-
   return (
     <section className="py-10 md:py-14 bg-background">
       <div className="container px-4 md:px-6">
@@ -44,32 +42,32 @@ const SingaporeTrending = () => {
           {trendingItems.map((item) => (
             <Card
               key={item.title}
-              className="group overflow-hidden cursor-pointer hover:shadow-card-hover transition-all duration-300"
-              onClick={() => navigate(item.slug)}
+              className="group overflow-hidden hover:shadow-card-hover transition-all duration-300"
             >
-              <div className="relative h-52 overflow-hidden">
-                <SafeImage
-                  src={item.image}
-                  alt={item.title}
-                  width={600}
-                  height={416}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-              </div>
+              <Link to={item.slug} aria-label={item.title} className="block">
+                <div className="relative h-52 overflow-hidden">
+                  <SafeImage
+                    src={item.image}
+                    alt={item.title}
+                    width={600}
+                    height={416}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                </div>
+              </Link>
               <div className="p-4 flex flex-col gap-3">
                 <h3 className="font-semibold text-base line-clamp-2 group-hover:text-primary transition-colors">
-                  {item.title}
+                  <Link to={item.slug} className="hover:text-primary">
+                    {item.title}
+                  </Link>
                 </h3>
                 <Button
+                  asChild
                   size="sm"
                   className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigate(item.slug);
-                  }}
                 >
-                  Explore Now
+                  <Link to={item.slug}>Explore Now</Link>
                 </Button>
               </div>
             </Card>
