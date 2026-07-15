@@ -393,6 +393,32 @@ const DubaiSmartGuides = () => {
             ))}
           </div>
 
+          {/* Dubai Airport Transfer Zones */}
+          <section className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Dubai Airport Transfer Zones</h2>
+            <p className="text-muted-foreground mb-6 max-w-2xl">
+              Book reliable Dubai airport pickup and drop-off transfers by zone — Zone 1 (Deira / Bur Dubai) through Zone 5 (Jebel Ali / Dubai Marina outskirts).
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[1, 2, 3, 4, 5].map((z) => (
+                <Card key={z} className="hover:shadow-md transition-shadow">
+                  <CardContent className="p-5">
+                    <h3 className="font-semibold text-foreground mb-3">Dubai Airport — Zone {z}</h3>
+                    <div className="flex flex-wrap gap-3 text-sm">
+                      <Link to={`/dubai/airport-pickup-zone${z}`} className="text-primary hover:underline font-medium">
+                        Airport Pickup Zone {z} →
+                      </Link>
+                      <Link to={`/dubai/airport-dropoff-zone${z}`} className="text-primary hover:underline font-medium">
+                        Airport Drop-off Zone {z} →
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+
           {/* Newsletter Section */}
           <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-none">
             <CardContent className="p-8 text-center">

@@ -273,9 +273,11 @@ const Header = () => {
                   <span className="font-medium">Singapore</span>
                 </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className={`${menuItemClass} opacity-50 cursor-not-allowed`} onSelect={(e) => { e.preventDefault(); toast({ title: "Dubai Temporarily Unavailable", description: "⚠️ We will soon update the prices as per the ongoing War Situation", variant: "destructive" }); }}>
-                  <Castle className="h-5 w-5 mr-3 text-muted-foreground" />
-                  <span className="font-medium text-muted-foreground">Dubai</span>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/dubai/destination-guides">
+                  <Castle className="h-5 w-5 mr-3 text-primary" />
+                  <span className="font-medium">Dubai</span>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -461,9 +463,11 @@ const Header = () => {
                     Singapore
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className={`${mobileMenuItemClass} opacity-50 cursor-not-allowed`} onSelect={(e) => { e.preventDefault(); toast({ title: "Dubai Temporarily Unavailable", description: "⚠️ We will soon update the prices as per the ongoing War Situation", variant: "destructive" }); }}>
-                    <Castle className="h-4 w-4 mr-2 text-muted-foreground" />
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link to="/dubai/destination-guides" onClick={() => setIsMenuOpen(false)}>
+                    <Castle className="h-4 w-4 mr-2 text-primary" />
                     Dubai
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
