@@ -41,11 +41,14 @@ interface TourBookingProps {
   extraContentBeforeReviews?: React.ReactNode;
   extraContentBeforeSuggested?: React.ReactNode;
   extraContentAfterPolicies?: React.ReactNode;
+  extraDescriptionBeforeHighlights?: React.ReactNode;
+  hideItinerary?: boolean;
   heroVariant?: "slider" | "collage";
   hidePhotoGallery?: boolean;
+  forceBlackText?: boolean;
 }
 
-const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, extraContentAfterPolicies, heroVariant = "slider", hidePhotoGallery = false }: TourBookingProps) => {
+const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, extraContentAfterPolicies, extraDescriptionBeforeHighlights, hideItinerary, heroVariant = "slider", hidePhotoGallery = false, forceBlackText = false }: TourBookingProps) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const itineraryRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
@@ -183,7 +186,8 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className={`min-h-screen bg-background ${forceBlackText ? "[&_main_*]:!text-black" : ""}`}>
+
       <Seo
         title={`${tourData.title} | Yellodae Trails`}
         description={tourData.shortDescription}
@@ -337,7 +341,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
 
             {/* Tour Description */}
             <div ref={itineraryRef}>
-              <TourDescription tourData={tourData} />
+              <TourDescription tourData={tourData} extraBeforeHighlights={extraDescriptionBeforeHighlights} hideItinerary={hideItinerary} />
             </div>
 
             {/* Tour Policies */}

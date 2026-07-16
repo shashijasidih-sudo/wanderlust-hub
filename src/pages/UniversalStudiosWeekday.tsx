@@ -4,6 +4,68 @@ import { toursData } from "@/data/tourData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Utensils, Plug, Languages, IndianRupee, Plane, ShieldCheck } from "lucide-react";
 
+const rides = [
+  { emoji: "🚀", name: "Battlestar Galactica: CYLON", thrill: "⭐⭐⭐⭐⭐", type: "Inverted Roller Coaster", best: "Thrill Seekers" },
+  { emoji: "🚀", name: "Battlestar Galactica: HUMAN", thrill: "⭐⭐⭐⭐☆", type: "Seated Roller Coaster", best: "Teens & Adults" },
+  { emoji: "🤖", name: "Transformers: The Ride 3D", thrill: "⭐⭐⭐⭐⭐", type: "3D Motion Simulator", best: "Everyone" },
+  { emoji: "🏺", name: "Revenge of the Mummy", thrill: "⭐⭐⭐⭐⭐", type: "Indoor Roller Coaster", best: "Adventure Lovers" },
+  { emoji: "🦖", name: "Jurassic Park Rapids Adventure", thrill: "⭐⭐⭐⭐☆", type: "Water Rapids Ride", best: "Families & Friends" },
+];
+
+const RidesAndTimings = () => (
+  <div className="space-y-6">
+    <div className="overflow-x-auto">
+      <table className="w-full text-sm border border-border rounded-lg overflow-hidden">
+        <thead className="bg-muted">
+          <tr>
+            <th className="text-left p-3 font-semibold">Ride</th>
+            <th className="text-left p-3 font-semibold">Thrill</th>
+            <th className="text-left p-3 font-semibold">Type</th>
+            <th className="text-left p-3 font-semibold">Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rides.map((r) => (
+            <tr key={r.name} className="border-t border-border">
+              <td className="p-3">{r.emoji} {r.name}</td>
+              <td className="p-3">{r.thrill}</td>
+              <td className="p-3">{r.type}</td>
+              <td className="p-3">{r.best}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <h3 className="text-lg font-semibold mb-3">Timings & Duration</h3>
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm border border-border rounded-lg overflow-hidden">
+          <thead className="bg-muted">
+            <tr>
+              <th className="text-left p-3 font-semibold">Transfers Type</th>
+              <th className="text-left p-3 font-semibold">Pickup Timings</th>
+              <th className="text-left p-3 font-semibold">Duration Approx</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="border-t border-border">
+              <td className="p-3">Sharing Transfers</td>
+              <td className="p-3">Pickup between: 08:30 am · Drop off: 7:00 pm</td>
+              <td className="p-3">11:00 hours</td>
+            </tr>
+            <tr className="border-t border-border">
+              <td className="p-3">Without Transfers</td>
+              <td className="p-3">Universal Opening Hours: 10:00 am to 8:00 pm</td>
+              <td className="p-3">04:00 hours</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+);
+
 const IndianTravelerCompanion = () => (
   <Card>
     <CardHeader>
@@ -74,6 +136,9 @@ const UniversalStudiosWeekday = () => {
       tourData={tourData}
       heroVariant="collage"
       hidePhotoGallery
+      hideItinerary
+      forceBlackText
+      extraDescriptionBeforeHighlights={<RidesAndTimings />}
       extraContentAfterPolicies={<IndianTravelerCompanion />}
     />
   );

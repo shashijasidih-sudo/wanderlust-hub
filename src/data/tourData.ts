@@ -70,10 +70,10 @@ import singaporeMarinaByDay from "@/assets/singapore-marina-bay-sands-day-1.jpg"
 import singaporeMerlionNight from "@/assets/singapore-merlion-night-1.jpg";
 import singaporeCoupleWalking from "@/assets/singapore-couple-walking-1.jpg";
 import singaporeTouristsCity from "@/assets/singapore-tourists-city-1.jpg";
-import ussGlobe from "@/assets/uss-globe.jpg.asset.json";
-import ussCastle from "@/assets/uss-castle.jpg.asset.json";
-import ussCastleLake from "@/assets/uss-castle-lake.jpg.asset.json";
-import singaporeCityNight from "@/assets/singapore-city-night.jpg.asset.json";
+import ussGlobe from "@/assets/uss-globe.jpg";
+import ussCastle from "@/assets/uss-castle.jpg";
+import ussCastleLake from "@/assets/uss-castle-lake.jpg";
+import singaporeCityNight from "@/assets/singapore-city-night.jpg";
 
 export interface CustomerReview {
   name: string;
@@ -4627,8 +4627,8 @@ export const toursData: Record<string, TourData> = {
   },
   "universal-studios-weekday": {
     id: "universal-studios-weekday",
-    title: "Universal Studios Ticket",
-    shortDescription: "Movie-themed experience with thrilling rides and 7 exciting zones at Resorts World Sentosa.",
+    title: "Universal Studios Ticket & Transfers",
+    shortDescription: "Movie-themed experience with thrilling rides and 6 exciting zones at Resorts World Sentosa.",
     location: "Resorts World Sentosa, Singapore",
     city: "singapore",
     basePrice: 6762,
@@ -4637,10 +4637,10 @@ export const toursData: Record<string, TourData> = {
     rating: 4.9,
     reviews: 5678,
     heroImages: [
-      { src: ussGlobe.url, title: "Universal Studios Globe" },
-      { src: ussCastle.url, title: "Far Far Away Castle" },
-      { src: ussCastleLake.url, title: "USS Castle & Lake" },
-      { src: singaporeCityNight.url, title: "Singapore Skyline" }
+      { src: ussGlobe, title: "Universal Studios Globe" },
+      { src: ussCastle, title: "Far Far Away Castle" },
+      { src: ussCastleLake, title: "USS Castle & Lake" },
+      { src: singaporeCityNight, title: "Singapore Skyline" }
     ],
     galleryImages: [],
     tourOptions: [
@@ -4651,7 +4651,7 @@ export const toursData: Record<string, TourData> = {
       { label: "Universal Studios Meal Voucher", adultPrice: 966, childPrice: 966 }
     ],
     highlights: [
-      "7 themed zones",
+      "6 themed zones",
       "Hollywood & New York replicas",
       "Ancient Egypt adventures",
       "Far Far Away fairytale fun",
@@ -4660,15 +4660,24 @@ export const toursData: Record<string, TourData> = {
     ],
     description: {
       overview: "Universal Studios Singapore offers thrilling movie-themed experiences at Resorts World Sentosa.",
-      whatToExpect: "Explore Hollywood and New York replicas, venture into Ancient Egypt for adventure rides, visit Far Far Away for fairytale fun, dance with Madagascar's characters, and face your fears on one of the world's tallest roller coasters at Sci-Fi City."
+      whatToExpect: "Universal Studios Singapore (USS) is divided into 6 immersive themed zones, featuring a mix of thrilling roller coasters, 3D simulators, family rides, live shows, and character experiences. The park offers around 28 attractions, including rides, shows, and entertainment."
     },
     itinerary: [],
     tourTimings: ["10:00 AM - 8:00 PM"],
-    inclusions: ["Universal Studios entrance", "Access to all 7 zones", "All rides and attractions"],
+    inclusions: [
+      "Universal Studios Singapore: Entry + Minion Land & Bollywood Show",
+      "Access to 6 Themed Zones (Not 7 zones)",
+      "Access to Minion Land & Sesame Street Dance Show",
+      "Access to all rides"
+    ],
     exclusions: ["Personal expenses", "Food (unless meal voucher add-on selected)", "Express passes"],
     bookingPolicy: ["Valid photo ID required", "Children must be accompanied by adult"],
     cancellationPolicy: ["100% charge for cancellations after booking"],
-    childPolicy: ["Under 4: Free", "4-12: Child rate", "Above 12: Adult rate"],
+    childPolicy: [
+      "Children under the age of 4 are considered infants and are admitted free of charge when accompanied by a paying adult.",
+      "Children between ages 4 to 12 will be considered as children and charged a child rate.",
+      "Children above the age of 12 years will be considered an adult and charged an adult rate."
+    ],
     faqs: []
   },
   "universal-studios-weekend": {
