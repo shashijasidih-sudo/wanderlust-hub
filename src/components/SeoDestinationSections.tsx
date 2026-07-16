@@ -29,6 +29,22 @@ import singaporeCityImg from "@/assets/singapore-city-tour.jpg";
 import tokyoImg from "@/assets/japan-tokyo-city-1.jpg";
 import kyotoImg from "@/assets/japan-kyoto-temple-1.jpg";
 import fujiImg from "@/assets/japan-mount-fuji-1.jpg";
+import alcazarImg from "@/assets/alcazar-show-1.jpg";
+import bigEyeImg from "@/assets/bigeye-show-pattaya-1.jpg";
+import muayThaiImg from "@/assets/muay-thai-1.jpg";
+import pattayaNightImg from "@/assets/pattaya-nightlife-1.jpg";
+import pattayaDolphinImg from "@/assets/dolphin-show-1.jpg";
+import bangkokCruiseImg from "@/assets/bangkok-cruise-night-3.jpg";
+import bangkokSkywalkImg from "@/assets/bangkok-skywalk-1.jpg";
+import bangkokTempleImg from "@/assets/bangkok-temple-1.jpg";
+import dubaiDesertImg from "@/assets/dubai-desert-couple-1.jpg";
+import dubaiDhowImg from "@/assets/dubai-dhow-cruise-1.jpg";
+import dubaiCityImg from "@/assets/dubai-city-night-1.jpg";
+import dubaiFountainImg from "@/assets/dubai-fountain-show-1.jpg";
+import dubaiGlobalVillageImg from "@/assets/dubai-global-village-1.jpg";
+import dubaiAquariumImg from "@/assets/dubai-aquarium-fish-1.jpg";
+import dubaiSkylineImg from "@/assets/dubai-skyline-night-1.jpg";
+import chiangRaiImg from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg";
 
 const sections: Section[] = [
   {
