@@ -233,9 +233,9 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
       </div>
       
       <main className="container mx-auto px-4 py-8">
-        {/* Hero Section */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-8">
-          <div className="lg:col-span-2 space-y-4">
+        {/* Unified two-column layout: left flows hero + content, right is sticky sidebar */}
+        <div className="grid lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2 space-y-8">
             {/* Title above images (collage variant) */}
             {heroVariant === "collage" && (
               <div className="space-y-2">
@@ -331,12 +331,42 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                 </Button>
               </div>
             </div>
+
+            {/* Photo Gallery */}
+            {!hidePhotoGallery && <PhotoGallery images={safeGalleryImages} />}
+
+            {/* Tour Description */}
+            <div ref={itineraryRef}>
+              <TourDescription tourData={tourData} />
+            </div>
+
+            {/* Tour Policies */}
+            <TourPolicies tourData={tourData} />
+
+            {/* Optional extra content after policies */}
+            {extraContentAfterPolicies}
+
+            {/* Optional extra SEO content before reviews */}
+            {extraContentBeforeReviews}
+
+            {/* Customer Reviews */}
+            <CustomerReviews
+              reviews={tourData.customerReviews}
+              averageRating={tourData.rating}
+              totalReviews={tourData.reviews}
+            />
+
+            {/* FAQ Section */}
+            <FAQSection
+              faqs={tourData.faqs}
+              seoFaqs={getSeoFaqsForCity(tourData.city)}
+            />
           </div>
 
-          {/* Sticky Pricing Sidebar */}
+          {/* Sticky Right Sidebar: Pricing on top, Support below */}
           <div className="lg:col-span-1">
-            <div className="sticky top-4">
-              <PricingCalculator 
+            <div className="sticky top-4 space-y-6">
+              <PricingCalculator
                 basePrice={tourData.basePrice}
                 childPrice={tourData.childPrice}
                 activityName={tourData.title}
@@ -351,52 +381,11 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                 tourAddOns={tourData.tourAddOns}
                 hideChildren={tourData.hideChildren}
               />
-            </div>
-          </div>
-        </div>
-
-        {/* Main Content Sections */}
-        <div className="grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
-            {/* Photo Gallery */}
-            {!hidePhotoGallery && <PhotoGallery images={safeGalleryImages} />}
-            
-            {/* Tour Description */}
-            <div ref={itineraryRef}>
-              <TourDescription tourData={tourData} />
-            </div>
-            
-            {/* Tour Policies (Inclusion, Exclusion, Booking, Cancellation, Child Policy) */}
-            <TourPolicies tourData={tourData} />
-
-            {/* Optional extra content after policies (e.g. Indian Traveler Companion) */}
-            {extraContentAfterPolicies}
-            
-            
-            {/* Optional extra SEO content before reviews */}
-            {extraContentBeforeReviews}
-
-            {/* Customer Reviews */}
-            <CustomerReviews 
-              reviews={tourData.customerReviews}
-              averageRating={tourData.rating}
-              totalReviews={tourData.reviews}
-            />
-            
-            {/* FAQ Section — booking FAQs + city-level SEO FAQs (combined JSON-LD) */}
-            <FAQSection
-              faqs={tourData.faqs}
-              seoFaqs={getSeoFaqsForCity(tourData.city)}
-            />
-          </div>
-
-          {/* Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-4">
               <CustomerSupport />
             </div>
           </div>
         </div>
+
 
         {/* Travel Guides — auto-rendered by city, or overridden via extraContentBeforeSuggested */}
         {extraContentBeforeSuggested ?? (() => {
