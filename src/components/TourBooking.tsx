@@ -186,7 +186,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
   };
 
   return (
-    <div className={`min-h-screen bg-background ${forceBlackText ? "[&_main_.lg\\:col-span-2_*]:!text-black" : ""}`}>
+    <div className={`min-h-screen bg-background overflow-x-hidden ${forceBlackText ? "[&_main_.lg\\:col-span-2_*]:!text-black" : ""}`}>
 
       <Seo
         title={`${tourData.title} | Yellodae Trails`}
@@ -238,9 +238,9 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
       
       <main className="container mx-auto px-4 py-8">
         {/* Mobile order: title/hero -> booking -> tour details. Desktop: sticky sidebar spans full left content height. */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8 min-w-0">
           {/* Top left: title, hero, rating, gallery */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-8 min-w-0">
             {/* Title above images (collage variant) */}
             {heroVariant === "collage" && (
               <div className="space-y-2">
@@ -342,7 +342,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
           </div>
 
           {/* Sticky Right Sidebar: Pricing on top, Support below. On mobile it sits between hero and tour details. */}
-          <div className="lg:col-span-1 lg:row-span-2">
+          <div className="lg:col-span-1 lg:row-span-2 min-w-0">
             <div className="sticky top-4 space-y-6">
               <PricingCalculator
                 basePrice={tourData.basePrice}
@@ -364,7 +364,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
           </div>
 
           {/* Bottom left: tour description, policies, reviews, FAQ */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-8 min-w-0">
             {/* Tour Description */}
             <div ref={itineraryRef}>
               <TourDescription tourData={tourData} extraBeforeHighlights={extraDescriptionBeforeHighlights} hideItinerary={hideItinerary} />

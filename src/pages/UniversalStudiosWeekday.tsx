@@ -13,9 +13,9 @@ const rides = [
 ];
 
 const RidesAndTimings = () => (
-  <div className="space-y-6">
-    <div className="overflow-x-auto">
-      <table className="w-full text-xs md:text-sm border border-border rounded-lg overflow-hidden min-w-[600px] md:min-w-0">
+  <div className="space-y-6 min-w-0">
+    <div className="overflow-x-auto -mx-4 md:mx-0 px-4 md:px-0">
+      <table className="w-full text-[11px] md:text-sm border border-border rounded-lg overflow-hidden min-w-[520px] md:min-w-0">
         <thead className="bg-muted">
           <tr>
             <th className="text-left p-2 md:p-3 font-semibold">Ride</th>
@@ -39,25 +39,25 @@ const RidesAndTimings = () => (
 
     <div>
       <h3 className="text-base md:text-lg font-semibold mb-3">Timings & Duration</h3>
-      <div className="overflow-x-auto">
-        <table className="w-full text-xs md:text-sm border border-border rounded-lg overflow-hidden min-w-[600px] md:min-w-0">
+      <div className="overflow-x-auto -mx-4 md:mx-0 px-4 md:px-0">
+        <table className="w-full text-[11px] md:text-sm border border-border rounded-lg overflow-hidden min-w-[520px] md:min-w-0">
           <thead className="bg-muted">
             <tr>
-              <th className="text-left p-2 md:p-3 font-semibold">Transfers Type</th>
-              <th className="text-left p-2 md:p-3 font-semibold">Pickup Timings</th>
-              <th className="text-left p-2 md:p-3 font-semibold">Duration Approx</th>
+              <th className="text-left p-2 md:p-3 font-semibold">Transfers</th>
+              <th className="text-left p-2 md:p-3 font-semibold">Timings</th>
+              <th className="text-left p-2 md:p-3 font-semibold">Duration</th>
             </tr>
           </thead>
           <tbody>
             <tr className="border-t border-border">
               <td className="p-2 md:p-3 whitespace-normal">Sharing Transfers</td>
-              <td className="p-2 md:p-3 whitespace-normal">Pickup between: 08:30 am · Drop off: 7:00 pm</td>
-              <td className="p-2 md:p-3 whitespace-normal">11:00 hours</td>
+              <td className="p-2 md:p-3 whitespace-normal">Pickup 08:30 am · Drop 7:00 pm</td>
+              <td className="p-2 md:p-3 whitespace-normal">11 hrs</td>
             </tr>
             <tr className="border-t border-border">
               <td className="p-2 md:p-3 whitespace-normal">Without Transfers</td>
-              <td className="p-2 md:p-3 whitespace-normal">Universal Opening Hours: 10:00 am to 8:00 pm</td>
-              <td className="p-2 md:p-3 whitespace-normal">04:00 hours</td>
+              <td className="p-2 md:p-3 whitespace-normal">10:00 am – 8:00 pm</td>
+              <td className="p-2 md:p-3 whitespace-normal">04 hrs</td>
             </tr>
           </tbody>
         </table>
