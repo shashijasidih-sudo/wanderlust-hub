@@ -40,11 +40,12 @@ interface TourBookingProps {
   tourData: TourData;
   extraContentBeforeReviews?: React.ReactNode;
   extraContentBeforeSuggested?: React.ReactNode;
+  extraContentAfterPolicies?: React.ReactNode;
   heroVariant?: "slider" | "collage";
   hidePhotoGallery?: boolean;
 }
 
-const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, heroVariant = "slider", hidePhotoGallery = false }: TourBookingProps) => {
+const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, extraContentAfterPolicies, heroVariant = "slider", hidePhotoGallery = false }: TourBookingProps) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const itineraryRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
@@ -332,7 +333,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Photo Gallery */}
-            <PhotoGallery images={safeGalleryImages} />
+            {!hidePhotoGallery && <PhotoGallery images={safeGalleryImages} />}
             
             {/* Tour Description */}
             <div ref={itineraryRef}>
@@ -341,6 +342,10 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
             
             {/* Tour Policies (Inclusion, Exclusion, Booking, Cancellation, Child Policy) */}
             <TourPolicies tourData={tourData} />
+
+            {/* Optional extra content after policies (e.g. Indian Traveler Companion) */}
+            {extraContentAfterPolicies}
+            
             
             {/* Optional extra SEO content before reviews */}
             {extraContentBeforeReviews}
