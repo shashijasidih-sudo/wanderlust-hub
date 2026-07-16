@@ -70,10 +70,10 @@ import singaporeMarinaByDay from "@/assets/singapore-marina-bay-sands-day-1.jpg"
 import singaporeMerlionNight from "@/assets/singapore-merlion-night-1.jpg";
 import singaporeCoupleWalking from "@/assets/singapore-couple-walking-1.jpg";
 import singaporeTouristsCity from "@/assets/singapore-tourists-city-1.jpg";
-import ussGlobe from "@/assets/uss-globe.jpg.asset.json";
-import ussCastle from "@/assets/uss-castle.jpg.asset.json";
-import ussCastleLake from "@/assets/uss-castle-lake.jpg.asset.json";
-import singaporeCityNight from "@/assets/singapore-city-night.jpg.asset.json";
+import ussGlobe from "@/assets/uss-globe.jpg";
+import ussCastle from "@/assets/uss-castle.jpg";
+import ussCastleLake from "@/assets/uss-castle-lake.jpg";
+import singaporeCityNight from "@/assets/singapore-city-night.jpg";
 
 export interface CustomerReview {
   name: string;
