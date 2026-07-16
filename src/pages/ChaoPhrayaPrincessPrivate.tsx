@@ -28,7 +28,6 @@ const ChaoPhrayaPrincessPrivate = () => {
       <TourBooking
         tourData={tourData}
         extraContentBeforeReviews={<ChaoPhrayaPrincessPrivateSEO />}
-        extraContentBeforeSuggested={<TravelGuidesSection />}
       />
     </>
   );

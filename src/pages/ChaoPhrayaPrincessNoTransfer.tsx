@@ -28,7 +28,6 @@ const ChaoPhrayaPrincessNoTransfer = () => {
       <TourBooking
         tourData={tourData}
         extraContentBeforeReviews={<ChaoPhrayaPrincessNoTransferSEO />}
-        extraContentBeforeSuggested={<TravelGuidesSection />}
       />
     </>
   );

@@ -28,7 +28,6 @@ const ChaoPhrayaPrincessJoin = () => {
       <TourBooking
         tourData={tourData}
         extraContentBeforeReviews={<ChaoPhrayaPrincessSEOContent />}
-        extraContentBeforeSuggested={<TravelGuidesSection />}
       />
     </>
   );
