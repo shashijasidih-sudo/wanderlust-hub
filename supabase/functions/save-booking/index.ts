@@ -54,23 +54,9 @@ serve(async (req) => {
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    // Idempotency: if this Razorpay payment already produced a booking, return it.
-    // Best-effort — silently skip if the column doesn't exist on this schema.
-    if (payment_id) {
-      const { data: existing, error: idemErr } = await supabase
-        .from("bookings")
-        .select("*")
-        .eq("payment_id", payment_id)
-        .maybeSingle();
-      if (!idemErr && existing?.id) {
-        console.log("Idempotent hit for payment_id, returning existing booking:", existing.id);
-        return new Response(JSON.stringify({ success: true, booking: existing, idempotent: true }), {
-          status: 200,
-          headers: corsHeaders,
-        });
-      }
-      if (idemErr) console.warn("Idempotency lookup skipped:", idemErr.message);
-    }
+    // NOTE: The production `bookings` table does NOT have `payment_id` or `order_id` columns.
+    // We embed those refs inside `item_details` for traceability and use booking_number for idempotency.
+    // If you later add the columns via migration, re-enable the block below.
 
     // Collision-proof booking number generator: YL-<YY><MM><DD>-<8hex>
     const genBookingNumber = () => {
@@ -80,6 +66,16 @@ serve(async (req) => {
       const dd = String(d.getUTCDate()).padStart(2, "0");
       const rand = crypto.randomUUID().replace(/-/g, "").slice(0, 8).toUpperCase();
       return `YL-${yy}${mm}${dd}-${rand}`;
+    };
+
+    // Merge payment/order refs into item_details so we don't lose the audit trail
+    // even though the table doesn't have dedicated columns for them.
+    const mergedItemDetails = {
+      ...(body.item_details && typeof body.item_details === "object" && !Array.isArray(body.item_details)
+        ? body.item_details
+        : { items: body.item_details ?? null }),
+      payment_id: payment_id || null,
+      order_id: order_id || null,
     };
 
     const baseBookingData: Record<string, unknown> = {
@@ -96,22 +92,15 @@ serve(async (req) => {
       adults: adults || 1,
       children: children || 0,
       special_requests: special_requests || null,
-      item_details: body.item_details || null,
+      item_details: mergedItemDetails,
     };
-    // Only include payment/order refs if provided; drop them if the column is missing.
-    const optionalRefs: Record<string, unknown> = {};
-    if (payment_id) optionalRefs.payment_id = payment_id;
-    if (order_id) optionalRefs.order_id = order_id;
 
     // Retry on unique-violation collisions (23505) by regenerating booking_number.
-    // Also retry once with unknown columns stripped (42703) so schema drift is non-fatal.
     let data: any = null;
     let error: any = null;
-    let includeOptional = Object.keys(optionalRefs).length > 0;
     for (let attempt = 0; attempt < 6; attempt++) {
       const bookingData: Record<string, unknown> = {
         ...baseBookingData,
-        ...(includeOptional ? optionalRefs : {}),
         booking_number: genBookingNumber(),
       };
       const res = await supabase.from("bookings").insert([bookingData]).select().single();
@@ -123,13 +112,9 @@ serve(async (req) => {
         console.warn(`booking_number collision on attempt ${attempt + 1}, retrying...`);
         continue;
       }
-      if (code === "42703" && includeOptional) {
-        console.warn("Column missing, retrying without optional refs:", (error as any).message);
-        includeOptional = false;
-        continue;
-      }
       break;
     }
+
 
 
     if (error) {
