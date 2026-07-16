@@ -181,7 +181,19 @@ const sections: Section[] = [
       { title: "Chiang Rai + Golden Triangle", href: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip", image: chiangRaiImg },
     ],
   },
-]);
+  {
+    id: "japan-travel",
+    heading: "Japan Travel",
+    description:
+      "Discover Japan with Yellodae — Tokyo and Osaka itineraries, Mount Fuji day trips and complete Japan budget guides in INR for Indian travelers.",
+    cards: [
+      { title: "Tokyo Itinerary", href: "/japan/destination-guides/activity/tokyo-city-tour-guide", image: tokyoImg },
+      { title: "Osaka Guide", href: "/japan/destination-guides/activity/kyoto-temple-tour-guide", image: kyotoImg },
+      { title: "Japan Budget Guide", href: "/japan/destination-guides/price-cost/japan-trip-cost-from-india", image: fujiImg },
+      { title: "Mount Fuji Day Tour", href: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo", image: fujiImg },
+    ],
+  },
+];
 
 const SeoDestinationSections = () => {
   return (
