@@ -5,6 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import FloatingWhatsApp from "./FloatingWhatsApp";
 import HeroSlider from "./activity-detail/HeroSlider";
+import HeroCollage from "./activity-detail/HeroCollage";
 import PhotoGallery from "./activity-detail/PhotoGallery";
 import CustomerReviews from "./activity-detail/CustomerReviews";
 import PricingCalculator from "./activity-detail/PricingCalculator";
@@ -39,9 +40,11 @@ interface TourBookingProps {
   tourData: TourData;
   extraContentBeforeReviews?: React.ReactNode;
   extraContentBeforeSuggested?: React.ReactNode;
+  heroVariant?: "slider" | "collage";
+  hidePhotoGallery?: boolean;
 }
 
-const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested }: TourBookingProps) => {
+const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, heroVariant = "slider", hidePhotoGallery = false }: TourBookingProps) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const itineraryRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
@@ -232,8 +235,12 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
         {/* Hero Section */}
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-2 space-y-6">
-            {/* Hero Image Slider */}
-            <HeroSlider images={safeHeroImages} onExplore={scrollToItinerary} />
+            {/* Hero Image */}
+            {heroVariant === "collage" ? (
+              <HeroCollage images={safeHeroImages} />
+            ) : (
+              <HeroSlider images={safeHeroImages} onExplore={scrollToItinerary} />
+            )}
             
             {/* Title, Location, Rating */}
             <div className="space-y-4">
