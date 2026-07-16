@@ -237,9 +237,10 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
       </div>
       
       <main className="container mx-auto px-4 py-8">
-        {/* Unified two-column layout: left flows hero + content, right is sticky sidebar */}
+        {/* Mobile order: title/hero -> booking -> tour details. Desktop: sticky sidebar spans full left content height. */}
         <div className="grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8 order-2 lg:order-none">
+          {/* Top left: title, hero, rating, gallery */}
+          <div className="lg:col-span-2 space-y-8">
             {/* Title above images (collage variant) */}
             {heroVariant === "collage" && (
               <div className="space-y-2">
@@ -338,7 +339,32 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
 
             {/* Photo Gallery */}
             {!hidePhotoGallery && <PhotoGallery images={safeGalleryImages} />}
+          </div>
 
+          {/* Sticky Right Sidebar: Pricing on top, Support below. On mobile it sits between hero and tour details. */}
+          <div className="lg:col-span-1 lg:row-span-2">
+            <div className="sticky top-4 space-y-6">
+              <PricingCalculator
+                basePrice={tourData.basePrice}
+                childPrice={tourData.childPrice}
+                activityName={tourData.title}
+                tourTimings={tourData.tourTimings}
+                pricePerVehicle={tourData.pricePerVehicle}
+                vehicleCapacity={tourData.vehicleCapacity}
+                tourSlug={tourSlug}
+                singleAdultPrice={tourData.singleAdultPrice}
+                twoAdultPrice={tourData.twoAdultPrice}
+                minAdults={tourData.minAdults}
+                tourOptions={tourData.tourOptions}
+                tourAddOns={tourData.tourAddOns}
+                hideChildren={tourData.hideChildren}
+              />
+              <CustomerSupport />
+            </div>
+          </div>
+
+          {/* Bottom left: tour description, policies, reviews, FAQ */}
+          <div className="lg:col-span-2 space-y-8">
             {/* Tour Description */}
             <div ref={itineraryRef}>
               <TourDescription tourData={tourData} extraBeforeHighlights={extraDescriptionBeforeHighlights} hideItinerary={hideItinerary} />
@@ -365,28 +391,6 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
               faqs={tourData.faqs}
               seoFaqs={getSeoFaqsForCity(tourData.city)}
             />
-          </div>
-
-          {/* Sticky Right Sidebar: Pricing on top, Support below */}
-          <div className="lg:col-span-1 order-1 lg:order-none">
-            <div className="sticky top-4 space-y-6">
-              <PricingCalculator
-                basePrice={tourData.basePrice}
-                childPrice={tourData.childPrice}
-                activityName={tourData.title}
-                tourTimings={tourData.tourTimings}
-                pricePerVehicle={tourData.pricePerVehicle}
-                vehicleCapacity={tourData.vehicleCapacity}
-                tourSlug={tourSlug}
-                singleAdultPrice={tourData.singleAdultPrice}
-                twoAdultPrice={tourData.twoAdultPrice}
-                minAdults={tourData.minAdults}
-                tourOptions={tourData.tourOptions}
-                tourAddOns={tourData.tourAddOns}
-                hideChildren={tourData.hideChildren}
-              />
-              <CustomerSupport />
-            </div>
           </div>
         </div>
 
