@@ -248,8 +248,8 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                   <MapPin className="h-4 w-4" />
                   <span>{tourData.location}</span>
                 </div>
-                <div className="flex items-center justify-between gap-4">
-                  <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+                <div className="flex items-center justify-between gap-4 min-w-0">
+                  <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight break-words">
                     {tourData.title}
                   </h1>
                   <WishlistButton
@@ -279,8 +279,8 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                     <span>{tourData.location}</span>
                   </div>
 
-                  <div className="flex items-center justify-between gap-4">
-                    <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+                  <div className="flex items-center justify-between gap-4 min-w-0">
+                    <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight break-words">
                       {tourData.title}
                     </h1>
                     <WishlistButton
