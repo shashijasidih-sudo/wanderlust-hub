@@ -234,35 +234,61 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
       
       <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
-          <div className="lg:col-span-2 space-y-6">
+        <div className="grid lg:grid-cols-3 gap-8 mb-8">
+          <div className="lg:col-span-2 space-y-4">
+            {/* Title above images (collage variant) */}
+            {heroVariant === "collage" && (
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <MapPin className="h-4 w-4" />
+                  <span>{tourData.location}</span>
+                </div>
+                <div className="flex items-center justify-between gap-4">
+                  <h1 className="text-2xl md:text-3xl font-bold leading-tight">
+                    {tourData.title}
+                  </h1>
+                  <WishlistButton
+                    tourSlug={tourSlug}
+                    tourName={tourData.title}
+                    tourImage={safeHeroImages[0]?.src}
+                    tourPrice={tourData.basePrice}
+                    size="default"
+                  />
+                </div>
+              </div>
+            )}
+
             {/* Hero Image */}
             {heroVariant === "collage" ? (
               <HeroCollage images={safeHeroImages} />
             ) : (
               <HeroSlider images={safeHeroImages} onExplore={scrollToItinerary} />
             )}
-            
-            {/* Title, Location, Rating */}
+
+            {/* Title, Location, Rating (slider variant only) */}
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <MapPin className="h-4 w-4" />
-                <span>{tourData.location}</span>
-              </div>
-              
-              <div className="flex items-center justify-between gap-4">
-                <h1 className="text-2xl md:text-3xl font-bold leading-tight">
-                  {tourData.title}
-                </h1>
-                <WishlistButton
-                  tourSlug={tourSlug}
-                  tourName={tourData.title}
-                  tourImage={safeHeroImages[0]?.src}
-                  tourPrice={tourData.basePrice}
-                  size="default"
-                />
-              </div>
-              
+              {heroVariant !== "collage" && (
+                <>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <MapPin className="h-4 w-4" />
+                    <span>{tourData.location}</span>
+                  </div>
+
+                  <div className="flex items-center justify-between gap-4">
+                    <h1 className="text-2xl md:text-3xl font-bold leading-tight">
+                      {tourData.title}
+                    </h1>
+                    <WishlistButton
+                      tourSlug={tourSlug}
+                      tourName={tourData.title}
+                      tourImage={safeHeroImages[0]?.src}
+                      tourPrice={tourData.basePrice}
+                      size="default"
+                    />
+                  </div>
+                </>
+              )}
+
               <p className="text-lg text-muted-foreground">
                 {tourData.shortDescription}
               </p>
