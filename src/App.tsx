@@ -880,7 +880,7 @@ const App = () => (
             <Route path="/singapore/adventure-cove-waterpark-tickets" element={<AdventureCove />} />
             <Route path="/singapore/singapore-flyer-tickets-and-transfers" element={<SingaporeFlyer />} />
             <Route path="/singapore/river-wonders-singapore-tickets" element={<RiverSafari />} />
-            <Route path="/singapore/universal-studios-singapore-weekday-tickets" element={<UniversalStudiosWeekday />} />
+            <Route path="/singapore/universal-studios-singapore-tickets-and-transfers" element={<UniversalStudiosWeekday />} />
             <Route path="/singapore/universal-studios-singapore-weekend-tickets" element={<UniversalStudiosWeekend />} />
             <Route path="/singapore/singapore-zoo-tickets" element={<SingaporeZoo />} />
             <Route path="/singapore/rainforest-wild-asia-tickets" element={<RainforestWildAsia />} />

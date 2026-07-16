@@ -70,6 +70,10 @@ import singaporeMarinaByDay from "@/assets/singapore-marina-bay-sands-day-1.jpg"
 import singaporeMerlionNight from "@/assets/singapore-merlion-night-1.jpg";
 import singaporeCoupleWalking from "@/assets/singapore-couple-walking-1.jpg";
 import singaporeTouristsCity from "@/assets/singapore-tourists-city-1.jpg";
+import ussGlobe from "@/assets/uss-globe.jpg.asset.json";
+import ussCastle from "@/assets/uss-castle.jpg.asset.json";
+import ussCastleLake from "@/assets/uss-castle-lake.jpg.asset.json";
+import singaporeCityNight from "@/assets/singapore-city-night.jpg.asset.json";
 
 export interface CustomerReview {
   name: string;
@@ -4623,19 +4627,29 @@ export const toursData: Record<string, TourData> = {
   },
   "universal-studios-weekday": {
     id: "universal-studios-weekday",
-    title: "Universal Studios Singapore Weekday Ticket",
-    shortDescription: "Movie-themed experience with thrilling rides and 7 exciting zones.",
+    title: "Universal Studios Ticket",
+    shortDescription: "Movie-themed experience with thrilling rides and 7 exciting zones at Resorts World Sentosa.",
     location: "Resorts World Sentosa, Singapore",
     city: "singapore",
-    basePrice: 7000,
-    childPrice: 4200,
+    basePrice: 6762,
+    childPrice: 5000,
     duration: "Full Day",
     rating: 4.9,
     reviews: 5678,
     heroImages: [
-      { src: "https://images.unsplash.com/photo-1581351123004-757df051db8e?w=800&auto=format&fit=crop", title: "Universal Studios" }
+      { src: ussGlobe.url, title: "Universal Studios Globe" },
+      { src: ussCastle.url, title: "Far Far Away Castle" },
+      { src: ussCastleLake.url, title: "USS Castle & Lake" },
+      { src: singaporeCityNight.url, title: "Singapore Skyline" }
     ],
     galleryImages: [],
+    tourOptions: [
+      { label: "Universal Studios Admission Ticket", adultPrice: 6762, childPrice: 5000 },
+      { label: "Universal Studios Admission Ticket with Transfers (min. 2 adults)", adultPrice: 7873, childPrice: 7245 }
+    ],
+    tourAddOns: [
+      { label: "Universal Studios Meal Voucher", adultPrice: 966, childPrice: 966 }
+    ],
     highlights: [
       "7 themed zones",
       "Hollywood & New York replicas",
@@ -4645,16 +4659,16 @@ export const toursData: Record<string, TourData> = {
       "Madagascar characters"
     ],
     description: {
-      overview: "Universal Studios Singapore offers thrilling movie-themed experiences.",
+      overview: "Universal Studios Singapore offers thrilling movie-themed experiences at Resorts World Sentosa.",
       whatToExpect: "Explore Hollywood and New York replicas, venture into Ancient Egypt for adventure rides, visit Far Far Away for fairytale fun, dance with Madagascar's characters, and face your fears on one of the world's tallest roller coasters at Sci-Fi City."
     },
     itinerary: [],
     tourTimings: ["10:00 AM - 8:00 PM"],
     inclusions: ["Universal Studios entrance", "Access to all 7 zones", "All rides and attractions"],
-    exclusions: ["Personal expenses", "Food", "Express passes"],
+    exclusions: ["Personal expenses", "Food (unless meal voucher add-on selected)", "Express passes"],
     bookingPolicy: ["Valid photo ID required", "Children must be accompanied by adult"],
     cancellationPolicy: ["100% charge for cancellations after booking"],
-    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    childPolicy: ["Under 4: Free", "4-12: Child rate", "Above 12: Adult rate"],
     faqs: []
   },
   "universal-studios-weekend": {

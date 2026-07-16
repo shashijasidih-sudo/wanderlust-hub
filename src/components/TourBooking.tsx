@@ -5,6 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import FloatingWhatsApp from "./FloatingWhatsApp";
 import HeroSlider from "./activity-detail/HeroSlider";
+import HeroCollage from "./activity-detail/HeroCollage";
 import PhotoGallery from "./activity-detail/PhotoGallery";
 import CustomerReviews from "./activity-detail/CustomerReviews";
 import PricingCalculator from "./activity-detail/PricingCalculator";
@@ -39,9 +40,12 @@ interface TourBookingProps {
   tourData: TourData;
   extraContentBeforeReviews?: React.ReactNode;
   extraContentBeforeSuggested?: React.ReactNode;
+  extraContentAfterPolicies?: React.ReactNode;
+  heroVariant?: "slider" | "collage";
+  hidePhotoGallery?: boolean;
 }
 
-const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested }: TourBookingProps) => {
+const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, extraContentAfterPolicies, heroVariant = "slider", hidePhotoGallery = false }: TourBookingProps) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const itineraryRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
@@ -232,8 +236,12 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
         {/* Hero Section */}
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-2 space-y-6">
-            {/* Hero Image Slider */}
-            <HeroSlider images={safeHeroImages} onExplore={scrollToItinerary} />
+            {/* Hero Image */}
+            {heroVariant === "collage" ? (
+              <HeroCollage images={safeHeroImages} />
+            ) : (
+              <HeroSlider images={safeHeroImages} onExplore={scrollToItinerary} />
+            )}
             
             {/* Title, Location, Rating */}
             <div className="space-y-4">
@@ -325,7 +333,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Photo Gallery */}
-            <PhotoGallery images={safeGalleryImages} />
+            {!hidePhotoGallery && <PhotoGallery images={safeGalleryImages} />}
             
             {/* Tour Description */}
             <div ref={itineraryRef}>
@@ -334,6 +342,10 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
             
             {/* Tour Policies (Inclusion, Exclusion, Booking, Cancellation, Child Policy) */}
             <TourPolicies tourData={tourData} />
+
+            {/* Optional extra content after policies (e.g. Indian Traveler Companion) */}
+            {extraContentAfterPolicies}
+            
             
             {/* Optional extra SEO content before reviews */}
             {extraContentBeforeReviews}

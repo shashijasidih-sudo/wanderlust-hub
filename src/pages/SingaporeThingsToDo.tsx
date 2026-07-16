@@ -100,7 +100,7 @@ const activities: Activity[] = [
     description: "Hollywood blockbuster movies come to life — 7 themed zones at USS on weekdays.",
     price: 6762,
     image: singaporeUniversalStudios,
-    slug: "/singapore/universal-studios-singapore-weekday-tickets",
+    slug: "/singapore/universal-studios-singapore-tickets-and-transfers",
     category: "Theme Parks & Water Parks",
   },
   {
@@ -493,7 +493,7 @@ const SingaporeThingsToDo = () => {
             <h3 className="text-lg font-semibold">Popular Singapore Tours</h3>
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {[
-                { label: "Universal Studios Weekday", to: "/singapore/universal-studios-singapore-weekday-tickets" },
+                { label: "Universal Studios Weekday", to: "/singapore/universal-studios-singapore-tickets-and-transfers" },
                 { label: "Universal Studios Weekend", to: "/singapore/universal-studios-singapore-weekend-tickets" },
                 { label: "Gardens by the Bay", to: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
                 { label: "Singapore Flyer", to: "/singapore/singapore-flyer-tickets-and-transfers" },
