@@ -48,14 +48,14 @@ const CustomerReviews = ({ reviews, averageRating = 4.8, totalReviews = 1247 }: 
   return (
     <Card>
       <CardHeader>
-        <div className="flex items-center justify-between">
-          <CardTitle className="text-2xl">Customer Reviews</CardTitle>
-          <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1">
+        <div className="flex items-center justify-between gap-2">
+          <CardTitle className="text-lg md:text-2xl">Customer Reviews</CardTitle>
+          <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className={`h-5 w-5 ${
+                  className={`h-4 w-4 ${
                     i < Math.floor(displayAverageRating)
                       ? "fill-primary text-primary"
                       : "text-muted-foreground"
@@ -63,32 +63,32 @@ const CustomerReviews = ({ reviews, averageRating = 4.8, totalReviews = 1247 }: 
                 />
               ))}
             </div>
-            <span className="font-semibold text-lg">{displayAverageRating}</span>
-            <span className="text-muted-foreground">({displayTotalReviews} reviews)</span>
+            <span className="font-semibold text-sm md:text-base">{displayAverageRating}</span>
+            <span className="text-muted-foreground text-xs md:text-sm">({displayTotalReviews} reviews)</span>
           </div>
         </div>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-4 p-3 md:p-6">
         {displayReviews.map((review, index) => (
-          <div key={index} className="border-b border-border pb-6 last:border-0">
-            <div className="flex items-start gap-4">
-              <Avatar>
-                <AvatarFallback className="bg-primary/10 text-primary font-semibold">
+          <div key={index} className="border-b border-border pb-4 last:border-0">
+            <div className="flex items-start gap-3">
+              <Avatar className="h-8 w-8">
+                <AvatarFallback className="bg-primary/10 text-primary text-xs font-semibold">
                   {review.name.split(" ").map(n => n[0]).join("")}
                 </AvatarFallback>
               </Avatar>
               
-              <div className="flex-1 space-y-2">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-semibold">{review.name}</p>
-                    <p className="text-sm text-muted-foreground">{review.date}</p>
+              <div className="flex-1 space-y-1.5 min-w-0">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="min-w-0">
+                    <p className="font-semibold text-sm md:text-base truncate">{review.name}</p>
+                    <p className="text-xs text-muted-foreground">{review.date}</p>
                   </div>
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-0.5 shrink-0">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`h-4 w-4 ${
+                        className={`h-3 w-3 ${
                           i < review.rating
                             ? "fill-primary text-primary"
                             : "text-muted-foreground"
@@ -98,11 +98,11 @@ const CustomerReviews = ({ reviews, averageRating = 4.8, totalReviews = 1247 }: 
                   </div>
                 </div>
                 
-                <p className="text-muted-foreground">{review.comment}</p>
+                <p className="text-sm md:text-base text-muted-foreground break-words">{review.comment}</p>
                 
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <button className="flex items-center gap-1 hover:text-primary transition-colors">
-                    <ThumbsUp className="h-4 w-4" />
+                    <ThumbsUp className="h-3 w-3" />
                     Helpful ({review.helpful})
                   </button>
                 </div>
