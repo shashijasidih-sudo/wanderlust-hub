@@ -141,6 +141,7 @@ const UniversalStudiosWeekday = () => {
       forceBlackText
       extraDescriptionBeforeHighlights={<RidesAndTimings />}
       extraContentAfterPolicies={<IndianTravelerCompanion />}
+      extraContentBeforeSuggested={<DontMissThese />}
     />
   );
 };
