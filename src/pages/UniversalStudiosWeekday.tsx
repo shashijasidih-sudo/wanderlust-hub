@@ -15,22 +15,22 @@ const rides = [
 const RidesAndTimings = () => (
   <div className="space-y-6">
     <div className="overflow-x-auto">
-      <table className="w-full text-sm border border-border rounded-lg overflow-hidden">
+      <table className="w-full text-xs md:text-sm border border-border rounded-lg overflow-hidden min-w-[600px] md:min-w-0">
         <thead className="bg-muted">
           <tr>
-            <th className="text-left p-3 font-semibold">Ride</th>
-            <th className="text-left p-3 font-semibold">Thrill</th>
-            <th className="text-left p-3 font-semibold">Type</th>
-            <th className="text-left p-3 font-semibold">Best For</th>
+            <th className="text-left p-2 md:p-3 font-semibold">Ride</th>
+            <th className="text-left p-2 md:p-3 font-semibold">Thrill</th>
+            <th className="text-left p-2 md:p-3 font-semibold">Type</th>
+            <th className="text-left p-2 md:p-3 font-semibold">Best For</th>
           </tr>
         </thead>
         <tbody>
           {rides.map((r) => (
             <tr key={r.name} className="border-t border-border">
-              <td className="p-3">{r.emoji} {r.name}</td>
-              <td className="p-3">{r.thrill}</td>
-              <td className="p-3">{r.type}</td>
-              <td className="p-3">{r.best}</td>
+              <td className="p-2 md:p-3 whitespace-normal">{r.emoji} {r.name}</td>
+              <td className="p-2 md:p-3 whitespace-normal">{r.thrill}</td>
+              <td className="p-2 md:p-3 whitespace-normal">{r.type}</td>
+              <td className="p-2 md:p-3 whitespace-normal">{r.best}</td>
             </tr>
           ))}
         </tbody>
@@ -38,26 +38,26 @@ const RidesAndTimings = () => (
     </div>
 
     <div>
-      <h3 className="text-lg font-semibold mb-3">Timings & Duration</h3>
+      <h3 className="text-base md:text-lg font-semibold mb-3">Timings & Duration</h3>
       <div className="overflow-x-auto">
-        <table className="w-full text-sm border border-border rounded-lg overflow-hidden">
+        <table className="w-full text-xs md:text-sm border border-border rounded-lg overflow-hidden min-w-[600px] md:min-w-0">
           <thead className="bg-muted">
             <tr>
-              <th className="text-left p-3 font-semibold">Transfers Type</th>
-              <th className="text-left p-3 font-semibold">Pickup Timings</th>
-              <th className="text-left p-3 font-semibold">Duration Approx</th>
+              <th className="text-left p-2 md:p-3 font-semibold">Transfers Type</th>
+              <th className="text-left p-2 md:p-3 font-semibold">Pickup Timings</th>
+              <th className="text-left p-2 md:p-3 font-semibold">Duration Approx</th>
             </tr>
           </thead>
           <tbody>
             <tr className="border-t border-border">
-              <td className="p-3">Sharing Transfers</td>
-              <td className="p-3">Pickup between: 08:30 am · Drop off: 7:00 pm</td>
-              <td className="p-3">11:00 hours</td>
+              <td className="p-2 md:p-3 whitespace-normal">Sharing Transfers</td>
+              <td className="p-2 md:p-3 whitespace-normal">Pickup between: 08:30 am · Drop off: 7:00 pm</td>
+              <td className="p-2 md:p-3 whitespace-normal">11:00 hours</td>
             </tr>
             <tr className="border-t border-border">
-              <td className="p-3">Without Transfers</td>
-              <td className="p-3">Universal Opening Hours: 10:00 am to 8:00 pm</td>
-              <td className="p-3">04:00 hours</td>
+              <td className="p-2 md:p-3 whitespace-normal">Without Transfers</td>
+              <td className="p-2 md:p-3 whitespace-normal">Universal Opening Hours: 10:00 am to 8:00 pm</td>
+              <td className="p-2 md:p-3 whitespace-normal">04:00 hours</td>
             </tr>
           </tbody>
         </table>
@@ -69,9 +69,9 @@ const RidesAndTimings = () => (
 const IndianTravelerCompanion = () => (
   <Card>
     <CardHeader>
-      <CardTitle className="text-2xl">Indian Traveler Companion</CardTitle>
+      <CardTitle className="text-xl md:text-2xl">Indian Traveler Companion</CardTitle>
     </CardHeader>
-    <CardContent className="space-y-4 text-sm">
+    <CardContent className="space-y-4 text-sm p-4 md:p-6">
       <p className="text-muted-foreground">
         A quick handbook for Indian families visiting Universal Studios Singapore — from vegetarian
         food inside the park to currency, connectivity and prayer facilities on Sentosa.
