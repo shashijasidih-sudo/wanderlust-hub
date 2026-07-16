@@ -54,7 +54,33 @@ serve(async (req) => {
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    const bookingData = {
+    // Idempotency: if this Razorpay payment already produced a booking, return it.
+    if (payment_id) {
+      const { data: existing } = await supabase
+        .from("bookings")
+        .select("*")
+        .eq("payment_id", payment_id)
+        .maybeSingle();
+      if (existing?.id) {
+        console.log("Idempotent hit for payment_id, returning existing booking:", existing.id);
+        return new Response(JSON.stringify({ success: true, booking: existing, idempotent: true }), {
+          status: 200,
+          headers: corsHeaders,
+        });
+      }
+    }
+
+    // Collision-proof booking number generator: YL-<YY><MM><DD>-<8hex>
+    const genBookingNumber = () => {
+      const d = new Date();
+      const yy = String(d.getUTCFullYear()).slice(-2);
+      const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
+      const dd = String(d.getUTCDate()).padStart(2, "0");
+      const rand = crypto.randomUUID().replace(/-/g, "").slice(0, 8).toUpperCase();
+      return `YL-${yy}${mm}${dd}-${rand}`;
+    };
+
+    const baseBookingData: Record<string, unknown> = {
       user_id: user_id || null,
       contact_name: contact_name || "",
       contact_email,
@@ -69,21 +95,32 @@ serve(async (req) => {
       children: children || 0,
       special_requests: special_requests || null,
       item_details: body.item_details || null,
+      payment_id: payment_id || null,
+      order_id: order_id || null,
     };
 
-    const { data, error } = await supabase
-      .from("bookings")
-      .insert([bookingData])
-      .select()
-      .single();
+    // Retry on unique-violation collisions (23505) by regenerating booking_number.
+    let data: any = null;
+    let error: any = null;
+    for (let attempt = 0; attempt < 5; attempt++) {
+      const bookingData = { ...baseBookingData, booking_number: genBookingNumber() };
+      const res = await supabase.from("bookings").insert([bookingData]).select().single();
+      data = res.data;
+      error = res.error;
+      if (!error) break;
+      // 23505 = unique_violation
+      if ((error as any).code !== "23505") break;
+      console.warn(`booking_number collision on attempt ${attempt + 1}, retrying...`);
+    }
 
     if (error) {
       console.error("Database insert error:", error);
-      return new Response(JSON.stringify({ error: "Failed to save booking", details: error.message }), {
+      return new Response(JSON.stringify({ error: "Failed to save booking", details: (error as any).message }), {
         status: 500,
         headers: corsHeaders,
       });
     }
+
 
     const bookingId = data?.id;
     console.log("Returned booking:", JSON.stringify(data));
