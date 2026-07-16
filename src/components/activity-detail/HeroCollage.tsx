@@ -11,7 +11,7 @@ const HeroCollage = ({ images }: HeroCollageProps) => {
   while (imgs.length < 4 && images.length > 0) imgs.push(images[0]);
 
   return (
-    <div className="relative h-[420px] md:h-[500px] rounded-2xl overflow-hidden">
+    <div className="relative h-[280px] sm:h-[360px] md:h-[500px] rounded-2xl overflow-hidden">
       <div className="grid grid-cols-2 grid-rows-2 gap-2 h-full">
         {imgs.map((img, i) => (
           <div key={i} className="relative overflow-hidden">

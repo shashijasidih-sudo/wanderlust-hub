@@ -239,7 +239,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
       <main className="container mx-auto px-4 py-8">
         {/* Unified two-column layout: left flows hero + content, right is sticky sidebar */}
         <div className="grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-8 order-2 lg:order-none">
             {/* Title above images (collage variant) */}
             {heroVariant === "collage" && (
               <div className="space-y-2">
@@ -248,7 +248,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                   <span>{tourData.location}</span>
                 </div>
                 <div className="flex items-center justify-between gap-4">
-                  <h1 className="text-2xl md:text-3xl font-bold leading-tight">
+                  <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
                     {tourData.title}
                   </h1>
                   <WishlistButton
@@ -279,7 +279,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                   </div>
 
                   <div className="flex items-center justify-between gap-4">
-                    <h1 className="text-2xl md:text-3xl font-bold leading-tight">
+                    <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
                       {tourData.title}
                     </h1>
                     <WishlistButton
@@ -293,7 +293,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                 </>
               )}
 
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground">
                 {tourData.shortDescription}
               </p>
 
@@ -305,7 +305,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                       <Star key={i} className="h-5 w-5 fill-primary text-primary" />
                     ))}
                   </div>
-                  <span className="font-semibold text-lg">{tourData.rating}</span>
+                  <span className="font-semibold text-base md:text-lg">{tourData.rating}</span>
                   <span className="text-muted-foreground">({tourData.reviews.toLocaleString()} reviews)</span>
                 </div>
                 <div className="flex items-center gap-4 text-sm">
@@ -328,7 +328,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                 <Button
                   size="lg"
                   onClick={scrollToItinerary}
-                  className="w-full bg-primary hover:bg-primary/90 text-lg py-6"
+                  className="w-full bg-primary hover:bg-primary/90 text-base md:text-lg py-5 md:py-6"
                 >
                   Explore Your Adventure
                   <ChevronDown className="ml-2 h-5 w-5" />
@@ -368,7 +368,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
           </div>
 
           {/* Sticky Right Sidebar: Pricing on top, Support below */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 order-1 lg:order-none">
             <div className="sticky top-4 space-y-6">
               <PricingCalculator
                 basePrice={tourData.basePrice}

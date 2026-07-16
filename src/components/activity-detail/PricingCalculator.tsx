@@ -147,9 +147,9 @@ const PricingCalculator = ({
   return (
     <Card className="border-2 border-primary/20 shadow-lg">
       <CardHeader className="bg-primary/5">
-        <CardTitle className="text-2xl">Book Your Experience</CardTitle>
+        <CardTitle className="text-xl md:text-2xl">Book Your Experience</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6 p-6">
+      <CardContent className="space-y-6 p-4 md:p-6">
         <div className="space-y-2">
           <label className="text-sm font-medium flex items-center gap-2">
             <Calendar className="h-4 w-4 text-primary" />
