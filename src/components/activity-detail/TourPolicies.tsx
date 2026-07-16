@@ -16,20 +16,20 @@ const TourPolicies = ({ tourData }: TourPoliciesProps) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl">Tour Information & Policies</CardTitle>
+        <CardTitle className="text-lg md:text-2xl">Tour Information & Policies</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-4 p-3 md:p-6">
         {/* Inclusion */}
         <div>
-          <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-            <Check className="h-5 w-5 text-primary" />
+          <h3 className="text-sm md:text-base font-semibold mb-2 flex items-center gap-2">
+            <Check className="h-4 w-4 text-primary" />
             What's Included
           </h3>
-          <ul className="space-y-2 ml-7">
+          <ul className="space-y-1 ml-6">
             {tourData.inclusions.map((item, idx) => (
               <li key={idx} className="flex items-start gap-2">
-                <span className="text-primary mt-1">•</span>
-                <span>{item}</span>
+                <span className="text-primary mt-1 text-xs">•</span>
+                <span className="text-sm md:text-base">{item}</span>
               </li>
             ))}
           </ul>
@@ -37,15 +37,15 @@ const TourPolicies = ({ tourData }: TourPoliciesProps) => {
 
         {/* Exclusion */}
         <div>
-          <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-            <X className="h-5 w-5 text-destructive" />
+          <h3 className="text-sm md:text-base font-semibold mb-2 flex items-center gap-2">
+            <X className="h-4 w-4 text-destructive" />
             What's Not Included
           </h3>
-          <ul className="space-y-2 ml-7">
+          <ul className="space-y-1 ml-6">
             {tourData.exclusions.map((item, idx) => (
               <li key={idx} className="flex items-start gap-2">
-                <span className="text-destructive mt-1">•</span>
-                <span>{item}</span>
+                <span className="text-destructive mt-1 text-xs">•</span>
+                <span className="text-sm md:text-base">{item}</span>
               </li>
             ))}
           </ul>
@@ -54,8 +54,8 @@ const TourPolicies = ({ tourData }: TourPoliciesProps) => {
         {/* Accordion for Policies */}
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="booking">
-            <AccordionTrigger>Booking Policy</AccordionTrigger>
-            <AccordionContent className="space-y-2 text-muted-foreground">
+            <AccordionTrigger className="text-sm md:text-base py-3">Booking Policy</AccordionTrigger>
+            <AccordionContent className="space-y-1 text-xs md:text-sm text-muted-foreground">
               {tourData.bookingPolicy.map((item, idx) => (
                 <p key={idx}>• {item}</p>
               ))}
@@ -65,8 +65,8 @@ const TourPolicies = ({ tourData }: TourPoliciesProps) => {
           </AccordionItem>
 
           <AccordionItem value="cancellation">
-            <AccordionTrigger>Cancellation Policy</AccordionTrigger>
-            <AccordionContent className="space-y-2 text-muted-foreground">
+            <AccordionTrigger className="text-sm md:text-base py-3">Cancellation Policy</AccordionTrigger>
+            <AccordionContent className="space-y-1 text-xs md:text-sm text-muted-foreground">
               {tourData.cancellationPolicy.map((item, idx) => (
                 <p key={idx}>• {item}</p>
               ))}
@@ -74,8 +74,8 @@ const TourPolicies = ({ tourData }: TourPoliciesProps) => {
           </AccordionItem>
 
           <AccordionItem value="child">
-            <AccordionTrigger>Child Policy</AccordionTrigger>
-            <AccordionContent className="space-y-2 text-muted-foreground">
+            <AccordionTrigger className="text-sm md:text-base py-3">Child Policy</AccordionTrigger>
+            <AccordionContent className="space-y-1 text-xs md:text-sm text-muted-foreground">
               {tourData.childPolicy.map((item, idx) => (
                 <p key={idx}>• {item}</p>
               ))}

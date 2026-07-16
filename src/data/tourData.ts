@@ -4635,7 +4635,7 @@ export const toursData: Record<string, TourData> = {
     childPrice: 5000,
     duration: "Full Day",
     rating: 4.9,
-    reviews: 5678,
+    reviews: 150,
     heroImages: [
       { src: ussGlobe, title: "Universal Studios Globe" },
       { src: ussCastle, title: "Far Far Away Castle" },

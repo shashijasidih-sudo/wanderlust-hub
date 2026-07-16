@@ -1,56 +1,32 @@
-import { Phone, Mail, MessageCircle, Clock } from "lucide-react";
+import { Mail, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 const CustomerSupport = () => {
   return (
     <Card className="bg-primary/5 border-primary/20">
-      <CardHeader>
-        <CardTitle>Need Help?</CardTitle>
+      <CardHeader className="pb-2 px-3 pt-3">
+        <CardTitle className="text-sm">Need Help?</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-4">
-        <p className="text-muted-foreground">
-          Our customer support team is here to assist you with any questions or concerns.
+      <CardContent className="space-y-2 p-3 text-xs">
+        <p className="text-muted-foreground text-xs">
+          Our team is here to assist you.
         </p>
-        
-        <div className="grid md:grid-cols-2 gap-4">
-          <div className="flex items-center gap-3 p-4 bg-background rounded-lg">
-            <Phone className="h-5 w-5 text-primary" />
+        <div className="grid grid-cols-2 gap-2">
+          <div className="flex items-center gap-2 p-2 bg-background rounded-md">
+            <Mail className="h-4 w-4 text-primary" />
             <div>
-              <p className="font-semibold">Phone Support</p>
-              <p className="text-sm text-muted-foreground">+66 123 456 789</p>
+              <p className="font-semibold text-xs">Email Support</p>
+              <p className="text-[10px] text-muted-foreground">support@yellodae.com</p>
             </div>
           </div>
-
-          <div className="flex items-center gap-3 p-4 bg-background rounded-lg">
-            <Mail className="h-5 w-5 text-primary" />
+          <div className="flex items-center gap-2 p-2 bg-background rounded-md">
+            <Clock className="h-4 w-4 text-primary" />
             <div>
-              <p className="font-semibold">Email Support</p>
-              <p className="text-sm text-muted-foreground">support@yellodae.com</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3 p-4 bg-background rounded-lg">
-            <MessageCircle className="h-5 w-5 text-primary" />
-            <div>
-              <p className="font-semibold">Live Chat</p>
-              <p className="text-sm text-muted-foreground">Available 24/7</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3 p-4 bg-background rounded-lg">
-            <Clock className="h-5 w-5 text-primary" />
-            <div>
-              <p className="font-semibold">Response Time</p>
-              <p className="text-sm text-muted-foreground">Within 2 hours</p>
+              <p className="font-semibold text-xs">Response Time</p>
+              <p className="text-[10px] text-muted-foreground">Within 2 hours</p>
             </div>
           </div>
         </div>
-
-        <Button className="w-full bg-primary hover:bg-primary/90">
-          <MessageCircle className="mr-2 h-4 w-4" />
-          Start Live Chat
-        </Button>
       </CardContent>
     </Card>
   );
