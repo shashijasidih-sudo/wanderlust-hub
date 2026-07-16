@@ -395,8 +395,11 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
         </div>
 
 
-        {/* Travel Guides — auto-rendered by city, or overridden via extraContentBeforeSuggested */}
-        {extraContentBeforeSuggested ?? (() => {
+        {/* Optional extra content before Travel Guides */}
+        {extraContentBeforeSuggested}
+
+        {/* Travel Guides — auto-rendered by city */}
+        {(() => {
           const city = (tourData.city || "").toLowerCase();
           const thaiCities = ["bangkok", "phuket", "pattaya", "krabi", "thailand"];
           if (thaiCities.includes(city)) return <TravelGuidesSection region="thailand" />;
