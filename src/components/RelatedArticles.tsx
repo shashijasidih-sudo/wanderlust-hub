@@ -162,12 +162,12 @@ const RelatedArticles = ({ city, currentLink, count = 8, title = "Related Articl
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
                 <span className="absolute top-3 left-3 text-[10px] md:text-xs font-semibold uppercase tracking-wider bg-primary/90 text-primary-foreground px-2 py-1 rounded-full capitalize">
                   {cat}
                 </span>
                 <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
-                  <h3 className="text-white font-semibold text-sm md:text-base leading-snug line-clamp-3">
+                  <h3 className="!text-white font-semibold text-sm md:text-base leading-snug line-clamp-3 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
                     {b.title}
                   </h3>
                   <span className="mt-2 inline-flex items-center gap-1 text-xs text-white/90 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
