@@ -41,11 +41,14 @@ interface TourBookingProps {
   extraContentBeforeReviews?: React.ReactNode;
   extraContentBeforeSuggested?: React.ReactNode;
   extraContentAfterPolicies?: React.ReactNode;
+  extraDescriptionBeforeHighlights?: React.ReactNode;
+  hideItinerary?: boolean;
   heroVariant?: "slider" | "collage";
   hidePhotoGallery?: boolean;
+  forceBlackText?: boolean;
 }
 
-const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, extraContentAfterPolicies, heroVariant = "slider", hidePhotoGallery = false }: TourBookingProps) => {
+const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, extraContentAfterPolicies, extraDescriptionBeforeHighlights, hideItinerary, heroVariant = "slider", hidePhotoGallery = false, forceBlackText = false }: TourBookingProps) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const itineraryRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
