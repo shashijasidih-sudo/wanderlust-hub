@@ -29,6 +29,22 @@ import singaporeCityImg from "@/assets/singapore-city-tour.jpg";
 import tokyoImg from "@/assets/japan-tokyo-city-1.jpg";
 import kyotoImg from "@/assets/japan-kyoto-temple-1.jpg";
 import fujiImg from "@/assets/japan-mount-fuji-1.jpg";
+import alcazarImg from "@/assets/alcazar-show-1.jpg";
+import bigEyeImg from "@/assets/bigeye-show-pattaya-1.jpg";
+import muayThaiImg from "@/assets/muay-thai-1.jpg";
+import pattayaNightImg from "@/assets/pattaya-nightlife-1.jpg";
+import pattayaDolphinImg from "@/assets/dolphin-show-1.jpg";
+import bangkokCruiseImg from "@/assets/bangkok-cruise-night-3.jpg";
+import bangkokSkywalkImg from "@/assets/bangkok-skywalk-1.jpg";
+import bangkokTempleImg from "@/assets/bangkok-temple-1.jpg";
+import dubaiDesertImg from "@/assets/dubai-desert-couple-1.jpg";
+import dubaiDhowImg from "@/assets/dubai-dhow-cruise-1.jpg";
+import dubaiCityImg from "@/assets/dubai-city-night-1.jpg";
+import dubaiFountainImg from "@/assets/dubai-fountain-show-1.jpg";
+import dubaiGlobalVillageImg from "@/assets/dubai-global-village-1.jpg";
+import dubaiAquariumImg from "@/assets/dubai-aquarium-fish-1.jpg";
+import dubaiSkylineImg from "@/assets/dubai-skyline-night-1.jpg";
+import chiangRaiImg from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg";
 
 const sections: Section[] = [
   {
@@ -77,6 +93,92 @@ const sections: Section[] = [
       { title: "Universal Studios", href: "/singapore/universal-studios-singapore", image: universalImg },
       { title: "Budget Guide", href: "/blog/singapore-combo-pass", image: singaporeCityImg },
       { title: "Night Safari", href: "/blog/night-safari-singapore-guide", image: kohSamuiImg },
+    ],
+  },
+  {
+    id: "pattaya-shows",
+    heading: "Pattaya Shows & Nightlife",
+    description:
+      "Book Pattaya's most popular cabaret shows, live entertainment and nightlife tours with private transfers.",
+    cards: [
+      { title: "Alcazar Cabaret Show", href: "/thailand/pattaya/alcazar-cabaret-show-with-transfer", image: alcazarImg },
+      { title: "Tiffany's 89 Show", href: "/thailand/pattaya/89-show-pattaya-with-transfer", image: pattayaNightImg },
+      { title: "Big Eye 99 Show", href: "/thailand/pattaya/99-show-pattaya-big-eye-with-transfer", image: bigEyeImg },
+      { title: "Muay Thai Live", href: "/thailand/pattaya/muay-thai-boxing-show-pattaya", image: muayThaiImg },
+      { title: "Pattaya Pub Crawl", href: "/thailand/pattaya/pattaya-pub-crawl-night-tour", image: pattayaNightImg },
+      { title: "Pattaya Dolphinarium", href: "/thailand/pattaya/pattaya-dolphinarium-show-tickets", image: pattayaDolphinImg },
+    ],
+  },
+  {
+    id: "phuket-shows-cruises",
+    heading: "Phuket Cruises & Shows",
+    description:
+      "Premium Phi Phi cruises, dolphin encounters and Phuket's iconic evening shows with hotel transfers.",
+    cards: [
+      { title: "Phi Phi Premium Speedboat", href: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer", image: phiPhiImg },
+      { title: "Maya Bay + Khai Speedboat", href: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer", image: phiPhiImg },
+      { title: "Dolphin Show Phuket", href: "/thailand/phuket/dolphin-show-phuket-with-transfer", image: pattayaDolphinImg },
+      { title: "Simon Cabaret Show", href: "/thailand/phuket/simon-cabaret-show-with-transfer", image: alcazarImg },
+      { title: "Carnival Magic Show", href: "/thailand/phuket/carnival-magic-show-tickets-with-transfer", image: alcazarImg },
+      { title: "Phi Phi Big Boat Tour", href: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer", image: phiPhiImg },
+    ],
+  },
+  {
+    id: "bangkok-cruises",
+    heading: "Bangkok Cruises & Attractions",
+    description:
+      "Chao Phraya dinner cruises, Baiyoke Sky Buffet and iconic Bangkok attractions with easy booking.",
+    cards: [
+      { title: "Chao Phraya Princess Cruise", href: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer", image: bangkokCruiseImg },
+      { title: "Chao Phraya Private Cruise", href: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer", image: bangkokCruiseImg },
+      { title: "Baiyoke Sky Buffet", href: "/thailand/bangkok/baiyoke-buffet", image: bangkokSkywalkImg },
+      { title: "Sea Life + Madame Tussauds", href: "/thailand/bangkok/sea-life-madame-tussauds-tickets", image: bangkokTempleImg },
+    ],
+  },
+  {
+    id: "dubai-experiences",
+    heading: "Dubai Experiences",
+    description:
+      "Iconic Dubai experiences — Dhow cruises, desert safari and family-favourite attractions with instant confirmation.",
+    cards: [
+      { title: "Dhow Cruise Marina", href: "/dubai/dhow-cruise-marina-upper-deck", image: dubaiDhowImg },
+      { title: "Dhow Cruise Creek", href: "/dubai/dhow-cruise-creek-upper-deck", image: dubaiDhowImg },
+      { title: "Dubai Miracle Garden", href: "/dubai/miracle-garden", image: dubaiCityImg },
+      { title: "Dubai Fountain Show", href: "/dubai/fountain-show", image: dubaiFountainImg },
+      { title: "Dubai Aquarium & Penguin", href: "/dubai/aquarium-penguin", image: dubaiAquariumImg },
+      { title: "Global Village Dubai", href: "/dubai/global-village", image: dubaiGlobalVillageImg },
+      { title: "Ferrari World Abu Dhabi", href: "/dubai/abu-dhabi-ferrari-world", image: dubaiDesertImg },
+      { title: "Dubai City Tour + Mall", href: "/dubai/city-tour-mall", image: dubaiCityImg },
+    ],
+  },
+  {
+    id: "dubai-airport-transfers",
+    heading: "Dubai Airport Transfers by Zone",
+    description:
+      "Fixed-price Dubai airport pickups and drop-offs across all 5 city zones — book by your hotel area.",
+    cards: [
+      { title: "Zone 1 Airport Pickup", href: "/dubai/airport-pickup-zone1", image: dubaiSkylineImg },
+      { title: "Zone 1 Airport Drop-off", href: "/dubai/airport-dropoff-zone1", image: dubaiSkylineImg },
+      { title: "Zone 2 Airport Pickup", href: "/dubai/airport-pickup-zone2", image: dubaiSkylineImg },
+      { title: "Zone 2 Airport Drop-off", href: "/dubai/airport-dropoff-zone2", image: dubaiSkylineImg },
+      { title: "Zone 3 Airport Pickup", href: "/dubai/airport-pickup-zone3", image: dubaiSkylineImg },
+      { title: "Zone 3 Airport Drop-off", href: "/dubai/airport-dropoff-zone3", image: dubaiSkylineImg },
+      { title: "Zone 4 Airport Pickup", href: "/dubai/airport-pickup-zone4", image: dubaiSkylineImg },
+      { title: "Zone 4 Airport Drop-off", href: "/dubai/airport-dropoff-zone4", image: dubaiSkylineImg },
+      { title: "Zone 5 Airport Pickup", href: "/dubai/airport-pickup-zone5", image: dubaiSkylineImg },
+      { title: "Zone 5 Airport Drop-off", href: "/dubai/airport-dropoff-zone5", image: dubaiSkylineImg },
+    ],
+  },
+  {
+    id: "krabi-more",
+    heading: "More Krabi & Chiang Mai Adventures",
+    description:
+      "Extra island-hopping variants from Krabi and top day trips from Chiang Mai — perfect for extended stays.",
+    cards: [
+      { title: "Hong Island Speedboat", href: "/thailand/krabi/hong-island-tour-speedboat-with-transfer", image: hongIslandImg },
+      { title: "Hong Island Longtail", href: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer", image: hongIslandImg },
+      { title: "James Bond Island (Krabi)", href: "/thailand/krabi/james-bond-island", image: jamesBondImg },
+      { title: "Chiang Rai + Golden Triangle", href: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip", image: chiangRaiImg },
     ],
   },
   {
