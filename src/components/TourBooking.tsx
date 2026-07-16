@@ -341,7 +341,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
 
             {/* Tour Description */}
             <div ref={itineraryRef}>
-              <TourDescription tourData={tourData} />
+              <TourDescription tourData={tourData} extraBeforeHighlights={extraDescriptionBeforeHighlights} hideItinerary={hideItinerary} />
             </div>
 
             {/* Tour Policies */}
