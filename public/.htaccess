@@ -94,6 +94,7 @@ RedirectMatch 301 ^/thailand/pattaya/dmk-airport-pickup/?$ /thailand/bangkok/don
 RedirectMatch 301 ^/thailand/pattaya/city-hourly-rental/?$ /thailand/pattaya/pattaya-private-car-4-hours
 RedirectMatch 301 ^/thailand/phuket/hkt-airport-dropoff/?$ /thailand/phuket/phuket-hotel-to-phuket-airport-transfer
 RedirectMatch 301 ^/singapore/universal-studios-weekday/?$ /singapore/universal-studios-singapore-tickets-and-transfers
+RedirectMatch 301 ^/singapore/universal-studios-singapore-weekday-tickets/?$ /singapore/universal-studios-singapore-tickets-and-transfers
 RedirectMatch 301 ^/singapore/universal-studios-weekend/?$ /singapore/universal-studios-singapore-weekend-tickets
 RedirectMatch 301 ^/thailand/bangkok/three-temples-tour/?$ /thailand/bangkok/three-temples-bangkok-city-tour-with-transfer
 RedirectMatch 301 ^/thailand/bangkok/wat-arun-chinatown/?$ /thailand/bangkok/wat-arun-chinatown-tour
