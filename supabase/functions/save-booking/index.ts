@@ -55,19 +55,21 @@ serve(async (req) => {
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
     // Idempotency: if this Razorpay payment already produced a booking, return it.
+    // Best-effort — silently skip if the column doesn't exist on this schema.
     if (payment_id) {
-      const { data: existing } = await supabase
+      const { data: existing, error: idemErr } = await supabase
         .from("bookings")
         .select("*")
         .eq("payment_id", payment_id)
         .maybeSingle();
-      if (existing?.id) {
+      if (!idemErr && existing?.id) {
         console.log("Idempotent hit for payment_id, returning existing booking:", existing.id);
         return new Response(JSON.stringify({ success: true, booking: existing, idempotent: true }), {
           status: 200,
           headers: corsHeaders,
         });
       }
+      if (idemErr) console.warn("Idempotency lookup skipped:", idemErr.message);
     }
 
     // Collision-proof booking number generator: YL-<YY><MM><DD>-<8hex>
@@ -95,23 +97,40 @@ serve(async (req) => {
       children: children || 0,
       special_requests: special_requests || null,
       item_details: body.item_details || null,
-      payment_id: payment_id || null,
-      order_id: order_id || null,
     };
+    // Only include payment/order refs if provided; drop them if the column is missing.
+    const optionalRefs: Record<string, unknown> = {};
+    if (payment_id) optionalRefs.payment_id = payment_id;
+    if (order_id) optionalRefs.order_id = order_id;
 
     // Retry on unique-violation collisions (23505) by regenerating booking_number.
+    // Also retry once with unknown columns stripped (42703) so schema drift is non-fatal.
     let data: any = null;
     let error: any = null;
-    for (let attempt = 0; attempt < 5; attempt++) {
-      const bookingData = { ...baseBookingData, booking_number: genBookingNumber() };
+    let includeOptional = Object.keys(optionalRefs).length > 0;
+    for (let attempt = 0; attempt < 6; attempt++) {
+      const bookingData: Record<string, unknown> = {
+        ...baseBookingData,
+        ...(includeOptional ? optionalRefs : {}),
+        booking_number: genBookingNumber(),
+      };
       const res = await supabase.from("bookings").insert([bookingData]).select().single();
       data = res.data;
       error = res.error;
       if (!error) break;
-      // 23505 = unique_violation
-      if ((error as any).code !== "23505") break;
-      console.warn(`booking_number collision on attempt ${attempt + 1}, retrying...`);
+      const code = (error as any).code;
+      if (code === "23505") {
+        console.warn(`booking_number collision on attempt ${attempt + 1}, retrying...`);
+        continue;
+      }
+      if (code === "42703" && includeOptional) {
+        console.warn("Column missing, retrying without optional refs:", (error as any).message);
+        includeOptional = false;
+        continue;
+      }
+      break;
     }
+
 
     if (error) {
       console.error("Database insert error:", error);
