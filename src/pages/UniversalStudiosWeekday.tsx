@@ -3,6 +3,7 @@ import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Utensils, Plug, Languages, IndianRupee, Plane, ShieldCheck } from "lucide-react";
+import DontMissThese from "@/components/activity-detail/DontMissThese";
 
 const rides = [
   { emoji: "🚀", name: "Battlestar Galactica: CYLON", thrill: "⭐⭐⭐⭐⭐", type: "Inverted Roller Coaster", best: "Thrill Seekers" },
