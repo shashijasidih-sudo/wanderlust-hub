@@ -186,7 +186,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
   };
 
   return (
-    <div className={`min-h-screen bg-background ${forceBlackText ? "[&_main_*]:!text-black" : ""}`}>
+    <div className={`min-h-screen bg-background ${forceBlackText ? "[&_main_.lg\\:col-span-2_*]:!text-black" : ""}`}>
 
       <Seo
         title={`${tourData.title} | Yellodae Trails`}
