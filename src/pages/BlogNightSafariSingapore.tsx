@@ -29,7 +29,7 @@ const activityCards = [
   { title: "River Safari Singapore", location: "Mandai", image: riverSafari, slug: "/singapore/river-wonders-singapore-tickets" },
   { title: "Rainforest Wild Asia", location: "Mandai", image: zoo, slug: "/singapore/rainforest-wild-asia-tickets" },
   { title: "Gardens by the Bay", location: "Marina Bay", image: gardensBay, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
-  { title: "Universal Studios Weekday", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-weekday-tickets" },
+  { title: "Universal Studios Weekday", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-tickets-and-transfers" },
   { title: "Singapore City Tour", location: "Singapore", image: cityTour, slug: "/singapore/singapore-city-tour" },
   { title: "Singapore Flyer", location: "Marina Bay", image: flyer, slug: "/singapore/singapore-flyer-tickets-and-transfers" },
   { title: "Sentosa Cable Car", location: "Sentosa", image: cableCar, slug: "/singapore/sentosa-cable-car-tickets-and-transfers" },

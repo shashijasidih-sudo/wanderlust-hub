@@ -12,7 +12,7 @@ const INTERNAL_LINK_BLOCK =
   "Related reads: [Singapore Airport Transfers](/singapore/singapore-airport-pickup) · " +
   "[Gardens by the Bay](/singapore/gardens-by-the-bay-tickets-and-transfers) · " +
   "[Night Safari](/singapore/night-safari-singapore-tickets-and-transfers) · " +
-  "[Universal Studios](/singapore/universal-studios-singapore-weekday-tickets) · " +
+  "[Universal Studios](/singapore/universal-studios-singapore-tickets-and-transfers) · " +
   "[Sentosa](/singapore/sentosa-island).";
 
 const BlogMarinaBaySands12LocalExperiences = () => (
@@ -76,7 +76,7 @@ const BlogMarinaBaySands12LocalExperiences = () => (
       { type: "paragraph", content: INTERNAL_LINK_BLOCK },
 
       { type: "heading", content: "2. Skip the Crowds at Sentosa's Beaches" },
-      { type: "paragraph", content: "Most tourists rush directly to [Universal Studios](/singapore/universal-studios-singapore-weekday-tickets). Locals know [Sentosa Island](/singapore/sentosa-island) has another side." },
+      { type: "paragraph", content: "Most tourists rush directly to [Universal Studios](/singapore/universal-studios-singapore-tickets-and-transfers). Locals know [Sentosa Island](/singapore/sentosa-island) has another side." },
       { type: "paragraph", content: "You can easily spend an evening at Siloso or Palawan Beach where beach bars, live music, cycling paths, and sunset walks replace queues and roller coasters." },
       { type: "paragraph", content: "The atmosphere feels surprisingly tropical — more like a beach town than one of Asia's busiest cities. Stay until night, when the beaches become calm and beautifully lit." },
 
@@ -145,7 +145,7 @@ const BlogMarinaBaySands12LocalExperiences = () => (
       { type: "paragraph", content: "The journey begins at Mount Faber, one of Singapore's oldest parks, before gliding high above the city skyline, lush greenery, cruise terminals, and the sparkling harbour. Within minutes, you'll enjoy panoramic views that are impossible to experience from the ground." },
       { type: "paragraph", content: "As your cabin crosses the water toward Sentosa Island, you'll spot luxury yachts, giant cruise ships, container ports, and the Southern Islands stretching into the distance. On a clear day, the views are breathtaking in every direction." },
       { type: "paragraph", content: "The experience becomes even more magical during golden hour, when the setting sun paints the skyline in shades of orange and pink before Singapore's skyscrapers begin to sparkle at night." },
-      { type: "paragraph", content: "Once you arrive in Sentosa, you're perfectly positioned to continue exploring attractions like [Universal Studios Singapore](/singapore/universal-studios-singapore-weekday-tickets), S.E.A. Aquarium, or Siloso Beach." },
+      { type: "paragraph", content: "Once you arrive in Sentosa, you're perfectly positioned to continue exploring attractions like [Universal Studios Singapore](/singapore/universal-studios-singapore-tickets-and-transfers), S.E.A. Aquarium, or Siloso Beach." },
       { type: "tip-box", content: "Best Time: One hour before sunset. Photography Tip: Sit facing Marina Bay for the best skyline photographs during the journey." },
       { type: "paragraph", content: INTERNAL_LINK_BLOCK },
 
@@ -228,7 +228,7 @@ const BlogMarinaBaySands12LocalExperiences = () => (
         "[Night Safari](/singapore/night-safari-singapore-tickets-and-transfers)",
         "[Gardens by the Bay](/singapore/gardens-by-the-bay-tickets-and-transfers) (Cloud Forest & Flower Dome)",
         "[Singapore River Cruise](/singapore/singapore-river-cruise-tickets-and-transfers)",
-        "[Universal Studios Singapore](/singapore/universal-studios-singapore-weekday-tickets)",
+        "[Universal Studios Singapore](/singapore/universal-studios-singapore-tickets-and-transfers)",
         "[Singapore Cable Car](/singapore/sentosa-cable-car-tickets-and-transfers)",
       ]},
       { type: "paragraph", content: "⭐ Worth It for Families:" },
@@ -263,7 +263,7 @@ const BlogMarinaBaySands12LocalExperiences = () => (
       { type: "paragraph", content: "🎟️ Sentosa Adventure Combo: [Singapore Cable Car](/singapore/sentosa-cable-car-tickets-and-transfers), [Wings of Time](/singapore/wings-of-time-show-sentosa-tickets), [SkyHelix Sentosa](/singapore/skyhelix-sentosa-tickets), Madame Tussauds (optional)." },
       { type: "paragraph", content: "🎟️ Wildlife Parks Combo: [Night Safari](/singapore/night-safari-singapore-tickets-and-transfers), [Singapore Zoo](/singapore/singapore-zoo-tickets), [River Wonders](/singapore/river-wonders-singapore-tickets), Bird Paradise. Perfect for families spending a full day exploring Mandai Wildlife Reserve." },
       { type: "paragraph", content: "🎟️ Gardens & Skyline Combo: [Gardens by the Bay](/singapore/gardens-by-the-bay-tickets-and-transfers), Marina Bay Observation Deck, [Singapore Flyer](/singapore/singapore-flyer-tickets-and-transfers). Ideal for first-time visitors who want to experience Singapore's iconic skyline." },
-      { type: "paragraph", content: "🎟️ Universal Studios + Transfers: Many travel providers bundle [Universal Studios](/singapore/universal-studios-singapore-weekday-tickets) tickets with hotel or airport transfers, making the day more convenient and often more economical." },
+      { type: "paragraph", content: "🎟️ Universal Studios + Transfers: Many travel providers bundle [Universal Studios](/singapore/universal-studios-singapore-tickets-and-transfers) tickets with hotel or airport transfers, making the day more convenient and often more economical." },
       { type: "paragraph", content: "🎟️ City Explorer Packages combining: [Singapore River Cruise](/singapore/singapore-river-cruise-tickets-and-transfers), [City Tour](/singapore/singapore-city-tour), [Gardens by the Bay](/singapore/gardens-by-the-bay-tickets-and-transfers), [Airport Transfers](/singapore/singapore-airport-pickup). These bundles often cost significantly less than purchasing each activity separately." },
       { type: "tip-box", content: "Pro Tip: Before booking, compare individual prices with combo packages. If you're planning to visit three or more paid attractions, combo tickets usually provide the best overall value." },
 
@@ -278,7 +278,7 @@ const BlogMarinaBaySands12LocalExperiences = () => (
       { title: "Night Safari Singapore", link: "/singapore/night-safari-singapore-tickets-and-transfers" },
       { title: "Gardens by the Bay", link: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
       { title: "Sentosa Cable Car", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
-      { title: "Universal Studios Singapore", link: "/singapore/universal-studios-singapore-weekday-tickets" },
+      { title: "Universal Studios Singapore", link: "/singapore/universal-studios-singapore-tickets-and-transfers" },
       { title: "Singapore Flyer", link: "/singapore/singapore-flyer-tickets-and-transfers" },
       { title: "Singapore Airport Pickup", link: "/singapore/singapore-airport-pickup" },
       { title: "Singapore Airport Drop-off", link: "/singapore/singapore-airport-dropoff" },

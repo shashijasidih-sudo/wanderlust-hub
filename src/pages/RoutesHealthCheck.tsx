@@ -26,7 +26,7 @@ const singaporeRoutes = [
   "/singapore/sentosa-4d-3-rides", "/singapore/sentosa-cable-car-tickets-and-transfers", "/singapore/wings-of-time-show-sentosa-tickets",
   "/singapore/skyhelix-sentosa-tickets", "/singapore/singapore-river-cruise-tickets-and-transfers", "/singapore/gardens-by-the-bay-tickets-and-transfers",
   "/singapore/adventure-cove-waterpark-tickets", "/singapore/singapore-flyer-tickets-and-transfers", "/singapore/river-wonders-singapore-tickets",
-  "/singapore/universal-studios-singapore-weekday-tickets", "/singapore/universal-studios-singapore-weekend-tickets",
+  "/singapore/universal-studios-singapore-tickets-and-transfers", "/singapore/universal-studios-singapore-weekend-tickets",
   "/singapore/singapore-zoo-tickets", "/singapore/rainforest-wild-asia-tickets", "/singapore/big-bus-hop-on-hop-off-singapore-city-tour",
   "/singapore/big-bus-night-city-tour-singapore", "/singapore/sentosa-island", "/singapore/destination-guides",
   "/blog/airport-transfer-booking-singapore", "/blog/sentosa-activities-singapore",
