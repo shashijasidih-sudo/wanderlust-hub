@@ -238,9 +238,9 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
       
       <main className="container mx-auto px-4 py-8">
         {/* Mobile order: title/hero -> booking -> tour details. Desktop: sticky sidebar spans full left content height. */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8 min-w-0">
           {/* Top left: title, hero, rating, gallery */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-8 min-w-0">
             {/* Title above images (collage variant) */}
             {heroVariant === "collage" && (
               <div className="space-y-2">
