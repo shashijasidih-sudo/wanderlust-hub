@@ -237,8 +237,9 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
       </div>
       
       <main className="container mx-auto px-4 py-8">
-        {/* Unified two-column layout: left flows hero + content, right is sticky sidebar */}
+        {/* Mobile order: title/hero -> booking -> tour details. Desktop: sticky sidebar spans full left content height. */}
         <div className="grid lg:grid-cols-3 gap-8">
+          {/* Top left: title, hero, rating, gallery */}
           <div className="lg:col-span-2 space-y-8">
             {/* Title above images (collage variant) */}
             {heroVariant === "collage" && (
@@ -247,8 +248,8 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                   <MapPin className="h-4 w-4" />
                   <span>{tourData.location}</span>
                 </div>
-                <div className="flex items-center justify-between gap-4">
-                  <h1 className="text-2xl md:text-3xl font-bold leading-tight">
+                <div className="flex items-center justify-between gap-4 min-w-0">
+                  <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight break-words">
                     {tourData.title}
                   </h1>
                   <WishlistButton
@@ -278,8 +279,8 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                     <span>{tourData.location}</span>
                   </div>
 
-                  <div className="flex items-center justify-between gap-4">
-                    <h1 className="text-2xl md:text-3xl font-bold leading-tight">
+                  <div className="flex items-center justify-between gap-4 min-w-0">
+                    <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight break-words">
                       {tourData.title}
                     </h1>
                     <WishlistButton
@@ -293,7 +294,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                 </>
               )}
 
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground">
                 {tourData.shortDescription}
               </p>
 
@@ -305,7 +306,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                       <Star key={i} className="h-5 w-5 fill-primary text-primary" />
                     ))}
                   </div>
-                  <span className="font-semibold text-lg">{tourData.rating}</span>
+                  <span className="font-semibold text-base md:text-lg">{tourData.rating}</span>
                   <span className="text-muted-foreground">({tourData.reviews.toLocaleString()} reviews)</span>
                 </div>
                 <div className="flex items-center gap-4 text-sm">
@@ -328,7 +329,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                 <Button
                   size="lg"
                   onClick={scrollToItinerary}
-                  className="w-full bg-primary hover:bg-primary/90 text-lg py-6"
+                  className="w-full bg-primary hover:bg-primary/90 text-base md:text-lg py-5 md:py-6"
                 >
                   Explore Your Adventure
                   <ChevronDown className="ml-2 h-5 w-5" />
@@ -338,7 +339,32 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
 
             {/* Photo Gallery */}
             {!hidePhotoGallery && <PhotoGallery images={safeGalleryImages} />}
+          </div>
 
+          {/* Sticky Right Sidebar: Pricing on top, Support below. On mobile it sits between hero and tour details. */}
+          <div className="lg:col-span-1 lg:row-span-2">
+            <div className="sticky top-4 space-y-6">
+              <PricingCalculator
+                basePrice={tourData.basePrice}
+                childPrice={tourData.childPrice}
+                activityName={tourData.title}
+                tourTimings={tourData.tourTimings}
+                pricePerVehicle={tourData.pricePerVehicle}
+                vehicleCapacity={tourData.vehicleCapacity}
+                tourSlug={tourSlug}
+                singleAdultPrice={tourData.singleAdultPrice}
+                twoAdultPrice={tourData.twoAdultPrice}
+                minAdults={tourData.minAdults}
+                tourOptions={tourData.tourOptions}
+                tourAddOns={tourData.tourAddOns}
+                hideChildren={tourData.hideChildren}
+              />
+              <CustomerSupport />
+            </div>
+          </div>
+
+          {/* Bottom left: tour description, policies, reviews, FAQ */}
+          <div className="lg:col-span-2 space-y-8">
             {/* Tour Description */}
             <div ref={itineraryRef}>
               <TourDescription tourData={tourData} extraBeforeHighlights={extraDescriptionBeforeHighlights} hideItinerary={hideItinerary} />
@@ -365,28 +391,6 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
               faqs={tourData.faqs}
               seoFaqs={getSeoFaqsForCity(tourData.city)}
             />
-          </div>
-
-          {/* Sticky Right Sidebar: Pricing on top, Support below */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-4 space-y-6">
-              <PricingCalculator
-                basePrice={tourData.basePrice}
-                childPrice={tourData.childPrice}
-                activityName={tourData.title}
-                tourTimings={tourData.tourTimings}
-                pricePerVehicle={tourData.pricePerVehicle}
-                vehicleCapacity={tourData.vehicleCapacity}
-                tourSlug={tourSlug}
-                singleAdultPrice={tourData.singleAdultPrice}
-                twoAdultPrice={tourData.twoAdultPrice}
-                minAdults={tourData.minAdults}
-                tourOptions={tourData.tourOptions}
-                tourAddOns={tourData.tourAddOns}
-                hideChildren={tourData.hideChildren}
-              />
-              <CustomerSupport />
-            </div>
           </div>
         </div>
 

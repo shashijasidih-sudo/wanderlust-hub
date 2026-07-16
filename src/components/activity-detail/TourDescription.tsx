@@ -12,16 +12,16 @@ const TourDescription = ({ tourData, extraBeforeHighlights, hideItinerary }: Tou
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl">Tour Overview</CardTitle>
+        <CardTitle className="text-xl md:text-2xl">Tour Overview</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 p-4 md:p-6">
         {/* Overview */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">What to Expect</h3>
-          <p className="text-muted-foreground leading-relaxed">
+          <h3 className="text-base md:text-lg font-semibold mb-3">What to Expect</h3>
+          <p className="text-muted-foreground leading-relaxed break-words">
             {tourData.description.overview}
           </p>
-          <p className="text-muted-foreground leading-relaxed mt-3">
+          <p className="text-muted-foreground leading-relaxed mt-3 break-words">
             {tourData.description.whatToExpect}
           </p>
         </div>
@@ -30,7 +30,7 @@ const TourDescription = ({ tourData, extraBeforeHighlights, hideItinerary }: Tou
 
         {/* Highlights */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Tour Highlights</h3>
+          <h3 className="text-base md:text-lg font-semibold mb-3">Tour Highlights</h3>
           <div className="grid md:grid-cols-2 gap-3">
             {tourData.highlights.map((highlight, idx) => (
               <div key={idx} className="flex items-start gap-2">
@@ -44,7 +44,7 @@ const TourDescription = ({ tourData, extraBeforeHighlights, hideItinerary }: Tou
         {/* Full Itinerary */}
         {!hideItinerary && tourData.itinerary && tourData.itinerary.length > 0 && (
           <div>
-            <h3 className="text-lg font-semibold mb-3">Full Itinerary</h3>
+            <h3 className="text-base md:text-lg font-semibold mb-3">Full Itinerary</h3>
             <div className="space-y-4">
               {tourData.itinerary.map((item, idx) => (
                 <div key={idx} className="flex gap-4">
