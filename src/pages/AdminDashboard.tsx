@@ -19,8 +19,9 @@ import {
 import {
   Loader2, ShieldCheck, CreditCard, XCircle, CheckCircle,
   Search, Download, ArrowUpDown, BarChart3, IndianRupee, Clock, RefreshCw,
-  ChevronLeft, ChevronRight,
+  ChevronLeft, ChevronRight, Eye,
 } from "lucide-react";
+import ViewBookingModal from "@/components/ViewBookingModal";
 import { toast } from "@/hooks/use-toast";
 import { format } from "date-fns";
 
@@ -81,6 +82,8 @@ const AdminDashboard = () => {
   const [sortField, setSortField] = useState<SortField>("created_at");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
   const [currentPage, setCurrentPage] = useState(1);
+  const [viewBooking, setViewBooking] = useState<Booking | null>(null);
+  const [viewOpen, setViewOpen] = useState(false);
 
   // Wait for auth to fully resolve before checking admin status
   useEffect(() => {
@@ -565,7 +568,15 @@ const AdminDashboard = () => {
                             </Badge>
                           </TableCell>
                           <TableCell>
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                className="h-8 text-xs border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                                onClick={() => { setViewBooking(booking); setViewOpen(true); }}
+                              >
+                                <Eye className="h-3 w-3 mr-1" /> View
+                              </Button>
                               <Select
                                 value={booking.status || "pending"}
                                 onValueChange={(value) => handleStatusUpdate(booking.id, value)}
@@ -645,6 +656,11 @@ const AdminDashboard = () => {
           </Card>
         </div>
       </main>
+      <ViewBookingModal
+        booking={viewBooking as any}
+        open={viewOpen}
+        onOpenChange={setViewOpen}
+      />
       <Footer />
     </div>
   );
