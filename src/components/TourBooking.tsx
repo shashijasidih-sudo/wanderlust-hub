@@ -346,7 +346,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
 
           {/* Sticky Right Sidebar (desktop only): Pricing on top, Support below. On mobile it sits statically between hero and tour details to avoid overlapping content under Child Policy. */}
           <div className="lg:col-span-1 lg:row-span-2 min-w-0">
-            <div className="lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto lg:pr-1">
+            <div className="lg:sticky lg:top-4">
               <BookingSidebar
                 ready={!!tourData?.title}
                 pricing={{
