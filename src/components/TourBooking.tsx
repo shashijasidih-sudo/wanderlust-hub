@@ -42,6 +42,7 @@ interface TourBookingProps {
   extraContentBeforeReviews?: React.ReactNode;
   extraContentBeforeSuggested?: React.ReactNode;
   extraContentAfterPolicies?: React.ReactNode;
+  extraContentAfterTransfers?: React.ReactNode;
   extraDescriptionBeforeHighlights?: React.ReactNode;
   hideItinerary?: boolean;
   heroVariant?: "slider" | "collage";
@@ -49,7 +50,8 @@ interface TourBookingProps {
   forceBlackText?: boolean;
 }
 
-const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, extraContentAfterPolicies, extraDescriptionBeforeHighlights, hideItinerary, heroVariant = "slider", hidePhotoGallery = false, forceBlackText = false }: TourBookingProps) => {
+const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, extraContentAfterPolicies, extraContentAfterTransfers, extraDescriptionBeforeHighlights, hideItinerary, heroVariant = "slider", hidePhotoGallery = false, forceBlackText = false }: TourBookingProps) => {
+
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const itineraryRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
@@ -423,6 +425,10 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
             <BookTransfersSection city={cityTransfers.city} transfers={cityTransfers.transfers} />
           );
         })()}
+
+        {/* Optional CTA / extra content after transfers */}
+        {extraContentAfterTransfers}
+
 
         {/* Suggested Tours */}
         <div className="mt-12">
