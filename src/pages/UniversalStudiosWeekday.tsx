@@ -2,7 +2,10 @@ import { useEffect } from "react";
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Utensils, Plug, Languages, IndianRupee, Plane, ShieldCheck } from "lucide-react";
+import {
+  Utensils, Plug, Languages, IndianRupee, Plane, ShieldCheck,
+  Star, MapPin, Clock, Users, Check, Sparkles, MessageCircle, X,
+} from "lucide-react";
 import DontMissThese from "@/components/activity-detail/DontMissThese";
 
 const rides = [
