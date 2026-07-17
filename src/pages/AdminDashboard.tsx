@@ -568,7 +568,15 @@ const AdminDashboard = () => {
                             </Badge>
                           </TableCell>
                           <TableCell>
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                className="h-8 text-xs border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                                onClick={() => { setViewBooking(booking); setViewOpen(true); }}
+                              >
+                                <Eye className="h-3 w-3 mr-1" /> View
+                              </Button>
                               <Select
                                 value={booking.status || "pending"}
                                 onValueChange={(value) => handleStatusUpdate(booking.id, value)}
