@@ -4627,7 +4627,7 @@ export const toursData: Record<string, TourData> = {
   },
   "universal-studios-weekday": {
     id: "universal-studios-weekday",
-    title: "Universal Studios Ticket & Transfers",
+    title: "Universal Studios Singapore Tickets with Hotel Transfers | Instant Confirmation",
     shortDescription: "Movie-themed experience with thrilling rides and 6 exciting zones at Resorts World Sentosa.",
     location: "Resorts World Sentosa, Singapore",
     city: "singapore",
