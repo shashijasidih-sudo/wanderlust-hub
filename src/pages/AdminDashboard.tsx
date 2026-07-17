@@ -656,6 +656,11 @@ const AdminDashboard = () => {
           </Card>
         </div>
       </main>
+      <ViewBookingModal
+        booking={viewBooking as any}
+        open={viewOpen}
+        onOpenChange={setViewOpen}
+      />
       <Footer />
     </div>
   );
