@@ -82,6 +82,8 @@ const AdminDashboard = () => {
   const [sortField, setSortField] = useState<SortField>("created_at");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
   const [currentPage, setCurrentPage] = useState(1);
+  const [viewBooking, setViewBooking] = useState<Booking | null>(null);
+  const [viewOpen, setViewOpen] = useState(false);
 
   // Wait for auth to fully resolve before checking admin status
   useEffect(() => {
