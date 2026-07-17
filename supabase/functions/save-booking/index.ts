@@ -95,24 +95,56 @@ serve(async (req) => {
       item_details: mergedItemDetails,
     };
 
-    // Retry on unique-violation collisions (23505) by regenerating booking_number.
+    // Retry loop:
+    //  - 23505 (unique violation on booking_number)  -> regenerate booking_number
+    //  - 42703 / PGRST204 (missing column)           -> drop the offending column and retry
     let data: any = null;
     let error: any = null;
-    for (let attempt = 0; attempt < 6; attempt++) {
+    const workingData: Record<string, unknown> = { ...baseBookingData };
+    const droppedCols: string[] = [];
+
+    // Extract the offending column name from Postgres/PostgREST error messages.
+    const extractMissingCol = (err: any): string | null => {
+      const msg: string = (err?.message || "") + " " + (err?.details || "") + " " + (err?.hint || "");
+      // e.g. "Could not find the 'foo' column of 'bookings' in the schema cache"
+      let m = msg.match(/'([^']+)' column/);
+      if (m) return m[1];
+      // e.g. "column bookings.foo does not exist" / "column \"foo\" of relation"
+      m = msg.match(/column\s+(?:"?[\w]+"?\.)?"?([\w]+)"?\s+(?:does not exist|of relation)/i);
+      if (m) return m[1];
+      return null;
+    };
+
+    for (let attempt = 0; attempt < 12; attempt++) {
       const bookingData: Record<string, unknown> = {
-        ...baseBookingData,
+        ...workingData,
         booking_number: genBookingNumber(),
       };
       const res = await supabase.from("bookings").insert([bookingData]).select().single();
       data = res.data;
       error = res.error;
       if (!error) break;
+
       const code = (error as any).code;
       if (code === "23505") {
         console.warn(`booking_number collision on attempt ${attempt + 1}, retrying...`);
         continue;
       }
+      if (code === "42703" || code === "PGRST204") {
+        const col = extractMissingCol(error);
+        if (col && col in workingData) {
+          console.warn(`Column '${col}' missing on bookings table — dropping and retrying.`);
+          delete workingData[col];
+          droppedCols.push(col);
+          continue;
+        }
+        console.error("Missing column reported but could not parse name:", error);
+      }
       break;
+    }
+
+    if (droppedCols.length) {
+      console.warn("Inserted without columns not present in production schema:", droppedCols);
     }
 
 
