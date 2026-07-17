@@ -19,8 +19,9 @@ import {
 import {
   Loader2, ShieldCheck, CreditCard, XCircle, CheckCircle,
   Search, Download, ArrowUpDown, BarChart3, IndianRupee, Clock, RefreshCw,
-  ChevronLeft, ChevronRight,
+  ChevronLeft, ChevronRight, Eye,
 } from "lucide-react";
+import ViewBookingModal from "@/components/ViewBookingModal";
 import { toast } from "@/hooks/use-toast";
 import { format } from "date-fns";
 
