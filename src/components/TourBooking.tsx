@@ -5,6 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import FloatingWhatsApp from "./FloatingWhatsApp";
 import HeroSlider from "./activity-detail/HeroSlider";
+import BookingSidebar from "./activity-detail/BookingSidebar";
 import HeroCollage from "./activity-detail/HeroCollage";
 import PhotoGallery from "./activity-detail/PhotoGallery";
 import CustomerReviews from "./activity-detail/CustomerReviews";
