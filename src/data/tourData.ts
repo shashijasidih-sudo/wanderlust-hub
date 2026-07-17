@@ -4678,8 +4678,46 @@ export const toursData: Record<string, TourData> = {
       "Children between ages 4 to 12 will be considered as children and charged a child rate.",
       "Children above the age of 12 years will be considered an adult and charged an adult rate."
     ],
-    faqs: []
+    faqs: [],
+    customerReviews: [
+      {
+        name: "Ananya Iyer",
+        date: "3 days ago",
+        rating: 5,
+        comment: "We booked Universal Studios Singapore through Yellodae because hotel transfers were included. Saved us from figuring out MRT with two kids and heavy strollers. Pickup was on time and tickets were on WhatsApp within minutes.",
+        helpful: 32,
+      },
+      {
+        name: "Rohit Mehra",
+        date: "1 week ago",
+        rating: 5,
+        comment: "My daughter absolutely loved Minion Land at Universal Studios. Transformers and Revenge of the Mummy were the highlights for me. Yellodae's driver arrived exactly on time at our Orchard Road hotel — very smooth day out.",
+        helpful: 27,
+      },
+      {
+        name: "Sneha Reddy",
+        date: "2 weeks ago",
+        rating: 5,
+        comment: "Very smooth booking experience for Universal Studios Singapore. WhatsApp support replied instantly when I had questions about vegetarian food inside the park. Paid in INR, got GST invoice — everything felt trustworthy.",
+        helpful: 21,
+      },
+      {
+        name: "Arjun Kapoor",
+        date: "3 weeks ago",
+        rating: 5,
+        comment: "Went to Universal Studios Singapore with my parents. The sharing transfer from our hotel was comfortable and the entry was hassle-free. Battlestar Galactica was a thrill! Great support from the Yellodae team in Hindi over WhatsApp.",
+        helpful: 19,
+      },
+      {
+        name: "Meera Nair",
+        date: "1 month ago",
+        rating: 4,
+        comment: "Family of four, first time at Universal Studios Singapore. Yellodae guided us on the best rides for kids and even reminded us to carry a poncho for the water rides. Small park compared to Orlando, but perfectly packed for one day.",
+        helpful: 14,
+      },
+    ],
   },
+
   "universal-studios-weekend": {
     id: "universal-studios-weekend",
     title: "Universal Studios Singapore Weekend Ticket",
