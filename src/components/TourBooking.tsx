@@ -426,6 +426,10 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
           );
         })()}
 
+        {/* Optional CTA / extra content after transfers */}
+        {extraContentAfterTransfers}
+
+
         {/* Suggested Tours */}
         <div className="mt-12">
           <SuggestedTours currentCity={tourData.city} />
