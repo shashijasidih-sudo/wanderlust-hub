@@ -336,7 +336,12 @@ const UniversalStudiosWeekday = () => {
       hidePhotoGallery
       hideItinerary
       forceBlackText
-      extraDescriptionBeforeHighlights={<RidesAndTimings />}
+      extraDescriptionBeforeHighlights={
+        <div className="space-y-8">
+          <MarketingIntro />
+          <RidesAndTimings />
+        </div>
+      }
       extraContentAfterPolicies={<IndianTravelerCompanion />}
       extraContentBeforeSuggested={<DontMissThese />}
     />
