@@ -363,35 +363,38 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
             </div>
           </div>
 
-          {/* Bottom left: tour description, policies, reviews, FAQ */}
+          {/* Bottom left: tour description, policies (sidebar sticks until end of policies / Child Policy) */}
           <div className="lg:col-span-2 space-y-8 min-w-0">
             {/* Tour Description */}
             <div ref={itineraryRef}>
               <TourDescription tourData={tourData} extraBeforeHighlights={extraDescriptionBeforeHighlights} hideItinerary={hideItinerary} />
             </div>
 
-            {/* Tour Policies */}
+            {/* Tour Policies (includes Child Policy) */}
             <TourPolicies tourData={tourData} />
-
-            {/* Optional extra content after policies */}
-            {extraContentAfterPolicies}
-
-            {/* Optional extra SEO content before reviews */}
-            {extraContentBeforeReviews}
-
-            {/* Customer Reviews */}
-            <CustomerReviews
-              reviews={tourData.customerReviews}
-              averageRating={tourData.rating}
-              totalReviews={tourData.reviews}
-            />
-
-            {/* FAQ Section */}
-            <FAQSection
-              faqs={tourData.faqs}
-              seoFaqs={getSeoFaqsForCity(tourData.city)}
-            />
           </div>
+        </div>
+
+        {/* Full-width sections below the sticky sidebar */}
+        <div className="space-y-8 mt-8 min-w-0">
+          {/* Optional extra content after policies (e.g. Indian Traveler Companion) */}
+          {extraContentAfterPolicies}
+
+          {/* Optional extra SEO content before reviews */}
+          {extraContentBeforeReviews}
+
+          {/* Customer Reviews */}
+          <CustomerReviews
+            reviews={tourData.customerReviews}
+            averageRating={tourData.rating}
+            totalReviews={tourData.reviews}
+          />
+
+          {/* FAQ Section */}
+          <FAQSection
+            faqs={tourData.faqs}
+            seoFaqs={getSeoFaqsForCity(tourData.city)}
+          />
         </div>
 
 
