@@ -5,6 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import FloatingWhatsApp from "./FloatingWhatsApp";
 import HeroSlider from "./activity-detail/HeroSlider";
+import BookingSidebar from "./activity-detail/BookingSidebar";
 import HeroCollage from "./activity-detail/HeroCollage";
 import PhotoGallery from "./activity-detail/PhotoGallery";
 import CustomerReviews from "./activity-detail/CustomerReviews";
@@ -341,27 +342,30 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
             {!hidePhotoGallery && <PhotoGallery images={safeGalleryImages} />}
           </div>
 
-          {/* Sticky Right Sidebar: Pricing on top, Support below. On mobile it sits between hero and tour details. */}
+          {/* Sticky Right Sidebar (desktop only): Pricing on top, Support below. On mobile it sits statically between hero and tour details to avoid overlapping content under Child Policy. */}
           <div className="lg:col-span-1 lg:row-span-2 min-w-0">
-            <div className="sticky top-4 space-y-6">
-              <PricingCalculator
-                basePrice={tourData.basePrice}
-                childPrice={tourData.childPrice}
-                activityName={tourData.title}
-                tourTimings={tourData.tourTimings}
-                pricePerVehicle={tourData.pricePerVehicle}
-                vehicleCapacity={tourData.vehicleCapacity}
-                tourSlug={tourSlug}
-                singleAdultPrice={tourData.singleAdultPrice}
-                twoAdultPrice={tourData.twoAdultPrice}
-                minAdults={tourData.minAdults}
-                tourOptions={tourData.tourOptions}
-                tourAddOns={tourData.tourAddOns}
-                hideChildren={tourData.hideChildren}
+            <div className="lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto lg:pr-1">
+              <BookingSidebar
+                ready={!!tourData?.title}
+                pricing={{
+                  basePrice: tourData.basePrice,
+                  childPrice: tourData.childPrice,
+                  activityName: tourData.title,
+                  tourTimings: tourData.tourTimings,
+                  pricePerVehicle: tourData.pricePerVehicle,
+                  vehicleCapacity: tourData.vehicleCapacity,
+                  tourSlug,
+                  singleAdultPrice: tourData.singleAdultPrice,
+                  twoAdultPrice: tourData.twoAdultPrice,
+                  minAdults: tourData.minAdults,
+                  tourOptions: tourData.tourOptions,
+                  tourAddOns: tourData.tourAddOns,
+                  hideChildren: tourData.hideChildren,
+                }}
               />
-              <CustomerSupport />
             </div>
           </div>
+
 
           {/* Bottom left: tour description, policies (sidebar sticks until end of policies / Child Policy) */}
           <div className="lg:col-span-2 space-y-8 min-w-0">
