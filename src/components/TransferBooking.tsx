@@ -315,9 +315,9 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                 className="w-full h-[240px] object-cover"
               />
             </div>
-            {/* Desktop: 4-image collage */}
+            {/* Desktop: up to 5-image collage */}
             <div className="hidden md:grid grid-cols-4 grid-rows-2 gap-3 h-[420px]">
-              {galleryImages.slice(0, 4).map((img, idx) => (
+              {galleryImages.slice(0, 5).map((img, idx) => (
                 <div
                   key={idx}
                   className={cn(
