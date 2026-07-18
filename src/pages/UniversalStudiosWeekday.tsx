@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
+import Seo from "@/components/seo/Seo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -590,22 +591,31 @@ const UniversalStudiosWeekday = () => {
   const tourData = toursData["universal-studios-weekday"];
 
   return (
-    <TourBooking
-      tourData={tourData}
-      heroVariant="collage"
-      hidePhotoGallery
-      hideItinerary
-      forceBlackText
-      extraDescriptionBeforeHighlights={
-        <div className="space-y-8">
-          <MarketingIntro />
-          <RidesAndTimings />
-        </div>
-      }
-      extraContentAfterPolicies={<IndianTravelerCompanion />}
-      extraContentBeforeSuggested={<CompleteYourSingaporeTrip />}
-      extraContentAfterTransfers={<FinalCTA />}
-    />
+    <>
+      <Seo
+        path="/singapore/universal-studios-singapore-tickets-and-transfers/"
+        title="Universal Studios Singapore Tickets with Hotel Transfers | Instant Confirmation"
+        description="Book Universal Studios Singapore tickets with hotel transfers. Instant confirmation, INR pricing, Indian WhatsApp support, and easy cancellation. Trusted by 5,000+ Indian travellers."
+        type="product"
+        image="https://yellodae.com/assets/singapore-universal-studios.jpg"
+      />
+      <TourBooking
+        tourData={tourData}
+        heroVariant="collage"
+        hidePhotoGallery
+        hideItinerary
+        forceBlackText
+        extraDescriptionBeforeHighlights={
+          <div className="space-y-8">
+            <MarketingIntro />
+            <RidesAndTimings />
+          </div>
+        }
+        extraContentAfterPolicies={<IndianTravelerCompanion />}
+        extraContentBeforeSuggested={<CompleteYourSingaporeTrip />}
+        extraContentAfterTransfers={<FinalCTA />}
+      />
+    </>
   );
 };
 
