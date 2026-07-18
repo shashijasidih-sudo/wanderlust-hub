@@ -9,13 +9,18 @@ import sgGardensNight from "@/assets/singapore-gardens-bay-night-1.jpg";
 import sgCouple from "@/assets/singapore-couple-walking-1.jpg";
 import sgFlyerTwilight from "@/assets/singapore-flyer-twilight-1.jpg";
 import sgTourists from "@/assets/singapore-tourists-city-1.jpg";
+import sgChangiArrivals from "@/assets/singapore-changi-arrivals.jpg.asset.json";
+import sgDriverNameboard from "@/assets/singapore-driver-nameboard.jpg.asset.json";
+import sgFamilyLuggage from "@/assets/singapore-family-luggage.jpg.asset.json";
+import sgPrivateMpv from "@/assets/singapore-private-mpv.jpg.asset.json";
 
 // ---------- Galleries ----------
 const airportPickupGallery: TransferGalleryImage[] = [
-  { src: sgCityscape, alt: "Singapore Changi Airport pickup heading to city hotel" },
-  { src: sgMarinaDay, alt: "Marina Bay Sands daytime arrival via private transfer" },
-  { src: sgTourists, alt: "Singapore tourists arriving at hotel from Changi airport" },
-  { src: sgCouple, alt: "Couple arriving at Singapore hotel after airport pickup" },
+  { src: sgChangiArrivals.url, alt: "Singapore Changi Airport arrivals hall" },
+  { src: sgDriverNameboard.url, alt: "Professional driver holding a name board at Changi Airport" },
+  { src: sgFamilyLuggage.url, alt: "Family with luggage at Singapore Changi Airport pickup" },
+  { src: sgPrivateMpv.url, alt: "Private MPV waiting at Singapore airport pickup zone" },
+  { src: sgMarinaDay, alt: "Marina Bay Sands daytime view from Singapore airport transfer" },
 ];
 
 const airportDropoffGallery: TransferGalleryImage[] = [
