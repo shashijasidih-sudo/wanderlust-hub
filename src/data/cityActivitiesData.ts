@@ -133,7 +133,7 @@ export const cityActivities: Record<string, RecommendedActivity[]> = {
       desc: "7 themed zones at USS — Hollywood blockbuster movies come to life.",
       price: 6762,
       img: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&auto=format&fit=crop",
-      slug: "/singapore/universal-studios-singapore-tickets-and-transfers",
+      slug: "/singapore/universal-studios-singapore-tickets-and-transfers/",
     },
     {
       title: "Gardens by the Bay Tickets and Transfers",

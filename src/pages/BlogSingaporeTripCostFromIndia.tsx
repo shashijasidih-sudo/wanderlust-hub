@@ -50,7 +50,7 @@ const Blog = () => (
       { type: "paragraph", content: "A Singapore trip from India can be done on ₹60K or stretched to ₹1.5L+ depending on your style. With smart planning — book flights early, pick the right hotel area and pre-book activities — you can comfortably cover all the must-do experiences within budget." },
     ]}
     relatedActivities={[
-      { title: "Universal Studios Singapore Tickets", link: "/singapore/universal-studios-singapore-tickets-and-transfers" },
+      { title: "Universal Studios Singapore Tickets", link: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
       { title: "Night Safari Tickets & Transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers" },
       { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
     ]}

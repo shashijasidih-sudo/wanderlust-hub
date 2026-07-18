@@ -111,7 +111,7 @@ export const TOUR_LINK_MAP: TourLink[] = [
   // ---------- Singapore ----------
   {
     phrase: "Universal Studios Singapore",
-    path: "/singapore/universal-studios-singapore-tickets-and-transfers",
+    path: "/singapore/universal-studios-singapore-tickets-and-transfers/",
     aliases: ["Universal Studios", "USS"],
   },
   {

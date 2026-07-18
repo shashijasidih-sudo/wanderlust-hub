@@ -54,7 +54,7 @@ const Blog = () => (
     ]}
     relatedActivities={[
       { title: "Singapore City Tour", link: "/singapore/singapore-city-tour" },
-      { title: "Universal Studios Singapore", link: "/singapore/universal-studios-singapore-tickets-and-transfers" },
+      { title: "Universal Studios Singapore", link: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
       { title: "Singapore Cable Car & Sentosa", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
     ]}
     relatedLinks={[

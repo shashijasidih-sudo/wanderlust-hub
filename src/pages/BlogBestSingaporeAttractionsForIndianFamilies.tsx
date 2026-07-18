@@ -50,7 +50,7 @@ const Blog = () => (
       { type: "cta", content: "Plan your Singapore family trip with Yellodae", link: "/singapore/things-to-do", linkText: "See Singapore Tours" },
     ]}
     relatedActivities={[
-      { title: "Universal Studios Singapore", link: "/singapore/universal-studios-singapore-tickets-and-transfers" },
+      { title: "Universal Studios Singapore", link: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
       { title: "Singapore Night Safari", link: "/singapore/night-safari-singapore-tickets-and-transfers" },
       { title: "Sentosa Cable Car", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
     ]}
