@@ -16,12 +16,12 @@ const BlogBigBuddhaPhuketGuide = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/phuket/destination-guides#activity" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Big Buddha Phuket — a 45-meter white marble statue on Nakkerd Hill — is one of Phuket's top free attractions, offering 360° island views and a peaceful spiritual atmosphere." },
       { type: "heading", content: "Quick Facts" },
       { type: "list", items: ["Entry: Free (donations welcome)", "Timings: 6:00 AM – 7:30 PM", "Location: Nakkerd Hill — 15 km from Patong, 10 km from Kata/Karon", "Dress code: shoulders and knees covered"] },
-      { type: "cta", content: "Book a Phuket City Tour that covers Big Buddha + Wat Chalong", link: "/thailand/phuket/phuket-city-tour", linkText: "Book Phuket City Tour" },
+      { type: "cta", content: "Book a Phuket City Tour that covers Big Buddha + Wat Chalong", link: "/thailand/phuket/phuket-city-tour/", linkText: "Book Phuket City Tour" },
       { type: "heading", content: "How to Reach Big Buddha" },
       { type: "list", items: ["Taxi/Grab: ₹600–₹1,000 one-way", "Scooter rental: ~₹500/day (steep climb)", "City tour package (recommended): hassle-free + multiple stops"] },
       { type: "heading", content: "What to See on Top" },
@@ -40,14 +40,14 @@ const BlogBigBuddhaPhuketGuide = () => (
       { type: "paragraph", content: "An absolute must-do half-day trip in Phuket — best paired with Wat Chalong, Karon Viewpoint and Old Town as part of a city tour." },
     ]}
     relatedActivities={[
-      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour" },
-      { title: "Phuket Hourly Rental", link: "/thailand/phuket/phuket-city-hourly-rental" },
-      { title: "Phuket FantaSea Show", link: "/thailand/phuket/phuket-fanta-sea-show" },
+      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour/" },
+      { title: "Phuket Hourly Rental", link: "/thailand/phuket/phuket-city-hourly-rental/" },
+      { title: "Phuket FantaSea Show", link: "/thailand/phuket/phuket-fanta-sea-show/" },
     ]}
     relatedLinks={[
-      { title: "Phuket City Tour vs Island Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-city-tour-vs-island-tour" },
-      { title: "Phuket Private vs Group Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-private-vs-group-tour" },
-      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
+      { title: "Phuket City Tour vs Island Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-city-tour-vs-island-tour/" },
+      { title: "Phuket Private vs Group Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-private-vs-group-tour/" },
+      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/activity/big-buddha-phuket-guide")}
   />

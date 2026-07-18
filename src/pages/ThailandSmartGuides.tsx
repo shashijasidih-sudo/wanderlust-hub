@@ -40,23 +40,23 @@ interface BlogArticle {
 }
 
 const blogArticles: BlogArticle[] = [
-  { id: -5, title: "Thailand Trip Cost From India (2026 Guide): Budget vs Mid-Range vs Luxury", description: "Complete 2026 breakdown of Thailand trip cost from India — flights, hotels, visa, food, transfers and activities for budget, mid-range and luxury travelers.", category: "Thailand Travel Guide", image: bangkokCityImg, author: "Yellodae Travel Expert", date: "Jun 4, 2026", readTime: "12 min read", slug: "/blog/thailand-trip-cost-from-india", city: "multi-city" },
-  { id: -3, title: "Complete Guide to Thailand Island Combos", description: "Discover the best Thailand island combos — Phuket + Phi Phi, Krabi combos, Koh Samui packages. Plan your dream tropical escape.", category: "Island Adventures", image: phiPhiImg, author: "Yellodae Travel Expert", date: "Mar 3, 2026", readTime: "10 min read", slug: "/blog/thailand-island-combos", city: "multi-city" },
-  { id: -4, title: "Complete Guide to Thailand Food Experiences", description: "Discover the best Thailand food experiences — from Bangkok street food to Phuket seafood, floating markets to rooftop dining.", category: "Food Tours", image: bangkokSkywalkImg, author: "Yellodae Travel Expert", date: "Mar 5, 2026", readTime: "11 min read", slug: "/blog/thailand-food-experiences", city: "multi-city" },
-  { id: 0, title: "Complete Guide to Airport Transfer Booking in Thailand", description: "Everything about airport transfers in Thailand — routes, types, tips, and the best platform to book your Suvarnabhumi, Phuket, or Krabi transfer.", category: "Thailand Transfers", image: bangkokCityImg, author: "Yellodae Travel Expert", date: "Feb 19, 2026", readTime: "8 min read", slug: "/blog/airport-transfer-booking-thailand", city: "multi-city" },
-  { id: -1, title: "Complete Guide to Phi Phi Island Tours in Thailand", description: "Plan the perfect Phi Phi Island tour — speedboat, longtail, or luxury private tours. Maya Bay, snorkelling, and everything you need to know.", category: "Island Adventures", image: phiPhiBoatImg, author: "Yellodae Island Expert", date: "Feb 22, 2026", readTime: "10 min read", slug: "/blog/phi-phi-island-tours-thailand", city: "phuket" },
-  { id: 1, title: "Top 10 Beaches to Visit in Thailand", description: "Discover the most stunning beaches from Phuket to Krabi, featuring crystal-clear waters and pristine white sand.", category: "Beach Adventures", image: phiPhiImg, author: "Travel Expert", date: "Nov 25, 2024", readTime: "8 min read", slug: "/thailand", city: "multi-city" },
-  { id: 2, title: "A Complete Guide to Thai Street Food", description: "From Pad Thai to Som Tam, explore the vibrant street food culture that makes Thailand a foodie paradise.", category: "Food Tours", image: bangkokSkywalkImg, author: "Food Blogger", date: "Nov 22, 2024", readTime: "10 min read", slug: "/thailand", city: "bangkok" },
-  { id: 3, title: "Ancient Temples of Bangkok: A Spiritual Journey", description: "Explore the magnificent temples of Bangkok including Wat Phra Kaew, Wat Arun, and Wat Pho.", category: "Cultural Sites", image: jamesBondImg, author: "Culture Guide", date: "Nov 20, 2024", readTime: "12 min read", slug: "/thailand", city: "bangkok" },
-  { id: 4, title: "Island Hopping Guide: Phi Phi & Beyond", description: "Plan the perfect island-hopping adventure through Thailand's most beautiful archipelagos.", category: "Beach Adventures", image: phiPhiImg, author: "Island Explorer", date: "Nov 18, 2024", readTime: "9 min read", slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer", city: "phuket" },
-  { id: 5, title: "Best Night Markets in Thailand", description: "Navigate the buzzing night markets of Bangkok, Chiang Mai, and Phuket for authentic local experiences.", category: "Food Tours", image: massageImg, author: "Night Owl", date: "Nov 15, 2024", readTime: "7 min read", slug: "/thailand", city: "multi-city" },
-  { id: 6, title: "Ethical Elephant Sanctuaries in Thailand", description: "A guide to responsible elephant tourism and the best sanctuaries to visit in Thailand.", category: "Wildlife", image: elephantImg, author: "Wildlife Expert", date: "Nov 12, 2024", readTime: "11 min read", slug: "/thailand/phuket/elephant-safari", city: "phuket" },
-  { id: 7, title: "Krabi Rock Climbing: A Beginner's Guide", description: "Everything you need to know about rock climbing at Railay Beach and Ton Sai in Krabi.", category: "Beach Adventures", image: jamesBondImg, author: "Adventure Guide", date: "Nov 10, 2024", readTime: "8 min read", slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer", city: "krabi" },
-  { id: 8, title: "Thai Cooking Classes: Learn From the Masters", description: "Discover the best cooking classes in Thailand to master authentic Thai cuisine.", category: "Food Tours", image: bangkokSkywalkImg, author: "Chef Marco", date: "Nov 8, 2024", readTime: "6 min read", slug: "/thailand", city: "bangkok" },
-  { id: 9, title: "Ayutthaya Day Trip: UNESCO Heritage Sites", description: "Plan your perfect day trip to the ancient capital of Ayutthaya from Bangkok.", category: "Cultural Sites", image: tigerImg, author: "History Buff", date: "Nov 5, 2024", readTime: "10 min read", slug: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok", city: "bangkok" },
-  { id: 10, title: "Phuket's Hidden Gems: Secret Beaches", description: "Escape the crowds and discover Phuket's lesser-known beaches and hidden coves.", category: "Beach Adventures", image: phiPhiImg, author: "Local Guide", date: "Nov 2, 2024", readTime: "7 min read", slug: "/thailand/phuket", city: "phuket" },
-  { id: 11, title: "Traditional Thai Massage: Complete Guide", description: "Everything you need to know about experiencing authentic Thai massage therapy.", category: "Cultural Sites", image: massageImg, author: "Wellness Expert", date: "Oct 30, 2024", readTime: "9 min read", slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok", city: "bangkok" },
-  { id: 12, title: "Bangkok to Chiang Mai: The Ultimate Road Trip", description: "Plan an epic road trip through Thailand's heartland with stops at hidden temples and local markets.", category: "Cultural Sites", image: elephantImg, author: "Road Tripper", date: "Oct 28, 2024", readTime: "14 min read", slug: "/thailand", city: "chiang-mai" }
+  { id: -5, title: "Thailand Trip Cost From India (2026 Guide): Budget vs Mid-Range vs Luxury", description: "Complete 2026 breakdown of Thailand trip cost from India — flights, hotels, visa, food, transfers and activities for budget, mid-range and luxury travelers.", category: "Thailand Travel Guide", image: bangkokCityImg, author: "Yellodae Travel Expert", date: "Jun 4, 2026", readTime: "12 min read", slug: "/blog/thailand-trip-cost-from-india/", city: "multi-city" },
+  { id: -3, title: "Complete Guide to Thailand Island Combos", description: "Discover the best Thailand island combos — Phuket + Phi Phi, Krabi combos, Koh Samui packages. Plan your dream tropical escape.", category: "Island Adventures", image: phiPhiImg, author: "Yellodae Travel Expert", date: "Mar 3, 2026", readTime: "10 min read", slug: "/blog/thailand-island-combos/", city: "multi-city" },
+  { id: -4, title: "Complete Guide to Thailand Food Experiences", description: "Discover the best Thailand food experiences — from Bangkok street food to Phuket seafood, floating markets to rooftop dining.", category: "Food Tours", image: bangkokSkywalkImg, author: "Yellodae Travel Expert", date: "Mar 5, 2026", readTime: "11 min read", slug: "/blog/thailand-food-experiences/", city: "multi-city" },
+  { id: 0, title: "Complete Guide to Airport Transfer Booking in Thailand", description: "Everything about airport transfers in Thailand — routes, types, tips, and the best platform to book your Suvarnabhumi, Phuket, or Krabi transfer.", category: "Thailand Transfers", image: bangkokCityImg, author: "Yellodae Travel Expert", date: "Feb 19, 2026", readTime: "8 min read", slug: "/blog/airport-transfer-booking-thailand/", city: "multi-city" },
+  { id: -1, title: "Complete Guide to Phi Phi Island Tours in Thailand", description: "Plan the perfect Phi Phi Island tour — speedboat, longtail, or luxury private tours. Maya Bay, snorkelling, and everything you need to know.", category: "Island Adventures", image: phiPhiBoatImg, author: "Yellodae Island Expert", date: "Feb 22, 2026", readTime: "10 min read", slug: "/blog/phi-phi-island-tours-thailand/", city: "phuket" },
+  { id: 1, title: "Top 10 Beaches to Visit in Thailand", description: "Discover the most stunning beaches from Phuket to Krabi, featuring crystal-clear waters and pristine white sand.", category: "Beach Adventures", image: phiPhiImg, author: "Travel Expert", date: "Nov 25, 2024", readTime: "8 min read", slug: "/thailand/", city: "multi-city" },
+  { id: 2, title: "A Complete Guide to Thai Street Food", description: "From Pad Thai to Som Tam, explore the vibrant street food culture that makes Thailand a foodie paradise.", category: "Food Tours", image: bangkokSkywalkImg, author: "Food Blogger", date: "Nov 22, 2024", readTime: "10 min read", slug: "/thailand/", city: "bangkok" },
+  { id: 3, title: "Ancient Temples of Bangkok: A Spiritual Journey", description: "Explore the magnificent temples of Bangkok including Wat Phra Kaew, Wat Arun, and Wat Pho.", category: "Cultural Sites", image: jamesBondImg, author: "Culture Guide", date: "Nov 20, 2024", readTime: "12 min read", slug: "/thailand/", city: "bangkok" },
+  { id: 4, title: "Island Hopping Guide: Phi Phi & Beyond", description: "Plan the perfect island-hopping adventure through Thailand's most beautiful archipelagos.", category: "Beach Adventures", image: phiPhiImg, author: "Island Explorer", date: "Nov 18, 2024", readTime: "9 min read", slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/", city: "phuket" },
+  { id: 5, title: "Best Night Markets in Thailand", description: "Navigate the buzzing night markets of Bangkok, Chiang Mai, and Phuket for authentic local experiences.", category: "Food Tours", image: massageImg, author: "Night Owl", date: "Nov 15, 2024", readTime: "7 min read", slug: "/thailand/", city: "multi-city" },
+  { id: 6, title: "Ethical Elephant Sanctuaries in Thailand", description: "A guide to responsible elephant tourism and the best sanctuaries to visit in Thailand.", category: "Wildlife", image: elephantImg, author: "Wildlife Expert", date: "Nov 12, 2024", readTime: "11 min read", slug: "/thailand/phuket/elephant-safari/", city: "phuket" },
+  { id: 7, title: "Krabi Rock Climbing: A Beginner's Guide", description: "Everything you need to know about rock climbing at Railay Beach and Ton Sai in Krabi.", category: "Beach Adventures", image: jamesBondImg, author: "Adventure Guide", date: "Nov 10, 2024", readTime: "8 min read", slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/", city: "krabi" },
+  { id: 8, title: "Thai Cooking Classes: Learn From the Masters", description: "Discover the best cooking classes in Thailand to master authentic Thai cuisine.", category: "Food Tours", image: bangkokSkywalkImg, author: "Chef Marco", date: "Nov 8, 2024", readTime: "6 min read", slug: "/thailand/", city: "bangkok" },
+  { id: 9, title: "Ayutthaya Day Trip: UNESCO Heritage Sites", description: "Plan your perfect day trip to the ancient capital of Ayutthaya from Bangkok.", category: "Cultural Sites", image: tigerImg, author: "History Buff", date: "Nov 5, 2024", readTime: "10 min read", slug: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok/", city: "bangkok" },
+  { id: 10, title: "Phuket's Hidden Gems: Secret Beaches", description: "Escape the crowds and discover Phuket's lesser-known beaches and hidden coves.", category: "Beach Adventures", image: phiPhiImg, author: "Local Guide", date: "Nov 2, 2024", readTime: "7 min read", slug: "/thailand/phuket/", city: "phuket" },
+  { id: 11, title: "Traditional Thai Massage: Complete Guide", description: "Everything you need to know about experiencing authentic Thai massage therapy.", category: "Cultural Sites", image: massageImg, author: "Wellness Expert", date: "Oct 30, 2024", readTime: "9 min read", slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok/", city: "bangkok" },
+  { id: 12, title: "Bangkok to Chiang Mai: The Ultimate Road Trip", description: "Plan an epic road trip through Thailand's heartland with stops at hidden temples and local markets.", category: "Cultural Sites", image: elephantImg, author: "Road Tripper", date: "Oct 28, 2024", readTime: "14 min read", slug: "/thailand/", city: "chiang-mai" }
 ];
 
 const CITY_ORDER: { key: CityKey | "all"; label: string }[] = [
@@ -102,7 +102,7 @@ const ThailandSmartGuides = () => {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link to="/thailand">Thailand</Link>
+                  <Link to="/thailand/">Thailand</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
@@ -166,27 +166,27 @@ const ThailandSmartGuides = () => {
                 className="w-full sm:w-auto"
                 onClick={() => {
                   if (c.key === "bangkok") {
-                    navigate("/thailand/bangkok/destination-guides");
+                    navigate("/thailand/bangkok/destination-guides/");
                     return;
                   }
                   if (c.key === "pattaya") {
-                    navigate("/thailand/pattaya/destination-guides");
+                    navigate("/thailand/pattaya/destination-guides/");
                     return;
                   }
                   if (c.key === "koh-samui") {
-                    navigate("/thailand/koh-samui/destination-guides");
+                    navigate("/thailand/koh-samui/destination-guides/");
                     return;
                   }
                   if (c.key === "chiang-mai") {
-                    navigate("/thailand/chiang-mai/destination-guides");
+                    navigate("/thailand/chiang-mai/destination-guides/");
                     return;
                   }
                   if (c.key === "phuket") {
-                    navigate("/thailand/phuket/destination-guides");
+                    navigate("/thailand/phuket/destination-guides/");
                     return;
                   }
                   if (c.key === "krabi") {
-                    navigate("/thailand/krabi/destination-guides");
+                    navigate("/thailand/krabi/destination-guides/");
                     return;
                   }
                   setActiveCity(c.key);

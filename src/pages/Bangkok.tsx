@@ -25,37 +25,37 @@ import cruiseNight2 from "@/assets/cruise-night-2.jpg";
 
 const activities = [
   // Temple & City Tours
-  { title: "Bangkok's Iconic Three Temple Tour with Grand Palace and Canal Tour", price: 10845, image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
-  { title: "Bangkok's Famous Three Temple Wat Arun, Wat Pho, and Wat Traimit Private City and Cultural Tour", price: 4915, image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
-  { title: "Bangkok City Tour by Boat from Meeting Point", price: 3570, image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour" },
-  { title: "Bangkok City and Temple Tours with Gems Gallery", price: 1960, image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/gems-gallery-bangkok-tickets" },
-  { title: "Double World Heritage Bangkok City Tour: Sunset at Wat Arun and Chinatown Street Food Experience (Join-In)", price: 5044, image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/wat-arun-chinatown-tour" },
-  { title: "Bangkok City and Temple Tour with Golden Buddha, Marble Temple, Mini Reclining Buddha, and Gems Gallery", price: 3642, image: bangkokTemple1, slug: "/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour" },
-  { title: "Ayutthaya Temple Join Tour from Bangkok by Road with Transfer", price: 5922, image: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok" },
-  { title: "The Best of Bangkok: Royal Grand Palace, Emerald Buddha and Reclining Buddha", price: 2646, image: "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+  { title: "Bangkok's Iconic Three Temple Tour with Grand Palace and Canal Tour", price: 10845, image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/" },
+  { title: "Bangkok's Famous Three Temple Wat Arun, Wat Pho, and Wat Traimit Private City and Cultural Tour", price: 4915, image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/" },
+  { title: "Bangkok City Tour by Boat from Meeting Point", price: 3570, image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour/" },
+  { title: "Bangkok City and Temple Tours with Gems Gallery", price: 1960, image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/gems-gallery-bangkok-tickets/" },
+  { title: "Double World Heritage Bangkok City Tour: Sunset at Wat Arun and Chinatown Street Food Experience (Join-In)", price: 5044, image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/wat-arun-chinatown-tour/" },
+  { title: "Bangkok City and Temple Tour with Golden Buddha, Marble Temple, Mini Reclining Buddha, and Gems Gallery", price: 3642, image: bangkokTemple1, slug: "/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour/" },
+  { title: "Ayutthaya Temple Join Tour from Bangkok by Road with Transfer", price: 5922, image: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok/" },
+  { title: "The Best of Bangkok: Royal Grand Palace, Emerald Buddha and Reclining Buddha", price: 2646, image: "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/" },
   
   // Other Activities
-  { title: "Baiyoke Sky Restaurant Admission Ticket", price: 1478, image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/baiyoke-buffet" },
-  { title: "Bangkok Sea Life Aquarium and Madame Tussauds Admission Ticket", price: 4215, image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/sea-life-madame-tussauds-tickets" },
+  { title: "Baiyoke Sky Restaurant Admission Ticket", price: 1478, image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/baiyoke-buffet/" },
+  { title: "Bangkok Sea Life Aquarium and Madame Tussauds Admission Ticket", price: 4215, image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/sea-life-madame-tussauds-tickets/" },
   
   // Cruise Activities
-  { title: "Viva Alangka Dinner Cruise from Asiatique with Transfer", price: 4915, image: cruiseNight1, slug: "/thailand/bangkok/viva-alangka-dinner-cruise" },
-  { title: "Ayutthaya Glittering Tours from Bangkok with Sunset Cruise Experience with transfers", price: 5245, image: ayutthayaSunset1, slug: "/thailand/bangkok/ayutthaya-sunset-river-cruise" },
-  { title: "Chao Phraya Princess Dinner Cruise in Bangkok with Private Transfer", price: 5545, image: cruiseNight2, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
-  { title: "Chao Phraya Princess Dinner Cruise: Valentine's Day Celebration", price: 3150, image: cruiseNight1, slug: "/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise" },
-  { title: "Chaophraya Princess River Dinner Cruise Over Chaophraya River with Join Transfer", price: 4410, image: cruiseNight2, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer" },
-  { title: "River Cruise by Chao Phraya Princess Admission Ticket With Indian or International Dinner (No Transfer)", price: 3150, image: cruiseNight1, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise" },
+  { title: "Viva Alangka Dinner Cruise from Asiatique with Transfer", price: 4915, image: cruiseNight1, slug: "/thailand/bangkok/viva-alangka-dinner-cruise/" },
+  { title: "Ayutthaya Glittering Tours from Bangkok with Sunset Cruise Experience with transfers", price: 5245, image: ayutthayaSunset1, slug: "/thailand/bangkok/ayutthaya-sunset-river-cruise/" },
+  { title: "Chao Phraya Princess Dinner Cruise in Bangkok with Private Transfer", price: 5545, image: cruiseNight2, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/" },
+  { title: "Chao Phraya Princess Dinner Cruise: Valentine's Day Celebration", price: 3150, image: cruiseNight1, slug: "/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise/" },
+  { title: "Chaophraya Princess River Dinner Cruise Over Chaophraya River with Join Transfer", price: 4410, image: cruiseNight2, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer/" },
+  { title: "River Cruise by Chao Phraya Princess Admission Ticket With Indian or International Dinner (No Transfer)", price: 3150, image: cruiseNight1, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise/" },
   
   // Other Activities
-  { title: "Health Land Gift Voucher: Traditional Thai Massage (120 Min)", price: 2775, image: massageHero, slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok" },
-  { title: "Bangkok Mahanakhon Sky Walk Admission Ticket", price: 4536, image: bangkokSkywalkHero, slug: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+  { title: "Health Land Gift Voucher: Traditional Thai Massage (120 Min)", price: 2775, image: massageHero, slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok/" },
+  { title: "Bangkok Mahanakhon Sky Walk Admission Ticket", price: 4536, image: bangkokSkywalkHero, slug: "/thailand/bangkok/mahanakhon-skywalk-tickets/" },
   
   // Railway and Floating Market
-  { title: "Maeklong Railway Market and Damnoensaduak Floating Market Tour in Bangkok (Join Tour)", price: 3405, image: floatingMarket1, slug: "/thailand/bangkok/maeklong-floating-market-tour" },
+  { title: "Maeklong Railway Market and Damnoensaduak Floating Market Tour in Bangkok (Join Tour)", price: 3405, image: floatingMarket1, slug: "/thailand/bangkok/maeklong-floating-market-tour/" },
   
   // Other Activities
-  { title: "Bangkok Night Tour on TUK-TUK Minimum 2 PAX", price: 5040, image: "https://images.unsplash.com/photo-1534008897995-27a23e859048?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
-  { title: "Dream World Bangkok Super Visa Admission Ticket with Lunch + Transfer", price: 4285, image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/dream-world-bangkok-tickets" },
+  { title: "Bangkok Night Tour on TUK-TUK Minimum 2 PAX", price: 5040, image: "https://images.unsplash.com/photo-1534008897995-27a23e859048?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/tuk-tuk-night-tour-bangkok/" },
+  { title: "Dream World Bangkok Super Visa Admission Ticket with Lunch + Transfer", price: 4285, image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/dream-world-bangkok-tickets/" },
 ];
 
 const categories = [
@@ -258,28 +258,28 @@ const Bangkok = () => {
             desc: "Private, air-conditioned transfer from BKK airport straight to your Bangkok hotel. 24/7 service with meet & greet.",
             price: 2700,
             img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
-            slug: "/thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer",
+            slug: "/thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer/",
           },
           {
             title: "Don Mueang Airport to Bangkok Hotel",
             desc: "Hassle-free DMK airport pickup with professional driver and comfortable sedan or minivan.",
             price: 2600,
             img: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=800&auto=format&fit=crop",
-            slug: "/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer",
+            slug: "/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer/",
           },
           {
             title: "Bangkok Hotel to Suvarnabhumi Airport",
             desc: "Timed departure transfer from your hotel to BKK airport. Punctual pick-up so you never miss your flight.",
             price: 2700,
             img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&auto=format&fit=crop",
-            slug: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer",
+            slug: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer/",
           },
           {
             title: "Bangkok Hotel to Pattaya Hotel Transfer",
             desc: "Comfortable private transfer from Bangkok to Pattaya — door-to-door, with luggage assistance.",
             price: 4200,
             img: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?w=800&auto=format&fit=crop",
-            slug: "/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer",
+            slug: "/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer/",
           },
         ]}
       />

@@ -23,14 +23,14 @@ const BlogTiffanyShowPattayaReview = () => (
     subCategory={{ label: "Activity Guides", link: "/thailand/pattaya/destination-guides#activity" }}
     cityHub={{
       city: "Pattaya",
-      thingsToDoLink: "/thailand/pattaya/things-to-do",
-      transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer",
+      thingsToDoLink: "/thailand/pattaya/things-to-do/",
+      transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer/",
     }}
     relatedActivities={[
-      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
-      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
-      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
-      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide/" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide/" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide/" },
     ]}
     sections={[
       { type: "paragraph", content: "Tiffany Show is one of the world's first transgender cabaret shows and is widely regarded as Pattaya's most premium evening experience. Known for its high-end production, themed segments and respectful artistry, it's a fantastic family-friendly night out." },
@@ -89,14 +89,14 @@ const BlogTiffanyShowPattayaReview = () => (
       ]},
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Tiffany Show is the most premium cabaret experience in Pattaya — perfect for travelers who want production quality over price. Pair it with Alcazar comparison if you're still deciding." },
-      { type: "cta", content: "Book Tiffany Show Pattaya tickets", link: "/thailand/pattaya/tiffany-show", linkText: "View Tickets" },
+      { type: "cta", content: "Book Tiffany Show Pattaya tickets", link: "/thailand/pattaya/tiffany-show/", linkText: "View Tickets" },
     ]}
     relatedLinks={[
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
-      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
-      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
-      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
     ]}
   />
 );

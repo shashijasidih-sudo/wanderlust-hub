@@ -22,7 +22,7 @@ const BlogPhuketTripCostFromIndia = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Price & Cost Guides", link: "/thailand/phuket/destination-guides#price-cost" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Wondering how much a Phuket trip costs from India in 2026? This guide gives you a transparent INR budget — flights, visa, stay, food, island tours and transfers — for budget, mid-range and luxury travelers." },
       { type: "heading", content: "Total Phuket Trip Cost — At a Glance (4–5 Days, Per Person)" },
@@ -81,18 +81,18 @@ const BlogPhuketTripCostFromIndia = () => (
       ]},
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "A comfortable Phuket trip from India in 2026 averages ₹60,000–₹80,000 per person for 4–5 days. Pre-book flights, hotels and your top 3 island tours to lock in the best price." },
-      { type: "cta", content: "Plan a custom Phuket package", link: "/thailand/phuket/things-to-do", linkText: "Explore Phuket" },
+      { type: "cta", content: "Plan a custom Phuket package", link: "/thailand/phuket/things-to-do/", linkText: "Explore Phuket" },
     ]}
     relatedActivities={[
-      { title: "Phuket Phi Phi Island Tour (Big Boat)", link: "/thailand/phuket/phuket-phi-phi-island-tour" },
-      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-tour" },
-      { title: "Phuket City Tour with Big Buddha", link: "/thailand/phuket/phuket-city-tour" },
+      { title: "Phuket Phi Phi Island Tour (Big Boat)", link: "/thailand/phuket/phuket-phi-phi-island-tour/" },
+      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-tour/" },
+      { title: "Phuket City Tour with Big Buddha", link: "/thailand/phuket/phuket-city-tour/" },
     ]}
     relatedLinks={[
-      { title: "Cheapest Phi Phi Island Tour from Phuket", link: "/thailand/phuket/destination-guides/price-cost/cheapest-phi-phi-tour-from-phuket" },
-      { title: "Phuket Budget Trip Under ₹50,000 for Indians", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000" },
-      { title: "4 Days Phuket Itinerary (2026)", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" },
-      { title: "Phuket vs Krabi for Indian Travelers", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians" },
+      { title: "Cheapest Phi Phi Island Tour from Phuket", link: "/thailand/phuket/destination-guides/price-cost/cheapest-phi-phi-tour-from-phuket/" },
+      { title: "Phuket Budget Trip Under ₹50,000 for Indians", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000/" },
+      { title: "4 Days Phuket Itinerary (2026)", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary/" },
+      { title: "Phuket vs Krabi for Indian Travelers", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/price-cost/phuket-trip-cost-from-india")}
   />

@@ -89,12 +89,12 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Thailand</h4>
             <ul className="space-y-2 text-sm text-background/80">
-              <li><Link to="/thailand/bangkok/things-to-do" className="hover:text-background transition-colors">Bangkok Activities</Link></li>
-              <li><Link to="/thailand/phuket/things-to-do" className="hover:text-background transition-colors">Phuket Tours</Link></li>
-              <li><Link to="/thailand/pattaya/things-to-do" className="hover:text-background transition-colors">Pattaya Tours</Link></li>
-              <li><Link to="/thailand/krabi/things-to-do" className="hover:text-background transition-colors">Krabi Tours</Link></li>
+              <li><Link to="/thailand/bangkok/things-to-do/" className="hover:text-background transition-colors">Bangkok Activities</Link></li>
+              <li><Link to="/thailand/phuket/things-to-do/" className="hover:text-background transition-colors">Phuket Tours</Link></li>
+              <li><Link to="/thailand/pattaya/things-to-do/" className="hover:text-background transition-colors">Pattaya Tours</Link></li>
+              <li><Link to="/thailand/krabi/things-to-do/" className="hover:text-background transition-colors">Krabi Tours</Link></li>
               <li><Link to="/thailand/airport-transfers/" className="hover:text-background transition-colors">Thailand Transfers</Link></li>
-              <li><Link to="/thailand/destination-guides" className="hover:text-background transition-colors">Thailand Smart Guides</Link></li>
+              <li><Link to="/thailand/destination-guides/" className="hover:text-background transition-colors">Thailand Smart Guides</Link></li>
             </ul>
           </div>
 
@@ -102,12 +102,12 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Koh Samui & Chiang Mai</h4>
             <ul className="space-y-2 text-sm text-background/80">
-              <li><Link to="/thailand/koh-samui" className="hover:text-background transition-colors">Koh Samui Activities</Link></li>
-              <li><Link to="/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" className="hover:text-background transition-colors">Koh Samui Full Moon Party</Link></li>
-              <li><Link to="/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival" className="hover:text-background transition-colors">Loy Krathong Cruise Samui</Link></li>
-              <li><Link to="/thailand/chiang-mai/things-to-do" className="hover:text-background transition-colors">Chiang Mai Activities</Link></li>
-              <li><Link to="/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour" className="hover:text-background transition-colors">Doi Inthanon Full Day Tour</Link></li>
-              <li><Link to="/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip" className="hover:text-background transition-colors">Chiang Rai Golden Triangle</Link></li>
+              <li><Link to="/thailand/koh-samui/" className="hover:text-background transition-colors">Koh Samui Activities</Link></li>
+              <li><Link to="/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" className="hover:text-background transition-colors">Koh Samui Full Moon Party</Link></li>
+              <li><Link to="/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/" className="hover:text-background transition-colors">Loy Krathong Cruise Samui</Link></li>
+              <li><Link to="/thailand/chiang-mai/things-to-do/" className="hover:text-background transition-colors">Chiang Mai Activities</Link></li>
+              <li><Link to="/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/" className="hover:text-background transition-colors">Doi Inthanon Full Day Tour</Link></li>
+              <li><Link to="/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/" className="hover:text-background transition-colors">Chiang Rai Golden Triangle</Link></li>
               <li><Link to="/thailand/chiang-mai-airport-transfers/" className="hover:text-background transition-colors">Chiang Mai Airport Transfers</Link></li>
             </ul>
           </div>
@@ -116,12 +116,12 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Singapore</h4>
             <ul className="space-y-2 text-sm text-background/80">
-              <li><Link to="/singapore/things-to-do" className="hover:text-background transition-colors">Singapore Activities</Link></li>
-              <li><Link to="/singapore/budget-airport-transfers" className="hover:text-background transition-colors">Changi Airport Transfers</Link></li>
+              <li><Link to="/singapore/things-to-do/" className="hover:text-background transition-colors">Singapore Activities</Link></li>
+              <li><Link to="/singapore/budget-airport-transfers/" className="hover:text-background transition-colors">Changi Airport Transfers</Link></li>
               <li><Link to="/singapore/universal-studios-singapore-tickets-and-transfers/" className="hover:text-background transition-colors">Universal Studios Singapore</Link></li>
-              <li><Link to="/singapore/sentosa-cable-car-tickets-and-transfers" className="hover:text-background transition-colors">Sentosa Cable Car</Link></li>
-              <li><Link to="/singapore/gardens-by-the-bay-tickets-and-transfers" className="hover:text-background transition-colors">Gardens by the Bay</Link></li>
-              <li><Link to="/singapore/night-safari-singapore-tickets-and-transfers" className="hover:text-background transition-colors">Night Safari Singapore</Link></li>
+              <li><Link to="/singapore/sentosa-cable-car-tickets-and-transfers/" className="hover:text-background transition-colors">Sentosa Cable Car</Link></li>
+              <li><Link to="/singapore/gardens-by-the-bay-tickets-and-transfers/" className="hover:text-background transition-colors">Gardens by the Bay</Link></li>
+              <li><Link to="/singapore/night-safari-singapore-tickets-and-transfers/" className="hover:text-background transition-colors">Night Safari Singapore</Link></li>
             </ul>
           </div>
 
@@ -129,11 +129,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Support</h4>
             <ul className="space-y-2 text-sm text-background/80">
-              <li><Link to="/about-us" className="hover:text-background transition-colors">About Us</Link></li>
-              <li><Link to="/contact-us" className="hover:text-background transition-colors">Contact Us</Link></li>
-              <li><Link to="/quick-pay" className="hover:text-background transition-colors">Pay Now</Link></li>
-              <li><Link to="/faq" className="hover:text-background transition-colors">FAQ</Link></li>
-              <li><Link to="/tour-packages" className="hover:text-background transition-colors">Tour Packages</Link></li>
+              <li><Link to="/about-us/" className="hover:text-background transition-colors">About Us</Link></li>
+              <li><Link to="/contact-us/" className="hover:text-background transition-colors">Contact Us</Link></li>
+              <li><Link to="/quick-pay/" className="hover:text-background transition-colors">Pay Now</Link></li>
+              <li><Link to="/faq/" className="hover:text-background transition-colors">FAQ</Link></li>
+              <li><Link to="/tour-packages/" className="hover:text-background transition-colors">Tour Packages</Link></li>
             </ul>
           </div>
 
@@ -141,10 +141,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-sm text-background/80">
-              <li><Link to="/privacy-policy" className="hover:text-background transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms-of-service" className="hover:text-background transition-colors">Terms of Service</Link></li>
-              <li><Link to="/cookie-policy" className="hover:text-background transition-colors">Cookie Policy</Link></li>
-              <li><Link to="/disclaimer" className="hover:text-background transition-colors">Disclaimer</Link></li>
+              <li><Link to="/privacy-policy/" className="hover:text-background transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-service/" className="hover:text-background transition-colors">Terms of Service</Link></li>
+              <li><Link to="/cookie-policy/" className="hover:text-background transition-colors">Cookie Policy</Link></li>
+              <li><Link to="/disclaimer/" className="hover:text-background transition-colors">Disclaimer</Link></li>
             </ul>
           </div>
         </div>

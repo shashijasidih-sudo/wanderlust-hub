@@ -118,16 +118,16 @@ const BlogMountFujiTourCostFromTokyo = () => (
         "First-time visitors → Guided tour",
       ]},
 
-      { type: "cta", content: "Want a Mount Fuji tour bundled into your Japan itinerary?", linkText: "View Japan Packages", link: "/tour-packages" },
+      { type: "cta", content: "Want a Mount Fuji tour bundled into your Japan itinerary?", linkText: "View Japan Packages", link: "/tour-packages/" },
 
       { type: "heading", content: "Conclusion" },
       { type: "paragraph", content: "The Mount Fuji tour cost from Tokyo depends on your preferences. Budget tours offer value, while premium tours deliver comfort and flexibility." },
     ]}
     relatedLinks={[
-      { title: "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Tips", link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" },
-      { title: "Japan Trip Cost from India: Full Budget Breakdown", link: "/japan/destination-guides/price-cost/japan-trip-cost-from-india" },
-      { title: "Tokyo Disneyland Ticket Price Guide: Latest Costs & Tips", link: "/japan/destination-guides/price-cost/tokyo-disneyland-ticket-price-guide" },
-      { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide" },
+      { title: "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Tips", link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo/" },
+      { title: "Japan Trip Cost from India: Full Budget Breakdown", link: "/japan/destination-guides/price-cost/japan-trip-cost-from-india/" },
+      { title: "Tokyo Disneyland Ticket Price Guide: Latest Costs & Tips", link: "/japan/destination-guides/price-cost/tokyo-disneyland-ticket-price-guide/" },
+      { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide/" },
     ]}
       internalLinks={getJapanInternalLinks("/japan/destination-guides/price-cost/mount-fuji-tour-cost-from-tokyo")}
   />

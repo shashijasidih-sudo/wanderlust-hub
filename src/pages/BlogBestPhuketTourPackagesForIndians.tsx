@@ -16,7 +16,7 @@ const BlogBestPhuketTourPackagesForIndians = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "For Indian Travelers", link: "/thailand/phuket/destination-guides#indian-audience" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Phuket is now the most popular international destination for Indian travelers — but the package question always comes up: book a package, or DIY everything? This 2026 guide breaks down package types, real cost in INR, inclusions, pros & cons and the right pick for couples, families and budget travelers." },
 
@@ -54,7 +54,7 @@ const BlogBestPhuketTourPackagesForIndians = () => (
         "Best for: Honeymoon, anniversary, premium travelers",
       ]},
 
-      { type: "cta", content: "Build your Phuket package with handpicked tours", link: "/thailand/phuket/things-to-do", linkText: "Explore Phuket Tours" },
+      { type: "cta", content: "Build your Phuket package with handpicked tours", link: "/thailand/phuket/things-to-do/", linkText: "Explore Phuket Tours" },
 
       { type: "heading", content: "Package vs Self-Plan" },
       { type: "list", items: [
@@ -99,15 +99,15 @@ const BlogBestPhuketTourPackagesForIndians = () => (
       { type: "paragraph", content: "For Indian travelers, mid-range Phuket packages deliver the best mix of comfort, experiences and value. Add a customization layer on top, book 1–2 months out, and you'll get a perfectly priced trip." },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour" },
-      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour" },
-      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour" },
+      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour/" },
+      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour/" },
+      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour/" },
     ]}
     relatedLinks={[
-      { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india" },
-      { title: "Phuket Honeymoon Guide for Indian Couples", link: "/thailand/phuket/destination-guides/indian-audience/phuket-honeymoon-for-indian-couples" },
-      { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000" },
-      { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel" },
+      { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india/" },
+      { title: "Phuket Honeymoon Guide for Indian Couples", link: "/thailand/phuket/destination-guides/indian-audience/phuket-honeymoon-for-indian-couples/" },
+      { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000/" },
+      { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/indian-audience/best-phuket-tour-packages-for-indians")}
   />

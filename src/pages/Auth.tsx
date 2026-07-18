@@ -238,7 +238,7 @@ const Auth = () => {
               <div className="flex items-start space-x-2">
                 <Checkbox id="terms" checked={acceptTerms} onCheckedChange={(checked) => setAcceptTerms(checked === true)} className={`mt-0.5 ${errors.acceptTerms ? "border-destructive" : ""}`} />
                 <Label htmlFor="terms" className="text-sm leading-relaxed cursor-pointer text-muted-foreground">
-                  I accept the <Link to="/terms-of-service" className="text-primary hover:underline" target="_blank">Terms</Link> and <Link to="/privacy-policy" className="text-primary hover:underline" target="_blank">Privacy Policy</Link>
+                  I accept the <Link to="/terms-of-service/" className="text-primary hover:underline" target="_blank">Terms</Link> and <Link to="/privacy-policy/" className="text-primary hover:underline" target="_blank">Privacy Policy</Link>
                 </Label>
               </div>
               {errors.acceptTerms && <p className="text-sm text-destructive">{errors.acceptTerms}</p>}

@@ -22,7 +22,7 @@ const BlogPhuketTourPackagePriceComparison = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Price & Cost Guides", link: "/thailand/phuket/destination-guides#price-cost" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Phuket tour packages from India range from ₹25,000 to ₹2,00,000+ per person. This 2026 guide compares 3-day to 7-day plans across budget, mid-range and luxury tiers so you can pick the best value." },
       { type: "heading", content: "Phuket Package Price by Duration (Per Person, Land Only)" },
@@ -89,18 +89,18 @@ const BlogPhuketTourPackagePriceComparison = () => (
       ]},
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "For most Indian families, a 5D/4N mid-range package at ₹60,000–₹85,000 land + ₹25,000 flight delivers the best mix of comfort, sightseeing and value in 2026. Honeymooners should consider the luxury tier in Surin or Kamala." },
-      { type: "cta", content: "Get a custom Phuket package quote", link: "/thailand/phuket/things-to-do", linkText: "Plan Phuket Trip" },
+      { type: "cta", content: "Get a custom Phuket package quote", link: "/thailand/phuket/things-to-do/", linkText: "Plan Phuket Trip" },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Island Tour (Big Boat)", link: "/thailand/phuket/phuket-phi-phi-island-tour" },
-      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-tour" },
-      { title: "Phuket City Tour with Big Buddha", link: "/thailand/phuket/phuket-city-tour" },
+      { title: "Phi Phi Island Tour (Big Boat)", link: "/thailand/phuket/phuket-phi-phi-island-tour/" },
+      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-tour/" },
+      { title: "Phuket City Tour with Big Buddha", link: "/thailand/phuket/phuket-city-tour/" },
     ]}
     relatedLinks={[
-      { title: "Best Phuket Tour Packages for Indian Travelers", link: "/thailand/phuket/destination-guides/indian-audience/best-phuket-tour-packages-for-indians" },
-      { title: "Phuket Trip Cost from India 2026", link: "/thailand/phuket/destination-guides/price-cost/phuket-trip-cost-from-india" },
-      { title: "5 Days Phuket Itinerary with Phi Phi & James Bond", link: "/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary" },
-      { title: "Phuket Honeymoon Itinerary (4–5 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary" },
+      { title: "Best Phuket Tour Packages for Indian Travelers", link: "/thailand/phuket/destination-guides/indian-audience/best-phuket-tour-packages-for-indians/" },
+      { title: "Phuket Trip Cost from India 2026", link: "/thailand/phuket/destination-guides/price-cost/phuket-trip-cost-from-india/" },
+      { title: "5 Days Phuket Itinerary with Phi Phi & James Bond", link: "/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary/" },
+      { title: "Phuket Honeymoon Itinerary (4–5 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/price-cost/phuket-tour-package-price-comparison")}
   />

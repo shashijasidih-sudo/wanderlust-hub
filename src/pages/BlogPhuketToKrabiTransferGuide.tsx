@@ -16,7 +16,7 @@ const Blog = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Transfer Blogs", link: "/thailand/krabi/destination-guides#transfer" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Traveling between Phuket and Krabi is one of the most common routes in Thailand. Whether you're combining destinations or optimizing your itinerary, choosing the right transfer can save you time, money and a lot of hassle. The good news — there are multiple ways to travel from Phuket to Krabi, each suited for different budgets and travel styles. This complete 2026 guide compares bus, ferry and taxi on travel time, cost in INR, and the best option based on your needs." },
       { type: "heading", content: "Distance & Travel Overview" },
@@ -30,7 +30,7 @@ const Blog = () => (
       { type: "tip-box", content: "Ferries usually run from November to April. During monsoon (May–October), services can be cancelled — book private taxi as a safer backup." },
       { type: "heading", content: "3. Private Taxi (Best Overall Option)" },
       { type: "list", items: ["Cost — ₹4,000–₹7,000 per vehicle (4–8 seater)","Duration — 2.5 to 3 hours, fastest road option","Pros — door-to-door, no waiting, ideal for families and groups","Cons — expensive for solo travelers","Best for families, couples and groups of 3+"] },
-      { type: "cta", content: "Book a private Phuket → Krabi transfer at a fixed INR price", link: "/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer", linkText: "Book Phuket–Krabi Transfer" },
+      { type: "cta", content: "Book a private Phuket → Krabi transfer at a fixed INR price", link: "/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer/", linkText: "Book Phuket–Krabi Transfer" },
       { type: "heading", content: "Cost Comparison (2026)" },
       { type: "list", items: ["Bus / Van — ₹600–₹1,200 per person","Ferry — ₹1,200–₹2,500 per person","Private Taxi — ₹4,000–₹7,000 per vehicle (₹1,000–₹1,750 per person for 4 pax)"] },
       { type: "heading", content: "Which Option Should You Choose?" },
@@ -43,19 +43,19 @@ const Blog = () => (
       { type: "list", items: ["Booking ferry during monsoon without a backup plan","Choosing the cheapest van without checking reviews","Underestimating road travel time during weekends","Not confirming hotel pickup is included"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "For most Indian travelers, a private taxi is the best overall option for the Phuket to Krabi route — fast, comfortable and surprisingly affordable when shared. Budget solo travelers should pick the bus, while couples chasing a unique experience can take the ferry one way." },
-      { type: "cta", content: "Book your Krabi airport or hotel transfer with English-speaking driver", link: "/thailand/krabi/budget-airport-transfers", linkText: "View All Krabi Transfers" },
+      { type: "cta", content: "Book your Krabi airport or hotel transfer with English-speaking driver", link: "/thailand/krabi/budget-airport-transfers/", linkText: "View All Krabi Transfers" },
     ]}
     relatedActivities={[
-      { title: "Krabi Hotel to Phuket Hotel Transfer", link: "/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer" },
-      { title: "Krabi Hotel to Phuket Airport Transfer", link: "/thailand/krabi/krabi-hotel-to-phuket-airport-transfer" },
-      { title: "Krabi Airport to Phuket Hotel Transfer", link: "/thailand/krabi/krabi-airport-to-phuket-hotel-transfer" },
-      { title: "All Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers" },
+      { title: "Krabi Hotel to Phuket Hotel Transfer", link: "/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer/" },
+      { title: "Krabi Hotel to Phuket Airport Transfer", link: "/thailand/krabi/krabi-hotel-to-phuket-airport-transfer/" },
+      { title: "Krabi Airport to Phuket Hotel Transfer", link: "/thailand/krabi/krabi-airport-to-phuket-hotel-transfer/" },
+      { title: "All Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
     ]}
     relatedLinks={[
-      { title: "Krabi Airport to Ao Nang Transfer Guide", link: "/thailand/krabi/destination-guides/transfer/krabi-airport-to-ao-nang-transfer-guide" },
-      { title: "Krabi to Phi Phi: Ferry vs Speedboat", link: "/thailand/krabi/destination-guides/transfer/krabi-to-phi-phi-ferry-vs-speedboat" },
-      { title: "Phuket vs Krabi for Indian Travelers", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians" },
-      { title: "Phuket + Krabi Combo Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary" },
+      { title: "Krabi Airport to Ao Nang Transfer Guide", link: "/thailand/krabi/destination-guides/transfer/krabi-airport-to-ao-nang-transfer-guide/" },
+      { title: "Krabi to Phi Phi: Ferry vs Speedboat", link: "/thailand/krabi/destination-guides/transfer/krabi-to-phi-phi-ferry-vs-speedboat/" },
+      { title: "Phuket vs Krabi for Indian Travelers", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians/" },
+      { title: "Phuket + Krabi Combo Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/transfer/phuket-to-krabi-transfer-guide")}
   />

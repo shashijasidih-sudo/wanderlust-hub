@@ -18,7 +18,7 @@ const BlogWingsOfTimeSingaporeShow = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "Activity Guides", link: "/singapore/destination-guides#activity" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "When the sun sets over Sentosa, the energy shifts from daytime adventure to magical night-time entertainment — and nothing captures this transformation better than Wings of Time. Set against the open sea at Siloso Beach, this award-winning outdoor night show combines water, fire, lasers, music and fireworks into one immersive experience." },
       { type: "heading", content: "What is Wings of Time?" },
@@ -30,7 +30,7 @@ const BlogWingsOfTimeSingaporeShow = () => (
       { type: "list", items: ["Standard Seating — affordable, good overall view","Premium Seating — closer to the stage, better angles, ideal for photography"] },
       { type: "heading", content: "Cost in 2026 (INR)" },
       { type: "list", items: ["Standard seat — ₹1,400–₹1,800","Premium seat — ₹2,200–₹2,800"] },
-      { type: "cta", content: "Book Wings of Time Tickets", link: "/singapore/things-to-do", linkText: "Book Wings of Time" },
+      { type: "cta", content: "Book Wings of Time Tickets", link: "/singapore/things-to-do/", linkText: "Book Wings of Time" },
       { type: "heading", content: "How to Reach Wings of Time" },
       { type: "list", items: ["Location: Siloso Beach, Sentosa Island","Cable Car — most scenic","Sentosa Express Monorail — fastest and cheapest","Taxi / private transfer — easiest for families"] },
       { type: "heading", content: "Tips for the Best Experience" },
@@ -41,14 +41,14 @@ const BlogWingsOfTimeSingaporeShow = () => (
       { type: "paragraph", content: "Yes — it's one of the few attractions that delivers a complete sensory experience in just 25 minutes. Even on a tight schedule, it's worth slotting in as the perfect end to your Sentosa day." },
     ]}
     relatedActivities={[
-      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
-      { title: "Sentosa 4D Adventureland", link: "/singapore/sentosa-4d-adventureland-tickets" },
+      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+      { title: "Sentosa 4D Adventureland", link: "/singapore/sentosa-4d-adventureland-tickets/" },
     ]}
     relatedLinks={[
-      { title: "Sentosa Cable Car Ride Guide (Mount Faber Line)", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line" },
-      { title: "Sentosa 4D Adventureland Complete Experience", link: "/singapore/destination-guides/activity/sentosa-4d-adventureland-guide" },
-      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide" },
-      { title: "Night Safari Singapore Experience Guide", link: "/singapore/destination-guides/activity/night-safari-singapore-guide" },
+      { title: "Sentosa Cable Car Ride Guide (Mount Faber Line)", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line/" },
+      { title: "Sentosa 4D Adventureland Complete Experience", link: "/singapore/destination-guides/activity/sentosa-4d-adventureland-guide/" },
+      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide/" },
+      { title: "Night Safari Singapore Experience Guide", link: "/singapore/destination-guides/activity/night-safari-singapore-guide/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

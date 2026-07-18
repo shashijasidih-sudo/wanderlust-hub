@@ -104,14 +104,14 @@ const BlogTokyoCityTourGuide = () => (
         "Covers hidden spots you'd otherwise miss",
       ]},
 
-      { type: "cta", content: "Want a curated Tokyo city tour with everything pre-booked?", linkText: "Explore Japan Packages", link: "/tour-packages" },
+      { type: "cta", content: "Want a curated Tokyo city tour with everything pre-booked?", linkText: "Explore Japan Packages", link: "/tour-packages/" },
 
       { type: "heading", content: "Conclusion" },
       { type: "paragraph", content: "A Tokyo city tour is the perfect introduction to Japan. Whether you're exploring temples or neon streets, Tokyo guarantees unforgettable experiences." },
     ]}
     relatedLinks={[
-      { title: "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Tips", link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" },
-      { title: "Kyoto Temple Tour Guide: Fushimi Inari & Golden Pavilion", link: "/japan/destination-guides/activity/kyoto-temple-tour-guide" },
+      { title: "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Tips", link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo/" },
+      { title: "Kyoto Temple Tour Guide: Fushimi Inari & Golden Pavilion", link: "/japan/destination-guides/activity/kyoto-temple-tour-guide/" },
     ]}
       internalLinks={getJapanInternalLinks("/japan/destination-guides/activity/tokyo-city-tour-guide")}
   />

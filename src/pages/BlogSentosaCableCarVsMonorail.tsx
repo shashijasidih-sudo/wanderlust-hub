@@ -18,7 +18,7 @@ const Blog = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "Comparison Guides", link: "/singapore/destination-guides#comparison" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "Heading to Sentosa Island and stuck between the scenic Cable Car and the budget-friendly Sentosa Express Monorail? Both will get you onto the island, but the experience, cost and time are very different. This 2026 guide compares both options so you can pick the right one — or smartly combine them." },
       { type: "heading", content: "Quick Overview" },
@@ -40,7 +40,7 @@ const Blog = () => (
       { type: "list", items: ["Best experience — Cable Car (clear winner)","Best for budget travelers — Monorail","Best for families — Monorail (easy, fast, kid-friendly)","Best for couples / honeymooners — Cable Car (especially at sunset)","Best for first-time visitors — Cable Car (the iconic Sentosa arrival)"] },
       { type: "heading", content: "Best Time to Use Each" },
       { type: "list", items: ["Cable Car — sunset or evening (city lights are unbeatable)","Monorail — anytime; ideal for hopping between Sentosa attractions"] },
-      { type: "cta", content: "Plan your Sentosa day with attractions & transfers", link: "/singapore/things-to-do", linkText: "See Sentosa Activities" },
+      { type: "cta", content: "Plan your Sentosa day with attractions & transfers", link: "/singapore/things-to-do/", linkText: "See Sentosa Activities" },
       { type: "heading", content: "Pros & Cons" },
       { type: "subheading", content: "Cable Car" },
       { type: "list", items: ["✔ Panoramic harbour + skyline views","✔ Romantic, premium feel","✔ A bucket-list Sentosa experience","❌ Expensive","❌ Slower"] },
@@ -55,16 +55,16 @@ const Blog = () => (
       { type: "paragraph", content: "If it's your first time in Singapore and budget allows, the Cable Car is highly recommended — it's a Sentosa experience in itself. If you're on a budget or shuttling between island attractions, the Monorail wins easily." },
     ]}
     relatedActivities={[
-      { title: "Sentosa Cable Car Sky Pass", link: "/singapore/things-to-do" },
-      { title: "Universal Studios Singapore", link: "/singapore/things-to-do" },
-      { title: "Wings of Time Show", link: "/singapore/things-to-do" },
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour" },
+      { title: "Sentosa Cable Car Sky Pass", link: "/singapore/things-to-do/" },
+      { title: "Universal Studios Singapore", link: "/singapore/things-to-do/" },
+      { title: "Wings of Time Show", link: "/singapore/things-to-do/" },
+      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
     ]}
     relatedLinks={[
-      { title: "Sentosa Cable Car Ride Guide (Mount Faber Line)", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line" },
-      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide" },
-      { title: "Wings of Time Singapore Show", link: "/singapore/destination-guides/activity/wings-of-time-singapore-show" },
-      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer" },
+      { title: "Sentosa Cable Car Ride Guide (Mount Faber Line)", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line/" },
+      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide/" },
+      { title: "Wings of Time Singapore Show", link: "/singapore/destination-guides/activity/wings-of-time-singapore-show/" },
+      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

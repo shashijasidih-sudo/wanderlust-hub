@@ -25,8 +25,8 @@ const BlogCheapestPhiPhiTourFromPhuket = () => (
     subCategory={{ label: "Price & Cost Guides", link: "/thailand/phuket/destination-guides#price-cost" }}
     cityHub={{
       city: "Phuket",
-      thingsToDoLink: "/thailand/phuket/things-to-do",
-      transfersLink: "/thailand/phuket/transfers",
+      thingsToDoLink: "/thailand/phuket/things-to-do/",
+      transfersLink: "/thailand/phuket/transfers/",
     }}
     sections={[
       { type: "paragraph", content: "Phi Phi is the #1 attraction in Phuket — but you don't need to spend ₹8,000–₹10,000 to enjoy it. With the right strategy, Indian travelers can do this iconic tour for as low as ₹2,500–₹4,000 per person in 2026." },
@@ -59,7 +59,7 @@ const BlogCheapestPhiPhiTourFromPhuket = () => (
         "Cons: slower travel time, fewer stops, less time at each spot",
       ]},
 
-      { type: "cta", content: "Compare and book the best-value Phi Phi tour from Phuket", link: "/thailand/phuket/things-to-do", linkText: "View Phi Phi Tours" },
+      { type: "cta", content: "Compare and book the best-value Phi Phi tour from Phuket", link: "/thailand/phuket/things-to-do/", linkText: "View Phi Phi Tours" },
 
       { type: "heading", content: "Why Speedboat Costs More" },
       { type: "paragraph", content: "Speedboat tours run ₹5,000 – ₹8,500 because they're faster, cover more islands (Bamboo, Maya, Monkey Beach) and give you more time at each location. They're great — just not necessary if you're optimizing for budget." },
@@ -126,18 +126,18 @@ const BlogCheapestPhiPhiTourFromPhuket = () => (
       { type: "paragraph", content: "The cheapest Phi Phi Island tour from Phuket in 2026 is the big boat tour at ₹2,500–₹4,000 per person. Add ₹1,000 for the National Park fee and ₹500 for snacks and you're at ₹4,000–₹5,500 all-in — affordable, comfortable and still covers the iconic Phi Phi viewpoints." },
       { type: "paragraph", content: "Smart Indian travelers compare online vs walk-in, book one day before, travel off-season and skip optional add-ons. That's how you experience Phi Phi without overpaying." },
 
-      { type: "cta", content: "Ready to book your Phi Phi day trip from Phuket?", link: "/thailand/phuket/phuket-phi-phi-island-tour", linkText: "Book Phi Phi Tour" },
+      { type: "cta", content: "Ready to book your Phi Phi day trip from Phuket?", link: "/thailand/phuket/phuket-phi-phi-island-tour/", linkText: "Book Phi Phi Tour" },
     ]}
     relatedActivities={[
-      { title: "Phuket Phi Phi Island Tour (Big Boat)", link: "/thailand/phuket/phuket-phi-phi-island-tour" },
-      { title: "Phi Phi Speedboat Day Tour from Phuket", link: "/thailand/phuket/phuket-phi-phi-speedboat" },
-      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-tour" },
+      { title: "Phuket Phi Phi Island Tour (Big Boat)", link: "/thailand/phuket/phuket-phi-phi-island-tour/" },
+      { title: "Phi Phi Speedboat Day Tour from Phuket", link: "/thailand/phuket/phuket-phi-phi-speedboat/" },
+      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-tour/" },
     ]}
     relatedLinks={[
-      { title: "Best Phi Phi Island Tours from Phuket (2026)", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours" },
-      { title: "Phi Phi Speedboat vs Big Boat — Which to Pick?", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat" },
-      { title: "Phuket Budget Trip Under ₹50,000 (Indian Travelers)", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000" },
-      { title: "4 Days Phuket Itinerary (2026)", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" },
+      { title: "Best Phi Phi Island Tours from Phuket (2026)", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours/" },
+      { title: "Phi Phi Speedboat vs Big Boat — Which to Pick?", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat/" },
+      { title: "Phuket Budget Trip Under ₹50,000 (Indian Travelers)", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000/" },
+      { title: "4 Days Phuket Itinerary (2026)", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/price-cost/cheapest-phi-phi-tour-from-phuket")}
   />

@@ -16,7 +16,7 @@ const BlogPhuketTripFromIndia = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "For Indian Travelers", link: "/thailand/phuket/destination-guides#indian-audience" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Planning your first international trip from India? Phuket is one of the easiest, most affordable and exciting destinations you can pick. With visa-on-arrival, direct flights from major Indian cities, plenty of Indian food and budget-friendly packages, it's the top international choice for Indian travelers in 2026." },
 
@@ -38,7 +38,7 @@ const BlogPhuketTripFromIndia = () => (
       ]},
       { type: "paragraph", content: "Required documents: Passport (6 months validity), return ticket, hotel booking, passport-size photo, proof of funds (~₹10K/person)." },
 
-      { type: "cta", content: "Browse curated Phuket packages built for Indian travelers", link: "/thailand/phuket/things-to-do", linkText: "View Phuket Tours" },
+      { type: "cta", content: "Browse curated Phuket packages built for Indian travelers", link: "/thailand/phuket/things-to-do/", linkText: "View Phuket Tours" },
 
       { type: "heading", content: "Flights from India to Phuket" },
       { type: "list", items: [
@@ -90,7 +90,7 @@ const BlogPhuketTripFromIndia = () => (
         "Scooter rental: ~₹500/day (only if you ride confidently)",
       ]},
 
-      { type: "cta", content: "Pre-book your Phuket airport pickup in INR", link: "/thailand/phuket/phuket-hkt-airport-pickup", linkText: "Book HKT Pickup" },
+      { type: "cta", content: "Pre-book your Phuket airport pickup in INR", link: "/thailand/phuket/phuket-hkt-airport-pickup/", linkText: "Book HKT Pickup" },
 
       { type: "heading", content: "Ideal 4–5 Day Phuket Itinerary" },
       { type: "list", items: [
@@ -113,15 +113,15 @@ const BlogPhuketTripFromIndia = () => (
       { type: "paragraph", content: "A Phuket trip from India offers easy visa, affordable packages and unforgettable experiences. Budget smartly, book early and pick a balanced itinerary — and you'll have one of the best international holidays of your life." },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour" },
-      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour" },
-      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour" },
+      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour/" },
+      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour/" },
+      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour/" },
     ]}
     relatedLinks={[
-      { title: "Phuket Visa Guide for Indians", link: "/thailand/phuket/destination-guides/indian-audience/phuket-visa-for-indians" },
-      { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000" },
-      { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket" },
-      { title: "5 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary" },
+      { title: "Phuket Visa Guide for Indians", link: "/thailand/phuket/destination-guides/indian-audience/phuket-visa-for-indians/" },
+      { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000/" },
+      { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket/" },
+      { title: "5 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india")}
   />

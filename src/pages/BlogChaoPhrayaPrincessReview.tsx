@@ -26,8 +26,8 @@ const BlogChaoPhrayaPrincessReview = () => (
     subCategory={{ label: "Activity Guides", link: "/thailand/bangkok/destination-guides#activity" }}
     cityHub={{
       city: "Bangkok",
-      thingsToDoLink: "/thailand/bangkok/things-to-do",
-      transfersLink: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer",
+      thingsToDoLink: "/thailand/bangkok/things-to-do/",
+      transfersLink: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer/",
     }}
     sections={[
       {
@@ -130,22 +130,22 @@ const BlogChaoPhrayaPrincessReview = () => (
       {
         type: "cta",
         content: "Ready to sail the Chao Phraya?",
-        link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer",
+        link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/",
         linkText: "Book Princess Cruise",
       },
     ]}
     relatedActivities={[
-      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
-      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
-      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
-      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide/" },
     ]}
     relatedLinks={[
-      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
-      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
-      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary/" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok/" },
     ]}
   />
 );

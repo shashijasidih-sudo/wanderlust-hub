@@ -28,14 +28,14 @@ const CITY_POOLS: Record<string, BlogEntry[]> = {
 };
 
 const CITY_HUB: Record<string, { label: string; link: string }> = {
-  bangkok: { label: "Bangkok Guides Hub", link: "/thailand/bangkok/destination-guides" },
-  pattaya: { label: "Pattaya Guides Hub", link: "/thailand/pattaya/destination-guides" },
-  phuket: { label: "Phuket Guides Hub", link: "/thailand/phuket/destination-guides" },
-  krabi: { label: "Krabi Guides Hub", link: "/thailand/krabi/destination-guides" },
-  "chiang-mai": { label: "Chiang Mai Guides Hub", link: "/thailand/chiang-mai/destination-guides" },
-  "koh-samui": { label: "Koh Samui Guides Hub", link: "/thailand/koh-samui/destination-guides" },
-  singapore: { label: "Singapore Guides Hub", link: "/singapore/destination-guides" },
-  japan: { label: "Japan Guides Hub", link: "/japan/destination-guides" },
+  bangkok: { label: "Bangkok Guides Hub", link: "/thailand/bangkok/destination-guides/" },
+  pattaya: { label: "Pattaya Guides Hub", link: "/thailand/pattaya/destination-guides/" },
+  phuket: { label: "Phuket Guides Hub", link: "/thailand/phuket/destination-guides/" },
+  krabi: { label: "Krabi Guides Hub", link: "/thailand/krabi/destination-guides/" },
+  "chiang-mai": { label: "Chiang Mai Guides Hub", link: "/thailand/chiang-mai/destination-guides/" },
+  "koh-samui": { label: "Koh Samui Guides Hub", link: "/thailand/koh-samui/destination-guides/" },
+  singapore: { label: "Singapore Guides Hub", link: "/singapore/destination-guides/" },
+  japan: { label: "Japan Guides Hub", link: "/japan/destination-guides/" },
 };
 
 const ALL_CITIES = Object.keys(CITY_POOLS);

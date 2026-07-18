@@ -25,7 +25,7 @@ const Blog25BestThingsToDoPhuket = () => (
     subCategory={{ label: "Activity Guides", link: "/thailand/phuket/destination-guides#activity" }}
     cityHub={{
       city: "Phuket",
-      thingsToDoLink: "/thailand/phuket/things-to-do",
+      thingsToDoLink: "/thailand/phuket/things-to-do/",
       transfersLink: "/thailand/phuket-airport-transfers/",
     }}
     bodyClassName="[&_p]:!text-black [&_li]:!text-black [&_li_span]:!text-black [&_td]:!text-black [&_th]:!text-black"
@@ -62,7 +62,7 @@ const Blog25BestThingsToDoPhuket = () => (
       { type: "paragraph", content: "Price: ₹2,200–₹3,500 per person (approx.)" },
       { type: "paragraph", content: "Best Time: November to April." },
       { type: "tip-box", content: "Travel Tip: Book speedboat tours if you want more sightseeing time." },
-      { type: "cta", content: "Book the Phi Phi Island Tour from Phuket", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer", linkText: "Book Phi Phi Island Tour" },
+      { type: "cta", content: "Book the Phi Phi Island Tour from Phuket", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/", linkText: "Book Phi Phi Island Tour" },
       { type: "paragraph", content: "Related speedboat options: [Phi Phi Maya Bay & Khai Island Speedboat Tour](/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer) and the [Phi Phi Premium Speedboat Tour](/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer)." },
 
       { type: "heading", content: "2. James Bond Island Tour" },
@@ -72,7 +72,7 @@ const Blog25BestThingsToDoPhuket = () => (
       { type: "list", items: ["Canoeing", "Sea caves", "Floating village", "Long-tail boat experience"] },
       { type: "paragraph", content: "Price: ₹2,500–₹4,000. Best Time: November to April." },
       { type: "tip-box", content: "Travel Tip: Book speedboat tours if you want more sightseeing time." },
-      { type: "cta", content: "Book the James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer", linkText: "Book James Bond Tour" },
+      { type: "cta", content: "Book the James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/", linkText: "Book James Bond Tour" },
       { type: "paragraph", content: "Prefer a slower, immersive canoe day? Try the [James Bond Island Sea Canoe Tour](/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer)." },
 
       { type: "heading", content: "3. Phuket City Tour" },
@@ -82,14 +82,14 @@ const Blog25BestThingsToDoPhuket = () => (
       { type: "list", items: ["Big Buddha", "Wat Chalong", "Old Phuket Town", "Karon Viewpoint", "Cashew Factory"] },
       { type: "paragraph", content: "Approximate Price: ₹1,500–₹3,000 per person." },
       { type: "tip-box", content: "Travel Tip: Wear comfortable footwear and clothing suitable for visiting temples." },
-      { type: "cta", content: "Explore the Phuket City Tour", link: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer", linkText: "Book Phuket City Tour" },
+      { type: "cta", content: "Explore the Phuket City Tour", link: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/", linkText: "Book Phuket City Tour" },
 
       { type: "heading", content: "4. Phuket Fantasea Show" },
       { type: "paragraph", content: "One of Thailand's biggest cultural performances featuring stunning stage effects, traditional Thai storytelling, and buffet dining. Phuket FantaSea is one of Thailand's most celebrated evening attractions, combining Thai mythology, culture, music, dance, and cutting-edge stage technology into an unforgettable theatrical performance. The massive cultural theme park also features shopping areas, games, traditional performances, and one of Asia's largest buffet restaurants." },
       { type: "paragraph", content: "Families especially enjoy the colorful costumes, acrobatics, and visual effects that make the show entertaining for all age groups. Arriving early allows enough time to explore the themed village before the performance begins." },
       { type: "paragraph", content: "Best for: Families, couples, groups. Duration: 4–5 hours. Approximate Price: ₹2,000–₹4,500 per person." },
       { type: "tip-box", content: "Travel Tip: Cameras are not permitted inside the theatre, so enjoy the performance without worrying about photography." },
-      { type: "cta", content: "Book Phuket FantaSea Tickets with Transfers", link: "/thailand/phuket/carnival-magic-show-tickets-with-transfer", linkText: "Book FantaSea Tickets" },
+      { type: "cta", content: "Book Phuket FantaSea Tickets with Transfers", link: "/thailand/phuket/carnival-magic-show-tickets-with-transfer/", linkText: "Book FantaSea Tickets" },
       { type: "paragraph", content: "Looking for a more contemporary evening show? Try the [Carnival Magic Show Tickets](/thailand/phuket/carnival-magic-show-tickets-with-transfer)." },
 
       { type: "heading", content: "5. Visit an Ethical Elephant Sanctuary" },
@@ -97,21 +97,21 @@ const Blog25BestThingsToDoPhuket = () => (
       { type: "paragraph", content: "Knowledgeable guides explain elephant conservation, their history, and the importance of responsible tourism. Supporting ethical sanctuaries helps promote better animal welfare while giving visitors a meaningful wildlife encounter." },
       { type: "paragraph", content: "Best for: Families, wildlife enthusiasts, responsible travelers. Duration: Half day. Approximate Price: ₹3,500–₹6,500 per person." },
       { type: "tip-box", content: "Travel Tip: Wear clothes that can get muddy and bring an extra change of clothes. Avoid elephant riding." },
-      { type: "cta", content: "Book the Phuket Elephant Sanctuary Tour", link: "/thailand/phuket/elephant-safari", linkText: "Book Elephant Sanctuary" },
+      { type: "cta", content: "Book the Phuket Elephant Sanctuary Tour", link: "/thailand/phuket/elephant-safari/", linkText: "Book Elephant Sanctuary" },
 
       { type: "heading", content: "6. Simon Cabaret Show" },
       { type: "paragraph", content: "One of Phuket's most famous evening entertainment shows featuring elaborate costumes, music, and choreography. The Simon Cabaret Show is one of Phuket's most iconic nightlife attractions, renowned for its dazzling costumes, impressive choreography, and high-energy performances. Featuring talented performers, the show blends music, dance, comedy, and theatrical storytelling into a glamorous evening suitable for adults and families with older children." },
       { type: "paragraph", content: "The modern theatre, comfortable seating, and world-class production make it one of the island's top-rated entertainment experiences. Performances feature songs from around the world, making it enjoyable even for visitors who don't speak Thai." },
       { type: "paragraph", content: "Best for: Couples, friends, nightlife lovers. Duration: 70–90 minutes. Approximate Price: ₹1,000–₹2,500 per person." },
       { type: "tip-box", content: "Travel Tip: Arrive 20–30 minutes before the show for the best seating experience." },
-      { type: "cta", content: "Book Simon Cabaret Show Tickets", link: "/thailand/phuket/simon-cabaret-show-with-transfer", linkText: "Book Simon Cabaret" },
+      { type: "cta", content: "Book Simon Cabaret Show Tickets", link: "/thailand/phuket/simon-cabaret-show-with-transfer/", linkText: "Book Simon Cabaret" },
 
       { type: "heading", content: "7. ATV Jungle Adventure" },
       { type: "paragraph", content: "Ride through jungle trails, hills, and plantations while enjoying Phuket's natural beauty. Adventure seekers shouldn't miss an ATV ride through Phuket's lush tropical landscapes. Guided tours take visitors along forest trails, rubber plantations, muddy tracks, and scenic hills, offering an exciting alternative to the island's beaches. Safety equipment and training are provided before the ride, making it suitable even for beginners." },
       { type: "paragraph", content: "Many ATV tours also include panoramic viewpoints where riders can stop to enjoy spectacular views of the Andaman Sea and surrounding countryside." },
       { type: "paragraph", content: "Best for: Adventure lovers, groups, couples. Duration: 2–3 hours. Approximate Price: ₹2,500–₹5,000 per person." },
       { type: "tip-box", content: "Travel Tip: Wear closed-toe shoes and avoid carrying loose valuables." },
-      { type: "cta", content: "Book the Phuket ATV Adventure", link: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer", linkText: "Book ATV + Tiger Kingdom" },
+      { type: "cta", content: "Book the Phuket ATV Adventure", link: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer/", linkText: "Book ATV + Tiger Kingdom" },
 
       { type: "heading", content: "8. Luxury Yacht Tour" },
       { type: "paragraph", content: "Experience luxury sailing around Phuket's islands with snorkeling, sunset views, meals, and premium service. A luxury yacht cruise offers one of the most relaxing ways to experience Phuket's coastline. These premium tours often include gourmet meals, snorkeling stops, paddleboarding, music, and spectacular sunset views over the Andaman Sea. Some cruises visit nearby islands such as Coral Island or Racha Island, while others focus on leisurely sailing." },
@@ -224,7 +224,7 @@ const Blog25BestThingsToDoPhuket = () => (
       { type: "paragraph", content: "Best for: Families, food lovers, souvenir shopping. Opening Hours: Mostly evenings (varies by market). Entry Fee: Free." },
       { type: "tip-box", content: "Travel Tip: Bargaining is acceptable at many stalls, but always negotiate politely and respectfully." },
       { type: "list", items: ["Chillva Market", "Naka Market", "Sunday Walking Street"] },
-      { type: "cta", content: "Book the Phuket Night Market Tour with Transfers", link: "/thailand/phuket/phuket-night-market-tour-with-transfer", linkText: "Book Night Market Tour" },
+      { type: "cta", content: "Book the Phuket Night Market Tour with Transfers", link: "/thailand/phuket/phuket-night-market-tour-with-transfer/", linkText: "Book Night Market Tour" },
 
       { type: "heading", content: "25. Book a Private Airport Transfer" },
       { type: "paragraph", content: "Start your Phuket holiday stress-free with a pre-booked airport transfer. Your Phuket holiday begins the moment you land, and arranging a private airport transfer in advance is one of the easiest ways to ensure a smooth and stress-free arrival. Instead of waiting in long taxi queues or negotiating fares with local drivers, a pre-booked transfer provides a professional driver, fixed pricing, and direct transportation to your hotel." },
@@ -294,25 +294,25 @@ const Blog25BestThingsToDoPhuket = () => (
       { type: "paragraph", content: "Whether you're visiting for three days or a full week, this list of the best things to do in Phuket serves as a practical starting point for building an unforgettable itinerary." },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Island Full-Day Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-      { title: "Phi Phi Maya Bay & Khai Island Speedboat", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer" },
-      { title: "James Bond Island Speedboat", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
-      { title: "James Bond Island Sea Canoe Tour", link: "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer" },
-      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer" },
-      { title: "Phuket FantaSea Show", link: "/thailand/phuket/carnival-magic-show-tickets-with-transfer" },
-      { title: "Simon Cabaret Show", link: "/thailand/phuket/simon-cabaret-show-with-transfer" },
-      { title: "Tiger Kingdom + ATV Adventure", link: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer" },
-      { title: "Elephant Safari Phuket", link: "/thailand/phuket/elephant-safari" },
-      { title: "Dolphin Show Phuket", link: "/thailand/phuket/dolphin-show-phuket-with-transfer" },
-      { title: "Carnival Magic Show", link: "/thailand/phuket/carnival-magic-show-tickets-with-transfer" },
-      { title: "Phuket Night Market Tour", link: "/thailand/phuket/phuket-night-market-tour-with-transfer" },
+      { title: "Phi Phi Island Full-Day Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "Phi Phi Maya Bay & Khai Island Speedboat", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/" },
+      { title: "James Bond Island Speedboat", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+      { title: "James Bond Island Sea Canoe Tour", link: "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer/" },
+      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" },
+      { title: "Phuket FantaSea Show", link: "/thailand/phuket/carnival-magic-show-tickets-with-transfer/" },
+      { title: "Simon Cabaret Show", link: "/thailand/phuket/simon-cabaret-show-with-transfer/" },
+      { title: "Tiger Kingdom + ATV Adventure", link: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer/" },
+      { title: "Elephant Safari Phuket", link: "/thailand/phuket/elephant-safari/" },
+      { title: "Dolphin Show Phuket", link: "/thailand/phuket/dolphin-show-phuket-with-transfer/" },
+      { title: "Carnival Magic Show", link: "/thailand/phuket/carnival-magic-show-tickets-with-transfer/" },
+      { title: "Phuket Night Market Tour", link: "/thailand/phuket/phuket-night-market-tour-with-transfer/" },
     ]}
     relatedLinks={[
-      { title: "Best Phi Phi Island Tours", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours" },
-      { title: "James Bond Island Guide", link: "/thailand/phuket/destination-guides/activity/james-bond-island-tour-guide" },
-      { title: "Phuket City Tour Guide", link: "/thailand/phuket/destination-guides/activity/phuket-city-tour-guide" },
-      { title: "Snorkeling in Phuket Guide", link: "/thailand/phuket/destination-guides/activity/snorkeling-in-phuket-guide" },
-      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
+      { title: "Best Phi Phi Island Tours", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours/" },
+      { title: "James Bond Island Guide", link: "/thailand/phuket/destination-guides/activity/james-bond-island-tour-guide/" },
+      { title: "Phuket City Tour Guide", link: "/thailand/phuket/destination-guides/activity/phuket-city-tour-guide/" },
+      { title: "Snorkeling in Phuket Guide", link: "/thailand/phuket/destination-guides/activity/snorkeling-in-phuket-guide/" },
+      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do/" },
     ]}
     internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/activity/25-best-things-to-do-in-phuket-2026")}
   />

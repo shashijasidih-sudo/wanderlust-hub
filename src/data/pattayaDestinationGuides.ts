@@ -105,7 +105,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaTripCost,
     date: "May 2, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/price-cost/pattaya-trip-cost",
+    link: "/thailand/pattaya/destination-guides/price-cost/pattaya-trip-cost/",
   },
   {
     title: "Coral Island Pattaya Price Guide: Tours vs Self-Planning (2026)",
@@ -114,7 +114,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgCoralIslandPrice,
     date: "May 2, 2026",
     readTime: "8 min read",
-    link: "/thailand/pattaya/destination-guides/price-cost/coral-island-pattaya-price-guide",
+    link: "/thailand/pattaya/destination-guides/price-cost/coral-island-pattaya-price-guide/",
   },
   {
     title: "Pattaya Activity Prices 2026: Full List (Shows, Islands, Parks)",
@@ -123,7 +123,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaActivityPrices,
     date: "May 2, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/price-cost/pattaya-activity-prices",
+    link: "/thailand/pattaya/destination-guides/price-cost/pattaya-activity-prices/",
   },
   {
     title: "Alcazar vs Tiffany Show Price Comparison 2026: Which Is Worth It?",
@@ -132,7 +132,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgAlcazarVsTiffany,
     date: "May 2, 2026",
     readTime: "8 min read",
-    link: "/thailand/pattaya/destination-guides/price-cost/alcazar-vs-tiffany-show-price",
+    link: "/thailand/pattaya/destination-guides/price-cost/alcazar-vs-tiffany-show-price/",
   },
   {
     title: "Pattaya Water Sports Price Guide 2026: Parasailing, Jet Ski & More",
@@ -141,7 +141,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaWaterSports,
     date: "May 2, 2026",
     readTime: "8 min read",
-    link: "/thailand/pattaya/destination-guides/price-cost/pattaya-water-sports-price-guide",
+    link: "/thailand/pattaya/destination-guides/price-cost/pattaya-water-sports-price-guide/",
   },
   {
     title: "Pattaya 3 Days Trip Cost 2026: Budget vs Luxury (Day-Wise)",
@@ -150,7 +150,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattaya3Day,
     date: "May 2, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/price-cost/pattaya-3-days-trip-cost",
+    link: "/thailand/pattaya/destination-guides/price-cost/pattaya-3-days-trip-cost/",
   },
   {
     title: "Sanctuary of Truth Ticket Price 2026 + Hidden Costs (Pattaya)",
@@ -159,7 +159,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgSanctuaryTruth,
     date: "May 2, 2026",
     readTime: "7 min read",
-    link: "/thailand/pattaya/destination-guides/price-cost/sanctuary-of-truth-ticket-price",
+    link: "/thailand/pattaya/destination-guides/price-cost/sanctuary-of-truth-ticket-price/",
   },
   {
     title: "Coral Island Pattaya Guide 2026: Beaches, Activities & Tips",
@@ -168,7 +168,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgCoralIslandPrice,
     date: "May 3, 2026",
     readTime: "8 min read",
-    link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide",
+    link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/",
   },
   {
     title: "Sanctuary of Truth Pattaya Guide 2026: Architecture, Tips & Timings",
@@ -177,7 +177,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgSanctuaryTruth,
     date: "May 3, 2026",
     readTime: "8 min read",
-    link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide",
+    link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide/",
   },
   {
     title: "Alcazar Cabaret Show Pattaya: Seating, Tickets & What to Expect",
@@ -186,7 +186,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgAlcazarVsTiffany,
     date: "May 4, 2026",
     readTime: "8 min read",
-    link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide",
+    link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide/",
   },
   {
     title: "Tiffany Show Pattaya Review: Tickets, Seating & Which Show is Better",
@@ -195,7 +195,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgTiffanyShow,
     date: "May 4, 2026",
     readTime: "8 min read",
-    link: "/thailand/pattaya/destination-guides/activity/tiffany-show-pattaya-review",
+    link: "/thailand/pattaya/destination-guides/activity/tiffany-show-pattaya-review/",
   },
   {
     title: "Nong Nooch Tropical Garden Pattaya: Shows, Tickets & Best Route",
@@ -204,7 +204,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgNongNooch,
     date: "May 4, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide",
+    link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide/",
   },
   {
     title: "Ramayana Water Park Pattaya: Rides, Tickets & Tips",
@@ -213,7 +213,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgRamayana,
     date: "May 4, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/activity/ramayana-water-park-guide",
+    link: "/thailand/pattaya/destination-guides/activity/ramayana-water-park-guide/",
   },
   {
     title: "Underwater World Pattaya: Is It Worth Visiting?",
@@ -222,7 +222,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgUnderwaterWorld,
     date: "May 4, 2026",
     readTime: "7 min read",
-    link: "/thailand/pattaya/destination-guides/activity/underwater-world-pattaya-guide",
+    link: "/thailand/pattaya/destination-guides/activity/underwater-world-pattaya-guide/",
   },
   {
     title: "Pattaya Floating Market Guide: Shopping, Food & Entry Tips",
@@ -231,7 +231,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgFloatingMarket,
     date: "May 4, 2026",
     readTime: "7 min read",
-    link: "/thailand/pattaya/destination-guides/activity/pattaya-floating-market-guide",
+    link: "/thailand/pattaya/destination-guides/activity/pattaya-floating-market-guide/",
   },
   {
     title: "Big Eye vs Show 69 vs Show 89 Pattaya: Honest Comparison (2026)",
@@ -240,7 +240,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgBigEyeShow,
     date: "May 4, 2026",
     readTime: "8 min read",
-    link: "/thailand/pattaya/destination-guides/comparison/adult-shows-pattaya-comparison",
+    link: "/thailand/pattaya/destination-guides/comparison/adult-shows-pattaya-comparison/",
   },
   {
     title: "Alcazar vs Tiffany Show Pattaya: Which One Should You Choose?",
@@ -249,7 +249,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgAlcazarVsTiffany,
     date: "May 4, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/comparison/alcazar-vs-tiffany-show",
+    link: "/thailand/pattaya/destination-guides/comparison/alcazar-vs-tiffany-show/",
   },
   {
     title: "Coral Island Tour vs Koh Larn DIY: Which is Better? (2026)",
@@ -258,7 +258,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgCoralIslandPrice,
     date: "May 4, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/comparison/coral-island-tour-vs-koh-larn-diy",
+    link: "/thailand/pattaya/destination-guides/comparison/coral-island-tour-vs-koh-larn-diy/",
   },
   {
     title: "Pattaya vs Phuket: Which is Better for Indian Travelers? (2026)",
@@ -267,7 +267,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPhuketSpeedboat,
     date: "May 4, 2026",
     readTime: "10 min read",
-    link: "/thailand/pattaya/destination-guides/comparison/pattaya-vs-phuket",
+    link: "/thailand/pattaya/destination-guides/comparison/pattaya-vs-phuket/",
   },
   {
     title: "Bangkok vs Pattaya: Where Should You Spend More Time? (2026)",
@@ -276,7 +276,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgBangkokVsPattaya,
     date: "May 4, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/comparison/bangkok-vs-pattaya",
+    link: "/thailand/pattaya/destination-guides/comparison/bangkok-vs-pattaya/",
   },
   {
     title: "Ramayana vs Cartoon Network Water Park Pattaya: Which is Better?",
@@ -285,7 +285,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgRamayana,
     date: "May 4, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/comparison/ramayana-vs-cartoon-network-water-park",
+    link: "/thailand/pattaya/destination-guides/comparison/ramayana-vs-cartoon-network-water-park/",
   },
   {
     title: "Speedboat vs Ferry to Coral Island Pattaya: Which is Better?",
@@ -294,7 +294,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaTripCost,
     date: "May 4, 2026",
     readTime: "7 min read",
-    link: "/thailand/pattaya/destination-guides/comparison/speedboat-vs-ferry-coral-island",
+    link: "/thailand/pattaya/destination-guides/comparison/speedboat-vs-ferry-coral-island/",
   },
   {
     title: "Pattaya 2 Days Itinerary 2026: Perfect Weekend Plan",
@@ -303,7 +303,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaActivityPrices,
     date: "May 5, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary",
+    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/",
   },
   {
     title: "Pattaya 3 Days Itinerary 2026: Activities + Island + Shows",
@@ -312,7 +312,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattaya3Day,
     date: "May 5, 2026",
     readTime: "11 min read",
-    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary",
+    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/",
   },
   {
     title: "Bangkok + Pattaya 5 Days Itinerary 2026: Most Popular Route",
@@ -321,7 +321,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgBangkokVsPattaya,
     date: "May 5, 2026",
     readTime: "12 min read",
-    link: "/thailand/pattaya/destination-guides/itinerary/bangkok-pattaya-5-days-itinerary",
+    link: "/thailand/pattaya/destination-guides/itinerary/bangkok-pattaya-5-days-itinerary/",
   },
   {
     title: "Pattaya Honeymoon Itinerary 2026: 4 Days Romantic Plan",
@@ -330,7 +330,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaWoman,
     date: "May 5, 2026",
     readTime: "11 min read",
-    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-honeymoon-itinerary",
+    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-honeymoon-itinerary/",
   },
   {
     title: "Pattaya Family Itinerary 2026: 4 Days Plan with Kids",
@@ -339,7 +339,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgRamayana,
     date: "May 5, 2026",
     readTime: "11 min read",
-    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-family-itinerary",
+    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-family-itinerary/",
   },
   {
     title: "Pattaya Nightlife Itinerary 2026: 2 Nights Plan (Safe & Smart)",
@@ -348,7 +348,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaNightlife,
     date: "May 5, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-nightlife-itinerary",
+    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-nightlife-itinerary/",
   },
   {
     title: "Is Pattaya Safe for Indian Tourists? 2026 Complete Safety Guide",
@@ -357,7 +357,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaActivityPrices,
     date: "May 6, 2026",
     readTime: "10 min read",
-    link: "/thailand/pattaya/destination-guides/indian-audience/pattaya-safety-for-indians",
+    link: "/thailand/pattaya/destination-guides/indian-audience/pattaya-safety-for-indians/",
   },
   {
     title: "Pattaya for Indian Families 2026: What to Expect (Complete Guide)",
@@ -366,7 +366,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgRamayana,
     date: "May 6, 2026",
     readTime: "11 min read",
-    link: "/thailand/pattaya/destination-guides/indian-audience/pattaya-for-indian-families",
+    link: "/thailand/pattaya/destination-guides/indian-audience/pattaya-for-indian-families/",
   },
   {
     title: "Indian Restaurants in Pattaya 2026: Best Places to Eat (Veg & Jain)",
@@ -375,7 +375,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaWoman,
     date: "May 6, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/indian-audience/indian-restaurants-in-pattaya",
+    link: "/thailand/pattaya/destination-guides/indian-audience/indian-restaurants-in-pattaya/",
   },
   {
     title: "Pattaya Travel Tips for Indians 2026: First-Time Guide",
@@ -384,7 +384,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaWoman,
     date: "May 6, 2026",
     readTime: "11 min read",
-    link: "/thailand/pattaya/destination-guides/indian-audience/pattaya-travel-tips-for-indians",
+    link: "/thailand/pattaya/destination-guides/indian-audience/pattaya-travel-tips-for-indians/",
   },
   {
     title: "Pattaya + Coral Island Itinerary 2026: Best Combo Plan",
@@ -393,7 +393,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgCoralIslandPrice,
     date: "May 5, 2026",
     readTime: "10 min read",
-    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-coral-island-combo-itinerary",
+    link: "/thailand/pattaya/destination-guides/itinerary/pattaya-coral-island-combo-itinerary/",
   },
   {
     title: "Best Time to Visit Pattaya 2026: Weather, Season & Travel Guide",
@@ -402,7 +402,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaActivityPrices,
     date: "May 7, 2026",
     readTime: "8 min read",
-    link: "/thailand/pattaya/destination-guides/micro/best-time-to-visit-pattaya",
+    link: "/thailand/pattaya/destination-guides/micro/best-time-to-visit-pattaya/",
   },
   {
     title: "Is Coral Island Worth It? Honest Pattaya Travel Guide 2026",
@@ -411,7 +411,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgCoralIslandPrice,
     date: "May 7, 2026",
     readTime: "8 min read",
-    link: "/thailand/pattaya/destination-guides/micro/is-coral-island-worth-it",
+    link: "/thailand/pattaya/destination-guides/micro/is-coral-island-worth-it/",
   },
   {
     title: "Pattaya Nightlife Safety Guide 2026: How to Enjoy It Safely",
@@ -420,7 +420,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaNightlife,
     date: "May 7, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/micro/pattaya-nightlife-safety-guide",
+    link: "/thailand/pattaya/destination-guides/micro/pattaya-nightlife-safety-guide/",
   },
   {
     title: "Do You Need Tickets for Pattaya Beach Activities? 2026 Guide",
@@ -429,7 +429,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaWaterSports,
     date: "May 7, 2026",
     readTime: "8 min read",
-    link: "/thailand/pattaya/destination-guides/micro/pattaya-beach-activities-tickets",
+    link: "/thailand/pattaya/destination-guides/micro/pattaya-beach-activities-tickets/",
   },
   {
     title: "Pattaya Travel Mistakes to Avoid 2026: Honest First-Timer Guide",
@@ -438,7 +438,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPattayaTripCost,
     date: "May 7, 2026",
     readTime: "10 min read",
-    link: "/thailand/pattaya/destination-guides/micro/pattaya-travel-mistakes-to-avoid",
+    link: "/thailand/pattaya/destination-guides/micro/pattaya-travel-mistakes-to-avoid/",
   },
   {
     title: "What to Wear in Pattaya Temples 2026: Complete Dress Code Guide",
@@ -447,7 +447,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgSanctuaryTruth,
     date: "May 7, 2026",
     readTime: "7 min read",
-    link: "/thailand/pattaya/destination-guides/micro/pattaya-temple-dress-code",
+    link: "/thailand/pattaya/destination-guides/micro/pattaya-temple-dress-code/",
   },
   {
     title: "Bangkok to Pattaya Transfer 2026: Taxi, Bus & Private Car Guide",
@@ -456,7 +456,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgBangkokPattayaTransfer,
     date: "May 8, 2026",
     readTime: "10 min read",
-    link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer",
+    link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/",
   },
   {
     title: "Pattaya to Bangkok Airport Transfer 2026: Best Options & Prices",
@@ -465,7 +465,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgBkkAirportTransfer,
     date: "May 8, 2026",
     readTime: "10 min read",
-    link: "/thailand/pattaya/destination-guides/transfer/pattaya-to-bangkok-airport-transfer",
+    link: "/thailand/pattaya/destination-guides/transfer/pattaya-to-bangkok-airport-transfer/",
   },
   {
     title: "Suvarnabhumi Airport to Pattaya 2026: Cost, Travel Time & Best Options",
@@ -474,7 +474,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgBkkAirportTransfer,
     date: "May 8, 2026",
     readTime: "10 min read",
-    link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya",
+    link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/",
   },
   {
     title: "Don Mueang Airport to Pattaya 2026: Complete Transfer Guide",
@@ -483,7 +483,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgDmkAirportTransfer,
     date: "May 8, 2026",
     readTime: "10 min read",
-    link: "/thailand/pattaya/destination-guides/transfer/don-mueang-to-pattaya",
+    link: "/thailand/pattaya/destination-guides/transfer/don-mueang-to-pattaya/",
   },
   {
     title: "Private vs Shared Transfers in Pattaya 2026: Which is Better?",
@@ -492,7 +492,7 @@ export const pattayaBlogs: PattayaBlogEntry[] = [
     image: imgPrivateTransfer,
     date: "May 8, 2026",
     readTime: "9 min read",
-    link: "/thailand/pattaya/destination-guides/transfer/private-vs-shared-transfers-pattaya",
+    link: "/thailand/pattaya/destination-guides/transfer/private-vs-shared-transfers-pattaya/",
   },
 ];
 

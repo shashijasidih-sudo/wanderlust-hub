@@ -30,7 +30,7 @@ const bangkokGuides: BangkokGuide[] = [
     image: bangkokCity1,
     date: "Mar 1, 2026",
     readTime: "9 min read",
-    link: "/blog/bangkok-activities-guide",
+    link: "/blog/bangkok-activities-guide/",
   },
   {
     title: "Airport Transfer Booking Guide Thailand",
@@ -40,7 +40,7 @@ const bangkokGuides: BangkokGuide[] = [
     image: bangkokSkywalk,
     date: "Feb 19, 2026",
     readTime: "8 min read",
-    link: "/blog/airport-transfer-booking-thailand",
+    link: "/blog/airport-transfer-booking-thailand/",
   },
   {
     title: "Best Thailand Activities to Book Online",
@@ -50,7 +50,7 @@ const bangkokGuides: BangkokGuide[] = [
     image: grandPalaceWatArun,
     date: "Feb 25, 2026",
     readTime: "10 min read",
-    link: "/blog/best-thailand-activities",
+    link: "/blog/best-thailand-activities/",
   },
   {
     title: "Complete Guide to Thailand Food Experiences",
@@ -60,7 +60,7 @@ const bangkokGuides: BangkokGuide[] = [
     image: floatingMarket1,
     date: "Mar 5, 2026",
     readTime: "11 min read",
-    link: "/blog/thailand-food-experiences",
+    link: "/blog/thailand-food-experiences/",
   },
   {
     title: "Bangkok's Iconic Temple Trail",
@@ -70,7 +70,7 @@ const bangkokGuides: BangkokGuide[] = [
     image: bangkokTemple1,
     date: "Feb 28, 2026",
     readTime: "9 min read",
-    link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour",
+    link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/",
   },
   {
     title: "Chao Phraya Dinner Cruise Experience",
@@ -80,7 +80,7 @@ const bangkokGuides: BangkokGuide[] = [
     image: cruiseNight1,
     date: "Mar 2, 2026",
     readTime: "7 min read",
-    link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer",
+    link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/",
   },
   {
     title: "Ayutthaya & Sunset Cruise from Bangkok",
@@ -90,7 +90,7 @@ const bangkokGuides: BangkokGuide[] = [
     image: bangkokPagodaSunset,
     date: "Feb 18, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/ayutthaya-sunset-river-cruise",
+    link: "/thailand/bangkok/ayutthaya-sunset-river-cruise/",
   },
   {
     title: "Riverside Bangkok: Where to Stay & What to Do",
@@ -100,7 +100,7 @@ const bangkokGuides: BangkokGuide[] = [
     image: bangkokRiverside,
     date: "Feb 12, 2026",
     readTime: "8 min read",
-    link: "/blog/bangkok-activities-guide",
+    link: "/blog/bangkok-activities-guide/",
   },
 ];
 
@@ -168,7 +168,7 @@ const BangkokSmartGuides = () => {
 
         <div className="text-center mt-10">
           <Link
-            to="/thailand/destination-guides"
+            to="/thailand/destination-guides/"
             className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
           >
             View all Thailand Smart Guides <ArrowRight className="h-4 w-4" />

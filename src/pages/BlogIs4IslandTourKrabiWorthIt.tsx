@@ -16,7 +16,7 @@ const Blog = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Micro Guides", link: "/thailand/krabi/destination-guides#micro" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Planning your Krabi trip and wondering if the 4 Island Tour is really worth it in 2026? With Phi Phi, Hong Island and sunset cruises all competing for attention, it's easy to get confused. Short answer — yes, the 4 Island Tour is absolutely worth it, but only if you understand what to expect and pick the right boat option. This guide covers what's included, real pros and cons, cost vs value, who should (and shouldn't) book it, and an honest verdict for 2026." },
       { type: "heading", content: "What is the 4 Island Tour in Krabi?" },
@@ -31,7 +31,7 @@ const Blog = () => (
       { type: "list", items: ["Crowded — very popular and can feel busy","Limited time per island — quick stops","Less 'exclusive' feel compared to Hong Island"] },
       { type: "heading", content: "Speedboat vs Longtail: Which to Choose?" },
       { type: "list", items: ["Longtail — cheaper, slower, authentic experience","Speedboat — faster, more comfortable, slightly expensive","Budget travelers → longtail","Comfort seekers → speedboat"] },
-      { type: "cta", content: "Book the 4 Island Tour with hotel pickup and local guide", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer", linkText: "Book 4 Island Tour" },
+      { type: "cta", content: "Book the 4 Island Tour with hotel pickup and local guide", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/", linkText: "Book 4 Island Tour" },
       { type: "heading", content: "Is It Better Than Other Tours?" },
       { type: "list", items: ["4 Island vs Hong Island — 4 Island is cheaper but more crowded; Hong Island is scenic and peaceful","4 Island vs Phi Phi — 4 Island is closer and affordable; Phi Phi is more iconic and premium","Best strategy — combine 4 Island Tour with one premium tour (Hong or Phi Phi)"] },
       { type: "heading", content: "Who Should Definitely Do This Tour?" },
@@ -50,19 +50,19 @@ const Blog = () => (
       { type: "paragraph", content: "Most travelers agree — it's crowded but totally worth it. The combination of variety, scenery and affordability makes it a Krabi essential." },
       { type: "heading", content: "Final Verdict (Honest Answer)" },
       { type: "paragraph", content: "Yes — the 4 Island Tour is worth it in 2026, especially for first-time visitors and budget travelers. It's not ideal for luxury seekers or crowd-averse travelers, but for everyone else it remains a must-do Krabi activity. Best strategy: combine it with a premium experience like Hong Island or Phi Phi for the perfect mix of value and exclusivity." },
-      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival", link: "/thailand/krabi/budget-airport-transfers", linkText: "Book Krabi Transfer" },
+      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
-      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer" },
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer" },
-      { title: "Hong Island Tour", link: "/thailand/krabi/hong-island-tour-by-speedboat-with-transfer" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers" },
+      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" },
+      { title: "Hong Island Tour", link: "/thailand/krabi/hong-island-tour-by-speedboat-with-transfer/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
     ]}
     relatedLinks={[
-      { title: "Best Time for Island Hopping in Krabi (Month-wise Guide)", link: "/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi" },
-      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary" },
-      { title: "Best Krabi Packages for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples" },
-      { title: "Phi Phi Speedboat vs Big Boat (from Phuket)", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat" },
+      { title: "Best Time for Island Hopping in Krabi (Month-wise Guide)", link: "/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi/" },
+      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary/" },
+      { title: "Best Krabi Packages for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples/" },
+      { title: "Phi Phi Speedboat vs Big Boat (from Phuket)", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/micro/is-4-island-tour-krabi-worth-it")}
   />

@@ -16,7 +16,7 @@ const Blog = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Transfer Blogs", link: "/thailand/krabi/destination-guides#transfer" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Landing in Krabi and wondering how to reach Ao Nang — the main tourist hub? You're not alone. This is one of the most searched and important travel decisions for first-time visitors. The good news: getting from Krabi Airport (KBV) to Ao Nang is easy, affordable and well-organized. This complete 2026 guide covers all transfer options, cost comparison, travel time, the best choice based on budget and comfort, and pro tips to avoid overpaying." },
       { type: "heading", content: "Distance & Travel Time" },
@@ -30,7 +30,7 @@ const Blog = () => (
       { type: "tip-box", content: "If you're 2 or more people, a private taxi works out cheaper per head than a shared shuttle — and saves 30+ minutes." },
       { type: "heading", content: "3. Hotel Transfers (Most Convenient)" },
       { type: "list", items: ["Cost — ₹800–₹1,800","Pre-booked with driver waiting at arrival with name sign","Smooth, zero-negotiation experience","Pros — hassle-free, reliable, ideal after a long flight","Cons — slightly overpriced compared to airport taxi counter","Best for first-time travelers and late-night arrivals"] },
-      { type: "cta", content: "Pre-book a private Krabi Airport → Ao Nang transfer at a fixed INR price", link: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer", linkText: "Book Krabi Airport → Ao Nang Transfer" },
+      { type: "cta", content: "Pre-book a private Krabi Airport → Ao Nang transfer at a fixed INR price", link: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer/", linkText: "Book Krabi Airport → Ao Nang Transfer" },
       { type: "heading", content: "4. Ride Apps (Limited Availability)" },
       { type: "list", items: ["Grab is sometimes available but unreliable at Krabi airport","Prices similar to private taxis","Not recommended as a primary plan"] },
       { type: "heading", content: "Cost Comparison (2026)" },
@@ -47,19 +47,19 @@ const Blog = () => (
       { type: "list", items: ["Always use official airport counters or pre-booked transfers","Avoid unlicensed taxis","Keep your hotel address and Google Maps pin ready","Share trip details with family back home"] },
       { type: "heading", content: "Final Recommendation" },
       { type: "paragraph", content: "For most Indian travelers landing in Krabi, a pre-booked private taxi or hotel transfer is the smartest choice — affordable when shared, fast, comfortable and stress-free after a long flight. Budget solo travelers can comfortably stick to shared shuttles." },
-      { type: "cta", content: "Book your Krabi Airport transfer at a fixed INR price with English-speaking driver", link: "/thailand/krabi/budget-airport-transfers", linkText: "View All Krabi Transfers" },
+      { type: "cta", content: "Book your Krabi Airport transfer at a fixed INR price with English-speaking driver", link: "/thailand/krabi/budget-airport-transfers/", linkText: "View All Krabi Transfers" },
     ]}
     relatedActivities={[
-      { title: "Krabi Airport to Ao Nang Hotel Transfer", link: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer" },
-      { title: "Krabi Hotel to Krabi Airport Transfer", link: "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer" },
-      { title: "All Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers" },
-      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer" },
+      { title: "Krabi Airport to Ao Nang Hotel Transfer", link: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer/" },
+      { title: "Krabi Hotel to Krabi Airport Transfer", link: "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer/" },
+      { title: "All Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
     ]}
     relatedLinks={[
-      { title: "Phuket to Krabi Transfer Guide", link: "/thailand/krabi/destination-guides/transfer/phuket-to-krabi-transfer-guide" },
-      { title: "Krabi to Phi Phi: Ferry vs Speedboat", link: "/thailand/krabi/destination-guides/transfer/krabi-to-phi-phi-ferry-vs-speedboat" },
-      { title: "4 Days Krabi Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary" },
-      { title: "Best Krabi Packages for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples" },
+      { title: "Phuket to Krabi Transfer Guide", link: "/thailand/krabi/destination-guides/transfer/phuket-to-krabi-transfer-guide/" },
+      { title: "Krabi to Phi Phi: Ferry vs Speedboat", link: "/thailand/krabi/destination-guides/transfer/krabi-to-phi-phi-ferry-vs-speedboat/" },
+      { title: "4 Days Krabi Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary/" },
+      { title: "Best Krabi Packages for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/transfer/krabi-airport-to-ao-nang-transfer-guide")}
   />

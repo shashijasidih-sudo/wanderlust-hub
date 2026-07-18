@@ -17,8 +17,8 @@ const BlogBangkokGrabTaxi = () => (
     subCategory={{ label: "Transfer Guides", link: "/thailand/bangkok/destination-guides#transfer" }}
     cityHub={{
       city: "Bangkok",
-      thingsToDoLink: "/thailand/bangkok/things-to-do",
-      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+      thingsToDoLink: "/thailand/bangkok/things-to-do/",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer/",
     }}
     sections={[
       { type: "paragraph", content: "Grab is Southeast Asia's Uber — and in Bangkok, it competes head-on with the city's metered pink/yellow taxis. Both work, both are safe, but the price, language barrier and reliability differ. Here's the practical comparison so you pick the right one for each ride." },
@@ -41,20 +41,20 @@ const BlogBangkokGrabTaxi = () => (
       { type: "list", items: ["Grab is 20–40% pricier than metered taxi","Use Grab: late night, no Thai language, solo female, scam-risk areas","Use taxi: short daytime rides on main routes","GrabTaxi (yellow taxi via app) = cheapest + safest combo"] },
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Grab and taxis both work in Bangkok — pick based on time of day, your comfort level and how lost-in-translation you are. Grab is the safer first choice for tourists; metered taxis are cheaper for confident travelers. Use GrabTaxi when you can — best of both worlds. Your phone is your best transport tool in Bangkok." },
-      { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+      { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do/", linkText: "Explore Bangkok Tours" }
     ]}
     relatedActivities={[
-      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
-      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
-      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
-      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide/" },
     ]}
     relatedLinks={[
-      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
-      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
-      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary/" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok/" },
     ]}
   />
 );

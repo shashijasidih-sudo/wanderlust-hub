@@ -18,7 +18,7 @@ const BlogSingaporeRiverCruiseGuide = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "Activity Guides", link: "/singapore/destination-guides#activity" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "The Singapore River Cruise — a modernised wooden bumboat ride along the historic Singapore River — is one of the most relaxing yet visually rewarding ways to experience the city. It blends sightseeing, cultural storytelling and the contrast of colonial heritage against a futuristic Marina Bay skyline." },
       { type: "heading", content: "Route & Key Highlights" },
@@ -33,7 +33,7 @@ const BlogSingaporeRiverCruiseGuide = () => (
       { type: "list", items: ["Day cruise — clearer views of architecture, better for history, smaller crowds","Night cruise (recommended) — illuminated skyline, water reflections, romantic atmosphere"] },
       { type: "heading", content: "Duration, Timing & Cost (2026 INR)" },
       { type: "list", items: ["Total duration: ~40 minutes","Best time: 7 PM – 9 PM for night views","Standard ticket — ₹1,500–₹1,900","Combo with attractions — ₹2,400+"] },
-      { type: "cta", content: "Book Singapore River Cruise", link: "/singapore/things-to-do", linkText: "Book River Cruise" },
+      { type: "cta", content: "Book Singapore River Cruise", link: "/singapore/things-to-do/", linkText: "Book River Cruise" },
       { type: "heading", content: "What to Expect On Board" },
       { type: "list", items: ["Comfortable open-side bumboat seating","Audio commentary on history and landmarks","Plenty of photo angles unique to water level"] },
       { type: "heading", content: "Tips for the Best Experience" },
@@ -44,14 +44,14 @@ const BlogSingaporeRiverCruiseGuide = () => (
       { type: "paragraph", content: "Yes — if you want a calm, scenic break from walking and a chance to see Singapore from a completely different angle. It's not a high-adrenaline attraction, but it delivers one of the most relaxing premium experiences in the city." },
     ]}
     relatedActivities={[
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour" },
-      { title: "Big Bus Hop-On Hop-Off", link: "/singapore/things-to-do" },
+      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
+      { title: "Big Bus Hop-On Hop-Off", link: "/singapore/things-to-do/" },
     ]}
     relatedLinks={[
-      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide" },
-      { title: "Singapore Flyer Observation Wheel Experience", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel" },
-      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer" },
-      { title: "Big Bus Singapore Hop-On Hop-Off", link: "/singapore/destination-guides/activity/big-bus-singapore-hop-on-hop-off" },
+      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide/" },
+      { title: "Singapore Flyer Observation Wheel Experience", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel/" },
+      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer/" },
+      { title: "Big Bus Singapore Hop-On Hop-Off", link: "/singapore/destination-guides/activity/big-bus-singapore-hop-on-hop-off/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

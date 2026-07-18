@@ -15,9 +15,9 @@ interface TravelGuidesSectionProps {
 }
 
 const REGION_CONFIG: Record<GuideRegion, { label: string; viewAll: string; data: typeof thailandGuides }> = {
-  thailand: { label: "Thailand", viewAll: "/thailand/destination-guides", data: thailandGuides },
-  singapore: { label: "Singapore", viewAll: "/singapore/destination-guides", data: singaporeGuides as typeof thailandGuides },
-  dubai: { label: "Dubai", viewAll: "/dubai/destination-guides", data: dubaiGuides as typeof thailandGuides },
+  thailand: { label: "Thailand", viewAll: "/thailand/destination-guides/", data: thailandGuides },
+  singapore: { label: "Singapore", viewAll: "/singapore/destination-guides/", data: singaporeGuides as typeof thailandGuides },
+  dubai: { label: "Dubai", viewAll: "/dubai/destination-guides/", data: dubaiGuides as typeof thailandGuides },
 };
 
 const TravelGuidesSection = ({ count = 4, title = "Travel Guides", region = "thailand" }: TravelGuidesSectionProps) => {

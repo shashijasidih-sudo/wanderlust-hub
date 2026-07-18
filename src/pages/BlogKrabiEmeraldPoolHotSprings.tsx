@@ -16,7 +16,7 @@ const BlogKrabiEmeraldPoolHotSprings = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/krabi/destination-guides#activity" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Looking to explore beyond Krabi's beaches and islands? The Emerald Pool and Hot Springs offer a refreshing inland escape into lush rainforest landscapes. Located within Khao Phra Bang Khram Nature Reserve, this experience combines natural mineral pools, jungle walks and therapeutic hot springs — all in one day." },
       { type: "heading", content: "What is the Emerald Pool in Krabi?" },
@@ -34,7 +34,7 @@ const BlogKrabiEmeraldPoolHotSprings = () => (
       { type: "list", items: ["Swimwear","Quick-dry towel","Comfortable walking shoes","Sunscreen","Insect repellent"] },
       { type: "heading", content: "Pro Tips" },
       { type: "list", items: ["Start early to avoid crowds","Take the Nature Trail — more scenic and less crowded","Visit Hot Springs first if you arrive late"] },
-      { type: "cta", content: "Book the Krabi Jungle & Emerald Pool Tour", link: "/thailand/krabi/things-to-do", linkText: "Book Jungle Tour" },
+      { type: "cta", content: "Book the Krabi Jungle & Emerald Pool Tour", link: "/thailand/krabi/things-to-do/", linkText: "Book Jungle Tour" },
       { type: "heading", content: "Emerald Pool vs Island Tours" },
       { type: "list", items: ["Emerald Pool — jungle & freshwater, moderate crowd, high relaxation","Island Tours — beaches & ocean, high crowd, medium relaxation"] },
       { type: "heading", content: "Who Should Visit" },
@@ -45,16 +45,16 @@ const BlogKrabiEmeraldPoolHotSprings = () => (
       { type: "paragraph", content: "The Emerald Pool and Hot Springs in Krabi offer a completely different side of Thailand — lush, peaceful and rejuvenating. A perfect contrast to island tours." },
     ]}
     relatedActivities={[
-      { title: "Krabi Jungle & Emerald Pool Tour", link: "/thailand/krabi/things-to-do" },
-      { title: "Tiger Cave Temple Visit", link: "/thailand/krabi/things-to-do" },
-      { title: "Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do" },
+      { title: "Krabi Jungle & Emerald Pool Tour", link: "/thailand/krabi/things-to-do/" },
+      { title: "Tiger Cave Temple Visit", link: "/thailand/krabi/things-to-do/" },
+      { title: "Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do/" },
     ]}
     relatedLinks={[
-      { title: "15 Best Things to Do in Krabi", link: "/thailand/krabi/destination-guides/activity/15-best-things-to-do-in-krabi" },
-      { title: "4 Island Tour Krabi Guide", link: "/thailand/krabi/destination-guides/activity/4-island-tour-krabi-guide" },
-      { title: "Hong Island Tour Krabi", link: "/thailand/krabi/destination-guides/activity/hong-island-tour-krabi" },
-      { title: "Krabi Night Markets Guide", link: "/thailand/krabi/destination-guides/activity/krabi-night-markets-guide" },
-      { title: "Kayaking in Ao Thalane Krabi", link: "/thailand/krabi/destination-guides/activity/kayaking-in-ao-thalane-krabi" },
+      { title: "15 Best Things to Do in Krabi", link: "/thailand/krabi/destination-guides/activity/15-best-things-to-do-in-krabi/" },
+      { title: "4 Island Tour Krabi Guide", link: "/thailand/krabi/destination-guides/activity/4-island-tour-krabi-guide/" },
+      { title: "Hong Island Tour Krabi", link: "/thailand/krabi/destination-guides/activity/hong-island-tour-krabi/" },
+      { title: "Krabi Night Markets Guide", link: "/thailand/krabi/destination-guides/activity/krabi-night-markets-guide/" },
+      { title: "Kayaking in Ao Thalane Krabi", link: "/thailand/krabi/destination-guides/activity/kayaking-in-ao-thalane-krabi/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/activity/krabi-emerald-pool-hot-springs-guide")}
   />

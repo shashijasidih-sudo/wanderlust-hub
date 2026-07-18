@@ -16,7 +16,7 @@ const BlogKrabi15BestThingsToDo = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/krabi/destination-guides#activity" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Krabi is one of Thailand's most breathtaking destinations — known for limestone cliffs, turquoise waters and island-hopping adventures. If you're visiting for the first time in 2026, planning the right mix of experiences can make or break your trip. This guide covers the 15 best things to do in Krabi, with insider tips, ideal timing and how to structure your itinerary efficiently." },
       { type: "heading", content: "1. Take the Famous 4 Island Tour" },
@@ -53,20 +53,20 @@ const BlogKrabi15BestThingsToDo = () => (
       { type: "list", items: ["Day 1 — 4 Island Tour + Night Market","Day 2 — Phi Phi Islands","Day 3 — Jungle Tour + Sunset Cruise"] },
       { type: "heading", content: "Final Tips for First-Time Travelers" },
       { type: "list", items: ["Best time to visit — November to April","Book tours in advance during peak season","Carry cash for small vendors"] },
-      { type: "cta", content: "Plan your Krabi trip with curated activities", link: "/thailand/krabi/things-to-do", linkText: "Explore Krabi Tours" },
+      { type: "cta", content: "Plan your Krabi trip with curated activities", link: "/thailand/krabi/things-to-do/", linkText: "Explore Krabi Tours" },
     ]}
     relatedActivities={[
-      { title: "Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do" },
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/things-to-do" },
-      { title: "Hong Island Tour", link: "/thailand/krabi/things-to-do" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers" },
+      { title: "Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/things-to-do/" },
+      { title: "Hong Island Tour", link: "/thailand/krabi/things-to-do/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
     ]}
     relatedLinks={[
-      { title: "4 Island Tour Krabi Guide", link: "/thailand/krabi/destination-guides/activity/4-island-tour-krabi-guide" },
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/destination-guides/activity/phi-phi-island-tour-from-krabi" },
-      { title: "Hong Island Tour Krabi", link: "/thailand/krabi/destination-guides/activity/hong-island-tour-krabi" },
-      { title: "Krabi Emerald Pool & Hot Springs Guide", link: "/thailand/krabi/destination-guides/activity/krabi-emerald-pool-hot-springs-guide" },
-      { title: "Krabi Night Markets Guide", link: "/thailand/krabi/destination-guides/activity/krabi-night-markets-guide" },
+      { title: "4 Island Tour Krabi Guide", link: "/thailand/krabi/destination-guides/activity/4-island-tour-krabi-guide/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/destination-guides/activity/phi-phi-island-tour-from-krabi/" },
+      { title: "Hong Island Tour Krabi", link: "/thailand/krabi/destination-guides/activity/hong-island-tour-krabi/" },
+      { title: "Krabi Emerald Pool & Hot Springs Guide", link: "/thailand/krabi/destination-guides/activity/krabi-emerald-pool-hot-springs-guide/" },
+      { title: "Krabi Night Markets Guide", link: "/thailand/krabi/destination-guides/activity/krabi-night-markets-guide/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/activity/15-best-things-to-do-in-krabi")}
   />

@@ -115,12 +115,12 @@ const AboutYellodaeSection = () => {
 
             <div className="flex flex-wrap gap-3 pt-2">
               <Button asChild size="lg" className="rounded-full shadow-lg hover:shadow-xl">
-                <Link to="/about-us">
+                <Link to="/about-us/">
                   Learn More About Us <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full border-2">
-                <Link to="/contact-us">Plan My Trip</Link>
+                <Link to="/contact-us/">Plan My Trip</Link>
               </Button>
             </div>
           </div>

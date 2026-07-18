@@ -22,7 +22,7 @@ const BlogPhuketFoodCostGuide = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Price & Cost Guides", link: "/thailand/phuket/destination-guides#price-cost" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Food in Phuket can cost ₹150 a meal — or ₹3,000. This 2026 guide gives you real INR pricing across street food, restaurants, Indian meals and beachside dining so you can budget smartly." },
       { type: "heading", content: "Phuket Food Cost — Per Meal (Per Person)" },
@@ -71,18 +71,18 @@ const BlogPhuketFoodCostGuide = () => (
       ]},
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Most Indian travelers spend ₹1,200–₹1,800 per day on food in Phuket — mixing street food, one Indian meal and one casual restaurant. Beach clubs and fine dining are worth one splurge but not daily." },
-      { type: "cta", content: "Plan your Phuket food + tour day", link: "/thailand/phuket/things-to-do", linkText: "Explore Phuket" },
+      { type: "cta", content: "Plan your Phuket food + tour day", link: "/thailand/phuket/things-to-do/", linkText: "Explore Phuket" },
     ]}
     relatedActivities={[
-      { title: "Phuket City Tour with Big Buddha", link: "/thailand/phuket/phuket-city-tour" },
-      { title: "Phi Phi Island Tour (Big Boat)", link: "/thailand/phuket/phuket-phi-phi-island-tour" },
-      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-tour" },
+      { title: "Phuket City Tour with Big Buddha", link: "/thailand/phuket/phuket-city-tour/" },
+      { title: "Phi Phi Island Tour (Big Boat)", link: "/thailand/phuket/phuket-phi-phi-island-tour/" },
+      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-tour/" },
     ]}
     relatedLinks={[
-      { title: "Indian Food in Phuket: Best Restaurants", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket" },
-      { title: "Phuket Trip Cost from India 2026", link: "/thailand/phuket/destination-guides/price-cost/phuket-trip-cost-from-india" },
-      { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000" },
-      { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" },
+      { title: "Indian Food in Phuket: Best Restaurants", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket/" },
+      { title: "Phuket Trip Cost from India 2026", link: "/thailand/phuket/destination-guides/price-cost/phuket-trip-cost-from-india/" },
+      { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000/" },
+      { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/price-cost/phuket-food-cost-guide")}
   />

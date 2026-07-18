@@ -17,8 +17,8 @@ const BlogSuvarnabhumiToPattaya = () => (
     subCategory={{ label: "Transfer Guides", link: "/thailand/pattaya/destination-guides#transfer" }}
     cityHub={{
       city: "Pattaya",
-      thingsToDoLink: "/thailand/pattaya/things-to-do",
-      transfersLink: "/thailand/pattaya",
+      thingsToDoLink: "/thailand/pattaya/things-to-do/",
+      transfersLink: "/thailand/pattaya/",
     }}
     sections={[
       { type: "paragraph", content: "Most international flights to Thailand land at Suvarnabhumi (BKK), and a huge share of those passengers head straight to Pattaya — about 120 km southeast. Choosing the right transfer is the difference between a smooth start and a 3-hour ordeal. Here's the 2026 breakdown across budget, comfort and travel time." },
@@ -46,20 +46,20 @@ const BlogSuvarnabhumiToPattaya = () => (
       { type: "list", items: ["Accepting flat-fare offers from drivers inside the terminal","Walking outside arrivals to look for cheaper taxis (illegal touts)","Not carrying small Thai Baht for tolls","Skipping pre-booking on busy travel days (long weekends, festivals)"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "BKK to Pattaya is one of Thailand's easiest airport transfers — under 2 hours by car. Pre-book a private transfer for stress-free arrival, take the public taxi if you're confident with queues, or grab the airport bus if you're traveling solo on a tight budget. Either way, you'll be on Pattaya beach the same day." },
-      { type: "cta", content: "Book your Pattaya transfer", link: "/thailand/pattaya", linkText: "Explore Pattaya Services" }
+      { type: "cta", content: "Book your Pattaya transfer", link: "/thailand/pattaya/", linkText: "Explore Pattaya Services" }
     ]}
     relatedActivities={[
-      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
-      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
-      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
-      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide/" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide/" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide/" },
     ]}
     relatedLinks={[
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
-      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
-      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
-      { title: "Don Mueang to Pattaya Transfer", link: "/thailand/pattaya/destination-guides/transfer/don-mueang-to-pattaya" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
+      { title: "Don Mueang to Pattaya Transfer", link: "/thailand/pattaya/destination-guides/transfer/don-mueang-to-pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
     ]}
   />
 );

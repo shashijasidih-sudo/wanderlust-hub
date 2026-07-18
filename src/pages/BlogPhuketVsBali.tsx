@@ -23,9 +23,9 @@ const BlogPhuketVsBali = () => (
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Comparison Guides", link: "/thailand/phuket/destination-guides#comparison" }}
     comparisonItems={[
-      { name: "Phuket", link: "/thailand/phuket/things-to-do" },
+      { name: "Phuket", link: "/thailand/phuket/things-to-do/" },
     ]}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       {
         type: "paragraph",
@@ -44,7 +44,7 @@ const BlogPhuketVsBali = () => (
       {
         type: "cta",
         content: "Land in Phuket stress-free — pre-book your HKT airport transfer",
-        link: "/thailand/phuket/phuket-hkt-airport-pickup",
+        link: "/thailand/phuket/phuket-hkt-airport-pickup/",
         linkText: "Book Phuket Airport Transfer",
       },
       { type: "heading", content: "Budget & Daily Cost (Mid-Range)" },
@@ -150,21 +150,21 @@ const BlogPhuketVsBali = () => (
       {
         type: "cta",
         content: "Start planning your Phuket island-hopping holiday",
-        link: "/thailand/phuket/things-to-do",
+        link: "/thailand/phuket/things-to-do/",
         linkText: "Explore Phuket Tours",
       },
     ]}
     relatedActivities={[
-      { title: "Full-Day Phi Phi Island Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
-      { title: "Phuket Simon Cabaret Show", link: "/thailand/phuket/simon-cabaret-show-with-transfer" },
-      { title: "Phuket HKT Airport Pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup" },
+      { title: "Full-Day Phi Phi Island Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+      { title: "Phuket Simon Cabaret Show", link: "/thailand/phuket/simon-cabaret-show-with-transfer/" },
+      { title: "Phuket HKT Airport Pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup/" },
     ]}
     relatedLinks={[
-      { title: "Phuket vs Krabi for Indian Travelers", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians" },
-      { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel" },
-      { title: "Phuket Private Tour vs Group Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-private-vs-group-tour" },
-      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
+      { title: "Phuket vs Krabi for Indian Travelers", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians/" },
+      { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel/" },
+      { title: "Phuket Private Tour vs Group Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-private-vs-group-tour/" },
+      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/comparison/phuket-vs-bali")}
   />

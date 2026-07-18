@@ -16,7 +16,7 @@ const BlogKrabiNightMarketsGuide = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/krabi/destination-guides#activity" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Krabi isn't just about beaches and island tours — its night markets are where the destination truly comes alive after sunset. From sizzling street food and live music to budget shopping and local vibes, visiting a night market is one of the most authentic experiences in Krabi." },
       { type: "heading", content: "Why Visit Night Markets in Krabi?" },
@@ -38,21 +38,21 @@ const BlogKrabiNightMarketsGuide = () => (
       { type: "list", items: ["Markets — cheaper, authentic, lively","Restaurants — comfortable, slower, more expensive"] },
       { type: "heading", content: "Pro Tips" },
       { type: "list", items: ["Visit multiple markets — each has a different vibe","Try local dishes — don't stick to familiar food","Carry cash — most stalls don't accept cards","Easy transport at night via Grab or songthaew"] },
-      { type: "cta", content: "Explore curated Krabi experiences", link: "/thailand/krabi/things-to-do", linkText: "Browse Krabi Tours" },
+      { type: "cta", content: "Explore curated Krabi experiences", link: "/thailand/krabi/things-to-do/", linkText: "Browse Krabi Tours" },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "The Krabi Night Markets are more than just places to eat — they're a complete cultural experience. In 2026, they remain one of the best budget-friendly and authentic things to do in Krabi, especially after a day of island hopping." },
     ]}
     relatedActivities={[
-      { title: "Krabi City Tour", link: "/thailand/krabi/things-to-do" },
-      { title: "Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do" },
-      { title: "Krabi Sunset Cruise", link: "/thailand/krabi/things-to-do" },
+      { title: "Krabi City Tour", link: "/thailand/krabi/things-to-do/" },
+      { title: "Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do/" },
+      { title: "Krabi Sunset Cruise", link: "/thailand/krabi/things-to-do/" },
     ]}
     relatedLinks={[
-      { title: "15 Best Things to Do in Krabi", link: "/thailand/krabi/destination-guides/activity/15-best-things-to-do-in-krabi" },
-      { title: "Indian Restaurants in Krabi", link: "/thailand/krabi/destination-guides/indian-audience/indian-restaurants-in-krabi" },
-      { title: "Krabi Emerald Pool & Hot Springs", link: "/thailand/krabi/destination-guides/activity/krabi-emerald-pool-hot-springs-guide" },
-      { title: "Best Krabi Packages for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples" },
-      { title: "Kayaking in Ao Thalane Krabi", link: "/thailand/krabi/destination-guides/activity/kayaking-in-ao-thalane-krabi" },
+      { title: "15 Best Things to Do in Krabi", link: "/thailand/krabi/destination-guides/activity/15-best-things-to-do-in-krabi/" },
+      { title: "Indian Restaurants in Krabi", link: "/thailand/krabi/destination-guides/indian-audience/indian-restaurants-in-krabi/" },
+      { title: "Krabi Emerald Pool & Hot Springs", link: "/thailand/krabi/destination-guides/activity/krabi-emerald-pool-hot-springs-guide/" },
+      { title: "Best Krabi Packages for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples/" },
+      { title: "Kayaking in Ao Thalane Krabi", link: "/thailand/krabi/destination-guides/activity/kayaking-in-ao-thalane-krabi/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/activity/krabi-night-markets-guide")}
   />

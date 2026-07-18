@@ -120,7 +120,7 @@ export default function AuthCallback() {
         {error ? (
           <>
             <p className="text-destructive mb-4">{error}</p>
-            <Button onClick={() => navigate("/auth", { replace: true })}>Back to login</Button>
+            <Button onClick={() => navigate("/auth/", { replace: true })}>Back to login</Button>
           </>
         ) : (
           <div className="flex items-center gap-2 text-muted-foreground">

@@ -16,7 +16,7 @@ const BlogPhuketVisaForIndians = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "For Indian Travelers", link: "/thailand/phuket/destination-guides#indian-audience" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Planning a trip to Phuket from India? Sorting your Thailand visa is step one. Good news: it's simple, quick and tourist-friendly. Here's the complete 2026 breakdown — VOA vs e-visa, costs in INR, documents and the smart pick." },
 
@@ -41,7 +41,7 @@ const BlogPhuketVisaForIndians = () => (
         "Cons: Needs advance planning (3–5 working days)",
       ]},
 
-      { type: "cta", content: "Got your visa sorted? Plan your Phuket experiences", link: "/thailand/phuket/things-to-do", linkText: "Browse Phuket Tours" },
+      { type: "cta", content: "Got your visa sorted? Plan your Phuket experiences", link: "/thailand/phuket/things-to-do/", linkText: "Browse Phuket Tours" },
 
       { type: "heading", content: "Required Documents" },
       { type: "list", items: [
@@ -99,15 +99,15 @@ const BlogPhuketVisaForIndians = () => (
       { type: "paragraph", content: "For most Indian travelers, e-Visa is the smarter choice — same cost, faster entry, no airport stress. Apply 1–2 weeks before travel and start your Phuket holiday on the right note." },
     ]}
     relatedActivities={[
-      { title: "Phuket Airport HKT Pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup" },
-      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour" },
-      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour" },
+      { title: "Phuket Airport HKT Pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup/" },
+      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour/" },
+      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour/" },
     ]}
     relatedLinks={[
-      { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india" },
-      { title: "Phuket Airport to Patong Transfer", link: "/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong" },
-      { title: "Is Phuket Safe for Indian Tourists?", link: "/thailand/phuket/destination-guides/indian-audience/phuket-safety-for-indians" },
-      { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000" },
+      { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india/" },
+      { title: "Phuket Airport to Patong Transfer", link: "/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong/" },
+      { title: "Is Phuket Safe for Indian Tourists?", link: "/thailand/phuket/destination-guides/indian-audience/phuket-safety-for-indians/" },
+      { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/indian-audience/phuket-visa-for-indians")}
   />

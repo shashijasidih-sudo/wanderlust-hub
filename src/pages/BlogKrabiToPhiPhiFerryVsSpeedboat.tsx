@@ -16,7 +16,7 @@ const Blog = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Transfer Blogs", link: "/thailand/krabi/destination-guides#transfer" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Planning a day trip or stay on Phi Phi from Krabi? You have two main transfer options — ferry and speedboat. Each has its own pros, cons and ideal traveler profile. This 2026 guide breaks down cost in INR, travel time, comfort, timings and booking tips so you can pick the right one." },
       { type: "heading", content: "Distance & Travel Time" },
@@ -30,7 +30,7 @@ const Blog = () => (
       { type: "list", items: ["Morning — 9:00 AM departure","Midday — 11:00 AM departure","Afternoon — 2:00 PM departure","Timings vary seasonally — confirm before booking"] },
       { type: "heading", content: "What to Expect" },
       { type: "list", items: ["Hotel pickup (often included with speedboat tours)","Boarding from Krabi/Ao Nang pier","Scenic sea journey with limestone cliff views","Drop at Tonsai Pier (Phi Phi Don)"] },
-      { type: "cta", content: "Book a Krabi → Phi Phi tour with hotel pickup and lunch", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer", linkText: "Book Phi Phi Tour from Krabi" },
+      { type: "cta", content: "Book a Krabi → Phi Phi tour with hotel pickup and lunch", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/", linkText: "Book Phi Phi Tour from Krabi" },
       { type: "heading", content: "Tips for a Smooth Journey" },
       { type: "list", items: ["Arrive 30 minutes before departure","Choose morning trips for calmer seas","Sit outside for views — but carry sunscreen","Carry motion sickness medicine, especially for speedboats","Book early in peak season (Dec–Feb) — boats fill fast"] },
       { type: "heading", content: "Best Option by Traveler Type" },
@@ -41,19 +41,19 @@ const Blog = () => (
       { type: "list", items: ["Booking the cheapest option without checking inclusions","Missing the last return ferry/speedboat","Not pre-booking during peak season","Skipping motion sickness medicine on rough days"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Both ferry and speedboat are great options — your choice depends on time, budget and comfort. For relaxed family travel, choose the ferry. For day-trippers and couples wanting maximum island time, the speedboat is worth the extra rupees." },
-      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival before your Phi Phi day", link: "/thailand/krabi/budget-airport-transfers", linkText: "Book Krabi Transfer" },
+      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival before your Phi Phi day", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer" },
-      { title: "4 Island Tour by Speedboat", link: "/thailand/krabi/4-island-tour-speedboat-with-transfer" },
-      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" },
+      { title: "4 Island Tour by Speedboat", link: "/thailand/krabi/4-island-tour-speedboat-with-transfer/" },
+      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
     ]}
     relatedLinks={[
-      { title: "Krabi Speedboat vs Ferry: Which is Faster?", link: "/thailand/krabi/destination-guides/transfer/krabi-speedboat-vs-ferry-which-is-faster" },
-      { title: "Is 4 Island Tour in Krabi Worth It?", link: "/thailand/krabi/destination-guides/micro/is-4-island-tour-krabi-worth-it" },
-      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary" },
-      { title: "Best Time for Island Hopping in Krabi", link: "/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi" },
+      { title: "Krabi Speedboat vs Ferry: Which is Faster?", link: "/thailand/krabi/destination-guides/transfer/krabi-speedboat-vs-ferry-which-is-faster/" },
+      { title: "Is 4 Island Tour in Krabi Worth It?", link: "/thailand/krabi/destination-guides/micro/is-4-island-tour-krabi-worth-it/" },
+      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary/" },
+      { title: "Best Time for Island Hopping in Krabi", link: "/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/transfer/krabi-to-phi-phi-ferry-vs-speedboat")}
   />

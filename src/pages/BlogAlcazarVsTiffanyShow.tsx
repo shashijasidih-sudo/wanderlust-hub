@@ -23,18 +23,18 @@ const BlogAlcazarVsTiffanyShow = () => (
     subCategory={{ label: "Comparison Guides", link: "/thailand/pattaya/destination-guides#comparison" }}
     cityHub={{
       city: "Pattaya",
-      thingsToDoLink: "/thailand/pattaya/things-to-do",
-      transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer",
+      thingsToDoLink: "/thailand/pattaya/things-to-do/",
+      transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer/",
     }}
     comparisonItems={[
-      { name: "Alcazar Cabaret Show", link: "/thailand/pattaya/alcazar-show" },
-      { name: "Tiffany Show Pattaya", link: "/thailand/pattaya/tiffany-show" },
+      { name: "Alcazar Cabaret Show", link: "/thailand/pattaya/alcazar-show/" },
+      { name: "Tiffany Show Pattaya", link: "/thailand/pattaya/tiffany-show/" },
     ]}
     relatedActivities={[
-      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
-      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
-      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
-      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide/" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide/" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide/" },
     ]}
     sections={[
       { type: "paragraph", content: "If you're visiting Pattaya, watching a cabaret show is almost a must-do. But travelers often get stuck on one big question: Alcazar or Tiffany? Both are iconic, visually stunning and highly rated — but they're not identical. This guide breaks down ticket prices, seating, performance quality and exactly which one suits you." },
@@ -105,14 +105,14 @@ const BlogAlcazarVsTiffanyShow = () => (
       { type: "paragraph", content: "Not necessary — both shows are similar in concept and you'll get diminishing returns watching both on the same trip. Pick one based on your budget and vibe." },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "For most travelers → Alcazar Show. For premium experience seekers → Tiffany Show. Both are excellent — there's no wrong choice, only a question of price vs polish." },
-      { type: "cta", content: "Book your Pattaya cabaret show", link: "/thailand/pattaya/alcazar-show", linkText: "View Tickets" },
+      { type: "cta", content: "Book your Pattaya cabaret show", link: "/thailand/pattaya/alcazar-show/", linkText: "View Tickets" },
     ]}
     relatedLinks={[
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
-      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
-      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
-      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
     ]}
   />
 );

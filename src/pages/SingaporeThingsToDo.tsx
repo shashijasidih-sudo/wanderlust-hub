@@ -66,7 +66,7 @@ const activities: Activity[] = [
     description: "Experience Singapore's highest open-air panoramic ride, 79m above sea level on Sentosa Island.",
     price: 1811.25,
     image: singaporeSkyHelix,
-    slug: "/singapore/skyhelix-sentosa-tickets",
+    slug: "/singapore/skyhelix-sentosa-tickets/",
     category: "Sentosa Island Attractions",
   },
   {
@@ -74,7 +74,7 @@ const activities: Activity[] = [
     description: "Two thrilling 4D rides at Sentosa's interactive AdventureLand — perfect for families.",
     price: 2060,
     image: singaporeSentosa4d,
-    slug: "/singapore/sentosa-4d-adventureland-tickets",
+    slug: "/singapore/sentosa-4d-adventureland-tickets/",
     category: "Sentosa Island Attractions",
   },
   {
@@ -82,7 +82,7 @@ const activities: Activity[] = [
     description: "Sky-high cable car ride between Mount Faber and Sentosa Island with stunning harbour views.",
     price: 2180,
     image: singaporeCableCar,
-    slug: "/singapore/sentosa-cable-car-tickets-and-transfers",
+    slug: "/singapore/sentosa-cable-car-tickets-and-transfers/",
     category: "Sentosa Island Attractions",
   },
   {
@@ -90,7 +90,7 @@ const activities: Activity[] = [
     description: "Open-air night show at Siloso Beach with water, lasers, fire and live music.",
     price: 2656.5,
     image: singaporeWingsTime,
-    slug: "/singapore/wings-of-time-show-sentosa-tickets",
+    slug: "/singapore/wings-of-time-show-sentosa-tickets/",
     category: "Sentosa Island Attractions",
   },
 
@@ -108,7 +108,7 @@ const activities: Activity[] = [
     description: "Same iconic Universal Studios experience with weekend access — perfect for short trips.",
     price: 7872.9,
     image: singaporeUniversalStudios,
-    slug: "/singapore/universal-studios-singapore-weekend-tickets",
+    slug: "/singapore/universal-studios-singapore-weekend-tickets/",
     category: "Theme Parks & Water Parks",
   },
   {
@@ -116,7 +116,7 @@ const activities: Activity[] = [
     description: "Thrilling water slides, snorkeling with 20,000 fish and a lazy river at RWS.",
     price: 2656.5,
     image: singaporeAdventureCove,
-    slug: "/singapore/adventure-cove-waterpark-tickets",
+    slug: "/singapore/adventure-cove-waterpark-tickets/",
     category: "Theme Parks & Water Parks",
   },
 
@@ -126,7 +126,7 @@ const activities: Activity[] = [
     description: "World's first nocturnal wildlife park — tram safari with 900+ animals after dark.",
     price: 4470,
     image: singaporeNightSafari,
-    slug: "/singapore/night-safari-singapore-tickets-and-transfers",
+    slug: "/singapore/night-safari-singapore-tickets-and-transfers/",
     category: "Wildlife & Safari",
   },
   {
@@ -134,7 +134,7 @@ const activities: Activity[] = [
     description: "Award-winning open-concept zoo with tram ride and 2,800+ animals across 11 zones.",
     price: 3743.25,
     image: singaporeZoo,
-    slug: "/singapore/singapore-zoo-tickets",
+    slug: "/singapore/singapore-zoo-tickets/",
     category: "Wildlife & Safari",
   },
   {
@@ -142,7 +142,7 @@ const activities: Activity[] = [
     description: "Asia's first river-themed wildlife park featuring Giant Pandas and the Amazon River Quest.",
     price: 4468,
     image: singaporeRiverSafari,
-    slug: "/singapore/river-wonders-singapore-tickets",
+    slug: "/singapore/river-wonders-singapore-tickets/",
     category: "Wildlife & Safari",
   },
   {
@@ -150,7 +150,7 @@ const activities: Activity[] = [
     description: "Singapore's newest immersive wildlife park exploring South-East Asia's rainforest habitats.",
     price: 3441.375,
     image: singaporeZoo,
-    slug: "/singapore/rainforest-wild-asia-tickets",
+    slug: "/singapore/rainforest-wild-asia-tickets/",
     category: "Wildlife & Safari",
   },
 
@@ -160,7 +160,7 @@ const activities: Activity[] = [
     description: "Half-day guided Singapore city tour covering Merlion, Chinatown, Little India and more.",
     price: 1815,
     image: singaporeCityTour,
-    slug: "/singapore/singapore-city-tour",
+    slug: "/singapore/singapore-city-tour/",
     category: "City Tours & Sightseeing",
   },
   {
@@ -168,7 +168,7 @@ const activities: Activity[] = [
     description: "Flexible hop-on hop-off open-top bus pass covering Singapore's top attractions.",
     price: 4709.25,
     image: singaporeBigBus,
-    slug: "/singapore/big-bus-hop-on-hop-off-singapore-city-tour",
+    slug: "/singapore/big-bus-hop-on-hop-off-singapore-city-tour/",
     category: "City Tours & Sightseeing",
   },
   {
@@ -176,7 +176,7 @@ const activities: Activity[] = [
     description: "See Singapore's iconic landmarks beautifully lit up on this open-top night bus tour.",
     price: 4709.25,
     image: singaporeBigBus,
-    slug: "/singapore/big-bus-night-city-tour-singapore",
+    slug: "/singapore/big-bus-night-city-tour-singapore/",
     category: "City Tours & Sightseeing",
   },
   {
@@ -184,7 +184,7 @@ const activities: Activity[] = [
     description: "Scenic bumboat cruise along the Singapore River past Marina Bay and Clarke Quay.",
     price: 2173.5,
     image: singaporeRiverCruise,
-    slug: "/singapore/singapore-river-cruise-tickets-and-transfers",
+    slug: "/singapore/singapore-river-cruise-tickets-and-transfers/",
     category: "City Tours & Sightseeing",
   },
 
@@ -194,7 +194,7 @@ const activities: Activity[] = [
     description: "Visit the iconic Cloud Forest and Flower Dome at Singapore's futuristic garden park.",
     price: 2660,
     image: singaporeGardensBay,
-    slug: "/singapore/gardens-by-the-bay-tickets-and-transfers",
+    slug: "/singapore/gardens-by-the-bay-tickets-and-transfers/",
     category: "Iconic Landmarks",
   },
   {
@@ -202,7 +202,7 @@ const activities: Activity[] = [
     description: "Asia's largest observation wheel — 165m high panoramic views over Marina Bay.",
     price: 3381,
     image: singaporeFlyer,
-    slug: "/singapore/singapore-flyer-tickets-and-transfers",
+    slug: "/singapore/singapore-flyer-tickets-and-transfers/",
     category: "Iconic Landmarks",
   },
 ];
@@ -310,7 +310,7 @@ const SingaporeThingsToDo = () => {
 
   const breadcrumbItems = [
     { name: "Home", url: "/" },
-    { name: "Singapore", url: "/singapore" },
+    { name: "Singapore", url: "/singapore/" },
     { name: "Things to Do", url: PAGE_PATH },
   ];
 
@@ -348,7 +348,7 @@ const SingaporeThingsToDo = () => {
           <BreadcrumbList>
             <BreadcrumbItem><BreadcrumbLink asChild><Link to="/">Home</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/singapore">Singapore</Link></BreadcrumbLink></BreadcrumbItem>
+            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/singapore/">Singapore</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem><BreadcrumbPage>Things to Do</BreadcrumbPage></BreadcrumbItem>
           </BreadcrumbList>
@@ -370,7 +370,7 @@ const SingaporeThingsToDo = () => {
           <div className="mt-6 flex flex-wrap gap-3">
             <Button size="lg" asChild><a href="#all-activities">Explore Activities</a></Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/singapore/budget-airport-transfers">Singapore Transfers</Link>
+              <Link to="/singapore/budget-airport-transfers/">Singapore Transfers</Link>
             </Button>
           </div>
         </div>
@@ -419,7 +419,7 @@ const SingaporeThingsToDo = () => {
             <h2 className="text-2xl font-bold md:text-3xl">All Singapore Activities</h2>
             <p className="mt-1 text-muted-foreground">Browse every Singapore activity available on Yellodae.</p>
           </div>
-          <Button variant="outline" asChild><Link to="/singapore">View Singapore City Page</Link></Button>
+          <Button variant="outline" asChild><Link to="/singapore/">View Singapore City Page</Link></Button>
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {allSorted.slice(0, visibleAll).map((a) => <Card key={`all-${a.slug}`} a={a} />)}
@@ -441,9 +441,9 @@ const SingaporeThingsToDo = () => {
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { title: "Singapore Changi Airport Pickup", desc: "Private air-conditioned transfer from Changi airport to your Singapore hotel.", price: 4000, img: singaporeCityTour, slug: "/singapore/singapore-airport-pickup" },
-            { title: "Singapore Hotel to Changi Airport Dropoff", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 4000, img: singaporeMarinaBay, slug: "/singapore/singapore-airport-dropoff" },
-            { title: "Singapore Airport Night Pickup", desc: "Late-night and early-morning Changi airport pickup with meet & greet.", price: 5000, img: singaporeRiverCruise, slug: "/singapore/singapore-airport-night-pickup" },
+            { title: "Singapore Changi Airport Pickup", desc: "Private air-conditioned transfer from Changi airport to your Singapore hotel.", price: 4000, img: singaporeCityTour, slug: "/singapore/singapore-airport-pickup/" },
+            { title: "Singapore Hotel to Changi Airport Dropoff", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 4000, img: singaporeMarinaBay, slug: "/singapore/singapore-airport-dropoff/" },
+            { title: "Singapore Airport Night Pickup", desc: "Late-night and early-morning Changi airport pickup with meet & greet.", price: 5000, img: singaporeRiverCruise, slug: "/singapore/singapore-airport-night-pickup/" },
           ].map((t) => (
             <article key={t.slug} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
               <Link to={t.slug} className="block aspect-[4/3] overflow-hidden bg-muted">
@@ -485,7 +485,7 @@ const SingaporeThingsToDo = () => {
               <li><Link to="/singapore/things-to-do#wildlife-safari" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Wildlife & Safari</Link></li>
               <li><Link to="/singapore/things-to-do#city-tours-sightseeing" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">City Tours & Sightseeing</Link></li>
               <li><Link to="/singapore/things-to-do#iconic-landmarks" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Iconic Landmarks</Link></li>
-              <li><Link to="/singapore/budget-airport-transfers" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Singapore Airport Transfers</Link></li>
+              <li><Link to="/singapore/budget-airport-transfers/" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Singapore Airport Transfers</Link></li>
             </ul>
           </div>
 
@@ -494,17 +494,17 @@ const SingaporeThingsToDo = () => {
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {[
                 { label: "Universal Studios Weekday", to: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-                { label: "Universal Studios Weekend", to: "/singapore/universal-studios-singapore-weekend-tickets" },
-                { label: "Gardens by the Bay", to: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
-                { label: "Singapore Flyer", to: "/singapore/singapore-flyer-tickets-and-transfers" },
-                { label: "Night Safari Singapore", to: "/singapore/night-safari-singapore-tickets-and-transfers" },
-                { label: "Singapore Zoo", to: "/singapore/singapore-zoo-tickets" },
-                { label: "River Wonders Singapore", to: "/singapore/river-wonders-singapore-tickets" },
-                { label: "SkyHelix Sentosa", to: "/singapore/skyhelix-sentosa-tickets" },
-                { label: "Sentosa Cable Car", to: "/singapore/sentosa-cable-car-tickets-and-transfers" },
-                { label: "Wings of Time Show", to: "/singapore/wings-of-time-show-sentosa-tickets" },
-                { label: "Singapore River Cruise", to: "/singapore/singapore-river-cruise-tickets-and-transfers" },
-                { label: "Singapore City Tour", to: "/singapore/singapore-city-tour" },
+                { label: "Universal Studios Weekend", to: "/singapore/universal-studios-singapore-weekend-tickets/" },
+                { label: "Gardens by the Bay", to: "/singapore/gardens-by-the-bay-tickets-and-transfers/" },
+                { label: "Singapore Flyer", to: "/singapore/singapore-flyer-tickets-and-transfers/" },
+                { label: "Night Safari Singapore", to: "/singapore/night-safari-singapore-tickets-and-transfers/" },
+                { label: "Singapore Zoo", to: "/singapore/singapore-zoo-tickets/" },
+                { label: "River Wonders Singapore", to: "/singapore/river-wonders-singapore-tickets/" },
+                { label: "SkyHelix Sentosa", to: "/singapore/skyhelix-sentosa-tickets/" },
+                { label: "Sentosa Cable Car", to: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+                { label: "Wings of Time Show", to: "/singapore/wings-of-time-show-sentosa-tickets/" },
+                { label: "Singapore River Cruise", to: "/singapore/singapore-river-cruise-tickets-and-transfers/" },
+                { label: "Singapore City Tour", to: "/singapore/singapore-city-tour/" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">{l.label}</Link>
@@ -520,11 +520,11 @@ const SingaporeThingsToDo = () => {
           <h2 className="text-xl font-semibold">Plan Your Singapore Trip</h2>
           <p className="mt-1 text-sm text-muted-foreground">Combine activities with reliable Changi airport transfers.</p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Button asChild variant="default"><Link to="/singapore">Singapore City Guide</Link></Button>
-            <Button asChild variant="outline"><Link to="/singapore/budget-airport-transfers">Singapore Transfers</Link></Button>
-            <Button asChild variant="outline"><Link to="/thailand/bangkok/things-to-do">Things to Do in Bangkok</Link></Button>
-            <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do">Things to Do in Chiang Mai</Link></Button>
-            <Button asChild variant="outline"><Link to="/singapore/destination-guides">Singapore Smart Guides</Link></Button>
+            <Button asChild variant="default"><Link to="/singapore/">Singapore City Guide</Link></Button>
+            <Button asChild variant="outline"><Link to="/singapore/budget-airport-transfers/">Singapore Transfers</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/bangkok/things-to-do/">Things to Do in Bangkok</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do/">Things to Do in Chiang Mai</Link></Button>
+            <Button asChild variant="outline"><Link to="/singapore/destination-guides/">Singapore Smart Guides</Link></Button>
           </div>
         </div>
       </section>

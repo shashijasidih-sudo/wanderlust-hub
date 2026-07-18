@@ -32,10 +32,10 @@ const BlogSingaporeAirportTransfer = () => {
         "Yellodae Singapore",
       ]}
       relatedLinks={[
-        { title: "Sentosa Activities Guide", link: "/blog/sentosa-activities-singapore" },
-        { title: "Singapore Transfers", link: "/singapore/budget-airport-transfers" },
-        { title: "Singapore City Tour", link: "/singapore/singapore-city-tour" },
-        { title: "Gardens by the Bay", link: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
+        { title: "Sentosa Activities Guide", link: "/blog/sentosa-activities-singapore/" },
+        { title: "Singapore Transfers", link: "/singapore/budget-airport-transfers/" },
+        { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
+        { title: "Gardens by the Bay", link: "/singapore/gardens-by-the-bay-tickets-and-transfers/" },
       ]}
       sections={[
         {
@@ -181,7 +181,7 @@ const BlogSingaporeAirportTransfer = () => {
         {
           type: "cta",
           content: "Ready to book your Singapore airport transfer? Travel easy with Yellodae — comfort from the moment you land.",
-          link: "/singapore/budget-airport-transfers",
+          link: "/singapore/budget-airport-transfers/",
           linkText: "🚖 Book Singapore Transfer Now",
         },
       ]}

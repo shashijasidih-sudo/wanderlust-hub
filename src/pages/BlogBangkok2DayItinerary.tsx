@@ -17,8 +17,8 @@ const BlogBangkok2DayItinerary = () => (
     subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
     cityHub={{
       city: "Bangkok",
-      thingsToDoLink: "/thailand/bangkok/things-to-do",
-      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+      thingsToDoLink: "/thailand/bangkok/things-to-do/",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer/",
     }}
     sections={[
       { type: "paragraph", content: "Only 48 hours in Bangkok? You can still cover the city's biggest icons, eat phenomenally well, shop till midnight and end with a rooftop view that will live rent-free in your head forever. The trick is sequencing — start cultural and west-side, end commercial and east-side, and never schedule more than two big things in a single half-day. This 2-day Bangkok itinerary is the exact plan we've handed to hundreds of short-trip travelers from India, and it works whether you're flying in for a weekend break or stopping over en route to Phuket. Read on for a minute-by-minute plan that respects Bangkok traffic, your stomach and your jet lag." },
@@ -41,20 +41,20 @@ const BlogBangkok2DayItinerary = () => (
       { type: "list", items: ["Day 1: Grand Palace + Wat Pho + Wat Arun + Dinner Cruise","Day 2: Mahanakhon Skywalk + Siam shopping + Asiatique","Stay in Sukhumvit (Asok / Phrom Phong)","Use BTS + Grab — never struggle with traffic again"] },
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Two days in Bangkok will leave you wanting more — and that's exactly the point. This itinerary delivers the city's biggest icons (Grand Palace, Wat Arun, Mahanakhon, Chao Phraya) without any wasted travel time, plus enough food and shopping to feel like a real holiday. Tag a 3rd day if you can squeeze it for Safari World or a floating market day trip — but if 48 hours is all you have, follow this plan exactly and you'll leave Bangkok with zero regrets." },
-      { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+      { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do/", linkText: "Explore Bangkok Tours" }
     ]}
     relatedActivities={[
-      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
-      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
-      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
-      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide/" },
     ]}
     relatedLinks={[
-      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Bangkok 4 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-4-day-itinerary" },
-      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
-      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
+      { title: "Bangkok 4 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-4-day-itinerary/" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok/" },
     ]}
   />
 );

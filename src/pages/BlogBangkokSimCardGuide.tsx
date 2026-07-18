@@ -17,8 +17,8 @@ const BlogBangkokSimCardGuide = () => (
     subCategory={{ label: "Quick Tips & Micro Guides", link: "/thailand/bangkok/destination-guides#micro" }}
     cityHub={{
       city: "Bangkok",
-      thingsToDoLink: "/thailand/bangkok/things-to-do",
-      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+      thingsToDoLink: "/thailand/bangkok/things-to-do/",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer/",
     }}
     sections={[
       { type: "paragraph", content: "Staying connected in Bangkok is dirt cheap — a tourist SIM with unlimited 4G/5G costs about 300 baht (₹750) for 8 days. The bigger question is which carrier, where to buy and whether to grab an eSIM from India before flying. Here's the no-fluff answer." },
@@ -39,20 +39,20 @@ const BlogBangkokSimCardGuide = () => (
       { type: "list", items: ["AIS = best coverage, DTAC = best value","300 baht (~₹750) for 8 days unlimited data","Buy at Suvarnabhumi airport Level 2 arrivals","Carry passport — mandatory for SIM registration","eSIM from Airalo/Holafly works if you prefer pre-arrival activation"] },
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok connectivity is among the cheapest in Asia. Grab a DTAC or AIS tourist SIM at the airport for ~₹750 and you're set for 8 days of unlimited 4G — perfect for Maps, WhatsApp, Grab and Insta uploads. eSIMs work fine too if you prefer landing pre-connected. Indian roaming is overkill for short Bangkok trips." },
-      { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+      { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do/", linkText: "Explore Bangkok Tours" }
     ]}
     relatedActivities={[
-      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
-      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
-      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
-      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide/" },
     ]}
     relatedLinks={[
-      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
-      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
-      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary/" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok/" },
     ]}
   />
 );

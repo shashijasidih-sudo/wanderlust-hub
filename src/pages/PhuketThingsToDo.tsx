@@ -64,7 +64,7 @@ const activities: Activity[] = [
     description: "Visit Phi Phi, Maya Bay and Khai Island by speedboat with national park fee, lunch and transfer.",
     price: 4951,
     image: phuketSpeedboat,
-    slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer",
+    slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/",
     category: "Phi Phi & Island Tours",
   },
   {
@@ -72,7 +72,7 @@ const activities: Activity[] = [
     description: "Relaxed Phi Phi Island day tour by big boat — perfect for families and seniors.",
     price: 3985,
     image: phuketBigBoat,
-    slug: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer",
+    slug: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/",
     category: "Phi Phi & Island Tours",
   },
   {
@@ -80,7 +80,7 @@ const activities: Activity[] = [
     description: "First-class Royal Jet cruiser experience to Phi Phi with VIP service and transfer.",
     price: 5555,
     image: phuketBoatTour,
-    slug: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer",
+    slug: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/",
     category: "Phi Phi & Island Tours",
   },
   {
@@ -88,7 +88,7 @@ const activities: Activity[] = [
     description: "Speedboat day tour to Phi Phi, Maya Bay and Khai Island excluding national marine fee.",
     price: 4347,
     image: phuketMayaBay,
-    slug: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer",
+    slug: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/",
     category: "Phi Phi & Island Tours",
   },
 
@@ -98,7 +98,7 @@ const activities: Activity[] = [
     description: "Phang Nga Bay sea canoe adventure visiting James Bond Island with lunch and transfer.",
     price: 4470,
     image: phuketLongtailBoat,
-    slug: "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer",
+    slug: "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer/",
     category: "James Bond Island & Day Trips",
   },
   {
@@ -106,7 +106,7 @@ const activities: Activity[] = [
     description: "Phang Nga Bay James Bond Island day tour by speed boat with lunch and transfer.",
     price: 3985,
     image: phuketKayaks,
-    slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer",
+    slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/",
     category: "James Bond Island & Day Trips",
   },
 
@@ -116,7 +116,7 @@ const activities: Activity[] = [
     description: "City tour with Tiger Kingdom Phuket entry — selfie with the famous tigers.",
     price: 4589,
     image: phuketIslandView,
-    slug: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer",
+    slug: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/",
     category: "City Tours & Tiger Experiences",
   },
   {
@@ -124,7 +124,7 @@ const activities: Activity[] = [
     description: "Discover Phuket's old town and famous night market with hotel transfers included.",
     price: 2053,
     image: phuketNightMarket,
-    slug: "/thailand/phuket/phuket-night-market-tour-with-transfer",
+    slug: "/thailand/phuket/phuket-night-market-tour-with-transfer/",
     category: "City Tours & Tiger Experiences",
   },
   {
@@ -132,7 +132,7 @@ const activities: Activity[] = [
     description: "Tiger Kingdom Phuket entry combined with a 30-minute ATV ride and transfer.",
     price: 5435,
     image: phuketAtv,
-    slug: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer",
+    slug: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer/",
     category: "City Tours & Tiger Experiences",
   },
   {
@@ -140,7 +140,7 @@ const activities: Activity[] = [
     description: "Family-friendly Phuket dolphin show with reserved seats and transfer.",
     price: 3410,
     image: dolphinShow1,
-    slug: "/thailand/phuket/dolphin-show-phuket-with-transfer",
+    slug: "/thailand/phuket/dolphin-show-phuket-with-transfer/",
     category: "City Tours & Tiger Experiences",
   },
 
@@ -150,7 +150,7 @@ const activities: Activity[] = [
     description: "Watch the world-famous Simon Cabaret in Phuket with reserved seating and transfer.",
     price: 2268,
     image: phuketSpeedboat,
-    slug: "/thailand/phuket/simon-cabaret-show-with-transfer",
+    slug: "/thailand/phuket/simon-cabaret-show-with-transfer/",
     category: "Shows & Entertainment",
   },
   {
@@ -158,7 +158,7 @@ const activities: Activity[] = [
     description: "Spectacular Carnival Magic show in Phuket with hotel transfer and reserved seating.",
     price: 6426,
     image: phuketCarnival,
-    slug: "/thailand/phuket/carnival-magic-show-tickets-with-transfer",
+    slug: "/thailand/phuket/carnival-magic-show-tickets-with-transfer/",
     category: "Shows & Entertainment",
   },
 
@@ -168,7 +168,7 @@ const activities: Activity[] = [
     description: "5km rafting + monkey caves + ATV ride + elephant trekking + flying fox + lunch.",
     price: 7245,
     image: phuketLongtailBoat,
-    slug: "/thailand/phuket/elephant-safari",
+    slug: "/thailand/phuket/elephant-safari/",
     category: "Special Experiences",
   },
   {
@@ -176,7 +176,7 @@ const activities: Activity[] = [
     description: "Curated Halal-friendly Phuket tour with mosque visits and Halal dining options.",
     price: 8820,
     image: phuketMuslimWoman,
-    slug: "/thailand/phuket/muslim-friendly-tour",
+    slug: "/thailand/phuket/muslim-friendly-tour/",
     category: "Special Experiences",
   },
 ];
@@ -284,8 +284,8 @@ const PhuketThingsToDo = () => {
 
   const breadcrumbItems = [
     { name: "Home", url: "/" },
-    { name: "Thailand", url: "/thailand" },
-    { name: "Phuket", url: "/thailand/phuket" },
+    { name: "Thailand", url: "/thailand/" },
+    { name: "Phuket", url: "/thailand/phuket/" },
     { name: "Things to Do", url: PAGE_PATH },
   ];
 
@@ -323,9 +323,9 @@ const PhuketThingsToDo = () => {
           <BreadcrumbList>
             <BreadcrumbItem><BreadcrumbLink asChild><Link to="/">Home</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand">Thailand</Link></BreadcrumbLink></BreadcrumbItem>
+            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/">Thailand</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/phuket">Phuket</Link></BreadcrumbLink></BreadcrumbItem>
+            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/phuket/">Phuket</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem><BreadcrumbPage>Things to Do</BreadcrumbPage></BreadcrumbItem>
           </BreadcrumbList>
@@ -348,7 +348,7 @@ const PhuketThingsToDo = () => {
           <div className="mt-6 flex flex-wrap gap-3">
             <Button size="lg" asChild><a href="#all-activities">Explore Activities</a></Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/thailand/phuket/budget-airport-transfers">Phuket Transfers</Link>
+              <Link to="/thailand/phuket/budget-airport-transfers/">Phuket Transfers</Link>
             </Button>
           </div>
         </div>
@@ -398,7 +398,7 @@ const PhuketThingsToDo = () => {
             <h2 className="text-2xl font-bold md:text-3xl">All Phuket Activities</h2>
             <p className="mt-1 text-muted-foreground">Browse every Phuket activity available on Yellodae.</p>
           </div>
-          <Button variant="outline" asChild><Link to="/thailand/phuket">View Phuket City Page</Link></Button>
+          <Button variant="outline" asChild><Link to="/thailand/phuket/">View Phuket City Page</Link></Button>
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {allSorted.slice(0, visibleAll).map((a) => <Card key={`all-${a.slug}`} a={a} />)}
@@ -420,10 +420,10 @@ const PhuketThingsToDo = () => {
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { title: "Phuket Airport (HKT) to Phuket Hotel Transfer", desc: "Private air-conditioned transfer from HKT airport to your Phuket hotel.", price: 1800, img: phuketBoatTour, slug: "/thailand/phuket/phuket-airport-to-phuket-hotel-transfer" },
-            { title: "Phuket Hotel to Phuket Airport (HKT) Transfer", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 1800, img: phuketSpeedboat, slug: "/thailand/phuket/phuket-hotel-to-phuket-airport-transfer" },
-            { title: "Phuket 4-Hour Private Car Rental", desc: "Flexible 4-hour private vehicle for sightseeing, shopping or hotel transfers.", price: 4200, img: phuketIslandView, slug: "/thailand/phuket/phuket-hotel-to-hotel-transfer-4-hours" },
-            { title: "Phuket Hotel to Krabi Hotel Transfer", desc: "Private direct transfer from Phuket to Krabi for a smooth multi-city trip.", price: 5800, img: phuketLongtailBoat, slug: "/thailand/phuket/phuket-hotel-to-krabi-hotel-transfer" },
+            { title: "Phuket Airport (HKT) to Phuket Hotel Transfer", desc: "Private air-conditioned transfer from HKT airport to your Phuket hotel.", price: 1800, img: phuketBoatTour, slug: "/thailand/phuket/phuket-airport-to-phuket-hotel-transfer/" },
+            { title: "Phuket Hotel to Phuket Airport (HKT) Transfer", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 1800, img: phuketSpeedboat, slug: "/thailand/phuket/phuket-hotel-to-phuket-airport-transfer/" },
+            { title: "Phuket 4-Hour Private Car Rental", desc: "Flexible 4-hour private vehicle for sightseeing, shopping or hotel transfers.", price: 4200, img: phuketIslandView, slug: "/thailand/phuket/phuket-hotel-to-hotel-transfer-4-hours/" },
+            { title: "Phuket Hotel to Krabi Hotel Transfer", desc: "Private direct transfer from Phuket to Krabi for a smooth multi-city trip.", price: 5800, img: phuketLongtailBoat, slug: "/thailand/phuket/phuket-hotel-to-krabi-hotel-transfer/" },
           ].map((t) => (
             <article key={t.slug} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
               <Link to={t.slug} className="block aspect-[4/3] overflow-hidden bg-muted">
@@ -465,7 +465,7 @@ const PhuketThingsToDo = () => {
               <li><Link to="/thailand/phuket/things-to-do#city-tours-tiger-experiences" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">City Tours & Tiger Kingdom</Link></li>
               <li><Link to="/thailand/phuket/things-to-do#shows-entertainment" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Shows & Entertainment</Link></li>
               <li><Link to="/thailand/phuket/things-to-do#special-experiences" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Special Experiences</Link></li>
-              <li><Link to="/thailand/phuket/budget-airport-transfers" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Phuket Airport & City Transfers</Link></li>
+              <li><Link to="/thailand/phuket/budget-airport-transfers/" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Phuket Airport & City Transfers</Link></li>
             </ul>
           </div>
 
@@ -473,16 +473,16 @@ const PhuketThingsToDo = () => {
             <h3 className="text-lg font-semibold">Popular Phuket Attractions</h3>
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {[
-                { label: "Phi Phi Island Speedboat Tour", to: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-                { label: "Phi Phi Island Big Boat Tour", to: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer" },
-                { label: "Phi Phi Premium Royal Jet Tour", to: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer" },
-                { label: "James Bond Island Speed Boat", to: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
-                { label: "James Bond Island Sea Canoe", to: "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer" },
-                { label: "Tiger Kingdom + ATV Phuket", to: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer" },
-                { label: "Phuket Night Market Tour", to: "/thailand/phuket/phuket-night-market-tour-with-transfer" },
-                { label: "Simon Cabaret Show", to: "/thailand/phuket/simon-cabaret-show-with-transfer" },
-                { label: "Carnival Magic Show", to: "/thailand/phuket/carnival-magic-show-tickets-with-transfer" },
-                { label: "Dolphin Show Phuket", to: "/thailand/phuket/dolphin-show-phuket-with-transfer" },
+                { label: "Phi Phi Island Speedboat Tour", to: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+                { label: "Phi Phi Island Big Boat Tour", to: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/" },
+                { label: "Phi Phi Premium Royal Jet Tour", to: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/" },
+                { label: "James Bond Island Speed Boat", to: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+                { label: "James Bond Island Sea Canoe", to: "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer/" },
+                { label: "Tiger Kingdom + ATV Phuket", to: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer/" },
+                { label: "Phuket Night Market Tour", to: "/thailand/phuket/phuket-night-market-tour-with-transfer/" },
+                { label: "Simon Cabaret Show", to: "/thailand/phuket/simon-cabaret-show-with-transfer/" },
+                { label: "Carnival Magic Show", to: "/thailand/phuket/carnival-magic-show-tickets-with-transfer/" },
+                { label: "Dolphin Show Phuket", to: "/thailand/phuket/dolphin-show-phuket-with-transfer/" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">{l.label}</Link>
@@ -498,11 +498,11 @@ const PhuketThingsToDo = () => {
           <h2 className="text-xl font-semibold">Plan Your Phuket Trip</h2>
           <p className="mt-1 text-sm text-muted-foreground">Combine activities with reliable airport and city transfers.</p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Button asChild variant="default"><Link to="/thailand/phuket">Phuket City Guide</Link></Button>
-            <Button asChild variant="outline"><Link to="/thailand/phuket/budget-airport-transfers">Phuket Transfers</Link></Button>
-            <Button asChild variant="outline"><Link to="/thailand/krabi/things-to-do">Things to Do in Krabi</Link></Button>
-            <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do">Things to Do in Chiang Mai</Link></Button>
-            <Button asChild variant="outline"><Link to="/thailand">Thailand Destinations</Link></Button>
+            <Button asChild variant="default"><Link to="/thailand/phuket/">Phuket City Guide</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/phuket/budget-airport-transfers/">Phuket Transfers</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/krabi/things-to-do/">Things to Do in Krabi</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do/">Things to Do in Chiang Mai</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/">Thailand Destinations</Link></Button>
           </div>
         </div>
       </section>

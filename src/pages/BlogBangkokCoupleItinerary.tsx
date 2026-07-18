@@ -17,8 +17,8 @@ const BlogBangkokCoupleItinerary = () => (
     subCategory={{ label: "Itinerary Guides", link: "/thailand/bangkok/destination-guides#itinerary" }}
     cityHub={{
       city: "Bangkok",
-      thingsToDoLink: "/thailand/bangkok/things-to-do",
-      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+      thingsToDoLink: "/thailand/bangkok/things-to-do/",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer/",
     }}
     sections={[
       { type: "paragraph", content: "Bangkok is criminally underrated as a couples destination. Beyond the temples and shopping, it's a city of rooftop bars at sunset, candle-lit Chao Phraya cruises, world-class couple spas and boutique riverside hotels. This 4-night Bangkok couple itinerary is built for honeymooners, anniversary trips and date weekends — alternating big-romance moments (sunset cruise, sky bar) with downtime (long couple massages, slow brunches). Skip the kids' parks and overcrowded markets; this is a curated romantic plan for two." },
@@ -41,20 +41,20 @@ const BlogBangkokCoupleItinerary = () => (
       { type: "list", items: ["Day 1: Couple massage + Sky Bar sunset","Day 2: Wat Arun + Chao Phraya Princess Dinner Cruise","Day 3: Floating market + 2-hour couple spa","Day 4: Brunch + ICONSIAM + Sirocco dinner","Stay riverside (Sala Rattanakosin) or Sukhumvit (Park Hyatt)"] },
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Bangkok for couples is one of Asia's best-kept secrets — affordable luxury, world-class dining, romantic riverside views and spas that will ruin every massage you get back home. This 4-night plan hits the city's most romantic corners while keeping plenty of slow time built in. Follow it for a honeymoon, anniversary or just a long-overdue weekend with your favorite person." },
-      { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+      { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do/", linkText: "Explore Bangkok Tours" }
     ]}
     relatedActivities={[
-      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
-      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
-      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
-      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide/" },
     ]}
     relatedLinks={[
-      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
-      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
-      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary/" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok/" },
     ]}
   />
 );

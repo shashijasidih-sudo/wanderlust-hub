@@ -23,13 +23,13 @@ const BlogBangkokVsPhuket = () => (
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Comparison Guides", link: "/thailand/bangkok/destination-guides#comparison" }}
     comparisonItems={[
-      { name: "Bangkok", link: "/thailand/bangkok/things-to-do" },
-      { name: "Phuket", link: "/thailand/phuket/things-to-do" },
+      { name: "Bangkok", link: "/thailand/bangkok/things-to-do/" },
+      { name: "Phuket", link: "/thailand/phuket/things-to-do/" },
     ]}
     cityHub={{
       city: "Bangkok",
-      thingsToDoLink: "/thailand/bangkok/things-to-do",
-      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+      thingsToDoLink: "/thailand/bangkok/things-to-do/",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer/",
     }}
     sections={[
       { type: "paragraph", content: "Bangkok or Phuket — it's the eternal Thailand dilemma every first-time traveler from India faces. One offers ancient temples, glittering malls, world-class street food and chaotic-but-magical urban energy. The other delivers turquoise water, palm-fringed beaches, hopping islands and a laid-back tropical pace. Both are world-famous, both are easy to reach, and both attract over a million Indian visitors a year. So which one deserves your limited holiday days first? In this honest, side-by-side guide we break down vibe, cost, activities, weather, food and the kind of traveler each city suits best — so by the end you'll know exactly where to land first." },
@@ -92,20 +92,20 @@ const BlogBangkokVsPhuket = () => (
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "If you can only pick one and it's your first Thailand trip — start with Bangkok. It's better connected, cheaper, more diverse, and gives you the full Thai cultural experience plus a taste of every cuisine and activity Thailand offers. Save Phuket for trip number two when you're ready to slow down and just lounge on a beach for a week. But if you have 7+ days, the perfect answer is both: 3 nights Bangkok for culture and shopping, then fly down for 4 nights in Phuket for islands and beaches. That combo remains the most-booked Indian itinerary on Yellodae year after year — and for good reason." },
 
-      { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" },
+      { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do/", linkText: "Explore Bangkok Tours" },
     ]}
     relatedActivities={[
-      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
-      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
-      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
-      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide/" },
     ]}
     relatedLinks={[
-      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
-      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
-      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary/" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok/" },
     ]}
   />
 );

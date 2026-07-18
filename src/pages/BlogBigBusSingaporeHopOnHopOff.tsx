@@ -18,7 +18,7 @@ const BlogBigBusSingaporeHopOnHopOff = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "Activity Guides", link: "/singapore/destination-guides#activity" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "Big Bus Singapore is a hop-on hop-off sightseeing service that lets you explore Singapore at your own pace — informative commentary, panoramic views from an open-top double-decker and complete flexibility to get off at any attraction you like." },
       { type: "heading", content: "How the Hop-On Hop-Off System Works" },
@@ -32,7 +32,7 @@ const BlogBigBusSingaporeHopOnHopOff = () => (
       { type: "list", items: ["Marina Bay Sands","Gardens by the Bay","Merlion Park","Singapore Flyer","Orchard Road","Chinatown","Little India"] },
       { type: "heading", content: "Ticket Options & Cost (2026 INR)" },
       { type: "list", items: ["24-hour pass — ₹3,200–₹3,800 (best for short trips)","48-hour pass — ₹4,500–₹5,200 (relaxed exploration)","Night Tour add-on — ₹1,800+"] },
-      { type: "cta", content: "Plan Your Big Bus Day", link: "/singapore/things-to-do", linkText: "Book Singapore Activities" },
+      { type: "cta", content: "Plan Your Big Bus Day", link: "/singapore/things-to-do/", linkText: "Book Singapore Activities" },
       { type: "heading", content: "What to Expect Onboard" },
       { type: "list", items: ["Open-top upper deck — best for views and photos","Audio commentary in multiple languages","Air-conditioned lower deck for hot weather"] },
       { type: "heading", content: "Tips for the Best Experience" },
@@ -45,14 +45,14 @@ const BlogBigBusSingaporeHopOnHopOff = () => (
       { type: "paragraph", content: "Yes — especially for first-time visitors, families and short-stay travellers who want a stress-free guided overview of the city. It's not just transport, it's a complete sightseeing experience in itself." },
     ]}
     relatedActivities={[
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour" },
-      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
+      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
+      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
     ]}
     relatedLinks={[
-      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer" },
-      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide" },
-      { title: "Singapore Flyer Observation Wheel", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel" },
-      { title: "Singapore River Cruise Experience", link: "/singapore/destination-guides/activity/singapore-river-cruise-guide" },
+      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer/" },
+      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide/" },
+      { title: "Singapore Flyer Observation Wheel", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel/" },
+      { title: "Singapore River Cruise Experience", link: "/singapore/destination-guides/activity/singapore-river-cruise-guide/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

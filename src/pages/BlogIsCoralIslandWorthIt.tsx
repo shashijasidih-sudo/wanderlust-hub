@@ -17,8 +17,8 @@ const BlogIsCoralIslandWorthIt = () => (
     subCategory={{ label: "Micro Guides", link: "/thailand/pattaya/destination-guides#micro" }}
     cityHub={{
       city: "Pattaya",
-      thingsToDoLink: "/thailand/pattaya/things-to-do",
-      transfersLink: "/thailand/pattaya",
+      thingsToDoLink: "/thailand/pattaya/things-to-do/",
+      transfersLink: "/thailand/pattaya/",
     }}
     sections={[
       { type: "paragraph", content: "Every Pattaya traveler asks the same question: is Coral Island actually worth a day trip? Short answer — yes, for most first-timers, but only if you plan it right. Pattaya Beach itself isn't great for swimming, so Coral Island (Koh Larn) is what gives you the real Thai beach experience." },
@@ -42,20 +42,20 @@ const BlogIsCoralIslandWorthIt = () => (
       { type: "list", items: ["Visit Samae Beach instead of Tawaen","Start early — leave Pattaya by 7–8 AM","Carry sunscreen, water and minimal cash","Book a verified speedboat tour, not random street agents"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Yes — Coral Island is worth it for almost everyone. Just pick the right beach (Samae over Tawaen), book through a trusted operator and start your day early to avoid crowds and afternoon waves." },
-      { type: "cta", content: "Book your Coral Island tour", link: "/thailand/pattaya/coral-island-pattaya", linkText: "View Coral Island Tour" }
+      { type: "cta", content: "Book your Coral Island tour", link: "/thailand/pattaya/coral-island-pattaya/", linkText: "View Coral Island Tour" }
     ]}
     relatedActivities={[
-      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
-      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
-      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
-      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide/" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide/" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide/" },
     ]}
     relatedLinks={[
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
-      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
-      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
-      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
     ]}
   />
 );

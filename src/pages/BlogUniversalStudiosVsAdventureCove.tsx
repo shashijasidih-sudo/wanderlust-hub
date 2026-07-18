@@ -18,7 +18,7 @@ const Blog = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "Comparison Guides", link: "/singapore/destination-guides#comparison" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "Sentosa Island is Singapore's entertainment hub, and two of its biggest attractions — Universal Studios Singapore (USS) and Adventure Cove Waterpark — often leave travelers confused about which one to pick. Both are world-class, but they serve completely different vibes. This 2026 guide compares them side-by-side so Indian travelers can plan smart based on style, budget and time." },
       { type: "heading", content: "Quick Overview" },
@@ -39,7 +39,7 @@ const Blog = () => (
       { type: "list", items: ["Families with older kids / teens — Universal Studios","Families with young kids — Adventure Cove","Couples — Universal Studios for energy, Adventure Cove for relaxation","Thrill seekers — Universal Studios","Honeymooners — Adventure Cove + Sentosa beaches"] },
       { type: "heading", content: "Cost Comparison (2026 INR)" },
       { type: "list", items: ["Universal Studios single-day ticket — ₹5,500–₹7,000","Express Pass add-on — ₹4,500–₹9,000","Adventure Cove single-day ticket — ₹3,500–₹4,500","Combo (USS + Adventure Cove) — ₹8,500–₹10,500 (best value)"] },
-      { type: "cta", content: "Book Sentosa attractions with shared transfer", link: "/singapore/things-to-do", linkText: "Plan Sentosa Day" },
+      { type: "cta", content: "Book Sentosa attractions with shared transfer", link: "/singapore/things-to-do/", linkText: "Plan Sentosa Day" },
       { type: "heading", content: "Crowd Levels" },
       { type: "list", items: ["Universal Studios — very crowded (Express Pass strongly recommended on weekends)","Adventure Cove — moderately crowded"] },
       { type: "heading", content: "Pros & Cons" },
@@ -54,16 +54,16 @@ const Blog = () => (
       { type: "paragraph", content: "If you only have time for one, pick Universal Studios — it's iconic and unmissable on a first Singapore trip. If you have 2+ days in Sentosa, combine both for the complete experience." },
     ]}
     relatedActivities={[
-      { title: "Universal Studios Singapore Tickets", link: "/singapore/things-to-do" },
-      { title: "Adventure Cove Waterpark Tickets", link: "/singapore/things-to-do" },
-      { title: "Sentosa Cable Car Sky Pass", link: "/singapore/things-to-do" },
-      { title: "Sentosa 4D Adventureland", link: "/singapore/things-to-do" },
+      { title: "Universal Studios Singapore Tickets", link: "/singapore/things-to-do/" },
+      { title: "Adventure Cove Waterpark Tickets", link: "/singapore/things-to-do/" },
+      { title: "Sentosa Cable Car Sky Pass", link: "/singapore/things-to-do/" },
+      { title: "Sentosa 4D Adventureland", link: "/singapore/things-to-do/" },
     ]}
     relatedLinks={[
-      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide" },
-      { title: "Sentosa 4D Adventureland Complete Experience", link: "/singapore/destination-guides/activity/sentosa-4d-adventureland-guide" },
-      { title: "Sentosa Cable Car Ride Guide", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line" },
-      { title: "Wings of Time Singapore Show", link: "/singapore/destination-guides/activity/wings-of-time-singapore-show" },
+      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide/" },
+      { title: "Sentosa 4D Adventureland Complete Experience", link: "/singapore/destination-guides/activity/sentosa-4d-adventureland-guide/" },
+      { title: "Sentosa Cable Car Ride Guide", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line/" },
+      { title: "Wings of Time Singapore Show", link: "/singapore/destination-guides/activity/wings-of-time-singapore-show/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

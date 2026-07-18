@@ -23,21 +23,21 @@ import nongNooch from "@/assets/pattaya-tropical-beach-1.jpg";
 import cruiseNight from "@/assets/cruise-night-1.jpg";
 
 const activityCards = [
-  { title: "Phi Phi Island, Maya Bay & Khai Island Speedboat", location: "Phuket", image: phiPhi, slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-  { title: "James Bond Island & Phang Nga Bay Tour", location: "Phuket", image: jamesBond, slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
-  { title: "Grand Palace & Emerald Buddha Temple Tour", location: "Bangkok", image: grandPalace, slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
-  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/thailand/bangkok/safari-world" },
-  { title: "Coral Island & Water Sports Pattaya", location: "Pattaya", image: coralIsland, slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" },
-  { title: "Floating Market & Railway Market Tour", location: "Bangkok", image: floatingMarket, slug: "/thailand/bangkok/maeklong-floating-market-tour" },
-  { title: "Alcazar Cabaret Show Pattaya", location: "Pattaya", image: alcazar, slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer" },
-  { title: "Dolphin Show Phuket", location: "Phuket", image: dolphinShow, slug: "/thailand/bangkok/dolphin-show" },
-  { title: "Selfie with Tigers", location: "Phuket", image: tigerSelfie, slug: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer" },
-  { title: "Bangkok King Power Mahanakhon Skywalk", location: "Bangkok", image: bangkokSkywalk, slug: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
-  { title: "Hot Spring & Emerald Pool with Tiger Cave", location: "Krabi", image: hotSpring, slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer" },
-  { title: "Thai Massage Coupon Packages", location: "Bangkok", image: massage, slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok" },
-  { title: "Nong Nooch Tropical Garden", location: "Pattaya", image: nongNooch, slug: "/thailand/pattaya/nong-nooch-tropical-garden-tickets" },
-  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruiseNight, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer" },
-  { title: "Bangkok Three Temples City Tour", location: "Bangkok", image: bangkokTemple, slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
+  { title: "Phi Phi Island, Maya Bay & Khai Island Speedboat", location: "Phuket", image: phiPhi, slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+  { title: "James Bond Island & Phang Nga Bay Tour", location: "Phuket", image: jamesBond, slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+  { title: "Grand Palace & Emerald Buddha Temple Tour", location: "Bangkok", image: grandPalace, slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/" },
+  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/thailand/bangkok/safari-world/" },
+  { title: "Coral Island & Water Sports Pattaya", location: "Pattaya", image: coralIsland, slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/" },
+  { title: "Floating Market & Railway Market Tour", location: "Bangkok", image: floatingMarket, slug: "/thailand/bangkok/maeklong-floating-market-tour/" },
+  { title: "Alcazar Cabaret Show Pattaya", location: "Pattaya", image: alcazar, slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/" },
+  { title: "Dolphin Show Phuket", location: "Phuket", image: dolphinShow, slug: "/thailand/bangkok/dolphin-show/" },
+  { title: "Selfie with Tigers", location: "Phuket", image: tigerSelfie, slug: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" },
+  { title: "Bangkok King Power Mahanakhon Skywalk", location: "Bangkok", image: bangkokSkywalk, slug: "/thailand/bangkok/mahanakhon-skywalk-tickets/" },
+  { title: "Hot Spring & Emerald Pool with Tiger Cave", location: "Krabi", image: hotSpring, slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
+  { title: "Thai Massage Coupon Packages", location: "Bangkok", image: massage, slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok/" },
+  { title: "Nong Nooch Tropical Garden", location: "Pattaya", image: nongNooch, slug: "/thailand/pattaya/nong-nooch-tropical-garden-tickets/" },
+  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruiseNight, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer/" },
+  { title: "Bangkok Three Temples City Tour", location: "Bangkok", image: bangkokTemple, slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/" },
 ];
 
 const ActivityCards = () => {
@@ -96,20 +96,20 @@ const BlogBestThailandActivities = () => {
       guidesLabel="Thailand Guides"
       cityHub={{
         city: "Bangkok",
-        thingsToDoLink: "/thailand/bangkok/things-to-do",
-        transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+        thingsToDoLink: "/thailand/bangkok/things-to-do/",
+        transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer/",
       }}
       relatedActivities={[
-        { title: "Phi Phi Island, Maya Bay & Khai Speedboat", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-        { title: "James Bond Island & Phang Nga Bay", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
-        { title: "Coral Island Pattaya with Indian Lunch", link: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" },
-        { title: "Alcazar Cabaret Show Pattaya", link: "/thailand/pattaya/alcazar-cabaret-show-with-transfer" },
+        { title: "Phi Phi Island, Maya Bay & Khai Speedboat", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+        { title: "James Bond Island & Phang Nga Bay", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+        { title: "Coral Island Pattaya with Indian Lunch", link: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/" },
+        { title: "Alcazar Cabaret Show Pattaya", link: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/" },
       ]}
       relatedLinks={[
-        { title: "Bangkok Activities Booking Guide", link: "/blog/bangkok-activities-guide" },
-        { title: "Bangkok Trip Cost from India", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
-        { title: "Bangkok vs Phuket — Which Should You Pick?", link: "/thailand/bangkok/destination-guides/comparison/bangkok-vs-phuket" },
-        { title: "Top Things to Do in Bangkok", link: "/thailand/bangkok/things-to-do" },
+        { title: "Bangkok Activities Booking Guide", link: "/blog/bangkok-activities-guide/" },
+        { title: "Bangkok Trip Cost from India", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india/" },
+        { title: "Bangkok vs Phuket — Which Should You Pick?", link: "/thailand/bangkok/destination-guides/comparison/bangkok-vs-phuket/" },
+        { title: "Top Things to Do in Bangkok", link: "/thailand/bangkok/things-to-do/" },
       ]}
       sections={[
         { type: "paragraph", content: "Thailand is one of the most popular travel destinations in the world, and for good reason. From stunning tropical islands to ancient temples, vibrant night markets to thrilling wildlife encounters — Thailand offers something for every traveler. Whether you're visiting Bangkok, Phuket, Pattaya, or Krabi, there are incredible activities waiting for you at every turn." },
@@ -168,7 +168,7 @@ const BlogBestThailandActivities = () => {
           "Trusted by 50,000+ Indian travelers",
           "Flexible rescheduling options",
         ]},
-        { type: "cta", content: "Ready to explore Thailand? Browse all activities and book at the best prices!", link: "/thailand", linkText: "🇹🇭 Explore Thailand Activities" },
+        { type: "cta", content: "Ready to explore Thailand? Browse all activities and book at the best prices!", link: "/thailand/", linkText: "🇹🇭 Explore Thailand Activities" },
       ]}
     >
       <ActivityCards />

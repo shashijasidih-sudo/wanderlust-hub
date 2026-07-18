@@ -18,7 +18,7 @@ const BlogUniversalStudiosSingaporeGuide = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "Activity Guides", link: "/singapore/destination-guides#activity" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "Universal Studios Singapore (USS) on Sentosa Island is Southeast Asia's first and only Universal Studios theme park. With 7 themed zones, blockbuster-inspired rides, live shows and family-friendly attractions, it's the headline experience of any Sentosa visit — and a non-negotiable on most Singapore itineraries." },
       { type: "heading", content: "The 7 Themed Zones" },
@@ -44,7 +44,7 @@ const BlogUniversalStudiosSingaporeGuide = () => (
       { type: "paragraph", content: "Yes, especially during peak seasons. Skip long queues, save time and cover significantly more rides — highly recommended if you only have a single day at USS." },
       { type: "heading", content: "Cost in 2026 (INR)" },
       { type: "list", items: ["Standard adult ticket — ₹6,200–₹7,200","Express Pass add-on (single use) — ₹4,500+","Express Unlimited — ₹8,500+","Combo with Adventure Cove / SEA Aquarium — ₹10,500+"] },
-      { type: "cta", content: "Plan Your USS Day", link: "/singapore/things-to-do", linkText: "Book Singapore Activities" },
+      { type: "cta", content: "Plan Your USS Day", link: "/singapore/things-to-do/", linkText: "Book Singapore Activities" },
       { type: "heading", content: "Food and Dining Options" },
       { type: "list", items: ["Fast food outlets","Themed restaurants","Snack kiosks","Vegetarian options available — convenient for Indian travellers"] },
       { type: "heading", content: "Tips to Avoid Long Queues" },
@@ -55,14 +55,14 @@ const BlogUniversalStudiosSingaporeGuide = () => (
       { type: "paragraph", content: "Absolutely. It's one of the best theme parks in Asia and delivers a complete entertainment experience — especially worth it for families, friend groups and thrill-seekers wanting a full-day activity." },
     ]}
     relatedActivities={[
-      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
-      { title: "Sentosa 4D Adventureland", link: "/singapore/sentosa-4d-adventureland-tickets" },
+      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+      { title: "Sentosa 4D Adventureland", link: "/singapore/sentosa-4d-adventureland-tickets/" },
     ]}
     relatedLinks={[
-      { title: "Sentosa 4D Adventureland Complete Experience", link: "/singapore/destination-guides/activity/sentosa-4d-adventureland-guide" },
-      { title: "Sentosa Cable Car Ride Guide (Mount Faber Line)", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line" },
-      { title: "Wings of Time Singapore Show", link: "/singapore/destination-guides/activity/wings-of-time-singapore-show" },
-      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide" },
+      { title: "Sentosa 4D Adventureland Complete Experience", link: "/singapore/destination-guides/activity/sentosa-4d-adventureland-guide/" },
+      { title: "Sentosa Cable Car Ride Guide (Mount Faber Line)", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line/" },
+      { title: "Wings of Time Singapore Show", link: "/singapore/destination-guides/activity/wings-of-time-singapore-show/" },
+      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

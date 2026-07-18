@@ -16,7 +16,7 @@ const BlogPhiPhiTourForIndians = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "For Indian Travelers", link: "/thailand/phuket/destination-guides#indian-audience" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "A trip to Phuket is incomplete without Phi Phi — turquoise water, limestone cliffs and postcard beaches. But Indian travelers usually have specific questions: vegetarian food? cost? speedboat or big boat? safe for families? This 2026 guide answers all of it." },
 
@@ -31,7 +31,7 @@ const BlogPhiPhiTourForIndians = () => (
         "Best overall: Speedboat",
       ]},
 
-      { type: "cta", content: "Book a trusted Phi Phi speedboat tour in INR", link: "/thailand/phuket/phi-phi-island-speedboat-tour", linkText: "Book Phi Phi Speedboat" },
+      { type: "cta", content: "Book a trusted Phi Phi speedboat tour in INR", link: "/thailand/phuket/phi-phi-island-speedboat-tour/", linkText: "Book Phi Phi Speedboat" },
 
       { type: "heading", content: "Places Covered in a Phi Phi Tour" },
       { type: "list", items: [
@@ -93,15 +93,15 @@ const BlogPhiPhiTourForIndians = () => (
       { type: "paragraph", content: "Phi Phi is non-negotiable on a Phuket trip. Pick a speedboat, book a trusted operator, carry snacks and you'll have one of the most unforgettable days of your Thailand holiday." },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour" },
-      { title: "Phi Phi Island by Big Boat", link: "/thailand/phuket/phi-phi-island-big-boat-tour" },
-      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour" },
+      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour/" },
+      { title: "Phi Phi Island by Big Boat", link: "/thailand/phuket/phi-phi-island-big-boat-tour/" },
+      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour/" },
     ]}
     relatedLinks={[
-      { title: "Best Phi Phi Island Tours from Phuket", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours" },
-      { title: "Maya Bay Tour Guide", link: "/thailand/phuket/destination-guides/activity/maya-bay-tour-guide" },
-      { title: "Phi Phi Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat" },
-      { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket" },
+      { title: "Best Phi Phi Island Tours from Phuket", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours/" },
+      { title: "Maya Bay Tour Guide", link: "/thailand/phuket/destination-guides/activity/maya-bay-tour-guide/" },
+      { title: "Phi Phi Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat/" },
+      { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/indian-audience/phi-phi-tour-for-indians")}
   />

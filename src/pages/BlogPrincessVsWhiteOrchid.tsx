@@ -23,13 +23,13 @@ const BlogPrincessVsWhiteOrchid = () => (
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Comparison Guides", link: "/thailand/bangkok/destination-guides#comparison" }}
     comparisonItems={[
-      { name: "Chao Phraya Princess Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+      { name: "Chao Phraya Princess Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/" },
       { name: "White Orchid River Cruise" },
     ]}
     cityHub={{
       city: "Bangkok",
-      thingsToDoLink: "/thailand/bangkok/things-to-do",
-      transfersLink: "/thailand/bangkok/chaophraya-princess-cruise-to-suvarnabhumi-airport-transfer",
+      thingsToDoLink: "/thailand/bangkok/things-to-do/",
+      transfersLink: "/thailand/bangkok/chaophraya-princess-cruise-to-suvarnabhumi-airport-transfer/",
     }}
     sections={[
       { type: "paragraph", content: "A Chao Phraya river dinner cruise is one of those Bangkok experiences nobody skips. You float past the floodlit Wat Arun, the Grand Palace, the Temple of Dawn and the iconic ICONSIAM mall, all while being served a buffet, watching live performances, and catching the cool river breeze. Two operators dominate this market: Chao Phraya Princess and White Orchid. Both are popular, both are on every Bangkok travel agent's brochure, and both look almost identical from the outside. But there are real differences — in food, music, ambience, vessel size and overall value — that can make or break your night. Here's a complete, honest 2026 comparison so you book the right one." },
@@ -93,20 +93,20 @@ const BlogPrincessVsWhiteOrchid = () => (
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "For 80% of Indian travelers, Chao Phraya Princess is the better choice — bigger, newer, more food variety, and a much better photo experience. The ₹500 premium over White Orchid is genuinely worth it for couples, honeymooners and families. Choose White Orchid only if you're traveling on a strict budget, or if you specifically want the traditional Thai dance performance experience. Either way, you can't really go wrong — both deliver the iconic Bangkok-by-night-on-the-river feeling that no rooftop bar can match. Book in advance during peak season (Nov–Feb), and always pick the version with private transfer included." },
 
-      { type: "cta", content: "Book the Chao Phraya Princess cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer", linkText: "Book Princess Cruise" },
+      { type: "cta", content: "Book the Chao Phraya Princess cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/", linkText: "Book Princess Cruise" },
     ]}
     relatedActivities={[
-      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
-      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
-      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
-      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide/" },
     ]}
     relatedLinks={[
-      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
-      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
-      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary/" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok/" },
     ]}
   />
 );

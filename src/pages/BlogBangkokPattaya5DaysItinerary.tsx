@@ -17,8 +17,8 @@ const BlogBangkokPattaya5DaysItinerary = () => (
     subCategory={{ label: "Itinerary Guides", link: "/thailand/pattaya/destination-guides#itinerary" }}
     cityHub={{
       city: "Pattaya",
-      thingsToDoLink: "/thailand/pattaya/things-to-do",
-      transfersLink: "/thailand/pattaya",
+      thingsToDoLink: "/thailand/pattaya/things-to-do/",
+      transfersLink: "/thailand/pattaya/",
     }}
     sections={[
       { type: "paragraph", content: "If you're flying into Thailand from India for the first time and have 5 days, the Bangkok + Pattaya combo is the route locals quietly recommend. Bangkok gives you culture, shopping and food. Pattaya gives you beaches, Coral Island and nightlife. Together they cover 80% of what most first-time visitors actually want — without flights between cities. Here's the day-by-day plan." },
@@ -42,20 +42,20 @@ const BlogBangkokPattaya5DaysItinerary = () => (
       { type: "paragraph", content: "Upgrade to 5-star hotels in both cities (Lebua / The Sukhothai in Bangkok, Hilton / Royal Cliff in Pattaya), use private speedboats for Coral Island and add a private Chao Phraya cruise. Same itinerary, premium experience." },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Bangkok + Pattaya in 5 days is the most efficient Thailand route from India — no domestic flights, balanced city/beach mix and total cost that beats Phuket. If you've got 7 days, add a 2-night Krabi extension at the end. If you've got 4 days, drop the Sanctuary of Truth day and finish from Pattaya directly." },
-      { type: "cta", content: "Plan your Bangkok + Pattaya trip", link: "/thailand/pattaya/things-to-do", linkText: "Explore Tours" }
+      { type: "cta", content: "Plan your Bangkok + Pattaya trip", link: "/thailand/pattaya/things-to-do/", linkText: "Explore Tours" }
     ]}
     relatedActivities={[
-      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
-      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
-      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
-      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide/" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide/" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide/" },
     ]}
     relatedLinks={[
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
-      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
-      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
-      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
     ]}
   />
 );

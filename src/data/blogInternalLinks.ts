@@ -73,7 +73,7 @@ export const getPhuketInternalLinks = (currentLink: string): InternalLinkSet => 
     itineraries,
     transfers,
     more,
-    pillar: { title: "Phuket Destination Guides Hub", link: "/thailand/phuket/destination-guides" },
+    pillar: { title: "Phuket Destination Guides Hub", link: "/thailand/phuket/destination-guides/" },
   };
 };
 
@@ -81,22 +81,22 @@ export const getPhuketInternalLinks = (currentLink: string): InternalLinkSet => 
 const JAPAN_TRANSFER_FALLBACKS: InternalLink[] = [
   {
     title: "Tokyo Narita Airport Transfer Guide (Train, Limo Bus & Taxi) — 2026",
-    link: "/japan/destination-guides/activity/tokyo-city-tour-guide",
+    link: "/japan/destination-guides/activity/tokyo-city-tour-guide/",
   },
   {
     title: "Getting Around Japan: JR Pass, Shinkansen & Local Transport (2026)",
-    link: "/japan/destination-guides/price-cost/japan-trip-cost-from-india",
+    link: "/japan/destination-guides/price-cost/japan-trip-cost-from-india/",
   },
 ];
 
 const JAPAN_ITINERARY_FALLBACKS: InternalLink[] = [
   {
     title: "5-Day Japan Itinerary: Tokyo, Mt Fuji & Kyoto Highlights",
-    link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo",
+    link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo/",
   },
   {
     title: "7-Day Japan Itinerary for First-Time Indian Travelers",
-    link: "/japan/destination-guides/price-cost/japan-trip-cost-from-india",
+    link: "/japan/destination-guides/price-cost/japan-trip-cost-from-india/",
   },
 ];
 
@@ -126,7 +126,7 @@ export const getJapanInternalLinks = (currentLink: string): InternalLinkSet => {
     itineraries,
     transfers,
     more,
-    pillar: { title: "Japan Smart Guides Hub", link: "/japan/destination-guides" },
+    pillar: { title: "Japan Smart Guides Hub", link: "/japan/destination-guides/" },
   };
 };
 
@@ -134,31 +134,31 @@ export const getJapanInternalLinks = (currentLink: string): InternalLinkSet => {
 // for activity, transfer and comparison categories so the linking rule is satisfied.
 const KRABI_ACTIVITY_FALLBACKS: InternalLink[] = [
   { title: "Best Phi Phi Island Tours from Phuket (also reachable from Krabi)",
-    link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours" },
+    link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours/" },
   { title: "Maya Bay Tour Guide: Rules, Best Time & What to Expect",
-    link: "/thailand/phuket/destination-guides/activity/maya-bay-tour-guide" },
+    link: "/thailand/phuket/destination-guides/activity/maya-bay-tour-guide/" },
   { title: "James Bond Island Tour: Complete Experience Guide",
-    link: "/thailand/phuket/destination-guides/activity/james-bond-island-tour-guide" },
+    link: "/thailand/phuket/destination-guides/activity/james-bond-island-tour-guide/" },
   { title: "Snorkeling Guide: Best Spots, Tours & Cost",
-    link: "/thailand/phuket/destination-guides/activity/snorkeling-in-phuket-guide" },
+    link: "/thailand/phuket/destination-guides/activity/snorkeling-in-phuket-guide/" },
 ];
 
 const KRABI_TRANSFER_FALLBACKS: InternalLink[] = [
   { title: "Krabi Airport to Ao Nang Transfer Guide",
-    link: "/thailand/krabi/destination-guides/transfer/krabi-airport-to-ao-nang-transfer-guide" },
+    link: "/thailand/krabi/destination-guides/transfer/krabi-airport-to-ao-nang-transfer-guide/" },
   { title: "Phuket to Krabi Transfer Guide (Bus, Ferry, Taxi)",
-    link: "/thailand/krabi/destination-guides/transfer/phuket-to-krabi-transfer-guide" },
+    link: "/thailand/krabi/destination-guides/transfer/phuket-to-krabi-transfer-guide/" },
 ];
 
 const KRABI_MORE_FALLBACKS: InternalLink[] = [
   { title: "Phuket vs Krabi: Which Is Better for Indian Travelers?",
-    link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians" },
+    link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians/" },
   { title: "Phuket + Krabi Combo Itinerary: 6–7 Days Plan",
-    link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary" },
+    link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary/" },
   { title: "James Bond Island vs Phi Phi Island Tour",
-    link: "/thailand/phuket/destination-guides/comparison/james-bond-island-vs-phi-phi-island" },
+    link: "/thailand/phuket/destination-guides/comparison/james-bond-island-vs-phi-phi-island/" },
   { title: "Phi Phi Speedboat vs Big Boat: Which to Pick?",
-    link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat" },
+    link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat/" },
 ];
 
 export const getKrabiInternalLinks = (currentLink: string): InternalLinkSet => {
@@ -179,7 +179,7 @@ export const getKrabiInternalLinks = (currentLink: string): InternalLinkSet => {
     itineraries,
     transfers,
     more,
-    pillar: { title: "Krabi Destination Guides Hub", link: "/thailand/krabi/destination-guides" },
+    pillar: { title: "Krabi Destination Guides Hub", link: "/thailand/krabi/destination-guides/" },
   };
 };
 
@@ -187,26 +187,26 @@ export const getKrabiInternalLinks = (currentLink: string): InternalLinkSet => {
 // for itineraries/transfers/more fallbacks so the linking rule is satisfied.
 const SINGAPORE_ITINERARY_FALLBACKS: InternalLink[] = [
   { title: "Singapore City Tour with Guide & Shared Transfer Itinerary",
-    link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer" },
+    link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer/" },
   { title: "Big Bus Singapore Hop-On Hop-Off Experience — Routes & Tips",
-    link: "/singapore/destination-guides/activity/big-bus-singapore-hop-on-hop-off" },
+    link: "/singapore/destination-guides/activity/big-bus-singapore-hop-on-hop-off/" },
 ];
 
 const SINGAPORE_TRANSFER_FALLBACKS: InternalLink[] = [
   { title: "Singapore Airport Transfer Booking Guide",
-    link: "/blog/airport-transfer-booking-singapore" },
+    link: "/blog/airport-transfer-booking-singapore/" },
   { title: "Sentosa Cable Car Ride Guide (Mount Faber Line)",
-    link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line" },
+    link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line/" },
 ];
 
 const SINGAPORE_MORE_FALLBACKS: InternalLink[] = [
   { title: "Best Sentosa Activities for First-Time Visitors",
-    link: "/blog/sentosa-activities-singapore" },
+    link: "/blog/sentosa-activities-singapore/" },
   { title: "Singapore Combo Pass: Is It Worth It?",
-    link: "/blog/singapore-combo-pass" },
+    link: "/blog/singapore-combo-pass/" },
   { title: "Top Singapore Food Experiences for Indian Travelers",
-    link: "/blog/singapore-food-experiences" },
-  { title: "Top Things to Do in Singapore", link: "/singapore/things-to-do" },
+    link: "/blog/singapore-food-experiences/" },
+  { title: "Top Things to Do in Singapore", link: "/singapore/things-to-do/" },
 ];
 
 export const getSingaporeInternalLinks = (currentLink: string): InternalLinkSet => {
@@ -232,7 +232,7 @@ export const getSingaporeInternalLinks = (currentLink: string): InternalLinkSet 
     itineraries,
     transfers,
     more,
-    pillar: { title: "Singapore Smart Guides Hub", link: "/singapore/destination-guides" },
+    pillar: { title: "Singapore Smart Guides Hub", link: "/singapore/destination-guides/" },
   };
 };
 
@@ -267,7 +267,7 @@ export const getBangkokInternalLinks = (currentLink: string): InternalLinkSet =>
     more: [],
     pillar: {
       title: "Bangkok Destination Guides Hub",
-      link: "/thailand/bangkok/destination-guides",
+      link: "/thailand/bangkok/destination-guides/",
     },
   };
 };
@@ -304,29 +304,29 @@ const buildFullCityLinks = (
 export const getKrabiFullInternalLinks = (currentLink: string) =>
   buildFullCityLinks(krabiBlogs, currentLink, "krb", {
     title: "Krabi Destination Guides Hub",
-    link: "/thailand/krabi/destination-guides",
+    link: "/thailand/krabi/destination-guides/",
   });
 
 export const getPattayaFullInternalLinks = (currentLink: string) =>
   buildFullCityLinks(pattayaBlogs, currentLink, "pty", {
     title: "Pattaya Destination Guides Hub",
-    link: "/thailand/pattaya/destination-guides",
+    link: "/thailand/pattaya/destination-guides/",
   });
 
 export const getPhuketFullInternalLinks = (currentLink: string) =>
   buildFullCityLinks(phuketBlogs, currentLink, "phk", {
     title: "Phuket Destination Guides Hub",
-    link: "/thailand/phuket/destination-guides",
+    link: "/thailand/phuket/destination-guides/",
   });
 
 export const getChiangMaiFullInternalLinks = (currentLink: string) =>
   buildFullCityLinks(chiangMaiBlogs, currentLink, "cnx", {
     title: "Chiang Mai Destination Guides Hub",
-    link: "/thailand/chiang-mai/destination-guides",
+    link: "/thailand/chiang-mai/destination-guides/",
   });
 
 export const getKohSamuiFullInternalLinks = (currentLink: string) =>
   buildFullCityLinks(kohSamuiBlogs, currentLink, "ksm", {
     title: "Koh Samui Destination Guides Hub",
-    link: "/thailand/koh-samui/destination-guides",
+    link: "/thailand/koh-samui/destination-guides/",
   });

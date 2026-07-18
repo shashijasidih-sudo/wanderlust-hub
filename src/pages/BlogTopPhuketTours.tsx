@@ -23,21 +23,21 @@ import muslimTour from "@/assets/phuket-muslim-woman-hijab.jpg";
 import hotSpring from "@/assets/hot-spring-emerald-hero.jpg";
 
 const activityCards = [
-  { title: "Phi Phi Island, Maya Bay & Khai Island Speedboat", location: "Phuket", image: phiPhi, slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-  { title: "Phi Phi Island Big Boat Tour", location: "Phuket", image: phiPhiBigBoat, slug: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer" },
-  { title: "Phi Phi Royal Jet Speedboat Tour", location: "Phuket", image: phiPhiRoyal, slug: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer" },
-  { title: "Phi Phi Maya & Khai Speedboat", location: "Phuket", image: phiPhiMaya, slug: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer" },
-  { title: "James Bond Island & Phang Nga Bay", location: "Phuket", image: jamesBond, slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
-  { title: "James Bond Island with Sea Canoe", location: "Phuket", image: jamesBondCanoe, slug: "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer" },
-  { title: "Dolphin Show Phuket", location: "Phuket", image: dolphin, slug: "/thailand/bangkok/dolphin-show" },
-  { title: "Dolphin Bay Phuket", location: "Phuket", image: dolphinBay, slug: "/thailand/phuket/dolphin-show-phuket-with-transfer" },
-  { title: "Selfie with Tigers Phuket", location: "Phuket", image: tiger, slug: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer" },
-  { title: "Selfie with Tigers & ATV Ride", location: "Phuket", image: tigerAtv, slug: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer" },
-  { title: "Phuket Carnival Magic Show", location: "Phuket", image: carnival, slug: "/thailand/phuket/carnival-magic-show-tickets-with-transfer" },
-  { title: "Phuket Simon Cabaret Show", location: "Phuket", image: simonCabaret, slug: "/thailand/phuket/simon-cabaret-show-with-transfer" },
-  { title: "Phuket City Night Market Tour", location: "Phuket", image: nightMarket, slug: "/thailand/phuket/phuket-night-market-tour-with-transfer" },
-  { title: "Phuket Muslim Friendly Tour", location: "Phuket", image: muslimTour, slug: "/thailand/phuket/muslim-friendly-tour" },
-  { title: "Hot Spring & Emerald Pool Krabi", location: "Krabi", image: hotSpring, slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer" },
+  { title: "Phi Phi Island, Maya Bay & Khai Island Speedboat", location: "Phuket", image: phiPhi, slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+  { title: "Phi Phi Island Big Boat Tour", location: "Phuket", image: phiPhiBigBoat, slug: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/" },
+  { title: "Phi Phi Royal Jet Speedboat Tour", location: "Phuket", image: phiPhiRoyal, slug: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/" },
+  { title: "Phi Phi Maya & Khai Speedboat", location: "Phuket", image: phiPhiMaya, slug: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/" },
+  { title: "James Bond Island & Phang Nga Bay", location: "Phuket", image: jamesBond, slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+  { title: "James Bond Island with Sea Canoe", location: "Phuket", image: jamesBondCanoe, slug: "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer/" },
+  { title: "Dolphin Show Phuket", location: "Phuket", image: dolphin, slug: "/thailand/bangkok/dolphin-show/" },
+  { title: "Dolphin Bay Phuket", location: "Phuket", image: dolphinBay, slug: "/thailand/phuket/dolphin-show-phuket-with-transfer/" },
+  { title: "Selfie with Tigers Phuket", location: "Phuket", image: tiger, slug: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" },
+  { title: "Selfie with Tigers & ATV Ride", location: "Phuket", image: tigerAtv, slug: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer/" },
+  { title: "Phuket Carnival Magic Show", location: "Phuket", image: carnival, slug: "/thailand/phuket/carnival-magic-show-tickets-with-transfer/" },
+  { title: "Phuket Simon Cabaret Show", location: "Phuket", image: simonCabaret, slug: "/thailand/phuket/simon-cabaret-show-with-transfer/" },
+  { title: "Phuket City Night Market Tour", location: "Phuket", image: nightMarket, slug: "/thailand/phuket/phuket-night-market-tour-with-transfer/" },
+  { title: "Phuket Muslim Friendly Tour", location: "Phuket", image: muslimTour, slug: "/thailand/phuket/muslim-friendly-tour/" },
+  { title: "Hot Spring & Emerald Pool Krabi", location: "Krabi", image: hotSpring, slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
 ];
 
 const ActivityCards = () => {
@@ -86,10 +86,10 @@ const BlogTopPhuketTours = () => {
       guidesLink="/thailand/destination-guides"
       guidesLabel="Thailand Guides"
       relatedLinks={[
-        { title: "Best Thailand Activities to Book Online", link: "/blog/best-thailand-activities" },
-        { title: "Bangkok Activities Booking Guide", link: "/blog/bangkok-activities-guide" },
-        { title: "Best Pattaya Activities for First-Time Visitors", link: "/blog/best-pattaya-activities" },
-        { title: "Phi Phi Island Tours Complete Guide", link: "/blog/phi-phi-island-tours-thailand" },
+        { title: "Best Thailand Activities to Book Online", link: "/blog/best-thailand-activities/" },
+        { title: "Bangkok Activities Booking Guide", link: "/blog/bangkok-activities-guide/" },
+        { title: "Best Pattaya Activities for First-Time Visitors", link: "/blog/best-pattaya-activities/" },
+        { title: "Phi Phi Island Tours Complete Guide", link: "/blog/phi-phi-island-tours-thailand/" },
       ]}
       sections={[
         { type: "paragraph", content: "Phuket is Thailand's largest island and one of the most popular destinations for Indian travelers. With its stunning beaches, world-class island tours, vibrant nightlife, and delicious food, Phuket offers an unforgettable vacation experience. This comprehensive guide covers the best island tours and activities available from Phuket — all bookable online with instant confirmation." },
@@ -148,7 +148,7 @@ const BlogTopPhuketTours = () => {
           "Dedicated WhatsApp support for Indian travelers",
           "Genuine reviews from Indian families and couples",
         ]},
-        { type: "cta", content: "Ready to explore Phuket's stunning islands? Book your tour now!", link: "/thailand/phuket", linkText: "🏝️ Browse Phuket Tours" },
+        { type: "cta", content: "Ready to explore Phuket's stunning islands? Book your tour now!", link: "/thailand/phuket/", linkText: "🏝️ Browse Phuket Tours" },
       ]}
     >
       <ActivityCards />

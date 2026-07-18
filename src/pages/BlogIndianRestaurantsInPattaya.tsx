@@ -17,8 +17,8 @@ const BlogIndianRestaurantsInPattaya = () => (
     subCategory={{ label: "Indian Traveller Guides", link: "/thailand/pattaya/destination-guides#indian-audience" }}
     cityHub={{
       city: "Pattaya",
-      thingsToDoLink: "/thailand/pattaya/things-to-do",
-      transfersLink: "/thailand/pattaya",
+      thingsToDoLink: "/thailand/pattaya/things-to-do/",
+      transfersLink: "/thailand/pattaya/",
     }}
     sections={[
       { type: "paragraph", content: "Indian food is one of the biggest reasons families and first-time travelers love Pattaya — there's a strong cluster of authentic North Indian, South Indian, vegetarian and even Jain-friendly restaurants across Central Pattaya, Soi 13/2 and Beach Road. This 2026 guide covers the best Indian restaurants in Pattaya, what they serve, real prices and pro tips so you never have a bad meal on your trip." },
@@ -45,20 +45,20 @@ const BlogIndianRestaurantsInPattaya = () => (
       { type: "list", items: ["Try Thai food at least once — Tom Kha, Pad Thai, mango sticky rice","Carry a basic medicine kit (acidity, antacids) for the first 2 days","Drink only bottled water — never tap water","Most restaurants speak basic Hindi — don't hesitate to talk in Hindi"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Indian food in Pattaya is plentiful, affordable and good quality — families, vegetarians and Jain travelers will have zero food worries. Save 3–4 of the names above in Google Maps before you fly, mix in a couple of Thai meals for variety, and you'll eat extremely well throughout your Pattaya trip." },
-      { type: "cta", content: "Plan your Pattaya activities", link: "/thailand/pattaya/things-to-do", linkText: "Explore Pattaya Tours" }
+      { type: "cta", content: "Plan your Pattaya activities", link: "/thailand/pattaya/things-to-do/", linkText: "Explore Pattaya Tours" }
     ]}
     relatedActivities={[
-      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
-      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
-      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
-      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide/" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide/" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide/" },
     ]}
     relatedLinks={[
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
-      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
-      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
-      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
     ]}
   />
 );

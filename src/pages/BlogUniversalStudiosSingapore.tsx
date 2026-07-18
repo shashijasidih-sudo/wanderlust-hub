@@ -23,20 +23,20 @@ import sentosaIsland from "@/assets/singapore-sentosa-4d.jpg";
 
 const activityCards = [
   { title: "Universal Studios Weekday Ticket", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-  { title: "Universal Studios Weekend Ticket", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-weekend-tickets" },
-  { title: "Adventure Cove Water Park", location: "Sentosa", image: adventureCove, slug: "/singapore/adventure-cove-waterpark-tickets" },
-  { title: "Sentosa Cable Car", location: "Sentosa", image: cableCar, slug: "/singapore/sentosa-cable-car-tickets-and-transfers" },
-  { title: "Wings of Time Show", location: "Sentosa", image: wingsTime, slug: "/singapore/wings-of-time-show-sentosa-tickets" },
-  { title: "Sentosa Sky Helix", location: "Sentosa", image: skyHelix, slug: "/singapore/skyhelix-sentosa-tickets" },
-  { title: "Sentosa 4D Adventureland", location: "Sentosa", image: sentosa4d, slug: "/sentosa-4d-2rides" },
-  { title: "Gardens by the Bay", location: "Marina Bay", image: gardensBay, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
-  { title: "Night Safari Singapore", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-singapore-tickets-and-transfers" },
-  { title: "Singapore Flyer", location: "Marina Bay", image: flyer, slug: "/singapore/singapore-flyer-tickets-and-transfers" },
-  { title: "Singapore City Tour", location: "Singapore", image: cityTour, slug: "/singapore/singapore-city-tour" },
-  { title: "Singapore River Cruise", location: "Clarke Quay", image: riverCruise, slug: "/singapore/singapore-river-cruise-tickets-and-transfers" },
-  { title: "Singapore Zoo + Tram", location: "Mandai", image: zoo, slug: "/singapore/singapore-zoo-tickets" },
-  { title: "River Safari Singapore", location: "Mandai", image: riverSafari, slug: "/singapore/river-wonders-singapore-tickets" },
-  { title: "Big Bus Discover Tour", location: "Singapore", image: bigBus, slug: "/singapore/big-bus-hop-on-hop-off-singapore-city-tour" },
+  { title: "Universal Studios Weekend Ticket", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-weekend-tickets/" },
+  { title: "Adventure Cove Water Park", location: "Sentosa", image: adventureCove, slug: "/singapore/adventure-cove-waterpark-tickets/" },
+  { title: "Sentosa Cable Car", location: "Sentosa", image: cableCar, slug: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+  { title: "Wings of Time Show", location: "Sentosa", image: wingsTime, slug: "/singapore/wings-of-time-show-sentosa-tickets/" },
+  { title: "Sentosa Sky Helix", location: "Sentosa", image: skyHelix, slug: "/singapore/skyhelix-sentosa-tickets/" },
+  { title: "Sentosa 4D Adventureland", location: "Sentosa", image: sentosa4d, slug: "/sentosa-4d-2rides/" },
+  { title: "Gardens by the Bay", location: "Marina Bay", image: gardensBay, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers/" },
+  { title: "Night Safari Singapore", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-singapore-tickets-and-transfers/" },
+  { title: "Singapore Flyer", location: "Marina Bay", image: flyer, slug: "/singapore/singapore-flyer-tickets-and-transfers/" },
+  { title: "Singapore City Tour", location: "Singapore", image: cityTour, slug: "/singapore/singapore-city-tour/" },
+  { title: "Singapore River Cruise", location: "Clarke Quay", image: riverCruise, slug: "/singapore/singapore-river-cruise-tickets-and-transfers/" },
+  { title: "Singapore Zoo + Tram", location: "Mandai", image: zoo, slug: "/singapore/singapore-zoo-tickets/" },
+  { title: "River Safari Singapore", location: "Mandai", image: riverSafari, slug: "/singapore/river-wonders-singapore-tickets/" },
+  { title: "Big Bus Discover Tour", location: "Singapore", image: bigBus, slug: "/singapore/big-bus-hop-on-hop-off-singapore-city-tour/" },
 ];
 
 const ActivityCards = () => {
@@ -87,10 +87,10 @@ const BlogUniversalStudiosSingapore = () => {
     guidesLink="/singapore/smart-guides"
     guidesLabel="Singapore Guides"
     relatedLinks={[
-      { title: "Best Singapore Attraction Tickets for Indian Travelers", link: "/blog/best-singapore-attractions" },
-      { title: "Top Things to Do in Singapore", link: "/blog/top-things-singapore" },
-      { title: "Singapore Night Safari Booking Guide", link: "/blog/night-safari-singapore-guide" },
-      { title: "Sentosa Island Activities Guide", link: "/blog/sentosa-activities-singapore" },
+      { title: "Best Singapore Attraction Tickets for Indian Travelers", link: "/blog/best-singapore-attractions/" },
+      { title: "Top Things to Do in Singapore", link: "/blog/top-things-singapore/" },
+      { title: "Singapore Night Safari Booking Guide", link: "/blog/night-safari-singapore-guide/" },
+      { title: "Sentosa Island Activities Guide", link: "/blog/sentosa-activities-singapore/" },
     ]}
     sections={[
       { type: "paragraph", content: "Universal Studios Singapore (USS) is Southeast Asia's only Universal Studios theme park and one of the most popular attractions in Singapore. Located on Sentosa Island, USS features 24 rides, shows, and attractions across 7 uniquely themed zones. This comprehensive guide covers everything you need to know to plan your visit." },

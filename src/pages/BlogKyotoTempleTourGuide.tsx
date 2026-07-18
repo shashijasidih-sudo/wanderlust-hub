@@ -80,14 +80,14 @@ const BlogKyotoTempleTourGuide = () => (
         "Spiritual atmosphere unmatched in Japan",
       ]},
 
-      { type: "cta", content: "Want Kyoto temples bundled into a stress-free Japan itinerary?", linkText: "View Japan Tour Packages", link: "/tour-packages" },
+      { type: "cta", content: "Want Kyoto temples bundled into a stress-free Japan itinerary?", linkText: "View Japan Tour Packages", link: "/tour-packages/" },
 
       { type: "heading", content: "Conclusion" },
       { type: "paragraph", content: "A Kyoto temple tour is the soul of any Japan trip. From the glowing torii of Fushimi Inari to the gold of Kinkaku-ji and the green of Arashiyama, this is a side of Japan you'll never forget." },
     ]}
     relatedLinks={[
-      { title: "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Tips", link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" },
-      { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide" },
+      { title: "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Tips", link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo/" },
+      { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide/" },
     ]}
       internalLinks={getJapanInternalLinks("/japan/destination-guides/activity/kyoto-temple-tour-guide")}
   />

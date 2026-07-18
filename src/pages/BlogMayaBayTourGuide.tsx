@@ -16,7 +16,7 @@ const BlogMayaBayTourGuide = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/phuket/destination-guides#activity" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Maya Bay — the crown jewel of Phi Phi Leh — is one of the most photographed beaches on earth, made famous by The Beach. But strict 2026 conservation rules mean you need to plan smart to actually enjoy it." },
       { type: "heading", content: "What Is Maya Bay?" },
@@ -30,7 +30,7 @@ const BlogMayaBayTourGuide = () => (
         "National Park fee mandatory at entry",
       ]},
       { type: "tip-box", content: "Maya Bay sometimes closes seasonally for coral regeneration — always check status before booking." },
-      { type: "cta", content: "Book a Maya Bay + Phi Phi speedboat tour from Phuket", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer", linkText: "Book Maya Bay Tour" },
+      { type: "cta", content: "Book a Maya Bay + Phi Phi speedboat tour from Phuket", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/", linkText: "Book Maya Bay Tour" },
       { type: "heading", content: "How to Reach Maya Bay" },
       { type: "paragraph", content: "Only via Phi Phi Island day tours from Phuket — speedboat (1 hr) or big boat (2–3 hrs). Boats dock at the rear jetty; you walk a forest path to the beach viewpoint." },
       { type: "heading", content: "Best Time to Visit" },
@@ -41,14 +41,14 @@ const BlogMayaBayTourGuide = () => (
       { type: "paragraph", content: "Maya Bay is absolutely worth visiting in 2026 — but only if you go early, follow the rules, and pair it with other Phi Phi stops for a complete experience." },
     ]}
     relatedActivities={[
-      { title: "Phi Phi, Maya, Khai Speedboat Tour", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer" },
-      { title: "Full-Day Phi Phi Island Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-      { title: "Phi Phi Premium Speedboat", link: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer" },
+      { title: "Phi Phi, Maya, Khai Speedboat Tour", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/" },
+      { title: "Full-Day Phi Phi Island Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "Phi Phi Premium Speedboat", link: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/" },
     ]}
     relatedLinks={[
-      { title: "Best Phi Phi Island Tours", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours" },
-      { title: "Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat" },
-      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
+      { title: "Best Phi Phi Island Tours", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours/" },
+      { title: "Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat/" },
+      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/activity/maya-bay-tour-guide")}
   />

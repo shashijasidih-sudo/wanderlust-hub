@@ -16,13 +16,13 @@ const BlogPhuketVsKrabiForIndians = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Comparison Guides", link: "/thailand/phuket/destination-guides#comparison" }}
-    comparisonItems={[{ name: "Phuket", link: "/thailand/phuket/things-to-do" }, { name: "Krabi", link: "/thailand/krabi/things-to-do" }]}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    comparisonItems={[{ name: "Phuket", link: "/thailand/phuket/things-to-do/" }, { name: "Krabi", link: "/thailand/krabi/things-to-do/" }]}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Phuket or Krabi — every Indian traveler heading to Southern Thailand faces this exact dilemma. Phuket is the famous, well-connected island packed with nightlife, malls, beach clubs and easy direct flights. Krabi is the quieter, more scenic neighbor with limestone cliffs, hidden beaches and Railay's iconic skyline. This 2026 guide breaks down connectivity, cost, beaches, nightlife, food, honeymoon vibe and exactly which destination suits which kind of Indian traveler." },
       { type: "heading", content: "Connectivity from India" },
       { type: "list", items: ["Phuket: direct flights from Delhi, Mumbai, Bangalore — many daily options", "Krabi: 1 stop via Bangkok in most cases, 7–10 hours total", "Winner: Phuket (easier travel for Indian travelers)"] },
-      { type: "cta", content: "Land in Phuket — pre-book a private HKT airport transfer", link: "/thailand/phuket/transfers", linkText: "Book Phuket Transfer" },
+      { type: "cta", content: "Land in Phuket — pre-book a private HKT airport transfer", link: "/thailand/phuket/transfers/", linkText: "Book Phuket Transfer" },
       { type: "heading", content: "Beaches & Natural Beauty" },
       { type: "paragraph", content: "Krabi wins on natural beauty — Railay Beach, Phra Nang Cave Beach and the limestone karsts feel like a postcard. Phuket has more variety (Patong, Kata, Karon, Surin) but the wow-factor moments belong to Krabi." },
       { type: "list", items: ["Phuket: more beach options, easier access", "Krabi: dramatic cliffs, less crowded, postcard beaches", "Winner: Krabi (better natural beauty)"] },
@@ -47,18 +47,18 @@ const BlogPhuketVsKrabiForIndians = () => (
       ]},
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "For most Indian travelers — especially first-timers — Phuket wins on overall convenience and variety. But if you've already done Phuket or want a calmer, more scenic trip, Krabi is the smarter pick. Got 5+ days? Do both." },
-      { type: "cta", content: "Plan a Phuket + Krabi combo trip", link: "/thailand/phuket/things-to-do", linkText: "Explore Phuket Tours" },
+      { type: "cta", content: "Plan a Phuket + Krabi combo trip", link: "/thailand/phuket/things-to-do/", linkText: "Explore Phuket Tours" },
     ]}
     relatedActivities={[
-      { title: "Full-Day Phi Phi Island Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
-      { title: "Phuket to Krabi Transfer", link: "/thailand/phuket/phuket-to-krabi" },
+      { title: "Full-Day Phi Phi Island Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+      { title: "Phuket to Krabi Transfer", link: "/thailand/phuket/phuket-to-krabi/" },
     ]}
     relatedLinks={[
-      { title: "Phi Phi Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat" },
-      { title: "Phuket vs Bali Comparison", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-bali" },
-      { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel" },
-      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
+      { title: "Phi Phi Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat/" },
+      { title: "Phuket vs Bali Comparison", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-bali/" },
+      { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel/" },
+      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians")}
   />

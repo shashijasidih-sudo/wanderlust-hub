@@ -23,13 +23,13 @@ const BlogSafariWorldVsSeaLife = () => (
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Comparison Guides", link: "/thailand/bangkok/destination-guides#comparison" }}
     comparisonItems={[
-      { name: "Safari World Bangkok", link: "/thailand/bangkok/safari-world-marine-park" },
+      { name: "Safari World Bangkok", link: "/thailand/bangkok/safari-world-marine-park/" },
       { name: "Sea Life Bangkok Ocean World" },
     ]}
     cityHub={{
       city: "Bangkok",
-      thingsToDoLink: "/thailand/bangkok/things-to-do",
-      transfersLink: "/thailand/bangkok/safari-world-to-suvarnabhumi-airport-transfer",
+      thingsToDoLink: "/thailand/bangkok/things-to-do/",
+      transfersLink: "/thailand/bangkok/safari-world-to-suvarnabhumi-airport-transfer/",
     }}
     sections={[
       { type: "paragraph", content: "Traveling to Bangkok with kids? Safari World and Sea Life are the two top family attractions everyone debates between. They're very different experiences — Safari World is a sprawling outdoor zoo-and-marine park combo on the city's outskirts, while Sea Life is a compact, world-class indoor aquarium right in central Siam. Both are loved by Indian families, both cost roughly the same per family, and both deliver memorable photos. So how do you choose? This honest 2026 comparison breaks down everything — tickets, time, age suitability, weather, location, and the experience itself." },
@@ -89,20 +89,20 @@ const BlogSafariWorldVsSeaLife = () => (
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Pick Safari World if you have a full free day, the weather is cool, and your kids are aged 6+ and love animals + shows. It's an unforgettable, all-inclusive day they'll talk about for months. Pick Sea Life Bangkok for shorter trips, toddlers, hot or rainy days, or as part of a Siam mall-and-shopping day. If your trip is 4+ days in Bangkok, do both — they're complementary, and you can balance a heavy Safari World day with a chill Sea Life half-day. For most Indian families on a 3-night Bangkok stay, Safari World remains the more memorable single pick. Just always book it with a private transfer." },
 
-      { type: "cta", content: "Book Safari World tickets", link: "/thailand/bangkok/safari-world-marine-park", linkText: "Book Safari World" },
+      { type: "cta", content: "Book Safari World tickets", link: "/thailand/bangkok/safari-world-marine-park/", linkText: "Book Safari World" },
     ]}
     relatedActivities={[
-      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
-      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
-      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
-      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide/" },
     ]}
     relatedLinks={[
-      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
-      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
-      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary/" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok/" },
     ]}
   />
 );

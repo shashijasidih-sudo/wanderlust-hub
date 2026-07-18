@@ -129,16 +129,16 @@ const BlogJapanTripCostFromIndia = () => (
       ]},
       { type: "tip-box", content: "Japan may seem expensive, but with smart planning, it's comparable to a Europe trip — and often more efficient and cleaner." },
 
-      { type: "cta", content: "Want a Japan itinerary tailored to your budget?", linkText: "Explore Japan Packages", link: "/tour-packages" },
+      { type: "cta", content: "Want a Japan itinerary tailored to your budget?", linkText: "Explore Japan Packages", link: "/tour-packages/" },
 
       { type: "heading", content: "Conclusion" },
       { type: "paragraph", content: "A Japan trip from India in 2026 can be tailored to any budget. Whether you're backpacking or going luxury, Japan offers unmatched experiences worth every rupee." },
     ]}
     relatedLinks={[
-      { title: "Mount Fuji Tour Cost from Tokyo: Budget vs Premium Compared", link: "/japan/destination-guides/price-cost/mount-fuji-tour-cost-from-tokyo" },
-      { title: "Tokyo Disneyland Ticket Price Guide: Latest Costs & Tips", link: "/japan/destination-guides/price-cost/tokyo-disneyland-ticket-price-guide" },
-      { title: "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Tips", link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" },
-      { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide" },
+      { title: "Mount Fuji Tour Cost from Tokyo: Budget vs Premium Compared", link: "/japan/destination-guides/price-cost/mount-fuji-tour-cost-from-tokyo/" },
+      { title: "Tokyo Disneyland Ticket Price Guide: Latest Costs & Tips", link: "/japan/destination-guides/price-cost/tokyo-disneyland-ticket-price-guide/" },
+      { title: "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Tips", link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo/" },
+      { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide/" },
     ]}
       internalLinks={getJapanInternalLinks("/japan/destination-guides/price-cost/japan-trip-cost-from-india")}
   />

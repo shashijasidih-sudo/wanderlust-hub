@@ -25,7 +25,7 @@ const UserSettings = () => {
 
   useEffect(() => {
     if (!isLoading && !user) {
-      navigate("/auth");
+      navigate("/auth/");
     }
   }, [isLoading, user, navigate]);
 
@@ -65,7 +65,7 @@ const UserSettings = () => {
           <h1 className="text-3xl font-bold mb-6">My Account</h1>
 
           <div className="grid grid-cols-3 gap-3 mb-8">
-            <Link to="/user-profile">
+            <Link to="/user-profile/">
               <Card className="hover:bg-muted/50 transition-colors cursor-pointer">
                 <CardContent className="p-4 flex flex-col items-center text-center gap-2">
                   <UserIcon className="h-6 w-6 text-muted-foreground" />
@@ -73,7 +73,7 @@ const UserSettings = () => {
                 </CardContent>
               </Card>
             </Link>
-            <Link to="/user-bookings">
+            <Link to="/user-bookings/">
               <Card className="hover:bg-muted/50 transition-colors cursor-pointer">
                 <CardContent className="p-4 flex flex-col items-center text-center gap-2">
                   <CalendarDays className="h-6 w-6 text-muted-foreground" />

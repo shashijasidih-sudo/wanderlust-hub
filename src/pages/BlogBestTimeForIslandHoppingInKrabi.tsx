@@ -16,7 +16,7 @@ const Blog = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Micro Guides", link: "/thailand/krabi/destination-guides#micro" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Planning island hopping in Krabi and wondering when to go for the best experience? Timing matters more than most travelers think. Weather affects sea conditions, visibility, crowds, prices and even which islands you can access. This month-wise 2026 guide explains the best months for calm seas and clear water, when to skip crowds vs save money, and what each season really feels like on the water." },
       { type: "heading", content: "Quick Verdict (If You're in a Hurry)" },
@@ -28,7 +28,7 @@ const Blog = () => (
       { type: "tip-box", content: "If island hopping is the main reason you're visiting Krabi, prioritize December to March for the most reliable conditions." },
       { type: "heading", content: "Month-wise Breakdown" },
       { type: "list", items: ["January — sunny & dry, very calm sea, high crowd — perfect for island hopping","February — clear skies, calm sea, excellent visibility — best month overall","March — hot but stable, calm sea, moderate crowd — great for tours","April — very hot, mostly calm sea, occasional showers — still good but hot","May — start of rain, slightly rough sea, low crowd — good budget option","June — rainy, rough sea, limited tours — not recommended","July — frequent rain, choppy sea, poor visibility — avoid for island hopping","August — unpredictable weather, rough sea, often cancelled — not ideal","September — peak monsoon, rough sea, low tourism — worst month for island hopping","October — improving weather, stabilizing sea, low crowd — great value month","November — clear skies return, calm sea, increasing crowd — start of best season","December — perfect weather, very calm sea, high crowd — peak tourist season"] },
-      { type: "cta", content: "Browse Krabi island tours that run year-round (with safe operators)", link: "/thailand/krabi/things-to-do", linkText: "Browse Krabi Tours" },
+      { type: "cta", content: "Browse Krabi island tours that run year-round (with safe operators)", link: "/thailand/krabi/things-to-do/", linkText: "Browse Krabi Tours" },
       { type: "heading", content: "Best Months for Each Activity" },
       { type: "list", items: ["Snorkeling — February to March (clear water, best visibility)","Photography — November to February (blue skies, perfect lighting)","Budget travel — May & October (lower prices, fewer crowds)","Luxury experience — December to January (best conditions)"] },
       { type: "heading", content: "Best Time of Day for Island Hopping" },
@@ -47,19 +47,19 @@ const Blog = () => (
       { type: "list", items: ["First-time travelers — December to March","Budget travelers — May or October","Photographers — November to February","Honeymooners — December to February"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Best time for island hopping in Krabi is December to March — calm waters, clear views and perfect photos. But if you want fewer crowds and better deals, May and October are smart choices. Choose the right month and Krabi's islands will deliver the experience you came for; pick the wrong window and even the best tour can disappoint." },
-      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival", link: "/thailand/krabi/budget-airport-transfers", linkText: "Book Krabi Transfer" },
+      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
-      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer" },
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer" },
-      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi/hong-island-tour-by-speedboat-with-transfer" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers" },
+      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" },
+      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi/hong-island-tour-by-speedboat-with-transfer/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
     ]}
     relatedLinks={[
-      { title: "Is 4 Island Tour in Krabi Worth It?", link: "/thailand/krabi/destination-guides/micro/is-4-island-tour-krabi-worth-it" },
-      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary" },
-      { title: "Krabi Honeymoon Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-honeymoon-itinerary" },
-      { title: "Best Krabi Packages for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples" },
+      { title: "Is 4 Island Tour in Krabi Worth It?", link: "/thailand/krabi/destination-guides/micro/is-4-island-tour-krabi-worth-it/" },
+      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary/" },
+      { title: "Krabi Honeymoon Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-honeymoon-itinerary/" },
+      { title: "Best Krabi Packages for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi")}
   />

@@ -56,7 +56,7 @@ const UserBookings = () => {
   useEffect(() => {
     if (isAuthLoading) return;
     if (!user) {
-      navigate("/auth");
+      navigate("/auth/");
       return;
     }
     fetchBookings();
@@ -198,7 +198,7 @@ const UserBookings = () => {
 
           {/* Quick Navigation */}
           <div className="grid grid-cols-3 gap-3 mb-8">
-            <Link to="/user-profile">
+            <Link to="/user-profile/">
               <Card className="hover:bg-muted/50 transition-colors cursor-pointer">
                 <CardContent className="p-4 flex flex-col items-center text-center gap-2">
                   <UserIcon className="h-6 w-6 text-muted-foreground" />
@@ -212,7 +212,7 @@ const UserBookings = () => {
                 <span className="text-sm font-medium text-primary">Bookings</span>
               </CardContent>
             </Card>
-            <Link to="/settings">
+            <Link to="/settings/">
               <Card className="hover:bg-muted/50 transition-colors cursor-pointer">
                 <CardContent className="p-4 flex flex-col items-center text-center gap-2">
                   <Settings className="h-6 w-6 text-muted-foreground" />
@@ -326,7 +326,7 @@ const UserBookings = () => {
                   {statusFilter === "all" ? "You haven't made any bookings yet. Start exploring our tours!" : `You don't have any ${statusFilter} bookings.`}
                 </p>
                 {statusFilter === "all" && (
-                  <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
+                  <Link to="/thailand/"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
                 )}
               </CardContent>
             </Card>

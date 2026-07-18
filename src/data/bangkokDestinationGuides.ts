@@ -146,7 +146,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogChaoPhrayaCruise,
     date: "Apr 28, 2026",
     readTime: "9 min read",
-    link: "/thailand/bangkok/destination-guides/activity/chao-phraya-princess-cruise-review",
+    link: "/thailand/bangkok/destination-guides/activity/chao-phraya-princess-cruise-review/",
   },
   {
     title: "Best Dinner Cruises in Bangkok for Couples (2026)",
@@ -156,7 +156,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogCruiseCouples,
     date: "Apr 27, 2026",
     readTime: "8 min read",
-    link: "/thailand/bangkok/destination-guides/activity/best-dinner-cruises-bangkok-couples",
+    link: "/thailand/bangkok/destination-guides/activity/best-dinner-cruises-bangkok-couples/",
   },
   {
     title: "Wat Arun Bangkok Guide: Tickets, Timings & Photo Spots (2026)",
@@ -166,7 +166,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogWatArunSunset,
     date: "Apr 26, 2026",
     readTime: "7 min read",
-    link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide",
+    link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/",
   },
   {
     title: "Grand Palace Bangkok Guide: Tickets, Dress Code & Tips (2026)",
@@ -176,7 +176,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogGrandPalace,
     date: "Apr 25, 2026",
     readTime: "9 min read",
-    link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide",
+    link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/",
   },
   {
     title: "Mahanakhon Skywalk Tickets: Price, Sunset Timing & Tips (2026)",
@@ -186,7 +186,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogMahanakhon,
     date: "Apr 24, 2026",
     readTime: "7 min read",
-    link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide",
+    link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/",
   },
   {
     title: "Safari World Bangkok Guide: Shows, Tickets & Timings (2026)",
@@ -196,7 +196,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogSafariWorld,
     date: "Apr 23, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide",
+    link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide/",
   },
   {
     title: "Sea Life Bangkok: Is It Worth It? Tickets & Tips (2026)",
@@ -206,7 +206,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogSeaLife,
     date: "Apr 22, 2026",
     readTime: "8 min read",
-    link: "/thailand/bangkok/destination-guides/activity/sea-life-bangkok-guide",
+    link: "/thailand/bangkok/destination-guides/activity/sea-life-bangkok-guide/",
   },
   {
     title: "Bangkok Half-Day vs Full-Day Temple Tour: Which to Choose?",
@@ -216,7 +216,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogTemplesSunset,
     date: "Apr 21, 2026",
     readTime: "7 min read",
-    link: "/thailand/bangkok/destination-guides/activity/bangkok-temple-tour-half-vs-full-day",
+    link: "/thailand/bangkok/destination-guides/activity/bangkok-temple-tour-half-vs-full-day/",
   },
 
   // ===== Existing Bangkok blogs reclassified under ACTIVITY =====
@@ -228,7 +228,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: bangkokCity,
     date: "Mar 1, 2026",
     readTime: "9 min read",
-    link: "/blog/bangkok-activities-guide",
+    link: "/blog/bangkok-activities-guide/",
     external: true,
   },
   {
@@ -239,7 +239,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: bangkokTemple,
     date: "Feb 28, 2026",
     readTime: "9 min read",
-    link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour",
+    link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/",
     external: true,
   },
   {
@@ -250,7 +250,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: cruiseNight,
     date: "Mar 2, 2026",
     readTime: "7 min read",
-    link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer",
+    link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/",
     external: true,
   },
   {
@@ -261,7 +261,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: bangkokPagodaSunset,
     date: "Feb 18, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/ayutthaya-sunset-river-cruise",
+    link: "/thailand/bangkok/ayutthaya-sunset-river-cruise/",
     external: true,
   },
   {
@@ -272,7 +272,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: grandPalaceWatArun,
     date: "Feb 25, 2026",
     readTime: "10 min read",
-    link: "/blog/best-thailand-activities",
+    link: "/blog/best-thailand-activities/",
     external: true,
   },
   {
@@ -283,7 +283,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: bangkokRiverside,
     date: "Feb 12, 2026",
     readTime: "8 min read",
-    link: "/blog/bangkok-activities-guide",
+    link: "/blog/bangkok-activities-guide/",
     external: true,
   },
   {
@@ -294,7 +294,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: floatingMarket,
     date: "Mar 5, 2026",
     readTime: "11 min read",
-    link: "/blog/thailand-food-experiences",
+    link: "/blog/thailand-food-experiences/",
     external: true,
   },
 
@@ -307,7 +307,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogCostBudget,
     date: "Apr 29, 2026",
     readTime: "9 min read",
-    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india",
+    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india/",
   },
   {
     title: "Bangkok Family Trip Cost 2026: Family of 4 Budget Guide",
@@ -317,7 +317,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogFamilyCost,
     date: "Apr 28, 2026",
     readTime: "8 min read",
-    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-family-trip-cost",
+    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-family-trip-cost/",
   },
   {
     title: "Bangkok Couple Trip Cost 2026: Honeymoon & Romantic Budget",
@@ -327,7 +327,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogCoupleCost,
     date: "Apr 27, 2026",
     readTime: "8 min read",
-    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-couple-trip-cost",
+    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-couple-trip-cost/",
   },
   {
     title: "How Much Does Food Cost in Bangkok? 2026 Daily Budget",
@@ -337,7 +337,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogStreetFoodCost,
     date: "Apr 26, 2026",
     readTime: "6 min read",
-    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-food-cost",
+    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-food-cost/",
   },
   {
     title: "Bangkok Attraction Ticket Prices 2026: Full List & Booking Tips",
@@ -347,7 +347,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogSafariCost,
     date: "Apr 25, 2026",
     readTime: "7 min read",
-    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-attraction-ticket-prices",
+    link: "/thailand/bangkok/destination-guides/price-cost/bangkok-attraction-ticket-prices/",
   },
   {
     title: "Cheapest Time to Visit Bangkok in 2026 (Save 30–40%)",
@@ -357,7 +357,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogTransportCost,
     date: "Apr 24, 2026",
     readTime: "6 min read",
-    link: "/thailand/bangkok/destination-guides/price-cost/cheapest-time-to-visit-bangkok",
+    link: "/thailand/bangkok/destination-guides/price-cost/cheapest-time-to-visit-bangkok/",
   },
 
   // ===================== COMPARISON BLOGS =====================
@@ -369,7 +369,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkVsPhuket,
     date: "May 2, 2026",
     readTime: "9 min read",
-    link: "/thailand/bangkok/destination-guides/comparison/bangkok-vs-phuket",
+    link: "/thailand/bangkok/destination-guides/comparison/bangkok-vs-phuket/",
   },
   {
     title: "Bangkok vs Pattaya: Which City Suits Your Trip in 2026?",
@@ -379,7 +379,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkVsPattaya,
     date: "May 1, 2026",
     readTime: "8 min read",
-    link: "/thailand/bangkok/destination-guides/comparison/bangkok-vs-pattaya",
+    link: "/thailand/bangkok/destination-guides/comparison/bangkok-vs-pattaya/",
   },
   {
     title: "Chao Phraya Princess vs White Orchid Cruise: Which Is Better?",
@@ -389,7 +389,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogPrincessVsOrchid,
     date: "Apr 30, 2026",
     readTime: "9 min read",
-    link: "/thailand/bangkok/destination-guides/comparison/chao-phraya-princess-vs-white-orchid",
+    link: "/thailand/bangkok/destination-guides/comparison/chao-phraya-princess-vs-white-orchid/",
   },
   {
     title: "Wat Arun vs Grand Palace: Which Bangkok Temple Is Worth Your Time?",
@@ -399,7 +399,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogWatArunVsPalace,
     date: "Apr 29, 2026",
     readTime: "7 min read",
-    link: "/thailand/bangkok/destination-guides/comparison/wat-arun-vs-grand-palace",
+    link: "/thailand/bangkok/destination-guides/comparison/wat-arun-vs-grand-palace/",
   },
   {
     title: "Safari World vs Sea Life Bangkok: Which Is Better for Families?",
@@ -409,7 +409,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogSafariVsSealife,
     date: "Apr 28, 2026",
     readTime: "8 min read",
-    link: "/thailand/bangkok/destination-guides/comparison/safari-world-vs-sea-life-bangkok",
+    link: "/thailand/bangkok/destination-guides/comparison/safari-world-vs-sea-life-bangkok/",
   },
   {
     title: "BTS Skytrain vs Taxi in Bangkok: Which Is Better in 2026?",
@@ -419,7 +419,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBtsVsTaxi,
     date: "Apr 27, 2026",
     readTime: "6 min read",
-    link: "/thailand/bangkok/destination-guides/comparison/bts-vs-taxi-bangkok",
+    link: "/thailand/bangkok/destination-guides/comparison/bts-vs-taxi-bangkok/",
   },
 
   // ===================== ITINERARY BLOGS =====================
@@ -431,7 +431,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkk2Day,
     date: "May 5, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary",
+    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary/",
   },
   {
     title: "Bangkok 3-Day Itinerary 2026: The Perfect First-Time Plan",
@@ -441,7 +441,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkk3Day,
     date: "May 4, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary",
+    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/",
   },
   {
     title: "Bangkok 4-Day Itinerary 2026: Temples, Markets & Day Trips",
@@ -451,7 +451,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkk4Day,
     date: "May 3, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-4-day-itinerary",
+    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-4-day-itinerary/",
   },
   {
     title: "Bangkok Family Itinerary 2026: Best 5-Day Trip with Kids",
@@ -461,7 +461,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkFamilyIt,
     date: "May 2, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-family-itinerary",
+    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-family-itinerary/",
   },
   {
     title: "Bangkok Couple Itinerary 2026: Perfect 4-Night Romantic Trip",
@@ -471,7 +471,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkCoupleIt,
     date: "May 1, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-couple-itinerary",
+    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-couple-itinerary/",
   },
   {
     title: "Bangkok Solo Itinerary 2026: Safe & Fun 4-Day Plan",
@@ -481,7 +481,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkSoloIt,
     date: "Apr 30, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-solo-itinerary",
+    link: "/thailand/bangkok/destination-guides/itinerary/bangkok-solo-itinerary/",
   },
 
   // ===================== INDIAN AUDIENCE BLOGS =====================
@@ -493,7 +493,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkVisaIn,
     date: "May 6, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/destination-guides/indian-audience/thailand-visa-for-indians",
+    link: "/thailand/bangkok/destination-guides/indian-audience/thailand-visa-for-indians/",
   },
   {
     title: "Best Indian Restaurants in Bangkok 2026: Pure Veg & Jain Friendly",
@@ -503,7 +503,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkIndianFood,
     date: "May 5, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/destination-guides/indian-audience/best-indian-restaurants-bangkok",
+    link: "/thailand/bangkok/destination-guides/indian-audience/best-indian-restaurants-bangkok/",
   },
   {
     title: "INR to Thai Baht 2026: Bangkok Currency Guide for Indians",
@@ -513,7 +513,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkCurrencyIn,
     date: "May 4, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/destination-guides/indian-audience/inr-to-thai-baht-guide",
+    link: "/thailand/bangkok/destination-guides/indian-audience/inr-to-thai-baht-guide/",
   },
   {
     title: "Bangkok Honeymoon Guide 2026: Best Plan for Indian Couples",
@@ -523,7 +523,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkHoneymoonIn,
     date: "May 3, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-honeymoon-for-indians",
+    link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-honeymoon-for-indians/",
   },
   {
     title: "Is Bangkok Safe for Indian Tourists 2026? Honest Safety Guide",
@@ -533,7 +533,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkSafetyIn,
     date: "May 2, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-safety-for-indians",
+    link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-safety-for-indians/",
   },
   {
     title: "Bangkok Tips for Indian Families 2026: 15 Things to Know",
@@ -543,7 +543,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkIndianFamilyTips,
     date: "May 1, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-tips-indian-families",
+    link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-tips-indian-families/",
   },
 
   // ===================== MICRO BLOGS =====================
@@ -555,7 +555,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkTempleDress,
     date: "May 6, 2026",
     readTime: "5 min read",
-    link: "/thailand/bangkok/destination-guides/micro/bangkok-temple-dress-code",
+    link: "/thailand/bangkok/destination-guides/micro/bangkok-temple-dress-code/",
   },
   {
     title: "Best Time to Visit Bangkok 2026: Month-by-Month Guide",
@@ -565,7 +565,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkBestTime,
     date: "May 5, 2026",
     readTime: "6 min read",
-    link: "/thailand/bangkok/destination-guides/micro/best-time-to-visit-bangkok",
+    link: "/thailand/bangkok/destination-guides/micro/best-time-to-visit-bangkok/",
   },
   {
     title: "Bangkok in Monsoon 2026: Should You Visit in Rain Season?",
@@ -575,7 +575,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkMonsoon,
     date: "May 4, 2026",
     readTime: "6 min read",
-    link: "/thailand/bangkok/destination-guides/micro/bangkok-monsoon-guide",
+    link: "/thailand/bangkok/destination-guides/micro/bangkok-monsoon-guide/",
   },
   {
     title: "Bangkok SIM Card 2026: Best Tourist Plans for Indian Travelers",
@@ -585,7 +585,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkSim,
     date: "May 3, 2026",
     readTime: "6 min read",
-    link: "/thailand/bangkok/destination-guides/micro/bangkok-sim-card-guide",
+    link: "/thailand/bangkok/destination-guides/micro/bangkok-sim-card-guide/",
   },
   {
     title: "Bangkok Tipping Guide 2026: How Much to Tip Where",
@@ -595,7 +595,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkTipping,
     date: "May 2, 2026",
     readTime: "5 min read",
-    link: "/thailand/bangkok/destination-guides/micro/bangkok-tipping-guide",
+    link: "/thailand/bangkok/destination-guides/micro/bangkok-tipping-guide/",
   },
   {
     title: "Bangkok Shopping Guide 2026: Best Markets, Malls & Bargaining",
@@ -605,7 +605,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkShopping,
     date: "May 1, 2026",
     readTime: "7 min read",
-    link: "/thailand/bangkok/destination-guides/micro/bangkok-shopping-guide",
+    link: "/thailand/bangkok/destination-guides/micro/bangkok-shopping-guide/",
   },
 
   // ===================== TRANSFER BLOGS =====================
@@ -617,7 +617,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkAirport,
     date: "May 6, 2026",
     readTime: "8 min read",
-    link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer",
+    link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/",
   },
   {
     title: "Don Mueang (DMK) Airport Transfer 2026: How to Reach Bangkok",
@@ -627,7 +627,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogDmkAirport,
     date: "May 5, 2026",
     readTime: "8 min read",
-    link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer",
+    link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/",
   },
   {
     title: "Bangkok to Pattaya Transfer 2026: Bus, Taxi & Private Car",
@@ -637,7 +637,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkPattayaTransfer,
     date: "May 4, 2026",
     readTime: "8 min read",
-    link: "/thailand/bangkok/destination-guides/transfer/bangkok-to-pattaya-transfer",
+    link: "/thailand/bangkok/destination-guides/transfer/bangkok-to-pattaya-transfer/",
   },
   {
     title: "Bangkok Airport Rail Link 2026: Cheapest Way to City Center",
@@ -647,7 +647,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkRail,
     date: "May 3, 2026",
     readTime: "7 min read",
-    link: "/thailand/bangkok/destination-guides/transfer/bangkok-airport-rail-link",
+    link: "/thailand/bangkok/destination-guides/transfer/bangkok-airport-rail-link/",
   },
   {
     title: "Bangkok Private Transfer 2026: Is It Worth the Extra Cost?",
@@ -657,7 +657,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkPrivateTransfer,
     date: "May 2, 2026",
     readTime: "7 min read",
-    link: "/thailand/bangkok/destination-guides/transfer/bangkok-private-transfer",
+    link: "/thailand/bangkok/destination-guides/transfer/bangkok-private-transfer/",
   },
   {
     title: "Grab vs Taxi in Bangkok 2026: Which Should You Use?",
@@ -667,7 +667,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: blogBkkGrab,
     date: "May 1, 2026",
     readTime: "7 min read",
-    link: "/thailand/bangkok/destination-guides/transfer/grab-vs-taxi-bangkok",
+    link: "/thailand/bangkok/destination-guides/transfer/grab-vs-taxi-bangkok/",
   },
 ];
 

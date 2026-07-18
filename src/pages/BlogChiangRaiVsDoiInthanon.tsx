@@ -15,10 +15,10 @@ const Blog = () => (
     guidesLink="/thailand/chiang-mai/destination-guides"
     guidesLabel="Chiang Mai Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/chiang-mai/destination-guides#activity" }}
-    cityHub={{ city: "Chiang Mai", thingsToDoLink: "/thailand/chiang-mai/things-to-do", transfersLink: "/thailand/chiang-mai/budget-airport-transfers" }}
+    cityHub={{ city: "Chiang Mai", thingsToDoLink: "/thailand/chiang-mai/things-to-do/", transfersLink: "/thailand/chiang-mai/budget-airport-transfers/" }}
     comparisonItems={[
-      { name: "Chiang Rai Day Trip (Golden Triangle + Long Neck)", link: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip" },
-      { name: "Doi Inthanon National Park Full-Day Tour", link: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour" },
+      { name: "Chiang Rai Day Trip (Golden Triangle + Long Neck)", link: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/" },
+      { name: "Doi Inthanon National Park Full-Day Tour", link: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/" },
     ]}
     sections={[
       { type: "paragraph", content: "When visiting Chiang Mai, two day trips dominate every itinerary — the Chiang Rai Golden Triangle tour and the Doi Inthanon National Park tour. If you only have time for one, this comparison will help you decide based on your travel style." },
@@ -31,7 +31,7 @@ const Blog = () => (
       { type: "list", items: ["Unique temples unlike anywhere else","See three countries at once","Rich cultural exposure"] },
       { type: "subheading", content: "Downsides" },
       { type: "list", items: ["Long travel time","Tiring full day"] },
-      { type: "cta", content: "Want culture, art and the Golden Triangle? Book the Chiang Rai day trip", link: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip", linkText: "Book Chiang Rai Tour" },
+      { type: "cta", content: "Want culture, art and the Golden Triangle? Book the Chiang Rai day trip", link: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/", linkText: "Book Chiang Rai Tour" },
       { type: "heading", content: "Doi Inthanon Experience" },
       { type: "subheading", content: "Highlights" },
       { type: "list", items: ["Thailand's highest peak","Wachirathan Waterfall","Twin Royal Pagodas","Nature trails"] },
@@ -39,7 +39,7 @@ const Blog = () => (
       { type: "list", items: ["Cooler climate","Relaxing nature","Shorter, less tiring journey"] },
       { type: "subheading", content: "Downsides" },
       { type: "list", items: ["Less cultural variety","Weather-dependent views"] },
-      { type: "cta", content: "Prefer cool weather and waterfalls? Book the Doi Inthanon full-day tour", link: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour", linkText: "Book Doi Inthanon Tour" },
+      { type: "cta", content: "Prefer cool weather and waterfalls? Book the Doi Inthanon full-day tour", link: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/", linkText: "Book Doi Inthanon Tour" },
       { type: "mid-activities", destination: "thailand", heading: "Other Chiang Mai Tours" },
       { type: "heading", content: "Cost Comparison" },
       { type: "list", items: ["Chiang Rai: ₹2,500 – ₹4,500","Doi Inthanon: ₹2,000 – ₹3,500"] },
@@ -50,15 +50,15 @@ const Blog = () => (
       { type: "tip-box", content: "Final verdict: Culture lovers → Chiang Rai. Nature lovers → Doi Inthanon. Limited time → Doi Inthanon. Either way, pair it with a Chiang Mai temple tour for a complete itinerary." },
     ]}
     relatedActivities={[
-      { title: "Chiang Rai & Golden Triangle Day Trip", link: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip" },
-      { title: "Doi Inthanon National Park Full-Day Tour", link: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour" },
-      { title: "Chiang Mai City Temple Tour (Doi Suthep)", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer" },
+      { title: "Chiang Rai & Golden Triangle Day Trip", link: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/" },
+      { title: "Doi Inthanon National Park Full-Day Tour", link: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/" },
+      { title: "Chiang Mai City Temple Tour (Doi Suthep)", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/" },
     ]}
     relatedLinks={[
-      { title: "Chiang Rai Day Trip — Full Guide", link: "/thailand/chiang-mai/destination-guides/activity/chiang-rai-day-trip-golden-triangle-long-neck-tribe" },
-      { title: "Best Day Trips from Chiang Mai", link: "/thailand/chiang-mai/destination-guides/activity/best-day-trips-from-chiang-mai" },
-      { title: "Chiang Mai Temple Tour Price Guide 2026", link: "/thailand/chiang-mai/destination-guides/activity/chiang-mai-temple-tour-price-guide-2026" },
-      { title: "Explore All Chiang Mai Tours", link: "/thailand/chiang-mai/things-to-do" },
+      { title: "Chiang Rai Day Trip — Full Guide", link: "/thailand/chiang-mai/destination-guides/activity/chiang-rai-day-trip-golden-triangle-long-neck-tribe/" },
+      { title: "Best Day Trips from Chiang Mai", link: "/thailand/chiang-mai/destination-guides/activity/best-day-trips-from-chiang-mai/" },
+      { title: "Chiang Mai Temple Tour Price Guide 2026", link: "/thailand/chiang-mai/destination-guides/activity/chiang-mai-temple-tour-price-guide-2026/" },
+      { title: "Explore All Chiang Mai Tours", link: "/thailand/chiang-mai/things-to-do/" },
     ]}
   />
 );

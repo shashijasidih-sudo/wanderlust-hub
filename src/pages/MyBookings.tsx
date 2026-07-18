@@ -59,7 +59,7 @@ const MyBookings = () => {
 
   useEffect(() => {
     if (authLoading) return;
-    if (!user) { navigate("/auth"); return; }
+    if (!user) { navigate("/auth/"); return; }
 
     const fetchBookings = async () => {
       try {
@@ -199,7 +199,7 @@ const MyBookings = () => {
                   <div className="rounded-full bg-muted p-6 mb-4"><CalendarDays className="h-12 w-12 text-muted-foreground" /></div>
                   <h3 className="text-lg font-semibold mb-2">No Bookings Yet</h3>
                   <p className="text-muted-foreground mb-6 max-w-md">You haven't made any bookings yet. Start exploring our amazing tours and activities!</p>
-                  <Link to="/thailand"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
+                  <Link to="/thailand/"><Button><Search className="mr-2 h-4 w-4" />Explore Tours</Button></Link>
                 </div>
               </CardContent>
             </Card>

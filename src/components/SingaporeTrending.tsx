@@ -11,22 +11,22 @@ const trendingItems = [
   {
     title: "Best Things to Do in Singapore (2026 Guide)",
     image: marinaBay,
-    slug: "/singapore/things-to-do",
+    slug: "/singapore/things-to-do/",
   },
   {
     title: "Best Singapore Attraction Tickets for Indian Travelers",
     image: gardensBay,
-    slug: "/blog/best-singapore-attractions",
+    slug: "/blog/best-singapore-attractions/",
   },
   {
     title: "Top Things to Do in Singapore",
     image: universalStudios,
-    slug: "/blog/top-things-singapore",
+    slug: "/blog/top-things-singapore/",
   },
   {
     title: "Singapore Night Safari Booking Guide",
     image: nightSafari,
-    slug: "/blog/night-safari-singapore-guide",
+    slug: "/blog/night-safari-singapore-guide/",
   },
 ];
 

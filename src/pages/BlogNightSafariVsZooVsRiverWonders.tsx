@@ -18,7 +18,7 @@ const Blog = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "Comparison Guides", link: "/singapore/destination-guides#comparison" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "Singapore is home to some of the best wildlife attractions in the world — all clustered inside the Mandai Wildlife Reserve. Among them, three stand out: Night Safari, Singapore Zoo and River Wonders. All three focus on wildlife but offer completely different experiences. This 2026 comparison breaks down what each park is really like so you can decide which one — or all three — belong in your Singapore itinerary." },
       { type: "heading", content: "Quick Overview of Each Attraction" },
@@ -43,7 +43,7 @@ const Blog = () => (
       { type: "list", items: ["Night Safari — ★★★★★ (most romantic & unique)","River Wonders — ★★★★","Singapore Zoo — ★★★"] },
       { type: "heading", content: "Cost Comparison (Indian Travelers, 2026 INR)" },
       { type: "list", items: ["Singapore Zoo single ticket — ₹3,000–₹3,800","Night Safari single ticket — ₹3,400–₹4,200 (slightly premium)","River Wonders single ticket — ₹2,900–₹3,600","Combo (2 parks) — saves 15–20%","Mandai 4-Park Pass — best value if you plan to visit all"] },
-      { type: "cta", content: "Plan your full Mandai day with a combo pass", link: "/singapore/things-to-do", linkText: "See Singapore Attractions" },
+      { type: "cta", content: "Plan your full Mandai day with a combo pass", link: "/singapore/things-to-do/", linkText: "See Singapore Attractions" },
       { type: "heading", content: "Crowd Levels" },
       { type: "list", items: ["Singapore Zoo — busy during the day","Night Safari — packed in the evenings","River Wonders — usually the least crowded"] },
       { type: "heading", content: "Pros & Cons" },
@@ -60,16 +60,16 @@ const Blog = () => (
       { type: "paragraph", content: "It's not really 'which is better' — it's about what kind of wildlife experience you want. For most Indian travelers on a 4–5 day Singapore trip, pairing Singapore Zoo with Night Safari delivers the best balance. Add River Wonders if you're traveling with kids or wildlife enthusiasts." },
     ]}
     relatedActivities={[
-      { title: "Night Safari Singapore Tickets", link: "/singapore/things-to-do" },
-      { title: "Singapore Zoo Tickets", link: "/singapore/things-to-do" },
-      { title: "River Wonders Tickets", link: "/singapore/things-to-do" },
-      { title: "Mandai Combo Pass", link: "/singapore/things-to-do" },
+      { title: "Night Safari Singapore Tickets", link: "/singapore/things-to-do/" },
+      { title: "Singapore Zoo Tickets", link: "/singapore/things-to-do/" },
+      { title: "River Wonders Tickets", link: "/singapore/things-to-do/" },
+      { title: "Mandai Combo Pass", link: "/singapore/things-to-do/" },
     ]}
     relatedLinks={[
-      { title: "Night Safari Singapore Experience Guide", link: "/singapore/destination-guides/activity/night-safari-singapore-guide" },
-      { title: "Singapore River Cruise Experience", link: "/singapore/destination-guides/activity/singapore-river-cruise-guide" },
-      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide" },
-      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer" },
+      { title: "Night Safari Singapore Experience Guide", link: "/singapore/destination-guides/activity/night-safari-singapore-guide/" },
+      { title: "Singapore River Cruise Experience", link: "/singapore/destination-guides/activity/singapore-river-cruise-guide/" },
+      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide/" },
+      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

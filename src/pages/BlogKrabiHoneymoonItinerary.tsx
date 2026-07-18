@@ -16,7 +16,7 @@ const BlogKrabiHoneymoonItinerary = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Itinerary Guides", link: "/thailand/krabi/destination-guides#itinerary" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Krabi is one of the most romantic destinations in Thailand — secluded beaches, dramatic limestone cliffs, sunset cruises and luxurious resorts. This 5-day Krabi honeymoon itinerary is built for Indian couples who want a perfect mix of romance, adventure and relaxation." },
       { type: "heading", content: "Quick Overview (Romantic 5-Day Plan)" },
@@ -25,7 +25,7 @@ const BlogKrabiHoneymoonItinerary = () => (
       { type: "paragraph", content: "Airport pickup and check into your hotel/resort. Best honeymoon areas — Railay Beach (luxury & privacy), Ao Nang (variety) or a private resort with pool villa. Evening — candlelit dinner on the beach or your hotel's beachfront restaurant for the perfect first night." },
       { type: "heading", content: "Day 2: 4 Island Tour (Romantic + Scenic)" },
       { type: "paragraph", content: "Highlights — Phra Nang Cave Beach, Chicken Island, Tup Island sandbar and Poda Island. Walking together on sandbars, swimming in clear water and stunning photo spots make this one of the most romantic days. Tip — pick a private longtail or speedboat upgrade for an exclusive experience. Evening — dinner in Ao Nang." },
-      { type: "cta", content: "Upgrade to a private 4 Island longtail for couples", link: "/thailand/krabi/things-to-do", linkText: "Book Private 4 Island Tour" },
+      { type: "cta", content: "Upgrade to a private 4 Island longtail for couples", link: "/thailand/krabi/things-to-do/", linkText: "Book Private 4 Island Tour" },
       { type: "heading", content: "Day 3: Phi Phi Islands (Dream Destination)" },
       { type: "paragraph", content: "One of the most romantic locations in Thailand. Key stops — Maya Bay, Pileh Lagoon, Viking Cave and Phi Phi Don. Activities — snorkeling, swimming and dreamy photos. Evening — relax after a long day with a light dinner and early rest." },
       { type: "heading", content: "Day 4: Leisure + Sunset Cruise (Most Romantic Day)" },
@@ -47,20 +47,20 @@ const BlogKrabiHoneymoonItinerary = () => (
       { type: "list", items: ["Honeymoon couples","Romantic travelers","Anniversary trips"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "This 5-day Krabi honeymoon itinerary is perfectly balanced between romance, adventure and relaxation — exactly what Indian couples look for in a tropical honeymoon." },
-      { type: "cta", content: "Plan your dream Krabi honeymoon with curated activities", link: "/thailand/krabi/things-to-do", linkText: "Explore Krabi Tours" },
+      { type: "cta", content: "Plan your dream Krabi honeymoon with curated activities", link: "/thailand/krabi/things-to-do/", linkText: "Explore Krabi Tours" },
     ]}
     relatedActivities={[
-      { title: "Krabi Sunset Cruise", link: "/thailand/krabi/things-to-do" },
-      { title: "Private 4 Island Tour from Krabi", link: "/thailand/krabi/things-to-do" },
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/things-to-do" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers" },
+      { title: "Krabi Sunset Cruise", link: "/thailand/krabi/things-to-do/" },
+      { title: "Private 4 Island Tour from Krabi", link: "/thailand/krabi/things-to-do/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/things-to-do/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
     ]}
     relatedLinks={[
-      { title: "4 Days Krabi Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary" },
-      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary" },
-      { title: "3 Days Krabi Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-3-days-itinerary" },
-      { title: "Phuket Honeymoon for Indian Couples", link: "/thailand/phuket/destination-guides/indian-audience/phuket-honeymoon-for-indian-couples" },
-      { title: "Phuket + Krabi Combo Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary" },
+      { title: "4 Days Krabi Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary/" },
+      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary/" },
+      { title: "3 Days Krabi Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-3-days-itinerary/" },
+      { title: "Phuket Honeymoon for Indian Couples", link: "/thailand/phuket/destination-guides/indian-audience/phuket-honeymoon-for-indian-couples/" },
+      { title: "Phuket + Krabi Combo Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/itinerary/krabi-honeymoon-itinerary")}
   />

@@ -16,7 +16,7 @@ const Blog = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Indian Audience Guides", link: "/thailand/krabi/destination-guides#indian-audience" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Traveling to Krabi from India and worried about food — especially vegetarian or Jain options? You're not alone. The good news: Krabi is very Indian-friendly when it comes to food. From North Indian curries to South Indian meals and pure vegetarian options, you'll find plenty of choices, especially around Ao Nang. This 2026 guide covers the best areas, top restaurants, vegetarian and Jain options, costs and smart food tips for Indian travelers." },
       { type: "heading", content: "Why Indian Food is Easily Available in Krabi" },
@@ -32,7 +32,7 @@ const Blog = () => (
       { type: "list", items: ["Many Indian restaurants offer no-onion, no-garlic options","Meals can be customised on request","Inform staff clearly about dietary preferences before ordering"] },
       { type: "heading", content: "Indian Breakfast Options" },
       { type: "list", items: ["Paratha, poha, idli (in some places), masala chai","Cost — ₹150–₹400","Some hotels also offer Indian breakfast on request"] },
-      { type: "cta", content: "Pair Indian food with island days — see the most-booked Krabi tours", link: "/thailand/krabi/things-to-do", linkText: "Browse Krabi Tours" },
+      { type: "cta", content: "Pair Indian food with island days — see the most-booked Krabi tours", link: "/thailand/krabi/things-to-do/", linkText: "Browse Krabi Tours" },
       { type: "heading", content: "Food Cost for Indian Travelers" },
       { type: "list", items: ["Daily budget — ₹800–₹1,200 (budget) or ₹1,500–₹2,500 (mid-range)","5-day food budget — ₹5,000–₹10,000","Indian restaurant meal — ₹500–₹1,200 per person"] },
       { type: "heading", content: "Vegan & Healthy Options" },
@@ -45,19 +45,19 @@ const Blog = () => (
       { type: "list", items: ["Cheaper than Europe and Dubai","Similar to Bali","Affordable for most Indian travelers"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Indian food in Krabi is easily available, affordable and diverse. Whether you're vegetarian, Jain or non-veg, you'll find plenty of options — especially in Ao Nang. Plan your stay around food hubs and Krabi becomes one of the most comfortable international trips for Indian families." },
-      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival", link: "/thailand/krabi/budget-airport-transfers", linkText: "Book Krabi Transfer" },
+      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
-      { title: "4 Island Tour from Krabi", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer" },
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer" },
-      { title: "Emerald Pool & Hot Springs Day Tour", link: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers" },
+      { title: "4 Island Tour from Krabi", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" },
+      { title: "Emerald Pool & Hot Springs Day Tour", link: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
     ]}
     relatedLinks={[
-      { title: "Best Krabi Packages for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples" },
-      { title: "Krabi Honeymoon Guide for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/krabi-honeymoon-guide-for-indian-couples" },
-      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary" },
-      { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket" },
+      { title: "Best Krabi Packages for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples/" },
+      { title: "Krabi Honeymoon Guide for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/krabi-honeymoon-guide-for-indian-couples/" },
+      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary/" },
+      { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/indian-audience/indian-restaurants-in-krabi")}
   />

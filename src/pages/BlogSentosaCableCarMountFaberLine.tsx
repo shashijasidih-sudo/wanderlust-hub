@@ -18,7 +18,7 @@ const BlogSentosaCableCarMountFaberLine = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "Activity Guides", link: "/singapore/destination-guides#activity" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "The Sentosa Cable Car Ride on the Mount Faber Line connects mainland Singapore to Sentosa Island with breathtaking 360° harbour views. It's not just transport — it's one of the most scenic experiences in Singapore in its own right." },
       { type: "heading", content: "Cable Car Route Breakdown" },
@@ -34,7 +34,7 @@ const BlogSentosaCableCarMountFaberLine = () => (
       { type: "list", items: ["One-way journey: ~15 minutes","Round trip: ~30 minutes","Round-trip tickets recommended for full experience","Combo tickets with Sentosa attractions offer better value"] },
       { type: "heading", content: "Cost in 2026 (INR)" },
       { type: "list", items: ["Round-trip standard cabin — ₹2,000–₹2,600","Glass-bottom cabin upgrade — ₹3,500+","Combo with SkyHelix / 4D Adventureland — ₹3,200+"] },
-      { type: "cta", content: "Book Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers", linkText: "Book Cable Car" },
+      { type: "cta", content: "Book Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers/", linkText: "Book Cable Car" },
       { type: "heading", content: "Best Time to Take the Cable Car" },
       { type: "list", items: ["Sunset (highly recommended) — golden hour skyline","Evening — magical city lights","Morning — clearest visibility, smallest crowds"] },
       { type: "heading", content: "Tips for the Best Experience" },
@@ -45,14 +45,14 @@ const BlogSentosaCableCarMountFaberLine = () => (
       { type: "paragraph", content: "Absolutely. There are cheaper ways to reach Sentosa, but none offer the same experience. The cable car turns a simple commute into one of the most memorable moments of a Singapore trip." },
     ]}
     relatedActivities={[
-      { title: "Sentosa Cable Car Tickets & Transfers", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
-      { title: "Sentosa 4D Adventureland", link: "/singapore/sentosa-4d-adventureland-tickets" },
+      { title: "Sentosa Cable Car Tickets & Transfers", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+      { title: "Sentosa 4D Adventureland", link: "/singapore/sentosa-4d-adventureland-tickets/" },
     ]}
     relatedLinks={[
-      { title: "Sentosa 4D Adventureland Complete Experience", link: "/singapore/destination-guides/activity/sentosa-4d-adventureland-guide" },
-      { title: "Wings of Time Singapore Show", link: "/singapore/destination-guides/activity/wings-of-time-singapore-show" },
-      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide" },
-      { title: "Singapore Flyer Observation Wheel", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel" },
+      { title: "Sentosa 4D Adventureland Complete Experience", link: "/singapore/destination-guides/activity/sentosa-4d-adventureland-guide/" },
+      { title: "Wings of Time Singapore Show", link: "/singapore/destination-guides/activity/wings-of-time-singapore-show/" },
+      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide/" },
+      { title: "Singapore Flyer Observation Wheel", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

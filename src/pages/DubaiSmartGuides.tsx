@@ -43,7 +43,7 @@ const blogArticles = [
     author: "Yellodae Travel Expert",
     date: "Mar 4, 2026",
     readTime: "12 min read",
-    slug: "/blog/dubai-shopping-tours"
+    slug: "/blog/dubai-shopping-tours/"
   },
   {
     id: -6,
@@ -54,7 +54,7 @@ const blogArticles = [
     author: "Yellodae Travel Expert",
     date: "Mar 7, 2026",
     readTime: "10 min read",
-    slug: "/blog/dubai-food-experiences"
+    slug: "/blog/dubai-food-experiences/"
   },
   {
     id: 0,
@@ -65,7 +65,7 @@ const blogArticles = [
     author: "Yellodae Travel Expert",
     date: "Feb 17, 2026",
     readTime: "9 min read",
-    slug: "/blog/airport-transfer-booking-dubai"
+    slug: "/blog/airport-transfer-booking-dubai/"
   },
   {
     id: -1,
@@ -76,7 +76,7 @@ const blogArticles = [
     author: "Yellodae Desert Expert",
     date: "Feb 20, 2026",
     readTime: "12 min read",
-    slug: "/blog/desert-safari-deals-dubai"
+    slug: "/blog/desert-safari-deals-dubai/"
   },
   {
     id: -2,
@@ -87,7 +87,7 @@ const blogArticles = [
     author: "Yellodae Travel Expert",
     date: "Feb 26, 2026",
     readTime: "9 min read",
-    slug: "/blog/dubai-marina-cruise"
+    slug: "/blog/dubai-marina-cruise/"
   },
   {
     id: -3,
@@ -98,7 +98,7 @@ const blogArticles = [
     author: "Yellodae Travel Expert",
     date: "Feb 27, 2026",
     readTime: "8 min read",
-    slug: "/blog/burj-khalifa-tickets-dubai"
+    slug: "/blog/burj-khalifa-tickets-dubai/"
   },
   {
     id: 1,
@@ -109,7 +109,7 @@ const blogArticles = [
     author: "Desert Expert",
     date: "Nov 25, 2024",
     readTime: "8 min read",
-    slug: "/dubai/desert-safari"
+    slug: "/dubai/desert-safari/"
   },
   {
     id: 2,
@@ -120,7 +120,7 @@ const blogArticles = [
     author: "Architecture Buff",
     date: "Nov 22, 2024",
     readTime: "10 min read",
-    slug: "/dubai"
+    slug: "/dubai/"
   },
   {
     id: 3,
@@ -131,7 +131,7 @@ const blogArticles = [
     author: "History Guide",
     date: "Nov 20, 2024",
     readTime: "12 min read",
-    slug: "/dubai"
+    slug: "/dubai/"
   },
   {
     id: 4,
@@ -142,7 +142,7 @@ const blogArticles = [
     author: "Food Critic",
     date: "Nov 18, 2024",
     readTime: "7 min read",
-    slug: "/dubai/dhow-cruise"
+    slug: "/dubai/dhow-cruise/"
   },
   {
     id: 5,
@@ -153,7 +153,7 @@ const blogArticles = [
     author: "Style Expert",
     date: "Nov 15, 2024",
     readTime: "9 min read",
-    slug: "/dubai"
+    slug: "/dubai/"
   },
   {
     id: 6,
@@ -164,7 +164,7 @@ const blogArticles = [
     author: "Family Travel",
     date: "Nov 12, 2024",
     readTime: "11 min read",
-    slug: "/dubai"
+    slug: "/dubai/"
   },
   {
     id: 7,
@@ -175,7 +175,7 @@ const blogArticles = [
     author: "Island Explorer",
     date: "Nov 10, 2024",
     readTime: "8 min read",
-    slug: "/dubai/atlantis-aquaventure"
+    slug: "/dubai/atlantis-aquaventure/"
   },
   {
     id: 8,
@@ -186,7 +186,7 @@ const blogArticles = [
     author: "Local Guide",
     date: "Nov 8, 2024",
     readTime: "6 min read",
-    slug: "/dubai"
+    slug: "/dubai/"
   },
   {
     id: 9,
@@ -197,7 +197,7 @@ const blogArticles = [
     author: "Day Tripper",
     date: "Nov 5, 2024",
     readTime: "10 min read",
-    slug: "/dubai"
+    slug: "/dubai/"
   },
   {
     id: 10,
@@ -208,7 +208,7 @@ const blogArticles = [
     author: "Beach Lover",
     date: "Nov 2, 2024",
     readTime: "7 min read",
-    slug: "/dubai"
+    slug: "/dubai/"
   },
   {
     id: 11,
@@ -219,7 +219,7 @@ const blogArticles = [
     author: "Food Explorer",
     date: "Oct 30, 2024",
     readTime: "9 min read",
-    slug: "/dubai"
+    slug: "/dubai/"
   },
   {
     id: 12,
@@ -230,7 +230,7 @@ const blogArticles = [
     author: "Night Owl",
     date: "Oct 28, 2024",
     readTime: "8 min read",
-    slug: "/dubai"
+    slug: "/dubai/"
   }
 ];
 
@@ -292,7 +292,7 @@ const DubaiSmartGuides = () => {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link to="/dubai">Dubai</Link>
+                  <Link to="/dubai/">Dubai</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />

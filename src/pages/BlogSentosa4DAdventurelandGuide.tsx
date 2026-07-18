@@ -18,7 +18,7 @@ const BlogSentosa4DAdventurelandGuide = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "Activity Guides", link: "/singapore/destination-guides#activity" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "Sentosa 4D Adventureland is a tech-driven indoor attraction that combines cinema with physical sensations — motion seats, air blasts, water sprays, vibrations and surround sound. It's a quick, fun, weather-proof addition to any Sentosa itinerary." },
       { type: "heading", content: "What is Sentosa 4D Adventureland?" },
@@ -34,7 +34,7 @@ const BlogSentosa4DAdventurelandGuide = () => (
       { type: "list", items: ["Each ride: 10–15 minutes","Total time needed: 45–60 minutes","Located at Imbiah Lookout — central Sentosa","Reach via Cable Car, Sentosa Express, taxi or walk"] },
       { type: "heading", content: "Cost in 2026 (INR)" },
       { type: "list", items: ["Single ride ticket — ₹1,000–₹1,300","2-ride combo — ₹1,600–₹1,900","3-ride combo (best value) — ₹2,000–₹2,400"] },
-      { type: "cta", content: "Book Sentosa 4D Adventureland Tickets", link: "/singapore/sentosa-4d-adventureland-tickets", linkText: "Book Sentosa 4D" },
+      { type: "cta", content: "Book Sentosa 4D Adventureland Tickets", link: "/singapore/sentosa-4d-adventureland-tickets/", linkText: "Book Sentosa 4D" },
       { type: "heading", content: "Best Time to Visit" },
       { type: "list", items: ["Mornings — least crowded","Weekdays for shorter wait times","Ideal indoor backup during rain or hot afternoons"] },
       { type: "heading", content: "Tips for the Best Experience" },
@@ -45,15 +45,15 @@ const BlogSentosa4DAdventurelandGuide = () => (
       { type: "paragraph", content: "Treat 4D Adventureland as a quick add-on rather than a main attraction. Combine it with the Sentosa Cable Car, SkyHelix, Wings of Time or a half-day at Universal Studios for a full day on the island." },
     ]}
     relatedActivities={[
-      { title: "Sentosa 4D Adventureland (2 Rides)", link: "/singapore/sentosa-4d-adventureland-tickets" },
-      { title: "Sentosa 4D Adventureland (3 Rides)", link: "/singapore/sentosa-4d-3-rides" },
-      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
+      { title: "Sentosa 4D Adventureland (2 Rides)", link: "/singapore/sentosa-4d-adventureland-tickets/" },
+      { title: "Sentosa 4D Adventureland (3 Rides)", link: "/singapore/sentosa-4d-3-rides/" },
+      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
     ]}
     relatedLinks={[
-      { title: "Sentosa Cable Car Ride Guide (Mount Faber Line)", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line" },
-      { title: "Wings of Time Singapore Show", link: "/singapore/destination-guides/activity/wings-of-time-singapore-show" },
-      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide" },
-      { title: "Singapore Flyer Observation Wheel Experience", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel" },
+      { title: "Sentosa Cable Car Ride Guide (Mount Faber Line)", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line/" },
+      { title: "Wings of Time Singapore Show", link: "/singapore/destination-guides/activity/wings-of-time-singapore-show/" },
+      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide/" },
+      { title: "Singapore Flyer Observation Wheel Experience", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

@@ -236,15 +236,15 @@ const BlogSingaporeSummerActivities = () => {
         {
           type: "cta",
           content: "Ready to plan your Singapore summer escape?",
-          link: "/singapore/things-to-do",
+          link: "/singapore/things-to-do/",
           linkText: "Browse Singapore Activities",
         },
       ]}
       relatedLinks={[
-        { title: "Singapore Things to Do", link: "/singapore/things-to-do" },
-        { title: "Singapore Airport Transfers", link: "/singapore/budget-airport-transfers" },
-        { title: "Singapore Destination Guides", link: "/singapore/destination-guides" },
-        { title: "Thailand Adventure Activities 2026", link: "/blog/thailand-adventure-activities-2026" },
+        { title: "Singapore Things to Do", link: "/singapore/things-to-do/" },
+        { title: "Singapore Airport Transfers", link: "/singapore/budget-airport-transfers/" },
+        { title: "Singapore Destination Guides", link: "/singapore/destination-guides/" },
+        { title: "Thailand Adventure Activities 2026", link: "/blog/thailand-adventure-activities-2026/" },
       ]}
     />
   );

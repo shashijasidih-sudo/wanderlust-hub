@@ -148,7 +148,7 @@ const WhyYellodae = () => {
       <Seo
         title="Why choose Yellodae Trails | Trusted Travel Platform for Indians"
         description="Discover why 10,000+ Indian travelers trust Yellodae Trails for Thailand, Singapore, Dubai and Japan tours, airport transfers, attraction tickets and 24/7 customer support."
-        path="/why-yellodae"
+        path="/why-yellodae/"
         image="https://yellodae.com/yellodae-logo.png"
         jsonLd={JSON_LD}
       />
@@ -177,12 +177,12 @@ const WhyYellodae = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button asChild size="lg" className="rounded-full shadow-lg hover:shadow-xl">
-                  <Link to="/thailand">
+                  <Link to="/thailand/">
                     Explore Thailand <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="rounded-full">
-                  <Link to="/contact-us">Contact Our Team</Link>
+                  <Link to="/contact-us/">Contact Our Team</Link>
                 </Button>
               </div>
             </div>
@@ -317,12 +317,12 @@ const WhyYellodae = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="rounded-full shadow-lg hover:shadow-xl">
-                <Link to="/thailand">
+                <Link to="/thailand/">
                   Start Exploring <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full">
-                <Link to="/contact-us">Plan My Trip</Link>
+                <Link to="/contact-us/">Plan My Trip</Link>
               </Button>
             </div>
           </div>

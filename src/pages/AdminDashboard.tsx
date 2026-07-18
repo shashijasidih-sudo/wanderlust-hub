@@ -91,7 +91,7 @@ const AdminDashboard = () => {
 
     const checkAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession();
-      if (!session) { navigate("/auth"); return; }
+      if (!session) { navigate("/auth/"); return; }
       const admin = await isAdminUser(session.user?.id);
       if (!admin) { navigate("/"); return; }
       setAuthChecked(true);
@@ -107,7 +107,7 @@ const AdminDashboard = () => {
       description,
       variant: "destructive",
     });
-    navigate("/auth");
+    navigate("/auth/");
   };
 
 

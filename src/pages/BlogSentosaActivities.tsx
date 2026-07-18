@@ -32,10 +32,10 @@ const BlogSentosaActivities = () => {
         "Yellodae Sentosa booking",
       ]}
       relatedLinks={[
-        { title: "Singapore Airport Transfer Guide", link: "/blog/airport-transfer-booking-singapore" },
+        { title: "Singapore Airport Transfer Guide", link: "/blog/airport-transfer-booking-singapore/" },
         { title: "Universal Studios Weekday", link: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-        { title: "Sentosa Cable Car", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
-        { title: "Sky Helix Sentosa", link: "/singapore/skyhelix-sentosa-tickets" },
+        { title: "Sentosa Cable Car", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+        { title: "Sky Helix Sentosa", link: "/singapore/skyhelix-sentosa-tickets/" },
       ]}
       sections={[
         {
@@ -175,7 +175,7 @@ const BlogSentosaActivities = () => {
         {
           type: "cta",
           content: "Ready to explore Sentosa? Plan smart, travel better, and create unforgettable memories!",
-          link: "/singapore/sentosa-island",
+          link: "/singapore/sentosa-island/",
           linkText: "🎢 Book Sentosa Activities Now",
         },
       ]}

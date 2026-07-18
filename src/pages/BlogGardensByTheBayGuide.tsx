@@ -18,7 +18,7 @@ const BlogGardensByTheBayGuide = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "Activity Guides", link: "/singapore/destination-guides#activity" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "Spanning over 100 hectares near Marina Bay, Gardens by the Bay blends cutting-edge technology with environmental sustainability — themed gardens, climate-controlled conservatories, towering Supertrees and immersive light shows. It's one of the most iconic and rewarding attractions in Singapore." },
       { type: "heading", content: "Three Waterfront Gardens" },
@@ -38,7 +38,7 @@ const BlogGardensByTheBayGuide = () => (
       { type: "list", items: ["Free — Supertree Grove, Garden Rhapsody, outdoor gardens","Paid — Cloud Forest, Flower Dome, OCBC Skyway"] },
       { type: "heading", content: "Cost in 2026 (INR)" },
       { type: "list", items: ["Cloud Forest + Flower Dome combo — ₹3,000–₹3,600","OCBC Skyway — ₹700–₹900","Floral Fantasy add-on — ₹1,000+"] },
-      { type: "cta", content: "Plan Your Gardens by the Bay Visit", link: "/singapore/things-to-do", linkText: "Explore Singapore Activities" },
+      { type: "cta", content: "Plan Your Gardens by the Bay Visit", link: "/singapore/things-to-do/", linkText: "Explore Singapore Activities" },
       { type: "heading", content: "Best Time to Visit" },
       { type: "list", items: ["Afternoon — start in the conservatories (cool indoors)","Evening (highly recommended) — Supertree light show, cooler weather, skyline views","Ideal plan: afternoon visit, stay until evening for the full experience"] },
       { type: "heading", content: "How to Reach Gardens by the Bay" },
@@ -49,14 +49,14 @@ const BlogGardensByTheBayGuide = () => (
       { type: "list", items: ["Afternoon: Cloud Forest + Flower Dome","Evening: Walk around Supertree Grove","Night: Garden Rhapsody show","Combine with Marina Bay Sands, Singapore River Cruise and Merlion Park"] },
     ]}
     relatedActivities={[
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour" },
-      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
+      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
+      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
     ]}
     relatedLinks={[
-      { title: "Singapore Flyer Observation Wheel Experience", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel" },
-      { title: "Singapore River Cruise Experience", link: "/singapore/destination-guides/activity/singapore-river-cruise-guide" },
-      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer" },
-      { title: "Big Bus Singapore Hop-On Hop-Off", link: "/singapore/destination-guides/activity/big-bus-singapore-hop-on-hop-off" },
+      { title: "Singapore Flyer Observation Wheel Experience", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel/" },
+      { title: "Singapore River Cruise Experience", link: "/singapore/destination-guides/activity/singapore-river-cruise-guide/" },
+      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer/" },
+      { title: "Big Bus Singapore Hop-On Hop-Off", link: "/singapore/destination-guides/activity/big-bus-singapore-hop-on-hop-off/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

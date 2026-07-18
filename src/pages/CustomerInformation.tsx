@@ -87,7 +87,7 @@ const CustomerInformation = () => {
         <main className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">No items in cart</h1>
           <p className="text-muted-foreground mb-6">Please add a transfer to your cart first.</p>
-          <Button onClick={() => navigate("/thailand/bangkok/budget-airport-transfers")}>Browse Transfers</Button>
+          <Button onClick={() => navigate("/thailand/bangkok/budget-airport-transfers/")}>Browse Transfers</Button>
         </main>
         <Footer />
       </div>
@@ -115,7 +115,7 @@ const CustomerInformation = () => {
     }));
     sessionStorage.setItem("itemDetails", JSON.stringify(itemDetailsForBooking));
 
-    navigate("/payment-information");
+    navigate("/payment-information/");
   };
 
   return (
@@ -232,7 +232,7 @@ const CustomerInformation = () => {
                 <div className="flex items-start gap-2 mt-6">
                   <Checkbox id="terms" checked={agreeTerms} onCheckedChange={(checked) => setAgreeTerms(checked === true)} />
                   <label htmlFor="terms" className="text-sm leading-relaxed">
-                    I acknowledge and agree to abide by all cancellation and refund policies, as outlined in their <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>.<span className="text-destructive">*</span>
+                    I acknowledge and agree to abide by all cancellation and refund policies, as outlined in their <Link to="/privacy-policy/" className="text-primary hover:underline">Privacy Policy</Link>.<span className="text-destructive">*</span>
                   </label>
                 </div>
                 <div className="flex justify-center mt-8">

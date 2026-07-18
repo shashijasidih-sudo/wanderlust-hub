@@ -15,10 +15,10 @@ const Blog = () => (
     guidesLink="/thailand/chiang-mai/destination-guides"
     guidesLabel="Chiang Mai Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/chiang-mai/destination-guides#activity" }}
-    cityHub={{ city: "Chiang Mai", thingsToDoLink: "/thailand/chiang-mai/things-to-do", transfersLink: "/thailand/chiang-mai/budget-airport-transfers" }}
+    cityHub={{ city: "Chiang Mai", thingsToDoLink: "/thailand/chiang-mai/things-to-do/", transfersLink: "/thailand/chiang-mai/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "If one place defines the spiritual soul of Chiang Mai, it is Wat Phra That Doi Suthep. Sitting at 1,073 metres above sea level, this sacred temple blends history, panoramic beauty and Thai spirituality — and it pairs perfectly with a guided Chiang Mai city temple tour to Doi Suthep, Chedi Luang and Wat Pha Lat for first-time visitors." },
-      { type: "cta", content: "Visit Doi Suthep, Chedi Luang & Wat Pha Lat in one comfortable half-day with hotel transfers", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer", linkText: "Book the Doi Suthep Temple Tour" },
+      { type: "cta", content: "Visit Doi Suthep, Chedi Luang & Wat Pha Lat in one comfortable half-day with hotel transfers", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/", linkText: "Book the Doi Suthep Temple Tour" },
       { type: "heading", content: "History of Doi Suthep Temple" },
       { type: "paragraph", content: "Founded in 1383 during the Lanna Kingdom under King Keo Naone, the temple was built where a sacred white elephant carrying a Buddha relic stopped, trumpeted three times and died — a sign interpreted as divine. It remains one of Northern Thailand's most important pilgrimage sites." },
       { type: "heading", content: "Architectural Highlights" },
@@ -34,7 +34,7 @@ const Blog = () => (
       { type: "list", items: ["Early Morning (6 AM – 9 AM): cool weather, fewer crowds","Late Afternoon (4 PM – 7 PM): best lighting for photos","Avoid midday heat and tour-bus crowds"] },
       { type: "heading", content: "How to Reach Doi Suthep" },
       { type: "list", items: ["Shared songthaew (red truck) — cheapest, 50–100 THB","Private taxi or car — comfortable for couples and families","Guided tour with hotel pickup — recommended (combines Wat Pha Lat and city temples)"] },
-      { type: "cta", content: "Skip the songthaew haggling — pre-book your Doi Suthep + city temple tour with hotel pickup", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer", linkText: "Reserve Temple Tour" },
+      { type: "cta", content: "Skip the songthaew haggling — pre-book your Doi Suthep + city temple tour with hotel pickup", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/", linkText: "Reserve Temple Tour" },
       { type: "mid-activities", destination: "thailand", heading: "Plan Your Chiang Mai Experience" },
       { type: "heading", content: "Dress Code & Etiquette" },
       { type: "list", items: ["Shoulders and knees must be covered","Avoid sleeveless tops and shorts","Remove shoes before entering prayer areas","Maintain silence and respect"] },
@@ -43,18 +43,18 @@ const Blog = () => (
       { type: "heading", content: "Travel Tips" },
       { type: "list", items: ["Carry water and sunscreen","Wear comfortable shoes for climbing","Visit early to beat crowds","Combine with a Chiang Mai city temple tour for best value"] },
       { type: "tip-box", content: "Verdict: Doi Suthep is a must-visit symbol of Chiang Mai — culture, calmness and panoramic views in a single half-day. For step-free access, see our short guide to visiting Doi Suthep without climbing 300 steps." },
-      { type: "cta", content: "Ready to go? Lock in your Doi Suthep + Chedi Luang + Pha Lat tour with transfer", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer", linkText: "Book Now" },
+      { type: "cta", content: "Ready to go? Lock in your Doi Suthep + Chedi Luang + Pha Lat tour with transfer", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/", linkText: "Book Now" },
     ]}
     relatedActivities={[
-      { title: "Chiang Mai City Temple Tour (Doi Suthep + Chedi Luang + Pha Lat)", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer" },
-      { title: "Chiang Rai & Golden Triangle Day Trip", link: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip" },
-      { title: "Doi Inthanon National Park Full-Day Tour", link: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour" },
+      { title: "Chiang Mai City Temple Tour (Doi Suthep + Chedi Luang + Pha Lat)", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/" },
+      { title: "Chiang Rai & Golden Triangle Day Trip", link: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/" },
+      { title: "Doi Inthanon National Park Full-Day Tour", link: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/" },
     ]}
     relatedLinks={[
-      { title: "Visit Doi Suthep Without Climbing 300 Steps", link: "/thailand/chiang-mai/destination-guides/activity/visit-doi-suthep-without-climbing-steps" },
-      { title: "Chiang Mai Temple Tour Price Guide 2026", link: "/thailand/chiang-mai/destination-guides/activity/chiang-mai-temple-tour-price-guide-2026" },
-      { title: "Chiang Mai Tour Guide for Indians", link: "/thailand/chiang-mai/destination-guides/activity/chiang-mai-tour-guide-for-indians" },
-      { title: "Explore All Chiang Mai Tours & Activities", link: "/thailand/chiang-mai/things-to-do" },
+      { title: "Visit Doi Suthep Without Climbing 300 Steps", link: "/thailand/chiang-mai/destination-guides/activity/visit-doi-suthep-without-climbing-steps/" },
+      { title: "Chiang Mai Temple Tour Price Guide 2026", link: "/thailand/chiang-mai/destination-guides/activity/chiang-mai-temple-tour-price-guide-2026/" },
+      { title: "Chiang Mai Tour Guide for Indians", link: "/thailand/chiang-mai/destination-guides/activity/chiang-mai-tour-guide-for-indians/" },
+      { title: "Explore All Chiang Mai Tours & Activities", link: "/thailand/chiang-mai/things-to-do/" },
     ]}
   />
 );

@@ -16,7 +16,7 @@ const BlogKrabi3DaysItinerary = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Itinerary Guides", link: "/thailand/krabi/destination-guides#itinerary" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Short on time but still want to experience the magic of Krabi? This 3-day Krabi itinerary is built for travelers who only have a long weekend — covering Ao Nang, the famous 4 Island Tour and a choice between Phi Phi Islands or a relaxed jungle trip before departure." },
       { type: "heading", content: "Quick Overview (3 Days Plan)" },
@@ -25,7 +25,7 @@ const BlogKrabi3DaysItinerary = () => (
       { type: "paragraph", content: "Land at Krabi Airport and transfer to Ao Nang (30–40 minutes). Best base: Ao Nang (central + affordable). Afternoon — relax at Ao Nang Beach, enjoy ocean views and try local cafes. Evening — visit Ao Nang Night Market for Thai street food and souvenirs." },
       { type: "heading", content: "Day 2: 4 Island Tour" },
       { type: "paragraph", content: "Highlights — Phra Nang Cave Beach, Chicken Island, Tup Island sandbar and Poda Island. Activities — snorkeling, swimming, beach hopping and photography. Tips — start early (7–8 AM), choose speedboat if short on time, carry sunscreen and a waterproof bag. Evening — return relaxed to Ao Nang." },
-      { type: "cta", content: "Book the famous Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do", linkText: "Book 4 Island Tour" },
+      { type: "cta", content: "Book the famous Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do/", linkText: "Book 4 Island Tour" },
       { type: "heading", content: "Day 3: Phi Phi OR Jungle Tour + Departure" },
       { type: "paragraph", content: "Option 1: Phi Phi Islands Tour — Maya Bay, Pileh Lagoon, Viking Cave and Phi Phi Don. A bucket-list experience. Option 2: Jungle Tour — Emerald Pool, Hot Springs and optional Tiger Cave Temple. Less tiring, unique inland experience and great for families. Afternoon — return to hotel and head to airport." },
       { type: "heading", content: "Budget Breakdown (3 Days)" },
@@ -43,20 +43,20 @@ const BlogKrabi3DaysItinerary = () => (
       { type: "list", items: ["Add Hong Island Tour","Or add Railay rock climbing + sunset"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "This 3-day Krabi itinerary is perfect for time-pressed travelers who want a meaningful taste of Krabi — beaches, islands and one big highlight tour, all without feeling rushed." },
-      { type: "cta", content: "Plan your full Krabi trip with curated activities", link: "/thailand/krabi/things-to-do", linkText: "Explore Krabi Tours" },
+      { type: "cta", content: "Plan your full Krabi trip with curated activities", link: "/thailand/krabi/things-to-do/", linkText: "Explore Krabi Tours" },
     ]}
     relatedActivities={[
-      { title: "Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do" },
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/things-to-do" },
-      { title: "Krabi Jungle & Emerald Pool Tour", link: "/thailand/krabi/things-to-do" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers" },
+      { title: "Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/things-to-do/" },
+      { title: "Krabi Jungle & Emerald Pool Tour", link: "/thailand/krabi/things-to-do/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
     ]}
     relatedLinks={[
-      { title: "4 Days Krabi Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary" },
-      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary" },
-      { title: "Krabi Honeymoon Itinerary (5 Days)", link: "/thailand/krabi/destination-guides/itinerary/krabi-honeymoon-itinerary" },
-      { title: "Phuket vs Krabi for Indian Travelers", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians" },
-      { title: "Phuket + Krabi Combo Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary" },
+      { title: "4 Days Krabi Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary/" },
+      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary/" },
+      { title: "Krabi Honeymoon Itinerary (5 Days)", link: "/thailand/krabi/destination-guides/itinerary/krabi-honeymoon-itinerary/" },
+      { title: "Phuket vs Krabi for Indian Travelers", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians/" },
+      { title: "Phuket + Krabi Combo Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/itinerary/krabi-3-days-itinerary")}
   />

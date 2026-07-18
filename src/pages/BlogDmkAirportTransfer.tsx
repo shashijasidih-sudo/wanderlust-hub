@@ -17,8 +17,8 @@ const BlogDmkAirportTransfer = () => (
     subCategory={{ label: "Transfer Guides", link: "/thailand/bangkok/destination-guides#transfer" }}
     cityHub={{
       city: "Bangkok",
-      thingsToDoLink: "/thailand/bangkok/things-to-do",
-      transfersLink: "/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer",
+      thingsToDoLink: "/thailand/bangkok/things-to-do/",
+      transfersLink: "/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer/",
     }}
     sections={[
       { type: "paragraph", content: "Don Mueang (DMK) is Bangkok's older domestic and budget airline airport — most Air Asia, Nok Air and Thai Lion flights land here. It's smaller, north of the city, and a bit further from central Bangkok than Suvarnabhumi. Getting to your hotel is straightforward if you pick the right option for your budget and luggage." },
@@ -39,20 +39,20 @@ const BlogDmkAirportTransfer = () => (
       { type: "list", items: ["Cheapest: A1 Express Bus + BTS — 80 baht","Most popular: Public taxi — ~500 baht to Sukhumvit","Late-night arrivals: Pre-book private (~1,500 baht)","DMK is 15 min further than BKK — plan accordingly"] },
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Don Mueang to Bangkok is easy and cheap — pick the A1 bus if you're a budget backpacker, a public taxi or Grab for general travelers, and a pre-booked private transfer for families or late-night flights. The airport is smaller and faster to exit than Suvarnabhumi — you'll often be in a cab within 15 minutes of landing." },
-      { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" }
+      { type: "cta", content: "Plan your Bangkok activities", link: "/thailand/bangkok/things-to-do/", linkText: "Explore Bangkok Tours" }
     ]}
     relatedActivities={[
-      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
-      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
-      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
-      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide/" },
     ]}
     relatedLinks={[
-      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
-      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Bangkok to Pattaya Transfer", link: "/thailand/bangkok/destination-guides/transfer/bangkok-to-pattaya-transfer" },
-      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary/" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
+      { title: "Bangkok to Pattaya Transfer", link: "/thailand/bangkok/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok/" },
     ]}
   />
 );

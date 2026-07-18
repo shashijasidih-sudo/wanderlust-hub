@@ -16,7 +16,7 @@ const BlogPhuketSnorkelingGuide = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/phuket/destination-guides#activity" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Phuket has some of the best beginner snorkeling in Thailand — calm, shallow, coral-rich water with vibrant fish and easy boat access. Here's where to go and which tour to book in 2026." },
       { type: "heading", content: "Top Snorkeling Spots" },
@@ -27,7 +27,7 @@ const BlogPhuketSnorkelingGuide = () => (
         "Maiton Island — dolphins occasionally spotted",
         "Racha Yai Island — premium clarity",
       ]},
-      { type: "cta", content: "Book the most popular Phuket snorkeling tour", link: "/thailand/phuket/coral-island-tour-with-transfer", linkText: "Book Coral Island Tour" },
+      { type: "cta", content: "Book the most popular Phuket snorkeling tour", link: "/thailand/phuket/coral-island-tour-with-transfer/", linkText: "Book Coral Island Tour" },
       { type: "heading", content: "Tour Options" },
       { type: "list", items: [
         "Coral Island half-day: ₹2,000 – ₹3,500",
@@ -52,14 +52,14 @@ const BlogPhuketSnorkelingGuide = () => (
       { type: "paragraph", content: "If it's your first time, start with Coral Island. For the full Phuket reef experience, do a Phi Phi or Khai Islands speedboat tour — both deliver stunning coral and easy snorkeling for all levels." },
     ]}
     relatedActivities={[
-      { title: "Coral Island Tour", link: "/thailand/phuket/coral-island-tour-with-transfer" },
-      { title: "Khai Islands Tour", link: "/thailand/phuket/khai-island-tour-with-transfer" },
-      { title: "Phi Phi, Maya, Khai Speedboat", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer" },
+      { title: "Coral Island Tour", link: "/thailand/phuket/coral-island-tour-with-transfer/" },
+      { title: "Khai Islands Tour", link: "/thailand/phuket/khai-island-tour-with-transfer/" },
+      { title: "Phi Phi, Maya, Khai Speedboat", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/" },
     ]}
     relatedLinks={[
-      { title: "Best Phi Phi Island Tours", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours" },
-      { title: "Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat" },
-      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
+      { title: "Best Phi Phi Island Tours", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours/" },
+      { title: "Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat/" },
+      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/activity/snorkeling-in-phuket-guide")}
   />

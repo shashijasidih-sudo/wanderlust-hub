@@ -16,14 +16,14 @@ const BlogDolphinShowPhuket = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/phuket/destination-guides#activity" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "The Phuket Dolphin Show is one of the city's most popular family activities — a 45-minute high-energy performance with trained dolphins, jumps, ball acts and audience interaction." },
       { type: "heading", content: "Show Highlights" },
       { type: "list", items: ["High jumps and acrobatic flips", "Ball balancing acts", "Dolphin painting demos", "Audience interaction segments"] },
       { type: "heading", content: "Ticket Types & Pricing" },
       { type: "list", items: ["Standard: ₹1,200 – ₹1,800", "Premium (middle): ₹1,800 – ₹2,400", "VIP (front): ₹2,500 – ₹3,200", "Photo session: extra ₹500–₹800"] },
-      { type: "cta", content: "Book Phuket Dolphin Show tickets in INR", link: "/thailand/phuket/dolphin-show", linkText: "Book Dolphin Show" },
+      { type: "cta", content: "Book Phuket Dolphin Show tickets in INR", link: "/thailand/phuket/dolphin-show/", linkText: "Book Dolphin Show" },
       { type: "heading", content: "Show Timings (2026)" },
       { type: "list", items: ["Daily shows: 12:00 PM, 3:00 PM, 5:00 PM, 7:30 PM", "Duration: 45 minutes", "Reach 30 mins before showtime"] },
       { type: "heading", content: "Pros" },
@@ -35,14 +35,14 @@ const BlogDolphinShowPhuket = () => (
       { type: "paragraph", content: "Worth it for couples and families — easy, comfortable, and a fun cultural break between island days. Skip if you only want adventure activities." },
     ]}
     relatedActivities={[
-      { title: "Phuket Dolphin Show", link: "/thailand/phuket/dolphin-show" },
-      { title: "Phuket FantaSea Show", link: "/thailand/phuket/phuket-fanta-sea-show" },
-      { title: "Simon Cabaret Show", link: "/thailand/phuket/simon-cabaret-show" },
+      { title: "Phuket Dolphin Show", link: "/thailand/phuket/dolphin-show/" },
+      { title: "Phuket FantaSea Show", link: "/thailand/phuket/phuket-fanta-sea-show/" },
+      { title: "Simon Cabaret Show", link: "/thailand/phuket/simon-cabaret-show/" },
     ]}
     relatedLinks={[
-      { title: "Phuket Dolphin vs Safari World Bangkok", link: "/thailand/phuket/destination-guides/comparison/phuket-dolphin-show-vs-safari-world-bangkok" },
-      { title: "Phuket City vs Island Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-city-tour-vs-island-tour" },
-      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
+      { title: "Phuket Dolphin vs Safari World Bangkok", link: "/thailand/phuket/destination-guides/comparison/phuket-dolphin-show-vs-safari-world-bangkok/" },
+      { title: "Phuket City vs Island Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-city-tour-vs-island-tour/" },
+      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/activity/dolphin-show-phuket")}
   />

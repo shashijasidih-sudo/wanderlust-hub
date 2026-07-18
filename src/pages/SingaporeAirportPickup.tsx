@@ -19,12 +19,12 @@ const SingaporeAirportPickup = () => {
         relatedLinks={[
           {
             title: "Singapore Hotel to Changi Airport Drop Off",
-            url: "/singapore/singapore-airport-dropoff",
+            url: "/singapore/singapore-airport-dropoff/",
             description: "Private transfer from your Singapore hotel to Changi Airport with fixed INR pricing and on-time pickups.",
           },
           {
             title: "Singapore Changi Airport Night Pick Up to Hotel",
-            url: "/singapore/singapore-airport-night-pickup",
+            url: "/singapore/singapore-airport-night-pickup/",
             description: "Safe late-night and early-morning airport transfers from 10:00 PM to 6:30 AM with guaranteed driver availability.",
           },
         ]}

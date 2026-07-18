@@ -79,12 +79,12 @@ const Header = () => {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-            <Link to="/wishlist">
+            <Link to="/wishlist/">
               <Button variant="ghost" size="icon" className="h-8 w-8 md:h-10 md:w-10">
                 <Heart className="h-4 w-4 md:h-5 md:w-5" />
               </Button>
             </Link>
-            <Link to="/cart" className="relative">
+            <Link to="/cart/" className="relative">
               <Button variant="ghost" size="icon" className="h-8 w-8 md:h-10 md:w-10">
                 <ShoppingCart className="h-4 w-4 md:h-5 md:w-5" />
                 {cartCount > 0 && (
@@ -104,26 +104,26 @@ const Header = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[180px]" align="end">
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                    <Link to="/user-profile" className="flex items-center w-full">
+                    <Link to="/user-profile/" className="flex items-center w-full">
                       <User className="h-4 w-4 mr-2" />
                       Profile
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                    <Link to="/user-bookings" className="flex items-center w-full">
+                    <Link to="/user-bookings/" className="flex items-center w-full">
                       <CalendarDays className="h-4 w-4 mr-2" />
                       My Bookings
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                    <Link to="/settings" className="flex items-center w-full">
+                    <Link to="/settings/" className="flex items-center w-full">
                       <Settings className="h-4 w-4 mr-2" />
                       Settings
                     </Link>
                   </DropdownMenuItem>
                   {user.is_admin && (
                     <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                      <Link to="/admin" className="flex items-center w-full">
+                      <Link to="/admin/" className="flex items-center w-full">
                         <ShieldCheck className="h-4 w-4 mr-2" />
                         Admin Dashboard
                       </Link>
@@ -137,7 +137,7 @@ const Header = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
-              <Link to="/auth" className="md:hidden">
+              <Link to="/auth/" className="md:hidden">
                 <Button variant="ghost" size="icon" className="h-8 w-8">
                   <User className="h-4 w-4" />
                 </Button>
@@ -154,32 +154,32 @@ const Header = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[180px]" align="end">
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                    <Link to="/user-profile" className="flex items-center w-full">
+                    <Link to="/user-profile/" className="flex items-center w-full">
                       <User className="h-4 w-4 mr-2" />
                       Profile
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                    <Link to="/user-bookings" className="flex items-center w-full">
+                    <Link to="/user-bookings/" className="flex items-center w-full">
                       <CalendarDays className="h-4 w-4 mr-2" />
                       My Bookings
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                    <Link to="/wishlist" className="flex items-center w-full">
+                    <Link to="/wishlist/" className="flex items-center w-full">
                       <Heart className="h-4 w-4 mr-2" />
                       Wishlist
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                    <Link to="/settings" className="flex items-center w-full">
+                    <Link to="/settings/" className="flex items-center w-full">
                       <Settings className="h-4 w-4 mr-2" />
                       Settings
                     </Link>
                   </DropdownMenuItem>
                   {user.is_admin && (
                     <DropdownMenuItem className="cursor-pointer hover:bg-primary/10" asChild>
-                      <Link to="/admin" className="flex items-center w-full">
+                      <Link to="/admin/" className="flex items-center w-full">
                         <ShieldCheck className="h-4 w-4 mr-2" />
                         Admin Dashboard
                       </Link>
@@ -193,7 +193,7 @@ const Header = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
-              <Link to="/auth">
+              <Link to="/auth/">
                 <Button variant="default" size="sm" className="hidden md:flex items-center gap-2">
                   <User className="h-4 w-4" />
                   Sign Up / Login
@@ -225,56 +225,56 @@ const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[240px] p-2">
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand">
+                <Link to="/thailand/">
                   <Palmtree className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Thailand</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand/bangkok">
+                <Link to="/thailand/bangkok/">
                   <Building2 className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Bangkok</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand/phuket">
+                <Link to="/thailand/phuket/">
                   <Fish className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Phuket</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand/krabi">
+                <Link to="/thailand/krabi/">
                   <Anchor className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Krabi</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand/pattaya">
+                <Link to="/thailand/pattaya/">
                   <Ship className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Pattaya</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand/chiang-mai">
+                <Link to="/thailand/chiang-mai/">
                   <TreePine className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Chiang Mai</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand/koh-samui">
+                <Link to="/thailand/koh-samui/">
                   <Palmtree className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Koh Samui</span>
                 </Link>
               </DropdownMenuItem>
               <div className="h-px bg-border my-2" />
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/singapore">
+                <Link to="/singapore/">
                   <TreePine className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Singapore</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/dubai/destination-guides">
+                <Link to="/dubai/destination-guides/">
                   <Castle className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Dubai</span>
                 </Link>
@@ -325,7 +325,7 @@ const Header = () => {
               </DropdownMenuItem>
               <div className="h-px bg-border my-2" />
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/singapore/budget-airport-transfers">
+                <Link to="/singapore/budget-airport-transfers/">
                   <TreePine className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Singapore</span>
                 </Link>
@@ -339,7 +339,7 @@ const Header = () => {
           <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-colors hover:text-primary">
             Travel Essentials
           </a>
-          <Link to="/tour-packages" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link to="/tour-packages/" className="text-sm font-medium transition-colors hover:text-primary">
             Tours & Packages
           </Link>
           <DropdownMenu>
@@ -349,25 +349,25 @@ const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[260px] p-2">
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/thailand/destination-guides">
+                <Link to="/thailand/destination-guides/">
                   <Palmtree className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Thailand Smart Guides</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/singapore/destination-guides">
+                <Link to="/singapore/destination-guides/">
                   <TreePine className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Singapore Smart Guides</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/dubai/destination-guides">
+                <Link to="/dubai/destination-guides/">
                   <Castle className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Dubai Smart Guides</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/japan/destination-guides">
+                <Link to="/japan/destination-guides/">
                   <Mountain className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Japan Smart Guides</span>
                 </Link>
@@ -415,56 +415,56 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/" onClick={() => setIsMenuOpen(false)}>
                     <Palmtree className="h-4 w-4 mr-2 text-primary" />
                     Thailand
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/bangkok" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/bangkok/" onClick={() => setIsMenuOpen(false)}>
                     <Building2 className="h-4 w-4 mr-2 text-primary" />
                     Bangkok
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/phuket" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/phuket/" onClick={() => setIsMenuOpen(false)}>
                     <Fish className="h-4 w-4 mr-2 text-primary" />
                     Phuket
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/krabi" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/krabi/" onClick={() => setIsMenuOpen(false)}>
                     <Anchor className="h-4 w-4 mr-2 text-primary" />
                     Krabi
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/pattaya" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/pattaya/" onClick={() => setIsMenuOpen(false)}>
                     <Ship className="h-4 w-4 mr-2 text-primary" />
                     Pattaya
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/chiang-mai" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/chiang-mai/" onClick={() => setIsMenuOpen(false)}>
                     <TreePine className="h-4 w-4 mr-2 text-primary" />
                     Chiang Mai
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/koh-samui" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/koh-samui/" onClick={() => setIsMenuOpen(false)}>
                     <Palmtree className="h-4 w-4 mr-2 text-primary" />
                     Koh Samui
                   </Link>
                 </DropdownMenuItem>
                 <div className="h-px bg-border my-1" />
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/singapore" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/singapore/" onClick={() => setIsMenuOpen(false)}>
                     <TreePine className="h-4 w-4 mr-2 text-primary" />
                     Singapore
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/dubai/destination-guides" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/dubai/destination-guides/" onClick={() => setIsMenuOpen(false)}>
                     <Castle className="h-4 w-4 mr-2 text-primary" />
                     Dubai
                   </Link>
@@ -515,7 +515,7 @@ const Header = () => {
                 </DropdownMenuItem>
                 <div className="h-px bg-border my-1" />
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/singapore/budget-airport-transfers" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/singapore/budget-airport-transfers/" onClick={() => setIsMenuOpen(false)}>
                     <TreePine className="h-4 w-4 mr-2 text-primary" />
                     Singapore
                   </Link>
@@ -529,7 +529,7 @@ const Header = () => {
             <a href="https://www.barnip.com" target="_blank" rel="noopener noreferrer" className="text-base font-medium transition-colors hover:text-primary">
               Travel Essentials
             </a>
-            <Link to="/tour-packages" className="text-base font-medium transition-colors hover:text-primary" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/tour-packages/" className="text-base font-medium transition-colors hover:text-primary" onClick={() => setIsMenuOpen(false)}>
               Tours & Packages
             </Link>
             <DropdownMenu>
@@ -539,25 +539,25 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/thailand/destination-guides" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/thailand/destination-guides/" onClick={() => setIsMenuOpen(false)}>
                     <Palmtree className="h-4 w-4 mr-2 text-primary" />
                     Thailand Smart Guides
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/singapore/destination-guides" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/singapore/destination-guides/" onClick={() => setIsMenuOpen(false)}>
                     <TreePine className="h-4 w-4 mr-2 text-primary" />
                     Singapore Smart Guides
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/dubai/destination-guides" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/dubai/destination-guides/" onClick={() => setIsMenuOpen(false)}>
                     <Castle className="h-4 w-4 mr-2 text-primary" />
                     Dubai Smart Guides
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/japan/destination-guides" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/japan/destination-guides/" onClick={() => setIsMenuOpen(false)}>
                     <Mountain className="h-4 w-4 mr-2 text-primary" />
                     Japan Smart Guides
                   </Link>

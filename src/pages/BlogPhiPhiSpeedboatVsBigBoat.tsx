@@ -17,10 +17,10 @@ const BlogPhiPhiSpeedboatVsBigBoat = () => (
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Comparison Guides", link: "/thailand/phuket/destination-guides#comparison" }}
     comparisonItems={[
-      { name: "Phi Phi Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-      { name: "Phi Phi Big Boat Tour", link: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer" },
+      { name: "Phi Phi Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+      { name: "Phi Phi Big Boat Tour", link: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/" },
     ]}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Planning a Phi Phi Island tour from Phuket and stuck on the biggest decision of all — speedboat or big boat? It is not just a price difference. It directly changes your travel time, comfort level, how many islands you cover, and the overall experience you bring back. In this 2026 comparison we break down both options across cost, vibe, pros and cons, and exactly who should pick what." },
       { type: "heading", content: "Phi Phi Tours from Phuket — The Quick Picture" },
@@ -31,7 +31,7 @@ const BlogPhiPhiSpeedboatVsBigBoat = () => (
         "Travel time: 45–60 mins (speedboat) vs 2–3 hours (big boat)",
         "Crowd size: 20–30 (speedboat) vs 50–100 (big boat)",
       ]},
-      { type: "cta", content: "Skip the queue — pre-book your Phi Phi speedboat day from Phuket", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer", linkText: "Book Phi Phi Speedboat" },
+      { type: "cta", content: "Skip the queue — pre-book your Phi Phi speedboat day from Phuket", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/", linkText: "Book Phi Phi Speedboat" },
       { type: "heading", content: "Speedboat Tour — Detailed Breakdown" },
       { type: "paragraph", content: "Cost: ₹5,000–₹8,500 per person. Speedboats are small, fast and built for efficiency — you get to islands quicker, spend more time swimming, and visit more spots like Bamboo Island and Pileh Lagoon. Pros: covers more locations, more activity time, less crowded, far better for photography. Cons: more expensive, can be bumpy in waves, not ideal for elderly or pregnant travelers." },
       { type: "heading", content: "Big Boat Tour — Detailed Breakdown" },
@@ -51,19 +51,19 @@ const BlogPhiPhiSpeedboatVsBigBoat = () => (
       ]},
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "If budget allows, the speedboat wins on overall experience and value — more islands, less crowd, more time in the water. The big boat wins decisively on comfort and price for families. Either way, book mornings, avoid the cheapest operators, and carry motion sickness tablets." },
-      { type: "cta", content: "Prefer comfort and a stable ride? Book the Phi Phi Big Boat", link: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer", linkText: "Book Big Boat Tour" },
+      { type: "cta", content: "Prefer comfort and a stable ride? Book the Phi Phi Big Boat", link: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/", linkText: "Book Big Boat Tour" },
     ]}
     relatedActivities={[
-      { title: "Full-Day Phi Phi Island Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-      { title: "Phi Phi Island Big Boat Tour", link: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer" },
-      { title: "Phi Phi Premium Speedboat Tour", link: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer" },
-      { title: "Phi Phi, Maya, Khai Speedboat Tour", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer" },
+      { title: "Full-Day Phi Phi Island Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "Phi Phi Island Big Boat Tour", link: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/" },
+      { title: "Phi Phi Premium Speedboat Tour", link: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/" },
+      { title: "Phi Phi, Maya, Khai Speedboat Tour", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/" },
     ]}
     relatedLinks={[
-      { title: "James Bond Island vs Phi Phi: Which Is Worth It?", link: "/thailand/phuket/destination-guides/comparison/james-bond-island-vs-phi-phi-island" },
-      { title: "Phuket Private vs Group Tour Comparison", link: "/thailand/phuket/destination-guides/comparison/phuket-private-vs-group-tour" },
-      { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel" },
-      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
+      { title: "James Bond Island vs Phi Phi: Which Is Worth It?", link: "/thailand/phuket/destination-guides/comparison/james-bond-island-vs-phi-phi-island/" },
+      { title: "Phuket Private vs Group Tour Comparison", link: "/thailand/phuket/destination-guides/comparison/phuket-private-vs-group-tour/" },
+      { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel/" },
+      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat")}
   />

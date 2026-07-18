@@ -9,10 +9,10 @@ import { TOUR_ROUTES } from "@/data/tourRoutes";
 
 const primaryDestinations = [
   { name: "Home", path: "/", icon: "🏠" },
-  { name: "Thailand", path: "/thailand", icon: "🇹🇭" },
-  { name: "Singapore", path: "/singapore", icon: "🇸🇬" },
-  { name: "Dubai", path: "/dubai", icon: "🇦🇪" },
-  { name: "Contact Us", path: "/contact-us", icon: "✉️" },
+  { name: "Thailand", path: "/thailand/", icon: "🇹🇭" },
+  { name: "Singapore", path: "/singapore/", icon: "🇸🇬" },
+  { name: "Dubai", path: "/dubai/", icon: "🇦🇪" },
+  { name: "Contact Us", path: "/contact-us/", icon: "✉️" },
 ];
 
 const NotFound = () => {

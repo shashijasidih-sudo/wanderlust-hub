@@ -23,13 +23,13 @@ const activities = [
     title: "Full Moon Party with Transfer, Koh Samui",
     price: 3800,
     image: fullMoon,
-    slug: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer",
+    slug: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/",
   },
   {
     title: "White Orchid River Cruise – Loy Krathong Festival",
     price: 5000,
     image: cruise,
-    slug: "/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival",
+    slug: "/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/",
   },
 ];
 
@@ -151,14 +151,14 @@ const KohSamui = () => {
             desc: "Private USM airport pickup with meet & greet, straight to your Koh Samui hotel.",
             price: 1800,
             img: beach,
-            slug: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer",
+            slug: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/",
           },
           {
             title: "Koh Samui Hotel to Koh Phangan Pier",
             desc: "Private transfer with onward boat to Koh Phangan for the Full Moon Party.",
             price: 2200,
             img: fullMoon,
-            slug: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer",
+            slug: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/",
           },
         ]}
       />

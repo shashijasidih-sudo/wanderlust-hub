@@ -23,14 +23,14 @@ const BlogCoralIslandPattayaGuide = () => (
     subCategory={{ label: "Activity Guides", link: "/thailand/pattaya/destination-guides#activity" }}
     cityHub={{
       city: "Pattaya",
-      thingsToDoLink: "/thailand/pattaya/things-to-do",
-      transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer",
+      thingsToDoLink: "/thailand/pattaya/things-to-do/",
+      transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer/",
     }}
     relatedActivities={[
-      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
-      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
-      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
-      { title: "Ramayana Water Park Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/ramayana-water-park-guide" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide/" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide/" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide/" },
+      { title: "Ramayana Water Park Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/ramayana-water-park-guide/" },
     ]}
     sections={[
       { type: "paragraph", content: "If you're visiting Pattaya and expecting clear blue water, white sand and adventure, Coral Island (Koh Larn) is where you actually get it. Pattaya Beach is lively but not known for crystal-clear water — which is why almost every Pattaya itinerary includes a Coral Island day trip." },
@@ -88,14 +88,14 @@ const BlogCoralIslandPattayaGuide = () => (
       ]},
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Coral Island offers the best mix of adventure and scenic beauty near Pattaya, and it's the easiest day trip to plan. For first-time travelers, couples and families — it's a 100% must-do." },
-      { type: "cta", content: "Book a Coral Island speedboat tour", link: "/thailand/pattaya/coral-island-tour", linkText: "View Tour" },
+      { type: "cta", content: "Book a Coral Island speedboat tour", link: "/thailand/pattaya/coral-island-tour/", linkText: "View Tour" },
     ]}
     relatedLinks={[
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
-      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
-      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
-      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
     ]}
   />
 );

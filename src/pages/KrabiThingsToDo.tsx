@@ -61,7 +61,7 @@ const activities: Activity[] = [
     description: "Visit Krabi's famous 4 islands with snorkeling, lunch and longtail boat — without national park fees.",
     price: 2415,
     image: krabiLongtailBoats,
-    slug: "/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer",
+    slug: "/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer/",
     category: "4 Islands & Day Tours",
   },
   {
@@ -69,7 +69,7 @@ const activities: Activity[] = [
     description: "Krabi's iconic 4 islands tour with longtail boat, lunch, snorkeling and round-trip transfer.",
     price: 4589,
     image: krabiKayaks,
-    slug: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer",
+    slug: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/",
     category: "4 Islands & Day Tours",
   },
   {
@@ -77,7 +77,7 @@ const activities: Activity[] = [
     description: "Faster speedboat version of the famous 4 islands Krabi tour with lunch and transfer.",
     price: 4589,
     image: krabiTourBoat,
-    slug: "/thailand/krabi/4-island-tour-speedboat-with-transfer",
+    slug: "/thailand/krabi/4-island-tour-speedboat-with-transfer/",
     category: "4 Islands & Day Tours",
   },
 
@@ -87,7 +87,7 @@ const activities: Activity[] = [
     description: "Discover Hong Island's hidden lagoon and pristine beaches by longtail boat with lunch and transfer.",
     price: 3381,
     image: krabiIslandView,
-    slug: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer",
+    slug: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/",
     category: "Hong Islands Tours",
   },
   {
@@ -95,7 +95,7 @@ const activities: Activity[] = [
     description: "Speedboat version of the Hong Island tour — see more in less time with lunch and transfer.",
     price: 4347,
     image: krabiSpeedboat,
-    slug: "/thailand/krabi/hong-island-tour-speedboat-with-transfer",
+    slug: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/",
     category: "Hong Islands Tours",
   },
 
@@ -105,7 +105,7 @@ const activities: Activity[] = [
     description: "Romantic 7 islands sunset tour with snorkeling, BBQ dinner and plankton viewing.",
     price: 3743,
     image: krabiSailboat,
-    slug: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer",
+    slug: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer/",
     category: "7 Islands Sunset Tours",
   },
   {
@@ -113,7 +113,7 @@ const activities: Activity[] = [
     description: "Speedboat 7 islands sunset experience with BBQ dinner, snorkeling and transfer.",
     price: 4830,
     image: krabiBoatTour,
-    slug: "/thailand/krabi/7-islands-tour-speedboat-with-transfer",
+    slug: "/thailand/krabi/7-islands-tour-speedboat-with-transfer/",
     category: "7 Islands Sunset Tours",
   },
 
@@ -123,7 +123,7 @@ const activities: Activity[] = [
     description: "Day-trip to Phi Phi Island from Krabi by speedboat with lunch, snorkeling and transfer.",
     price: 4830,
     image: krabiBeachWoman,
-    slug: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer",
+    slug: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/",
     category: "Phi Phi & James Bond from Krabi",
   },
   {
@@ -131,7 +131,7 @@ const activities: Activity[] = [
     description: "Visit James Bond Island and Phang Nga Bay from Krabi by longtail boat with lunch.",
     price: 4951,
     image: krabiLongtailBoats,
-    slug: "/thailand/krabi/james-bond-island",
+    slug: "/thailand/krabi/james-bond-island/",
     category: "Phi Phi & James Bond from Krabi",
   },
 
@@ -141,7 +141,7 @@ const activities: Activity[] = [
     description: "Full-day tour of Krabi's Emerald Pool, natural hot springs and the Tiger Cave Temple with lunch.",
     price: 3140,
     image: krabiTempleWoman,
-    slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer",
+    slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/",
     category: "Nature & Adventure",
   },
 ];
@@ -249,8 +249,8 @@ const KrabiThingsToDo = () => {
 
   const breadcrumbItems = [
     { name: "Home", url: "/" },
-    { name: "Thailand", url: "/thailand" },
-    { name: "Krabi", url: "/thailand/krabi" },
+    { name: "Thailand", url: "/thailand/" },
+    { name: "Krabi", url: "/thailand/krabi/" },
     { name: "Things to Do", url: PAGE_PATH },
   ];
 
@@ -288,9 +288,9 @@ const KrabiThingsToDo = () => {
           <BreadcrumbList>
             <BreadcrumbItem><BreadcrumbLink asChild><Link to="/">Home</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand">Thailand</Link></BreadcrumbLink></BreadcrumbItem>
+            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/">Thailand</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/krabi">Krabi</Link></BreadcrumbLink></BreadcrumbItem>
+            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/krabi/">Krabi</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem><BreadcrumbPage>Things to Do</BreadcrumbPage></BreadcrumbItem>
           </BreadcrumbList>
@@ -313,7 +313,7 @@ const KrabiThingsToDo = () => {
           <div className="mt-6 flex flex-wrap gap-3">
             <Button size="lg" asChild><a href="#all-activities">Explore Activities</a></Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/thailand/krabi/budget-airport-transfers">Krabi Transfers</Link>
+              <Link to="/thailand/krabi/budget-airport-transfers/">Krabi Transfers</Link>
             </Button>
           </div>
         </div>
@@ -364,7 +364,7 @@ const KrabiThingsToDo = () => {
             <h2 className="text-2xl font-bold md:text-3xl">All Krabi Activities</h2>
             <p className="mt-1 text-muted-foreground">Browse every Krabi activity available on Yellodae.</p>
           </div>
-          <Button variant="outline" asChild><Link to="/thailand/krabi">View Krabi City Page</Link></Button>
+          <Button variant="outline" asChild><Link to="/thailand/krabi/">View Krabi City Page</Link></Button>
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {allSorted.slice(0, visibleAll).map((a) => <Card key={`all-${a.slug}`} a={a} />)}
@@ -386,10 +386,10 @@ const KrabiThingsToDo = () => {
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { title: "Krabi Airport (KBV) to Ao Nang Hotel Transfer", desc: "Private air-conditioned transfer from KBV airport to your Ao Nang hotel.", price: 1500, img: krabiBoatTour, slug: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer" },
-            { title: "Krabi Hotel to Krabi Airport (KBV) Transfer", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 1500, img: krabiTourBoat, slug: "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer" },
-            { title: "Krabi Hotel to Phuket Hotel Transfer", desc: "Private direct transfer from Krabi to Phuket for a smooth multi-city trip.", price: 5800, img: krabiSpeedboat, slug: "/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer" },
-            { title: "Krabi Airport to Phuket Hotel Transfer", desc: "Direct transfer from Krabi airport to your Phuket hotel — convenient and stress-free.", price: 6500, img: krabiSailboat, slug: "/thailand/krabi/krabi-airport-to-phuket-hotel-transfer" },
+            { title: "Krabi Airport (KBV) to Ao Nang Hotel Transfer", desc: "Private air-conditioned transfer from KBV airport to your Ao Nang hotel.", price: 1500, img: krabiBoatTour, slug: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer/" },
+            { title: "Krabi Hotel to Krabi Airport (KBV) Transfer", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 1500, img: krabiTourBoat, slug: "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer/" },
+            { title: "Krabi Hotel to Phuket Hotel Transfer", desc: "Private direct transfer from Krabi to Phuket for a smooth multi-city trip.", price: 5800, img: krabiSpeedboat, slug: "/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer/" },
+            { title: "Krabi Airport to Phuket Hotel Transfer", desc: "Direct transfer from Krabi airport to your Phuket hotel — convenient and stress-free.", price: 6500, img: krabiSailboat, slug: "/thailand/krabi/krabi-airport-to-phuket-hotel-transfer/" },
           ].map((t) => (
             <article key={t.slug} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
               <Link to={t.slug} className="block aspect-[4/3] overflow-hidden bg-muted">
@@ -431,7 +431,7 @@ const KrabiThingsToDo = () => {
               <li><Link to="/thailand/krabi/things-to-do#7-islands-sunset-tours" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">7 Islands Sunset Tours</Link></li>
               <li><Link to="/thailand/krabi/things-to-do#phi-phi-james-bond-from-krabi" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Phi Phi & James Bond Tours</Link></li>
               <li><Link to="/thailand/krabi/things-to-do#nature-adventure" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Nature & Adventure</Link></li>
-              <li><Link to="/thailand/krabi/budget-airport-transfers" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Krabi Airport & City Transfers</Link></li>
+              <li><Link to="/thailand/krabi/budget-airport-transfers/" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Krabi Airport & City Transfers</Link></li>
             </ul>
           </div>
 
@@ -439,16 +439,16 @@ const KrabiThingsToDo = () => {
             <h3 className="text-lg font-semibold">Popular Krabi Tours</h3>
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {[
-                { label: "4 Islands Longtail (No Park Fee)", to: "/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer" },
-                { label: "4 Islands Longtail Boat Tour", to: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer" },
-                { label: "4 Islands Speedboat Tour", to: "/thailand/krabi/4-island-tour-speedboat-with-transfer" },
-                { label: "Hong Island Longtail Tour", to: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer" },
-                { label: "Hong Island Speedboat Tour", to: "/thailand/krabi/hong-island-tour-speedboat-with-transfer" },
-                { label: "7 Islands Sunset BBQ Longtail", to: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer" },
-                { label: "7 Islands Sunset BBQ Speedboat", to: "/thailand/krabi/7-islands-tour-speedboat-with-transfer" },
-                { label: "Phi Phi Island from Krabi", to: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer" },
-                { label: "James Bond Island from Krabi", to: "/thailand/krabi/james-bond-island" },
-                { label: "Emerald Pool + Tiger Cave Temple", to: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer" },
+                { label: "4 Islands Longtail (No Park Fee)", to: "/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer/" },
+                { label: "4 Islands Longtail Boat Tour", to: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
+                { label: "4 Islands Speedboat Tour", to: "/thailand/krabi/4-island-tour-speedboat-with-transfer/" },
+                { label: "Hong Island Longtail Tour", to: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/" },
+                { label: "Hong Island Speedboat Tour", to: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
+                { label: "7 Islands Sunset BBQ Longtail", to: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer/" },
+                { label: "7 Islands Sunset BBQ Speedboat", to: "/thailand/krabi/7-islands-tour-speedboat-with-transfer/" },
+                { label: "Phi Phi Island from Krabi", to: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" },
+                { label: "James Bond Island from Krabi", to: "/thailand/krabi/james-bond-island/" },
+                { label: "Emerald Pool + Tiger Cave Temple", to: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">{l.label}</Link>
@@ -464,11 +464,11 @@ const KrabiThingsToDo = () => {
           <h2 className="text-xl font-semibold">Plan Your Krabi Trip</h2>
           <p className="mt-1 text-sm text-muted-foreground">Combine activities with reliable airport and city transfers.</p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Button asChild variant="default"><Link to="/thailand/krabi">Krabi City Guide</Link></Button>
-            <Button asChild variant="outline"><Link to="/thailand/krabi/budget-airport-transfers">Krabi Transfers</Link></Button>
-            <Button asChild variant="outline"><Link to="/thailand/phuket/things-to-do">Things to Do in Phuket</Link></Button>
-            <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do">Things to Do in Chiang Mai</Link></Button>
-            <Button asChild variant="outline"><Link to="/thailand">Thailand Destinations</Link></Button>
+            <Button asChild variant="default"><Link to="/thailand/krabi/">Krabi City Guide</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/krabi/budget-airport-transfers/">Krabi Transfers</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/phuket/things-to-do/">Things to Do in Phuket</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do/">Things to Do in Chiang Mai</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/">Thailand Destinations</Link></Button>
           </div>
         </div>
       </section>
