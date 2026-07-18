@@ -158,7 +158,7 @@ RedirectMatch 301 ^/singapore/airport-dropoff/?$ /singapore/singapore-airport-dr
 RedirectMatch 301 ^/bangkok-city-gems-gallery/?$ /thailand/bangkok/gems-gallery-bangkok-tickets
 RedirectMatch 301 ^/chao-phraya-princess-join/?$ /thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer
 RedirectMatch 301 ^/pattaya-nightlife-walking/?$ /thailand/pattaya/pattaya-nightlife-walking-tour
-RedirectMatch 301 ^/universal-studios-weekday/?$ /singapore/universal-studios-singapore-tickets-and-transfers
+RedirectMatch 301 ^/universal-studios-weekday/?$ /singapore/universal-studios-singapore-tickets-and-transfers/
 RedirectMatch 301 ^/universal-studios-weekend/?$ /singapore/universal-studios-singapore-weekend-tickets
 RedirectMatch 301 ^/thailand/phuket/transfers/?$ /thailand/phuket-airport-transfers/
 RedirectMatch 301 ^/thailand/pattaya/show-69/?$ /thailand/pattaya/69-show-pattaya-with-transfer
