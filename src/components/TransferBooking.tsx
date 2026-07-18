@@ -220,6 +220,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         path={location.pathname}
         type="product"
         image={galleryImages?.[0]?.src}
+        preloadImage={galleryImages?.[0]?.src}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Service",
@@ -306,17 +307,28 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         {/* Photo Gallery */}
         {galleryImages && galleryImages.length > 0 && (
           <div className="max-w-6xl mx-auto mb-6 md:mb-8">
-            {/* Mobile: single hero image */}
-            <div className="md:hidden overflow-hidden rounded-xl">
-              <img
-                src={galleryImages[0].src}
-                alt={galleryImages[0].alt}
-                loading="lazy"
-                className="w-full h-[240px] object-cover"
-              />
+            {/* Mobile & Tablet: 2-column collage (primary spans full width) */}
+            <div className="lg:hidden grid grid-cols-2 gap-3">
+              {galleryImages.slice(0, 5).map((img, idx) => (
+                <div
+                  key={idx}
+                  className={cn(
+                    "overflow-hidden rounded-xl aspect-[4/3]",
+                    idx === 0 ? "col-span-2" : "col-span-1"
+                  )}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    fetchPriority={idx === 0 ? "high" : "auto"}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              ))}
             </div>
-            {/* Desktop: up to 5-image collage */}
-            <div className="hidden md:grid grid-cols-4 grid-rows-2 gap-3 h-[420px]">
+            {/* Desktop: 4-column collage */}
+            <div className="hidden lg:grid grid-cols-4 grid-rows-2 gap-3 h-[420px]">
               {galleryImages.slice(0, 5).map((img, idx) => (
                 <div
                   key={idx}
@@ -328,7 +340,8 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                   <img
                     src={img.src}
                     alt={img.alt}
-                    loading="lazy"
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    fetchPriority={idx === 0 ? "high" : "auto"}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>

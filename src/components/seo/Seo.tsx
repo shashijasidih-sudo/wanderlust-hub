@@ -19,6 +19,8 @@ export interface SeoProps {
   origin?: string;
   /** When true, page should not be indexed. */
   noindex?: boolean;
+  /** Absolute image URL to preload as the LCP image. */
+  preloadImage?: string;
 }
 
 /**
@@ -35,6 +37,7 @@ const Seo = ({
   jsonLd,
   origin = DEFAULT_ORIGIN,
   noindex,
+  preloadImage,
 }: SeoProps) => {
   const pathname =
     path ??
@@ -55,6 +58,9 @@ const Seo = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
+      {preloadImage && (
+        <link rel="preload" as="image" href={preloadImage} fetchPriority="high" />
+      )}
       {noindex && <meta name="robots" content="noindex,nofollow" />}
 
       <meta property="og:title" content={title} />
