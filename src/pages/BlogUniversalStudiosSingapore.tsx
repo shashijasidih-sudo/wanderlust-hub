@@ -22,7 +22,7 @@ import riverSafari from "@/assets/singapore-river-safari.jpg";
 import sentosaIsland from "@/assets/singapore-sentosa-4d.jpg";
 
 const activityCards = [
-  { title: "Universal Studios Weekday Ticket", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-tickets-and-transfers" },
+  { title: "Universal Studios Weekday Ticket", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
   { title: "Universal Studios Weekend Ticket", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-weekend-tickets" },
   { title: "Adventure Cove Water Park", location: "Sentosa", image: adventureCove, slug: "/singapore/adventure-cove-waterpark-tickets" },
   { title: "Sentosa Cable Car", location: "Sentosa", image: cableCar, slug: "/singapore/sentosa-cable-car-tickets-and-transfers" },
@@ -145,7 +145,7 @@ const BlogUniversalStudiosSingapore = () => {
         "Combo deals with other Sentosa attractions",
         "Free cancellation up to 24 hours before",
       ]},
-      { type: "cta", content: "Book your Universal Studios Singapore tickets now at the lowest price!", link: "/singapore/universal-studios-singapore-tickets-and-transfers", linkText: "🎢 Book USS Tickets Now" },
+      { type: "cta", content: "Book your Universal Studios Singapore tickets now at the lowest price!", link: "/singapore/universal-studios-singapore-tickets-and-transfers/", linkText: "🎢 Book USS Tickets Now" },
     ]}
   >
     <ActivityCards />

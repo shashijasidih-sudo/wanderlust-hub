@@ -41,7 +41,7 @@ const activities = [
   { title: "Adventure Cove Water Park", price: 2656.5, image: singaporeAdventureCove, slug: "/singapore/adventure-cove-waterpark-tickets" },
   { title: "Singapore Flyer Ticket", price: 3381, image: singaporeFlyer, slug: "/singapore/singapore-flyer-tickets-and-transfers" },
   { title: "Singapore River Safari", price: 4468, image: singaporeRiverSafari, slug: "/singapore/river-wonders-singapore-tickets" },
-  { title: "Universal Studios Weekday Ticket", price: 6762, image: singaporeUniversalStudios, slug: "/singapore/universal-studios-singapore-tickets-and-transfers" },
+  { title: "Universal Studios Weekday Ticket", price: 6762, image: singaporeUniversalStudios, slug: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
   { title: "Universal Studios Weekend Ticket", price: 7872.9, image: singaporeUniversalStudios, slug: "/singapore/universal-studios-singapore-weekend-tickets" },
   { title: "Singapore Zoo + Tram Ride", price: 3743.25, image: singaporeZoo, slug: "/singapore/singapore-zoo-tickets" },
   { title: "Rainforest Wild Asia with Transfer", price: 3441.375, image: singaporeZoo, slug: "/singapore/rainforest-wild-asia-tickets" },
@@ -111,7 +111,7 @@ const Singapore = () => {
         <QuickBookWidget
           title="⚡ Quick Book Top Singapore Activities"
           items={[
-            { title: "Universal Studios Weekday", price: 6762, image: singaporeUniversalStudios, slug: "/singapore/universal-studios-singapore-tickets-and-transfers", rating: 4.9, badge: "Bestseller" },
+            { title: "Universal Studios Weekday", price: 6762, image: singaporeUniversalStudios, slug: "/singapore/universal-studios-singapore-tickets-and-transfers/", rating: 4.9, badge: "Bestseller" },
             { title: "Gardens by the Bay", price: 2660, image: singaporeGardensBay, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers", rating: 4.8, badge: "Iconic" },
             { title: "Night Safari Singapore", price: 4470, image: singaporeNightSafari, slug: "/singapore/night-safari-singapore-tickets-and-transfers", rating: 4.7 },
             { title: "Singapore City Tour", price: 1815, image: singaporeCityTour, slug: "/singapore/singapore-city-tour", rating: 4.6 },

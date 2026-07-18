@@ -84,7 +84,7 @@ export const TOUR_ROUTES: Record<string, string> = {
   "adventure-cove": "/singapore/adventure-cove-waterpark-tickets",
   "singapore-flyer": "/singapore/singapore-flyer-tickets-and-transfers",
   "river-safari": "/singapore/river-wonders-singapore-tickets",
-  "universal-studios-weekday": "/singapore/universal-studios-singapore-tickets-and-transfers",
+  "universal-studios-weekday": "/singapore/universal-studios-singapore-tickets-and-transfers/",
   "universal-studios-weekend": "/singapore/universal-studios-singapore-weekend-tickets",
   "singapore-zoo": "/singapore/singapore-zoo-tickets",
   "rainforest-wild-asia": "/singapore/rainforest-wild-asia-tickets",

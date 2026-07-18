@@ -23,7 +23,7 @@ import bigBus from "@/assets/singapore-big-bus.jpg";
 
 const activityCards = [
   { title: "Gardens by the Bay Tickets", location: "Marina Bay", image: gardensBay, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
-  { title: "Universal Studios Weekday", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-tickets-and-transfers" },
+  { title: "Universal Studios Weekday", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
   { title: "Night Safari with Dinner", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-dinner" },
   { title: "Singapore City Tour", location: "Singapore", image: cityTour, slug: "/singapore/singapore-city-tour" },
   { title: "Sentosa Cable Car Ride", location: "Sentosa", image: cableCar, slug: "/singapore/sentosa-cable-car-tickets-and-transfers" },
