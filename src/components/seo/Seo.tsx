@@ -59,7 +59,7 @@ const Seo = ({
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
       {preloadImage && (
-        <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />
+        <link rel="preload" as="image" href={preloadImage} fetchPriority="high" />
       )}
       {noindex && <meta name="robots" content="noindex,nofollow" />}
 
