@@ -18,7 +18,7 @@ const Blog = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "Comparison Guides", link: "/singapore/destination-guides#comparison" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "Want to see Singapore from up high but stuck between the iconic Singapore Flyer and the newer open-air SkyHelix Sentosa? Both deliver stunning views — but the actual experience is very different. This 2026 guide compares both attractions on views, comfort, photos, cost and overall value." },
       { type: "heading", content: "Quick Overview" },
@@ -43,7 +43,7 @@ const Blog = () => (
       { type: "heading", content: "Ticket Price (2026 INR)" },
       { type: "list", items: ["Singapore Flyer — ₹2,400–₹3,200","SkyHelix Sentosa — ₹1,400–₹2,000","Sunset / dining add-ons available on Flyer (₹6,500+ for cocktail capsule)"] },
       { type: "tip-box", content: "Best time on either ride — 30 minutes before sunset for golden hour + night skyline in the same visit." },
-      { type: "cta", content: "Book Singapore Flyer tickets", link: "/singapore/things-to-do", linkText: "See Singapore Attractions" },
+      { type: "cta", content: "Book Singapore Flyer tickets", link: "/singapore/things-to-do/", linkText: "See Singapore Attractions" },
       { type: "heading", content: "Pros & Cons" },
       { type: "subheading", content: "Singapore Flyer" },
       { type: "list", items: ["✔ Iconic Marina Bay views","✔ Comfortable, premium capsule","✔ Great for all ages","❌ Higher cost","❌ Slower experience"] },
@@ -56,16 +56,16 @@ const Blog = () => (
       { type: "paragraph", content: "For most first-time Indian travelers, Singapore Flyer is the better choice — it's the picture-perfect skyline ride you'll want photos of. SkyHelix is a fun bonus if you're spending a full day in Sentosa." },
     ]}
     relatedActivities={[
-      { title: "Singapore Flyer Tickets", link: "/singapore/things-to-do" },
-      { title: "SkyHelix Sentosa Tickets", link: "/singapore/things-to-do" },
-      { title: "Marina Bay Sands SkyPark", link: "/singapore/things-to-do" },
-      { title: "Sentosa Cable Car Sky Pass", link: "/singapore/things-to-do" },
+      { title: "Singapore Flyer Tickets", link: "/singapore/things-to-do/" },
+      { title: "SkyHelix Sentosa Tickets", link: "/singapore/things-to-do/" },
+      { title: "Marina Bay Sands SkyPark", link: "/singapore/things-to-do/" },
+      { title: "Sentosa Cable Car Sky Pass", link: "/singapore/things-to-do/" },
     ]}
     relatedLinks={[
-      { title: "Singapore Flyer Observation Wheel Experience", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel" },
-      { title: "Sentosa Cable Car Ride Guide", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line" },
-      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide" },
-      { title: "Singapore River Cruise Experience", link: "/singapore/destination-guides/activity/singapore-river-cruise-guide" },
+      { title: "Singapore Flyer Observation Wheel Experience", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel/" },
+      { title: "Sentosa Cable Car Ride Guide", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line/" },
+      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide/" },
+      { title: "Singapore River Cruise Experience", link: "/singapore/destination-guides/activity/singapore-river-cruise-guide/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

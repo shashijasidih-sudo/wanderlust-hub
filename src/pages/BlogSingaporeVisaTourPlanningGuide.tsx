@@ -18,7 +18,7 @@ const Blog = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "For Indian Travelers", link: "/singapore/destination-guides#indian-audience" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "Planning a Singapore trip from India? You'll need a tourist e-Visa, the right paperwork and a solid 4–5 day plan. This 2026 guide covers everything Indian travelers need — visa documents, fees, processing time, best time to visit, where to stay, and a ready-to-use itinerary." },
       { type: "heading", content: "Singapore Visa for Indians — The Basics" },
@@ -34,7 +34,7 @@ const Blog = () => (
       { type: "list", items: ["February – April: pleasant weather, less rain — best overall","July – September: Great Singapore Sale + festivals","November – January: Christmas lights and Marina Bay countdown","Avoid: Heaviest monsoon spells in late Nov–Dec"] },
       { type: "heading", content: "Where to Stay in Singapore" },
       { type: "list", items: ["Little India — budget-friendly, Indian food everywhere, MRT-connected","Bugis — mid-range, central, lively street markets","Orchard Road — shopping district, mid-to-luxury hotels","Marina Bay — luxury, iconic views","Sentosa — resort stays, ideal for families with USS days"] },
-      { type: "cta", content: "Pre-book your Changi airport transfer to start the trip stress-free", link: "/blog/airport-transfer-booking-singapore", linkText: "Book Airport Transfer" },
+      { type: "cta", content: "Pre-book your Changi airport transfer to start the trip stress-free", link: "/blog/airport-transfer-booking-singapore/", linkText: "Book Airport Transfer" },
       { type: "heading", content: "Sample 4-Day Singapore Plan (Perfect for First-Timers)" },
       { type: "list", items: ["Day 1: Arrival + City Tour + Marina Bay + Gardens by the Bay light show","Day 2: Universal Studios Singapore (full day at Sentosa)","Day 3: Singapore Zoo + Night Safari","Day 4: Sentosa Cable Car + Shopping (Orchard / Mustafa)"] },
       { type: "mid-activities", destination: "singapore", heading: "Must-Book Singapore Experiences" },
@@ -48,20 +48,20 @@ const Blog = () => (
       { type: "list", items: ["Mustafa Centre — best for electronics, perfumes, gifts (24×7)","Orchard Road — luxury brands","Bugis Street — budget souvenirs","Chinatown — local crafts and tea"] },
       { type: "heading", content: "SIM & Connectivity" },
       { type: "list", items: ["Pick up a Singtel / Starhub tourist SIM at Changi","7-day prepaid plans from ~SGD 12 with unlimited data","Free Wi-Fi at MRT stations and malls"] },
-      { type: "cta", content: "Browse curated Singapore tours and combos with INR pricing", link: "/singapore/things-to-do", linkText: "See Singapore Tours" },
+      { type: "cta", content: "Browse curated Singapore tours and combos with INR pricing", link: "/singapore/things-to-do/", linkText: "See Singapore Tours" },
       { type: "heading", content: "Final Word" },
       { type: "paragraph", content: "Singapore's visa process is straightforward for Indian travelers — apply 3–4 weeks early through an authorised agent, pre-book your major attractions, and stay near MRT lines. With this plan, you'll cover all the highlights of Singapore in 4 well-paced days." },
     ]}
     relatedActivities={[
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour" },
+      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
       { title: "Universal Studios Singapore", link: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-      { title: "Singapore Cable Car & Sentosa", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
+      { title: "Singapore Cable Car & Sentosa", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
     ]}
     relatedLinks={[
-      { title: "Singapore Trip Cost from India with Activities", link: "/singapore/destination-guides/indian-audience/singapore-trip-cost-from-india-with-activities" },
-      { title: "Is Singapore Expensive for Indian Travelers?", link: "/singapore/destination-guides/indian-audience/is-singapore-expensive-for-indian-travelers" },
-      { title: "Best Singapore Attractions for Indian Families", link: "/singapore/destination-guides/indian-audience/best-singapore-attractions-for-indian-families" },
-      { title: "Singapore City Tour Shared Transfer Itinerary", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer" },
+      { title: "Singapore Trip Cost from India with Activities", link: "/singapore/destination-guides/indian-audience/singapore-trip-cost-from-india-with-activities/" },
+      { title: "Is Singapore Expensive for Indian Travelers?", link: "/singapore/destination-guides/indian-audience/is-singapore-expensive-for-indian-travelers/" },
+      { title: "Best Singapore Attractions for Indian Families", link: "/singapore/destination-guides/indian-audience/best-singapore-attractions-for-indian-families/" },
+      { title: "Singapore City Tour Shared Transfer Itinerary", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

@@ -48,7 +48,7 @@ export const japanBlogs: JapanBlogEntry[] = [
     image: imgFuji,
     date: "May 10, 2026",
     readTime: "10 min read",
-    link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo",
+    link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo/",
   },
   {
     title: "Tokyo City Tour Guide: Top Attractions, Hidden Gems & Local Experiences You Can't Miss",
@@ -58,7 +58,7 @@ export const japanBlogs: JapanBlogEntry[] = [
     image: imgTokyo,
     date: "May 10, 2026",
     readTime: "9 min read",
-    link: "/japan/destination-guides/activity/tokyo-city-tour-guide",
+    link: "/japan/destination-guides/activity/tokyo-city-tour-guide/",
   },
   {
     title: "Kyoto Temple Tour Guide: Fushimi Inari, Arashiyama & Golden Pavilion Explained",
@@ -68,7 +68,7 @@ export const japanBlogs: JapanBlogEntry[] = [
     image: imgKyoto,
     date: "May 10, 2026",
     readTime: "9 min read",
-    link: "/japan/destination-guides/activity/kyoto-temple-tour-guide",
+    link: "/japan/destination-guides/activity/kyoto-temple-tour-guide/",
   },
   {
     title: "Japan Trip Cost from India (2026): Full Budget Breakdown with Flights, Hotels & Tours",
@@ -78,7 +78,7 @@ export const japanBlogs: JapanBlogEntry[] = [
     image: imgTokyo,
     date: "May 10, 2026",
     readTime: "11 min read",
-    link: "/japan/destination-guides/price-cost/japan-trip-cost-from-india",
+    link: "/japan/destination-guides/price-cost/japan-trip-cost-from-india/",
   },
   {
     title: "Mount Fuji Tour Cost from Tokyo: Budget vs Premium Options Compared (2026)",
@@ -88,7 +88,7 @@ export const japanBlogs: JapanBlogEntry[] = [
     image: imgFuji,
     date: "May 10, 2026",
     readTime: "9 min read",
-    link: "/japan/destination-guides/price-cost/mount-fuji-tour-cost-from-tokyo",
+    link: "/japan/destination-guides/price-cost/mount-fuji-tour-cost-from-tokyo/",
   },
   {
     title: "Tokyo Disneyland Ticket Price Guide: Latest Costs, Offers & Money-Saving Tips (2026)",
@@ -98,7 +98,7 @@ export const japanBlogs: JapanBlogEntry[] = [
     image: imgDisney,
     date: "May 10, 2026",
     readTime: "9 min read",
-    link: "/japan/destination-guides/price-cost/tokyo-disneyland-ticket-price-guide",
+    link: "/japan/destination-guides/price-cost/tokyo-disneyland-ticket-price-guide/",
   },
 ];
 

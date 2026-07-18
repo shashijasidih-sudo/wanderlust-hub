@@ -16,7 +16,7 @@ const Blog = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Comparisons", link: "/thailand/krabi/destination-guides#comparison" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Booking an island tour in Krabi and stuck between a traditional longtail boat and a modern speedboat? Both are popular — but they offer very different experiences in speed, comfort, cost and reach. This 2026 guide breaks down everything you need to know before you book." },
       { type: "heading", content: "Quick Verdict (Fast Decision)" },
@@ -37,7 +37,7 @@ const Blog = () => (
       { type: "list", items: ["Longtail — safe in calm waters, not ideal in rough seas","Speedboat — better in rough waters with professional crew","Verdict — Speedboat is safer in rough conditions"] },
       { type: "heading", content: "8. Cost (2026, INR)" },
       { type: "list", items: ["Longtail tour — ₹1,200–₹2,000","Speedboat tour — ₹2,500–₹4,500","Private longtail — ₹3,500–₹5,000","Private speedboat — ₹15,000+"] },
-      { type: "cta", content: "Book the 4 Island Tour by longtail boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer", linkText: "Book Longtail Tour" },
+      { type: "cta", content: "Book the 4 Island Tour by longtail boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/", linkText: "Book Longtail Tour" },
       { type: "heading", content: "9. Best Tours by Boat Type" },
       { type: "list", items: ["Longtail best for — 4 Island Tour, Railay short hops, sunset cruises","Speedboat best for — Phi Phi Islands, Hong Island, full-day combos"] },
       { type: "heading", content: "10. Group Size & Crowd" },
@@ -47,22 +47,22 @@ const Blog = () => (
       { type: "heading", content: "12. Who Should Choose Which?" },
       { type: "list", items: ["Families with kids → Speedboat","Couples → Both work (longtail for romance, speedboat for comfort)","First-time travelers → Speedboat (covers more)","Budget travelers / authentic seekers → Longtail","Photographers → Longtail for iconic shots"] },
       { type: "tip-box", content: "Best strategy — do one longtail tour (4 Island) and one speedboat tour (Phi Phi or Hong) to experience the best of both worlds." },
-      { type: "cta", content: "Book Hong Island Tour by speedboat", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer", linkText: "Book Speedboat Tour" },
+      { type: "cta", content: "Book Hong Island Tour by speedboat", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/", linkText: "Book Speedboat Tour" },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Longtail wins for budget, culture and short scenic trips. Speedboat wins for comfort, speed and reaching farther islands. For most Indian travelers in 2026 — combine both: a longtail for the 4 Island Tour and a speedboat for Phi Phi or Hong Island. That's the perfect Krabi island-hopping mix." },
-      { type: "cta", content: "Book your Krabi airport transfer", link: "/thailand/krabi/budget-airport-transfers", linkText: "Book Krabi Transfer" },
+      { type: "cta", content: "Book your Krabi airport transfer", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
-      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer" },
-      { title: "4 Island Tour by Speedboat", link: "/thailand/krabi/4-island-tour-speedboat-with-transfer" },
-      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer" },
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer" },
+      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
+      { title: "4 Island Tour by Speedboat", link: "/thailand/krabi/4-island-tour-speedboat-with-transfer/" },
+      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" },
     ]}
     relatedLinks={[
-      { title: "Is 4 Island Tour in Krabi Worth It?", link: "/thailand/krabi/destination-guides/micro/is-4-island-tour-krabi-worth-it" },
-      { title: "Krabi Speedboat vs Ferry: Which is Faster?", link: "/thailand/krabi/destination-guides/transfer/krabi-speedboat-vs-ferry-which-is-faster" },
-      { title: "4 Island vs Hong Island Tour Krabi", link: "/thailand/krabi/destination-guides/comparison/4-island-vs-hong-island-tour-krabi" },
-      { title: "Best Time for Island Hopping in Krabi", link: "/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi" },
+      { title: "Is 4 Island Tour in Krabi Worth It?", link: "/thailand/krabi/destination-guides/micro/is-4-island-tour-krabi-worth-it/" },
+      { title: "Krabi Speedboat vs Ferry: Which is Faster?", link: "/thailand/krabi/destination-guides/transfer/krabi-speedboat-vs-ferry-which-is-faster/" },
+      { title: "4 Island vs Hong Island Tour Krabi", link: "/thailand/krabi/destination-guides/comparison/4-island-vs-hong-island-tour-krabi/" },
+      { title: "Best Time for Island Hopping in Krabi", link: "/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/comparison/longtail-vs-speedboat-in-krabi")}
   />

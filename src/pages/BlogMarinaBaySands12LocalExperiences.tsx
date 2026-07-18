@@ -37,8 +37,8 @@ const BlogMarinaBaySands12LocalExperiences = () => (
     subCategory={{ label: "Activity Guides", link: "/singapore/destination-guides#activity" }}
     cityHub={{
       city: "Singapore",
-      thingsToDoLink: "/singapore/things-to-do",
-      transfersLink: "/singapore/singapore-airport-pickup",
+      thingsToDoLink: "/singapore/things-to-do/",
+      transfersLink: "/singapore/singapore-airport-pickup/",
     }}
     bodyClassName="[&_p]:!text-black [&_li]:!text-black [&_li_span]:!text-black [&_td]:!text-black [&_th]:!text-black"
     sections={[
@@ -87,7 +87,7 @@ const BlogMarinaBaySands12LocalExperiences = () => (
       { type: "paragraph", content: "If you're looking for a closer encounter, step off the tram and explore the walking trails. These paths take you through quieter sections of the park where you'll discover fascinating nocturnal animals such as fishing cats, civets, clouded leopards, flying foxes, and other elusive wildlife that are difficult to observe during the day." },
       { type: "paragraph", content: "Another crowd favourite is the Creatures of the Night Show, where trainers demonstrate the remarkable abilities of nocturnal animals through engaging educational presentations. It's entertaining for children and adults alike, while also highlighting wildlife conservation efforts." },
       { type: "tip-box", content: "Insider Tip: Arrive about 30–45 minutes before your booked entry time. This gives you enough time to explore the entrance area, enjoy the ambience, and secure better seats for the show before boarding the tram. Weekends and holidays are particularly busy, so booking tickets in advance is highly recommended." },
-      { type: "cta", content: "Book Night Safari tickets with transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers", linkText: "Book Night Safari" },
+      { type: "cta", content: "Book Night Safari tickets with transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers/", linkText: "Book Night Safari" },
       { type: "paragraph", content: INTERNAL_LINK_BLOCK },
 
       { type: "heading", content: "4. Wander Through Kampong Glam – Singapore's Creative Heart" },
@@ -271,27 +271,27 @@ const BlogMarinaBaySands12LocalExperiences = () => (
       { type: "paragraph", content: "Singapore is one of the easiest destinations in the world to explore, but smart planning makes an enormous difference. Booking your attractions in advance, using combo passes, carrying the right payment methods, and mixing iconic sights with hidden local experiences will help you enjoy more while spending less." },
       { type: "paragraph", content: "After all, the best Singapore itinerary isn't the one with the longest checklist — it's the one filled with unforgettable memories." },
 
-      { type: "cta", content: "Plan your Singapore trip with Yellodae", link: "/singapore/things-to-do", linkText: "Explore Singapore Activities" },
+      { type: "cta", content: "Plan your Singapore trip with Yellodae", link: "/singapore/things-to-do/", linkText: "Explore Singapore Activities" },
     ]}
     relatedActivities={[
-      { title: "Singapore River Cruise", link: "/singapore/singapore-river-cruise-tickets-and-transfers" },
-      { title: "Night Safari Singapore", link: "/singapore/night-safari-singapore-tickets-and-transfers" },
-      { title: "Gardens by the Bay", link: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
-      { title: "Sentosa Cable Car", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
+      { title: "Singapore River Cruise", link: "/singapore/singapore-river-cruise-tickets-and-transfers/" },
+      { title: "Night Safari Singapore", link: "/singapore/night-safari-singapore-tickets-and-transfers/" },
+      { title: "Gardens by the Bay", link: "/singapore/gardens-by-the-bay-tickets-and-transfers/" },
+      { title: "Sentosa Cable Car", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
       { title: "Universal Studios Singapore", link: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-      { title: "Singapore Flyer", link: "/singapore/singapore-flyer-tickets-and-transfers" },
-      { title: "Singapore Airport Pickup", link: "/singapore/singapore-airport-pickup" },
-      { title: "Singapore Airport Drop-off", link: "/singapore/singapore-airport-dropoff" },
+      { title: "Singapore Flyer", link: "/singapore/singapore-flyer-tickets-and-transfers/" },
+      { title: "Singapore Airport Pickup", link: "/singapore/singapore-airport-pickup/" },
+      { title: "Singapore Airport Drop-off", link: "/singapore/singapore-airport-dropoff/" },
     ]}
     relatedLinks={[
-      { title: "Singapore River Cruise Experience Guide", link: "/singapore/destination-guides/activity/singapore-river-cruise-guide" },
-      { title: "Night Safari Singapore Experience Guide", link: "/singapore/destination-guides/activity/night-safari-singapore-guide" },
-      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide" },
-      { title: "Sentosa Cable Car (Mount Faber Line) Guide", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line" },
-      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide" },
-      { title: "Singapore Flyer Observation Wheel Guide", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel" },
-      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer" },
-      { title: "Singapore Trip Cost from India (2026)", link: "/singapore/destination-guides/indian-audience/singapore-trip-cost-from-india-with-activities" },
+      { title: "Singapore River Cruise Experience Guide", link: "/singapore/destination-guides/activity/singapore-river-cruise-guide/" },
+      { title: "Night Safari Singapore Experience Guide", link: "/singapore/destination-guides/activity/night-safari-singapore-guide/" },
+      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide/" },
+      { title: "Sentosa Cable Car (Mount Faber Line) Guide", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line/" },
+      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide/" },
+      { title: "Singapore Flyer Observation Wheel Guide", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel/" },
+      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer/" },
+      { title: "Singapore Trip Cost from India (2026)", link: "/singapore/destination-guides/indian-audience/singapore-trip-cost-from-india-with-activities/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

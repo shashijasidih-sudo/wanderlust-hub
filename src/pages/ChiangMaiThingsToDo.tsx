@@ -48,7 +48,7 @@ const activities: Activity[] = [
       "Half-day private temple tour covering Doi Suthep, Wat Chedi Luang and the hidden Wat Pha Lat with hotel transfers.",
     price: 3900,
     image: doiSuthep,
-    slug: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer",
+    slug: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/",
   },
   {
     title: "Doi Inthanon National Park Full Day Tour from Chiang Mai",
@@ -56,7 +56,7 @@ const activities: Activity[] = [
       "Full-day tour to Thailand's highest peak with twin pagodas, Karen tribal village and waterfalls.",
     price: 4900,
     image: inthanon,
-    slug: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour",
+    slug: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/",
   },
   {
     title: "Chiang Rai Day Trip: Golden Triangle with Long Neck Tribe",
@@ -64,7 +64,7 @@ const activities: Activity[] = [
       "Visit the White Temple, Black House, Golden Triangle and Long Neck Karen village on a full-day Chiang Rai trip.",
     price: 6000,
     image: goldenTriangle,
-    slug: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip",
+    slug: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/",
   },
 ];
 
@@ -134,8 +134,8 @@ const ChiangMaiThingsToDo = () => {
 
   const breadcrumbItems = [
     { name: "Home", url: "/" },
-    { name: "Thailand", url: "/thailand" },
-    { name: "Chiang Mai", url: "/thailand/chiang-mai" },
+    { name: "Thailand", url: "/thailand/" },
+    { name: "Chiang Mai", url: "/thailand/chiang-mai/" },
     { name: "Things to Do", url: PAGE_PATH },
   ];
 
@@ -178,9 +178,9 @@ const ChiangMaiThingsToDo = () => {
           <BreadcrumbList>
             <BreadcrumbItem><BreadcrumbLink asChild><Link to="/">Home</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand">Thailand</Link></BreadcrumbLink></BreadcrumbItem>
+            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/">Thailand</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/chiang-mai">Chiang Mai</Link></BreadcrumbLink></BreadcrumbItem>
+            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/chiang-mai/">Chiang Mai</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem><BreadcrumbPage>Things to Do</BreadcrumbPage></BreadcrumbItem>
           </BreadcrumbList>
@@ -208,7 +208,7 @@ const ChiangMaiThingsToDo = () => {
           <div className="mt-6 flex flex-wrap gap-3">
             <Button size="lg" asChild><a href="#all-activities">Explore Activities</a></Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/thailand/chiang-mai">Chiang Mai City Page</Link>
+              <Link to="/thailand/chiang-mai/">Chiang Mai City Page</Link>
             </Button>
           </div>
         </div>
@@ -244,7 +244,7 @@ const ChiangMaiThingsToDo = () => {
             <h2 className="text-2xl font-bold md:text-3xl">All Chiang Mai Activities</h2>
             <p className="mt-1 text-muted-foreground">Browse every Chiang Mai tour available on Yellodae.</p>
           </div>
-          <Button variant="outline" asChild><Link to="/thailand/chiang-mai">View Chiang Mai City Page</Link></Button>
+          <Button variant="outline" asChild><Link to="/thailand/chiang-mai/">View Chiang Mai City Page</Link></Button>
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {sortedActivities.map((a) => <Card key={a.slug} a={a} />)}
@@ -267,10 +267,10 @@ const ChiangMaiThingsToDo = () => {
                 Combine Chiang Mai tours with reliable airport transfers and explore other Thailand destinations.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
-                <Button asChild variant="default"><Link to="/thailand/chiang-mai">Chiang Mai City Guide</Link></Button>
-                <Button asChild variant="outline"><Link to="/thailand/bangkok/things-to-do">Things to Do in Bangkok</Link></Button>
-                <Button asChild variant="outline"><Link to="/thailand/phuket/things-to-do">Things to Do in Phuket</Link></Button>
-                <Button asChild variant="outline"><Link to="/thailand">Thailand Destinations</Link></Button>
+                <Button asChild variant="default"><Link to="/thailand/chiang-mai/">Chiang Mai City Guide</Link></Button>
+                <Button asChild variant="outline"><Link to="/thailand/bangkok/things-to-do/">Things to Do in Bangkok</Link></Button>
+                <Button asChild variant="outline"><Link to="/thailand/phuket/things-to-do/">Things to Do in Phuket</Link></Button>
+                <Button asChild variant="outline"><Link to="/thailand/">Thailand Destinations</Link></Button>
               </div>
             </div>
           </div>

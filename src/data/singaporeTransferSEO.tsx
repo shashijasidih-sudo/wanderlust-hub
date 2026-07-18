@@ -81,8 +81,8 @@ type SEOEntry = {
 export const singaporeTransferSEO: Record<string, SEOEntry> = {
   // 1
   "singapore-airport-pickup": {
-    newSlug: "/singapore/singapore-airport-pickup",
-    oldSlug: "/singapore/airport-pickup",
+    newSlug: "/singapore/singapore-airport-pickup/",
+    oldSlug: "/singapore/airport-pickup/",
     gallery: airportPickupGallery,
     seoContent: (
       <>
@@ -147,8 +147,8 @@ export const singaporeTransferSEO: Record<string, SEOEntry> = {
 
   // 2
   "singapore-airport-dropoff": {
-    newSlug: "/singapore/singapore-airport-dropoff",
-    oldSlug: "/singapore/airport-dropoff",
+    newSlug: "/singapore/singapore-airport-dropoff/",
+    oldSlug: "/singapore/airport-dropoff/",
     gallery: airportDropoffGallery,
     seoContent: (
       <>
@@ -206,8 +206,8 @@ export const singaporeTransferSEO: Record<string, SEOEntry> = {
 
   // 3
   "singapore-airport-night-pickup": {
-    newSlug: "/singapore/singapore-airport-night-pickup",
-    oldSlug: "/singapore/airport-night-pickup",
+    newSlug: "/singapore/singapore-airport-night-pickup/",
+    oldSlug: "/singapore/airport-night-pickup/",
     gallery: airportNightPickupGallery,
     seoContent: (
       <>

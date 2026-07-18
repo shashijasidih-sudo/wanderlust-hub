@@ -25,8 +25,8 @@ const BlogPhuketAirportToPatongTransfer = () => (
     subCategory={{ label: "Transfer Guides", link: "/thailand/phuket/destination-guides#transfer" }}
     cityHub={{
       city: "Phuket",
-      thingsToDoLink: "/thailand/phuket/things-to-do",
-      transfersLink: "/thailand/phuket/transfers",
+      thingsToDoLink: "/thailand/phuket/things-to-do/",
+      transfersLink: "/thailand/phuket/transfers/",
     }}
     sections={[
       { type: "paragraph", content: "Just landed at Phuket International Airport (HKT) and wondering how to reach Patong Beach without overpaying or getting stuck waiting? Patong is the most popular tourist hub in Phuket, but it sits about 40 km from the airport — and choosing the wrong transfer can mean inflated prices, long waits and a stressful start to your holiday. This 2026 guide breaks down every option (private transfer, shared shuttle, airport taxi), real costs in INR, travel time and which one suits your group." },
@@ -47,7 +47,7 @@ const BlogPhuketAirportToPatongTransfer = () => (
       ]},
       { type: "tip-box", content: "Pre-booking your transfer online is almost always cheaper and safer than negotiating with random taxis at the arrivals gate." },
 
-      { type: "cta", content: "Skip the queues — pre-book your Phuket airport pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup", linkText: "Book HKT Airport Pickup" },
+      { type: "cta", content: "Skip the queues — pre-book your Phuket airport pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup/", linkText: "Book HKT Airport Pickup" },
 
       { type: "heading", content: "1. Private Transfer (Best Overall)" },
       { type: "paragraph", content: "A dedicated air-conditioned car or van that picks you up directly from arrivals and drops you at your Patong hotel — no stops, no waiting." },
@@ -89,7 +89,7 @@ const BlogPhuketAirportToPatongTransfer = () => (
         "Late-night arrivals → Private transfer (always)",
       ]},
 
-      { type: "cta", content: "Heading back? Book your Phuket airport drop-off in advance", link: "/thailand/phuket/phuket-hkt-airport-dropoff", linkText: "Book HKT Airport Drop-off" },
+      { type: "cta", content: "Heading back? Book your Phuket airport drop-off in advance", link: "/thailand/phuket/phuket-hkt-airport-dropoff/", linkText: "Book HKT Airport Drop-off" },
 
       { type: "heading", content: "Booking Options" },
       { type: "list", items: [
@@ -153,15 +153,15 @@ const BlogPhuketAirportToPatongTransfer = () => (
       { type: "paragraph", content: "Getting from Phuket Airport to Patong is easy, flexible and affordable in 2026. Pick a private transfer for comfort and zero stress, or a shared transfer if you're solo and want to save. Whatever you do — pre-book online and skip the airport-counter premiums." },
     ]}
     relatedActivities={[
-      { title: "Phuket Airport HKT Pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup" },
-      { title: "Phuket Airport HKT Dropoff", link: "/thailand/phuket/phuket-hkt-airport-dropoff" },
-      { title: "Phuket City Hourly Rental", link: "/thailand/phuket/phuket-city-hourly-rental" },
+      { title: "Phuket Airport HKT Pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup/" },
+      { title: "Phuket Airport HKT Dropoff", link: "/thailand/phuket/phuket-hkt-airport-dropoff/" },
+      { title: "Phuket City Hourly Rental", link: "/thailand/phuket/phuket-city-hourly-rental/" },
     ]}
     relatedLinks={[
-      { title: "Shared vs Private Airport Transfer in Phuket", link: "/thailand/phuket/destination-guides/comparison/shared-vs-private-airport-transfer-phuket" },
-      { title: "Phuket Private vs Group Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-private-vs-group-tour" },
-      { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" },
-      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
+      { title: "Shared vs Private Airport Transfer in Phuket", link: "/thailand/phuket/destination-guides/comparison/shared-vs-private-airport-transfer-phuket/" },
+      { title: "Phuket Private vs Group Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-private-vs-group-tour/" },
+      { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary/" },
+      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong")}
   />

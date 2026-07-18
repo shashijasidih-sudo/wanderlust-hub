@@ -27,7 +27,7 @@ const UserProfile = () => {
   useEffect(() => {
     if (isLoading) return;
     if (!user) {
-      navigate("/auth");
+      navigate("/auth/");
       return;
     }
     setFullName(user.full_name || "");
@@ -115,7 +115,7 @@ const UserProfile = () => {
                 <span className="text-sm font-medium text-primary">Profile</span>
               </CardContent>
             </Card>
-            <Link to="/user-bookings">
+            <Link to="/user-bookings/">
               <Card className="hover:bg-muted/50 transition-colors cursor-pointer">
                 <CardContent className="p-4 flex flex-col items-center text-center gap-2">
                   <CalendarDays className="h-6 w-6 text-muted-foreground" />
@@ -123,7 +123,7 @@ const UserProfile = () => {
                 </CardContent>
               </Card>
             </Link>
-            <Link to="/settings">
+            <Link to="/settings/">
               <Card className="hover:bg-muted/50 transition-colors cursor-pointer">
                 <CardContent className="p-4 flex flex-col items-center text-center gap-2">
                   <Settings className="h-6 w-6 text-muted-foreground" />

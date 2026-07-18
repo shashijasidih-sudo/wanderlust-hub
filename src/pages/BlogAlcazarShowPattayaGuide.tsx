@@ -23,14 +23,14 @@ const BlogAlcazarShowPattayaGuide = () => (
     subCategory={{ label: "Activity Guides", link: "/thailand/pattaya/destination-guides#activity" }}
     cityHub={{
       city: "Pattaya",
-      thingsToDoLink: "/thailand/pattaya/things-to-do",
-      transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer",
+      thingsToDoLink: "/thailand/pattaya/things-to-do/",
+      transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer/",
     }}
     relatedActivities={[
-      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
-      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
-      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
-      { title: "Ramayana Water Park Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/ramayana-water-park-guide" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide/" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide/" },
+      { title: "Ramayana Water Park Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/ramayana-water-park-guide/" },
     ]}
     sections={[
       { type: "paragraph", content: "Alcazar Cabaret is one of the longest-running and most-loved evening shows in Pattaya. With elaborate costumes, international-themed performances and high-energy choreography, it's a must-do night experience — especially for first-time travelers." },
@@ -85,14 +85,14 @@ const BlogAlcazarShowPattayaGuide = () => (
       ]},
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Alcazar Cabaret Show is one of Pattaya's top evening experiences — high production quality at a very reasonable price. If you're picking only one show, Alcazar is the safest, most-loved choice." },
-      { type: "cta", content: "Book Alcazar Cabaret Show tickets", link: "/thailand/pattaya/alcazar-show", linkText: "View Tickets" },
+      { type: "cta", content: "Book Alcazar Cabaret Show tickets", link: "/thailand/pattaya/alcazar-show/", linkText: "View Tickets" },
     ]}
     relatedLinks={[
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
-      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
-      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
-      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
     ]}
   />
 );

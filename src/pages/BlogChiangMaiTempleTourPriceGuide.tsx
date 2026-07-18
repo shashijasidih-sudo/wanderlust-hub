@@ -15,10 +15,10 @@ const Blog = () => (
     guidesLink="/thailand/chiang-mai/destination-guides"
     guidesLabel="Chiang Mai Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/chiang-mai/destination-guides#activity" }}
-    cityHub={{ city: "Chiang Mai", thingsToDoLink: "/thailand/chiang-mai/things-to-do", transfersLink: "/thailand/chiang-mai/budget-airport-transfers" }}
+    cityHub={{ city: "Chiang Mai", thingsToDoLink: "/thailand/chiang-mai/things-to-do/", transfersLink: "/thailand/chiang-mai/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "If you're planning a cultural trip to Chiang Mai, visiting Wat Phra That Doi Suthep, Wat Chedi Luang and the hidden jungle sanctuary of Wat Pha Lat is a must — and the most cost-effective way is a single Chiang Mai city temple tour with hotel transfer that bundles all three." },
-      { type: "cta", content: "Get all 3 temples + transfer in one fixed-price tour (no surprise costs)", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer", linkText: "Book Temple Tour" },
+      { type: "cta", content: "Get all 3 temples + transfer in one fixed-price tour (no surprise costs)", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/", linkText: "Book Temple Tour" },
       { type: "heading", content: "Average Temple Tour Cost in 2026" },
       { type: "subheading", content: "Join Tours (Shared)" },
       { type: "list", items: ["Price: ₹1,200 – ₹2,500 per person","Duration: 4–6 hours","Includes hotel pickup, transport, English-speaking guide, temple visits","Ideal for solo travelers and backpackers"] },
@@ -38,21 +38,21 @@ const Blog = () => (
       { type: "list", items: ["Budget (~₹1,500): join tour, shared transport, basic guide","Mid-range (~₹4,000): semi-private tour, better vehicle","Luxury (~₹10,000+): private SUV, dedicated guide, flexible itinerary"] },
       { type: "heading", content: "How to Save Money" },
       { type: "list", items: ["Choose join tours","Combine multiple temples in one trip","Avoid last-minute bookings","Compare prices online"] },
-      { type: "cta", content: "Save up to 30% with a bundled Doi Suthep + Chedi Luang + Pha Lat tour", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer", linkText: "Book Bundled Tour" },
+      { type: "cta", content: "Save up to 30% with a bundled Doi Suthep + Chedi Luang + Pha Lat tour", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/", linkText: "Book Bundled Tour" },
       { type: "tip-box", content: "Pair the temple tour with a Chiang Rai or Doi Inthanon day trip for a 2-day cultural + nature combo — see our Chiang Rai vs Doi Inthanon guide." },
       { type: "heading", content: "Final Thoughts" },
       { type: "paragraph", content: "Whether you're a backpacker or luxury traveler, Chiang Mai temple tours fit every budget. With the right booking, you'll explore the city's heritage without overspending." },
     ]}
     relatedActivities={[
-      { title: "Chiang Mai City Temple Tour (Doi Suthep + Chedi Luang + Pha Lat)", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer" },
-      { title: "Doi Inthanon National Park Full-Day Tour", link: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour" },
-      { title: "Chiang Rai & Golden Triangle Day Trip", link: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip" },
+      { title: "Chiang Mai City Temple Tour (Doi Suthep + Chedi Luang + Pha Lat)", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/" },
+      { title: "Doi Inthanon National Park Full-Day Tour", link: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/" },
+      { title: "Chiang Rai & Golden Triangle Day Trip", link: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/" },
     ]}
     relatedLinks={[
-      { title: "Doi Suthep Complete Guide", link: "/thailand/chiang-mai/destination-guides/activity/doi-suthep-temple-complete-guide" },
-      { title: "Visit Doi Suthep Without Climbing 300 Steps", link: "/thailand/chiang-mai/destination-guides/activity/visit-doi-suthep-without-climbing-steps" },
-      { title: "Chiang Rai vs Doi Inthanon Day Trip", link: "/thailand/chiang-mai/destination-guides/activity/chiang-rai-vs-doi-inthanon-day-trip" },
-      { title: "Explore All Chiang Mai Tours", link: "/thailand/chiang-mai/things-to-do" },
+      { title: "Doi Suthep Complete Guide", link: "/thailand/chiang-mai/destination-guides/activity/doi-suthep-temple-complete-guide/" },
+      { title: "Visit Doi Suthep Without Climbing 300 Steps", link: "/thailand/chiang-mai/destination-guides/activity/visit-doi-suthep-without-climbing-steps/" },
+      { title: "Chiang Rai vs Doi Inthanon Day Trip", link: "/thailand/chiang-mai/destination-guides/activity/chiang-rai-vs-doi-inthanon-day-trip/" },
+      { title: "Explore All Chiang Mai Tours", link: "/thailand/chiang-mai/things-to-do/" },
     ]}
   />
 );

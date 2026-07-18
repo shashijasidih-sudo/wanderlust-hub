@@ -16,7 +16,7 @@ const BlogIndianFoodInPhuket = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "For Indian Travelers", link: "/thailand/phuket/destination-guides#indian-audience" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "The biggest concern for most Indian travelers in Phuket — will I find Indian food? Are vegetarian and Jain options available? Is food expensive? Good news: Phuket is extremely Indian-friendly. Whether you crave North Indian curries, South Indian dosa or simple veg meals, you'll find plenty." },
 
@@ -43,7 +43,7 @@ const BlogIndianFoodInPhuket = () => (
       { type: "heading", content: "Jain Food Availability" },
       { type: "paragraph", content: "Jain food is limited but possible — most Indian restaurants will customise on request (no onion/garlic). Always call 1–2 hours ahead. In Patong and Karon you'll find at least 2–3 places that handle strict Jain meals." },
 
-      { type: "cta", content: "Pre-book your Phuket activities so meals are sorted on tour days", link: "/thailand/phuket/things-to-do", linkText: "Explore Phuket Tours" },
+      { type: "cta", content: "Pre-book your Phuket activities so meals are sorted on tour days", link: "/thailand/phuket/things-to-do/", linkText: "Explore Phuket Tours" },
 
       { type: "heading", content: "Cost of Indian Meals in Phuket (2026)" },
       { type: "list", items: [
@@ -88,15 +88,15 @@ const BlogIndianFoodInPhuket = () => (
       { type: "paragraph", content: "You will not go hungry in Phuket. Stick to a mix of Indian and local Thai food, pick a hotel close to Patong or Karon, and carry a small snack stash for travel days." },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour" },
-      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour" },
-      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour" },
+      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour/" },
+      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour/" },
+      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour/" },
     ]}
     relatedLinks={[
-      { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india" },
-      { title: "Phi Phi Island for Indians", link: "/thailand/phuket/destination-guides/indian-audience/phi-phi-tour-for-indians" },
-      { title: "Is Phuket Safe for Indian Tourists?", link: "/thailand/phuket/destination-guides/indian-audience/phuket-safety-for-indians" },
-      { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000" },
+      { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india/" },
+      { title: "Phi Phi Island for Indians", link: "/thailand/phuket/destination-guides/indian-audience/phi-phi-tour-for-indians/" },
+      { title: "Is Phuket Safe for Indian Tourists?", link: "/thailand/phuket/destination-guides/indian-audience/phuket-safety-for-indians/" },
+      { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket")}
   />

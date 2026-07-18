@@ -106,14 +106,14 @@ const BlogMountFujiDayTourFromTokyo = () => (
         "Includes transport and tickets",
       ]},
 
-      { type: "cta", content: "Ready to see Mount Fuji from Tokyo without the planning stress?", linkText: "Plan Your Japan Trip", link: "/tour-packages" },
+      { type: "cta", content: "Ready to see Mount Fuji from Tokyo without the planning stress?", linkText: "Plan Your Japan Trip", link: "/tour-packages/" },
 
       { type: "heading", content: "Conclusion" },
       { type: "paragraph", content: "A Mount Fuji day tour from Tokyo is a must-do for every traveler. Whether you choose Kawaguchiko for serenity or Hakone for variety, this experience will be a highlight of your Japan trip." },
     ]}
     relatedLinks={[
-      { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide" },
-      { title: "Kyoto Temple Tour Guide: Fushimi Inari & Golden Pavilion", link: "/japan/destination-guides/activity/kyoto-temple-tour-guide" },
+      { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide/" },
+      { title: "Kyoto Temple Tour Guide: Fushimi Inari & Golden Pavilion", link: "/japan/destination-guides/activity/kyoto-temple-tour-guide/" },
     ]}
       internalLinks={getJapanInternalLinks("/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo")}
   />

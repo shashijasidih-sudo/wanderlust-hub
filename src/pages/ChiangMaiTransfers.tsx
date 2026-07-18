@@ -16,25 +16,25 @@ const transfers = [
     title: "Chiang Mai Town to Chiang Mai Airport (Mini Van, 3–9 Pax)",
     desc: "Private mini-van transfer from your Chiang Mai hotel to Chiang Mai International Airport (CNX).",
     price: 2600,
-    slug: "/thailand/chiang-mai/chiang-mai-town-to-airport-mini-van",
+    slug: "/thailand/chiang-mai/chiang-mai-town-to-airport-mini-van/",
   },
   {
     title: "Chiang Mai Town to Chiang Mai Airport (Sedan, 1–2 Pax)",
     desc: "Comfortable sedan car transfer from your Chiang Mai hotel to Chiang Mai airport.",
     price: 3000,
-    slug: "/thailand/chiang-mai/chiang-mai-town-to-airport-sedan",
+    slug: "/thailand/chiang-mai/chiang-mai-town-to-airport-sedan/",
   },
   {
     title: "Chiang Mai Airport to Chiang Mai Town (Mini Van, 3–9 Pax)",
     desc: "Hassle-free CNX airport pickup with meet & greet, straight to your Chiang Mai hotel.",
     price: 2900,
-    slug: "/thailand/chiang-mai/chiang-mai-airport-to-town-mini-van",
+    slug: "/thailand/chiang-mai/chiang-mai-airport-to-town-mini-van/",
   },
   {
     title: "Chiang Mai Airport to Chiang Mai Town (Sedan, 1–2 Pax)",
     desc: "Private sedan CNX airport pickup straight to your Chiang Mai hotel.",
     price: 3000,
-    slug: "/thailand/chiang-mai/chiang-mai-airport-to-town-sedan",
+    slug: "/thailand/chiang-mai/chiang-mai-airport-to-town-sedan/",
   },
 ];
 

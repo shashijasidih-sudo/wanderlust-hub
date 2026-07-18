@@ -13,10 +13,10 @@ import heroBeach from "@/assets/hero-thailand-beach.jpg";
 import heroTemple from "@/assets/hero-thailand-temple.jpg";
 
 const cities = [
-  { name: "Bangkok", image: bangkokImg, link: "/thailand/bangkok", country: "Thailand", tours: "50+ Tours" },
-  { name: "Phuket", image: phuketImg, link: "/thailand/phuket", country: "Thailand", tours: "40+ Tours" },
-  { name: "Krabi", image: krabiImg, link: "/thailand/krabi", country: "Thailand", tours: "30+ Tours" },
-  { name: "Pattaya", image: pattayaImg, link: "/thailand/pattaya", country: "Thailand", tours: "35+ Tours" },
+  { name: "Bangkok", image: bangkokImg, link: "/thailand/bangkok/", country: "Thailand", tours: "50+ Tours" },
+  { name: "Phuket", image: phuketImg, link: "/thailand/phuket/", country: "Thailand", tours: "40+ Tours" },
+  { name: "Krabi", image: krabiImg, link: "/thailand/krabi/", country: "Thailand", tours: "30+ Tours" },
+  { name: "Pattaya", image: pattayaImg, link: "/thailand/pattaya/", country: "Thailand", tours: "35+ Tours" },
 ];
 
 const whatWeDo = [
@@ -309,10 +309,10 @@ const AboutUs = () => {
             Follow Yellodae Trails on social media for travel inspiration, exclusive offers, and updates on the latest tour packages and travel deals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link to="/thailand" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl">
+            <Link to="/thailand/" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl">
               Explore Tour Packages <MapPin className="w-5 h-5" />
             </Link>
-            <Link to="/contact-us" className="inline-flex items-center justify-center gap-2 bg-background text-foreground px-8 py-4 rounded-full font-semibold border-2 border-border hover:border-primary transition-colors">
+            <Link to="/contact-us/" className="inline-flex items-center justify-center gap-2 bg-background text-foreground px-8 py-4 rounded-full font-semibold border-2 border-border hover:border-primary transition-colors">
               Talk to Our Experts
             </Link>
           </div>

@@ -16,7 +16,7 @@ const Blog = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Indian Audience Guides", link: "/thailand/krabi/destination-guides#indian-audience" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Planning a romantic getaway to Krabi? One of the easiest ways to travel stress-free is by booking a Krabi tour package designed for Indian couples. These packages bundle flights, hotels, transfers and tours — saving time, money and effort. The real question is: which Krabi package gives the best value for Indian couples in 2026? This guide breaks down types of packages, price ranges, what's included and how to avoid overpaying." },
       { type: "heading", content: "Why Choose a Krabi Package?" },
@@ -30,7 +30,7 @@ const Blog = () => (
       { type: "list", items: ["Romantic room setup","Candlelight dinner","Island tours","Private transfers","Best for newly married couples"] },
       { type: "heading", content: "4. Luxury Krabi Packages — ₹1,50,000–₹3,00,000+ pp" },
       { type: "list", items: ["5-star resorts","Private pool villas","Private island tours","Spa sessions","Best for premium travelers and anniversaries"] },
-      { type: "cta", content: "See all curated Krabi tours and combos for Indian couples", link: "/thailand/krabi/things-to-do", linkText: "Explore Krabi Tours" },
+      { type: "cta", content: "See all curated Krabi tours and combos for Indian couples", link: "/thailand/krabi/things-to-do/", linkText: "Explore Krabi Tours" },
       { type: "heading", content: "What's Usually Included" },
       { type: "list", items: ["Hotel stay","Airport transfers","Breakfast","Selected tours","Optional add-ons: flights, visa assistance, candlelight dinner, spa"] },
       { type: "heading", content: "Popular Krabi Couple Package Itinerary" },
@@ -50,20 +50,20 @@ const Blog = () => (
       { type: "list", items: ["Choose 4–5 day duration — ideal for Krabi","Include the Phi Phi tour — must-have experience","Add a candlelight dinner or sunset cruise","Avoid an overpacked itinerary — keep relaxation time","Always check the cancellation policy"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Krabi packages for Indian couples offer great value, convenience and peace of mind in 2026. Whether you choose budget or luxury, a well-planned package ensures smooth travel, romantic moments and zero planning stress." },
-      { type: "cta", content: "Get a customised Krabi package for your dates and budget", link: "/thailand/krabi/things-to-do", linkText: "Plan My Krabi Trip" },
+      { type: "cta", content: "Get a customised Krabi package for your dates and budget", link: "/thailand/krabi/things-to-do/", linkText: "Plan My Krabi Trip" },
     ]}
     relatedActivities={[
-      { title: "4 Island Tour from Krabi", link: "/thailand/krabi/4-island-tour-speedboat-with-transfer" },
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer" },
-      { title: "Hong Island Speedboat Tour", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers" },
+      { title: "4 Island Tour from Krabi", link: "/thailand/krabi/4-island-tour-speedboat-with-transfer/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" },
+      { title: "Hong Island Speedboat Tour", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
     ]}
     relatedLinks={[
-      { title: "5 Days Krabi Honeymoon Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-honeymoon-itinerary" },
-      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary" },
-      { title: "4 Days Krabi Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary" },
-      { title: "Phuket + Krabi Combo Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary" },
-      { title: "Phuket vs Krabi for Indian Travelers", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians" },
+      { title: "5 Days Krabi Honeymoon Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-honeymoon-itinerary/" },
+      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary/" },
+      { title: "4 Days Krabi Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary/" },
+      { title: "Phuket + Krabi Combo Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary/" },
+      { title: "Phuket vs Krabi for Indian Travelers", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples")}
   />

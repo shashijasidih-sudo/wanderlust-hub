@@ -22,7 +22,7 @@ const BlogPhuketHotelPriceGuide = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Price & Cost Guides", link: "/thailand/phuket/destination-guides#price-cost" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Phuket hotel prices vary wildly by area, season and star rating. This 2026 guide breaks down the real INR cost so you can pick the right neighbourhood without overpaying." },
       { type: "heading", content: "Phuket Hotel Price by Star Rating (Per Night)" },
@@ -79,18 +79,18 @@ const BlogPhuketHotelPriceGuide = () => (
       ]},
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "For most Indian travelers, a 4-star hotel in Patong or Karon at ₹3,500–₹6,000 per night offers the best value in 2026. Honeymooners should consider Surin/Kamala for the premium beach experience." },
-      { type: "cta", content: "Plan your Phuket stay with curated tours", link: "/thailand/phuket/things-to-do", linkText: "Explore Phuket Tours" },
+      { type: "cta", content: "Plan your Phuket stay with curated tours", link: "/thailand/phuket/things-to-do/", linkText: "Explore Phuket Tours" },
     ]}
     relatedActivities={[
-      { title: "Phuket City Tour with Big Buddha", link: "/thailand/phuket/phuket-city-tour" },
-      { title: "Phi Phi Island Tour from Phuket", link: "/thailand/phuket/phuket-phi-phi-island-tour" },
-      { title: "Phuket Airport Pickup (HKT)", link: "/thailand/phuket/transfers" },
+      { title: "Phuket City Tour with Big Buddha", link: "/thailand/phuket/phuket-city-tour/" },
+      { title: "Phi Phi Island Tour from Phuket", link: "/thailand/phuket/phuket-phi-phi-island-tour/" },
+      { title: "Phuket Airport Pickup (HKT)", link: "/thailand/phuket/transfers/" },
     ]}
     relatedLinks={[
-      { title: "Phuket Trip Cost from India 2026", link: "/thailand/phuket/destination-guides/price-cost/phuket-trip-cost-from-india" },
-      { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000" },
-      { title: "Phuket Honeymoon for Indian Couples", link: "/thailand/phuket/destination-guides/indian-audience/phuket-honeymoon-for-indian-couples" },
-      { title: "Phuket Luxury Itinerary (5–6 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-luxury-itinerary" },
+      { title: "Phuket Trip Cost from India 2026", link: "/thailand/phuket/destination-guides/price-cost/phuket-trip-cost-from-india/" },
+      { title: "Phuket Budget Trip Under ₹50,000", link: "/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000/" },
+      { title: "Phuket Honeymoon for Indian Couples", link: "/thailand/phuket/destination-guides/indian-audience/phuket-honeymoon-for-indian-couples/" },
+      { title: "Phuket Luxury Itinerary (5–6 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-luxury-itinerary/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/price-cost/phuket-hotel-price-guide")}
   />

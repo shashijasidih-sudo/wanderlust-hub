@@ -10,14 +10,14 @@ const destinations = [
     name: "Thailand",
     duration: "6 Nights 7 Days",
     price: 22000,
-    link: "/thailand"
+    link: "/thailand/"
   },
   {
     image: newyorkImage,
     name: "Dubai",
     duration: "4 Nights 5 Days",
     price: 25000,
-    link: "/dubai"
+    link: "/dubai/"
   },
   {
     image: maldivesImage,
@@ -31,7 +31,7 @@ const destinations = [
     name: "Thailand",
     duration: "4 Nights 5 Days",
     price: 15000,
-    link: "/thailand"
+    link: "/thailand/"
   },
 ];
 

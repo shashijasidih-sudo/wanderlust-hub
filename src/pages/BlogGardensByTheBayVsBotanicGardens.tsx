@@ -18,7 +18,7 @@ const Blog = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "Comparison Guides", link: "/singapore/destination-guides#comparison" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "Singapore is famously a 'city in a garden', and two attractions define that identity — the futuristic Gardens by the Bay and the UNESCO-listed Singapore Botanic Gardens. Both are stunning but completely different in concept. This 2026 guide compares them side-by-side so you can decide which one (or both) fits your Singapore itinerary." },
       { type: "heading", content: "Quick Overview" },
@@ -42,7 +42,7 @@ const Blog = () => (
       { type: "heading", content: "Cost Comparison (2026 INR)" },
       { type: "list", items: ["Gardens by the Bay — outdoor areas + Supertree show are FREE","Gardens by the Bay Cloud Forest + Flower Dome combo — ₹3,000–₹3,800","OCBC Skyway — ₹800–₹1,200","Singapore Botanic Gardens — FREE (entire park)","National Orchid Garden — ₹300–₹500"] },
       { type: "tip-box", content: "On a tight budget? Walk the Botanic Gardens for free in the morning, then catch the free Supertree light show at Gardens by the Bay at night." },
-      { type: "cta", content: "Plan your Singapore sightseeing day", link: "/singapore/things-to-do", linkText: "See Singapore Activities" },
+      { type: "cta", content: "Plan your Singapore sightseeing day", link: "/singapore/things-to-do/", linkText: "See Singapore Activities" },
       { type: "heading", content: "Crowd Levels" },
       { type: "list", items: ["Gardens by the Bay — very crowded, especially evenings","Botanic Gardens — calm, even on weekends"] },
       { type: "heading", content: "Photography" },
@@ -59,16 +59,16 @@ const Blog = () => (
       { type: "paragraph", content: "If you only have one slot, choose Gardens by the Bay — it's the modern face of Singapore and a must-do. If you have an extra morning, the Botanic Gardens adds heritage, calm and beautiful walking trails for free." },
     ]}
     relatedActivities={[
-      { title: "Gardens by the Bay Combo Tickets", link: "/singapore/things-to-do" },
-      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/singapore-city-tour" },
-      { title: "Big Bus Singapore Hop-On Hop-Off", link: "/singapore/things-to-do" },
-      { title: "Singapore Flyer Tickets", link: "/singapore/things-to-do" },
+      { title: "Gardens by the Bay Combo Tickets", link: "/singapore/things-to-do/" },
+      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/singapore-city-tour/" },
+      { title: "Big Bus Singapore Hop-On Hop-Off", link: "/singapore/things-to-do/" },
+      { title: "Singapore Flyer Tickets", link: "/singapore/things-to-do/" },
     ]}
     relatedLinks={[
-      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide" },
-      { title: "Singapore Flyer Observation Wheel Experience", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel" },
-      { title: "Singapore River Cruise Experience", link: "/singapore/destination-guides/activity/singapore-river-cruise-guide" },
-      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer" },
+      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide/" },
+      { title: "Singapore Flyer Observation Wheel Experience", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel/" },
+      { title: "Singapore River Cruise Experience", link: "/singapore/destination-guides/activity/singapore-river-cruise-guide/" },
+      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

@@ -186,7 +186,7 @@ const Cart = () => {
 
   const handleProceedToCheckout = () => {
     trackBeginCheckout(getCartTotal(), cartAnalyticsItems());
-    navigate("/customer-information");
+    navigate("/customer-information/");
   };
 
   if (isLoading) {
@@ -214,13 +214,13 @@ const Cart = () => {
               Looks like you haven't added any items to your cart yet.
             </p>
             <div className="flex flex-col gap-3">
-              <Link to="/thailand">
+              <Link to="/thailand/">
                 <Button className="w-full">Browse Thailand Tours</Button>
               </Link>
-              <Link to="/singapore">
+              <Link to="/singapore/">
                 <Button variant="outline" className="w-full">Browse Singapore Activities</Button>
               </Link>
-              <Link to="/dubai">
+              <Link to="/dubai/">
                 <Button variant="outline" className="w-full">Browse Dubai Experiences</Button>
               </Link>
             </div>

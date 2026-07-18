@@ -18,7 +18,7 @@ const BlogNightSafariSingaporeGuide = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "Activity Guides", link: "/singapore/destination-guides#activity" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "Night Safari Singapore is the world's first nocturnal zoo and one of the most unique wildlife experiences anywhere in Asia. Located in the Mandai Wildlife Reserve, it lets you observe over 900 animals in carefully recreated natural habitats lit by soft moonlight — without disturbing their behaviour." },
       { type: "heading", content: "Why Night Safari is Unique" },
@@ -33,7 +33,7 @@ const BlogNightSafariSingaporeGuide = () => (
       { type: "list", items: ["Opening hours: 6:30 PM – 12:00 AM","Last entry: ~11:00 PM","Best slot: arrive 6:30–7:30 PM, weekdays only","Avoid peak weekends and rainy evenings"] },
       { type: "heading", content: "Cost in 2026 (INR)" },
       { type: "list", items: ["Standard adult ticket — ₹3,200–₹3,800","With tram ride included — ₹3,800–₹4,500","Combo (Zoo + Night Safari + River Wonders) — ₹6,500+"] },
-      { type: "cta", content: "Book Night Safari Tickets & Transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers", linkText: "Book Night Safari" },
+      { type: "cta", content: "Book Night Safari Tickets & Transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers/", linkText: "Book Night Safari" },
       { type: "heading", content: "How to Reach Night Safari" },
       { type: "list", items: ["Taxi or private transfer (most convenient — ~30 minutes from city)","Shared shuttle from city hotels","Public bus + MRT combination (cheapest, longer)"] },
       { type: "heading", content: "Tips for the Best Experience" },
@@ -42,15 +42,15 @@ const BlogNightSafariSingaporeGuide = () => (
       { type: "paragraph", content: "Absolutely — even if you've been to many zoos, this feels completely different. It's a signature Singapore experience and one of the most memorable parts of any trip to the city." },
     ]}
     relatedActivities={[
-      { title: "Night Safari Tickets & Transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers" },
-      { title: "Night Safari Transfer Only", link: "/singapore/night-safari-transfer" },
-      { title: "Night Safari with Dinner", link: "/singapore/night-safari-dinner" },
+      { title: "Night Safari Tickets & Transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers/" },
+      { title: "Night Safari Transfer Only", link: "/singapore/night-safari-transfer/" },
+      { title: "Night Safari with Dinner", link: "/singapore/night-safari-dinner/" },
     ]}
     relatedLinks={[
-      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer" },
-      { title: "Sentosa Cable Car Ride Guide", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line" },
-      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide" },
-      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide" },
+      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer/" },
+      { title: "Sentosa Cable Car Ride Guide", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line/" },
+      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide/" },
+      { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

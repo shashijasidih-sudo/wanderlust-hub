@@ -47,19 +47,19 @@ const BlogThailandAdventureActivities2026 = () => {
         relatedLinks={[
           {
             title: "Best Things to Do in Thailand for Indian Travelers",
-            link: "/blog/best-thailand-activities",
+            link: "/blog/best-thailand-activities/",
           },
           {
             title: "Top Phuket Tours & Phi Phi Island Experiences",
-            link: "/blog/top-phuket-tours",
+            link: "/blog/top-phuket-tours/",
           },
           {
             title: "Thailand Island Combo Itineraries",
-            link: "/blog/thailand-island-combos",
+            link: "/blog/thailand-island-combos/",
           },
           {
             title: "Thailand Airport Transfers — Bangkok, Phuket & Krabi",
-            link: "/blog/airport-transfer-thailand",
+            link: "/blog/airport-transfer-thailand/",
           },
         ]}
         sections={[
@@ -299,7 +299,7 @@ const BlogThailandAdventureActivities2026 = () => {
           {
             type: "cta",
             content: "Plan your Thailand adventure with the best-priced tours and instant confirmation.",
-            link: "/thailand",
+            link: "/thailand/",
             linkText: "🇹🇭 Explore Thailand Activities",
           },
         ]}

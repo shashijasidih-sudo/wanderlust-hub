@@ -21,28 +21,28 @@ const items: DontMissItem[] = [
     title: "Gardens by the Bay",
     description: "Explore the iconic Cloud Forest, Flower Dome and Supertree Grove.",
     image: gardensByTheBayImg,
-    slug: "/singapore/gardens-by-the-bay-tickets-and-transfers",
+    slug: "/singapore/gardens-by-the-bay-tickets-and-transfers/",
   },
   {
     id: "night-safari",
     title: "Night Safari",
     description: "World's first nocturnal wildlife park with tram safari after dark.",
     image: nightSafariImg,
-    slug: "/singapore/night-safari-singapore-tickets-and-transfers",
+    slug: "/singapore/night-safari-singapore-tickets-and-transfers/",
   },
   {
     id: "wings-of-time",
     title: "Wings of Time",
     description: "Sentosa's spectacular outdoor night show with water, lasers and fire.",
     image: wingsOfTimeImg,
-    slug: "/singapore/wings-of-time-show-sentosa-tickets",
+    slug: "/singapore/wings-of-time-show-sentosa-tickets/",
   },
   {
     id: "singapore-airport-transfer",
     title: "Singapore Airport Transfer",
     description: "Reliable Changi airport pickup and drop-off for a hassle-free trip.",
     image: airportTransferImg,
-    slug: "/singapore/singapore-airport-pickup",
+    slug: "/singapore/singapore-airport-pickup/",
   },
 ];
 
@@ -57,7 +57,7 @@ const DontMissThese = () => {
           </p>
         </div>
         <Link
-          to="/singapore/things-to-do"
+          to="/singapore/things-to-do/"
           className="hidden sm:inline-flex items-center gap-1 text-primary text-sm font-medium hover:gap-2 transition-all"
         >
           View all <ArrowRight className="h-4 w-4" />
@@ -93,7 +93,7 @@ const DontMissThese = () => {
 
       <div className="mt-4 sm:hidden">
         <Link
-          to="/singapore/things-to-do"
+          to="/singapore/things-to-do/"
           className="inline-flex items-center gap-1 text-primary text-sm font-medium"
         >
           View all Singapore activities <ArrowRight className="h-4 w-4" />

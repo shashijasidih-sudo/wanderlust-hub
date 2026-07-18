@@ -16,7 +16,7 @@ const BlogPhuketCityTourGuide = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/phuket/destination-guides#activity" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "A Phuket City Tour is the easiest way to cover Big Buddha, Wat Chalong, Karon Viewpoint and Old Town in one stress-free half-day — perfect when you want a break from beaches and boats." },
       { type: "heading", content: "Tour Highlights" },
@@ -27,7 +27,7 @@ const BlogPhuketCityTourGuide = () => (
         "Phuket Old Town — Sino-Portuguese streets, cafes, markets",
         "Cashew nut & local handicraft stops",
       ]},
-      { type: "cta", content: "Book a guided Phuket City Tour with hotel transfer", link: "/thailand/phuket/phuket-city-tour", linkText: "Book Phuket City Tour" },
+      { type: "cta", content: "Book a guided Phuket City Tour with hotel transfer", link: "/thailand/phuket/phuket-city-tour/", linkText: "Book Phuket City Tour" },
       { type: "heading", content: "Typical Itinerary" },
       { type: "list", items: [
         "8:30 AM — Hotel pickup",
@@ -48,14 +48,14 @@ const BlogPhuketCityTourGuide = () => (
       { type: "paragraph", content: "The best half-day add-on to any Phuket itinerary — covers culture, viewpoints and Old Town without the cost or fatigue of an island tour." },
     ]}
     relatedActivities={[
-      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour" },
-      { title: "Phuket City Hourly Rental", link: "/thailand/phuket/phuket-city-hourly-rental" },
-      { title: "Phuket FantaSea Show", link: "/thailand/phuket/phuket-fanta-sea-show" },
+      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour/" },
+      { title: "Phuket City Hourly Rental", link: "/thailand/phuket/phuket-city-hourly-rental/" },
+      { title: "Phuket FantaSea Show", link: "/thailand/phuket/phuket-fanta-sea-show/" },
     ]}
     relatedLinks={[
-      { title: "Phuket City Tour vs Island Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-city-tour-vs-island-tour" },
-      { title: "Phuket Private vs Group Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-private-vs-group-tour" },
-      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
+      { title: "Phuket City Tour vs Island Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-city-tour-vs-island-tour/" },
+      { title: "Phuket Private vs Group Tour", link: "/thailand/phuket/destination-guides/comparison/phuket-private-vs-group-tour/" },
+      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/activity/phuket-city-tour-guide")}
   />

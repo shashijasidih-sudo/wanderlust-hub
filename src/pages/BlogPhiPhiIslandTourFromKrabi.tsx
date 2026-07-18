@@ -16,7 +16,7 @@ const BlogPhiPhiIslandTourFromKrabi = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/krabi/destination-guides#activity" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "The Phi Phi Islands are one of Thailand's most iconic destinations — and if you're staying in Krabi, a Phi Phi Island tour is an absolute must-do. Turquoise lagoons, dramatic limestone cliffs and world-famous beaches make this full-day trip a perfect mix of adventure and postcard scenery." },
       { type: "heading", content: "What is the Phi Phi Island Tour from Krabi?" },
@@ -30,7 +30,7 @@ const BlogPhiPhiIslandTourFromKrabi = () => (
       { type: "list", items: ["Speedboat group tour — ₹3,500–₹5,500 per person","Ferry — ₹2,000–₹3,000 per person","Private speedboat — ₹35,000+ for 6 pax","Extras — National Park Fee ₹400–₹600, longtail photos ₹300–₹500"] },
       { type: "heading", content: "What's Included" },
       { type: "list", items: ["Hotel transfers","Speedboat / ferry transfer","Buffet lunch","Snorkel gear and life jacket","English-speaking guide"] },
-      { type: "cta", content: "Book the Phi Phi Island Tour from Krabi", link: "/thailand/krabi/things-to-do", linkText: "Book Phi Phi Tour" },
+      { type: "cta", content: "Book the Phi Phi Island Tour from Krabi", link: "/thailand/krabi/things-to-do/", linkText: "Book Phi Phi Tour" },
       { type: "heading", content: "Why It's Worth It" },
       { type: "list", items: ["Iconic locations","Stunning natural beauty","Great for first-time visitors"] },
       { type: "heading", content: "Downsides" },
@@ -43,16 +43,16 @@ const BlogPhiPhiIslandTourFromKrabi = () => (
       { type: "paragraph", content: "The Phi Phi Island Tour from Krabi lives up to the hype — Maya Bay and Pileh Lagoon are unforgettable. Plan smart, start early and it's the highlight of any Krabi trip." },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Island by Speedboat from Krabi", link: "/thailand/krabi/things-to-do" },
-      { title: "Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do" },
-      { title: "Hong Island Tour", link: "/thailand/krabi/things-to-do" },
+      { title: "Phi Phi Island by Speedboat from Krabi", link: "/thailand/krabi/things-to-do/" },
+      { title: "Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do/" },
+      { title: "Hong Island Tour", link: "/thailand/krabi/things-to-do/" },
     ]}
     relatedLinks={[
-      { title: "4 Island Tour Krabi Guide", link: "/thailand/krabi/destination-guides/activity/4-island-tour-krabi-guide" },
-      { title: "Hong Island Tour Krabi", link: "/thailand/krabi/destination-guides/activity/hong-island-tour-krabi" },
-      { title: "Krabi to Phi Phi: Ferry vs Speedboat", link: "/thailand/krabi/destination-guides/transfer/krabi-to-phi-phi-ferry-vs-speedboat" },
-      { title: "Krabi vs Phi Phi: Where to Stay", link: "/thailand/krabi/destination-guides/comparison/krabi-vs-phi-phi-where-to-stay" },
-      { title: "15 Best Things to Do in Krabi", link: "/thailand/krabi/destination-guides/activity/15-best-things-to-do-in-krabi" },
+      { title: "4 Island Tour Krabi Guide", link: "/thailand/krabi/destination-guides/activity/4-island-tour-krabi-guide/" },
+      { title: "Hong Island Tour Krabi", link: "/thailand/krabi/destination-guides/activity/hong-island-tour-krabi/" },
+      { title: "Krabi to Phi Phi: Ferry vs Speedboat", link: "/thailand/krabi/destination-guides/transfer/krabi-to-phi-phi-ferry-vs-speedboat/" },
+      { title: "Krabi vs Phi Phi: Where to Stay", link: "/thailand/krabi/destination-guides/comparison/krabi-vs-phi-phi-where-to-stay/" },
+      { title: "15 Best Things to Do in Krabi", link: "/thailand/krabi/destination-guides/activity/15-best-things-to-do-in-krabi/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/activity/phi-phi-island-tour-from-krabi")}
   />

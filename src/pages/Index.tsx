@@ -157,18 +157,18 @@ const Index = () => {
           <h2 className="sr-only">Welcome to Yellodae Trails</h2>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
             Welcome to <strong className="text-foreground">Yellodae Trails</strong>, India's trusted online travel platform for booking{" "}
-            <Link to="/about-us" className="underline underline-offset-2 hover:text-primary">tours</Link>, attraction tickets,{" "}
-            <Link to="/thailand/bangkok/transfers" className="underline underline-offset-2 hover:text-primary">airport transfers</Link>{" "}
+            <Link to="/about-us/" className="underline underline-offset-2 hover:text-primary">tours</Link>, attraction tickets,{" "}
+            <Link to="/thailand/bangkok/transfers/" className="underline underline-offset-2 hover:text-primary">airport transfers</Link>{" "}
             and curated travel experiences across{" "}
-            <Link to="/thailand" className="underline underline-offset-2 hover:text-primary">Thailand</Link>,{" "}
-            <Link to="/singapore" className="underline underline-offset-2 hover:text-primary">Singapore</Link>,{" "}
-            <Link to="/dubai" className="underline underline-offset-2 hover:text-primary">Dubai</Link> and{" "}
-            <Link to="/japan" className="underline underline-offset-2 hover:text-primary">Japan</Link>. Yellodae Trails, also known
+            <Link to="/thailand/" className="underline underline-offset-2 hover:text-primary">Thailand</Link>,{" "}
+            <Link to="/singapore/" className="underline underline-offset-2 hover:text-primary">Singapore</Link>,{" "}
+            <Link to="/dubai/" className="underline underline-offset-2 hover:text-primary">Dubai</Link> and{" "}
+            <Link to="/japan/" className="underline underline-offset-2 hover:text-primary">Japan</Link>. Yellodae Trails, also known
             simply as <strong className="text-foreground">Yellodae</strong>, curates holiday packages, transfers and skip-the-line tickets
             for Indian travellers — with 24/7 WhatsApp support. Learn more{" "}
-            <Link to="/about-us" className="underline underline-offset-2 hover:text-primary">about Yellodae Trails</Link>,{" "}
-            read our <Link to="/thailand/destination-guides" className="underline underline-offset-2 hover:text-primary">travel blog</Link>, or{" "}
-            <Link to="/contact-us" className="underline underline-offset-2 hover:text-primary">contact us</Link> to plan your trip.
+            <Link to="/about-us/" className="underline underline-offset-2 hover:text-primary">about Yellodae Trails</Link>,{" "}
+            read our <Link to="/thailand/destination-guides/" className="underline underline-offset-2 hover:text-primary">travel blog</Link>, or{" "}
+            <Link to="/contact-us/" className="underline underline-offset-2 hover:text-primary">contact us</Link> to plan your trip.
           </p>
         </section>
         <Suspense fallback={null}>

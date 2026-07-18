@@ -6,22 +6,22 @@ const destinations = [
   {
     name: "Phuket",
     image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop",
-    link: "/thailand/phuket"
+    link: "/thailand/phuket/"
   },
   {
     name: "Dubai",
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop",
-    link: "/dubai"
+    link: "/dubai/"
   },
   {
     name: "Singapore",
     image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop",
-    link: "/singapore"
+    link: "/singapore/"
   },
   {
     name: "Bangkok",
     image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop",
-    link: "/thailand/bangkok"
+    link: "/thailand/bangkok/"
   }
 ];
 

@@ -17,95 +17,95 @@ export const TOUR_LINK_MAP: TourLink[] = [
   // ---------- Phuket ----------
   {
     phrase: "Phi Phi Island Tour",
-    path: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer",
+    path: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/",
     aliases: ["Phi Phi Island Speedboat Tour", "Phi Phi Islands Tour", "Phi Phi tour", "Phi Phi Island"],
   },
   {
     phrase: "James Bond Island Tour",
-    path: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer",
+    path: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/",
     aliases: ["James Bond Island", "James Bond Island Speedboat Tour"],
   },
   {
     phrase: "Phuket City Tour",
-    path: "/thailand/phuket/phuket-city-tour",
+    path: "/thailand/phuket/phuket-city-tour/",
     aliases: ["Phuket City Tour with Big Buddha", "Big Buddha Phuket"],
   },
   {
     phrase: "Phuket Fantasea",
-    path: "/thailand/phuket/phuket-fantasea-show-with-transfer",
+    path: "/thailand/phuket/phuket-fantasea-show-with-transfer/",
     aliases: ["Phuket Fantasea Show"],
   },
   {
     phrase: "Phuket Transfers",
-    path: "/thailand/phuket/transfers",
+    path: "/thailand/phuket/transfers/",
     aliases: ["HKT airport transfer", "Phuket airport transfer"],
   },
 
   // ---------- Bangkok ----------
   {
     phrase: "Safari World Bangkok",
-    path: "/thailand/bangkok/safari-world",
+    path: "/thailand/bangkok/safari-world/",
     aliases: ["Safari World"],
   },
   {
     phrase: "Chao Phraya Dinner Cruise",
-    path: "/thailand/bangkok/chao-phraya-princess-dinner-cruise",
+    path: "/thailand/bangkok/chao-phraya-princess-dinner-cruise/",
     aliases: ["Chao Phraya Princess Cruise", "Chao Phraya Cruise"],
   },
   {
     phrase: "Grand Palace Bangkok",
-    path: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide",
+    path: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/",
     aliases: ["Grand Palace"],
   },
   {
     phrase: "Mahanakhon Skywalk",
-    path: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide",
+    path: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/",
   },
   {
     phrase: "Wat Arun",
-    path: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide",
+    path: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/",
   },
   {
     phrase: "Suvarnabhumi Airport Transfer",
-    path: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+    path: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer/",
   },
   {
     phrase: "Bangkok Transfers",
-    path: "/thailand/bangkok/transfers",
+    path: "/thailand/bangkok/transfers/",
     aliases: ["Bangkok airport transfer"],
   },
 
   // ---------- Pattaya ----------
   {
     phrase: "Coral Island Pattaya",
-    path: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch",
+    path: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/",
     aliases: ["Coral Island Tour", "Coral Island"],
   },
   {
     phrase: "Alcazar Cabaret Show",
-    path: "/thailand/pattaya/alcazar-cabaret-show-with-transfer",
+    path: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/",
     aliases: ["Alcazar Show Pattaya", "Alcazar Show", "Alcazar Cabaret"],
   },
   {
     phrase: "Pattaya Transfers",
-    path: "/thailand/pattaya/transfers",
+    path: "/thailand/pattaya/transfers/",
     aliases: ["Pattaya airport transfer"],
   },
 
   // ---------- Krabi ----------
   {
     phrase: "Krabi 4 Islands Tour",
-    path: "/thailand/krabi/4-islands-tour-by-speedboat-with-transfer",
+    path: "/thailand/krabi/4-islands-tour-by-speedboat-with-transfer/",
     aliases: ["4 Islands Tour Krabi", "Krabi Four Islands Tour"],
   },
   {
     phrase: "Hong Islands Tour",
-    path: "/thailand/krabi/hong-islands-tour-by-speedboat-with-transfer",
+    path: "/thailand/krabi/hong-islands-tour-by-speedboat-with-transfer/",
     aliases: ["Hong Island Tour"],
   },
   {
     phrase: "Krabi Transfers",
-    path: "/thailand/krabi/transfers",
+    path: "/thailand/krabi/transfers/",
   },
 
   // ---------- Singapore ----------
@@ -116,36 +116,36 @@ export const TOUR_LINK_MAP: TourLink[] = [
   },
   {
     phrase: "Night Safari Singapore",
-    path: "/singapore/night-safari-singapore-tickets-and-transfers",
+    path: "/singapore/night-safari-singapore-tickets-and-transfers/",
     aliases: ["Night Safari"],
   },
   {
     phrase: "Sentosa Cable Car",
-    path: "/singapore/sentosa-cable-car-tickets-and-transfers",
+    path: "/singapore/sentosa-cable-car-tickets-and-transfers/",
   },
   {
     phrase: "Gardens by the Bay",
-    path: "/singapore/gardens-by-the-bay-tickets-and-transfers",
+    path: "/singapore/gardens-by-the-bay-tickets-and-transfers/",
   },
   {
     phrase: "Singapore Flyer",
-    path: "/singapore/singapore-flyer-tickets-and-transfers",
+    path: "/singapore/singapore-flyer-tickets-and-transfers/",
   },
 
   // ---------- Country / hub ----------
   {
     phrase: "Thailand transfers",
-    path: "/thailand/transfers",
+    path: "/thailand/transfers/",
     aliases: ["Thailand airport transfers"],
   },
   {
     phrase: "Thailand tours",
-    path: "/thailand",
+    path: "/thailand/",
     aliases: ["all Thailand tours"],
   },
   {
     phrase: "Singapore tours",
-    path: "/singapore/things-to-do",
+    path: "/singapore/things-to-do/",
   },
 ];
 

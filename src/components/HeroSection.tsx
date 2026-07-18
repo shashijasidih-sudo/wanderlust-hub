@@ -180,11 +180,11 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-wrap gap-2 md:gap-3 justify-center">
             {[
-              { mobile: "Bangkok", desktop: "Things to Do in Bangkok", to: "/thailand/bangkok/things-to-do" },
-              { mobile: "Pattaya", desktop: "Things to Do in Pattaya", to: "/thailand/pattaya/things-to-do" },
-              { mobile: "Phuket", desktop: "Things to Do in Phuket", to: "/thailand/phuket/things-to-do" },
-              { mobile: "Krabi", desktop: "Things to Do in Krabi", to: "/thailand/krabi/things-to-do" },
-              { mobile: "Singapore", desktop: "Things to Do in Singapore", to: "/singapore/things-to-do" },
+              { mobile: "Bangkok", desktop: "Things to Do in Bangkok", to: "/thailand/bangkok/things-to-do/" },
+              { mobile: "Pattaya", desktop: "Things to Do in Pattaya", to: "/thailand/pattaya/things-to-do/" },
+              { mobile: "Phuket", desktop: "Things to Do in Phuket", to: "/thailand/phuket/things-to-do/" },
+              { mobile: "Krabi", desktop: "Things to Do in Krabi", to: "/thailand/krabi/things-to-do/" },
+              { mobile: "Singapore", desktop: "Things to Do in Singapore", to: "/singapore/things-to-do/" },
             ].map((item) => (
               <Button
                 key={item.to}
@@ -210,7 +210,7 @@ const HeroSection = () => {
               variant="secondary"
               size="sm"
               className="bg-white/90 hover:bg-white active:bg-primary active:text-primary-foreground active:scale-95 hover:scale-105 hover:shadow-md backdrop-blur-sm rounded-full text-xs md:text-sm h-8 md:h-10 px-3 md:px-4 transition-all duration-200 touch-manipulation focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-              onClick={() => navigate("/singapore/budget-airport-transfers")}
+              onClick={() => navigate("/singapore/budget-airport-transfers/")}
             >
               <span className="md:hidden">SG Transfers</span>
               <span className="hidden md:inline">Singapore Transfers</span>

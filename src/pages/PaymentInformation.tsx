@@ -48,7 +48,7 @@ const PaymentInformation = () => {
   useEffect(() => {
     const savedInfo = sessionStorage.getItem("customerInfo");
     if (savedInfo) setCustomerInfo(JSON.parse(savedInfo));
-    else navigate("/customer-information");
+    else navigate("/customer-information/");
 
     const savedDetails = sessionStorage.getItem("itemDetails");
     if (savedDetails) setSavedItemDetails(JSON.parse(savedDetails));
@@ -89,7 +89,7 @@ const PaymentInformation = () => {
         <main className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">No items in cart</h1>
           <p className="text-muted-foreground mb-6">Please add a transfer to your cart first.</p>
-          <Button onClick={() => navigate("/thailand/bangkok/budget-airport-transfers")}>Browse Transfers</Button>
+          <Button onClick={() => navigate("/thailand/bangkok/budget-airport-transfers/")}>Browse Transfers</Button>
         </main>
         <Footer />
       </div>
@@ -253,7 +253,7 @@ const PaymentInformation = () => {
           clearCart();
           sessionStorage.removeItem("customerInfo");
           toast.success("Payment successful!");
-          navigate("/booking-confirmed");
+          navigate("/booking-confirmed/");
         },
 
         prefill: {

@@ -24,19 +24,19 @@ const activities = [
     title: "Chiang Mai City Temple Tour: Doi Suthep, Chedi Luang & Pha Lat with Transfer",
     price: 3900,
     image: doiSuthep,
-    slug: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer",
+    slug: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/",
   },
   {
     title: "Doi Inthanon National Park Full Day Tour from Chiang Mai",
     price: 4900,
     image: inthanon,
-    slug: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour",
+    slug: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/",
   },
   {
     title: "Chiang Rai Day Trip: Golden Triangle with Long Neck Tribe",
     price: 6000,
     image: goldenTriangle,
-    slug: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip",
+    slug: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/",
   },
 ];
 
@@ -158,28 +158,28 @@ const ChiangMai = () => {
             desc: "Private mini-van transfer from your Chiang Mai hotel to Chiang Mai airport (CNX).",
             price: 2600,
             img: van,
-            slug: "/thailand/chiang-mai/chiang-mai-town-to-airport-mini-van",
+            slug: "/thailand/chiang-mai/chiang-mai-town-to-airport-mini-van/",
           },
           {
             title: "Chiang Mai Town to Chiang Mai Airport (Sedan, 1–2 Pax)",
             desc: "Comfortable sedan car transfer from your Chiang Mai hotel to Chiang Mai airport.",
             price: 3000,
             img: van,
-            slug: "/thailand/chiang-mai/chiang-mai-town-to-airport-sedan",
+            slug: "/thailand/chiang-mai/chiang-mai-town-to-airport-sedan/",
           },
           {
             title: "Chiang Mai Airport to Chiang Mai Town (Mini Van, 3–9 Pax)",
             desc: "Hassle-free CNX airport pickup with meet & greet, straight to your Chiang Mai hotel.",
             price: 2900,
             img: van,
-            slug: "/thailand/chiang-mai/chiang-mai-airport-to-town-mini-van",
+            slug: "/thailand/chiang-mai/chiang-mai-airport-to-town-mini-van/",
           },
           {
             title: "Chiang Mai Airport to Chiang Mai Town (Sedan, 1–2 Pax)",
             desc: "Private sedan CNX airport pickup straight to your Chiang Mai hotel.",
             price: 3000,
             img: van,
-            slug: "/thailand/chiang-mai/chiang-mai-airport-to-town-sedan",
+            slug: "/thailand/chiang-mai/chiang-mai-airport-to-town-sedan/",
           },
         ]}
       />

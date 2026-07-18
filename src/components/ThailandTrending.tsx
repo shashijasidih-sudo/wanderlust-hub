@@ -11,32 +11,32 @@ const trendingItems = [
   {
     title: "Best Thailand Activities to Book Online",
     image: heroBeach,
-    slug: "/blog/best-thailand-activities",
+    slug: "/blog/best-thailand-activities/",
   },
   {
     title: "Top Phuket Island Tours for Indian Travelers",
     image: phiPhi,
-    slug: "/blog/top-phuket-island-tours",
+    slug: "/blog/top-phuket-island-tours/",
   },
   {
     title: "Best Things to Do in Bangkok (2026 Guide)",
     image: bangkokTemple,
-    slug: "/thailand/bangkok/things-to-do",
+    slug: "/thailand/bangkok/things-to-do/",
   },
   {
     title: "Best Things to Do in Pattaya (2026 Guide)",
     image: pattayaBeach,
-    slug: "/thailand/pattaya/things-to-do",
+    slug: "/thailand/pattaya/things-to-do/",
   },
   {
     title: "Bangkok Activities Booking Guide",
     image: bangkokTemple,
-    slug: "/blog/bangkok-activities-guide",
+    slug: "/blog/bangkok-activities-guide/",
   },
   {
     title: "Best Pattaya Activities for First-Time Visitors",
     image: pattayaBeach,
-    slug: "/blog/best-pattaya-activities",
+    slug: "/blog/best-pattaya-activities/",
   },
 ];
 

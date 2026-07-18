@@ -108,16 +108,16 @@ const BlogTokyoDisneylandTicketPriceGuide = () => (
         "Best Disney park if you only ever visit one",
       ]},
 
-      { type: "cta", content: "Want Tokyo Disneyland tickets bundled with your Japan trip?", linkText: "Explore Japan Packages", link: "/tour-packages" },
+      { type: "cta", content: "Want Tokyo Disneyland tickets bundled with your Japan trip?", linkText: "Explore Japan Packages", link: "/tour-packages/" },
 
       { type: "heading", content: "Conclusion" },
       { type: "paragraph", content: "Tokyo Disneyland ticket prices in 2026 vary based on day, season and pass type — but with smart booking, Indian travelers can enjoy a full park day for under ₹15,000 inclusive of food and a few skip-the-line rides." },
     ]}
     relatedLinks={[
-      { title: "Japan Trip Cost from India: Full Budget Breakdown", link: "/japan/destination-guides/price-cost/japan-trip-cost-from-india" },
-      { title: "Mount Fuji Tour Cost from Tokyo: Budget vs Premium Compared", link: "/japan/destination-guides/price-cost/mount-fuji-tour-cost-from-tokyo" },
-      { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide" },
-      { title: "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Tips", link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo" },
+      { title: "Japan Trip Cost from India: Full Budget Breakdown", link: "/japan/destination-guides/price-cost/japan-trip-cost-from-india/" },
+      { title: "Mount Fuji Tour Cost from Tokyo: Budget vs Premium Compared", link: "/japan/destination-guides/price-cost/mount-fuji-tour-cost-from-tokyo/" },
+      { title: "Tokyo City Tour Guide: Top Attractions & Hidden Gems", link: "/japan/destination-guides/activity/tokyo-city-tour-guide/" },
+      { title: "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Tips", link: "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo/" },
     ]}
       internalLinks={getJapanInternalLinks("/japan/destination-guides/price-cost/tokyo-disneyland-ticket-price-guide")}
   />

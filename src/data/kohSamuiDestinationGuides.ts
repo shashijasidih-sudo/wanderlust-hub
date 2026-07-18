@@ -42,7 +42,7 @@ export const kohSamuiBlogs: KohSamuiBlogEntry[] = [
     image: imgCruise,
     date: "May 6, 2026",
     readTime: "9 min read",
-    link: "/thailand/koh-samui/destination-guides/activity/white-orchid-river-cruise-loy-krathong-festival-guide",
+    link: "/thailand/koh-samui/destination-guides/activity/white-orchid-river-cruise-loy-krathong-festival-guide/",
   },
   {
     title: "First-Time Full Moon Party in Koh Samui: Complete Beginner Guide",
@@ -52,7 +52,7 @@ export const kohSamuiBlogs: KohSamuiBlogEntry[] = [
     image: imgFullMoon,
     date: "May 6, 2026",
     readTime: "10 min read",
-    link: "/thailand/koh-samui/destination-guides/activity/first-time-full-moon-party-koh-samui-beginner-guide",
+    link: "/thailand/koh-samui/destination-guides/activity/first-time-full-moon-party-koh-samui-beginner-guide/",
   },
   {
     title: "What Happens at a Full Moon Party in Thailand? Real Experience Breakdown",
@@ -62,7 +62,7 @@ export const kohSamuiBlogs: KohSamuiBlogEntry[] = [
     image: imgBeach,
     date: "May 6, 2026",
     readTime: "8 min read",
-    link: "/thailand/koh-samui/destination-guides/activity/what-happens-at-full-moon-party-thailand",
+    link: "/thailand/koh-samui/destination-guides/activity/what-happens-at-full-moon-party-thailand/",
   },
   {
     title: "Hidden Costs of Full Moon Party Thailand 2026 (Avoid These Mistakes)",
@@ -72,7 +72,7 @@ export const kohSamuiBlogs: KohSamuiBlogEntry[] = [
     image: imgFullMoon,
     date: "May 6, 2026",
     readTime: "10 min read",
-    link: "/thailand/koh-samui/destination-guides/activity/hidden-costs-full-moon-party-thailand-2026",
+    link: "/thailand/koh-samui/destination-guides/activity/hidden-costs-full-moon-party-thailand-2026/",
   },
   {
     title: "Koh Samui Full Moon Party vs Phuket Nightlife: What's Better for Party Lovers?",
@@ -82,7 +82,7 @@ export const kohSamuiBlogs: KohSamuiBlogEntry[] = [
     image: imgCity,
     date: "May 6, 2026",
     readTime: "8 min read",
-    link: "/thailand/koh-samui/destination-guides/activity/koh-samui-full-moon-party-vs-phuket-nightlife",
+    link: "/thailand/koh-samui/destination-guides/activity/koh-samui-full-moon-party-vs-phuket-nightlife/",
   },
   {
     title: "Full Moon Party vs Half Moon Party Thailand: Key Differences Explained",
@@ -92,7 +92,7 @@ export const kohSamuiBlogs: KohSamuiBlogEntry[] = [
     image: imgBeach,
     date: "May 6, 2026",
     readTime: "7 min read",
-    link: "/thailand/koh-samui/destination-guides/activity/full-moon-vs-half-moon-party-thailand",
+    link: "/thailand/koh-samui/destination-guides/activity/full-moon-vs-half-moon-party-thailand/",
   },
   {
     title: "How to Reach Full Moon Party from Phuket and Bangkok",
@@ -102,7 +102,7 @@ export const kohSamuiBlogs: KohSamuiBlogEntry[] = [
     image: imgCity,
     date: "May 6, 2026",
     readTime: "9 min read",
-    link: "/thailand/koh-samui/destination-guides/activity/how-to-reach-full-moon-party-from-phuket-and-bangkok",
+    link: "/thailand/koh-samui/destination-guides/activity/how-to-reach-full-moon-party-from-phuket-and-bangkok/",
   },
   {
     title: "Full Moon Party Thailand Guide for Indians: Tips, Costs, Transfers & Safety",
@@ -112,7 +112,7 @@ export const kohSamuiBlogs: KohSamuiBlogEntry[] = [
     image: imgFullMoon,
     date: "May 6, 2026",
     readTime: "11 min read",
-    link: "/thailand/koh-samui/destination-guides/activity/full-moon-party-thailand-guide-for-indians",
+    link: "/thailand/koh-samui/destination-guides/activity/full-moon-party-thailand-guide-for-indians/",
   },
   {
     title: "Loy Krathong Festival for Indian Travelers: What You Must Know",
@@ -122,7 +122,7 @@ export const kohSamuiBlogs: KohSamuiBlogEntry[] = [
     image: imgCruiseNight,
     date: "May 6, 2026",
     readTime: "9 min read",
-    link: "/thailand/koh-samui/destination-guides/activity/loy-krathong-festival-for-indian-travelers",
+    link: "/thailand/koh-samui/destination-guides/activity/loy-krathong-festival-for-indian-travelers/",
   },
 ];
 

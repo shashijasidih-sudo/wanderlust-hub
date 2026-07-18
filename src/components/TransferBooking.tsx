@@ -208,7 +208,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         price: bookingData.price,
         quantity: 1,
       });
-      navigate("/customer-information");
+      navigate("/customer-information/");
     }
   };
 
@@ -248,12 +248,12 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         {(() => {
           const cityKey = transferData.city?.toLowerCase().trim() || "";
           const cityHomeMap: Record<string, { name: string; url: string }> = {
-            bangkok: { name: "Bangkok", url: "/thailand/bangkok" },
-            phuket: { name: "Phuket", url: "/thailand/phuket" },
-            krabi: { name: "Krabi", url: "/thailand/krabi" },
-            pattaya: { name: "Pattaya", url: "/thailand/pattaya" },
-            "chiang mai": { name: "Chiang Mai", url: "/thailand/chiang-mai" },
-            singapore: { name: "Singapore", url: "/singapore" },
+            bangkok: { name: "Bangkok", url: "/thailand/bangkok/" },
+            phuket: { name: "Phuket", url: "/thailand/phuket/" },
+            krabi: { name: "Krabi", url: "/thailand/krabi/" },
+            pattaya: { name: "Pattaya", url: "/thailand/pattaya/" },
+            "chiang mai": { name: "Chiang Mai", url: "/thailand/chiang-mai/" },
+            singapore: { name: "Singapore", url: "/singapore/" },
           };
           const cityTransfersMap: Record<string, { name: string; url: string }> = {
             bangkok: { name: "Bangkok Transfers", url: "/thailand/bangkok-airport-transfers/" },
@@ -261,7 +261,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
             krabi: { name: "Krabi Transfers", url: "/thailand/krabi-airport-transfers/" },
             pattaya: { name: "Pattaya Transfers", url: "/thailand/pattaya-transfers/" },
             "chiang mai": { name: "Chiang Mai Transfers", url: "/thailand/chiang-mai-airport-transfers/" },
-            singapore: { name: "Singapore Transfers", url: "/singapore/budget-airport-transfers" },
+            singapore: { name: "Singapore Transfers", url: "/singapore/budget-airport-transfers/" },
           };
           const cityHome = cityHomeMap[cityKey];
           const cityTransfers = cityTransfersMap[cityKey];

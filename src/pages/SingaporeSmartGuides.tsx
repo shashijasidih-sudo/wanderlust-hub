@@ -79,7 +79,7 @@ const SingaporeSmartGuides = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <CanonicalUrl path="/singapore-smart-guides" />
+      <CanonicalUrl path="/singapore-smart-guides/" />
       <Header />
 
       <main className="flex-1 bg-secondary/30">
@@ -121,7 +121,7 @@ const SingaporeSmartGuides = () => {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link to="/singapore">Singapore</Link>
+                  <Link to="/singapore/">Singapore</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />

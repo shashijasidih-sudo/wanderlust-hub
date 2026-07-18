@@ -23,18 +23,18 @@ const BlogPattayaVsPhuket = () => (
     subCategory={{ label: "Comparison Guides", link: "/thailand/pattaya/destination-guides#comparison" }}
     cityHub={{
       city: "Pattaya",
-      thingsToDoLink: "/thailand/pattaya/things-to-do",
-      transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer",
+      thingsToDoLink: "/thailand/pattaya/things-to-do/",
+      transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer/",
     }}
     comparisonItems={[
-      { name: "Pattaya", link: "/thailand/pattaya/things-to-do" },
-      { name: "Phuket", link: "/thailand/phuket/things-to-do" },
+      { name: "Pattaya", link: "/thailand/pattaya/things-to-do/" },
+      { name: "Phuket", link: "/thailand/phuket/things-to-do/" },
     ]}
     relatedActivities={[
-      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
-      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
-      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
-      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide/" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide/" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide/" },
     ]}
     sections={[
       { type: "paragraph", content: "Pattaya or Phuket? It's the most-asked question by Indian travelers planning Thailand. Both are coastal, both offer beaches and nightlife — but they deliver very different experiences. This guide compares them honestly across cost, beaches, nightlife, food and travel style so you can pick the right one." },
@@ -99,14 +99,14 @@ const BlogPattayaVsPhuket = () => (
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Choose Pattaya if you want a budget trip, short travel time, lively nightlife and a family-friendly mix. Choose Phuket if you want scenic beaches, island hopping, beach clubs and a romantic vibe — and you have 5+ days to spare." },
       { type: "tip-box", content: "Pro tip: For a first Thailand trip, do Bangkok + Pattaya. For a second trip, go Phuket + Krabi." },
-      { type: "cta", content: "Plan your Pattaya trip with curated activities", link: "/thailand/pattaya/things-to-do", linkText: "Explore Pattaya" },
+      { type: "cta", content: "Plan your Pattaya trip with curated activities", link: "/thailand/pattaya/things-to-do/", linkText: "Explore Pattaya" },
     ]}
     relatedLinks={[
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
-      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
-      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
-      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
     ]}
   />
 );

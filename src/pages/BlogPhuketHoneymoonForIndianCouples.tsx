@@ -16,7 +16,7 @@ const BlogPhuketHoneymoonForIndianCouples = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "For Indian Travelers", link: "/thailand/phuket/destination-guides#indian-audience" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Planning your honeymoon? Phuket is one of the best honeymoon destinations for Indian couples in 2026 — romantic beaches, private pool villas, island adventures and candlelight dinners, all at a fraction of European prices." },
 
@@ -46,7 +46,7 @@ const BlogPhuketHoneymoonForIndianCouples = () => (
         "Best areas: Bang Tao, Kamala, Surin, Layan (calm + premium)",
       ]},
 
-      { type: "cta", content: "Plan a romantic Phuket trip with our handpicked tours", link: "/thailand/phuket/things-to-do", linkText: "View Phuket Experiences" },
+      { type: "cta", content: "Plan a romantic Phuket trip with our handpicked tours", link: "/thailand/phuket/things-to-do/", linkText: "View Phuket Experiences" },
 
       { type: "heading", content: "Romantic 5-Day Itinerary" },
 
@@ -109,15 +109,15 @@ const BlogPhuketHoneymoonForIndianCouples = () => (
       { type: "paragraph", content: "Phuket delivers everything Indian couples want from a honeymoon — luxury, romance, adventure and value. Pick a great hotel, mix Phi Phi with one slow spa day, and you'll have memories that last a lifetime." },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour" },
-      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour" },
-      { title: "Phuket Sunset Cruise", link: "/thailand/phuket/phuket-sunset-cruise" },
+      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour/" },
+      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour/" },
+      { title: "Phuket Sunset Cruise", link: "/thailand/phuket/phuket-sunset-cruise/" },
     ]}
     relatedLinks={[
-      { title: "Phuket Honeymoon Itinerary (4–5 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary" },
-      { title: "Phuket Luxury Itinerary (5–6 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-luxury-itinerary" },
-      { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india" },
-      { title: "Best Phuket Tour Packages for Indians", link: "/thailand/phuket/destination-guides/indian-audience/best-phuket-tour-packages-for-indians" },
+      { title: "Phuket Honeymoon Itinerary (4–5 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary/" },
+      { title: "Phuket Luxury Itinerary (5–6 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-luxury-itinerary/" },
+      { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india/" },
+      { title: "Best Phuket Tour Packages for Indians", link: "/thailand/phuket/destination-guides/indian-audience/best-phuket-tour-packages-for-indians/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/indian-audience/phuket-honeymoon-for-indian-couples")}
   />

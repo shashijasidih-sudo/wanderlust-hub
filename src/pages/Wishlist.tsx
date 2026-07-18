@@ -30,7 +30,7 @@ const Wishlist = () => {
   useEffect(() => {
     const init = async () => {
       const { data: { session } } = await supabase.auth.getSession();
-      if (!session?.user) { navigate("/auth"); return; }
+      if (!session?.user) { navigate("/auth/"); return; }
 
       const { data, error } = await supabase
         .from("wishlists")
@@ -92,7 +92,7 @@ const Wishlist = () => {
               <Heart className="h-16 w-16 text-muted-foreground" />
               <h2 className="text-xl font-semibold">Your wishlist is empty</h2>
               <p className="text-muted-foreground">Start exploring tours and save your favorites here!</p>
-              <Button onClick={() => navigate("/thailand")}>Discover Tours</Button>
+              <Button onClick={() => navigate("/thailand/")}>Discover Tours</Button>
             </CardContent>
           </Card>
         ) : (

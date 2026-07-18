@@ -26,16 +26,16 @@ import krabiBoatTour from "@/assets/krabi-boat-tour-1.jpg";
 import krabiTempleWoman from "@/assets/krabi-temple-woman-1.jpg";
 
 const activities = [
-  { title: "4 Islands by Longtail Boat (No National Park Fee)", price: 2415, image: krabiLongtailBoats, slug: "/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer" },
-  { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 4589, image: krabiKayaks, slug: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer" },
-  { title: "Emerald Pool + Hot Springs + Tiger Cave with Lunch", price: 3140, image: krabiTempleWoman, slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer" },
-  { title: "Hong Islands by Longtail Boat", price: 3381, image: krabiIslandView, slug: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer" },
-  { title: "7 Islands Sunset Tour BBQ with Longtail boat", price: 3743, image: krabiSailboat, slug: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer" },
-  { title: "Hong Island Tour (By Speed Boat)", price: 4347, image: krabiSpeedboat, slug: "/thailand/krabi/hong-island-tour-speedboat-with-transfer" },
-  { title: "4 Islands by Speedboat (With National Park Fee)", price: 4589, image: krabiTourBoat, slug: "/thailand/krabi/4-island-tour-speedboat-with-transfer" },
-  { title: "Phi Phi Island by Speedboat with Transfer from Krabi", price: 4830, image: krabiBeachWoman, slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-  { title: "7 Islands Sunset Tour BBQ with Speedboat", price: 4830, image: krabiBoatTour, slug: "/thailand/krabi/7-islands-tour-speedboat-with-transfer" },
-  { title: "James Bond Island (Phang Nga Bay) Tour with Lunch By Long Tail Boat", price: 4951, image: krabiLongtailBoats, slug: "/thailand/krabi/james-bond-island" },
+  { title: "4 Islands by Longtail Boat (No National Park Fee)", price: 2415, image: krabiLongtailBoats, slug: "/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer/" },
+  { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 4589, image: krabiKayaks, slug: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
+  { title: "Emerald Pool + Hot Springs + Tiger Cave with Lunch", price: 3140, image: krabiTempleWoman, slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
+  { title: "Hong Islands by Longtail Boat", price: 3381, image: krabiIslandView, slug: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/" },
+  { title: "7 Islands Sunset Tour BBQ with Longtail boat", price: 3743, image: krabiSailboat, slug: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer/" },
+  { title: "Hong Island Tour (By Speed Boat)", price: 4347, image: krabiSpeedboat, slug: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
+  { title: "4 Islands by Speedboat (With National Park Fee)", price: 4589, image: krabiTourBoat, slug: "/thailand/krabi/4-island-tour-speedboat-with-transfer/" },
+  { title: "Phi Phi Island by Speedboat with Transfer from Krabi", price: 4830, image: krabiBeachWoman, slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+  { title: "7 Islands Sunset Tour BBQ with Speedboat", price: 4830, image: krabiBoatTour, slug: "/thailand/krabi/7-islands-tour-speedboat-with-transfer/" },
+  { title: "James Bond Island (Phang Nga Bay) Tour with Lunch By Long Tail Boat", price: 4951, image: krabiLongtailBoats, slug: "/thailand/krabi/james-bond-island/" },
 ];
 
 const categories = [
@@ -231,28 +231,28 @@ const Krabi = () => {
             desc: "Private KBV airport pickup with meet & greet, straight to your Ao Nang hotel.",
             price: 1800,
             img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
-            slug: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer",
+            slug: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer/",
           },
           {
             title: "Krabi Hotel to Krabi Airport",
             desc: "Punctual departure transfer from your Krabi hotel to KBV airport — comfortable and on time.",
             price: 1800,
             img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&auto=format&fit=crop",
-            slug: "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer",
+            slug: "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer/",
           },
           {
             title: "Krabi Airport to Phuket Hotel",
             desc: "Long-distance private transfer from KBV airport to your Phuket hotel — door-to-door comfort.",
             price: 4200,
             img: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=800&auto=format&fit=crop",
-            slug: "/thailand/krabi/krabi-airport-to-phuket-hotel-transfer",
+            slug: "/thailand/krabi/krabi-airport-to-phuket-hotel-transfer/",
           },
           {
             title: "Krabi Hotel to Phuket Airport",
             desc: "Private transfer from Krabi to Phuket airport (HKT) for your onward flight.",
             price: 4200,
             img: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?w=800&auto=format&fit=crop",
-            slug: "/thailand/krabi/krabi-hotel-to-phuket-airport-transfer",
+            slug: "/thailand/krabi/krabi-hotel-to-phuket-airport-transfer/",
           },
         ]}
       />

@@ -16,7 +16,7 @@ const BlogPhuketBudgetTrip50000 = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "For Indian Travelers", link: "/thailand/phuket/destination-guides#indian-audience" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Can you actually do Phuket under ₹50,000 from India in 2026? Yes — with smart choices on flights, stay and tours. This budget guide gives you a complete plan covering flights, stay, food, activities and insider hacks to keep the trip under ₹50K without missing the iconic experiences." },
 
@@ -43,7 +43,7 @@ const BlogPhuketBudgetTrip50000 = () => (
         "Use shared transfers and tuk-tuks instead of taxis",
       ]},
 
-      { type: "cta", content: "Pre-book a budget-friendly shared Phi Phi tour", link: "/thailand/phuket/phi-phi-island-big-boat-tour", linkText: "Book Phi Phi Big Boat" },
+      { type: "cta", content: "Pre-book a budget-friendly shared Phi Phi tour", link: "/thailand/phuket/phi-phi-island-big-boat-tour/", linkText: "Book Phi Phi Big Boat" },
 
       { type: "heading", content: "Where to Stay (Budget)" },
       { type: "list", items: [
@@ -99,15 +99,15 @@ const BlogPhuketBudgetTrip50000 = () => (
       { type: "paragraph", content: "Phuket under ₹50,000 is genuinely possible in 2026. Plan early, travel off-season, share rooms and pick value tours — you'll get the full Phuket experience without breaking the bank." },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Island by Big Boat", link: "/thailand/phuket/phi-phi-island-big-boat-tour" },
-      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour" },
-      { title: "Phuket Airport HKT Pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup" },
+      { title: "Phi Phi Island by Big Boat", link: "/thailand/phuket/phi-phi-island-big-boat-tour/" },
+      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour/" },
+      { title: "Phuket Airport HKT Pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup/" },
     ]}
     relatedLinks={[
-      { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel" },
-      { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india" },
-      { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket" },
-      { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" },
+      { title: "Phuket Luxury vs Budget Travel", link: "/thailand/phuket/destination-guides/comparison/phuket-luxury-vs-budget-travel/" },
+      { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india/" },
+      { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket/" },
+      { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/indian-audience/phuket-budget-trip-50000")}
   />

@@ -490,14 +490,14 @@ const IndianTravelerCompanion = () => (
 /* ---------- Complete Your Singapore Trip ---------- */
 
 const tripItems = [
-  { title: "Gardens by the Bay", desc: "Cloud Forest, Flower Dome & Supertree Grove.", image: gardensByTheBayImg, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers" },
-  { title: "Night Safari", desc: "World's first nocturnal wildlife park.", image: nightSafariImg, slug: "/singapore/night-safari-singapore-tickets-and-transfers" },
-  { title: "Airport Transfer", desc: "Reliable Changi pickup & drop-off.", image: airportTransferImg, slug: "/singapore/things-to-do" },
-  { title: "Wings of Time", desc: "Sentosa's spectacular outdoor night show.", image: wingsOfTimeImg, slug: "/singapore/wings-of-time-show-sentosa-tickets" },
-  { title: "Sentosa Cable Car", desc: "Iconic ride over the harbour to Sentosa.", image: cableCarImg, slug: "/singapore/sentosa-cable-car-tickets-and-transfers" },
-  { title: "S.E.A. Aquarium", desc: "One of the world's largest aquariums.", image: seaAquariumImg, slug: "/singapore/things-to-do" },
-  { title: "Singapore Zoo", desc: "Award-winning open-concept rainforest zoo.", image: singaporeZooImg, slug: "/singapore/singapore-zoo-tickets" },
-  { title: "Bird Paradise", desc: "Asia's largest bird park at Mandai.", image: birdParadiseImg, slug: "/singapore/things-to-do" },
+  { title: "Gardens by the Bay", desc: "Cloud Forest, Flower Dome & Supertree Grove.", image: gardensByTheBayImg, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers/" },
+  { title: "Night Safari", desc: "World's first nocturnal wildlife park.", image: nightSafariImg, slug: "/singapore/night-safari-singapore-tickets-and-transfers/" },
+  { title: "Airport Transfer", desc: "Reliable Changi pickup & drop-off.", image: airportTransferImg, slug: "/singapore/things-to-do/" },
+  { title: "Wings of Time", desc: "Sentosa's spectacular outdoor night show.", image: wingsOfTimeImg, slug: "/singapore/wings-of-time-show-sentosa-tickets/" },
+  { title: "Sentosa Cable Car", desc: "Iconic ride over the harbour to Sentosa.", image: cableCarImg, slug: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+  { title: "S.E.A. Aquarium", desc: "One of the world's largest aquariums.", image: seaAquariumImg, slug: "/singapore/things-to-do/" },
+  { title: "Singapore Zoo", desc: "Award-winning open-concept rainforest zoo.", image: singaporeZooImg, slug: "/singapore/singapore-zoo-tickets/" },
+  { title: "Bird Paradise", desc: "Asia's largest bird park at Mandai.", image: birdParadiseImg, slug: "/singapore/things-to-do/" },
 ];
 
 const CompleteYourSingaporeTrip = () => (
@@ -510,7 +510,7 @@ const CompleteYourSingaporeTrip = () => (
         </p>
       </div>
       <Link
-        to="/singapore/things-to-do"
+        to="/singapore/things-to-do/"
         className="hidden sm:inline-flex items-center gap-1 text-primary text-sm font-medium hover:gap-2 transition-all"
       >
         View all <ArrowRight className="h-4 w-4" />

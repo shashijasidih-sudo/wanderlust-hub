@@ -22,21 +22,21 @@ import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
 import ayutthayaSunset from "@/assets/ayutthaya-sunset-1.jpg";
 
 const activityCards = [
-  { title: "Bangkok Three Temples Tour", location: "Bangkok", image: bangkokTemple, slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
-  { title: "Maeklong & Floating Market", location: "Bangkok", image: floatingMarket, slug: "/thailand/bangkok/maeklong-floating-market-tour" },
-  { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: bangkokCity2, slug: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
-  { title: "Baiyoke Sky Buffet Dinner", location: "Bangkok", image: bangkokSkywalk, slug: "/thailand/bangkok/baiyoke-buffet" },
-  { title: "Ayutthaya Sunset Cruise", location: "Ayutthaya", image: ayutthayaSunset, slug: "/thailand/bangkok/ayutthaya-sunset-river-cruise" },
-  { title: "Chao Phraya Princess Cruise", location: "Bangkok", image: bangkokPagoda, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer" },
-  { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: bangkokCity, slug: "/thailand/bangkok/viva-alangka-dinner-cruise" },
-  { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/thailand/pattaya/pattaya-floating-market-tour" },
-  { title: "Pattaya Nightlife Walking", location: "Pattaya", image: pattayaNightlife, slug: "/thailand/pattaya/pattaya-nightlife-walking-tour" },
-  { title: "Grand Palace & Emerald Buddha", location: "Bangkok", image: grandPalace, slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
-  { title: "Phi Phi Island by Speedboat", location: "Phuket", image: phiPhi, slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-  { title: "James Bond Island Tour", location: "Phuket", image: jamesBond, slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
-  { title: "Elephant Safari Experience", location: "Phuket", image: elephantSafari, slug: "/thailand/phuket/elephant-safari" },
-  { title: "Thai Massage Coupons", location: "Bangkok", image: massage, slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok" },
-  { title: "Dolphin Bay Phuket", location: "Phuket", image: phuketBoatTour, slug: "/thailand/phuket/dolphin-show-phuket-with-transfer" },
+  { title: "Bangkok Three Temples Tour", location: "Bangkok", image: bangkokTemple, slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/" },
+  { title: "Maeklong & Floating Market", location: "Bangkok", image: floatingMarket, slug: "/thailand/bangkok/maeklong-floating-market-tour/" },
+  { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: bangkokCity2, slug: "/thailand/bangkok/tuk-tuk-night-tour-bangkok/" },
+  { title: "Baiyoke Sky Buffet Dinner", location: "Bangkok", image: bangkokSkywalk, slug: "/thailand/bangkok/baiyoke-buffet/" },
+  { title: "Ayutthaya Sunset Cruise", location: "Ayutthaya", image: ayutthayaSunset, slug: "/thailand/bangkok/ayutthaya-sunset-river-cruise/" },
+  { title: "Chao Phraya Princess Cruise", location: "Bangkok", image: bangkokPagoda, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer/" },
+  { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: bangkokCity, slug: "/thailand/bangkok/viva-alangka-dinner-cruise/" },
+  { title: "Pattaya Floating Market Tour", location: "Pattaya", image: floatingMarket, slug: "/thailand/pattaya/pattaya-floating-market-tour/" },
+  { title: "Pattaya Nightlife Walking", location: "Pattaya", image: pattayaNightlife, slug: "/thailand/pattaya/pattaya-nightlife-walking-tour/" },
+  { title: "Grand Palace & Emerald Buddha", location: "Bangkok", image: grandPalace, slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/" },
+  { title: "Phi Phi Island by Speedboat", location: "Phuket", image: phiPhi, slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+  { title: "James Bond Island Tour", location: "Phuket", image: jamesBond, slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+  { title: "Elephant Safari Experience", location: "Phuket", image: elephantSafari, slug: "/thailand/phuket/elephant-safari/" },
+  { title: "Thai Massage Coupons", location: "Bangkok", image: massage, slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok/" },
+  { title: "Dolphin Bay Phuket", location: "Phuket", image: phuketBoatTour, slug: "/thailand/phuket/dolphin-show-phuket-with-transfer/" },
 ];
 
 const ActivityCards = () => {
@@ -95,20 +95,20 @@ const BlogThailandFoodExperiences = () => {
       guidesLabel="Thailand Guides"
       cityHub={{
         city: "Bangkok",
-        thingsToDoLink: "/thailand/bangkok/things-to-do",
-        transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+        thingsToDoLink: "/thailand/bangkok/things-to-do/",
+        transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer/",
       }}
       relatedActivities={[
-        { title: "Maeklong Floating Market Tour", link: "/thailand/bangkok/maeklong-floating-market-tour" },
-        { title: "Bangkok Tuk Tuk Night Food Tour", link: "/thailand/bangkok/tuk-tuk-night-tour-bangkok" },
-        { title: "Baiyoke Sky Buffet Dinner", link: "/thailand/bangkok/baiyoke-buffet" },
-        { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer" },
+        { title: "Maeklong Floating Market Tour", link: "/thailand/bangkok/maeklong-floating-market-tour/" },
+        { title: "Bangkok Tuk Tuk Night Food Tour", link: "/thailand/bangkok/tuk-tuk-night-tour-bangkok/" },
+        { title: "Baiyoke Sky Buffet Dinner", link: "/thailand/bangkok/baiyoke-buffet/" },
+        { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/" },
       ]}
       relatedLinks={[
-        { title: "How Much Does Food Cost in Bangkok?", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-food-cost" },
-        { title: "Best Indian Food in Bangkok", link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-indian-food" },
-        { title: "Best Dinner Cruises in Bangkok for Couples", link: "/thailand/bangkok/destination-guides/activity/best-dinner-cruises-bangkok-couples" },
-        { title: "Top Things to Do in Bangkok", link: "/thailand/bangkok/things-to-do" },
+        { title: "How Much Does Food Cost in Bangkok?", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-food-cost/" },
+        { title: "Best Indian Food in Bangkok", link: "/thailand/bangkok/destination-guides/indian-audience/bangkok-indian-food/" },
+        { title: "Best Dinner Cruises in Bangkok for Couples", link: "/thailand/bangkok/destination-guides/activity/best-dinner-cruises-bangkok-couples/" },
+        { title: "Top Things to Do in Bangkok", link: "/thailand/bangkok/things-to-do/" },
       ]}
       sections={[
         { type: "paragraph", content: "Thailand is one of the most exciting destinations in the world for food lovers. From vibrant street markets to authentic local restaurants, the Thailand food experiences are rich in flavour, culture, and tradition. Whether you are tasting spicy curries, fresh seafood, tropical fruits, or famous Thai street food, every meal in Thailand feels like an adventure." },
@@ -153,7 +153,7 @@ const BlogThailandFoodExperiences = () => {
           "Expert travel assistance throughout your journey",
           "Perfect itineraries covering the best food spots",
         ]},
-        { type: "cta", content: "Ready to explore Thailand's incredible food scene? Browse all activities and book at the best prices!", link: "/thailand", linkText: "🇹🇭 Explore Thailand Activities" },
+        { type: "cta", content: "Ready to explore Thailand's incredible food scene? Browse all activities and book at the best prices!", link: "/thailand/", linkText: "🇹🇭 Explore Thailand Activities" },
       ]}
     >
       <ActivityCards />

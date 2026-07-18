@@ -16,7 +16,7 @@ const BlogPhuket5DaysItinerary = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Itinerary Guides", link: "/thailand/phuket/destination-guides#itinerary" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "If 4 days feels rushed and 7 days is too long, 5 days in Phuket is the sweet spot. You can comfortably fit both Phi Phi and James Bond Island, a city tour, adventure activities and proper relaxation — without burnout." },
       { type: "heading", content: "Phuket 5-Day Itinerary Overview" },
@@ -25,7 +25,7 @@ const BlogPhuket5DaysItinerary = () => (
       { type: "paragraph", content: "Private transfer from HKT airport (₹1,500–₹2,500, 45–60 min). Check in at Patong (nightlife) or Kata/Karon (peaceful). Evening: relax at the beach, dinner at an Indian or Thai restaurant. Sleep early — Day 2 starts at 7 AM." },
       { type: "heading", content: "Day 2: Phi Phi Island Tour" },
       { type: "paragraph", content: "Speedboat tour 7 AM–4:30 PM covering Maya Bay, Pileh Lagoon, Monkey Beach and Viking Cave with snorkeling, swimming and beach time. Cost ₹5,000–₹8,500 per person. The single most important day of your trip." },
-      { type: "cta", content: "Book your Phi Phi speedboat day", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer", linkText: "Book Phi Phi Tour" },
+      { type: "cta", content: "Book your Phi Phi speedboat day", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/", linkText: "Book Phi Phi Tour" },
       { type: "heading", content: "Day 3: James Bond Island Tour" },
       { type: "paragraph", content: "Day trip to Phang Nga Bay — James Bond Island, Koh Panyee floating Muslim village and sea canoeing through limestone caves. Cost ₹3,500–₹6,000. Calmer, more scenic and less crowded than Phi Phi — a relaxing contrast." },
       { type: "tip-box", content: "Don't do Phi Phi and James Bond on consecutive days without sleep. The 5-day plan exists exactly to space them out." },
@@ -41,20 +41,20 @@ const BlogPhuket5DaysItinerary = () => (
       { type: "list", items: ["Doing both island tours on consecutive days","Picking the cheapest tour and regretting it","Trying to add Krabi in 5 days"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "5 days in Phuket is the most balanced plan — it covers the top experiences, avoids burnout and works perfectly for Indian travelers who want both Phi Phi and James Bond Island in one trip." },
-      { type: "cta", content: "Pre-book your Phuket activities", link: "/thailand/phuket/things-to-do", linkText: "Explore Phuket Tours" },
+      { type: "cta", content: "Pre-book your Phuket activities", link: "/thailand/phuket/things-to-do/", linkText: "Explore Phuket Tours" },
     ]}
     relatedActivities={[
-      { title: "Full-Day Phi Phi Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
-      { title: "Phuket City Tour with Tiger Kingdom", link: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer" },
-      { title: "Phuket Elephant Safari", link: "/thailand/phuket/elephant-safari" },
+      { title: "Full-Day Phi Phi Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+      { title: "Phuket City Tour with Tiger Kingdom", link: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" },
+      { title: "Phuket Elephant Safari", link: "/thailand/phuket/elephant-safari/" },
     ]}
     relatedLinks={[
-      { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary" },
-      { title: "Phuket Honeymoon Itinerary (4–5 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary" },
-      { title: "Phuket + Krabi Combo Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary" },
-      { title: "James Bond vs Phi Phi", link: "/thailand/phuket/destination-guides/comparison/james-bond-island-vs-phi-phi-island" },
-      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
+      { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary/" },
+      { title: "Phuket Honeymoon Itinerary (4–5 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary/" },
+      { title: "Phuket + Krabi Combo Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary/" },
+      { title: "James Bond vs Phi Phi", link: "/thailand/phuket/destination-guides/comparison/james-bond-island-vs-phi-phi-island/" },
+      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary")}
   />

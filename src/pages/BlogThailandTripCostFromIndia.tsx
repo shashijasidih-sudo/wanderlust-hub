@@ -30,10 +30,10 @@ const BlogThailandTripCostFromIndia = () => {
       guidesLink="/thailand/destination-guides"
       guidesLabel="Thailand Guides"
       relatedLinks={[
-        { title: "Complete Guide to Thailand Island Combos", link: "/blog/thailand-island-combos" },
-        { title: "Complete Guide to Thailand Food Experiences", link: "/blog/thailand-food-experiences" },
-        { title: "Airport Transfer Booking Guide", link: "/blog/airport-transfer-booking-thailand" },
-        { title: "Phi Phi Island Tours Complete Guide", link: "/blog/phi-phi-island-tours-thailand" },
+        { title: "Complete Guide to Thailand Island Combos", link: "/blog/thailand-island-combos/" },
+        { title: "Complete Guide to Thailand Food Experiences", link: "/blog/thailand-food-experiences/" },
+        { title: "Airport Transfer Booking Guide", link: "/blog/airport-transfer-booking-thailand/" },
+        { title: "Phi Phi Island Tours Complete Guide", link: "/blog/phi-phi-island-tours-thailand/" },
       ]}
       sections={[
         { type: "paragraph", content: "One of the most sought-after foreign vacation destinations for Indian tourists has always been Thailand. With stunning beaches, exciting nightlife, mouthwatering cuisine, first-rate shopping, and reasonable transport, it suits families, honeymooners, solo travelers, and groups of friends alike." },
@@ -88,7 +88,7 @@ const BlogThailandTripCostFromIndia = () => {
           "Bangkok (BTS, MRT, Taxi, Grab): ₹200 – ₹600/day",
           "Phuket & Krabi (taxis, island transfers): ₹500 – ₹2,000/day",
         ]},
-        { type: "cta", content: "Skip airport haggling — book reliable Thailand airport transfers in advance.", link: "/thailand/transfers", linkText: "Browse Thailand Transfers" },
+        { type: "cta", content: "Skip airport haggling — book reliable Thailand airport transfers in advance.", link: "/thailand/transfers/", linkText: "Browse Thailand Transfers" },
 
         { type: "heading", content: "Popular Thailand Tours & Approximate Cost" },
         { type: "list", items: [
@@ -99,11 +99,11 @@ const BlogThailandTripCostFromIndia = () => {
           "[Alcazar Show Pattaya](/thailand/pattaya/alcazar-cabaret-show-with-transfer): ₹1,000 – ₹2,500",
         ]},
         { type: "paragraph", content: "Book directly: [Phi Phi Island Speedboat Tour](/thailand/phuket/full-day-phi-phi-island-tour-with-transfer), [James Bond Island Tour](/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer), [Safari World Bangkok](/thailand/bangkok/safari-world), [Coral Island Pattaya with Indian Lunch](/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch), and the [Alcazar Cabaret Show Pattaya](/thailand/pattaya/alcazar-cabaret-show-with-transfer)." },
-        { type: "cta", content: "Pre-book the iconic Phi Phi Island speedboat from Phuket.", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer", linkText: "Book Phi Phi Island Tour" },
-        { type: "cta", content: "Explore Phang Nga Bay's most famous landmark.", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer", linkText: "Book James Bond Island Tour" },
-        { type: "cta", content: "Family favourite — animals, dolphins and safari park.", link: "/thailand/bangkok/safari-world", linkText: "Book Safari World Bangkok" },
-        { type: "cta", content: "Pattaya's best half-day beach escape with Indian lunch.", link: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch", linkText: "Book Coral Island Pattaya" },
-        { type: "cta", content: "Pattaya's most famous cabaret experience.", link: "/thailand/pattaya/alcazar-cabaret-show-with-transfer", linkText: "Book Alcazar Show Pattaya" },
+        { type: "cta", content: "Pre-book the iconic Phi Phi Island speedboat from Phuket.", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/", linkText: "Book Phi Phi Island Tour" },
+        { type: "cta", content: "Explore Phang Nga Bay's most famous landmark.", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/", linkText: "Book James Bond Island Tour" },
+        { type: "cta", content: "Family favourite — animals, dolphins and safari park.", link: "/thailand/bangkok/safari-world/", linkText: "Book Safari World Bangkok" },
+        { type: "cta", content: "Pattaya's best half-day beach escape with Indian lunch.", link: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/", linkText: "Book Coral Island Pattaya" },
+        { type: "cta", content: "Pattaya's most famous cabaret experience.", link: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/", linkText: "Book Alcazar Show Pattaya" },
 
         { type: "image", src: phiPhi, alt: "Phi Phi Island turquoise waters", caption: "Phi Phi Island — a must-add for any Thailand trip" },
 
@@ -175,7 +175,7 @@ const BlogThailandTripCostFromIndia = () => {
 
         { type: "heading", content: "Final Verdict" },
         { type: "paragraph", content: "In 2026, Thailand remains one of the best-value international destinations for Indians. A budget of ₹75,000 – ₹1,20,000 per person for a 7-day trip gives the perfect blend of comfort, sightseeing and unforgettable experiences. Plan ahead, pre-book transfers and activities, and you'll make the most of every rupee." },
-        { type: "cta", content: "Ready to plan your trip? Browse all Thailand tours and book at the best prices.", link: "/thailand", linkText: "Explore Thailand Tours" },
+        { type: "cta", content: "Ready to plan your trip? Browse all Thailand tours and book at the best prices.", link: "/thailand/", linkText: "Explore Thailand Tours" },
       ]}
     />
   );

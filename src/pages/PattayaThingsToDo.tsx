@@ -69,7 +69,7 @@ const activities: Activity[] = [
     description: "Visit Big Buddha Hill and the famous Gems Gallery with round-trip Pattaya hotel transfers.",
     price: 1208,
     image: pattayaSailboat,
-    slug: "/thailand/pattaya/big-buddha-gems-gallery-tour",
+    slug: "/thailand/pattaya/big-buddha-gems-gallery-tour/",
     category: "City Tours & Sightseeing",
   },
   {
@@ -77,7 +77,7 @@ const activities: Activity[] = [
     description: "Full-day Nong Nooch Garden tour with cultural show, lunch and round-trip transfer.",
     price: 3622.5,
     image: pattayaTropicalBeach,
-    slug: "/thailand/pattaya/nong-nooch-tropical-garden-tickets",
+    slug: "/thailand/pattaya/nong-nooch-tropical-garden-tickets/",
     category: "City Tours & Sightseeing",
   },
 
@@ -87,7 +87,7 @@ const activities: Activity[] = [
     description: "Speedboat day-trip to Coral Island with Indian lunch, water sports options and transfer.",
     price: 603.75,
     image: pattayaBoatsBeach,
-    slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch",
+    slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/",
     category: "Beach & Island Tours",
   },
   {
@@ -95,7 +95,7 @@ const activities: Activity[] = [
     description: "Family-friendly dolphin show in Pattaya with transfers from your hotel.",
     price: 3650,
     image: dolphinShow1,
-    slug: "/thailand/pattaya/pattaya-dolphinarium-show-tickets",
+    slug: "/thailand/pattaya/pattaya-dolphinarium-show-tickets/",
     category: "Beach & Island Tours",
   },
 
@@ -105,7 +105,7 @@ const activities: Activity[] = [
     description: "Pattaya floating market tour with city sightseeing and lunch included.",
     price: 2175,
     image: floatingMarket1,
-    slug: "/thailand/pattaya/pattaya-floating-market-tour",
+    slug: "/thailand/pattaya/pattaya-floating-market-tour/",
     category: "Floating Market Tours",
   },
   {
@@ -113,7 +113,7 @@ const activities: Activity[] = [
     description: "Guided experience at Pattaya's famous Four Regions Floating Market with transfer.",
     price: 3140,
     image: floatingMarket2,
-    slug: "/thailand/pattaya/pattaya-floating-market-guided-tour",
+    slug: "/thailand/pattaya/pattaya-floating-market-guided-tour/",
     category: "Floating Market Tours",
   },
 
@@ -123,7 +123,7 @@ const activities: Activity[] = [
     description: "World-famous Alcazar cabaret show in Pattaya with reserved seating and transfer.",
     price: 2420,
     image: alcazarShow1,
-    slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer",
+    slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/",
     category: "Shows & Cabaret",
   },
   {
@@ -131,7 +131,7 @@ const activities: Activity[] = [
     description: "Live Muay Thai boxing show experience at one of Pattaya's premier stadiums.",
     price: 4830,
     image: muayThai1,
-    slug: "/thailand/pattaya/muay-thai-boxing-show-pattaya",
+    slug: "/thailand/pattaya/muay-thai-boxing-show-pattaya/",
     category: "Shows & Cabaret",
   },
 
@@ -141,7 +141,7 @@ const activities: Activity[] = [
     description: "Guided walking tour of Pattaya's iconic Walking Street with drinks and food tasting.",
     price: 3745,
     image: pattayaNightlife1,
-    slug: "/thailand/pattaya/pattaya-nightlife-walking-tour",
+    slug: "/thailand/pattaya/pattaya-nightlife-walking-tour/",
     category: "Nightlife & Adult Shows",
   },
   {
@@ -149,7 +149,7 @@ const activities: Activity[] = [
     description: "Sunset club and pub crawling experience along Pattaya's drinking street.",
     price: 6280,
     image: pattayaNightlife2,
-    slug: "/thailand/pattaya/pattaya-pub-crawl-night-tour",
+    slug: "/thailand/pattaya/pattaya-pub-crawl-night-tour/",
     category: "Nightlife & Adult Shows",
   },
   {
@@ -157,7 +157,7 @@ const activities: Activity[] = [
     description: "Adults-only 69 Show in Pattaya with reserved seating and round-trip transfer.",
     price: 3800,
     image: show69Pattaya1,
-    slug: "/thailand/pattaya/69-show-pattaya-with-transfer",
+    slug: "/thailand/pattaya/69-show-pattaya-with-transfer/",
     category: "Nightlife & Adult Shows",
   },
   {
@@ -165,7 +165,7 @@ const activities: Activity[] = [
     description: "Imagine 79 Show in Pattaya — adult cabaret experience with hotel transfer.",
     price: 4000,
     image: imagine79Show1,
-    slug: "/thailand/pattaya/79-show-pattaya-with-transfer",
+    slug: "/thailand/pattaya/79-show-pattaya-with-transfer/",
     category: "Nightlife & Adult Shows",
   },
   {
@@ -173,7 +173,7 @@ const activities: Activity[] = [
     description: "Premium 89 Show Pattaya with VIP-style seating and hotel transfer.",
     price: 6000,
     image: show89Pattaya1,
-    slug: "/thailand/pattaya/89-show-pattaya-with-transfer",
+    slug: "/thailand/pattaya/89-show-pattaya-with-transfer/",
     category: "Nightlife & Adult Shows",
   },
   {
@@ -181,7 +181,7 @@ const activities: Activity[] = [
     description: "Big Eye 99 adult show in Pattaya with round-trip transfer included.",
     price: 6000,
     image: bigeyeShowPattaya1,
-    slug: "/thailand/pattaya/99-show-pattaya-big-eye-with-transfer",
+    slug: "/thailand/pattaya/99-show-pattaya-big-eye-with-transfer/",
     category: "Nightlife & Adult Shows",
   },
 ];
@@ -294,8 +294,8 @@ const PattayaThingsToDo = () => {
 
   const breadcrumbItems = [
     { name: "Home", url: "/" },
-    { name: "Thailand", url: "/thailand" },
-    { name: "Pattaya", url: "/thailand/pattaya" },
+    { name: "Thailand", url: "/thailand/" },
+    { name: "Pattaya", url: "/thailand/pattaya/" },
     { name: "Things to Do", url: PAGE_PATH },
   ];
 
@@ -346,11 +346,11 @@ const PattayaThingsToDo = () => {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink asChild><Link to="/thailand">Thailand</Link></BreadcrumbLink>
+              <BreadcrumbLink asChild><Link to="/thailand/">Thailand</Link></BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink asChild><Link to="/thailand/pattaya">Pattaya</Link></BreadcrumbLink>
+              <BreadcrumbLink asChild><Link to="/thailand/pattaya/">Pattaya</Link></BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -383,7 +383,7 @@ const PattayaThingsToDo = () => {
               <a href="#all-activities">Explore Activities</a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/thailand/pattaya/budget-airport-transfers">Pattaya Transfers</Link>
+              <Link to="/thailand/pattaya/budget-airport-transfers/">Pattaya Transfers</Link>
             </Button>
           </div>
         </div>
@@ -448,7 +448,7 @@ const PattayaThingsToDo = () => {
             </p>
           </div>
           <Button variant="outline" asChild>
-            <Link to="/thailand/pattaya">View Pattaya City Page</Link>
+            <Link to="/thailand/pattaya/">View Pattaya City Page</Link>
           </Button>
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -480,28 +480,28 @@ const PattayaThingsToDo = () => {
               desc: "Punctual private transfer from your Pattaya hotel to BKK airport — perfect for stress-free departures.",
               price: 3200,
               img: pattayaSpeedboat,
-              slug: "/thailand/pattaya/pattaya-hotel-to-suvarnabhumi-airport-transfer",
+              slug: "/thailand/pattaya/pattaya-hotel-to-suvarnabhumi-airport-transfer/",
             },
             {
               title: "Pattaya Hotel to Don Mueang (DMK) Airport Transfer",
               desc: "Comfortable private DMK airport transfer with professional driver and meet & greet.",
               price: 3200,
               img: pattayaIslandsBoats,
-              slug: "/thailand/pattaya/pattaya-hotel-to-don-mueang-airport-transfer",
+              slug: "/thailand/pattaya/pattaya-hotel-to-don-mueang-airport-transfer/",
             },
             {
               title: "U-Tapao Airport to Pattaya Hotel Transfer",
               desc: "Quick private pickup from U-Tapao airport (UTP) directly to your Pattaya hotel.",
               price: 1800,
               img: pattayaBoatsBeach,
-              slug: "/thailand/pattaya/u-tapao-airport-to-pattaya-hotel-transfer",
+              slug: "/thailand/pattaya/u-tapao-airport-to-pattaya-hotel-transfer/",
             },
             {
               title: "Pattaya Private Car (4-Hour City Rental)",
               desc: "Flexible 4-hour private vehicle rental for shopping, sightseeing or hotel-to-hotel transfers.",
               price: 4200,
               img: pattayaTropicalBeach,
-              slug: "/thailand/pattaya/pattaya-private-car-4-hours",
+              slug: "/thailand/pattaya/pattaya-private-car-4-hours/",
             },
           ].map((t) => (
             <article key={t.slug} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
@@ -576,7 +576,7 @@ const PattayaThingsToDo = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/thailand/pattaya/budget-airport-transfers" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">
+                <Link to="/thailand/pattaya/budget-airport-transfers/" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">
                   Pattaya Airport & City Transfers
                 </Link>
               </li>
@@ -588,16 +588,16 @@ const PattayaThingsToDo = () => {
             <h3 className="text-lg font-semibold">Popular Pattaya Attractions</h3>
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {[
-                { label: "Coral Island Tour with Lunch", to: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" },
-                { label: "Nong Nooch Tropical Garden", to: "/thailand/pattaya/nong-nooch-tropical-garden-tickets" },
-                { label: "Alcazar Cabaret Show", to: "/thailand/pattaya/alcazar-cabaret-show-with-transfer" },
-                { label: "Big Buddha Hill & Gems Gallery", to: "/thailand/pattaya/big-buddha-gems-gallery-tour" },
-                { label: "Pattaya Dolphinarium Show", to: "/thailand/pattaya/pattaya-dolphinarium-show-tickets" },
-                { label: "Pattaya Floating Market Tour", to: "/thailand/pattaya/pattaya-floating-market-tour" },
-                { label: "Muay Thai Boxing Show", to: "/thailand/pattaya/muay-thai-boxing-show-pattaya" },
-                { label: "Walking Street Nightlife Tour", to: "/thailand/pattaya/pattaya-nightlife-walking-tour" },
-                { label: "69 Show Pattaya (18+)", to: "/thailand/pattaya/69-show-pattaya-with-transfer" },
-                { label: "99 Big Eye Show (18+)", to: "/thailand/pattaya/99-show-pattaya-big-eye-with-transfer" },
+                { label: "Coral Island Tour with Lunch", to: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/" },
+                { label: "Nong Nooch Tropical Garden", to: "/thailand/pattaya/nong-nooch-tropical-garden-tickets/" },
+                { label: "Alcazar Cabaret Show", to: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/" },
+                { label: "Big Buddha Hill & Gems Gallery", to: "/thailand/pattaya/big-buddha-gems-gallery-tour/" },
+                { label: "Pattaya Dolphinarium Show", to: "/thailand/pattaya/pattaya-dolphinarium-show-tickets/" },
+                { label: "Pattaya Floating Market Tour", to: "/thailand/pattaya/pattaya-floating-market-tour/" },
+                { label: "Muay Thai Boxing Show", to: "/thailand/pattaya/muay-thai-boxing-show-pattaya/" },
+                { label: "Walking Street Nightlife Tour", to: "/thailand/pattaya/pattaya-nightlife-walking-tour/" },
+                { label: "69 Show Pattaya (18+)", to: "/thailand/pattaya/69-show-pattaya-with-transfer/" },
+                { label: "99 Big Eye Show (18+)", to: "/thailand/pattaya/99-show-pattaya-big-eye-with-transfer/" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">
@@ -619,19 +619,19 @@ const PattayaThingsToDo = () => {
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <Button asChild variant="default">
-              <Link to="/thailand/pattaya">Pattaya City Guide</Link>
+              <Link to="/thailand/pattaya/">Pattaya City Guide</Link>
             </Button>
             <Button asChild variant="outline">
-              <Link to="/thailand/pattaya/budget-airport-transfers">Pattaya Transfers</Link>
+              <Link to="/thailand/pattaya/budget-airport-transfers/">Pattaya Transfers</Link>
             </Button>
             <Button asChild variant="outline">
-              <Link to="/thailand/bangkok/things-to-do">Things to Do in Bangkok</Link>
+              <Link to="/thailand/bangkok/things-to-do/">Things to Do in Bangkok</Link>
             </Button>
             <Button asChild variant="outline">
-              <Link to="/thailand/chiang-mai/things-to-do">Things to Do in Chiang Mai</Link>
+              <Link to="/thailand/chiang-mai/things-to-do/">Things to Do in Chiang Mai</Link>
             </Button>
             <Button asChild variant="outline">
-              <Link to="/thailand">Thailand Destinations</Link>
+              <Link to="/thailand/">Thailand Destinations</Link>
             </Button>
           </div>
         </div>

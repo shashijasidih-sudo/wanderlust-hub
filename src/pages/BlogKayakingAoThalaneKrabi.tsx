@@ -16,7 +16,7 @@ const BlogKayakingAoThalaneKrabi = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/krabi/destination-guides#activity" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Looking to experience a quieter, more untouched side of Krabi? Kayaking in Ao Thalane is one of the best activities you can add to your itinerary. Far from crowded island tours, this experience takes you deep into mangrove forests, limestone canyons, hidden lagoons and wildlife-rich ecosystems." },
       { type: "heading", content: "What is Ao Thalane?" },
@@ -33,7 +33,7 @@ const BlogKayakingAoThalaneKrabi = () => (
       { type: "paragraph", content: "Yes — Ao Thalane is calm and beginner-friendly. Guides provide life jackets and full briefing. Suitable for ages 6+." },
       { type: "heading", content: "Pro Tips" },
       { type: "list", items: ["Choose a guided tour for hidden spots","Go during high tide for smoother paddling","Keep valuables in waterproof bags","Start early or go at sunset to avoid midday heat","Stay quiet to spot wildlife"] },
-      { type: "cta", content: "Book the Ao Thalane Kayaking Tour", link: "/thailand/krabi/things-to-do", linkText: "Book Kayaking Tour" },
+      { type: "cta", content: "Book the Ao Thalane Kayaking Tour", link: "/thailand/krabi/things-to-do/", linkText: "Book Kayaking Tour" },
       { type: "heading", content: "Who Should Try This" },
       { type: "list", items: ["Nature lovers","Couples","Solo travelers","Photographers"] },
       { type: "heading", content: "Who Might Skip It" },
@@ -46,16 +46,16 @@ const BlogKayakingAoThalaneKrabi = () => (
       { type: "paragraph", content: "Kayaking in Ao Thalane is one of the most peaceful and immersive experiences in Krabi — a refreshing contrast to crowded island tours and a must-do for travelers wanting something different, scenic and memorable in 2026." },
     ]}
     relatedActivities={[
-      { title: "Ao Thalane Kayaking Tour", link: "/thailand/krabi/things-to-do" },
-      { title: "Hong Island Tour", link: "/thailand/krabi/things-to-do" },
-      { title: "Krabi Jungle & Emerald Pool Tour", link: "/thailand/krabi/things-to-do" },
+      { title: "Ao Thalane Kayaking Tour", link: "/thailand/krabi/things-to-do/" },
+      { title: "Hong Island Tour", link: "/thailand/krabi/things-to-do/" },
+      { title: "Krabi Jungle & Emerald Pool Tour", link: "/thailand/krabi/things-to-do/" },
     ]}
     relatedLinks={[
-      { title: "15 Best Things to Do in Krabi", link: "/thailand/krabi/destination-guides/activity/15-best-things-to-do-in-krabi" },
-      { title: "Hong Island Tour Krabi", link: "/thailand/krabi/destination-guides/activity/hong-island-tour-krabi" },
-      { title: "Krabi Emerald Pool & Hot Springs", link: "/thailand/krabi/destination-guides/activity/krabi-emerald-pool-hot-springs-guide" },
-      { title: "Krabi Night Markets Guide", link: "/thailand/krabi/destination-guides/activity/krabi-night-markets-guide" },
-      { title: "Best Time for Island Hopping in Krabi", link: "/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi" },
+      { title: "15 Best Things to Do in Krabi", link: "/thailand/krabi/destination-guides/activity/15-best-things-to-do-in-krabi/" },
+      { title: "Hong Island Tour Krabi", link: "/thailand/krabi/destination-guides/activity/hong-island-tour-krabi/" },
+      { title: "Krabi Emerald Pool & Hot Springs", link: "/thailand/krabi/destination-guides/activity/krabi-emerald-pool-hot-springs-guide/" },
+      { title: "Krabi Night Markets Guide", link: "/thailand/krabi/destination-guides/activity/krabi-night-markets-guide/" },
+      { title: "Best Time for Island Hopping in Krabi", link: "/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/activity/kayaking-in-ao-thalane-krabi")}
   />

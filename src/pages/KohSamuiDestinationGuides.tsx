@@ -48,7 +48,7 @@ const KohSamuiDestinationGuides = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <CanonicalUrl path="/thailand/koh-samui/destination-guides" />
+      <CanonicalUrl path="/thailand/koh-samui/destination-guides/" />
       <Header />
       <main className="flex-1 bg-secondary/30">
         <div className="container px-4 py-6">
@@ -56,9 +56,9 @@ const KohSamuiDestinationGuides = () => {
             <BreadcrumbList>
               <BreadcrumbItem><BreadcrumbLink asChild><Link to="/">Home</Link></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
-              <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand">Thailand</Link></BreadcrumbLink></BreadcrumbItem>
+              <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/">Thailand</Link></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
-              <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/koh-samui">Koh Samui</Link></BreadcrumbLink></BreadcrumbItem>
+              <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/koh-samui/">Koh Samui</Link></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem><BreadcrumbPage>Destination Guides</BreadcrumbPage></BreadcrumbItem>
             </BreadcrumbList>

@@ -11,7 +11,7 @@
 
 export interface SeoFaq {
   question: string;
-  /** May contain HTML — use <a href="/path">text</a> for internal links. */
+  /** May contain HTML — use <a href="/path/">text</a> for internal links. */
   answer: string;
 }
 

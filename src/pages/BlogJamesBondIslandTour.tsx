@@ -16,7 +16,7 @@ const BlogJamesBondIslandTour = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/phuket/destination-guides#activity" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "The James Bond Island tour from Phuket is the most scenic day trip in the Andaman — towering limestone karsts, hidden sea caves, the famous Koh Tapu, sea canoeing, and lunch at Koh Panyee floating village." },
       { type: "heading", content: "Tour Options" },
@@ -25,7 +25,7 @@ const BlogJamesBondIslandTour = () => (
         "Big boat (budget): 2–3 hrs, comfortable, family-friendly",
         "Private charter: customizable, premium pricing",
       ]},
-      { type: "cta", content: "Book a James Bond Island speedboat day from Phuket", link: "/thailand/phuket/james-bond-island-tour-with-transfer", linkText: "Book James Bond Tour" },
+      { type: "cta", content: "Book a James Bond Island speedboat day from Phuket", link: "/thailand/phuket/james-bond-island-tour-with-transfer/", linkText: "Book James Bond Tour" },
       { type: "heading", content: "Typical Itinerary" },
       { type: "list", items: [
         "7:00–8:00 AM — Hotel pickup",
@@ -46,14 +46,14 @@ const BlogJamesBondIslandTour = () => (
       { type: "paragraph", content: "James Bond Island is a must-do for first-timers, families and anyone who wants stunning scenery without rough seas. Pair with Phi Phi the next day for the complete Phuket island experience." },
     ]}
     relatedActivities={[
-      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour-with-transfer" },
-      { title: "Phi Phi Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour" },
+      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour-with-transfer/" },
+      { title: "Phi Phi Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour/" },
     ]}
     relatedLinks={[
-      { title: "James Bond vs Phi Phi", link: "/thailand/phuket/destination-guides/comparison/james-bond-island-vs-phi-phi-island" },
-      { title: "Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat" },
-      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do" },
+      { title: "James Bond vs Phi Phi", link: "/thailand/phuket/destination-guides/comparison/james-bond-island-vs-phi-phi-island/" },
+      { title: "Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat/" },
+      { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/activity/james-bond-island-tour-guide")}
   />

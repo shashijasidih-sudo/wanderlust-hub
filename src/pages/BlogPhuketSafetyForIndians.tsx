@@ -16,7 +16,7 @@ const BlogPhuketSafetyForIndians = () => (
     guidesLink="/thailand/phuket/destination-guides"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "For Indian Travelers", link: "/thailand/phuket/destination-guides#indian-audience" }}
-    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do", transfersLink: "/thailand/phuket/transfers" }}
+    cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
       { type: "paragraph", content: "Is Phuket safe for Indian tourists? Yes — Phuket is one of the safest international destinations for Indian travelers in 2026. But like any tourist hotspot, you need to follow basic precautions. Here's everything you need to know about scams, safety for couples, families, solo travelers and emergencies." },
 
@@ -40,7 +40,7 @@ const BlogPhuketSafetyForIndians = () => (
       ]},
       { type: "tip-box", content: "Always pre-book tours and transfers online with reviews — eliminates 90% of scam risk." },
 
-      { type: "cta", content: "Pre-book a trusted Phuket airport pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup", linkText: "Book Verified Transfer" },
+      { type: "cta", content: "Pre-book a trusted Phuket airport pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup/", linkText: "Book Verified Transfer" },
 
       { type: "heading", content: "Safety for Couples" },
       { type: "list", items: [
@@ -120,15 +120,15 @@ const BlogPhuketSafetyForIndians = () => (
       { type: "paragraph", content: "Phuket is genuinely safe for Indian travelers — couples, families, solo travelers and senior citizens. Pre-book tours and transfers, follow basic precautions, and enjoy one of Asia's most welcoming destinations." },
     ]}
     relatedActivities={[
-      { title: "Phuket Airport HKT Pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup" },
-      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour" },
-      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour" },
+      { title: "Phuket Airport HKT Pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup/" },
+      { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour/" },
+      { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour/" },
     ]}
     relatedLinks={[
-      { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india" },
-      { title: "Phuket Visa for Indians", link: "/thailand/phuket/destination-guides/indian-audience/phuket-visa-for-indians" },
-      { title: "Phuket Airport to Patong Transfer", link: "/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong" },
-      { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket" },
+      { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india/" },
+      { title: "Phuket Visa for Indians", link: "/thailand/phuket/destination-guides/indian-audience/phuket-visa-for-indians/" },
+      { title: "Phuket Airport to Patong Transfer", link: "/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong/" },
+      { title: "Indian Food in Phuket", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/indian-audience/phuket-safety-for-indians")}
   />

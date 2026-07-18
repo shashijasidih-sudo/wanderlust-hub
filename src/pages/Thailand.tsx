@@ -59,7 +59,7 @@ const activities = [
     description: "Experience breathtaking 360° views of Bangkok from the iconic King Power MahaNakhon Skywalk.",
     availability: "Available",
     city: "Bangkok",
-    slug: "/thailand/bangkok/mahanakhon-skywalk-tickets"
+    slug: "/thailand/bangkok/mahanakhon-skywalk-tickets/"
   },
   {
     id: 2,
@@ -73,7 +73,7 @@ const activities = [
     description: "Visit Bangkok's most iconic temples including Wat Pho, Wat Arun, and Wat Traimit.",
     availability: "Available",
     city: "Bangkok",
-    slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer"
+    slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/"
   },
   // Phuket Activities
   {
@@ -88,7 +88,7 @@ const activities = [
     description: "Explore the stunning Phi Phi Islands with snorkeling, swimming, and beach activities.",
     availability: "Available",
     city: "Phuket",
-    slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer"
+    slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/"
   },
   {
     id: 4,
@@ -102,7 +102,7 @@ const activities = [
     description: "Enjoy Thailand's most famous cabaret show with spectacular costumes and performances.",
     availability: "Available",
     city: "Phuket",
-    slug: "/thailand/phuket/simon-cabaret-show-with-transfer"
+    slug: "/thailand/phuket/simon-cabaret-show-with-transfer/"
   },
   // Krabi Activities
   {
@@ -117,7 +117,7 @@ const activities = [
     description: "Visit the famous James Bond Island and explore Phang Nga Bay's stunning limestone karsts.",
     availability: "Available",
     city: "Krabi",
-    slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer"
+    slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/"
   },
   {
     id: 6,
@@ -131,7 +131,7 @@ const activities = [
     description: "Discover Krabi's four islands including Phra Nang Beach and Tup Island by speedboat.",
     availability: "Available",
     city: "Krabi",
-    slug: "/thailand/krabi/4-island-tour-speedboat-with-transfer"
+    slug: "/thailand/krabi/4-island-tour-speedboat-with-transfer/"
   },
   {
     id: 7,
@@ -145,16 +145,16 @@ const activities = [
     description: "Stay connected across Thailand with a 5G/4G eSIM from AIS. Instant digital activation, no physical SIM needed.",
     availability: "Available",
     city: "Thailand",
-    slug: "/thailand/esim-ais"
+    slug: "/thailand/esim-ais/"
   },
 ];
 
 const cities = [
-  { name: "Bangkok", image: bangkokImg, link: "/thailand/bangkok" },
-  { name: "Phuket", image: phuketImg, link: "/thailand/phuket" },
-  { name: "Krabi", image: krabiImg, link: "/thailand/krabi" },
-  { name: "Koh Samui", image: kohsamuiImg, link: "/thailand" },
-  { name: "Pattaya", image: pattayaImg, link: "/thailand/pattaya" },
+  { name: "Bangkok", image: bangkokImg, link: "/thailand/bangkok/" },
+  { name: "Phuket", image: phuketImg, link: "/thailand/phuket/" },
+  { name: "Krabi", image: krabiImg, link: "/thailand/krabi/" },
+  { name: "Koh Samui", image: kohsamuiImg, link: "/thailand/" },
+  { name: "Pattaya", image: pattayaImg, link: "/thailand/pattaya/" },
 ];
 
 const placeholderCities = ["Phuket", "Krabi", "Chiang Mai", "Pattaya", "Bangkok"];
@@ -494,7 +494,7 @@ const Thailand = () => {
                       <p className="text-sm text-muted-foreground mb-4">
                         Explore pristine beaches and islands
                       </p>
-                      <Link to="/thailand/destination-guides">
+                      <Link to="/thailand/destination-guides/">
                         <Button variant="outline" size="sm">View All</Button>
                       </Link>
                     </CardContent>
@@ -506,7 +506,7 @@ const Thailand = () => {
                       <p className="text-sm text-muted-foreground mb-4">
                         Taste authentic Thai cuisine
                       </p>
-                      <Link to="/thailand/destination-guides">
+                      <Link to="/thailand/destination-guides/">
                         <Button variant="outline" size="sm">View All</Button>
                       </Link>
                     </CardContent>
@@ -518,7 +518,7 @@ const Thailand = () => {
                       <p className="text-sm text-muted-foreground mb-4">
                         Discover ancient temples and history
                       </p>
-                      <Link to="/thailand/destination-guides">
+                      <Link to="/thailand/destination-guides/">
                         <Button variant="outline" size="sm">View All</Button>
                       </Link>
                     </CardContent>
@@ -560,7 +560,7 @@ const Thailand = () => {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Bangkok - Skywalk */}
-                  <Link to="/thailand/bangkok/mahanakhon-skywalk-tickets">
+                  <Link to="/thailand/bangkok/mahanakhon-skywalk-tickets/">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -583,7 +583,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Phuket - Phi Phi Island */}
-                  <Link to="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer">
+                  <Link to="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -606,7 +606,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Krabi - James Bond Island */}
-                  <Link to="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer">
+                  <Link to="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -629,7 +629,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Pattaya - Elephant Safari */}
-                  <Link to="/thailand/phuket/elephant-safari">
+                  <Link to="/thailand/phuket/elephant-safari/">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -652,7 +652,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Bangkok - Thai Massage */}
-                  <Link to="/thailand/bangkok/thai-massage-spa-deals-bangkok">
+                  <Link to="/thailand/bangkok/thai-massage-spa-deals-bangkok/">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img
@@ -675,7 +675,7 @@ const Thailand = () => {
                   </Link>
 
                   {/* Phuket - Tiger Kingdom */}
-                  <Link to="/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer">
+                  <Link to="/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
                         <img

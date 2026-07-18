@@ -24,12 +24,12 @@ const BlogWatArunVsGrandPalace = () => (
     subCategory={{ label: "Comparison Guides", link: "/thailand/bangkok/destination-guides#comparison" }}
     comparisonItems={[
       { name: "Wat Arun (Temple of Dawn)" },
-      { name: "Grand Palace & Wat Phra Kaew", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
+      { name: "Grand Palace & Wat Phra Kaew", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/" },
     ]}
     cityHub={{
       city: "Bangkok",
-      thingsToDoLink: "/thailand/bangkok/things-to-do",
-      transfersLink: "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer",
+      thingsToDoLink: "/thailand/bangkok/things-to-do/",
+      transfersLink: "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer/",
     }}
     sections={[
       { type: "paragraph", content: "Wat Arun and the Grand Palace are the two most famous landmarks in Bangkok — and most travelers want to do both. But if you only have one morning free, or you're suffering from temple fatigue, which one deserves your time? They look superficially similar from photos, but the experience is wildly different. Grand Palace is grand, golden, royal and crowded. Wat Arun is quieter, riverside, photogenic and steeper. Here's an honest 2026 comparison so you choose the right one for your style of travel." },
@@ -96,20 +96,20 @@ const BlogWatArunVsGrandPalace = () => (
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Honestly, do both — they're 5 minutes apart by ferry, and most guided tours combine them into a comfortable half-day. If you're forced to pick just one, pick Wat Arun. It's cheaper, faster, more photogenic, less crowded, and gives you a more memorable Instagram moment. The Grand Palace is undeniably more historic and grand, but the heat, crowds and ticket price can sour the experience for budget or short-stay travelers. Booking a guided combo tour with Yellodae makes life easier — skip-the-line tickets, a Thai-speaking guide, and door-to-door transfers included for under ₹3,000." },
 
-      { type: "cta", content: "Book a Bangkok temple tour", link: "/thailand/bangkok/three-temples-tour-with-transfer", linkText: "Book Three Temples Tour" },
+      { type: "cta", content: "Book a Bangkok temple tour", link: "/thailand/bangkok/three-temples-tour-with-transfer/", linkText: "Book Three Temples Tour" },
     ]}
     relatedActivities={[
-      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
-      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
-      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
-      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide/" },
     ]}
     relatedLinks={[
-      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
-      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
-      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary/" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok/" },
     ]}
   />
 );

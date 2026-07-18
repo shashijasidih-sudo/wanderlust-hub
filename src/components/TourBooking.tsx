@@ -108,19 +108,19 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
   const cityDisplay = cityName ? cityName.charAt(0).toUpperCase() + cityName.slice(1) : "";
   // Per-city Things-to-Do hub URLs (only cities with a published hub page)
   const thingsToDoHubs: Record<string, string> = {
-    bangkok: "/thailand/bangkok/things-to-do",
-    pattaya: "/thailand/pattaya/things-to-do",
-    phuket: "/thailand/phuket/things-to-do",
-    krabi: "/thailand/krabi/things-to-do",
-    singapore: "/singapore/things-to-do",
+    bangkok: "/thailand/bangkok/things-to-do/",
+    pattaya: "/thailand/pattaya/things-to-do/",
+    phuket: "/thailand/phuket/things-to-do/",
+    krabi: "/thailand/krabi/things-to-do/",
+    singapore: "/singapore/things-to-do/",
   };
   // Per-city landing page URLs
   const cityHomeUrls: Record<string, string> = {
-    bangkok: "/thailand/bangkok",
-    pattaya: "/thailand/pattaya",
-    phuket: "/thailand/phuket",
-    krabi: "/thailand/krabi",
-    singapore: "/singapore",
+    bangkok: "/thailand/bangkok/",
+    pattaya: "/thailand/pattaya/",
+    phuket: "/thailand/phuket/",
+    krabi: "/thailand/krabi/",
+    singapore: "/singapore/",
   };
   const cityHomeUrl = cityHomeUrls[cityKey] || `/${citySlug}`;
   const thingsToDoUrl = thingsToDoHubs[cityKey];

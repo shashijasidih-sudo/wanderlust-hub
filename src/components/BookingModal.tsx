@@ -80,7 +80,7 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
 
     if (!user) {
       toast({ title: "Login Required", description: "Please log in to make a booking.", variant: "destructive" });
-      navigate("/auth");
+      navigate("/auth/");
       return;
     }
 
@@ -222,7 +222,7 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
 
           toast({ title: "Payment Successful!", description: `Payment ID: ${response.razorpay_payment_id}` });
           onClose();
-          navigate("/user-bookings");
+          navigate("/user-bookings/");
         },
         modal: {
           ondismiss: () => {
@@ -266,7 +266,7 @@ const BookingModal = ({ isOpen, onClose, tourName, tourSlug, pricePerAdult, pric
     }
   };
 
-  const handleLoginRedirect = () => { onClose(); navigate("/auth"); };
+  const handleLoginRedirect = () => { onClose(); navigate("/auth/"); };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

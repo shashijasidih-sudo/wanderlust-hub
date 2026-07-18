@@ -48,7 +48,7 @@ const BookingDetail = () => {
 
   useEffect(() => {
     if (isAuthLoading) return;
-    if (!user) { navigate("/auth"); return; }
+    if (!user) { navigate("/auth/"); return; }
     fetchBooking();
   }, [user, isAuthLoading, id]);
 
@@ -66,7 +66,7 @@ const BookingDetail = () => {
     } catch (err) {
       console.error("Failed to fetch booking:", err);
       toast({ title: "Error", description: "Booking not found", variant: "destructive" });
-      navigate("/user-bookings");
+      navigate("/user-bookings/");
     } finally {
       setIsLoading(false);
     }
@@ -119,7 +119,7 @@ const BookingDetail = () => {
       <main className="container px-4 md:px-6 py-8 md:py-12 mt-16">
         <div className="max-w-6xl mx-auto">
           {/* Back button */}
-          <Button variant="ghost" className="mb-6 -ml-2 text-base" onClick={() => navigate("/user-bookings")}>
+          <Button variant="ghost" className="mb-6 -ml-2 text-base" onClick={() => navigate("/user-bookings/")}>
             <ArrowLeft className="h-5 w-5 mr-2" /> Back to My Bookings
           </Button>
 

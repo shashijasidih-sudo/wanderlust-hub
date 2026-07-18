@@ -17,37 +17,37 @@ export interface SearchResult {
 // Define all cities and their activities
 const cityActivities: Record<string, Activity[]> = {
   bangkok: [
-    { title: "Bangkok's Iconic Three Temple Tour with Grand Palace and Canal Tour", price: 10020, image: "https://images.unsplash.com/photo-1563492065567-7a0b2e7d1a3e?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer" },
-    { title: "Bangkok's Famous Three Temple Wat Arun, Wat Pho, and Wat Traimit Private City and Cultural Tour", price: 10020, image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
-    { title: "Bangkok City Tour by Boat from Meeting Point", price: 3700, image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour" },
-    { title: "Bangkok City and Temple Tours with Gems Gallery", price: 1800, image: "https://images.unsplash.com/photo-1563492065567-7a0b2e7d1a3e?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/gems-gallery-bangkok-tickets" },
-    { title: "Double World Heritage Bangkok City Tour: Sunset at Wat Arun and Chinatown Street Food Experience (Join-In)", price: 5900, image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/wat-arun-chinatown-tour" },
-    { title: "Bangkok City and Temple Tour with Golden Buddha, Marble Temple, Mini Reclining Buddha, and Gems Gallery", price: 2000, image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour" },
-    { title: "The Best of Bangkok: Royal Grand Palace, Emerald Buddha and Reclining Buddha", price: 2300, image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
-    { title: "All Day Buffet at Baiyoke Floating Market on 75th floor", price: 2200, image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/baiyoke-buffet" },
-    { title: "Bangkok Mahanakhon Sky Walk Admission Ticket", price: 4500, image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/mahanakhon-skywalk-tickets" },
+    { title: "Bangkok's Iconic Three Temple Tour with Grand Palace and Canal Tour", price: 10020, image: "https://images.unsplash.com/photo-1563492065567-7a0b2e7d1a3e?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/" },
+    { title: "Bangkok's Famous Three Temple Wat Arun, Wat Pho, and Wat Traimit Private City and Cultural Tour", price: 10020, image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/" },
+    { title: "Bangkok City Tour by Boat from Meeting Point", price: 3700, image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour/" },
+    { title: "Bangkok City and Temple Tours with Gems Gallery", price: 1800, image: "https://images.unsplash.com/photo-1563492065567-7a0b2e7d1a3e?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/gems-gallery-bangkok-tickets/" },
+    { title: "Double World Heritage Bangkok City Tour: Sunset at Wat Arun and Chinatown Street Food Experience (Join-In)", price: 5900, image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/wat-arun-chinatown-tour/" },
+    { title: "Bangkok City and Temple Tour with Golden Buddha, Marble Temple, Mini Reclining Buddha, and Gems Gallery", price: 2000, image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour/" },
+    { title: "The Best of Bangkok: Royal Grand Palace, Emerald Buddha and Reclining Buddha", price: 2300, image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/" },
+    { title: "All Day Buffet at Baiyoke Floating Market on 75th floor", price: 2200, image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/baiyoke-buffet/" },
+    { title: "Bangkok Mahanakhon Sky Walk Admission Ticket", price: 4500, image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop", slug: "/thailand/bangkok/mahanakhon-skywalk-tickets/" },
   ],
   pattaya: [
-    { title: "Discovery Pattaya City Tours with Floating Market - Join Tour", price: 1800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/pattaya-floating-market-tour" },
-    { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1200, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/big-buddha-gems-gallery-tour" },
-    { title: "Coral Island Join Tour with Indian Lunch", price: 650, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" },
-    { title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/nong-nooch-tropical-garden-tickets" },
-    { title: "Pattaya Dolphinarium Admission Ticket with Transfer", price: 3100, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/pattaya-dolphinarium-show-tickets" },
-    { title: "Alcazar Show Pattaya Ticket with Transfer", price: 1500, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer" },
+    { title: "Discovery Pattaya City Tours with Floating Market - Join Tour", price: 1800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/pattaya-floating-market-tour/" },
+    { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1200, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/big-buddha-gems-gallery-tour/" },
+    { title: "Coral Island Join Tour with Indian Lunch", price: 650, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/" },
+    { title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/nong-nooch-tropical-garden-tickets/" },
+    { title: "Pattaya Dolphinarium Admission Ticket with Transfer", price: 3100, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/pattaya-dolphinarium-show-tickets/" },
+    { title: "Alcazar Show Pattaya Ticket with Transfer", price: 1500, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop", slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/" },
   ],
   phuket: [
-    { title: "Full Day Tour from Phuket to Phi Phi Island, Maya Bay and Khai Island by Speedboat with National Park Fee", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-    { title: "Dolphin Bay Phuket Admission Ticket with Transfer", price: 3300, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/thailand/phuket/dolphin-show-phuket-with-transfer" },
-    { title: "Phang Nga Bay (James Bond Island) Sea Canoe Tour by Long tail Boat", price: 3600, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
-    { title: "Phuket City Tour and Tiger Experience: Tiger Only", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer" },
-    { title: "Phuket Simon Cabaret Show Ticket with Join Roundtrip Transfer", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/simon-cabaret-show-with-transfer" },
+    { title: "Full Day Tour from Phuket to Phi Phi Island, Maya Bay and Khai Island by Speedboat with National Park Fee", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+    { title: "Dolphin Bay Phuket Admission Ticket with Transfer", price: 3300, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/thailand/phuket/dolphin-show-phuket-with-transfer/" },
+    { title: "Phang Nga Bay (James Bond Island) Sea Canoe Tour by Long tail Boat", price: 3600, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+    { title: "Phuket City Tour and Tiger Experience: Tiger Only", price: 3000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" },
+    { title: "Phuket Simon Cabaret Show Ticket with Join Roundtrip Transfer", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/simon-cabaret-show-with-transfer/" },
   ],
   krabi: [
-    { title: "Phi Phi Island by Speedboat with Transfer from Krabi", price: 3800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-    { title: "James Bond Island Sightseeing Tour by Long-Tailed Boat", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
-    { title: "Hong Islands by Longtail Boat", price: 2600, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer" },
-    { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer" },
-    { title: "Half Day Emerald Pool + Hot Springs with Lunch", price: 2800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer" },
+    { title: "Phi Phi Island by Speedboat with Transfer from Krabi", price: 3800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+    { title: "James Bond Island Sightseeing Tour by Long-Tailed Boat", price: 4000, image: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop", slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+    { title: "Hong Islands by Longtail Boat", price: 2600, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/" },
+    { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 2000, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
+    { title: "Half Day Emerald Pool + Hot Springs with Lunch", price: 2800, image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop", slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
   ],
 };
 
@@ -126,11 +126,11 @@ export function searchAll(query: string): SearchResult[] {
 
   // Search popular destinations
   const destinations = [
-    { name: "Phi Phi Island", path: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer" },
-    { name: "James Bond Island", path: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer" },
-    { name: "Grand Palace", path: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour" },
-    { name: "Wat Arun", path: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour" },
-    { name: "Coral Island", path: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch" },
+    { name: "Phi Phi Island", path: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+    { name: "James Bond Island", path: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+    { name: "Grand Palace", path: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/" },
+    { name: "Wat Arun", path: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/" },
+    { name: "Coral Island", path: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/" },
   ];
 
   destinations.forEach((dest) => {

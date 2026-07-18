@@ -23,21 +23,21 @@ const BlogAdultShowsPattayaComparison = () => (
     subCategory={{ label: "Comparison Guides", link: "/thailand/pattaya/destination-guides#comparison" }}
     cityHub={{
       city: "Pattaya",
-      thingsToDoLink: "/thailand/pattaya/things-to-do",
-      transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer",
+      thingsToDoLink: "/thailand/pattaya/things-to-do/",
+      transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer/",
     }}
     comparisonItems={[
       { name: "Big Eye Show" },
       { name: "Show 69" },
       { name: "Show 89" },
-      { name: "Alcazar Cabaret", link: "/thailand/pattaya/alcazar-show" },
-      { name: "Tiffany Show", link: "/thailand/pattaya/tiffany-show" },
+      { name: "Alcazar Cabaret", link: "/thailand/pattaya/alcazar-show/" },
+      { name: "Tiffany Show", link: "/thailand/pattaya/tiffany-show/" },
     ]}
     relatedActivities={[
-      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
-      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
-      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
-      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide/" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide/" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide/" },
     ]}
     sections={[
       { type: "paragraph", content: "Pattaya is famous worldwide for its nightlife, and a big part of that reputation comes from its adult-themed shows. First-time travelers often ask: Big Eye Show, Show 69 or Show 89 — which is actually worth watching? This guide gives you a clear, non-explicit comparison so you can make an informed decision." },
@@ -109,14 +109,14 @@ const BlogAdultShowsPattayaComparison = () => (
       ]},
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Best overall → Big Eye Show. Budget option → Show 69. Balanced → Show 89. But honestly, if you're picking one Pattaya evening experience, Alcazar or Tiffany cabaret will give you more entertainment, better photos and a memory you'll actually share." },
-      { type: "cta", content: "Book a Pattaya cabaret show instead", link: "/thailand/pattaya/alcazar-show", linkText: "View Alcazar Tickets" },
+      { type: "cta", content: "Book a Pattaya cabaret show instead", link: "/thailand/pattaya/alcazar-show/", linkText: "View Alcazar Tickets" },
     ]}
     relatedLinks={[
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
-      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
-      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
-      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
     ]}
   />
 );

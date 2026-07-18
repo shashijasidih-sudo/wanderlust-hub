@@ -182,7 +182,7 @@ const FAQ = () => {
               <p className="text-muted-foreground mb-6">
                 Can't find the answer you're looking for? Our support team is here to help.
               </p>
-              <Link to="/contact-us">
+              <Link to="/contact-us/">
                 <Button size="lg">
                   Contact Support
                 </Button>

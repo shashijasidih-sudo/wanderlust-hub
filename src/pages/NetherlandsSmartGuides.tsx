@@ -23,7 +23,7 @@ const blogArticles = [
     author: "Canal Expert",
     date: "Nov 25, 2024",
     readTime: "9 min read",
-    slug: "/netherlands"
+    slug: "/netherlands/"
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const blogArticles = [
     author: "Art Historian",
     date: "Nov 22, 2024",
     readTime: "10 min read",
-    slug: "/netherlands"
+    slug: "/netherlands/"
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const blogArticles = [
     author: "Garden Expert",
     date: "Nov 20, 2024",
     readTime: "8 min read",
-    slug: "/netherlands"
+    slug: "/netherlands/"
   },
   {
     id: 4,
@@ -56,7 +56,7 @@ const blogArticles = [
     author: "History Guide",
     date: "Nov 18, 2024",
     readTime: "7 min read",
-    slug: "/netherlands"
+    slug: "/netherlands/"
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ const blogArticles = [
     author: "Food Blogger",
     date: "Nov 15, 2024",
     readTime: "6 min read",
-    slug: "/netherlands"
+    slug: "/netherlands/"
   },
   {
     id: 6,
@@ -78,7 +78,7 @@ const blogArticles = [
     author: "Cycling Guide",
     date: "Nov 12, 2024",
     readTime: "11 min read",
-    slug: "/netherlands"
+    slug: "/netherlands/"
   },
   {
     id: 7,
@@ -89,7 +89,7 @@ const blogArticles = [
     author: "Heritage Expert",
     date: "Nov 10, 2024",
     readTime: "8 min read",
-    slug: "/netherlands"
+    slug: "/netherlands/"
   },
   {
     id: 8,
@@ -100,7 +100,7 @@ const blogArticles = [
     author: "Architecture Buff",
     date: "Nov 8, 2024",
     readTime: "9 min read",
-    slug: "/netherlands"
+    slug: "/netherlands/"
   },
   {
     id: 9,
@@ -111,7 +111,7 @@ const blogArticles = [
     author: "Day Tripper",
     date: "Nov 5, 2024",
     readTime: "7 min read",
-    slug: "/netherlands"
+    slug: "/netherlands/"
   },
   {
     id: 10,
@@ -122,7 +122,7 @@ const blogArticles = [
     author: "Street Food Fan",
     date: "Nov 2, 2024",
     readTime: "5 min read",
-    slug: "/netherlands"
+    slug: "/netherlands/"
   },
   {
     id: 11,
@@ -133,7 +133,7 @@ const blogArticles = [
     author: "Museum Guide",
     date: "Oct 30, 2024",
     readTime: "10 min read",
-    slug: "/netherlands"
+    slug: "/netherlands/"
   },
   {
     id: 12,
@@ -144,7 +144,7 @@ const blogArticles = [
     author: "Night Owl",
     date: "Oct 28, 2024",
     readTime: "8 min read",
-    slug: "/netherlands"
+    slug: "/netherlands/"
   }
 ];
 
@@ -165,7 +165,7 @@ const NetherlandsSmartGuides = () => {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link to="/netherlands">Netherlands</Link>
+                  <Link to="/netherlands/">Netherlands</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />

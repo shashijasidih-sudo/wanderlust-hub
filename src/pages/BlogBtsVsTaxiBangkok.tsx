@@ -28,8 +28,8 @@ const BlogBtsVsTaxiBangkok = () => (
     ]}
     cityHub={{
       city: "Bangkok",
-      thingsToDoLink: "/thailand/bangkok/things-to-do",
-      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer",
+      thingsToDoLink: "/thailand/bangkok/things-to-do/",
+      transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer/",
     }}
     sections={[
       { type: "paragraph", content: "Bangkok traffic is genuinely legendary — the kind that makes Mumbai monsoon traffic look like a relaxed Sunday drive. Getting around smartly can literally save you 2–3 hours a day during peak hours. The good news? Bangkok has some of Asia's best public transport. The BTS Skytrain glides above the gridlock, the metered taxis are cheap, and Grab (the local Uber) is everywhere. So which one should you actually use, and when? This practical 2026 guide breaks down cost, speed, comfort, safety and the exact use cases each mode wins. Master this and your Bangkok trip will feel effortless." },
@@ -94,20 +94,20 @@ const BlogBtsVsTaxiBangkok = () => (
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Use BTS for anything connected to malls and modern Bangkok — it's the fastest, cheapest, and most reliable option. Use Grab for old city temples, late nights, family trips with luggage, and any time you don't want to argue with a taxi driver. Use metered taxis only when there's no Grab nearby and you're confident the driver will use the meter. Mix all three intelligently and you'll never lose time to traffic — most Yellodae travelers report saving 2–3 hours a day on a 5-day Bangkok trip just by following this combo. And for guided tours like temple combos or Safari World, always book with private transfers included so you don't have to think about transport at all." },
 
-      { type: "cta", content: "Book Bangkok tours with private transfers", link: "/thailand/bangkok/things-to-do", linkText: "Explore Bangkok Tours" },
+      { type: "cta", content: "Book Bangkok tours with private transfers", link: "/thailand/bangkok/things-to-do/", linkText: "Explore Bangkok Tours" },
     ]}
     relatedActivities={[
-      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide" },
-      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide" },
-      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide" },
-      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide" },
+      { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/" },
+      { title: "Grand Palace Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/" },
+      { title: "Mahanakhon Skywalk Tickets Guide", link: "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/" },
+      { title: "Safari World Bangkok Guide", link: "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide/" },
     ]}
     relatedLinks={[
-      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary" },
-      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary" },
-      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer" },
-      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok" },
+      { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
+      { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary/" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
+      { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok/" },
     ]}
   />
 );

@@ -18,7 +18,7 @@ const Blog = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "For Indian Travelers", link: "/singapore/destination-guides#indian-audience" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "Singapore is one of the most popular international destinations for Indian travelers, thanks to its clean environment, world-class attractions and easy visa process. But the single most-asked question is: how much does a Singapore trip cost from India with activities included? Here is a realistic 2026 breakdown in INR — flights, hotels, transfers, food and the must-do attractions." },
       { type: "heading", content: "Flight Cost from India to Singapore" },
@@ -27,7 +27,7 @@ const Blog = () => (
       { type: "list", items: ["Budget hotels — ₹4,000 – ₹7,000 (Little India, Geylang, Bugis)","Mid-range — ₹7,000 – ₹15,000 (Orchard Road, Clarke Quay)","Luxury — ₹15,000 – ₹40,000+ (Marina Bay, Sentosa)","Recommended for Indians: Little India — close to Indian food, MRT and Mustafa Centre"] },
       { type: "heading", content: "Local Transport & Transfers" },
       { type: "list", items: ["MRT (Singapore's metro) — ₹100 – ₹300 per ride","Bus — ₹100 – ₹200 per ride","Grab/Taxi — ₹500 – ₹1,500 per trip","Airport transfer — ₹1,500 – ₹3,000","Total transport for 4–5 days: ₹3,000 – ₹7,000"] },
-      { type: "cta", content: "Pre-book your Changi airport transfer to skip taxi queues", link: "/blog/airport-transfer-booking-singapore", linkText: "See Airport Transfer Options" },
+      { type: "cta", content: "Pre-book your Changi airport transfer to skip taxi queues", link: "/blog/airport-transfer-booking-singapore/", linkText: "See Airport Transfer Options" },
       { type: "heading", content: "Activity Cost in Singapore (Per Person, 2026 INR)" },
       { type: "list", items: ["Universal Studios Singapore — ₹5,500 – ₹7,000","Night Safari — ₹3,500 – ₹4,500","Gardens by the Bay (Cloud Forest + Flower Dome) — ₹1,500 – ₹2,500","Singapore Flyer — ₹2,500 – ₹3,500","Sentosa Cable Car — ₹2,500 – ₹3,500","Adventure Cove Waterpark — ₹4,500 – ₹6,000","Singapore River Cruise — ₹1,500 – ₹2,500","Average activity spend per person: ₹12,000 – ₹25,000"] },
       { type: "mid-activities", destination: "singapore", heading: "Popular Singapore Activities to Pre-Book" },
@@ -45,20 +45,20 @@ const Blog = () => (
       { type: "tip-box", content: "Family of 4 from India: budget trip ≈ ₹2.5L – ₹3L, mid-range ≈ ₹3.5L – ₹5L (including USS, Sentosa and Night Safari)." },
       { type: "heading", content: "Ways to Save Money" },
       { type: "list", items: ["Book flights 6–10 weeks early","Pre-book attractions online to skip walk-in surcharges","Pick combo passes (USS + Cable Car, GBTB + Flyer)","Stay in Little India or Bugis instead of Marina Bay","Use MRT instead of taxis","Eat at hawker centres — cheap, clean, vegetarian-friendly"] },
-      { type: "cta", content: "Plan your Singapore trip with Yellodae — INR pricing, instant confirmation", link: "/singapore/things-to-do", linkText: "Explore Singapore Tours" },
+      { type: "cta", content: "Plan your Singapore trip with Yellodae — INR pricing, instant confirmation", link: "/singapore/things-to-do/", linkText: "Explore Singapore Tours" },
       { type: "heading", content: "Final Word" },
       { type: "paragraph", content: "A Singapore trip from India can be done on ₹60K or stretched to ₹1.5L+ depending on your style. With smart planning — book flights early, pick the right hotel area and pre-book activities — you can comfortably cover all the must-do experiences within budget." },
     ]}
     relatedActivities={[
       { title: "Universal Studios Singapore Tickets", link: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-      { title: "Night Safari Tickets & Transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers" },
-      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers" },
+      { title: "Night Safari Tickets & Transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers/" },
+      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
     ]}
     relatedLinks={[
-      { title: "Singapore Visa + Tour Planning Guide for Indians", link: "/singapore/destination-guides/indian-audience/singapore-visa-and-tour-planning-guide-for-indians" },
-      { title: "Is Singapore Expensive for Indian Travelers?", link: "/singapore/destination-guides/indian-audience/is-singapore-expensive-for-indian-travelers" },
-      { title: "Best Singapore Attractions for Indian Families", link: "/singapore/destination-guides/indian-audience/best-singapore-attractions-for-indian-families" },
-      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide" },
+      { title: "Singapore Visa + Tour Planning Guide for Indians", link: "/singapore/destination-guides/indian-audience/singapore-visa-and-tour-planning-guide-for-indians/" },
+      { title: "Is Singapore Expensive for Indian Travelers?", link: "/singapore/destination-guides/indian-audience/is-singapore-expensive-for-indian-travelers/" },
+      { title: "Best Singapore Attractions for Indian Families", link: "/singapore/destination-guides/indian-audience/best-singapore-attractions-for-indian-families/" },
+      { title: "Universal Studios Singapore Full Experience", link: "/singapore/destination-guides/activity/universal-studios-singapore-guide/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

@@ -17,8 +17,8 @@ const BlogPattayaToBangkokAirportTransfer = () => (
     subCategory={{ label: "Transfer Guides", link: "/thailand/pattaya/destination-guides#transfer" }}
     cityHub={{
       city: "Pattaya",
-      thingsToDoLink: "/thailand/pattaya/things-to-do",
-      transfersLink: "/thailand/pattaya",
+      thingsToDoLink: "/thailand/pattaya/things-to-do/",
+      transfersLink: "/thailand/pattaya/",
     }}
     sections={[
       { type: "paragraph", content: "Heading back from Pattaya to catch a Bangkok flight? You've got 4 main options — taxi, private transfer, bus and shared van. The right pick depends on your flight time, group size and luggage. Here's the 2026 breakdown for both Suvarnabhumi (BKK) and Don Mueang (DMK)." },
@@ -44,20 +44,20 @@ const BlogPattayaToBangkokAirportTransfer = () => (
       { type: "paragraph", content: "Suvarnabhumi (BKK) is closer to Pattaya and easier to reach by direct bus or taxi. Don Mueang (DMK) is further north, requires longer travel, and a direct private transfer is much smoother than the bus + taxi combo." },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "For most travelers, a pre-booked private car is the safest pick — fixed price, hotel pickup, on-time arrival. Use Grab/taxi for daytime flights with relaxed timing, public bus only if you have hours to spare. Plan ahead, leave early, and you'll never miss a flight from Pattaya." },
-      { type: "cta", content: "Book your airport transfer", link: "/thailand/pattaya", linkText: "Explore Pattaya Services" }
+      { type: "cta", content: "Book your airport transfer", link: "/thailand/pattaya/", linkText: "Explore Pattaya Services" }
     ]}
     relatedActivities={[
-      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide" },
-      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide" },
-      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide" },
-      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide" },
+      { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/" },
+      { title: "Sanctuary of Truth Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide/" },
+      { title: "Alcazar Cabaret Show Pattaya Guide", link: "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide/" },
+      { title: "Nong Nooch Tropical Garden Pattaya", link: "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide/" },
     ]}
     relatedLinks={[
-      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary" },
-      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary" },
-      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer" },
-      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya" },
+      { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },
+      { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
+      { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
+      { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
     ]}
   />
 );

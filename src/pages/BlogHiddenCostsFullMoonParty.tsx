@@ -15,12 +15,12 @@ const Blog = () => (
     guidesLink="/thailand/koh-samui/destination-guides"
     guidesLabel="Koh Samui Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/koh-samui/destination-guides#activity" }}
-    cityHub={{ city: "Koh Samui", thingsToDoLink: "/thailand/koh-samui/things-to-do", transfersLink: "/thailand/koh-samui" }}
+    cityHub={{ city: "Koh Samui", thingsToDoLink: "/thailand/koh-samui/things-to-do/", transfersLink: "/thailand/koh-samui/" }}
     sections={[
       { type: "paragraph", content: "Most people think the Full Moon Party is dirt cheap. The entry fee is — but the real bill stacks up fast. Here are the hidden costs to plan for in 2026." },
       { type: "heading", content: "1. Transfer Costs" },
       { type: "paragraph", content: "Booking last-minute transfers means surge prices on peak dates. Pre-book return transfers and choose shared transfers for cheaper options." },
-      { type: "cta", content: "Beat surge pricing — pre-book the bundled Samui → Koh Phangan transfer + party combo", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer", linkText: "Lock 2026 Price" },
+      { type: "cta", content: "Beat surge pricing — pre-book the bundled Samui → Koh Phangan transfer + party combo", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/", linkText: "Lock 2026 Price" },
       { type: "heading", content: "2. Accommodation" },
       { type: "paragraph", content: "Common mistake: booking late or staying too close to Haad Rin Beach. Smart strategy: book 2–3 weeks in advance and stay slightly away from party zones." },
       { type: "heading", content: "3. Drinks Expenses" },
@@ -43,20 +43,20 @@ const Blog = () => (
       { type: "heading", content: "Smart Budget Tips" },
       { type: "list", items: ["Book transfer + party combo packages","Travel in groups to split costs","Set a strict spending limit","Pre-plan accommodation and logistics"] },
       { type: "tip-box", content: "Yes, the Full Moon Party is still worth it in 2026 — but only if you plan your budget. Focus on the experience, not overspending." },
-      { type: "cta", content: "Book Full Moon Party with pre-paid transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer", linkText: "Book Now" },
+      { type: "cta", content: "Book Full Moon Party with pre-paid transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/", linkText: "Book Now" },
     ]}
     relatedActivities={[
-      { title: "First-Time Full Moon Party Beginner Guide", link: "/thailand/koh-samui/destination-guides/activity/first-time-full-moon-party-koh-samui-beginner-guide" },
-      { title: "What Happens at a Full Moon Party", link: "/thailand/koh-samui/destination-guides/activity/what-happens-at-full-moon-party-thailand" },
-      { title: "Full Moon Party Guide for Indians", link: "/thailand/koh-samui/destination-guides/activity/full-moon-party-thailand-guide-for-indians" },
-      { title: "How to Reach Full Moon Party from Phuket and Bangkok", link: "/thailand/koh-samui/destination-guides/activity/how-to-reach-full-moon-party-from-phuket-and-bangkok" },
+      { title: "First-Time Full Moon Party Beginner Guide", link: "/thailand/koh-samui/destination-guides/activity/first-time-full-moon-party-koh-samui-beginner-guide/" },
+      { title: "What Happens at a Full Moon Party", link: "/thailand/koh-samui/destination-guides/activity/what-happens-at-full-moon-party-thailand/" },
+      { title: "Full Moon Party Guide for Indians", link: "/thailand/koh-samui/destination-guides/activity/full-moon-party-thailand-guide-for-indians/" },
+      { title: "How to Reach Full Moon Party from Phuket and Bangkok", link: "/thailand/koh-samui/destination-guides/activity/how-to-reach-full-moon-party-from-phuket-and-bangkok/" },
     ]}
     relatedLinks={[
-      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer" },
-      { title: "Bangkok Trip Cost from India 2026", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india" },
-      { title: "Pattaya 3 Days Trip Cost", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-3-days-trip-cost" },
-      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer" },
-      { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui" },
+      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" },
+      { title: "Bangkok Trip Cost from India 2026", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india/" },
+      { title: "Pattaya 3 Days Trip Cost", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-3-days-trip-cost/" },
+      { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
+      { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui/" },
     ]}
   />
 );

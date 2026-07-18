@@ -18,7 +18,7 @@ const Profile = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    if (!user) { navigate("/auth"); return; }
+    if (!user) { navigate("/auth/"); return; }
     setFullName(user.full_name || "");
   }, [user, navigate]);
 

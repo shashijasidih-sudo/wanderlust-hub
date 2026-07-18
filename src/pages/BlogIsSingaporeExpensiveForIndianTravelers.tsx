@@ -18,7 +18,7 @@ const Blog = () => (
     guidesLink="/singapore/destination-guides"
     guidesLabel="Singapore Smart Guides"
     subCategory={{ label: "For Indian Travelers", link: "/singapore/destination-guides#indian-audience" }}
-    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do" }}
+    cityHub={{ city: "Singapore", thingsToDoLink: "/singapore/things-to-do/" }}
     sections={[
       { type: "paragraph", content: "Singapore is famous for being one of the most expensive cities in the world — so is it actually expensive for Indian travelers? The honest answer: it depends entirely on your travel style. Here's a full 2026 category-by-category cost breakdown in INR, so you can decide for yourself." },
       { type: "heading", content: "Flights from India — Verdict: Affordable if Booked Early" },
@@ -48,18 +48,18 @@ const Blog = () => (
       { type: "paragraph", content: "Spend less and you'll still enjoy 90% of Singapore — the city itself is the attraction. Spend more and you unlock Marina Bay Sands stays, premium experiences and fine dining. There's no wrong answer, just different versions of the same great trip." },
       { type: "heading", content: "So — Is Singapore Expensive for Indians?" },
       { type: "paragraph", content: "Not really. Singapore is more expensive than Thailand or Vietnam, but it's far from unaffordable. With smart planning, a 4–5 day trip from India fits comfortably in ₹60,000–₹80,000 per person, including the must-do attractions. Save on hotels and transport, and spend on the experiences that truly matter — that's the Singapore formula." },
-      { type: "cta", content: "Plan your Singapore trip with INR pricing and instant confirmation", link: "/singapore/things-to-do", linkText: "Explore Singapore Tours" },
+      { type: "cta", content: "Plan your Singapore trip with INR pricing and instant confirmation", link: "/singapore/things-to-do/", linkText: "Explore Singapore Tours" },
     ]}
     relatedActivities={[
       { title: "Universal Studios Singapore", link: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-      { title: "Night Safari Tickets & Transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers" },
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour" },
+      { title: "Night Safari Tickets & Transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers/" },
+      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
     ]}
     relatedLinks={[
-      { title: "Singapore Trip Cost from India with Activities", link: "/singapore/destination-guides/indian-audience/singapore-trip-cost-from-india-with-activities" },
-      { title: "Singapore Visa + Tour Planning Guide for Indians", link: "/singapore/destination-guides/indian-audience/singapore-visa-and-tour-planning-guide-for-indians" },
-      { title: "Best Singapore Attractions for Indian Families", link: "/singapore/destination-guides/indian-audience/best-singapore-attractions-for-indian-families" },
-      { title: "Singapore City Tour Shared Transfer Itinerary", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer" },
+      { title: "Singapore Trip Cost from India with Activities", link: "/singapore/destination-guides/indian-audience/singapore-trip-cost-from-india-with-activities/" },
+      { title: "Singapore Visa + Tour Planning Guide for Indians", link: "/singapore/destination-guides/indian-audience/singapore-visa-and-tour-planning-guide-for-indians/" },
+      { title: "Best Singapore Attractions for Indian Families", link: "/singapore/destination-guides/indian-audience/best-singapore-attractions-for-indian-families/" },
+      { title: "Singapore City Tour Shared Transfer Itinerary", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer/" },
     ]}
     internalLinks={getSingaporeInternalLinks(LINK)}
   />

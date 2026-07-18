@@ -16,7 +16,7 @@ const Blog = () => (
     guidesLink="/thailand/krabi/destination-guides"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Comparisons", link: "/thailand/krabi/destination-guides#comparison" }}
-    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do", transfersLink: "/thailand/krabi/budget-airport-transfers" }}
+    cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Planning your first Thailand trip and stuck between Krabi and Phuket? You're not alone. These two destinations dominate Thailand itineraries — but they offer very different experiences, especially for Indian travelers. The real question isn't which is 'better' overall — it's which one is better for you based on budget, travel style and expectations. This detailed 2026 guide compares cost, beaches, nightlife, food, connectivity and overall vibe so you can confidently choose the right destination." },
       { type: "heading", content: "Quick Verdict (If You're in a Hurry)" },
@@ -31,7 +31,7 @@ const Blog = () => (
       { type: "list", items: ["Krabi beaches — Railay, Phra Nang Cave, Hong Island, Poda Island (dramatic cliffs + untouched)","Phuket beaches — Patong, Kata, Karon, Freedom (beautiful but often crowded & commercial)","Verdict — Krabi wins for scenic beauty and peaceful beaches"] },
       { type: "heading", content: "4. Island Tours & Activities" },
       { type: "list", items: ["Krabi — 4 Island Tour, Phi Phi, Hong Island, Jungle Tour, Kayaking in Ao Thalane","Phuket — Phi Phi, James Bond Island, Coral Island, water sports, luxury cruises","Krabi tours ₹1,200–₹4,500 | Phuket tours ₹3,500–₹7,500","Verdict — Krabi offers better value"] },
-      { type: "cta", content: "Book the best-rated 4 Island Tour from Krabi", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer", linkText: "Book 4 Island Tour" },
+      { type: "cta", content: "Book the best-rated 4 Island Tour from Krabi", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/", linkText: "Book 4 Island Tour" },
       { type: "heading", content: "5. Nightlife & Party Scene" },
       { type: "list", items: ["Krabi — limited, beach bars, chill vibe","Phuket — Bangla Road, nightclubs, beach parties, cabaret shows","Verdict — Phuket clearly wins for nightlife"] },
       { type: "heading", content: "6. Food & Indian Food Availability" },
@@ -52,22 +52,22 @@ const Blog = () => (
       { type: "list", items: ["Krabi — 3–4 days is enough","Phuket — 4–5 days recommended"] },
       { type: "heading", content: "14. Can You Combine Krabi & Phuket?" },
       { type: "paragraph", content: "Yes — and this is the smartest option. Suggested plan: 3 days in Krabi + 2 days in Phuket, connected by ferry (2–3 hours) or speedboat. You get nature + nightlife in one trip." },
-      { type: "cta", content: "See our 6–7 day Phuket + Krabi combo itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary", linkText: "View Combo Itinerary" },
+      { type: "cta", content: "See our 6–7 day Phuket + Krabi combo itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary/", linkText: "View Combo Itinerary" },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Krabi is ideal for experience and value. Phuket is ideal for energy and entertainment. If it's your first international trip, Krabi is usually the better and more comfortable choice. If you want a bit of everything, do both." },
-      { type: "cta", content: "Book a smooth Krabi airport transfer", link: "/thailand/krabi/budget-airport-transfers", linkText: "Book Krabi Transfer" },
+      { type: "cta", content: "Book a smooth Krabi airport transfer", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
-      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer" },
-      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer" },
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers" },
+      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
+      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
     ]}
     relatedLinks={[
-      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary" },
-      { title: "Best Krabi Packages for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples" },
-      { title: "Phuket vs Krabi: Which Is Better for Indians?", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians" },
-      { title: "Phuket + Krabi Combo Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary" },
+      { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary/" },
+      { title: "Best Krabi Packages for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples/" },
+      { title: "Phuket vs Krabi: Which Is Better for Indians?", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians/" },
+      { title: "Phuket + Krabi Combo Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary/" },
     ]}
     internalLinks={getKrabiInternalLinks("/thailand/krabi/destination-guides/comparison/krabi-vs-phuket-for-indian-travelers")}
   />

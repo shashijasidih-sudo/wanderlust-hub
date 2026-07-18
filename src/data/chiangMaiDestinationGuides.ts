@@ -43,7 +43,7 @@ export const chiangMaiBlogs: ChiangMaiBlogEntry[] = [
     image: imgDoiSuthep,
     date: "May 6, 2026",
     readTime: "9 min read",
-    link: "/thailand/chiang-mai/destination-guides/activity/doi-suthep-temple-complete-guide",
+    link: "/thailand/chiang-mai/destination-guides/activity/doi-suthep-temple-complete-guide/",
   },
   {
     title: "Chiang Rai Day Trip Guide: Golden Triangle & Long Neck Tribe Experience",
@@ -53,7 +53,7 @@ export const chiangMaiBlogs: ChiangMaiBlogEntry[] = [
     image: imgGoldenTriangle,
     date: "May 6, 2026",
     readTime: "10 min read",
-    link: "/thailand/chiang-mai/destination-guides/activity/chiang-rai-day-trip-golden-triangle-long-neck-tribe",
+    link: "/thailand/chiang-mai/destination-guides/activity/chiang-rai-day-trip-golden-triangle-long-neck-tribe/",
   },
   {
     title: "Best Day Trips from Chiang Mai for First-Time Visitors",
@@ -63,7 +63,7 @@ export const chiangMaiBlogs: ChiangMaiBlogEntry[] = [
     image: imgInthanon,
     date: "May 6, 2026",
     readTime: "8 min read",
-    link: "/thailand/chiang-mai/destination-guides/activity/best-day-trips-from-chiang-mai",
+    link: "/thailand/chiang-mai/destination-guides/activity/best-day-trips-from-chiang-mai/",
   },
   {
     title: "Chiang Mai Temple Tour Price Guide: What Does It Cost in 2026?",
@@ -73,7 +73,7 @@ export const chiangMaiBlogs: ChiangMaiBlogEntry[] = [
     image: imgChediLuang,
     date: "May 6, 2026",
     readTime: "10 min read",
-    link: "/thailand/chiang-mai/destination-guides/activity/chiang-mai-temple-tour-price-guide-2026",
+    link: "/thailand/chiang-mai/destination-guides/activity/chiang-mai-temple-tour-price-guide-2026/",
   },
   {
     title: "Chiang Rai vs Doi Inthanon Tour: Which Day Trip Should You Choose?",
@@ -83,7 +83,7 @@ export const chiangMaiBlogs: ChiangMaiBlogEntry[] = [
     image: imgGoldenTriangle,
     date: "May 6, 2026",
     readTime: "8 min read",
-    link: "/thailand/chiang-mai/destination-guides/activity/chiang-rai-vs-doi-inthanon-day-trip",
+    link: "/thailand/chiang-mai/destination-guides/activity/chiang-rai-vs-doi-inthanon-day-trip/",
   },
   {
     title: "Chiang Mai Tour Guide for Indians: Temples, Food & Travel Tips",
@@ -93,7 +93,7 @@ export const chiangMaiBlogs: ChiangMaiBlogEntry[] = [
     image: imgCity,
     date: "May 6, 2026",
     readTime: "9 min read",
-    link: "/thailand/chiang-mai/destination-guides/activity/chiang-mai-tour-guide-for-indians",
+    link: "/thailand/chiang-mai/destination-guides/activity/chiang-mai-tour-guide-for-indians/",
   },
   {
     title: "Chiang Rai Day Trip from Chiang Mai for Indian Travelers",
@@ -103,7 +103,7 @@ export const chiangMaiBlogs: ChiangMaiBlogEntry[] = [
     image: imgVan,
     date: "May 6, 2026",
     readTime: "8 min read",
-    link: "/thailand/chiang-mai/destination-guides/activity/chiang-rai-day-trip-for-indian-travelers",
+    link: "/thailand/chiang-mai/destination-guides/activity/chiang-rai-day-trip-for-indian-travelers/",
   },
   {
     title: "How to Visit Wat Phra That Doi Suthep Without Climbing 300 Steps",
@@ -113,7 +113,7 @@ export const chiangMaiBlogs: ChiangMaiBlogEntry[] = [
     image: imgDoiSuthep,
     date: "May 6, 2026",
     readTime: "6 min read",
-    link: "/thailand/chiang-mai/destination-guides/activity/visit-doi-suthep-without-climbing-steps",
+    link: "/thailand/chiang-mai/destination-guides/activity/visit-doi-suthep-without-climbing-steps/",
   },
 ];
 

@@ -62,7 +62,7 @@ const PhuketDestinationGuides = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <CanonicalUrl path="/thailand/phuket/destination-guides" />
+      <CanonicalUrl path="/thailand/phuket/destination-guides/" />
       <Header />
 
       <main className="flex-1 bg-secondary/30">
@@ -77,13 +77,13 @@ const PhuketDestinationGuides = () => {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link to="/thailand">Thailand</Link>
+                  <Link to="/thailand/">Thailand</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link to="/thailand/phuket">Phuket</Link>
+                  <Link to="/thailand/phuket/">Phuket</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
