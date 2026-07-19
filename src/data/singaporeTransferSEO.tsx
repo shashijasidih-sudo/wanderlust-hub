@@ -9,33 +9,35 @@ import sgGardensNight from "@/assets/singapore-gardens-bay-night-1.jpg";
 import sgCouple from "@/assets/singapore-couple-walking-1.jpg";
 import sgFlyerTwilight from "@/assets/singapore-flyer-twilight-1.jpg";
 import sgTourists from "@/assets/singapore-tourists-city-1.jpg";
-import sgChangiArrivals from "@/assets/singapore-changi-arrivals.jpg.asset.json";
-import sgDriverNameboard from "@/assets/singapore-driver-nameboard.jpg.asset.json";
-import sgFamilyLuggage from "@/assets/singapore-family-luggage.jpg.asset.json";
-import sgPrivateMpv from "@/assets/singapore-private-mpv.jpg.asset.json";
+// Airport transfer imagery is served directly from /public so it works on the
+// custom domain (which does not route Lovable's __l5e asset infrastructure).
+const sgChangiArrivalsUrl = "/images/singapore-transfers/changi-arrivals.jpg";
+const sgDriverNameboardUrl = "/images/singapore-transfers/driver-nameboard.jpg";
+const sgFamilyLuggageUrl = "/images/singapore-transfers/family-luggage.jpg";
+const sgPrivateMpvUrl = "/images/singapore-transfers/private-mpv.jpg";
 
 // ---------- Galleries ----------
 const airportPickupGallery: TransferGalleryImage[] = [
-  { src: sgChangiArrivals.url, alt: "Singapore Changi Airport arrivals hall" },
-  { src: sgDriverNameboard.url, alt: "Professional driver holding a name board at Changi Airport" },
-  { src: sgFamilyLuggage.url, alt: "Family with luggage at Singapore Changi Airport pickup" },
-  { src: sgPrivateMpv.url, alt: "Private MPV waiting at Singapore airport pickup zone" },
+  { src: sgChangiArrivalsUrl, alt: "Singapore Changi Airport arrivals hall" },
+  { src: sgDriverNameboardUrl, alt: "Professional driver holding a name board at Changi Airport" },
+  { src: sgFamilyLuggageUrl, alt: "Family with luggage at Singapore Changi Airport pickup" },
+  { src: sgPrivateMpvUrl, alt: "Private MPV waiting at Singapore airport pickup zone" },
   { src: sgMarinaDay, alt: "Marina Bay Sands daytime view from Singapore airport transfer" },
 ];
 
 const airportDropoffGallery: TransferGalleryImage[] = [
-  { src: sgFamilyLuggage.url, alt: "Family with luggage leaving Singapore hotel for Changi airport" },
-  { src: sgPrivateMpv.url, alt: "Private MPV ready for hotel-to-airport drop-off in Singapore" },
-  { src: sgChangiArrivals.url, alt: "Singapore Changi Airport departure terminal drop-off" },
-  { src: sgDriverNameboard.url, alt: "Professional driver assisting with airport drop-off in Singapore" },
+  { src: sgFamilyLuggageUrl, alt: "Family with luggage leaving Singapore hotel for Changi airport" },
+  { src: sgPrivateMpvUrl, alt: "Private MPV ready for hotel-to-airport drop-off in Singapore" },
+  { src: sgChangiArrivalsUrl, alt: "Singapore Changi Airport departure terminal drop-off" },
+  { src: sgDriverNameboardUrl, alt: "Professional driver assisting with airport drop-off in Singapore" },
   { src: sgMarinaDay, alt: "Marina Bay skyline on the drive to Changi airport" },
 ];
 
 const airportNightPickupGallery: TransferGalleryImage[] = [
-  { src: sgChangiArrivals.url, alt: "Late-night arrivals at Singapore Changi Airport" },
-  { src: sgDriverNameboard.url, alt: "Driver with name board at Changi Airport for late-night pickup" },
-  { src: sgFamilyLuggage.url, alt: "Family with luggage at Singapore Changi Airport at night" },
-  { src: sgPrivateMpv.url, alt: "Private MPV for late-night Singapore airport pickup" },
+  { src: sgChangiArrivalsUrl, alt: "Late-night arrivals at Singapore Changi Airport" },
+  { src: sgDriverNameboardUrl, alt: "Driver with name board at Changi Airport for late-night pickup" },
+  { src: sgFamilyLuggageUrl, alt: "Family with luggage at Singapore Changi Airport at night" },
+  { src: sgPrivateMpvUrl, alt: "Private MPV for late-night Singapore airport pickup" },
   { src: sgMarinaNight, alt: "Marina Bay Sands night view en route from Changi airport" },
 ];
 
