@@ -24,17 +24,19 @@ const airportPickupGallery: TransferGalleryImage[] = [
 ];
 
 const airportDropoffGallery: TransferGalleryImage[] = [
-  { src: sgCouple, alt: "Singapore hotel pickup heading to Changi airport" },
-  { src: sgMarinaDay, alt: "Marina Bay area drive to Changi airport" },
-  { src: sgFlyerTwilight, alt: "Singapore Flyer twilight on the way to airport" },
-  { src: sgCityscape, alt: "Singapore Changi airport drop-off" },
+  { src: sgFamilyLuggage.url, alt: "Family with luggage leaving Singapore hotel for Changi airport" },
+  { src: sgPrivateMpv.url, alt: "Private MPV ready for hotel-to-airport drop-off in Singapore" },
+  { src: sgChangiArrivals.url, alt: "Singapore Changi Airport departure terminal drop-off" },
+  { src: sgDriverNameboard.url, alt: "Professional driver assisting with airport drop-off in Singapore" },
+  { src: sgMarinaDay, alt: "Marina Bay skyline on the drive to Changi airport" },
 ];
 
 const airportNightPickupGallery: TransferGalleryImage[] = [
-  { src: sgMarinaNight, alt: "Marina Bay Sands night pickup from Singapore Changi airport" },
-  { src: sgMerlionNight, alt: "Singapore Merlion night view en route from airport" },
-  { src: sgGardensNight, alt: "Gardens by the Bay night arrival to Singapore hotel" },
-  { src: sgCityscape, alt: "Singapore late night airport private transfer to hotel" },
+  { src: sgChangiArrivals.url, alt: "Late-night arrivals at Singapore Changi Airport" },
+  { src: sgDriverNameboard.url, alt: "Driver with name board at Changi Airport for late-night pickup" },
+  { src: sgFamilyLuggage.url, alt: "Family with luggage at Singapore Changi Airport at night" },
+  { src: sgPrivateMpv.url, alt: "Private MPV for late-night Singapore airport pickup" },
+  { src: sgMarinaNight, alt: "Marina Bay Sands night view en route from Changi airport" },
 ];
 
 // ---------- Reusable SEO blocks ----------
