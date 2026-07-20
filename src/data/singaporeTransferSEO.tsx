@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import type { TransferFAQ, TransferGalleryImage } from "@/components/TransferBooking";
+import IndianTravellerCompanion from "@/components/activity-detail/IndianTravellerCompanion";
+
 
 import sgCityscape from "@/assets/singapore-cityscape-woman-1.jpg";
 import sgMarinaDay from "@/assets/singapore-marina-bay-sands-day-1.jpg";
