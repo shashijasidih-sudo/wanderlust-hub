@@ -44,26 +44,8 @@ const airportNightPickupGallery: TransferGalleryImage[] = [
 ];
 
 // ---------- Reusable SEO blocks ----------
-const IndianTravelersBlock = () => (
-  <>
-    <h3>Why Indian Travelers Prefer This Transfer</h3>
-    <ul>
-      <li>INR pricing for easy budgeting before travel</li>
-      <li>Pre-trip WhatsApp support on +91 7061710810</li>
-      <li>No language barrier — driver briefed for Indian families</li>
-      <li>Comfortable for elderly parents, kids and honeymoon couples</li>
-      <li>Plenty of luggage space for shopping bags</li>
-      <li>Drop-off at Indian-friendly hotels in Little India, Geylang, Bugis</li>
-    </ul>
-  </>
-);
 
-const KeywordsBlock = ({ items }: { items: string[] }) => (
-  <>
-    <h3>Top Search Keywords Covered</h3>
-    <p className="text-sm">{items.join(" • ")}</p>
-  </>
-);
+
 
 const ServiceAreasBlock = () => (
   <>
