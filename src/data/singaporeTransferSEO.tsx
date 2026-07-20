@@ -190,14 +190,8 @@ export const singaporeTransferSEO: Record<string, SEOEntry> = {
 
         <ServiceAreasBlock />
 
-        <IndianTravelersBlock />
+        <IndianTravellerCompanion />
 
-        <KeywordsBlock items={[
-          "Singapore hotel to Changi airport",
-          "Singapore airport drop taxi price",
-          "Orchard to Changi airport private cab",
-          "Singapore departure transfer India",
-        ]} />
       </>
     ),
     faqs: [
@@ -250,15 +244,8 @@ export const singaporeTransferSEO: Record<string, SEOEntry> = {
 
         <ServiceAreasBlock />
 
-        <IndianTravelersBlock />
+        <IndianTravellerCompanion />
 
-        <KeywordsBlock items={[
-          "Singapore airport night pickup",
-          "Changi late night taxi India",
-          "Singapore airport pickup midnight",
-          "Changi to Orchard 2 AM transfer",
-          "Singapore red-eye flight private cab",
-        ]} />
       </>
     ),
     faqs: [
