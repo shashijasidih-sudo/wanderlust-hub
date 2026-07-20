@@ -136,15 +136,8 @@ export const singaporeTransferSEO: Record<string, SEOEntry> = {
 
         <ServiceAreasBlock />
 
-        <IndianTravelersBlock />
+        <IndianTravellerCompanion />
 
-        <KeywordsBlock items={[
-          "Singapore Changi airport pickup",
-          "Changi airport to hotel taxi India",
-          "Singapore airport private transfer INR",
-          "Changi to Orchard Road cab",
-          "Singapore airport pickup price",
-        ]} />
       </>
     ),
     faqs: [
