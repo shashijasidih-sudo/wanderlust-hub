@@ -648,7 +648,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
           </aside>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="w-full">
           {/* Transfer Details Accordion */}
           <div className="mt-8">
             <Accordion type="multiple" className="space-y-4">
