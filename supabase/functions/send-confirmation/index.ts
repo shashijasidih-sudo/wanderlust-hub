@@ -23,11 +23,13 @@ async function smtpSend(to: string, subject: string, html: string, replyTo?: str
     },
   });
   try {
+    // Break long HTML lines to avoid quoted-printable soft-wraps producing "=20" artifacts in some clients
+    const safeHtml = html.replace(/(>)([^<\n]{60,}?)(<)/g, (_m, a, b, c) => `${a}\n${b}\n${c}`).replace(/[ \t]+\n/g, "\n");
     await client.send({
       from: `Yellodae <${SMTP_FROM}>`,
       to,
       subject,
-      html,
+      html: safeHtml,
       content: "This email requires an HTML-capable client.",
       ...(replyTo ? { replyTo } : {}),
     });
@@ -76,11 +78,14 @@ function money(amount: number, curr: string) {
 
 
 function detectDestination(slug: string, tourName: string): string {
-  const cities = ["Bangkok", "Phuket", "Pattaya", "Krabi", "Chiang Mai", "Bali", "Dubai", "Singapore", "Abu Dhabi"];
   const hay = `${slug} ${tourName}`.toLowerCase();
+  const cities = ["Bangkok", "Phuket", "Pattaya", "Krabi", "Chiang Mai", "Koh Samui", "Bali", "Abu Dhabi"];
   for (const c of cities) if (hay.includes(c.toLowerCase())) return c;
-  return "Your Destination";
+  const countries = ["Thailand", "Singapore", "Japan", "Dubai", "Malaysia", "Indonesia", "Vietnam"];
+  for (const c of countries) if (hay.includes(c.toLowerCase())) return c;
+  return "";
 }
+
 
 function shell(inner: string, previewText: string) {
   return `<!DOCTYPE html>
@@ -99,11 +104,11 @@ function shell(inner: string, previewText: string) {
 <tr><td style="background:linear-gradient(135deg,${BRAND.primary},${BRAND.primaryDark});padding:32px 32px;text-align:center;">
   <img src="${LOGO_URL}" alt="Yellodae" width="52" height="52" style="display:inline-block;width:52px;height:52px;border-radius:12px;background:#ffffff;padding:6px;" />
   <h1 style="color:#ffffff;margin:12px 0 4px;font-size:26px;font-weight:800;letter-spacing:-0.5px;">Yellodae</h1>
-  <p style="color:#fff7ed;margin:0;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;">Curated Travel Experiences</p>
+  <p style="color:#fff7ed;margin:0;font-size:14px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-align:center;">Curated Travel Experiences</p>
 </td></tr>
 ${inner}
 <tr><td style="background:${BRAND.ink};padding:24px 32px;text-align:center;">
-  <p style="color:#d1d5db;font-size:13px;margin:0 0 6px;font-weight:600;">Yellodae Tours &amp; Travels</p>
+  <p style="color:#d1d5db;font-size:13px;margin:0 0 6px;font-weight:600;">Yellodae Trails</p>
   <p style="color:#9ca3af;font-size:11px;margin:0 0 10px;">Need help? Email <a href="mailto:support@yellodae.com" style="color:${BRAND.primary};text-decoration:none;">support@yellodae.com</a> or WhatsApp +91 7061710810</p>
   <p style="color:#6b7280;font-size:11px;margin:0;">
     <a href="${SITE}" style="color:${BRAND.primary};text-decoration:none;">yellodae.com</a>
@@ -141,7 +146,7 @@ function customerEmail(p: CustomerParams) {
 <tr><td style="padding:36px 32px 8px;text-align:center;">
   <div style="display:inline-block;background:#dcfce7;border-radius:999px;padding:10px 18px;color:${BRAND.success};font-size:12px;font-weight:700;letter-spacing:0.5px;">✓ BOOKING CONFIRMED</div>
   <h1 style="color:${BRAND.ink};margin:18px 0 6px;font-size:26px;line-height:1.25;font-weight:800;">You're all set, ${p.name}!</h1>
-  <p style="color:${BRAND.muted};margin:0;font-size:15px;line-height:1.5;">Your ${p.destination} experience is booked. We've saved your spot and shared the details below.</p>
+  <p style="color:${BRAND.muted};margin:0;font-size:15px;line-height:1.5;">${p.destination ? `Your ${p.destination} experience is booked.` : "Your travel experience is booked."} We've saved your spot and shared the details below.</p>
 </td></tr>
 
 <tr><td style="padding:24px 32px 8px;">
@@ -149,7 +154,7 @@ function customerEmail(p: CustomerParams) {
     <tr><td style="padding:20px 22px;">
       <p style="margin:0 0 4px;color:${BRAND.primaryDark};font-size:11px;font-weight:700;letter-spacing:1px;">ACTIVITY</p>
       <p style="margin:0;color:${BRAND.ink};font-size:17px;font-weight:700;line-height:1.35;">${p.tourTitle}</p>
-      <p style="margin:6px 0 0;color:${BRAND.muted};font-size:13px;">📍 ${p.destination}</p>
+      <p style="margin:6px 0 0;color:${BRAND.muted};font-size:13px;">📍 ${p.destination || "Travel Experience"}</p>
     </td></tr>
   </table>
 </td></tr>
@@ -217,7 +222,7 @@ function supportEmail(p: SupportParams) {
 <tr><td style="padding:32px 32px 8px;text-align:center;">
   <div style="display:inline-block;background:#fef3c7;border-radius:999px;padding:8px 16px;color:${BRAND.primaryDark};font-size:11px;font-weight:700;letter-spacing:1px;">NEW BOOKING RECEIVED</div>
   <h1 style="color:${BRAND.ink};margin:16px 0 4px;font-size:22px;font-weight:800;">${p.tourTitle}</h1>
-  <p style="color:${BRAND.muted};margin:0;font-size:13px;">📍 ${p.destination}</p>
+  <p style="color:${BRAND.muted};margin:0;font-size:13px;">📍 ${p.destination || "Travel Experience"}</p>
 </td></tr>
 
 <tr><td style="padding:20px 32px 8px;">
