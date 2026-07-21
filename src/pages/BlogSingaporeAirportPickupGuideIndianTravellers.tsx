@@ -52,6 +52,20 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
       { type: "paragraph", content: "In this comprehensive guide, we'll explain everything Indian travellers need to know about booking a **Changi Airport Transfer**, compare private transfers with taxis and Grab, discuss vehicle options, luggage capacity, pricing, hotel coverage, frequently asked questions, and share practical travel tips to help you start your Singapore holiday with confidence." },
       { type: "paragraph", content: "Whether it's your first trip to Singapore or your fifth, this guide will help you choose the best airport transfer option for your needs." },
 
+      {
+        type: "cta-prominent",
+        content: "Book Your Singapore Airport Transfer",
+        subheading: "Skip the taxi queue after your flight from India. Fixed INR pricing, flight tracking, meet & greet, and direct hotel drop-off across Marina Bay, Sentosa, Orchard Road and Little India.",
+        items: [
+          "Sedan, MPV & large van options",
+          "Family-friendly with luggage space",
+          "24/7 arrivals including late-night flights",
+          "Instant online confirmation",
+        ],
+        link: "/singapore/singapore-airport-pickup/",
+        linkText: "Book Airport Pickup",
+      },
+
       { type: "heading", content: "Why Choosing a Singapore Airport Pickup Makes Sense" },
       { type: "paragraph", content: "Singapore is known for having one of the best transportation systems in the world. The MRT (Mass Rapid Transit), buses, taxis, and ride-hailing apps like Grab are all reliable and widely used." },
       { type: "paragraph", content: "However, airport arrivals are different from everyday city travel." },
@@ -145,6 +159,20 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
       { type: "paragraph", content: "Most airport transfer drivers will help load your luggage into the vehicle before beginning the journey. This is particularly helpful for:" },
       { type: "list", items: ["Families with children", "Senior citizens", "Travellers carrying multiple suitcases", "Honeymoon couples with extra baggage"] },
       { type: "paragraph", content: "Once everyone is comfortably seated, you'll head directly to your hotel or accommodation without unnecessary stops." },
+
+      {
+        type: "cta-prominent",
+        content: "Book Your Singapore Airport Transfer",
+        subheading: "Arrange your Changi Airport pickup in advance and travel straight to your hotel with a professional driver, flight monitoring and fixed pricing.",
+        items: [
+          "Meet & greet at arrivals hall",
+          "Driver holds your name board",
+          "WhatsApp updates before pickup",
+          "No surge pricing or hidden fees",
+        ],
+        link: "/singapore/singapore-airport-pickup/",
+        linkText: "Reserve My Transfer",
+      },
 
       { type: "heading", content: "Choosing the Right Vehicle for Your Airport Transfer" },
       { type: "paragraph", content: "Selecting the right vehicle is just as important as booking your airport transfer. The ideal option depends on the number of passengers, luggage, and whether you're travelling with children or senior citizens." },
@@ -346,19 +374,22 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
       { type: "paragraph", content: "Singapore is renowned for its efficiency, safety and hospitality. Starting your journey with a reliable **Changi Airport Transfer** allows you to focus on what really matters — enjoying your holiday from the very first moment." },
       { type: "paragraph", content: "Whether you're heading to Marina Bay, Sentosa, Orchard Road, Little India or any other part of the city, planning your transportation in advance helps you avoid unnecessary delays and ensures a comfortable beginning to your trip." },
 
-      { type: "heading", content: "Book Your Singapore Airport Pickup Today" },
-      { type: "paragraph", content: "Ready to begin your Singapore adventure without the stress of finding transportation after landing? Book your Singapore Airport Pickup with Yellodae and enjoy:" },
-      { type: "list", items: [
-        "✔ Fixed prices with no hidden surprises",
-        "✔ Comfortable private vehicles",
-        "✔ Professional airport meet & greet",
-        "✔ Flight monitoring for delayed arrivals",
-        "✔ Direct hotel transfers across Singapore",
-        "✔ Suitable options for solo travellers, couples, families and groups",
-        "✔ Easy online booking with instant confirmation",
-      ]},
-      { type: "paragraph", content: "Start your Singapore holiday the smart way — with a dependable airport transfer designed for Indian travellers." },
-      { type: "cta", content: "Book your Changi Airport Transfer now", link: "/singapore/singapore-airport-pickup/", linkText: "Book Singapore Airport Pickup" },
+      {
+        type: "cta-prominent",
+        content: "Book Your Singapore Airport Transfer",
+        subheading: "Ready to begin your Singapore adventure without the stress of finding transportation after landing? Book your Changi Airport pickup with Yellodae and start your holiday the smart way.",
+        items: [
+          "Fixed prices with no hidden surprises",
+          "Comfortable private sedans, MPVs & vans",
+          "Professional airport meet & greet",
+          "Flight monitoring for delayed arrivals",
+          "Direct hotel transfers across Singapore",
+          "Suitable for solo travellers, couples, families & groups",
+          "Easy online booking with instant confirmation",
+        ],
+        link: "/singapore/singapore-airport-pickup/",
+        linkText: "Book Singapore Airport Pickup",
+      },
       { type: "paragraph", content: "**Safe travels, and we look forward to welcoming you to Singapore!**" },
       { type: "paragraph", content: LINKS },
     ]}
