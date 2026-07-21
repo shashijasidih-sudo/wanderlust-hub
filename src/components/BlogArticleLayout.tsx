@@ -430,6 +430,37 @@ const BlogArticleLayout = ({
                       </div>
                     );
                     break;
+                  case "cta-prominent":
+                    rendered = (
+                      <div className="my-10 p-6 md:p-8 rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-background to-primary/10 shadow-lg">
+                        <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-xl md:text-2xl font-bold text-black mb-2">{section.content}</h3>
+                            {section.subheading && (
+                              <p className="text-black/80 mb-4 leading-relaxed">{section.subheading}</p>
+                            )}
+                            {section.items && section.items.length > 0 && (
+                              <ul className="grid sm:grid-cols-2 gap-2">
+                                {section.items.map((item, j) => (
+                                  <li key={j} className="flex items-start gap-2 text-sm text-black">
+                                    <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+                          <Button
+                            asChild
+                            size="lg"
+                            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 whitespace-nowrap shadow-md hover:shadow-lg transition-all"
+                          >
+                            <Link to={section.link || "/singapore/singapore-airport-pickup/"}>{section.linkText || "Book Airport Transfer"}</Link>
+                          </Button>
+                        </div>
+                      </div>
+                    );
+                    break;
                   case "tip-box":
                     rendered = (
                       <div className="my-6 p-6 bg-secondary/50 border-l-4 border-primary rounded-r-xl">
