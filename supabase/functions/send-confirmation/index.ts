@@ -23,11 +23,13 @@ async function smtpSend(to: string, subject: string, html: string, replyTo?: str
     },
   });
   try {
+    // Break long HTML lines to avoid quoted-printable soft-wraps producing "=20" artifacts in some clients
+    const safeHtml = html.replace(/(>)([^<\n]{60,}?)(<)/g, (_m, a, b, c) => `${a}\n${b}\n${c}`).replace(/[ \t]+\n/g, "\n");
     await client.send({
       from: `Yellodae <${SMTP_FROM}>`,
       to,
       subject,
-      html,
+      html: safeHtml,
       content: "This email requires an HTML-capable client.",
       ...(replyTo ? { replyTo } : {}),
     });
