@@ -52,6 +52,20 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
       { type: "paragraph", content: "In this comprehensive guide, we'll explain everything Indian travellers need to know about booking a **Changi Airport Transfer**, compare private transfers with taxis and Grab, discuss vehicle options, luggage capacity, pricing, hotel coverage, frequently asked questions, and share practical travel tips to help you start your Singapore holiday with confidence." },
       { type: "paragraph", content: "Whether it's your first trip to Singapore or your fifth, this guide will help you choose the best airport transfer option for your needs." },
 
+      {
+        type: "cta-prominent",
+        content: "Book Your Singapore Airport Transfer",
+        subheading: "Skip the taxi queue after your flight from India. Fixed INR pricing, flight tracking, meet & greet, and direct hotel drop-off across Marina Bay, Sentosa, Orchard Road and Little India.",
+        items: [
+          "Sedan, MPV & large van options",
+          "Family-friendly with luggage space",
+          "24/7 arrivals including late-night flights",
+          "Instant online confirmation",
+        ],
+        link: "/singapore/singapore-airport-pickup/",
+        linkText: "Book Airport Pickup",
+      },
+
       { type: "heading", content: "Why Choosing a Singapore Airport Pickup Makes Sense" },
       { type: "paragraph", content: "Singapore is known for having one of the best transportation systems in the world. The MRT (Mass Rapid Transit), buses, taxis, and ride-hailing apps like Grab are all reliable and widely used." },
       { type: "paragraph", content: "However, airport arrivals are different from everyday city travel." },
