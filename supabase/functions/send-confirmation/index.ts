@@ -104,7 +104,7 @@ function shell(inner: string, previewText: string) {
 <tr><td style="background:linear-gradient(135deg,${BRAND.primary},${BRAND.primaryDark});padding:32px 32px;text-align:center;">
   <img src="${LOGO_URL}" alt="Yellodae" width="52" height="52" style="display:inline-block;width:52px;height:52px;border-radius:12px;background:#ffffff;padding:6px;" />
   <h1 style="color:#ffffff;margin:12px 0 4px;font-size:26px;font-weight:800;letter-spacing:-0.5px;">Yellodae</h1>
-  <p style="color:#fff7ed;margin:0;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;">Curated Travel Experiences</p>
+  <p style="color:#fff7ed;margin:0;font-size:14px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-align:center;">Curated Travel Experiences</p>
 </td></tr>
 ${inner}
 <tr><td style="background:${BRAND.ink};padding:24px 32px;text-align:center;">
