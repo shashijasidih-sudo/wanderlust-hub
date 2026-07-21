@@ -160,6 +160,20 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
       { type: "list", items: ["Families with children", "Senior citizens", "Travellers carrying multiple suitcases", "Honeymoon couples with extra baggage"] },
       { type: "paragraph", content: "Once everyone is comfortably seated, you'll head directly to your hotel or accommodation without unnecessary stops." },
 
+      {
+        type: "cta-prominent",
+        content: "Book Your Singapore Airport Transfer",
+        subheading: "Arrange your Changi Airport pickup in advance and travel straight to your hotel with a professional driver, flight monitoring and fixed pricing.",
+        items: [
+          "Meet & greet at arrivals hall",
+          "Driver holds your name board",
+          "WhatsApp updates before pickup",
+          "No surge pricing or hidden fees",
+        ],
+        link: "/singapore/singapore-airport-pickup/",
+        linkText: "Reserve My Transfer",
+      },
+
       { type: "heading", content: "Choosing the Right Vehicle for Your Airport Transfer" },
       { type: "paragraph", content: "Selecting the right vehicle is just as important as booking your airport transfer. The ideal option depends on the number of passengers, luggage, and whether you're travelling with children or senior citizens." },
       { type: "paragraph", content: "Many Indian travellers underestimate how much luggage they will have. Besides regular suitcases, families often carry cabin bags, strollers, shopping bags, baby essentials, or even foldable wheelchairs. Choosing a slightly larger vehicle can make your journey far more comfortable." },
