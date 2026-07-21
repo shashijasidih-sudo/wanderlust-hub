@@ -108,7 +108,7 @@ function shell(inner: string, previewText: string) {
 </td></tr>
 ${inner}
 <tr><td style="background:${BRAND.ink};padding:24px 32px;text-align:center;">
-  <p style="color:#d1d5db;font-size:13px;margin:0 0 6px;font-weight:600;">Yellodae Tours &amp; Travels</p>
+  <p style="color:#d1d5db;font-size:13px;margin:0 0 6px;font-weight:600;">Yellodae Trails</p>
   <p style="color:#9ca3af;font-size:11px;margin:0 0 10px;">Need help? Email <a href="mailto:support@yellodae.com" style="color:${BRAND.primary};text-decoration:none;">support@yellodae.com</a> or WhatsApp +91 7061710810</p>
   <p style="color:#6b7280;font-size:11px;margin:0;">
     <a href="${SITE}" style="color:${BRAND.primary};text-decoration:none;">yellodae.com</a>
