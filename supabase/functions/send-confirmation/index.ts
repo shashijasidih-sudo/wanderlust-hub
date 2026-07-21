@@ -146,7 +146,7 @@ function customerEmail(p: CustomerParams) {
 <tr><td style="padding:36px 32px 8px;text-align:center;">
   <div style="display:inline-block;background:#dcfce7;border-radius:999px;padding:10px 18px;color:${BRAND.success};font-size:12px;font-weight:700;letter-spacing:0.5px;">✓ BOOKING CONFIRMED</div>
   <h1 style="color:${BRAND.ink};margin:18px 0 6px;font-size:26px;line-height:1.25;font-weight:800;">You're all set, ${p.name}!</h1>
-  <p style="color:${BRAND.muted};margin:0;font-size:15px;line-height:1.5;">Your ${p.destination} experience is booked. We've saved your spot and shared the details below.</p>
+  <p style="color:${BRAND.muted};margin:0;font-size:15px;line-height:1.5;">${p.destination ? `Your ${p.destination} experience is booked.` : "Your travel experience is booked."} We've saved your spot and shared the details below.</p>
 </td></tr>
 
 <tr><td style="padding:24px 32px 8px;">
@@ -154,7 +154,7 @@ function customerEmail(p: CustomerParams) {
     <tr><td style="padding:20px 22px;">
       <p style="margin:0 0 4px;color:${BRAND.primaryDark};font-size:11px;font-weight:700;letter-spacing:1px;">ACTIVITY</p>
       <p style="margin:0;color:${BRAND.ink};font-size:17px;font-weight:700;line-height:1.35;">${p.tourTitle}</p>
-      <p style="margin:6px 0 0;color:${BRAND.muted};font-size:13px;">📍 ${p.destination}</p>
+      <p style="margin:6px 0 0;color:${BRAND.muted};font-size:13px;">📍 ${p.destination || "Travel Experience"}</p>
     </td></tr>
   </table>
 </td></tr>
