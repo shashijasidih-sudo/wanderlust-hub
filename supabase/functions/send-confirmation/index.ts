@@ -78,11 +78,14 @@ function money(amount: number, curr: string) {
 
 
 function detectDestination(slug: string, tourName: string): string {
-  const cities = ["Bangkok", "Phuket", "Pattaya", "Krabi", "Chiang Mai", "Bali", "Dubai", "Singapore", "Abu Dhabi"];
   const hay = `${slug} ${tourName}`.toLowerCase();
+  const cities = ["Bangkok", "Phuket", "Pattaya", "Krabi", "Chiang Mai", "Koh Samui", "Bali", "Abu Dhabi"];
   for (const c of cities) if (hay.includes(c.toLowerCase())) return c;
-  return "Your Destination";
+  const countries = ["Thailand", "Singapore", "Japan", "Dubai", "Malaysia", "Indonesia", "Vietnam"];
+  for (const c of countries) if (hay.includes(c.toLowerCase())) return c;
+  return "";
 }
+
 
 function shell(inner: string, previewText: string) {
   return `<!DOCTYPE html>
