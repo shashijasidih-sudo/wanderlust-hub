@@ -65,6 +65,12 @@ const ACT = "/singapore/destination-guides/activity";
 
 export const singaporeBlogs: SingaporeBlogEntry[] = [
   {
+    title: "Singapore Airport Pickup Guide for Indian Travellers (2026)",
+    description: "Complete guide to Changi Airport transfers for Indian travellers — taxi vs Grab vs private pickup, vehicle options, INR pricing, hotel routes, FAQs and tips.",
+    category: "activity", image: cityTourImg, date: "July 21, 2026", readTime: "18 min read",
+    link: `${ACT}/singapore-airport-pickup-guide-indian-travellers`,
+  },
+  {
     title: "Why Everyone Goes to Marina Bay Sands… But Locals Recommend These 12 Experiences Instead (2026 Guide)",
     description: "Skip the tourist queue. 12 local-recommended Singapore experiences beyond Marina Bay Sands — river cruise, Sentosa beaches, Night Safari, Kampong Glam, hawker food, Cloud Forest, Pulau Ubin, Chinatown, Cable Car, Southern Ridges, Jewel Changi and rooftop bars.",
     category: "activity", image: marinaBayImg, date: "July 15, 2026", readTime: "14 min read",
