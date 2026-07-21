@@ -222,7 +222,7 @@ function supportEmail(p: SupportParams) {
 <tr><td style="padding:32px 32px 8px;text-align:center;">
   <div style="display:inline-block;background:#fef3c7;border-radius:999px;padding:8px 16px;color:${BRAND.primaryDark};font-size:11px;font-weight:700;letter-spacing:1px;">NEW BOOKING RECEIVED</div>
   <h1 style="color:${BRAND.ink};margin:16px 0 4px;font-size:22px;font-weight:800;">${p.tourTitle}</h1>
-  <p style="color:${BRAND.muted};margin:0;font-size:13px;">📍 ${p.destination}</p>
+  <p style="color:${BRAND.muted};margin:0;font-size:13px;">📍 ${p.destination || "Travel Experience"}</p>
 </td></tr>
 
 <tr><td style="padding:20px 32px 8px;">
