@@ -4305,15 +4305,16 @@ export const toursData: Record<string, TourData> = {
   },
   "sentosa-wings-time": {
     id: "sentosa-wings-time",
-    title: "Sentosa Wings of Time Tickets with Transfers",
-    shortDescription: "Spectacular outdoor night show with fireworks, water jets and lasers.",
-    location: "Sentosa Island, Singapore",
+    title: "Wings of Time Sentosa Show Tickets & Transfers",
+    shortDescription: "Award-winning open-air night show at Siloso Beach — lasers, water screens, fire jets and fireworks finale.",
+    location: "Siloso Beach, Sentosa Island, Singapore",
     city: "singapore",
-    basePrice: 2656.5,
-    childPrice: 2052.75,
-    duration: "1 Hour",
-    rating: 4.6,
-    reviews: 987,
+    basePrice: 1499,
+    childPrice: 1299,
+    minAdults: 1,
+    duration: "20–25 Minutes",
+    rating: 4.9,
+    reviews: 150,
     heroImages: [
       { src: singaporeGardensByNight, title: "Wings of Time" }
     ],
@@ -4323,22 +4324,53 @@ export const toursData: Record<string, TourData> = {
       { src: singaporeWomanCityscape, alt: "City Night" }
     ],
     highlights: [
-      "Outdoor night show",
-      "Fireworks display",
-      "Water jets & lasers",
-      "Musical storytelling"
+      "Standard or Premium reserved seating",
+      "Lasers, 3D projections & water screens",
+      "Live music with fireworks finale",
+      "Optional hotel transfers to/from Sentosa",
+      "Instant confirmation & mobile ticket",
+      "Indian WhatsApp support in INR"
     ],
     description: {
-      overview: "Wings of Time is Sentosa's spectacular outdoor night show.",
-      whatToExpect: "Experience a magical show featuring fireworks, water jets, lasers and stunning visual effects set to music."
+      overview: "Wings of Time is Sentosa's iconic outdoor night show at Siloso Beach — around 25 minutes of lasers, 3D projections, water fountains, flame bursts and fireworks set to a musical score, following the journey of a mythical bird named Shahbaz.",
+      whatToExpect: "Arrive 20–30 minutes early, settle into your reserved Standard or Premium seat facing the open sea, and enjoy synchronized visuals, music and pyrotechnics culminating in a fireworks finale — the perfect ending to any Sentosa day."
     },
     itinerary: [],
     tourTimings: ["7:40 PM", "8:40 PM"],
-    inclusions: ["Wings of Time admission"],
-    exclusions: ["Personal expenses", "Food"],
-    bookingPolicy: ["Pre-book slot 72 hours in advance at reservation.mountfaberleisure.com"],
-    cancellationPolicy: ["100% charge for cancellations after booking"],
-    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
+    tourOptions: [
+      { label: "Standard Seat — Tickets Only", adultPrice: 1499, childPrice: 1299 },
+      { label: "Premium Seat — Tickets Only", adultPrice: 2299, childPrice: 1999 },
+      { label: "Standard Seat + Hotel Transfers", adultPrice: 2899, childPrice: 2499 },
+      { label: "Premium Seat + Hotel Transfers", adultPrice: 3699, childPrice: 3199 }
+    ],
+    inclusions: [
+      "Wings of Time show admission (Standard or Premium reserved seat)",
+      "Round-trip hotel transfers (for transfer options only)",
+      "Instant e-ticket confirmation",
+      "Indian WhatsApp support before, during and after the show"
+    ],
+    exclusions: [
+      "Food, snacks and beverages",
+      "Personal expenses & souvenirs",
+      "Sentosa Island entry (waived when arriving by cable car / walk / show ticket)",
+      "Hotel transfers (for tickets-only options)"
+    ],
+    bookingPolicy: [
+      "Show timings: 7:40 PM and 8:40 PM daily (subject to weather)",
+      "Reach Siloso Beach amphitheatre at least 20 minutes prior",
+      "Reserved seat number issued at the venue",
+      "For transfer options: pickup approx 90 mins before showtime"
+    ],
+    cancellationPolicy: [
+      "Free cancellation up to 24 hours before showtime",
+      "100% charge for cancellations within 24 hours or no-shows",
+      "Show cancelled due to weather → full refund or free reschedule"
+    ],
+    childPolicy: [
+      "Under 4: Free (no seat, on parent's lap)",
+      "4–12: Child rate",
+      "13 & above: Adult rate"
+    ],
     faqs: []
   },
   "sentosa-sky-helix": {
