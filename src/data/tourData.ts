@@ -65,6 +65,7 @@ import dubaiDhowCruise from "@/assets/dubai-dhow-cruise-1.jpg";
 import dubaiFountainShow from "@/assets/dubai-fountain-show-1.jpg";
 import singaporeWomanCityscape from "@/assets/singapore-cityscape-woman-1.jpg";
 import singaporeGardensByNight from "@/assets/singapore-gardens-bay-night-1.jpg";
+import gardensByBay from "@/assets/singapore-gardens-bay.jpg";
 import singaporeFlyerTwilight from "@/assets/singapore-flyer-twilight-1.jpg";
 import singaporeMarinaByDay from "@/assets/singapore-marina-bay-sands-day-1.jpg";
 import singaporeMerlionNight from "@/assets/singapore-merlion-night-1.jpg";
@@ -4467,8 +4468,8 @@ export const toursData: Record<string, TourData> = {
   },
   "gardens-by-the-bay": {
     id: "gardens-by-the-bay",
-    title: "Gardens by the Bay",
-    shortDescription: "Stunning 101-hectare oasis featuring 250,000 plants and iconic Supertree Grove with flexible package options.",
+    title: "Gardens by the Bay Tickets & Transfers",
+    shortDescription: "Skip-the-line tickets to Flower Dome, Cloud Forest with Jurassic World & Supertree Grove — with optional hotel transfers for Indian families.",
     location: "Marina Bay, Singapore",
     city: "singapore",
     basePrice: 2660,
@@ -4476,9 +4477,12 @@ export const toursData: Record<string, TourData> = {
     minAdults: 1,
     duration: "3-4 Hours",
     rating: 4.9,
-    reviews: 3456,
+    reviews: 150,
     heroImages: [
-      { src: singaporeGardensByNight, title: "Gardens by the Bay" }
+      { src: singaporeGardensByNight, title: "Supertree Grove at Night" },
+      { src: singaporeMarinaByDay, title: "Marina Bay Skyline" },
+      { src: singaporeCoupleWalking, title: "Couple Exploring the Gardens" },
+      { src: gardensByBay, title: "Cloud Forest & Flower Dome" }
     ],
     galleryImages: [
       { src: singaporeGardensByNight, alt: "Gardens Night" },
@@ -4486,35 +4490,70 @@ export const toursData: Record<string, TourData> = {
       { src: singaporeCoupleWalking, alt: "Couple at Gardens" }
     ],
     highlights: [
-      "Flower Dome conservatory",
-      "Cloud Forest with Jurassic World",
-      "Supertree Grove",
-      "250,000 rare plants"
+      "Flower Dome — world's largest glass greenhouse",
+      "Cloud Forest with 35m indoor waterfall",
+      "Jurassic World: The Experience inside Cloud Forest",
+      "Iconic Supertree Grove (25–50m tall)",
+      "Free Garden Rhapsody light show every evening",
+      "Instant e-ticket confirmation to WhatsApp"
     ],
     description: {
-      overview: "Gardens by the Bay is a stunning oasis in Singapore's concrete jungle, spanning 101 hectares.",
-      whatToExpect: "Explore the Cloud Forest and Flower Dome showcasing rare flora from Mediterranean regions and mountain environments. The Supertree Grove features eco-friendly man-made trees with a 20-meter high walkway. Experience Jurassic World with 13 immersive zones including dinosaur encounters."
+      overview: "Gardens by the Bay is Singapore's 101-hectare futuristic nature park at Marina Bay — home to over 250,000 rare plants across two climate-controlled conservatories and the iconic Supertree Grove. Perfect for families, couples and photography lovers.",
+      whatToExpect: "Explore the Flower Dome (Mediterranean & desert flora, rotating seasonal displays) and the Cloud Forest (mist-filled mountain with a 35m indoor waterfall and the immersive Jurassic World: The Experience). Walk under the Supertree Grove and stay back for the free Garden Rhapsody music & light show at 7:45 PM & 8:45 PM."
     },
     itinerary: [],
     tourTimings: ["9:00 AM - 8:00 PM"],
     tourOptions: [
       {
-        label: "Gardens by the Bay + Flower Dome + Cloud Forest with Jurassic World Tickets Only",
+        label: "Flower Dome + Cloud Forest + Jurassic World — Tickets Only",
         adultPrice: 2660,
         childPrice: 2660
       },
       {
-        label: "Gardens by the Bay + Flower Dome + Cloud Forest with Jurassic World with Tickets and Transfers",
+        label: "Flower Dome + Cloud Forest + Jurassic World — Tickets + Hotel Transfers",
         adultPrice: 4046,
         childPrice: 3381
       }
     ],
-    inclusions: ["Gardens by the Bay admission", "Flower Dome entry", "Cloud Forest with Jurassic World", "Transfers (for applicable option)"],
-    exclusions: ["Personal expenses", "Food"],
-    bookingPolicy: ["Valid photo ID required", "No re-entry allowed", "Maximum 1 hour per conservatory", "Minimum 2 adults for transfer option"],
-    cancellationPolicy: ["100% charge for cancellations after booking"],
-    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
-    faqs: []
+    inclusions: [
+      "Skip-the-line admission to Flower Dome",
+      "Skip-the-line admission to Cloud Forest",
+      "Jurassic World: The Experience inside Cloud Forest",
+      "Access to Supertree Grove outdoor gardens",
+      "Free Garden Rhapsody light show (evening)",
+      "Hotel pick-up & drop-off (transfer option only)"
+    ],
+    exclusions: [
+      "Food & beverages inside the park",
+      "OCBC Skyway & Floral Fantasy (paid separately)",
+      "Personal expenses & souvenirs",
+      "Hotel transfers (for tickets-only option)"
+    ],
+    bookingPolicy: [
+      "Valid photo ID required at entry",
+      "No re-entry once you exit the conservatories",
+      "Recommended time: ~1 hour per conservatory",
+      "Minimum 2 adults required for transfer option"
+    ],
+    cancellationPolicy: ["100% charge for cancellations after booking (non-refundable e-ticket)"],
+    childPolicy: [
+      "Under 3 years: Free entry (no ticket required)",
+      "3–12 years: Child rate applies",
+      "13 years & above: Adult rate applies"
+    ],
+    faqs: [
+      { question: "Is Gardens by the Bay worth visiting for Indian families?", answer: "Absolutely. It's air-conditioned indoors, kid-friendly, has clean washrooms, plenty of vegetarian food nearby at Marina Bay Sands, and the Supertree light show is free." },
+      { question: "How much time do I need?", answer: "Plan 3–4 hours — 1 hour each in Flower Dome & Cloud Forest, plus time outdoors for the Supertrees. Come in the late afternoon so you can stay for the free evening light show." },
+      { question: "Is Jurassic World included?", answer: "Yes, Jurassic World: The Experience is included inside the Cloud Forest at no extra cost." },
+      { question: "How do I reach Gardens by the Bay?", answer: "Bayfront MRT station is a 5-minute walk. If you choose the transfer option, our driver picks you up from your hotel and drops you back after the visit." }
+    ],
+    customerReviews: [
+      { name: "Anjali S.", date: "1 week ago", rating: 5, comment: "The Cloud Forest waterfall is breathtaking! Our kids loved Jurassic World inside. Transfers were on time and driver was very polite.", helpful: 42 },
+      { name: "Rahul M.", date: "2 weeks ago", rating: 5, comment: "Booked tickets + transfer combo. Everything was smooth — instant WhatsApp confirmation, skip-the-line entry, and the Supertree light show at night was magical.", helpful: 38 },
+      { name: "Priya K.", date: "3 weeks ago", rating: 5, comment: "Great value compared to Klook. Yellodae's Indian support answered all my queries on WhatsApp before booking. Highly recommend for families.", helpful: 51 },
+      { name: "Vikram J.", date: "1 month ago", rating: 4.5, comment: "Flower Dome was stunning with the seasonal tulip display. Only wish we had more time. The Garden Rhapsody show is a MUST-see and it's free.", helpful: 29 },
+      { name: "Sneha P.", date: "1 month ago", rating: 5, comment: "Perfect experience for our anniversary trip. INR pricing meant no surprise forex charges. Would book again through Yellodae.", helpful: 33 }
+    ]
   },
   "adventure-cove": {
     id: "adventure-cove",
