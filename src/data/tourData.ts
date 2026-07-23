@@ -65,6 +65,7 @@ import dubaiDhowCruise from "@/assets/dubai-dhow-cruise-1.jpg";
 import dubaiFountainShow from "@/assets/dubai-fountain-show-1.jpg";
 import singaporeWomanCityscape from "@/assets/singapore-cityscape-woman-1.jpg";
 import singaporeGardensByNight from "@/assets/singapore-gardens-bay-night-1.jpg";
+import gardensByBay from "@/assets/singapore-gardens-bay.jpg";
 import singaporeFlyerTwilight from "@/assets/singapore-flyer-twilight-1.jpg";
 import singaporeMarinaByDay from "@/assets/singapore-marina-bay-sands-day-1.jpg";
 import singaporeMerlionNight from "@/assets/singapore-merlion-night-1.jpg";
