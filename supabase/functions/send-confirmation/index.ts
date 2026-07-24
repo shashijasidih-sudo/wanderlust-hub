@@ -78,11 +78,20 @@ function money(amount: number, curr: string) {
 
 
 function detectDestination(slug: string, tourName: string): string {
-  const hay = `${slug} ${tourName}`.toLowerCase();
-  const cities = ["Bangkok", "Phuket", "Pattaya", "Krabi", "Chiang Mai", "Koh Samui", "Bali", "Abu Dhabi"];
-  for (const c of cities) if (hay.includes(c.toLowerCase())) return c;
-  const countries = ["Thailand", "Singapore", "Japan", "Dubai", "Malaysia", "Indonesia", "Vietnam"];
-  for (const c of countries) if (hay.includes(c.toLowerCase())) return c;
+  const hay = ` ${slug} ${tourName} `.toLowerCase().replace(/[-_/]+/g, " ");
+  // Country checks first (covers eSIM titles like "5G eSIM Thailand | AIS")
+  const countries = ["Thailand", "Singapore", "Japan", "Dubai", "Malaysia", "Indonesia", "Vietnam", "UAE"];
+  for (const c of countries) if (hay.includes(` ${c.toLowerCase()} `) || hay.includes(`${c.toLowerCase()} `)) {
+    return c === "UAE" ? "Dubai" : c;
+  }
+  const cityToCountry: Record<string, string> = {
+    Bangkok: "Thailand", Phuket: "Thailand", Pattaya: "Thailand", Krabi: "Thailand",
+    "Chiang Mai": "Thailand", "Koh Samui": "Thailand",
+    Bali: "Indonesia", "Abu Dhabi": "Dubai", Sentosa: "Singapore",
+  };
+  for (const [city, country] of Object.entries(cityToCountry)) {
+    if (hay.includes(city.toLowerCase())) return country;
+  }
   return "";
 }
 
