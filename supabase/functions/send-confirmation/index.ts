@@ -78,11 +78,20 @@ function money(amount: number, curr: string) {
 
 
 function detectDestination(slug: string, tourName: string): string {
-  const hay = `${slug} ${tourName}`.toLowerCase();
-  const cities = ["Bangkok", "Phuket", "Pattaya", "Krabi", "Chiang Mai", "Koh Samui", "Bali", "Abu Dhabi"];
-  for (const c of cities) if (hay.includes(c.toLowerCase())) return c;
-  const countries = ["Thailand", "Singapore", "Japan", "Dubai", "Malaysia", "Indonesia", "Vietnam"];
-  for (const c of countries) if (hay.includes(c.toLowerCase())) return c;
+  const hay = ` ${slug} ${tourName} `.toLowerCase().replace(/[-_/]+/g, " ");
+  // Country checks first (covers eSIM titles like "5G eSIM Thailand | AIS")
+  const countries = ["Thailand", "Singapore", "Japan", "Dubai", "Malaysia", "Indonesia", "Vietnam", "UAE"];
+  for (const c of countries) if (hay.includes(` ${c.toLowerCase()} `) || hay.includes(`${c.toLowerCase()} `)) {
+    return c === "UAE" ? "Dubai" : c;
+  }
+  const cityToCountry: Record<string, string> = {
+    Bangkok: "Thailand", Phuket: "Thailand", Pattaya: "Thailand", Krabi: "Thailand",
+    "Chiang Mai": "Thailand", "Koh Samui": "Thailand",
+    Bali: "Indonesia", "Abu Dhabi": "Dubai", Sentosa: "Singapore",
+  };
+  for (const [city, country] of Object.entries(cityToCountry)) {
+    if (hay.includes(city.toLowerCase())) return country;
+  }
   return "";
 }
 
@@ -97,6 +106,7 @@ function shell(inner: string, previewText: string) {
 <title>Yellodae</title>
 </head>
 <body style="margin:0;padding:0;background:${BRAND.bg};font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:${BRAND.text};">
+<!-- EMAIL_TEMPLATE_VERSION: 2026-07-24-v3 -->
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">${previewText}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${BRAND.bg};padding:24px 12px;">
 <tr><td align="center">
@@ -142,34 +152,52 @@ function customerEmail(p: CustomerParams) {
       <td style="padding:10px 0;border-bottom:1px solid ${BRAND.border};color:${opts?.color || BRAND.ink};font-size:14px;font-weight:${opts?.strong ? 700 : 500};text-align:right;">${value}</td>
     </tr>`;
 
+  const destinationLabel = p.destination || "Travel Experience";
+
   const inner = `
 <tr><td style="padding:36px 32px 8px;text-align:center;">
   <div style="display:inline-block;background:#dcfce7;border-radius:999px;padding:10px 18px;color:${BRAND.success};font-size:12px;font-weight:700;letter-spacing:0.5px;">✓ BOOKING CONFIRMED</div>
-  <h1 style="color:${BRAND.ink};margin:18px 0 6px;font-size:26px;line-height:1.25;font-weight:800;">You're all set, ${p.name}!</h1>
-  <p style="color:${BRAND.muted};margin:0;font-size:15px;line-height:1.5;">${p.destination ? `Your ${p.destination} experience is booked.` : "Your travel experience is booked."} We've saved your spot and shared the details below.</p>
+  <h1 style="color:${BRAND.ink};margin:20px 0 12px;font-size:26px;line-height:1.25;font-weight:800;">🎉 You're all set, ${p.name}!</h1>
+  <p style="color:${BRAND.text};margin:0 0 10px;font-size:15px;line-height:1.6;">Thank you for choosing <strong>Yellodae Trails</strong>.</p>
+  <p style="color:${BRAND.text};margin:0 0 10px;font-size:15px;line-height:1.6;">Your booking has been successfully confirmed.</p>
+  <p style="color:${BRAND.muted};margin:0;font-size:14px;line-height:1.6;">You will be receiving your voucher via email and WhatsApp shortly.</p>
 </td></tr>
 
 <tr><td style="padding:24px 32px 8px;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${BRAND.soft};border:1px solid #fed7aa;border-radius:12px;">
     <tr><td style="padding:20px 22px;">
-      <p style="margin:0 0 4px;color:${BRAND.primaryDark};font-size:11px;font-weight:700;letter-spacing:1px;">ACTIVITY</p>
+      <p style="margin:0 0 4px;color:${BRAND.primaryDark};font-size:11px;font-weight:700;letter-spacing:1px;">BOOKING SUMMARY</p>
       <p style="margin:0;color:${BRAND.ink};font-size:17px;font-weight:700;line-height:1.35;">${p.tourTitle}</p>
-      <p style="margin:6px 0 0;color:${BRAND.muted};font-size:13px;">📍 ${p.destination || "Travel Experience"}</p>
+      <p style="margin:6px 0 0;color:${BRAND.muted};font-size:13px;">📍 ${destinationLabel}</p>
     </td></tr>
   </table>
 </td></tr>
 
 <tr><td style="padding:16px 32px 8px;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-    ${row("Booking ID", `<span style="font-family:monospace;">${p.bookingShort}</span>`, { strong: true })}
+    ${row("Activity", p.tourTitle, { strong: true })}
+    ${row("Destination", destinationLabel, { strong: true })}
     ${row("Travel Date", p.tourDate, { strong: true })}
-    ${row("Guests", p.guests)}
-    ${row("Booking Status", `<span style="color:${BRAND.success};font-weight:700;">${p.status.toUpperCase()}</span>`)}
+    ${row("Travellers", p.guests)}
+    ${row("Booking Status", `<span style="color:${BRAND.success};font-weight:700;">✅ Confirmed</span>`)}
+    ${row("Booking ID", `<span style="font-family:monospace;">${p.bookingShort}</span>`, { strong: true })}
     <tr>
       <td style="padding:14px 0 4px;color:${BRAND.ink};font-size:15px;font-weight:700;">Amount Paid</td>
       <td style="padding:14px 0 4px;color:${BRAND.primaryDark};font-size:20px;font-weight:800;text-align:right;">${p.amount}</td>
     </tr>
   </table>
+</td></tr>
+
+<tr><td style="padding:24px 32px 8px;">
+  <div style="background:${BRAND.surface};border:1px solid ${BRAND.border};border-radius:12px;padding:20px 22px;">
+    <p style="margin:0 0 12px;color:${BRAND.ink};font-size:15px;font-weight:800;">What's Next?</p>
+    <ul style="margin:0;padding:0 0 0 18px;color:${BRAND.text};font-size:13px;line-height:1.75;">
+      <li>You will receive your voucher via email and WhatsApp shortly.</li>
+      <li>Please carry a valid Passport/ID wherever required.</li>
+      <li>Reach the meeting point 10–15 minutes before the reporting time.</li>
+      <li>Contact our support team anytime if you need assistance.</li>
+    </ul>
+  </div>
 </td></tr>
 
 <tr><td style="padding:24px 32px 8px;">
@@ -181,20 +209,18 @@ function customerEmail(p: CustomerParams) {
     </tr>
     <tr>
       <td align="center">
+        <a href="${p.exploreUrl}" style="display:inline-block;background:#ffffff;color:${BRAND.ink};text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:600;font-size:14px;border:1.5px solid ${BRAND.border};margin:0 4px 8px;">Explore Activities</a>
         <a href="${p.supportUrl}" style="display:inline-block;background:#ffffff;color:${BRAND.ink};text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:600;font-size:14px;border:1.5px solid ${BRAND.border};margin:0 4px 8px;">Contact Support</a>
-        <a href="${p.exploreUrl}" style="display:inline-block;background:#ffffff;color:${BRAND.ink};text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:600;font-size:14px;border:1.5px solid ${BRAND.border};margin:0 4px 8px;">Explore More Activities</a>
       </td>
     </tr>
   </table>
 </td></tr>
 
-<tr><td style="padding:16px 32px 32px;">
-  <div style="background:${BRAND.surface};border-radius:10px;padding:18px 20px;">
-    <p style="margin:0 0 8px;color:${BRAND.ink};font-size:13px;font-weight:700;">Need help with your booking?</p>
+<tr><td style="padding:8px 32px 32px;">
+  <div style="background:${BRAND.surface};border-radius:10px;padding:16px 20px;">
     <p style="margin:0;color:${BRAND.muted};font-size:13px;line-height:1.6;">
-      Email <a href="mailto:support@yellodae.com" style="color:${BRAND.primaryDark};">support@yellodae.com</a> or WhatsApp
+      Need help? Email <a href="mailto:support@yellodae.com" style="color:${BRAND.primaryDark};">support@yellodae.com</a> or WhatsApp
       <a href="https://wa.me/917061710810" style="color:${BRAND.primaryDark};">+91 7061710810</a>.
-      Our team responds within a few hours, 7 days a week.
     </p>
   </div>
 </td></tr>`;
@@ -316,9 +342,9 @@ serve(async (req) => {
     const status = booking.status || "confirmed";
     const bookingShort = String(bookingId).slice(0, 8).toUpperCase();
 
-    const viewUrl = `${SITE}/booking/${bookingId}`;
+    const viewUrl = `${SITE}/user-bookings`;
     const supportUrl = `mailto:support@yellodae.com?subject=${encodeURIComponent(`Help with booking ${bookingShort}`)}`;
-    const exploreUrl = `${SITE}/${(destination || "thailand").toLowerCase().replace(/\s+/g, "-")}`;
+    const exploreUrl = `${SITE}/`;
 
     const customerHtml = customerEmail({
       name, tourTitle, destination, bookingId, bookingShort, tourDate, guests, amount, status, viewUrl, supportUrl, exploreUrl,
