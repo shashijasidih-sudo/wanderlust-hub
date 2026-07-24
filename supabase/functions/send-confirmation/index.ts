@@ -342,9 +342,9 @@ serve(async (req) => {
     const status = booking.status || "confirmed";
     const bookingShort = String(bookingId).slice(0, 8).toUpperCase();
 
-    const viewUrl = `${SITE}/booking/${bookingId}`;
+    const viewUrl = `${SITE}/user-bookings`;
     const supportUrl = `mailto:support@yellodae.com?subject=${encodeURIComponent(`Help with booking ${bookingShort}`)}`;
-    const exploreUrl = `${SITE}/${(destination || "thailand").toLowerCase().replace(/\s+/g, "-")}`;
+    const exploreUrl = `${SITE}/`;
 
     const customerHtml = customerEmail({
       name, tourTitle, destination, bookingId, bookingShort, tourDate, guests, amount, status, viewUrl, supportUrl, exploreUrl,
