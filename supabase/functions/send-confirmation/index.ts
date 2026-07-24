@@ -106,6 +106,7 @@ function shell(inner: string, previewText: string) {
 <title>Yellodae</title>
 </head>
 <body style="margin:0;padding:0;background:${BRAND.bg};font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:${BRAND.text};">
+<!-- EMAIL_TEMPLATE_VERSION: 2026-07-24-v3 -->
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">${previewText}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${BRAND.bg};padding:24px 12px;">
 <tr><td align="center">
