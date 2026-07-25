@@ -14,13 +14,224 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      booking_items: {
+        Row: {
+          activity_name: string
+          activity_slug: string | null
+          adults: number
+          airline: string | null
+          booking_id: string
+          children: number
+          country: string | null
+          created_at: string
+          currency: string
+          destination: string | null
+          drop_location: string | null
+          flight_number: string | null
+          hotel_name: string | null
+          id: string
+          image_url: string | null
+          item_details: Json
+          meeting_point: string | null
+          pickup_location: string | null
+          pickup_required: boolean
+          pickup_time: string | null
+          pickup_type: string | null
+          price: number
+          product_id: string | null
+          product_type: string
+          quantity: number
+          special_requests: string | null
+          status: string
+          supplier_reference: string | null
+          terminal: string | null
+          travel_date: string | null
+          updated_at: string
+          voucher_number: string | null
+          voucher_url: string | null
+        }
+        Insert: {
+          activity_name: string
+          activity_slug?: string | null
+          adults?: number
+          airline?: string | null
+          booking_id: string
+          children?: number
+          country?: string | null
+          created_at?: string
+          currency?: string
+          destination?: string | null
+          drop_location?: string | null
+          flight_number?: string | null
+          hotel_name?: string | null
+          id?: string
+          image_url?: string | null
+          item_details?: Json
+          meeting_point?: string | null
+          pickup_location?: string | null
+          pickup_required?: boolean
+          pickup_time?: string | null
+          pickup_type?: string | null
+          price?: number
+          product_id?: string | null
+          product_type?: string
+          quantity?: number
+          special_requests?: string | null
+          status?: string
+          supplier_reference?: string | null
+          terminal?: string | null
+          travel_date?: string | null
+          updated_at?: string
+          voucher_number?: string | null
+          voucher_url?: string | null
+        }
+        Update: {
+          activity_name?: string
+          activity_slug?: string | null
+          adults?: number
+          airline?: string | null
+          booking_id?: string
+          children?: number
+          country?: string | null
+          created_at?: string
+          currency?: string
+          destination?: string | null
+          drop_location?: string | null
+          flight_number?: string | null
+          hotel_name?: string | null
+          id?: string
+          image_url?: string | null
+          item_details?: Json
+          meeting_point?: string | null
+          pickup_location?: string | null
+          pickup_required?: boolean
+          pickup_time?: string | null
+          pickup_type?: string | null
+          price?: number
+          product_id?: string | null
+          product_type?: string
+          quantity?: number
+          special_requests?: string | null
+          status?: string
+          supplier_reference?: string | null
+          terminal?: string | null
+          travel_date?: string | null
+          updated_at?: string
+          voucher_number?: string | null
+          voucher_url?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "booking_items_booking_id_fkey"
+            columns: ["booking_id"]
+            isOneToOne: false
+            referencedRelation: "bookings"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      bookings: {
+        Row: {
+          adults: number
+          booking_number: string | null
+          children: number
+          contact_email: string
+          contact_name: string
+          contact_phone: string | null
+          created_at: string
+          currency: string
+          id: string
+          item_details: Json
+          payment_status: string
+          special_requests: string | null
+          status: string
+          total_price: number
+          tour_date: string | null
+          tour_name: string
+          tour_slug: string
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          adults?: number
+          booking_number?: string | null
+          children?: number
+          contact_email: string
+          contact_name?: string
+          contact_phone?: string | null
+          created_at?: string
+          currency?: string
+          id?: string
+          item_details?: Json
+          payment_status?: string
+          special_requests?: string | null
+          status?: string
+          total_price?: number
+          tour_date?: string | null
+          tour_name?: string
+          tour_slug?: string
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          adults?: number
+          booking_number?: string | null
+          children?: number
+          contact_email?: string
+          contact_name?: string
+          contact_phone?: string | null
+          created_at?: string
+          currency?: string
+          id?: string
+          item_details?: Json
+          payment_status?: string
+          special_requests?: string | null
+          status?: string
+          total_price?: number
+          tour_date?: string | null
+          tour_name?: string
+          tour_slug?: string
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          email: string | null
+          full_name: string | null
+          id: string
+          phone: string | null
+          role: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id: string
+          phone?: string | null
+          role?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+          role?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      is_admin: { Args: { _uid: string }; Returns: boolean }
     }
     Enums: {
       [_ in never]: never
