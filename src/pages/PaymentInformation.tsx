@@ -111,11 +111,12 @@ const PaymentInformation = () => {
       const totalAmountPaise = Math.round(getCartTotal() * 100);
 
       // Save booking data to localStorage BEFORE payment
+      const bookingItems = buildBookingItemsFromCart(cartItems, savedItemDetails, "INR");
       const bookingData = {
         customer_name: customerInfo?.customerName || "",
         customer_email: customerInfo?.email || "",
         customer_phone: customerInfo?.phone || "",
-        tour_name: cartItems.map(i => i.title).join(", "),
+        tour_name: cartItems.length > 1 ? `${cartItems.length} experiences` : cartItems[0]?.title || "",
         tour_slug: cartItems[0]?.slug || "cart-booking",
         tour_date: cartItems[0]?.selectedDate || cartItems[0]?.pickupDate || new Date().toISOString().split("T")[0],
         adults: cartItems.reduce((sum, i) => sum + (i.adults || i.quantity || 1), 0),
@@ -123,7 +124,7 @@ const PaymentInformation = () => {
         amount: totalAmountPaise,
         currency: "INR",
         total_price: getCartTotal(),
-        item_details: savedItemDetails,
+        items: bookingItems,
       };
       localStorage.setItem("booking_data", JSON.stringify(bookingData));
       console.log("Booking data saved to localStorage before payment:", bookingData);
