@@ -42,7 +42,7 @@ const CustomerInformation = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   // Per-item details keyed by cart item id
-  const [itemDetails, setItemDetails] = useState<Record<string, ItemDetails>>({});
+  const [itemDetails, setItemDetails] = useState<Record<string, BookingItemForm>>({});
 
   useEffect(() => {
     if (user) {
@@ -58,8 +58,10 @@ const CustomerInformation = () => {
       cartItems.forEach(item => {
         if (!updated[item.id]) {
           updated[item.id] = {
-            hotelName: "",
+            ...emptyItemForm(),
             pickupLocation: item.pickupLocation || "",
+            dropLocation: item.dropLocation || "",
+            pickupTime: item.pickupTime || item.selectedTime || "",
             country: "",
           };
         }
@@ -68,10 +70,10 @@ const CustomerInformation = () => {
     });
   }, [cartItems]);
 
-  const updateItemDetail = (itemId: string, field: keyof ItemDetails, value: string) => {
+  const updateItemDetail = (itemId: string, field: keyof BookingItemForm, value: string) => {
     setItemDetails(prev => ({
       ...prev,
-      [itemId]: { ...prev[itemId], [field]: value },
+      [itemId]: { ...(prev[itemId] || emptyItemForm()), [field]: value },
     }));
   };
 
