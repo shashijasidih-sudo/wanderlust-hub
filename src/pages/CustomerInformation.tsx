@@ -17,7 +17,8 @@ import { useCart } from "@/contexts/CartContext";
 import { useAuth } from "@/lib/auth";
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
-import { Hotel, MapPin, Globe } from "lucide-react";
+import { Hotel, MapPin, Globe, Plane, Wifi, Ticket, Clock } from "lucide-react";
+import { detectProductType, pickupTypeFor, emptyItemForm, type BookingItemForm } from "@/lib/bookingItems";
 
 const countries = [
   "India", "United States", "United Kingdom", "Canada", "Australia",
@@ -25,12 +26,6 @@ const countries = [
   "Japan", "China", "South Korea", "Indonesia", "Philippines",
   "Vietnam", "New Zealand", "South Africa", "Brazil"
 ];
-
-interface ItemDetails {
-  hotelName: string;
-  pickupLocation: string;
-  country: string;
-}
 
 const CustomerInformation = () => {
   const navigate = useNavigate();
