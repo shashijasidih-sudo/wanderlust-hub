@@ -169,53 +169,122 @@ const CustomerInformation = () => {
                 <p className="text-sm text-muted-foreground mb-6">Please provide pickup details for each item in your booking.</p>
 
                 <div className="space-y-6">
-                  {cartItems.map((item, index) => (
-                    <Card key={item.id} className="border border-border">
-                      <CardContent className="p-4 md:p-5">
-                        <p className="font-semibold text-sm mb-4 flex items-center gap-2">
-                          <span className="flex items-center justify-center h-6 w-6 rounded-full bg-primary text-primary-foreground text-xs font-bold">{index + 1}</span>
-                          {item.title}
-                          <span className="ml-auto text-xs px-2 py-0.5 rounded-full bg-muted text-muted-foreground capitalize">{item.itemType}</span>
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                          <div>
-                            <Label className="text-primary font-semibold text-xs flex items-center gap-1.5">
-                              <Hotel className="h-3.5 w-3.5" /> Hotel Name
-                            </Label>
-                            <Input
-                              value={itemDetails[item.id]?.hotelName || ""}
-                              onChange={(e) => updateItemDetail(item.id, "hotelName", e.target.value)}
-                              placeholder="Enter hotel name"
-                              className="mt-1.5"
-                            />
+                  {cartItems.map((item, index) => {
+                    const pt = detectProductType(item);
+                    const pType = pickupTypeFor(pt);
+                    const form = itemDetails[item.id] || emptyItemForm();
+                    const typeIcon = pt === "esim" ? <Wifi className="h-3 w-3" /> : pt === "ticket" ? <Ticket className="h-3 w-3" /> : pt === "airport_transfer" ? <Plane className="h-3 w-3" /> : <MapPin className="h-3 w-3" />;
+                    const typeLabel = ({ airport_transfer: "Airport Transfer", transfer: "Hotel Transfer", esim: "eSIM", ticket: "Attraction Ticket", activity: "Activity" } as any)[pt] || pt;
+                    return (
+                      <Card key={item.id} className="border border-border">
+                        <CardContent className="p-4 md:p-5">
+                          <p className="font-semibold text-sm mb-4 flex items-center gap-2 flex-wrap">
+                            <span className="flex items-center justify-center h-6 w-6 rounded-full bg-primary text-primary-foreground text-xs font-bold">{index + 1}</span>
+                            <span className="flex-1 min-w-0 truncate">{item.title}</span>
+                            <span className="text-xs px-2 py-0.5 rounded-full bg-muted text-muted-foreground flex items-center gap-1">{typeIcon}{typeLabel}</span>
+                          </p>
+
+                          {pt === "esim" && (
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                              <div>
+                                <Label className="text-primary font-semibold text-xs">Delivery Email</Label>
+                                <Input value={form.activationEmail} onChange={(e) => updateItemDetail(item.id, "activationEmail", e.target.value)} placeholder="Where should we send the QR?" className="mt-1.5" />
+                              </div>
+                              <div>
+                                <Label className="text-primary font-semibold text-xs">Activation Date</Label>
+                                <Input type="date" value={form.activationDate} onChange={(e) => updateItemDetail(item.id, "activationDate", e.target.value)} className="mt-1.5" />
+                              </div>
+                              <div>
+                                <Label className="text-primary font-semibold text-xs flex items-center gap-1.5"><Globe className="h-3.5 w-3.5" /> Country of Use</Label>
+                                <Select value={form.country} onValueChange={(v) => updateItemDetail(item.id, "country", v)}>
+                                  <SelectTrigger className="mt-1.5"><SelectValue placeholder="Select country" /></SelectTrigger>
+                                  <SelectContent>{countries.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
+                                </Select>
+                              </div>
+                            </div>
+                          )}
+
+                          {pt === "ticket" && (
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                              <div>
+                                <Label className="text-primary font-semibold text-xs">Lead Visitor Name</Label>
+                                <Input value={form.visitorName} onChange={(e) => updateItemDetail(item.id, "visitorName", e.target.value)} placeholder="As per ID" className="mt-1.5" />
+                              </div>
+                              <div>
+                                <Label className="text-primary font-semibold text-xs flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> Preferred Entry Time</Label>
+                                <Input value={form.entryTime} onChange={(e) => updateItemDetail(item.id, "entryTime", e.target.value)} placeholder="e.g. 10:00 AM" className="mt-1.5" />
+                              </div>
+                              <div>
+                                <Label className="text-primary font-semibold text-xs flex items-center gap-1.5"><Hotel className="h-3.5 w-3.5" /> Hotel (optional)</Label>
+                                <Input value={form.hotelName} onChange={(e) => updateItemDetail(item.id, "hotelName", e.target.value)} placeholder="For transfer add-on" className="mt-1.5" />
+                              </div>
+                            </div>
+                          )}
+
+                          {pType === "airport" && (
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                              <div>
+                                <Label className="text-primary font-semibold text-xs flex items-center gap-1.5"><Plane className="h-3.5 w-3.5" /> Airline</Label>
+                                <Input value={form.airline} onChange={(e) => updateItemDetail(item.id, "airline", e.target.value)} placeholder="e.g. Air India" className="mt-1.5" />
+                              </div>
+                              <div>
+                                <Label className="text-primary font-semibold text-xs">Flight Number</Label>
+                                <Input value={form.flightNumber} onChange={(e) => updateItemDetail(item.id, "flightNumber", e.target.value)} placeholder="e.g. AI 342" className="mt-1.5" />
+                              </div>
+                              <div>
+                                <Label className="text-primary font-semibold text-xs">Terminal</Label>
+                                <Input value={form.terminal} onChange={(e) => updateItemDetail(item.id, "terminal", e.target.value)} placeholder="e.g. T3" className="mt-1.5" />
+                              </div>
+                              <div>
+                                <Label className="text-primary font-semibold text-xs flex items-center gap-1.5"><Hotel className="h-3.5 w-3.5" /> Hotel / Drop Location</Label>
+                                <Input value={form.dropLocation} onChange={(e) => updateItemDetail(item.id, "dropLocation", e.target.value)} placeholder="Hotel or address" className="mt-1.5" />
+                              </div>
+                              <div>
+                                <Label className="text-primary font-semibold text-xs flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> Pickup Time</Label>
+                                <Input value={form.pickupTime} onChange={(e) => updateItemDetail(item.id, "pickupTime", e.target.value)} placeholder="e.g. 09:30" className="mt-1.5" />
+                              </div>
+                              <div>
+                                <Label className="text-primary font-semibold text-xs flex items-center gap-1.5"><Globe className="h-3.5 w-3.5" /> Country</Label>
+                                <Select value={form.country} onValueChange={(v) => updateItemDetail(item.id, "country", v)}>
+                                  <SelectTrigger className="mt-1.5"><SelectValue placeholder="Select country" /></SelectTrigger>
+                                  <SelectContent>{countries.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
+                                </Select>
+                              </div>
+                            </div>
+                          )}
+
+                          {pType === "hotel" && (
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                              <div>
+                                <Label className="text-primary font-semibold text-xs flex items-center gap-1.5"><Hotel className="h-3.5 w-3.5" /> Hotel Name</Label>
+                                <Input value={form.hotelName} onChange={(e) => updateItemDetail(item.id, "hotelName", e.target.value)} placeholder="Enter hotel name" className="mt-1.5" />
+                              </div>
+                              <div>
+                                <Label className="text-primary font-semibold text-xs flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5" /> Pickup Location</Label>
+                                <Input value={form.pickupLocation} onChange={(e) => updateItemDetail(item.id, "pickupLocation", e.target.value)} placeholder="Enter pickup address" className="mt-1.5" />
+                              </div>
+                              <div>
+                                <Label className="text-primary font-semibold text-xs flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> Pickup Time</Label>
+                                <Input value={form.pickupTime} onChange={(e) => updateItemDetail(item.id, "pickupTime", e.target.value)} placeholder="e.g. 09:30" className="mt-1.5" />
+                              </div>
+                              <div>
+                                <Label className="text-primary font-semibold text-xs flex items-center gap-1.5"><Globe className="h-3.5 w-3.5" /> Country</Label>
+                                <Select value={form.country} onValueChange={(v) => updateItemDetail(item.id, "country", v)}>
+                                  <SelectTrigger className="mt-1.5"><SelectValue placeholder="Select country" /></SelectTrigger>
+                                  <SelectContent>{countries.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
+                                </Select>
+                              </div>
+                            </div>
+                          )}
+
+                          <div className="mt-3">
+                            <Label className="text-primary font-semibold text-xs">Special Requests (optional)</Label>
+                            <Input value={form.specialRequests} onChange={(e) => updateItemDetail(item.id, "specialRequests", e.target.value)} placeholder="Allergies, wheelchair, child seat, etc." className="mt-1.5" />
                           </div>
-                          <div>
-                            <Label className="text-primary font-semibold text-xs flex items-center gap-1.5">
-                              <MapPin className="h-3.5 w-3.5" /> Pickup Location
-                            </Label>
-                            <Input
-                              value={itemDetails[item.id]?.pickupLocation || ""}
-                              onChange={(e) => updateItemDetail(item.id, "pickupLocation", e.target.value)}
-                              placeholder="Enter pickup address"
-                              className="mt-1.5"
-                            />
-                          </div>
-                          <div>
-                            <Label className="text-primary font-semibold text-xs flex items-center gap-1.5">
-                              <Globe className="h-3.5 w-3.5" /> Country
-                            </Label>
-                            <Select
-                              value={itemDetails[item.id]?.country || ""}
-                              onValueChange={(val) => updateItemDetail(item.id, "country", val)}
-                            >
-                              <SelectTrigger className="mt-1.5"><SelectValue placeholder="Select country" /></SelectTrigger>
-                              <SelectContent>{countries.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
-                            </Select>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
                 </div>
 
                 <div className="flex items-start gap-2 mt-6">
