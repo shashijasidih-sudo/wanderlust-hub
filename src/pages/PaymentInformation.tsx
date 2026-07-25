@@ -30,10 +30,7 @@ interface CustomerInfo {
   country: string; address: string; zipCode: string;
 }
 
-interface ItemDetail {
-  itemId: string; title: string; slug: string;
-  hotelName: string; pickupLocation: string; country: string;
-}
+import { buildBookingItemsFromCart, type BookingItemForm } from "@/lib/bookingItems";
 
 const PaymentInformation = () => {
   const navigate = useNavigate();
@@ -43,7 +40,7 @@ const PaymentInformation = () => {
   const [paymentMethod, setPaymentMethod] = useState("credit-card");
   const [isProcessing, setIsProcessing] = useState(false);
 
-  const [savedItemDetails, setSavedItemDetails] = useState<ItemDetail[]>([]);
+  const [savedItemDetails, setSavedItemDetails] = useState<Record<string, BookingItemForm>>({});
 
   useEffect(() => {
     const savedInfo = sessionStorage.getItem("customerInfo");
@@ -51,7 +48,19 @@ const PaymentInformation = () => {
     else navigate("/customer-information/");
 
     const savedDetails = sessionStorage.getItem("itemDetails");
-    if (savedDetails) setSavedItemDetails(JSON.parse(savedDetails));
+    if (savedDetails) {
+      try {
+        const parsed = JSON.parse(savedDetails);
+        // Legacy array format -> map by itemId
+        if (Array.isArray(parsed)) {
+          const map: Record<string, BookingItemForm> = {};
+          parsed.forEach((p: any) => { if (p.itemId) map[p.itemId] = p; });
+          setSavedItemDetails(map);
+        } else {
+          setSavedItemDetails(parsed);
+        }
+      } catch { /* ignore */ }
+    }
   }, [navigate]);
 
   // Load Razorpay script
