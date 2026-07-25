@@ -101,16 +101,8 @@ const CustomerInformation = () => {
       customerName, email, phone: `${countryCode} ${phone}`, country, address, zipCode
     }));
 
-    // Save per-item details mapped by item title for booking persistence
-    const itemDetailsForBooking = cartItems.map(item => ({
-      itemId: item.id,
-      title: item.title,
-      slug: item.slug,
-      hotelName: itemDetails[item.id]?.hotelName || "",
-      pickupLocation: itemDetails[item.id]?.pickupLocation || "",
-      country: itemDetails[item.id]?.country || "",
-    }));
-    sessionStorage.setItem("itemDetails", JSON.stringify(itemDetailsForBooking));
+    // Save per-item details keyed by cart item id (full form state)
+    sessionStorage.setItem("itemDetails", JSON.stringify(itemDetails));
 
     navigate("/payment-information/");
   };
