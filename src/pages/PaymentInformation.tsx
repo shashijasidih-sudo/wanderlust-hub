@@ -30,10 +30,7 @@ interface CustomerInfo {
   country: string; address: string; zipCode: string;
 }
 
-interface ItemDetail {
-  itemId: string; title: string; slug: string;
-  hotelName: string; pickupLocation: string; country: string;
-}
+import { buildBookingItemsFromCart, type BookingItemForm } from "@/lib/bookingItems";
 
 const PaymentInformation = () => {
   const navigate = useNavigate();
@@ -43,7 +40,7 @@ const PaymentInformation = () => {
   const [paymentMethod, setPaymentMethod] = useState("credit-card");
   const [isProcessing, setIsProcessing] = useState(false);
 
-  const [savedItemDetails, setSavedItemDetails] = useState<ItemDetail[]>([]);
+  const [savedItemDetails, setSavedItemDetails] = useState<Record<string, BookingItemForm>>({});
 
   useEffect(() => {
     const savedInfo = sessionStorage.getItem("customerInfo");
@@ -51,7 +48,19 @@ const PaymentInformation = () => {
     else navigate("/customer-information/");
 
     const savedDetails = sessionStorage.getItem("itemDetails");
-    if (savedDetails) setSavedItemDetails(JSON.parse(savedDetails));
+    if (savedDetails) {
+      try {
+        const parsed = JSON.parse(savedDetails);
+        // Legacy array format -> map by itemId
+        if (Array.isArray(parsed)) {
+          const map: Record<string, BookingItemForm> = {};
+          parsed.forEach((p: any) => { if (p.itemId) map[p.itemId] = p; });
+          setSavedItemDetails(map);
+        } else {
+          setSavedItemDetails(parsed);
+        }
+      } catch { /* ignore */ }
+    }
   }, [navigate]);
 
   // Load Razorpay script
@@ -102,11 +111,12 @@ const PaymentInformation = () => {
       const totalAmountPaise = Math.round(getCartTotal() * 100);
 
       // Save booking data to localStorage BEFORE payment
+      const bookingItems = buildBookingItemsFromCart(cartItems, savedItemDetails, "INR");
       const bookingData = {
         customer_name: customerInfo?.customerName || "",
         customer_email: customerInfo?.email || "",
         customer_phone: customerInfo?.phone || "",
-        tour_name: cartItems.map(i => i.title).join(", "),
+        tour_name: cartItems.length > 1 ? `${cartItems.length} experiences` : cartItems[0]?.title || "",
         tour_slug: cartItems[0]?.slug || "cart-booking",
         tour_date: cartItems[0]?.selectedDate || cartItems[0]?.pickupDate || new Date().toISOString().split("T")[0],
         adults: cartItems.reduce((sum, i) => sum + (i.adults || i.quantity || 1), 0),
@@ -114,7 +124,7 @@ const PaymentInformation = () => {
         amount: totalAmountPaise,
         currency: "INR",
         total_price: getCartTotal(),
-        item_details: savedItemDetails,
+        items: bookingItems,
       };
       localStorage.setItem("booking_data", JSON.stringify(bookingData));
       console.log("Booking data saved to localStorage before payment:", bookingData);
@@ -197,7 +207,7 @@ const PaymentInformation = () => {
               children: savedData.children || 0,
               currency: savedData.currency || "INR",
               special_requests: savedData.special_requests || null,
-              item_details: savedData.item_details || [],
+              items: savedData.items || [],
             };
             console.log("FINAL DATA to save:", finalData);
 

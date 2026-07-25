@@ -1,37 +1,118 @@
-# SEO Rendering Upgrade Plan
+# Multi-Item Booking Architecture
 
-The site is a Vite + React Router SPA (~668 routes, 341 in the sitemap). Full SSR would require migrating to TanStack Start / Next, which would break the current build/preview/publish flow. The pragmatic, low-risk path that fully meets your goals is **build-time static prerendering** combined with **per-route head metadata via `react-helmet-async`**.
+Redesign bookings so one `bookings` row can contain up to 10 heterogeneous `booking_items` (activities, transfers, eSIMs, tickets, packages), each with its own pickup/customer fields, while keeping Razorpay, email, refund, cancellation, auth, and booking numbers untouched.
 
-## Approach
+## Scope guardrails (unchanged)
+- `supabase/functions/create-order`, `verify-payment`, `send-confirmation`, `send-email`, `refund-payment`
+- `bookings` id/booking_number generation trigger
+- Razorpay client flow, auth (`useAuth`), currency context
+- Existing single-item bookings must keep rendering (fallback path)
 
-1. **Per-route metadata layer** — Add `react-helmet-async` and wrap the app in `<HelmetProvider>`. Create a reusable `<Seo />` component that emits `title`, `description`, canonical, OG, Twitter, and JSON-LD. Use it on the priority page templates (Home, Destination Guides, Blog/Article, Activity/Tour, Transfer, Package). Today most pages share `index.html` head, so this gives Google unique metadata per URL.
+## 1. Database (migration)
 
-2. **Static prerendering at build time** — Add `vite-plugin-prerender` (Puppeteer-based) wired to read URLs from `public/sitemap.xml` (~341 priority URLs). At `vite build`, each URL is rendered to HTML; the rendered file is written to `dist/<route>/index.html` with the fully-resolved DOM, Helmet head, and inline JSON-LD. Hosting then serves the static HTML directly for crawlers and first paint, then React hydrates.
-   - Output: every prioritized URL gets a real HTML file with title, meta description, canonical, OG/Twitter tags, and JSON-LD already in the response — no JS required.
-   - Crawl coverage: anchors in the prerendered HTML expose all internal links to crawlers.
-   - Perf: first paint is the prerendered HTML; CWV improves (LCP/CLS) because content is in the initial response.
+New table `public.booking_items`:
 
-3. **Sitemap-driven route list** — `scripts/generate-sitemap.mjs` already produces the canonical URL list. We reuse it as the source of truth for prerender, so adding a new page only requires updating the sitemap generator (already automated).
+```
+id uuid pk
+booking_id uuid fk -> bookings(id) on delete cascade
+product_id text
+product_type text            -- 'activity' | 'transfer' | 'esim' | 'ticket' | 'package'
+activity_name text
+activity_slug text
+image_url text
+destination text
+travel_date date
+quantity int default 1
+adults int default 1
+children int default 0
+price numeric
+currency text
+status text default 'confirmed'
+pickup_required boolean default false
+pickup_type text             -- 'airport' | 'hotel' | 'meeting_point' | null
+hotel_name text
+pickup_location text
+country text
+meeting_point text
+pickup_time text
+drop_location text
+flight_number text
+airline text
+terminal text
+special_requests text
+voucher_number text
+voucher_url text
+supplier_reference text
+item_details jsonb           -- catch-all for future fields
+created_at, updated_at timestamptz
+```
 
-4. **Fallbacks & safety**
-   - Hydration mismatch guard: lazy-load any client-only widgets (CurrencyContext, cart) with `useEffect` so initial HTML matches.
-   - Routes not in the prerender list still work as today (client-rendered SPA fallback).
-   - `index.html` keeps sitewide defaults; `<Seo />` overrides per route.
+RLS: owner via `bookings.user_id = auth.uid()`; admin via `has_role`; service_role full.
+GRANTs: SELECT/INSERT/UPDATE/DELETE to authenticated; ALL to service_role.
+Index on `booking_id`, `travel_date`.
+Trigger for `updated_at`.
 
-## Technical Details
+`bookings` table stays as-is — no destructive changes. `item_details` JSON on bookings continues to work as the legacy fallback.
 
-- Install: `react-helmet-async`, `@prerenderer/rollup-plugin`, `@prerenderer/renderer-puppeteer`.
-- `src/main.tsx`: wrap `<App />` in `<HelmetProvider>`.
-- `src/components/seo/Seo.tsx`: new component accepting `{ title, description, canonical, ogImage?, jsonLd? }`.
-- `vite.config.ts`: add prerender plugin in production mode; route list loaded from `public/sitemap.xml`.
-- Page edits: add `<Seo />` to ~6 template files (Home, `*DestinationGuides`, `BlogArticleLayout`, `TourBooking`, `TransferBooking`, package pages). Per-page values pulled from the existing data files (`*DestinationGuides.ts`, `toursData`, `transfersData`).
-- Remove `<link rel="canonical">` from `index.html` (per-route Helmet owns it) to avoid duplicate canonicals.
-- `package.json`: build still runs `vite build`; prerender hook fires during the bundle step. No deploy changes.
-- Build time impact: ~341 pages × ~1.5s each ≈ 8–10 min on first build (Puppeteer). Acceptable for publish.
+## 2. Cart → checkout → save
+
+- Extend `CartItem` with `productType`, `pickupRequired`, and per-type pickup fields (already partly present).
+- Checkout form becomes product-aware: renders per-item field group by `productType` (airport transfer / hotel transfer / tour / theme park / eSIM / package). Reuse existing form primitives.
+- `save-booking` edge function: after inserting the parent `bookings` row, insert one `booking_items` row per cart item using the merged pickup/customer fields. Wrapped in a single transaction via `rpc` or sequential inserts with rollback on failure. Enforce max 10 items server-side.
+- Legacy single-item callers keep working: if payload has no `items[]`, insert a single derived `booking_items` row from top-level fields.
+
+## 3. My Booking page
+
+Redesign `src/pages/MyBookings.tsx` (or equivalent):
+
+- Hero: booking number, status chip, payment status, total, currency, created date.
+- Timeline: Confirmed → Voucher Sent → Upcoming → Completed (derived from status + travel_date).
+- One card per `booking_items` row:
+  - Image (from activity data via slug lookup), destination, tour name, date, guests
+  - Pickup block ONLY if `pickup_required = true`; fields shown depend on `pickup_type`
+  - Voucher download button (per item)
+  - Contact Support / Manage Booking actions
+- Collapsible when >3 items.
+- Fallback: if a booking has zero `booking_items`, render from legacy `bookings` columns as today.
+- Responsive; keep dark-sea-green + orange primary CTAs.
+
+## 4. Admin Dashboard
+
+Update `AdminDashboard` + `ViewBookingModal`:
+
+- List row shows item count + destinations summary.
+- Detail modal renders each `booking_items` row independently, grouped by type, showing pickup/flight/hotel/voucher fields relevant to that type.
+- Empty pickup sections hidden.
+
+## 5. Vouchers
+
+- Add `voucher_url` per item; "Download Voucher" button per card.
+- Booking-level voucher stays as fallback.
+
+## 6. Images
+
+Add `getActivityImage(slug)` helper reading from existing `toursData` / transfer data maps; used by both customer and admin cards.
+
+## Technical notes
+
+- New file: `supabase/migrations/*_booking_items.sql`
+- Edit: `supabase/functions/save-booking/index.ts` (multi-insert loop, no logic change to email trigger)
+- New: `src/components/booking/BookingItemCard.tsx`, `PickupBlock.tsx`, `BookingTimeline.tsx`
+- Edit: `src/pages/MyBookings.tsx`, `src/pages/AdminDashboard.tsx`, `src/components/ViewBookingModal.tsx`
+- Edit: `src/contexts/CartContext.tsx` + `src/services/cart.ts` to persist `productType` and pickup fields
+- Edit: checkout page — dynamic per-item field groups
+- Types regenerated automatically after migration approval
+
+## Rollout order
+
+1. Migration (booking_items + RLS + grants)
+2. `save-booking` writes items (parent write unchanged)
+3. My Booking redesign with legacy fallback
+4. Admin view update
+5. Dynamic checkout forms
+6. Voucher per-item wiring
 
 ## Out of scope
+Payments, emails, refund/cancel logic, auth, booking number trigger, SMTP.
 
-- Full Node SSR / framework migration (would rewrite the project).
-- Dynamic personalization in prerendered HTML (e.g. logged-in state) — these stay client-rendered post-hydration, same as today.
-
-Confirm and I'll implement.
+Approve to proceed with step 1 (migration).
