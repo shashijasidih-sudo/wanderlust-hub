@@ -211,29 +211,42 @@ const PaymentInformation = () => {
             };
             console.log("FINAL DATA to save:", finalData);
 
-            // Save booking
+            // Save booking (atomic: parent booking + all items, or nothing)
+            const { data: sessionData } = await supabase.auth.getSession();
+            const accessToken = sessionData?.session?.access_token;
+
             const saveRes = await fetch(
               "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/save-booking",
               {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                  "Content-Type": "application/json",
+                  ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
+                },
                 body: JSON.stringify(finalData),
               }
             );
 
-            let bookingId: string | undefined;
-            if (saveRes.ok) {
-              const saveResult = await saveRes.json();
-              console.log("Booking saved, send-confirmation triggered server-side:", saveResult);
-              bookingId =
-                saveResult?.booking?.id ||
-                saveResult?.booking?.booking_id ||
-                saveResult?.id ||
-                resp.razorpay_payment_id;
-            } else {
-              console.error("Save booking failed:", await saveRes.text());
-              bookingId = resp.razorpay_payment_id;
+            const saveResult = await saveRes.json().catch(() => ({} as any));
+
+            if (!saveRes.ok || !saveResult?.success) {
+              console.error("Save booking failed:", saveResult);
+              toast.error(
+                saveResult?.error ||
+                  "Your payment went through but we could not save the booking. Please contact support with payment ID " +
+                    resp.razorpay_payment_id,
+                { duration: 12000 }
+              );
+              setIsProcessing(false);
+              return; // do NOT clear the cart or show the confirmation page
             }
+
+            console.log("Booking saved, send-confirmation triggered server-side:", saveResult);
+            const bookingId: string =
+              saveResult?.booking?.id ||
+              saveResult?.booking?.booking_id ||
+              resp.razorpay_payment_id;
+
 
             // GA4 purchase — fires ONCE, only after booking saved
             const nameParts = (customerInfo?.customerName || "").trim().split(/\s+/);
