@@ -195,7 +195,7 @@ const PaymentInformation = () => {
             const finalData = {
               payment_id: resp.razorpay_payment_id,
               order_id: resp.razorpay_order_id,
-              user_id: user?.id || "",
+              // user_id is derived server-side from the bearer token, never sent from the client
               tour_name: savedData.tour_name,
               tour_slug: savedData.tour_slug,
               tour_date: savedData.tour_date,
