@@ -31,6 +31,8 @@ interface CustomerInfo {
 }
 
 import { buildBookingItemsFromCart, type BookingItemForm } from "@/lib/bookingItems";
+import { supabase } from "@/lib/supabaseClient";
+
 
 const PaymentInformation = () => {
   const navigate = useNavigate();
