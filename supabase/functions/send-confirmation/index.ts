@@ -257,7 +257,10 @@ interface CustomerParams {
   viewUrl: string;
   supportUrl: string;
   exploreUrl: string;
+  itemsHtml: string;
+  itemCount: number;
 }
+
 
 function customerEmail(p: CustomerParams) {
   const row = (label: string, value: string, opts?: { strong?: boolean; color?: string }) => `
