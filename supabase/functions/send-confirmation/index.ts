@@ -95,6 +95,120 @@ function detectDestination(slug: string, tourName: string): string {
   return "";
 }
 
+// ---- Itemized booking rendering ----
+interface BookingItemRow {
+  activity_name?: string | null;
+  product_type?: string | null;
+  activity_slug?: string | null;
+  destination?: string | null;
+  travel_date?: string | null;
+  quantity?: number | null;
+  adults?: number | null;
+  children?: number | null;
+  price?: number | null;
+  currency?: string | null;
+  pickup_required?: boolean | null;
+  pickup_type?: string | null;
+  hotel_name?: string | null;
+  pickup_location?: string | null;
+  meeting_point?: string | null;
+  pickup_time?: string | null;
+  drop_location?: string | null;
+  flight_number?: string | null;
+  airline?: string | null;
+  terminal?: string | null;
+  special_requests?: string | null;
+  voucher_number?: string | null;
+}
+
+function esc(v: unknown): string {
+  return String(v ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function fmtDate(d?: string | null): string {
+  if (!d) return "TBD";
+  const dt = new Date(d);
+  if (isNaN(dt.getTime())) return String(d);
+  return dt.toLocaleDateString("en-IN", { weekday: "long", day: "2-digit", month: "long", year: "numeric" });
+}
+
+function prettyType(t?: string | null): string {
+  const raw = (t || "activity").toString().replace(/[-_]+/g, " ").trim();
+  const map: Record<string, string> = {
+    activity: "Activity",
+    tour: "Tour",
+    transfer: "Transfer",
+    "airport transfer": "Airport Transfer",
+    "hotel transfer": "Hotel Transfer",
+    esim: "eSIM",
+    "theme park": "Theme Park",
+    package: "Package",
+    ticket: "Ticket",
+  };
+  return map[raw.toLowerCase()] || raw.replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function itemDetailRow(label: string, value: string) {
+  return `
+    <tr>
+      <td style="padding:7px 0;border-bottom:1px solid ${BRAND.border};color:${BRAND.muted};font-size:12px;">${label}</td>
+      <td style="padding:7px 0;border-bottom:1px solid ${BRAND.border};color:${BRAND.ink};font-size:13px;font-weight:600;text-align:right;">${value}</td>
+    </tr>`;
+}
+
+function renderItemCard(it: BookingItemRow, index: number, total: number, fallbackCurrency: string) {
+  const name = esc(it.activity_name || "Travel Experience");
+  const dest = esc(it.destination || detectDestination(it.activity_slug || "", it.activity_name || "") || "Travel Experience");
+  const adults = Number(it.adults ?? 0);
+  const children = Number(it.children ?? 0);
+  const qty = Number(it.quantity ?? 1);
+  const curr = it.currency || fallbackCurrency || "INR";
+  const pickupRequired = !!it.pickup_required;
+
+  const rows = [
+    itemDetailRow("Product Type", esc(prettyType(it.product_type))),
+    itemDetailRow("Destination", dest),
+    itemDetailRow("Travel Date", esc(fmtDate(it.travel_date))),
+    itemDetailRow("Adults", String(adults)),
+    itemDetailRow("Children", String(children)),
+    itemDetailRow("Quantity", String(qty)),
+    itemDetailRow("Price", money(Number(it.price || 0), curr)),
+    itemDetailRow("Pickup Required", pickupRequired ? "Yes" : "No"),
+    it.hotel_name ? itemDetailRow("Hotel", esc(it.hotel_name)) : "",
+    it.pickup_location ? itemDetailRow("Pickup Location", esc(it.pickup_location)) : "",
+    it.meeting_point ? itemDetailRow("Meeting Point", esc(it.meeting_point)) : "",
+    it.pickup_time ? itemDetailRow("Pickup Time", esc(it.pickup_time)) : "",
+    it.drop_location ? itemDetailRow("Drop Location", esc(it.drop_location)) : "",
+    it.flight_number ? itemDetailRow("Flight Number", esc(it.flight_number)) : "",
+    it.airline ? itemDetailRow("Airline", esc(it.airline)) : "",
+    it.terminal ? itemDetailRow("Terminal", esc(it.terminal)) : "",
+    it.voucher_number ? itemDetailRow("Voucher No.", `<span style="font-family:monospace;">${esc(it.voucher_number)}</span>`) : "",
+    it.special_requests ? itemDetailRow("Special Requests", esc(it.special_requests)) : "",
+  ].join("");
+
+  const badge = total > 1
+    ? `<span style="display:inline-block;background:${BRAND.primary};color:#ffffff;border-radius:999px;padding:2px 10px;font-size:11px;font-weight:700;margin-bottom:6px;">Item ${index + 1} of ${total}</span><br/>`
+    : "";
+
+  return `
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${BRAND.soft};border:1px solid #fed7aa;border-radius:12px;margin-bottom:14px;">
+    <tr><td style="padding:18px 20px;">
+      ${badge}
+      <p style="margin:0;color:${BRAND.ink};font-size:16px;font-weight:700;line-height:1.35;">${name}</p>
+      <p style="margin:6px 0 10px;color:${BRAND.muted};font-size:12px;">📍 ${dest} · ${esc(prettyType(it.product_type))}</p>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table>
+    </td></tr>
+  </table>`;
+}
+
+function renderItems(items: BookingItemRow[], fallbackCurrency: string) {
+  if (!items.length) return "";
+  return items.map((it, i) => renderItemCard(it, i, items.length, fallbackCurrency)).join("");
+}
+
 
 function shell(inner: string, previewText: string) {
   return `<!DOCTYPE html>
