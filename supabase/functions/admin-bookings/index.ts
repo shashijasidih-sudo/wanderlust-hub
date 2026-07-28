@@ -56,8 +56,8 @@ serve(async (req) => {
       return new Response(JSON.stringify({ error: "Forbidden" }), { status: 403, headers: corsHeaders });
     }
 
-    // Fetch ALL bookings
-    const { data: bookings, error } = await adminClient
+    // Fetch ALL bookings (newest first)
+    const { data: bookingRows, error } = await adminClient
       .from("bookings")
       .select("*")
       .order("created_at", { ascending: false });
@@ -66,6 +66,35 @@ serve(async (req) => {
       console.error("Fetch error:", error);
       return new Response(JSON.stringify({ error: error.message }), { status: 500, headers: corsHeaders });
     }
+
+    const bookingList = bookingRows ?? [];
+
+    // Fetch all booking_items for those bookings and group them by booking_id.
+    // Bookings with zero items simply get an empty array (backward compatible).
+    const itemsByBooking: Record<string, unknown[]> = {};
+    if (bookingList.length > 0) {
+      const ids = bookingList.map((b: { id: string }) => b.id);
+      const { data: items, error: itemsError } = await adminClient
+        .from("booking_items")
+        .select("*")
+        .in("booking_id", ids)
+        .order("created_at", { ascending: true });
+
+      if (itemsError) {
+        // Old databases may not have booking_items yet — don't fail the dashboard.
+        console.error("booking_items fetch error:", itemsError);
+      } else {
+        for (const item of items ?? []) {
+          const key = (item as { booking_id: string }).booking_id;
+          (itemsByBooking[key] ||= []).push(item);
+        }
+      }
+    }
+
+    const bookings = bookingList.map((b: { id: string }) => ({
+      ...b,
+      booking_items: itemsByBooking[b.id] ?? [],
+    }));
 
     return new Response(JSON.stringify({ bookings }), { status: 200, headers: corsHeaders });
   } catch (error) {
