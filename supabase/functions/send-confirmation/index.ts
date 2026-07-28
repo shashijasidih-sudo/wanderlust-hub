@@ -455,6 +455,7 @@ serve(async (req) => {
     const guests = `${adultCount} Adult${adultCount > 1 ? "s" : ""}${childCount > 0 ? `, ${childCount} Child${childCount > 1 ? "ren" : ""}` : ""}`;
     const amount = money(booking.total_price || 0, booking.currency || "INR");
     const status = booking.status || "confirmed";
+    const bookingShort = String(bookingId).slice(0, 8).toUpperCase();
 
     // ---- Itemized details from booking_items (with legacy fallback) ----
     let items: BookingItemRow[] = [];
