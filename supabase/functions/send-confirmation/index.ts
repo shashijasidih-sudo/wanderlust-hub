@@ -375,12 +375,16 @@ function supportEmail(p: SupportParams) {
   <h3 style="color:${BRAND.ink};margin:0 0 8px;font-size:13px;letter-spacing:0.5px;text-transform:uppercase;">Booking</h3>
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
     ${row("Booking ID", `<span style="font-family:monospace;">${p.bookingId}</span>`)}
-    ${row("Activity", p.tourTitle)}
-    ${row("Travel Date", p.tourDate)}
-    ${row("Guests", p.guests)}
+    ${row("Items", String(p.itemCount))}
     ${row("Status", `<span style="color:${BRAND.success};">${p.status.toUpperCase()}</span>`)}
   </table>
 </td></tr>
+
+<tr><td style="padding:20px 32px 8px;">
+  <h3 style="color:${BRAND.ink};margin:0 0 8px;font-size:13px;letter-spacing:0.5px;text-transform:uppercase;">Booked Items</h3>
+  ${p.itemsHtml}
+</td></tr>
+
 
 <tr><td style="padding:20px 32px 8px;">
   <h3 style="color:${BRAND.ink};margin:0 0 8px;font-size:13px;letter-spacing:0.5px;text-transform:uppercase;">Payment</h3>
