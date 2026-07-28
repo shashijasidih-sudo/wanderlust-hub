@@ -269,7 +269,8 @@ function customerEmail(p: CustomerParams) {
       <td style="padding:10px 0;border-bottom:1px solid ${BRAND.border};color:${opts?.color || BRAND.ink};font-size:14px;font-weight:${opts?.strong ? 700 : 500};text-align:right;">${value}</td>
     </tr>`;
 
-  const destinationLabel = p.destination || "Travel Experience";
+
+
 
   const inner = `
 <tr><td style="padding:36px 32px 8px;text-align:center;">
