@@ -455,18 +455,67 @@ serve(async (req) => {
     const guests = `${adultCount} Adult${adultCount > 1 ? "s" : ""}${childCount > 0 ? `, ${childCount} Child${childCount > 1 ? "ren" : ""}` : ""}`;
     const amount = money(booking.total_price || 0, booking.currency || "INR");
     const status = booking.status || "confirmed";
-    const bookingShort = String(bookingId).slice(0, 8).toUpperCase();
+
+    // ---- Itemized details from booking_items (with legacy fallback) ----
+    let items: BookingItemRow[] = [];
+    const { data: itemRows, error: itemsError } = await supabase
+      .from("booking_items")
+      .select("*")
+      .eq("booking_id", bookingId)
+      .order("created_at", { ascending: true });
+
+    if (itemsError) {
+      console.error("booking_items fetch failed (falling back to parent booking):", itemsError.message);
+    } else if (Array.isArray(itemRows)) {
+      items = itemRows as BookingItemRow[];
+    }
+
+    if (!items.length) {
+      // Backward compatibility: synthesize a single item from the parent booking
+      const legacy = (booking.item_details || {}) as Record<string, unknown>;
+      items = [{
+        activity_name: tourTitle,
+        activity_slug: tourSlug,
+        product_type: (legacy.product_type as string) || "activity",
+        destination: destination || null,
+        travel_date: booking.tour_date || null,
+        quantity: 1,
+        adults: adultCount,
+        children: childCount,
+        price: booking.total_price || 0,
+        currency: booking.currency || "INR",
+        pickup_required: !!(legacy.pickup_required ?? legacy.hotel_name ?? legacy.pickup_location),
+        hotel_name: (legacy.hotel_name as string) || null,
+        pickup_location: (legacy.pickup_location as string) || null,
+        meeting_point: (legacy.meeting_point as string) || null,
+        pickup_time: (legacy.pickup_time as string) || null,
+        drop_location: (legacy.drop_location as string) || null,
+        flight_number: (legacy.flight_number as string) || null,
+        airline: (legacy.airline as string) || null,
+        terminal: (legacy.terminal as string) || null,
+        special_requests: booking.special_requests || null,
+      }];
+    }
+
+    const itemsHtml = renderItems(items, booking.currency || "INR");
+    const itemCount = items.length;
+    const summaryTitle = itemCount > 1
+      ? `${tourTitle} + ${itemCount - 1} more`
+      : (items[0]?.activity_name || tourTitle);
 
     const viewUrl = `${SITE}/user-bookings`;
     const supportUrl = `mailto:support@yellodae.com?subject=${encodeURIComponent(`Help with booking ${bookingShort}`)}`;
     const exploreUrl = `${SITE}/`;
 
     const customerHtml = customerEmail({
-      name, tourTitle, destination, bookingId, bookingShort, tourDate, guests, amount, status, viewUrl, supportUrl, exploreUrl,
+      name, tourTitle: summaryTitle, destination, bookingId, bookingShort, tourDate, guests, amount, status, viewUrl, supportUrl, exploreUrl,
+      itemsHtml, itemCount,
     });
 
     const supportHtml = supportEmail({
-      name, tourTitle, destination, bookingId, bookingShort, tourDate, guests, amount, status, viewUrl, supportUrl, exploreUrl,
+      name, tourTitle: summaryTitle, destination, bookingId, bookingShort, tourDate, guests, amount, status, viewUrl, supportUrl, exploreUrl,
+      itemsHtml, itemCount,
+
       customerEmail: recipientEmail,
       customerPhone: booking.contact_phone || "",
       paymentId: paymentId || "",
