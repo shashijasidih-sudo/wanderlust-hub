@@ -280,22 +280,13 @@ function customerEmail(p: CustomerParams) {
   <p style="color:${BRAND.muted};margin:0;font-size:14px;line-height:1.6;">You will be receiving your voucher via email and WhatsApp shortly.</p>
 </td></tr>
 
-<tr><td style="padding:24px 32px 8px;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${BRAND.soft};border:1px solid #fed7aa;border-radius:12px;">
-    <tr><td style="padding:20px 22px;">
-      <p style="margin:0 0 4px;color:${BRAND.primaryDark};font-size:11px;font-weight:700;letter-spacing:1px;">BOOKING SUMMARY</p>
-      <p style="margin:0;color:${BRAND.ink};font-size:17px;font-weight:700;line-height:1.35;">${p.tourTitle}</p>
-      <p style="margin:6px 0 0;color:${BRAND.muted};font-size:13px;">📍 ${destinationLabel}</p>
-    </td></tr>
-  </table>
+<tr><td style="padding:24px 32px 0;">
+  <p style="margin:0 0 12px;color:${BRAND.primaryDark};font-size:11px;font-weight:700;letter-spacing:1px;">BOOKING SUMMARY${p.itemCount > 1 ? ` · ${p.itemCount} ITEMS` : ""}</p>
+  ${p.itemsHtml}
 </td></tr>
 
-<tr><td style="padding:16px 32px 8px;">
+<tr><td style="padding:4px 32px 8px;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-    ${row("Activity", p.tourTitle, { strong: true })}
-    ${row("Destination", destinationLabel, { strong: true })}
-    ${row("Travel Date", p.tourDate, { strong: true })}
-    ${row("Travellers", p.guests)}
     ${row("Booking Status", `<span style="color:${BRAND.success};font-weight:700;">✅ Confirmed</span>`)}
     ${row("Booking ID", `<span style="font-family:monospace;">${p.bookingShort}</span>`, { strong: true })}
     <tr>
@@ -304,6 +295,8 @@ function customerEmail(p: CustomerParams) {
     </tr>
   </table>
 </td></tr>
+
+
 
 <tr><td style="padding:24px 32px 8px;">
   <div style="background:${BRAND.surface};border:1px solid ${BRAND.border};border-radius:12px;padding:20px 22px;">
