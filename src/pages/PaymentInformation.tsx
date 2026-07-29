@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TripRecommendations from "@/components/recommendations/TripRecommendations";
 import BookingSteps from "@/components/BookingSteps";
 import BookingSummary from "@/components/BookingSummary";
 import { Button } from "@/components/ui/button";
@@ -363,6 +364,7 @@ const PaymentInformation = () => {
           </CardContent>
         </Card>
       </main>
+      <TripRecommendations />
       <Footer />
     </div>
   );

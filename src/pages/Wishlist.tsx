@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Heart, Loader2, Trash2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TripRecommendations from "@/components/recommendations/TripRecommendations";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -141,6 +142,11 @@ const Wishlist = () => {
           </div>
         )}
       </main>
+      <TripRecommendations
+        showCompleteYourTrip
+        hints={wishlistItems.flatMap((w) => [w.tour_slug, w.tour_name])}
+        excludeSlugs={wishlistItems.map((w) => w.tour_slug)}
+      />
       <Footer />
     </div>
   );
