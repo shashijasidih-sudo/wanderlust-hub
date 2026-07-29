@@ -154,8 +154,8 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
       badge: "eSIM",
     },
     {
-      slug: "/thailand/pattaya/alcazar-show-pattaya/",
-      title: "Alcazar Show Pattaya",
+      slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/",
+      title: "Alcazar Cabaret Show with Transfer",
       description: "Pattaya's most famous cabaret — premium seating available.",
       image: U("photo-1514533212735-5df27d970db0"),
       badge: "Premium Experience",
@@ -195,8 +195,8 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
   ],
   krabi: [
     {
-      slug: "/thailand/krabi/krabi-airport-to-krabi-hotel-transfer/",
-      title: "Krabi Airport Pickup",
+      slug: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer/",
+      title: "Krabi Airport to Ao Nang Transfer",
       description: "Private airport transfer to Ao Nang, Railay pier or Krabi town.",
       image: U("photo-1436491865332-7a61a109cc05"),
       price: 1700,
@@ -218,7 +218,7 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
       badge: "eSIM",
     },
     {
-      slug: "/thailand/krabi/hong-island-tour-by-speedboat/",
+      slug: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/",
       title: "Hong Island Speedboat Tour",
       description: "Emerald lagoons and white-sand beaches on a private-style speedboat.",
       image: U("photo-1537956965359-7573183d1f57"),
