@@ -7,6 +7,7 @@ import { Trash2, ShoppingCart, ArrowRight, Car, Minus, Plus, Loader2, Ticket } f
 import { Link, useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TripRecommendations from "@/components/recommendations/TripRecommendations";
 import { format } from "date-fns";
 import {
   trackViewCart,
@@ -334,6 +335,7 @@ const Cart = () => {
           </div>
         </div>
       </div>
+      <TripRecommendations />
       <Footer />
     </div>
   );

@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Loader2, CalendarDays, Search, XCircle, MapPin, Mail, Phone, ChevronDown, Receipt, IndianRupee } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TripRecommendations from "@/components/recommendations/TripRecommendations";
 import { format } from "date-fns";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -255,6 +256,11 @@ const MyBookings = () => {
           )}
         </div>
       </main>
+      <TripRecommendations
+        showCompleteYourTrip
+        hints={bookings.flatMap((b) => [b.tour_slug, b.tour_name])}
+        excludeSlugs={bookings.map((b) => b.tour_slug)}
+      />
       <Footer />
     </div>
   );
