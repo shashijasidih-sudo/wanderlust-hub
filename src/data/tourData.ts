@@ -67,6 +67,9 @@ import singaporeWomanCityscape from "@/assets/singapore-cityscape-woman-1.jpg";
 import singaporeGardensByNight from "@/assets/singapore-gardens-bay-night-1.jpg";
 import gardensByBay from "@/assets/singapore-gardens-bay.jpg";
 import singaporeFlyerTwilight from "@/assets/singapore-flyer-twilight-1.jpg";
+import singaporeFlyerWheel from "@/assets/singapore-flyer.jpg";
+import singaporeCityTourDoc1 from "@/assets/singapore-doc/city-tour-1.jpg";
+import singaporeCityTourDoc2 from "@/assets/singapore-doc/city-tour-2.jpg";
 import singaporeMarinaByDay from "@/assets/singapore-marina-bay-sands-day-1.jpg";
 import singaporeMerlionNight from "@/assets/singapore-merlion-night-1.jpg";
 import singaporeCoupleWalking from "@/assets/singapore-couple-walking-1.jpg";
@@ -3953,18 +3956,21 @@ export const toursData: Record<string, TourData> = {
   // Singapore Tours
   "singapore-city-tour": {
     id: "singapore-city-tour",
-    title: "Singapore City Tour with Guide and Transfer",
-    shortDescription: "Explore iconic landmarks like Suntec City, Fountain of Wealth, Merlion Park, Little India and Chinatown with guide and transfers.",
+    title: "Singapore City Tour with Guide & Transfers",
+    shortDescription: "Half-day guided Singapore city tour with hotel transfers — Merlion Park, Suntec City Fountain of Wealth, Chinatown, Little India and Marina Bay photo stops.",
     location: "Singapore",
     city: "singapore",
     basePrice: 1815,
     childPrice: 1690.5,
     minAdults: 2,
-    duration: "Half Day",
-    rating: 4.7,
-    reviews: 1234,
+    duration: "Half Day (3–4 Hours)",
+    rating: 4.9,
+    reviews: 150,
     heroImages: [
-      { src: singaporeMarinaByNight, title: "Singapore Skyline" }
+      { src: singaporeCityTourDoc1, title: "Chinatown Heritage Streets" },
+      { src: singaporeMerlionNight, title: "Merlion Park" },
+      { src: singaporeCityTourDoc2, title: "Little India Temples" },
+      { src: singaporeMarinaByDay, title: "Marina Bay Skyline" }
     ],
     galleryImages: [
       { src: singaporeMarinaByDay, alt: "Marina Bay Sands Day" },
@@ -3972,31 +3978,61 @@ export const toursData: Record<string, TourData> = {
       { src: singaporeMerlionNight, alt: "Merlion at Night" }
     ],
     highlights: [
+      "English-speaking professional guide",
+      "Merlion Park — Singapore's icon",
       "Suntec City & Fountain of Wealth",
-      "Merlion Park",
-      "Little India exploration",
-      "Chinatown & Buddha Temple",
-      "Hotel transfers included"
+      "Chinatown & Buddha Tooth Relic Temple",
+      "Little India — favourite with Indian families",
+      "Round-trip hotel pick-up & drop-off included"
     ],
     description: {
-      overview: "Embark on a Singapore city tour with a knowledgeable guide to explore the best of this modern and diverse city.",
-      whatToExpect: "Visit iconic landmarks like Suntec City, Fountain of Wealth and Merlion Park. Experience the cultural vibrancy of Little India and Chinatown. Discover the beauty of Gardens by the Bay and the historical charm of Colonial District. Enjoy a memorable journey filled with fascinating history, stunning architecture, and a taste of Singapore's rich multicultural heritage. Minimum 2 adults required."
+      overview: "A half-day guided Singapore city tour that covers the island's most iconic landmarks and cultural districts in one comfortable, air-conditioned trip — the smartest first-day plan for Indian families and first-time visitors.",
+      whatToExpect: "Your guide picks you up from your hotel and takes you through Merlion Park, the Marina Bay waterfront, Suntec City's Fountain of Wealth, heritage-rich Chinatown with the Buddha Tooth Relic Temple, and vibrant Little India with its temples, sweet shops and markets. Expect commentary on Singapore's history and multicultural story, plus photo stops at the best skyline viewpoints. Minimum 2 adults required."
     },
     itinerary: [
-      { time: "Start", title: "Little India", description: "Begin tour from Little India" },
-      { time: "", title: "Beach Road", description: "Drive through Beach Road area" },
-      { time: "", title: "Suntec City", description: "Visit Suntec City and Fountain of Wealth" },
-      { time: "", title: "Merlion Park", description: "See the iconic Merlion statue" },
-      { time: "", title: "Chinatown", description: "Explore Chinatown and Buddha Temple" },
-      { time: "End", title: "Return", description: "Return to hotel" }
+      { time: "Start", title: "Hotel Pickup", description: "Air-conditioned vehicle picks you up from your hotel lobby" },
+      { time: "", title: "Little India", description: "Temples, markets and Indian eateries" },
+      { time: "", title: "Suntec City", description: "Fountain of Wealth photo stop" },
+      { time: "", title: "Merlion Park", description: "Iconic Merlion & Marina Bay skyline views" },
+      { time: "", title: "Chinatown", description: "Buddha Tooth Relic Temple & heritage streets" },
+      { time: "End", title: "Return", description: "Drop-off back at your hotel" }
     ],
     tourTimings: ["09:00 AM", "02:00 PM"],
-    inclusions: ["City tour with knowledgeable guide", "Suntec City & Fountain of Wealth", "Merlion Park", "Little India & Chinatown exploration", "Hotel pick-up and drop-off"],
-    exclusions: ["Personal expenses for shopping, drinks and dining"],
+    tourOptions: [
+      {
+        label: "Singapore City Tour with Guide & Shared Hotel Transfers",
+        adultPrice: 1815,
+        childPrice: 1690.5
+      }
+    ],
+    inclusions: [
+      "Half-day guided city tour",
+      "English-speaking professional guide",
+      "Air-conditioned coach or van",
+      "Merlion Park, Suntec City & Fountain of Wealth",
+      "Chinatown & Little India exploration",
+      "Round-trip hotel pick-up and drop-off"
+    ],
+    exclusions: [
+      "Attraction entry tickets (sightseeing & photo stops only)",
+      "Food & beverages",
+      "Personal expenses for shopping and dining"
+    ],
     bookingPolicy: ["Minimum 2 adults required", "Be ready in hotel lobby 15 minutes before pickup", "Provide accurate hotel address", "Carry valid ID/passport"],
     cancellationPolicy: ["Free cancellation 84 hours prior", "100% charge within 84 hours"],
-    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
-    faqs: []
+    childPolicy: [
+      "Under 3 years: Free (seat shared with parent)",
+      "3–12 years: Child rate applies",
+      "13 years & above: Adult rate applies"
+    ],
+    faqs: [],
+    customerReviews: [
+      { name: "Meera R.", date: "1 week ago", rating: 5, comment: "Perfect first-day plan. Our guide explained everything so well and the Little India stop was a hit with my parents. Pickup was bang on time.", helpful: 46 },
+      { name: "Arjun T.", date: "2 weeks ago", rating: 5, comment: "Covered all the landmarks in half a day without any hassle. Great value compared to booking taxis ourselves.", helpful: 39 },
+      { name: "Nisha & Family", date: "3 weeks ago", rating: 5, comment: "Clean AC van, friendly driver and lovely photo stops at Merlion Park. Yellodae's WhatsApp support answered every doubt before we booked.", helpful: 52 },
+      { name: "Karthik S.", date: "1 month ago", rating: 4.5, comment: "Very good tour, only wish we had more time at Chinatown. The guide gave us excellent food recommendations.", helpful: 27 },
+      { name: "Pooja D.", date: "1 month ago", rating: 5, comment: "Booked in INR, no forex surprises. Ideal introduction to Singapore — we knew exactly where to go back on our own later.", helpful: 31 }
+    ]
   },
   "night-safari-tickets": {
     id: "night-safari-tickets",
@@ -4609,17 +4645,21 @@ export const toursData: Record<string, TourData> = {
   },
   "singapore-flyer": {
     id: "singapore-flyer",
-    title: "Singapore Flyer Ticket Only",
-    shortDescription: "Experience panoramic views from 165 meters high on this giant observation wheel.",
+    title: "Singapore Flyer Tickets & Transfers",
+    shortDescription: "Ride Asia's giant observation wheel 165m above Marina Bay — skip-the-line tickets with optional hotel transfers for Indian families.",
     location: "Marina Bay, Singapore",
     city: "singapore",
     basePrice: 3381,
     childPrice: 2173.5,
-    duration: "30 Minutes",
-    rating: 4.7,
-    reviews: 2890,
+    minAdults: 1,
+    duration: "30 Minutes (Allow 1–2 Hours)",
+    rating: 4.9,
+    reviews: 150,
     heroImages: [
-      { src: singaporeFlyerTwilight, title: "Singapore Flyer" }
+      { src: singaporeFlyerTwilight, title: "Singapore Flyer at Twilight" },
+      { src: singaporeFlyerWheel, title: "Giant Observation Wheel" },
+      { src: singaporeMarinaByDay, title: "Marina Bay Skyline Views" },
+      { src: singaporeMarinaByNight, title: "Night Skyline from the Capsule" }
     ],
     galleryImages: [
       { src: singaporeFlyerTwilight, alt: "Flyer Twilight" },
@@ -4627,23 +4667,68 @@ export const toursData: Record<string, TourData> = {
       { src: singaporeCoupleWalking, alt: "Couple Travelers" }
     ],
     highlights: [
-      "165 meters high",
-      "Panoramic city views",
-      "Marina Bay Sands views",
-      "30-minute scenic ride"
+      "165 metres high — Asia's largest observation wheel",
+      "30-minute fully air-conditioned capsule ride",
+      "360° views of Marina Bay Sands & the city skyline",
+      "Time Capsule multisensory pre-boarding experience",
+      "Best at sunset — day and night views in one ride",
+      "Instant e-ticket confirmation on WhatsApp"
     ],
     description: {
-      overview: "The Singapore Flyer offers breathtaking panoramic views at 165 meters high.",
-      whatToExpect: "Marvel at Singapore's stunning skyline and catch glimpses of the Indonesian Spice Islands and Straits of Johor. Begin with the Time Capsule for an immersive multisensory journey."
+      overview: "The Singapore Flyer is Asia's largest giant observation wheel, rising 165 metres above Marina Bay. Each air-conditioned glass capsule gives you a full 360° panorama of the Singapore skyline, Gardens by the Bay, Marina Bay Sands and — on clear days — the Straits of Johor and Indonesia's Spice Islands.",
+      whatToExpect: "Start with the Time Capsule, an immersive multisensory walkthrough of Singapore's story, then board your private-feeling capsule for a smooth 30-minute rotation. Sunset slots (around 6:30–7:15 PM) are the most popular because you see the city in daylight, dusk and full night lights in a single ride. Choose the transfer option and our driver handles hotel pick-up and drop-off."
     },
     itinerary: [],
     tourTimings: ["2:00 PM - 10:00 PM"],
-    inclusions: ["Singapore Flyer admission", "30-minute scenic ride"],
-    exclusions: ["Personal expenses", "Food", "Transfers"],
-    bookingPolicy: ["Valid photo ID required", "No bulky items in capsule"],
-    cancellationPolicy: ["100% charge for cancellations after booking"],
-    childPolicy: ["Under 3: Free", "3-12: Child rate", "Above 12: Adult rate"],
-    faqs: []
+    tourOptions: [
+      {
+        label: "Singapore Flyer — Tickets Only",
+        adultPrice: 3381,
+        childPrice: 2173.5
+      },
+      {
+        label: "Singapore Flyer — Tickets + Hotel Transfers",
+        adultPrice: 4646,
+        childPrice: 3438
+      }
+    ],
+    inclusions: [
+      "Singapore Flyer admission ticket",
+      "30-minute scenic capsule ride",
+      "Time Capsule experience",
+      "Hotel pick-up & drop-off (transfer option only)"
+    ],
+    exclusions: [
+      "Food & beverages",
+      "Premium/champagne capsule upgrades",
+      "Personal expenses & souvenirs",
+      "Hotel transfers (for tickets-only option)"
+    ],
+    bookingPolicy: [
+      "Valid photo ID required at entry",
+      "No bulky items or large luggage inside the capsule",
+      "Arrive 20 minutes before your slot",
+      "Minimum 2 adults required for transfer option"
+    ],
+    cancellationPolicy: ["100% charge for cancellations after booking (non-refundable e-ticket)"],
+    childPolicy: [
+      "Under 3 years: Free entry (no ticket required)",
+      "3–12 years: Child rate applies",
+      "13 years & above: Adult rate applies"
+    ],
+    faqs: [
+      { question: "What is the best time to ride the Singapore Flyer?", answer: "Sunset — around 6:30 to 7:15 PM. You get daylight views, the golden hour and the illuminated night skyline all within one 30-minute rotation." },
+      { question: "Is the Singapore Flyer worth it with kids?", answer: "Yes. The capsules are large, fully air-conditioned, stroller-friendly and completely enclosed, so it is safe and comfortable even for toddlers. Under 3s ride free." },
+      { question: "Do I get a private capsule?", answer: "Standard tickets are shared capsules (up to 28 people, usually far fewer). Private and champagne capsules can be arranged on request via WhatsApp." },
+      { question: "How do I reach the Singapore Flyer?", answer: "Promenade MRT is a 5-minute walk and Gardens by the Bay is 10 minutes away. If you pick the transfer option, our driver picks you up from your hotel and drops you back." }
+    ],
+    customerReviews: [
+      { name: "Rohit A.", date: "1 week ago", rating: 5, comment: "Did the sunset slot as Yellodae suggested — absolutely stunning. Saw the city in daylight and lit up at night in the same ride.", helpful: 44 },
+      { name: "Shalini G.", date: "2 weeks ago", rating: 5, comment: "Took the tickets + transfer combo with my parents. Driver was punctual and polite, no walking or MRT confusion at all.", helpful: 37 },
+      { name: "Deepak & Family", date: "3 weeks ago", rating: 5, comment: "Kids loved the Time Capsule before boarding. Booking in INR through Yellodae was cheaper than what our hotel quoted.", helpful: 49 },
+      { name: "Ananya V.", date: "1 month ago", rating: 4.5, comment: "Beautiful views of Marina Bay and Gardens by the Bay. Slightly crowded capsule but still got great photos.", helpful: 26 },
+      { name: "Manish P.", date: "1 month ago", rating: 5, comment: "Instant WhatsApp confirmation and easy entry with the mobile ticket. Paired it with Gardens by the Bay the same evening — perfect combo.", helpful: 34 }
+    ]
   },
   "river-safari": {
     id: "river-safari",
