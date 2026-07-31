@@ -60,8 +60,10 @@ export interface SingaporeActivityConfig {
   companionIntro: string;
   /** headline used in the closing CTA banner */
   ctaHeadline: string;
-  /** background image for the closing CTA banner */
-  ctaImage: string;
+  /** background image for the closing CTA banner (defaults to first hero image) */
+  ctaImage?: string;
+  /** merged on top of toursData[tourKey] — e.g. custom heroImages or faqs */
+  tourOverrides?: Record<string, unknown>;
   /** optional tables rendered under the marketing intro */
   tables?: TableBlock[];
   /** page-specific tips list shown inside the companion card */
@@ -622,11 +624,11 @@ const CompleteYourSingaporeTrip = ({ currentPath, title }: { currentPath: string
   );
 };
 
-const FinalCTA = ({ config }: { config: SingaporeActivityConfig }) => (
+const FinalCTA = ({ config, fallbackImage }: { config: SingaporeActivityConfig; fallbackImage?: string }) => (
   <section className="mt-12">
     <div className="relative overflow-hidden rounded-2xl border border-border">
       <img
-        src={config.ctaImage}
+        src={config.ctaImage || fallbackImage}
         alt={config.ctaHeadline}
         className="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
@@ -667,8 +669,9 @@ const FinalCTA = ({ config }: { config: SingaporeActivityConfig }) => (
 /* --------------------------------- layout --------------------------------- */
 
 const SingaporeActivityTemplate = ({ config }: { config: SingaporeActivityConfig }) => {
-  const tourData = toursData[config.tourKey];
-  if (!tourData) return null;
+  const base = toursData[config.tourKey];
+  if (!base) return null;
+  const tourData = { ...base, ...(config.tourOverrides ?? {}) } as typeof base;
 
   return (
     <>
@@ -713,7 +716,7 @@ const SingaporeActivityTemplate = ({ config }: { config: SingaporeActivityConfig
         extraContentBeforeSuggested={
           <CompleteYourSingaporeTrip currentPath={config.path} title={tourData.title} />
         }
-        extraContentAfterTransfers={<FinalCTA config={config} />}
+        extraContentAfterTransfers={<FinalCTA config={config} fallbackImage={tourData.heroImages?.[0]?.src} />}
       />
     </>
   );
