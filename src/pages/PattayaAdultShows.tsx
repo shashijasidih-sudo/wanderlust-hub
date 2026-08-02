@@ -32,7 +32,7 @@ const PattayaAdultShows = () => {
       <Seo
         title="Pattaya Adult Shows (18+) Tickets with Transfer | Yellodae"
         description="Book Pattaya adult shows online — Alcazar, Imagine 79, 69 Show, 89 Show and Big Eye Show with hotel transfers. 18+ only, instant confirmation, INR pricing."
-        canonical="https://yellodae.com/thailand/pattaya/adultshows/"
+        path="/thailand/pattaya/adultshows/"
       />
       <Header />
 
