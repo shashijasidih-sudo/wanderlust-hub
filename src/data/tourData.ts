@@ -1456,6 +1456,93 @@ export const toursData: Record<string, TourData> = {
       { question: "Why is national park fee excluded?", answer: "The fee must be paid in cash at the pier on the day of the tour." }
     ]
   },
+  // Tiger Kingdom + City Tour (tiger only)
+  "selfie-tigers": {
+    id: "selfie-tigers",
+    title: "Phuket City Tour and Tiger Experience: Tiger Only",
+    shortDescription: "Get up close with majestic tigers in a safe environment, combined with Phuket city sightseeing.",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    basePrice: 4589,
+    childPrice: 4589,
+    duration: "Half Day",
+    rating: 4.7,
+    reviews: 823,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "Close encounter with tigers",
+      "Professional photo session",
+      "Experienced handlers",
+      "Big Buddha and Chalong Temple stops",
+      "Hotel transfer included"
+    ],
+    description: {
+      overview: "Experience a once-in-a-lifetime opportunity to interact with tigers in a controlled and safe environment, paired with Phuket's most photogenic city stops.",
+      whatToExpect: "Professional trainers ensure your safety while you capture unforgettable memories with these magnificent creatures, before visiting the Big Buddha viewpoint and Chalong Temple."
+    },
+    itinerary: [
+      { time: "09:00 AM", title: "Hotel Pickup", description: "Pickup from your hotel" },
+      { time: "10:00 AM", title: "Arrive at Tiger Kingdom", description: "Safety briefing" },
+      { time: "10:30 AM", title: "Tiger Experience", description: "Photo session with tigers" },
+      { time: "12:00 PM", title: "Return", description: "Drop-off at hotel" }
+    ],
+    tourTimings: ["07:00 AM", "10:00 AM", "01:00 PM"],
+    inclusions: ["Hotel Transfer", "Admission", "Photo Session", "English Speaking Guide"],
+    exclusions: ["Personal Expenses", "Tips", "Meals"],
+    bookingPolicy: ["Confirmation within 24 hours"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before"],
+    childPolicy: ["Same pricing for all ages"],
+    faqs: [
+      { question: "Is it safe?", answer: "Yes, experienced handlers supervise all interactions." }
+    ]
+  },
+  // Elephant Safari adventure combo
+  "elephant-safari": {
+    id: "elephant-safari",
+    title: "5 km Rafting Adventure + Monkey Caves + ATV Ride + Elephant Trekking + Flying Fox + Lunch",
+    shortDescription: "Ultimate adventure combo with rafting, ATV, elephant trekking, and flying fox activities.",
+    location: "Phuket, Thailand",
+    city: "phuket",
+    basePrice: 7245,
+    childPrice: 7245,
+    duration: "Full Day",
+    rating: 4.8,
+    reviews: 567,
+    heroImages: [],
+    galleryImages: [],
+    highlights: [
+      "5km white water rafting",
+      "ATV jungle ride",
+      "Elephant trekking experience",
+      "Flying fox zipline",
+      "Monkey caves visit",
+      "Thai lunch included"
+    ],
+    description: {
+      overview: "Experience the ultimate adventure day in Phuket with multiple activities including rafting, ATV, elephant trekking, and zipline.",
+      whatToExpect: "Start with thrilling white water rafting, explore monkey caves, ride ATVs through the jungle, trek with elephants, and finish with an exciting zipline adventure."
+    },
+    itinerary: [
+      { time: "07:00 AM", title: "Hotel Pickup", description: "Pickup from your hotel" },
+      { time: "09:00 AM", title: "White Water Rafting", description: "5km rafting adventure" },
+      { time: "10:30 AM", title: "Monkey Caves", description: "Explore the caves" },
+      { time: "11:30 AM", title: "ATV Ride", description: "Jungle ATV adventure" },
+      { time: "12:30 PM", title: "Lunch", description: "Thai buffet lunch" },
+      { time: "01:30 PM", title: "Elephant Trekking", description: "Walk with elephants" },
+      { time: "03:00 PM", title: "Flying Fox", description: "Zipline adventure" },
+      { time: "04:30 PM", title: "Return", description: "Hotel drop-off" }
+    ],
+    tourTimings: ["07:00 AM"],
+    inclusions: ["Hotel Transfer", "All Activities", "Lunch", "Equipment", "Guide", "Insurance"],
+    exclusions: ["Personal Expenses", "Tips"],
+    bookingPolicy: ["Confirmation within 24 hours"],
+    cancellationPolicy: ["Free cancellation up to 48 hours before"],
+    childPolicy: ["Same pricing for all ages", "Minimum age 6 years"],
+    faqs: [
+      { question: "What should I wear?", answer: "Comfortable clothes and shoes that can get wet." }
+    ]
+  },
   // Selfie with Tigers + ATV
   "selfie-tigers-atv": {
     id: "selfie-tigers-atv",
