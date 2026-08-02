@@ -1,8 +1,28 @@
-import TourBooking from "@/components/TourBooking";
+import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
 import fullMoon from "@/assets/koh-samui-full-moon-party-1.jpg";
 import beach from "@/assets/koh-samui-beach-1.jpg";
 import nightlife from "@/assets/pattaya-nightlife-1.jpg";
+import cityImg from "@/assets/city-kohsamui.jpg";
+
+const config: ThaiActivityConfig = {
+  path: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/",
+  city: "koh-samui",
+  area: "party",
+  seoTitle: "Full Moon Party Koh Phangan Tickets with Transfer from Koh Samui | Yellodae",
+  seoDescription: "Book the Full Moon Party Koh Phangan with return boat and hotel transfers from Koh Samui. 18+ only, instant confirmation, INR pricing and Indian support.",
+  whatsappTopic: "the Full Moon Party Koh Phangan package with transfers",
+  audience: "Adults Only (18+)",
+  companionIntro:
+    "The Full Moon Party is an all-night beach party on Koh Phangan with a boat transfer from Koh Samui. Here is the practical Indian traveller guide to timings, cash, safety and getting back.",
+  ctaHeadline: "Book Your Full Moon Party Package Today",
+  tips: [
+    "Carry cash — most Haad Rin bars and beach stalls do not accept cards.",
+    "Wear closed or sturdy sandals; the sand has broken glass late at night.",
+    "Keep your phone in a waterproof pouch and stay with your group.",
+    "The party peaks between 1 AM and 4 AM; return boats run at sunrise.",
+  ],
+};
 
 const KohSamuiFullMoonParty = () => {
   const tourData = {
@@ -11,6 +31,7 @@ const KohSamuiFullMoonParty = () => {
       { src: fullMoon, title: "Full Moon Party Haad Rin Beach" },
       { src: beach, title: "Koh Samui Beach" },
       { src: nightlife, title: "Beach Party Vibes" },
+      { src: cityImg, title: "Koh Samui Island" },
     ],
     galleryImages: [
       { src: fullMoon, alt: "Full Moon Party crowd dancing under the moon" },
@@ -18,7 +39,7 @@ const KohSamuiFullMoonParty = () => {
       { src: nightlife, alt: "Beach nightlife party" },
     ],
   };
-  return <TourBooking tourData={tourData} />;
+  return <ThaiCityActivityTemplate tourData={tourData} config={config} />;
 };
 
 export default KohSamuiFullMoonParty;
