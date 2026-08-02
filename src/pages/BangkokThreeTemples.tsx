@@ -1,4 +1,4 @@
-import TourBooking from "@/components/TourBooking";
+import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
 import { ThreeTemplesGrandPalaceSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { threeTemplesGrandPalaceFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -35,7 +35,28 @@ const BangkokThreeTemples = () => {
     faqs: threeTemplesGrandPalaceFaqs,
   };
 
-  return <TourBooking tourData={tourData} extraContentBeforeReviews={<ThreeTemplesGrandPalaceSEO />} />;
+  return <BangkokActivityTemplate
+      tourData={tourData}
+      config={{
+        path: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/",
+        seoTitle: "Three Temples Bangkok City Tour with Transfers | Book in INR",
+        seoDescription:
+          "Private Bangkok three-temple city tour covering Wat Traimit, Wat Pho and Wat Arun with hotel transfers. Instant confirmation, Indian support and INR pricing.",
+        whatsappTopic: "the Bangkok three temples city tour",
+        audience: "Great for Families & Culture Lovers",
+        area: "riverside",
+        ctaHeadline: "Bangkok's Famous Three Temples, Privately Guided",
+        companionIntro:
+          "A private, air-conditioned run through Wat Traimit, Wat Pho and Wat Arun \u2014 planned around Bangkok traffic so Indian families are not rushed.",
+        tips: [
+          "Ask your guide to start at Wat Traimit and finish at Wat Arun for the best light.",
+          "Slip-on shoes make the repeated shrine entries far easier.",
+          "Keep a bottle of water per person \u2014 shade is limited inside the complexes.",
+          "Photography is allowed outdoors; avoid flash inside shrines.",
+        ],
+      }}
+      extraContentBeforeReviews={<ThreeTemplesGrandPalaceSEO />}
+    />;
 };
 
 export default BangkokThreeTemples;

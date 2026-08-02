@@ -1,4 +1,4 @@
-import TourBooking from "@/components/TourBooking";
+import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
 import { BaiyokeBuffetSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { baiyokeBuffetFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,7 +21,28 @@ const BaiyokeBuffet = () => {
     ],
     faqs: baiyokeBuffetFaqs,
   };
-  return <TourBooking tourData={tourData} extraContentBeforeReviews={<BaiyokeBuffetSEO />} />;
+  return <BangkokActivityTemplate
+      tourData={tourData}
+      config={{
+        path: "/thailand/bangkok/baiyoke-buffet/",
+        seoTitle: "Baiyoke Sky Buffet & Observation Deck Tickets Bangkok | Book in INR",
+        seoDescription:
+          "Book Baiyoke Sky Tower buffet and observation deck tickets in Bangkok. 360-degree revolving views with an international buffet. Instant confirmation and INR pricing.",
+        whatsappTopic: "Baiyoke Sky buffet tickets",
+        audience: "Great for Families & Couples",
+        area: "city",
+        ctaHeadline: "Dinner and 360\u00b0 Bangkok Views at Baiyoke Sky",
+        companionIntro:
+          "Bangkok's classic buffet-with-a-view \u2014 with clear guidance on veg spreads and the best time slot for Indian families.",
+        tips: [
+          "Book the sunset slot for both daylight and night skyline views.",
+          "Smart casual dress is recommended for the buffet floors.",
+          "The revolving deck is on the 84th floor \u2014 allow time for lifts.",
+          "Vegetarian counters are available; Jain meals need advance notice.",
+        ],
+      }}
+      extraContentBeforeReviews={<BaiyokeBuffetSEO />}
+    />;
 };
 
 export default BaiyokeBuffet;

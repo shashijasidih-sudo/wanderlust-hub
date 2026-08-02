@@ -1,4 +1,4 @@
-import TourBooking from "@/components/TourBooking";
+import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
 import { WatArunPhoPhraKaewSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { watArunPhoPhraKaewFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -35,7 +35,28 @@ const BangkokWatArunPhoTraimit = () => {
     faqs: watArunPhoPhraKaewFaqs,
   };
 
-  return <TourBooking tourData={tourData} extraContentBeforeReviews={<WatArunPhoPhraKaewSEO />} />;
+  return <BangkokActivityTemplate
+      tourData={tourData}
+      config={{
+        path: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/",
+        seoTitle: "Wat Arun, Wat Pho & Golden Buddha Tour Bangkok | Book in INR",
+        seoDescription:
+          "Book the Wat Arun, Wat Pho and Golden Buddha temple tour in Bangkok with transfers. Guided half-day heritage tour, instant confirmation and INR pricing for Indian travellers.",
+        whatsappTopic: "the Wat Arun, Wat Pho & Golden Buddha tour",
+        audience: "Ideal for First-Time Visitors",
+        area: "riverside",
+        ctaHeadline: "See Bangkok's Three Great Temples in One Morning",
+        companionIntro:
+          "Bangkok's most photographed temples in one guided half-day \u2014 here's what Indian travellers should wear, when to start and where to eat vegetarian nearby.",
+        tips: [
+          "Start by 8:00 AM to beat both the heat and tour buses.",
+          "Cover shoulders and knees \u2014 sarongs are available on rent but queues are long.",
+          "Carry small THB notes for the cross-river ferry and donations.",
+          "Silom's Indian restaurants are a 15-minute ride from Wat Pho.",
+        ],
+      }}
+      extraContentBeforeReviews={<WatArunPhoPhraKaewSEO />}
+    />;
 };
 
 export default BangkokWatArunPhoTraimit;

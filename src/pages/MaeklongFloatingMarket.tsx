@@ -1,4 +1,4 @@
-import TourBooking from "@/components/TourBooking";
+import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
 import { MaeklongFloatingMarketSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { maeklongFloatingMarketFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,7 +21,28 @@ const MaeklongFloatingMarket = () => {
     ],
     faqs: maeklongFloatingMarketFaqs,
   };
-  return <TourBooking tourData={tourData} extraContentBeforeReviews={<MaeklongFloatingMarketSEO />} />;
+  return <BangkokActivityTemplate
+      tourData={tourData}
+      config={{
+        path: "/thailand/bangkok/maeklong-floating-market-tour/",
+        seoTitle: "Maeklong Railway & Damnoen Saduak Floating Market Tour | Book in INR",
+        seoDescription:
+          "Book the Maeklong Railway Market and Damnoen Saduak Floating Market tour from Bangkok with transfers. Full-day trip, instant confirmation and INR pricing.",
+        whatsappTopic: "the Maeklong & Damnoen Saduak market tour",
+        audience: "Popular with Families & Photographers",
+        area: "outskirts",
+        ctaHeadline: "Train Market and Floating Market in One Day",
+        companionIntro:
+          "Two of Thailand's most photographed markets in a single day trip \u2014 with the early-start plan Indian families need to avoid the crowds.",
+        tips: [
+          "Pickups start early (around 6:30 AM) \u2014 sleep early the night before.",
+          "Check the train timings with your guide to catch the market fold-away moment.",
+          "Boat rides at Damnoen Saduak are paid separately unless included.",
+          "Bargain politely at the market; start at about half the quoted price.",
+        ],
+      }}
+      extraContentBeforeReviews={<MaeklongFloatingMarketSEO />}
+    />;
 };
 
 export default MaeklongFloatingMarket;

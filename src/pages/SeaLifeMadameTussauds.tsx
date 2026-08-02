@@ -1,4 +1,4 @@
-import TourBooking from "@/components/TourBooking";
+import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
 import { SeaLifeMadameTussaudsSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { seaLifeMadameTussaudsFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,7 +21,28 @@ const SeaLifeMadameTussauds = () => {
     ],
     faqs: seaLifeMadameTussaudsFaqs,
   };
-  return <TourBooking tourData={tourData} extraContentBeforeReviews={<SeaLifeMadameTussaudsSEO />} />;
+  return <BangkokActivityTemplate
+      tourData={tourData}
+      config={{
+        path: "/thailand/bangkok/sea-life-madame-tussauds-tickets/",
+        seoTitle: "Sea Life Bangkok & Madame Tussauds Combo Tickets | Book in INR",
+        seoDescription:
+          "Book the Sea Life Ocean World and Madame Tussauds Bangkok combo tickets at Siam Paragon. Indoor, air-conditioned fun for families. Instant confirmation in INR.",
+        whatsappTopic: "the Sea Life & Madame Tussauds combo tickets",
+        audience: "Best for Families with Kids",
+        area: "city",
+        ctaHeadline: "Two Indoor Bangkok Attractions, One Combo Ticket",
+        companionIntro:
+          "A fully air-conditioned combo at Siam Paragon \u2014 the best rainy-day or peak-heat plan for Indian families with children.",
+        tips: [
+          "Both attractions are inside Siam Paragon \u2014 no transfers needed between them.",
+          "Allow around 2 hours for Sea Life and 1.5 hours for Madame Tussauds.",
+          "BTS Siam station connects directly to the mall.",
+          "Plenty of vegetarian food options in the Paragon food hall.",
+        ],
+      }}
+      extraContentBeforeReviews={<SeaLifeMadameTussaudsSEO />}
+    />;
 };
 
 export default SeaLifeMadameTussauds;

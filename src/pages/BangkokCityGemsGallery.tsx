@@ -1,4 +1,4 @@
-import TourBooking from "@/components/TourBooking";
+import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
 import { CityGemsGallerySEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { cityGemsGalleryFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,7 +21,28 @@ const BangkokCityGemsGallery = () => {
     ],
     faqs: cityGemsGalleryFaqs,
   };
-  return <TourBooking tourData={tourData} extraContentBeforeReviews={<CityGemsGallerySEO />} />;
+  return <BangkokActivityTemplate
+      tourData={tourData}
+      config={{
+        path: "/thailand/bangkok/gems-gallery-bangkok-tickets/",
+        seoTitle: "Bangkok City & Temple Tour with Gems Gallery | Book in INR",
+        seoDescription:
+          "Book the Bangkok city and temple tour with a Gems Gallery visit. Air-conditioned half-day sightseeing with transfers, instant confirmation and INR pricing.",
+        whatsappTopic: "the Bangkok city tour with Gems Gallery",
+        audience: "Easy Half-Day Option",
+        area: "city",
+        ctaHeadline: "Temples, City Sights and Gems in One Easy Half Day",
+        companionIntro:
+          "A comfortable, air-conditioned introduction to Bangkok \u2014 good for Indian travellers with a short layover or a half-free day.",
+        tips: [
+          "The gallery stop is browse-only; there is no purchase obligation.",
+          "Wear temple-appropriate clothing for the shrine stops.",
+          "Book the morning slot if you have afternoon shopping planned.",
+          "Silom and Sukhumvit Indian restaurants are close to the drop-off points.",
+        ],
+      }}
+      extraContentBeforeReviews={<CityGemsGallerySEO />}
+    />;
 };
 
 export default BangkokCityGemsGallery;

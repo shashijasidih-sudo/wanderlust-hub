@@ -1,4 +1,4 @@
-import TourBooking from "@/components/TourBooking";
+import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
 import { VivaAlangkaCruiseSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { vivaAlangkaCruiseFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,7 +21,28 @@ const VivaAlangkaCruise = () => {
     ],
     faqs: vivaAlangkaCruiseFaqs,
   };
-  return <TourBooking tourData={tourData} extraContentBeforeReviews={<VivaAlangkaCruiseSEO />} />;
+  return <BangkokActivityTemplate
+      tourData={tourData}
+      config={{
+        path: "/thailand/bangkok/viva-alangka-dinner-cruise/",
+        seoTitle: "Viva Alangka Dinner Cruise Bangkok with Transfers | Book in INR",
+        seoDescription:
+          "Book the Viva Alangka dinner cruise from Asiatique with hotel transfers. Buffet dinner, live music and illuminated Chao Phraya views. Instant confirmation in INR.",
+        whatsappTopic: "the Viva Alangka dinner cruise",
+        audience: "Perfect for Couples & Families",
+        area: "riverside",
+        ctaHeadline: "A Romantic Evening on the Chao Phraya",
+        companionIntro:
+          "A relaxed buffet cruise from Asiatique \u2014 here's the boarding plan, dress code and veg-food guidance for Indian travellers.",
+        tips: [
+          "Reach Asiatique 45 minutes before departure for boarding formalities.",
+          "Request vegetarian or Jain meals while booking, not on board.",
+          "Upper-deck seats give the best Wat Arun and Rama VIII bridge views.",
+          "Smart casual dress; carry a light shrug for the river breeze.",
+        ],
+      }}
+      extraContentBeforeReviews={<VivaAlangkaCruiseSEO />}
+    />;
 };
 
 export default VivaAlangkaCruise;
