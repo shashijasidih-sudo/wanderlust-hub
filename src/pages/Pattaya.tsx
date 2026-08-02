@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useCurrency } from "@/contexts/CurrencyContext";
+import { useNavigate } from "react-router-dom";
 import { Grid, List, ShoppingCart, Mail, Eye } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -13,73 +14,23 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import SearchInput from "@/components/SearchInput";
 import BookTransfersSection from "@/components/BookTransfersSection";
 import CityExploreLinks from "@/components/CityExploreLinks";
-import pattayaBoatTour from "@/assets/floating-market-daylight-1.jpg";
-import pattayaSailboat from "@/assets/pattaya-sailboat-1.jpg";
-import pattayaBoatsBeach from "@/assets/pattaya-boats-beach-1.jpg";
-import pattayaTropicalBeach from "@/assets/pattaya-tropical-beach-1.jpg";
-import pattayaLongtailBoats from "@/assets/pattaya-longtail-boats-1.jpg";
-import pattayaWomanSea from "@/assets/pattaya-woman-sea-1.jpg";
-import pattayaSpeedboat from "@/assets/pattaya-speedboat-1.jpg";
-import pattayaIslandsBoats from "@/assets/floating-market-daylight-2.jpg";
-import alcazarShow1 from "@/assets/alcazar-show-1.jpg";
-import pattayaNightlife1 from "@/assets/pattaya-nightlife-1.jpg";
-import pattayaNightlife2 from "@/assets/pattaya-nightlife-2.jpg";
-import muayThai1 from "@/assets/muay-thai-1.jpg";
-import imagine79Show1 from "@/assets/imagine79-show-1.jpg";
-import show69Pattaya1 from "@/assets/show69-pattaya-1.jpg";
-import show89Pattaya1 from "@/assets/show89-pattaya-1.jpg";
-import bigeyeShowPattaya1 from "@/assets/bigeye-show-pattaya-1.jpg";
+import { allPattayaActivities, pattayaCategories as categories } from "@/data/pattayaActivitiesData";
 
-const regularActivities = [
-  { title: "Discovery Pattaya City Tours with Floating Market - Join Tour", price: 2175, image: pattayaBoatTour, slug: "/thailand/pattaya/pattaya-floating-market-tour/" },
-  { title: "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer", price: 1208, image: pattayaSailboat, slug: "/thailand/pattaya/big-buddha-gems-gallery-tour/" },
-  { title: "Coral Island Join Tour with Indian Lunch", price: 603.75, image: pattayaBoatsBeach, slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/" },
-  { title: "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya", price: 3622.5, image: pattayaTropicalBeach, slug: "/thailand/pattaya/nong-nooch-tropical-garden-tickets/" },
-  { title: "Pattaya Dolphinarium Admission Ticket with Transfer", price: 3650, image: pattayaSpeedboat, slug: "/thailand/pattaya/pattaya-dolphinarium-show-tickets/" },
-  { title: "Muay Thai Pattaya Admission Ticket", price: 4830, image: muayThai1, slug: "/thailand/pattaya/muay-thai-boxing-show-pattaya/" },
-  { title: "Pattaya Floating Market Guided Tour with Transfer", price: 3140, image: pattayaIslandsBoats, slug: "/thailand/pattaya/pattaya-floating-market-guided-tour/" },
-  { title: "Lost in Nightlight - A Walking, Drinking, and Food Tasting Experience at Pattaya's Red Light District", price: 3745, image: pattayaNightlife1, slug: "/thailand/pattaya/pattaya-nightlife-walking-tour/" },
-  { title: "Sunset Club and Pub Crawling Experience at Drinking Street in Pattaya", price: 6280, image: pattayaNightlife2, slug: "/thailand/pattaya/pattaya-pub-crawl-night-tour/" },
-];
-
-const adultShowActivities = [
-  { title: "Alcazar Show Pattaya Ticket with Transfer", price: 2420, image: alcazarShow1, slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/" },
-  { title: "Imagine 79 Show Pattaya with Transfer", price: 4000, image: imagine79Show1, slug: "/thailand/pattaya/79-show-pattaya-with-transfer/" },
-  { title: "Show 69 in Pattaya with Transfer", price: 3800, image: show69Pattaya1, slug: "/thailand/pattaya/69-show-pattaya-with-transfer/" },
-  { title: "Show 89 in Pattaya with Transfer", price: 6000, image: show89Pattaya1, slug: "/thailand/pattaya/89-show-pattaya-with-transfer/" },
-  { title: "Big Eye Show in Pattaya with Transfer", price: 6000, image: bigeyeShowPattaya1, slug: "/thailand/pattaya/99-show-pattaya-big-eye-with-transfer/" },
-];
-
-const categories = [
-  "City Tours", "Culture & Attractions", "Adventure Tours", "Sightseeing Tours",
-  "Boat & Cruise Tours", "Theme Parks", "Wildlife & Zoo", "Nightlife",
-  "Shows & Entertainment", "Water Activities", "Transfers", "Special Experiences"
-];
+const activities = allPattayaActivities;
 
 const Pattaya = () => {
   const { formatPrice } = useCurrency();
+  const navigate = useNavigate();
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('price-low');
-  const [showAdultShows, setShowAdultShows] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
 
-  const activities = showAdultShows ? adultShowActivities : regularActivities;
   const minPrice = Math.min(...activities.map(a => a.price));
   const maxPrice = Math.max(...activities.map(a => a.price));
   const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
 
-  const handleToggleAdultShows = () => {
-    setShowAdultShows(prev => {
-      const next = !prev;
-      const nextActivities = next ? adultShowActivities : regularActivities;
-      const newMin = Math.min(...nextActivities.map(a => a.price));
-      const newMax = Math.max(...nextActivities.map(a => a.price));
-      setPriceRange([newMin, newMax]);
-      setCurrentPage(1);
-      return next;
-    });
-  };
+  const goToAdultShows = () => navigate('/thailand/pattaya/adultshows/');
 
   const sortedActivities = [...activities].sort((a, b) => {
     if (sortBy === 'price-low') return a.price - b.price;
@@ -106,9 +57,9 @@ const Pattaya = () => {
         <div className="bg-card shadow-card rounded-lg p-4 md:p-6 mb-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
             <h1 className="text-2xl md:text-3xl font-bold text-foreground">
-              {showAdultShows ? "Pattaya Adult Shows" : "Pattaya Tours & Activities"}
+              Pattaya Tours &amp; Activities
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground">{activities.length} {showAdultShows ? "Adult Shows" : "Things to do"} in Pattaya</p>
+            <p className="text-lg md:text-xl text-muted-foreground">{activities.length} Things to do in Pattaya</p>
             <div className="flex items-center gap-4">
               <Select value={sortBy} onValueChange={setSortBy}>
                 <SelectTrigger className="w-40 md:w-48">
@@ -156,10 +107,9 @@ const Pattaya = () => {
             categories={categories}
           />
           <Button
-            variant={showAdultShows ? 'default' : 'outline'}
             size="sm"
             className="flex items-center gap-2"
-            onClick={handleToggleAdultShows}
+            onClick={goToAdultShows}
           >
             <Eye className="h-4 w-4" />
             Adult Shows
@@ -170,6 +120,17 @@ const Pattaya = () => {
           {/* Desktop Sidebar - Hidden on mobile */}
           <aside className="hidden lg:block w-80 flex-shrink-0">
             <div className="bg-card shadow-card rounded-lg p-6 space-y-6 sticky top-4">
+              {/* Adult Shows – above My Cart */}
+              <div>
+                <Button
+                  className="w-full flex items-center gap-2"
+                  onClick={goToAdultShows}
+                >
+                  <Eye className="h-5 w-5" />
+                  Adult Shows
+                </Button>
+              </div>
+
               <div>
                 <div className="flex items-center gap-2 mb-3">
                   <ShoppingCart className="h-5 w-5 text-muted-foreground" />
@@ -199,18 +160,6 @@ const Pattaya = () => {
                 <p className="text-sm text-muted-foreground">
                   {formatPrice(priceRange[0])} – {formatPrice(priceRange[1])}
                 </p>
-              </div>
-
-              {/* Adult Shows Toggle */}
-              <div>
-                <Button
-                  variant={showAdultShows ? 'default' : 'outline'}
-                  className="w-full flex items-center gap-2"
-                  onClick={handleToggleAdultShows}
-                >
-                  <Eye className="h-5 w-5" />
-                  {showAdultShows ? "Show All Activities" : "Adult Shows"}
-                </Button>
               </div>
 
               <div>

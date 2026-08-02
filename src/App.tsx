@@ -16,6 +16,7 @@ const RoutesHealthCheck = lazy(() => import("./pages/RoutesHealthCheck"));
 const Thailand = lazy(() => import("./pages/Thailand"));
 const Bangkok = lazy(() => import("./pages/Bangkok"));
 const Pattaya = lazy(() => import("./pages/Pattaya"));
+const PattayaAdultShows = lazy(() => import("./pages/PattayaAdultShows"));
 const Phuket = lazy(() => import("./pages/Phuket"));
 const Krabi = lazy(() => import("./pages/Krabi"));
 const Dubai = lazy(() => import("./pages/Dubai"));
@@ -472,6 +473,8 @@ const App = () => (
             <Route path="/thailand/bangkok/" element={<Bangkok />} />
             <Route path="/thailand/bangkok/things-to-do/" element={<BangkokThingsToDo />} />
             <Route path="/thailand/pattaya/" element={<Pattaya />} />
+            <Route path="/thailand/pattaya/adultshows/" element={<PattayaAdultShows />} />
+            <Route path="/thailand/pattaya/adultshows" element={<PattayaAdultShows />} />
             <Route path="/thailand/phuket/" element={<Phuket />} />
             <Route path="/thailand/krabi/" element={<Krabi />} />
             <Route path="/thailand/koh-samui/" element={<KohSamui />} />
