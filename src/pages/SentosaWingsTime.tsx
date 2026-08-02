@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import TourBooking from "@/components/TourBooking";
+import SingaporeTravelEssentials from "@/components/activity-detail/SingaporeTravelEssentials";
 import { toursData } from "@/data/tourData";
 import Seo from "@/components/seo/Seo";
 import { SentosaWingsTimeSEO } from "@/components/activity-detail/SingaporeActivitySEO";
@@ -511,7 +512,7 @@ const CompleteYourSingaporeTrip = () => (
     </div>
 
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
-      {tripItems.map((item) => (
+      {tripItems.slice(0, 4).map((item) => (
         <Card key={item.title} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
           <Link to={item.slug}>
             <div className="aspect-[16/11] overflow-hidden">
@@ -620,6 +621,7 @@ const SentosaWingsTime = () => {
         extraContentBeforeReviews={<SentosaWingsTimeSEO />}
         extraContentAfterPolicies={<IndianTravelerCompanion />}
         extraContentBeforeSuggested={<CompleteYourSingaporeTrip />}
+        extraContentBeforeGuides={<SingaporeTravelEssentials />}
         extraContentAfterTransfers={<FinalCTA />}
       />
     </>
