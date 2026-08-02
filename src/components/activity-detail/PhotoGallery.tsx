@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SafeImage from "@/components/SafeImage";
 
 interface PhotoGalleryProps {
   images: { src: string; alt: string }[];
@@ -32,7 +33,7 @@ const PhotoGallery = ({ images }: PhotoGalleryProps) => {
                 className="relative aspect-video cursor-pointer overflow-hidden rounded-lg group"
                 onClick={() => openLightbox(index)}
               >
-                <img
+                <SafeImage
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover transition-transform group-hover:scale-110"
@@ -65,7 +66,7 @@ const PhotoGallery = ({ images }: PhotoGalleryProps) => {
             <ChevronLeft className="h-8 w-8" />
           </Button>
           
-          <img
+          <SafeImage
             src={displayImages[selectedImage].src}
             alt={displayImages[selectedImage].alt}
             className="max-h-[90vh] max-w-[90vw] object-contain"

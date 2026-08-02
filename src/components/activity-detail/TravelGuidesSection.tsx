@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { thailandGuides } from "@/data/thailandGuides";
 import { singaporeGuides } from "@/data/singaporeGuides";
 import { dubaiGuides } from "@/data/dubaiGuides";
+import SafeImage from "@/components/SafeImage";
 
 type GuideRegion = "thailand" | "singapore" | "dubai";
 
@@ -53,7 +54,7 @@ const TravelGuidesSection = ({ count = 4, title = "Travel Guides", region = "tha
           >
             <Link to={guide.slug}>
               <div className="aspect-[16/10] overflow-hidden">
-                <img
+                <SafeImage
                   src={guide.image}
                   alt={guide.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

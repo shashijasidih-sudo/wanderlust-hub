@@ -6,6 +6,7 @@ import gardensByTheBayImg from "@/assets/singapore-gardens-bay-night-1.jpg";
 import nightSafariImg from "@/assets/singapore-night-safari.jpg";
 import wingsOfTimeImg from "@/assets/singapore-wings-time.jpg";
 import airportTransferImg from "@/assets/singapore-city-tour.jpg";
+import SafeImage from "@/components/SafeImage";
 
 interface DontMissItem {
   id: string;
@@ -72,7 +73,7 @@ const DontMissThese = () => {
           >
             <Link to={item.slug}>
               <div className="aspect-[16/10] overflow-hidden">
-                <img
+                <SafeImage
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
