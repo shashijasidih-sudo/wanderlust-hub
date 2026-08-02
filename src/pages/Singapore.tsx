@@ -28,6 +28,9 @@ import singaporeRiverSafari from "@/assets/singapore-river-safari.jpg";
 import singaporeUniversalStudios from "@/assets/singapore-universal-studios.jpg";
 import singaporeZoo from "@/assets/singapore-zoo.jpg";
 import singaporeBigBus from "@/assets/singapore-big-bus.jpg";
+import singaporeRainforestWildAsia from "@/assets/singapore-rainforest-wild-asia.jpg";
+import singaporeUniversalStudiosWeekend from "@/assets/singapore-universal-studios-weekend.jpg";
+import singaporeBigBusNight from "@/assets/singapore-big-bus-night.jpg";
 
 const activities = [
   { title: "Singapore City Tour with Guide and Transfer", price: 1815, image: singaporeCityTour, slug: "/singapore/singapore-city-tour/" },
@@ -42,11 +45,11 @@ const activities = [
   { title: "Singapore Flyer Ticket", price: 3381, image: singaporeFlyer, slug: "/singapore/singapore-flyer-tickets-and-transfers/" },
   { title: "Singapore River Safari", price: 4468, image: singaporeRiverSafari, slug: "/singapore/river-wonders-singapore-tickets/" },
   { title: "Universal Studios Weekday Ticket", price: 6762, image: singaporeUniversalStudios, slug: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-  { title: "Universal Studios Weekend Ticket", price: 7872.9, image: singaporeUniversalStudios, slug: "/singapore/universal-studios-singapore-weekend-tickets/" },
+  { title: "Universal Studios Weekend Ticket", price: 7872.9, image: singaporeUniversalStudiosWeekend, slug: "/singapore/universal-studios-singapore-weekend-tickets/" },
   { title: "Singapore Zoo + Tram Ride", price: 3743.25, image: singaporeZoo, slug: "/singapore/singapore-zoo-tickets/" },
-  { title: "Rainforest Wild Asia with Transfer", price: 3441.375, image: singaporeZoo, slug: "/singapore/rainforest-wild-asia-tickets/" },
+  { title: "Rainforest Wild Asia with Transfer", price: 3441.375, image: singaporeRainforestWildAsia, slug: "/singapore/rainforest-wild-asia-tickets/" },
   { title: "Big Bus Singapore - Discover Ticket", price: 4709.25, image: singaporeBigBus, slug: "/singapore/big-bus-hop-on-hop-off-singapore-city-tour/" },
-  { title: "Big Bus Singapore Night City Tour", price: 4709.25, image: singaporeBigBus, slug: "/singapore/big-bus-night-city-tour-singapore/" },
+  { title: "Big Bus Singapore Night City Tour", price: 4709.25, image: singaporeBigBusNight, slug: "/singapore/big-bus-night-city-tour-singapore/" },
 ];
 
 const categories = [
