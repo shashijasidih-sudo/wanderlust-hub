@@ -1,5 +1,6 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import { kohSamuiLoyKrathongCruiseFaqs } from "@/data/kohSamuiActivityFaqs";
 import cruiseImg from "@/assets/koh-samui-loy-krathong-cruise-1.jpg";
 import bangkokCruise from "@/assets/bangkok-cruise-night-3.jpg";
 import valentineCruise from "@/assets/valentine-cruise-1.jpg";
@@ -38,6 +39,7 @@ const KohSamuiWhiteOrchidLoyKrathongCruise = () => {
       { src: bangkokCruise, alt: "Bangkok river cruise at night" },
       { src: valentineCruise, alt: "On-board entertainment" },
     ],
+    faqs: kohSamuiLoyKrathongCruiseFaqs,
   };
   return <ThaiCityActivityTemplate tourData={tourData} config={config} />;
 };

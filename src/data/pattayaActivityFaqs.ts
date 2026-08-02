@@ -291,3 +291,43 @@ export const muayThaiPattayaFaqs: FAQ[] = extend([
       "Performances take place at a dedicated Muay Thai stadium in Pattaya. Hotel transfer is available with selected packages.",
   },
 ]);
+
+/** Shared FAQ set for Pattaya's adults-only (18+) cabaret shows. */
+export const adultShowPattayaFaqs = (showName: string): FAQ[] =>
+  extend([
+    {
+      question: `Is there an age limit for the ${showName}?`,
+      answer:
+        "Yes. This is a strictly adults-only (18+) show. A passport or valid photo ID may be checked at the entrance, and children are not permitted.",
+    },
+    {
+      question: `What are the ${showName} timings?`,
+      answer:
+        "Shows run nightly with the most popular slots between 8:00 PM and 10:30 PM. Arrive 20 minutes before showtime for seating and check-in.",
+    },
+    {
+      question: "How long does the show last?",
+      answer:
+        "The performance typically lasts 45 to 60 minutes. With hotel transfers included, plan around 2 hours in total for the evening.",
+    },
+    {
+      question: "Is there a dress code?",
+      answer:
+        "Smart casual is recommended. Avoid beachwear, vests and flip-flops — some venues refuse entry to guests in swimwear.",
+    },
+    {
+      question: "Is photography allowed inside?",
+      answer:
+        "No. Photography and video recording are strictly prohibited inside the theatre, and phones must be kept away during the performance.",
+    },
+    {
+      question: "Are drinks included with the ticket?",
+      answer:
+        "Selected packages include one welcome drink. Additional drinks can be purchased at the venue bar in Thai baht cash or by card.",
+    },
+    {
+      question: "Is hotel transfer included?",
+      answer:
+        "Yes, round-trip hotel transfers within central Pattaya are included in transfer packages. No-transfer tickets require you to reach the venue on your own via taxi, Grab or Bolt.",
+    },
+  ]);

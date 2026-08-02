@@ -1,5 +1,6 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import { chiangMaiCityTempleTourFaqs } from "@/data/chiangMaiActivityFaqs";
 import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.jpg";
 import chediLuang from "@/assets/chiang-mai-wat-chedi-luang-1.jpg";
 import cityImg from "@/assets/city-chiang-mai.jpg";
@@ -38,6 +39,7 @@ const ChiangMaiCityTempleTour = () => {
       { src: chediLuang, alt: "Wat Chedi Luang ancient brick chedi" },
       { src: cityImg, alt: "Chiang Mai cityscape" },
     ],
+    faqs: chiangMaiCityTempleTourFaqs,
   };
   return <ThaiCityActivityTemplate tourData={tourData} config={config} />;
 };
