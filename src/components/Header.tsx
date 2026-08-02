@@ -223,7 +223,7 @@ const Header = () => {
               Activities
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[240px] p-2">
+            <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[240px] p-2 max-h-[70vh] overflow-y-auto overscroll-contain">
               <DropdownMenuItem asChild className={menuItemClass}>
                 <Link to="/thailand/">
                   <Palmtree className="h-5 w-5 mr-3 text-primary" />
@@ -286,7 +286,7 @@ const Header = () => {
               Transfers
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[240px] p-2">
+            <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[240px] p-2 max-h-[70vh] overflow-y-auto overscroll-contain">
               <DropdownMenuItem asChild className={menuItemClass}>
                 <Link to="/thailand/airport-transfers/">
                   <Palmtree className="h-5 w-5 mr-3 text-primary" />
@@ -347,7 +347,7 @@ const Header = () => {
               Destination Guides
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[260px] p-2">
+            <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[260px] p-2 max-h-[70vh] overflow-y-auto overscroll-contain">
               <DropdownMenuItem asChild className={menuItemClass}>
                 <Link to="/thailand/destination-guides/">
                   <Palmtree className="h-5 w-5 mr-3 text-primary" />
@@ -413,7 +413,7 @@ const Header = () => {
                 Activities
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
+              <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px] max-h-[60vh] overflow-y-auto overscroll-contain">
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/thailand/" onClick={() => setIsMenuOpen(false)}>
                     <Palmtree className="h-4 w-4 mr-2 text-primary" />
@@ -476,7 +476,7 @@ const Header = () => {
                 Transfers
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
+              <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px] max-h-[60vh] overflow-y-auto overscroll-contain">
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/thailand/airport-transfers/" onClick={() => setIsMenuOpen(false)}>
                     <Palmtree className="h-4 w-4 mr-2 text-primary" />
@@ -537,7 +537,7 @@ const Header = () => {
                 Destination Guides
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px]">
+              <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[200px] max-h-[60vh] overflow-y-auto overscroll-contain">
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link to="/thailand/destination-guides/" onClick={() => setIsMenuOpen(false)}>
                     <Palmtree className="h-4 w-4 mr-2 text-primary" />
