@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
 import Seo from "@/components/seo/Seo";
+import SingaporeTravelEssentials from "@/components/activity-detail/SingaporeTravelEssentials";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -587,7 +588,7 @@ const TRIP_POOL = [
 ];
 
 const CompleteYourSingaporeTrip = ({ currentPath, title }: { currentPath: string; title: string }) => {
-  const items = TRIP_POOL.filter((i) => i.slug !== currentPath).slice(0, 8);
+  const items = TRIP_POOL.filter((i) => i.slug !== currentPath).slice(0, 4);
   return (
     <section className="mt-12">
       <div className="flex items-end justify-between mb-4 md:mb-6">
@@ -605,7 +606,7 @@ const CompleteYourSingaporeTrip = ({ currentPath, title }: { currentPath: string
         </Link>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
         {items.map((item) => (
           <Card key={item.slug} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
             <Link to={item.slug}>
@@ -716,6 +717,7 @@ const SingaporeActivityTemplate = ({ config }: { config: SingaporeActivityConfig
         extraContentBeforeSuggested={
           <CompleteYourSingaporeTrip currentPath={config.path} title={tourData.title} />
         }
+        extraContentBeforeGuides={<SingaporeTravelEssentials />}
         extraContentAfterTransfers={<FinalCTA config={config} fallbackImage={tourData.heroImages?.[0]?.src} />}
       />
     </>

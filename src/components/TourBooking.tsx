@@ -43,6 +43,7 @@ interface TourBookingProps {
   extraContentBeforeSuggested?: React.ReactNode;
   extraContentAfterPolicies?: React.ReactNode;
   extraContentAfterTransfers?: React.ReactNode;
+  extraContentBeforeGuides?: React.ReactNode;
   extraDescriptionBeforeHighlights?: React.ReactNode;
   hideItinerary?: boolean;
   heroVariant?: "slider" | "collage";
@@ -50,7 +51,7 @@ interface TourBookingProps {
   forceBlackText?: boolean;
 }
 
-const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, extraContentAfterPolicies, extraContentAfterTransfers, extraDescriptionBeforeHighlights, hideItinerary, heroVariant = "slider", hidePhotoGallery = false, forceBlackText = false }: TourBookingProps) => {
+const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, extraContentAfterPolicies, extraContentAfterTransfers, extraContentBeforeGuides, extraDescriptionBeforeHighlights, hideItinerary, heroVariant = "slider", hidePhotoGallery = false, forceBlackText = false }: TourBookingProps) => {
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const itineraryRef = useRef<HTMLDivElement>(null);
@@ -407,6 +408,18 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
         {/* Optional extra content before Travel Guides */}
         {extraContentBeforeSuggested}
 
+        {/* Book Transfers in this city */}
+        {(() => {
+          const cityTransfers = getCityTransfers(tourData.city);
+          if (!cityTransfers) return null;
+          return (
+            <BookTransfersSection city={cityTransfers.city} transfers={cityTransfers.transfers} />
+          );
+        })()}
+
+        {/* Optional content between Transfers and Travel Guides */}
+        {extraContentBeforeGuides}
+
         {/* Travel Guides — auto-rendered by city */}
         {(() => {
           const city = (tourData.city || "").toLowerCase();
@@ -415,15 +428,6 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
           if (city === "singapore") return <TravelGuidesSection region="singapore" />;
           if (city === "dubai" || city === "abu dhabi") return <TravelGuidesSection region="dubai" />;
           return null;
-        })()}
-
-        {/* Book Transfers in this city */}
-        {(() => {
-          const cityTransfers = getCityTransfers(tourData.city);
-          if (!cityTransfers) return null;
-          return (
-            <BookTransfersSection city={cityTransfers.city} transfers={cityTransfers.transfers} />
-          );
         })()}
 
         {/* Optional CTA / extra content after transfers */}

@@ -147,7 +147,7 @@ export const cityTransfers: Record<string, BookTransferItem[]> = {
       title: "Sentosa Island to Singapore Hotel Transfer",
       desc: "Private transfer from Sentosa Island attractions back to your Singapore city hotel.",
       price: 4000,
-      img: "https://images.unsplash.com/photo-1508964942454-1a56651a54e8?w=800&auto=format&fit=crop",
+      img: "https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=800&auto=format&fit=crop",
       slug: "/singapore/singapore-airport-dropoff/",
     },
   ],
