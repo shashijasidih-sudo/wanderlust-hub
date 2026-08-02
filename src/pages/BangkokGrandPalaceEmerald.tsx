@@ -1,4 +1,4 @@
-import TourBooking from "@/components/TourBooking";
+import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
 import { GrandPalaceEmeraldSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { grandPalaceEmeraldFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,7 +21,28 @@ const BangkokGrandPalaceEmerald = () => {
     ],
     faqs: grandPalaceEmeraldFaqs,
   };
-  return <TourBooking tourData={tourData} extraContentBeforeReviews={<GrandPalaceEmeraldSEO />} />;
+  return <BangkokActivityTemplate
+      tourData={tourData}
+      config={{
+        path: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/",
+        seoTitle: "Grand Palace & Wat Phra Kaew Tour Bangkok | Book Tickets in INR",
+        seoDescription:
+          "Book the Grand Palace, Emerald Buddha and Reclining Buddha tour in Bangkok with transfers. Guided half-day royal heritage tour with instant confirmation in INR.",
+        whatsappTopic: "the Grand Palace & Emerald Buddha tour",
+        audience: "Ideal for First-Time Visitors",
+        area: "riverside",
+        ctaHeadline: "Walk Through Bangkok's Royal Grand Palace",
+        companionIntro:
+          "Bangkok's single most important sight \u2014 here's the dress code, best entry time and nearby Indian food options for Indian travellers.",
+        tips: [
+          "Strict dress code: no shorts, sleeveless tops or ripped jeans.",
+          "Arrive at opening (8:30 AM) \u2014 the courtyards get very hot by 11 AM.",
+          "Ignore touts claiming the palace is closed; it opens daily.",
+          "Wat Pho is a 10-minute walk away and pairs perfectly with this visit.",
+        ],
+      }}
+      extraContentBeforeReviews={<GrandPalaceEmeraldSEO />}
+    />;
 };
 
 export default BangkokGrandPalaceEmerald;

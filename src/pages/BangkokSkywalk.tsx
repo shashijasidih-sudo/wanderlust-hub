@@ -1,4 +1,4 @@
-import TourBooking from "@/components/TourBooking";
+import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
 import { SkywalkSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { bangkokSkywalkFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -28,7 +28,28 @@ const BangkokSkywalk = () => {
     ],
     faqs: bangkokSkywalkFaqs,
   };
-  return <TourBooking tourData={tourData} extraContentBeforeReviews={<SkywalkSEO />} />;
+  return <BangkokActivityTemplate
+      tourData={tourData}
+      config={{
+        path: "/thailand/bangkok/mahanakhon-skywalk-tickets/",
+        seoTitle: "Mahanakhon SkyWalk Bangkok Tickets | Glass Floor Deck | Book in INR",
+        seoDescription:
+          "Book Mahanakhon SkyWalk Bangkok tickets \u2014 Thailand's highest observation deck with a glass floor and 360-degree skyline views. Instant confirmation and INR pricing.",
+        whatsappTopic: "Mahanakhon SkyWalk tickets",
+        audience: "Great for Couples & Photographers",
+        area: "city",
+        ctaHeadline: "Stand on Glass, 314 Metres Above Bangkok",
+        companionIntro:
+          "Bangkok's highest viewpoint \u2014 here's the best time slot, what to wear and how Indian travellers should plan the glass-floor experience.",
+        tips: [
+          "Book the 5:30\u20136:30 PM slot for sunset plus night views.",
+          "Skirts are not ideal on the glass floor; shoe covers are provided.",
+          "BTS Chong Nonsi station connects directly to the tower.",
+          "Allow around 90 minutes including lift queues.",
+        ],
+      }}
+      extraContentBeforeReviews={<SkywalkSEO />}
+    />;
 };
 
 export default BangkokSkywalk;

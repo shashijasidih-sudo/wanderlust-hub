@@ -1,4 +1,4 @@
-import TourBooking from "@/components/TourBooking";
+import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
 import { AyutthayaTempleTourSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { ayutthayaTempleTourFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -23,7 +23,28 @@ const AyutthayaTempleTour = () => {
     ],
     faqs: ayutthayaTempleTourFaqs,
   };
-  return <TourBooking tourData={tourData} extraContentBeforeReviews={<AyutthayaTempleTourSEO />} />;
+  return <BangkokActivityTemplate
+      tourData={tourData}
+      config={{
+        path: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok/",
+        seoTitle: "Ayutthaya Day Tour from Bangkok with Transfers | Book in INR",
+        seoDescription:
+          "Full-day Ayutthaya temple tour from Bangkok with hotel transfers. Visit UNESCO World Heritage ruins with a guide. Instant confirmation and INR pricing for Indians.",
+        whatsappTopic: "the Ayutthaya day tour from Bangkok",
+        audience: "Best for History Lovers & Families",
+        area: "ayutthaya",
+        ctaHeadline: "Step Into Siam's Ancient Capital, Ayutthaya",
+        companionIntro:
+          "A full day among UNESCO ruins 80 km from Bangkok \u2014 here's how Indian travellers should plan food, heat and clothing for the day.",
+        tips: [
+          "Leave by 7:30 AM; ruins are unshaded and brutal after noon.",
+          "Carry two litres of water per person and electrolyte sachets.",
+          "Do not climb on or pose in front of Buddha images \u2014 it is an offence.",
+          "Pack an Indian snack box; veg options en route are limited.",
+        ],
+      }}
+      extraContentBeforeReviews={<AyutthayaTempleTourSEO />}
+    />;
 };
 
 export default AyutthayaTempleTour;

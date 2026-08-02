@@ -1,4 +1,4 @@
-import TourBooking from "@/components/TourBooking";
+import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
 import { BangkokCityBoatTourSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { bangkokCityBoatTourFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -35,7 +35,28 @@ const BangkokCityBoatTour = () => {
     faqs: bangkokCityBoatTourFaqs,
   };
 
-  return <TourBooking tourData={tourData} extraContentBeforeReviews={<BangkokCityBoatTourSEO />} />;
+  return <BangkokActivityTemplate
+      tourData={tourData}
+      config={{
+        path: "/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour/",
+        seoTitle: "Chao Phraya River Boat Bangkok City Tour | Book in INR",
+        seoDescription:
+          "Book the Chao Phraya river boat Bangkok city tour \u2014 canal cruise past riverside temples and local communities. Instant confirmation, Indian support, INR pricing.",
+        whatsappTopic: "the Chao Phraya river boat city tour",
+        audience: "Relaxed Sightseeing for All Ages",
+        area: "riverside",
+        ctaHeadline: "See Bangkok the Way Locals Do \u2014 From the River",
+        companionIntro:
+          "A slow, shaded look at Bangkok's riverside life \u2014 an easy option for Indian families travelling with elders or young children.",
+        tips: [
+          "Sit on the shaded side of the boat during midday departures.",
+          "Carry a cap and sunscreen \u2014 reflection off the water is strong.",
+          "Keep phones secured with a strap while shooting from the deck.",
+          "Combine with a Wat Arun stop for the best photos.",
+        ],
+      }}
+      extraContentBeforeReviews={<BangkokCityBoatTourSEO />}
+    />;
 };
 
 export default BangkokCityBoatTour;

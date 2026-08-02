@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import TourBooking from "@/components/TourBooking";
+import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
 import { SafariWorldSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { safariWorldFaqs } from "@/data/bangkokActivityFaqs";
 import bangkokRiversideTemple1 from "@/assets/bangkok-riverside-temple-1.jpg";
@@ -73,7 +73,28 @@ const SafariWorld = () => {
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Activities
         </Button>
-        <TourBooking tourData={tourData} extraContentBeforeReviews={<SafariWorldSEO />} />
+        <BangkokActivityTemplate
+      tourData={tourData}
+      config={{
+        path: "/thailand/bangkok/safari-world/",
+        seoTitle: "Safari World Bangkok Tickets with Lunch & Transfers | Book in INR",
+        seoDescription:
+          "Book Safari World and Marine Park Bangkok tickets with lunch and hotel transfers. Drive-through safari, dolphin and orangutan shows. Instant confirmation in INR.",
+        whatsappTopic: "Safari World Bangkok tickets",
+        audience: "Best for Families & Kids",
+        area: "outskirts",
+        ctaHeadline: "Safari Park and Marine Shows in One Big Day",
+        companionIntro:
+          "Thailand's largest open zoo makes an easy full-day outing for Indian families \u2014 here's the show timing order that saves the most walking.",
+        tips: [
+          "Do the drive-through safari first, then the Marine Park shows.",
+          "Check the show schedule at the entrance and plan around it.",
+          "Carry a cap, sunscreen and refillable water bottles.",
+          "Indian and vegetarian meals can be requested with the lunch package.",
+        ],
+      }}
+      extraContentBeforeReviews={<SafariWorldSEO />}
+    />
       </div>
     </div>
   );
