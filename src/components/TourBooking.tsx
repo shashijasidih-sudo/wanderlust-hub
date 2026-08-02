@@ -383,52 +383,68 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
         </div>
 
         {/* Full-width sections below the sticky sidebar */}
-        <div className="space-y-8 mt-8 min-w-0">
-          {/* Optional extra content after policies (e.g. Indian Traveler Companion) */}
-          {extraContentAfterPolicies}
-
-          {/* Optional extra SEO content before reviews */}
-          {extraContentBeforeReviews}
-
-          {/* Customer Reviews */}
-          <CustomerReviews
-            reviews={tourData.customerReviews}
-            averageRating={tourData.rating}
-            totalReviews={tourData.reviews}
-          />
-
-          {/* FAQ Section */}
-          <FAQSection
-            faqs={tourData.faqs}
-            seoFaqs={getSeoFaqsForCity(tourData.city)}
-          />
-        </div>
-
-
-        {/* Optional extra content before Travel Guides */}
-        {extraContentBeforeSuggested}
-
-        {/* Book Transfers in this city */}
         {(() => {
-          const cityTransfers = getCityTransfers(tourData.city);
-          if (!cityTransfers) return null;
+          const isSingapore = (tourData.city || "").toLowerCase() === "singapore";
+          const reviews = isSingapore
+            ? (tourData.customerReviews || []).slice(0, 2)
+            : tourData.customerReviews;
+          const faq = (
+            <FAQSection
+              faqs={tourData.faqs}
+              seoFaqs={getSeoFaqsForCity(tourData.city)}
+            />
+          );
           return (
-            <BookTransfersSection city={cityTransfers.city} transfers={cityTransfers.transfers} />
+            <>
+              <div className="space-y-8 mt-8 min-w-0">
+                {/* Optional extra content after policies (e.g. Indian Traveler Companion) */}
+                {extraContentAfterPolicies}
+
+                {/* Optional extra SEO content before reviews */}
+                {extraContentBeforeReviews}
+
+                {/* Customer Reviews */}
+                <CustomerReviews
+                  reviews={reviews}
+                  averageRating={tourData.rating}
+                  totalReviews={tourData.reviews}
+                />
+
+                {/* FAQ (non-Singapore keeps its original position) */}
+                {!isSingapore && faq}
+              </div>
+
+              {/* Optional extra content before Travel Guides */}
+              {extraContentBeforeSuggested}
+
+              {/* Book Transfers in this city */}
+              {(() => {
+                const cityTransfers = getCityTransfers(tourData.city);
+                if (!cityTransfers) return null;
+                return (
+                  <BookTransfersSection city={cityTransfers.city} transfers={cityTransfers.transfers} />
+                );
+              })()}
+
+              {/* Optional content between Transfers and Travel Guides */}
+              {extraContentBeforeGuides}
+
+              {/* Travel Guides — auto-rendered by city */}
+              {(() => {
+                const city = (tourData.city || "").toLowerCase();
+                const thaiCities = ["bangkok", "phuket", "pattaya", "krabi", "thailand"];
+                if (thaiCities.includes(city)) return <TravelGuidesSection region="thailand" />;
+                if (city === "singapore") return <TravelGuidesSection region="singapore" />;
+                if (city === "dubai" || city === "abu dhabi") return <TravelGuidesSection region="dubai" />;
+                return null;
+              })()}
+
+              {/* Singapore: FAQ moved below Travel Guides */}
+              {isSingapore && <div className="mt-8">{faq}</div>}
+            </>
           );
         })()}
 
-        {/* Optional content between Transfers and Travel Guides */}
-        {extraContentBeforeGuides}
-
-        {/* Travel Guides — auto-rendered by city */}
-        {(() => {
-          const city = (tourData.city || "").toLowerCase();
-          const thaiCities = ["bangkok", "phuket", "pattaya", "krabi", "thailand"];
-          if (thaiCities.includes(city)) return <TravelGuidesSection region="thailand" />;
-          if (city === "singapore") return <TravelGuidesSection region="singapore" />;
-          if (city === "dubai" || city === "abu dhabi") return <TravelGuidesSection region="dubai" />;
-          return null;
-        })()}
 
         {/* Optional CTA / extra content after transfers */}
         {extraContentAfterTransfers}
