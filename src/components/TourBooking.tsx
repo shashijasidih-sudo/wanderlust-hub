@@ -43,6 +43,7 @@ interface TourBookingProps {
   extraContentBeforeSuggested?: React.ReactNode;
   extraContentAfterPolicies?: React.ReactNode;
   extraContentAfterTransfers?: React.ReactNode;
+  extraContentBeforeGuides?: React.ReactNode;
   extraDescriptionBeforeHighlights?: React.ReactNode;
   hideItinerary?: boolean;
   heroVariant?: "slider" | "collage";
@@ -50,7 +51,7 @@ interface TourBookingProps {
   forceBlackText?: boolean;
 }
 
-const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, extraContentAfterPolicies, extraContentAfterTransfers, extraDescriptionBeforeHighlights, hideItinerary, heroVariant = "slider", hidePhotoGallery = false, forceBlackText = false }: TourBookingProps) => {
+const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSuggested, extraContentAfterPolicies, extraContentAfterTransfers, extraContentBeforeGuides, extraDescriptionBeforeHighlights, hideItinerary, heroVariant = "slider", hidePhotoGallery = false, forceBlackText = false }: TourBookingProps) => {
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const itineraryRef = useRef<HTMLDivElement>(null);
