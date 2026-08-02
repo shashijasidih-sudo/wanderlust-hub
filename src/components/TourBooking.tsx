@@ -384,7 +384,7 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
 
         {/* Full-width sections below the sticky sidebar */}
         {(() => {
-          const isSingapore = ["singapore", "bangkok", "phuket"].includes((tourData.city || "").toLowerCase());
+          const isSingapore = ["singapore", "bangkok", "phuket", "krabi"].includes((tourData.city || "").toLowerCase());
           const reviews = isSingapore
             ? (tourData.customerReviews || []).slice(0, 2)
             : tourData.customerReviews;
