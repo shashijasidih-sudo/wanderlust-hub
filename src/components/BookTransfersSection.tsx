@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useCurrency } from "@/contexts/CurrencyContext";
+import SafeImage from "@/components/SafeImage";
 
 export interface BookTransferItem {
   title: string;
@@ -35,7 +36,7 @@ const BookTransfersSection = ({ city, intro, transfers }: BookTransfersSectionPr
             className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md"
           >
             <Link to={t.slug} className="block aspect-[4/3] overflow-hidden bg-muted">
-              <img
+              <SafeImage
                 src={t.img}
                 alt={`${t.title} – ${city} transfer`}
                 loading="lazy"
