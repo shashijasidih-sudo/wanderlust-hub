@@ -1,5 +1,6 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import { adultShowPattayaFaqs } from "@/data/pattayaActivityFaqs";
 
 const config: ThaiActivityConfig = {
   path: "/thailand/pattaya/69-show-pattaya-with-transfer/",
@@ -14,7 +15,7 @@ const config: ThaiActivityConfig = {
 };
 
 const Show69Pattaya = () => {
-  const tourData = toursData["show-69-pattaya"];
+  const tourData = { ...toursData["show-69-pattaya"], faqs: adultShowPattayaFaqs("69 Show Pattaya") };
   return <ThaiCityActivityTemplate tourData={tourData} config={config} />;
 };
 

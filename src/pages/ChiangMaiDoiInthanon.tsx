@@ -1,5 +1,6 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import { chiangMaiDoiInthanonFaqs } from "@/data/chiangMaiActivityFaqs";
 import doiInthanon from "@/assets/chiang-mai-doi-inthanon-1.jpg";
 import cityImg from "@/assets/city-chiang-mai.jpg";
 import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.jpg";
@@ -38,6 +39,7 @@ const ChiangMaiDoiInthanon = () => {
       { src: cityImg, alt: "Chiang Mai highlands" },
       { src: doiSuthep, alt: "Northern Thai temple" },
     ],
+    faqs: chiangMaiDoiInthanonFaqs,
   };
   return <ThaiCityActivityTemplate tourData={tourData} config={config} />;
 };

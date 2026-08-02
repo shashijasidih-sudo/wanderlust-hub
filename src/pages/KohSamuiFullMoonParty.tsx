@@ -1,5 +1,6 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import { kohSamuiFullMoonPartyFaqs } from "@/data/kohSamuiActivityFaqs";
 import fullMoon from "@/assets/koh-samui-full-moon-party-1.jpg";
 import beach from "@/assets/koh-samui-beach-1.jpg";
 import nightlife from "@/assets/pattaya-nightlife-1.jpg";
@@ -38,6 +39,7 @@ const KohSamuiFullMoonParty = () => {
       { src: beach, alt: "Koh Samui beach scene" },
       { src: nightlife, alt: "Beach nightlife party" },
     ],
+    faqs: kohSamuiFullMoonPartyFaqs,
   };
   return <ThaiCityActivityTemplate tourData={tourData} config={config} />;
 };
