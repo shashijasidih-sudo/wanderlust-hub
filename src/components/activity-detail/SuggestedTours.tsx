@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import cruiseNight1 from "@/assets/cruise-night-1.jpg";
 import floatingMarket1 from "@/assets/floating-market-daylight-1.jpg";
+import SafeImage from "@/components/SafeImage";
 
 interface SuggestedToursProps {
   currentCity: string;
@@ -56,7 +57,7 @@ const SuggestedTours = ({ currentCity }: SuggestedToursProps) => {
             onClick={() => navigate(tour.link)}
           >
             <div className="aspect-video overflow-hidden">
-              <img
+              <SafeImage
                 src={tour.image}
                 alt={tour.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

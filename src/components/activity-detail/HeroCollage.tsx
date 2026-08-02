@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 interface HeroCollageProps {
   images: { src: string; title: string; alt?: string }[];
 }
@@ -15,7 +16,7 @@ const HeroCollage = ({ images }: HeroCollageProps) => {
       <div className="grid grid-cols-2 grid-rows-2 gap-2 h-full">
         {imgs.map((img, i) => (
           <div key={i} className="relative overflow-hidden">
-            <img
+            <SafeImage
               src={img.src}
               alt={img.alt || img.title}
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"

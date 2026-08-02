@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SafeImage from "@/components/SafeImage";
 
 interface HeroSliderProps {
   images: { src: string; title: string }[];
@@ -29,7 +30,7 @@ const HeroSlider = ({ images, onExplore }: HeroSliderProps) => {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <img
+          <SafeImage
             src={slide.src}
             alt={slide.title}
             className="w-full h-full object-cover"

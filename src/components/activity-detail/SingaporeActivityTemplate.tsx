@@ -29,6 +29,7 @@ import cableCarImg from "@/assets/singapore-cable-car.jpg";
 import gardensImg from "@/assets/singapore-gardens-bay-night-1.jpg";
 import singaporeZooImg from "@/assets/singapore-zoo.jpg";
 import riverSafariImg from "@/assets/singapore-river-safari.jpg";
+import SafeImage from "@/components/SafeImage";
 
 const WHATSAPP = "917061710810";
 
@@ -611,7 +612,7 @@ const CompleteYourSingaporeTrip = ({ currentPath, title }: { currentPath: string
           <Card key={item.slug} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
             <Link to={item.slug}>
               <div className="aspect-[16/11] overflow-hidden">
-                <img src={item.image} alt={item.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <SafeImage src={item.image} alt={item.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               </div>
               <CardContent className="p-3">
                 <h3 className="font-bold text-sm md:text-base text-foreground group-hover:text-primary transition-colors line-clamp-1">{item.title}</h3>
@@ -628,7 +629,7 @@ const CompleteYourSingaporeTrip = ({ currentPath, title }: { currentPath: string
 const FinalCTA = ({ config, fallbackImage }: { config: SingaporeActivityConfig; fallbackImage?: string }) => (
   <section className="mt-12">
     <div className="relative overflow-hidden rounded-2xl border border-border">
-      <img
+      <SafeImage
         src={config.ctaImage || fallbackImage}
         alt={config.ctaHeadline}
         className="absolute inset-0 w-full h-full object-cover"
