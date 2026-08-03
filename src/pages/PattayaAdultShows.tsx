@@ -10,7 +10,46 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import CityExploreLinks from "@/components/CityExploreLinks";
 import Seo from "@/components/seo/Seo";
+import FAQSection from "@/components/activity-detail/FAQSection";
 import { adultShowActivities } from "@/data/pattayaActivitiesData";
+import { pattayaAdultShowsPageFaqs } from "@/data/pattayaActivityFaqs";
+
+const SITE = "https://yellodae.com";
+const PAGE_PATH = "/thailand/pattaya/adultshows/";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: pattayaAdultShowsPageFaqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+    { "@type": "ListItem", position: 2, name: "Thailand", item: `${SITE}/thailand/` },
+    { "@type": "ListItem", position: 3, name: "Pattaya", item: `${SITE}/thailand/pattaya/` },
+    { "@type": "ListItem", position: 4, name: "Adult Shows (18+)", item: `${SITE}${PAGE_PATH}` },
+  ],
+};
+
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Pattaya Adult Shows (18+)",
+  numberOfItems: adultShowActivities.length,
+  itemListElement: adultShowActivities.map((a, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: a.title,
+    url: `${SITE}${a.slug}`,
+  })),
+};
 
 const PattayaAdultShows = () => {
   const { formatPrice } = useCurrency();
