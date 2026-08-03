@@ -114,6 +114,13 @@ const PattayaAdultShows = () => {
             <ActivityCard key={activity.slug} {...activity} isRecommended={index < 2} viewMode={viewMode} />
           ))}
         </div>
+
+        <div className="mt-10">
+          <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+            Pattaya Adult Shows — Frequently Asked Questions
+          </h2>
+          <FAQSection faqs={pattayaAdultShowsPageFaqs} />
+        </div>
       </div>
 
       <CityExploreLinks city="pattaya" />
