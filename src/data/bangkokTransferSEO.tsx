@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import type { TransferFAQ, TransferGalleryImage } from "@/components/TransferBooking";
+import ThailandTravellerCompanion from "@/components/activity-detail/ThailandTravellerCompanion";
 
 // Bangkok-themed gallery imagery (reusing existing high-quality local assets)
 import bangkokCity1 from "@/assets/bangkok-city-1.jpg";
@@ -25,7 +26,17 @@ import pattayaNightlife from "@/assets/pattaya-nightlife-1.jpg";
 import cityPattaya from "@/assets/city-pattaya.jpg";
 
 // ---------- Common gallery presets ----------
+// Thailand airport transfer imagery served from /public so it works on the custom domain.
+const thAirportArrivalsUrl = "/images/thailand-transfers/thailand-airport-arrivals.jpg";
+const thDriverNameboardUrl = "/images/thailand-transfers/thailand-driver-nameboard.jpg";
+const thFamilyLuggageUrl = "/images/thailand-transfers/thailand-family-luggage.jpg";
+const thPrivateVanUrl = "/images/thailand-transfers/thailand-private-van.jpg";
+
 const airportGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Bangkok airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Bangkok airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Bangkok airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Bangkok airport transfer meeting point" },
   { src: bangkokCityNight1, alt: "Bangkok skyline at night welcoming arriving travelers" },
   { src: bangkokBridgeDay, alt: "Bangkok expressway en route to city hotels" },
   { src: bangkokCity1, alt: "Modern Bangkok cityscape near Sukhumvit" },
@@ -33,6 +44,10 @@ const airportGallery: TransferGalleryImage[] = [
 ];
 
 const dropoffGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Bangkok airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Bangkok airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Bangkok airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Bangkok airport transfer meeting point" },
   { src: bangkokBridgeTwilight, alt: "Bangkok highway at twilight on the way to the airport" },
   { src: bangkokCity2, alt: "Bangkok hotel pickup point in central business district" },
   { src: bangkokCityNight1, alt: "Late-night Bangkok ride to Suvarnabhumi" },
@@ -356,6 +371,7 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
           "late night airport pickup Bangkok",
           "INR price Bangkok airport transfer",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -412,6 +428,7 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
           "late night DMK pickup",
           "INR price DMK transfer",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -467,6 +484,7 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
           "early morning airport drop Bangkok",
           "INR price BKK drop transfer",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -521,6 +539,7 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
           "private temple tour airport combo",
           "Bangkok 2 temple tour Indian travelers",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -565,6 +584,7 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
           "private transfer Safari World BKK airport",
           "Indian family Bangkok Safari World tour",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -612,6 +632,7 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
           "Bangkok airport transfer for IndiGo flight",
           "INR price DMK drop",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -657,6 +678,7 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
           "Bangkok city tour with luggage to DMK",
           "Indian family Bangkok temple combo",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -701,6 +723,7 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
           "Bangkok family transfer DMK",
           "Indian family Safari World tour",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -747,6 +770,7 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
           "Bangkok shopping transfer Sukhumvit to riverside",
           "Bangkok private car hire 4 hours",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -801,6 +825,7 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
           "private cab Sukhumvit to Pattaya",
           "Bangkok to Pattaya 10-seater van",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -848,6 +873,7 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
           "Bangkok city tour Pattaya drop Indian family",
           "private cab Bangkok sightseeing Pattaya",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -895,6 +921,7 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
           "private transfer Bangkok Tiger Zoo Pattaya",
           "Indian family Sriracha Tiger Topia tour",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [

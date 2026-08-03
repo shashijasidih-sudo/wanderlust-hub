@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import type { TransferFAQ, TransferGalleryImage } from "@/components/TransferBooking";
+import ThailandTravellerCompanion from "@/components/activity-detail/ThailandTravellerCompanion";
 
 // Pattaya & Bangkok themed gallery imagery (reusing existing assets)
 import bangkokCity1 from "@/assets/bangkok-city-1.jpg";
@@ -22,7 +23,17 @@ import pattayaNightlife from "@/assets/pattaya-nightlife-1.jpg";
 import cityPattaya from "@/assets/city-pattaya.jpg";
 
 // ---------- Common gallery presets ----------
+// Thailand airport transfer imagery served from /public so it works on the custom domain.
+const thAirportArrivalsUrl = "/images/thailand-transfers/thailand-airport-arrivals.jpg";
+const thDriverNameboardUrl = "/images/thailand-transfers/thailand-driver-nameboard.jpg";
+const thFamilyLuggageUrl = "/images/thailand-transfers/thailand-family-luggage.jpg";
+const thPrivateVanUrl = "/images/thailand-transfers/thailand-private-van.jpg";
+
 const bkkToPattayaGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Pattaya airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Pattaya airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Pattaya airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Pattaya airport transfer meeting point" },
   { src: bangkokCityNight1, alt: "Suvarnabhumi Airport arrival ready for Pattaya transfer" },
   { src: bangkokBridgeDay, alt: "Bangkok motorway en route to Pattaya beach hotels" },
   { src: pattayaBeach, alt: "Pattaya tropical beach welcomes Bangkok arrivals" },
@@ -30,6 +41,10 @@ const bkkToPattayaGallery: TransferGalleryImage[] = [
 ];
 
 const dmkToPattayaGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Pattaya airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Pattaya airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Pattaya airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Pattaya airport transfer meeting point" },
   { src: bangkokCity1, alt: "Don Mueang Airport pickup for Pattaya travelers" },
   { src: bangkokBridgeDay, alt: "Bangkok-Pattaya highway from DMK Airport" },
   { src: pattayaBoats, alt: "Pattaya boats and beachfront resort area" },
@@ -44,6 +59,10 @@ const tigerTopiaGallery: TransferGalleryImage[] = [
 ];
 
 const pattayaToBkkGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Pattaya airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Pattaya airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Pattaya airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Pattaya airport transfer meeting point" },
   { src: pattayaNightlife, alt: "Pattaya hotel pickup heading to Bangkok airport" },
   { src: bangkokBridgeTwilight, alt: "Twilight drive from Pattaya to Suvarnabhumi" },
   { src: bangkokCityNight1, alt: "Bangkok skyline at night en route to BKK" },
@@ -51,6 +70,10 @@ const pattayaToBkkGallery: TransferGalleryImage[] = [
 ];
 
 const pattayaToDmkGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Pattaya airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Pattaya airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Pattaya airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Pattaya airport transfer meeting point" },
   { src: cityPattaya, alt: "Pattaya hotel departure for Don Mueang Airport" },
   { src: bangkokBridgeTwilight, alt: "Bangkok highway towards Don Mueang Airport" },
   { src: bangkokCity2, alt: "Don Mueang district approaching the airport" },
@@ -58,6 +81,10 @@ const pattayaToDmkGallery: TransferGalleryImage[] = [
 ];
 
 const templeBkkGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Pattaya airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Pattaya airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Pattaya airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Pattaya airport transfer meeting point" },
   { src: pattayaBeach, alt: "Pattaya hotel pickup before Bangkok temple tour" },
   { src: grandPalaceWatArun, alt: "Wat Arun temple tour stop in Bangkok" },
   { src: bangkokTemple1, alt: "Wat Pho reclining Buddha in Bangkok" },
@@ -65,6 +92,10 @@ const templeBkkGallery: TransferGalleryImage[] = [
 ];
 
 const templeDmkGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Pattaya airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Pattaya airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Pattaya airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Pattaya airport transfer meeting point" },
   { src: pattayaBoats, alt: "Pattaya hotel pickup heading to Bangkok temples" },
   { src: grandPalaceBuddha, alt: "Bangkok Golden Buddha temple tour" },
   { src: bangkokTemple2, alt: "Marble temple visit en route to DMK" },
@@ -72,6 +103,10 @@ const templeDmkGallery: TransferGalleryImage[] = [
 ];
 
 const safariBkkGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Pattaya airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Pattaya airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Pattaya airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Pattaya airport transfer meeting point" },
   { src: pattayaBeach, alt: "Pattaya hotel pickup heading to Safari World" },
   { src: elephantSafari, alt: "Safari World Bangkok wildlife park" },
   { src: bangkokTemple3, alt: "Safari Park animals open zoo Bangkok" },
@@ -114,6 +149,10 @@ const bangkokSafariPattayaGallery: TransferGalleryImage[] = [
 ];
 
 const utapaoGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Pattaya airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Pattaya airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Pattaya airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Pattaya airport transfer meeting point" },
   { src: bangkokBridgeDay, alt: "U-Tapao Rayong-Pattaya Airport pickup road" },
   { src: pattayaBeach, alt: "Pattaya beach hotel from U-Tapao airport" },
   { src: cityPattaya, alt: "Pattaya city drop-off from U-Tapao Airport" },
@@ -267,6 +306,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "BKK Pattaya transfer price India",
           "Suvarnabhumi Pattaya transfer for families",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -333,6 +373,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Bangkok airport Pattaya zoo combo transfer",
           "Tiger Topia Sriracha Zoo private cab India",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -405,6 +446,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Bangkok DMK Pattaya private cab",
           "Don Mueang Pattaya transfer price India",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -459,6 +501,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Don Mueang to Tiger Topia Sriracha taxi",
           "DMK Pattaya zoo private cab",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -516,6 +559,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Pattaya hotel to Bangkok airport private cab",
           "Pattaya BKK drop INR price",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -572,6 +616,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Pattaya Bangkok temples Suvarnabhumi transfer",
           "Wat Arun Wat Pho Pattaya airport combo",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -619,6 +664,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Pattaya to Safari World to Suvarnabhumi",
           "Safari World combo airport drop",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -669,6 +715,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Pattaya to Don Mueang airport taxi",
           "Pattaya hotel DMK private cab",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -724,6 +771,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Pattaya Bangkok temples Don Mueang transfer",
           "Wat Arun Wat Pho Pattaya DMK combo",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -775,6 +823,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Pattaya Pratunam shopping airport drop",
           "Pattaya wholesale shopping Don Mueang taxi",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -830,6 +879,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Pattaya city tour private cab India",
           "Walking Street Pattaya private car",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -891,6 +941,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Pattaya Bangkok private cab India",
           "Pattaya to Sukhumvit transfer price",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -949,6 +1000,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Pattaya to Bangkok temples and hotel drop",
           "Pattaya Bangkok sightseeing private cab",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -1004,6 +1056,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Safari World combo Pattaya drop",
           "Bangkok hotel Safari World Pattaya private cab",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -1065,6 +1118,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
           "Rayong Pattaya airport private cab",
           "U-Tapao Pattaya transfer price India",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [

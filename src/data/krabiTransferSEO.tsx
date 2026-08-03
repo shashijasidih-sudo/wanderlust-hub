@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import type { TransferFAQ, TransferGalleryImage } from "@/components/TransferBooking";
+import ThailandTravellerCompanion from "@/components/activity-detail/ThailandTravellerCompanion";
 
 import cityKrabi from "@/assets/city-krabi.jpg";
 import cityPhuket from "@/assets/city-phuket.jpg";
@@ -18,7 +19,17 @@ import phuketLongtailBeach from "@/assets/phuket-longtail-boats-beach-1.jpg";
 import phuketBigBoat from "@/assets/phuket-big-boat-1.jpg";
 
 // ---------- Galleries ----------
+// Thailand airport transfer imagery served from /public so it works on the custom domain.
+const thAirportArrivalsUrl = "/images/thailand-transfers/thailand-airport-arrivals.jpg";
+const thDriverNameboardUrl = "/images/thailand-transfers/thailand-driver-nameboard.jpg";
+const thFamilyLuggageUrl = "/images/thailand-transfers/thailand-family-luggage.jpg";
+const thPrivateVanUrl = "/images/thailand-transfers/thailand-private-van.jpg";
+
 const kbvToPhuketGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Krabi airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Krabi airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Krabi airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Krabi airport transfer meeting point" },
   { src: krabiSpeedboat, alt: "Krabi International Airport KBV pickup heading to Phuket" },
   { src: krabiBeach, alt: "Krabi coast en route to Phuket hotel" },
   { src: phuketLongtailBeach, alt: "Phuket beach hotel arrival" },
@@ -26,6 +37,10 @@ const kbvToPhuketGallery: TransferGalleryImage[] = [
 ];
 
 const krabiHotelKbvGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Krabi airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Krabi airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Krabi airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Krabi airport transfer meeting point" },
   { src: cityKrabi, alt: "Krabi hotel pickup heading to KBV airport" },
   { src: krabiLongtail, alt: "Ao Nang area drive to Krabi airport" },
   { src: krabiViewpoint, alt: "Krabi viewpoint en route to airport" },
@@ -47,6 +62,10 @@ const krabiPhuketCityTourGallery: TransferGalleryImage[] = [
 ];
 
 const krabiToHktGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Krabi airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Krabi airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Krabi airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Krabi airport transfer meeting point" },
   { src: cityKrabi, alt: "Krabi hotel pickup heading to HKT Phuket airport" },
   { src: krabiBoat, alt: "Krabi coast on way to Phuket airport" },
   { src: phuketBigBoat, alt: "Phang Nga drive en route to Phuket airport" },
@@ -54,6 +73,10 @@ const krabiToHktGallery: TransferGalleryImage[] = [
 ];
 
 const kbvToAoNangGallery: TransferGalleryImage[] = [
+  { src: thAirportArrivalsUrl, alt: "Krabi airport arrivals hall for private transfer pickup" },
+  { src: thDriverNameboardUrl, alt: "Professional driver with name board at Krabi airport" },
+  { src: thPrivateVanUrl, alt: "Private air-conditioned van for Krabi airport transfer" },
+  { src: thFamilyLuggageUrl, alt: "Indian family with luggage at Krabi airport transfer meeting point" },
   { src: krabiSpeedboat, alt: "Krabi International Airport KBV pickup for Ao Nang" },
   { src: krabiKayaks, alt: "Drive to Ao Nang Krabi from airport" },
   { src: krabiSailboat, alt: "Ao Nang sailboat coastline arrival" },
@@ -146,6 +169,7 @@ export const krabiTransferSEO: Record<string, SEOEntry> = {
           "KBV to Phuket price INR",
           "Krabi to Phuket airport transfer",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -197,6 +221,7 @@ export const krabiTransferSEO: Record<string, SEOEntry> = {
           "Krabi airport drop private cab",
           "Krabi departure transfer India",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -249,6 +274,7 @@ export const krabiTransferSEO: Record<string, SEOEntry> = {
           "Krabi Phuket cab price India",
           "Krabi hotel to Phuket hotel car",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -298,6 +324,7 @@ export const krabiTransferSEO: Record<string, SEOEntry> = {
           "Phuket sightseeing private transfer from Krabi",
           "Big Buddha Wat Chalong Krabi combo",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -345,6 +372,7 @@ export const krabiTransferSEO: Record<string, SEOEntry> = {
           "Krabi to HKT airport taxi",
           "Ao Nang to Phuket airport private cab",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
@@ -404,6 +432,7 @@ export const krabiTransferSEO: Record<string, SEOEntry> = {
           "Krabi airport to Nopparat Thara cab",
           "KBV to Klong Muang transfer",
         ]} />
+        <ThailandTravellerCompanion />
       </>
     ),
     faqs: [
