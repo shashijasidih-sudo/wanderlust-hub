@@ -17,16 +17,6 @@ import { pattayaAdultShowsPageFaqs } from "@/data/pattayaActivityFaqs";
 const SITE = "https://yellodae.com";
 const PAGE_PATH = "/thailand/pattaya/adultshows/";
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: pattayaAdultShowsPageFaqs.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: { "@type": "Answer", text: f.answer },
-  })),
-};
-
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -72,7 +62,7 @@ const PattayaAdultShows = () => {
         title="Pattaya Adult Shows 18+ | Alcazar, 79, 69, 89 & Big Eye Tickets"
         description="Book Pattaya adult shows (18+) online — Alcazar, Imagine 79, 69, 89 and Big Eye 99 Show tickets with hotel transfers. INR pricing, instant confirmation, Indian support."
         path={PAGE_PATH}
-        jsonLd={[faqJsonLd, breadcrumbJsonLd, itemListJsonLd]}
+        jsonLd={[breadcrumbJsonLd, itemListJsonLd]}
       />
       <Header />
 
