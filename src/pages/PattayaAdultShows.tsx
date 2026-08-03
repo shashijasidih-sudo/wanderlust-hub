@@ -69,9 +69,10 @@ const PattayaAdultShows = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title="Pattaya Adult Shows (18+) Tickets with Transfer | Yellodae"
-        description="Book Pattaya adult shows online — Alcazar, Imagine 79, 69 Show, 89 Show and Big Eye Show with hotel transfers. 18+ only, instant confirmation, INR pricing."
-        path="/thailand/pattaya/adultshows/"
+        title="Pattaya Adult Shows 18+ | Alcazar, 79, 69, 89 & Big Eye Tickets"
+        description="Book Pattaya adult shows (18+) online — Alcazar, Imagine 79, 69, 89 and Big Eye 99 Show tickets with hotel transfers. INR pricing, instant confirmation, Indian support."
+        path={PAGE_PATH}
+        jsonLd={[faqJsonLd, breadcrumbJsonLd, itemListJsonLd]}
       />
       <Header />
 
