@@ -331,3 +331,47 @@ export const adultShowPattayaFaqs = (showName: string): FAQ[] =>
         "Yes, round-trip hotel transfers within central Pattaya are included in transfer packages. No-transfer tickets require you to reach the venue on your own via taxi, Grab or Bolt.",
     },
   ]);
+
+/** FAQs for the Pattaya Adult Shows (18+) listing page. */
+export const pattayaAdultShowsPageFaqs: FAQ[] = [
+  {
+    question: "Which adult shows can I book in Pattaya?",
+    answer:
+      "Yellodae offers Alcazar Cabaret Show, Imagine 79 Show, 69 Show, 89 Show and Big Eye 99 Show in Pattaya — all bookable online with optional round-trip hotel transfers.",
+  },
+  {
+    question: "What is the age limit for Pattaya adult shows?",
+    answer:
+      "The 79, 69, 89 and Big Eye 99 shows are strictly 18+ and photo ID may be checked at entry. Alcazar Cabaret is the only family-friendly show on this page.",
+  },
+  {
+    question: "How much do Pattaya adult show tickets cost for Indians?",
+    answer:
+      "Tickets start from around ₹2,420 per person for Alcazar and go up to ₹6,000 for premium adult shows. All prices are shown in INR and can be paid online in Indian rupees.",
+  },
+  {
+    question: "Are hotel transfers included with adult show tickets?",
+    answer:
+      "Yes. Transfer packages include round-trip pickup and drop-off within central Pattaya. No-transfer tickets require you to reach the venue via taxi, Grab or Bolt.",
+  },
+  {
+    question: "What are the usual show timings?",
+    answer:
+      "Most Pattaya adult shows run nightly between 8:00 PM and 10:30 PM. Arrive around 20 minutes before showtime for check-in and seating.",
+  },
+  {
+    question: "Is there a dress code for Pattaya night shows?",
+    answer:
+      "Smart casual is recommended. Beachwear, vests and flip-flops are often refused entry at the more premium venues.",
+  },
+  {
+    question: "Is photography allowed inside the theatre?",
+    answer:
+      "No. Photography and video recording are prohibited inside adult show venues. Photos with performers are usually allowed outside after the show.",
+  },
+  {
+    question: "Do I get instant confirmation on booking?",
+    answer:
+      "Yes. Tickets are confirmed instantly by email and WhatsApp after successful payment — simply show the voucher on your phone at the venue.",
+  },
+];

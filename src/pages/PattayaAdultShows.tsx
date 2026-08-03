@@ -10,7 +10,36 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import CityExploreLinks from "@/components/CityExploreLinks";
 import Seo from "@/components/seo/Seo";
+import FAQSection from "@/components/activity-detail/FAQSection";
 import { adultShowActivities } from "@/data/pattayaActivitiesData";
+import { pattayaAdultShowsPageFaqs } from "@/data/pattayaActivityFaqs";
+
+const SITE = "https://yellodae.com";
+const PAGE_PATH = "/thailand/pattaya/adultshows/";
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+    { "@type": "ListItem", position: 2, name: "Thailand", item: `${SITE}/thailand/` },
+    { "@type": "ListItem", position: 3, name: "Pattaya", item: `${SITE}/thailand/pattaya/` },
+    { "@type": "ListItem", position: 4, name: "Adult Shows (18+)", item: `${SITE}${PAGE_PATH}` },
+  ],
+};
+
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Pattaya Adult Shows (18+)",
+  numberOfItems: adultShowActivities.length,
+  itemListElement: adultShowActivities.map((a, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: a.title,
+    url: `${SITE}${a.slug}`,
+  })),
+};
 
 const PattayaAdultShows = () => {
   const { formatPrice } = useCurrency();
@@ -30,9 +59,10 @@ const PattayaAdultShows = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title="Pattaya Adult Shows (18+) Tickets with Transfer | Yellodae"
-        description="Book Pattaya adult shows online — Alcazar, Imagine 79, 69 Show, 89 Show and Big Eye Show with hotel transfers. 18+ only, instant confirmation, INR pricing."
-        path="/thailand/pattaya/adultshows/"
+        title="Pattaya Adult Shows 18+ | Alcazar, 79, 69, 89 & Big Eye Tickets"
+        description="Book Pattaya adult shows (18+) online — Alcazar, Imagine 79, 69, 89 and Big Eye 99 Show tickets with hotel transfers. INR pricing, instant confirmation, Indian support."
+        path={PAGE_PATH}
+        jsonLd={[breadcrumbJsonLd, itemListJsonLd]}
       />
       <Header />
 
@@ -73,6 +103,13 @@ const PattayaAdultShows = () => {
           {sorted.map((activity, index) => (
             <ActivityCard key={activity.slug} {...activity} isRecommended={index < 2} viewMode={viewMode} />
           ))}
+        </div>
+
+        <div className="mt-10">
+          <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+            Pattaya Adult Shows — Frequently Asked Questions
+          </h2>
+          <FAQSection faqs={pattayaAdultShowsPageFaqs} />
         </div>
       </div>
 
