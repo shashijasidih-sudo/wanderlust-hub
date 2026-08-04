@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useCurrency } from "@/contexts/CurrencyContext";
@@ -28,7 +29,7 @@ const RecommendedActivitiesSection = ({ city, activities }: RecommendedActivitie
             className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md"
           >
             <Link to={a.slug} className="block aspect-[4/3] overflow-hidden bg-muted">
-              <img
+              <SafeImage
                 src={a.img}
                 alt={`${a.title} – ${city} activity`}
                 loading="lazy"

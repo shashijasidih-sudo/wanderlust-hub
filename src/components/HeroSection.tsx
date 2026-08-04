@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { Calendar as CalendarIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
@@ -75,7 +76,7 @@ const HeroSection = () => {
         return (
           <picture key={index}>
             <source media="(max-width: 768px)" srcSet={image.mobile} />
-            <img
+            <SafeImage
               src={image.full}
               alt={image.alt}
               width={1920}

@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
 
@@ -46,7 +47,7 @@ const TopThingsToDo = () => {
               className="group overflow-hidden hover:shadow-card-hover transition-all duration-300"
             >
               <div className="relative h-48 overflow-hidden">
-                <img 
+                <SafeImage 
                   src={destination.image} 
                   alt={destination.title}
                   width={400}

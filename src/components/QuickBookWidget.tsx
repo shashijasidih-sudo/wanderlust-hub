@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { Link } from "react-router-dom";
 import { Star, ArrowRight, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -36,7 +37,7 @@ const QuickBookWidget = ({ title, items }: QuickBookWidgetProps) => {
               className="flex-shrink-0 w-52 bg-card rounded-xl shadow-card hover:shadow-card-hover transition-all group overflow-hidden border border-border block"
             >
               <div className="relative h-28 overflow-hidden">
-                <img
+                <SafeImage
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"

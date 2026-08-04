@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "./Header";
@@ -317,7 +318,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                     idx === 0 ? "col-span-2" : "col-span-1"
                   )}
                 >
-                  <img
+                  <SafeImage
                     src={img.src}
                     alt={img.alt}
                     loading={idx === 0 ? "eager" : "lazy"}
@@ -337,7 +338,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                     idx === 0 ? "col-span-2 row-span-2" : "col-span-1 row-span-1"
                   )}
                 >
-                  <img
+                  <SafeImage
                     src={img.src}
                     alt={img.alt}
                     loading={idx === 0 ? "eager" : "lazy"}
@@ -381,7 +382,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                     <div className="md:hidden">
                       <div className="flex items-start gap-3">
                         <div className="w-20 h-16 flex-shrink-0">
-                          <img src={vehicle.image} alt={vehicle.name} className="w-full h-full object-contain" />
+                          <SafeImage src={vehicle.image} alt={vehicle.name} className="w-full h-full object-contain" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-start justify-between gap-2">
@@ -410,7 +411,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                     {/* Desktop layout */}
                     <div className="hidden md:flex items-center gap-4">
                       <div className="w-32 h-20 flex-shrink-0">
-                        <img src={vehicle.image} alt={vehicle.name} className="w-full h-full object-contain" />
+                        <SafeImage src={vehicle.image} alt={vehicle.name} className="w-full h-full object-contain" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-lg">{vehicle.name}</h3>

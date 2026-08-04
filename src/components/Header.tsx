@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { Menu, IndianRupee, Heart, ShoppingCart, User, ChevronDown, Ship, Anchor, Palmtree, Tent, Fish, Camera, TreePine, Droplet, Building2, Castle, Ticket, LogOut, CalendarDays, ShieldCheck, Settings, Instagram, Linkedin, Youtube, Mountain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -48,7 +49,7 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Logo & Brand Name */}
           <Link to="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
-            <img src={logo} alt="Yellodae Logo" className="h-10 w-10 md:h-14 md:w-14 object-contain" />
+            <SafeImage src={logo} alt="Yellodae Logo" className="h-10 w-10 md:h-14 md:w-14 object-contain" />
             <div className="text-lg md:text-2xl font-bold" style={{ color: 'rgb(25, 25, 112)' }}>
               Yellodae
             </div>

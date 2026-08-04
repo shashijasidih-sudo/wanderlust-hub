@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
@@ -77,7 +78,7 @@ const MidArticleActivities = ({
             onClick={() => navigate(a.slug)}
           >
             <div className="relative h-36 overflow-hidden">
-              <img
+              <SafeImage
                 src={a.img}
                 alt={a.title}
                 loading="lazy"

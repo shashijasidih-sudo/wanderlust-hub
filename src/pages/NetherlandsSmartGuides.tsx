@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, User } from "lucide-react";
 import Header from "@/components/Header";
@@ -41,7 +42,7 @@ const blogArticles = [
     title: "Keukenhof Gardens: Tulip Season Guide",
     description: "When to visit, what to see, and how to make the most of the world's largest flower garden.",
     category: "Nature",
-    image: "https://images.unsplash.com/photo-1588005480655-f60cca5c3db6?w=800",
+    image: "https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?w=800",
     author: "Garden Expert",
     date: "Nov 20, 2024",
     readTime: "8 min read",
@@ -74,7 +75,7 @@ const blogArticles = [
     title: "Cycling Through the Netherlands",
     description: "Tips for exploring the country by bike, from Amsterdam to the countryside.",
     category: "Adventure",
-    image: "https://images.unsplash.com/photo-1558618047-f4b511ee370c?w=800",
+    image: "https://images.unsplash.com/photo-1534313314376-a72289b6181e?w=800",
     author: "Cycling Guide",
     date: "Nov 12, 2024",
     readTime: "11 min read",
@@ -85,7 +86,7 @@ const blogArticles = [
     title: "Windmills of Kinderdijk: UNESCO Wonder",
     description: "Discover the iconic windmills and learn about Dutch water management history.",
     category: "Landmarks",
-    image: "https://images.unsplash.com/photo-1512470876579-de59a8a15e77?w=800",
+    image: "https://images.unsplash.com/photo-1459679749680-18eb1eb37418?w=800",
     author: "Heritage Expert",
     date: "Nov 10, 2024",
     readTime: "8 min read",
@@ -96,7 +97,7 @@ const blogArticles = [
     title: "Rotterdam: Architecture & Modern Art",
     description: "Explore Europe's most innovative skyline and vibrant contemporary art scene.",
     category: "Architecture",
-    image: "https://images.unsplash.com/photo-1512470876579-de59a8a15e77?w=800",
+    image: "https://images.unsplash.com/photo-1459679749680-18eb1eb37418?w=800",
     author: "Architecture Buff",
     date: "Nov 8, 2024",
     readTime: "9 min read",
@@ -189,7 +190,7 @@ const NetherlandsSmartGuides = () => {
             <Link to={blogArticles[0].slug}>
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="aspect-[4/3] md:aspect-auto overflow-hidden">
-                  <img
+                  <SafeImage
                     src={blogArticles[0].image}
                     alt={blogArticles[0].title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -235,7 +236,7 @@ const NetherlandsSmartGuides = () => {
               <Card key={article.id} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
                 <Link to={article.slug}>
                   <div className="aspect-[16/10] overflow-hidden">
-                    <img
+                    <SafeImage
                       src={article.image}
                       alt={article.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

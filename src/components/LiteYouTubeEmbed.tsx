@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useState } from "react";
 import { Play } from "lucide-react";
 
@@ -39,7 +40,7 @@ const LiteYouTubeEmbed = ({ id, title, aspect = 56.25, className = "" }: LiteYou
           aria-label={`Play ${title}`}
           className="absolute inset-0 w-full h-full group cursor-pointer"
         >
-          <img
+          <SafeImage
             src={thumb}
             alt={title}
             loading="lazy"

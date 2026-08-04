@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
@@ -72,7 +73,7 @@ export const BookingItemCard = ({ item, onSupport }: { item: BookingItemView; on
       <div className="grid grid-cols-1 sm:grid-cols-[180px_1fr]">
         {image ? (
           <div className="h-32 sm:h-full bg-muted">
-            <img src={image} alt={item.activity_name} loading="lazy" className="h-full w-full object-cover" />
+            <SafeImage src={image} alt={item.activity_name} loading="lazy" className="h-full w-full object-cover" />
           </div>
         ) : (
           <div className="h-32 sm:h-full bg-gradient-to-br from-primary/10 to-accent flex items-center justify-center">

@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import React, { useEffect } from "react";
 import Seo from "@/components/seo/Seo";
 
@@ -316,7 +317,7 @@ const BlogArticleLayout = ({
       <main className="flex-1">
         {/* Hero */}
         <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
-          <img src={heroImage} alt={heroAlt} width={1600} height={900} fetchPriority="high" decoding="async" className="w-full h-full object-cover" />
+          <SafeImage src={heroImage} alt={heroAlt} width={1600} height={900} fetchPriority="high" decoding="async" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 p-6 md:p-12 container">
             <span className="inline-block bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
@@ -415,7 +416,7 @@ const BlogArticleLayout = ({
                   case "image":
                     rendered = (
                       <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
-                        <img src={section.src} alt={section.alt || ""} className="w-full h-auto object-cover" loading="lazy" />
+                        <SafeImage src={section.src} alt={section.alt || ""} className="w-full h-auto object-cover" loading="lazy" />
                         {section.caption && <figcaption className="text-sm text-muted-foreground text-center py-3 bg-secondary/30">{section.caption}</figcaption>}
                       </figure>
                     );
@@ -578,7 +579,7 @@ const BlogArticleLayout = ({
                           className="group relative block rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-card border border-border"
                         >
                           <div className="aspect-[4/3] overflow-hidden bg-muted">
-                            <img
+                            <SafeImage
                               src={img}
                               alt={rl.title}
                               loading="lazy"
@@ -619,7 +620,7 @@ const BlogArticleLayout = ({
                         className="group rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all"
                       >
                         <div className="aspect-[4/3] overflow-hidden bg-muted">
-                          <img
+                          <SafeImage
                             src={img}
                             alt={a.title}
                             loading="lazy"
@@ -652,7 +653,7 @@ const BlogArticleLayout = ({
                       className="group rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all"
                     >
                       <div className="aspect-[16/9] overflow-hidden bg-muted">
-                        <img
+                        <SafeImage
                           src={cityImgs.thingsToDo}
                           alt={`Top things to do in ${cityHub.city}`}
                           loading="lazy"
@@ -671,7 +672,7 @@ const BlogArticleLayout = ({
                         className="group rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all"
                       >
                         <div className="aspect-[16/9] overflow-hidden bg-muted">
-                          <img
+                          <SafeImage
                             src={cityImgs.transfers}
                             alt={`${cityHub.city} airport transfers`}
                             loading="lazy"
@@ -703,7 +704,7 @@ const BlogArticleLayout = ({
                           className="flex items-center gap-3 group rounded-lg hover:bg-muted/40 p-1.5 -m-1.5 transition-colors"
                         >
                           {l.image && (
-                            <img
+                            <SafeImage
                               src={l.image}
                               alt=""
                               loading="lazy"

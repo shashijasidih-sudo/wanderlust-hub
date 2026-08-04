@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, User, ChevronLeft, ChevronRight } from "lucide-react";
@@ -251,7 +252,7 @@ const DubaiSmartGuides = () => {
         <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
           {heroSlides.map((slide, i) => (
             <div key={i} className={`absolute inset-0 transition-opacity duration-700 ${i === currentSlide ? "opacity-100" : "opacity-0"}`}>
-              <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
+              <SafeImage src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
             </div>
           ))}
@@ -316,7 +317,7 @@ const DubaiSmartGuides = () => {
             <Link to={blogArticles[0].slug}>
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="aspect-[4/3] md:aspect-auto overflow-hidden">
-                  <img
+                  <SafeImage
                     src={blogArticles[0].image}
                     alt={blogArticles[0].title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -362,7 +363,7 @@ const DubaiSmartGuides = () => {
               <Card key={article.id} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
                 <Link to={article.slug}>
                   <div className="aspect-[16/10] overflow-hidden">
-                    <img
+                    <SafeImage
                       src={article.image}
                       alt={article.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

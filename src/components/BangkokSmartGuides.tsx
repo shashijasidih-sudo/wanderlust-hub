@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
@@ -131,7 +132,7 @@ const BangkokSmartGuides = () => {
               className="group bg-card rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden border border-border"
             >
               <div className="aspect-[4/3] overflow-hidden relative">
-                <img
+                <SafeImage
                   src={guide.image}
                   alt={guide.title}
                   loading="lazy"

@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { Link, useLocation } from "react-router-dom";
 import { getBlogLinkImage } from "@/lib/blogLinkImages";
 import { bangkokBlogs } from "@/data/bangkokDestinationGuides";
@@ -156,7 +157,7 @@ const RelatedArticles = ({ city, currentLink, count = 8, title = "Related Articl
               className="group relative block rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-card border border-border"
             >
               <div className="aspect-[4/3] overflow-hidden bg-muted relative">
-                <img
+                <SafeImage
                   src={img}
                   alt={b.title}
                   loading="lazy"

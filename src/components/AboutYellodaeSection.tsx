@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { Link } from "react-router-dom";
 import { Sparkles, Ticket, Car, Package, ArrowRight, Star, Globe2, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -36,7 +37,7 @@ const AboutYellodaeSection = () => {
             <div className="absolute -bottom-6 -right-6 w-full h-full bg-orange-500/15 rounded-3xl rotate-[3deg]" aria-hidden="true" />
 
             <div className="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-border/50">
-              <img
+              <SafeImage
                 src={collageImg}
                 alt="Plan smarter with Yellodae Trails — Thailand, Singapore, Dubai destinations"
                 width={1024}

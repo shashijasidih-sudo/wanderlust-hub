@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { MessageCircle, MapPin, Plane } from "lucide-react";
 import {
   Carousel,
@@ -118,7 +119,7 @@ const TravelerExperiences = () => {
                   itemType="https://schema.org/ImageObject"
                 >
                   <div className="relative aspect-[3/4] overflow-hidden bg-muted">
-                    <img
+                    <SafeImage
                       src={item.src}
                       alt={`${item.tag}: ${item.caption} — ${item.location}`}
                       title={item.caption}
