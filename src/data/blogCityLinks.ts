@@ -102,7 +102,7 @@ const extraActivities: Partial<
     {
       title: "Atlantis The Palm Aquaventure Tickets",
       link: "/dubai/atlantis-aquaventure-waterpark/",
-      image: "https://images.unsplash.com/photo-1583244532610-2a234c7f7e7e?w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1600664356348-10686526af4f?w=800&auto=format&fit=crop",
     },
   ],
   thailand: [
@@ -124,7 +124,7 @@ const extraActivities: Partial<
     {
       title: "4 Islands Tour Krabi by Longtail Boat",
       link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/",
-      image: "https://images.unsplash.com/photo-1545569310-12d97d3ff5ee?w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1544194215-541c2d3561a4?w=800&auto=format&fit=crop",
     },
   ],
 };
