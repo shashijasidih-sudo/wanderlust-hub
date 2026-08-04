@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import RelatedArticles from "@/components/RelatedArticles";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
@@ -106,7 +107,7 @@ const KohSamuiDestinationGuides = () => {
                   <Card key={blog.link} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
                     <Link to={blog.link}>
                       <div className="aspect-[16/10] overflow-hidden">
-                        <img src={blog.image} alt={blog.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <SafeImage src={blog.image} alt={blog.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                       </div>
                       <CardContent className="p-5">
                         <span className="text-primary font-semibold text-xs uppercase tracking-wide">{group.short}</span>

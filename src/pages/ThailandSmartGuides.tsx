@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, User } from "lucide-react";
@@ -126,7 +127,7 @@ const ThailandSmartGuides = () => {
             <Link to={blogArticles[0].slug}>
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="aspect-[4/3] md:aspect-auto overflow-hidden">
-                  <img
+                  <SafeImage
                     src={blogArticles[0].image}
                     alt={blogArticles[0].title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -211,7 +212,7 @@ const ThailandSmartGuides = () => {
                   <Card key={article.id} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
                     <Link to={article.slug}>
                       <div className="aspect-[16/10] overflow-hidden">
-                        <img
+                        <SafeImage
                           src={article.image}
                           alt={article.title}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

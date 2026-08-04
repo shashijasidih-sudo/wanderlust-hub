@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -95,7 +96,7 @@ const AboutUs = () => {
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[500px] overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroBeach} alt="Travel destinations by Yellodae" className="w-full h-full object-cover scale-105" />
+          <SafeImage src={heroBeach} alt="Travel destinations by Yellodae" className="w-full h-full object-cover scale-105" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
         <div className="absolute inset-0 flex items-center justify-center">
@@ -146,7 +147,7 @@ const AboutUs = () => {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
               <div className="relative">
-                <img src={heroTemple} alt="Yellodae Trails customized tour packages" className="w-full h-[400px] object-cover rounded-2xl shadow-xl" />
+                <SafeImage src={heroTemple} alt="Yellodae Trails customized tour packages" className="w-full h-[400px] object-cover rounded-2xl shadow-xl" />
                 <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
                   <Plane className="w-8 h-8 mb-2" />
                   <p className="font-bold text-lg">20+ Destinations</p>
@@ -233,7 +234,7 @@ const AboutUs = () => {
             {cities.map((city) => (
               <Link key={city.name} to={city.link} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3">
                 <div className="aspect-[3/4] relative">
-                  <img src={city.image} alt={city.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <SafeImage src={city.image} alt={city.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
                   <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
                     <span className="text-xs font-medium tracking-wider uppercase opacity-70 mb-1">{city.country}</span>

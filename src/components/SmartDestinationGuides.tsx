@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { Link } from "react-router-dom";
 import { MapPin, ArrowRight } from "lucide-react";
 import thailandImage from "@/assets/destination-tokyo.jpg";
@@ -53,7 +54,7 @@ const SmartDestinationGuides = () => {
               className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="aspect-[4/3] relative">
-                <img
+                <SafeImage
                   src={guide.image}
                   alt={guide.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

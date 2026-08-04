@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { Link } from "react-router-dom";
 import bangkokImg from "@/assets/city-bangkok.jpg";
 import phuketImg from "@/assets/city-phuket.jpg";
@@ -33,7 +34,7 @@ const CityNavigation = ({ currentCity }: CityNavigationProps) => {
             }`}
           >
             <div className="aspect-[4/3] relative">
-              <img
+              <SafeImage
                 src={city.image}
                 alt={city.name}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"

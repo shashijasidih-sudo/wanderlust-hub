@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { format } from "date-fns";
@@ -156,7 +157,7 @@ const BookingDetail = () => {
                       className="aspect-video rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() => setSelectedImage(img.src)}
                     >
-                      <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
+                      <SafeImage src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
                     </div>
                   ))}
                 </div>
@@ -167,7 +168,7 @@ const BookingDetail = () => {
           {/* Image Lightbox */}
           {selectedImage && (
             <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
-              <img src={selectedImage} alt="Gallery" className="max-w-full max-h-[90vh] rounded-lg object-contain" />
+              <SafeImage src={selectedImage} alt="Gallery" className="max-w-full max-h-[90vh] rounded-lg object-contain" />
             </div>
           )}
 

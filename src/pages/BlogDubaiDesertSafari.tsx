@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getBlogCityProps } from "@/data/blogCityLinks";
 import { Card } from "@/components/ui/card";
@@ -43,7 +44,7 @@ const DesertActivityCards = () => {
           {desertActivityCards.map((a) => (
             <Card key={a.slug} className="group overflow-hidden cursor-pointer hover:shadow-card-hover transition-all duration-300" onClick={() => navigate(a.slug)}>
               <div className="relative h-44 overflow-hidden">
-                <img src={a.image} alt={a.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy" />
+                <SafeImage src={a.image} alt={a.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-2 left-2 flex items-center gap-1 text-white text-xs">
                   <MapPin className="h-3 w-3" />{a.location}

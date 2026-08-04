@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -341,7 +342,7 @@ const BangkokThingsToDo = () => {
   const Card = ({ a }: { a: Activity }) => (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
       <Link to={a.slug} className="block aspect-[4/3] overflow-hidden bg-muted">
-        <img
+        <SafeImage
           src={a.image}
           alt={`${a.title} – Bangkok activity`}
           loading="lazy"
@@ -546,7 +547,7 @@ const BangkokThingsToDo = () => {
           ].map((t) => (
             <article key={t.slug} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
               <Link to={t.slug} className="block aspect-[4/3] overflow-hidden bg-muted">
-                <img
+                <SafeImage
                   src={t.img}
                   alt={`${t.title} – Bangkok transfer`}
                   loading="lazy"

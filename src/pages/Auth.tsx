@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { supabase } from "@/lib/supabaseClient";
@@ -262,7 +263,7 @@ const Auth = () => {
       <div className="w-full lg:w-1/2 flex flex-col">
         <div className="p-6 lg:p-10">
           <Link to="/" className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img src={yellodaeLogo} alt="Yellodae" className="h-10 w-auto" />
+            <SafeImage src={yellodaeLogo} alt="Yellodae" className="h-10 w-auto" />
             <span className="text-xl font-bold text-primary">Yellodae</span>
           </Link>
         </div>
@@ -271,7 +272,7 @@ const Auth = () => {
         </div>
       </div>
       <div className="hidden lg:block lg:w-1/2 relative">
-        <img src={heroImage} alt="Adventurous water snorkeling activity" className="absolute inset-0 w-full h-full object-cover" loading="eager" decoding="async" />
+        <SafeImage src={heroImage} alt="Adventurous water snorkeling activity" className="absolute inset-0 w-full h-full object-cover" loading="eager" decoding="async" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
         <div className="absolute bottom-12 left-12 right-12 text-white">
           <p className="text-2xl font-bold leading-snug">Discover breathtaking destinations across Asia</p>

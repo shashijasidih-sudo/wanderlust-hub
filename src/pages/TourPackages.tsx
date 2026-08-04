@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useState, useRef, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -36,7 +37,7 @@ interface PackageInfo {
 const PackageCard = ({ pkg, onBookNow }: { pkg: PackageInfo; onBookNow: (title: string) => void }) => (
   <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
     <div className="relative h-56 overflow-hidden">
-      <img
+      <SafeImage
         src={pkg.image}
         alt={pkg.title}
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -260,7 +261,7 @@ const TourPackages = () => {
       <main className="flex-1">
         {/* Hero */}
         <section className="relative h-[420px] overflow-hidden">
-          <img src={heroImage} alt="Tour Packages" className="absolute inset-0 w-full h-full object-cover" />
+          <SafeImage src={heroImage} alt="Tour Packages" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
           <div className="relative container px-4 md:px-6 h-full flex items-center justify-center text-center">
             <div className="text-white">

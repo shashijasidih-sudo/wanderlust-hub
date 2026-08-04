@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import motLogo from "@/assets/ministry-of-tourism-logo-new.png";
 import nidhiLogo from "@/assets/nidhi-logo.jpg";
 import { Shield, BadgeCheck, Award } from "lucide-react";
@@ -13,7 +14,7 @@ const ApprovalBadge = () => {
           {/* Ministry of Tourism Logo with glow */}
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-orange-400 rounded-lg opacity-30 group-hover:opacity-50 blur transition-opacity duration-300" />
-            <img 
+            <SafeImage 
               src={motLogo} 
               alt="Ministry of Tourism, Government of India" 
               className="relative h-10 md:h-12 object-contain rounded"
@@ -59,7 +60,7 @@ const ApprovalBadge = () => {
           {/* NIDHI Logo with glow */}
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-lg opacity-30 group-hover:opacity-50 blur transition-opacity duration-300" />
-            <img 
+            <SafeImage 
               src={nidhiLogo} 
               alt="NIDHI - National Integrated Database of Hospitality Industry" 
               className="relative h-10 md:h-12 object-contain rounded"

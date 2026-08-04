@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { Card } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -39,7 +40,7 @@ const QuickDestinations = () => {
             const CardBody = (
               <Card className="group overflow-hidden hover:shadow-card-hover transition-all duration-300 h-full">
                 <div className="relative h-40 md:h-48 overflow-hidden">
-                  <img
+                  <SafeImage
                     src={destination.image}
                     alt={destination.name}
                     width={400}

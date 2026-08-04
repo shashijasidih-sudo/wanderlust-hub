@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -57,7 +58,7 @@ const ChiangMaiTransfers = () => {
           {transfers.map((t) => (
             <article key={t.slug} className="flex flex-col rounded-xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-md transition">
               <Link to={t.slug} className="block aspect-[4/3] overflow-hidden bg-muted">
-                <img src={van} alt={t.title} loading="lazy" className="w-full h-full object-cover hover:scale-105 transition" />
+                <SafeImage src={van} alt={t.title} loading="lazy" className="w-full h-full object-cover hover:scale-105 transition" />
               </Link>
               <div className="flex flex-col flex-1 gap-3 p-4">
                 <h3 className="font-semibold text-base leading-snug line-clamp-2"><Link to={t.slug} className="hover:text-primary">{t.title}</Link></h3>

@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useState, useEffect } from "react";
 import { Search, Grid3x3, List, Star, MapPin, Clock, ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -256,7 +257,7 @@ const Thailand = () => {
                 onClick={() => navigate(city.link)}
               >
                 <div className="relative aspect-video">
-                  <img
+                  <SafeImage
                     src={city.image}
                     alt={city.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -390,7 +391,7 @@ const Thailand = () => {
                     }`}
                   >
                     <div className={viewMode === "list" ? "w-72 flex-shrink-0" : "aspect-[4/3] overflow-hidden"}>
-                      <img
+                      <SafeImage
                         src={activity.image}
                         alt={activity.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -529,7 +530,7 @@ const Thailand = () => {
                   <CardContent className="p-0">
                     <div className="grid md:grid-cols-2 gap-0">
                       <div className="relative aspect-[4/3] md:aspect-auto">
-                        <img
+                        <SafeImage
                           src={thailandNewsletterImg}
                           alt="Thailand Experience"
                           className="w-full h-full object-cover"
@@ -563,7 +564,7 @@ const Thailand = () => {
                   <Link to="/thailand/bangkok/mahanakhon-skywalk-tickets/">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
-                        <img
+                        <SafeImage
                           src={bangkokSkywalkImg}
                           alt="Bangkok Skywalk"
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -586,7 +587,7 @@ const Thailand = () => {
                   <Link to="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
-                        <img
+                        <SafeImage
                           src={phiPhiImg}
                           alt="Phi Phi Island"
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -609,7 +610,7 @@ const Thailand = () => {
                   <Link to="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
-                        <img
+                        <SafeImage
                           src={jamesBondImg}
                           alt="James Bond Island"
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -632,7 +633,7 @@ const Thailand = () => {
                   <Link to="/thailand/phuket/elephant-safari/">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
-                        <img
+                        <SafeImage
                           src={elephantImg}
                           alt="Elephant Safari"
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -655,7 +656,7 @@ const Thailand = () => {
                   <Link to="/thailand/bangkok/thai-massage-spa-deals-bangkok/">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
-                        <img
+                        <SafeImage
                           src={massageImg}
                           alt="Thai Massage"
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -678,7 +679,7 @@ const Thailand = () => {
                   <Link to="/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/">
                     <Card className="group cursor-pointer hover:shadow-card-hover transition-all">
                       <div className="aspect-[16/9] overflow-hidden">
-                        <img
+                        <SafeImage
                           src={tigerImg}
                           alt="Tiger Kingdom"
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

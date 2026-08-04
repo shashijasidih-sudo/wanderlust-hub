@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { SearchResult } from "@/lib/fuzzySearch";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -42,7 +43,7 @@ const SearchResults = ({ results, onClose }: SearchResultsProps) => {
             <CardContent className="p-3">
               <div className="flex gap-3">
                 {result.tour.heroImages?.[0] && (
-                  <img 
+                  <SafeImage 
                     src={result.tour.heroImages[0].src} 
                     alt={result.tour.title}
                     className="w-20 h-20 object-cover rounded"

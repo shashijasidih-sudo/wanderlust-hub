@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -214,7 +215,7 @@ const SeoDestinationSections = () => {
                   aria-label={`${s.heading} — ${c.title}`}
                 >
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img
+                    <SafeImage
                       src={c.image}
                       alt={`${c.title} - ${s.heading}`}
                       loading="lazy"

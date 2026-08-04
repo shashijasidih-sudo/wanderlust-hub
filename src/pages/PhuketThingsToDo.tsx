@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -292,7 +293,7 @@ const PhuketThingsToDo = () => {
   const Card = ({ a }: { a: Activity }) => (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
       <Link to={a.slug} className="block aspect-[4/3] overflow-hidden bg-muted">
-        <img src={a.image} alt={`${a.title} – Phuket activity`} loading="lazy" className="h-full w-full object-cover transition group-hover:scale-105" />
+        <SafeImage src={a.image} alt={`${a.title} – Phuket activity`} loading="lazy" className="h-full w-full object-cover transition group-hover:scale-105" />
       </Link>
       <div className="flex flex-1 flex-col gap-3 p-4">
         <h3 className="line-clamp-2 text-base font-semibold leading-snug">
@@ -427,7 +428,7 @@ const PhuketThingsToDo = () => {
           ].map((t) => (
             <article key={t.slug} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
               <Link to={t.slug} className="block aspect-[4/3] overflow-hidden bg-muted">
-                <img src={t.img} alt={`${t.title} – Phuket transfer`} loading="lazy" className="h-full w-full object-cover transition group-hover:scale-105" />
+                <SafeImage src={t.img} alt={`${t.title} – Phuket transfer`} loading="lazy" className="h-full w-full object-cover transition group-hover:scale-105" />
               </Link>
               <div className="flex flex-1 flex-col gap-3 p-4">
                 <h3 className="line-clamp-2 text-base font-semibold leading-snug">

@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -73,7 +74,7 @@ const BookingRecommendations = ({ city, excludeSlug }: Props) => {
                   <Card className="overflow-hidden h-full hover:shadow-xl transition-all duration-300">
                     <div className="aspect-video overflow-hidden bg-muted">
                       {img && (
-                        <img
+                        <SafeImage
                           src={img}
                           alt={t.title}
                           loading="lazy"
@@ -128,7 +129,7 @@ const BookingRecommendations = ({ city, excludeSlug }: Props) => {
               <Link key={t.slug} to={t.slug} className={`group block ${scrollItemClass}`}>
                 <Card className="overflow-hidden h-full hover:shadow-xl transition-all duration-300">
                   <div className="aspect-video overflow-hidden bg-muted">
-                    <img
+                    <SafeImage
                       src={t.img}
                       alt={t.title}
                       loading="lazy"

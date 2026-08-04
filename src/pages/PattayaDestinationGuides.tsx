@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import RelatedArticles from "@/components/RelatedArticles";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
@@ -154,7 +155,7 @@ const PattayaDestinationGuides = () => {
                     >
                       <Link to={blog.link}>
                         <div className="aspect-[16/10] overflow-hidden relative">
-                          <img
+                          <SafeImage
                             src={blog.image}
                             alt={blog.title}
                             loading="lazy"

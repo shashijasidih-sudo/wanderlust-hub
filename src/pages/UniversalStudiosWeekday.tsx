@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import TourBooking from "@/components/TourBooking";
@@ -523,7 +524,7 @@ const CompleteYourSingaporeTrip = () => (
         <Card key={item.title} className="group cursor-pointer hover:shadow-card-hover transition-all overflow-hidden">
           <Link to={item.slug}>
             <div className="aspect-[16/11] overflow-hidden">
-              <img src={item.image} alt={item.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <SafeImage src={item.image} alt={item.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
             </div>
             <CardContent className="p-3">
               <h3 className="font-bold text-sm md:text-base text-foreground group-hover:text-primary transition-colors line-clamp-1">{item.title}</h3>
@@ -541,7 +542,7 @@ const CompleteYourSingaporeTrip = () => (
 const FinalCTA = () => (
   <section className="mt-12">
     <div className="relative overflow-hidden rounded-2xl border border-border">
-      <img
+      <SafeImage
         src={ussHeroImg}
         alt="Universal Studios Singapore"
         className="absolute inset-0 w-full h-full object-cover"

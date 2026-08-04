@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Heart, Loader2, Trash2 } from "lucide-react";
@@ -108,7 +109,7 @@ const Wishlist = () => {
               return (
                 <Card key={item.id} className="overflow-hidden group hover:shadow-lg transition-all flex flex-col">
                   <div className="relative h-32 sm:h-40 md:h-48 cursor-pointer bg-muted" onClick={() => handleViewTour(item.tour_slug)}>
-                    <img
+                    <SafeImage
                       src={img}
                       alt={item.tour_name}
                       loading="lazy"

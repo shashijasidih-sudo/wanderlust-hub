@@ -1,3 +1,4 @@
+import SafeImage from "@/components/SafeImage";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, ChevronLeft, ChevronRight, Clock } from "lucide-react";
@@ -87,7 +88,7 @@ const SingaporeSmartGuides = () => {
         <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
           {heroSlides.map((slide, i) => (
             <div key={i} className={`absolute inset-0 transition-opacity duration-700 ${i === currentSlide ? "opacity-100" : "opacity-0"}`}>
-              <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
+              <SafeImage src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
             </div>
           ))}
@@ -190,7 +191,7 @@ const SingaporeSmartGuides = () => {
                     >
                       <Link to={blog.link}>
                         <div className="aspect-[16/10] overflow-hidden relative">
-                          <img
+                          <SafeImage
                             src={blog.image}
                             alt={blog.title}
                             loading="lazy"
