@@ -6,6 +6,7 @@ import Seo from "@/components/seo/Seo";
 
 // Lazy-load everything below the hero — improves FCP/LCP on mobile.
 const SeoDestinationSections = lazy(() => import("@/components/SeoDestinationSections"));
+const PattayaAdultShowsHome = lazy(() => import("@/components/PattayaAdultShowsHome"));
 const AboutYellodaeSection = lazy(() => import("@/components/AboutYellodaeSection"));
 const ThailandTrending = lazy(() => import("@/components/ThailandTrending"));
 const SingaporeTrending = lazy(() => import("@/components/SingaporeTrending"));
@@ -172,6 +173,7 @@ const Index = () => {
           </p>
         </section>
         <Suspense fallback={null}>
+          <PattayaAdultShowsHome />
           <SeoDestinationSections />
           <AboutYellodaeSection />
           <TravelerExperiences />
