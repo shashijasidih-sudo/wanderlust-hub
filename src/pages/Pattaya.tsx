@@ -98,7 +98,7 @@ const Pattaya = () => {
         <CityNavigation currentCity="Pattaya" />
 
         {/* Mobile Filters */}
-        <div className="flex gap-2 lg:hidden mb-4">
+        <div className="flex flex-wrap gap-2 lg:hidden mb-4">
           <MobileFilters
             priceRange={priceRange}
             onPriceRangeChange={setPriceRange}
@@ -108,13 +108,14 @@ const Pattaya = () => {
           />
           <Button
             size="sm"
-            className="flex items-center gap-2"
+            className="flex flex-1 min-w-0 items-center justify-center gap-2"
             onClick={goToAdultShows}
           >
-            <Eye className="h-4 w-4" />
-            Adult Shows
+            <Eye className="h-4 w-4 shrink-0" />
+            <span className="truncate">Adult Shows</span>
           </Button>
         </div>
+
 
         <div className="flex gap-8">
           {/* Desktop Sidebar - Hidden on mobile */}
