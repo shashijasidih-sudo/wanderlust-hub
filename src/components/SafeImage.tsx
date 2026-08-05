@@ -1,4 +1,6 @@
 import { useState, ImgHTMLAttributes } from "react";
+import { cn } from "@/lib/utils";
+
 
 const FALLBACK =
   "data:image/svg+xml;utf8," +
