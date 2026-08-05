@@ -175,6 +175,7 @@ const Index = () => {
         </section>
         <Suspense fallback={null}>
           <PattayaAdultShowsHome />
+          <KohSamuiHighlightsHome />
           <SeoDestinationSections />
           <AboutYellodaeSection />
           <TravelerExperiences />
