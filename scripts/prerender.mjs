@@ -149,9 +149,37 @@ function withShell(html, pathname) {
   return html.replace(/<div id="root">\s*<\/div>/, `<div id="root">${shell}</div>`);
 }
 
-// Homepage gets its own preload written back into dist/index.html.
-// (No shell on "/" — it already preloads a real hero image as the LCP element.)
-writeFileSync(INDEX, withPreload(baseHtml, "/"));
+function homeShell() {
+  const desktop = resolveAsset(LCP_ASSETS["/"].desktop);
+  const mobile = resolveAsset(LCP_ASSETS["/"].mobile);
+  if (!desktop) return null;
+  const source = mobile
+    ? `<source media="(max-width: 768px)" srcset="${mobile}">`
+    : "";
+  return `<div id="pp-shell" style="font-family:system-ui,-apple-system,'Segoe UI',sans-serif">
+      <div style="height:64px;border-bottom:1px solid #e8ecea;display:flex;align-items:center;padding:0 16px;font-weight:700;font-size:18px;color:#2e6b57">Yellodae Trails</div>
+      <div style="position:relative;height:600px;overflow:hidden">
+        <picture>${source}<img src="${desktop}" alt="Thailand beach hero" width="1920" height="1080" fetchpriority="high" decoding="sync" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></picture>
+        <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.4),rgba(0,0,0,.3),rgba(0,0,0,.6))"></div>
+        <div style="position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 16px">
+          <h1 style="margin:0 0 16px;font-size:40px;line-height:1.1;font-weight:700;color:#fff">Explore your Destination Activities</h1>
+          <p style="margin:0;font-size:18px;color:rgba(255,255,255,.9)">Find exclusive tours, activities, and transfer deals all in one place</p>
+        </div>
+      </div>
+    </div>`;
+}
+
+// Homepage: preload + a static hero shell so the (already preloaded) LCP image
+// paints without waiting for the JS bundle to mount.
+{
+  const withHome = withPreload(baseHtml, "/");
+  const shell = homeShell();
+  writeFileSync(
+    INDEX,
+    shell ? withHome.replace(/<div id="root">\s*<\/div>/, `<div id="root">${shell}</div>`) : withHome
+  );
+}
+
 
 let written = 0;
 for (const loc of locs) {
