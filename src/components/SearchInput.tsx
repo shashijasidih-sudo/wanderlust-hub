@@ -2,7 +2,6 @@ import { Search, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { fuzzySearchTours } from "@/lib/fuzzySearch";
 import type { SearchResult } from "@/lib/fuzzySearch";
 import { TOUR_ROUTES } from "@/data/tourRoutes";
 import { trackSearch, trackSelectItem, destinationFromSlug } from "@/lib/analytics";
