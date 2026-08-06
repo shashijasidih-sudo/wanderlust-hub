@@ -1,7 +1,7 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-chao-phraya-cruise-night.jpg";
+import heroImg from "@/assets/blog-chao-phraya-cruise-night.webp";
 import cruiseImg from "@/assets/cruise-night-1.jpg";
-import watArunImg from "@/assets/blog-wat-arun-sunset.jpg";
+import watArunImg from "@/assets/blog-wat-arun-sunset.webp";
 
 const BlogChaoPhrayaPrincessReview = () => (
   <BlogArticleLayout

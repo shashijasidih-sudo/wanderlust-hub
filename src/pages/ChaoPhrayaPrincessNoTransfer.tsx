@@ -3,8 +3,8 @@ import ChaoPhrayaPrincessNoTransferSEO from "@/components/activity-detail/ChaoPh
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { toursData } from "@/data/tourData";
 import { chaoPhrayaPrincessFaqs } from "@/data/chaoPhrayaPrincessFaqs";
-import cruiseNight2 from "@/assets/cruise-night-2.jpg";
-import cruiseShip1 from "@/assets/cruise-ship-1.jpg";
+import cruiseNight2 from "@/assets/cruise-night-2.webp";
+import cruiseShip1 from "@/assets/cruise-ship-1.webp";
 import watArunTwilight1 from "@/assets/wat-arun-twilight-1.jpg";
 
 const ChaoPhrayaPrincessNoTransfer = () => {

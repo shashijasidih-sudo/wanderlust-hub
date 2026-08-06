@@ -4,10 +4,10 @@ import { bangkokSkywalkFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokSkywalk1 from "@/assets/bangkok-skywalk-1.jpg";
 import bangkokSkywalk2 from "@/assets/bangkok-skywalk-2.jpg";
-import bangkokSkywalk3 from "@/assets/bangkok-skywalk-3.jpg";
-import bangkokSkywalk4 from "@/assets/bangkok-skywalk-4.jpg";
+import bangkokSkywalk3 from "@/assets/bangkok-skywalk-3.webp";
+import bangkokSkywalk4 from "@/assets/bangkok-skywalk-4.webp";
 import bangkokSkywalk5 from "@/assets/bangkok-skywalk-5.jpg";
-import bangkokSkywalkHero from "@/assets/bangkok-skywalk-hero.jpg";
+import bangkokSkywalkHero from "@/assets/bangkok-skywalk-hero.webp";
 
 const BangkokSkywalk = () => {
   const tourData = {

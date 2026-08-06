@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getSingaporeInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/singapore-marina-bay-sands-night-1.jpg";
+import heroImg from "@/assets/singapore-marina-bay-sands-night-1.webp";
 
 const LINK =
   "/singapore/destination-guides/activity/why-everyone-goes-to-marina-bay-sands-12-local-experiences-instead";

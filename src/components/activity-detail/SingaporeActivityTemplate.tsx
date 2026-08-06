@@ -21,13 +21,13 @@ import {
   Leaf, CloudRain, Baby, ArrowRight, Camera,
 } from "lucide-react";
 
-import ussImg from "@/assets/singapore-universal-studios.jpg";
-import nightSafariImg from "@/assets/singapore-night-safari.jpg";
-import wingsOfTimeImg from "@/assets/singapore-wings-time.jpg";
+import ussImg from "@/assets/singapore-universal-studios.webp";
+import nightSafariImg from "@/assets/singapore-night-safari.webp";
+import wingsOfTimeImg from "@/assets/singapore-wings-time.webp";
 import cityTourImg from "@/assets/singapore-city-tour.jpg";
-import cableCarImg from "@/assets/singapore-cable-car.jpg";
+import cableCarImg from "@/assets/singapore-cable-car.webp";
 import gardensImg from "@/assets/singapore-gardens-bay-night-1.jpg";
-import singaporeZooImg from "@/assets/singapore-zoo.jpg";
+import singaporeZooImg from "@/assets/singapore-zoo.webp";
 import riverSafariImg from "@/assets/singapore-river-safari.jpg";
 import SafeImage from "@/components/SafeImage";
 

@@ -8,12 +8,12 @@ import { useNavigate } from "react-router-dom";
 import heroImg from "@/assets/dubai-skyline-night-1.jpg";
 import marinaImg from "@/assets/dubai-city-night-1.jpg";
 import dhowImg from "@/assets/dubai-dhow-cruise-1.jpg";
-import fountainImg from "@/assets/dubai-fountain-show-1.jpg";
+import fountainImg from "@/assets/dubai-fountain-show-1.webp";
 import dubaiDesertCouple2 from "@/assets/dubai-desert-couple-2.jpg";
 import dubaiDesertWoman from "@/assets/dubai-desert-woman-1.jpg";
 import dubaiSkylineSunset from "@/assets/dubai-skyline-sunset-1.jpg";
 import dubaiGlobalVillage from "@/assets/dubai-global-village-1.jpg";
-import dubaiAquariumFish from "@/assets/dubai-aquarium-fish-1.jpg";
+import dubaiAquariumFish from "@/assets/dubai-aquarium-fish-1.webp";
 
 const cruiseActivityCards = [
   { title: "Dhow Creek Cruise - Lower Deck", location: "Dubai Creek", image: dhowImg, slug: "/dubai/dhow-cruise-creek-lower-deck/" },

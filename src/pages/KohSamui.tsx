@@ -14,9 +14,9 @@ import SearchInput from "@/components/SearchInput";
 import BookTransfersSection from "@/components/BookTransfersSection";
 import CityExploreLinks from "@/components/CityExploreLinks";
 
-import beach from "@/assets/koh-samui-beach-1.jpg";
+import beach from "@/assets/koh-samui-beach-1.webp";
 import fullMoon from "@/assets/koh-samui-full-moon-party-1.jpg";
-import cruise from "@/assets/koh-samui-loy-krathong-cruise-1.jpg";
+import cruise from "@/assets/koh-samui-loy-krathong-cruise-1.webp";
 
 const activities = [
   {

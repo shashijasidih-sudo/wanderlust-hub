@@ -6,7 +6,7 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 import bangkokCity1 from "@/assets/bangkok-city-1.jpg";
 import bangkokSkywalk from "@/assets/bangkok-skywalk-1.jpg";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
-import bangkokRiverside from "@/assets/bangkok-riverside-temple-1.jpg";
+import bangkokRiverside from "@/assets/bangkok-riverside-temple-1.webp";
 import grandPalaceWatArun from "@/assets/grand-palace-wat-arun.jpg";
 import cruiseNight1 from "@/assets/cruise-night-1.jpg";
 import floatingMarket1 from "@/assets/floating-market-daylight-1.jpg";

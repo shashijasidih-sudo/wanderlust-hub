@@ -22,8 +22,8 @@ import {
   singaporeBlogs,
   getSingaporeBlogsByCategory,
 } from "@/data/singaporeDestinationGuides";
-import marinaBayImg from "@/assets/singapore-marina-bay-sands-night-1.jpg";
-import universalImg from "@/assets/singapore-universal-studios.jpg";
+import marinaBayImg from "@/assets/singapore-marina-bay-sands-night-1.webp";
+import universalImg from "@/assets/singapore-universal-studios.webp";
 import gardensBayNightImg from "@/assets/singapore-gardens-bay-night-1.jpg";
 import merlionImg from "@/assets/singapore-merlion-night-1.jpg";
 

@@ -7,7 +7,7 @@ import TransferHeroBadges from "@/components/TransferHeroBadges";
 import TravelEssentials from "@/components/TravelEssentials";
 import { Button } from "@/components/ui/button";
 import { useCurrency } from "@/contexts/CurrencyContext";
-import van from "@/assets/chiang-mai-transfer-van-1.jpg";
+import van from "@/assets/chiang-mai-transfer-van-1.webp";
 import CityExploreLinks from "@/components/CityExploreLinks";
 import RelatedArticles from "@/components/RelatedArticles";
 

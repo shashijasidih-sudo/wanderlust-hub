@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getSingaporeInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/singapore-night-safari.jpg";
+import heroImg from "@/assets/singapore-night-safari.webp";
 
 const LINK = "/singapore/destination-guides/comparison/night-safari-vs-singapore-zoo-vs-river-wonders";
 

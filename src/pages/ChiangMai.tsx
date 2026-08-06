@@ -14,10 +14,10 @@ import SearchInput from "@/components/SearchInput";
 import BookTransfersSection from "@/components/BookTransfersSection";
 import CityExploreLinks from "@/components/CityExploreLinks";
 
-import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.jpg";
+import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.webp";
 import goldenTriangle from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg";
-import inthanon from "@/assets/chiang-mai-doi-inthanon-1.jpg";
-import van from "@/assets/chiang-mai-transfer-van-1.jpg";
+import inthanon from "@/assets/chiang-mai-doi-inthanon-1.webp";
+import van from "@/assets/chiang-mai-transfer-van-1.webp";
 
 const activities = [
   {

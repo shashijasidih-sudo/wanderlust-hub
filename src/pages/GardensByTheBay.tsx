@@ -15,13 +15,13 @@ import {
 } from "lucide-react";
 
 import gbbHeroImg from "@/assets/singapore-gardens-bay-night-1.jpg";
-import ussImg from "@/assets/singapore-universal-studios.jpg";
-import nightSafariImg from "@/assets/singapore-night-safari.jpg";
-import wingsOfTimeImg from "@/assets/singapore-wings-time.jpg";
+import ussImg from "@/assets/singapore-universal-studios.webp";
+import nightSafariImg from "@/assets/singapore-night-safari.webp";
+import wingsOfTimeImg from "@/assets/singapore-wings-time.webp";
 import airportTransferImg from "@/assets/singapore-city-tour.jpg";
-import cableCarImg from "@/assets/singapore-cable-car.jpg";
-import seaAquariumImg from "@/assets/blog-sea-life-aquarium.jpg";
-import singaporeZooImg from "@/assets/singapore-zoo.jpg";
+import cableCarImg from "@/assets/singapore-cable-car.webp";
+import seaAquariumImg from "@/assets/blog-sea-life-aquarium.webp";
+import singaporeZooImg from "@/assets/singapore-zoo.webp";
 import birdParadiseImg from "@/assets/singapore-river-safari.jpg";
 
 const attractions = [

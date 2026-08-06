@@ -1,8 +1,8 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
 import { toursData } from "@/data/tourData";
 import phuketAtv from "@/assets/phuket-atv-1.jpg";
-import phuketTiger from "@/assets/phuket-tiger-1.jpg";
-import tiger1 from "@/assets/tiger-1.jpg";
+import phuketTiger from "@/assets/phuket-tiger-1.webp";
+import tiger1 from "@/assets/tiger-1.webp";
 import phuketIslandView from "@/assets/phuket-island-viewpoint-1.jpg";
 
 const SelfieWithTigerATV = () => {

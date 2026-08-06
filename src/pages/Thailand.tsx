@@ -8,11 +8,11 @@ import krabiImg from "@/assets/city-krabi.jpg";
 import kohsamuiImg from "@/assets/city-kohsamui.jpg";
 import pattayaImg from "@/assets/city-pattaya.jpg";
 import bangkokSkywalkImg from "@/assets/bangkok-skywalk-1.jpg";
-import phiPhiImg from "@/assets/phi-phi-1.jpg";
-import jamesBondImg from "@/assets/james-bond-1.jpg";
+import phiPhiImg from "@/assets/phi-phi-1.webp";
+import jamesBondImg from "@/assets/james-bond-1.webp";
 import elephantImg from "@/assets/elephant-1.jpg";
-import massageImg from "@/assets/massage-1.jpg";
-import tigerImg from "@/assets/tiger-1.jpg";
+import massageImg from "@/assets/massage-1.webp";
+import tigerImg from "@/assets/tiger-1.webp";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -41,7 +41,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Link } from "react-router-dom";
-import thailandNewsletterImg from "@/assets/thailand-newsletter.jpg";
+import thailandNewsletterImg from "@/assets/thailand-newsletter.webp";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import CityExploreLinks from "@/components/CityExploreLinks";
 

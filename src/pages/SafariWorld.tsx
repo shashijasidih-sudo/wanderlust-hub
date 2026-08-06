@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
 import { SafariWorldSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { safariWorldFaqs } from "@/data/bangkokActivityFaqs";
-import bangkokRiversideTemple1 from "@/assets/bangkok-riverside-temple-1.jpg";
+import bangkokRiversideTemple1 from "@/assets/bangkok-riverside-temple-1.webp";
 import bangkokBridgeDay1 from "@/assets/bangkok-bridge-day-1.jpg";
 import bangkokTempleWoman1 from "@/assets/bangkok-temple-woman-1.jpg";
 

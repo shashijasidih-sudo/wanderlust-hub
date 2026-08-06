@@ -26,13 +26,13 @@ import {
 import { useCurrency } from "@/contexts/CurrencyContext";
 
 // Local imagery (re-using existing Bangkok assets)
-import bangkokSkywalkHero from "@/assets/bangkok-skywalk-hero.jpg";
-import massageHero from "@/assets/massage-coupon-hero.jpg";
+import bangkokSkywalkHero from "@/assets/bangkok-skywalk-hero.webp";
+import massageHero from "@/assets/massage-coupon-hero.webp";
 import floatingMarket1 from "@/assets/floating-market-daylight-1.jpg";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import ayutthayaSunset1 from "@/assets/ayutthaya-sunset-1.jpg";
 import cruiseNight1 from "@/assets/cruise-night-1.jpg";
-import cruiseNight2 from "@/assets/cruise-night-2.jpg";
+import cruiseNight2 from "@/assets/cruise-night-2.webp";
 import bangkokCity1 from "@/assets/bangkok-city-1.jpg";
 import CityExploreLinks from "@/components/CityExploreLinks";
 import RelatedArticles from "@/components/RelatedArticles";

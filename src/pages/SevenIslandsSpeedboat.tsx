@@ -1,10 +1,10 @@
 import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTemplate";
 import { toursData } from "@/data/tourData";
 import { sevenIslandsLongtailFaqs } from "@/data/krabiActivityFaqs";
-import seven2 from "@/assets/krabi-doc/seven-2.jpg";
-import seven3 from "@/assets/krabi-doc/seven-3.jpg";
-import seven1 from "@/assets/krabi-doc/seven-1.jpg";
-import krabiBoatTour from "@/assets/krabi-boat-tour-1.jpg";
+import seven2 from "@/assets/krabi-doc/seven-2.webp";
+import seven3 from "@/assets/krabi-doc/seven-3.webp";
+import seven1 from "@/assets/krabi-doc/seven-1.webp";
+import krabiBoatTour from "@/assets/krabi-boat-tour-1.webp";
 
 const SevenIslandsSpeedboat = () => {
   const base = toursData["seven-islands-speedboat"];

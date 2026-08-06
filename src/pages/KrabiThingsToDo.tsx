@@ -26,14 +26,14 @@ import {
 import { useCurrency } from "@/contexts/CurrencyContext";
 
 import krabiCity from "@/assets/city-krabi.jpg";
-import krabiTourBoat from "@/assets/krabi-tour-boat-1.jpg";
+import krabiTourBoat from "@/assets/krabi-tour-boat-1.webp";
 import krabiSailboat from "@/assets/krabi-sailboat-1.jpg";
 import krabiKayaks from "@/assets/krabi-kayaks-beach-1.jpg";
 import krabiIslandView from "@/assets/krabi-island-viewpoint-1.jpg";
 import krabiLongtailBoats from "@/assets/krabi-longtail-boats-1.jpg";
-import krabiBeachWoman from "@/assets/krabi-beach-woman-1.jpg";
+import krabiBeachWoman from "@/assets/krabi-beach-woman-1.webp";
 import krabiSpeedboat from "@/assets/krabi-speedboat-1.jpg";
-import krabiBoatTour from "@/assets/krabi-boat-tour-1.jpg";
+import krabiBoatTour from "@/assets/krabi-boat-tour-1.webp";
 import krabiTempleWoman from "@/assets/krabi-temple-woman-1.jpg";
 import CityExploreLinks from "@/components/CityExploreLinks";
 import RelatedArticles from "@/components/RelatedArticles";

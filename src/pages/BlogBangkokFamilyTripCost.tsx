@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-bangkok-family-cost.jpg";
+import heroImg from "@/assets/blog-bangkok-family-cost.webp";
 
 const BlogBangkokFamilyTripCost = () => (
   /* SEO — Primary: bangkok family trip cost | Intent: Commercial */

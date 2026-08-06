@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-bangkok-transport-cost.jpg";
+import heroImg from "@/assets/blog-bangkok-transport-cost.webp";
 
 const BlogCheapestTimeToVisitBangkok = () => (
   /* SEO — Primary: cheapest time to visit bangkok | Intent: Informational */

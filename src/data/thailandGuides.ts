@@ -1,9 +1,9 @@
-import phiPhiImg from "@/assets/phi-phi-1.jpg";
-import jamesBondImg from "@/assets/james-bond-1.jpg";
+import phiPhiImg from "@/assets/phi-phi-1.webp";
+import jamesBondImg from "@/assets/james-bond-1.webp";
 import elephantImg from "@/assets/elephant-1.jpg";
 import bangkokSkywalkImg from "@/assets/bangkok-skywalk-1.jpg";
-import massageImg from "@/assets/massage-1.jpg";
-import tigerImg from "@/assets/tiger-1.jpg";
+import massageImg from "@/assets/massage-1.webp";
+import tigerImg from "@/assets/tiger-1.webp";
 import bangkokCityImg from "@/assets/bangkok-city-1.jpg";
 import phiPhiBoatImg from "@/assets/phi-phi-boat.jpeg";
 

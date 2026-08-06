@@ -5,12 +5,12 @@ import IndianTravellerCompanion from "@/components/activity-detail/IndianTravell
 
 import sgCityscape from "@/assets/singapore-cityscape-woman-1.jpg";
 import sgMarinaDay from "@/assets/singapore-marina-bay-sands-day-1.jpg";
-import sgMarinaNight from "@/assets/singapore-marina-bay-sands-night-1.jpg";
+import sgMarinaNight from "@/assets/singapore-marina-bay-sands-night-1.webp";
 import sgMerlionNight from "@/assets/singapore-merlion-night-1.jpg";
 import sgGardensNight from "@/assets/singapore-gardens-bay-night-1.jpg";
-import sgCouple from "@/assets/singapore-couple-walking-1.jpg";
+import sgCouple from "@/assets/singapore-couple-walking-1.webp";
 import sgFlyerTwilight from "@/assets/singapore-flyer-twilight-1.jpg";
-import sgTourists from "@/assets/singapore-tourists-city-1.jpg";
+import sgTourists from "@/assets/singapore-tourists-city-1.webp";
 // Airport transfer imagery is served directly from /public so it works on the
 // custom domain (which does not route Lovable's __l5e asset infrastructure).
 const sgChangiArrivalsUrl = "/images/singapore-transfers/changi-arrivals.jpg";

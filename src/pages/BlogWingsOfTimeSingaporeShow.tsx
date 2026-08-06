@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getSingaporeInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/singapore-wings-time.jpg";
+import heroImg from "@/assets/singapore-wings-time.webp";
 
 const LINK = "/singapore/destination-guides/activity/wings-of-time-singapore-show";
 

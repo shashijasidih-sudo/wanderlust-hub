@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/pattaya-woman-sea-1.jpg";
+import heroImg from "@/assets/pattaya-woman-sea-1.webp";
 
 const BlogPattayaTravelTipsForIndians = () => (
   <BlogArticleLayout

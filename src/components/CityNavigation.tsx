@@ -5,7 +5,7 @@ import phuketImg from "@/assets/city-phuket.jpg";
 import krabiImg from "@/assets/city-krabi.jpg";
 import kohsamuiImg from "@/assets/city-kohsamui.jpg";
 import pattayaImg from "@/assets/city-pattaya.jpg";
-import chiangMaiImg from "@/assets/city-chiang-mai.jpg";
+import chiangMaiImg from "@/assets/city-chiang-mai.webp";
 
 const cities = [
   { name: "Bangkok", image: bangkokImg, link: "/thailand/bangkok/" },

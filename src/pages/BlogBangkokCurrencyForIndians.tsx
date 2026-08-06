@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-bangkok-currency-india.jpg";
+import heroImg from "@/assets/blog-bangkok-currency-india.webp";
 
 const BlogBangkokCurrencyForIndians = () => (
   <BlogArticleLayout

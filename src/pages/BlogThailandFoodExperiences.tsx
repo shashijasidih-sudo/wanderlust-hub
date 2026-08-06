@@ -7,19 +7,19 @@ import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import bangkokTemple from "@/assets/bangkok-temple-3.jpg";
-import bangkokSkywalk from "@/assets/bangkok-skywalk-hero.jpg";
+import bangkokSkywalk from "@/assets/bangkok-skywalk-hero.webp";
 import floatingMarket from "@/assets/floating-market-1.jpg";
 import bangkokCity from "@/assets/bangkok-city-1.jpg";
 import bangkokCity2 from "@/assets/bangkok-city-2.jpg";
-import pattayaNightlife from "@/assets/pattaya-nightlife-1.jpg";
-import krabiBeach from "@/assets/krabi-beach-woman-1.jpg";
-import phiPhi from "@/assets/phi-phi-3.jpg";
-import jamesBond from "@/assets/james-bond-1.jpg";
+import pattayaNightlife from "@/assets/pattaya-nightlife-1.webp";
+import krabiBeach from "@/assets/krabi-beach-woman-1.webp";
+import phiPhi from "@/assets/phi-phi-3.webp";
+import jamesBond from "@/assets/james-bond-1.webp";
 import elephantSafari from "@/assets/elephant-safari-hero.jpg";
 import bangkokPagoda from "@/assets/bangkok-pagoda-sunset-1.jpg";
-import grandPalace from "@/assets/grand-palace-temple-1.jpg";
-import massage from "@/assets/massage-1.jpg";
-import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
+import grandPalace from "@/assets/grand-palace-temple-1.webp";
+import massage from "@/assets/massage-1.webp";
+import phuketBoatTour from "@/assets/phuket-boat-tour-1.webp";
 import ayutthayaSunset from "@/assets/ayutthaya-sunset-1.jpg";
 
 const activityCards = [

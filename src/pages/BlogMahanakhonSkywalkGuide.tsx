@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-mahanakhon-skywalk.jpg";
+import heroImg from "@/assets/blog-mahanakhon-skywalk.webp";
 
 const BlogMahanakhonSkywalkGuide = () => (
   <BlogArticleLayout

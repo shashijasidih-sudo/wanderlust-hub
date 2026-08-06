@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/phi-phi-1.jpg";
+import heroImg from "@/assets/phi-phi-1.webp";
 
 const BlogPhuket4DaysItinerary = () => (
   <BlogArticleLayout

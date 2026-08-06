@@ -19,13 +19,13 @@ import phuketBigBoat from "@/assets/phuket-big-boat-1.jpg";
 import phuketSpeedboat from "@/assets/phuket-speedboat-1.jpg";
 import phuketKayaks from "@/assets/phuket-kayaks-beach-1.jpg";
 import phuketIslandView from "@/assets/phuket-island-viewpoint-1.jpg";
-import phuketMayaBay from "@/assets/phuket-maya-bay-1.jpg";
-import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
-import phuketNightMarket from "@/assets/phuket-night-market-1.jpg";
-import dolphinShow1 from "@/assets/dolphin-show-1.jpg";
+import phuketMayaBay from "@/assets/phuket-maya-bay-1.webp";
+import phuketBoatTour from "@/assets/phuket-boat-tour-1.webp";
+import phuketNightMarket from "@/assets/phuket-night-market-1.webp";
+import dolphinShow1 from "@/assets/dolphin-show-1.webp";
 import phuketAtv from "@/assets/phuket-atv-1.jpg";
-import phuketCarnival from "@/assets/phuket-carnival-1.jpg";
-import phuketMuslimWoman from "@/assets/phuket-muslim-woman-hijab.jpg";
+import phuketCarnival from "@/assets/phuket-carnival-1.webp";
+import phuketMuslimWoman from "@/assets/phuket-muslim-woman-hijab.webp";
 
 const activities = [
   { title: "Full Day Tour from Phuket to Phi Phi Island, Maya Bay and Khai Island by Speedboat with National Park Fee", price: 4951, image: phuketSpeedboat, slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },

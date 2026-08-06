@@ -15,22 +15,22 @@ import CityExploreLinks from "@/components/CityExploreLinks";
 
 // Singapore-specific images
 import singaporeCityTour from "@/assets/singapore-city-tour.jpg";
-import singaporeNightSafari from "@/assets/singapore-night-safari.jpg";
-import singaporeSentosa4d from "@/assets/singapore-sentosa-4d.jpg";
-import singaporeCableCar from "@/assets/singapore-cable-car.jpg";
-import singaporeWingsTime from "@/assets/singapore-wings-time.jpg";
+import singaporeNightSafari from "@/assets/singapore-night-safari.webp";
+import singaporeSentosa4d from "@/assets/singapore-sentosa-4d.webp";
+import singaporeCableCar from "@/assets/singapore-cable-car.webp";
+import singaporeWingsTime from "@/assets/singapore-wings-time.webp";
 import singaporeSkyHelix from "@/assets/singapore-sky-helix.jpg";
 import singaporeRiverCruise from "@/assets/singapore-river-cruise.jpg";
 import singaporeGardensBay from "@/assets/singapore-gardens-bay.jpg";
 import singaporeAdventureCove from "@/assets/singapore-adventure-cove.jpg";
-import singaporeFlyer from "@/assets/singapore-flyer.jpg";
+import singaporeFlyer from "@/assets/singapore-flyer.webp";
 import singaporeRiverSafari from "@/assets/singapore-river-safari.jpg";
-import singaporeUniversalStudios from "@/assets/singapore-universal-studios.jpg";
-import singaporeZoo from "@/assets/singapore-zoo.jpg";
-import singaporeBigBus from "@/assets/singapore-big-bus.jpg";
+import singaporeUniversalStudios from "@/assets/singapore-universal-studios.webp";
+import singaporeZoo from "@/assets/singapore-zoo.webp";
+import singaporeBigBus from "@/assets/singapore-big-bus.webp";
 import singaporeRainforestWildAsia from "@/assets/singapore-rainforest-wild-asia.jpg";
-import singaporeUniversalStudiosWeekend from "@/assets/singapore-universal-studios-weekend.jpg";
-import singaporeBigBusNight from "@/assets/singapore-big-bus-night.jpg";
+import singaporeUniversalStudiosWeekend from "@/assets/singapore-universal-studios-weekend.webp";
+import singaporeBigBusNight from "@/assets/singapore-big-bus-night.webp";
 
 const activities = [
   { title: "Singapore City Tour with Guide and Transfer", price: 1815, image: singaporeCityTour, slug: "/singapore/singapore-city-tour/" },

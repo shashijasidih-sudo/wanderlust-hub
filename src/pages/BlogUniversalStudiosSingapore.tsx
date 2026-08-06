@@ -6,21 +6,21 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import universalStudios from "@/assets/singapore-universal-studios.jpg";
+import universalStudios from "@/assets/singapore-universal-studios.webp";
 import gardensBay from "@/assets/singapore-gardens-bay.jpg";
-import nightSafari from "@/assets/singapore-night-safari.jpg";
+import nightSafari from "@/assets/singapore-night-safari.webp";
 import cityTour from "@/assets/singapore-city-tour.jpg";
-import cableCar from "@/assets/singapore-cable-car.jpg";
-import flyer from "@/assets/singapore-flyer.jpg";
+import cableCar from "@/assets/singapore-cable-car.webp";
+import flyer from "@/assets/singapore-flyer.webp";
 import riverCruise from "@/assets/singapore-river-cruise.jpg";
 import adventureCove from "@/assets/singapore-adventure-cove.jpg";
-import zoo from "@/assets/singapore-zoo.jpg";
-import wingsTime from "@/assets/singapore-wings-time.jpg";
+import zoo from "@/assets/singapore-zoo.webp";
+import wingsTime from "@/assets/singapore-wings-time.webp";
 import skyHelix from "@/assets/singapore-sky-helix.jpg";
-import sentosa4d from "@/assets/singapore-sentosa-4d.jpg";
-import bigBus from "@/assets/singapore-big-bus.jpg";
+import sentosa4d from "@/assets/singapore-sentosa-4d.webp";
+import bigBus from "@/assets/singapore-big-bus.webp";
 import riverSafari from "@/assets/singapore-river-safari.jpg";
-import sentosaIsland from "@/assets/singapore-sentosa-4d.jpg";
+import sentosaIsland from "@/assets/singapore-sentosa-4d.webp";
 
 const activityCards = [
   { title: "Universal Studios Weekday Ticket", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-tickets-and-transfers/" },

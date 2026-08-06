@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getSingaporeInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/singapore-sentosa-4d.jpg";
+import heroImg from "@/assets/singapore-sentosa-4d.webp";
 
 const LINK = "/singapore/destination-guides/activity/sentosa-4d-adventureland-guide";
 

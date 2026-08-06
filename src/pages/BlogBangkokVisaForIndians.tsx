@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-bangkok-visa-india.jpg";
+import heroImg from "@/assets/blog-bangkok-visa-india.webp";
 
 const BlogBangkokVisaForIndians = () => (
   <BlogArticleLayout

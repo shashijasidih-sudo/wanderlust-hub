@@ -21,14 +21,14 @@ import {
   Leaf, CloudRain, Baby, ArrowRight, Camera,
 } from "lucide-react";
 
-import fourIslandsImg from "@/assets/krabi-doc/four-islands-1.jpg";
-import fourIslands2Img from "@/assets/krabi-doc/four-islands-2.jpg";
+import fourIslandsImg from "@/assets/krabi-doc/four-islands-1.webp";
+import fourIslands2Img from "@/assets/krabi-doc/four-islands-2.webp";
 import hongImg from "@/assets/krabi-doc/hong-1.jpg";
-import hong2Img from "@/assets/krabi-doc/hong-2.jpg";
-import sevenImg from "@/assets/krabi-doc/seven-1.jpg";
-import seven2Img from "@/assets/krabi-doc/seven-2.jpg";
-import jamesBondImg from "@/assets/krabi-doc/james-bond-1.jpg";
-import emeraldImg from "@/assets/krabi-doc/emerald-1.jpg";
+import hong2Img from "@/assets/krabi-doc/hong-2.webp";
+import sevenImg from "@/assets/krabi-doc/seven-1.webp";
+import seven2Img from "@/assets/krabi-doc/seven-2.webp";
+import jamesBondImg from "@/assets/krabi-doc/james-bond-1.webp";
+import emeraldImg from "@/assets/krabi-doc/emerald-1.webp";
 
 const WHATSAPP = "917061710810";
 

@@ -22,12 +22,12 @@ import {
 } from "lucide-react";
 
 import templeImg from "@/assets/bangkok-temple-2.jpg";
-import buddhaImg from "@/assets/bangkok-buddha-1.jpg";
-import cruiseImg from "@/assets/bangkok-cruise-night-3.jpg";
-import skywalkImg from "@/assets/bangkok-skywalk-hero.jpg";
+import buddhaImg from "@/assets/bangkok-buddha-1.webp";
+import cruiseImg from "@/assets/bangkok-cruise-night-3.webp";
+import skywalkImg from "@/assets/bangkok-skywalk-hero.webp";
 import cityImg from "@/assets/bangkok-city-1.jpg";
 import ayutthayaImg from "@/assets/ayutthaya-sunset-1.jpg";
-import riversideImg from "@/assets/bangkok-riverside-temple-1.jpg";
+import riversideImg from "@/assets/bangkok-riverside-temple-1.webp";
 import nightImg from "@/assets/bangkok-city-night-1.jpg";
 
 const WHATSAPP = "917061710810";

@@ -4,8 +4,8 @@ import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { toursData } from "@/data/tourData";
 import { chaoPhrayaPrincessFaqs } from "@/data/chaoPhrayaPrincessFaqs";
 import cruiseNight1 from "@/assets/cruise-night-1.jpg";
-import cruiseNight2 from "@/assets/cruise-night-2.jpg";
-import cruiseShip1 from "@/assets/cruise-ship-1.jpg";
+import cruiseNight2 from "@/assets/cruise-night-2.webp";
+import cruiseShip1 from "@/assets/cruise-ship-1.webp";
 
 const ChaoPhrayaPrincessJoin = () => {
   const tourData = {

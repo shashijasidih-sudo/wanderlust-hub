@@ -1,8 +1,8 @@
 import DestinationCard from "./DestinationCard";
-import parisImage from "@/assets/destination-paris.jpg";
+import parisImage from "@/assets/destination-paris.webp";
 import tokyoImage from "@/assets/destination-tokyo.jpg";
-import maldivesImage from "@/assets/destination-maldives.jpg";
-import newyorkImage from "@/assets/destination-newyork.jpg";
+import maldivesImage from "@/assets/destination-maldives.webp";
+import newyorkImage from "@/assets/destination-newyork.webp";
 
 const destinations = [
   {

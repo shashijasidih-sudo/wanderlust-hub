@@ -2,8 +2,8 @@ import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTem
 import { toursData } from "@/data/tourData";
 import { HotSpringEmeraldPoolSEO } from "@/components/activity-detail/KrabiActivitySEO";
 import { hotSpringEmeraldPoolFaqs } from "@/data/krabiActivityFaqs";
-import emerald1 from "@/assets/krabi-doc/emerald-1.jpg";
-import emerald2 from "@/assets/krabi-doc/emerald-2.jpg";
+import emerald1 from "@/assets/krabi-doc/emerald-1.webp";
+import emerald2 from "@/assets/krabi-doc/emerald-2.webp";
 import krabiTemple from "@/assets/krabi-temple-woman-1.jpg";
 import krabiIsland from "@/assets/krabi-island-viewpoint-1.jpg";
 

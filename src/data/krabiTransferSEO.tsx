@@ -4,16 +4,16 @@ import ThailandTravellerCompanion from "@/components/activity-detail/ThailandTra
 
 import cityKrabi from "@/assets/city-krabi.jpg";
 import cityPhuket from "@/assets/city-phuket.jpg";
-import krabiBeach from "@/assets/krabi-beach-woman-1.jpg";
-import krabiBoat from "@/assets/krabi-boat-tour-1.jpg";
+import krabiBeach from "@/assets/krabi-beach-woman-1.webp";
+import krabiBoat from "@/assets/krabi-boat-tour-1.webp";
 import krabiLongtail from "@/assets/krabi-longtail-boats-1.jpg";
 import krabiViewpoint from "@/assets/krabi-island-viewpoint-1.jpg";
 import krabiTemple from "@/assets/krabi-temple-woman-1.jpg";
 import krabiSpeedboat from "@/assets/krabi-speedboat-1.jpg";
 import krabiKayaks from "@/assets/krabi-kayaks-beach-1.jpg";
 import krabiSailboat from "@/assets/krabi-sailboat-1.jpg";
-import phuketMaiKhao from "@/assets/phuket-mai-khao-beach-plane.jpg";
-import phuketTiger from "@/assets/phuket-tiger-1.jpg";
+import phuketMaiKhao from "@/assets/phuket-mai-khao-beach-plane.webp";
+import phuketTiger from "@/assets/phuket-tiger-1.webp";
 import phuketViewpoint from "@/assets/phuket-island-viewpoint-1.jpg";
 import phuketLongtailBeach from "@/assets/phuket-longtail-boats-beach-1.jpg";
 import phuketBigBoat from "@/assets/phuket-big-boat-1.jpg";

@@ -2,7 +2,7 @@ import SafeImage from "@/components/SafeImage";
 import { Link } from "react-router-dom";
 import { Sparkles, Ticket, Car, Package, ArrowRight, Star, Globe2, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import collageImg from "@/assets/about-yellodae-collage.jpg";
+import collageImg from "@/assets/about-yellodae-collage.webp";
 
 const features = [
   {

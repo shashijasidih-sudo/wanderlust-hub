@@ -1,9 +1,9 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
 import { toursData } from "@/data/tourData";
-import dolphinShow1 from "@/assets/dolphin-show-1.jpg";
+import dolphinShow1 from "@/assets/dolphin-show-1.webp";
 import dolphinShow2 from "@/assets/dolphin-show-2.jpg";
-import dolphinShow3 from "@/assets/dolphin-show-3.jpg";
-import phuketNightMarket from "@/assets/phuket-night-market-1.jpg";
+import dolphinShow3 from "@/assets/dolphin-show-3.webp";
+import phuketNightMarket from "@/assets/phuket-night-market-1.webp";
 
 const DolphinBayPhuket = () => {
   const baseTourData = toursData["dolphin-bay-phuket"];

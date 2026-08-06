@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-safari-vs-sealife.jpg";
+import heroImg from "@/assets/blog-safari-vs-sealife.webp";
 
 const BlogSafariWorldVsSeaLife = () => (
   <BlogArticleLayout

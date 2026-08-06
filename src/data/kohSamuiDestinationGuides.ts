@@ -1,8 +1,8 @@
-import imgCruise from "@/assets/koh-samui-loy-krathong-cruise-1.jpg";
+import imgCruise from "@/assets/koh-samui-loy-krathong-cruise-1.webp";
 import imgFullMoon from "@/assets/koh-samui-full-moon-party-1.jpg";
-import imgBeach from "@/assets/koh-samui-beach-1.jpg";
+import imgBeach from "@/assets/koh-samui-beach-1.webp";
 import imgCity from "@/assets/city-kohsamui.jpg";
-import imgCruiseNight from "@/assets/bangkok-cruise-night-3.jpg";
+import imgCruiseNight from "@/assets/bangkok-cruise-night-3.webp";
 
 export type KohSamuiBlogCategory = "activity";
 

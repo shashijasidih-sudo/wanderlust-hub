@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-temples-sunset-river.jpg";
+import heroImg from "@/assets/blog-temples-sunset-river.webp";
 
 const BlogBangkokTempleTourHalfVsFull = () => (
   <BlogArticleLayout

@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-bangkok-street-food-cost.jpg";
+import heroImg from "@/assets/blog-bangkok-street-food-cost.webp";
 
 const BlogBangkokFoodCost = () => (
   /* SEO — Primary: bangkok food cost per day | Intent: Informational */

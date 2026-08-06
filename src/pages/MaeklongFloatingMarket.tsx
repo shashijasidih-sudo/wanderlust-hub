@@ -3,7 +3,7 @@ import { MaeklongFloatingMarketSEO } from "@/components/activity-detail/BangkokA
 import { maeklongFloatingMarketFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import floatingMarket1 from "@/assets/floating-market-1.jpg";
-import bangkokRiversideTemple1 from "@/assets/bangkok-riverside-temple-1.jpg";
+import bangkokRiversideTemple1 from "@/assets/bangkok-riverside-temple-1.webp";
 import bangkokBridgeDay1 from "@/assets/bangkok-bridge-day-1.jpg";
 
 const MaeklongFloatingMarket = () => {

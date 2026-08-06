@@ -12,7 +12,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Eye, EyeOff, Loader2, Plane } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { z } from "zod";
-import heroImage from "@/assets/auth-water-adventure.jpg";
+import heroImage from "@/assets/auth-water-adventure.webp";
 import { trackLogin, trackSignUp } from "@/lib/analytics";
 
 const loginSchema = z.object({

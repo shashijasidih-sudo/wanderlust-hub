@@ -2,7 +2,7 @@ import SingaporeActivityTemplate from "@/components/activity-detail/SingaporeAct
 import { toursData } from "@/data/tourData";
 import { SentosaCableCarSEO } from "@/components/activity-detail/SingaporeActivitySEO";
 import { sentosaCableCarFaqs } from "@/data/singaporeActivityFaqs";
-import cable1 from "@/assets/singapore-doc/cable-car-1.jpg";
+import cable1 from "@/assets/singapore-doc/cable-car-1.webp";
 
 const base = toursData["sentosa-cable-car"];
 

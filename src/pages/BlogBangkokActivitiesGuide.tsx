@@ -7,21 +7,21 @@ import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import heroImg from "@/assets/bangkok-temple-3.jpg";
-import grandPalace from "@/assets/grand-palace-temple-1.jpg";
+import grandPalace from "@/assets/grand-palace-temple-1.webp";
 import threeTemples from "@/assets/bangkok-temple-4.jpg";
 import watArun from "@/assets/wat-arun-twilight-1.jpg";
-import gemsGallery from "@/assets/gems-gallery-temple-1.jpg";
+import gemsGallery from "@/assets/gems-gallery-temple-1.webp";
 import safariWorld from "@/assets/elephant-safari-hero.jpg";
-import skywalk from "@/assets/bangkok-skywalk-hero.jpg";
+import skywalk from "@/assets/bangkok-skywalk-hero.webp";
 import floatingMarket from "@/assets/floating-market-1.jpg";
 import tukTuk from "@/assets/bangkok-city-night-1.jpg";
 import dreamWorld from "@/assets/bangkok-city-2.jpg";
 import cruise from "@/assets/cruise-night-1.jpg";
-import vivaAlangka from "@/assets/valentine-cruise-1.jpg";
+import vivaAlangka from "@/assets/valentine-cruise-1.webp";
 import ayutthaya from "@/assets/ayutthaya-sunset-1.jpg";
 import baiyoke from "@/assets/bangkok-city-1.jpg";
-import seaLife from "@/assets/bangkok-city-purple-1.jpg";
-import massage from "@/assets/massage-coupon-hero.jpg";
+import seaLife from "@/assets/bangkok-city-purple-1.webp";
+import massage from "@/assets/massage-coupon-hero.webp";
 
 const activityCards = [
   { title: "Grand Palace & Emerald Buddha Temple", location: "Bangkok", image: grandPalace, slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/" },

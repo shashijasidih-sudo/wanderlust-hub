@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/bigeye-show-pattaya-1.jpg";
+import heroImg from "@/assets/bigeye-show-pattaya-1.webp";
 
 const BlogAdultShowsPattayaComparison = () => (
   <BlogArticleLayout

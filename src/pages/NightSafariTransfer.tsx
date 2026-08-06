@@ -2,9 +2,9 @@ import SingaporeActivityTemplate from "@/components/activity-detail/SingaporeAct
 import { toursData } from "@/data/tourData";
 import { NightSafariTransferSEO } from "@/components/activity-detail/SingaporeActivitySEO";
 import { nightSafariTransferFaqs } from "@/data/singaporeActivityFaqs";
-import ns1 from "@/assets/singapore-doc/night-safari-1.jpg";
-import ns2 from "@/assets/singapore-doc/night-safari-2.jpg";
-import ns3 from "@/assets/singapore-doc/night-safari-3.jpg";
+import ns1 from "@/assets/singapore-doc/night-safari-1.webp";
+import ns2 from "@/assets/singapore-doc/night-safari-2.webp";
+import ns3 from "@/assets/singapore-doc/night-safari-3.webp";
 
 const base = toursData["night-safari-transfer"];
 

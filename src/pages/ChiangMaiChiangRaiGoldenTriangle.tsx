@@ -2,9 +2,9 @@ import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activ
 import { toursData } from "@/data/tourData";
 import { chiangMaiChiangRaiGoldenTriangleFaqs } from "@/data/chiangMaiActivityFaqs";
 import goldenTriangle from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg";
-import cityImg from "@/assets/city-chiang-mai.jpg";
-import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.jpg";
-import vanImg from "@/assets/chiang-mai-transfer-van-1.jpg";
+import cityImg from "@/assets/city-chiang-mai.webp";
+import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.webp";
+import vanImg from "@/assets/chiang-mai-transfer-van-1.webp";
 
 const config: ThaiActivityConfig = {
   path: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/",

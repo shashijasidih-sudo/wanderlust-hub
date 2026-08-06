@@ -2,7 +2,7 @@ import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivit
 import { GoldenBuddhaMarbleTempleSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { goldenBuddhaMarbleTempleFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
-import bangkokBuddha1 from "@/assets/bangkok-buddha-1.jpg";
+import bangkokBuddha1 from "@/assets/bangkok-buddha-1.webp";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import bangkokTemple4 from "@/assets/bangkok-temple-4.jpg";
 

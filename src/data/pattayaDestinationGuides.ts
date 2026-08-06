@@ -4,22 +4,22 @@ import imgCoralIslandPrice from "@/assets/pattaya-islands-boats-1.jpg";
 import imgPattayaActivityPrices from "@/assets/pattaya-tropical-beach-1.jpg";
 import imgAlcazarVsTiffany from "@/assets/alcazar-show-1.jpg";
 import imgPattayaWaterSports from "@/assets/pattaya-boats-beach-1.jpg";
-import imgPattaya3Day from "@/assets/pattaya-boat-tour-1.jpg";
+import imgPattaya3Day from "@/assets/pattaya-boat-tour-1.webp";
 import imgSanctuaryTruth from "@/assets/pattaya-temple-woman-1.jpg";
-import imgTiffanyShow from "@/assets/show89-pattaya-1.jpg";
+import imgTiffanyShow from "@/assets/show89-pattaya-1.webp";
 import imgNongNooch from "@/assets/pattaya-tropical-beach-1.jpg";
-import imgRamayana from "@/assets/pattaya-lake-tour-1.jpg";
-import imgUnderwaterWorld from "@/assets/blog-sea-life-aquarium.jpg";
+import imgRamayana from "@/assets/pattaya-lake-tour-1.webp";
+import imgUnderwaterWorld from "@/assets/blog-sea-life-aquarium.webp";
 import imgFloatingMarket from "@/assets/floating-market-1.jpg";
-import imgBigEyeShow from "@/assets/bigeye-show-pattaya-1.jpg";
+import imgBigEyeShow from "@/assets/bigeye-show-pattaya-1.webp";
 import imgPhuketSpeedboat from "@/assets/phuket-speedboat-1.jpg";
-import imgBangkokVsPattaya from "@/assets/blog-bangkok-vs-pattaya.jpg";
-import imgPattayaWoman from "@/assets/pattaya-woman-sea-1.jpg";
-import imgPattayaNightlife from "@/assets/pattaya-nightlife-1.jpg";
-import imgBangkokPattayaTransfer from "@/assets/blog-bangkok-pattaya-transfer.jpg";
-import imgBkkAirportTransfer from "@/assets/blog-bkk-airport-transfer.jpg";
-import imgDmkAirportTransfer from "@/assets/blog-dmk-airport-transfer.jpg";
-import imgPrivateTransfer from "@/assets/blog-bangkok-private-transfer.jpg";
+import imgBangkokVsPattaya from "@/assets/blog-bangkok-vs-pattaya.webp";
+import imgPattayaWoman from "@/assets/pattaya-woman-sea-1.webp";
+import imgPattayaNightlife from "@/assets/pattaya-nightlife-1.webp";
+import imgBangkokPattayaTransfer from "@/assets/blog-bangkok-pattaya-transfer.webp";
+import imgBkkAirportTransfer from "@/assets/blog-bkk-airport-transfer.webp";
+import imgDmkAirportTransfer from "@/assets/blog-dmk-airport-transfer.webp";
+import imgPrivateTransfer from "@/assets/blog-bangkok-private-transfer.webp";
 
 export type PattayaBlogCategory =
   | "activity"

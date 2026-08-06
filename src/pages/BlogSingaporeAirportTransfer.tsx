@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getBlogCityProps } from "@/data/blogCityLinks";
-import heroImg from "@/assets/singapore-marina-bay-sands-night-1.jpg";
+import heroImg from "@/assets/singapore-marina-bay-sands-night-1.webp";
 import changiImg from "@/assets/singapore-flyer-twilight-1.jpg";
 import gardenImg from "@/assets/singapore-gardens-bay-night-1.jpg";
 import cityImg from "@/assets/singapore-city-tour.jpg";

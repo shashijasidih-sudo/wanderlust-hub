@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getSingaporeInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/singapore-big-bus.jpg";
+import heroImg from "@/assets/singapore-big-bus.webp";
 
 const LINK = "/singapore/destination-guides/activity/big-bus-singapore-hop-on-hop-off";
 

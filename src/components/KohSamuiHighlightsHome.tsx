@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import SafeImage from "@/components/SafeImage";
 import { useCurrency } from "@/contexts/CurrencyContext";
 
-import beach from "@/assets/koh-samui-beach-1.jpg";
+import beach from "@/assets/koh-samui-beach-1.webp";
 import fullMoon from "@/assets/koh-samui-full-moon-party-1.jpg";
-import cruise from "@/assets/koh-samui-loy-krathong-cruise-1.jpg";
+import cruise from "@/assets/koh-samui-loy-krathong-cruise-1.webp";
 
 type Item = {
   title: string;
