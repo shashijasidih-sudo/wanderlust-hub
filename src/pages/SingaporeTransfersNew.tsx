@@ -123,6 +123,7 @@ const SingaporeTransfersNew = () => {
               return (
                 <TransferCard
                   key={transfer.id}
+                  priority={index < 3}
                   transfer={transfer}
                   badges={
                     <Badge className="absolute top-3 left-3 bg-primary text-primary-foreground">

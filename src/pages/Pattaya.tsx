@@ -184,6 +184,7 @@ const Pattaya = () => {
               {paginatedActivities.map((activity, index) => (
                 <ActivityCard
                   key={index}
+                  priority={index < 3}
                   {...activity}
                   isRecommended={index < 3}
                   viewMode={viewMode}
