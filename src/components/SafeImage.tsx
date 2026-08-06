@@ -22,6 +22,26 @@ const FALLBACK =
 
 type Props = ImgHTMLAttributes<HTMLImageElement> & {
   fallback?: string;
+  /** Mark above-the-fold / LCP candidate images: eager + fetchpriority=high */
+  priority?: boolean;
+};
+
+/**
+ * Ask remote image CDNs for modern formats (AVIF/WebP) via content negotiation.
+ * Purely a URL-parameter optimization — the rendered image is unchanged.
+ */
+const optimizeSrc = (src?: string) => {
+  if (!src || typeof src !== "string") return src;
+  if (src.startsWith("data:") || src.startsWith("blob:")) return src;
+  if (src.includes("images.unsplash.com")) {
+    const [base, query = ""] = src.split("?");
+    const params = new URLSearchParams(query);
+    if (!params.has("auto")) params.set("auto", "format");
+    if (!params.has("fm")) params.set("fm", "webp");
+    if (!params.has("q")) params.set("q", "72");
+    return `${base}?${params.toString()}`;
+  }
+  return src;
 };
 
 /**
@@ -35,8 +55,9 @@ type Props = ImgHTMLAttributes<HTMLImageElement> & {
 const SafeImage = ({
   src,
   alt = "",
-  loading = "lazy",
+  loading,
   decoding = "async",
+  priority = false,
   fallback = FALLBACK,
   onError,
   onLoad,
@@ -48,9 +69,10 @@ const SafeImage = ({
   return (
     <img
       {...rest}
-      src={errored || !src ? fallback : src}
+      src={errored || !src ? fallback : optimizeSrc(src)}
       alt={alt}
-      loading={loading}
+      loading={loading ?? (priority ? "eager" : "lazy")}
+      fetchPriority={priority ? "high" : rest.fetchPriority}
       decoding={decoding}
       className={cn(
         "max-w-full transition-[opacity,filter] duration-500 ease-out",

@@ -10,9 +10,10 @@ interface DestinationCardProps {
   duration: string;
   price: number;
   link?: string;
+  priority?: boolean;
 }
 
-const DestinationCard = ({ image, name, duration, price, link }: DestinationCardProps) => {
+const DestinationCard = ({ image, name, duration, price, link, priority = false }: DestinationCardProps) => {
   const { formatPrice } = useCurrency();
   const href = link && link.startsWith("/") ? link : undefined;
 
@@ -24,6 +25,7 @@ const DestinationCard = ({ image, name, duration, price, link }: DestinationCard
           alt={name}
           width={800}
           height={800}
+          priority={priority}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
       </div>
