@@ -20,7 +20,7 @@ import phuketImg from "@/assets/city-phuket.jpg";
 import bangkokImg from "@/assets/bangkok-city-1.jpg";
 import kohSamuiImg from "@/assets/koh-samui-beach-1.webp";
 import fourIslandImg from "@/assets/krabi-boat-tour-1.webp";
-import phiPhiImg from "@/assets/phi-phi-1.webp";
+import phiPhiImg from "@/assets/phi-phi-1.jpg";
 import hongIslandImg from "@/assets/krabi-island-viewpoint-1.jpg";
 import jungleImg from "@/assets/krabi-temple-woman-1.jpg";
 import jamesBondImg from "@/assets/james-bond-1.webp";

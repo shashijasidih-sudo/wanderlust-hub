@@ -1,7 +1,7 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
 import { toursData } from "@/data/tourData";
 import jamesBond1 from "@/assets/james-bond-1.webp";
-import jamesBond2 from "@/assets/james-bond-2.webp";
+import jamesBond2 from "@/assets/james-bond-2.jpg";
 import jamesBond3 from "@/assets/james-bond-3.webp";
 import phuketLongtailBoat from "@/assets/phuket-longtail-boat-1.jpg";
 import phuketKayaks from "@/assets/phuket-kayaks-beach-1.jpg";

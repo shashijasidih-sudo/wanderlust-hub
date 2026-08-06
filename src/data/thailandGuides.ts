@@ -1,4 +1,4 @@
-import phiPhiImg from "@/assets/phi-phi-1.webp";
+import phiPhiImg from "@/assets/phi-phi-1.jpg";
 import jamesBondImg from "@/assets/james-bond-1.webp";
 import elephantImg from "@/assets/elephant-1.jpg";
 import bangkokSkywalkImg from "@/assets/bangkok-skywalk-1.jpg";

@@ -8,7 +8,7 @@ import krabiImg from "@/assets/city-krabi.jpg";
 import kohsamuiImg from "@/assets/city-kohsamui.jpg";
 import pattayaImg from "@/assets/city-pattaya.jpg";
 import bangkokSkywalkImg from "@/assets/bangkok-skywalk-1.jpg";
-import phiPhiImg from "@/assets/phi-phi-1.webp";
+import phiPhiImg from "@/assets/phi-phi-1.jpg";
 import jamesBondImg from "@/assets/james-bond-1.webp";
 import elephantImg from "@/assets/elephant-1.jpg";
 import massageImg from "@/assets/massage-1.webp";

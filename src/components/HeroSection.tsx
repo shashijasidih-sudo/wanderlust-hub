@@ -7,7 +7,7 @@ import heroImage1 from "@/assets/hero-thailand-beach.jpg";
 import heroImage1Mobile from "@/assets/hero-thailand-beach-mobile.webp";
 import heroImage2 from "@/assets/hero-thailand-temple.jpg";
 import heroImage2Mobile from "@/assets/hero-thailand-temple-mobile.webp";
-import heroImage3 from "@/assets/hero-thailand-adventure.webp";
+import heroImage3 from "@/assets/hero-thailand-adventure.jpg";
 import heroImage3Mobile from "@/assets/hero-thailand-adventure-mobile.webp";
 import heroImage4 from "@/assets/hero-thailand-island.jpg";
 import heroImage4Mobile from "@/assets/hero-thailand-island-mobile.webp";

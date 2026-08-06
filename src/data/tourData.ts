@@ -1,5 +1,5 @@
-import phiPhi1 from "@/assets/phi-phi-1.webp";
-import phiPhi2 from "@/assets/phi-phi-2.webp";
+import phiPhi1 from "@/assets/phi-phi-1.jpg";
+import phiPhi2 from "@/assets/phi-phi-2.jpg";
 import phiPhi3 from "@/assets/phi-phi-3.webp";
 import phiPhi4 from "@/assets/phi-phi-4.jpg";
 import phiPhi5 from "@/assets/phi-phi-5.jpg";
@@ -7,7 +7,7 @@ import phiPhi6 from "@/assets/phi-phi-6.jpg";
 import phiPhi7 from "@/assets/phi-phi-7.webp";
 import phiPhi8 from "@/assets/phi-phi-8.jpg";
 import jamesBond1 from "@/assets/james-bond-1.webp";
-import jamesBond2 from "@/assets/james-bond-2.webp";
+import jamesBond2 from "@/assets/james-bond-2.jpg";
 import jamesBond3 from "@/assets/james-bond-3.webp";
 import jamesBond4 from "@/assets/james-bond-4.webp";
 import bangkokSkywalk1 from "@/assets/bangkok-skywalk-1.jpg";

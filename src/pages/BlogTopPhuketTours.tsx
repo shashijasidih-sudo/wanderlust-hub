@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import heroImg from "@/assets/phi-phi-1.webp";
+import heroImg from "@/assets/phi-phi-1.jpg";
 import phiPhi from "@/assets/phi-phi-3.webp";
 import phiPhiBigBoat from "@/assets/phi-phi-5.jpg";
 import phiPhiRoyal from "@/assets/phi-phi-7.webp";

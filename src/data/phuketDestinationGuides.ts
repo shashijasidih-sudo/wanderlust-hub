@@ -14,7 +14,7 @@ import imgBigBuddha from "@/assets/phuket-island-viewpoint-1.jpg";
 import imgJamesBond from "@/assets/james-bond-island-hero.jpg";
 import imgCityTour from "@/assets/phuket-night-market-1.webp";
 import imgSnorkeling from "@/assets/phuket-big-boat-1.jpg";
-import imgItin4Days from "@/assets/phi-phi-1.webp";
+import imgItin4Days from "@/assets/phi-phi-1.jpg";
 import imgItin5Days from "@/assets/james-bond-island-hero.jpg";
 import imgItinHoneymoon from "@/assets/phuket-longtail-boats-beach-1.jpg";
 import imgItinKrabiCombo from "@/assets/krabi-longtail-boats-1.jpg";

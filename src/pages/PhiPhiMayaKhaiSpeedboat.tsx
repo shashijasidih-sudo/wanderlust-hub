@@ -2,8 +2,8 @@ import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityT
 import { toursData } from "@/data/tourData";
 import phuketSpeedboat from "@/assets/phuket-speedboat-1.jpg";
 import phuketMayaBay from "@/assets/phuket-maya-bay-1.webp";
-import phiPhi1 from "@/assets/phi-phi-1.webp";
-import phiPhi2 from "@/assets/phi-phi-2.webp";
+import phiPhi1 from "@/assets/phi-phi-1.jpg";
+import phiPhi2 from "@/assets/phi-phi-2.jpg";
 import phiPhi3 from "@/assets/phi-phi-3.webp";
 import phiPhi4 from "@/assets/phi-phi-4.jpg";
 

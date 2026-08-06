@@ -12,7 +12,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 
 
-import phiPhi1 from "@/assets/phi-phi-1.webp";
+import phiPhi1 from "@/assets/phi-phi-1.jpg";
 import pattayaBoats from "@/assets/pattaya-boats-beach-1.jpg";
 import bangkokTemple from "@/assets/bangkok-temple-1.jpg";
 import singaporeGardens from "@/assets/singapore-gardens-bay-night-1.jpg";
