@@ -27,7 +27,7 @@ const QuickBookWidget = ({ title, items }: QuickBookWidgetProps) => {
         <h2 className="text-xl font-bold text-foreground">{title}</h2>
       </div>
       <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-        {items.map((item) => {
+        {items.map((item, index) => {
           const href = toHref(item.slug);
           return (
             <Link
@@ -40,6 +40,7 @@ const QuickBookWidget = ({ title, items }: QuickBookWidgetProps) => {
                 <SafeImage
                   src={item.image}
                   alt={item.title}
+                  priority={index < 3}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 {item.badge && (
