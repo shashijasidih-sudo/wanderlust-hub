@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import nightSafari from "@/assets/singapore-night-safari.webp";
+import nightSafari from "@/assets/singapore-night-safari.jpg";
 import gardensBay from "@/assets/singapore-gardens-bay.jpg";
 import universalStudios from "@/assets/singapore-universal-studios.webp";
 import cityTour from "@/assets/singapore-city-tour.jpg";

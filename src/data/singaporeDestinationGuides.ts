@@ -3,7 +3,7 @@ import sentosa4DImg from "@/assets/singapore-sentosa-4d.webp";
 import universalImg from "@/assets/singapore-universal-studios.webp";
 import gardensBayNightImg from "@/assets/singapore-gardens-bay-night-1.jpg";
 import cityTourImg from "@/assets/singapore-city-tour.jpg";
-import nightSafariImg from "@/assets/singapore-night-safari.webp";
+import nightSafariImg from "@/assets/singapore-night-safari.jpg";
 import cableCarImg from "@/assets/singapore-cable-car.webp";
 import wingsTimeImg from "@/assets/singapore-wings-time.webp";
 import riverCruiseImg from "@/assets/singapore-river-cruise.jpg";

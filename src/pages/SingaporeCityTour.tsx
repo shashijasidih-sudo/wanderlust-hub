@@ -18,7 +18,7 @@ import {
 import cityTour1 from "@/assets/singapore-doc/city-tour-1.webp";
 import cityTour2 from "@/assets/singapore-doc/city-tour-2.webp";
 import ussImg from "@/assets/singapore-universal-studios.webp";
-import nightSafariImg from "@/assets/singapore-night-safari.webp";
+import nightSafariImg from "@/assets/singapore-night-safari.jpg";
 import wingsOfTimeImg from "@/assets/singapore-wings-time.webp";
 import gardensImg from "@/assets/singapore-gardens-bay-night-1.jpg";
 import cableCarImg from "@/assets/singapore-cable-car.webp";

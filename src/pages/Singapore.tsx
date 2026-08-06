@@ -15,7 +15,7 @@ import CityExploreLinks from "@/components/CityExploreLinks";
 
 // Singapore-specific images
 import singaporeCityTour from "@/assets/singapore-city-tour.jpg";
-import singaporeNightSafari from "@/assets/singapore-night-safari.webp";
+import singaporeNightSafari from "@/assets/singapore-night-safari.jpg";
 import singaporeSentosa4d from "@/assets/singapore-sentosa-4d.webp";
 import singaporeCableCar from "@/assets/singapore-cable-car.webp";
 import singaporeWingsTime from "@/assets/singapore-wings-time.webp";

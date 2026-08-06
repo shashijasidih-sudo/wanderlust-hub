@@ -22,7 +22,7 @@ import wt3 from "@/assets/singapore-doc/wings-time-3.webp";
 import wingsHero from "@/assets/singapore-wings-time.webp";
 import ussImg from "@/assets/singapore-universal-studios.webp";
 import gardensByTheBayImg from "@/assets/singapore-gardens-bay-night-1.jpg";
-import nightSafariImg from "@/assets/singapore-night-safari.webp";
+import nightSafariImg from "@/assets/singapore-night-safari.jpg";
 import cityTourImg from "@/assets/singapore-city-tour.jpg";
 import cableCarImg from "@/assets/singapore-cable-car.webp";
 import seaAquariumImg from "@/assets/blog-sea-life-aquarium.webp";

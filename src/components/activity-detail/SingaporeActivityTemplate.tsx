@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 
 import ussImg from "@/assets/singapore-universal-studios.webp";
-import nightSafariImg from "@/assets/singapore-night-safari.webp";
+import nightSafariImg from "@/assets/singapore-night-safari.jpg";
 import wingsOfTimeImg from "@/assets/singapore-wings-time.webp";
 import cityTourImg from "@/assets/singapore-city-tour.jpg";
 import cableCarImg from "@/assets/singapore-cable-car.webp";

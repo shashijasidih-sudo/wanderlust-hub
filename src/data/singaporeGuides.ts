@@ -1,5 +1,5 @@
 import sentosa from "@/assets/singapore-sentosa-4d.webp";
-import nightSafari from "@/assets/singapore-night-safari.webp";
+import nightSafari from "@/assets/singapore-night-safari.jpg";
 import universal from "@/assets/singapore-universal-studios.webp";
 import marina from "@/assets/singapore-marina-bay-sands-night-1.webp";
 import gardens from "@/assets/singapore-gardens-bay-night-1.jpg";

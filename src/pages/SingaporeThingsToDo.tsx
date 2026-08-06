@@ -27,7 +27,7 @@ import { useCurrency } from "@/contexts/CurrencyContext";
 
 import singaporeMarinaBay from "@/assets/singapore-marina-bay-sands-night-1.webp";
 import singaporeCityTour from "@/assets/singapore-city-tour.jpg";
-import singaporeNightSafari from "@/assets/singapore-night-safari.webp";
+import singaporeNightSafari from "@/assets/singapore-night-safari.jpg";
 import singaporeSentosa4d from "@/assets/singapore-sentosa-4d.webp";
 import singaporeCableCar from "@/assets/singapore-cable-car.webp";
 import singaporeWingsTime from "@/assets/singapore-wings-time.webp";

@@ -8,7 +8,7 @@ import { MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import universalStudios from "@/assets/singapore-universal-studios.webp";
 import gardensBay from "@/assets/singapore-gardens-bay.jpg";
-import nightSafari from "@/assets/singapore-night-safari.webp";
+import nightSafari from "@/assets/singapore-night-safari.jpg";
 import cityTour from "@/assets/singapore-city-tour.jpg";
 import cableCar from "@/assets/singapore-cable-car.webp";
 import flyer from "@/assets/singapore-flyer.webp";

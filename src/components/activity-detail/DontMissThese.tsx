@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 
 import gardensByTheBayImg from "@/assets/singapore-gardens-bay-night-1.jpg";
-import nightSafariImg from "@/assets/singapore-night-safari.webp";
+import nightSafariImg from "@/assets/singapore-night-safari.jpg";
 import wingsOfTimeImg from "@/assets/singapore-wings-time.webp";
 import airportTransferImg from "@/assets/singapore-city-tour.jpg";
 import SafeImage from "@/components/SafeImage";
