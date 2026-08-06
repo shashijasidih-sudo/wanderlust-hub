@@ -1,50 +1,24 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Analytics stubs: dataLayer / gtag queue exist immediately so any
-         app code (trackPurchase, GTM events) can push before the libraries
-         load. The actual tags are injected after first paint / first input,
-         which keeps them off the LCP critical path. IDs and config unchanged. -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M8M9C49G');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- gtag.js — loads GA4 (G-TR2JE3RHQN) and Google Ads (AW-11416530867).
+         GA4 conversions fire only from trackPurchase after successful payment. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TR2JE3RHQN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-TR2JE3RHQN');
       gtag('config', 'AW-11416530867');
-
-      (function () {
-        var loaded = false;
-        function loadTags() {
-          if (loaded) return;
-          loaded = true;
-          // GA4 + Google Ads (gtag.js)
-          var g = document.createElement('script');
-          g.async = true;
-          g.src = 'https://www.googletagmanager.com/gtag/js?id=G-TR2JE3RHQN';
-          document.head.appendChild(g);
-          // Google Tag Manager
-          dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-          var t = document.createElement('script');
-          t.async = true;
-          t.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-M8M9C49G';
-          document.head.appendChild(t);
-        }
-        var events = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
-        function onInteract() {
-          events.forEach(function (e) { window.removeEventListener(e, onInteract); });
-          loadTags();
-        }
-        events.forEach(function (e) { window.addEventListener(e, onInteract, { passive: true, once: true }); });
-        window.addEventListener('load', function () {
-          if ('requestIdleCallback' in window) {
-            requestIdleCallback(loadTags, { timeout: 3500 });
-          } else {
-            setTimeout(loadTags, 2500);
-          }
-        });
-      })();
     </script>
-
 
 
     <meta charset="UTF-8" />

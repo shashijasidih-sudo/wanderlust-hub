@@ -18,23 +18,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     target: "es2020",
     cssCodeSplit: true,
-    manifest: true,
     chunkSizeWarningLimit: 1200,
-    rollupOptions: {
-      output: {
-        // Keep the very large static data modules out of the entry bundle so
-        // they load only on the routes that need them. Vendor code is left to
-        // Rollup's default chunking (manual vendor splits caused cross-chunk
-        // initialisation order errors).
-        manualChunks(id) {
-          if (id.includes("/src/data/tourData")) return "data-tours";
-          if (id.includes("/src/data/transferData")) return "data-transfers";
-          if (id.includes("/src/data/cityActivitiesData")) return "data-city-activities";
-          return undefined;
-        },
-
-      },
-    },
   },
 }));
 
