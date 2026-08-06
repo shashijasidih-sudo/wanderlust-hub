@@ -2,8 +2,8 @@ import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activ
 import { toursData } from "@/data/tourData";
 import { kohSamuiFullMoonPartyFaqs } from "@/data/kohSamuiActivityFaqs";
 import fullMoon from "@/assets/koh-samui-full-moon-party-1.jpg";
-import beach from "@/assets/koh-samui-beach-1.jpg";
-import nightlife from "@/assets/pattaya-nightlife-1.jpg";
+import beach from "@/assets/koh-samui-beach-1.webp";
+import nightlife from "@/assets/pattaya-nightlife-1.webp";
 import cityImg from "@/assets/city-kohsamui.jpg";
 
 const config: ThaiActivityConfig = {

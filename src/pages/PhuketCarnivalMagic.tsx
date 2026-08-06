@@ -2,10 +2,10 @@ import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityT
 import { PhuketFantaSeaSEO } from "@/components/activity-detail/PhuketActivitySEO";
 import { phuketFantaSeaFaqs } from "@/data/phuketActivityFaqs";
 import { toursData } from "@/data/tourData";
-import phuketCarnival1 from "@/assets/phuket-carnival-1.jpg";
+import phuketCarnival1 from "@/assets/phuket-carnival-1.webp";
 import phuketCarnival2 from "@/assets/phuket-carnival-2.jpg";
 import phuketCarnival3 from "@/assets/phuket-carnival-3.jpg";
-import phuketNightMarket from "@/assets/phuket-night-market-1.jpg";
+import phuketNightMarket from "@/assets/phuket-night-market-1.webp";
 
 const PhuketCarnivalMagic = () => {
   const baseTourData = toursData["phuket-carnival-magic"];

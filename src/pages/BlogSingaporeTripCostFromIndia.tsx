@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getSingaporeInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/singapore-tourists-city-1.jpg";
+import heroImg from "@/assets/singapore-tourists-city-1.webp";
 
 const LINK = "/singapore/destination-guides/indian-audience/singapore-trip-cost-from-india-with-activities";
 

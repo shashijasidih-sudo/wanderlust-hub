@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getJapanInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/japan-tokyo-city-1.jpg";
+import heroImg from "@/assets/japan-tokyo-city-1.webp";
 
 const BlogJapanTripCostFromIndia = () => (
   <BlogArticleLayout

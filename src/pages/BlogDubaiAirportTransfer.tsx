@@ -2,7 +2,7 @@ import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getBlogCityProps } from "@/data/blogCityLinks";
 import heroImg from "@/assets/dubai-skyline-night-1.jpg";
 import marinaImg from "@/assets/dubai-city-night-1.jpg";
-import fountainImg from "@/assets/dubai-fountain-show-1.jpg";
+import fountainImg from "@/assets/dubai-fountain-show-1.webp";
 import dhowImg from "@/assets/dubai-dhow-cruise-1.jpg";
 
 const BlogDubaiAirportTransfer = () => {

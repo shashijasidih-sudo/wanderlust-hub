@@ -2,9 +2,9 @@ import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivit
 import { VivaAlangkaCruiseSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { vivaAlangkaCruiseFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
-import cruiseDock1 from "@/assets/cruise-dock-1.jpg";
+import cruiseDock1 from "@/assets/cruise-dock-1.webp";
 import cruiseNight1 from "@/assets/cruise-night-1.jpg";
-import cruiseShip1 from "@/assets/cruise-ship-1.jpg";
+import cruiseShip1 from "@/assets/cruise-ship-1.webp";
 
 const VivaAlangkaCruise = () => {
   const tourData = {

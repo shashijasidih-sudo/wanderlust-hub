@@ -15,12 +15,12 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import dubaiSkylineImg from "@/assets/dubai-skyline-night-1.jpg";
-import desertCoupleImg from "@/assets/dubai-desert-couple-1.jpg";
+import desertCoupleImg from "@/assets/dubai-desert-couple-1.webp";
 import dubaiCityImg from "@/assets/dubai-city-night-1.jpg";
-import fountainImg from "@/assets/dubai-fountain-show-1.jpg";
+import fountainImg from "@/assets/dubai-fountain-show-1.webp";
 import dhowImg from "@/assets/dubai-dhow-cruise-1.jpg";
 import globalVillageImg from "@/assets/dubai-global-village-1.jpg";
-import aquariumImg from "@/assets/dubai-aquarium-fish-1.jpg";
+import aquariumImg from "@/assets/dubai-aquarium-fish-1.webp";
 import dubaiSkylineSunset from "@/assets/dubai-skyline-sunset-1.jpg";
 import dubaiGlobalVillage2 from "@/assets/dubai-global-village-2.jpg";
 import dubaiDesertWoman from "@/assets/dubai-desert-woman-1.jpg";

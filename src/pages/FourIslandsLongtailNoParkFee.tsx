@@ -2,10 +2,10 @@ import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTem
 import { toursData } from "@/data/tourData";
 import { FourIslandsLongtailSEO } from "@/components/activity-detail/KrabiActivitySEO";
 import { fourIslandsLongtailFaqs } from "@/data/krabiActivityFaqs";
-import four2 from "@/assets/krabi-doc/four-islands-2.jpg";
-import four3 from "@/assets/krabi-doc/four-islands-3.jpg";
-import four1 from "@/assets/krabi-doc/four-islands-1.jpg";
-import krabiBeach from "@/assets/krabi-beach-woman-1.jpg";
+import four2 from "@/assets/krabi-doc/four-islands-2.webp";
+import four3 from "@/assets/krabi-doc/four-islands-3.webp";
+import four1 from "@/assets/krabi-doc/four-islands-1.webp";
+import krabiBeach from "@/assets/krabi-beach-woman-1.webp";
 
 const FourIslandsLongtailNoParkFee = () => {
   const base = toursData["four-islands-longtail-no-park-fee"];

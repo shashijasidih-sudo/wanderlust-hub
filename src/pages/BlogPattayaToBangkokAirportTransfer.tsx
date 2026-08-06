@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-bkk-airport-transfer.jpg";
+import heroImg from "@/assets/blog-bkk-airport-transfer.webp";
 
 const BlogPattayaToBangkokAirportTransfer = () => (
   <BlogArticleLayout

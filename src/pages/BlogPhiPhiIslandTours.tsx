@@ -1,7 +1,7 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getBlogCityProps } from "@/data/blogCityLinks";
 import heroImg from "@/assets/phi-phi-1.jpg";
-import phiPhi2 from "@/assets/phi-phi-3.jpg";
+import phiPhi2 from "@/assets/phi-phi-3.webp";
 import phiPhi3 from "@/assets/phi-phi-5.jpg";
 import phiPhi4 from "@/assets/phi-phi-boat.jpeg";
 

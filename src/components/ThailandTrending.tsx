@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import SafeImage from "./SafeImage";
 import heroBeach from "@/assets/hero-thailand-beach.jpg";
-import phiPhi from "@/assets/phi-phi-3.jpg";
+import phiPhi from "@/assets/phi-phi-3.webp";
 import bangkokTemple from "@/assets/bangkok-temple-3.jpg";
 import pattayaBeach from "@/assets/pattaya-tropical-beach-1.jpg";
 

@@ -14,6 +14,7 @@ interface ActivityCardProps {
   viewMode: 'grid' | 'list';
   reviews?: number;
   slug?: string;
+  priority?: boolean;
 }
 
 const ActivityCard = ({ 
@@ -23,7 +24,8 @@ const ActivityCard = ({
   isRecommended = false, 
   viewMode,
   reviews = Math.floor(Math.random() * 100) + 20,
-  slug
+  slug,
+  priority = false
 }: ActivityCardProps) => {
   const rating = (Math.random() * 1 + 4).toFixed(1);
   const navigate = useNavigate();
@@ -44,7 +46,7 @@ const ActivityCard = ({
         onClick={handleCardClick}
       >
         <div className="relative w-80 h-64 flex-shrink-0">
-          <SafeImage src={image} alt={title} width={640} height={512} className="w-full h-full object-cover" />
+          <SafeImage src={image} alt={title} width={640} height={512} priority={priority} className="w-full h-full object-cover" />
           {isRecommended && (
             <div className="absolute top-2 left-2 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold">
               Recommended
@@ -127,7 +129,7 @@ const ActivityCard = ({
       onClick={handleCardClick}
     >
       <div className="relative h-32 md:h-56">
-        <SafeImage src={image} alt={title} width={400} height={300} className="w-full h-full object-cover" />
+        <SafeImage src={image} alt={title} width={400} height={300} priority={priority} className="w-full h-full object-cover" />
         {isRecommended && (
           <div className="absolute top-1 left-1 md:top-2 md:left-2 bg-accent text-accent-foreground px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-semibold">
             Recommended

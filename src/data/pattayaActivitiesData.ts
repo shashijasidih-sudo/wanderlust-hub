@@ -3,15 +3,15 @@ import pattayaSailboat from "@/assets/pattaya-sailboat-1.jpg";
 import pattayaBoatsBeach from "@/assets/pattaya-boats-beach-1.jpg";
 import pattayaTropicalBeach from "@/assets/pattaya-tropical-beach-1.jpg";
 import pattayaSpeedboat from "@/assets/pattaya-speedboat-1.jpg";
-import pattayaIslandsBoats from "@/assets/floating-market-daylight-2.jpg";
+import pattayaIslandsBoats from "@/assets/floating-market-daylight-2.webp";
 import alcazarShow1 from "@/assets/alcazar-show-1.jpg";
-import pattayaNightlife1 from "@/assets/pattaya-nightlife-1.jpg";
+import pattayaNightlife1 from "@/assets/pattaya-nightlife-1.webp";
 import pattayaNightlife2 from "@/assets/pattaya-nightlife-2.jpg";
 import muayThai1 from "@/assets/muay-thai-1.jpg";
-import imagine79Show1 from "@/assets/imagine79-show-1.jpg";
-import show69Pattaya1 from "@/assets/show69-pattaya-1.jpg";
-import show89Pattaya1 from "@/assets/show89-pattaya-1.jpg";
-import bigeyeShowPattaya1 from "@/assets/bigeye-show-pattaya-1.jpg";
+import imagine79Show1 from "@/assets/imagine79-show-1.webp";
+import show69Pattaya1 from "@/assets/show69-pattaya-1.webp";
+import show89Pattaya1 from "@/assets/show89-pattaya-1.webp";
+import bigeyeShowPattaya1 from "@/assets/bigeye-show-pattaya-1.webp";
 
 export interface PattayaActivity {
   title: string;

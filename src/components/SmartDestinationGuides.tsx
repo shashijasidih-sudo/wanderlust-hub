@@ -2,9 +2,9 @@ import SafeImage from "@/components/SafeImage";
 import { Link } from "react-router-dom";
 import { MapPin, ArrowRight } from "lucide-react";
 import thailandImage from "@/assets/destination-tokyo.jpg";
-import dubaiImage from "@/assets/destination-newyork.jpg";
-import singaporeImage from "@/assets/destination-maldives.jpg";
-import netherlandsImage from "@/assets/destination-paris.jpg";
+import dubaiImage from "@/assets/destination-newyork.webp";
+import singaporeImage from "@/assets/destination-maldives.webp";
+import netherlandsImage from "@/assets/destination-paris.webp";
 
 const guides = [
   {

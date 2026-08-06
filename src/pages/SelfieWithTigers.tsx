@@ -2,10 +2,10 @@ import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityT
 import { TigerKingdomSEO } from "@/components/activity-detail/PhuketActivitySEO";
 import { tigerKingdomFaqs } from "@/data/phuketActivityFaqs";
 import { toursData } from "@/data/tourData";
-import tiger1 from "@/assets/tiger-1.jpg";
-import phuketTiger from "@/assets/phuket-tiger-1.jpg";
+import tiger1 from "@/assets/tiger-1.webp";
+import phuketTiger from "@/assets/phuket-tiger-1.webp";
 import phuketIslandView from "@/assets/phuket-island-viewpoint-1.jpg";
-import phuketNightMarket from "@/assets/phuket-night-market-1.jpg";
+import phuketNightMarket from "@/assets/phuket-night-market-1.webp";
 
 const SelfieWithTigers = () => {
   const baseTourData = toursData["selfie-tigers"];

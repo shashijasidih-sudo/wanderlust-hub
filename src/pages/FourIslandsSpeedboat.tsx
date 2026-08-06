@@ -1,9 +1,9 @@
 import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTemplate";
 import { toursData } from "@/data/tourData";
 import { fourIslandsLongtailFaqs } from "@/data/krabiActivityFaqs";
-import four3 from "@/assets/krabi-doc/four-islands-3.jpg";
-import four1 from "@/assets/krabi-doc/four-islands-1.jpg";
-import four2 from "@/assets/krabi-doc/four-islands-2.jpg";
+import four3 from "@/assets/krabi-doc/four-islands-3.webp";
+import four1 from "@/assets/krabi-doc/four-islands-1.webp";
+import four2 from "@/assets/krabi-doc/four-islands-2.webp";
 import krabiSpeedboat from "@/assets/krabi-speedboat-1.jpg";
 
 const FourIslandsSpeedboat = () => {

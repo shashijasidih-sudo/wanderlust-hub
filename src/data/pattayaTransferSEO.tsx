@@ -11,15 +11,15 @@ import bangkokBridgeTwilight from "@/assets/bangkok-bridge-twilight-1.jpg";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
 import bangkokTemple3 from "@/assets/bangkok-temple-3.jpg";
-import bangkokRiverside from "@/assets/bangkok-riverside-temple-1.jpg";
-import grandPalaceBuddha from "@/assets/grand-palace-buddha.jpg";
+import bangkokRiverside from "@/assets/bangkok-riverside-temple-1.webp";
+import grandPalaceBuddha from "@/assets/grand-palace-buddha.webp";
 import grandPalacePagoda from "@/assets/grand-palace-pagoda.jpg";
 import grandPalaceWatArun from "@/assets/grand-palace-wat-arun.jpg";
-import grandPalaceTemple from "@/assets/grand-palace-temple-1.jpg";
+import grandPalaceTemple from "@/assets/grand-palace-temple-1.webp";
 import elephantSafari from "@/assets/elephant-safari-hero.jpg";
 import pattayaBeach from "@/assets/pattaya-tropical-beach-1.jpg";
 import pattayaBoats from "@/assets/pattaya-boats-beach-1.jpg";
-import pattayaNightlife from "@/assets/pattaya-nightlife-1.jpg";
+import pattayaNightlife from "@/assets/pattaya-nightlife-1.webp";
 import cityPattaya from "@/assets/city-pattaya.jpg";
 
 // ---------- Common gallery presets ----------

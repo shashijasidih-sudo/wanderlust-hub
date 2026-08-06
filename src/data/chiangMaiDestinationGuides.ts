@@ -1,9 +1,9 @@
-import imgDoiSuthep from "@/assets/chiang-mai-doi-suthep-1.jpg";
+import imgDoiSuthep from "@/assets/chiang-mai-doi-suthep-1.webp";
 import imgGoldenTriangle from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg";
-import imgInthanon from "@/assets/chiang-mai-doi-inthanon-1.jpg";
-import imgChediLuang from "@/assets/chiang-mai-wat-chedi-luang-1.jpg";
-import imgCity from "@/assets/city-chiang-mai.jpg";
-import imgVan from "@/assets/chiang-mai-transfer-van-1.jpg";
+import imgInthanon from "@/assets/chiang-mai-doi-inthanon-1.webp";
+import imgChediLuang from "@/assets/chiang-mai-wat-chedi-luang-1.webp";
+import imgCity from "@/assets/city-chiang-mai.webp";
+import imgVan from "@/assets/chiang-mai-transfer-van-1.webp";
 
 export type ChiangMaiBlogCategory = "activity";
 

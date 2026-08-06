@@ -1,7 +1,7 @@
-import imgFuji from "@/assets/japan-mount-fuji-1.jpg";
-import imgTokyo from "@/assets/japan-tokyo-city-1.jpg";
-import imgKyoto from "@/assets/japan-kyoto-temple-1.jpg";
-import imgDisney from "@/assets/japan-disneyland-1.jpg";
+import imgFuji from "@/assets/japan-mount-fuji-1.webp";
+import imgTokyo from "@/assets/japan-tokyo-city-1.webp";
+import imgKyoto from "@/assets/japan-kyoto-temple-1.webp";
+import imgDisney from "@/assets/japan-disneyland-1.webp";
 
 export type JapanBlogCategory = "activity" | "price-cost";
 

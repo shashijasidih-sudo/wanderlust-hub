@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/chiang-mai-doi-inthanon-1.jpg";
+import heroImg from "@/assets/chiang-mai-doi-inthanon-1.webp";
 
 const Blog = () => (
   <BlogArticleLayout

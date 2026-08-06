@@ -5,7 +5,7 @@ import { toursData } from "@/data/tourData";
 import phuketBigBoat from "@/assets/phuket-big-boat-1.jpg";
 import phiPhi1 from "@/assets/phi-phi-1.jpg";
 import phiPhi2 from "@/assets/phi-phi-2.jpg";
-import phiPhi3 from "@/assets/phi-phi-3.jpg";
+import phiPhi3 from "@/assets/phi-phi-3.webp";
 import phiPhi4 from "@/assets/phi-phi-4.jpg";
 import phiPhi5 from "@/assets/phi-phi-5.jpg";
 import phiPhi6 from "@/assets/phi-phi-6.jpg";

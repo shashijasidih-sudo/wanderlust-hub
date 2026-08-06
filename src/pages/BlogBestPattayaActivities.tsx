@@ -10,16 +10,16 @@ import heroImg from "@/assets/pattaya-tropical-beach-1.jpg";
 import coralIsland from "@/assets/pattaya-boats-beach-1.jpg";
 import alcazar from "@/assets/alcazar-show-1.jpg";
 import floatingMarket from "@/assets/floating-market-1.jpg";
-import nongNooch from "@/assets/pattaya-lake-tour-1.jpg";
-import dolphinarium from "@/assets/dolphin-show-3.jpg";
+import nongNooch from "@/assets/pattaya-lake-tour-1.webp";
+import dolphinarium from "@/assets/dolphin-show-3.webp";
 import muayThai from "@/assets/muay-thai-1.jpg";
-import nightlife from "@/assets/pattaya-nightlife-1.jpg";
+import nightlife from "@/assets/pattaya-nightlife-1.webp";
 import pubCrawl from "@/assets/pattaya-nightlife-2.jpg";
 import bigBuddha from "@/assets/pattaya-temple-woman-1.jpg";
-import floatingGuided from "@/assets/pattaya-boat-tour-1.jpg";
+import floatingGuided from "@/assets/pattaya-boat-tour-1.webp";
 import speedboat from "@/assets/pattaya-speedboat-1.jpg";
 import elephantSafari from "@/assets/elephant-1.jpg";
-import tigerSelfie from "@/assets/tiger-1.jpg";
+import tigerSelfie from "@/assets/tiger-1.webp";
 import safariWorld from "@/assets/elephant-safari-hero.jpg";
 
 const activityCards = [

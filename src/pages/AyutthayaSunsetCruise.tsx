@@ -2,7 +2,7 @@ import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivit
 import { AyutthayaSunsetCruiseSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { ayutthayaSunsetCruiseFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
-import ayutthayaRiverside1 from "@/assets/ayutthaya-riverside-1.jpg";
+import ayutthayaRiverside1 from "@/assets/ayutthaya-riverside-1.webp";
 import ayutthayaSunset1 from "@/assets/ayutthaya-sunset-1.jpg";
 import watArunTwilight1 from "@/assets/wat-arun-twilight-1.jpg";
 

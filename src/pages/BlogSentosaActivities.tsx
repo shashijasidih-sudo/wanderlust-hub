@@ -1,9 +1,9 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getBlogCityProps } from "@/data/blogCityLinks";
-import heroImg from "@/assets/singapore-universal-studios.jpg";
+import heroImg from "@/assets/singapore-universal-studios.webp";
 import sentosaImg from "@/assets/singapore-adventure-cove.jpg";
 import skyHelixImg from "@/assets/singapore-sky-helix.jpg";
-import wingsImg from "@/assets/singapore-wings-time.jpg";
+import wingsImg from "@/assets/singapore-wings-time.webp";
 
 const BlogSentosaActivities = () => {
   return (

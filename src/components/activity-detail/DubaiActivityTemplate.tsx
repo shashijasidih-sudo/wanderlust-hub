@@ -26,10 +26,10 @@ import dubaiSkylineSunset from "@/assets/dubai-skyline-sunset-1.jpg";
 import dubaiSkylineNight from "@/assets/dubai-skyline-night-1.jpg";
 import dubaiCityNight from "@/assets/dubai-city-night-1.jpg";
 import dubaiDesertWoman from "@/assets/dubai-desert-woman-1.jpg";
-import dubaiDesertCouple from "@/assets/dubai-desert-couple-1.jpg";
+import dubaiDesertCouple from "@/assets/dubai-desert-couple-1.webp";
 import dubaiDhowCruise from "@/assets/dubai-dhow-cruise-1.jpg";
-import dubaiFountain from "@/assets/dubai-fountain-show-1.jpg";
-import dubaiAquariumFish from "@/assets/dubai-aquarium-fish-1.jpg";
+import dubaiFountain from "@/assets/dubai-fountain-show-1.webp";
+import dubaiAquariumFish from "@/assets/dubai-aquarium-fish-1.webp";
 import dubaiGlobalVillage from "@/assets/dubai-global-village-1.jpg";
 import dubaiGlobalVillage2 from "@/assets/dubai-global-village-2.jpg";
 

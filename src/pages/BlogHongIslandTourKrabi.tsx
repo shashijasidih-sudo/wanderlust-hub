@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getKrabiInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/krabi-boat-tour-1.jpg";
+import heroImg from "@/assets/krabi-boat-tour-1.webp";
 
 const BlogHongIslandTourKrabi = () => (
   <BlogArticleLayout

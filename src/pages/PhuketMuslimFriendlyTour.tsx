@@ -1,9 +1,9 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
 import { toursData } from "@/data/tourData";
-import phuketMuslimWoman from "@/assets/phuket-muslim-woman-hijab.jpg";
+import phuketMuslimWoman from "@/assets/phuket-muslim-woman-hijab.webp";
 import phuketWaterfall from "@/assets/phuket-bang-pae-waterfall.jpg";
-import phuketMosque from "@/assets/phuket-mosque-bangTao.jpg";
-import phuketPlaneBeach from "@/assets/phuket-mai-khao-beach-plane.jpg";
+import phuketMosque from "@/assets/phuket-mosque-bangTao.webp";
+import phuketPlaneBeach from "@/assets/phuket-mai-khao-beach-plane.webp";
 
 const PhuketMuslimFriendlyTour = () => {
   const baseTourData = toursData["phuket-muslim-friendly-tour"];

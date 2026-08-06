@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/pattaya-nightlife-1.jpg";
+import heroImg from "@/assets/pattaya-nightlife-1.webp";
 
 const BlogPattayaNightlifeItinerary = () => (
   <BlogArticleLayout

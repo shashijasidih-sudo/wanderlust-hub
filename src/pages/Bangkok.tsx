@@ -15,13 +15,13 @@ import BookTransfersSection from "@/components/BookTransfersSection";
 import CityExploreLinks from "@/components/CityExploreLinks";
 
 // Import local assets
-import bangkokSkywalkHero from "@/assets/bangkok-skywalk-hero.jpg";
-import massageHero from "@/assets/massage-coupon-hero.jpg";
+import bangkokSkywalkHero from "@/assets/bangkok-skywalk-hero.webp";
+import massageHero from "@/assets/massage-coupon-hero.webp";
 import floatingMarket1 from "@/assets/floating-market-daylight-1.jpg";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import ayutthayaSunset1 from "@/assets/ayutthaya-sunset-1.jpg";
 import cruiseNight1 from "@/assets/cruise-night-1.jpg";
-import cruiseNight2 from "@/assets/cruise-night-2.jpg";
+import cruiseNight2 from "@/assets/cruise-night-2.webp";
 
 const activities = [
   // Temple & City Tours
@@ -219,6 +219,7 @@ const Bangkok = () => {
               {paginatedActivities.map((activity, index) => (
                 <ActivityCard
                   key={index}
+                  priority={index < 3}
                   {...activity}
                   isRecommended={index < 3}
                   viewMode={viewMode}

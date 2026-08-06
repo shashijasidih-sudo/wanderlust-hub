@@ -1,8 +1,8 @@
 import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTemplate";
 import { toursData } from "@/data/tourData";
 import { hongIslandsLongtailFaqs } from "@/data/krabiActivityFaqs";
-import hong2 from "@/assets/krabi-doc/hong-2.jpg";
-import hong3 from "@/assets/krabi-doc/hong-3.jpg";
+import hong2 from "@/assets/krabi-doc/hong-2.webp";
+import hong3 from "@/assets/krabi-doc/hong-3.webp";
 import hong1 from "@/assets/krabi-doc/hong-1.jpg";
 import krabiSpeedboat from "@/assets/krabi-speedboat-1.jpg";
 

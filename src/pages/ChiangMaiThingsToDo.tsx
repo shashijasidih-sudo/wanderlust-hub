@@ -25,11 +25,11 @@ import {
 } from "@/components/ui/breadcrumb";
 import { useCurrency } from "@/contexts/CurrencyContext";
 
-import chiangMaiCity from "@/assets/city-chiang-mai.jpg";
-import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.jpg";
+import chiangMaiCity from "@/assets/city-chiang-mai.webp";
+import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.webp";
 import goldenTriangle from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg";
-import inthanon from "@/assets/chiang-mai-doi-inthanon-1.jpg";
-import watChediLuang from "@/assets/chiang-mai-wat-chedi-luang-1.jpg";
+import inthanon from "@/assets/chiang-mai-doi-inthanon-1.webp";
+import watChediLuang from "@/assets/chiang-mai-wat-chedi-luang-1.webp";
 import CityExploreLinks from "@/components/CityExploreLinks";
 import RelatedArticles from "@/components/RelatedArticles";
 

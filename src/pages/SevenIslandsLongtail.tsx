@@ -2,9 +2,9 @@ import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTem
 import { toursData } from "@/data/tourData";
 import { SevenIslandsLongtailSEO } from "@/components/activity-detail/KrabiActivitySEO";
 import { sevenIslandsLongtailFaqs } from "@/data/krabiActivityFaqs";
-import seven1 from "@/assets/krabi-doc/seven-1.jpg";
-import seven2 from "@/assets/krabi-doc/seven-2.jpg";
-import seven3 from "@/assets/krabi-doc/seven-3.jpg";
+import seven1 from "@/assets/krabi-doc/seven-1.webp";
+import seven2 from "@/assets/krabi-doc/seven-2.webp";
+import seven3 from "@/assets/krabi-doc/seven-3.webp";
 import krabiSailboat from "@/assets/krabi-sailboat-1.jpg";
 
 const SevenIslandsLongtail = () => {

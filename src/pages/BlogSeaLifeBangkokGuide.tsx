@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-sea-life-aquarium.jpg";
+import heroImg from "@/assets/blog-sea-life-aquarium.webp";
 
 const BlogSeaLifeBangkokGuide = () => (
   <BlogArticleLayout

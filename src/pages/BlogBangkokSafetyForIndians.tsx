@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-bangkok-safety-india.jpg";
+import heroImg from "@/assets/blog-bangkok-safety-india.webp";
 
 const BlogBangkokSafetyForIndians = () => (
   <BlogArticleLayout

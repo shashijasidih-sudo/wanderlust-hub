@@ -118,11 +118,12 @@ const SingaporeTransfersNew = () => {
 
           {/* Transfers Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {filteredTransfers.map((transfer) => {
+            {filteredTransfers.map((transfer, index) => {
               const IconComponent = transfer.icon;
               return (
                 <TransferCard
                   key={transfer.id}
+                  priority={index < 3}
                   transfer={transfer}
                   badges={
                     <Badge className="absolute top-3 left-3 bg-primary text-primary-foreground">

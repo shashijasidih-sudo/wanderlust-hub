@@ -27,21 +27,21 @@ import coralIslandImg from "@/assets/pattaya-boats-beach-1.jpg";
 import alcazarImg from "@/assets/alcazar-show-1.jpg";
 import floatingMarketImg from "@/assets/floating-market-1.jpg";
 import floatingMarketDayImg from "@/assets/floating-market-daylight-1.jpg";
-import nongNoochImg from "@/assets/pattaya-lake-tour-1.jpg";
-import dolphinImg from "@/assets/dolphin-show-3.jpg";
+import nongNoochImg from "@/assets/pattaya-lake-tour-1.webp";
+import dolphinImg from "@/assets/dolphin-show-3.webp";
 import muayThaiImg from "@/assets/muay-thai-1.jpg";
 import bigBuddhaImg from "@/assets/pattaya-temple-woman-1.jpg";
-import nightlifeImg from "@/assets/pattaya-nightlife-1.jpg";
+import nightlifeImg from "@/assets/pattaya-nightlife-1.webp";
 import pubCrawlImg from "@/assets/pattaya-nightlife-2.jpg";
 
 /* Koh Samui assets */
 import fullMoonImg from "@/assets/koh-samui-full-moon-party-1.jpg";
-import loyKrathongImg from "@/assets/koh-samui-loy-krathong-cruise-1.jpg";
+import loyKrathongImg from "@/assets/koh-samui-loy-krathong-cruise-1.webp";
 
 /* Chiang Mai assets */
-import doiSuthepImg from "@/assets/chiang-mai-doi-suthep-1.jpg";
+import doiSuthepImg from "@/assets/chiang-mai-doi-suthep-1.webp";
 import goldenTriangleImg from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg";
-import doiInthanonImg from "@/assets/chiang-mai-doi-inthanon-1.jpg";
+import doiInthanonImg from "@/assets/chiang-mai-doi-inthanon-1.webp";
 
 const WHATSAPP = "917061710810";
 

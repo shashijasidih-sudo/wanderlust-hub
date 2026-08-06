@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-bangkok-cost-budget.jpg";
+import heroImg from "@/assets/blog-bangkok-cost-budget.webp";
 
 const BlogBangkokTripCost = () => (
   /* SEO — Primary: bangkok trip cost from india | Intent: Commercial */

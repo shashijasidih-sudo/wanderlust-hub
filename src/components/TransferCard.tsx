@@ -31,9 +31,10 @@ export interface TransferCardData {
 interface TransferCardProps {
   transfer: TransferCardData;
   badges?: React.ReactNode;
+  priority?: boolean;
 }
 
-const TransferCard = ({ transfer, badges }: TransferCardProps) => {
+const TransferCard = ({ transfer, badges, priority = false }: TransferCardProps) => {
   const { formatPrice } = useCurrency();
   const { addToCart } = useCart();
   const { toast } = useToast();
@@ -58,6 +59,7 @@ const TransferCard = ({ transfer, badges }: TransferCardProps) => {
       <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer h-full">
         <div className="relative h-48 overflow-hidden">
           <SafeImage
+            priority={priority}
             src={transfer.image}
             alt={transfer.title}
             width={600}

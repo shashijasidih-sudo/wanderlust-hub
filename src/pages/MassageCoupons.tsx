@@ -1,7 +1,7 @@
 import TourBooking from "@/components/TourBooking";
 import { massageCouponsFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
-import massageCouponHero from "@/assets/massage-coupon-hero.jpg";
+import massageCouponHero from "@/assets/massage-coupon-hero.webp";
 
 const MassageCoupons = () => {
   const tourData = {

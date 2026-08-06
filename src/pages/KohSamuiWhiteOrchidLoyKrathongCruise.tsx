@@ -1,9 +1,9 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
 import { kohSamuiLoyKrathongCruiseFaqs } from "@/data/kohSamuiActivityFaqs";
-import cruiseImg from "@/assets/koh-samui-loy-krathong-cruise-1.jpg";
-import bangkokCruise from "@/assets/bangkok-cruise-night-3.jpg";
-import valentineCruise from "@/assets/valentine-cruise-1.jpg";
+import cruiseImg from "@/assets/koh-samui-loy-krathong-cruise-1.webp";
+import bangkokCruise from "@/assets/bangkok-cruise-night-3.webp";
+import valentineCruise from "@/assets/valentine-cruise-1.webp";
 import cityImg from "@/assets/city-kohsamui.jpg";
 
 const config: ThaiActivityConfig = {

@@ -21,13 +21,13 @@ import {
   Leaf, CloudRain, Baby, ArrowRight, Camera,
 } from "lucide-react";
 
-import mayaBayImg from "@/assets/phuket-maya-bay-1.jpg";
-import jamesBondImg from "@/assets/james-bond-1.jpg";
-import tigerImg from "@/assets/tiger-1.jpg";
+import mayaBayImg from "@/assets/phuket-maya-bay-1.webp";
+import jamesBondImg from "@/assets/james-bond-1.webp";
+import tigerImg from "@/assets/tiger-1.webp";
 import elephantImg from "@/assets/elephant-1.jpg";
-import dolphinImg from "@/assets/dolphin-show-1.jpg";
-import nightMarketImg from "@/assets/phuket-night-market-1.jpg";
-import carnivalImg from "@/assets/phuket-carnival-1.jpg";
+import dolphinImg from "@/assets/dolphin-show-1.webp";
+import nightMarketImg from "@/assets/phuket-night-market-1.webp";
+import carnivalImg from "@/assets/phuket-carnival-1.webp";
 import bigBoatImg from "@/assets/phuket-big-boat-1.jpg";
 
 const WHATSAPP = "917061710810";

@@ -15,14 +15,14 @@ import {
 } from "lucide-react";
 
 import flyerHeroImg from "@/assets/singapore-flyer-twilight-1.jpg";
-import ussImg from "@/assets/singapore-universal-studios.jpg";
+import ussImg from "@/assets/singapore-universal-studios.webp";
 import nightSafariImg from "@/assets/singapore-night-safari.jpg";
-import wingsOfTimeImg from "@/assets/singapore-wings-time.jpg";
+import wingsOfTimeImg from "@/assets/singapore-wings-time.webp";
 import gardensImg from "@/assets/singapore-gardens-bay-night-1.jpg";
-import cableCarImg from "@/assets/singapore-cable-car.jpg";
+import cableCarImg from "@/assets/singapore-cable-car.webp";
 import cityTourImg from "@/assets/singapore-city-tour.jpg";
-import singaporeZooImg from "@/assets/singapore-zoo.jpg";
-import bigBusImg from "@/assets/singapore-big-bus.jpg";
+import singaporeZooImg from "@/assets/singapore-zoo.webp";
+import bigBusImg from "@/assets/singapore-big-bus.webp";
 
 const highlightsTable = [
   { emoji: "🎡", name: "Giant Observation Wheel", type: "165m Icon", best: "360° skyline views", time: "30 min rotation" },

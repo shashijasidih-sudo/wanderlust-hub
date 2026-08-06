@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getBlogCityProps } from "@/data/blogCityLinks";
-import heroImg from "@/assets/blog/thailand-adventure-2026/hero-thailand-adventure.jpg";
-import scubaKohTao from "@/assets/blog/thailand-adventure-2026/scuba-koh-tao.jpg";
-import scubaSimilan from "@/assets/blog/thailand-adventure-2026/scuba-similan.jpg";
-import snorkelKohLipe from "@/assets/blog/thailand-adventure-2026/snorkeling-koh-lipe.jpg";
-import trekDoi from "@/assets/blog/thailand-adventure-2026/trekking-doi-inthanon.jpg";
-import khaoSok from "@/assets/blog/thailand-adventure-2026/khao-sok-rainforest.jpg";
-import paiCanyon from "@/assets/blog/thailand-adventure-2026/pai-canyon.jpg";
-import railay from "@/assets/blog/thailand-adventure-2026/rock-climbing-railay.jpg";
-import maeTaeng from "@/assets/blog/thailand-adventure-2026/mae-taeng-rafting.jpg";
+import heroImg from "@/assets/blog/thailand-adventure-2026/hero-thailand-adventure.webp";
+import scubaKohTao from "@/assets/blog/thailand-adventure-2026/scuba-koh-tao.webp";
+import scubaSimilan from "@/assets/blog/thailand-adventure-2026/scuba-similan.webp";
+import snorkelKohLipe from "@/assets/blog/thailand-adventure-2026/snorkeling-koh-lipe.webp";
+import trekDoi from "@/assets/blog/thailand-adventure-2026/trekking-doi-inthanon.webp";
+import khaoSok from "@/assets/blog/thailand-adventure-2026/khao-sok-rainforest.webp";
+import paiCanyon from "@/assets/blog/thailand-adventure-2026/pai-canyon.webp";
+import railay from "@/assets/blog/thailand-adventure-2026/rock-climbing-railay.webp";
+import maeTaeng from "@/assets/blog/thailand-adventure-2026/mae-taeng-rafting.webp";
 import zipline from "@/assets/blog/thailand-adventure-2026/zipline-flight-of-gibbon.jpg";
 
 const BlogThailandAdventureActivities2026 = () => {

@@ -4,7 +4,7 @@ import { seaLifeMadameTussaudsFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokBridgeTwilight1 from "@/assets/bangkok-bridge-twilight-1.jpg";
 import bangkokCityNight1 from "@/assets/bangkok-city-night-1.jpg";
-import bangkokCityPurple1 from "@/assets/bangkok-city-purple-1.jpg";
+import bangkokCityPurple1 from "@/assets/bangkok-city-purple-1.webp";
 
 const SeaLifeMadameTussauds = () => {
   const tourData = {

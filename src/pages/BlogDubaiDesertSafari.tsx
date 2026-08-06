@@ -5,16 +5,16 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import heroImg from "@/assets/dubai-desert-couple-1.jpg";
+import heroImg from "@/assets/dubai-desert-couple-1.webp";
 import desertImg from "@/assets/dubai-desert-woman-1.jpg";
 import sunsetImg from "@/assets/dubai-skyline-sunset-1.jpg";
 import villageImg from "@/assets/dubai-global-village-1.jpg";
 import dubaiDhowCruise from "@/assets/dubai-dhow-cruise-1.jpg";
 import dubaiSkylineNight from "@/assets/dubai-skyline-night-1.jpg";
-import dubaiAquariumFish from "@/assets/dubai-aquarium-fish-1.jpg";
+import dubaiAquariumFish from "@/assets/dubai-aquarium-fish-1.webp";
 import dubaiCityNight from "@/assets/dubai-city-night-1.jpg";
 import dubaiDesertCouple2 from "@/assets/dubai-desert-couple-2.jpg";
-import dubaiFountainShow from "@/assets/dubai-fountain-show-1.jpg";
+import dubaiFountainShow from "@/assets/dubai-fountain-show-1.webp";
 
 const desertActivityCards = [
   { title: "Desert Safari with Sharing Transfer", location: "Lahbab Desert", image: dubaiDesertCouple2, slug: "/dubai/desert-safari-sharing/" },

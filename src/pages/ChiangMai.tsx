@@ -14,10 +14,10 @@ import SearchInput from "@/components/SearchInput";
 import BookTransfersSection from "@/components/BookTransfersSection";
 import CityExploreLinks from "@/components/CityExploreLinks";
 
-import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.jpg";
+import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.webp";
 import goldenTriangle from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg";
-import inthanon from "@/assets/chiang-mai-doi-inthanon-1.jpg";
-import van from "@/assets/chiang-mai-transfer-van-1.jpg";
+import inthanon from "@/assets/chiang-mai-doi-inthanon-1.webp";
+import van from "@/assets/chiang-mai-transfer-van-1.webp";
 
 const activities = [
   {
@@ -141,7 +141,7 @@ const ChiangMai = () => {
           <main className="flex-1">
             <div className={viewMode === 'grid' ? 'grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6' : 'space-y-6'}>
               {filteredActivities.map((activity, index) => (
-                <ActivityCard key={index} {...activity} isRecommended={index < 3} viewMode={viewMode} />
+                <ActivityCard key={index} {...activity} isRecommended={index < 3} priority={index < 3} viewMode={viewMode} />
               ))}
             </div>
           </main>

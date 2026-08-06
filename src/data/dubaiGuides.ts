@@ -1,11 +1,11 @@
-import desert from "@/assets/dubai-desert-couple-1.jpg";
+import desert from "@/assets/dubai-desert-couple-1.webp";
 import marina from "@/assets/dubai-dhow-cruise-1.jpg";
 import skylineNight from "@/assets/dubai-skyline-night-1.jpg";
 import skylineSunset from "@/assets/dubai-skyline-sunset-1.jpg";
-import fountain from "@/assets/dubai-fountain-show-1.jpg";
+import fountain from "@/assets/dubai-fountain-show-1.webp";
 import globalVillage from "@/assets/dubai-global-village-1.jpg";
 import cityNight from "@/assets/dubai-city-night-1.jpg";
-import aquarium from "@/assets/dubai-aquarium-fish-1.jpg";
+import aquarium from "@/assets/dubai-aquarium-fish-1.webp";
 
 export interface DubaiGuide {
   id: number;

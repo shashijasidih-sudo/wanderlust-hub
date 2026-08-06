@@ -2,10 +2,10 @@ import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityT
 import { PhuketCityTourSEO } from "@/components/activity-detail/PhuketActivitySEO";
 import { phuketCityTourFaqs } from "@/data/phuketActivityFaqs";
 import { toursData } from "@/data/tourData";
-import phuketNightMarket from "@/assets/phuket-night-market-1.jpg";
+import phuketNightMarket from "@/assets/phuket-night-market-1.webp";
 import phuketIslandView from "@/assets/phuket-island-viewpoint-1.jpg";
-import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
-import phuketMayaBay from "@/assets/phuket-maya-bay-1.jpg";
+import phuketBoatTour from "@/assets/phuket-boat-tour-1.webp";
+import phuketMayaBay from "@/assets/phuket-maya-bay-1.webp";
 
 const PhuketCityNightMarket = () => {
   const baseTourData = toursData["phuket-city-night-market"];

@@ -15,16 +15,16 @@ import {
   Leaf, CloudRain, Baby, ArrowRight, Camera,
 } from "lucide-react";
 
-import cityTour1 from "@/assets/singapore-doc/city-tour-1.jpg";
-import cityTour2 from "@/assets/singapore-doc/city-tour-2.jpg";
-import ussImg from "@/assets/singapore-universal-studios.jpg";
+import cityTour1 from "@/assets/singapore-doc/city-tour-1.webp";
+import cityTour2 from "@/assets/singapore-doc/city-tour-2.webp";
+import ussImg from "@/assets/singapore-universal-studios.webp";
 import nightSafariImg from "@/assets/singapore-night-safari.jpg";
-import wingsOfTimeImg from "@/assets/singapore-wings-time.jpg";
+import wingsOfTimeImg from "@/assets/singapore-wings-time.webp";
 import gardensImg from "@/assets/singapore-gardens-bay-night-1.jpg";
-import cableCarImg from "@/assets/singapore-cable-car.jpg";
+import cableCarImg from "@/assets/singapore-cable-car.webp";
 import flyerImg from "@/assets/singapore-flyer-twilight-1.jpg";
-import singaporeZooImg from "@/assets/singapore-zoo.jpg";
-import bigBusImg from "@/assets/singapore-big-bus.jpg";
+import singaporeZooImg from "@/assets/singapore-zoo.webp";
+import bigBusImg from "@/assets/singapore-big-bus.webp";
 
 const stops = [
   { emoji: "🦁", name: "Merlion Park", type: "Icon & Photo Stop", best: "Skyline photos", time: "20–25 min" },

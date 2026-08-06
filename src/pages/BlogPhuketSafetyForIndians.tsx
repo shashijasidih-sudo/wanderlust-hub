@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/blog-bangkok-safety-india.jpg";
+import heroImg from "@/assets/blog-bangkok-safety-india.webp";
 
 const BlogPhuketSafetyForIndians = () => (
   <BlogArticleLayout

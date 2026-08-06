@@ -4,7 +4,7 @@ import { baiyokeBuffetFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokCityNight1 from "@/assets/bangkok-city-night-1.jpg";
 import bangkokPagodaSunset1 from "@/assets/bangkok-pagoda-sunset-1.jpg";
-import bangkokCityPurple1 from "@/assets/bangkok-city-purple-1.jpg";
+import bangkokCityPurple1 from "@/assets/bangkok-city-purple-1.webp";
 
 const BaiyokeBuffet = () => {
   const tourData = {

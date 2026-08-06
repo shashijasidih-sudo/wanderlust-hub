@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-bangkok-sim-card.jpg";
+import heroImg from "@/assets/blog-bangkok-sim-card.webp";
 
 const BlogBangkokSimCardGuide = () => (
   <BlogArticleLayout

@@ -3,8 +3,8 @@ import { toursData } from "@/data/tourData";
 import { HongIslandsLongtailSEO } from "@/components/activity-detail/KrabiActivitySEO";
 import { hongIslandsLongtailFaqs } from "@/data/krabiActivityFaqs";
 import hong1 from "@/assets/krabi-doc/hong-1.jpg";
-import hong2 from "@/assets/krabi-doc/hong-2.jpg";
-import hong3 from "@/assets/krabi-doc/hong-3.jpg";
+import hong2 from "@/assets/krabi-doc/hong-2.webp";
+import hong3 from "@/assets/krabi-doc/hong-3.webp";
 import krabiLongtail from "@/assets/krabi-longtail-boats-1.jpg";
 
 const HongIslandsLongtail = () => {

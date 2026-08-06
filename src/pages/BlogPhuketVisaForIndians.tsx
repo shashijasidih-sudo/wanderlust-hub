@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/blog-bangkok-visa-india.jpg";
+import heroImg from "@/assets/blog-bangkok-visa-india.webp";
 
 const BlogPhuketVisaForIndians = () => (
   <BlogArticleLayout

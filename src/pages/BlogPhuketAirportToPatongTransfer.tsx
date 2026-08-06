@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/phuket-mai-khao-beach-plane.jpg";
+import heroImg from "@/assets/phuket-mai-khao-beach-plane.webp";
 
 const BlogPhuketAirportToPatongTransfer = () => (
   <BlogArticleLayout

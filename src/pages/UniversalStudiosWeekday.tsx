@@ -16,13 +16,13 @@ import {
 
 import gardensByTheBayImg from "@/assets/singapore-gardens-bay-night-1.jpg";
 import nightSafariImg from "@/assets/singapore-night-safari.jpg";
-import wingsOfTimeImg from "@/assets/singapore-wings-time.jpg";
+import wingsOfTimeImg from "@/assets/singapore-wings-time.webp";
 import airportTransferImg from "@/assets/singapore-city-tour.jpg";
-import cableCarImg from "@/assets/singapore-cable-car.jpg";
-import seaAquariumImg from "@/assets/blog-sea-life-aquarium.jpg";
-import singaporeZooImg from "@/assets/singapore-zoo.jpg";
+import cableCarImg from "@/assets/singapore-cable-car.webp";
+import seaAquariumImg from "@/assets/blog-sea-life-aquarium.webp";
+import singaporeZooImg from "@/assets/singapore-zoo.webp";
 import birdParadiseImg from "@/assets/singapore-river-safari.jpg";
-import ussHeroImg from "@/assets/singapore-universal-studios.jpg";
+import ussHeroImg from "@/assets/singapore-universal-studios.webp";
 
 const rides = [
   { emoji: "🚀", name: "Battlestar Galactica: CYLON", thrill: "⭐⭐⭐⭐⭐", type: "Inverted Roller Coaster", best: "Thrill Seekers" },
@@ -599,7 +599,7 @@ const UniversalStudiosWeekday = () => {
         title="Universal Studios Singapore Tickets with Hotel Transfers | Instant Confirmation"
         description="Book Universal Studios Singapore tickets with hotel transfers. Instant confirmation, INR pricing, Indian WhatsApp support, and easy cancellation. Trusted by 5,000+ Indian travellers."
         type="product"
-        image="https://yellodae.com/assets/singapore-universal-studios.jpg"
+        image="https://yellodae.com/assets/singapore-universal-studios.webp"
       />
       <TourBooking
         tourData={tourData}

@@ -8,20 +8,20 @@ import { MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import gardensBay from "@/assets/singapore-gardens-bay.jpg";
 import gardensBayNight from "@/assets/singapore-gardens-bay-night-1.jpg";
-import universalStudios from "@/assets/singapore-universal-studios.jpg";
+import universalStudios from "@/assets/singapore-universal-studios.webp";
 import nightSafari from "@/assets/singapore-night-safari.jpg";
-import sentosa4d from "@/assets/singapore-sentosa-4d.jpg";
-import cableCar from "@/assets/singapore-cable-car.jpg";
-import wingsTime from "@/assets/singapore-wings-time.jpg";
+import sentosa4d from "@/assets/singapore-sentosa-4d.webp";
+import cableCar from "@/assets/singapore-cable-car.webp";
+import wingsTime from "@/assets/singapore-wings-time.webp";
 import skyHelix from "@/assets/singapore-sky-helix.jpg";
 import riverCruise from "@/assets/singapore-river-cruise.jpg";
 import adventureCove from "@/assets/singapore-adventure-cove.jpg";
-import flyer from "@/assets/singapore-flyer.jpg";
+import flyer from "@/assets/singapore-flyer.webp";
 import riverSafari from "@/assets/singapore-river-safari.jpg";
-import zoo from "@/assets/singapore-zoo.jpg";
-import bigBus from "@/assets/singapore-big-bus.jpg";
+import zoo from "@/assets/singapore-zoo.webp";
+import bigBus from "@/assets/singapore-big-bus.webp";
 import cityTour from "@/assets/singapore-city-tour.jpg";
-import marinaBay from "@/assets/singapore-marina-bay-sands-night-1.jpg";
+import marinaBay from "@/assets/singapore-marina-bay-sands-night-1.webp";
 
 const activityCards = [
   { title: "Gardens by the Bay Tickets", location: "Marina Bay", image: gardensBay, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers/" },

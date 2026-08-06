@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/blog-bkk-airport-transfer.jpg";
+import heroImg from "@/assets/blog-bkk-airport-transfer.webp";
 
 const BlogSharedVsPrivateAirportTransferPhuket = () => (
   <BlogArticleLayout

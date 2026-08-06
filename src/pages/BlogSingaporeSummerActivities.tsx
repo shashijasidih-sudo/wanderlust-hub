@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getBlogCityProps } from "@/data/blogCityLinks";
-import heroImg from "@/assets/blog/singapore-summer-2026/hero-sentosa.jpg";
-import sentosaImg from "@/assets/blog/singapore-summer-2026/sentosa-island.jpg";
-import gardensImg from "@/assets/blog/singapore-summer-2026/gardens-by-the-bay.jpg";
-import nightSafariImg from "@/assets/blog/singapore-summer-2026/night-safari.jpg";
-import marinaBayImg from "@/assets/blog/singapore-summer-2026/marina-bay.jpg";
-import eastCoastImg from "@/assets/blog/singapore-summer-2026/east-coast-park.jpg";
-import clarkeQuayImg from "@/assets/blog/singapore-summer-2026/clarke-quay.jpg";
-import zooImg from "@/assets/blog/singapore-summer-2026/singapore-zoo.jpg";
-import macritchieImg from "@/assets/blog/singapore-summer-2026/macritchie.jpg";
-import mountFaberImg from "@/assets/blog/singapore-summer-2026/mount-faber.jpg";
+import heroImg from "@/assets/blog/singapore-summer-2026/hero-sentosa.webp";
+import sentosaImg from "@/assets/blog/singapore-summer-2026/sentosa-island.webp";
+import gardensImg from "@/assets/blog/singapore-summer-2026/gardens-by-the-bay.webp";
+import nightSafariImg from "@/assets/blog/singapore-summer-2026/night-safari.webp";
+import marinaBayImg from "@/assets/blog/singapore-summer-2026/marina-bay.webp";
+import eastCoastImg from "@/assets/blog/singapore-summer-2026/east-coast-park.webp";
+import clarkeQuayImg from "@/assets/blog/singapore-summer-2026/clarke-quay.webp";
+import zooImg from "@/assets/blog/singapore-summer-2026/singapore-zoo.webp";
+import macritchieImg from "@/assets/blog/singapore-summer-2026/macritchie.webp";
+import mountFaberImg from "@/assets/blog/singapore-summer-2026/mount-faber.webp";
 
 const BlogSingaporeSummerActivities = () => {
   useEffect(() => {

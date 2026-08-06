@@ -25,21 +25,21 @@ import {
 } from "@/components/ui/breadcrumb";
 import { useCurrency } from "@/contexts/CurrencyContext";
 
-import singaporeMarinaBay from "@/assets/singapore-marina-bay-sands-night-1.jpg";
+import singaporeMarinaBay from "@/assets/singapore-marina-bay-sands-night-1.webp";
 import singaporeCityTour from "@/assets/singapore-city-tour.jpg";
 import singaporeNightSafari from "@/assets/singapore-night-safari.jpg";
-import singaporeSentosa4d from "@/assets/singapore-sentosa-4d.jpg";
-import singaporeCableCar from "@/assets/singapore-cable-car.jpg";
-import singaporeWingsTime from "@/assets/singapore-wings-time.jpg";
+import singaporeSentosa4d from "@/assets/singapore-sentosa-4d.webp";
+import singaporeCableCar from "@/assets/singapore-cable-car.webp";
+import singaporeWingsTime from "@/assets/singapore-wings-time.webp";
 import singaporeSkyHelix from "@/assets/singapore-sky-helix.jpg";
 import singaporeRiverCruise from "@/assets/singapore-river-cruise.jpg";
 import singaporeGardensBay from "@/assets/singapore-gardens-bay-night-1.jpg";
 import singaporeAdventureCove from "@/assets/singapore-adventure-cove.jpg";
-import singaporeFlyer from "@/assets/singapore-flyer.jpg";
+import singaporeFlyer from "@/assets/singapore-flyer.webp";
 import singaporeRiverSafari from "@/assets/singapore-river-safari.jpg";
-import singaporeUniversalStudios from "@/assets/singapore-universal-studios.jpg";
-import singaporeZoo from "@/assets/singapore-zoo.jpg";
-import singaporeBigBus from "@/assets/singapore-big-bus.jpg";
+import singaporeUniversalStudios from "@/assets/singapore-universal-studios.webp";
+import singaporeZoo from "@/assets/singapore-zoo.webp";
+import singaporeBigBus from "@/assets/singapore-big-bus.webp";
 import CityExploreLinks from "@/components/CityExploreLinks";
 import RelatedArticles from "@/components/RelatedArticles";
 

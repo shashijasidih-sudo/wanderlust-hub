@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getJapanInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/japan-disneyland-1.jpg";
+import heroImg from "@/assets/japan-disneyland-1.webp";
 
 const BlogTokyoDisneylandTicketPriceGuide = () => (
   <BlogArticleLayout

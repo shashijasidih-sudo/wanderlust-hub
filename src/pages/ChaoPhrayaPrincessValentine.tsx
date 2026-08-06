@@ -3,8 +3,8 @@ import ChaoPhrayaPrincessValentineSEO from "@/components/activity-detail/ChaoPhr
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { toursData } from "@/data/tourData";
 import { chaoPhrayaPrincessFaqs } from "@/data/chaoPhrayaPrincessFaqs";
-import valentineCruise1 from "@/assets/valentine-cruise-1.jpg";
-import valentineCruise2 from "@/assets/valentine-cruise-2.jpg";
+import valentineCruise1 from "@/assets/valentine-cruise-1.webp";
+import valentineCruise2 from "@/assets/valentine-cruise-2.webp";
 import valentineCruise3 from "@/assets/valentine-cruise-3.jpg";
 
 const ChaoPhrayaPrincessValentine = () => {

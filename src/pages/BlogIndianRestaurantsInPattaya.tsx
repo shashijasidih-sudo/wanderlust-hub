@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/blog-bangkok-indian-food.jpg";
+import heroImg from "@/assets/blog-bangkok-indian-food.webp";
 
 const BlogIndianRestaurantsInPattaya = () => (
   <BlogArticleLayout

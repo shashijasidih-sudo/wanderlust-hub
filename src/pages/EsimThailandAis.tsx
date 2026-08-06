@@ -2,7 +2,7 @@ import TourBooking from "@/components/TourBooking";
 import { toursData } from "@/data/tourData";
 import esimThailand1 from "@/assets/esim-thailand-1.jpg";
 import esimThailand2 from "@/assets/esim-thailand-2.jpg";
-import esimThailand3 from "@/assets/esim-thailand-3.jpg";
+import esimThailand3 from "@/assets/esim-thailand-3.webp";
 
 const EsimThailandAis = () => {
   const tourData = {

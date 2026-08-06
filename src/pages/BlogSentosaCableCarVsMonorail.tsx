@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getSingaporeInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/singapore-cable-car.jpg";
+import heroImg from "@/assets/singapore-cable-car.webp";
 
 const LINK = "/singapore/destination-guides/comparison/sentosa-cable-car-vs-sentosa-monorail";
 

@@ -4,7 +4,7 @@ import { ayutthayaTempleTourFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
 import bangkokTemple3 from "@/assets/bangkok-temple-3.jpg";
-import ayutthayaRiverside1 from "@/assets/ayutthaya-riverside-1.jpg";
+import ayutthayaRiverside1 from "@/assets/ayutthaya-riverside-1.webp";
 import ayutthayaSunset1 from "@/assets/ayutthaya-sunset-1.jpg";
 
 const AyutthayaTempleTour = () => {

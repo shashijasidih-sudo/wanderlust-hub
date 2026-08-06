@@ -1,10 +1,10 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
 import { chiangMaiCityTempleTourFaqs } from "@/data/chiangMaiActivityFaqs";
-import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.jpg";
-import chediLuang from "@/assets/chiang-mai-wat-chedi-luang-1.jpg";
-import cityImg from "@/assets/city-chiang-mai.jpg";
-import vanImg from "@/assets/chiang-mai-transfer-van-1.jpg";
+import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.webp";
+import chediLuang from "@/assets/chiang-mai-wat-chedi-luang-1.webp";
+import cityImg from "@/assets/city-chiang-mai.webp";
+import vanImg from "@/assets/chiang-mai-transfer-van-1.webp";
 
 const config: ThaiActivityConfig = {
   path: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/",

@@ -2,10 +2,10 @@ import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTem
 import { toursData } from "@/data/tourData";
 import { JamesBondIslandKrabiSEO } from "@/components/activity-detail/KrabiActivitySEO";
 import { jamesBondIslandKrabiFaqs } from "@/data/krabiActivityFaqs";
-import jb1 from "@/assets/krabi-doc/james-bond-1.jpg";
-import jb2 from "@/assets/krabi-doc/james-bond-2.jpg";
-import jb3 from "@/assets/krabi-doc/james-bond-3.jpg";
-import krabiTourBoat from "@/assets/krabi-tour-boat-1.jpg";
+import jb1 from "@/assets/krabi-doc/james-bond-1.webp";
+import jb2 from "@/assets/krabi-doc/james-bond-2.webp";
+import jb3 from "@/assets/krabi-doc/james-bond-3.webp";
+import krabiTourBoat from "@/assets/krabi-tour-boat-1.webp";
 
 const JamesBondIslandKrabi = () => {
   const base = toursData["james-bond-island-krabi"];

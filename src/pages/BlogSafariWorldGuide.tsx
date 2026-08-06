@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import heroImg from "@/assets/blog-safari-world-lions.jpg";
-import giraffeImg from "@/assets/blog-giraffe-feeding.jpg";
+import giraffeImg from "@/assets/blog-giraffe-feeding.webp";
 
 const BlogSafariWorldGuide = () => (
   <BlogArticleLayout

@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImg from "@/assets/pattaya-boat-tour-1.jpg";
+import heroImg from "@/assets/pattaya-boat-tour-1.webp";
 
 const BlogPattaya3DaysTripCost = () => (
   <BlogArticleLayout

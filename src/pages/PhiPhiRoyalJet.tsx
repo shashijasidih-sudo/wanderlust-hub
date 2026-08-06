@@ -1,9 +1,9 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
 import { toursData } from "@/data/tourData";
-import phuketBoatTour from "@/assets/phuket-boat-tour-1.jpg";
+import phuketBoatTour from "@/assets/phuket-boat-tour-1.webp";
 import phiPhi1 from "@/assets/phi-phi-1.jpg";
 import phiPhi2 from "@/assets/phi-phi-2.jpg";
-import phiPhi3 from "@/assets/phi-phi-3.jpg";
+import phiPhi3 from "@/assets/phi-phi-3.webp";
 import phiPhi4 from "@/assets/phi-phi-4.jpg";
 import phiPhi5 from "@/assets/phi-phi-5.jpg";
 

@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getSingaporeInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/singapore-universal-studios.jpg";
+import heroImg from "@/assets/singapore-universal-studios.webp";
 
 const BlogSingapore3DaysItinerary = () => (
   <BlogArticleLayout

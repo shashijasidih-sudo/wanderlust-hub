@@ -192,9 +192,10 @@ const ThailandTransfers = () => {
 
         {/* Transfer Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredTransfers.map((transfer) => (
+          {filteredTransfers.map((transfer, index) => (
             <TransferCard
               key={transfer.id}
+              priority={index < 3}
               transfer={transfer}
               badges={
                 <>

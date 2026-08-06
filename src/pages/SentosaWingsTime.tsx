@@ -16,17 +16,17 @@ import {
   Leaf, CloudRain, Baby, ArrowRight,
 } from "lucide-react";
 
-import wt1 from "@/assets/singapore-doc/wings-time-1.jpg";
-import wt2 from "@/assets/singapore-doc/wings-time-2.jpg";
-import wt3 from "@/assets/singapore-doc/wings-time-3.jpg";
-import wingsHero from "@/assets/singapore-wings-time.jpg";
-import ussImg from "@/assets/singapore-universal-studios.jpg";
+import wt1 from "@/assets/singapore-doc/wings-time-1.webp";
+import wt2 from "@/assets/singapore-doc/wings-time-2.webp";
+import wt3 from "@/assets/singapore-doc/wings-time-3.webp";
+import wingsHero from "@/assets/singapore-wings-time.webp";
+import ussImg from "@/assets/singapore-universal-studios.webp";
 import gardensByTheBayImg from "@/assets/singapore-gardens-bay-night-1.jpg";
 import nightSafariImg from "@/assets/singapore-night-safari.jpg";
 import cityTourImg from "@/assets/singapore-city-tour.jpg";
-import cableCarImg from "@/assets/singapore-cable-car.jpg";
-import seaAquariumImg from "@/assets/blog-sea-life-aquarium.jpg";
-import singaporeZooImg from "@/assets/singapore-zoo.jpg";
+import cableCarImg from "@/assets/singapore-cable-car.webp";
+import seaAquariumImg from "@/assets/blog-sea-life-aquarium.webp";
+import singaporeZooImg from "@/assets/singapore-zoo.webp";
 import birdParadiseImg from "@/assets/singapore-river-safari.jpg";
 
 const HeroMeta = () => (
@@ -605,7 +605,7 @@ const SentosaWingsTime = () => {
         title="Wings of Time Sentosa Tickets with Hotel Transfers | Instant Confirmation"
         description="Book Wings of Time Sentosa tickets with hotel transfers. Standard & Premium seating, instant confirmation, INR pricing, Indian WhatsApp support and easy cancellation."
         type="product"
-        image="https://yellodae.com/assets/singapore-wings-time.jpg"
+        image="https://yellodae.com/assets/singapore-wings-time.webp"
       />
       <TourBooking
         tourData={tourData}

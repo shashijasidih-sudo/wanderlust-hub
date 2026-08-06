@@ -1,6 +1,6 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getSingaporeInternalLinks } from "@/data/blogInternalLinks";
-import heroImg from "@/assets/singapore-flyer.jpg";
+import heroImg from "@/assets/singapore-flyer.webp";
 
 const LINK = "/singapore/destination-guides/activity/singapore-flyer-observation-wheel";
 

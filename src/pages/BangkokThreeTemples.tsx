@@ -4,7 +4,7 @@ import { threeTemplesGrandPalaceFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokTemple2 from "@/assets/bangkok-temple-2.jpg";
 import bangkokTemple3 from "@/assets/bangkok-temple-3.jpg";
-import bangkokBuddha1 from "@/assets/bangkok-buddha-1.jpg";
+import bangkokBuddha1 from "@/assets/bangkok-buddha-1.webp";
 
 const BangkokThreeTemples = () => {
   const baseTourData = toursData["bangkok-three-temples"];

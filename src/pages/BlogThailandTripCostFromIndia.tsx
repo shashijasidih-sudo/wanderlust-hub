@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getBlogCityProps } from "@/data/blogCityLinks";
 import heroImg from "@/assets/hero-thailand-island.jpg";
-import phiPhi from "@/assets/phi-phi-3.jpg";
+import phiPhi from "@/assets/phi-phi-3.webp";
 import bangkokCity from "@/assets/bangkok-city-1.jpg";
 
 const BlogThailandTripCostFromIndia = () => {

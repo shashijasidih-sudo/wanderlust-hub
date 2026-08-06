@@ -17,9 +17,9 @@ import pattayaBoats from "@/assets/pattaya-boats-beach-1.jpg";
 import bangkokTemple from "@/assets/bangkok-temple-1.jpg";
 import singaporeGardens from "@/assets/singapore-gardens-bay-night-1.jpg";
 import singaporeFlyer from "@/assets/singapore-flyer-twilight-1.jpg";
-import singaporeMarina from "@/assets/singapore-marina-bay-sands-night-1.jpg";
+import singaporeMarina from "@/assets/singapore-marina-bay-sands-night-1.webp";
 import dubaiSkyline from "@/assets/dubai-skyline-night-1.jpg";
-import dubaiDesert from "@/assets/dubai-desert-couple-1.jpg";
+import dubaiDesert from "@/assets/dubai-desert-couple-1.webp";
 import dubaiCity from "@/assets/dubai-city-night-1.jpg";
 import heroImage from "@/assets/hero-beach.jpg";
 

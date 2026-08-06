@@ -3,7 +3,7 @@ import { CityGemsGallerySEO } from "@/components/activity-detail/BangkokActivity
 import { cityGemsGalleryFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
 import bangkokTemple1 from "@/assets/bangkok-temple-1.jpg";
-import bangkokBuddha1 from "@/assets/bangkok-buddha-1.jpg";
+import bangkokBuddha1 from "@/assets/bangkok-buddha-1.webp";
 import bangkokTemple4 from "@/assets/bangkok-temple-4.jpg";
 
 const BangkokCityGemsGallery = () => {

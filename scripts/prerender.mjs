@@ -44,7 +44,7 @@ const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
  */
 const LCP_ASSETS = {
   "/": {
-    desktop: "src/assets/hero-thailand-beach.webp",
+    desktop: "src/assets/hero-thailand-beach.jpg",
     mobile: "src/assets/hero-thailand-beach-mobile.webp",
   },
 };
