@@ -20,15 +20,24 @@ const SearchInput = ({ placeholder = "Search...", className = "", autoFocus = fa
   const searchRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
+  // The search index (tour + transfer data) is large; load it on demand so it
+  // never blocks first paint. Behaviour is identical once loaded.
   useEffect(() => {
+    let cancelled = false;
     if (searchQuery.length >= 1) {
-      const searchResults = fuzzySearchTours(searchQuery, 20, cityFilter);
-      setResults(searchResults);
-      setIsOpen(searchResults.length > 0);
+      import("@/lib/fuzzySearch").then(({ fuzzySearchTours }) => {
+        if (cancelled) return;
+        const searchResults = fuzzySearchTours(searchQuery, 20, cityFilter);
+        setResults(searchResults);
+        setIsOpen(searchResults.length > 0);
+      });
     } else {
       setResults([]);
       setIsOpen(false);
     }
+    return () => {
+      cancelled = true;
+    };
   }, [searchQuery, cityFilter]);
 
   useEffect(() => {
