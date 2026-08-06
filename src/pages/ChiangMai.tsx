@@ -141,7 +141,7 @@ const ChiangMai = () => {
           <main className="flex-1">
             <div className={viewMode === 'grid' ? 'grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6' : 'space-y-6'}>
               {filteredActivities.map((activity, index) => (
-                <ActivityCard key={index} {...activity} isRecommended={index < 3} viewMode={viewMode} />
+                <ActivityCard key={index} {...activity} isRecommended={index < 3} priority={index < 3} viewMode={viewMode} />
               ))}
             </div>
           </main>
