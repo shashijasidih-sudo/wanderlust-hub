@@ -17,7 +17,6 @@ interface Section {
 
 import krabiImg from "@/assets/city-krabi.jpg";
 import phuketImg from "@/assets/city-phuket.jpg";
-import bangkokImg from "@/assets/bangkok-city-1.jpg";
 import kohSamuiImg from "@/assets/koh-samui-beach-1.webp";
 import fourIslandImg from "@/assets/krabi-boat-tour-1.webp";
 import phiPhiImg from "@/assets/phi-phi-1.jpg";
@@ -31,9 +30,6 @@ import tokyoImg from "@/assets/japan-tokyo-city-1.webp";
 import kyotoImg from "@/assets/japan-kyoto-temple-1.webp";
 import fujiImg from "@/assets/japan-mount-fuji-1.webp";
 import alcazarImg from "@/assets/alcazar-show-1.jpg";
-import bigEyeImg from "@/assets/bigeye-show-pattaya-1.webp";
-import muayThaiImg from "@/assets/muay-thai-1.jpg";
-import pattayaNightImg from "@/assets/pattaya-nightlife-1.webp";
 import pattayaDolphinImg from "@/assets/dolphin-show-1.webp";
 import bangkokCruiseImg from "@/assets/bangkok-cruise-night-3.webp";
 import bangkokSkywalkImg from "@/assets/bangkok-skywalk-1.jpg";
