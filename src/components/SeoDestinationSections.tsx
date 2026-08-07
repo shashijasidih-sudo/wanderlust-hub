@@ -17,7 +17,6 @@ interface Section {
 
 import krabiImg from "@/assets/city-krabi.jpg";
 import phuketImg from "@/assets/city-phuket.jpg";
-import bangkokImg from "@/assets/bangkok-city-1.jpg";
 import kohSamuiImg from "@/assets/koh-samui-beach-1.webp";
 import fourIslandImg from "@/assets/krabi-boat-tour-1.webp";
 import phiPhiImg from "@/assets/phi-phi-1.jpg";
@@ -31,9 +30,6 @@ import tokyoImg from "@/assets/japan-tokyo-city-1.webp";
 import kyotoImg from "@/assets/japan-kyoto-temple-1.webp";
 import fujiImg from "@/assets/japan-mount-fuji-1.webp";
 import alcazarImg from "@/assets/alcazar-show-1.jpg";
-import bigEyeImg from "@/assets/bigeye-show-pattaya-1.webp";
-import muayThaiImg from "@/assets/muay-thai-1.jpg";
-import pattayaNightImg from "@/assets/pattaya-nightlife-1.webp";
 import pattayaDolphinImg from "@/assets/dolphin-show-1.webp";
 import bangkokCruiseImg from "@/assets/bangkok-cruise-night-3.webp";
 import bangkokSkywalkImg from "@/assets/bangkok-skywalk-1.jpg";
@@ -50,14 +46,26 @@ import chiangRaiImg from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg";
 const sections: Section[] = [
   {
     id: "thailand-travel",
-    heading: "Thailand Travel",
+    heading: "Exciting Thailand Guides",
     description:
-      "Explore Thailand itineraries, island tours, honeymoon packages and budget travel guides curated for Indian travelers.",
+      "Hand-picked Thailand travel guides from Krabi, Phuket, Koh Samui and Chiang Mai — itineraries, costs in INR and insider tips for Indian travelers.",
     cards: [
-      { title: "Krabi Guide", href: "/thailand/krabi/destination-guides/", image: krabiImg },
-      { title: "Phuket Guide", href: "/thailand/phuket/destination-guides/", image: phuketImg },
-      { title: "Bangkok Guide", href: "/thailand/bangkok/destination-guides/", image: bangkokImg },
-      { title: "Koh Samui Guide", href: "/thailand/koh-samui/destination-guides/", image: kohSamuiImg },
+      { title: "15 Best Things to Do in Krabi", href: "/thailand/krabi/destination-guides/activity/15-best-things-to-do-in-krabi/", image: krabiImg },
+      { title: "25 Best Things to Do in Phuket", href: "/thailand/phuket/destination-guides/activity/25-best-things-to-do-in-phuket-2026/", image: phuketImg },
+      { title: "Full Moon Party Guide for Indians", href: "/thailand/koh-samui/destination-guides/activity/full-moon-party-thailand-guide-for-indians/", image: kohSamuiImg },
+      { title: "Chiang Mai Tour Guide for Indians", href: "/thailand/chiang-mai/destination-guides/activity/chiang-mai-tour-guide-for-indians/", image: chiangRaiImg },
+    ],
+  },
+  {
+    id: "singapore-travel",
+    heading: "Trending Singapore Activities & Transfers",
+    description:
+      "Most-booked Singapore attractions and airport transfers — Universal Studios tickets, Night Safari and fixed-price Changi pickups and drop-offs.",
+    cards: [
+      { title: "Universal Studios Tickets", href: "/singapore/universal-studios-singapore-tickets-and-transfers/", image: universalImg },
+      { title: "Night Safari Guide", href: "/blog/night-safari-singapore-guide/", image: singaporeImg },
+      { title: "Changi Airport Pickup", href: "/singapore/singapore-airport-pickup/", image: singaporeCityImg },
+      { title: "Changi Airport Drop-off", href: "/singapore/singapore-airport-dropoff/", image: singaporeCityImg },
     ],
   },
   {
@@ -74,7 +82,7 @@ const sections: Section[] = [
   },
   {
     id: "phuket-tours",
-    heading: "Phuket Tours",
+    heading: "Phuket Amazing Travel Activities",
     description:
       "Best Phuket tours — Phi Phi speed boat tours, James Bond Island adventures and Phuket city sightseeing for Indian travelers.",
     cards: [
@@ -85,31 +93,20 @@ const sections: Section[] = [
     ],
   },
   {
-    id: "singapore-travel",
-    heading: "Singapore Travel",
+    id: "dubai-travel-activities",
+    heading: "Dubai Travel Activities",
     description:
-      "Plan your Singapore trip — curated itineraries, Universal Studios tickets and budget travel guides for Indian families and honeymooners.",
+      "Book Dubai's most loved experiences — desert safari, dhow cruises, Burj Khalifa views and family attractions with instant confirmation.",
     cards: [
-      { title: "Singapore Itinerary", href: "/singapore/destination-guides/", image: singaporeImg },
-      { title: "Universal Studios", href: "/singapore/universal-studios-singapore/", image: universalImg },
-      { title: "Budget Guide", href: "/blog/singapore-combo-pass/", image: singaporeCityImg },
-      { title: "Night Safari", href: "/blog/night-safari-singapore-guide/", image: kohSamuiImg },
+      { title: "Dubai Desert Safari", href: "/dubai/desert-safari/", image: dubaiDesertImg },
+      { title: "Dhow Cruise Marina", href: "/dubai/dhow-cruise-marina-upper-deck/", image: dubaiDhowImg },
+      { title: "Dubai City Tour + Mall", href: "/dubai/city-tour-mall/", image: dubaiCityImg },
+      { title: "Dubai Fountain Show", href: "/dubai/fountain-show/", image: dubaiFountainImg },
+      { title: "Dubai Aquarium & Penguin", href: "/dubai/aquarium-penguin/", image: dubaiAquariumImg },
+      { title: "Global Village Dubai", href: "/dubai/global-village/", image: dubaiGlobalVillageImg },
     ],
   },
-  {
-    id: "pattaya-shows",
-    heading: "Pattaya Shows & Nightlife",
-    description:
-      "Book Pattaya's most popular cabaret shows, live entertainment and nightlife tours with private transfers.",
-    cards: [
-      { title: "Alcazar Cabaret Show", href: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/", image: alcazarImg },
-      { title: "Tiffany's 89 Show", href: "/thailand/pattaya/89-show-pattaya-with-transfer/", image: pattayaNightImg },
-      { title: "Big Eye 99 Show", href: "/thailand/pattaya/99-show-pattaya-big-eye-with-transfer/", image: bigEyeImg },
-      { title: "Muay Thai Live", href: "/thailand/pattaya/muay-thai-boxing-show-pattaya/", image: muayThaiImg },
-      { title: "Pattaya Pub Crawl", href: "/thailand/pattaya/pattaya-pub-crawl-night-tour/", image: pattayaNightImg },
-      { title: "Pattaya Dolphinarium", href: "/thailand/pattaya/pattaya-dolphinarium-show-tickets/", image: pattayaDolphinImg },
-    ],
-  },
+
   {
     id: "phuket-shows-cruises",
     heading: "Phuket Cruises & Shows",
