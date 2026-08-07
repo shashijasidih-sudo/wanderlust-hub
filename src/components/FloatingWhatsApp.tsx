@@ -87,11 +87,12 @@ const FloatingWhatsApp = () => {
       {/* Toggle button */}
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className={`bg-[#25D366] hover:bg-[#20BD5A] text-white p-4 rounded-full shadow-lg transition-all hover:scale-110 ${
-          open ? "rotate-0" : ""
-        }`}
-        aria-label={open ? "Close WhatsApp menu" : "Open WhatsApp menu"}
+        className={`bg-[#25D366] hover:bg-[#20BD5A] text-white ${
+          open ? "p-4 rounded-full" : "px-4 py-3 rounded-full gap-2"
+        } flex items-center shadow-lg transition-all hover:scale-110`}
+        aria-label={open ? "Close WhatsApp menu" : "Message us on WhatsApp"}
       >
+
         {open ? (
           <X className="h-6 w-6" />
         ) : (
