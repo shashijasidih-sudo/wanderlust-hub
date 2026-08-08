@@ -102,8 +102,6 @@ const sections: Section[] = [
       { title: "Dhow Cruise Marina", href: "/dubai/dhow-cruise-marina-upper-deck/", image: dubaiDhowImg },
       { title: "Dubai City Tour + Mall", href: "/dubai/city-tour-mall/", image: dubaiCityImg },
       { title: "Dubai Fountain Show", href: "/dubai/fountain-show/", image: dubaiFountainImg },
-      { title: "Dubai Aquarium & Penguin", href: "/dubai/aquarium-penguin/", image: dubaiAquariumImg },
-      { title: "Global Village Dubai", href: "/dubai/global-village/", image: dubaiGlobalVillageImg },
     ],
   },
 
@@ -117,8 +115,6 @@ const sections: Section[] = [
       { title: "Maya Bay + Khai Speedboat", href: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/", image: phiPhiImg },
       { title: "Dolphin Show Phuket", href: "/thailand/phuket/dolphin-show-phuket-with-transfer/", image: pattayaDolphinImg },
       { title: "Simon Cabaret Show", href: "/thailand/phuket/simon-cabaret-show-with-transfer/", image: alcazarImg },
-      { title: "Carnival Magic Show", href: "/thailand/phuket/carnival-magic-show-tickets-with-transfer/", image: alcazarImg },
-      { title: "Phi Phi Big Boat Tour", href: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/", image: phiPhiImg },
     ],
   },
   {
@@ -134,39 +130,18 @@ const sections: Section[] = [
     ],
   },
   {
-    id: "dubai-experiences",
-    heading: "Dubai Experiences",
+    id: "airport-transfers",
+    heading: "Airport Transfers",
     description:
-      "Iconic Dubai experiences — Dhow cruises, desert safari and family-favourite attractions with instant confirmation.",
+      "Fixed-price airport pickups and drop-offs with professional drivers — Bangkok, Singapore, Dubai and Phuket.",
     cards: [
-      { title: "Dhow Cruise Marina", href: "/dubai/dhow-cruise-marina-upper-deck/", image: dubaiDhowImg },
-      { title: "Dhow Cruise Creek", href: "/dubai/dhow-cruise-creek-upper-deck/", image: dubaiDhowImg },
-      { title: "Dubai Miracle Garden", href: "/dubai/miracle-garden/", image: dubaiCityImg },
-      { title: "Dubai Fountain Show", href: "/dubai/fountain-show/", image: dubaiFountainImg },
-      { title: "Dubai Aquarium & Penguin", href: "/dubai/aquarium-penguin/", image: dubaiAquariumImg },
-      { title: "Global Village Dubai", href: "/dubai/global-village/", image: dubaiGlobalVillageImg },
-      { title: "Ferrari World Abu Dhabi", href: "/dubai/abu-dhabi-ferrari-world/", image: dubaiDesertImg },
-      { title: "Dubai City Tour + Mall", href: "/dubai/city-tour-mall/", image: dubaiCityImg },
+      { title: "Bangkok Transfers", href: "/thailand/bangkok-airport-transfers/", image: bangkokSkywalkImg },
+      { title: "Singapore Transfers", href: "/singapore/budget-airport-transfers/", image: singaporeCityImg },
+      { title: "Dubai Transfers", href: "/dubai/budget-airport-transfers/", image: dubaiSkylineImg },
+      { title: "Phuket Transfers", href: "/thailand/phuket-airport-transfers/", image: phuketImg },
     ],
   },
-  {
-    id: "dubai-airport-transfers",
-    heading: "Dubai Airport Transfers by Zone",
-    description:
-      "Fixed-price Dubai airport pickups and drop-offs across all 5 city zones — book by your hotel area.",
-    cards: [
-      { title: "Zone 1 Airport Pickup", href: "/dubai/airport-pickup-zone1/", image: dubaiSkylineImg },
-      { title: "Zone 1 Airport Drop-off", href: "/dubai/airport-dropoff-zone1/", image: dubaiSkylineImg },
-      { title: "Zone 2 Airport Pickup", href: "/dubai/airport-pickup-zone2/", image: dubaiSkylineImg },
-      { title: "Zone 2 Airport Drop-off", href: "/dubai/airport-dropoff-zone2/", image: dubaiSkylineImg },
-      { title: "Zone 3 Airport Pickup", href: "/dubai/airport-pickup-zone3/", image: dubaiSkylineImg },
-      { title: "Zone 3 Airport Drop-off", href: "/dubai/airport-dropoff-zone3/", image: dubaiSkylineImg },
-      { title: "Zone 4 Airport Pickup", href: "/dubai/airport-pickup-zone4/", image: dubaiSkylineImg },
-      { title: "Zone 4 Airport Drop-off", href: "/dubai/airport-dropoff-zone4/", image: dubaiSkylineImg },
-      { title: "Zone 5 Airport Pickup", href: "/dubai/airport-pickup-zone5/", image: dubaiSkylineImg },
-      { title: "Zone 5 Airport Drop-off", href: "/dubai/airport-dropoff-zone5/", image: dubaiSkylineImg },
-    ],
-  },
+
   {
     id: "krabi-more",
     heading: "More Krabi & Chiang Mai Adventures",
