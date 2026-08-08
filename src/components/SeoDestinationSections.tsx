@@ -6,7 +6,9 @@ interface CardLink {
   title: string;
   href: string;
   image: string;
+  external?: boolean;
 }
+
 
 interface Section {
   id: string;
