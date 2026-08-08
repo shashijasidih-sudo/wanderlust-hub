@@ -203,29 +203,45 @@ const SeoDestinationSections = () => {
               <p className="text-muted-foreground text-base md:text-lg">{s.description}</p>
             </header>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {s.cards.map((c) => (
-                <Link
-                  key={c.href}
-                  to={c.href}
-                  className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300"
-                  aria-label={`${s.heading} — ${c.title}`}
-                >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <SafeImage
-                      src={c.image}
-                      alt={`${c.title} - ${s.heading}`}
-                      loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-4">
-                    <div className="flex items-center justify-between w-full">
-                      <h3 className="text-white font-semibold text-sm md:text-base">{c.title}</h3>
-                      <ArrowRight className="h-4 w-4 text-white opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+              {s.cards.map((c) => {
+                const inner = (
+                  <>
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <SafeImage
+                        src={c.image}
+                        alt={`${c.title} - ${s.heading}`}
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
                     </div>
-                  </div>
-                </Link>
-              ))}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-4">
+                      <div className="flex items-center justify-between w-full">
+                        <h3 className="text-white font-semibold text-sm md:text-base">{c.title}</h3>
+                        <ArrowRight className="h-4 w-4 text-white opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                      </div>
+                    </div>
+                  </>
+                );
+                const cls =
+                  "group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300";
+                return c.external ? (
+                  <a
+                    key={c.href}
+                    href={c.href}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className={cls}
+                    aria-label={`${s.heading} — ${c.title}`}
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <Link key={c.href} to={c.href} className={cls} aria-label={`${s.heading} — ${c.title}`}>
+                    {inner}
+                  </Link>
+                );
+              })}
+
             </div>
           </article>
         ))}
