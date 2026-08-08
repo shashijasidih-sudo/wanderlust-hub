@@ -6,7 +6,9 @@ interface CardLink {
   title: string;
   href: string;
   image: string;
+  external?: boolean;
 }
+
 
 interface Section {
   id: string;
@@ -42,6 +44,15 @@ import dubaiGlobalVillageImg from "@/assets/dubai-global-village-1.jpg";
 import dubaiAquariumImg from "@/assets/dubai-aquarium-fish-1.webp";
 import dubaiSkylineImg from "@/assets/dubai-skyline-night-1.jpg";
 import chiangRaiImg from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg";
+import antiTheftAsset from "@/assets/anti-theft-gear.jpg.asset.json";
+
+const U = (id: string, w = 600) =>
+  `https://images.unsplash.com/${id}?w=${w}&auto=format&fit=crop&q=70`;
+
+const packSafetyImg = U("photo-1581553680321-4fffae59fccd");
+const packAirtagImg = U("photo-1491637639811-60e2756cc1c7");
+const packCubesImg = U("photo-1763380064985-6c99cbb9955d");
+
 
 const sections: Section[] = [
   {
@@ -69,6 +80,19 @@ const sections: Section[] = [
     ],
   },
   {
+    id: "you-must-pack-these",
+    heading: "You Must Pack These",
+    description:
+      "Traveller-tested packing picks — safety essentials, anti-theft backpacks, luggage trackers and compression bags.",
+    cards: [
+      { title: "Women Safety Essentials", href: "https://barnip.com/packing-lists/by-traveler/women-travelers/women-travel-safety-essentials", image: packSafetyImg, external: true },
+      { title: "Best Anti-Theft Backpacks", href: "https://barnip.com/travel-bags/backpacks/anti-theft-backpacks", image: antiTheftAsset.url, external: true },
+      { title: "Best Travel Airtags", href: "https://barnip.com/travel-gadgets/smart-travel-gear/airtags", image: packAirtagImg, external: true },
+      { title: "Must Have Compression Bags", href: "https://barnip.com/travel-bags/organizers/compression-bags", image: packCubesImg, external: true },
+    ],
+  },
+  {
+
     id: "krabi-activities",
     heading: "Krabi Activities",
     description:
@@ -102,8 +126,6 @@ const sections: Section[] = [
       { title: "Dhow Cruise Marina", href: "/dubai/dhow-cruise-marina-upper-deck/", image: dubaiDhowImg },
       { title: "Dubai City Tour + Mall", href: "/dubai/city-tour-mall/", image: dubaiCityImg },
       { title: "Dubai Fountain Show", href: "/dubai/fountain-show/", image: dubaiFountainImg },
-      { title: "Dubai Aquarium & Penguin", href: "/dubai/aquarium-penguin/", image: dubaiAquariumImg },
-      { title: "Global Village Dubai", href: "/dubai/global-village/", image: dubaiGlobalVillageImg },
     ],
   },
 
@@ -117,8 +139,6 @@ const sections: Section[] = [
       { title: "Maya Bay + Khai Speedboat", href: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/", image: phiPhiImg },
       { title: "Dolphin Show Phuket", href: "/thailand/phuket/dolphin-show-phuket-with-transfer/", image: pattayaDolphinImg },
       { title: "Simon Cabaret Show", href: "/thailand/phuket/simon-cabaret-show-with-transfer/", image: alcazarImg },
-      { title: "Carnival Magic Show", href: "/thailand/phuket/carnival-magic-show-tickets-with-transfer/", image: alcazarImg },
-      { title: "Phi Phi Big Boat Tour", href: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/", image: phiPhiImg },
     ],
   },
   {
@@ -134,39 +154,18 @@ const sections: Section[] = [
     ],
   },
   {
-    id: "dubai-experiences",
-    heading: "Dubai Experiences",
+    id: "airport-transfers",
+    heading: "Airport Transfers",
     description:
-      "Iconic Dubai experiences — Dhow cruises, desert safari and family-favourite attractions with instant confirmation.",
+      "Fixed-price airport pickups and drop-offs with professional drivers — Bangkok, Singapore, Dubai and Phuket.",
     cards: [
-      { title: "Dhow Cruise Marina", href: "/dubai/dhow-cruise-marina-upper-deck/", image: dubaiDhowImg },
-      { title: "Dhow Cruise Creek", href: "/dubai/dhow-cruise-creek-upper-deck/", image: dubaiDhowImg },
-      { title: "Dubai Miracle Garden", href: "/dubai/miracle-garden/", image: dubaiCityImg },
-      { title: "Dubai Fountain Show", href: "/dubai/fountain-show/", image: dubaiFountainImg },
-      { title: "Dubai Aquarium & Penguin", href: "/dubai/aquarium-penguin/", image: dubaiAquariumImg },
-      { title: "Global Village Dubai", href: "/dubai/global-village/", image: dubaiGlobalVillageImg },
-      { title: "Ferrari World Abu Dhabi", href: "/dubai/abu-dhabi-ferrari-world/", image: dubaiDesertImg },
-      { title: "Dubai City Tour + Mall", href: "/dubai/city-tour-mall/", image: dubaiCityImg },
+      { title: "Bangkok Transfers", href: "/thailand/bangkok-airport-transfers/", image: bangkokSkywalkImg },
+      { title: "Singapore Transfers", href: "/singapore/budget-airport-transfers/", image: singaporeCityImg },
+      { title: "Dubai Transfers", href: "/dubai/budget-airport-transfers/", image: dubaiSkylineImg },
+      { title: "Phuket Transfers", href: "/thailand/phuket-airport-transfers/", image: phuketImg },
     ],
   },
-  {
-    id: "dubai-airport-transfers",
-    heading: "Dubai Airport Transfers by Zone",
-    description:
-      "Fixed-price Dubai airport pickups and drop-offs across all 5 city zones — book by your hotel area.",
-    cards: [
-      { title: "Zone 1 Airport Pickup", href: "/dubai/airport-pickup-zone1/", image: dubaiSkylineImg },
-      { title: "Zone 1 Airport Drop-off", href: "/dubai/airport-dropoff-zone1/", image: dubaiSkylineImg },
-      { title: "Zone 2 Airport Pickup", href: "/dubai/airport-pickup-zone2/", image: dubaiSkylineImg },
-      { title: "Zone 2 Airport Drop-off", href: "/dubai/airport-dropoff-zone2/", image: dubaiSkylineImg },
-      { title: "Zone 3 Airport Pickup", href: "/dubai/airport-pickup-zone3/", image: dubaiSkylineImg },
-      { title: "Zone 3 Airport Drop-off", href: "/dubai/airport-dropoff-zone3/", image: dubaiSkylineImg },
-      { title: "Zone 4 Airport Pickup", href: "/dubai/airport-pickup-zone4/", image: dubaiSkylineImg },
-      { title: "Zone 4 Airport Drop-off", href: "/dubai/airport-dropoff-zone4/", image: dubaiSkylineImg },
-      { title: "Zone 5 Airport Pickup", href: "/dubai/airport-pickup-zone5/", image: dubaiSkylineImg },
-      { title: "Zone 5 Airport Drop-off", href: "/dubai/airport-dropoff-zone5/", image: dubaiSkylineImg },
-    ],
-  },
+
   {
     id: "krabi-more",
     heading: "More Krabi & Chiang Mai Adventures",
@@ -204,29 +203,45 @@ const SeoDestinationSections = () => {
               <p className="text-muted-foreground text-base md:text-lg">{s.description}</p>
             </header>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {s.cards.map((c) => (
-                <Link
-                  key={c.href}
-                  to={c.href}
-                  className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300"
-                  aria-label={`${s.heading} — ${c.title}`}
-                >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <SafeImage
-                      src={c.image}
-                      alt={`${c.title} - ${s.heading}`}
-                      loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-4">
-                    <div className="flex items-center justify-between w-full">
-                      <h3 className="text-white font-semibold text-sm md:text-base">{c.title}</h3>
-                      <ArrowRight className="h-4 w-4 text-white opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+              {s.cards.map((c) => {
+                const inner = (
+                  <>
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <SafeImage
+                        src={c.image}
+                        alt={`${c.title} - ${s.heading}`}
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
                     </div>
-                  </div>
-                </Link>
-              ))}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-4">
+                      <div className="flex items-center justify-between w-full">
+                        <h3 className="text-white font-semibold text-sm md:text-base">{c.title}</h3>
+                        <ArrowRight className="h-4 w-4 text-white opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                      </div>
+                    </div>
+                  </>
+                );
+                const cls =
+                  "group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300";
+                return c.external ? (
+                  <a
+                    key={c.href}
+                    href={c.href}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className={cls}
+                    aria-label={`${s.heading} — ${c.title}`}
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <Link key={c.href} to={c.href} className={cls} aria-label={`${s.heading} — ${c.title}`}>
+                    {inner}
+                  </Link>
+                );
+              })}
+
             </div>
           </article>
         ))}
