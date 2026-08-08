@@ -69,6 +69,19 @@ const sections: Section[] = [
     ],
   },
   {
+    id: "you-must-pack-these",
+    heading: "You Must Pack These",
+    description:
+      "Traveller-tested packing picks — safety essentials, anti-theft backpacks, luggage trackers and compression bags.",
+    cards: [
+      { title: "Women Safety Essentials", href: "https://barnip.com/packing-lists/by-traveler/women-travelers/women-travel-safety-essentials", image: packSafetyImg, external: true },
+      { title: "Best Anti-Theft Backpacks", href: "https://barnip.com/travel-bags/backpacks/anti-theft-backpacks", image: antiTheftAsset.url, external: true },
+      { title: "Best Travel Airtags", href: "https://barnip.com/travel-gadgets/smart-travel-gear/airtags", image: packAirtagImg, external: true },
+      { title: "Must Have Compression Bags", href: "https://barnip.com/travel-bags/organizers/compression-bags", image: packCubesImg, external: true },
+    ],
+  },
+  {
+
     id: "krabi-activities",
     heading: "Krabi Activities",
     description:
