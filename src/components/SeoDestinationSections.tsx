@@ -44,6 +44,15 @@ import dubaiGlobalVillageImg from "@/assets/dubai-global-village-1.jpg";
 import dubaiAquariumImg from "@/assets/dubai-aquarium-fish-1.webp";
 import dubaiSkylineImg from "@/assets/dubai-skyline-night-1.jpg";
 import chiangRaiImg from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg";
+import antiTheftAsset from "@/assets/anti-theft-gear.jpg.asset.json";
+
+const U = (id: string, w = 600) =>
+  `https://images.unsplash.com/${id}?w=${w}&auto=format&fit=crop&q=70`;
+
+const packSafetyImg = U("photo-1581553680321-4fffae59fccd");
+const packAirtagImg = U("photo-1491637639811-60e2756cc1c7");
+const packCubesImg = U("photo-1763380064985-6c99cbb9955d");
+
 
 const sections: Section[] = [
   {
