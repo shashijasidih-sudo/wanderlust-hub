@@ -1,4 +1,6 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
+import PhuketTourItinerary from "@/components/activity-detail/PhuketTourItinerary";
+import { phuketSheetContent } from "@/data/phuketSheetContent";
 import { PhuketCityTourSEO } from "@/components/activity-detail/PhuketActivitySEO";
 import { phuketCityTourFaqs } from "@/data/phuketActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -26,10 +28,17 @@ const PhuketCityNightMarket = () => {
       { src: phuketMayaBay, alt: "Promthep Cape sunset" },
     ],
   };
+  const sheet = phuketSheetContent["phuket-city-night-market"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <PhuketActivityTemplate
-      tourData={tourData}
-      config={{
+      tourData={pageTourData}
+      contentAfterOverview={<PhuketTourItinerary tourKey="phuket-city-night-market" />}
+      config={
         path: "/thailand/phuket/phuket-night-market-tour-with-transfer/",
         seoTitle: "Phuket City & Night Market Tour with Transfers | Book in INR",
         seoDescription: "Book the Phuket city tour with night market and hotel transfers. Big Buddha, Old Town and street food. Instant confirmation with INR pricing.",

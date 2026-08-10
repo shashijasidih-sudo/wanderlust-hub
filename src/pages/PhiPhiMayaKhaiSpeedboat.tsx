@@ -1,4 +1,6 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
+import PhuketTourItinerary from "@/components/activity-detail/PhuketTourItinerary";
+import { phuketSheetContent } from "@/data/phuketSheetContent";
 import { toursData } from "@/data/tourData";
 import phuketSpeedboat from "@/assets/phuket-speedboat-1.jpg";
 import phuketMayaBay from "@/assets/phuket-maya-bay-1.webp";
@@ -25,10 +27,17 @@ const PhiPhiMayaKhaiSpeedboat = () => {
       { src: phiPhi1, alt: "Snorkelling with fish" },
     ],
   };
+  const sheet = phuketSheetContent["phi-phi-maya-khai-speedboat"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <PhuketActivityTemplate
-      tourData={tourData}
-      config={{
+      tourData={pageTourData}
+      contentAfterOverview={<PhuketTourItinerary tourKey="phi-phi-maya-khai-speedboat" />}
+      config={
         path: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/",
         seoTitle: "Phi Phi, Maya Bay & Khai Island Speedboat Tour | Book in INR",
         seoDescription: "Book the Phi Phi, Maya Bay and Khai Island speedboat tour from Phuket with hotel transfers, snorkelling and lunch. Instant confirmation and INR pricing.",

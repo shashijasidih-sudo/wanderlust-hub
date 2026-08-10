@@ -1,4 +1,6 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
+import PhuketTourItinerary from "@/components/activity-detail/PhuketTourItinerary";
+import { phuketSheetContent } from "@/data/phuketSheetContent";
 import { toursData } from "@/data/tourData";
 import phuketMuslimWoman from "@/assets/phuket-muslim-woman-hijab.webp";
 import phuketWaterfall from "@/assets/phuket-bang-pae-waterfall.jpg";
@@ -23,10 +25,17 @@ const PhuketMuslimFriendlyTour = () => {
       { src: phuketPlaneBeach, alt: "Mai Khao Beach with airplane" },
     ],
   };
+  const sheet = phuketSheetContent["phuket-muslim-friendly-tour"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <PhuketActivityTemplate
-      tourData={tourData}
-      config={{
+      tourData={pageTourData}
+      contentAfterOverview={<PhuketTourItinerary tourKey="phuket-muslim-friendly-tour" />}
+      config={
         path: "/thailand/phuket/muslim-friendly-tour/",
         seoTitle: "Muslim-Friendly Phuket Tour with Halal Food & Transfers | INR",
         seoDescription: "Book a Muslim-friendly Phuket tour with mosque visits, halal food stops, waterfalls and hotel transfers. Instant confirmation and INR pricing.",

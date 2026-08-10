@@ -1,4 +1,6 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
+import PhuketTourItinerary from "@/components/activity-detail/PhuketTourItinerary";
+import { phuketSheetContent } from "@/data/phuketSheetContent";
 import { toursData } from "@/data/tourData";
 import jamesBond1 from "@/assets/james-bond-1.webp";
 import jamesBond2 from "@/assets/james-bond-2.jpg";
@@ -25,10 +27,17 @@ const JamesBondIsland = () => {
       { src: phuketBoatTour, alt: "Koh Panyee floating village" },
     ],
   };
+  const sheet = phuketSheetContent["james-bond-island"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <PhuketActivityTemplate
-      tourData={tourData}
-      config={{
+      tourData={pageTourData}
+      contentAfterOverview={<PhuketTourItinerary tourKey="james-bond-island" />}
+      config={
         path: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/",
         seoTitle: "James Bond Island Speedboat Tour from Phuket | Book in INR",
         seoDescription: "Book the James Bond Island speedboat tour from Phuket with hotel transfers, Phang Nga Bay canoeing, Koh Panyee lunch and instant confirmation in INR.",

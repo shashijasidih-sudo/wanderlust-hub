@@ -1,4 +1,6 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
+import PhuketTourItinerary from "@/components/activity-detail/PhuketTourItinerary";
+import { phuketSheetContent } from "@/data/phuketSheetContent";
 import { toursData } from "@/data/tourData";
 import dolphinShow1 from "@/assets/dolphin-show-1.webp";
 import dolphinShow2 from "@/assets/dolphin-show-2.jpg";
@@ -23,10 +25,17 @@ const DolphinBayPhuket = () => {
       { src: phuketNightMarket, alt: "Family evening out in Phuket" },
     ],
   };
+  const sheet = phuketSheetContent["dolphin-bay-phuket"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <PhuketActivityTemplate
-      tourData={tourData}
-      config={{
+      tourData={pageTourData}
+      contentAfterOverview={<PhuketTourItinerary tourKey="dolphin-bay-phuket" />}
+      config={
         path: "/thailand/phuket/dolphin-show-phuket-with-transfer/",
         seoTitle: "Dolphin Show Phuket Tickets with Transfers | Book in INR",
         seoDescription: "Book Dolphin Show Phuket tickets with hotel transfers. Dolphin and seal performances loved by Indian families. Instant confirmation and INR pricing.",

@@ -1,4 +1,6 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
+import PhuketTourItinerary from "@/components/activity-detail/PhuketTourItinerary";
+import { phuketSheetContent } from "@/data/phuketSheetContent";
 import { toursData } from "@/data/tourData";
 import phuketAtv from "@/assets/phuket-atv-1.jpg";
 import phuketTiger from "@/assets/phuket-tiger-1.webp";
@@ -23,10 +25,17 @@ const SelfieWithTigerATV = () => {
       { src: phuketIslandView, alt: "Jungle trail views" },
     ],
   };
+  const sheet = phuketSheetContent["selfie-tigers-atv"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <PhuketActivityTemplate
-      tourData={tourData}
-      config={{
+      tourData={pageTourData}
+      contentAfterOverview={<PhuketTourItinerary tourKey="selfie-tigers-atv" />}
+      config={
         path: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer/",
         seoTitle: "Tiger Kingdom & ATV Experience Phuket with Transfers | INR",
         seoDescription: "Book Tiger Kingdom Phuket with an ATV jungle ride and hotel transfers. Tiger photo session plus off-road adventure. Instant confirmation in INR.",

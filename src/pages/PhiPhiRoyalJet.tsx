@@ -1,4 +1,6 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
+import PhuketTourItinerary from "@/components/activity-detail/PhuketTourItinerary";
+import { phuketSheetContent } from "@/data/phuketSheetContent";
 import { toursData } from "@/data/tourData";
 import phuketBoatTour from "@/assets/phuket-boat-tour-1.webp";
 import phiPhi1 from "@/assets/phi-phi-1.jpg";
@@ -25,10 +27,17 @@ const PhiPhiRoyalJet = () => {
       { src: phiPhi1, alt: "VIP island experience" },
     ],
   };
+  const sheet = phuketSheetContent["phi-phi-royal-jet"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <PhuketActivityTemplate
-      tourData={tourData}
-      config={{
+      tourData={pageTourData}
+      contentAfterOverview={<PhuketTourItinerary tourKey="phi-phi-royal-jet" />}
+      config={
         path: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/",
         seoTitle: "Phi Phi Premium Speedboat Tour from Phuket | Book in INR",
         seoDescription: "Book the premium Phi Phi Island speedboat tour from Phuket with private transfers, smaller groups and gourmet lunch. Instant confirmation in INR.",
