@@ -412,6 +412,7 @@ const BlogDolphinShowPhuket = lazy(() => import("./pages/BlogDolphinShowPhuket")
 const BlogBigBuddhaPhuketGuide = lazy(() => import("./pages/BlogBigBuddhaPhuketGuide"));
 const BlogJamesBondIslandTour = lazy(() => import("./pages/BlogJamesBondIslandTour"));
 const BlogPhuketCityTourGuide = lazy(() => import("./pages/BlogPhuketCityTourGuide"));
+const BlogPhuketCityTourTigerKingdomTransferGuide = lazy(() => import("./pages/BlogPhuketCityTourTigerKingdomTransferGuide"));
 const BlogPhuketSnorkelingGuide = lazy(() => import("./pages/BlogPhuketSnorkelingGuide"));
 const Blog25BestThingsToDoPhuket = lazy(() => import("./pages/Blog25BestThingsToDoPhuket"));
 const BlogPhuket4DaysItinerary = lazy(() => import("./pages/BlogPhuket4DaysItinerary"));
@@ -726,6 +727,8 @@ const App = () => (
            <Route path="/thailand/pattaya/destination-guides/transfer/private-vs-shared-transfers-pattaya/" element={<BlogPrivateVsSharedTransfersPattaya />} />
             <Route path="/blog/airport-transfer-booking-thailand/" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand/" element={<BlogPhiPhiIslandTours />} />
+            <Route path="/blog/phuket-city-tour-tiger-kingdom-transfer-guide/" element={<BlogPhuketCityTourTigerKingdomTransferGuide />} />
+            <Route path="/blog/phuket-city-tour-tiger-kingdom-transfer-guide" element={<BlogPhuketCityTourTigerKingdomTransferGuide />} />
             <Route path="/blog/best-thailand-activities/" element={<BlogBestThailandActivities />} />
             <Route path="/blog/thailand-adventure-activities-2026/" element={<BlogThailandAdventureActivities2026 />} />
             <Route path="/blog/singapore-summer-activities/" element={<BlogSingaporeSummerActivities />} />

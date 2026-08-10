@@ -166,6 +166,12 @@ export const phuketBlogs: PhuketBlogEntry[] = [
     link: "/thailand/phuket/destination-guides/activity/phuket-city-tour-guide/",
   },
   {
+    title: "Phuket City Tour with Tiger Kingdom & Transfer: Complete Guide for Indians",
+    description: "Discover Tiger Kingdom, Wat Chalong, Big Buddha, Karon Viewpoint and local experiences with this complete Phuket sightseeing guide for Indian travellers.",
+    category: "activity", image: imgBigBuddha, date: "Aug 10, 2026", readTime: "12 min read",
+    link: "/blog/phuket-city-tour-tiger-kingdom-transfer-guide/",
+  },
+  {
     title: "Snorkeling in Phuket: Best Spots, Tours & Cost Guide (2026)",
     description: "Best snorkeling spots in Phuket 2026 — Coral Island, Phi Phi reefs, Khai Islands — tour options and cost in INR.",
     category: "activity", image: imgSnorkeling, date: "May 7, 2026", readTime: "10 min read",
