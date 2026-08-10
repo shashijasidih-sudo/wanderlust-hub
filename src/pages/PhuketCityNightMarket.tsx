@@ -6,8 +6,8 @@ import { phuketCityTourFaqs } from "@/data/phuketActivityFaqs";
 import { toursData } from "@/data/tourData";
 import phuketNightMarket from "@/assets/phuket-night-market-1.webp";
 import phuketIslandView from "@/assets/phuket-island-viewpoint-1.jpg";
-import phuketBoatTour from "@/assets/phuket-boat-tour-1.webp";
-import phuketMayaBay from "@/assets/phuket-maya-bay-1.webp";
+import phuketWatChalong from "@/assets/phuket-wat-chalong-1.webp";
+import phuketBigBuddha from "@/assets/phuket-big-buddha-1.webp";
 
 const PhuketCityNightMarket = () => {
   const baseTourData = toursData["phuket-city-night-market"];
@@ -18,14 +18,14 @@ const PhuketCityNightMarket = () => {
     heroImages: [
       { src: phuketNightMarket, title: "Phuket City & Night Market Tour" },
       { src: phuketIslandView, title: "Big Buddha Sunset Views" },
-      { src: phuketBoatTour, title: "Phuket Old Town" },
-      { src: phuketMayaBay, title: "Coastal Viewpoints" },
+      { src: phuketWatChalong, title: "Chalong Temple" },
+      { src: phuketBigBuddha, title: "Big Buddha Phuket" },
     ],
     galleryImages: [
       { src: phuketNightMarket, alt: "Night market stalls and lanterns" },
-      { src: phuketBoatTour, alt: "Sino-Portuguese Old Town" },
+      { src: phuketWatChalong, alt: "Chalong Temple in Phuket" },
       { src: phuketIslandView, alt: "Big Buddha landmark" },
-      { src: phuketMayaBay, alt: "Promthep Cape sunset" },
+      { src: phuketBigBuddha, alt: "Big Buddha viewpoint" },
     ],
   };
   const sheet = phuketSheetContent["phuket-city-night-market"];
