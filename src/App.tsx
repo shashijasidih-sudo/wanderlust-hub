@@ -412,6 +412,7 @@ const BlogDolphinShowPhuket = lazy(() => import("./pages/BlogDolphinShowPhuket")
 const BlogBigBuddhaPhuketGuide = lazy(() => import("./pages/BlogBigBuddhaPhuketGuide"));
 const BlogJamesBondIslandTour = lazy(() => import("./pages/BlogJamesBondIslandTour"));
 const BlogPhuketCityTourGuide = lazy(() => import("./pages/BlogPhuketCityTourGuide"));
+const BlogPhuketCityTourTigerKingdomTransferGuide = lazy(() => import("./pages/BlogPhuketCityTourTigerKingdomTransferGuide"));
 const BlogPhuketSnorkelingGuide = lazy(() => import("./pages/BlogPhuketSnorkelingGuide"));
 const Blog25BestThingsToDoPhuket = lazy(() => import("./pages/Blog25BestThingsToDoPhuket"));
 const BlogPhuket4DaysItinerary = lazy(() => import("./pages/BlogPhuket4DaysItinerary"));
