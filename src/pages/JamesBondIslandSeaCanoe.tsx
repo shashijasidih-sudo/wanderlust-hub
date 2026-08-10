@@ -39,7 +39,7 @@ const JamesBondIslandSeaCanoe = () => {
     <PhuketActivityTemplate
       tourData={pageTourData}
       contentAfterOverview={<PhuketTourItinerary tourKey="james-bond-island-sea-canoe" />}
-      config={
+      config={{
         path: "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer/",
         seoTitle: "James Bond Island Sea Canoe Tour from Phuket | Book in INR",
         seoDescription: "Book the James Bond Island sea canoe tour by long-tail boat from Phuket with hotel transfers, cave canoeing and lunch. Instant confirmation in INR.",

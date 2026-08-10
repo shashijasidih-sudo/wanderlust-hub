@@ -35,7 +35,7 @@ const DolphinBayPhuket = () => {
     <PhuketActivityTemplate
       tourData={pageTourData}
       contentAfterOverview={<PhuketTourItinerary tourKey="dolphin-bay-phuket" />}
-      config={
+      config={{
         path: "/thailand/phuket/dolphin-show-phuket-with-transfer/",
         seoTitle: "Dolphin Show Phuket Tickets with Transfers | Book in INR",
         seoDescription: "Book Dolphin Show Phuket tickets with hotel transfers. Dolphin and seal performances loved by Indian families. Instant confirmation and INR pricing.",

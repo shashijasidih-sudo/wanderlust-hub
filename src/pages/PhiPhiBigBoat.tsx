@@ -41,7 +41,7 @@ const PhiPhiBigBoat = () => {
     <PhuketActivityTemplate
       tourData={pageTourData}
       contentAfterOverview={<PhuketTourItinerary tourKey="phi-phi-big-boat" />}
-      config={
+      config={{
         path: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/",
         seoTitle: "Phi Phi Island Big Boat Tour from Phuket | Book in INR",
         seoDescription: "Book the Phi Phi Island big boat tour from Phuket with hotel transfers, buffet lunch and snorkelling. Smooth ride, ideal for families. INR pricing.",

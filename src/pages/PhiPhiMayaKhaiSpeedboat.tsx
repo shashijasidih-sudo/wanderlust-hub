@@ -37,7 +37,7 @@ const PhiPhiMayaKhaiSpeedboat = () => {
     <PhuketActivityTemplate
       tourData={pageTourData}
       contentAfterOverview={<PhuketTourItinerary tourKey="phi-phi-maya-khai-speedboat" />}
-      config={
+      config={{
         path: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/",
         seoTitle: "Phi Phi, Maya Bay & Khai Island Speedboat Tour | Book in INR",
         seoDescription: "Book the Phi Phi, Maya Bay and Khai Island speedboat tour from Phuket with hotel transfers, snorkelling and lunch. Instant confirmation and INR pricing.",
