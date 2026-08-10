@@ -1,4 +1,6 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
+import PhuketTourItinerary from "@/components/activity-detail/PhuketTourItinerary";
+import { phuketSheetContent } from "@/data/phuketSheetContent";
 import { JamesBondSeaCanoeSEO } from "@/components/activity-detail/PhuketActivitySEO";
 import { jamesBondSeaCanoeFaqs } from "@/data/phuketActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -27,9 +29,16 @@ const JamesBondIslandSeaCanoe = () => {
       { src: jamesBond2, alt: "Limestone karsts" },
     ],
   };
+  const sheet = phuketSheetContent["james-bond-island-sea-canoe"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <PhuketActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<PhuketTourItinerary tourKey="james-bond-island-sea-canoe" />}
       config={{
         path: "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer/",
         seoTitle: "James Bond Island Sea Canoe Tour from Phuket | Book in INR",

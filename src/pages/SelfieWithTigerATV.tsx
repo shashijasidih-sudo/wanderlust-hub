@@ -1,9 +1,11 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
+import PhuketTourItinerary from "@/components/activity-detail/PhuketTourItinerary";
+import { phuketSheetContent } from "@/data/phuketSheetContent";
 import { toursData } from "@/data/tourData";
 import phuketAtv from "@/assets/phuket-atv-1.jpg";
 import phuketTiger from "@/assets/phuket-tiger-1.webp";
 import tiger1 from "@/assets/tiger-1.webp";
-import phuketIslandView from "@/assets/phuket-island-viewpoint-1.jpg";
+import phuketBigBuddha from "@/assets/phuket-big-buddha-1.webp";
 
 const SelfieWithTigerATV = () => {
   const baseTourData = toursData["selfie-tigers-atv"];
@@ -14,18 +16,25 @@ const SelfieWithTigerATV = () => {
       { src: phuketTiger, title: "Tiger Kingdom & ATV Experience" },
       { src: phuketAtv, title: "ATV Jungle Adventure" },
       { src: tiger1, title: "Tiger Photo Session" },
-      { src: phuketIslandView, title: "Big Buddha Viewpoint" },
+      { src: phuketBigBuddha, title: "Big Buddha Viewpoint" },
     ],
     galleryImages: [
       { src: phuketAtv, alt: "ATV off-road adventure" },
       { src: phuketTiger, alt: "Tiger selfie experience" },
       { src: tiger1, alt: "Majestic tiger encounter" },
-      { src: phuketIslandView, alt: "Jungle trail views" },
+      { src: phuketBigBuddha, alt: "Big Buddha landmark in Phuket" },
     ],
+  };
+  const sheet = phuketSheetContent["selfie-tigers-atv"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
   };
   return (
     <PhuketActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<PhuketTourItinerary tourKey="selfie-tigers-atv" />}
       config={{
         path: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer/",
         seoTitle: "Tiger Kingdom & ATV Experience Phuket with Transfers | INR",

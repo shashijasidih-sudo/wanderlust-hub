@@ -1,4 +1,6 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
+import PhuketTourItinerary from "@/components/activity-detail/PhuketTourItinerary";
+import { phuketSheetContent } from "@/data/phuketSheetContent";
 import { SimonCabaretSEO } from "@/components/activity-detail/PhuketActivitySEO";
 import { simonCabaretFaqs } from "@/data/phuketActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -26,9 +28,16 @@ const PhuketSimonCabaret = () => {
       { src: phuketBoatTour, alt: "Patong nightlife" },
     ],
   };
+  const sheet = phuketSheetContent["phuket-simon-cabaret"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <PhuketActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<PhuketTourItinerary tourKey="phuket-simon-cabaret" />}
       config={{
         path: "/thailand/phuket/simon-cabaret-show-with-transfer/",
         seoTitle: "Simon Cabaret Show Phuket Tickets with Transfers | Book in INR",

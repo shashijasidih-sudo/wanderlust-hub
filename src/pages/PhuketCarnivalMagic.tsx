@@ -1,4 +1,6 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
+import PhuketTourItinerary from "@/components/activity-detail/PhuketTourItinerary";
+import { phuketSheetContent } from "@/data/phuketSheetContent";
 import { PhuketFantaSeaSEO } from "@/components/activity-detail/PhuketActivitySEO";
 import { phuketFantaSeaFaqs } from "@/data/phuketActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -26,9 +28,16 @@ const PhuketCarnivalMagic = () => {
       { src: phuketNightMarket, alt: "Food and stalls" },
     ],
   };
+  const sheet = phuketSheetContent["phuket-carnival-magic"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <PhuketActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<PhuketTourItinerary tourKey="phuket-carnival-magic" />}
       config={{
         path: "/thailand/phuket/carnival-magic-show-tickets-with-transfer/",
         seoTitle: "Carnival Magic Phuket Tickets with Transfers | Book in INR",

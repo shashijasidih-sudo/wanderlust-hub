@@ -1,4 +1,6 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
+import PhuketTourItinerary from "@/components/activity-detail/PhuketTourItinerary";
+import { phuketSheetContent } from "@/data/phuketSheetContent";
 import { PhiPhiBigBoatSEO } from "@/components/activity-detail/PhuketActivitySEO";
 import { phiPhiBigBoatFaqs } from "@/data/phuketActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -29,9 +31,16 @@ const PhiPhiBigBoat = () => {
       { src: phiPhi6, alt: "Buffet lunch on the island" },
     ],
   };
+  const sheet = phuketSheetContent["phi-phi-big-boat"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <PhuketActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<PhuketTourItinerary tourKey="phi-phi-big-boat" />}
       config={{
         path: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/",
         seoTitle: "Phi Phi Island Big Boat Tour from Phuket | Book in INR",

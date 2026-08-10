@@ -1,4 +1,6 @@
 import PhuketActivityTemplate from "@/components/activity-detail/PhuketActivityTemplate";
+import PhuketTourItinerary from "@/components/activity-detail/PhuketTourItinerary";
+import { phuketSheetContent } from "@/data/phuketSheetContent";
 import { toursData } from "@/data/tourData";
 import elephant1 from "@/assets/elephant-1.jpg";
 import phuketAtv from "@/assets/phuket-atv-1.jpg";
@@ -23,9 +25,16 @@ const ElephantSafari = () => {
       { src: phuketIslandView, alt: "Flying fox zipline area" },
     ],
   };
+  const sheet = phuketSheetContent["elephant-safari"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <PhuketActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<PhuketTourItinerary tourKey="elephant-safari" />}
       config={{
         path: "/thailand/phuket/elephant-safari/",
         seoTitle: "Phuket Elephant Safari with ATV & Rafting | Book in INR",
