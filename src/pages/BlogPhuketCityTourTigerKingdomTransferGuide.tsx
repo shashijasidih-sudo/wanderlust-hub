@@ -2,6 +2,15 @@ import BlogArticleLayout from "@/components/BlogArticleLayout";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-island-viewpoint-1.jpg";
+import imgTiger from "@/assets/phuket-tiger-1.jpg";
+import imgBigBuddha from "@/assets/phuket-big-buddha-1.jpg";
+import imgWatChalong from "@/assets/phuket-wat-chalong-1.jpg";
+import imgNightMarket from "@/assets/phuket-night-market-1.jpg";
+import imgLongtail from "@/assets/phuket-longtail-boats-beach-1.jpg";
+import imgBoatTour from "@/assets/phuket-boat-tour-1.jpg";
+import imgMayaBay from "@/assets/phuket-maya-bay-1.jpg";
+import imgKayaks from "@/assets/phuket-kayaks-beach-1.jpg";
+
 
 const TOUR_LINK =
   "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/";
