@@ -486,8 +486,6 @@ const BlogArticleLayout = ({
                           </Button>
                         </div>
                       </div>
-
-                      </div>
                     );
                     break;
                   case "tip-box":
