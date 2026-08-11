@@ -1,9 +1,9 @@
 import { ExternalLink, Sun, Sparkles, Heart, Compass, Backpack, ShieldCheck, Package, Radar, Luggage, Lock, Briefcase, Wallet } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
-import cabinLuggageAsset from "@/assets/cabin-luggage.jpg.asset.json";
-import antiTheftAsset from "@/assets/anti-theft-gear.jpg.asset.json";
-import menTravelBagsAsset from "@/assets/men-travel-bags.jpg.asset.json";
-import moneyBeltAsset from "@/assets/money-belt.jpg.asset.json";
+import cabinLuggageImg from "@/assets/ess-cabin-luggage.jpg";
+import antiTheftImg from "@/assets/ess-anti-theft.jpg";
+import menTravelBagsImg from "@/assets/ess-men-bags.jpg";
+import moneyBeltImg from "@/assets/ess-money-belt.jpg";
 
 type Item = {
   title: string;
@@ -90,7 +90,7 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/buying-guides/best-products/best-cabin-luggage",
     icon: Luggage,
     tag: "Luggage",
-    image: cabinLuggageAsset.url,
+    image: cabinLuggageImg,
     alt: "Sleek modern cabin luggage at the airport terminal",
   },
   {
@@ -98,7 +98,7 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/travel-accessories/safety-products/anti-theft-gear",
     icon: Lock,
     tag: "Anti-Theft",
-    image: antiTheftAsset.url,
+    image: antiTheftImg,
     alt: "Secure anti-theft travel backpack with hidden zipper",
   },
   {
@@ -106,7 +106,7 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/packing-lists/by-traveler/men-travelers/best-bags-for-men-travelers",
     icon: Briefcase,
     tag: "Men's Bags",
-    image: menTravelBagsAsset.url,
+    image: menTravelBagsImg,
     alt: "Stylish leather travel duffel bag and backpack for men",
   },
   {
@@ -114,7 +114,7 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/travel-accessories/safety-products/money-belts",
     icon: Wallet,
     tag: "Money Belts",
-    image: moneyBeltAsset.url,
+    image: moneyBeltImg,
     alt: "Brown leather money belt and travel wallet with cash",
   },
 ];
