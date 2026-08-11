@@ -91,6 +91,9 @@ interface BlogArticleProps {
   category: string;
   keywords: string[];
   sections: BlogSection[];
+  /** Images cycled into the article after every two paragraphs. */
+  inlineImages?: { src: string; alt: string }[];
+
   relatedLinks?: { title: string; link: string; image?: string }[];
   relatedActivities?: RelatedActivity[];
   cityHub?: CityHub;
