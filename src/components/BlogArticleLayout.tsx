@@ -648,8 +648,8 @@ const BlogArticleLayout = ({
             {internalLinks && (() => {
               const renderSection = (heading: string, items: InternalLinkItem[]) => (
                 <section>
-                  <h5 className="text-base font-semibold text-foreground mb-3">{heading}</h5>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                  <h3 className="text-base font-semibold text-foreground mb-3">{heading}</h3>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
                     {items.map((l) => (
                       <li key={l.link}>
                         <Link
@@ -675,24 +675,26 @@ const BlogArticleLayout = ({
               );
 
               return (
-                <div className="mt-10 pt-8 border-t border-border space-y-8">
-                  <h4 className="text-lg font-bold text-foreground">Continue Exploring</h4>
-                  {internalLinks.activities.length > 0 && renderSection("Top Activity Guides", internalLinks.activities)}
-                  {internalLinks.itineraries.length > 0 && renderSection("Plan Your Itinerary", internalLinks.itineraries)}
-                  {internalLinks.transfers.length > 0 && renderSection("Airport & City Transfers", internalLinks.transfers)}
-                  {internalLinks.priceCost && internalLinks.priceCost.length > 0 && renderSection("Price & Cost Guides", internalLinks.priceCost)}
-                  {internalLinks.comparisons && internalLinks.comparisons.length > 0 && renderSection("Comparisons", internalLinks.comparisons)}
-                  {internalLinks.indianAudience && internalLinks.indianAudience.length > 0 && renderSection("For Indian Travelers", internalLinks.indianAudience)}
-                  {internalLinks.micro && internalLinks.micro.length > 0 && renderSection("Micro Guides & Quick Tips", internalLinks.micro)}
-                  {internalLinks.more.length > 0 && renderSection("More Reads", internalLinks.more)}
+                <div className="mt-12 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-b from-secondary/30 to-background py-10">
+                  <div className="container mx-auto px-4 md:px-6 space-y-8">
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">Continue Exploring</h2>
+                    {internalLinks.activities.length > 0 && renderSection("Top Activity Guides", internalLinks.activities)}
+                    {internalLinks.itineraries.length > 0 && renderSection("Plan Your Itinerary", internalLinks.itineraries)}
+                    {internalLinks.transfers.length > 0 && renderSection("Airport & City Transfers", internalLinks.transfers)}
+                    {internalLinks.priceCost && internalLinks.priceCost.length > 0 && renderSection("Price & Cost Guides", internalLinks.priceCost)}
+                    {internalLinks.comparisons && internalLinks.comparisons.length > 0 && renderSection("Comparisons", internalLinks.comparisons)}
+                    {internalLinks.indianAudience && internalLinks.indianAudience.length > 0 && renderSection("For Indian Travelers", internalLinks.indianAudience)}
+                    {internalLinks.micro && internalLinks.micro.length > 0 && renderSection("Micro Guides & Quick Tips", internalLinks.micro)}
+                    {internalLinks.more.length > 0 && renderSection("More Reads", internalLinks.more)}
 
-                  <div className="pt-2">
-                    <Link
-                      to={internalLinks.pillar.link}
-                      className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
-                    >
-                      Visit the {internalLinks.pillar.title} →
-                    </Link>
+                    <div className="pt-2">
+                      <Link
+                        to={internalLinks.pillar.link}
+                        className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+                      >
+                        Visit the {internalLinks.pillar.title} →
+                      </Link>
+                    </div>
                   </div>
                 </div>
               );
