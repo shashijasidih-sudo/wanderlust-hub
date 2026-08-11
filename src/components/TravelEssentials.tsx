@@ -171,7 +171,18 @@ const Section = ({ heading, subheading, items }: { heading: string; subheading: 
   </section>
 );
 
-const TravelEssentials = () => {
+const TravelEssentials = ({ compact = false }: { compact?: boolean }) => {
+  if (compact) {
+    return (
+      <div className="mt-10">
+        <Section
+          heading="Travel Essentials"
+          subheading="Top-rated gear every traveller should pack — curated picks."
+          items={bestEssentials.slice(0, 4)}
+        />
+      </div>
+    );
+  }
   return (
     <div className="mt-10">
       <Section
@@ -187,5 +198,6 @@ const TravelEssentials = () => {
     </div>
   );
 };
+
 
 export default TravelEssentials;

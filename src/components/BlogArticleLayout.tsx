@@ -91,6 +91,9 @@ interface BlogArticleProps {
   category: string;
   keywords: string[];
   sections: BlogSection[];
+  /** Images cycled into the article after every two paragraphs. */
+  inlineImages?: { src: string; alt: string }[];
+
   relatedLinks?: { title: string; link: string; image?: string }[];
   relatedActivities?: RelatedActivity[];
   cityHub?: CityHub;
@@ -160,7 +163,7 @@ const renderInline = (text: string): React.ReactNode => {
 
 const BlogArticleLayout = ({
   title, description, heroImage, heroAlt, author, date,
-  readTime, category, keywords, sections, relatedLinks,
+  readTime, category, keywords, sections, inlineImages, relatedLinks,
   relatedActivities, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
   subCategory, comparisonItems, internalLinks: internalLinksProp,
@@ -197,6 +200,22 @@ const BlogArticleLayout = ({
   };
   const ytShort = getYouTubeShort(currentPath, title);
   const ytInjectIndex = ytShort ? Math.floor(sections.length / 2) : -1;
+
+  // Inject a supporting image after every two paragraphs (cycles the pool).
+  const inlineImagePlan = new Map<number, { src: string; alt: string }>();
+  if (inlineImages && inlineImages.length > 0) {
+    let paragraphCount = 0;
+    let imgIndex = 0;
+    sections.forEach((s, i) => {
+      if (s.type !== "paragraph") return;
+      paragraphCount += 1;
+      if (paragraphCount % 2 === 0) {
+        inlineImagePlan.set(i, inlineImages[imgIndex % inlineImages.length]);
+        imgIndex += 1;
+      }
+    });
+  }
+
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({ title, text: description, url: window.location.href });
@@ -335,8 +354,8 @@ const BlogArticleLayout = ({
         </div>
 
         <div className="container px-4 py-8">
-          <Breadcrumb className="mb-8">
-            <BreadcrumbList>
+          <Breadcrumb className="mb-8 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <BreadcrumbList className="flex-nowrap whitespace-nowrap gap-1.5 sm:gap-2.5">
               <BreadcrumbItem><BreadcrumbLink asChild><Link to="/">Home</Link></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem><BreadcrumbLink asChild><Link to={guidesLink}>{guidesLabel}</Link></BreadcrumbLink></BreadcrumbItem>
@@ -347,9 +366,10 @@ const BlogArticleLayout = ({
                   <BreadcrumbSeparator />
                 </>
               )}
-              <BreadcrumbItem><BreadcrumbPage className="line-clamp-1">{title}</BreadcrumbPage></BreadcrumbItem>
+              <BreadcrumbItem className="min-w-0"><BreadcrumbPage className="block max-w-[40vw] sm:max-w-none truncate">{title}</BreadcrumbPage></BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
+
 
           <div className="max-w-3xl mx-auto">
             {/* Share */}
@@ -423,20 +443,35 @@ const BlogArticleLayout = ({
                     break;
                   case "cta":
                     rendered = (
-                      <div className="my-10 p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl text-center">
-                        <p className="text-lg font-semibold text-foreground mb-4">{section.content}</p>
-                        <Button asChild size="lg">
-                          <Link to={section.link || "/thailand"}>{section.linkText || "Book Now"}</Link>
+                      <div className="my-10 p-5 md:p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl text-center overflow-hidden">
+                        <p className="text-base md:text-lg font-semibold text-foreground mb-4 break-words">{section.content}</p>
+                        <Button
+                          asChild
+                          size="lg"
+                          className="w-full sm:w-auto max-w-full h-auto min-h-11 py-3 whitespace-normal break-words"
+                        >
+                          <Link to={section.link || "/thailand"} className="flex items-center justify-center gap-3 text-center">
+                            {section.src && (
+                              <SafeImage
+                                src={section.src}
+                                alt=""
+                                loading="lazy"
+                                className="h-9 w-9 rounded-md object-cover flex-shrink-0"
+                              />
+                            )}
+                            <span className="min-w-0">{section.linkText || "Book Now"}</span>
+                          </Link>
                         </Button>
                       </div>
                     );
                     break;
+
                   case "cta-prominent":
                     rendered = (
-                      <div className="my-10 p-6 md:p-8 rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-background to-primary/10 shadow-lg">
-                        <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+                      <div className="my-10 p-5 md:p-8 rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-background to-primary/10 shadow-lg overflow-hidden">
+                        <div className="flex flex-col lg:flex-row lg:items-center gap-5 md:gap-6">
                           <div className="flex-1 min-w-0">
-                            <h3 className="text-xl md:text-2xl font-bold text-black mb-2">{section.content}</h3>
+                            <h3 className="text-lg md:text-2xl font-bold text-black mb-2 break-words">{section.content}</h3>
                             {section.subheading && (
                               <p className="text-black/80 mb-4 leading-relaxed">{section.subheading}</p>
                             )}
@@ -454,9 +489,19 @@ const BlogArticleLayout = ({
                           <Button
                             asChild
                             size="lg"
-                            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 whitespace-nowrap shadow-md hover:shadow-lg transition-all"
+                            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 w-full lg:w-auto max-w-full h-auto min-h-11 py-3 whitespace-normal break-words shadow-md hover:shadow-lg transition-all"
                           >
-                            <Link to={section.link || "/singapore/singapore-airport-pickup/"}>{section.linkText || "Book Airport Transfer"}</Link>
+                            <Link to={section.link || "/singapore/singapore-airport-pickup/"} className="flex items-center justify-center gap-3 text-center">
+                              {section.src && (
+                                <SafeImage
+                                  src={section.src}
+                                  alt=""
+                                  loading="lazy"
+                                  className="h-9 w-9 rounded-md object-cover flex-shrink-0"
+                                />
+                              )}
+                              <span className="min-w-0">{section.linkText || "Book Airport Transfer"}</span>
+                            </Link>
                           </Button>
                         </div>
                       </div>
@@ -508,11 +553,23 @@ const BlogArticleLayout = ({
                   default:
                     rendered = null;
                 }
+                const inlineImg = inlineImagePlan.get(i);
                 return (
                   <div key={i}>
                     {ytEmbed}
                     {rendered}
+                    {inlineImg && (
+                      <figure className="my-6 md:my-8 rounded-xl overflow-hidden shadow-md">
+                        <SafeImage
+                          src={inlineImg.src}
+                          alt={inlineImg.alt}
+                          loading="lazy"
+                          className="w-full h-48 sm:h-64 md:h-80 object-cover"
+                        />
+                      </figure>
+                    )}
                   </div>
+
                 );
               })}
             </article>
@@ -540,17 +597,8 @@ const BlogArticleLayout = ({
               </div>
             </div>
 
-            {/* Real Traveler Experiences — full-bleed beyond the max-w-3xl article column */}
-            <div className="mt-10 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-              <TravelerExperiences />
-            </div>
 
-            {/* Travel Essentials — full-bleed affiliate/partner curated packing & gear guides */}
-            <div className="mt-10 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-              <div className="container px-4 md:px-6">
-                <TravelEssentials />
-              </div>
-            </div>
+
 
             {/* Related Topics — full-bleed 4-column image cards */}
             <div className="mt-12 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
@@ -744,6 +792,19 @@ const BlogArticleLayout = ({
                 </div>
               );
             })()}
+
+            {/* Travel Essentials — full-bleed curated packing & gear guides (4 cards) */}
+            <div className="mt-10 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+              <div className="container px-4 md:px-6">
+                <TravelEssentials compact />
+              </div>
+            </div>
+
+            {/* Real Traveler Experiences — full-bleed beyond the max-w-3xl article column */}
+            <div className="mt-10 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+              <TravelerExperiences />
+            </div>
+
 
           </div>
         </div>

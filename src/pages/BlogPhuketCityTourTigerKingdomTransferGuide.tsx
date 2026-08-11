@@ -2,6 +2,15 @@ import BlogArticleLayout from "@/components/BlogArticleLayout";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { getPhuketInternalLinks } from "@/data/blogInternalLinks";
 import heroImg from "@/assets/phuket-island-viewpoint-1.jpg";
+import imgTiger from "@/assets/phuket-tiger-1.jpg";
+import imgBigBuddha from "@/assets/phuket-big-buddha-1.jpg";
+import imgWatChalong from "@/assets/phuket-wat-chalong-1.jpg";
+import imgNightMarket from "@/assets/phuket-night-market-1.jpg";
+import imgLongtail from "@/assets/phuket-longtail-boats-beach-1.jpg";
+import imgBoatTour from "@/assets/phuket-boat-tour-1.jpg";
+import imgMayaBay from "@/assets/phuket-maya-bay-1.jpg";
+import imgKayaks from "@/assets/phuket-kayaks-beach-1.jpg";
+
 
 const TOUR_LINK =
   "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/";
@@ -111,7 +120,7 @@ const BlogPhuketCityTourTigerKingdomTransferGuide = () => (
       { type: "paragraph", content: "The attraction offers opportunities for visitors to observe and, depending on the selected ticket and current venue rules, have supervised encounters with tigers." },
       { type: "paragraph", content: "Some tour packages offer different tiger-size or encounter options, so it is important to carefully check the ticket category before booking." },
       { type: "paragraph", content: "For families, couples and groups of friends, Tiger Kingdom can add something different to a traditional Phuket sightseeing itinerary. Instead of spending the entire day visiting temples and viewpoints, you get a more unusual wildlife-focused experience. However, travellers should follow all venue instructions and safety rules during any animal encounter." },
-      { type: "cta", content: "Combine Tiger Kingdom, temples and viewpoints in one organised day", link: TOUR_LINK, linkText: "Book the Phuket City Tour with Tiger Kingdom & Transfer" },
+      { type: "cta", content: "Combine Tiger Kingdom, temples and viewpoints in one organised day", link: TOUR_LINK, src: imgTiger, linkText: "Book the Phuket City Tour with Tiger Kingdom & Transfer" },
 
       { type: "subheading", content: "2. Explore Wat Chalong" },
       { type: "paragraph", content: "Phuket isn't only about beaches and entertainment. The island has a deep Buddhist heritage, and Wat Chalong is one of its most important temples." },
@@ -245,13 +254,23 @@ const BlogPhuketCityTourTigerKingdomTransferGuide = () => (
       { type: "paragraph", content: "Phuket has far more to offer than beaches. From Buddhist temples and hilltop viewpoints to local products and wildlife experiences, a city tour gives you an opportunity to discover the island from several different perspectives." },
       { type: "paragraph", content: "The Phuket City Tour with Tiger Kingdom Phuket Tickets with Transfer from Yellodae Trails is designed for travellers who want to combine these experiences with convenient transportation." },
       { type: "paragraph", content: "If you're travelling from India and planning your Phuket holiday, consider adding this experience between your island-hopping and beach days. Explore Phuket. Discover its culture. See the views. Experience Tiger Kingdom. And make your holiday about more than just the beach." },
-      { type: "cta-prominent", content: "Book your Phuket City Tour with Tiger Kingdom and Transfer with Yellodae Trails.", link: TOUR_LINK, linkText: "Book the Phuket City Tour with Tiger Kingdom & Transfer" },
+      { type: "cta-prominent", content: "Book your Phuket City Tour with Tiger Kingdom and Transfer with Yellodae Trails.", link: TOUR_LINK, src: imgTiger, linkText: "Book the Phuket City Tour with Tiger Kingdom & Transfer" },
 
       { type: "heading", content: "Frequently Asked Questions" },
       ...faqs.flatMap((f) => ([
         { type: "subheading" as const, content: f.question },
         { type: "paragraph" as const, content: f.answer },
       ])),
+    ]}
+    inlineImages={[
+      { src: imgTiger, alt: "Tiger Kingdom Phuket tiger encounter" },
+      { src: imgBigBuddha, alt: "Big Buddha on Nakkerd Hill, Phuket" },
+      { src: imgWatChalong, alt: "Wat Chalong temple in Phuket" },
+      { src: imgLongtail, alt: "Longtail boats on a Phuket beach" },
+      { src: imgNightMarket, alt: "Phuket local market shopping" },
+      { src: imgBoatTour, alt: "Phuket island boat tour" },
+      { src: imgMayaBay, alt: "Maya Bay near Phuket" },
+      { src: imgKayaks, alt: "Kayaks on a Phuket beach" },
     ]}
     relatedActivities={[
       { title: "Phuket City Tour with Tiger Kingdom & Transfer", link: TOUR_LINK },
