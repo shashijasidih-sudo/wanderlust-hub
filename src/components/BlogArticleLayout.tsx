@@ -200,6 +200,22 @@ const BlogArticleLayout = ({
   };
   const ytShort = getYouTubeShort(currentPath, title);
   const ytInjectIndex = ytShort ? Math.floor(sections.length / 2) : -1;
+
+  // Inject a supporting image after every two paragraphs (cycles the pool).
+  const inlineImagePlan = new Map<number, { src: string; alt: string }>();
+  if (inlineImages && inlineImages.length > 0) {
+    let paragraphCount = 0;
+    let imgIndex = 0;
+    sections.forEach((s, i) => {
+      if (s.type !== "paragraph") return;
+      paragraphCount += 1;
+      if (paragraphCount % 2 === 0) {
+        inlineImagePlan.set(i, inlineImages[imgIndex % inlineImages.length]);
+        imgIndex += 1;
+      }
+    });
+  }
+
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({ title, text: description, url: window.location.href });
