@@ -335,8 +335,8 @@ const BlogArticleLayout = ({
         </div>
 
         <div className="container px-4 py-8">
-          <Breadcrumb className="mb-8">
-            <BreadcrumbList>
+          <Breadcrumb className="mb-8 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <BreadcrumbList className="flex-nowrap whitespace-nowrap gap-1.5 sm:gap-2.5">
               <BreadcrumbItem><BreadcrumbLink asChild><Link to="/">Home</Link></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem><BreadcrumbLink asChild><Link to={guidesLink}>{guidesLabel}</Link></BreadcrumbLink></BreadcrumbItem>
@@ -347,9 +347,10 @@ const BlogArticleLayout = ({
                   <BreadcrumbSeparator />
                 </>
               )}
-              <BreadcrumbItem><BreadcrumbPage className="line-clamp-1">{title}</BreadcrumbPage></BreadcrumbItem>
+              <BreadcrumbItem className="min-w-0"><BreadcrumbPage className="block max-w-[40vw] sm:max-w-none truncate">{title}</BreadcrumbPage></BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
+
 
           <div className="max-w-3xl mx-auto">
             {/* Share */}
