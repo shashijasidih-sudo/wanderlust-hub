@@ -178,7 +178,7 @@ const TravelEssentials = ({ compact = false }: { compact?: boolean }) => {
         <Section
           heading="Travel Essentials"
           subheading="Top-rated gear every traveller should pack — curated picks."
-          items={bestEssentials.slice(0, 4)}
+          items={bestEssentials.slice(0, 8)}
         />
       </div>
     );

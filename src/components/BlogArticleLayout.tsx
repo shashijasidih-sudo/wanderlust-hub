@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import MidArticleActivities from "@/components/MidArticleActivities";
 import LiteYouTubeEmbed from "@/components/LiteYouTubeEmbed";
-import { getBlogLinkImage, getCityImage } from "@/lib/blogLinkImages";
+import { getBlogLinkImage } from "@/lib/blogLinkImages";
 import {
   getBangkokInternalLinks,
   getKrabiFullInternalLinks,
@@ -607,41 +607,34 @@ const BlogArticleLayout = ({
               </div>
             </div>
 
-            {/* Related Guides — full-bleed */}
-            {relatedLinks && relatedLinks.length > 0 && (
-              <div className="mt-12 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-b from-secondary/30 to-background py-10">
+            {/* Recommended Activities (keyword-rich internal links) — full-bleed */}
+            {relatedActivities && relatedActivities.length > 0 && (
+              <div className="mt-12 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
                 <div className="container mx-auto px-4 md:px-6">
-                  <div className="flex items-end justify-between mb-6 gap-4 flex-wrap">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">Keep Reading</p>
-                      <h2 className="text-2xl md:text-3xl font-bold text-foreground">Related Guides</h2>
-                    </div>
-                  </div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                    Recommended Activities {cityHub ? `in ${cityHub.city}` : ""}
+                  </h2>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-                    {relatedLinks.map((rl) => {
-                      const img = rl.image || getBlogLinkImage(rl.link);
+                    {relatedActivities.map((a) => {
+                      const img = a.image || getBlogLinkImage(a.link);
                       return (
                         <Link
-                          key={rl.link}
-                          to={rl.link}
-                          className="group relative block rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-card border border-border"
+                          key={a.link}
+                          to={a.link}
+                          className="group rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all bg-card"
                         >
                           <div className="aspect-[4/3] overflow-hidden bg-muted">
                             <SafeImage
                               src={img}
-                              alt={rl.title}
+                              alt={a.title}
                               loading="lazy"
-                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                              className="w-full h-full object-cover transition group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                           </div>
-                          <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
-                            <h3 className="text-white font-semibold text-sm md:text-base leading-snug line-clamp-3 group-hover:text-primary-foreground transition-colors">
-                              {rl.title}
-                            </h3>
-                            <span className="mt-2 inline-flex items-center gap-1 text-xs text-white/90 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                              Read guide →
-                            </span>
+                          <div className="p-4">
+                            <p className="text-foreground font-medium leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                              {a.title}
+                            </p>
                           </div>
                         </Link>
                       );
@@ -651,100 +644,12 @@ const BlogArticleLayout = ({
               </div>
             )}
 
-
-            {/* Recommended Activities (keyword-rich internal links) */}
-            {relatedActivities && relatedActivities.length > 0 && (
-              <div className="mt-10 pt-8 border-t border-border">
-                <h4 className="text-lg font-bold text-foreground mb-4">
-                  Recommended Activities {cityHub ? `in ${cityHub.city}` : ""}
-                </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {relatedActivities.map((a) => {
-                    const img = a.image || getBlogLinkImage(a.link);
-                    return (
-                      <Link
-                        key={a.link}
-                        to={a.link}
-                        className="group rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all"
-                      >
-                        <div className="aspect-[4/3] overflow-hidden bg-muted">
-                          <SafeImage
-                            src={img}
-                            alt={a.title}
-                            loading="lazy"
-                            className="w-full h-full object-cover transition group-hover:scale-105"
-                          />
-                        </div>
-                        <div className="p-4">
-                          <p className="text-foreground font-medium leading-snug line-clamp-2 group-hover:text-primary transition-colors">
-                            {a.title}
-                          </p>
-                        </div>
-                      </Link>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-
-            {/* City Hub callout */}
-            {cityHub && (() => {
-              const cityImgs = getCityImage(cityHub.city);
-              return (
-                <div className="mt-10 pt-8 border-t border-border">
-                  <h4 className="text-lg font-bold text-foreground mb-4">
-                    Explore {cityHub.city}
-                  </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <Link
-                      to={cityHub.thingsToDoLink}
-                      className="group rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all"
-                    >
-                      <div className="aspect-[16/9] overflow-hidden bg-muted">
-                        <SafeImage
-                          src={cityImgs.thingsToDo}
-                          alt={`Top things to do in ${cityHub.city}`}
-                          loading="lazy"
-                          className="w-full h-full object-cover transition group-hover:scale-105"
-                        />
-                      </div>
-                      <div className="p-4 bg-secondary/30">
-                        <span className="text-foreground font-semibold group-hover:text-primary transition-colors">
-                          Top Things to Do in {cityHub.city} →
-                        </span>
-                      </div>
-                    </Link>
-                    {cityHub.transfersLink && (
-                      <Link
-                        to={cityHub.transfersLink}
-                        className="group rounded-xl border border-border overflow-hidden hover:border-primary hover:shadow-md transition-all"
-                      >
-                        <div className="aspect-[16/9] overflow-hidden bg-muted">
-                          <SafeImage
-                            src={cityImgs.transfers}
-                            alt={`${cityHub.city} airport transfers`}
-                            loading="lazy"
-                            className="w-full h-full object-cover transition group-hover:scale-105"
-                          />
-                        </div>
-                        <div className="p-4 bg-secondary/30">
-                          <span className="text-foreground font-semibold group-hover:text-primary transition-colors">
-                            {cityHub.city} Airport Transfers →
-                          </span>
-                        </div>
-                      </Link>
-                    )}
-                  </div>
-                </div>
-              );
-            })()}
-
             {/* Internal Links — mandatory linking block */}
             {internalLinks && (() => {
               const renderSection = (heading: string, items: InternalLinkItem[]) => (
                 <section>
-                  <h5 className="text-base font-semibold text-foreground mb-3">{heading}</h5>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                  <h3 className="text-base font-semibold text-foreground mb-3">{heading}</h3>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
                     {items.map((l) => (
                       <li key={l.link}>
                         <Link
@@ -770,24 +675,26 @@ const BlogArticleLayout = ({
               );
 
               return (
-                <div className="mt-10 pt-8 border-t border-border space-y-8">
-                  <h4 className="text-lg font-bold text-foreground">Continue Exploring</h4>
-                  {internalLinks.activities.length > 0 && renderSection("Top Activity Guides", internalLinks.activities)}
-                  {internalLinks.itineraries.length > 0 && renderSection("Plan Your Itinerary", internalLinks.itineraries)}
-                  {internalLinks.transfers.length > 0 && renderSection("Airport & City Transfers", internalLinks.transfers)}
-                  {internalLinks.priceCost && internalLinks.priceCost.length > 0 && renderSection("Price & Cost Guides", internalLinks.priceCost)}
-                  {internalLinks.comparisons && internalLinks.comparisons.length > 0 && renderSection("Comparisons", internalLinks.comparisons)}
-                  {internalLinks.indianAudience && internalLinks.indianAudience.length > 0 && renderSection("For Indian Travelers", internalLinks.indianAudience)}
-                  {internalLinks.micro && internalLinks.micro.length > 0 && renderSection("Micro Guides & Quick Tips", internalLinks.micro)}
-                  {internalLinks.more.length > 0 && renderSection("More Reads", internalLinks.more)}
+                <div className="mt-12 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-b from-secondary/30 to-background py-10">
+                  <div className="container mx-auto px-4 md:px-6 space-y-8">
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">Continue Exploring</h2>
+                    {internalLinks.activities.length > 0 && renderSection("Top Activity Guides", internalLinks.activities)}
+                    {internalLinks.itineraries.length > 0 && renderSection("Plan Your Itinerary", internalLinks.itineraries)}
+                    {internalLinks.transfers.length > 0 && renderSection("Airport & City Transfers", internalLinks.transfers)}
+                    {internalLinks.priceCost && internalLinks.priceCost.length > 0 && renderSection("Price & Cost Guides", internalLinks.priceCost)}
+                    {internalLinks.comparisons && internalLinks.comparisons.length > 0 && renderSection("Comparisons", internalLinks.comparisons)}
+                    {internalLinks.indianAudience && internalLinks.indianAudience.length > 0 && renderSection("For Indian Travelers", internalLinks.indianAudience)}
+                    {internalLinks.micro && internalLinks.micro.length > 0 && renderSection("Micro Guides & Quick Tips", internalLinks.micro)}
+                    {internalLinks.more.length > 0 && renderSection("More Reads", internalLinks.more)}
 
-                  <div className="pt-2">
-                    <Link
-                      to={internalLinks.pillar.link}
-                      className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
-                    >
-                      Visit the {internalLinks.pillar.title} →
-                    </Link>
+                    <div className="pt-2">
+                      <Link
+                        to={internalLinks.pillar.link}
+                        className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+                      >
+                        Visit the {internalLinks.pillar.title} →
+                      </Link>
+                    </div>
                   </div>
                 </div>
               );
