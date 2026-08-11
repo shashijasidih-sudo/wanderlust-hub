@@ -449,10 +449,10 @@ const BlogArticleLayout = ({
 
                   case "cta-prominent":
                     rendered = (
-                      <div className="my-10 p-6 md:p-8 rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-background to-primary/10 shadow-lg">
-                        <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+                      <div className="my-10 p-5 md:p-8 rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-background to-primary/10 shadow-lg overflow-hidden">
+                        <div className="flex flex-col lg:flex-row lg:items-center gap-5 md:gap-6">
                           <div className="flex-1 min-w-0">
-                            <h3 className="text-xl md:text-2xl font-bold text-black mb-2">{section.content}</h3>
+                            <h3 className="text-lg md:text-2xl font-bold text-black mb-2 break-words">{section.content}</h3>
                             {section.subheading && (
                               <p className="text-black/80 mb-4 leading-relaxed">{section.subheading}</p>
                             )}
@@ -470,11 +470,23 @@ const BlogArticleLayout = ({
                           <Button
                             asChild
                             size="lg"
-                            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 whitespace-nowrap shadow-md hover:shadow-lg transition-all"
+                            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 w-full lg:w-auto max-w-full h-auto min-h-11 py-3 whitespace-normal break-words shadow-md hover:shadow-lg transition-all"
                           >
-                            <Link to={section.link || "/singapore/singapore-airport-pickup/"}>{section.linkText || "Book Airport Transfer"}</Link>
+                            <Link to={section.link || "/singapore/singapore-airport-pickup/"} className="flex items-center justify-center gap-3 text-center">
+                              {section.src && (
+                                <SafeImage
+                                  src={section.src}
+                                  alt=""
+                                  loading="lazy"
+                                  className="h-9 w-9 rounded-md object-cover flex-shrink-0"
+                                />
+                              )}
+                              <span className="min-w-0">{section.linkText || "Book Airport Transfer"}</span>
+                            </Link>
                           </Button>
                         </div>
+                      </div>
+
                       </div>
                     );
                     break;
