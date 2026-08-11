@@ -566,17 +566,8 @@ const BlogArticleLayout = ({
               </div>
             </div>
 
-            {/* Real Traveler Experiences — full-bleed beyond the max-w-3xl article column */}
-            <div className="mt-10 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-              <TravelerExperiences />
-            </div>
 
-            {/* Travel Essentials — full-bleed affiliate/partner curated packing & gear guides */}
-            <div className="mt-10 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-              <div className="container px-4 md:px-6">
-                <TravelEssentials />
-              </div>
-            </div>
+
 
             {/* Related Topics — full-bleed 4-column image cards */}
             <div className="mt-12 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
