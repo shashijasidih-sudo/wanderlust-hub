@@ -163,7 +163,7 @@ const renderInline = (text: string): React.ReactNode => {
 
 const BlogArticleLayout = ({
   title, description, heroImage, heroAlt, author, date,
-  readTime, category, keywords, sections, relatedLinks,
+  readTime, category, keywords, sections, inlineImages, relatedLinks,
   relatedActivities, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
   subCategory, comparisonItems, internalLinks: internalLinksProp,
