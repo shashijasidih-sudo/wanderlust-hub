@@ -553,11 +553,23 @@ const BlogArticleLayout = ({
                   default:
                     rendered = null;
                 }
+                const inlineImg = inlineImagePlan.get(i);
                 return (
                   <div key={i}>
                     {ytEmbed}
                     {rendered}
+                    {inlineImg && (
+                      <figure className="my-6 md:my-8 rounded-xl overflow-hidden shadow-md">
+                        <SafeImage
+                          src={inlineImg.src}
+                          alt={inlineImg.alt}
+                          loading="lazy"
+                          className="w-full h-48 sm:h-64 md:h-80 object-cover"
+                        />
+                      </figure>
+                    )}
                   </div>
+
                 );
               })}
             </article>
