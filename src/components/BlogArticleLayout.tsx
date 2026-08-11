@@ -424,14 +424,29 @@ const BlogArticleLayout = ({
                     break;
                   case "cta":
                     rendered = (
-                      <div className="my-10 p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl text-center">
-                        <p className="text-lg font-semibold text-foreground mb-4">{section.content}</p>
-                        <Button asChild size="lg">
-                          <Link to={section.link || "/thailand"}>{section.linkText || "Book Now"}</Link>
+                      <div className="my-10 p-5 md:p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl text-center overflow-hidden">
+                        <p className="text-base md:text-lg font-semibold text-foreground mb-4 break-words">{section.content}</p>
+                        <Button
+                          asChild
+                          size="lg"
+                          className="w-full sm:w-auto max-w-full h-auto min-h-11 py-3 whitespace-normal break-words"
+                        >
+                          <Link to={section.link || "/thailand"} className="flex items-center justify-center gap-3 text-center">
+                            {section.src && (
+                              <SafeImage
+                                src={section.src}
+                                alt=""
+                                loading="lazy"
+                                className="h-9 w-9 rounded-md object-cover flex-shrink-0"
+                              />
+                            )}
+                            <span className="min-w-0">{section.linkText || "Book Now"}</span>
+                          </Link>
                         </Button>
                       </div>
                     );
                     break;
+
                   case "cta-prominent":
                     rendered = (
                       <div className="my-10 p-6 md:p-8 rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-background to-primary/10 shadow-lg">
