@@ -679,8 +679,6 @@ const BlogArticleLayout = ({
                   <div className="container mx-auto px-4 md:px-6 space-y-8">
                     <h2 className="text-2xl md:text-3xl font-bold text-foreground">Continue Exploring</h2>
                     {internalLinks.activities.length > 0 && renderSection("Top Activity Guides", internalLinks.activities)}
-                    {internalLinks.itineraries.length > 0 && renderSection("Plan Your Itinerary", internalLinks.itineraries)}
-                    {internalLinks.transfers.length > 0 && renderSection("Airport & City Transfers", internalLinks.transfers)}
                     {internalLinks.priceCost && internalLinks.priceCost.length > 0 && renderSection("Price & Cost Guides", internalLinks.priceCost)}
                     {internalLinks.comparisons && internalLinks.comparisons.length > 0 && renderSection("Comparisons", internalLinks.comparisons)}
                     {internalLinks.indianAudience && internalLinks.indianAudience.length > 0 && renderSection("For Indian Travelers", internalLinks.indianAudience)}
