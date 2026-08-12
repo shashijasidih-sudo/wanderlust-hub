@@ -4,6 +4,7 @@ import cabinLuggageImg from "@/assets/ess-cabin-luggage.jpg";
 import antiTheftImg from "@/assets/ess-anti-theft.jpg";
 import menTravelBagsImg from "@/assets/ess-men-bags.jpg";
 import moneyBeltImg from "@/assets/ess-money-belt.jpg";
+import honeymoonCoupleImg from "@/assets/ess-honeymoon-couple.jpg";
 
 type Item = {
   title: string;
