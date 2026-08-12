@@ -40,8 +40,8 @@ const destinationEssentials: Item[] = [
     href: "https://barnip.com/packing-lists/by-destination/bali/bali-honeymoon-packing-guide",
     icon: Heart,
     tag: "Bali",
-    image: U("photo-1537996194471-e657df975ab4"),
-    alt: "Bali rice terraces and tropical landscape",
+    image: honeymoonCoupleImg,
+    alt: "Romantic couple walking on a tropical beach at sunset",
   },
   {
     title: "Europe Packing Essentials",
