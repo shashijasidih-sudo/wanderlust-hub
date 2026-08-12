@@ -1,10 +1,12 @@
 import { ExternalLink, Sun, Sparkles, Heart, Compass, Backpack, ShieldCheck, Package, Radar, Luggage, Lock, Briefcase, Wallet } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
-import cabinLuggageImg from "@/assets/ess-cabin-luggage.jpg";
 import antiTheftImg from "@/assets/ess-anti-theft.jpg";
 import menTravelBagsImg from "@/assets/ess-men-bags.jpg";
 import moneyBeltImg from "@/assets/ess-money-belt.jpg";
 import honeymoonCoupleImg from "@/assets/ess-honeymoon-couple.jpg";
+import toiletryKitAsset from "@/assets/ess-toiletry-kit.png.asset.json";
+import womenSafetyAsset from "@/assets/ess-women-safety.png.asset.json";
+import romanceKitAsset from "@/assets/ess-romance-kit.png.asset.json";
 
 type Item = {
   title: string;
@@ -83,8 +85,8 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/travel-gadgets/smart-travel-gear/airtags",
     icon: Radar,
     tag: "Gadgets",
-    image: U("photo-1491637639811-60e2756cc1c7"),
-    alt: "Smart luggage tracker airtag travel gadget",
+    image: romanceKitAsset.url,
+    alt: "Must-have travel gadgets and essentials kit",
   },
   {
     title: "Passport and Money-Bag",
@@ -99,16 +101,16 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/airport-essentials/cabin-essentials/travel-toiletry-kits",
     icon: Package,
     tag: "Toiletries",
-    image: cabinLuggageImg,
-    alt: "Compact travel toiletry kit packed for a flight",
+    image: toiletryKitAsset.url,
+    alt: "Compact travel toiletry kit with refillable bottles and pouch",
   },
   {
     title: "Women Safety Essentials",
     href: "https://barnip.com/packing-lists/by-traveler/women-travelers/women-travel-safety-essentials",
     icon: ShieldCheck,
     tag: "Safety",
-    image: U("photo-1581553680321-4fffae59fccd"),
-    alt: "Travel safety essentials for women travellers",
+    image: womenSafetyAsset.url,
+    alt: "Personal safety keychain set with alarm for women travellers",
   },
   {
     title: "Packing List for Men",
