@@ -7,6 +7,7 @@ import honeymoonCoupleImg from "@/assets/ess-honeymoon-couple.jpg";
 import toiletryKitAsset from "@/assets/ess-toiletry-kit.png.asset.json";
 import womenSafetyAsset from "@/assets/ess-women-safety.png.asset.json";
 import romanceKitAsset from "@/assets/ess-romance-kit.png.asset.json";
+import airtagsAsset from "@/assets/ess-airtags.png.asset.json";
 
 type Item = {
   title: string;
@@ -77,16 +78,16 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/packing-lists/by-trip-type/honeymoon-packing-list",
     icon: Heart,
     tag: "Honeymoon",
-    image: honeymoonCoupleImg,
-    alt: "Romantic couple walking on a tropical beach at sunset",
+    image: romanceKitAsset.url,
+    alt: "Romantic travel essentials kit for honeymooners",
   },
   {
     title: "Must Have Airtags",
     href: "https://barnip.com/travel-gadgets/smart-travel-gear/airtags",
     icon: Radar,
     tag: "Gadgets",
-    image: romanceKitAsset.url,
-    alt: "Must-have travel gadgets and essentials kit",
+    image: airtagsAsset.url,
+    alt: "Portronics World Tag Bluetooth tracker with Apple Find My support",
   },
   {
     title: "Passport and Money-Bag",
