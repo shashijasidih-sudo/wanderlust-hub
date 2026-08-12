@@ -75,8 +75,8 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/packing-lists/by-trip-type/honeymoon-packing-list",
     icon: Heart,
     tag: "Honeymoon",
-    image: U("photo-1537996194471-e657df975ab4"),
-    alt: "Romantic tropical honeymoon getaway",
+    image: honeymoonCoupleImg,
+    alt: "Romantic couple walking on a tropical beach at sunset",
   },
   {
     title: "Must Have Airtags",
