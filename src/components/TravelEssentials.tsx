@@ -1,6 +1,5 @@
 import { ExternalLink, Sun, Sparkles, Heart, Compass, Backpack, ShieldCheck, Package, Radar, Luggage, Lock, Briefcase, Wallet } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
-import cabinLuggageImg from "@/assets/ess-cabin-luggage.jpg";
 import antiTheftImg from "@/assets/ess-anti-theft.jpg";
 import menTravelBagsImg from "@/assets/ess-men-bags.jpg";
 import moneyBeltImg from "@/assets/ess-money-belt.jpg";
