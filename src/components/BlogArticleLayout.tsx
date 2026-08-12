@@ -164,7 +164,7 @@ const renderInline = (text: string): React.ReactNode => {
 const BlogArticleLayout = ({
   title, description, heroImage, heroAlt, author, date,
   readTime, category, keywords, sections, inlineImages, relatedLinks,
-  relatedActivities, cityHub,
+  relatedActivities: relatedActivitiesProp, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
   subCategory, comparisonItems, internalLinks: internalLinksProp,
   bodyClassName,
@@ -182,6 +182,11 @@ const BlogArticleLayout = ({
     return undefined;
   };
   const internalLinks = internalLinksProp ?? deriveHubLinks(currentPath);
+
+  // Fallback so every city guide shows the same section set as the Phuket template
+  const relatedActivities = (relatedActivitiesProp && relatedActivitiesProp.length > 0)
+    ? relatedActivitiesProp
+    : (internalLinks?.activities ?? []).slice(0, 4).map((l): RelatedActivity => ({ title: l.title, link: l.link, image: l.image }));
 
   // Destination -> YouTube Short mapping (auto-embedded mid-article)
   const getYouTubeShort = (path: string, ttl: string): { id: string; name: string } | null => {
