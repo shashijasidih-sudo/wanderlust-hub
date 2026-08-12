@@ -78,7 +78,7 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/packing-lists/by-trip-type/honeymoon-packing-list",
     icon: Heart,
     tag: "Honeymoon",
-    image: romanceKitAsset.url,
+    image: romanceKitImg,
     alt: "Romantic travel essentials kit for honeymooners",
   },
   {
@@ -86,7 +86,7 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/travel-gadgets/smart-travel-gear/airtags",
     icon: Radar,
     tag: "Gadgets",
-    image: airtagsAsset.url,
+    image: airtagsImg,
     alt: "Portronics World Tag Bluetooth tracker with Apple Find My support",
   },
   {
@@ -102,7 +102,7 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/airport-essentials/cabin-essentials/travel-toiletry-kits",
     icon: Package,
     tag: "Toiletries",
-    image: toiletryKitAsset.url,
+    image: toiletryKitImg,
     alt: "Compact travel toiletry kit with refillable bottles and pouch",
   },
   {
@@ -110,7 +110,7 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/packing-lists/by-traveler/women-travelers/women-travel-safety-essentials",
     icon: ShieldCheck,
     tag: "Safety",
-    image: womenSafetyAsset.url,
+    image: womenSafetyImg,
     alt: "Personal safety keychain set with alarm for women travellers",
   },
   {
