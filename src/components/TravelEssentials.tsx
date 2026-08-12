@@ -4,10 +4,10 @@ import antiTheftImg from "@/assets/ess-anti-theft.jpg";
 import menTravelBagsImg from "@/assets/ess-men-bags.jpg";
 import moneyBeltImg from "@/assets/ess-money-belt.jpg";
 import honeymoonCoupleImg from "@/assets/ess-honeymoon-couple.jpg";
-import toiletryKitAsset from "@/assets/ess-toiletry-kit.png.asset.json";
-import womenSafetyAsset from "@/assets/ess-women-safety.png.asset.json";
-import romanceKitAsset from "@/assets/ess-romance-kit.png.asset.json";
-import airtagsAsset from "@/assets/ess-airtags.png.asset.json";
+import toiletryKitImg from "@/assets/ess-toiletry-kit.png";
+import womenSafetyImg from "@/assets/ess-women-safety.png";
+import romanceKitImg from "@/assets/ess-romance-kit.png";
+import airtagsImg from "@/assets/ess-airtags.png";
 
 type Item = {
   title: string;
