@@ -28,7 +28,7 @@ export function collectBlogMeta() {
   }
 
   const routes = [];
-  for (const m of app.matchAll(/<Route\s+path="(\/blog\/[^"]*)"\s+element=\{<(\w+)\s*\/>\}/g)) {
+  for (const m of app.matchAll(/<Route\s+path="(\/[^"]*)"\s+element=\{<(\w+)\s*\/>\}/g)) {
     routes.push([m[1], m[2]]);
   }
 
