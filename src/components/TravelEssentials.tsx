@@ -4,6 +4,7 @@ import cabinLuggageImg from "@/assets/ess-cabin-luggage.jpg";
 import antiTheftImg from "@/assets/ess-anti-theft.jpg";
 import menTravelBagsImg from "@/assets/ess-men-bags.jpg";
 import moneyBeltImg from "@/assets/ess-money-belt.jpg";
+import honeymoonCoupleImg from "@/assets/ess-honeymoon-couple.jpg";
 
 type Item = {
   title: string;
@@ -39,8 +40,8 @@ const destinationEssentials: Item[] = [
     href: "https://barnip.com/packing-lists/by-destination/bali/bali-honeymoon-packing-guide",
     icon: Heart,
     tag: "Bali",
-    image: U("photo-1537996194471-e657df975ab4"),
-    alt: "Bali rice terraces and tropical landscape",
+    image: honeymoonCoupleImg,
+    alt: "Romantic couple walking on a tropical beach at sunset",
   },
   {
     title: "Europe Packing Essentials",
@@ -74,8 +75,8 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/packing-lists/by-trip-type/honeymoon-packing-list",
     icon: Heart,
     tag: "Honeymoon",
-    image: U("photo-1537996194471-e657df975ab4"),
-    alt: "Romantic tropical honeymoon getaway",
+    image: honeymoonCoupleImg,
+    alt: "Romantic couple walking on a tropical beach at sunset",
   },
   {
     title: "Must Have Airtags",
