@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import InitialShellFallback from "@/components/InitialShellFallback";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -466,7 +467,7 @@ const App = () => (
           <ScrollToTop />
           <AnalyticsInit />
           <ApprovalBadge />
-          <Suspense fallback={null}><Routes>
+          <Suspense fallback={<InitialShellFallback />}><Routes>
           <Route path="/" element={<Index />} />
           <Route path="/auth/callback/" element={<AuthCallback />} />
           {/* Thailand routes */}

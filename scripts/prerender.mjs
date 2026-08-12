@@ -16,6 +16,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { resolve, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { collectBlogMeta } from "./blogMeta.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -143,8 +144,59 @@ function shellFor(pathname) {
     </div>`;
 }
 
+
+/**
+ * Article (blog) shell.
+ *
+ * Blog URLs get the real article header — hero image, category pill, H1,
+ * author/date/read-time and breadcrumb — instead of the generic 4-card
+ * listing skeleton, so the first paint is meaningful content and the hero is
+ * the LCP element. Markup mirrors BlogArticleLayout's hero (same heights,
+ * font sizes, spacing) so React's first commit replaces it without shift.
+ */
+const BLOG_META = collectBlogMeta();
+
+function blogShell(pathname) {
+  const meta = BLOG_META[pathname];
+  if (!meta) return null;
+  const esc = (t) => String(t || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+  const hero = meta.heroSrc ? resolveAsset(meta.heroSrc) : null;
+  const img = hero
+    ? `<img src="${hero}" alt="${esc(meta.heroAlt)}" width="1600" height="900" fetchpriority="high" decoding="sync" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">`
+    : "";
+  return `<div id="pp-shell" style="font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;color:#0f172a">
+      <style>#pp-shell .pp-hero{height:50vh}#pp-shell h1{font-size:30px}@media(min-width:768px){#pp-shell .pp-hero{height:60vh}#pp-shell h1{font-size:48px}}</style>
+      <div style="height:64px;border-bottom:1px solid #e8ecea;display:flex;align-items:center;padding:0 16px;font-weight:700;font-size:18px;color:#2e6b57">Yellodae Trails</div>
+      <div class="pp-hero" style="position:relative;overflow:hidden">
+        ${img}
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,.4),transparent)"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;padding:24px;max-width:1400px;margin:0 auto">
+          <span style="display:inline-block;background:#2e6b57;color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:4px 12px;border-radius:9999px;margin-bottom:16px">${esc(meta.category)}</span>
+          <h1 style="margin:0 0 16px;font-weight:700;line-height:1.15;color:#fff;max-width:48rem">${esc(meta.title)}</h1>
+          <div style="display:flex;flex-wrap:wrap;gap:16px;color:rgba(255,255,255,.8);font-size:14px">
+            <span>Monika Barnwal</span><span>${esc(meta.date)}</span><span>${esc(meta.readTime)}</span>
+          </div>
+        </div>
+      </div>
+      <div style="max-width:1400px;margin:0 auto;padding:32px 16px">
+        <p style="margin:0;font-size:14px;color:#5a6b64">Home / Guides / ${esc(meta.title)}</p>
+      </div>
+    </div>`;
+}
+
+function blogPreload(html, pathname) {
+  const meta = BLOG_META[pathname];
+  if (!meta || !meta.heroSrc) return html;
+  const hero = resolveAsset(meta.heroSrc);
+  if (!hero) return html;
+  return html.replace(
+    "</head>",
+    `    <link rel="preload" as="image" href="${hero}" fetchpriority="high">\n  </head>`
+  );
+}
+
 function withShell(html, pathname) {
-  const shell = shellFor(pathname);
+  const shell = blogShell(pathname) || shellFor(pathname);
   if (!shell) return html;
   return html.replace(/<div id="root">\s*<\/div>/, `<div id="root">${shell}</div>`);
 }
@@ -193,7 +245,7 @@ for (const loc of locs) {
   // Don't overwrite real built assets/files
   if (existsSync(outFile)) continue;
   mkdirSync(outDir, { recursive: true });
-  writeFileSync(outFile, withShell(withPreload(baseHtml, pathname), pathname));
+  writeFileSync(outFile, withShell(blogPreload(withPreload(baseHtml, pathname), pathname), pathname));
   written++;
 }
 
