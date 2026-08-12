@@ -86,8 +86,8 @@ const bestEssentials: Item[] = [
     href: "https://barnip.com/travel-gadgets/smart-travel-gear/airtags",
     icon: Radar,
     tag: "Gadgets",
-    image: U("photo-1491637639811-60e2756cc1c7"),
-    alt: "Smart luggage tracker airtag travel gadget",
+    image: romanceKitAsset.url,
+    alt: "Must-have travel gadgets and essentials kit",
   },
   {
     title: "Passport and Money-Bag",
