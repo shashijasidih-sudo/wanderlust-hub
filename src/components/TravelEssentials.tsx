@@ -7,6 +7,7 @@ import honeymoonCoupleImg from "@/assets/ess-honeymoon-couple.jpg";
 import toiletryKitAsset from "@/assets/ess-toiletry-kit.png.asset.json";
 import womenSafetyAsset from "@/assets/ess-women-safety.png.asset.json";
 import romanceKitAsset from "@/assets/ess-romance-kit.png.asset.json";
+import airtagsAsset from "@/assets/ess-airtags.png.asset.json";
 
 type Item = {
   title: string;
