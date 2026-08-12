@@ -186,7 +186,7 @@ const BlogArticleLayout = ({
   // Fallback so every city guide shows the same section set as the Phuket template
   const relatedActivities = (relatedActivitiesProp && relatedActivitiesProp.length > 0)
     ? relatedActivitiesProp
-    : (internalLinks?.activities ?? []).slice(0, 4).map((l) => ({ title: l.title, link: l.link }));
+    : (internalLinks?.activities ?? []).slice(0, 4).map((l): RelatedActivity => ({ title: l.title, link: l.link, image: l.image }));
 
   // Destination -> YouTube Short mapping (auto-embedded mid-article)
   const getYouTubeShort = (path: string, ttl: string): { id: string; name: string } | null => {
