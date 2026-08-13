@@ -520,6 +520,7 @@ const App = () => (
             <Route path="/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary/" element={<BlogPhuket4DaysItinerary />} />
             <Route path="/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary/" element={<BlogPhuket5DaysItinerary />} />
             <Route path="/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary/" element={<BlogPhuketHoneymoonItinerary />} />
+            <Route path="/thailand/phuket/destination-guides/indian-audience/phuket-honeymoon-for-indian-couples/" element={<BlogPhuketHoneymoonForIndianCouples />} />
             <Route path="/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary/" element={<BlogPhuketKrabiComboItinerary />} />
             <Route path="/thailand/phuket/destination-guides/itinerary/phuket-luxury-itinerary/" element={<BlogPhuketLuxuryItinerary />} />
             <Route path="/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong/" element={<BlogPhuketAirportToPatongTransfer />} />
