@@ -419,6 +419,7 @@ const Blog25BestThingsToDoPhuket = lazy(() => import("./pages/Blog25BestThingsTo
 const BlogPhuket4DaysItinerary = lazy(() => import("./pages/BlogPhuket4DaysItinerary"));
 const BlogPhuket5DaysItinerary = lazy(() => import("./pages/BlogPhuket5DaysItinerary"));
 const BlogPhuketHoneymoonItinerary = lazy(() => import("./pages/BlogPhuketHoneymoonItinerary"));
+const BlogPhuketHoneymoonForIndianCouples = lazy(() => import("./pages/BlogPhuketHoneymoonForIndianCouples"));
 const BlogPhuketKrabiComboItinerary = lazy(() => import("./pages/BlogPhuketKrabiComboItinerary"));
 const BlogPhuketLuxuryItinerary = lazy(() => import("./pages/BlogPhuketLuxuryItinerary"));
 const BlogPhuketAirportToPatongTransfer = lazy(() => import("./pages/BlogPhuketAirportToPatongTransfer"));
