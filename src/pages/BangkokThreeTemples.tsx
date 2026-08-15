@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { ThreeTemplesGrandPalaceSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { threeTemplesGrandPalaceFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -35,8 +37,15 @@ const BangkokThreeTemples = () => {
     faqs: threeTemplesGrandPalaceFaqs,
   };
 
+  const sheet = bangkokSheetContent["bangkok-three-temples"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-three-temples" />}
       config={{
         path: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/",
         seoTitle: "Three Temples Bangkok City Tour with Transfers | Book in INR",

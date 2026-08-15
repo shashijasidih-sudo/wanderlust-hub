@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { DreamWorldSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { dreamWorldFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,8 +23,15 @@ const DreamWorldBangkok = () => {
     ],
     faqs: dreamWorldFaqs,
   };
+  const sheet = bangkokSheetContent["dream-world-bangkok"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="dream-world-bangkok" />}
       config={{
         path: "/thailand/bangkok/dream-world-bangkok-tickets/",
         seoTitle: "Dream World Bangkok Tickets with Lunch & Transfers | Book in INR",

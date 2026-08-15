@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { CityGemsGallerySEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { cityGemsGalleryFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,8 +23,15 @@ const BangkokCityGemsGallery = () => {
     ],
     faqs: cityGemsGalleryFaqs,
   };
+  const sheet = bangkokSheetContent["bangkok-city-gems-gallery"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-city-gems-gallery" />}
       config={{
         path: "/thailand/bangkok/gems-gallery-bangkok-tickets/",
         seoTitle: "Bangkok City & Temple Tour with Gems Gallery | Book in INR",

@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { SkywalkSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { bangkokSkywalkFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -28,8 +30,15 @@ const BangkokSkywalk = () => {
     ],
     faqs: bangkokSkywalkFaqs,
   };
+  const sheet = bangkokSheetContent["bangkok-skywalk"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-skywalk" />}
       config={{
         path: "/thailand/bangkok/mahanakhon-skywalk-tickets/",
         seoTitle: "Mahanakhon SkyWalk Bangkok Tickets | Glass Floor Deck | Book in INR",

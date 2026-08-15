@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { GrandPalaceEmeraldSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { grandPalaceEmeraldFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,8 +23,15 @@ const BangkokGrandPalaceEmerald = () => {
     ],
     faqs: grandPalaceEmeraldFaqs,
   };
+  const sheet = bangkokSheetContent["bangkok-grand-palace-emerald"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-grand-palace-emerald" />}
       config={{
         path: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/",
         seoTitle: "Grand Palace & Wat Phra Kaew Tour Bangkok | Book Tickets in INR",

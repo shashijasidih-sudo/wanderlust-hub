@@ -1,4 +1,6 @@
 import TourBooking from "@/components/TourBooking";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import ChaoPhrayaPrincessSEOContent from "@/components/activity-detail/ChaoPhrayaPrincessSEOContent";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { toursData } from "@/data/tourData";
@@ -22,11 +24,18 @@ const ChaoPhrayaPrincessJoin = () => {
     ],
     faqs: chaoPhrayaPrincessFaqs
   };
+  const sheet = bangkokSheetContent["chao-phraya-princess-join"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <>
       <FaqJsonLd faqs={chaoPhrayaPrincessFaqs} id="faq-jsonld-cpp-join" />
       <TourBooking
-        tourData={tourData}
+        tourData={pageTourData}
+        extraDescriptionBeforeHighlights={<BangkokTourItinerary tourKey="chao-phraya-princess-join" />}
         extraContentBeforeReviews={<ChaoPhrayaPrincessSEOContent />}
       />
     </>

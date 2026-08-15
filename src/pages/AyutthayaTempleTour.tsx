@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { AyutthayaTempleTourSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { ayutthayaTempleTourFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -23,8 +25,15 @@ const AyutthayaTempleTour = () => {
     ],
     faqs: ayutthayaTempleTourFaqs,
   };
+  const sheet = bangkokSheetContent["ayutthaya-temple-tour"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="ayutthaya-temple-tour" />}
       config={{
         path: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok/",
         seoTitle: "Ayutthaya Day Tour from Bangkok with Transfers | Book in INR",

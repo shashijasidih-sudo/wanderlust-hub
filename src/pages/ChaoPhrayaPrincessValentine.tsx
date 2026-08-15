@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import ChaoPhrayaPrincessValentineSEO from "@/components/activity-detail/ChaoPhrayaPrincessValentineSEO";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { toursData } from "@/data/tourData";
@@ -22,11 +24,18 @@ const ChaoPhrayaPrincessValentine = () => {
     ],
     faqs: chaoPhrayaPrincessFaqs
   };
+  const sheet = bangkokSheetContent["chao-phraya-princess-valentine"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <>
       <FaqJsonLd faqs={chaoPhrayaPrincessFaqs} id="faq-jsonld-cpp-valentine" />
       <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="chao-phraya-princess-valentine" />}
       config={{
         path: "/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise/",
         seoTitle: "Chao Phraya Princess Valentine's Dinner Cruise Bangkok | Book in INR",

@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { TukTukNightSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { tukTukNightFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,8 +23,15 @@ const BangkokTukTukNight = () => {
     ],
     faqs: tukTukNightFaqs,
   };
+  const sheet = bangkokSheetContent["bangkok-tuk-tuk-night"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-tuk-tuk-night" />}
       config={{
         path: "/thailand/bangkok/tuk-tuk-night-tour-bangkok/",
         seoTitle: "Bangkok Tuk-Tuk Night Tour Tickets | Book in INR",

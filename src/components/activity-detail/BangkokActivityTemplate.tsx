@@ -658,9 +658,11 @@ interface Props {
   tourData: any;
   config: BangkokActivityConfig;
   extraContentBeforeReviews?: ReactNode;
+  /** Rendered directly under "What to Expect", above the marketing blocks */
+  contentAfterOverview?: ReactNode;
 }
 
-const BangkokActivityTemplate = ({ tourData, config, extraContentBeforeReviews }: Props) => {
+const BangkokActivityTemplate = ({ tourData, config, extraContentBeforeReviews, contentAfterOverview }: Props) => {
   if (!tourData) return null;
 
   return (
@@ -680,6 +682,7 @@ const BangkokActivityTemplate = ({ tourData, config, extraContentBeforeReviews }
         forceBlackText
         extraDescriptionBeforeHighlights={
           <div className="space-y-8">
+            {contentAfterOverview}
             <div className="space-y-6 min-w-0">
               <HeroMeta
                 rating={Math.max(tourData.rating ?? 4.8, 4.5)}

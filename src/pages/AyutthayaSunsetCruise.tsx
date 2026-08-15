@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { AyutthayaSunsetCruiseSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { ayutthayaSunsetCruiseFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,8 +23,15 @@ const AyutthayaSunsetCruise = () => {
     ],
     faqs: ayutthayaSunsetCruiseFaqs,
   };
+  const sheet = bangkokSheetContent["ayutthaya-sunset-cruise"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="ayutthaya-sunset-cruise" />}
       config={{
         path: "/thailand/bangkok/ayutthaya-sunset-river-cruise/",
         seoTitle: "Ayutthaya Tour with Sunset River Cruise from Bangkok | Book in INR",
