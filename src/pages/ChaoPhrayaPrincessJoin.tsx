@@ -35,7 +35,7 @@ const ChaoPhrayaPrincessJoin = () => {
       <FaqJsonLd faqs={chaoPhrayaPrincessFaqs} id="faq-jsonld-cpp-join" />
       <TourBooking
         tourData={pageTourData}
-      contentAfterOverview={<BangkokTourItinerary tourKey="chao-phraya-princess-join" />}
+        extraDescriptionBeforeHighlights={<BangkokTourItinerary tourKey="chao-phraya-princess-join" />}
         extraContentBeforeReviews={<ChaoPhrayaPrincessSEOContent />}
       />
     </>
