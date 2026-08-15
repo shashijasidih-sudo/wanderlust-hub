@@ -658,9 +658,11 @@ interface Props {
   tourData: any;
   config: BangkokActivityConfig;
   extraContentBeforeReviews?: ReactNode;
+  /** Rendered directly under "What to Expect", above the marketing blocks */
+  contentAfterOverview?: ReactNode;
 }
 
-const BangkokActivityTemplate = ({ tourData, config, extraContentBeforeReviews }: Props) => {
+const BangkokActivityTemplate = ({ tourData, config, extraContentBeforeReviews, contentAfterOverview }: Props) => {
   if (!tourData) return null;
 
   return (
