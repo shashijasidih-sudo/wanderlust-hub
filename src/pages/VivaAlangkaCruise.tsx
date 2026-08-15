@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { VivaAlangkaCruiseSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { vivaAlangkaCruiseFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,8 +23,15 @@ const VivaAlangkaCruise = () => {
     ],
     faqs: vivaAlangkaCruiseFaqs,
   };
+  const sheet = bangkokSheetContent["viva-alangka-cruise"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="viva-alangka-cruise" />}
       config={{
         path: "/thailand/bangkok/viva-alangka-dinner-cruise/",
         seoTitle: "Viva Alangka Dinner Cruise Bangkok with Transfers | Book in INR",

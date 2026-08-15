@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { WatArunPhoPhraKaewSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { watArunPhoPhraKaewFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -35,8 +37,15 @@ const BangkokWatArunPhoTraimit = () => {
     faqs: watArunPhoPhraKaewFaqs,
   };
 
+  const sheet = bangkokSheetContent["bangkok-wat-arun-pho-traimit"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-wat-arun-pho-traimit" />}
       config={{
         path: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/",
         seoTitle: "Wat Arun, Wat Pho & Golden Buddha Tour Bangkok | Book in INR",

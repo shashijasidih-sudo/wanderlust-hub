@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { MaeklongFloatingMarketSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { maeklongFloatingMarketFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,8 +23,15 @@ const MaeklongFloatingMarket = () => {
     ],
     faqs: maeklongFloatingMarketFaqs,
   };
+  const sheet = bangkokSheetContent["maeklong-floating-market"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="maeklong-floating-market" />}
       config={{
         path: "/thailand/bangkok/maeklong-floating-market-tour/",
         seoTitle: "Maeklong Railway & Damnoen Saduak Floating Market Tour | Book in INR",

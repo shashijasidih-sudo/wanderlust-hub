@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { GoldenBuddhaMarbleTempleSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { goldenBuddhaMarbleTempleFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,8 +23,15 @@ const BangkokGoldenMarbleBuddha = () => {
     ],
     faqs: goldenBuddhaMarbleTempleFaqs,
   };
+  const sheet = bangkokSheetContent["bangkok-golden-marble-buddha"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-golden-marble-buddha" />}
       config={{
         path: "/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour/",
         seoTitle: "Golden Buddha & Marble Temple Bangkok City Tour | Book in INR",

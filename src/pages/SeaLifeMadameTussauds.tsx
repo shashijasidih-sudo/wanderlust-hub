@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { SeaLifeMadameTussaudsSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { seaLifeMadameTussaudsFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,8 +23,15 @@ const SeaLifeMadameTussauds = () => {
     ],
     faqs: seaLifeMadameTussaudsFaqs,
   };
+  const sheet = bangkokSheetContent["sea-life-madame-tussauds"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="sea-life-madame-tussauds" />}
       config={{
         path: "/thailand/bangkok/sea-life-madame-tussauds-tickets/",
         seoTitle: "Sea Life Bangkok & Madame Tussauds Combo Tickets | Book in INR",

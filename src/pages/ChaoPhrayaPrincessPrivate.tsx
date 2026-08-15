@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import ChaoPhrayaPrincessPrivateSEO from "@/components/activity-detail/ChaoPhrayaPrincessPrivateSEO";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { toursData } from "@/data/tourData";
@@ -22,11 +24,18 @@ const ChaoPhrayaPrincessPrivate = () => {
     ],
     faqs: chaoPhrayaPrincessFaqs
   };
+  const sheet = bangkokSheetContent["chao-phraya-princess-private"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return (
     <>
       <FaqJsonLd faqs={chaoPhrayaPrincessFaqs} id="faq-jsonld-cpp-private" />
       <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="chao-phraya-princess-private" />}
       config={{
         path: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/",
         seoTitle: "Chao Phraya Princess Dinner Cruise with Private Transfer | Book in INR",

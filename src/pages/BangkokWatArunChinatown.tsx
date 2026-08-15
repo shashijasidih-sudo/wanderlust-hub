@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { WatArunChinatownSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { watArunChinatownFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -21,8 +23,15 @@ const BangkokWatArunChinatown = () => {
     ],
     faqs: watArunChinatownFaqs,
   };
+  const sheet = bangkokSheetContent["bangkok-wat-arun-chinatown"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-wat-arun-chinatown" />}
       config={{
         path: "/thailand/bangkok/wat-arun-chinatown-tour/",
         seoTitle: "Wat Arun Sunset & Chinatown Street Food Tour Bangkok | Book in INR",

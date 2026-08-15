@@ -1,4 +1,6 @@
 import BangkokActivityTemplate from "@/components/activity-detail/BangkokActivityTemplate";
+import BangkokTourItinerary from "@/components/activity-detail/BangkokTourItinerary";
+import { bangkokSheetContent } from "@/data/bangkokSheetContent";
 import { BangkokCityBoatTourSEO } from "@/components/activity-detail/BangkokActivitySEO";
 import { bangkokCityBoatTourFaqs } from "@/data/bangkokActivityFaqs";
 import { toursData } from "@/data/tourData";
@@ -35,8 +37,15 @@ const BangkokCityBoatTour = () => {
     faqs: bangkokCityBoatTourFaqs,
   };
 
+  const sheet = bangkokSheetContent["bangkok-city-boat-tour"];
+  const pageTourData = {
+    ...tourData,
+    description: { ...tourData.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
+  };
   return <BangkokActivityTemplate
-      tourData={tourData}
+      tourData={pageTourData}
+      contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-city-boat-tour" />}
       config={{
         path: "/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour/",
         seoTitle: "Chao Phraya River Boat Bangkok City Tour | Book in INR",
