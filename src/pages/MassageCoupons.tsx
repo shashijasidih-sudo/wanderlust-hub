@@ -23,7 +23,7 @@ const MassageCoupons = () => {
     inclusions: sheet.inclusions,
   };
   return <TourBooking tourData={pageTourData}
-      contentAfterOverview={<BangkokTourItinerary tourKey="massage-coupons" />} />;
+      extraDescriptionBeforeHighlights={<BangkokTourItinerary tourKey="massage-coupons" />} />;
 };
 
 export default MassageCoupons;
