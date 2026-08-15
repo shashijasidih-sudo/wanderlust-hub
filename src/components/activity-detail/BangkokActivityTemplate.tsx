@@ -682,6 +682,7 @@ const BangkokActivityTemplate = ({ tourData, config, extraContentBeforeReviews, 
         forceBlackText
         extraDescriptionBeforeHighlights={
           <div className="space-y-8">
+            {contentAfterOverview}
             <div className="space-y-6 min-w-0">
               <HeroMeta
                 rating={Math.max(tourData.rating ?? 4.8, 4.5)}
