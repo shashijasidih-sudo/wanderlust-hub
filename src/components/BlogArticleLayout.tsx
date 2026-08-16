@@ -123,16 +123,26 @@ const renderInline = (text: string): React.ReactNode => {
   let match: RegExpExecArray | null;
   let key = 0;
 
+  // Render **bold** markdown inside plain-text segments.
+  const pushBold = (segment: string) => {
+    const chunks = segment.split(/\*\*(.+?)\*\*/g);
+    chunks.forEach((chunk, i) => {
+      if (!chunk) return;
+      if (i % 2 === 1) parts.push(<strong key={key++} className="font-semibold">{chunk}</strong>);
+      else parts.push(chunk);
+    });
+  };
+
   const pushPlain = (segment: string) => {
     // Recursively scan plain-text segments for auto-link phrases.
     let remaining = segment;
     while (remaining) {
       const hit = findAutoLink(remaining);
       if (!hit || usedPaths.has(hit.path)) {
-        parts.push(remaining);
+        pushBold(remaining);
         return;
       }
-      if (hit.index > 0) parts.push(remaining.slice(0, hit.index));
+      if (hit.index > 0) pushBold(remaining.slice(0, hit.index));
       usedPaths.add(hit.path);
       parts.push(
         <Link key={key++} to={hit.path} className={linkClass}>{hit.label}</Link>
