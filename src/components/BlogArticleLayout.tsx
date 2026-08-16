@@ -385,6 +385,7 @@ const BlogArticleLayout = ({
             </div>
           </div>
         </div>
+        )}
 
         <div className="container px-4 py-8">
           <Breadcrumb className="mb-8 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
