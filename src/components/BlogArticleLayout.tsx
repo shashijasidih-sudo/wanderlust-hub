@@ -164,7 +164,7 @@ const renderInline = (text: string): React.ReactNode => {
 
 
 const BlogArticleLayout = ({
-  title, description, heroImage, heroAlt, author, date,
+  title, description, heroImage, heroAlt, heroContain = false, author, date,
   readTime, category, keywords, sections, inlineImages, relatedLinks,
   relatedActivities: relatedActivitiesProp, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
