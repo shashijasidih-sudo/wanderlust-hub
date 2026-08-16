@@ -504,6 +504,17 @@ const BlogArticleLayout = ({
                     rendered = (
                       <div className="my-10 p-5 md:p-8 rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-background to-primary/10 shadow-lg overflow-hidden">
                         <div className="flex flex-col lg:flex-row lg:items-center gap-5 md:gap-6">
+                          <Link
+                            to={section.link || "/thailand/"}
+                            className="block w-full lg:w-40 flex-shrink-0 overflow-hidden rounded-xl"
+                          >
+                            <SafeImage
+                              src={section.src || getBlogLinkImage(section.link || "")}
+                              alt={section.linkText || section.content || ""}
+                              loading="lazy"
+                              className="h-28 w-full object-cover lg:h-24"
+                            />
+                          </Link>
                           <div className="flex-1 min-w-0">
                             <h3 className="text-lg md:text-2xl font-bold text-black mb-2 break-words">{section.content}</h3>
                             {section.subheading && (
