@@ -75,8 +75,8 @@ const BlogMoviesFilmedInThailand = () => (
   <BlogArticleLayout
     title="Bollywood to Hollywood: 15 Famous Movies Filmed in Thailand and the Real Places You Can Visit"
     description="Discover famous Bollywood and Hollywood movies filmed in Thailand, from Kaho Naa Pyaar Hai and The Beach to James Bond. Find the real locations and tours to visit them."
-    heroImage={heroImg}
-    heroAlt="Longtail boat beside limestone cliffs at Phi Phi Island, a famous Thailand movie location"
+    heroImage={heroAsset.url}
+    heroAlt="You've seen Thailand in these movies — Bollywood and Hollywood filming locations in Krabi, Phuket, Bangkok, Maya Bay and Khao Lak"
     author="Yellodae Travel Expert"
     date="Aug 16, 2026"
     readTime="15 min read"
@@ -102,14 +102,14 @@ const BlogMoviesFilmedInThailand = () => (
     guidesLabel="Thailand Smart Guides"
     bodyClassName="text-black"
     inlineImages={[
-      { src: imgKrabi, alt: "Longtail boats on a Krabi beach below limestone cliffs" },
-      { src: imgSamui, alt: "Palm-lined beach in Koh Samui" },
-      { src: imgPhuket, alt: "Phuket island viewpoint over the Andaman Sea" },
-      { src: imgBangkok, alt: "Bangkok city skyline at night" },
-      { src: imgMayaBay, alt: "Maya Bay on Phi Phi Leh, the filming location of The Beach" },
-      { src: imgJamesBond, alt: "Ko Tapu, known worldwide as James Bond Island, in Phang Nga Bay" },
-      { src: imgKrabiBeach, alt: "Traveller on a Krabi beach with limestone karsts behind" },
-      { src: imgBangkokBridge, alt: "Bangkok bridge and river at twilight" },
+      { src: imgKrabiBollywood, alt: "Bollywood-style beach scene in Krabi, filming location of Kaho Naa Pyaar Hai" },
+      { src: imgPhuketFriends, alt: "Friends on a Phuket beach terrace, in the style of Veere Di Wedding" },
+      { src: imgBangkokNeon, alt: "Neon Bangkok street at night, seen in Ek Tha Tiger and The Hangover Part II" },
+      { src: imgMayaBayScene, alt: "Maya Bay on Phi Phi Leh, the filming location of The Beach" },
+      { src: imgJamesBondScene, alt: "Ko Tapu, James Bond Island, from The Man with the Golden Gun" },
+      { src: imgKhaoLak, alt: "Khao Lak beach, the setting of The Impossible" },
+      { src: imgKrabiJungle, alt: "Misty Krabi cliffs and waterfall, scenery used in Star Wars Episode III" },
+      { src: imgBangkokBridge, alt: "Bangkok river and bridge at twilight, a classic movie backdrop" },
     ]}
     cityHub={{ city: "Thailand", thingsToDoLink: PHUKET_THINGS, transfersLink: "/thailand/airport-transfers/" }}
     sections={[
