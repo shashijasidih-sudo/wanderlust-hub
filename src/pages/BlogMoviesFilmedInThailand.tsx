@@ -1,13 +1,13 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
-import heroImg from "@/assets/phi-phi-boat.jpeg";
-import imgKrabi from "@/assets/krabi-longtail-boats-1.jpg";
-import imgKrabiBeach from "@/assets/krabi-beach-woman-1.jpg";
-import imgSamui from "@/assets/koh-samui-beach-1.jpg";
-import imgPhuket from "@/assets/phuket-island-viewpoint-1.jpg";
-import imgBangkok from "@/assets/bangkok-city-night-1.jpg";
-import imgMayaBay from "@/assets/phuket-maya-bay-1.jpg";
-import imgJamesBond from "@/assets/james-bond-island-hero.jpg";
+import heroAsset from "@/assets/thailand-movies-featured.png.asset.json";
+import imgKrabiBollywood from "@/assets/movie-krabi-bollywood-scene.jpg";
+import imgMayaBayScene from "@/assets/movie-maya-bay-scene.jpg";
+import imgJamesBondScene from "@/assets/movie-james-bond-island-scene.jpg";
+import imgBangkokNeon from "@/assets/movie-bangkok-neon-scene.jpg";
+import imgPhuketFriends from "@/assets/movie-phuket-friends-scene.jpg";
+import imgKhaoLak from "@/assets/movie-khao-lak-scene.jpg";
+import imgKrabiJungle from "@/assets/movie-krabi-jungle-scene.jpg";
 import imgBangkokBridge from "@/assets/bangkok-bridge-twilight-1.jpg";
 
 /* ---- Yellodae activity links assigned to each movie section ---- */
