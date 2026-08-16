@@ -85,6 +85,8 @@ interface BlogArticleProps {
   description: string;
   heroImage: string;
   heroAlt: string;
+  /** Show the hero fully (letterboxed) instead of cropping it — for poster/infographic artwork. */
+  heroContain?: boolean;
   author: string;
   date: string;
   readTime: string;
@@ -121,16 +123,26 @@ const renderInline = (text: string): React.ReactNode => {
   let match: RegExpExecArray | null;
   let key = 0;
 
+  // Render **bold** markdown inside plain-text segments.
+  const pushBold = (segment: string) => {
+    const chunks = segment.split(/\*\*(.+?)\*\*/g);
+    chunks.forEach((chunk, i) => {
+      if (!chunk) return;
+      if (i % 2 === 1) parts.push(<strong key={key++} className="font-semibold">{chunk}</strong>);
+      else parts.push(chunk);
+    });
+  };
+
   const pushPlain = (segment: string) => {
     // Recursively scan plain-text segments for auto-link phrases.
     let remaining = segment;
     while (remaining) {
       const hit = findAutoLink(remaining);
       if (!hit || usedPaths.has(hit.path)) {
-        parts.push(remaining);
+        pushBold(remaining);
         return;
       }
-      if (hit.index > 0) parts.push(remaining.slice(0, hit.index));
+      if (hit.index > 0) pushBold(remaining.slice(0, hit.index));
       usedPaths.add(hit.path);
       parts.push(
         <Link key={key++} to={hit.path} className={linkClass}>{hit.label}</Link>
@@ -162,7 +174,7 @@ const renderInline = (text: string): React.ReactNode => {
 
 
 const BlogArticleLayout = ({
-  title, description, heroImage, heroAlt, author, date,
+  title, description, heroImage, heroAlt, heroContain = false, author, date,
   readTime, category, keywords, sections, inlineImages, relatedLinks,
   relatedActivities: relatedActivitiesProp, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
@@ -340,6 +352,32 @@ const BlogArticleLayout = ({
       <Header />
       <main className="flex-1">
         {/* Hero */}
+        {heroContain ? (
+          <div className="bg-secondary/30 border-b border-border">
+            <div className="container mx-auto px-4 md:px-6 py-6 md:py-10">
+              <SafeImage
+                src={heroImage}
+                alt={heroAlt}
+                width={1600}
+                height={900}
+                priority
+                decoding="async"
+                className="mx-auto w-full max-h-[75vh] object-contain rounded-xl shadow-lg"
+              />
+              <div className="mt-6 max-w-3xl">
+                <span className="inline-block bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
+                  {category}
+                </span>
+                <h1 className="text-2xl md:text-4xl font-bold text-foreground mb-3 leading-tight">{title}</h1>
+                <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm">
+                  <span className="flex items-center gap-1"><User className="h-4 w-4" />Monika Barnwal</span>
+                  <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />{date}</span>
+                  <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{readTime}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
         <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
           <SafeImage src={heroImage} alt={heroAlt} width={1600} height={900} priority decoding="async" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
@@ -357,6 +395,7 @@ const BlogArticleLayout = ({
             </div>
           </div>
         </div>
+        )}
 
         <div className="container px-4 py-8">
           <Breadcrumb className="mb-8 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -456,14 +495,12 @@ const BlogArticleLayout = ({
                           className="w-full sm:w-auto max-w-full h-auto min-h-11 py-3 whitespace-normal break-words"
                         >
                           <Link to={section.link || "/thailand"} className="flex items-center justify-center gap-3 text-center">
-                            {section.src && (
-                              <SafeImage
-                                src={section.src}
-                                alt=""
-                                loading="lazy"
-                                className="h-9 w-9 rounded-md object-cover flex-shrink-0"
-                              />
-                            )}
+                            <SafeImage
+                              src={section.src || getBlogLinkImage(section.link || "")}
+                              alt=""
+                              loading="lazy"
+                              className="h-9 w-9 rounded-md object-cover flex-shrink-0"
+                            />
                             <span className="min-w-0">{section.linkText || "Book Now"}</span>
                           </Link>
                         </Button>
@@ -475,6 +512,17 @@ const BlogArticleLayout = ({
                     rendered = (
                       <div className="my-10 p-5 md:p-8 rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-background to-primary/10 shadow-lg overflow-hidden">
                         <div className="flex flex-col lg:flex-row lg:items-center gap-5 md:gap-6">
+                          <Link
+                            to={section.link || "/thailand/"}
+                            className="block w-full lg:w-40 flex-shrink-0 overflow-hidden rounded-xl"
+                          >
+                            <SafeImage
+                              src={section.src || getBlogLinkImage(section.link || "")}
+                              alt={section.linkText || section.content || ""}
+                              loading="lazy"
+                              className="h-28 w-full object-cover lg:h-24"
+                            />
+                          </Link>
                           <div className="flex-1 min-w-0">
                             <h3 className="text-lg md:text-2xl font-bold text-black mb-2 break-words">{section.content}</h3>
                             {section.subheading && (
