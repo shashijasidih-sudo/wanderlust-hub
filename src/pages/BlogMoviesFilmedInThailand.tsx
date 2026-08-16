@@ -101,12 +101,6 @@ const BlogMoviesFilmedInThailand = () => (
     guidesLink="/thailand/destination-guides/"
     guidesLabel="Thailand Smart Guides"
     bodyClassName="text-black"
-    relatedActivities={[
-      { title: "Krabi 4 Islands Tour by Speedboat with Transfer", link: KRABI_4_ISLANDS },
-      { title: "Phi Phi & Maya Bay Island Tour from Phuket", link: PHI_PHI },
-      { title: "James Bond Island Speedboat Tour from Phuket", link: JAMES_BOND },
-      { title: "Bangkok Three Temples City Tour with Transfer", link: BANGKOK_CITY },
-    ]}
     cityHub={{ city: "Thailand", thingsToDoLink: PHUKET_THINGS, transfersLink: "/thailand/airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Have you ever watched a Bollywood or Hollywood movie and wondered, “Where is this beautiful place?”" },
