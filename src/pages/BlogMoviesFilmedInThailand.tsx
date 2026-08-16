@@ -1,14 +1,13 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
-import heroAsset from "@/assets/thailand-movies-featured.png.asset.json";
-import imgKrabiBollywood from "@/assets/movie-krabi-bollywood-scene.jpg";
-import imgMayaBayScene from "@/assets/movie-maya-bay-scene.jpg";
-import imgJamesBondScene from "@/assets/movie-james-bond-island-scene.jpg";
-import imgBangkokNeon from "@/assets/movie-bangkok-neon-scene.jpg";
-import imgPhuketFriends from "@/assets/movie-phuket-friends-scene.jpg";
-import imgKhaoLak from "@/assets/movie-khao-lak-scene.jpg";
-import imgKrabiJungle from "@/assets/movie-krabi-jungle-scene.jpg";
-import imgBangkokBridge from "@/assets/bangkok-bridge-twilight-1.jpg";
+import heroMovies from "@/assets/movies-thailand-hero.webp";
+import imgKahoNaa from "@/assets/movie-kaho-naa-pyaar-hai-krabi.webp";
+import imgBaarBaarDekho from "@/assets/movie-baar-baar-dekho-krabi.webp";
+import imgHousefull2 from "@/assets/movie-housefull2-krabi.webp";
+import imgVeereDiWedding from "@/assets/movie-veere-di-wedding-phuket.webp";
+import imgTheBeach from "@/assets/movie-the-beach-maya-bay.webp";
+import imgJamesBondPoster from "@/assets/movie-james-bond-island.webp";
+import imgDilChahtaHai from "@/assets/movie-dil-chahta-hai-thailand.webp";
 
 /* ---- Yellodae activity links assigned to each movie section ---- */
 const KRABI_4_ISLANDS = "/thailand/krabi/4-island-tour-speedboat-with-transfer/";
@@ -75,7 +74,8 @@ const BlogMoviesFilmedInThailand = () => (
   <BlogArticleLayout
     title="Bollywood to Hollywood: 15 Famous Movies Filmed in Thailand and the Real Places You Can Visit"
     description="Discover famous Bollywood and Hollywood movies filmed in Thailand, from Kaho Naa Pyaar Hai and The Beach to James Bond. Find the real locations and tours to visit them."
-    heroImage={heroAsset.url}
+    heroImage={heroMovies}
+    heroContain
     heroAlt="You've seen Thailand in these movies — Bollywood and Hollywood filming locations in Krabi, Phuket, Bangkok, Maya Bay and Khao Lak"
     author="Yellodae Travel Expert"
     date="Aug 16, 2026"
@@ -101,16 +101,6 @@ const BlogMoviesFilmedInThailand = () => (
     guidesLink="/thailand/destination-guides/"
     guidesLabel="Thailand Smart Guides"
     bodyClassName="text-black"
-    inlineImages={[
-      { src: imgKrabiBollywood, alt: "Bollywood-style beach scene in Krabi, filming location of Kaho Naa Pyaar Hai" },
-      { src: imgPhuketFriends, alt: "Friends on a Phuket beach terrace, in the style of Veere Di Wedding" },
-      { src: imgBangkokNeon, alt: "Neon Bangkok street at night, seen in Ek Tha Tiger and The Hangover Part II" },
-      { src: imgMayaBayScene, alt: "Maya Bay on Phi Phi Leh, the filming location of The Beach" },
-      { src: imgJamesBondScene, alt: "Ko Tapu, James Bond Island, from The Man with the Golden Gun" },
-      { src: imgKhaoLak, alt: "Khao Lak beach, the setting of The Impossible" },
-      { src: imgKrabiJungle, alt: "Misty Krabi cliffs and waterfall, scenery used in Star Wars Episode III" },
-      { src: imgBangkokBridge, alt: "Bangkok river and bridge at twilight, a classic movie backdrop" },
-    ]}
     cityHub={{ city: "Thailand", thingsToDoLink: PHUKET_THINGS, transfersLink: "/thailand/airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Have you ever watched a Bollywood or Hollywood movie and wondered, “Where is this beautiful place?”" },
@@ -149,6 +139,7 @@ const BlogMoviesFilmedInThailand = () => (
       { type: "paragraph", content: "**Don't just visit a destination. Visit the destination you remember from a movie.**" },
 
       { type: "heading", content: "1. Kaho Naa... Pyaar Hai — Krabi" },
+      { type: "image", src: imgKahoNaa, alt: "Kaho Naa Pyaar Hai filmed in Krabi, Thailand" },
       { type: "subheading", content: "The Bollywood Movie That Introduced a Generation to Thailand" },
       { type: "paragraph", content: "For many Indian travellers, the relationship between Bollywood and Thailand goes back to **Kaho Naa... Pyaar Hai**." },
       { type: "paragraph", content: "Released in 2000, the Hrithik Roshan and Ameesha Patel romantic drama became a phenomenon." },
@@ -167,6 +158,7 @@ const BlogMoviesFilmedInThailand = () => (
       { type: "tip-box", content: "**Content Hook:** “Did you know Hrithik Roshan made Krabi famous for an entire generation of Indian travellers?”" },
 
       { type: "heading", content: "2. Baar Baar Dekho — Krabi" },
+      { type: "image", src: imgBaarBaarDekho, alt: "Baar Baar Dekho song Sau Aasmaan filmed in Krabi, Thailand" },
       { type: "subheading", content: "When Bollywood Romance Met Thailand" },
       { type: "paragraph", content: "Remember the dreamy song “Sau Aasmaan” from Baar Baar Dekho? The song features Sidharth Malhotra and Katrina Kaif against spectacular tropical scenery. Thailand was used for part of the film's production, with the song shoot taking place in **Krabi**. The combination of blue water, limestone cliffs and romantic landscapes is exactly the type of scenery that makes Krabi such a popular honeymoon destination." },
       { type: "subheading", content: "Why couples should visit" },
@@ -186,6 +178,7 @@ const BlogMoviesFilmedInThailand = () => (
       { type: "paragraph", content: "**SEO Angle:** Baar Baar Dekho shooting location in Thailand" },
 
       { type: "heading", content: "3. Housefull 2 — Krabi" },
+      { type: "image", src: imgHousefull2, alt: "Housefull 2 filmed in Krabi, Thailand" },
       { type: "subheading", content: "Bollywood Comedy Meets Tropical Thailand" },
       { type: "paragraph", content: "The Housefull franchise has frequently used exotic international locations to add scale and glamour to its stories." },
       { type: "paragraph", content: "Housefull 2 included filming in Thailand, with **Krabi** providing spectacular resort and beach scenery." },
@@ -208,6 +201,7 @@ const BlogMoviesFilmedInThailand = () => (
       { type: "tip-box", content: "**Travel Tip:** Koh Samui is geographically separate from Phuket and should be planned as a separate destination rather than as a Phuket day trip." },
 
       { type: "heading", content: "5. Veere Di Wedding — Phuket" },
+      { type: "image", src: imgVeereDiWedding, alt: "Veere Di Wedding shot in Phuket, Thailand" },
       { type: "subheading", content: "When Phuket Became the Ultimate Girls' Trip" },
       { type: "paragraph", content: "Veere Di Wedding brought a very different energy to Thailand. The film was shot partly in **Phuket**, with resort, beach and celebration sequences giving the destination a glamorous holiday atmosphere. The Phuket portions are especially relevant for Indian travellers because the destination has become increasingly popular for:" },
       {
@@ -285,6 +279,7 @@ const BlogMoviesFilmedInThailand = () => (
       { type: "paragraph", content: "For the traveller: **See Bangkok's real streets after discovering how filmmakers transformed the city for cinema.** This is more of a **cinema + city sightseeing** connection than a literal movie-location tour. Explore more [things to do in Bangkok](" + BANGKOK_THINGS + ")." },
 
       { type: "heading", content: "10. The Beach — Maya Bay & Phi Phi" },
+      { type: "image", src: imgTheBeach, alt: "The Beach filmed at Maya Bay, Phi Phi Leh, Thailand" },
       { type: "subheading", content: "The Movie That Changed Maya Bay Forever" },
       { type: "paragraph", content: "Now we move from Bollywood to one of the most famous Thailand movies of all time." },
       { type: "paragraph", content: "**The Beach**, starring Leonardo DiCaprio, was filmed extensively in Thailand, including **Maya Bay on Phi Phi Leh**." },
@@ -300,6 +295,7 @@ const BlogMoviesFilmedInThailand = () => (
       { type: "tip-box", content: "**Content Hook:** “You've seen Maya Bay on screen. Now see the real place.”" },
 
       { type: "heading", content: "11. The Man with the Golden Gun — James Bond Island" },
+      { type: "image", src: imgJamesBondPoster, alt: "The Man with the Golden Gun filmed at James Bond Island, Phang Nga Bay" },
       { type: "subheading", content: "The Movie That Gave an Island a New Name" },
       { type: "paragraph", content: "Thailand's most famous movie-location story may belong to James Bond." },
       { type: "paragraph", content: "The Man with the Golden Gun was filmed partly in Thailand in the 1970s." },
@@ -435,6 +431,7 @@ const BlogMoviesFilmedInThailand = () => (
       },
 
       { type: "heading", content: "Why Bollywood Makes Thailand Even More Special for Indian Travellers" },
+      { type: "image", src: imgDilChahtaHai, alt: "Bollywood films such as Dil Chahta Hai and Thailand's on-screen locations" },
       { type: "paragraph", content: "For an Indian traveller, a destination can feel completely different when you've already seen it on screen." },
       { type: "paragraph", content: "You've heard the song. You've watched the actors walk along the beach. You've seen the dramatic landscape behind the romantic scene." },
       { type: "paragraph", content: "And then you arrive in Thailand. Suddenly, the destination feels familiar." },
