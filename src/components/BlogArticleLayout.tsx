@@ -485,14 +485,12 @@ const BlogArticleLayout = ({
                           className="w-full sm:w-auto max-w-full h-auto min-h-11 py-3 whitespace-normal break-words"
                         >
                           <Link to={section.link || "/thailand"} className="flex items-center justify-center gap-3 text-center">
-                            {section.src && (
-                              <SafeImage
-                                src={section.src}
-                                alt=""
-                                loading="lazy"
-                                className="h-9 w-9 rounded-md object-cover flex-shrink-0"
-                              />
-                            )}
+                            <SafeImage
+                              src={section.src || getBlogLinkImage(section.link || "")}
+                              alt=""
+                              loading="lazy"
+                              className="h-9 w-9 rounded-md object-cover flex-shrink-0"
+                            />
                             <span className="min-w-0">{section.linkText || "Book Now"}</span>
                           </Link>
                         </Button>
