@@ -287,3 +287,5 @@ RedirectMatch 301 ^/krabi(/.*)?$ /thailand/krabi$1
   # ------------------------------------------------------------------
   RewriteRule ^ index.html [L]
 </IfModule>
+
+Redirect 301 /blog/movies-filmed-in-thailand/ /thailand/phuket/destination-guides/activity/movies-filmed-in-thailand/

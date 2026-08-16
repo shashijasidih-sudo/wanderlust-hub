@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { CartProvider } from "@/contexts/CartContext";
 import { CurrencyProvider } from "@/contexts/CurrencyContext";
 import ApprovalBadge from "@/components/ApprovalBadge";
@@ -731,8 +731,10 @@ const App = () => (
            <Route path="/thailand/pattaya/destination-guides/transfer/private-vs-shared-transfers-pattaya/" element={<BlogPrivateVsSharedTransfersPattaya />} />
             <Route path="/blog/airport-transfer-booking-thailand/" element={<BlogAirportTransferThailand />} />
             <Route path="/blog/phi-phi-island-tours-thailand/" element={<BlogPhiPhiIslandTours />} />
-            <Route path="/blog/movies-filmed-in-thailand/" element={<BlogMoviesFilmedInThailand />} />
-            <Route path="/blog/movies-filmed-in-thailand" element={<BlogMoviesFilmedInThailand />} />
+            <Route path="/thailand/phuket/destination-guides/activity/movies-filmed-in-thailand/" element={<BlogMoviesFilmedInThailand />} />
+            <Route path="/thailand/phuket/destination-guides/activity/movies-filmed-in-thailand" element={<BlogMoviesFilmedInThailand />} />
+            <Route path="/blog/movies-filmed-in-thailand/" element={<Navigate to="/thailand/phuket/destination-guides/activity/movies-filmed-in-thailand/" replace />} />
+            <Route path="/blog/movies-filmed-in-thailand" element={<Navigate to="/thailand/phuket/destination-guides/activity/movies-filmed-in-thailand/" replace />} />
             <Route path="/blog/phuket-city-tour-tiger-kingdom-transfer-guide/" element={<BlogPhuketCityTourTigerKingdomTransferGuide />} />
             <Route path="/blog/phuket-city-tour-tiger-kingdom-transfer-guide" element={<BlogPhuketCityTourTigerKingdomTransferGuide />} />
             <Route path="/blog/best-thailand-activities/" element={<BlogBestThailandActivities />} />
