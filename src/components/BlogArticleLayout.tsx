@@ -85,6 +85,8 @@ interface BlogArticleProps {
   description: string;
   heroImage: string;
   heroAlt: string;
+  /** Show the hero fully (letterboxed) instead of cropping it — for poster/infographic artwork. */
+  heroContain?: boolean;
   author: string;
   date: string;
   readTime: string;
