@@ -20,6 +20,7 @@ export interface ThailandGuide {
 }
 
 export const thailandGuides: ThailandGuide[] = [
+  { id: -6, title: "Bollywood to Hollywood: 15 Famous Movies Filmed in Thailand", description: "Famous Bollywood and Hollywood movies filmed in Thailand and the real locations you can visit.", category: "Thailand Travel Guide", image: phiPhiBoatImg, author: "Yellodae Travel Expert", date: "Aug 16, 2026", readTime: "15 min read", slug: "/blog/movies-filmed-in-thailand/" },
   { id: -3, title: "Complete Guide to Thailand Island Combos", description: "Discover the best Thailand island combos — Phuket + Phi Phi, Krabi combos, Koh Samui packages.", category: "Island Adventures", image: phiPhiImg, author: "Yellodae Travel Expert", date: "Mar 3, 2026", readTime: "10 min read", slug: "/blog/thailand-island-combos/" },
   { id: -4, title: "Complete Guide to Thailand Food Experiences", description: "From Bangkok street food to Phuket seafood, floating markets to rooftop dining.", category: "Food Tours", image: bangkokSkywalkImg, author: "Yellodae Travel Expert", date: "Mar 5, 2026", readTime: "11 min read", slug: "/blog/thailand-food-experiences/" },
   { id: 0, title: "Complete Guide to Airport Transfer Booking in Thailand", description: "Routes, types, tips, and the best platform to book your Suvarnabhumi, Phuket, or Krabi transfer.", category: "Thailand Transfers", image: bangkokCityImg, author: "Yellodae Travel Expert", date: "Feb 19, 2026", readTime: "8 min read", slug: "/blog/airport-transfer-booking-thailand/" },

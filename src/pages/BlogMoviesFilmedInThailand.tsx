@@ -98,7 +98,7 @@ const BlogMoviesFilmedInThailand = () => (
       "movie tourism Thailand",
       "Thailand movie tour",
     ]}
-    guidesLink="/thailand/smart-guides/"
+    guidesLink="/thailand/destination-guides/"
     guidesLabel="Thailand Smart Guides"
     bodyClassName="text-black"
     inlineImages={[
