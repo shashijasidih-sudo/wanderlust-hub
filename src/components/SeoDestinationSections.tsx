@@ -1,4 +1,5 @@
 import SafeImage from "@/components/SafeImage";
+import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -49,6 +50,8 @@ import packAntiTheftBackpackImg from "@/assets/pack-anti-theft-backpack.webp";
 import packTravelAirtagImg from "@/assets/pack-travel-airtag.webp";
 import packCompressionBagsImg from "@/assets/pack-compression-bags.webp";
 
+
+const PattayaAdultShowsHome = lazy(() => import("@/components/PattayaAdultShowsHome"));
 
 const sections: Section[] = [
   {
@@ -192,54 +195,60 @@ const SeoDestinationSections = () => {
   return (
     <section className="py-10 md:py-14 bg-background" aria-label="Featured destinations for Indian travelers">
       <div className="container px-4 md:px-6 space-y-12">
-        {sections.map((s) => (
-          <article key={s.id} id={s.id}>
-            <header className="mb-6 max-w-3xl">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2 text-foreground">{s.heading}</h2>
-              <p className="text-muted-foreground text-base md:text-lg">{s.description}</p>
-            </header>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {s.cards.map((c) => {
-                const inner = (
-                  <>
-                    <div className="aspect-[4/3] overflow-hidden">
-                      <SafeImage
-                        src={c.image}
-                        alt={`${c.title} - ${s.heading}`}
-                        loading="lazy"
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-4">
-                      <div className="flex items-center justify-between w-full">
-                        <h3 className="text-white font-semibold text-sm md:text-base">{c.title}</h3>
-                        <ArrowRight className="h-4 w-4 text-white opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+        {sections.map((s, index) => (
+          <>
+            {s.id === "you-must-pack-these" && (
+              <Suspense fallback={null}>
+                <PattayaAdultShowsHome />
+              </Suspense>
+            )}
+            <article key={s.id} id={s.id}>
+              <header className="mb-6 max-w-3xl">
+                <h2 className="text-2xl md:text-3xl font-bold mb-2 text-foreground">{s.heading}</h2>
+                <p className="text-muted-foreground text-base md:text-lg">{s.description}</p>
+              </header>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                {s.cards.map((c) => {
+                  const inner = (
+                    <>
+                      <div className="aspect-[4/3] overflow-hidden">
+                        <SafeImage
+                          src={c.image}
+                          alt={`${c.title} - ${s.heading}`}
+                          loading="lazy"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
                       </div>
-                    </div>
-                  </>
-                );
-                const cls =
-                  "group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300";
-                return c.external ? (
-                  <a
-                    key={c.href}
-                    href={c.href}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    className={cls}
-                    aria-label={`${s.heading} — ${c.title}`}
-                  >
-                    {inner}
-                  </a>
-                ) : (
-                  <Link key={c.href} to={c.href} className={cls} aria-label={`${s.heading} — ${c.title}`}>
-                    {inner}
-                  </Link>
-                );
-              })}
-
-            </div>
-          </article>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-4">
+                        <div className="flex items-center justify-between w-full">
+                          <h3 className="text-white font-semibold text-sm md:text-base">{c.title}</h3>
+                          <ArrowRight className="h-4 w-4 text-white opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                        </div>
+                      </div>
+                    </>
+                  );
+                  const cls =
+                    "group relative overflow-hidden rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300";
+                  return c.external ? (
+                    <a
+                      key={c.href}
+                      href={c.href}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className={cls}
+                      aria-label={`${s.heading} — ${c.title}`}
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    <Link key={c.href} to={c.href} className={cls} aria-label={`${s.heading} — ${c.title}`}>
+                      {inner}
+                    </Link>
+                  );
+                })}
+              </div>
+            </article>
+          </>
         ))}
       </div>
     </section>

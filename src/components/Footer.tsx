@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Facebook, Instagram, Linkedin, Youtube, MessageCircle } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
 import TravelerExperiences from "@/components/TravelerExperiences";
 import BangkokSmartGuides from "@/components/BangkokSmartGuides";
@@ -150,17 +150,7 @@ const Footer = () => {
         </div>
 
         {/* WhatsApp & Payment Methods Section */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-8 pb-8 border-b border-background/20">
-          {/* WhatsApp Button */}
-          <a
-            href="https://wa.me/917061710810"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-5 py-2.5 rounded-full font-medium transition-colors"
-          >
-            <MessageCircle className="h-5 w-5" />
-            Chat on WhatsApp
-          </a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 pb-8 border-b border-background/20">
 
           {/* Payment Methods */}
           <div className="flex items-center gap-4">
