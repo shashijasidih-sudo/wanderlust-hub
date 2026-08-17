@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { Calendar, Clock, User, ArrowLeft, Share2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import TravelerExperiences from "@/components/TravelerExperiences";
 import TravelEssentials from "@/components/TravelEssentials";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
@@ -692,7 +691,7 @@ const BlogArticleLayout = ({
                             />
                           </div>
                           <div className="p-4">
-                            <p className="text-foreground font-medium leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                            <p className="text-sm md:text-base text-foreground font-medium leading-snug line-clamp-2 group-hover:text-primary transition-colors">
                               {a.title}
                             </p>
                           </div>
