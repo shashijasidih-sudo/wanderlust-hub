@@ -51,6 +51,8 @@ import packTravelAirtagImg from "@/assets/pack-travel-airtag.webp";
 import packCompressionBagsImg from "@/assets/pack-compression-bags.webp";
 
 
+const PattayaAdultShowsHome = lazy(() => import("@/components/PattayaAdultShowsHome"));
+
 const sections: Section[] = [
   {
     id: "thailand-travel",
