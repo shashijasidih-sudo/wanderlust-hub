@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { Calendar, Clock, User, ArrowLeft, Share2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import TravelerExperiences from "@/components/TravelerExperiences";
 import TravelEssentials from "@/components/TravelEssentials";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
@@ -660,15 +659,22 @@ const BlogArticleLayout = ({
               </div>
             </div>
 
+            {/* Travel Essentials — full-bleed curated packing & gear guides */}
+            <div className="mt-10 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+              <div className="container mx-auto px-4 md:px-6">
+                <TravelEssentials compact />
+              </div>
+            </div>
+
             {/* Recommended Activities (keyword-rich internal links) — full-bleed */}
             {relatedActivities && relatedActivities.length > 0 && (
               <div className="mt-12 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
                 <div className="container mx-auto px-4 md:px-6">
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                  <h2 className="text-xl md:text-3xl font-bold text-foreground mb-4 md:mb-6">
                     Recommended Activities {cityHub ? `in ${cityHub.city}` : ""}
                   </h2>
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-                    {relatedActivities.map((a) => {
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+                    {relatedActivities.slice(0, 4).map((a) => {
                       const img = a.image || getBlogLinkImage(a.link);
                       return (
                         <Link
@@ -684,8 +690,8 @@ const BlogArticleLayout = ({
                               className="w-full h-full object-cover transition group-hover:scale-105"
                             />
                           </div>
-                          <div className="p-4">
-                            <p className="text-foreground font-medium leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                          <div className="p-3 md:p-4">
+                            <p className="text-sm md:text-base text-foreground font-medium leading-snug line-clamp-2 group-hover:text-primary transition-colors">
                               {a.title}
                             </p>
                           </div>
@@ -751,17 +757,6 @@ const BlogArticleLayout = ({
               );
             })()}
 
-            {/* Travel Essentials — full-bleed curated packing & gear guides (4 cards) */}
-            <div className="mt-10 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-              <div className="container px-4 md:px-6">
-                <TravelEssentials compact />
-              </div>
-            </div>
-
-            {/* Real Traveler Experiences — full-bleed beyond the max-w-3xl article column */}
-            <div className="mt-10 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-              <TravelerExperiences />
-            </div>
 
 
           </div>
