@@ -660,15 +660,22 @@ const BlogArticleLayout = ({
               </div>
             </div>
 
+            {/* Travel Essentials — full-bleed curated packing & gear guides */}
+            <div className="mt-10 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+              <div className="container mx-auto px-4 md:px-6">
+                <TravelEssentials compact />
+              </div>
+            </div>
+
             {/* Recommended Activities (keyword-rich internal links) — full-bleed */}
             {relatedActivities && relatedActivities.length > 0 && (
               <div className="mt-12 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
                 <div className="container mx-auto px-4 md:px-6">
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                  <h2 className="text-xl md:text-3xl font-bold text-foreground mb-4 md:mb-6">
                     Recommended Activities {cityHub ? `in ${cityHub.city}` : ""}
                   </h2>
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-                    {relatedActivities.map((a) => {
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+                    {relatedActivities.slice(0, 4).map((a) => {
                       const img = a.image || getBlogLinkImage(a.link);
                       return (
                         <Link
