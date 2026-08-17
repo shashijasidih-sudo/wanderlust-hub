@@ -690,7 +690,7 @@ const BlogArticleLayout = ({
                               className="w-full h-full object-cover transition group-hover:scale-105"
                             />
                           </div>
-                          <div className="p-4">
+                          <div className="p-3 md:p-4">
                             <p className="text-sm md:text-base text-foreground font-medium leading-snug line-clamp-2 group-hover:text-primary transition-colors">
                               {a.title}
                             </p>
