@@ -1,4 +1,5 @@
 import SafeImage from "@/components/SafeImage";
+import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
