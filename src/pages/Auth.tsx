@@ -138,12 +138,17 @@ const Auth = () => {
     }
     setIsLoading(true);
     try {
-      await auth.signUp(email.trim(), password, fullName.trim());
+      const result = await auth.signUp(email.trim(), password, fullName.trim());
       trackSignUp("email", email.trim());
+      if (result.needsEmailConfirmation) {
+        setPendingConfirmationEmail(email.trim());
+        setPassword("");
+        return;
+      }
       toast({ title: "Bon Voyage! 🌴", description: "Account created successfully!" });
       navigate("/");
     } catch (error: any) {
-      toast({ title: "Signup Failed", description: error.message, variant: "destructive" });
+      toast({ title: "Signup Failed", description: error?.message || "Could not create your account.", variant: "destructive" });
     } finally {
       setIsLoading(false);
     }
