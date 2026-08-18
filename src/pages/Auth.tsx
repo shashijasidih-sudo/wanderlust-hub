@@ -302,6 +302,27 @@ const Auth = () => {
             {isLogin ? "Ready to continue your journey?" : "Create your account and unlock amazing destinations"}
           </p>
         </div>
+        {isLogin && unconfirmedEmail && (
+          <div className="rounded-lg border border-primary/30 bg-primary/5 p-4 space-y-3">
+            <div className="flex items-start gap-3">
+              <MailCheck className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+              <div>
+                <p className="font-semibold text-foreground">Email Not Confirmed</p>
+                <p className="text-sm text-muted-foreground">Please confirm your email address before signing in.</p>
+                <p className="text-sm font-medium text-foreground break-all mt-1">{unconfirmedEmail}</p>
+              </div>
+            </div>
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full"
+              onClick={() => handleResend(unconfirmedEmail)}
+              disabled={isResending}
+            >
+              {isResending ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending...</> : "Resend Confirmation Email"}
+            </Button>
+          </div>
+        )}
         <form onSubmit={isLogin ? handleLogin : handleSignup} className="space-y-5">
           {!isLogin && (
             <div className="space-y-2">
