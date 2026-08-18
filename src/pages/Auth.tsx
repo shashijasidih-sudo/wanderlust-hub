@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { Eye, EyeOff, Loader2, Plane } from "lucide-react";
+import { Eye, EyeOff, Loader2, MailCheck, Plane } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { z } from "zod";
 import heroImage from "@/assets/auth-water-adventure.webp";
