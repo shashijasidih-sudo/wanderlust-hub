@@ -211,6 +211,40 @@ const Auth = () => {
   };
 
   const renderForm = () => {
+    if (pendingConfirmationEmail) {
+      return (
+        <div className="space-y-6 text-center">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+            <MailCheck className="h-8 w-8 text-primary" />
+          </div>
+          <div className="space-y-3">
+            <h1 className="text-3xl font-bold tracking-tight text-foreground">Check Your Inbox</h1>
+            <p className="text-muted-foreground">
+              Your Yellodae account has been created successfully. We’ve sent a confirmation link to your email address.
+            </p>
+            <p className="text-sm text-muted-foreground">We sent a confirmation email to</p>
+            <p className="text-base font-semibold text-foreground break-all">{pendingConfirmationEmail}</p>
+            <p className="text-muted-foreground">
+              Please check your inbox and click the confirmation link to activate your account.
+            </p>
+          </div>
+          <div className="space-y-3 pt-2">
+            <p className="text-sm text-muted-foreground">Didn't receive the email?</p>
+            <Button
+              className="w-full h-12 text-base font-semibold"
+              onClick={() => handleResend(pendingConfirmationEmail)}
+              disabled={isResending}
+            >
+              {isResending ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending...</> : "Resend Confirmation Email"}
+            </Button>
+            <Button variant="outline" className="w-full h-12 text-base font-medium" onClick={backToSignIn}>
+              Back to Sign In
+            </Button>
+          </div>
+        </div>
+      );
+    }
+
     if (isForgotPassword) {
       return (
         <div className="space-y-6">
