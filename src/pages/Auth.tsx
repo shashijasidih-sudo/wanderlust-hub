@@ -66,14 +66,61 @@ const Auth = () => {
     }
     setIsLoading(true);
     try {
+      setUnconfirmedEmail(null);
       await auth.signInWithPassword(email.trim(), password);
       trackLogin("email", email.trim());
       toast({ title: "Welcome back! ✈️", description: "Ready for your next adventure?" });
       navigate("/");
     } catch (error: any) {
-      toast({ title: "Login Failed", description: error.message || "Invalid credentials", variant: "destructive" });
+      const raw = String(error?.message || "");
+      const isUnconfirmed =
+        error?.code === "email_not_confirmed" || /email not confirmed|not confirmed/i.test(raw);
+      if (isUnconfirmed) {
+        setUnconfirmedEmail(email.trim());
+        toast({
+          title: "Email Not Confirmed",
+          description: "Please confirm your email address before signing in.",
+          variant: "destructive",
+        });
+      } else {
+        toast({ title: "Login Failed", description: raw || "Invalid credentials", variant: "destructive" });
+      }
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleResend = async (targetEmail: string) => {
+    setIsResending(true);
+    try {
+      await auth.resendConfirmation(targetEmail);
+      toast({
+        title: "Confirmation email sent",
+        description: "We've sent a new confirmation link to your email address. Please check your inbox.",
+      });
+    } catch (error: any) {
+      const raw = String(error?.message || "");
+      if (error?.status === 429 || /rate|too many|seconds/i.test(raw)) {
+        toast({
+          title: "Please wait a moment",
+          description: "Please wait a moment before requesting another confirmation email.",
+          variant: "destructive",
+        });
+      } else if (/invalid|not found/i.test(raw)) {
+        toast({
+          title: "Couldn't send email",
+          description: "Please check that the email address is correct.",
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Couldn't send email",
+          description: "Something went wrong. Please try again shortly.",
+          variant: "destructive",
+        });
+      }
+    } finally {
+      setIsResending(false);
     }
   };
 
