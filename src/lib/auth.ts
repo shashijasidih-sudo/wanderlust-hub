@@ -85,24 +85,37 @@ export const auth = {
     email: string,
     password: string,
     fullName: string
-  ): Promise<AppUser> => {
+  ): Promise<{ user: AppUser | null; needsEmailConfirmation: boolean }> => {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
+        emailRedirectTo: `${window.location.origin}/auth/callback`,
         data: {
           full_name: fullName,
         },
       },
     });
     if (error) throw error;
+
+    // With "Confirm email" enabled, signUp returns a user but NO session.
+    // The user is NOT authenticated until they click the confirmation link.
+    if (!data.session) {
+      return { user: null, needsEmailConfirmation: true };
+    }
+
     const user: AppUser = {
       id: data.user?.id || "",
       email,
       full_name: fullName,
     };
     notify(user);
-    return user;
+    return { user, needsEmailConfirmation: false };
+  },
+
+  resendConfirmation: async (email: string) => {
+    const { error } = await supabase.auth.resend({ type: "signup", email });
+    if (error) throw error;
   },
 
   signInWithGoogle: async () => {

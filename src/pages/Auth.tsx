@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { Eye, EyeOff, Loader2, Plane } from "lucide-react";
+import { Eye, EyeOff, Loader2, MailCheck, Plane } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { z } from "zod";
 import heroImage from "@/assets/auth-water-adventure.webp";
@@ -39,6 +39,9 @@ const Auth = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [pendingConfirmationEmail, setPendingConfirmationEmail] = useState<string | null>(null);
+  const [unconfirmedEmail, setUnconfirmedEmail] = useState<string | null>(null);
+  const [isResending, setIsResending] = useState(false);
   const { toast } = useToast();
   const navigate = useNavigate();
   const { user } = useAuth();
@@ -63,14 +66,61 @@ const Auth = () => {
     }
     setIsLoading(true);
     try {
+      setUnconfirmedEmail(null);
       await auth.signInWithPassword(email.trim(), password);
       trackLogin("email", email.trim());
       toast({ title: "Welcome back! ✈️", description: "Ready for your next adventure?" });
       navigate("/");
     } catch (error: any) {
-      toast({ title: "Login Failed", description: error.message || "Invalid credentials", variant: "destructive" });
+      const raw = String(error?.message || "");
+      const isUnconfirmed =
+        error?.code === "email_not_confirmed" || /email not confirmed|not confirmed/i.test(raw);
+      if (isUnconfirmed) {
+        setUnconfirmedEmail(email.trim());
+        toast({
+          title: "Email Not Confirmed",
+          description: "Please confirm your email address before signing in.",
+          variant: "destructive",
+        });
+      } else {
+        toast({ title: "Login Failed", description: raw || "Invalid credentials", variant: "destructive" });
+      }
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleResend = async (targetEmail: string) => {
+    setIsResending(true);
+    try {
+      await auth.resendConfirmation(targetEmail);
+      toast({
+        title: "Confirmation email sent",
+        description: "We've sent a new confirmation link to your email address. Please check your inbox.",
+      });
+    } catch (error: any) {
+      const raw = String(error?.message || "");
+      if (error?.status === 429 || /rate|too many|seconds/i.test(raw)) {
+        toast({
+          title: "Please wait a moment",
+          description: "Please wait a moment before requesting another confirmation email.",
+          variant: "destructive",
+        });
+      } else if (/invalid|not found/i.test(raw)) {
+        toast({
+          title: "Couldn't send email",
+          description: "Please check that the email address is correct.",
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Couldn't send email",
+          description: "Something went wrong. Please try again shortly.",
+          variant: "destructive",
+        });
+      }
+    } finally {
+      setIsResending(false);
     }
   };
 
@@ -88,12 +138,17 @@ const Auth = () => {
     }
     setIsLoading(true);
     try {
-      await auth.signUp(email.trim(), password, fullName.trim());
+      const result = await auth.signUp(email.trim(), password, fullName.trim());
       trackSignUp("email", email.trim());
+      if (result.needsEmailConfirmation) {
+        setPendingConfirmationEmail(email.trim());
+        setPassword("");
+        return;
+      }
       toast({ title: "Bon Voyage! 🌴", description: "Account created successfully!" });
       navigate("/");
     } catch (error: any) {
-      toast({ title: "Signup Failed", description: error.message, variant: "destructive" });
+      toast({ title: "Signup Failed", description: error?.message || "Could not create your account.", variant: "destructive" });
     } finally {
       setIsLoading(false);
     }
@@ -140,11 +195,56 @@ const Auth = () => {
   const toggleMode = () => {
     setIsLogin(!isLogin);
     setIsForgotPassword(false);
+    setPendingConfirmationEmail(null);
+    setUnconfirmedEmail(null);
     clearErrors();
     setEmail(""); setPassword(""); setFullName(""); setAcceptTerms(false); setRememberMe(false);
   };
 
+  const backToSignIn = () => {
+    setPendingConfirmationEmail(null);
+    setUnconfirmedEmail(null);
+    setIsLogin(true);
+    setIsForgotPassword(false);
+    clearErrors();
+    setPassword("");
+  };
+
   const renderForm = () => {
+    if (pendingConfirmationEmail) {
+      return (
+        <div className="space-y-6 text-center">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+            <MailCheck className="h-8 w-8 text-primary" />
+          </div>
+          <div className="space-y-3">
+            <h1 className="text-3xl font-bold tracking-tight text-foreground">Check Your Inbox</h1>
+            <p className="text-muted-foreground">
+              Your Yellodae account has been created successfully. We’ve sent a confirmation link to your email address.
+            </p>
+            <p className="text-sm text-muted-foreground">We sent a confirmation email to</p>
+            <p className="text-base font-semibold text-foreground break-all">{pendingConfirmationEmail}</p>
+            <p className="text-muted-foreground">
+              Please check your inbox and click the confirmation link to activate your account.
+            </p>
+          </div>
+          <div className="space-y-3 pt-2">
+            <p className="text-sm text-muted-foreground">Didn't receive the email?</p>
+            <Button
+              className="w-full h-12 text-base font-semibold"
+              onClick={() => handleResend(pendingConfirmationEmail)}
+              disabled={isResending}
+            >
+              {isResending ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending...</> : "Resend Confirmation Email"}
+            </Button>
+            <Button variant="outline" className="w-full h-12 text-base font-medium" onClick={backToSignIn}>
+              Back to Sign In
+            </Button>
+          </div>
+        </div>
+      );
+    }
+
     if (isForgotPassword) {
       return (
         <div className="space-y-6">
@@ -202,6 +302,27 @@ const Auth = () => {
             {isLogin ? "Ready to continue your journey?" : "Create your account and unlock amazing destinations"}
           </p>
         </div>
+        {isLogin && unconfirmedEmail && (
+          <div className="rounded-lg border border-primary/30 bg-primary/5 p-4 space-y-3">
+            <div className="flex items-start gap-3">
+              <MailCheck className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+              <div>
+                <p className="font-semibold text-foreground">Email Not Confirmed</p>
+                <p className="text-sm text-muted-foreground">Please confirm your email address before signing in.</p>
+                <p className="text-sm font-medium text-foreground break-all mt-1">{unconfirmedEmail}</p>
+              </div>
+            </div>
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full"
+              onClick={() => handleResend(unconfirmedEmail)}
+              disabled={isResending}
+            >
+              {isResending ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending...</> : "Resend Confirmation Email"}
+            </Button>
+          </div>
+        )}
         <form onSubmit={isLogin ? handleLogin : handleSignup} className="space-y-5">
           {!isLogin && (
             <div className="space-y-2">
