@@ -195,8 +195,19 @@ const Auth = () => {
   const toggleMode = () => {
     setIsLogin(!isLogin);
     setIsForgotPassword(false);
+    setPendingConfirmationEmail(null);
+    setUnconfirmedEmail(null);
     clearErrors();
     setEmail(""); setPassword(""); setFullName(""); setAcceptTerms(false); setRememberMe(false);
+  };
+
+  const backToSignIn = () => {
+    setPendingConfirmationEmail(null);
+    setUnconfirmedEmail(null);
+    setIsLogin(true);
+    setIsForgotPassword(false);
+    clearErrors();
+    setPassword("");
   };
 
   const renderForm = () => {
