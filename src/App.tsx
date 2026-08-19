@@ -427,7 +427,7 @@ const BlogPhuketAirportToPatongTransfer = lazy(() => import("./pages/BlogPhuketA
 const BlogCheapestPhiPhiTourFromPhuket = lazy(() => import("./pages/BlogCheapestPhiPhiTourFromPhuket"));
 const BlogPhuketTripCostFromIndia = lazy(() => import("./pages/BlogPhuketTripCostFromIndia"));
 const BlogPhuketHotelPriceGuide = lazy(() => import("./pages/BlogPhuketHotelPriceGuide"));
-const BlogPhuketFoodCostGuide = lazy(() => import("./pages/BlogPhuketFoodCostGuide"));
+const BlogPhuketStreetFoodGuideIndianTravellers = lazy(() => import("./pages/BlogPhuketStreetFoodGuideIndianTravellers"));
 const BlogPhuketTourPackagePriceComparison = lazy(() => import("./pages/BlogPhuketTourPackagePriceComparison"));
 const KrabiDestinationGuides = lazy(() => import("./pages/KrabiDestinationGuides"));
 const BlogKrabi4DaysItinerary = lazy(() => import("./pages/BlogKrabi4DaysItinerary"));
@@ -528,7 +528,10 @@ const App = () => (
             <Route path="/thailand/phuket/destination-guides/price-cost/cheapest-phi-phi-tour-from-phuket/" element={<BlogCheapestPhiPhiTourFromPhuket />} />
             <Route path="/thailand/phuket/destination-guides/price-cost/phuket-trip-cost-from-india/" element={<BlogPhuketTripCostFromIndia />} />
             <Route path="/thailand/phuket/destination-guides/price-cost/phuket-hotel-price-guide/" element={<BlogPhuketHotelPriceGuide />} />
-            <Route path="/thailand/phuket/destination-guides/price-cost/phuket-food-cost-guide/" element={<BlogPhuketFoodCostGuide />} />
+            <Route path="/thailand/phuket/destination-guides/price-cost/phuket-street-food-guide-indian-travellers/" element={<BlogPhuketStreetFoodGuideIndianTravellers />} />
+            <Route path="/thailand/phuket/destination-guides/price-cost/phuket-street-food-guide-indian-travellers" element={<BlogPhuketStreetFoodGuideIndianTravellers />} />
+            <Route path="/thailand/phuket/destination-guides/price-cost/phuket-food-cost-guide/" element={<Navigate to="/thailand/phuket/destination-guides/price-cost/phuket-street-food-guide-indian-travellers/" replace />} />
+            <Route path="/thailand/phuket/destination-guides/price-cost/phuket-food-cost-guide" element={<Navigate to="/thailand/phuket/destination-guides/price-cost/phuket-street-food-guide-indian-travellers/" replace />} />
             <Route path="/thailand/phuket/destination-guides/price-cost/phuket-tour-package-price-comparison/" element={<BlogPhuketTourPackagePriceComparison />} />
             <Route path="/thailand/krabi/destination-guides/" element={<KrabiDestinationGuides />} />
             <Route path="/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary/" element={<BlogKrabi4DaysItinerary />} />
