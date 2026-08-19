@@ -32,6 +32,7 @@ import imgPriceCheapestPhiPhi from "@/assets/phuket-big-boat-1.jpg";
 import imgPriceTripCost from "@/assets/city-phuket.jpg";
 import imgPriceHotel from "@/assets/phuket-longtail-boats-beach-1.jpg";
 import imgPriceFood from "@/assets/phuket-night-market-1.webp";
+import imgStreetFoodFeatured from "@/assets/phuket-street-food-featured.webp";
 import imgPricePackages from "@/assets/phuket-island-viewpoint-1.jpg";
 
 export type PhuketBlogCategory =
@@ -286,10 +287,10 @@ export const phuketBlogs: PhuketBlogEntry[] = [
     link: "/thailand/phuket/destination-guides/price-cost/phuket-hotel-price-guide/",
   },
   {
-    title: "Phuket Food Cost Guide 2026: Street Food vs Restaurants vs Indian Meals (INR)",
-    description: "Real Phuket food cost in 2026 — street food, casual restaurants, Indian/veg meals, beach clubs and per-day food budget for Indian travelers.",
-    category: "price-cost", image: imgPriceFood, date: "May 8, 2026", readTime: "8 min read",
-    link: "/thailand/phuket/destination-guides/price-cost/phuket-food-cost-guide/",
+    title: "Phuket Street Food Guide for Indian Travellers | Best Thai Foods to Try",
+    description: "Discover the best Phuket street food for Indian travellers in 2026, from Hokkien noodles and moo hong to grilled seafood, Thai desserts and exotic local snacks.",
+    category: "price-cost", image: imgStreetFoodFeatured, date: "August 19, 2026", readTime: "10 min read",
+    link: "/thailand/phuket/destination-guides/price-cost/phuket-street-food-guide-indian-travellers/",
   },
   {
     title: "Phuket Tour Package Price Comparison 2026: 3D, 4D, 5D & 7D Plans (INR)",
