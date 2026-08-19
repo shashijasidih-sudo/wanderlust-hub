@@ -18,7 +18,7 @@ const BlogPhuketStreetFoodGuideIndianTravellers = () => (
     date="August 19, 2026"
     readTime="10 min read"
     category="Price / Cost Blogs"
-    bodyClassName="text-black"
+    bodyClassName="text-black [&_p]:!text-black [&_li]:!text-black [&_h2]:!text-black [&_h3]:!text-black [&_strong]:!text-black"
     keywords={[
       "Phuket street food",
       "Phuket street food for Indians",
