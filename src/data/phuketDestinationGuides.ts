@@ -32,7 +32,7 @@ import imgPriceCheapestPhiPhi from "@/assets/phuket-big-boat-1.jpg";
 import imgPriceTripCost from "@/assets/city-phuket.jpg";
 import imgPriceHotel from "@/assets/phuket-longtail-boats-beach-1.jpg";
 import imgPriceFood from "@/assets/phuket-night-market-1.webp";
-import imgStreetFoodFeatured from "@/assets/phuket-street-food-featured.webp.asset.json";
+import imgStreetFoodFeatured from "@/assets/phuket-street-food-featured.webp";
 import imgPricePackages from "@/assets/phuket-island-viewpoint-1.jpg";
 
 export type PhuketBlogCategory =
@@ -289,7 +289,7 @@ export const phuketBlogs: PhuketBlogEntry[] = [
   {
     title: "Phuket Street Food Guide for Indian Travellers | Best Thai Foods to Try",
     description: "Discover the best Phuket street food for Indian travellers in 2026, from Hokkien noodles and moo hong to grilled seafood, Thai desserts and exotic local snacks.",
-    category: "price-cost", image: imgStreetFoodFeatured.url, date: "August 19, 2026", readTime: "10 min read",
+    category: "price-cost", image: imgStreetFoodFeatured, date: "August 19, 2026", readTime: "10 min read",
     link: "/thailand/phuket/destination-guides/price-cost/phuket-street-food-guide-indian-travellers/",
   },
   {

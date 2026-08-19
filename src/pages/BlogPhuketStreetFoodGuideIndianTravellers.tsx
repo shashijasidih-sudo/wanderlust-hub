@@ -1,18 +1,18 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { getPhuketFullInternalLinks } from "@/data/blogInternalLinks";
-import heroAsset from "@/assets/phuket-street-food-featured.webp.asset.json";
-import nightMarketAsset from "@/assets/phuket-street-food-night-market-indian.png.asset.json";
-import seafoodAsset from "@/assets/phuket-street-food-grilled-seafood.png.asset.json";
-import squidAsset from "@/assets/phuket-grilled-squid.png.asset.json";
-import exoticAsset from "@/assets/phuket-exotic-snacks.png.asset.json";
-import dessertAsset from "@/assets/phuket-mango-sticky-rice.png.asset.json";
-import collageAsset from "@/assets/phuket-street-food-collage.webp.asset.json";
+import heroImg from "@/assets/phuket-street-food-featured.webp";
+import nightMarketImg from "@/assets/phuket-street-food-night-market-indian.webp";
+import seafoodImg from "@/assets/phuket-street-food-grilled-seafood.webp";
+import squidImg from "@/assets/phuket-grilled-squid.webp";
+import exoticImg from "@/assets/phuket-exotic-snacks.webp";
+import dessertImg from "@/assets/phuket-mango-sticky-rice.webp";
+import collageImg from "@/assets/phuket-street-food-collage.webp";
 
 const BlogPhuketStreetFoodGuideIndianTravellers = () => (
   <BlogArticleLayout
     title="Phuket Street Food Guide for Indian Travellers (2026): 12 Exotic Foods You Must Try"
     description="Discover the best Phuket street food for Indian travellers in 2026, from Hokkien noodles and moo hong to grilled seafood, Thai desserts and exotic local snacks."
-    heroImage={heroAsset.url}
+    heroImage={heroImg}
     heroAlt="Indian traveller trying Phuket street food at a night market"
     author="Yellodae Travel Expert"
     date="August 19, 2026"
@@ -37,7 +37,7 @@ const BlogPhuketStreetFoodGuideIndianTravellers = () => (
       { type: "paragraph", content: "Phuket is famous for its turquoise beaches, island-hopping adventures, viewpoints and vibrant nightlife. But there is another side of the island that deserves just as much attention: **Phuket street food**." },
       { type: "paragraph", content: "For Indian travellers, exploring Phuket through food can be an adventure in itself. The flavours can range from familiar combinations of chilli, garlic, herbs and spices to dishes that look and taste completely different from anything you may have tried at home." },
       { type: "paragraph", content: "Phuket's food culture has been shaped by Thai, Chinese and Peranakan influences, which is particularly visible in [Phuket Old Town](/thailand/phuket/things-to-do/). The Tourism Authority of Thailand highlights the area's street-food stalls, hawker-style eateries and family-run restaurants, including local specialities such as Hokkien noodles, a-pong and Phuket-style kanom jeen." },
-      { type: "image", src: nightMarketAsset.url, alt: "Indian traveller discovering Phuket night market street food" },
+      { type: "image", src: nightMarketImg, alt: "Indian traveller discovering Phuket night market street food" },
       { type: "paragraph", content: "So if your idea of a Phuket holiday is only beaches and sightseeing, keep one evening free." },
       { type: "paragraph", content: "**Your next memorable experience might be served from a tiny street-food stall.**" },
 
@@ -58,7 +58,7 @@ const BlogPhuketStreetFoodGuideIndianTravellers = () => (
       { type: "paragraph", content: "**Thick noodles + seafood + vegetables + savoury broth.**" },
       { type: "paragraph", content: "For an Indian traveller accustomed to spicy noodle dishes, the biggest surprise may be the flavour profile. It isn't necessarily about overwhelming heat; instead, the dish relies on a savoury, comforting combination of broth and ingredients." },
       { type: "tip-box", content: "Indian traveller tip: Ask about spice levels if you prefer your noodles hot." },
-      { type: "image", src: collageAsset.url, alt: "Collage of Indian foodies trying Phuket street food dishes" },
+      { type: "image", src: collageImg, alt: "Collage of Indian foodies trying Phuket street food dishes" },
 
       { type: "heading", content: "2. Moo Hong — Phuket-Style Braised Pork 🥘" },
       { type: "paragraph", content: "**Moo Hong** is one of Phuket's signature local dishes." },
@@ -73,7 +73,7 @@ const BlogPhuketStreetFoodGuideIndianTravellers = () => (
       { type: "paragraph", content: "Now for something that requires absolutely no complicated explanation." },
       { type: "paragraph", content: "**Fresh seafood on a hot grill.**" },
       { type: "paragraph", content: "Phuket's island location means seafood is an important part of its food culture. You'll find stalls and restaurants serving grilled prawns, squid, fish and other seafood." },
-      { type: "image", src: seafoodAsset.url, alt: "Grilled seafood stall at a Phuket night market" },
+      { type: "image", src: seafoodImg, alt: "Grilled seafood stall at a Phuket night market" },
       { type: "paragraph", content: "The experience is often as enjoyable as the food itself." },
       { type: "paragraph", content: "You watch the seafood being grilled." },
       { type: "paragraph", content: "You smell the smoke." },
@@ -82,7 +82,7 @@ const BlogPhuketStreetFoodGuideIndianTravellers = () => (
       { type: "paragraph", content: "**Try it with:**" },
       { type: "list", items: ["Lime", "Chilli sauce", "Garlic", "Thai-style seafood dipping sauce"] },
       { type: "paragraph", content: "**Warning:** once you smell grilled seafood at a night market, sticking to your original dinner plan may become difficult. 😂" },
-      { type: "image", src: squidAsset.url, alt: "Grilled squid skewer with chilli dipping sauce in Phuket" },
+      { type: "image", src: squidImg, alt: "Grilled squid skewer with chilli dipping sauce in Phuket" },
 
       { type: "heading", content: "4. Kanom Jeen — Phuket-Style Rice Noodles 🍜" },
       { type: "paragraph", content: "Want something different from conventional noodles?" },
@@ -140,7 +140,7 @@ const BlogPhuketStreetFoodGuideIndianTravellers = () => (
       { type: "paragraph", content: "Sweet mango. Sticky rice. Coconut sauce." },
       { type: "paragraph", content: "That's it." },
       { type: "paragraph", content: "And somehow, it's incredibly satisfying." },
-      { type: "image", src: dessertAsset.url, alt: "Mango sticky rice dessert at a Phuket night market" },
+      { type: "image", src: dessertImg, alt: "Mango sticky rice dessert at a Phuket night market" },
       { type: "paragraph", content: "This is one Thai dessert that almost every first-time visitor should try." },
       { type: "paragraph", content: "The combination of creamy coconut, sweet mango and soft sticky rice makes it a perfect ending to a night of exploring Phuket's food scene." },
       { type: "tip-box", content: "Indian traveller tip: Don't underestimate the portion. It looks simple. It isn't. You may end up ordering another one." },
@@ -158,7 +158,7 @@ const BlogPhuketStreetFoodGuideIndianTravellers = () => (
       { type: "paragraph", content: "Some Thai markets and tourist-oriented food stalls may display unusual snacks such as fried insects and other novelty foods." },
       { type: "paragraph", content: "You may see things like:" },
       { type: "list", items: ["Crickets", "Silkworm pupae", "Grasshoppers", "Other fried insects"] },
-      { type: "image", src: exoticAsset.url, alt: "Exotic fried insect snacks at a Phuket night market stall" },
+      { type: "image", src: exoticImg, alt: "Exotic fried insect snacks at a Phuket night market stall" },
       { type: "paragraph", content: "If you're curious, you can ask what something is before ordering." },
       { type: "paragraph", content: "And remember:" },
       { type: "paragraph", content: "**You don't have to eat something just because it's unusual.**" },
