@@ -47,9 +47,9 @@ const SuggestedTours = ({ currentCity }: SuggestedToursProps) => {
 
   return (
     <div className="mt-12 space-y-6">
-      <h2 className="text-3xl font-bold">You Might Also Like</h2>
+      <h2 className="text-xl md:text-3xl font-bold">You Might Also Like</h2>
       
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
         {tours.map((tour, index) => (
           <Card
             key={index}
@@ -63,14 +63,14 @@ const SuggestedTours = ({ currentCity }: SuggestedToursProps) => {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </div>
-            <CardContent className="p-4 space-y-3">
-              <h3 className="font-semibold line-clamp-2 group-hover:text-primary transition-colors">
+            <CardContent className="p-3 md:p-4 space-y-2 md:space-y-3">
+              <h3 className="text-sm md:text-base font-semibold line-clamp-2 group-hover:text-primary transition-colors">
                 {tour.title}
               </h3>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-muted-foreground">from</p>
-                  <p className="text-lg font-bold text-primary">
+                  <p className="text-xs md:text-sm text-muted-foreground">from</p>
+                  <p className="text-sm md:text-lg font-bold text-primary">
                     {formatPrice(tour.price)}
                   </p>
                 </div>
