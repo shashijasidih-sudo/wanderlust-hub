@@ -13,6 +13,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import AnalyticsInit from "@/components/AnalyticsInit";
 import Index from "./pages/Index";
 const NotFound = lazy(() => import("./pages/NotFound"));
+import LegacyRedirectOrNotFound from "./components/LegacyRedirectOrNotFound";
+
 const RoutesHealthCheck = lazy(() => import("./pages/RoutesHealthCheck"));
 const Thailand = lazy(() => import("./pages/Thailand"));
 const Bangkok = lazy(() => import("./pages/Bangkok"));
@@ -943,7 +945,7 @@ const App = () => (
             {/* Legacy /thailand/bangkok/<old-slug> → new SEO slug */}
              {/* Legacy Thailand city URLs → redirect to /thailand/<city>/* */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<LegacyRedirectOrNotFound fallback={<NotFound />} />} />
         </Routes></Suspense>
           <FloatingWhatsApp />
       </BrowserRouter>

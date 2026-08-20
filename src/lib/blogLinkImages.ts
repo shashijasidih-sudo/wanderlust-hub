@@ -7,6 +7,12 @@
 // generic city fallbacks (bangkok, phuket, pattaya...) so related grids
 // don't collapse into one repeating city photo.
 
+import cmDoiSuthep from "@/assets/chiang-mai-doi-suthep-1.webp";
+import cmDoiInthanon from "@/assets/chiang-mai-doi-inthanon-1.webp";
+import cmGoldenTriangle from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg";
+import cmChediLuang from "@/assets/chiang-mai-wat-chedi-luang-1.webp";
+import cmCity from "@/assets/city-chiang-mai.webp";
+
 const U = (id: string, w = 800) =>
   `https://images.unsplash.com/${id}?w=${w}&auto=format&fit=crop&q=70`;
 
@@ -16,7 +22,7 @@ const THEMES = {
   pattaya: U("photo-1552465011-b4e21bf6e79a"),
   phuket: U("photo-1589394815804-964ed0be2eb5"),
   krabi: U("photo-1537956965359-7573183d1f57"),
-  chiangMai: U("photo-1598935898639-81586f7d2129"),
+  chiangMai: cmCity,
   kohSamui: U("photo-1504457047772-27faf1c00561"),
   singapore: U("photo-1525625293386-3f8f99389edd"),
   japan: U("photo-1493780474015-ba834fd0ce2f"),
@@ -64,11 +70,11 @@ const THEMES = {
   emeraldPool: U("photo-1571115332188-7c4d8a06a4ef"),
 
   // Chiang Mai
-  doiSuthep: U("photo-1598935898639-81586f7d2129"),
-  doiInthanon: U("photo-1570559716060-d4d7a0ac4f88"),
-  chiangRai: U("photo-1528181304800-259b08848526"),
+  doiSuthep: cmDoiSuthep,
+  doiInthanon: cmDoiInthanon,
+  chiangRai: cmGoldenTriangle,
   elephantSanctuary: U("photo-1503066211613-c17ebc9daef0"),
-  whiteTemple: U("photo-1563492065599-3520f775eeed"),
+  whiteTemple: cmChediLuang,
   nightBazaar: U("photo-1542315192-1f61a1792f33"),
 
   // Singapore

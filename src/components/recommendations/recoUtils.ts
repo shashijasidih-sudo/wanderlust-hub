@@ -76,5 +76,5 @@ export function pickExactly<T extends { slug: string }>(
 
 export const sectionWrapClass = "container mx-auto px-4 py-8";
 export const gridClass =
-  "flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-5 sm:overflow-visible scrollbar-hide";
-export const gridItemClass = "snap-start shrink-0 w-[85%] sm:w-auto";
+  "grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4";
+export const gridItemClass = "min-w-0";

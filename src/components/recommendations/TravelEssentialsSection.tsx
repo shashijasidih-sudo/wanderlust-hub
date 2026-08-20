@@ -1,5 +1,3 @@
-import { ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import SafeImage from "@/components/SafeImage";
 import RecoSection from "./RecoSection";
 import { DestinationKey, pickExactly } from "./recoUtils";
@@ -37,7 +35,7 @@ const TravelEssentialsSection = ({ destination }: Props) => {
               className="h-full w-full object-cover transition group-hover:scale-105"
             />
           </a>
-          <div className="flex flex-1 flex-col gap-2 p-4">
+          <div className="flex flex-1 flex-col gap-1.5 p-3">
             <h3 className="line-clamp-2 text-sm font-semibold leading-snug md:text-base">
               <a
                 href={a.slug}
@@ -49,13 +47,6 @@ const TravelEssentialsSection = ({ destination }: Props) => {
               </a>
             </h3>
             <p className="line-clamp-2 text-xs text-muted-foreground md:text-sm">{a.description}</p>
-            <div className="mt-auto pt-2">
-              <Button asChild size="sm" variant="outline" className="w-full">
-                <a href={a.slug} target="_blank" rel="noopener noreferrer nofollow">
-                  Read Article <ExternalLink className="ml-1 h-3.5 w-3.5" />
-                </a>
-              </Button>
-            </div>
           </div>
         </article>
       ))}
