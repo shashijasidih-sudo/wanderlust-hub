@@ -13,6 +13,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import AnalyticsInit from "@/components/AnalyticsInit";
 import Index from "./pages/Index";
 const NotFound = lazy(() => import("./pages/NotFound"));
+import LegacyRedirectOrNotFound from "./components/LegacyRedirectOrNotFound";
+
 const RoutesHealthCheck = lazy(() => import("./pages/RoutesHealthCheck"));
 const Thailand = lazy(() => import("./pages/Thailand"));
 const Bangkok = lazy(() => import("./pages/Bangkok"));
