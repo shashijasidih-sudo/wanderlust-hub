@@ -6,7 +6,6 @@ import moneyBeltImg from "@/assets/ess-money-belt.jpg";
 import toiletryKitImg from "@/assets/ess-toiletry-kit.png";
 import womenSafetyImg from "@/assets/ess-women-safety.png";
 import airtagsImg from "@/assets/ess-airtags.png";
-import romanceKitImg from "@/assets/ess-romance-kit.png";
 
 
 export interface EssentialArticle {
