@@ -1,4 +1,13 @@
 import { DestinationKey } from "./recoUtils";
+import antiTheftImg from "@/assets/ess-anti-theft.jpg";
+import cabinLuggageImg from "@/assets/ess-cabin-luggage.jpg";
+import menBagsImg from "@/assets/ess-men-bags.jpg";
+import moneyBeltImg from "@/assets/ess-money-belt.jpg";
+import toiletryKitImg from "@/assets/ess-toiletry-kit.png";
+import womenSafetyImg from "@/assets/ess-women-safety.png";
+import airtagsImg from "@/assets/ess-airtags.png";
+import romanceKitImg from "@/assets/ess-romance-kit.png";
+
 
 export interface EssentialArticle {
   slug: string; // used as key/href
@@ -34,45 +43,45 @@ export const DUBAI_ESSENTIAL: EssentialArticle = {
 export const GENERAL_ESSENTIALS: EssentialArticle[] = [
   {
     slug: "https://barnip.com/travel-bags/backpacks/best-backpack-for-international-travel",
-    title: "Best Backpack for International Travel",
-    description: "Cabin-friendly backpacks that survive airports, transfers and day tours.",
-    image: U("photo-1553062407-98eeb64c6a62"),
+    title: "Anti-Theft Travel Backpack",
+    description: "Hidden-zip backpacks built for airports, transfers and day tours.",
+    image: antiTheftImg,
   },
   {
     slug: "https://barnip.com/airport-essentials/flight-comfort/long-haul-flight-essentials",
-    title: "Long-Haul Flight Essentials",
-    description: "Sleep, comfort and hydration kit for overnight international flights.",
-    image: U("photo-1436491865332-7a61a109cc05"),
+    title: "Cabin Luggage Essentials",
+    description: "Carry-on picks that clear size limits and keep flights comfortable.",
+    image: cabinLuggageImg,
   },
   {
     slug: "https://barnip.com/packing-lists/by-traveler/women-travelers/women-travel-safety-essentials",
     title: "Women Travel Safety Essentials",
     description: "Practical safety gear and habits for solo and group women travellers.",
-    image: U("photo-1488646953014-85cb44e25828"),
+    image: womenSafetyImg,
   },
   {
     slug: "https://barnip.com/packing-lists/by-traveler/women-travelers/best-bags-for-women-travelers",
-    title: "Best Bags for Women Travellers",
-    description: "Anti-theft crossbody bags and day packs that still look good in photos.",
-    image: U("photo-1547949003-9792a18a2601"),
+    title: "Passport & Money Belt",
+    description: "Keep passports, cards and cash safe on crowded streets and markets.",
+    image: moneyBeltImg,
   },
   {
     slug: "https://barnip.com/packing-lists/by-traveler/men-travelers/packing-list-for-men",
     title: "Packing List for Men",
     description: "A no-nonsense checklist that fits a week of travel into one cabin bag.",
-    image: U("photo-1553531384-cc64ac80f931"),
+    image: menBagsImg,
   },
   {
     slug: "https://barnip.com/packing-lists/by-trip-type/solo-travel-packing-list",
-    title: "Solo Travel Packing List",
-    description: "Travel light and stay self-sufficient on your first solo international trip.",
-    image: U("photo-1469854523086-cc02fe5d8800"),
+    title: "Travel Toiletry Kit",
+    description: "Leak-proof, cabin-approved toiletry kit for a week of travel.",
+    image: toiletryKitImg,
   },
   {
     slug: "https://barnip.com/travel-gadgets/entertainment/travel-games",
-    title: "Best Travel Games",
-    description: "Compact games that make long transfers and airport waits fly by.",
-    image: U("photo-1606092195730-5d7b9af1efc5"),
+    title: "Must-Have Travel AirTags",
+    description: "Track bags and gear across airports, transfers and island hops.",
+    image: airtagsImg,
   },
 ];
 
