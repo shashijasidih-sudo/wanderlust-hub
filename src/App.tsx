@@ -943,7 +943,7 @@ const App = () => (
             {/* Legacy /thailand/bangkok/<old-slug> → new SEO slug */}
              {/* Legacy Thailand city URLs → redirect to /thailand/<city>/* */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<LegacyRedirectOrNotFound fallback={<NotFound />} />} />
         </Routes></Suspense>
           <FloatingWhatsApp />
       </BrowserRouter>
