@@ -67,7 +67,7 @@ const SuggestedTours = ({ currentCity }: SuggestedToursProps) => {
               <h3 className="text-sm md:text-base font-semibold line-clamp-2 group-hover:text-primary transition-colors">
                 {tour.title}
               </h3>
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <p className="text-xs md:text-sm text-muted-foreground">from</p>
                   <p className="text-sm md:text-lg font-bold text-primary">
@@ -76,7 +76,7 @@ const SuggestedTours = ({ currentCity }: SuggestedToursProps) => {
                 </div>
                 <Button
                   size="sm"
-                  className="bg-primary hover:bg-primary/90"
+                  className="h-8 w-full px-2 text-xs bg-primary hover:bg-primary/90 sm:w-auto sm:px-3 sm:text-sm"
                 >
                   View Details
                 </Button>
