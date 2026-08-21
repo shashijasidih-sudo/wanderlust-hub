@@ -1,4 +1,6 @@
 import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTemplate";
+import KrabiTourItinerary from "@/components/activity-detail/KrabiTourItinerary";
+import { krabiSheetContent } from "@/data/krabiSheetContent";
 import { toursData } from "@/data/tourData";
 import { HongIslandsLongtailSEO } from "@/components/activity-detail/KrabiActivitySEO";
 import { hongIslandsLongtailFaqs } from "@/data/krabiActivityFaqs";
@@ -10,6 +12,7 @@ import krabiLongtail from "@/assets/krabi-longtail-boats-1.jpg";
 const HongIslandsLongtail = () => {
   const base = toursData["hong-islands-longtail"];
   if (!base) return null;
+  const sheet = krabiSheetContent["hong-islands-longtail"];
   const tourData = {
     ...base,
     heroImages: [
@@ -19,11 +22,14 @@ const HongIslandsLongtail = () => {
       { src: krabiLongtail, title: "Longtail Boat Island Hopping" },
     ],
     faqs: hongIslandsLongtailFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
   };
 
   return (
     <KrabiActivityTemplate
       tourData={tourData}
+      contentAfterOverview={<KrabiTourItinerary tourKey="hong-islands-longtail" />}
       config={{
         path: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/",
         seoTitle: "Hong Island Tour Krabi by Longtail Boat with Transfers | Yellodae",

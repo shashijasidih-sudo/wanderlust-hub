@@ -1,4 +1,6 @@
 import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTemplate";
+import KrabiTourItinerary from "@/components/activity-detail/KrabiTourItinerary";
+import { krabiSheetContent } from "@/data/krabiSheetContent";
 import { toursData } from "@/data/tourData";
 import { sevenIslandsLongtailFaqs } from "@/data/krabiActivityFaqs";
 import seven2 from "@/assets/krabi-doc/seven-2.webp";
@@ -9,6 +11,7 @@ import krabiBoatTour from "@/assets/krabi-boat-tour-1.webp";
 const SevenIslandsSpeedboat = () => {
   const base = toursData["seven-islands-speedboat"];
   if (!base) return null;
+  const sheet = krabiSheetContent["seven-islands-speedboat"];
   const tourData = {
     ...base,
     heroImages: [
@@ -18,11 +21,14 @@ const SevenIslandsSpeedboat = () => {
       { src: seven3, title: "BBQ Beach Dinner" },
     ],
     faqs: base.faqs?.length ? base.faqs : sevenIslandsLongtailFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
   };
 
   return (
     <KrabiActivityTemplate
       tourData={tourData}
+      contentAfterOverview={<KrabiTourItinerary tourKey="seven-islands-speedboat" />}
       config={{
         path: "/thailand/krabi/7-islands-tour-speedboat-with-transfer/",
         seoTitle: "7 Islands Sunset Speedboat Tour Krabi with Transfers | Yellodae",

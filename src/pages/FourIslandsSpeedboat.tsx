@@ -1,4 +1,6 @@
 import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTemplate";
+import KrabiTourItinerary from "@/components/activity-detail/KrabiTourItinerary";
+import { krabiSheetContent } from "@/data/krabiSheetContent";
 import { toursData } from "@/data/tourData";
 import { fourIslandsLongtailFaqs } from "@/data/krabiActivityFaqs";
 import four3 from "@/assets/krabi-doc/four-islands-3.webp";
@@ -9,6 +11,7 @@ import krabiSpeedboat from "@/assets/krabi-speedboat-1.jpg";
 const FourIslandsSpeedboat = () => {
   const base = toursData["four-islands-speedboat"];
   if (!base) return null;
+  const sheet = krabiSheetContent["four-islands-speedboat"];
   const tourData = {
     ...base,
     heroImages: [
@@ -18,11 +21,14 @@ const FourIslandsSpeedboat = () => {
       { src: four2, title: "Tub Island Sandbar" },
     ],
     faqs: base.faqs?.length ? base.faqs : fourIslandsLongtailFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
   };
 
   return (
     <KrabiActivityTemplate
       tourData={tourData}
+      contentAfterOverview={<KrabiTourItinerary tourKey="four-islands-speedboat" />}
       config={{
         path: "/thailand/krabi/4-island-tour-speedboat-with-transfer/",
         seoTitle: "4 Island Speedboat Tour Krabi with Hotel Transfers | Yellodae",

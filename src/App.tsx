@@ -85,6 +85,7 @@ const PattayaFloatingMarketGuided = lazy(() => import("./pages/PattayaFloatingMa
 const PattayaNightlifeWalking = lazy(() => import("./pages/PattayaNightlifeWalking"));
 const PattayaPubCrawl = lazy(() => import("./pages/PattayaPubCrawl"));
 const HongIslandsLongtail = lazy(() => import("./pages/HongIslandsLongtail"));
+const PhiPhiKrabiSpeedboat = lazy(() => import("./pages/PhiPhiKrabiSpeedboat"));
 const HongIslandsSpeedboat = lazy(() => import("./pages/HongIslandsSpeedboat"));
 const SevenIslandsLongtail = lazy(() => import("./pages/SevenIslandsLongtail"));
 const SevenIslandsSpeedboat = lazy(() => import("./pages/SevenIslandsSpeedboat"));
@@ -633,7 +634,7 @@ const App = () => (
             <Route path="/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer/" element={<FourIslandsLongtailNoParkFee />} />
             <Route path="/thailand/krabi/4-island-tour-speedboat-with-transfer/" element={<FourIslandsSpeedboat />} />
             <Route path="/thailand/krabi/james-bond-island/" element={<JamesBondIslandKrabi />} />
-            <Route path="/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" element={<PhiPhiIsland />} />
+            <Route path="/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" element={<PhiPhiKrabiSpeedboat />} />
             {/* Legacy Krabi activity slugs → redirects to new canonical SEO URLs */}
             {/* Krabi hub page */}
             <Route path="/thailand/krabi/things-to-do/" element={<KrabiThingsToDo />} />

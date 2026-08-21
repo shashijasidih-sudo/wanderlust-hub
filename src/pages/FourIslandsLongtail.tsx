@@ -1,4 +1,6 @@
 import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTemplate";
+import KrabiTourItinerary from "@/components/activity-detail/KrabiTourItinerary";
+import { krabiSheetContent } from "@/data/krabiSheetContent";
 import { toursData } from "@/data/tourData";
 import { FourIslandsLongtailSEO } from "@/components/activity-detail/KrabiActivitySEO";
 import { fourIslandsLongtailFaqs } from "@/data/krabiActivityFaqs";
@@ -10,6 +12,7 @@ import krabiKayaks from "@/assets/krabi-kayaks-beach-1.jpg";
 const FourIslandsLongtail = () => {
   const base = toursData["four-islands-longtail"];
   if (!base) return null;
+  const sheet = krabiSheetContent["four-islands-longtail"];
   const tourData = {
     ...base,
     heroImages: [
@@ -19,11 +22,14 @@ const FourIslandsLongtail = () => {
       { src: krabiKayaks, title: "Krabi Beach Day" },
     ],
     faqs: fourIslandsLongtailFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
   };
 
   return (
     <KrabiActivityTemplate
       tourData={tourData}
+      contentAfterOverview={<KrabiTourItinerary tourKey="four-islands-longtail" />}
       config={{
         path: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/",
         seoTitle: "4 Island Tour Krabi by Longtail Boat with Hotel Transfers | Yellodae",

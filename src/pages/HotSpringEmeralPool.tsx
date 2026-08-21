@@ -1,4 +1,6 @@
 import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTemplate";
+import KrabiTourItinerary from "@/components/activity-detail/KrabiTourItinerary";
+import { krabiSheetContent } from "@/data/krabiSheetContent";
 import { toursData } from "@/data/tourData";
 import { HotSpringEmeraldPoolSEO } from "@/components/activity-detail/KrabiActivitySEO";
 import { hotSpringEmeraldPoolFaqs } from "@/data/krabiActivityFaqs";
@@ -10,6 +12,7 @@ import krabiIsland from "@/assets/krabi-island-viewpoint-1.jpg";
 const HotSpringEmeralPool = () => {
   const base = toursData["hot-spring-emerald-pool"];
   if (!base) return null;
+  const sheet = krabiSheetContent["hot-spring-emerald-pool"];
   const tourData = {
     ...base,
     heroImages: [
@@ -19,11 +22,14 @@ const HotSpringEmeralPool = () => {
       { src: krabiIsland, title: "Krabi Jungle & Viewpoints" },
     ],
     faqs: hotSpringEmeraldPoolFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
   };
 
   return (
     <KrabiActivityTemplate
       tourData={tourData}
+      contentAfterOverview={<KrabiTourItinerary tourKey="hot-spring-emerald-pool" />}
       config={{
         path: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/",
         seoTitle: "Emerald Pool, Hot Springs & Tiger Cave Temple Tour Krabi | Yellodae",
