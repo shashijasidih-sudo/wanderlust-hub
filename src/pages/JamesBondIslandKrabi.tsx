@@ -1,4 +1,6 @@
 import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTemplate";
+import KrabiTourItinerary from "@/components/activity-detail/KrabiTourItinerary";
+import { krabiSheetContent } from "@/data/krabiSheetContent";
 import { toursData } from "@/data/tourData";
 import { JamesBondIslandKrabiSEO } from "@/components/activity-detail/KrabiActivitySEO";
 import { jamesBondIslandKrabiFaqs } from "@/data/krabiActivityFaqs";
@@ -10,6 +12,7 @@ import krabiTourBoat from "@/assets/krabi-tour-boat-1.webp";
 const JamesBondIslandKrabi = () => {
   const base = toursData["james-bond-island-krabi"];
   if (!base) return null;
+  const sheet = krabiSheetContent["james-bond-island-krabi"];
   const tourData = {
     ...base,
     heroImages: [
@@ -19,11 +22,14 @@ const JamesBondIslandKrabi = () => {
       { src: krabiTourBoat, title: "Krabi Day Tour Boat" },
     ],
     faqs: jamesBondIslandKrabiFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
   };
 
   return (
     <KrabiActivityTemplate
       tourData={tourData}
+      contentAfterOverview={<KrabiTourItinerary tourKey="james-bond-island-krabi" />}
       config={{
         path: "/thailand/krabi/james-bond-island/",
         seoTitle: "James Bond Island Tour from Krabi with Hotel Transfers | Yellodae",

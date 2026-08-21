@@ -1,4 +1,6 @@
 import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTemplate";
+import KrabiTourItinerary from "@/components/activity-detail/KrabiTourItinerary";
+import { krabiSheetContent } from "@/data/krabiSheetContent";
 import { toursData } from "@/data/tourData";
 import { SevenIslandsLongtailSEO } from "@/components/activity-detail/KrabiActivitySEO";
 import { sevenIslandsLongtailFaqs } from "@/data/krabiActivityFaqs";
@@ -10,6 +12,7 @@ import krabiSailboat from "@/assets/krabi-sailboat-1.jpg";
 const SevenIslandsLongtail = () => {
   const base = toursData["seven-islands-longtail"];
   if (!base) return null;
+  const sheet = krabiSheetContent["seven-islands-longtail"];
   const tourData = {
     ...base,
     heroImages: [
@@ -19,11 +22,14 @@ const SevenIslandsLongtail = () => {
       { src: krabiSailboat, title: "Andaman Sunset Cruise" },
     ],
     faqs: sevenIslandsLongtailFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
   };
 
   return (
     <KrabiActivityTemplate
       tourData={tourData}
+      contentAfterOverview={<KrabiTourItinerary tourKey="seven-islands-longtail" />}
       config={{
         path: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer/",
         seoTitle: "7 Islands Sunset Tour Krabi by Longtail Boat with Transfers | Yellodae",

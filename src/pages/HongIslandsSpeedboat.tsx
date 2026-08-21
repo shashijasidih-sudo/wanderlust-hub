@@ -1,4 +1,6 @@
 import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTemplate";
+import KrabiTourItinerary from "@/components/activity-detail/KrabiTourItinerary";
+import { krabiSheetContent } from "@/data/krabiSheetContent";
 import { toursData } from "@/data/tourData";
 import { hongIslandsLongtailFaqs } from "@/data/krabiActivityFaqs";
 import hong2 from "@/assets/krabi-doc/hong-2.webp";
@@ -9,6 +11,7 @@ import krabiSpeedboat from "@/assets/krabi-speedboat-1.jpg";
 const HongIslandsSpeedboat = () => {
   const base = toursData["hong-islands-speedboat"];
   if (!base) return null;
+  const sheet = krabiSheetContent["hong-islands-speedboat"];
   const tourData = {
     ...base,
     heroImages: [
@@ -18,11 +21,14 @@ const HongIslandsSpeedboat = () => {
       { src: hong3, title: "Lao Lading Paradise" },
     ],
     faqs: base.faqs?.length ? base.faqs : hongIslandsLongtailFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions,
   };
 
   return (
     <KrabiActivityTemplate
       tourData={tourData}
+      contentAfterOverview={<KrabiTourItinerary tourKey="hong-islands-speedboat" />}
       config={{
         path: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/",
         seoTitle: "Hong Island Speedboat Tour Krabi with Hotel Transfers | Yellodae",

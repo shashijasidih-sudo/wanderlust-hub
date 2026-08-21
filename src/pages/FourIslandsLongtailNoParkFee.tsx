@@ -1,4 +1,6 @@
 import KrabiActivityTemplate from "@/components/activity-detail/KrabiActivityTemplate";
+import KrabiTourItinerary from "@/components/activity-detail/KrabiTourItinerary";
+import { krabiSheetContent } from "@/data/krabiSheetContent";
 import { toursData } from "@/data/tourData";
 import { FourIslandsLongtailSEO } from "@/components/activity-detail/KrabiActivitySEO";
 import { fourIslandsLongtailFaqs } from "@/data/krabiActivityFaqs";
@@ -10,6 +12,7 @@ import krabiBeach from "@/assets/krabi-beach-woman-1.webp";
 const FourIslandsLongtailNoParkFee = () => {
   const base = toursData["four-islands-longtail-no-park-fee"];
   if (!base) return null;
+  const sheet = krabiSheetContent["four-islands-longtail"];
   const tourData = {
     ...base,
     heroImages: [
@@ -19,11 +22,14 @@ const FourIslandsLongtailNoParkFee = () => {
       { src: krabiBeach, title: "Krabi Island Beach Day" },
     ],
     faqs: fourIslandsLongtailFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    inclusions: sheet.inclusions.filter((i) => !/national (marine )?park/i.test(i)),
   };
 
   return (
     <KrabiActivityTemplate
       tourData={tourData}
+      contentAfterOverview={<KrabiTourItinerary tourKey="four-islands-longtail" />}
       config={{
         path: "/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer/",
         seoTitle: "4 Island Tour Krabi Longtail (No Park Fee) with Transfers | Yellodae",
