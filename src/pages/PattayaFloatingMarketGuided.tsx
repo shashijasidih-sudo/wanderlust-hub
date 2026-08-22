@@ -1,5 +1,7 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import PattayaTourItinerary from "@/components/activity-detail/PattayaTourItinerary";
+import { pattayaSheetContent } from "@/data/pattayaSheetContent";
 import { PattayaFloatingMarketGuidedSEO } from "@/components/activity-detail/PattayaActivitySEO";
 import { pattayaFloatingMarketFaqs } from "@/data/pattayaActivityFaqs";
 
@@ -16,8 +18,16 @@ const config: ThaiActivityConfig = {
 };
 
 const PattayaFloatingMarketGuided = () => {
-  const tourData = { ...toursData["pattaya-floating-market-guided"], faqs: pattayaFloatingMarketFaqs };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} extraContentBeforeReviews={<PattayaFloatingMarketGuidedSEO />} />;
+  const base = toursData["pattaya-floating-market-guided"];
+  if (!base) return null;
+  const sheet = pattayaSheetContent["pattaya-floating-market-guided"];
+  const tourData = {
+    ...base,
+    faqs: pattayaFloatingMarketFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
+  };
+  return <ThaiCityActivityTemplate tourData={tourData} config={config} contentAfterOverview={<PattayaTourItinerary tourKey="pattaya-floating-market-guided" />} extraContentBeforeReviews={<PattayaFloatingMarketGuidedSEO />} />;
 };
 
 export default PattayaFloatingMarketGuided;

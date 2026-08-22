@@ -1,5 +1,7 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import PattayaTourItinerary from "@/components/activity-detail/PattayaTourItinerary";
+import { pattayaSheetContent } from "@/data/pattayaSheetContent";
 import { PattayaBigBuddhaGemsSEO } from "@/components/activity-detail/PattayaActivitySEO";
 import { pattayaBigBuddhaGemsFaqs } from "@/data/pattayaActivityFaqs";
 
@@ -16,8 +18,16 @@ const config: ThaiActivityConfig = {
 };
 
 const PattayaBigBuddhaGems = () => {
-  const tourData = { ...toursData["pattaya-big-buddha-gems"], faqs: pattayaBigBuddhaGemsFaqs };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} extraContentBeforeReviews={<PattayaBigBuddhaGemsSEO />} />;
+  const base = toursData["pattaya-big-buddha-gems"];
+  if (!base) return null;
+  const sheet = pattayaSheetContent["pattaya-big-buddha-gems"];
+  const tourData = {
+    ...base,
+    faqs: pattayaBigBuddhaGemsFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
+  };
+  return <ThaiCityActivityTemplate tourData={tourData} config={config} contentAfterOverview={<PattayaTourItinerary tourKey="pattaya-big-buddha-gems" />} extraContentBeforeReviews={<PattayaBigBuddhaGemsSEO />} />;
 };
 
 export default PattayaBigBuddhaGems;

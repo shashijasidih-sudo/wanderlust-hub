@@ -1,5 +1,7 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import PattayaTourItinerary from "@/components/activity-detail/PattayaTourItinerary";
+import { pattayaSheetContent } from "@/data/pattayaSheetContent";
 import { adultShowPattayaFaqs } from "@/data/pattayaActivityFaqs";
 
 const config: ThaiActivityConfig = {
@@ -15,8 +17,16 @@ const config: ThaiActivityConfig = {
 };
 
 const Imagine79Show = () => {
-  const tourData = { ...toursData["imagine79-show-pattaya"], faqs: adultShowPattayaFaqs("Imagine 79 Show Pattaya") };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} />;
+  const base = toursData["imagine79-show-pattaya"];
+  if (!base) return null;
+  const sheet = pattayaSheetContent["imagine79-show-pattaya"];
+  const tourData = {
+    ...base,
+    faqs: adultShowPattayaFaqs("Imagine 79 Show Pattaya"),
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
+  };
+  return <ThaiCityActivityTemplate tourData={tourData} config={config} contentAfterOverview={<PattayaTourItinerary tourKey="imagine79-show-pattaya" />} />;
 };
 
 export default Imagine79Show;
