@@ -1,5 +1,7 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import PattayaTourItinerary from "@/components/activity-detail/PattayaTourItinerary";
+import { pattayaSheetContent } from "@/data/pattayaSheetContent";
 import { AlcazarShowPattayaSEO } from "@/components/activity-detail/PattayaActivitySEO";
 import { alcazarShowPattayaFaqs } from "@/data/pattayaActivityFaqs";
 
@@ -16,8 +18,16 @@ const config: ThaiActivityConfig = {
 };
 
 const AlcazarShowPattaya = () => {
-  const tourData = { ...toursData["alcazar-show-pattaya"], faqs: alcazarShowPattayaFaqs };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} extraContentBeforeReviews={<AlcazarShowPattayaSEO />} />;
+  const base = toursData["alcazar-show-pattaya"];
+  if (!base) return null;
+  const sheet = pattayaSheetContent["alcazar-show-pattaya"];
+  const tourData = {
+    ...base,
+    faqs: alcazarShowPattayaFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
+  };
+  return <ThaiCityActivityTemplate tourData={tourData} config={config} contentAfterOverview={<PattayaTourItinerary tourKey="alcazar-show-pattaya" />} extraContentBeforeReviews={<AlcazarShowPattayaSEO />} />;
 };
 
 export default AlcazarShowPattaya;

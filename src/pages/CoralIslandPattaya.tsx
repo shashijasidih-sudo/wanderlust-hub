@@ -1,5 +1,7 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import PattayaTourItinerary from "@/components/activity-detail/PattayaTourItinerary";
+import { pattayaSheetContent } from "@/data/pattayaSheetContent";
 import { CoralIslandPattayaSEO } from "@/components/activity-detail/PattayaActivitySEO";
 import { coralIslandPattayaFaqs } from "@/data/pattayaActivityFaqs";
 
@@ -16,8 +18,16 @@ const config: ThaiActivityConfig = {
 };
 
 const CoralIslandPattaya = () => {
-  const tourData = { ...toursData["coral-island-pattaya"], faqs: coralIslandPattayaFaqs };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} extraContentBeforeReviews={<CoralIslandPattayaSEO />} />;
+  const base = toursData["coral-island-pattaya"];
+  if (!base) return null;
+  const sheet = pattayaSheetContent["coral-island-pattaya"];
+  const tourData = {
+    ...base,
+    faqs: coralIslandPattayaFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
+  };
+  return <ThaiCityActivityTemplate tourData={tourData} config={config} contentAfterOverview={<PattayaTourItinerary tourKey="coral-island-pattaya" />} extraContentBeforeReviews={<CoralIslandPattayaSEO />} />;
 };
 
 export default CoralIslandPattaya;

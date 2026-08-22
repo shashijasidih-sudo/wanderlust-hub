@@ -1,5 +1,7 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import PattayaTourItinerary from "@/components/activity-detail/PattayaTourItinerary";
+import { pattayaSheetContent } from "@/data/pattayaSheetContent";
 import { MuayThaiPattayaSEO } from "@/components/activity-detail/PattayaActivitySEO";
 import { muayThaiPattayaFaqs } from "@/data/pattayaActivityFaqs";
 
@@ -16,8 +18,16 @@ const config: ThaiActivityConfig = {
 };
 
 const MuayThaiPattaya = () => {
-  const tourData = { ...toursData["muay-thai-pattaya"], faqs: muayThaiPattayaFaqs };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} extraContentBeforeReviews={<MuayThaiPattayaSEO />} />;
+  const base = toursData["muay-thai-pattaya"];
+  if (!base) return null;
+  const sheet = pattayaSheetContent["muay-thai-pattaya"];
+  const tourData = {
+    ...base,
+    faqs: muayThaiPattayaFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
+  };
+  return <ThaiCityActivityTemplate tourData={tourData} config={config} contentAfterOverview={<PattayaTourItinerary tourKey="muay-thai-pattaya" />} extraContentBeforeReviews={<MuayThaiPattayaSEO />} />;
 };
 
 export default MuayThaiPattaya;

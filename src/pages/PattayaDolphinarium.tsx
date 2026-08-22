@@ -1,5 +1,7 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import PattayaTourItinerary from "@/components/activity-detail/PattayaTourItinerary";
+import { pattayaSheetContent } from "@/data/pattayaSheetContent";
 import { PattayaDolphinariumSEO } from "@/components/activity-detail/PattayaActivitySEO";
 import { pattayaDolphinariumFaqs } from "@/data/pattayaActivityFaqs";
 
@@ -16,8 +18,16 @@ const config: ThaiActivityConfig = {
 };
 
 const PattayaDolphinarium = () => {
-  const tourData = { ...toursData["pattaya-dolphinarium"], faqs: pattayaDolphinariumFaqs };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} extraContentBeforeReviews={<PattayaDolphinariumSEO />} />;
+  const base = toursData["pattaya-dolphinarium"];
+  if (!base) return null;
+  const sheet = pattayaSheetContent["pattaya-dolphinarium"];
+  const tourData = {
+    ...base,
+    faqs: pattayaDolphinariumFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
+  };
+  return <ThaiCityActivityTemplate tourData={tourData} config={config} contentAfterOverview={<PattayaTourItinerary tourKey="pattaya-dolphinarium" />} extraContentBeforeReviews={<PattayaDolphinariumSEO />} />;
 };
 
 export default PattayaDolphinarium;

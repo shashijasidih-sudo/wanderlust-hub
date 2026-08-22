@@ -1,5 +1,7 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import PattayaTourItinerary from "@/components/activity-detail/PattayaTourItinerary";
+import { pattayaSheetContent } from "@/data/pattayaSheetContent";
 import { NongNoochGardenSEO } from "@/components/activity-detail/PattayaActivitySEO";
 import { nongNoochGardenFaqs } from "@/data/pattayaActivityFaqs";
 
@@ -16,8 +18,16 @@ const config: ThaiActivityConfig = {
 };
 
 const NongNoochGarden = () => {
-  const tourData = { ...toursData["nong-nooch-garden"], faqs: nongNoochGardenFaqs };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} extraContentBeforeReviews={<NongNoochGardenSEO />} />;
+  const base = toursData["nong-nooch-garden"];
+  if (!base) return null;
+  const sheet = pattayaSheetContent["nong-nooch-garden"];
+  const tourData = {
+    ...base,
+    faqs: nongNoochGardenFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
+  };
+  return <ThaiCityActivityTemplate tourData={tourData} config={config} contentAfterOverview={<PattayaTourItinerary tourKey="nong-nooch-garden" />} extraContentBeforeReviews={<NongNoochGardenSEO />} />;
 };
 
 export default NongNoochGarden;

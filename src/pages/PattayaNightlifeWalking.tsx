@@ -1,5 +1,7 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import PattayaTourItinerary from "@/components/activity-detail/PattayaTourItinerary";
+import { pattayaSheetContent } from "@/data/pattayaSheetContent";
 import { PattayaNightlifeWalkingSEO } from "@/components/activity-detail/PattayaActivitySEO";
 import { lostInNightlightFaqs } from "@/data/pattayaActivityFaqs";
 
@@ -16,8 +18,16 @@ const config: ThaiActivityConfig = {
 };
 
 const PattayaNightlifeWalking = () => {
-  const tourData = { ...toursData["pattaya-nightlife-walking"], faqs: lostInNightlightFaqs };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} extraContentBeforeReviews={<PattayaNightlifeWalkingSEO />} />;
+  const base = toursData["pattaya-nightlife-walking"];
+  if (!base) return null;
+  const sheet = pattayaSheetContent["pattaya-nightlife-walking"];
+  const tourData = {
+    ...base,
+    faqs: lostInNightlightFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
+  };
+  return <ThaiCityActivityTemplate tourData={tourData} config={config} contentAfterOverview={<PattayaTourItinerary tourKey="pattaya-nightlife-walking" />} extraContentBeforeReviews={<PattayaNightlifeWalkingSEO />} />;
 };
 
 export default PattayaNightlifeWalking;

@@ -1,5 +1,7 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import PattayaTourItinerary from "@/components/activity-detail/PattayaTourItinerary";
+import { pattayaSheetContent } from "@/data/pattayaSheetContent";
 import { PattayaPubCrawlSEO } from "@/components/activity-detail/PattayaActivitySEO";
 import { pubCrawlPattayaFaqs } from "@/data/pattayaActivityFaqs";
 
@@ -16,8 +18,16 @@ const config: ThaiActivityConfig = {
 };
 
 const PattayaPubCrawl = () => {
-  const tourData = { ...toursData["pattaya-pub-crawl"], faqs: pubCrawlPattayaFaqs };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} extraContentBeforeReviews={<PattayaPubCrawlSEO />} />;
+  const base = toursData["pattaya-pub-crawl"];
+  if (!base) return null;
+  const sheet = pattayaSheetContent["pattaya-pub-crawl"];
+  const tourData = {
+    ...base,
+    faqs: pubCrawlPattayaFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
+  };
+  return <ThaiCityActivityTemplate tourData={tourData} config={config} contentAfterOverview={<PattayaTourItinerary tourKey="pattaya-pub-crawl" />} extraContentBeforeReviews={<PattayaPubCrawlSEO />} />;
 };
 
 export default PattayaPubCrawl;
