@@ -883,9 +883,11 @@ interface Props {
   tourData: any;
   config: ThaiActivityConfig;
   extraContentBeforeReviews?: ReactNode;
+  /** Rendered directly under "What to Expect", above the marketing blocks */
+  contentAfterOverview?: ReactNode;
 }
 
-const ThaiCityActivityTemplate = ({ tourData, config, extraContentBeforeReviews }: Props) => {
+const ThaiCityActivityTemplate = ({ tourData, config, extraContentBeforeReviews, contentAfterOverview }: Props) => {
   if (!tourData) return null;
   const city = CITIES[config.city];
   const area = city.areas[config.area] ?? Object.values(city.areas)[0];
@@ -907,6 +909,7 @@ const ThaiCityActivityTemplate = ({ tourData, config, extraContentBeforeReviews 
         forceBlackText
         extraDescriptionBeforeHighlights={
           <div className="space-y-8">
+            {contentAfterOverview}
             <div className="space-y-6 min-w-0">
               <HeroMeta
                 rating={Math.max(tourData.rating ?? 4.8, 4.5)}
