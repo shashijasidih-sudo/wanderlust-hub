@@ -1,5 +1,7 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import KohSamuiTourItinerary from "@/components/activity-detail/KohSamuiTourItinerary";
+import { kohSamuiSheetContent } from "@/data/kohSamuiSheetContent";
 import { kohSamuiLoyKrathongCruiseFaqs } from "@/data/kohSamuiActivityFaqs";
 import cruiseImg from "@/assets/koh-samui-loy-krathong-cruise-1.webp";
 import bangkokCruise from "@/assets/bangkok-cruise-night-3.webp";
@@ -25,9 +27,13 @@ const config: ThaiActivityConfig = {
   ],
 };
 
+const TOUR_KEY = "koh-samui-white-orchid-loy-krathong-cruise";
+
 const KohSamuiWhiteOrchidLoyKrathongCruise = () => {
+  const base = toursData[TOUR_KEY];
+  const sheet = kohSamuiSheetContent[TOUR_KEY];
   const tourData = {
-    ...toursData["koh-samui-white-orchid-loy-krathong-cruise"],
+    ...base,
     heroImages: [
       { src: cruiseImg, title: "Loy Krathong River Cruise" },
       { src: bangkokCruise, title: "Chao Phraya River Cruise" },
@@ -40,8 +46,16 @@ const KohSamuiWhiteOrchidLoyKrathongCruise = () => {
       { src: valentineCruise, alt: "On-board entertainment" },
     ],
     faqs: kohSamuiLoyKrathongCruiseFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
   };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} />;
+  return (
+    <ThaiCityActivityTemplate
+      tourData={tourData}
+      config={config}
+      contentAfterOverview={<KohSamuiTourItinerary tourKey={TOUR_KEY} />}
+    />
+  );
 };
 
 export default KohSamuiWhiteOrchidLoyKrathongCruise;

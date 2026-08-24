@@ -1,5 +1,7 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import KohSamuiTourItinerary from "@/components/activity-detail/KohSamuiTourItinerary";
+import { kohSamuiSheetContent } from "@/data/kohSamuiSheetContent";
 import { kohSamuiFullMoonPartyFaqs } from "@/data/kohSamuiActivityFaqs";
 import fullMoon from "@/assets/koh-samui-full-moon-party-1.jpg";
 import beach from "@/assets/koh-samui-beach-1.webp";
@@ -25,9 +27,13 @@ const config: ThaiActivityConfig = {
   ],
 };
 
+const TOUR_KEY = "koh-samui-full-moon-party-with-transfer";
+
 const KohSamuiFullMoonParty = () => {
+  const base = toursData[TOUR_KEY];
+  const sheet = kohSamuiSheetContent[TOUR_KEY];
   const tourData = {
-    ...toursData["koh-samui-full-moon-party-with-transfer"],
+    ...base,
     heroImages: [
       { src: fullMoon, title: "Full Moon Party Haad Rin Beach" },
       { src: beach, title: "Koh Samui Beach" },
@@ -40,8 +46,16 @@ const KohSamuiFullMoonParty = () => {
       { src: nightlife, alt: "Beach nightlife party" },
     ],
     faqs: kohSamuiFullMoonPartyFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
   };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} />;
+  return (
+    <ThaiCityActivityTemplate
+      tourData={tourData}
+      config={config}
+      contentAfterOverview={<KohSamuiTourItinerary tourKey={TOUR_KEY} />}
+    />
+  );
 };
 
 export default KohSamuiFullMoonParty;
