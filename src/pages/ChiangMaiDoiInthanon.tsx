@@ -1,10 +1,14 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import ChiangMaiTourItinerary from "@/components/activity-detail/ChiangMaiTourItinerary";
+import { chiangMaiSheetContent } from "@/data/chiangMaiSheetContent";
 import { chiangMaiDoiInthanonFaqs } from "@/data/chiangMaiActivityFaqs";
 import doiInthanon from "@/assets/chiang-mai-doi-inthanon-1.webp";
 import cityImg from "@/assets/city-chiang-mai.webp";
 import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.webp";
 import vanImg from "@/assets/chiang-mai-transfer-van-1.webp";
+
+const TOUR_KEY = "chiang-mai-doi-inthanon-national-park-full-day-tour";
 
 const config: ThaiActivityConfig = {
   path: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/",
@@ -26,8 +30,10 @@ const config: ThaiActivityConfig = {
 };
 
 const ChiangMaiDoiInthanon = () => {
+  const base = toursData[TOUR_KEY];
+  const sheet = chiangMaiSheetContent[TOUR_KEY];
   const tourData = {
-    ...toursData["chiang-mai-doi-inthanon-national-park-full-day-tour"],
+    ...base,
     heroImages: [
       { src: doiInthanon, title: "Doi Inthanon Royal Twin Pagodas" },
       { src: cityImg, title: "Northern Thailand Highlands" },
@@ -40,8 +46,16 @@ const ChiangMaiDoiInthanon = () => {
       { src: doiSuthep, alt: "Northern Thai temple" },
     ],
     faqs: chiangMaiDoiInthanonFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
   };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} />;
+  return (
+    <ThaiCityActivityTemplate
+      tourData={tourData}
+      config={config}
+      contentAfterOverview={<ChiangMaiTourItinerary tourKey={TOUR_KEY} />}
+    />
+  );
 };
 
 export default ChiangMaiDoiInthanon;

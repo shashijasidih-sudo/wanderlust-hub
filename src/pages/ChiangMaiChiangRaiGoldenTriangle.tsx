@@ -1,10 +1,14 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import ChiangMaiTourItinerary from "@/components/activity-detail/ChiangMaiTourItinerary";
+import { chiangMaiSheetContent } from "@/data/chiangMaiSheetContent";
 import { chiangMaiChiangRaiGoldenTriangleFaqs } from "@/data/chiangMaiActivityFaqs";
 import goldenTriangle from "@/assets/chiang-mai-chiang-rai-golden-triangle-1.jpg";
 import cityImg from "@/assets/city-chiang-mai.webp";
 import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.webp";
 import vanImg from "@/assets/chiang-mai-transfer-van-1.webp";
+
+const TOUR_KEY = "chiang-mai-chiang-rai-golden-triangle-long-neck-tribe-day-trip";
 
 const config: ThaiActivityConfig = {
   path: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/",
@@ -26,8 +30,10 @@ const config: ThaiActivityConfig = {
 };
 
 const ChiangMaiChiangRaiGoldenTriangle = () => {
+  const base = toursData[TOUR_KEY];
+  const sheet = chiangMaiSheetContent[TOUR_KEY];
   const tourData = {
-    ...toursData["chiang-mai-chiang-rai-golden-triangle-long-neck-tribe-day-trip"],
+    ...base,
     heroImages: [
       { src: goldenTriangle, title: "Golden Triangle Viewpoint" },
       { src: cityImg, title: "Chiang Rai & Chiang Mai" },
@@ -40,8 +46,16 @@ const ChiangMaiChiangRaiGoldenTriangle = () => {
       { src: doiSuthep, alt: "Northern Thai temple" },
     ],
     faqs: chiangMaiChiangRaiGoldenTriangleFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
   };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} />;
+  return (
+    <ThaiCityActivityTemplate
+      tourData={tourData}
+      config={config}
+      contentAfterOverview={<ChiangMaiTourItinerary tourKey={TOUR_KEY} />}
+    />
+  );
 };
 
 export default ChiangMaiChiangRaiGoldenTriangle;

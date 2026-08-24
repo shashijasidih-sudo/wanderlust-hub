@@ -1,10 +1,14 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import ChiangMaiTourItinerary from "@/components/activity-detail/ChiangMaiTourItinerary";
+import { chiangMaiSheetContent } from "@/data/chiangMaiSheetContent";
 import { chiangMaiCityTempleTourFaqs } from "@/data/chiangMaiActivityFaqs";
 import doiSuthep from "@/assets/chiang-mai-doi-suthep-1.webp";
 import chediLuang from "@/assets/chiang-mai-wat-chedi-luang-1.webp";
 import cityImg from "@/assets/city-chiang-mai.webp";
 import vanImg from "@/assets/chiang-mai-transfer-van-1.webp";
+
+const TOUR_KEY = "chiang-mai-city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer";
 
 const config: ThaiActivityConfig = {
   path: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/",
@@ -26,8 +30,10 @@ const config: ThaiActivityConfig = {
 };
 
 const ChiangMaiCityTempleTour = () => {
+  const base = toursData[TOUR_KEY];
+  const sheet = chiangMaiSheetContent[TOUR_KEY];
   const tourData = {
-    ...toursData["chiang-mai-city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer"],
+    ...base,
     heroImages: [
       { src: doiSuthep, title: "Wat Phra That Doi Suthep" },
       { src: chediLuang, title: "Wat Chedi Luang" },
@@ -40,8 +46,16 @@ const ChiangMaiCityTempleTour = () => {
       { src: cityImg, alt: "Chiang Mai cityscape" },
     ],
     faqs: chiangMaiCityTempleTourFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
   };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} />;
+  return (
+    <ThaiCityActivityTemplate
+      tourData={tourData}
+      config={config}
+      contentAfterOverview={<ChiangMaiTourItinerary tourKey={TOUR_KEY} />}
+    />
+  );
 };
 
 export default ChiangMaiCityTempleTour;
