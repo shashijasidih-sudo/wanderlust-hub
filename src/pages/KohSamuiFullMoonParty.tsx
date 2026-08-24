@@ -1,5 +1,7 @@
 import ThaiCityActivityTemplate, { ThaiActivityConfig } from "@/components/activity-detail/ThaiCityActivityTemplate";
 import { toursData } from "@/data/tourData";
+import KohSamuiTourItinerary from "@/components/activity-detail/KohSamuiTourItinerary";
+import { kohSamuiSheetContent } from "@/data/kohSamuiSheetContent";
 import { kohSamuiFullMoonPartyFaqs } from "@/data/kohSamuiActivityFaqs";
 import fullMoon from "@/assets/koh-samui-full-moon-party-1.jpg";
 import beach from "@/assets/koh-samui-beach-1.webp";
