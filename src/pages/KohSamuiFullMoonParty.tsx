@@ -27,9 +27,13 @@ const config: ThaiActivityConfig = {
   ],
 };
 
+const TOUR_KEY = "koh-samui-full-moon-party-with-transfer";
+
 const KohSamuiFullMoonParty = () => {
+  const base = toursData[TOUR_KEY];
+  const sheet = kohSamuiSheetContent[TOUR_KEY];
   const tourData = {
-    ...toursData["koh-samui-full-moon-party-with-transfer"],
+    ...base,
     heroImages: [
       { src: fullMoon, title: "Full Moon Party Haad Rin Beach" },
       { src: beach, title: "Koh Samui Beach" },
