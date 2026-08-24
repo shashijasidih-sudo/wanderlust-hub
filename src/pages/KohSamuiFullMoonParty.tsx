@@ -46,8 +46,16 @@ const KohSamuiFullMoonParty = () => {
       { src: nightlife, alt: "Beach nightlife party" },
     ],
     faqs: kohSamuiFullMoonPartyFaqs,
+    description: { ...base.description, whatToExpect: sheet.whatToExpect },
+    ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
   };
-  return <ThaiCityActivityTemplate tourData={tourData} config={config} />;
+  return (
+    <ThaiCityActivityTemplate
+      tourData={tourData}
+      config={config}
+      contentAfterOverview={<KohSamuiTourItinerary tourKey={TOUR_KEY} />}
+    />
+  );
 };
 
 export default KohSamuiFullMoonParty;
