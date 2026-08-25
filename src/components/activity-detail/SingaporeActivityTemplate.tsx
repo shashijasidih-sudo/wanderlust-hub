@@ -9,6 +9,8 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import TourBooking from "@/components/TourBooking";
+import { singaporeSheetContent } from "@/data/singaporeSheetContent";
+import SingaporeTourItinerary from "@/components/activity-detail/SingaporeTourItinerary";
 import { toursData } from "@/data/tourData";
 import Seo from "@/components/seo/Seo";
 import SingaporeTravelEssentials from "@/components/activity-detail/SingaporeTravelEssentials";
