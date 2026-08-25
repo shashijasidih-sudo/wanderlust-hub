@@ -9,6 +9,8 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import TourBooking from "@/components/TourBooking";
+import { singaporeSheetContent } from "@/data/singaporeSheetContent";
+import SingaporeTourItinerary from "@/components/activity-detail/SingaporeTourItinerary";
 import { toursData } from "@/data/tourData";
 import Seo from "@/components/seo/Seo";
 import SingaporeTravelEssentials from "@/components/activity-detail/SingaporeTravelEssentials";
@@ -673,7 +675,14 @@ const FinalCTA = ({ config, fallbackImage }: { config: SingaporeActivityConfig; 
 const SingaporeActivityTemplate = ({ config }: { config: SingaporeActivityConfig }) => {
   const base = toursData[config.tourKey];
   if (!base) return null;
-  const tourData = { ...base, ...(config.tourOverrides ?? {}) } as typeof base;
+  const sheet = singaporeSheetContent[config.tourKey];
+  const sheetData = sheet
+    ? {
+        description: { ...base.description, whatToExpect: sheet.whatToExpect },
+        ...(sheet.inclusions.length ? { inclusions: sheet.inclusions } : {}),
+      }
+    : {};
+  const tourData = { ...base, ...sheetData, ...(config.tourOverrides ?? {}) } as typeof base;
 
   return (
     <>
@@ -692,7 +701,9 @@ const SingaporeActivityTemplate = ({ config }: { config: SingaporeActivityConfig
         forceBlackText
         extraDescriptionBeforeHighlights={
           <div className="space-y-8">
+            <SingaporeTourItinerary tourKey={config.tourKey} />
             <div className="space-y-6 min-w-0">
+
               <HeroMeta
                 rating={Math.max(tourData.rating ?? 4.8, 4.5)}
                 reviews={tourData.reviews ?? 150}

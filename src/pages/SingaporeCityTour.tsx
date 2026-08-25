@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import TourBooking from "@/components/TourBooking";
 import SingaporeTravelEssentials from "@/components/activity-detail/SingaporeTravelEssentials";
 import { toursData } from "@/data/tourData";
+import { singaporeSheetContent } from "@/data/singaporeSheetContent";
+import SingaporeTourItinerary from "@/components/activity-detail/SingaporeTourItinerary";
 import { singaporeCityTourFaqs } from "@/data/singaporeActivityFaqs";
 import Seo from "@/components/seo/Seo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -599,6 +601,8 @@ const SingaporeCityTour = () => {
       { src: cityTour2, alt: "Sri Mariamman temple gopuram" },
       ...base.galleryImages,
     ],
+    description: { ...base.description, whatToExpect: singaporeSheetContent["singapore-city-tour"].whatToExpect },
+    ...(singaporeSheetContent["singapore-city-tour"].inclusions.length ? { inclusions: singaporeSheetContent["singapore-city-tour"].inclusions } : {}),
     faqs: singaporeCityTourFaqs,
   };
 
@@ -618,6 +622,7 @@ const SingaporeCityTour = () => {
         forceBlackText
         extraDescriptionBeforeHighlights={
           <div className="space-y-8">
+            <SingaporeTourItinerary tourKey="singapore-city-tour" />
             <MarketingIntro />
             <StopsAndTimings />
           </div>

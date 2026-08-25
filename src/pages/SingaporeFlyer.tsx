@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import TourBooking from "@/components/TourBooking";
 import SingaporeTravelEssentials from "@/components/activity-detail/SingaporeTravelEssentials";
 import { toursData } from "@/data/tourData";
+import { singaporeSheetContent } from "@/data/singaporeSheetContent";
+import SingaporeTourItinerary from "@/components/activity-detail/SingaporeTourItinerary";
 import Seo from "@/components/seo/Seo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -588,7 +590,13 @@ const SingaporeFlyer = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const tourData = toursData["singapore-flyer"];
+  const sgSheet = singaporeSheetContent["singapore-flyer"];
+  const sgBase = toursData["singapore-flyer"];
+  const tourData = {
+    ...sgBase,
+    description: { ...sgBase.description, whatToExpect: sgSheet.whatToExpect },
+    ...(sgSheet.inclusions.length ? { inclusions: sgSheet.inclusions } : {}),
+  };
 
   return (
     <>
@@ -607,6 +615,7 @@ const SingaporeFlyer = () => {
         forceBlackText
         extraDescriptionBeforeHighlights={
           <div className="space-y-8">
+            <SingaporeTourItinerary tourKey="singapore-flyer" />
             <MarketingIntro />
             <HighlightsAndTimings />
           </div>

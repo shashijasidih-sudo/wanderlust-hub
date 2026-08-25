@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import TourBooking from "@/components/TourBooking";
 import SingaporeTravelEssentials from "@/components/activity-detail/SingaporeTravelEssentials";
 import { toursData } from "@/data/tourData";
+import { singaporeSheetContent } from "@/data/singaporeSheetContent";
+import SingaporeTourItinerary from "@/components/activity-detail/SingaporeTourItinerary";
 import Seo from "@/components/seo/Seo";
 import { SentosaWingsTimeSEO } from "@/components/activity-detail/SingaporeActivitySEO";
 import { sentosaWingsTimeFaqs } from "@/data/singaporeActivityFaqs";
@@ -595,6 +597,8 @@ const SentosaWingsTime = () => {
       { src: wt3, alt: "Wings of Time fireworks display over water" },
       ...base.galleryImages,
     ],
+    description: { ...base.description, whatToExpect: singaporeSheetContent["sentosa-wings-time"].whatToExpect },
+    ...(singaporeSheetContent["sentosa-wings-time"].inclusions.length ? { inclusions: singaporeSheetContent["sentosa-wings-time"].inclusions } : {}),
     faqs: sentosaWingsTimeFaqs,
   };
 
@@ -615,6 +619,7 @@ const SentosaWingsTime = () => {
         forceBlackText
         extraDescriptionBeforeHighlights={
           <div className="space-y-8">
+            <SingaporeTourItinerary tourKey="sentosa-wings-time" />
             <MarketingIntro />
             <SeatingAndTimings />
           </div>
