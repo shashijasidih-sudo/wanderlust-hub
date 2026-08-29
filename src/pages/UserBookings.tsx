@@ -340,6 +340,7 @@ const UserBookings = () => {
         onCancel={handleCancelBooking}
         cancellingId={cancellingId}
       />
+      <AccountRecommendations />
       <Footer />
     </div>
   );
