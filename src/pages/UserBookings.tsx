@@ -9,6 +9,7 @@ import { Loader2, CalendarDays, Search, User as UserIcon, Settings, XCircle, Eye
 import Header from "@/components/Header";
 import ViewBookingModal from "@/components/ViewBookingModal";
 import Footer from "@/components/Footer";
+import AccountRecommendations from "@/components/recommendations/AccountRecommendations";
 import { format } from "date-fns";
 import { useToast } from "@/hooks/use-toast";
 import { useCurrency } from "@/contexts/CurrencyContext";
