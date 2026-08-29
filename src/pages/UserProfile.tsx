@@ -12,6 +12,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getDisplayName } from "@/lib/userDisplay";
+import AccountRecommendations from "@/components/recommendations/AccountRecommendations";
 
 
 const UserProfile = () => {
@@ -186,6 +187,7 @@ const UserProfile = () => {
           </Card>
         </div>
       </main>
+      <AccountRecommendations />
       <Footer />
     </div>
   );
