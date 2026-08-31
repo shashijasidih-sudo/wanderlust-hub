@@ -1,7 +1,7 @@
 import SafeImage from "@/components/SafeImage";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Heart, Loader2, Trash2 } from "lucide-react";
+import { Heart, Loader2, Trash2, ShoppingCart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TripRecommendations from "@/components/recommendations/TripRecommendations";
