@@ -1,7 +1,7 @@
 import SafeImage from "@/components/SafeImage";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Heart, Loader2, Trash2 } from "lucide-react";
+import { Heart, Loader2, Trash2, ShoppingCart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TripRecommendations from "@/components/recommendations/TripRecommendations";
@@ -77,6 +77,17 @@ const Wishlist = () => {
     navigate(resolveLink(slug));
   };
 
+  // Activities need a travel date, guest count and (often) a variant, so we never
+  // add straight from the wishlist card. We take the user to the booking widget
+  // with those selections required. The item stays in the wishlist either way.
+  const handleAddToCart = (slug: string, title: string) => {
+    toast({
+      title: "Choose your date & guests",
+      description: `Select the travel date and travellers for ${title} to add it to your cart.`,
+    });
+    navigate(`${resolveLink(slug)}?book=1`, { state: { openBooking: true } });
+  };
+
   if (isLoading) {
     return <div className="min-h-screen flex items-center justify-center"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>;
   }
@@ -132,9 +143,34 @@ const Wishlist = () => {
                     >
                       {item.tour_name}
                     </h3>
-                    <div className="flex items-center justify-between gap-2 mt-auto flex-wrap">
-                      {item.tour_price && <p className="text-sm md:text-lg font-bold text-primary">{formatPrice(item.tour_price)}</p>}
-                      <Button size="sm" className="h-8 px-3 text-xs md:text-sm" onClick={() => handleViewTour(item.tour_slug)}>View</Button>
+                    <div className="mt-auto">
+                      {item.tour_price && <p className="text-sm md:text-lg font-bold text-primary mb-2">{formatPrice(item.tour_price)}</p>}
+                      <div className="flex items-center gap-1.5">
+                        <Button
+                          size="sm"
+                          className="h-8 px-2 md:px-3 text-[11px] md:text-sm flex-1 bg-orange-500 hover:bg-orange-600 text-white"
+                          onClick={() => handleAddToCart(item.tour_slug, item.tour_name)}
+                        >
+                          <ShoppingCart className="h-3.5 w-3.5 mr-1" /> Add to Cart
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="h-8 px-2 md:px-3 text-[11px] md:text-sm"
+                          onClick={() => handleViewTour(item.tour_slug)}
+                        >
+                          View
+                        </Button>
+                        <Button
+                          size="icon"
+                          variant="ghost"
+                          aria-label="Remove from wishlist"
+                          className="h-8 w-8 shrink-0"
+                          onClick={() => handleRemove(item.tour_slug, item.tour_name)}
+                        >
+                          <Heart className="h-4 w-4" style={{ color: "red", fill: "red" }} />
+                        </Button>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
