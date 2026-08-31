@@ -8,6 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TripRecommendations from "@/components/recommendations/TripRecommendations";
+import WishlistButton from "@/components/WishlistButton";
 import { format } from "date-fns";
 import {
   trackViewCart,
@@ -36,14 +37,23 @@ const TransferCartItem = ({ item, onRemove, onUpdateQuantity }: {
               <h3 className="font-semibold text-sm md:text-lg leading-tight line-clamp-2 break-words">{item.title}</h3>
               <p className="text-primary text-xs md:text-sm font-medium">{item.vehicleName}</p>
             </Link>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => onRemove(item.id)}
-              className="text-destructive hover:bg-destructive/10 h-6 w-6 md:h-8 md:w-8 shrink-0"
-            >
-              <Trash2 className="h-3.5 w-3.5 md:h-5 md:w-5" />
-            </Button>
+            <div className="flex items-center gap-0.5 shrink-0">
+              <WishlistButton
+                tourSlug={item.slug}
+                tourName={item.title}
+                tourPrice={item.price}
+                size="sm"
+                className="h-6 w-6 md:h-8 md:w-8 bg-transparent hover:bg-muted"
+              />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => onRemove(item.id)}
+                className="text-destructive hover:bg-destructive/10 h-6 w-6 md:h-8 md:w-8 shrink-0"
+              >
+                <Trash2 className="h-3.5 w-3.5 md:h-5 md:w-5" />
+              </Button>
+            </div>
           </div>
           
           <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-xs text-muted-foreground">
@@ -104,14 +114,23 @@ const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: {
               <h3 className="font-semibold text-sm md:text-lg leading-tight line-clamp-2 break-words">{item.title}</h3>
               <p className="text-xs text-muted-foreground">Activity / Tour</p>
             </Link>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => onRemove(item.id)}
-              className="text-destructive hover:bg-destructive/10 h-6 w-6 md:h-8 md:w-8 shrink-0"
-            >
-              <Trash2 className="h-3.5 w-3.5 md:h-5 md:w-5" />
-            </Button>
+            <div className="flex items-center gap-0.5 shrink-0">
+              <WishlistButton
+                tourSlug={item.slug}
+                tourName={item.title}
+                tourPrice={item.price}
+                size="sm"
+                className="h-6 w-6 md:h-8 md:w-8 bg-transparent hover:bg-muted"
+              />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => onRemove(item.id)}
+                className="text-destructive hover:bg-destructive/10 h-6 w-6 md:h-8 md:w-8 shrink-0"
+              >
+                <Trash2 className="h-3.5 w-3.5 md:h-5 md:w-5" />
+              </Button>
+            </div>
           </div>
           
           <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-xs text-muted-foreground">
