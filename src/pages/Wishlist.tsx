@@ -77,6 +77,17 @@ const Wishlist = () => {
     navigate(resolveLink(slug));
   };
 
+  // Activities need a travel date, guest count and (often) a variant, so we never
+  // add straight from the wishlist card. We take the user to the booking widget
+  // with those selections required. The item stays in the wishlist either way.
+  const handleAddToCart = (slug: string, title: string) => {
+    toast({
+      title: "Choose your date & guests",
+      description: `Select the travel date and travellers for ${title} to add it to your cart.`,
+    });
+    navigate(`${resolveLink(slug)}?book=1`, { state: { openBooking: true } });
+  };
+
   if (isLoading) {
     return <div className="min-h-screen flex items-center justify-center"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>;
   }
