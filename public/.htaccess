@@ -290,3 +290,4 @@ RedirectMatch 301 ^/krabi(/.*)?$ /thailand/krabi$1
 
 Redirect 301 /blog/movies-filmed-in-thailand/ /thailand/phuket/destination-guides/activity/movies-filmed-in-thailand/
 Redirect 301 /thailand/phuket/destination-guides/price-cost/phuket-food-cost-guide/ /thailand/phuket/destination-guides/price-cost/phuket-street-food-guide-indian-travellers/
+Redirect 301 /dubai/desert-safari/ /blog/dubai-desert-safari-new-attractions-guide/
