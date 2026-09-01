@@ -103,14 +103,14 @@ const blogArticles = [
   },
   {
     id: 1,
-    title: "Ultimate Guide to Dubai's Desert Safari",
-    description: "Experience the thrill of dune bashing, camel rides, and traditional Bedouin camps under the stars.",
+    title: "Ultimate Guide to Dubai Desert Safari & New Attractions in 2026",
+    description: "Dune bashing, camel rides, sandboarding, BBQ dinners, desert camps and the new Dubai attractions worth adding in 2026.",
     category: "Adventure",
-    image: dubaiCityImg,
-    author: "Desert Expert",
-    date: "Nov 25, 2024",
-    readTime: "8 min read",
-    slug: "/dubai/desert-safari/"
+    image: desertCoupleImg,
+    author: "Yellodae Travel Expert",
+    date: "Sep 1, 2026",
+    readTime: "12 min read",
+    slug: "/blog/dubai-desert-safari-new-attractions-guide/"
   },
   {
     id: 2,

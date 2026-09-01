@@ -200,6 +200,7 @@ const BlogBestPattayaActivities = lazy(() => import("./pages/BlogBestPattayaActi
 const DubaiSmartGuides = lazy(() => import("./pages/DubaiSmartGuides"));
 const BlogDubaiAirportTransfer = lazy(() => import("./pages/BlogDubaiAirportTransfer"));
 const BlogDubaiDesertSafari = lazy(() => import("./pages/BlogDubaiDesertSafari"));
+const BlogDubaiDesertSafariNewAttractions = lazy(() => import("./pages/BlogDubaiDesertSafariNewAttractions"));
 const BlogDubaiMarinaCruise = lazy(() => import("./pages/BlogDubaiMarinaCruise"));
 const BlogBurjKhalifaTickets = lazy(() => import("./pages/BlogBurjKhalifaTickets"));
 const BlogBestDubaiActivities = lazy(() => import("./pages/BlogBestDubaiActivities"));
@@ -823,7 +824,10 @@ const App = () => (
             <Route path="/blog/dubai-shopping-tours/" element={<BlogDubaiShoppingTours />} />
             <Route path="/blog/dubai-food-experiences/" element={<BlogDubaiFoodExperiences />} />
             <Route path="/dubai/" element={<Dubai />} />
-            <Route path="/dubai/desert-safari/" element={<DesertSafari />} />
+            <Route path="/blog/dubai-desert-safari-new-attractions-guide/" element={<BlogDubaiDesertSafariNewAttractions />} />
+            <Route path="/blog/dubai-desert-safari-new-attractions-guide" element={<Navigate to="/blog/dubai-desert-safari-new-attractions-guide/" replace />} />
+            <Route path="/dubai/desert-safari/" element={<Navigate to="/blog/dubai-desert-safari-new-attractions-guide/" replace />} />
+            <Route path="/dubai/desert-safari" element={<Navigate to="/blog/dubai-desert-safari-new-attractions-guide/" replace />} />
             <Route path="/dubai/desert-safari-shisha/" element={<DesertSafariShisha />} />
             <Route path="/dubai/desert-safari-sharing/" element={<DesertSafariSharing />} />
             <Route path="/dubai/dhow-cruise/" element={<DhowCruise />} />
