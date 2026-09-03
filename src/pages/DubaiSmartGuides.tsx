@@ -44,7 +44,7 @@ const blogArticles = [
     author: "Yellodae Travel Expert",
     date: "Mar 4, 2026",
     readTime: "12 min read",
-    slug: "/blog/dubai-shopping-tours/"
+    slug: "/dubai/destination-guides/dubai-shopping-tours/"
   },
   {
     id: -6,
@@ -55,7 +55,7 @@ const blogArticles = [
     author: "Yellodae Travel Expert",
     date: "Mar 7, 2026",
     readTime: "10 min read",
-    slug: "/blog/dubai-food-experiences/"
+    slug: "/dubai/destination-guides/dubai-food-experiences/"
   },
   {
     id: 0,
@@ -66,7 +66,7 @@ const blogArticles = [
     author: "Yellodae Travel Expert",
     date: "Feb 17, 2026",
     readTime: "9 min read",
-    slug: "/blog/airport-transfer-booking-dubai/"
+    slug: "/dubai/destination-guides/airport-transfer-booking-dubai/"
   },
   {
     id: -1,
@@ -77,7 +77,7 @@ const blogArticles = [
     author: "Yellodae Desert Expert",
     date: "Feb 20, 2026",
     readTime: "12 min read",
-    slug: "/blog/desert-safari-deals-dubai/"
+    slug: "/dubai/destination-guides/desert-safari-deals-dubai/"
   },
   {
     id: -2,
@@ -88,7 +88,7 @@ const blogArticles = [
     author: "Yellodae Travel Expert",
     date: "Feb 26, 2026",
     readTime: "9 min read",
-    slug: "/blog/dubai-marina-cruise/"
+    slug: "/dubai/destination-guides/dubai-marina-cruise/"
   },
   {
     id: -3,
@@ -99,7 +99,7 @@ const blogArticles = [
     author: "Yellodae Travel Expert",
     date: "Feb 27, 2026",
     readTime: "8 min read",
-    slug: "/blog/burj-khalifa-tickets-dubai/"
+    slug: "/dubai/destination-guides/burj-khalifa-tickets-dubai/"
   },
   {
     id: 1,
@@ -110,7 +110,7 @@ const blogArticles = [
     author: "Yellodae Travel Expert",
     date: "Sep 1, 2026",
     readTime: "12 min read",
-    slug: "/blog/dubai-desert-safari-new-attractions-guide/"
+    slug: "/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/"
   },
   {
     id: 2,

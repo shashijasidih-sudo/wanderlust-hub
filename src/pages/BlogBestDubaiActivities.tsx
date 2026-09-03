@@ -83,10 +83,10 @@ const BlogBestDubaiActivities = () => {
     guidesLink="/dubai/destination-guides"
     guidesLabel="Dubai Guides"
     relatedLinks={[
-      { title: "Best Dubai Desert Safari Packages", link: "/blog/desert-safari-deals-dubai/" },
-      { title: "Burj Khalifa Ticket Booking Guide", link: "/blog/burj-khalifa-tickets-dubai/" },
-      { title: "Dubai Marina Cruise Experience Guide", link: "/blog/dubai-marina-cruise/" },
-      { title: "Dubai Airport Transfer Guide", link: "/blog/airport-transfer-booking-dubai/" },
+      { title: "Best Dubai Desert Safari Packages", link: "/dubai/destination-guides/desert-safari-deals-dubai/" },
+      { title: "Burj Khalifa Ticket Booking Guide", link: "/dubai/destination-guides/burj-khalifa-tickets-dubai/" },
+      { title: "Dubai Marina Cruise Experience Guide", link: "/dubai/destination-guides/dubai-marina-cruise/" },
+      { title: "Dubai Airport Transfer Guide", link: "/dubai/destination-guides/airport-transfer-booking-dubai/" },
     ]}
     sections={[
       { type: "paragraph", content: "Dubai is a city that defies expectations at every turn. From the world's tallest building to vast golden deserts, from traditional dhow cruises to futuristic attractions — Dubai offers an extraordinary mix of luxury, adventure, and culture. Whether you're visiting for the first time or returning for more, there are incredible experiences waiting at every corner." },

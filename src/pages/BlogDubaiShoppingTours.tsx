@@ -84,10 +84,10 @@ const BlogDubaiShoppingTours = () => {
       guidesLink="/dubai/destination-guides"
       guidesLabel="Dubai Guides"
       relatedLinks={[
-        { title: "Top Dubai Activities to Book Online", link: "/blog/best-dubai-activities/" },
-        { title: "Best Dubai Desert Safari Packages", link: "/blog/desert-safari-deals-dubai/" },
-        { title: "Burj Khalifa Ticket Booking Guide", link: "/blog/burj-khalifa-tickets-dubai/" },
-        { title: "Dubai Marina Cruise Experience", link: "/blog/dubai-marina-cruise/" },
+        { title: "Top Dubai Activities to Book Online", link: "/dubai/destination-guides/best-dubai-activities/" },
+        { title: "Best Dubai Desert Safari Packages", link: "/dubai/destination-guides/desert-safari-deals-dubai/" },
+        { title: "Burj Khalifa Ticket Booking Guide", link: "/dubai/destination-guides/burj-khalifa-tickets-dubai/" },
+        { title: "Dubai Marina Cruise Experience", link: "/dubai/destination-guides/dubai-marina-cruise/" },
       ]}
       sections={[
         { type: "paragraph", content: "Dubai is known worldwide as a shopper's paradise, offering everything from luxury designer brands to traditional Arabian markets. A Dubai shopping tour is not just about buying products — it's an experience that combines culture, luxury, entertainment, and world-class shopping destinations." },

@@ -84,10 +84,10 @@ const BlogDubaiFoodExperiences = () => {
       guidesLink="/dubai/destination-guides"
       guidesLabel="Dubai Guides"
       relatedLinks={[
-        { title: "Top Dubai Activities to Book Online", link: "/blog/best-dubai-activities/" },
-        { title: "Dubai Shopping Tours Guide", link: "/blog/dubai-shopping-tours/" },
-        { title: "Best Dubai Desert Safari Packages", link: "/blog/desert-safari-deals-dubai/" },
-        { title: "Dubai Marina Cruise Experience", link: "/blog/dubai-marina-cruise/" },
+        { title: "Top Dubai Activities to Book Online", link: "/dubai/destination-guides/best-dubai-activities/" },
+        { title: "Dubai Shopping Tours Guide", link: "/dubai/destination-guides/dubai-shopping-tours/" },
+        { title: "Best Dubai Desert Safari Packages", link: "/dubai/destination-guides/desert-safari-deals-dubai/" },
+        { title: "Dubai Marina Cruise Experience", link: "/dubai/destination-guides/dubai-marina-cruise/" },
       ]}
       sections={[
         { type: "paragraph", content: "Dubai is not only famous for its luxury shopping, futuristic skyline, and desert adventures, but also for its incredible food culture. From traditional Emirati dishes to world-class international cuisine, the city offers unforgettable culinary adventures for every type of food lover." },

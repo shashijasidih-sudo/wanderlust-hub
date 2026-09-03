@@ -290,4 +290,14 @@ RedirectMatch 301 ^/krabi(/.*)?$ /thailand/krabi$1
 
 Redirect 301 /blog/movies-filmed-in-thailand/ /thailand/phuket/destination-guides/activity/movies-filmed-in-thailand/
 Redirect 301 /thailand/phuket/destination-guides/price-cost/phuket-food-cost-guide/ /thailand/phuket/destination-guides/price-cost/phuket-street-food-guide-indian-travellers/
-Redirect 301 /dubai/desert-safari/ /blog/dubai-desert-safari-new-attractions-guide/
+Redirect 301 /dubai/desert-safari/ /dubai/destination-guides/dubai-desert-safari-new-attractions-guide/
+
+# Dubai blogs moved under the Dubai destination guides silo (301)
+RedirectMatch 301 ^/blog/best-dubai-activities/?$ /dubai/destination-guides/best-dubai-activities/
+RedirectMatch 301 ^/blog/airport-transfer-booking-dubai/?$ /dubai/destination-guides/airport-transfer-booking-dubai/
+RedirectMatch 301 ^/blog/desert-safari-deals-dubai/?$ /dubai/destination-guides/desert-safari-deals-dubai/
+RedirectMatch 301 ^/blog/dubai-marina-cruise/?$ /dubai/destination-guides/dubai-marina-cruise/
+RedirectMatch 301 ^/blog/burj-khalifa-tickets-dubai/?$ /dubai/destination-guides/burj-khalifa-tickets-dubai/
+RedirectMatch 301 ^/blog/dubai-shopping-tours/?$ /dubai/destination-guides/dubai-shopping-tours/
+RedirectMatch 301 ^/blog/dubai-food-experiences/?$ /dubai/destination-guides/dubai-food-experiences/
+RedirectMatch 301 ^/blog/dubai-desert-safari-new-attractions-guide/?$ /dubai/destination-guides/dubai-desert-safari-new-attractions-guide/

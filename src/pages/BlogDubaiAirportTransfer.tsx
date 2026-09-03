@@ -32,7 +32,7 @@ const BlogDubaiAirportTransfer = () => {
         "Yellodae Dubai",
       ]}
       relatedLinks={[
-        { title: "Dubai Desert Safari Guide", link: "/blog/desert-safari-deals-dubai/" },
+        { title: "Dubai Desert Safari Guide", link: "/dubai/destination-guides/desert-safari-deals-dubai/" },
         { title: "Dubai Transfers", link: "/dubai/budget-airport-transfers/" },
         { title: "Dubai City Tour", link: "/dubai/city-tour/" },
         { title: "Dhow Cruise Dubai", link: "/dubai/dhow-cruise/" },

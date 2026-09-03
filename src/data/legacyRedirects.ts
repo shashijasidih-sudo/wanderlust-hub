@@ -1,6 +1,14 @@
 // Auto-generated map of legacy / mistyped internal URLs -> live routes.
 // Prevents 404s from older blog and data links. Keys and values are lowercase, trailing-slash paths.
 export const LEGACY_REDIRECTS: Record<string, string> = {
+  "/blog/best-dubai-activities/": "/dubai/destination-guides/best-dubai-activities/",
+  "/blog/airport-transfer-booking-dubai/": "/dubai/destination-guides/airport-transfer-booking-dubai/",
+  "/blog/desert-safari-deals-dubai/": "/dubai/destination-guides/desert-safari-deals-dubai/",
+  "/blog/dubai-marina-cruise/": "/dubai/destination-guides/dubai-marina-cruise/",
+  "/blog/burj-khalifa-tickets-dubai/": "/dubai/destination-guides/burj-khalifa-tickets-dubai/",
+  "/blog/dubai-shopping-tours/": "/dubai/destination-guides/dubai-shopping-tours/",
+  "/blog/dubai-food-experiences/": "/dubai/destination-guides/dubai-food-experiences/",
+  "/blog/dubai-desert-safari-new-attractions-guide/": "/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/",
   "/blog/airport-transfer-thailand/": "/blog/airport-transfer-booking-thailand/",
   "/blog/top-phuket-tours/": "/blog/top-phuket-island-tours/",
   "/dubai/atlantis-aquaventure-waterpark/": "/dubai/atlantis-aquaventure/",

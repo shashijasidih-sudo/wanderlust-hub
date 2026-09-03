@@ -188,7 +188,7 @@ export const cityseoFaqs: Record<string, SeoFaq[]> = {
   dubai: [
     {
       question: "What are the must-do activities in Dubai?",
-      answer: `Burj Khalifa, Desert Safari, Dubai Marina Cruise, Dubai Frame and Global Village are unmissable. See our ${link("/blog/best-dubai-activities", "best Dubai activities guide")}.`,
+      answer: `Burj Khalifa, Desert Safari, Dubai Marina Cruise, Dubai Frame and Global Village are unmissable. See our ${link("/dubai/destination-guides/best-dubai-activities", "best Dubai activities guide")}.`,
     },
     {
       question: "Is Desert Safari worth doing in Dubai?",
@@ -200,7 +200,7 @@ export const cityseoFaqs: Record<string, SeoFaq[]> = {
     },
     {
       question: "How is Dubai Marina Cruise different from Dhow Cruise Creek?",
-      answer: `${link("/dhow-cruise-marina-upper", "Marina Cruise")} sails past modern skyscrapers; ${link("/dhow-cruise-creek-upper", "Creek Cruise")} shows old Dubai. Read the ${link("/blog/dubai-marina-cruise", "Marina Cruise guide")} to choose.`,
+      answer: `${link("/dhow-cruise-marina-upper", "Marina Cruise")} sails past modern skyscrapers; ${link("/dhow-cruise-creek-upper", "Creek Cruise")} shows old Dubai. Read the ${link("/dubai/destination-guides/dubai-marina-cruise", "Marina Cruise guide")} to choose.`,
     },
     {
       question: "What is the best time to visit Dubai?",

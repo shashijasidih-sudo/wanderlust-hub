@@ -12,7 +12,7 @@ const dubaiRoutes = [
   "/dubai/abu-dhabi-city-tour", "/dubai/abu-dhabi-ferrari-world", "/dubai/aquarium-penguin",
   "/dubai/burj-khalifa-non-prime", "/dubai/burj-khalifa-prime", "/dubai/dolphin-show",
   "/dubai/miracle-garden", "/dubai/fountain-show", "/dubai/destination-guides",
-  "/blog/airport-transfer-booking-dubai", "/blog/desert-safari-deals-dubai",
+  "/dubai/destination-guides/airport-transfer-booking-dubai", "/dubai/destination-guides/desert-safari-deals-dubai",
   "/dubai/budget-airport-transfers", "/dubai/airport-pickup-zone-1", "/dubai/airport-dropoff-zone-1",
   "/dubai/airport-pickup-zone-2", "/dubai/airport-dropoff-zone-2",
   "/dubai/airport-pickup-zone-3", "/dubai/airport-dropoff-zone-3",
