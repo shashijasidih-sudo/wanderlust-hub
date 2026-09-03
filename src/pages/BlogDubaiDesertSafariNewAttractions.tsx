@@ -191,10 +191,10 @@ const BlogDubaiDesertSafariNewAttractions = () => (
       { title: "Dubai City Tour", link: "/dubai/city-tour/", image: cityNightImg },
     ]}
     relatedLinks={[
-      { title: "Best Dubai Activities for Every Traveller", link: "/blog/best-dubai-activities/" },
-      { title: "Burj Khalifa Tickets: Prime vs Non-Prime", link: "/blog/burj-khalifa-tickets-dubai/" },
-      { title: "Dubai Airport Transfer Booking Guide", link: "/blog/airport-transfer-booking-dubai/" },
-      { title: "Dubai Marina Cruise: Dhow vs Yacht", link: "/blog/dubai-marina-cruise/" },
+      { title: "Best Dubai Activities for Every Traveller", link: "/dubai/destination-guides/best-dubai-activities/" },
+      { title: "Burj Khalifa Tickets: Prime vs Non-Prime", link: "/dubai/destination-guides/burj-khalifa-tickets-dubai/" },
+      { title: "Dubai Airport Transfer Booking Guide", link: "/dubai/destination-guides/airport-transfer-booking-dubai/" },
+      { title: "Dubai Marina Cruise: Dhow vs Yacht", link: "/dubai/destination-guides/dubai-marina-cruise/" },
     ]}
   />
 );

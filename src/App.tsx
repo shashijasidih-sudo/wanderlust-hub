@@ -815,19 +815,19 @@ const App = () => (
             {/* Phuket Transfers — legacy redirects */}
              <Route path="/thailand/airport-transfers/" element={<ThailandTransfers />} />
           {/* Dubai routes */}
-            <Route path="/blog/best-dubai-activities/" element={<BlogBestDubaiActivities />} />
+            <Route path="/dubai/destination-guides/best-dubai-activities/" element={<BlogBestDubaiActivities />} />
             <Route path="/dubai/destination-guides/" element={<DubaiSmartGuides />} />
-            <Route path="/blog/airport-transfer-booking-dubai/" element={<BlogDubaiAirportTransfer />} />
-            <Route path="/blog/desert-safari-deals-dubai/" element={<BlogDubaiDesertSafari />} />
-            <Route path="/blog/dubai-marina-cruise/" element={<BlogDubaiMarinaCruise />} />
-            <Route path="/blog/burj-khalifa-tickets-dubai/" element={<BlogBurjKhalifaTickets />} />
-            <Route path="/blog/dubai-shopping-tours/" element={<BlogDubaiShoppingTours />} />
-            <Route path="/blog/dubai-food-experiences/" element={<BlogDubaiFoodExperiences />} />
+            <Route path="/dubai/destination-guides/airport-transfer-booking-dubai/" element={<BlogDubaiAirportTransfer />} />
+            <Route path="/dubai/destination-guides/desert-safari-deals-dubai/" element={<BlogDubaiDesertSafari />} />
+            <Route path="/dubai/destination-guides/dubai-marina-cruise/" element={<BlogDubaiMarinaCruise />} />
+            <Route path="/dubai/destination-guides/burj-khalifa-tickets-dubai/" element={<BlogBurjKhalifaTickets />} />
+            <Route path="/dubai/destination-guides/dubai-shopping-tours/" element={<BlogDubaiShoppingTours />} />
+            <Route path="/dubai/destination-guides/dubai-food-experiences/" element={<BlogDubaiFoodExperiences />} />
             <Route path="/dubai/" element={<Dubai />} />
-            <Route path="/blog/dubai-desert-safari-new-attractions-guide/" element={<BlogDubaiDesertSafariNewAttractions />} />
-            <Route path="/blog/dubai-desert-safari-new-attractions-guide" element={<Navigate to="/blog/dubai-desert-safari-new-attractions-guide/" replace />} />
-            <Route path="/dubai/desert-safari/" element={<Navigate to="/blog/dubai-desert-safari-new-attractions-guide/" replace />} />
-            <Route path="/dubai/desert-safari" element={<Navigate to="/blog/dubai-desert-safari-new-attractions-guide/" replace />} />
+            <Route path="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" element={<BlogDubaiDesertSafariNewAttractions />} />
+            <Route path="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide" element={<Navigate to="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" replace />} />
+            <Route path="/dubai/desert-safari/" element={<Navigate to="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" replace />} />
+            <Route path="/dubai/desert-safari" element={<Navigate to="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" replace />} />
             <Route path="/dubai/desert-safari-shisha/" element={<DesertSafariShisha />} />
             <Route path="/dubai/desert-safari-sharing/" element={<DesertSafariSharing />} />
             <Route path="/dubai/dhow-cruise/" element={<DhowCruise />} />

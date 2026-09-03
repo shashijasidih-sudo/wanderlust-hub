@@ -89,7 +89,7 @@ const BlogDubaiDesertSafari = () => {
         "Yellodae desert safari",
       ]}
       relatedLinks={[
-        { title: "Dubai Airport Transfer Guide", link: "/blog/airport-transfer-booking-dubai/" },
+        { title: "Dubai Airport Transfer Guide", link: "/dubai/destination-guides/airport-transfer-booking-dubai/" },
         { title: "Desert Safari Evening", link: "/dubai/desert-safari/" },
         { title: "Desert Safari with Shisha", link: "/dubai/desert-safari-shisha/" },
         { title: "Dhow Cruise Marina", link: "/dubai/dhow-cruise/" },
