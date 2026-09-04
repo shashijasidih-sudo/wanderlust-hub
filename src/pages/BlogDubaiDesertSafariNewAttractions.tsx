@@ -9,11 +9,18 @@ import cityNightImg from "@/assets/dubai-city-night-1.jpg";
 import globalVillageImg from "@/assets/dubai-global-village-1.jpg";
 import skylineNightImg from "@/assets/dubai-skyline-night-1.jpg";
 
+// The custom yellodae.com CDN currently intercepts relative /__l5e asset URLs
+// and returns 422. Resolve these uploaded graphics through the project's
+// Lovable asset host so they render on both the preview and custom domain.
+const ASSET_ORIGIN = "https://id-preview--72e37307-dbb0-4c5e-9a42-c8633824894d.lovable.app";
+const featuredImage = `${ASSET_ORIGIN}${featuredAsset.url}`;
+const collageImage = `${ASSET_ORIGIN}${collageAsset.url}`;
+
 const BlogDubaiDesertSafariNewAttractions = () => (
   <BlogArticleLayout
     title="Ultimate Guide to Dubai Desert Safari & New Attractions in 2026"
     description="Discover the ultimate Dubai desert safari guide for 2026, including dune bashing, camel rides, sandboarding, BBQ dinners, desert camps and new Dubai attractions."
-    heroImage={featuredAsset.url}
+    heroImage={featuredImage}
     heroContain
     heroAlt="Ultimate guide to Dubai desert safari and new attractions in 2026"
     author="Yellodae Travel Expert"
@@ -47,7 +54,7 @@ const BlogDubaiDesertSafariNewAttractions = () => (
       { type: "heading", content: "Dubai Desert Safari: The Experience You Shouldn't Miss" },
       { type: "paragraph", content: "A Dubai desert safari takes you away from the busy city and into the spectacular Arabian Desert." },
       { type: "paragraph", content: "Depending on the package you choose, your experience can include **4x4 dune bashing, sandboarding, camel riding, sunset photography, traditional refreshments, Bedouin-style camps, BBQ dinner and cultural entertainment.**" },
-      { type: "image", src: collageAsset.url, alt: "Dubai desert safari highlights — dune bashing, camel rides, sandboarding and desert camp" },
+      { type: "image", src: collageImage, alt: "Dubai desert safari highlights — dune bashing, camel rides, sandboarding and desert camp" },
       { type: "paragraph", content: "The official Dubai tourism guide describes desert safaris as a must-do experience, with options ranging from traditional experiences to VIP safaris, quad biking and overnight stays." },
       { type: "paragraph", content: "For travellers visiting Dubai for the first time, an **evening desert safari** is often the most complete option because it combines adventure, sunset views, culture and dinner into one experience." },
       { type: "cta", content: "Book a desert safari with hotel pickup and BBQ dinner", link: "/dubai/desert-safari-sharing/", linkText: "View Desert Safari Options" },
