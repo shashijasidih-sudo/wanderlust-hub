@@ -937,6 +937,8 @@ const App = () => (
           <Route path="/booking-history/" element={<BookingHistory />} />
           <Route path="/quick-pay/" element={<QuickPay />} />
           <Route path="/about-us/" element={<AboutUs />} />
+          <Route path="/free-digital-marketing-course-for-businesses/" element={<FreeDigitalMarketingCourse />} />
+          <Route path="/free-digital-marketing-course-for-businesses" element={<FreeDigitalMarketingCourse />} />
           <Route path="/why-yellodae/" element={<WhyYellodae />} />
           <Route path="/contact-us/" element={<ContactUs />} />
           <Route path="/faq/" element={<FAQ />} />
