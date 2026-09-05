@@ -134,6 +134,7 @@ const Footer = () => {
               <li><Link to="/quick-pay/" className="hover:text-background transition-colors">Pay Now</Link></li>
               <li><Link to="/faq/" className="hover:text-background transition-colors">FAQ</Link></li>
               <li><Link to="/tour-packages/" className="hover:text-background transition-colors">Tour Packages</Link></li>
+              <li><Link to="/free-digital-marketing-course-for-businesses/" className="hover:text-background transition-colors">Free Digital Marketing Course</Link></li>
             </ul>
           </div>
 
