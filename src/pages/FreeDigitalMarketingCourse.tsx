@@ -88,6 +88,14 @@ const scrollToCurriculum = () => {
     ?.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
+/** Extract a YouTube video ID from a watch/youtu.be URL. */
+const getYouTubeId = (url: string): string | null => {
+  const m =
+    url.match(/youtu\.be\/([A-Za-z0-9_-]{6,})/) ||
+    url.match(/[?&]v=([A-Za-z0-9_-]{6,})/);
+  return m ? m[1] : null;
+};
+
 const AssessmentButton = ({
   className = "",
   size = "lg",
