@@ -458,6 +458,7 @@ const BlogHongIslandTourKrabi = lazy(() => import("./pages/BlogHongIslandTourKra
 const BlogKrabiEmeraldPoolHotSprings = lazy(() => import("./pages/BlogKrabiEmeraldPoolHotSprings"));
 const BlogKrabiNightMarketsGuide = lazy(() => import("./pages/BlogKrabiNightMarketsGuide"));
 const BlogKayakingAoThalaneKrabi = lazy(() => import("./pages/BlogKayakingAoThalaneKrabi"));
+const FreeDigitalMarketingCourse = lazy(() => import("./pages/FreeDigitalMarketingCourse"));
 
 
 const queryClient = new QueryClient();
