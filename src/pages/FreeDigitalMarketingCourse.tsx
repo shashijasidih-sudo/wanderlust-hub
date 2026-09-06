@@ -292,9 +292,33 @@ const FreeDigitalMarketingCourse = () => {
                   {module.title}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {module.lectures.map((lecture) => (
-                    <Card key={lecture.number} className="h-full">
-                      <CardContent className="p-4 md:p-5 flex flex-col h-full">
+                  {module.lectures.map((lecture) => {
+                    const ytId = lecture.url ? getYouTubeId(lecture.url) : null;
+                    return (
+                    <Card key={lecture.number} className="h-full overflow-hidden">
+                      {ytId ? (
+                        <a
+                          href={lecture.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group relative block aspect-video w-full overflow-hidden bg-muted"
+                        >
+                          <img
+                            src={`https://i.ytimg.com/vi/${ytId}/hqdefault.jpg`}
+                            alt={`${lecture.title} — YouTube video thumbnail`}
+                            loading="lazy"
+                            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                          <span className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/35">
+                            <PlayCircle className="h-12 w-12 text-white drop-shadow-lg" />
+                          </span>
+                        </a>
+                      ) : (
+                        <div className="flex aspect-video w-full items-center justify-center bg-muted">
+                          <PlayCircle className="h-10 w-10 text-muted-foreground/40" />
+                        </div>
+                      )}
+                      <CardContent className="p-4 md:p-5 flex flex-col h-full flex-1">
                         <div className="flex items-start gap-3 mb-2">
                           <span className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary text-sm font-bold">
                             {String(lecture.number).padStart(2, "0")}
@@ -329,7 +353,8 @@ const FreeDigitalMarketingCourse = () => {
                         )}
                       </CardContent>
                     </Card>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             ))}
