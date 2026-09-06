@@ -353,7 +353,8 @@ const FreeDigitalMarketingCourse = () => {
                         )}
                       </CardContent>
                     </Card>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             ))}
