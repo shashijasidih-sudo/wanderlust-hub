@@ -375,6 +375,9 @@ const Header = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          <Link to="/free-digital-marketing-course-for-businesses/" className="text-sm font-medium transition-colors hover:text-primary">
+            Free DM Course
+          </Link>
           <div className="ml-auto flex items-center gap-1">
             <a href="https://share.google/OzpvI1Fw37najW0tE" target="_blank" rel="noopener noreferrer">
               <Button size="icon" variant="ghost" className="h-8 w-8 hover:bg-[#4285F4]/10">
@@ -565,6 +568,9 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+            <Link to="/free-digital-marketing-course-for-businesses/" className="text-base font-medium transition-colors hover:text-primary" onClick={() => setIsMenuOpen(false)}>
+              Free DM Course
+            </Link>
             <div className="flex items-center gap-2 pt-2 border-t">
               <a href="https://share.google/OzpvI1Fw37najW0tE" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
