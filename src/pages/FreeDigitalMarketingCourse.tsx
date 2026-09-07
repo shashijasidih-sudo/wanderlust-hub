@@ -29,7 +29,7 @@ import {
   ASSESSMENT_FORM_URL,
   COURSE_PLAYLIST_URL,
 } from "@/data/digitalMarketingCourse";
-import heroAsset from "@/assets/digital-marketing-course-hero.png.asset.json";
+import heroImage from "@/assets/digital-marketing-course-hero.jpg";
 
 const PAGE_PATH = "/free-digital-marketing-course-for-businesses/";
 const CANONICAL = `https://yellodae.com${PAGE_PATH}`;
@@ -256,10 +256,10 @@ const FreeDigitalMarketingCourse = () => {
               <div className="order-1 lg:order-2">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border bg-card">
                   <img
-                    src={heroAsset.url}
+                    src={heroImage}
                     alt="Free digital marketing course by Yellodae — laptop, analytics charts, SEO and social media icons"
-                    width={1536}
-                    height={1024}
+                    width={1280}
+                    height={960}
                     fetchPriority="high"
                     className="w-full h-auto object-cover"
                   />
