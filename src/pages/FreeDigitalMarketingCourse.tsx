@@ -29,7 +29,7 @@ import {
   ASSESSMENT_FORM_URL,
   COURSE_PLAYLIST_URL,
 } from "@/data/digitalMarketingCourse";
-import heroAsset from "@/assets/digital-marketing-course-hero.png.asset.json";
+import heroImage from "@/assets/digital-marketing-course-hero.jpg";
 
 const PAGE_PATH = "/free-digital-marketing-course-for-businesses/";
 const CANONICAL = `https://yellodae.com${PAGE_PATH}`;
