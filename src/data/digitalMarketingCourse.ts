@@ -78,8 +78,20 @@ export const COURSE_MODULES: CourseModule[] = [
           "Backlinks, authority signals, site speed, crawlability and the technical foundations of ranking.",
         url: "https://youtu.be/YeNFGtZLxBA",
       },
-      { number: 8, title: "Lecture 8", description: "Coming soon.", url: "" },
-      { number: 9, title: "Lecture 9", description: "Coming soon.", url: "" },
+      {
+        number: 8,
+        title: "SEM",
+        description:
+          "How search engine marketing works, the difference between SEO and SEM, and when to use paid search.",
+        url: "https://youtu.be/ItiKMkj10bA",
+      },
+      {
+        number: 9,
+        title: "Google Ads Creation",
+        description:
+          "A step-by-step walkthrough of creating your first Google Ads campaign, from account setup to ad copy.",
+        url: "https://youtu.be/V1bBnwSUFJo",
+      },
       { number: 10, title: "Lecture 10", description: "Coming soon.", url: "" },
     ],
   },
