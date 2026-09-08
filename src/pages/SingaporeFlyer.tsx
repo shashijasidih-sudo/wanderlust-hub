@@ -230,7 +230,7 @@ const MarketingIntro = () => (
 
 const HighlightsAndTimings = () => (
   <div className="space-y-6 min-w-0">
-    <div className="overflow-x-auto -mx-4 md:mx-0 px-4 md:px-0">
+    <div className="overflow-x-auto">
       <table className="w-full text-[11px] md:text-sm border border-border rounded-lg overflow-hidden min-w-[520px] md:min-w-0">
         <thead className="bg-muted">
           <tr>
@@ -296,7 +296,7 @@ const Section = ({
       <Icon className="h-5 w-5 text-primary" />
       <h3 className="font-semibold text-black text-base md:text-lg">{title}</h3>
     </div>
-    <div className="text-sm text-black">{children}</div>
+    <div className="text-sm text-black break-words">{children}</div>
   </div>
 );
 

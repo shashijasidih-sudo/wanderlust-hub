@@ -322,10 +322,10 @@ const WhyChooseYellodaeTable = () => {
 const DataTable = ({ block }: { block: TableBlock }) => (
   <div>
     {block.heading && <h3 className="text-base md:text-lg font-semibold mb-3 text-black">{block.heading}</h3>}
-    <div className="overflow-x-auto -mx-4 md:mx-0 px-4 md:px-0">
+    <div className="overflow-x-auto">
       <table
         className="w-full text-[11px] md:text-sm border border-border rounded-lg overflow-hidden md:min-w-0"
-        style={{ minWidth: block.minWidth ?? 520 }}
+        style={{ minWidth: block.minWidth ?? 0 }}
       >
         <thead className="bg-muted">
           <tr>
@@ -358,7 +358,7 @@ const Section = ({ icon: Icon, title, children }: {
       <Icon className="h-5 w-5 text-primary" />
       <h3 className="font-semibold text-black text-base md:text-lg">{title}</h3>
     </div>
-    <div className="text-sm text-black">{children}</div>
+    <div className="text-sm text-black break-words">{children}</div>
   </div>
 );
 
@@ -419,8 +419,8 @@ const IndianTravelerCompanion = ({ config }: { config: PhuketActivityConfig }) =
 
         <div className="grid md:grid-cols-2 gap-3 pt-2">
           <Section icon={Utensils} title="Indian Restaurants Nearby">
-            <div className="overflow-x-auto -mx-4 md:mx-0 px-4 md:px-0">
-              <table className="w-full text-xs md:text-sm border border-border rounded-lg overflow-hidden min-w-[420px]">
+            <div className="overflow-x-auto">
+              <table className="w-full text-[10px] sm:text-xs md:text-sm border border-border rounded-lg overflow-hidden">
                 <thead className="bg-muted">
                   <tr>
                     <th className="text-left p-2 font-semibold">Restaurant</th>
@@ -490,8 +490,8 @@ const IndianTravelerCompanion = ({ config }: { config: PhuketActivityConfig }) =
           </Section>
 
           <Section icon={Calculator} title="Budget Calculator (Family of 4)">
-            <div className="overflow-x-auto -mx-4 md:mx-0 px-4 md:px-0">
-              <table className="w-full text-xs md:text-sm border border-border rounded-lg overflow-hidden min-w-[360px]">
+            <div className="overflow-x-auto">
+              <table className="w-full text-[10px] sm:text-xs md:text-sm border border-border rounded-lg overflow-hidden">
                 <thead className="bg-muted">
                   <tr><th className="text-left p-2 font-semibold">Item</th><th className="text-right p-2 font-semibold">Approx (INR)</th></tr>
                 </thead>
