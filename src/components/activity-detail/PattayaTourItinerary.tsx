@@ -21,7 +21,7 @@ const PattayaTourItinerary = ({ tourKey }: Props) => {
             <span className="w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">
               {idx + 1}
             </span>
-            <span className="text-sm md:text-base text-muted-foreground">{step}</span>
+            <span className="text-sm md:text-base text-muted-foreground break-words">{step}</span>
           </li>
         ))}
       </ol>

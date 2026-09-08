@@ -35,7 +35,7 @@ const TourDescription = ({ tourData, extraBeforeHighlights, hideItinerary }: Tou
             {tourData.highlights.map((highlight, idx) => (
               <div key={idx} className="flex items-start gap-2">
                 <Star className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-sm md:text-base text-muted-foreground">{highlight}</span>
+                <span className="text-sm md:text-base text-muted-foreground break-words">{highlight}</span>
               </div>
             ))}
           </div>
@@ -55,8 +55,8 @@ const TourDescription = ({ tourData, extraBeforeHighlights, hideItinerary }: Tou
                     {idx < tourData.itinerary.length - 1 && <div className="w-0.5 h-full bg-border mt-2"></div>}
                   </div>
                   <div className="pb-4">
-                    <h4 className="text-sm md:text-base font-semibold mb-1">{item.title}</h4>
-                    <p className="text-xs md:text-sm text-muted-foreground">{item.description}</p>
+                    <h4 className="text-sm md:text-base font-semibold mb-1 break-words">{item.title}</h4>
+                    <p className="text-xs md:text-sm text-muted-foreground break-words">{item.description}</p>
                   </div>
                 </div>
               ))}
