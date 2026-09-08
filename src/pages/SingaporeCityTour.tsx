@@ -233,7 +233,7 @@ const MarketingIntro = () => (
 
 const StopsAndTimings = () => (
   <div className="space-y-6 min-w-0">
-    <div className="overflow-x-auto -mx-4 md:mx-0 px-4 md:px-0">
+    <div className="overflow-x-auto">
       <table className="w-full text-[11px] md:text-sm border border-border rounded-lg overflow-hidden min-w-[520px] md:min-w-0">
         <thead className="bg-muted">
           <tr>
@@ -294,12 +294,12 @@ const Section = ({
   title: string;
   children: React.ReactNode;
 }) => (
-  <div className="rounded-xl border border-border bg-card p-4 md:p-5">
+  <div className="rounded-xl border border-border bg-card p-4 md:p-5 min-w-0">
     <div className="flex items-center gap-2 mb-3">
       <Icon className="h-5 w-5 text-primary" />
       <h3 className="font-semibold text-black text-base md:text-lg">{title}</h3>
     </div>
-    <div className="text-sm text-black">{children}</div>
+    <div className="text-sm text-black break-words">{children}</div>
   </div>
 );
 
@@ -372,10 +372,10 @@ const IndianTravelerCompanion = () => (
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-t border-border"><td className="p-2">Komala Vilas</td><td className="p-2">Little India</td><td className="p-2">South Indian</td><td className="p-2">Pure Veg</td></tr>
-                <tr className="border-t border-border"><td className="p-2">Ananda Bhavan</td><td className="p-2">Little India</td><td className="p-2">South Indian</td><td className="p-2">Pure Veg</td></tr>
-                <tr className="border-t border-border"><td className="p-2">Muthu's Curry</td><td className="p-2">Little India</td><td className="p-2">Fish Head Curry</td><td className="p-2">Veg & Non-veg</td></tr>
-                <tr className="border-t border-border"><td className="p-2">Punjab Grill (MBS)</td><td className="p-2">Marina Bay</td><td className="p-2">North Indian</td><td className="p-2">Veg & Non-veg</td></tr>
+                <tr className="border-t border-border"><td className="p-2 break-words">Komala Vilas</td><td className="p-2 break-words">Little India</td><td className="p-2 break-words">South Indian</td><td className="p-2 break-words">Pure Veg</td></tr>
+                <tr className="border-t border-border"><td className="p-2 break-words">Ananda Bhavan</td><td className="p-2 break-words">Little India</td><td className="p-2 break-words">South Indian</td><td className="p-2 break-words">Pure Veg</td></tr>
+                <tr className="border-t border-border"><td className="p-2 break-words">Muthu's Curry</td><td className="p-2 break-words">Little India</td><td className="p-2 break-words">Fish Head Curry</td><td className="p-2 break-words">Veg & Non-veg</td></tr>
+                <tr className="border-t border-border"><td className="p-2 break-words">Punjab Grill (MBS)</td><td className="p-2 break-words">Marina Bay</td><td className="p-2 break-words">North Indian</td><td className="p-2 break-words">Veg & Non-veg</td></tr>
               </tbody>
             </table>
           </div>
@@ -445,11 +445,11 @@ const IndianTravelerCompanion = () => (
                 <tr><th className="text-left p-2 font-semibold">Item</th><th className="text-right p-2 font-semibold">Approx (INR)</th></tr>
               </thead>
               <tbody>
-                <tr className="border-t border-border"><td className="p-2">City Tour (2A + 2C)</td><td className="p-2 text-right">₹7,011</td></tr>
-                <tr className="border-t border-border"><td className="p-2">Lunch in Little India</td><td className="p-2 text-right">₹2,200</td></tr>
-                <tr className="border-t border-border"><td className="p-2">Snacks & drinks</td><td className="p-2 text-right">₹1,200</td></tr>
-                <tr className="border-t border-border"><td className="p-2">Souvenirs (Chinatown)</td><td className="p-2 text-right">₹2,000</td></tr>
-                <tr className="border-t border-border bg-primary/5 font-semibold"><td className="p-2">Total</td><td className="p-2 text-right">≈ ₹12,411</td></tr>
+                <tr className="border-t border-border"><td className="p-2 break-words">City Tour (2A + 2C)</td><td className="p-2 text-right break-words">₹7,011</td></tr>
+                <tr className="border-t border-border"><td className="p-2 break-words">Lunch in Little India</td><td className="p-2 text-right break-words">₹2,200</td></tr>
+                <tr className="border-t border-border"><td className="p-2 break-words">Snacks & drinks</td><td className="p-2 text-right break-words">₹1,200</td></tr>
+                <tr className="border-t border-border"><td className="p-2 break-words">Souvenirs (Chinatown)</td><td className="p-2 text-right break-words">₹2,000</td></tr>
+                <tr className="border-t border-border bg-primary/5 font-semibold"><td className="p-2 break-words">Total</td><td className="p-2 text-right break-words">≈ ₹12,411</td></tr>
               </tbody>
             </table>
           </div>

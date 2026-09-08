@@ -322,10 +322,10 @@ const WhyChooseYellodaeTable = () => {
 const DataTable = ({ block }: { block: TableBlock }) => (
   <div>
     {block.heading && <h3 className="text-base md:text-lg font-semibold mb-3 text-black">{block.heading}</h3>}
-    <div className="overflow-x-auto -mx-4 md:mx-0 px-4 md:px-0">
+    <div className="overflow-x-auto">
       <table
         className="w-full text-[11px] md:text-sm border border-border rounded-lg overflow-hidden md:min-w-0"
-        style={{ minWidth: block.minWidth ?? 520 }}
+        style={{ minWidth: block.minWidth ?? 0 }}
       >
         <thead className="bg-muted">
           <tr>
@@ -338,7 +338,7 @@ const DataTable = ({ block }: { block: TableBlock }) => (
           {block.rows.map((r, i) => (
             <tr key={i} className="border-t border-border">
               {r.map((cell, j) => (
-                <td key={j} className="p-2 md:p-3 whitespace-normal text-black">{cell}</td>
+                <td key={j} className="p-2 md:p-3 whitespace-normal text-black break-words">{cell}</td>
               ))}
             </tr>
           ))}
@@ -353,12 +353,12 @@ const Section = ({ icon: Icon, title, children }: {
   title: string;
   children: ReactNode;
 }) => (
-  <div className="rounded-xl border border-border bg-card p-4 md:p-5">
+  <div className="rounded-xl border border-border bg-card p-4 md:p-5 min-w-0">
     <div className="flex items-center gap-2 mb-3">
       <Icon className="h-5 w-5 text-primary" />
       <h3 className="font-semibold text-black text-base md:text-lg">{title}</h3>
     </div>
-    <div className="text-sm text-black">{children}</div>
+    <div className="text-sm text-black break-words">{children}</div>
   </div>
 );
 
@@ -419,8 +419,8 @@ const IndianTravelerCompanion = ({ config }: { config: PhuketActivityConfig }) =
 
         <div className="grid md:grid-cols-2 gap-3 pt-2">
           <Section icon={Utensils} title="Indian Restaurants Nearby">
-            <div className="overflow-x-auto -mx-4 md:mx-0 px-4 md:px-0">
-              <table className="w-full text-xs md:text-sm border border-border rounded-lg overflow-hidden min-w-[420px]">
+            <div className="overflow-x-auto">
+              <table className="w-full text-[10px] sm:text-xs md:text-sm border border-border rounded-lg overflow-hidden">
                 <thead className="bg-muted">
                   <tr>
                     <th className="text-left p-2 font-semibold">Restaurant</th>
@@ -432,7 +432,7 @@ const IndianTravelerCompanion = ({ config }: { config: PhuketActivityConfig }) =
                 <tbody>
                   {area.food.map((r) => (
                     <tr key={r[0]} className="border-t border-border">
-                      {r.map((c, i) => <td key={i} className="p-2">{c}</td>)}
+                      {r.map((c, i) => <td key={i} className="p-2 break-words">{c}</td>)}
                     </tr>
                   ))}
                 </tbody>
@@ -490,17 +490,17 @@ const IndianTravelerCompanion = ({ config }: { config: PhuketActivityConfig }) =
           </Section>
 
           <Section icon={Calculator} title="Budget Calculator (Family of 4)">
-            <div className="overflow-x-auto -mx-4 md:mx-0 px-4 md:px-0">
-              <table className="w-full text-xs md:text-sm border border-border rounded-lg overflow-hidden min-w-[360px]">
+            <div className="overflow-x-auto">
+              <table className="w-full text-[10px] sm:text-xs md:text-sm border border-border rounded-lg overflow-hidden">
                 <thead className="bg-muted">
                   <tr><th className="text-left p-2 font-semibold">Item</th><th className="text-right p-2 font-semibold">Approx (INR)</th></tr>
                 </thead>
                 <tbody>
-                  <tr className="border-t border-border"><td className="p-2">Tickets (2 Adults + 2 Children)</td><td className="p-2 text-right">See live pricing above</td></tr>
-                  <tr className="border-t border-border"><td className="p-2">Meals for the day</td><td className="p-2 text-right">₹2,500</td></tr>
-                  <tr className="border-t border-border"><td className="p-2">Taxi / Grab rides</td><td className="p-2 text-right">₹1,500</td></tr>
-                  <tr className="border-t border-border"><td className="p-2">Shopping & souvenirs</td><td className="p-2 text-right">₹2,000</td></tr>
-                  <tr className="border-t border-border bg-primary/5 font-semibold"><td className="p-2">Add-on budget</td><td className="p-2 text-right">≈ ₹6,000</td></tr>
+                  <tr className="border-t border-border"><td className="p-2 break-words">Tickets (2 Adults + 2 Children)</td><td className="p-2 text-right break-words">See live pricing above</td></tr>
+                  <tr className="border-t border-border"><td className="p-2 break-words">Meals for the day</td><td className="p-2 text-right break-words">₹2,500</td></tr>
+                  <tr className="border-t border-border"><td className="p-2 break-words">Taxi / Grab rides</td><td className="p-2 text-right break-words">₹1,500</td></tr>
+                  <tr className="border-t border-border"><td className="p-2 break-words">Shopping & souvenirs</td><td className="p-2 text-right break-words">₹2,000</td></tr>
+                  <tr className="border-t border-border bg-primary/5 font-semibold"><td className="p-2 break-words">Add-on budget</td><td className="p-2 text-right break-words">≈ ₹6,000</td></tr>
                 </tbody>
               </table>
             </div>
