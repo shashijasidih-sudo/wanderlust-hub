@@ -11,6 +11,7 @@ const KohSamuiHighlightsHome = lazy(() => import("@/components/KohSamuiHighlight
 const AboutYellodaeSection = lazy(() => import("@/components/AboutYellodaeSection"));
 const ThailandTrending = lazy(() => import("@/components/ThailandTrending"));
 const SingaporeTrending = lazy(() => import("@/components/SingaporeTrending"));
+const DubaiTrending = lazy(() => import("@/components/DubaiTrending"));
 const TrendingActivities = lazy(() => import("@/components/TrendingActivities"));
 const QuickDestinations = lazy(() => import("@/components/QuickDestinations"));
 const InstaStories = lazy(() => import("@/components/InstaStories"));
