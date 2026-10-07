@@ -24,23 +24,23 @@ import dubaiDesertCouple from "@/assets/dubai-desert-couple-1.jpg";
 import dubaiFountainShow from "@/assets/dubai-fountain-show-1.jpg";
 
 const activities = [
-  { title: "Dhow Creek Cruise Dinner - Lower Deck with Transfers", price: 2070.6, image: dubaiDhowCruise, slug: "dubai/dhow-cruise-creek-lower" },
-  { title: "Dhow Creek Cruise Dinner - Upper Deck with Transfers", price: 2436, image: dubaiDhowCruise, slug: "dubai/dhow-cruise-creek-upper" },
-  { title: "Desert Safari with Sharing Transfer", price: 3532.2, image: dubaiDesertCouple2, slug: "dubai/desert-safari-sharing" },
-  { title: "Desert Safari with Shisha on Table", price: 5115.6, image: dubaiDesertWoman, slug: "dubai/desert-safari-shisha" },
-  { title: "Dubai City Tour", price: 1461.6, image: dubaiSkylineSunset, slug: "dubai/dubai-city-tour" },
-  { title: "Dubai City Tour with Dubai Mall", price: 2070.6, image: dubaiSkylineNight, slug: "dubai/dubai-city-tour-mall" },
-  { title: "Dhow Dinner Cruise Marina - Lower Deck", price: 3654, image: dubaiDhowCruise, slug: "dubai/dhow-cruise-marina-lower" },
-  { title: "Dhow Dinner Cruise Marina - Upper Deck", price: 4384.8, image: dubaiDhowCruise, slug: "dubai/dhow-cruise-marina-upper" },
-  { title: "Global Village Dubai", price: 3288.6, image: dubaiGlobalVillage, slug: "dubai/global-village-dubai" },
-  { title: "Abu Dhabi City Tour", price: 3288.6, image: dubaiSkylineSunset, slug: "dubai/abu-dhabi-city-tour" },
-  { title: "Abu Dhabi City Tour + Ferrari World", price: 9744, image: dubaiSkylineNight, slug: "dubai/abu-dhabi-ferrari-world" },
-  { title: "Dubai Aquarium + Penguin Cove", price: 4019.4, image: dubaiAquariumFish, slug: "dubai/dubai-aquarium-penguin" },
-  { title: "Burj Khalifa 124/125 Non-Prime", price: 6090, image: dubaiSkylineNight, slug: "dubai/burj-khalifa-non-prime" },
-  { title: "Burj Khalifa 124/125 Prime", price: 8526, image: dubaiSkylineSunset, slug: "dubai/burj-khalifa-prime" },
-  { title: "Dubai Dolphin & Seal Show", price: 3532.2, image: dubaiAquariumFish, slug: "dubai/dubai-dolphin-show" },
-  { title: "Miracle Garden Dubai", price: 2557.8, image: dubaiGlobalVillage, slug: "dubai/miracle-garden-dubai" },
-  { title: "Dubai Fountain Show with Lake Ride Tickets", price: 2071, image: dubaiFountainShow, slug: "dubai/dubai-fountain-show" },
+  { title: "Dhow Creek Cruise Dinner - Lower Deck with Transfers", price: 2070.6, image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-creek-lower-deck/" },
+  { title: "Dhow Creek Cruise Dinner - Upper Deck with Transfers", price: 2436, image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-creek-upper-deck/" },
+  { title: "Desert Safari with Sharing Transfer", price: 3532.2, image: dubaiDesertCouple2, slug: "/dubai/desert-safari-sharing/" },
+  { title: "Desert Safari with Shisha on Table", price: 5115.6, image: dubaiDesertWoman, slug: "/dubai/desert-safari-shisha/" },
+  { title: "Dubai City Tour", price: 1461.6, image: dubaiSkylineSunset, slug: "/dubai/city-tour/" },
+  { title: "Dubai City Tour with Dubai Mall", price: 2070.6, image: dubaiSkylineNight, slug: "/dubai/city-tour-mall/" },
+  { title: "Dhow Dinner Cruise Marina - Lower Deck", price: 3654, image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-marina-lower-deck/" },
+  { title: "Dhow Dinner Cruise Marina - Upper Deck", price: 4384.8, image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-marina-upper-deck/" },
+  { title: "Global Village Dubai", price: 3288.6, image: dubaiGlobalVillage, slug: "/dubai/global-village/" },
+  { title: "Abu Dhabi City Tour", price: 3288.6, image: dubaiSkylineSunset, slug: "/dubai/abu-dhabi-city-tour/" },
+  { title: "Abu Dhabi City Tour + Ferrari World", price: 9744, image: dubaiSkylineNight, slug: "/dubai/abu-dhabi-ferrari-world/" },
+  { title: "Dubai Aquarium + Penguin Cove", price: 4019.4, image: dubaiAquariumFish, slug: "/dubai/aquarium-penguin/" },
+  { title: "Burj Khalifa 124/125 Non-Prime", price: 6090, image: dubaiSkylineNight, slug: "/dubai/burj-khalifa-non-prime/" },
+  { title: "Burj Khalifa 124/125 Prime", price: 8526, image: dubaiSkylineSunset, slug: "/dubai/burj-khalifa-prime/" },
+  { title: "Dubai Dolphin & Seal Show", price: 3532.2, image: dubaiAquariumFish, slug: "/dubai/dolphin-show/" },
+  { title: "Miracle Garden Dubai", price: 2557.8, image: dubaiGlobalVillage, slug: "/dubai/miracle-garden/" },
+  { title: "Dubai Fountain Show with Lake Ride Tickets", price: 2071, image: dubaiFountainShow, slug: "/dubai/fountain-show/" },
 ];
 
 const categories = [
@@ -105,12 +105,12 @@ const Dubai = () => {
         <QuickBookWidget
           title="⚡ Quick Book Top Dubai Activities"
           items={[
-            { title: "Desert Safari with Sharing Transfer", price: 3532, image: dubaiDesertCouple2, slug: "/desert-safari-sharing", rating: 4.8, badge: "Bestseller" },
-            { title: "Burj Khalifa 124/125 Non-Prime", price: 6090, image: dubaiSkylineNight, slug: "/burj-khalifa-non-prime", rating: 4.9, badge: "Iconic" },
-            { title: "Dhow Creek Cruise Dinner", price: 2071, image: dubaiDhowCruise, slug: "/dhow-cruise-creek-lower", rating: 4.7 },
-            { title: "Dubai City Tour", price: 1462, image: dubaiSkylineSunset, slug: "/dubai-city-tour", rating: 4.6 },
-            { title: "Global Village Dubai", price: 3289, image: dubaiGlobalVillage, slug: "/global-village-dubai", rating: 4.5 },
-            { title: "Dubai Fountain Show + Lake Ride", price: 2071, image: dubaiFountainShow, slug: "/dubai-fountain-show", rating: 4.8, badge: "Popular" },
+            { title: "Desert Safari with Sharing Transfer", price: 3532, image: dubaiDesertCouple2, slug: "/dubai/desert-safari-sharing/", rating: 4.8, badge: "Bestseller" },
+            { title: "Burj Khalifa 124/125 Non-Prime", price: 6090, image: dubaiSkylineNight, slug: "/dubai/burj-khalifa-non-prime/", rating: 4.9, badge: "Iconic" },
+            { title: "Dhow Creek Cruise Dinner", price: 2071, image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-creek-lower-deck/", rating: 4.7 },
+            { title: "Dubai City Tour", price: 1462, image: dubaiSkylineSunset, slug: "/dubai/city-tour/", rating: 4.6 },
+            { title: "Global Village Dubai", price: 3289, image: dubaiGlobalVillage, slug: "/dubai/global-village/", rating: 4.5 },
+            { title: "Dubai Fountain Show + Lake Ride", price: 2071, image: dubaiFountainShow, slug: "/dubai/fountain-show/", rating: 4.8, badge: "Popular" },
           ]}
         />
 

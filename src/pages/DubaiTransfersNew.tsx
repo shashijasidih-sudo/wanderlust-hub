@@ -19,7 +19,7 @@ const transfers = [
     reviews: 856, 
     duration: "Transfer", 
     capacity: "4 / 7 / 12 Seater", 
-    slug: "/dubai/airport-pickup-zone1", 
+    slug: "/dubai/airport-pickup-zone1/", 
     type: "pickup", 
     zone: "zone1",
     vehicles: ["4 Seater", "7 Seater", "12 Seater"] 
@@ -35,7 +35,7 @@ const transfers = [
     reviews: 623, 
     duration: "Transfer", 
     capacity: "4 / 7 / 12 Seater", 
-    slug: "/dubai/airport-dropoff-zone1", 
+    slug: "/dubai/airport-dropoff-zone1/", 
     type: "dropoff", 
     zone: "zone1",
     vehicles: ["4 Seater", "7 Seater", "12 Seater"] 
@@ -52,7 +52,7 @@ const transfers = [
     reviews: 745, 
     duration: "Transfer", 
     capacity: "4 / 7 / 12 Seater", 
-    slug: "/dubai/airport-pickup-zone2", 
+    slug: "/dubai/airport-pickup-zone2/", 
     type: "pickup", 
     zone: "zone2",
     vehicles: ["4 Seater", "7 Seater", "12 Seater"] 
@@ -68,7 +68,7 @@ const transfers = [
     reviews: 534, 
     duration: "Transfer", 
     capacity: "4 / 7 / 12 Seater", 
-    slug: "/dubai/airport-dropoff-zone2", 
+    slug: "/dubai/airport-dropoff-zone2/", 
     type: "dropoff", 
     zone: "zone2",
     vehicles: ["4 Seater", "7 Seater", "12 Seater"] 
@@ -85,7 +85,7 @@ const transfers = [
     reviews: 678, 
     duration: "Transfer", 
     capacity: "4 / 7 / 12 Seater", 
-    slug: "/dubai/airport-pickup-zone3", 
+    slug: "/dubai/airport-pickup-zone3/", 
     type: "pickup", 
     zone: "zone3",
     vehicles: ["4 Seater", "7 Seater", "12 Seater"] 
@@ -101,7 +101,7 @@ const transfers = [
     reviews: 489, 
     duration: "Transfer", 
     capacity: "4 / 7 / 12 Seater", 
-    slug: "/dubai/airport-dropoff-zone3", 
+    slug: "/dubai/airport-dropoff-zone3/", 
     type: "dropoff", 
     zone: "zone3",
     vehicles: ["4 Seater", "7 Seater", "12 Seater"] 
@@ -118,7 +118,7 @@ const transfers = [
     reviews: 345, 
     duration: "Transfer", 
     capacity: "4 / 7 / 12 Seater", 
-    slug: "/dubai/airport-pickup-zone4", 
+    slug: "/dubai/airport-pickup-zone4/", 
     type: "pickup", 
     zone: "zone4",
     vehicles: ["4 Seater", "7 Seater", "12 Seater"] 
@@ -134,7 +134,7 @@ const transfers = [
     reviews: 256, 
     duration: "Transfer", 
     capacity: "4 / 7 / 12 Seater", 
-    slug: "/dubai/airport-dropoff-zone4", 
+    slug: "/dubai/airport-dropoff-zone4/", 
     type: "dropoff", 
     zone: "zone4",
     vehicles: ["4 Seater", "7 Seater", "12 Seater"] 
@@ -151,7 +151,7 @@ const transfers = [
     reviews: 189, 
     duration: "Transfer", 
     capacity: "4 / 7 / 12 Seater", 
-    slug: "/dubai/airport-pickup-zone5", 
+    slug: "/dubai/airport-pickup-zone5/", 
     type: "pickup", 
     zone: "zone5",
     vehicles: ["4 Seater", "7 Seater", "12 Seater"] 
@@ -167,7 +167,7 @@ const transfers = [
     reviews: 145, 
     duration: "Transfer", 
     capacity: "4 / 7 / 12 Seater", 
-    slug: "/dubai/airport-dropoff-zone5", 
+    slug: "/dubai/airport-dropoff-zone5/", 
     type: "dropoff", 
     zone: "zone5",
     vehicles: ["4 Seater", "7 Seater", "12 Seater"] 

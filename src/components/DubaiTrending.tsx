@@ -10,22 +10,22 @@ const trendingItems = [
   {
     title: "Top Dubai Activities to Book Online",
     image: dubaiSkyline,
-    slug: "/blog/best-dubai-activities",
+    slug: "/dubai/destination-guides/best-dubai-activities/",
   },
   {
     title: "Best Dubai Desert Safari Packages",
     image: desertSafari,
-    slug: "/blog/desert-safari-deals-dubai",
+    slug: "/dubai/destination-guides/desert-safari-deals-dubai/",
   },
   {
     title: "Burj Khalifa Ticket Booking Guide",
     image: burjKhalifa,
-    slug: "/blog/burj-khalifa-tickets-dubai",
+    slug: "/dubai/destination-guides/burj-khalifa-tickets-dubai/",
   },
   {
     title: "Dubai Marina Cruise Experience Guide",
     image: dhowCruise,
-    slug: "/blog/dubai-marina-cruise",
+    slug: "/dubai/destination-guides/dubai-marina-cruise/",
   },
 ];
 
