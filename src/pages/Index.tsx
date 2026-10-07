@@ -180,6 +180,7 @@ const Index = () => {
           <TravelerExperiences />
           <ThailandTrending />
           <SingaporeTrending />
+          <DubaiTrending />
           <TrendingActivities />
           <QuickDestinations />
           <InstaStories />
