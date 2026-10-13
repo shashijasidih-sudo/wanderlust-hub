@@ -939,6 +939,8 @@ const App = () => (
           <Route path="/about-us/" element={<AboutUs />} />
           <Route path="/free-digital-marketing-course-for-businesses/" element={<FreeDigitalMarketingCourse />} />
           <Route path="/free-digital-marketing-course-for-businesses" element={<FreeDigitalMarketingCourse />} />
+          <Route path="/free-business-course/free-digital-marketing-course-for-businesses/" element={<FreeDigitalMarketingCourse />} />
+          <Route path="/free-business-course/free-digital-marketing-course-for-businesses" element={<FreeDigitalMarketingCourse />} />
           <Route path="/why-yellodae/" element={<WhyYellodae />} />
           <Route path="/contact-us/" element={<ContactUs />} />
           <Route path="/faq/" element={<FAQ />} />
