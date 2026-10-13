@@ -387,9 +387,9 @@ const Header = () => {
                 AI tools in Business Course
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <a href="https://yellodae.com/free-business-course/free-digital-marketing-course-for-businesses/">
+                <Link to="/free-business-course/free-digital-marketing-course-for-businesses/">
                   Digital Marketing in Business Course
-                </a>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -595,12 +595,12 @@ const Header = () => {
                   AI tools in Business Course
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <a
-                    href="https://yellodae.com/free-business-course/free-digital-marketing-course-for-businesses/"
+                  <Link
+                    to="/free-business-course/free-digital-marketing-course-for-businesses/"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Digital Marketing in Business Course
-                  </a>
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
