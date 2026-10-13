@@ -377,9 +377,22 @@ const Header = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <Link to="/free-digital-marketing-course-for-businesses/" className="text-sm font-medium transition-colors hover:text-primary">
-            Free DM Course
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary flex items-center gap-1">
+              Free Business Course
+              <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[280px] p-2">
+              <DropdownMenuItem disabled className="cursor-not-allowed opacity-60 px-3 py-3">
+                AI tools in Business Course
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <a href="https://yellodae.com/free-business-course/free-digital-marketing-course-for-businesses/">
+                  Digital Marketing in Business Course
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <div className="ml-auto flex items-center gap-1">
             <a href="https://share.google/OzpvI1Fw37najW0tE" target="_blank" rel="noopener noreferrer">
               <Button size="icon" variant="ghost" className="h-8 w-8 hover:bg-[#4285F4]/10">
@@ -572,9 +585,25 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Link to="/free-digital-marketing-course-for-businesses/" className="text-base font-medium transition-colors hover:text-primary" onClick={() => setIsMenuOpen(false)}>
-              Free DM Course
-            </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-base font-medium transition-colors hover:text-primary flex items-center gap-1">
+                Free Business Course
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[240px] max-h-[60vh] overflow-y-auto overscroll-contain">
+                <DropdownMenuItem disabled className="cursor-not-allowed opacity-60">
+                  AI tools in Business Course
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <a
+                    href="https://yellodae.com/free-business-course/free-digital-marketing-course-for-businesses/"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Digital Marketing in Business Course
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <div className="flex items-center gap-2 pt-2 border-t">
               <a href="https://share.google/OzpvI1Fw37najW0tE" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
