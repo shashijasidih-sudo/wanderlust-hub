@@ -459,6 +459,7 @@ const BlogKrabiEmeraldPoolHotSprings = lazy(() => import("./pages/BlogKrabiEmera
 const BlogKrabiNightMarketsGuide = lazy(() => import("./pages/BlogKrabiNightMarketsGuide"));
 const BlogKayakingAoThalaneKrabi = lazy(() => import("./pages/BlogKayakingAoThalaneKrabi"));
 const FreeDigitalMarketingCourse = lazy(() => import("./pages/FreeDigitalMarketingCourse"));
+const FreeAIToolsBusinessCourse = lazy(() => import("./pages/FreeAIToolsBusinessCourse"));
 
 
 const queryClient = new QueryClient();
@@ -941,6 +942,7 @@ const App = () => (
           <Route path="/free-digital-marketing-course-for-businesses" element={<FreeDigitalMarketingCourse />} />
           <Route path="/free-business-course/free-digital-marketing-course-for-businesses/" element={<FreeDigitalMarketingCourse />} />
           <Route path="/free-business-course/free-digital-marketing-course-for-businesses" element={<FreeDigitalMarketingCourse />} />
+          <Route path="/free-business-course/ai-tools-in-business-course/" element={<FreeAIToolsBusinessCourse />} />
           <Route path="/why-yellodae/" element={<WhyYellodae />} />
           <Route path="/contact-us/" element={<ContactUs />} />
           <Route path="/faq/" element={<FAQ />} />

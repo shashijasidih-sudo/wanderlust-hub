@@ -383,8 +383,10 @@ const Header = () => {
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border shadow-xl z-50 min-w-[280px] p-2">
-              <DropdownMenuItem disabled className="cursor-not-allowed opacity-60 px-3 py-3">
-                AI tools in Business Course
+              <DropdownMenuItem asChild className={menuItemClass}>
+                <Link to="/free-business-course/ai-tools-in-business-course/">
+                  AI tools in Business Course
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
                 <Link to="/free-business-course/free-digital-marketing-course-for-businesses/">
@@ -591,8 +593,13 @@ const Header = () => {
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border shadow-lg z-50 min-w-[240px] max-h-[60vh] overflow-y-auto overscroll-contain">
-                <DropdownMenuItem disabled className="cursor-not-allowed opacity-60">
-                  AI tools in Business Course
+                <DropdownMenuItem asChild className={mobileMenuItemClass}>
+                  <Link
+                    to="/free-business-course/ai-tools-in-business-course/"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    AI tools in Business Course
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
                   <Link
