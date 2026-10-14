@@ -43,9 +43,10 @@ const lectures = [
   },
   {
     number: 4,
-    title: "Lecture 4",
-    description: "Coming soon.",
-    url: "",
+    title: "How to Get Your Business Found on Google & AI Search",
+    description:
+      "Learn practical SEO techniques to improve how your business appears in Google search and AI-powered search results.",
+    url: "https://www.youtube.com/watch?v=ielVVDsj-xI",
   },
 ];
 
@@ -184,7 +185,7 @@ const FreeAIToolsBusinessCourse = () => {
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
               {[
                 { value: "4", label: "Video Lectures" },
-                { value: "3", label: "Available to Watch" },
+                { value: "4", label: "Available to Watch" },
                 { value: "AI", label: "Business Use Cases" },
                 { value: "YouTube", label: "Video Lessons" },
               ].map(({ value, label }) => (
@@ -333,8 +334,7 @@ const FreeAIToolsBusinessCourse = () => {
               })}
             </div>
             <p className="mt-6 text-center text-xs text-muted-foreground">
-              3 of 4 lectures are available now. The fourth lecture will appear
-              here when it is published.
+              All 4 lectures are available to watch now.
             </p>
           </div>
         </section>
