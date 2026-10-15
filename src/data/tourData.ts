@@ -3179,8 +3179,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Experience a traditional Arabian dhow cruise on Dubai Creek with a delicious buffet dinner and live entertainment.",
     location: "Dubai Creek, Dubai",
     city: "dubai",
-    basePrice: 2070.6,
-    childPrice: 1948.8,
+    basePrice: 1880,
+    childPrice: 1800,
     duration: "90 Minutes",
     rating: 4.7,
     reviews: 1245,
@@ -3245,7 +3245,7 @@ export const toursData: Record<string, TourData> = {
       "Above 10 years: Adult rate applies"
     ],
     tourAddOns: [
-      { label: "Dhow Cruise Beverage Package- Add On", adultPrice: 1800, childPrice: 1800 }
+      { label: "Dhow Cruise Beverage Package- Add On", adultPrice: 1400, childPrice: 1800 }
     ],
     faqs: [
       { question: "What time does boarding start?", answer: "Boarding starts between 7:45 PM - 8:00 PM." },
@@ -3258,8 +3258,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Enjoy an open-air dining experience on the upper deck of a traditional Arabian dhow cruising Dubai Creek.",
     location: "Dubai Creek, Dubai",
     city: "dubai",
-    basePrice: 2436,
-    childPrice: 2192.4,
+    basePrice: 2140,
+    childPrice: 1800,
     duration: "90 Minutes",
     rating: 4.8,
     reviews: 987,
@@ -3296,7 +3296,7 @@ export const toursData: Record<string, TourData> = {
     cancellationPolicy: ["Free cancellation 72 hours prior", "100% charge within 72 hours"],
     childPolicy: ["Under 3: Free", "3-10: Child rate", "Above 10: Adult rate"],
     tourAddOns: [
-      { label: "Dhow Cruise Beverage Package- Add On", adultPrice: 1800, childPrice: 1800 }
+      { label: "Dhow Cruise Beverage Package- Add On", adultPrice: 1400, childPrice: 1800 }
     ],
     faqs: []
   },
@@ -3306,7 +3306,7 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Premium desert safari experience with private shisha service at your table and thrilling dune bashing.",
     location: "Dubai Desert, UAE",
     city: "dubai",
-    basePrice: 5115.6,
+    basePrice: 4200,
     childPrice: 0,
     duration: "6 Hours",
     rating: 4.9,
@@ -3377,8 +3377,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Classic desert safari experience with dune bashing, camel riding, and BBQ dinner under the stars.",
     location: "Dubai Desert, UAE",
     city: "dubai",
-    basePrice: 3532,
-    childPrice: 3410,
+    basePrice: 2500,
+    childPrice: 2400,
     duration: "6 Hours",
     rating: 4.8,
     reviews: 3421,
@@ -3400,11 +3400,11 @@ export const toursData: Record<string, TourData> = {
       "Shisha corner access"
     ],
     tourOptions: [
-      { label: "Desert Safari with Sharing Transfer", adultPrice: 3532, childPrice: 3410 },
-      { label: "Desert Safari with Shisha on Table with Sharing Transfer", adultPrice: 5116, childPrice: 3410 }
+      { label: "Desert Safari with Sharing Transfer", adultPrice: 2500, childPrice: 2400 },
+      { label: "Desert Safari with Shisha on Table with Sharing Transfer", adultPrice: 4200 }
     ],
     tourAddOns: [
-      { label: "Desert Safari Beverage Package (Add On Only)", adultPrice: 1400 }
+      { label: "Desert Safari Beverage Package (Add On Only)", adultPrice: 1100 }
     ],
     description: {
       overview: "The classic Dubai desert safari experience with all essential activities included.",
@@ -3431,8 +3431,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Comprehensive tour of Dubai's iconic landmarks including Burj Al Arab, Dubai Frame, and traditional souks.",
     location: "Dubai, UAE",
     city: "dubai",
-    basePrice: 1462,
-    childPrice: 1827,
+    basePrice: 1880,
+    childPrice: 1700,
     duration: "6 Hours",
     rating: 4.6,
     reviews: 1876,
@@ -3455,8 +3455,8 @@ export const toursData: Record<string, TourData> = {
       "View of Atlantis The Palm"
     ],
     tourOptions: [
-      { label: "Dubai City Tour", adultPrice: 1462, childPrice: 1827 },
-      { label: "Dubai City Tour with Dubai Mall with Transfers", adultPrice: 2072, childPrice: 2436 }
+      { label: "Dubai City Tour", adultPrice: 1880, childPrice: 1700 },
+      { label: "Dubai City Tour with Dubai Mall with Transfers", adultPrice: 2120, childPrice: 2000 }
     ],
     description: {
       overview: "Discover the best of Dubai on this comprehensive city tour covering historical and modern landmarks.",
@@ -3486,8 +3486,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Complete Dubai city tour including visit to the world-famous Dubai Mall.",
     location: "Dubai, UAE",
     city: "dubai",
-    basePrice: 2070.6,
-    childPrice: 2436,
+    basePrice: 2120,
+    childPrice: 2000,
     duration: "6 Hours",
     rating: 4.7,
     reviews: 1543,
@@ -3529,8 +3529,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Elegant cruise along Dubai Marina's Venetian-styled canal with international cuisine and stunning views.",
     location: "Dubai Marina, UAE",
     city: "dubai",
-    basePrice: 3654,
-    childPrice: 3654,
+    basePrice: 3000,
+    childPrice: 3000,
     duration: "90 Minutes",
     rating: 4.8,
     reviews: 1654,
@@ -3574,8 +3574,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Premium open-air dining experience on Dubai Marina with panoramic views of modern Dubai.",
     location: "Dubai Marina, UAE",
     city: "dubai",
-    basePrice: 4384.8,
-    childPrice: 4384.8,
+    basePrice: 3600,
+    childPrice: 3600,
     duration: "90 Minutes",
     rating: 4.9,
     reviews: 1234,
@@ -3617,8 +3617,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Explore 32 pavilions representing 75+ countries at Dubai's largest cultural and entertainment destination.",
     location: "Global Village, Dubai",
     city: "dubai",
-    basePrice: 3288.6,
-    childPrice: 3166.8,
+    basePrice: 2700,
+    childPrice: 2600,
     duration: "Full Day",
     rating: 4.7,
     reviews: 2345,
@@ -3664,8 +3664,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Explore the UAE capital including the magnificent Sheikh Zayed Grand Mosque and cultural landmarks.",
     location: "Abu Dhabi, UAE",
     city: "dubai",
-    basePrice: 3290,
-    childPrice: 3290,
+    basePrice: 3600,
+    childPrice: 3500,
     duration: "Full Day",
     rating: 4.8,
     reviews: 1987,
@@ -3686,8 +3686,8 @@ export const toursData: Record<string, TourData> = {
       "Islamic Art House"
     ],
     tourOptions: [
-      { label: "Abu Dhabi City Tour", adultPrice: 3290, childPrice: 3290 },
-      { label: "Abu Dhabi City Tour + Ferrari World Ticket with Transfer", adultPrice: 9745, childPrice: 9745 }
+      { label: "Abu Dhabi City Tour", adultPrice: 3600, childPrice: 3500 },
+      { label: "Abu Dhabi City Tour + Ferrari World Ticket with Transfer", adultPrice: 10200, childPrice: 10200 }
     ],
     description: {
       overview: "An unforgettable journey through the heart of the UAE capital.",
@@ -3714,8 +3714,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Combine Abu Dhabi sightseeing with the thrill of Ferrari World theme park.",
     location: "Abu Dhabi, UAE",
     city: "dubai",
-    basePrice: 9744,
-    childPrice: 9744,
+    basePrice: 10200,
+    childPrice: 10200,
     duration: "Full Day",
     rating: 4.9,
     reviews: 1567,
@@ -3760,8 +3760,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Explore one of the world's largest suspended aquariums with 30,000+ aquatic animals.",
     location: "Dubai Mall, Dubai",
     city: "dubai",
-    basePrice: 4020,
-    childPrice: 4020,
+    basePrice: 3320,
+    childPrice: 3300,
     duration: "2-3 Hours",
     rating: 4.7,
     reviews: 2134,
@@ -3782,8 +3782,8 @@ export const toursData: Record<string, TourData> = {
       "Sharks and rays"
     ],
     tourOptions: [
-      { label: "Dubai Aquarium and Underwater Zoo with Penguin Cove", adultPrice: 4020, childPrice: 4020 },
-      { label: "Dubai Aquarium and Underwater Zoo with Penguin Cove with Transfer", adultPrice: 5360, childPrice: 5360 }
+      { label: "Dubai Aquarium and Underwater Zoo with Penguin Cove", adultPrice: 3320, childPrice: 3300 },
+      { label: "Dubai Aquarium and Underwater Zoo with Penguin Cove with Transfer", adultPrice: 4490, childPrice: 4490 }
     ],
     description: {
       overview: "One of its kind center-piece of Dubai Mall, home to more than 30,000 aquatic animals.",
@@ -3809,8 +3809,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Visit the world's tallest building during non-prime hours for the best value.",
     location: "Downtown Dubai, UAE",
     city: "dubai",
-    basePrice: 6090,
-    childPrice: 4872,
+    basePrice: 4500,
+    childPrice: 3500,
     duration: "1-2 Hours",
     rating: 4.9,
     reviews: 4567,
@@ -3831,8 +3831,8 @@ export const toursData: Record<string, TourData> = {
       "Telescopes available"
     ],
     tourOptions: [
-      { label: "Burj Khalifa- 124th + 125th Floor: Non Prime Hours- Silver (Morning: 07:00 - 11:30 a.m., Night: 20:30 - 23:00 p.m.)", adultPrice: 6090, childPrice: 4872 },
-      { label: "Burj Khalifa- 124th + 125th Floor: Non Prime Hours with Transfers", adultPrice: 6821, childPrice: 6699 }
+      { label: "Burj Khalifa- 124th + 125th Floor: Non Prime Hours- Silver (Morning: 07:00 - 11:30 a.m., Night: 20:30 - 23:00 p.m.)", adultPrice: 4500, childPrice: 3500 },
+      { label: "Burj Khalifa- 124th + 125th Floor: Non Prime Hours with Transfers", adultPrice: 5300, childPrice: 4500 }
     ],
     description: {
       overview: "An unforgettable journey into the heart of Dubai's skyline at the world's tallest building.",
@@ -3853,12 +3853,12 @@ export const toursData: Record<string, TourData> = {
   },
   "burj-khalifa-prime": {
     id: "burj-khalifa-prime",
-    title: "Burj Khalifa 124th + 125th Floor: Prime Hours",
-    shortDescription: "Experience stunning sunset views from the world's tallest building during prime hours.",
+    title: "Burj Khalifa Silver - Fast Track Access (Levels 124 & 125)",
+    shortDescription: "Visit the 124th and 125th floors with Silver Fast Track Access, or select the separate Prime Hours with Transfers option.",
     location: "Downtown Dubai, UAE",
     city: "dubai",
-    basePrice: 8526,
-    childPrice: 7308,
+    basePrice: 7000,
+    childPrice: 6000,
     duration: "1-2 Hours",
     rating: 4.9,
     reviews: 3456,
@@ -3871,18 +3871,18 @@ export const toursData: Record<string, TourData> = {
       { src: dubaiSkylineNight, alt: "Dubai Skyline Night" }
     ],
     highlights: [
-      "Prime time sunset views",
+      "Silver Fast Track Access (ticket option)",
       "124th & 125th floor access",
-      "Golden hour photography",
+      "Separate Prime Hours with Transfers option",
       "City transformation views"
     ],
     tourOptions: [
-      { label: "Burj Khalifa- 124th + 125th Floor: Prime Hours", adultPrice: 8526, childPrice: 7308 },
-      { label: "Burj Khalifa- 124th + 125th Floor: Prime Hours with Transfers", adultPrice: 9623, childPrice: 9500 }
+      { label: "Burj Khalifa Silver - Fast Track Access (Levels 124 & 125)", adultPrice: 7000, childPrice: 6000 },
+      { label: "Burj Khalifa- 124th + 125th Floor: Prime Hours with Transfers", adultPrice: 7900, childPrice: 7500 }
     ],
     description: {
-      overview: "Experience Burj Khalifa during the magical prime hours.",
-      whatToExpect: "Witness Dubai transform from day to night from the world's highest observation deck. Prime hours offer the best lighting for photography and the magical experience of watching the city light up."
+      overview: "Choose Silver Fast Track Access to Levels 124 and 125, or the separate Prime Hours with Transfers option.",
+      whatToExpect: "Explore Levels 124 and 125 with panoramic views across Dubai. Silver Fast Track Access is the ticket-only option; Prime Hours with Transfers is a separate option and does not include Fast Track Access."
     },
     itinerary: [
       { time: "Chosen Slot", title: "Entry", description: "Enter at your booked time" },
@@ -3902,8 +3902,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Interactive dolphin and seal show at Dubai's only fully air-conditioned dolphinarium.",
     location: "Dubai Creek Park, Dubai",
     city: "dubai",
-    basePrice: 3532.2,
-    childPrice: 3532.2,
+    basePrice: 2900,
+    childPrice: 2900,
     duration: "2.5 Hours",
     rating: 4.6,
     reviews: 1234,
@@ -3945,8 +3945,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Visit the world's largest natural flower garden with over 100 million blooming flowers.",
     location: "Al Barsha South, Dubai",
     city: "dubai",
-    basePrice: 2560,
-    childPrice: 2560,
+    basePrice: 1970,
+    childPrice: 1970,
     duration: "3-4 Hours",
     rating: 4.8,
     reviews: 3456,
@@ -3968,8 +3968,8 @@ export const toursData: Record<string, TourData> = {
       "Iconic floral structures"
     ],
     tourOptions: [
-      { label: "Miracle Garden Dubai", adultPrice: 2560, childPrice: 2560 },
-      { label: "Miracle Garden Dubai with Transfer", adultPrice: 4145, childPrice: 4020 }
+      { label: "Miracle Garden Dubai", adultPrice: 1970, childPrice: 1970 },
+      { label: "Miracle Garden Dubai with Transfer", adultPrice: 4530, childPrice: 4000 }
     ],
     description: {
       overview: "A botanical paradise spanning 72,000 square meters in the middle of the desert.",
@@ -3996,8 +3996,8 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Experience the world's largest choreographed fountain system with an exclusive lake ride on Burj Khalifa Lake.",
     location: "Downtown Dubai, UAE",
     city: "dubai",
-    basePrice: 2071,
-    childPrice: 2070,
+    basePrice: 1900,
+    childPrice: 1900,
     duration: "1 Hour",
     rating: 4.8,
     reviews: 2876,
