@@ -204,44 +204,11 @@ const FreeAIToolsBusinessCourse = () => {
           </div>
         </section>
 
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto max-w-5xl px-4 md:px-6">
-            <div className="mb-10 text-center md:mb-12">
-              <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1 text-xs font-semibold text-orange-600">
-                <Lightbulb className="h-3.5 w-3.5" /> Course Overview
-              </span>
-              <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
-                Practical AI for Everyday Business
-              </h2>
-              <p className="mx-auto max-w-3xl text-muted-foreground">
-                Explore ways AI tools can support common business tasks, from
-                setting up a website to preparing marketing materials and
-                streamlining everyday work. The lessons are video-based and
-                can be watched in order or revisited whenever you need them.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-              {[
-                "Build a business website with AI tools",
-                "Create marketing campaigns with AI support",
-                "Discover practical AI tools and workflows",
-              ].map((topic, index) => (
-                <div key={topic} className="flex items-start gap-3 border-t-2 border-primary/30 pt-4">
-                  <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
-                    {index + 1}
-                  </span>
-                  <p className="pt-1 text-sm font-medium md:text-base">{topic}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section
           id="course-curriculum"
           className="scroll-mt-20 bg-muted/40 py-12 md:py-16"
         >
-          <div className="container mx-auto max-w-5xl px-4 md:px-6">
+          <div className="container mx-auto max-w-7xl px-4 md:px-6">
             <div className="mb-10 text-center md:mb-12">
               <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
                 <PlayCircle className="h-3.5 w-3.5" /> Course Curriculum
@@ -263,7 +230,7 @@ const FreeAIToolsBusinessCourse = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
               {lectures.map((lecture) => {
                 const videoId = getYouTubeId(lecture.url);
                 return (
@@ -338,6 +305,39 @@ const FreeAIToolsBusinessCourse = () => {
             </p>
           </div>
         </section>
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto max-w-5xl px-4 md:px-6">
+            <div className="mb-10 text-center md:mb-12">
+              <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1 text-xs font-semibold text-orange-600">
+                <Lightbulb className="h-3.5 w-3.5" /> Course Overview
+              </span>
+              <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
+                Practical AI for Everyday Business
+              </h2>
+              <p className="mx-auto max-w-3xl text-muted-foreground">
+                Explore ways AI tools can support common business tasks, from
+                setting up a website to preparing marketing materials and
+                streamlining everyday work. The lessons are video-based and
+                can be watched in order or revisited whenever you need them.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+              {[
+                "Build a business website with AI tools",
+                "Create marketing campaigns with AI support",
+                "Discover practical AI tools and workflows",
+              ].map((topic, index) => (
+                <div key={topic} className="flex items-start gap-3 border-t-2 border-primary/30 pt-4">
+                  <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                    {index + 1}
+                  </span>
+                  <p className="pt-1 text-sm font-medium md:text-base">{topic}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
 
         <section className="border-t py-10 md:py-12">
           <div className="container mx-auto max-w-3xl px-4 text-center md:px-6">
