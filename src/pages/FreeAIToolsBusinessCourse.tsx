@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   ArrowDown,
+  BookOpen,
   CheckCircle2,
   Lightbulb,
   PlayCircle,
@@ -13,6 +14,7 @@ import {
   Youtube,
 } from "lucide-react";
 import heroImage from "@/assets/ai-business-course-hero.jpg";
+import digitalMarketingImage from "@/assets/digital-marketing-course-hero.jpg";
 
 const PAGE_PATH = "/free-business-course/ai-tools-in-business-course/";
 const CANONICAL = `https://yellodae.com${PAGE_PATH}`;
@@ -51,7 +53,9 @@ const lectures = [
 ];
 
 const getYouTubeId = (url: string): string | null => {
-  const match = url.match(/youtu\.be\/([A-Za-z0-9_-]{6,})/);
+  const match =
+    url.match(/youtu\.be\/([A-Za-z0-9_-]{6,})/) ||
+    url.match(/[?&]v=([A-Za-z0-9_-]{6,})/);
   return match?.[1] ?? null;
 };
 
@@ -339,19 +343,59 @@ const FreeAIToolsBusinessCourse = () => {
         </section>
 
 
-        <section className="border-t py-10 md:py-12">
-          <div className="container mx-auto max-w-3xl px-4 text-center md:px-6">
-            <h2 className="mb-3 text-xl font-bold md:text-2xl">
-              Keep Exploring Business Courses
-            </h2>
-            <p className="mb-5 text-sm text-muted-foreground md:text-base">
-              Continue learning with the Yellodae Digital Marketing in Business Course.
-            </p>
-            <Button asChild variant="outline">
-              <Link to="/free-business-course/free-digital-marketing-course-for-businesses/">
+        <section className="border-t py-10 md:py-14">
+          <div className="container mx-auto max-w-5xl px-4 md:px-6">
+            <div className="mb-6 text-center md:mb-8">
+              <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                <BookOpen className="h-3.5 w-3.5" /> Keep Learning
+              </span>
+              <h2 className="text-xl font-bold md:text-2xl">
                 Explore Digital Marketing Course
-              </Link>
-            </Button>
+              </h2>
+            </div>
+            <div className="grid overflow-hidden rounded-lg border bg-card shadow-sm md:grid-cols-2">
+              <div className="aspect-[4/3] overflow-hidden bg-muted md:aspect-auto md:min-h-72">
+                <img
+                  src={digitalMarketingImage}
+                  alt="Digital marketing course lessons covering online marketing and business growth"
+                  loading="lazy"
+                  width={1280}
+                  height={960}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="flex flex-col justify-center p-5 md:p-8">
+                <p className="mb-2 text-sm font-semibold text-primary">
+                  FREE Fundamentals of Digital Marketing Course
+                </p>
+                <h3 className="mb-3 text-xl font-bold md:text-2xl">
+                  Build your marketing skills, step by step
+                </h3>
+                <p className="mb-5 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  Continue with 28 beginner-friendly video lessons covering
+                  digital marketing basics, channels, funnels, SEO and SEM, plus
+                  a final 28-question assessment.
+                </p>
+                <div className="mb-6 grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
+                  {[
+                    "28 free video lectures",
+                    "Start from the fundamentals",
+                    "Learn at your own pace",
+                    "Final course assessment",
+                  ].map((detail) => (
+                    <span key={detail} className="inline-flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
+                      {detail}
+                    </span>
+                  ))}
+                </div>
+                <Button asChild className="w-full sm:w-fit">
+                  <Link to="/free-business-course/free-digital-marketing-course-for-businesses/">
+                    Explore Digital Marketing Course
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </section>
       </main>
