@@ -221,7 +221,6 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         path={location.pathname}
         type="product"
         image={galleryImages?.[0]?.src}
-        preloadImage={galleryImages?.[0]?.src}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Service",
@@ -304,52 +303,6 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
           );
         })()}
 
-
-        {/* Photo Gallery */}
-        {galleryImages && galleryImages.length > 0 && (
-          <div className="max-w-6xl mx-auto mb-6 md:mb-8">
-            {/* Mobile & Tablet: 2-column collage (primary spans full width) */}
-            <div className="lg:hidden grid grid-cols-2 gap-3">
-              {galleryImages.slice(0, 5).map((img, idx) => (
-                <div
-                  key={idx}
-                  className={cn(
-                    "overflow-hidden rounded-xl aspect-[4/3]",
-                    idx === 0 ? "col-span-2" : "col-span-1"
-                  )}
-                >
-                  <SafeImage
-                    src={img.src}
-                    alt={img.alt}
-                    loading={idx === 0 ? "eager" : "lazy"}
-                    fetchPriority={idx === 0 ? "high" : "auto"}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              ))}
-            </div>
-            {/* Desktop: 4-column collage */}
-            <div className="hidden lg:grid grid-cols-4 grid-rows-2 gap-3 h-[420px]">
-              {galleryImages.slice(0, 5).map((img, idx) => (
-                <div
-                  key={idx}
-                  className={cn(
-                    "overflow-hidden rounded-xl",
-                    idx === 0 ? "col-span-2 row-span-2" : "col-span-1 row-span-1"
-                  )}
-                >
-                  <SafeImage
-                    src={img.src}
-                    alt={img.alt}
-                    loading={idx === 0 ? "eager" : "lazy"}
-                    fetchPriority={idx === 0 ? "high" : "auto"}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
         {/* Title */}
         <div className="max-w-6xl mx-auto text-center mb-5 md:mb-6">
