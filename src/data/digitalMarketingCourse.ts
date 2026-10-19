@@ -37,6 +37,7 @@ export const COURSE_MODULES: CourseModule[] = [
     description:
       "What digital marketing is, how it differs from traditional marketing, the main digital channels, and how marketing funnels turn visitors into customers.",
     image: module1Image,
+    url: "https://youtu.be/bH6kfdtkde8",
     lectures: [
       {
         number: 1,
@@ -73,6 +74,7 @@ export const COURSE_MODULES: CourseModule[] = [
     description:
       "A hands-on workshop covering SEO basics, keyword research, on-page and off-page optimisation, technical SEO, search engine marketing and creating your first Google Ads campaign.",
     image: module2Image,
+    url: "https://youtu.be/VTk9SKxcd0Q",
     lectures: [
       {
         number: 5,
@@ -117,6 +119,7 @@ export const COURSE_MODULES: CourseModule[] = [
     description:
       "Building and managing a brand presence on social platforms — content planning, posting schedules, community engagement and growing an audience organically.",
     image: module3Image,
+    url: "https://youtu.be/gEbDIE5VgmU",
     lectures: Array.from({ length: 6 }, (_, i) => ({
       number: 11 + i,
       title: `Lecture ${11 + i}`,
@@ -129,6 +132,7 @@ export const COURSE_MODULES: CourseModule[] = [
     description:
       "Creating content that attracts and converts, plus practical email marketing — newsletters, campaigns, list building and measuring what works.",
     image: module4Image,
+    url: "https://youtu.be/1M7rtYboFgw",
     lectures: Array.from({ length: 6 }, (_, i) => ({
       number: 17 + i,
       title: `Lecture ${17 + i}`,
@@ -141,6 +145,7 @@ export const COURSE_MODULES: CourseModule[] = [
     description:
       "Measuring what matters: website tracking, Google Analytics reports, traffic sources, conversions and using data to improve your marketing.",
     image: module5Image,
+    url: "https://youtu.be/r_52iYJDXY8",
     lectures: Array.from({ length: 6 }, (_, i) => ({
       number: 23 + i,
       title: `Lecture ${23 + i}`,
