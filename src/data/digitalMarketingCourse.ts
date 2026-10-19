@@ -1,3 +1,9 @@
+import module1Image from "@/assets/dm-module-1-basics.jpg";
+import module2Image from "@/assets/dm-module-2-seo-sem.jpg";
+import module3Image from "@/assets/dm-module-3-social-media.jpg";
+import module4Image from "@/assets/dm-module-4-content-email.jpg";
+import module5Image from "@/assets/dm-module-5-analytics.jpg";
+
 export interface Lecture {
   number: number;
   title: string;
@@ -8,6 +14,8 @@ export interface Lecture {
 
 export interface CourseModule {
   title: string;
+  description: string;
+  image: string;
   lectures: Lecture[];
 }
 
@@ -17,12 +25,16 @@ export const COURSE_PLAYLIST_URL =
 export const ASSESSMENT_FORM_URL = "https://forms.gle/TLSimCKaAeMtQV5H9";
 
 /**
- * 28-lecture curriculum. Update the `url` field for each lecture as the
- * remaining videos are published — no other change is required.
+ * 5-module, 28-lecture curriculum. The course page shows modules only —
+ * update the `url` field of each lecture as the remaining videos are
+ * published; no other change is required.
  */
 export const COURSE_MODULES: CourseModule[] = [
   {
-    title: "Module 1 — Basics of Digital Marketing",
+    title: "Basics of Digital Marketing",
+    description:
+      "What digital marketing is, how it differs from traditional marketing, the main digital channels, and how marketing funnels turn visitors into customers.",
+    image: module1Image,
     lectures: [
       {
         number: 1,
@@ -55,7 +67,10 @@ export const COURSE_MODULES: CourseModule[] = [
     ],
   },
   {
-    title: "Module 2 — SEO & SEM",
+    title: "Practical Workshop on SEO & SEM",
+    description:
+      "A hands-on workshop covering SEO basics, keyword research, on-page and off-page optimisation, technical SEO, search engine marketing and creating your first Google Ads campaign.",
+    image: module2Image,
     lectures: [
       {
         number: 5,
@@ -96,10 +111,37 @@ export const COURSE_MODULES: CourseModule[] = [
     ],
   },
   {
-    title: "Module 3 — More Lectures Coming Soon",
-    lectures: Array.from({ length: 18 }, (_, i) => ({
+    title: "Social Media Marketing & Management",
+    description:
+      "Building and managing a brand presence on social platforms — content planning, posting schedules, community engagement and growing an audience organically.",
+    image: module3Image,
+    lectures: Array.from({ length: 6 }, (_, i) => ({
       number: 11 + i,
       title: `Lecture ${11 + i}`,
+      description: "Coming soon.",
+      url: "",
+    })),
+  },
+  {
+    title: "Content Marketing & Practical Email Marketing",
+    description:
+      "Creating content that attracts and converts, plus practical email marketing — newsletters, campaigns, list building and measuring what works.",
+    image: module4Image,
+    lectures: Array.from({ length: 6 }, (_, i) => ({
+      number: 17 + i,
+      title: `Lecture ${17 + i}`,
+      description: "Coming soon.",
+      url: "",
+    })),
+  },
+  {
+    title: "Web Analytics and Google Analytics",
+    description:
+      "Measuring what matters: website tracking, Google Analytics reports, traffic sources, conversions and using data to improve your marketing.",
+    image: module5Image,
+    lectures: Array.from({ length: 6 }, (_, i) => ({
+      number: 23 + i,
+      title: `Lecture ${23 + i}`,
       description: "Coming soon.",
       url: "",
     })),
