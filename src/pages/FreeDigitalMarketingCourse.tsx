@@ -25,7 +25,6 @@ import {
 } from "lucide-react";
 import {
   COURSE_MODULES,
-  ALL_LECTURES,
   ASSESSMENT_FORM_URL,
   COURSE_PLAYLIST_URL,
 } from "@/data/digitalMarketingCourse";
@@ -94,6 +93,13 @@ const stats = [
   { icon: FileCheck, value: "28", label: "Assessment Questions" },
   { icon: Youtube, value: "100%", label: "Free on YouTube" },
 ];
+
+const getYouTubeId = (url: string): string | null => {
+  const match =
+    url.match(/youtu\.be\/([A-Za-z0-9_-]{6,})/) ||
+    url.match(/[?&]v=([A-Za-z0-9_-]{6,})/);
+  return match?.[1] ?? null;
+};
 
 const scrollToCurriculum = () => {
   document
@@ -179,8 +185,6 @@ const FreeDigitalMarketingCourse = () => {
       ],
     },
   ];
-
-  const liveLectures = ALL_LECTURES.filter((l) => l.url).length;
 
   return (
     <div className="min-h-screen bg-background">
@@ -373,26 +377,37 @@ const FreeDigitalMarketingCourse = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
               {COURSE_MODULES.map((module, index) => {
-                const liveCount = module.lectures.filter((l) => l.url).length;
+                const videoId = getYouTubeId(module.url);
                 return (
-                  <Card
+                  <a
                     key={module.title}
-                    className="flex h-full flex-col overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow duration-300"
+                    href={module.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Watch Module ${index + 1}: ${module.title}`}
+                    className="group flex h-full flex-col overflow-hidden rounded-lg border-0 shadow-sm hover:shadow-md transition-shadow duration-300 bg-card"
                   >
                     <div className="relative aspect-video w-full overflow-hidden bg-muted">
                       <img
-                        src={module.image}
-                        alt={`${module.title} — module illustration`}
+                        src={
+                          videoId
+                            ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+                            : module.image
+                        }
+                        alt={`${module.title} — module video thumbnail`}
                         loading="lazy"
-                        width={1024}
-                        height={576}
-                        className="h-full w-full object-cover"
+                        width={480}
+                        height={360}
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <span className="absolute left-3 top-3 rounded-full bg-white/95 dark:bg-black/80 px-3 py-1 text-xs font-bold text-foreground shadow">
                         Module {index + 1}
                       </span>
+                      <span className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/35">
+                        <PlayCircle className="h-12 w-12 text-white drop-shadow-lg" />
+                      </span>
                     </div>
-                    <CardContent className="flex flex-1 flex-col p-5">
+                    <div className="flex flex-1 flex-col p-5">
                       <h3 className="mb-2 font-semibold leading-snug text-base md:text-lg break-words">
                         {module.title}
                       </h3>
@@ -404,17 +419,13 @@ const FreeDigitalMarketingCourse = () => {
                           <PlayCircle className="h-3.5 w-3.5 text-primary" />
                           {module.lectures.length} video lectures
                         </span>
-                        {liveCount > 0 ? (
-                          <span className="inline-flex items-center gap-1.5">
-                            <CheckCircle2 className="h-3.5 w-3.5 text-primary" />
-                            {liveCount} available now
-                          </span>
-                        ) : (
-                          <span>Coming soon</span>
-                        )}
+                        <span className="inline-flex items-center gap-1.5">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-primary" />
+                          Available now
+                        </span>
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </a>
                 );
               })}
 
@@ -456,8 +467,8 @@ const FreeDigitalMarketingCourse = () => {
             </div>
 
             <p className="mt-8 text-center text-xs text-muted-foreground">
-              {liveLectures} of {ALL_LECTURES.length} lectures are live. The
-              remaining videos are added to the playlist as they are published.
+              All 5 modules are available now. Watch them in order on our
+              YouTube channel, at your own pace.
             </p>
           </div>
         </section>
