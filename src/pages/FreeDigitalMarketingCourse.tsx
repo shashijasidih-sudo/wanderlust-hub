@@ -187,8 +187,6 @@ const FreeDigitalMarketingCourse = () => {
     },
   ];
 
-  const liveLectures = ALL_LECTURES.filter((l) => l.url).length;
-
   return (
     <div className="min-h-screen bg-background">
       <Seo
