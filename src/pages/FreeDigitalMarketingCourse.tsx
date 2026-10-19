@@ -470,8 +470,8 @@ const FreeDigitalMarketingCourse = () => {
             </div>
 
             <p className="mt-8 text-center text-xs text-muted-foreground">
-              {liveLectures} of {ALL_LECTURES.length} lectures are live. The
-              remaining videos are added to the playlist as they are published.
+              All 5 modules are available now. Watch them in order on our
+              YouTube channel, at your own pace.
             </p>
           </div>
         </section>
