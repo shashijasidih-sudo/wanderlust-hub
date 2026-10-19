@@ -30,6 +30,7 @@ import {
   COURSE_PLAYLIST_URL,
 } from "@/data/digitalMarketingCourse";
 import heroImage from "@/assets/digital-marketing-course-hero.jpg";
+import playlistImage from "@/assets/dm-course-playlist.jpg";
 
 const PAGE_PATH = "/free-digital-marketing-course-for-businesses/";
 const CANONICAL = `https://yellodae.com${PAGE_PATH}`;
@@ -41,7 +42,7 @@ const faqs = [
   },
   {
     q: "How many lectures are included?",
-    a: "The course covers 28 lectures, from digital marketing fundamentals through to practical application.",
+    a: "The course covers 28 lectures across 5 modules, from digital marketing fundamentals through to practical application.",
   },
   {
     q: "Who can take this course?",
@@ -65,7 +66,7 @@ const faqs = [
   },
   {
     q: "How can I access the course lectures?",
-    a: "Each lecture below links directly to its video on our YouTube channel. You can watch them in order, at your own pace, on any device.",
+    a: "All lectures are published on our YouTube channel. Open the full course playlist from the Course Curriculum section and watch the videos in order, at your own pace, on any device. New lectures are added to the playlist as they are released.",
   },
 ];
 
@@ -89,7 +90,7 @@ const audience = [
 
 const stats = [
   { icon: PlayCircle, value: "28", label: "Free Video Lectures" },
-  { icon: BookOpen, value: "5+", label: "Core Modules" },
+  { icon: BookOpen, value: "5", label: "Core Modules" },
   { icon: FileCheck, value: "28", label: "Assessment Questions" },
   { icon: Youtube, value: "100%", label: "Free on YouTube" },
 ];
@@ -98,14 +99,6 @@ const scrollToCurriculum = () => {
   document
     .getElementById("course-curriculum")
     ?.scrollIntoView({ behavior: "smooth", block: "start" });
-};
-
-/** Extract a YouTube video ID from a watch/youtu.be URL. */
-const getYouTubeId = (url: string): string | null => {
-  const m =
-    url.match(/youtu\.be\/([A-Za-z0-9_-]{6,})/) ||
-    url.match(/[?&]v=([A-Za-z0-9_-]{6,})/);
-  return m ? m[1] : null;
 };
 
 const AssessmentButton = ({
@@ -186,6 +179,8 @@ const FreeDigitalMarketingCourse = () => {
       ],
     },
   ];
+
+  const liveLectures = ALL_LECTURES.filter((l) => l.url).length;
 
   return (
     <div className="min-h-screen bg-background">
@@ -358,113 +353,111 @@ const FreeDigitalMarketingCourse = () => {
           </div>
         </section>
 
-        {/* CURRICULUM */}
+        {/* CURRICULUM — MODULES ONLY */}
         <section id="course-curriculum" className="py-12 md:py-16 bg-muted/40 scroll-mt-20">
-          <div className="container px-4 md:px-6 max-w-5xl mx-auto">
+          <div className="container px-4 md:px-6 max-w-6xl mx-auto">
             <div className="text-center mb-10 md:mb-12">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-semibold mb-3">
                 <PlayCircle className="h-3.5 w-3.5" />
                 Course Curriculum
               </span>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
-                All 28 Lectures, Grouped by Module
+                What You'll Learn — 5 Modules
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Watch each lecture on YouTube.{" "}
-                <a
-                  href={COURSE_PLAYLIST_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary underline underline-offset-2 font-medium"
-                >
-                  View the full YouTube playlist
-                </a>
-                .
+                The course is organised into five modules across 28 video
+                lectures. Watch them in order on our YouTube channel, at your own
+                pace.
               </p>
             </div>
 
-            {COURSE_MODULES.map((module) => (
-              <div key={module.title} className="mb-10 md:mb-12">
-                <div className="flex items-center gap-3 mb-5">
-                  <span className="h-8 w-1 rounded-full bg-orange-500" />
-                  <h3 className="text-lg md:text-xl font-semibold">
-                    {module.title}
-                  </h3>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {module.lectures.map((lecture) => {
-                    const ytId = lecture.url ? getYouTubeId(lecture.url) : null;
-                    return (
-                      <Card
-                        key={lecture.number}
-                        className="h-full overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow duration-300"
-                      >
-                        {ytId ? (
-                          <a
-                            href={lecture.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group relative block aspect-video w-full overflow-hidden bg-muted"
-                          >
-                            <img
-                              src={`https://i.ytimg.com/vi/${ytId}/hqdefault.jpg`}
-                              alt={`${lecture.title} — YouTube video thumbnail`}
-                              loading="lazy"
-                              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                            <span className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/35">
-                              <PlayCircle className="h-12 w-12 text-white drop-shadow-lg" />
-                            </span>
-                          </a>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+              {COURSE_MODULES.map((module, index) => {
+                const liveCount = module.lectures.filter((l) => l.url).length;
+                return (
+                  <Card
+                    key={module.title}
+                    className="flex h-full flex-col overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow duration-300"
+                  >
+                    <div className="relative aspect-video w-full overflow-hidden bg-muted">
+                      <img
+                        src={module.image}
+                        alt={`${module.title} — module illustration`}
+                        loading="lazy"
+                        width={1024}
+                        height={576}
+                        className="h-full w-full object-cover"
+                      />
+                      <span className="absolute left-3 top-3 rounded-full bg-white/95 dark:bg-black/80 px-3 py-1 text-xs font-bold text-foreground shadow">
+                        Module {index + 1}
+                      </span>
+                    </div>
+                    <CardContent className="flex flex-1 flex-col p-5">
+                      <h3 className="mb-2 font-semibold leading-snug text-base md:text-lg break-words">
+                        {module.title}
+                      </h3>
+                      <p className="mb-4 flex-1 text-sm text-muted-foreground">
+                        {module.description}
+                      </p>
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-medium text-muted-foreground">
+                        <span className="inline-flex items-center gap-1.5">
+                          <PlayCircle className="h-3.5 w-3.5 text-primary" />
+                          {module.lectures.length} video lectures
+                        </span>
+                        {liveCount > 0 ? (
+                          <span className="inline-flex items-center gap-1.5">
+                            <CheckCircle2 className="h-3.5 w-3.5 text-primary" />
+                            {liveCount} available now
+                          </span>
                         ) : (
-                          <div className="flex aspect-video w-full items-center justify-center bg-muted">
-                            <PlayCircle className="h-10 w-10 text-muted-foreground/40" />
-                          </div>
+                          <span>Coming soon</span>
                         )}
-                        <CardContent className="p-4 md:p-5 flex flex-col h-full flex-1">
-                          <div className="flex items-start gap-3 mb-2">
-                            <span className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary text-sm font-bold">
-                              {String(lecture.number).padStart(2, "0")}
-                            </span>
-                            <h4 className="font-semibold text-sm md:text-base leading-snug break-words">
-                              {lecture.title}
-                            </h4>
-                          </div>
-                          <p className="text-xs md:text-sm text-muted-foreground mb-4 flex-1">
-                            {lecture.description}
-                          </p>
-                          {lecture.url ? (
-                            <Button
-                              asChild
-                              variant="outline"
-                              size="sm"
-                              className="w-full sm:w-auto self-start"
-                            >
-                              <a
-                                href={lecture.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <PlayCircle className="h-4 w-4 mr-2" />
-                                Watch Lecture
-                              </a>
-                            </Button>
-                          ) : (
-                            <span className="text-xs font-medium text-muted-foreground">
-                              Video coming soon
-                            </span>
-                          )}
-                        </CardContent>
-                      </Card>
-                    );
-                  })}
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+
+              {/* PLAYLIST CARD */}
+              <a
+                href={COURSE_PLAYLIST_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex h-full flex-col overflow-hidden rounded-lg border-0 bg-primary text-primary-foreground shadow-sm transition-shadow hover:shadow-md"
+                aria-label="Open the full course playlist on YouTube"
+              >
+                <div className="relative aspect-video w-full overflow-hidden bg-muted">
+                  <img
+                    src={playlistImage}
+                    alt="Full course playlist on YouTube — stacked video thumbnails with a play button"
+                    loading="lazy"
+                    width={1024}
+                    height={576}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
-              </div>
-            ))}
-            <p className="text-xs text-muted-foreground text-center">
-              {ALL_LECTURES.filter((l) => l.url).length} of {ALL_LECTURES.length}{" "}
-              lectures are live. The remaining videos are added to this page as
-              they are published.
+                <div className="flex flex-1 flex-col p-5">
+                  <span className="mb-2 inline-flex w-fit items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold">
+                    <Youtube className="h-3.5 w-3.5" /> YouTube Playlist
+                  </span>
+                  <h3 className="mb-2 font-semibold leading-snug text-base md:text-lg">
+                    Watch the Full Course Playlist
+                  </h3>
+                  <p className="mb-4 flex-1 text-sm text-primary-foreground/80">
+                    All 28 lectures live on our YouTube channel. Open the
+                    playlist to watch every module in order.
+                  </p>
+                  <span className="inline-flex w-fit items-center gap-2 text-sm font-semibold underline underline-offset-4">
+                    Open YouTube Playlist
+                    <ExternalLink className="h-4 w-4" />
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <p className="mt-8 text-center text-xs text-muted-foreground">
+              {liveLectures} of {ALL_LECTURES.length} lectures are live. The
+              remaining videos are added to the playlist as they are published.
             </p>
           </div>
         </section>
