@@ -16,6 +16,8 @@ export interface CourseModule {
   title: string;
   description: string;
   image: string;
+  /** Full YouTube URL of the module's featured video. */
+  url: string;
   lectures: Lecture[];
 }
 
