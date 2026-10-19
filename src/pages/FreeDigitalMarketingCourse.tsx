@@ -25,7 +25,6 @@ import {
 } from "lucide-react";
 import {
   COURSE_MODULES,
-  ALL_LECTURES,
   ASSESSMENT_FORM_URL,
   COURSE_PLAYLIST_URL,
 } from "@/data/digitalMarketingCourse";
