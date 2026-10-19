@@ -95,6 +95,13 @@ const stats = [
   { icon: Youtube, value: "100%", label: "Free on YouTube" },
 ];
 
+const getYouTubeId = (url: string): string | null => {
+  const match =
+    url.match(/youtu\.be\/([A-Za-z0-9_-]{6,})/) ||
+    url.match(/[?&]v=([A-Za-z0-9_-]{6,})/);
+  return match?.[1] ?? null;
+};
+
 const scrollToCurriculum = () => {
   document
     .getElementById("course-curriculum")
