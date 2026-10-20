@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
+import SafeImage from "@/components/SafeImage";
 import Footer from "@/components/Footer";
 import Seo from "@/components/seo/Seo";
 import { Button } from "@/components/ui/button";
@@ -250,7 +251,7 @@ const FreeAIToolsBusinessCourse = () => {
                         className="group relative block aspect-video w-full overflow-hidden bg-muted"
                         aria-label={`Watch lecture ${lecture.number}: ${lecture.title}`}
                       >
-                        <img
+                        <SafeImage
                           src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
                           alt={`${lecture.title} — YouTube video thumbnail`}
                           loading="lazy"
