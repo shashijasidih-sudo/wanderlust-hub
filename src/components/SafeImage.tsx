@@ -47,7 +47,7 @@ const optimizeSrc = (src?: string) => {
 /**
  * Image component with:
  * - lazy loading & async decoding by default
- * - skeleton shimmer placeholder until the image is decoded
+ * - no visible skeleton, shimmer, or blur while images load
  * - smooth fade-in once loaded
  * - graceful fallback if src fails to load (broken links, 404s, offline images)
  * - preserves aspect ratio when width/height are supplied
@@ -75,8 +75,8 @@ const SafeImage = ({
       fetchPriority={priority ? "high" : rest.fetchPriority}
       decoding={decoding}
       className={cn(
-        "max-w-full transition-[opacity,filter] duration-500 ease-out",
-        loaded ? "opacity-100 blur-0" : "bg-muted animate-pulse opacity-70 blur-[2px]",
+        "max-w-full transition-opacity duration-300 ease-out motion-reduce:transition-none",
+        loaded || priority || loading === "eager" ? "opacity-100" : "opacity-0",
         className
       )}
       onLoad={(e) => {

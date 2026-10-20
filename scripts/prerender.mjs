@@ -196,7 +196,8 @@ function blogPreload(html, pathname) {
 }
 
 function withShell(html, pathname) {
-  const shell = blogShell(pathname) || shellFor(pathname);
+  // Only articles have a real-content shell; never inject generic card skeletons.
+  const shell = blogShell(pathname);
   if (!shell) return html;
   return html.replace(/<div id="root">\s*<\/div>/, `<div id="root">${shell}</div>`);
 }
