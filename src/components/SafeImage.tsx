@@ -1,4 +1,4 @@
-import { useState, ImgHTMLAttributes } from "react";
+import { useEffect, useRef, useState, ImgHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 
 
@@ -52,7 +52,7 @@ const optimizeSrc = (src?: string) => {
  * - graceful fallback if src fails to load (broken links, 404s, offline images)
  * - preserves aspect ratio when width/height are supplied
  */
-const SafeImage = ({
+const ImageWithLoadingState = ({
   src,
   alt = "",
   loading,
@@ -66,10 +66,30 @@ const SafeImage = ({
 }: Props) => {
   const [errored, setErrored] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const imageRef = useRef<HTMLImageElement>(null);
+  const imageSrc = errored || !src ? fallback : optimizeSrc(src);
+
+  useEffect(() => {
+    const image = imageRef.current;
+    if (!image) return;
+    let active = true;
+    const reveal = async () => {
+      try { await image.decode(); } catch { /* onError handles unavailable sources. */ }
+      if (active && image.complete && image.naturalWidth > 0) setLoaded(true);
+    };
+    image.addEventListener("load", reveal);
+    if (image.complete && image.naturalWidth > 0) void reveal();
+    return () => {
+      active = false;
+      image.removeEventListener("load", reveal);
+    };
+  }, [imageSrc, rest.srcSet]);
+
   return (
     <img
       {...rest}
-      src={errored || !src ? fallback : optimizeSrc(src)}
+      ref={imageRef}
+      src={imageSrc}
       alt={alt}
       loading={loading ?? (priority ? "eager" : "lazy")}
       fetchPriority={priority ? "high" : rest.fetchPriority}
@@ -80,17 +100,22 @@ const SafeImage = ({
         className
       )}
       onLoad={(e) => {
-        setLoaded(true);
         onLoad?.(e);
       }}
       onError={(e) => {
-        if (!errored) setErrored(true);
-        setLoaded(true);
+        if (!errored) {
+          setLoaded(false);
+          setErrored(true);
+        }
         onError?.(e);
       }}
     />
   );
 };
 
+// A changed source starts a fresh decode cycle instead of flashing the old image.
+const SafeImage = (props: Props) => (
+  <ImageWithLoadingState key={`${props.src}|${props.srcSet}|${props.fallback}`} {...props} />
+);
 
 export default SafeImage;

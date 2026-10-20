@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
+import SafeImage from "@/components/SafeImage";
 import Footer from "@/components/Footer";
 import Seo from "@/components/seo/Seo";
 import { Button } from "@/components/ui/button";
@@ -388,7 +389,7 @@ const FreeDigitalMarketingCourse = () => {
                     className="group flex h-full flex-col overflow-hidden rounded-lg border-0 shadow-sm hover:shadow-md transition-shadow duration-300 bg-card"
                   >
                     <div className="relative aspect-video w-full overflow-hidden bg-muted">
-                      <img
+                      <SafeImage
                         src={
                           videoId
                             ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
@@ -396,6 +397,7 @@ const FreeDigitalMarketingCourse = () => {
                         }
                         alt={`${module.title} — module video thumbnail`}
                         loading="lazy"
+                        fallback={module.image}
                         width={480}
                         height={360}
                         className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -438,7 +440,7 @@ const FreeDigitalMarketingCourse = () => {
                 aria-label="Open the full course playlist on YouTube"
               >
                 <div className="relative aspect-video w-full overflow-hidden bg-muted">
-                  <img
+                  <SafeImage
                     src={playlistImage}
                     alt="Full course playlist on YouTube — stacked video thumbnails with a play button"
                     loading="lazy"
