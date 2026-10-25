@@ -139,6 +139,10 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
   const selectedVehicleData = transferData.vehicles.find(v => v.id === selectedVehicle);
   const totalPrice = selectedVehicleData ? selectedVehicleData.price : 0;
 
+  // Airport → Hotel: pickup is the airport itself, only the drop hotel is needed
+  const isAirportToHotel = isAirportToHotelTransfer(transferData.id);
+  const airportName = transferData.title.split(/\s+[Tt]o\s+/)[0].trim();
+
   const handlePersonsChange = (increment: boolean) => {
     if (increment && selectedVehicleData) {
       const maxCapacity = parseInt(selectedVehicleData.capacity.split("-")[1]) || 10;
