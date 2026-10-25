@@ -37,7 +37,7 @@ const ChaoPhrayaPrincessPrivate = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="chao-phraya-princess-private" />}
       config={{
-        path: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/",
+        path: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/",
         seoTitle: "Chao Phraya Princess Dinner Cruise with Private Transfer | Book in INR",
         seoDescription:
           "Book the Chao Phraya Princess dinner cruise in Bangkok with private hotel transfers. Buffet dinner, live music and riverside landmarks. Instant confirmation in INR.",

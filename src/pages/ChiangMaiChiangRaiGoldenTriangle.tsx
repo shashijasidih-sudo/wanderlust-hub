@@ -11,7 +11,7 @@ import vanImg from "@/assets/chiang-mai-transfer-van-1.webp";
 const TOUR_KEY = "chiang-mai-chiang-rai-golden-triangle-long-neck-tribe-day-trip";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/",
+  path: "/thailand/chiang-mai-activities/chiang-rai-golden-triangle-long-neck-tribe-day-trip/",
   city: "chiang-mai",
   area: "daytrip",
   seoTitle: "Chiang Rai Day Trip: White Temple, Golden Triangle & Long Neck Tribe | Yellodae",

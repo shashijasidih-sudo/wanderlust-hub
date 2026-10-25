@@ -39,7 +39,7 @@ const PhuketCarnivalMagic = () => {
       tourData={pageTourData}
       contentAfterOverview={<PhuketTourItinerary tourKey="phuket-carnival-magic" />}
       config={{
-        path: "/thailand/phuket/carnival-magic-show-tickets-with-transfer/",
+        path: "/thailand/phuket-activities/carnival-magic-show-tickets-with-transfer/",
         seoTitle: "Carnival Magic Phuket Tickets with Transfers | Book in INR",
         seoDescription: "Book Carnival Magic Phuket tickets with hotel transfers and buffet options. Thailand's biggest night carnival with instant confirmation in INR.",
         whatsappTopic: "Carnival Magic Phuket tickets",

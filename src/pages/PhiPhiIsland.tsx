@@ -43,7 +43,7 @@ const PhiPhiIsland = () => {
       tourData={pageTourData}
       contentAfterOverview={<PhuketTourItinerary tourKey="phi-phi-island" />}
       config={{
-        path: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/",
+        path: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/",
         seoTitle: "Phi Phi Island Tour from Phuket with Transfers | Book in INR",
         seoDescription: "Book the full-day Phi Phi Island speedboat tour from Phuket with hotel transfers, Maya Bay, snorkelling and lunch. Instant confirmation and INR pricing.",
         whatsappTopic: "the Phi Phi Island tour from Phuket",

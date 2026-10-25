@@ -33,7 +33,7 @@ const DreamWorldBangkok = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="dream-world-bangkok" />}
       config={{
-        path: "/thailand/bangkok/dream-world-bangkok-tickets/",
+        path: "/thailand/bangkok-activities/dream-world-bangkok-tickets/",
         seoTitle: "Dream World Bangkok Tickets with Lunch & Transfers | Book in INR",
         seoDescription:
           "Book Dream World Bangkok Super Visa tickets with lunch and hotel transfers. Rides, Snow Town and shows for families. Instant confirmation and INR pricing.",

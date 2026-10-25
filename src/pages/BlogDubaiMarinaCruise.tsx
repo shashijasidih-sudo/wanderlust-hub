@@ -16,21 +16,21 @@ import dubaiGlobalVillage from "@/assets/dubai-global-village-1.jpg";
 import dubaiAquariumFish from "@/assets/dubai-aquarium-fish-1.webp";
 
 const cruiseActivityCards = [
-  { title: "Dhow Creek Cruise - Lower Deck", location: "Dubai Creek", image: dhowImg, slug: "/dubai/dhow-cruise-creek-lower-deck/" },
-  { title: "Dhow Creek Cruise - Upper Deck", location: "Dubai Creek", image: dhowImg, slug: "/dubai/dhow-cruise-creek-upper-deck/" },
-  { title: "Dhow Marina Cruise - Lower Deck", location: "Dubai Marina", image: dhowImg, slug: "/dubai/dhow-cruise-marina-lower-deck/" },
-  { title: "Dhow Marina Cruise - Upper Deck", location: "Dubai Marina", image: dhowImg, slug: "/dubai/dhow-cruise-marina-upper-deck/" },
-  { title: "Desert Safari with Sharing Transfer", location: "Lahbab Desert", image: dubaiDesertCouple2, slug: "/dubai/desert-safari-sharing/" },
-  { title: "Desert Safari with Shisha", location: "Lahbab Desert", image: dubaiDesertWoman, slug: "/dubai/desert-safari-shisha/" },
-  { title: "Burj Khalifa Non-Prime", location: "Downtown Dubai", image: dubaiSkylineSunset, slug: "/dubai/burj-khalifa-non-prime/" },
-  { title: "Burj Khalifa Prime", location: "Downtown Dubai", image: heroImg, slug: "/dubai/burj-khalifa-prime/" },
-  { title: "Dubai City Tour", location: "Dubai", image: marinaImg, slug: "/dubai/city-tour/" },
-  { title: "Dubai City Tour with Mall", location: "Dubai", image: dubaiSkylineSunset, slug: "/dubai/city-tour-mall/" },
-  { title: "Global Village Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/dubai/global-village/" },
-  { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: dubaiSkylineSunset, slug: "/dubai/abu-dhabi-city-tour/" },
-  { title: "Dubai Aquarium + Penguin Cove", location: "Dubai Mall", image: dubaiAquariumFish, slug: "/dubai/aquarium-penguin/" },
-  { title: "Dubai Fountain Show + Lake Ride", location: "Downtown Dubai", image: fountainImg, slug: "/dubai/fountain-show/" },
-  { title: "Dubai Dolphin & Seal Show", location: "Dubai", image: dubaiAquariumFish, slug: "/dubai/dolphin-show/" },
+  { title: "Dhow Creek Cruise - Lower Deck", location: "Dubai Creek", image: dhowImg, slug: "/dubai-activities/dhow-cruise-creek-lower-deck/" },
+  { title: "Dhow Creek Cruise - Upper Deck", location: "Dubai Creek", image: dhowImg, slug: "/dubai-activities/dhow-cruise-creek-upper-deck/" },
+  { title: "Dhow Marina Cruise - Lower Deck", location: "Dubai Marina", image: dhowImg, slug: "/dubai-activities/dhow-cruise-marina-lower-deck/" },
+  { title: "Dhow Marina Cruise - Upper Deck", location: "Dubai Marina", image: dhowImg, slug: "/dubai-activities/dhow-cruise-marina-upper-deck/" },
+  { title: "Desert Safari with Sharing Transfer", location: "Lahbab Desert", image: dubaiDesertCouple2, slug: "/dubai-activities/desert-safari-sharing/" },
+  { title: "Desert Safari with Shisha", location: "Lahbab Desert", image: dubaiDesertWoman, slug: "/dubai-activities/desert-safari-shisha/" },
+  { title: "Burj Khalifa Non-Prime", location: "Downtown Dubai", image: dubaiSkylineSunset, slug: "/dubai-activities/burj-khalifa-non-prime/" },
+  { title: "Burj Khalifa Prime", location: "Downtown Dubai", image: heroImg, slug: "/dubai-activities/burj-khalifa-prime/" },
+  { title: "Dubai City Tour", location: "Dubai", image: marinaImg, slug: "/dubai-activities/city-tour/" },
+  { title: "Dubai City Tour with Mall", location: "Dubai", image: dubaiSkylineSunset, slug: "/dubai-activities/city-tour-mall/" },
+  { title: "Global Village Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/dubai-activities/global-village/" },
+  { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: dubaiSkylineSunset, slug: "/dubai-activities/abu-dhabi-city-tour/" },
+  { title: "Dubai Aquarium + Penguin Cove", location: "Dubai Mall", image: dubaiAquariumFish, slug: "/dubai-activities/aquarium-penguin/" },
+  { title: "Dubai Fountain Show + Lake Ride", location: "Downtown Dubai", image: fountainImg, slug: "/dubai-activities/fountain-show/" },
+  { title: "Dubai Dolphin & Seal Show", location: "Dubai", image: dubaiAquariumFish, slug: "/dubai-activities/dolphin-show/" },
 ];
 
 const CruiseActivityCards = () => {
@@ -91,7 +91,7 @@ const BlogDubaiMarinaCruise = () => {
         { title: "Dubai Desert Safari Guide", link: "/dubai/destination-guides/desert-safari-deals-dubai/" },
         { title: "Burj Khalifa Tickets Guide", link: "/dubai/destination-guides/burj-khalifa-tickets-dubai/" },
         { title: "Dubai Transfers", link: "/dubai/budget-airport-transfers/" },
-        { title: "Dhow Cruise Dubai", link: "/dubai/dhow-cruise/" },
+        { title: "Dhow Cruise Dubai", link: "/dubai-activities/dhow-cruise/" },
       ]}
       sections={[
         {
@@ -245,7 +245,7 @@ const BlogDubaiMarinaCruise = () => {
         {
           type: "cta",
           content: "Don't miss out on the best Dubai Marina cruise experience. Book your cruise today and see Dubai like never before!",
-          link: "/dubai/dhow-cruise-marina-lower-deck/",
+          link: "/dubai-activities/dhow-cruise-marina-lower-deck/",
           linkText: "🚤 Book Dubai Marina Cruise Now",
         },
       ]}

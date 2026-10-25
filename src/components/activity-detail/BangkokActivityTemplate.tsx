@@ -560,14 +560,14 @@ const IndianTravelerCompanion = ({ config }: { config: BangkokActivityConfig }) 
 /* ----------------------- complete your Bangkok trip ----------------------- */
 
 const TRIP_POOL = [
-  { title: "Grand Palace & Wat Phra Kaew", desc: "Bangkok's most iconic royal complex.", image: templeImg, slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/" },
-  { title: "Chao Phraya Princess Cruise", desc: "Dinner cruise past illuminated riverside temples.", image: cruiseImg, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise/" },
-  { title: "Mahanakhon SkyWalk", desc: "Glass-floor rooftop over the Bangkok skyline.", image: skywalkImg, slug: "/thailand/bangkok/mahanakhon-skywalk-tickets/" },
-  { title: "Safari World & Marine Park", desc: "Drive-through safari plus marine shows.", image: riversideImg, slug: "/thailand/bangkok/safari-world/" },
-  { title: "Ayutthaya Day Tour", desc: "UNESCO ruins on a full-day trip from Bangkok.", image: ayutthayaImg, slug: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok/" },
-  { title: "Three Temples City Tour", desc: "Wat Arun, Wat Pho and Golden Buddha with transfers.", image: buddhaImg, slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/" },
-  { title: "Dream World Bangkok", desc: "Family theme park with Snow Town.", image: cityImg, slug: "/thailand/bangkok/dream-world-bangkok-tickets/" },
-  { title: "Tuk-Tuk Night Tour", desc: "Street food and temples after dark.", image: nightImg, slug: "/thailand/bangkok/tuk-tuk-night-tour-bangkok/" },
+  { title: "Grand Palace & Wat Phra Kaew", desc: "Bangkok's most iconic royal complex.", image: templeImg, slug: "/thailand/bangkok-activities/grand-palace-wat-phra-kaew-tour/" },
+  { title: "Chao Phraya Princess Cruise", desc: "Dinner cruise past illuminated riverside temples.", image: cruiseImg, slug: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise/" },
+  { title: "Mahanakhon SkyWalk", desc: "Glass-floor rooftop over the Bangkok skyline.", image: skywalkImg, slug: "/thailand/bangkok-activities/mahanakhon-skywalk-tickets/" },
+  { title: "Safari World & Marine Park", desc: "Drive-through safari plus marine shows.", image: riversideImg, slug: "/thailand/bangkok-activities/safari-world/" },
+  { title: "Ayutthaya Day Tour", desc: "UNESCO ruins on a full-day trip from Bangkok.", image: ayutthayaImg, slug: "/thailand/bangkok-activities/ayutthaya-day-tour-from-bangkok/" },
+  { title: "Three Temples City Tour", desc: "Wat Arun, Wat Pho and Golden Buddha with transfers.", image: buddhaImg, slug: "/thailand/bangkok-activities/three-temples-bangkok-city-tour-with-transfer/" },
+  { title: "Dream World Bangkok", desc: "Family theme park with Snow Town.", image: cityImg, slug: "/thailand/bangkok-activities/dream-world-bangkok-tickets/" },
+  { title: "Tuk-Tuk Night Tour", desc: "Street food and temples after dark.", image: nightImg, slug: "/thailand/bangkok-activities/tuk-tuk-night-tour-bangkok/" },
 ];
 
 const CompleteYourBangkokTrip = ({ currentPath, title }: { currentPath: string; title: string }) => {

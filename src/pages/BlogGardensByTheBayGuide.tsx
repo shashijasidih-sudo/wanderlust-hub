@@ -49,8 +49,8 @@ const BlogGardensByTheBayGuide = () => (
       { type: "list", items: ["Afternoon: Cloud Forest + Flower Dome","Evening: Walk around Supertree Grove","Night: Garden Rhapsody show","Combine with Marina Bay Sands, Singapore River Cruise and Merlion Park"] },
     ]}
     relatedActivities={[
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
-      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+      { title: "Singapore City Tour", link: "/singapore-activities/singapore-city-tour/" },
+      { title: "Sentosa Cable Car Tickets", link: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
     ]}
     relatedLinks={[
       { title: "Singapore Flyer Observation Wheel Experience", link: "/singapore/destination-guides/activity/singapore-flyer-observation-wheel/" },

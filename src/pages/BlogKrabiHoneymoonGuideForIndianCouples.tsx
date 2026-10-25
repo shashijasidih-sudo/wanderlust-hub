@@ -46,9 +46,9 @@ const Blog = () => (
       { type: "cta", content: "Plan a custom Krabi honeymoon — tours, transfers and stays sorted", link: "/thailand/krabi/things-to-do/", linkText: "Plan My Honeymoon" },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" },
-      { title: "4 Island Tour by Speedboat", link: "/thailand/krabi/4-island-tour-speedboat-with-transfer/" },
-      { title: "Hong Island Longtail Tour", link: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/" },
+      { title: "4 Island Tour by Speedboat", link: "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/" },
+      { title: "Hong Island Longtail Tour", link: "/thailand/krabi-activities/hong-island-tour-longtail-boat-with-transfer/" },
       { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
     ]}
     relatedLinks={[

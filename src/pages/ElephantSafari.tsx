@@ -36,7 +36,7 @@ const ElephantSafari = () => {
       tourData={pageTourData}
       contentAfterOverview={<PhuketTourItinerary tourKey="elephant-safari" />}
       config={{
-        path: "/thailand/phuket/elephant-safari/",
+        path: "/thailand/phuket-activities/elephant-safari/",
         seoTitle: "Phuket Elephant Safari with ATV & Rafting | Book in INR",
         seoDescription: "Book the Phuket elephant safari adventure with ATV riding, rafting and hotel transfers. Family-friendly jungle day with instant confirmation in INR.",
         whatsappTopic: "the Phuket elephant safari adventure",

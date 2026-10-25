@@ -4,7 +4,7 @@ const BigBusNight = () => (
   <SingaporeActivityTemplate
     config={{
       tourKey: "big-bus-night",
-      path: "/singapore/big-bus-night-city-tour-singapore/",
+      path: "/singapore-activities/big-bus-night-city-tour-singapore/",
       seoTitle: "Big Bus Singapore Night City Tour Tickets | Book in INR",
       seoDescription:
         "Book the Big Bus Singapore Night City Tour — open-top evening drive past Marina Bay, Merlion Park, Chinatown and the illuminated CBD skyline. Instant confirmation.",

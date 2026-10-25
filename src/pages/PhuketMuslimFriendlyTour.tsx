@@ -36,7 +36,7 @@ const PhuketMuslimFriendlyTour = () => {
       tourData={pageTourData}
       contentAfterOverview={<PhuketTourItinerary tourKey="phuket-muslim-friendly-tour" />}
       config={{
-        path: "/thailand/phuket/muslim-friendly-tour/",
+        path: "/thailand/phuket-activities/muslim-friendly-tour/",
         seoTitle: "Muslim-Friendly Phuket Tour with Halal Food & Transfers | INR",
         seoDescription: "Book a Muslim-friendly Phuket tour with mosque visits, halal food stops, waterfalls and hotel transfers. Instant confirmation and INR pricing.",
         whatsappTopic: "the Muslim-friendly Phuket tour",

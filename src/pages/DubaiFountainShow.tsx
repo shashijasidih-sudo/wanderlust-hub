@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { dubaiFountainShowFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/fountain-show/",
+  path: "/dubai-activities/fountain-show/",
   area: "downtown",
   seoTitle: "Dubai Fountain Show with Lake Ride Tickets | Yellodae",
   seoDescription: "Book Dubai Fountain show tickets with the Burj Lake abra ride for the closest view. Instant confirmation, INR pricing and Indian traveller support.",

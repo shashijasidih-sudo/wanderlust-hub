@@ -49,7 +49,7 @@ const activities: Activity[] = [
       "Half-day private temple tour covering Doi Suthep, Wat Chedi Luang and the hidden Wat Pha Lat with hotel transfers.",
     price: 3900,
     image: doiSuthep,
-    slug: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/",
+    slug: "/thailand/chiang-mai-activities/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/",
   },
   {
     title: "Doi Inthanon National Park Full Day Tour from Chiang Mai",
@@ -57,7 +57,7 @@ const activities: Activity[] = [
       "Full-day tour to Thailand's highest peak with twin pagodas, Karen tribal village and waterfalls.",
     price: 4900,
     image: inthanon,
-    slug: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/",
+    slug: "/thailand/chiang-mai-activities/doi-inthanon-national-park-full-day-tour/",
   },
   {
     title: "Chiang Rai Day Trip: Golden Triangle with Long Neck Tribe",
@@ -65,7 +65,7 @@ const activities: Activity[] = [
       "Visit the White Temple, Black House, Golden Triangle and Long Neck Karen village on a full-day Chiang Rai trip.",
     price: 6000,
     image: goldenTriangle,
-    slug: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/",
+    slug: "/thailand/chiang-mai-activities/chiang-rai-golden-triangle-long-neck-tribe-day-trip/",
   },
 ];
 

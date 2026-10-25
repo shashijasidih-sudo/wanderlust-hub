@@ -239,7 +239,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: bangkokTemple,
     date: "Feb 28, 2026",
     readTime: "9 min read",
-    link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/",
+    link: "/thailand/bangkok-activities/wat-arun-wat-pho-golden-buddha-tour/",
     external: true,
   },
   {
@@ -250,7 +250,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: cruiseNight,
     date: "Mar 2, 2026",
     readTime: "7 min read",
-    link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/",
+    link: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/",
     external: true,
   },
   {
@@ -261,7 +261,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: bangkokPagodaSunset,
     date: "Feb 18, 2026",
     readTime: "10 min read",
-    link: "/thailand/bangkok/ayutthaya-sunset-river-cruise/",
+    link: "/thailand/bangkok-activities/ayutthaya-sunset-river-cruise/",
     external: true,
   },
   {

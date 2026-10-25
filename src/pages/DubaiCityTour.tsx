@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { dubaiCityTourFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/city-tour/",
+  path: "/dubai-activities/city-tour/",
   area: "creek",
   seoTitle: "Dubai City Tour with Hotel Transfers | Yellodae",
   seoDescription: "Book a guided Dubai city tour covering Burj Al Arab, Dubai Frame, Al Fahidi, Creek abra ride and the souks. Hotel transfers, INR pricing, Indian support.",

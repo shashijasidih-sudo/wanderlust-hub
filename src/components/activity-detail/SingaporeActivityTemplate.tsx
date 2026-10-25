@@ -578,16 +578,16 @@ const IndianTravelerCompanion = ({ config }: { config: SingaporeActivityConfig }
 /* ---------------------- complete your Singapore trip ---------------------- */
 
 const TRIP_POOL = [
-  { title: "Universal Studios Singapore", desc: "Tickets + hotel transfers combo.", image: ussImg, slug: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-  { title: "Gardens by the Bay", desc: "Flower Dome, Cloud Forest & Supertrees.", image: gardensImg, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers/" },
-  { title: "Night Safari", desc: "World's first nocturnal wildlife park.", image: nightSafariImg, slug: "/singapore/night-safari-singapore-tickets-and-transfers/" },
-  { title: "Wings of Time", desc: "Sentosa's spectacular outdoor night show.", image: wingsOfTimeImg, slug: "/singapore/wings-of-time-show-sentosa-tickets/" },
-  { title: "Sentosa Cable Car", desc: "Iconic ride over the harbour to Sentosa.", image: cableCarImg, slug: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
-  { title: "Singapore City Tour", desc: "Guided half-day tour with transfers.", image: cityTourImg, slug: "/singapore/singapore-city-tour/" },
-  { title: "Singapore Zoo", desc: "Award-winning open-concept rainforest zoo.", image: singaporeZooImg, slug: "/singapore/singapore-zoo-tickets/" },
-  { title: "River Wonders", desc: "Giant pandas & Amazon river habitats.", image: riverSafariImg, slug: "/singapore/river-wonders-singapore-tickets/" },
-  { title: "Singapore River Cruise", desc: "Bumboat ride past Clarke Quay & Merlion.", image: cityTourImg, slug: "/singapore/singapore-river-cruise-tickets-and-transfers/" },
-  { title: "Singapore Flyer", desc: "Giant observation wheel over Marina Bay.", image: gardensImg, slug: "/singapore/singapore-flyer-tickets-and-transfers/" },
+  { title: "Universal Studios Singapore", desc: "Tickets + hotel transfers combo.", image: ussImg, slug: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/" },
+  { title: "Gardens by the Bay", desc: "Flower Dome, Cloud Forest & Supertrees.", image: gardensImg, slug: "/singapore-activities/gardens-by-the-bay-tickets-and-transfers/" },
+  { title: "Night Safari", desc: "World's first nocturnal wildlife park.", image: nightSafariImg, slug: "/singapore-activities/night-safari-singapore-tickets-and-transfers/" },
+  { title: "Wings of Time", desc: "Sentosa's spectacular outdoor night show.", image: wingsOfTimeImg, slug: "/singapore-activities/wings-of-time-show-sentosa-tickets/" },
+  { title: "Sentosa Cable Car", desc: "Iconic ride over the harbour to Sentosa.", image: cableCarImg, slug: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
+  { title: "Singapore City Tour", desc: "Guided half-day tour with transfers.", image: cityTourImg, slug: "/singapore-activities/singapore-city-tour/" },
+  { title: "Singapore Zoo", desc: "Award-winning open-concept rainforest zoo.", image: singaporeZooImg, slug: "/singapore-activities/singapore-zoo-tickets/" },
+  { title: "River Wonders", desc: "Giant pandas & Amazon river habitats.", image: riverSafariImg, slug: "/singapore-activities/river-wonders-singapore-tickets/" },
+  { title: "Singapore River Cruise", desc: "Bumboat ride past Clarke Quay & Merlion.", image: cityTourImg, slug: "/singapore-activities/singapore-river-cruise-tickets-and-transfers/" },
+  { title: "Singapore Flyer", desc: "Giant observation wheel over Marina Bay.", image: gardensImg, slug: "/singapore-activities/singapore-flyer-tickets-and-transfers/" },
 ];
 
 const CompleteYourSingaporeTrip = ({ currentPath, title }: { currentPath: string; title: string }) => {

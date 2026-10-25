@@ -45,8 +45,8 @@ const BlogBigBusSingaporeHopOnHopOff = () => (
       { type: "paragraph", content: "Yes — especially for first-time visitors, families and short-stay travellers who want a stress-free guided overview of the city. It's not just transport, it's a complete sightseeing experience in itself." },
     ]}
     relatedActivities={[
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
-      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+      { title: "Singapore City Tour", link: "/singapore-activities/singapore-city-tour/" },
+      { title: "Sentosa Cable Car Tickets", link: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
     ]}
     relatedLinks={[
       { title: "Singapore City Tour with Shared Transfer", link: "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer/" },

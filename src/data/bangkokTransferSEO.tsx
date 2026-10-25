@@ -736,7 +736,7 @@ export const bangkokTransferSEO: Record<string, SEOEntry> = {
   },
 
   "bangkok-city-hourly-rental": {
-    newSlug: "/thailand/bangkok/bangkok-hotel-to-hotel-transfer-4-hours/",
+    newSlug: "/thailand/bangkok-activities/bangkok-hotel-to-hotel-transfer-4-hours/",
     oldSlug: "/thailand/bangkok/city-hourly-rental/",
     gallery: hourlyGallery,
     seoContent: (

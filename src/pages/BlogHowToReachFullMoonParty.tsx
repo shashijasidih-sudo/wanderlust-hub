@@ -32,7 +32,7 @@ const Blog = () => (
       { type: "list", items: ["Flight Phuket → Koh Samui","Ferry → Koh Phangan","Cost: ₹6,000 – ₹10,000"] },
       { type: "heading", content: "Koh Samui to Full Moon Party" },
       { type: "list", items: ["Speedboat: 20–30 mins","Ferry: 45–60 mins","Most travelers stay in Koh Samui and take party transfers"] },
-      { type: "cta", content: "The easiest option: bundled Samui → Koh Phangan return transfer + party entry", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/", linkText: "Book Combo Transfer" },
+      { type: "cta", content: "The easiest option: bundled Samui → Koh Phangan return transfer + party entry", link: "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/", linkText: "Book Combo Transfer" },
       { type: "mid-activities", destination: "thailand", heading: "Plan Your Koh Samui Stay" },
       { type: "heading", content: "Best Timing Strategy" },
       { type: "list", items: ["Arrive before sunset","Return early morning (5–7 AM)"] },
@@ -43,7 +43,7 @@ const Blog = () => (
       { type: "heading", content: "Cost Summary" },
       { type: "list", items: ["Bangkok → Koh Phangan: ₹2,000 – ₹12,000","Phuket → Koh Phangan: ₹2,500 – ₹10,000"] },
       { type: "tip-box", content: "Reaching the Full Moon Party may take effort — but it's absolutely worth it. Plan smart and book early." },
-      { type: "cta", content: "Book Full Moon Party with transfer from Koh Samui", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/", linkText: "Book Now" },
+      { type: "cta", content: "Book Full Moon Party with transfer from Koh Samui", link: "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/", linkText: "Book Now" },
     ]}
     relatedActivities={[
       { title: "First-Time Full Moon Party Beginner Guide", link: "/thailand/koh-samui/destination-guides/activity/first-time-full-moon-party-koh-samui-beginner-guide/" },
@@ -52,7 +52,7 @@ const Blog = () => (
       { title: "Full Moon Party Guide for Indians", link: "/thailand/koh-samui/destination-guides/activity/full-moon-party-thailand-guide-for-indians/" },
     ]}
     relatedLinks={[
-      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" },
+      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/" },
       { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
       { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/" },

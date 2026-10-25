@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { globalVillageFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/global-village/",
+  path: "/dubai-activities/global-village/",
   area: "garden",
   seoTitle: "Global Village Dubai Tickets with Transfer | Yellodae",
   seoDescription: "Book Global Village Dubai entry tickets with hotel transfers. 90+ pavilions, street food, shows and fireworks. INR pricing and Indian traveller support.",

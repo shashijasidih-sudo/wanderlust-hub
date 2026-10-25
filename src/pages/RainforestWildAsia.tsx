@@ -4,7 +4,7 @@ const RainforestWildAsia = () => (
   <SingaporeActivityTemplate
     config={{
       tourKey: "rainforest-wild-asia",
-      path: "/singapore/rainforest-wild-asia-tickets/",
+      path: "/singapore-activities/rainforest-wild-asia-tickets/",
       seoTitle: "Rainforest Wild Asia Tickets with Transfer | Mandai Singapore",
       seoDescription:
         "Book Rainforest Wild Asia tickets with hotel transfers — Singapore's newest immersive rainforest park at Mandai with cave trails and canopy walks. Book in INR.",

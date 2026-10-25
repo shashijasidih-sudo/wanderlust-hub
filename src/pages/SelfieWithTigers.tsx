@@ -106,7 +106,7 @@ const SelfieWithTigers = () => {
       tourData={tourData}
       contentAfterOverview={<TourItinerarySection />}
       config={{
-        path: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/",
+        path: "/thailand/phuket-activities/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/",
         seoTitle: "Tiger Kingdom Phuket Tickets with City Tour & Transfers | INR",
         seoDescription: "Book Tiger Kingdom Phuket tickets with a city tour and hotel transfers. Photo session with tigers, Big Buddha and Old Town. Instant confirmation in INR.",
         whatsappTopic: "Tiger Kingdom Phuket with city tour",

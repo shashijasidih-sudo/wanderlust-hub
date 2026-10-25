@@ -61,7 +61,7 @@ const activities: Activity[] = [
     description: "Visit Wat Arun, Wat Pho and the Grand Palace with a scenic canal ride.",
     price: 10845,
     image: bangkokTemple1,
-    slug: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/",
+    slug: "/thailand/bangkok-activities/wat-arun-wat-pho-golden-buddha-tour/",
     category: "Temple & Cultural Tours",
   },
   {
@@ -69,7 +69,7 @@ const activities: Activity[] = [
     description: "Private guided tour of Wat Arun, Wat Pho and Wat Traimit with hotel transfers.",
     price: 4915,
     image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=800&auto=format&fit=crop",
-    slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/",
+    slug: "/thailand/bangkok-activities/three-temples-bangkok-city-tour-with-transfer/",
     category: "Temple & Cultural Tours",
   },
   {
@@ -77,7 +77,7 @@ const activities: Activity[] = [
     description: "Explore Bangkok's iconic Grand Palace, Emerald Buddha and Reclining Buddha.",
     price: 2646,
     image: "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=800&auto=format&fit=crop",
-    slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/",
+    slug: "/thailand/bangkok-activities/grand-palace-wat-phra-kaew-tour/",
     category: "Temple & Cultural Tours",
   },
   {
@@ -85,7 +85,7 @@ const activities: Activity[] = [
     description: "Half-day Bangkok temple and city tour ending at the famous Gems Gallery.",
     price: 1960,
     image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&auto=format&fit=crop",
-    slug: "/thailand/bangkok/gems-gallery-bangkok-tickets/",
+    slug: "/thailand/bangkok-activities/gems-gallery-bangkok-tickets/",
     category: "Temple & Cultural Tours",
   },
   {
@@ -93,7 +93,7 @@ const activities: Activity[] = [
     description: "Sunset at Wat Arun followed by a guided Chinatown street food walk.",
     price: 5044,
     image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=800&auto=format&fit=crop",
-    slug: "/thailand/bangkok/wat-arun-chinatown-tour/",
+    slug: "/thailand/bangkok-activities/wat-arun-chinatown-tour/",
     category: "Temple & Cultural Tours",
   },
   {
@@ -101,7 +101,7 @@ const activities: Activity[] = [
     description: "City tour covering Golden Buddha, Marble Temple and the Reclining Buddha.",
     price: 3642,
     image: bangkokTemple1,
-    slug: "/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour/",
+    slug: "/thailand/bangkok-activities/golden-buddha-marble-temple-bangkok-city-tour/",
     category: "Temple & Cultural Tours",
   },
   {
@@ -109,7 +109,7 @@ const activities: Activity[] = [
     description: "Full-day UNESCO Ayutthaya temple tour with comfortable road transfers.",
     price: 5922,
     image: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?w=800&auto=format&fit=crop",
-    slug: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok/",
+    slug: "/thailand/bangkok-activities/ayutthaya-day-tour-from-bangkok/",
     category: "Temple & Cultural Tours",
   },
   {
@@ -117,7 +117,7 @@ const activities: Activity[] = [
     description: "Cruise the Chao Phraya River and explore riverside Bangkok highlights.",
     price: 3570,
     image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop",
-    slug: "/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour/",
+    slug: "/thailand/bangkok-activities/chao-phraya-river-boat-bangkok-city-tour/",
     category: "Temple & Cultural Tours",
   },
 
@@ -127,7 +127,7 @@ const activities: Activity[] = [
     description: "Premium dinner cruise on the Chao Phraya River with private hotel transfer.",
     price: 5545,
     image: cruiseNight2,
-    slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/",
+    slug: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/",
     category: "Dinner Cruises",
   },
   {
@@ -135,7 +135,7 @@ const activities: Activity[] = [
     description: "Iconic Bangkok river dinner cruise with shared hotel transfer.",
     price: 4410,
     image: cruiseNight2,
-    slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer/",
+    slug: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-transfer/",
     category: "Dinner Cruises",
   },
   {
@@ -143,7 +143,7 @@ const activities: Activity[] = [
     description: "Indian or international dinner buffet aboard the Chao Phraya Princess.",
     price: 3150,
     image: cruiseNight1,
-    slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise/",
+    slug: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise/",
     category: "Dinner Cruises",
   },
   {
@@ -151,7 +151,7 @@ const activities: Activity[] = [
     description: "Special Valentine's Day celebration dinner cruise on the Chao Phraya.",
     price: 3150,
     image: cruiseNight1,
-    slug: "/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise/",
+    slug: "/thailand/bangkok-activities/chao-phraya-princess-valentine-dinner-cruise/",
     category: "Dinner Cruises",
   },
   {
@@ -159,7 +159,7 @@ const activities: Activity[] = [
     description: "Romantic dinner cruise on the Viva Alangka with hotel transfer included.",
     price: 4915,
     image: cruiseNight1,
-    slug: "/thailand/bangkok/viva-alangka-dinner-cruise/",
+    slug: "/thailand/bangkok-activities/viva-alangka-dinner-cruise/",
     category: "Dinner Cruises",
   },
   {
@@ -167,7 +167,7 @@ const activities: Activity[] = [
     description: "Sightseeing day in Ayutthaya capped with a beautiful sunset cruise back.",
     price: 5245,
     image: ayutthayaSunset1,
-    slug: "/thailand/bangkok/ayutthaya-sunset-river-cruise/",
+    slug: "/thailand/bangkok-activities/ayutthaya-sunset-river-cruise/",
     category: "Dinner Cruises",
   },
 
@@ -177,7 +177,7 @@ const activities: Activity[] = [
     description: "Dream World admission with Super Visa, lunch and round-trip transfer.",
     price: 4285,
     image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&auto=format&fit=crop",
-    slug: "/thailand/bangkok/dream-world-bangkok-tickets/",
+    slug: "/thailand/bangkok-activities/dream-world-bangkok-tickets/",
     category: "Theme Parks & Attractions",
   },
   {
@@ -185,7 +185,7 @@ const activities: Activity[] = [
     description: "Two of Bangkok's top family attractions on a single combo ticket.",
     price: 4215,
     image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop",
-    slug: "/thailand/bangkok/sea-life-madame-tussauds-tickets/",
+    slug: "/thailand/bangkok-activities/sea-life-madame-tussauds-tickets/",
     category: "Theme Parks & Attractions",
   },
   {
@@ -193,7 +193,7 @@ const activities: Activity[] = [
     description: "Take in 360° city views from Bangkok's tallest glass-floor observation deck.",
     price: 4536,
     image: bangkokSkywalkHero,
-    slug: "/thailand/bangkok/mahanakhon-skywalk-tickets/",
+    slug: "/thailand/bangkok-activities/mahanakhon-skywalk-tickets/",
     category: "Theme Parks & Attractions",
   },
   {
@@ -201,7 +201,7 @@ const activities: Activity[] = [
     description: "120-minute traditional Thai massage gift voucher at Health Land.",
     price: 2775,
     image: massageHero,
-    slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok/",
+    slug: "/thailand/bangkok-activities/thai-massage-spa-deals-bangkok/",
     category: "Theme Parks & Attractions",
   },
 
@@ -211,7 +211,7 @@ const activities: Activity[] = [
     description: "Iconic railway market plus the Damnoen Saduak floating market in one tour.",
     price: 3405,
     image: floatingMarket1,
-    slug: "/thailand/bangkok/maeklong-floating-market-tour/",
+    slug: "/thailand/bangkok-activities/maeklong-floating-market-tour/",
     category: "Floating Market Tours",
   },
 
@@ -221,7 +221,7 @@ const activities: Activity[] = [
     description: "Hop on a tuk-tuk and explore Bangkok's temples, markets and street food after dark.",
     price: 5040,
     image: "https://images.unsplash.com/photo-1534008897995-27a23e859048?w=800&auto=format&fit=crop",
-    slug: "/thailand/bangkok/tuk-tuk-night-tour-bangkok/",
+    slug: "/thailand/bangkok-activities/tuk-tuk-night-tour-bangkok/",
     category: "Night Tours & Experiences",
   },
 ];
@@ -542,7 +542,7 @@ const BangkokThingsToDo = () => {
               desc: "Flexible 4-hour private vehicle rental for city tours, shopping runs or hotel-to-hotel moves within Bangkok.",
               price: 4200,
               img: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?w=800&auto=format&fit=crop",
-              slug: "/thailand/bangkok/bangkok-hotel-to-hotel-transfer-4-hours/",
+              slug: "/thailand/bangkok-activities/bangkok-hotel-to-hotel-transfer-4-hours/",
             },
           ].map((t) => (
             <article key={t.slug} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
@@ -629,16 +629,16 @@ const BangkokThingsToDo = () => {
             <h3 className="text-lg font-semibold">Popular Bangkok Attractions</h3>
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {[
-                { label: "Grand Palace & Emerald Buddha", to: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/" },
-                { label: "Wat Arun & Chinatown Tour", to: "/thailand/bangkok/wat-arun-chinatown-tour/" },
-                { label: "Three Temples City Tour", to: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/" },
-                { label: "Chao Phraya Princess Dinner Cruise", to: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer/" },
-                { label: "Mahanakhon Skywalk Tickets", to: "/thailand/bangkok/mahanakhon-skywalk-tickets/" },
-                { label: "Sea Life & Madame Tussauds", to: "/thailand/bangkok/sea-life-madame-tussauds-tickets/" },
-                { label: "Dream World Bangkok Tickets", to: "/thailand/bangkok/dream-world-bangkok-tickets/" },
-                { label: "Maeklong Floating Market Tour", to: "/thailand/bangkok/maeklong-floating-market-tour/" },
-                { label: "Ayutthaya Day Tour from Bangkok", to: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok/" },
-                { label: "Bangkok Tuk-Tuk Night Tour", to: "/thailand/bangkok/tuk-tuk-night-tour-bangkok/" },
+                { label: "Grand Palace & Emerald Buddha", to: "/thailand/bangkok-activities/grand-palace-wat-phra-kaew-tour/" },
+                { label: "Wat Arun & Chinatown Tour", to: "/thailand/bangkok-activities/wat-arun-chinatown-tour/" },
+                { label: "Three Temples City Tour", to: "/thailand/bangkok-activities/three-temples-bangkok-city-tour-with-transfer/" },
+                { label: "Chao Phraya Princess Dinner Cruise", to: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-transfer/" },
+                { label: "Mahanakhon Skywalk Tickets", to: "/thailand/bangkok-activities/mahanakhon-skywalk-tickets/" },
+                { label: "Sea Life & Madame Tussauds", to: "/thailand/bangkok-activities/sea-life-madame-tussauds-tickets/" },
+                { label: "Dream World Bangkok Tickets", to: "/thailand/bangkok-activities/dream-world-bangkok-tickets/" },
+                { label: "Maeklong Floating Market Tour", to: "/thailand/bangkok-activities/maeklong-floating-market-tour/" },
+                { label: "Ayutthaya Day Tour from Bangkok", to: "/thailand/bangkok-activities/ayutthaya-day-tour-from-bangkok/" },
+                { label: "Bangkok Tuk-Tuk Night Tour", to: "/thailand/bangkok-activities/tuk-tuk-night-tour-bangkok/" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">

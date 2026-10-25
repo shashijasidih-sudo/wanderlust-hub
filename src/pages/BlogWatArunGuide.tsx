@@ -77,7 +77,7 @@ const BlogWatArunGuide = () => (
       {
         type: "cta",
         content: "See Wat Arun and more on a guided temple tour",
-        link: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/",
+        link: "/thailand/bangkok-activities/wat-arun-wat-pho-golden-buddha-tour/",
         linkText: "Book Temple Tour",
       },
     ]}

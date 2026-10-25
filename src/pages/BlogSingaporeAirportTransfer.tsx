@@ -34,8 +34,8 @@ const BlogSingaporeAirportTransfer = () => {
       relatedLinks={[
         { title: "Sentosa Activities Guide", link: "/blog/sentosa-activities-singapore/" },
         { title: "Singapore Transfers", link: "/singapore/budget-airport-transfers/" },
-        { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
-        { title: "Gardens by the Bay", link: "/singapore/gardens-by-the-bay-tickets-and-transfers/" },
+        { title: "Singapore City Tour", link: "/singapore-activities/singapore-city-tour/" },
+        { title: "Gardens by the Bay", link: "/singapore-activities/gardens-by-the-bay-tickets-and-transfers/" },
       ]}
       sections={[
         {

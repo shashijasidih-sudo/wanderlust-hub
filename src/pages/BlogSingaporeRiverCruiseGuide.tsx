@@ -44,7 +44,7 @@ const BlogSingaporeRiverCruiseGuide = () => (
       { type: "paragraph", content: "Yes — if you want a calm, scenic break from walking and a chance to see Singapore from a completely different angle. It's not a high-adrenaline attraction, but it delivers one of the most relaxing premium experiences in the city." },
     ]}
     relatedActivities={[
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
+      { title: "Singapore City Tour", link: "/singapore-activities/singapore-city-tour/" },
       { title: "Big Bus Hop-On Hop-Off", link: "/singapore/things-to-do/" },
     ]}
     relatedLinks={[

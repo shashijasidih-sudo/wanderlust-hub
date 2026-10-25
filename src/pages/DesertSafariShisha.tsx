@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { desertSafariFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/desert-safari-shisha/",
+  path: "/dubai-activities/desert-safari-shisha/",
   area: "desert",
   seoTitle: "Dubai Desert Safari with Shisha & BBQ Dinner | Yellodae",
   seoDescription: "Book Dubai desert safari with shisha, dune bashing, camel ride, live shows and BBQ dinner. Sharing hotel transfers, INR pricing and Indian support.",

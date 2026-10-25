@@ -5,7 +5,7 @@ import { pattayaSheetContent } from "@/data/pattayaSheetContent";
 import { adultShowPattayaFaqs } from "@/data/pattayaActivityFaqs";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/pattaya/99-show-pattaya-big-eye-with-transfer/",
+  path: "/thailand/pattaya-activities/99-show-pattaya-big-eye-with-transfer/",
   city: "pattaya",
   area: "show",
   seoTitle: "Big Eye 99 Show Pattaya Tickets with Transfer | Yellodae",

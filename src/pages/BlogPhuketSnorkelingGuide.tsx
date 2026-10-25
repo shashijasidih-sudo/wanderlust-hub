@@ -54,7 +54,7 @@ const BlogPhuketSnorkelingGuide = () => (
     relatedActivities={[
       { title: "Coral Island Tour", link: "/thailand/phuket/coral-island-tour-with-transfer/" },
       { title: "Khai Islands Tour", link: "/thailand/phuket/khai-island-tour-with-transfer/" },
-      { title: "Phi Phi, Maya, Khai Speedboat", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/" },
+      { title: "Phi Phi, Maya, Khai Speedboat", link: "/thailand/phuket-activities/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/" },
     ]}
     relatedLinks={[
       { title: "Best Phi Phi Island Tours", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours/" },

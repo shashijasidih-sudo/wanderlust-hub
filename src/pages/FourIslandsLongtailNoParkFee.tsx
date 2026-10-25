@@ -31,7 +31,7 @@ const FourIslandsLongtailNoParkFee = () => {
       tourData={tourData}
       contentAfterOverview={<KrabiTourItinerary tourKey="four-islands-longtail" />}
       config={{
-        path: "/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer/",
+        path: "/thailand/krabi-activities/4-island-tour-longtail-boat-no-park-fee-with-transfer/",
         seoTitle: "4 Island Tour Krabi Longtail (No Park Fee) with Transfers | Yellodae",
         seoDescription:
           "Budget-friendly Krabi 4 Island longtail tour excluding national park fees — Poda, Chicken, Tub Island and Phra Nang with hotel transfers and INR pricing.",

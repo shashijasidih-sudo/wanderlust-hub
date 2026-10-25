@@ -38,7 +38,7 @@ const JamesBondIsland = () => {
       tourData={pageTourData}
       contentAfterOverview={<PhuketTourItinerary tourKey="james-bond-island" />}
       config={{
-        path: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/",
+        path: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/",
         seoTitle: "James Bond Island Speedboat Tour from Phuket | Book in INR",
         seoDescription: "Book the James Bond Island speedboat tour from Phuket with hotel transfers, Phang Nga Bay canoeing, Koh Panyee lunch and instant confirmation in INR.",
         whatsappTopic: "the James Bond Island speedboat tour",

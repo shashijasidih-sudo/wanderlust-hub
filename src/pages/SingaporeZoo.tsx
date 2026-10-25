@@ -4,7 +4,7 @@ const SingaporeZoo = () => (
   <SingaporeActivityTemplate
     config={{
       tourKey: "singapore-zoo",
-      path: "/singapore/singapore-zoo-tickets/",
+      path: "/singapore-activities/singapore-zoo-tickets/",
       seoTitle: "Singapore Zoo Tickets with Tram Ride | Mandai | Book in INR",
       seoDescription:
         "Book Singapore Zoo tickets with tram ride — open-concept rainforest zoo with 4,200+ animals, Fragile Forest and animal shows. Instant confirmation, Indian WhatsApp support.",

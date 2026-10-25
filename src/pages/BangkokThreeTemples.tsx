@@ -47,7 +47,7 @@ const BangkokThreeTemples = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-three-temples" />}
       config={{
-        path: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/",
+        path: "/thailand/bangkok-activities/three-temples-bangkok-city-tour-with-transfer/",
         seoTitle: "Three Temples Bangkok City Tour with Transfers | Book in INR",
         seoDescription:
           "Private Bangkok three-temple city tour covering Wat Traimit, Wat Pho and Wat Arun with hotel transfers. Instant confirmation, Indian support and INR pricing.",

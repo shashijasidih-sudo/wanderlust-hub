@@ -50,8 +50,8 @@ const BlogPhuketVsKrabiForIndians = () => (
       { type: "cta", content: "Plan a Phuket + Krabi combo trip", link: "/thailand/phuket/things-to-do/", linkText: "Explore Phuket Tours" },
     ]}
     relatedActivities={[
-      { title: "Full-Day Phi Phi Island Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
-      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+      { title: "Full-Day Phi Phi Island Tour", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/" },
       { title: "Phuket to Krabi Transfer", link: "/thailand/phuket/phuket-to-krabi/" },
     ]}
     relatedLinks={[

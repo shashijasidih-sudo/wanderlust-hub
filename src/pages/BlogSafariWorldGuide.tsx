@@ -99,7 +99,7 @@ const BlogSafariWorldGuide = () => (
       {
         type: "cta",
         content: "Book Safari World with hotel transfer",
-        link: "/thailand/bangkok/safari-world/",
+        link: "/thailand/bangkok-activities/safari-world/",
         linkText: "Book Safari World",
       },
     ]}

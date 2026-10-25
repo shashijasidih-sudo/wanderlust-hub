@@ -6,7 +6,7 @@ import { NongNoochGardenSEO } from "@/components/activity-detail/PattayaActivity
 import { nongNoochGardenFaqs } from "@/data/pattayaActivityFaqs";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/pattaya/nong-nooch-tropical-garden-tickets/",
+  path: "/thailand/pattaya-activities/nong-nooch-tropical-garden-tickets/",
   city: "pattaya",
   area: "city",
   seoTitle: "Nong Nooch Tropical Garden Tickets with Show, Lunch & Transfer | Yellodae",

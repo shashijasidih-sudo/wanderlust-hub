@@ -41,8 +41,8 @@ const BlogWingsOfTimeSingaporeShow = () => (
       { type: "paragraph", content: "Yes — it's one of the few attractions that delivers a complete sensory experience in just 25 minutes. Even on a tight schedule, it's worth slotting in as the perfect end to your Sentosa day." },
     ]}
     relatedActivities={[
-      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
-      { title: "Sentosa 4D Adventureland", link: "/singapore/sentosa-4d-adventureland-tickets/" },
+      { title: "Sentosa Cable Car Tickets", link: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
+      { title: "Sentosa 4D Adventureland", link: "/singapore-activities/sentosa-4d-adventureland-tickets/" },
     ]}
     relatedLinks={[
       { title: "Sentosa Cable Car Ride Guide (Mount Faber Line)", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line/" },

@@ -30,7 +30,7 @@ const SevenIslandsSpeedboat = () => {
       tourData={tourData}
       contentAfterOverview={<KrabiTourItinerary tourKey="seven-islands-speedboat" />}
       config={{
-        path: "/thailand/krabi/7-islands-tour-speedboat-with-transfer/",
+        path: "/thailand/krabi-activities/7-islands-tour-speedboat-with-transfer/",
         seoTitle: "7 Islands Sunset Speedboat Tour Krabi with Transfers | Yellodae",
         seoDescription:
           "Book the Krabi 7 Islands sunset speedboat tour — snorkelling, beach BBQ and plankton swim with hotel transfers, INR pricing and Indian support.",

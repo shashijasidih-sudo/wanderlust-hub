@@ -47,7 +47,7 @@ const BangkokWatArunPhoTraimit = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-wat-arun-pho-traimit" />}
       config={{
-        path: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/",
+        path: "/thailand/bangkok-activities/wat-arun-wat-pho-golden-buddha-tour/",
         seoTitle: "Wat Arun, Wat Pho & Golden Buddha Tour Bangkok | Book in INR",
         seoDescription:
           "Book the Wat Arun, Wat Pho and Golden Buddha temple tour in Bangkok with transfers. Guided half-day heritage tour, instant confirmation and INR pricing for Indian travellers.",

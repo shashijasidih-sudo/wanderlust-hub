@@ -33,7 +33,7 @@ const VivaAlangkaCruise = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="viva-alangka-cruise" />}
       config={{
-        path: "/thailand/bangkok/viva-alangka-dinner-cruise/",
+        path: "/thailand/bangkok-activities/viva-alangka-dinner-cruise/",
         seoTitle: "Viva Alangka Dinner Cruise Bangkok with Transfers | Book in INR",
         seoDescription:
           "Book the Viva Alangka dinner cruise from Asiatique with hotel transfers. Buffet dinner, live music and illuminated Chao Phraya views. Instant confirmation in INR.",

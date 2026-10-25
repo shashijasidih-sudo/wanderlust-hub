@@ -32,7 +32,7 @@ const Blog = () => (
       { type: "list", items: ["Krabi — Indian, vegetarian, Thai, international; meals ₹150–₹800","Phi Phi — limited variety, slightly pricier; meals ₹250–₹1,200","Verdict — Krabi has better food options"] },
       { type: "heading", content: "5. Activities & Tours" },
       { type: "list", items: ["Krabi — 4 Island Tour, Hong Island, Phi Phi day trips, jungle, hot springs","Phi Phi — snorkeling, diving, beach relaxation, viewpoints","Verdict — Krabi offers more variety"] },
-      { type: "cta", content: "Book the Phi Phi Island day tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/", linkText: "Book Phi Phi Tour" },
+      { type: "cta", content: "Book the Phi Phi Island day tour from Krabi", link: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/", linkText: "Book Phi Phi Tour" },
       { type: "heading", content: "6. Nightlife Comparison" },
       { type: "list", items: ["Krabi — chill nightlife, beach bars, night markets","Phi Phi — lively party scene, fire shows, beach clubs","Verdict — Phi Phi wins for nightlife"] },
       { type: "heading", content: "7. Crowd & Space" },
@@ -53,9 +53,9 @@ const Blog = () => (
       { type: "cta", content: "Book your Krabi airport transfer", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" },
-      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
-      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/" },
+      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },
+      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/" },
       { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
     ]}
     relatedLinks={[

@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { dhowCruiseFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/dhow-cruise-creek-upper-deck/",
+  path: "/dubai-activities/dhow-cruise-creek-upper-deck/",
   area: "creek",
   seoTitle: "Dhow Creek Cruise Dinner Upper Deck with Transfers | Yellodae",
   seoDescription: "Book Dubai Creek dhow dinner cruise upper deck open-air seating with buffet dinner, live shows and hotel transfers. INR pricing and Indian support.",

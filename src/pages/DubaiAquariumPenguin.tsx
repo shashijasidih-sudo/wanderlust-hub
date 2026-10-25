@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { dubaiAquariumFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/aquarium-penguin/",
+  path: "/dubai-activities/aquarium-penguin/",
   area: "downtown",
   seoTitle: "Dubai Aquarium & Underwater Zoo with Penguin Cove | Yellodae",
   seoDescription: "Book Dubai Aquarium and Underwater Zoo tickets with Penguin Cove inside Dubai Mall. Instant confirmation, INR pricing and Indian traveller support.",

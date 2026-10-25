@@ -9,7 +9,7 @@ import nightlife from "@/assets/pattaya-nightlife-1.webp";
 import cityImg from "@/assets/city-kohsamui.jpg";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/",
+  path: "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/",
   city: "koh-samui",
   area: "party",
   seoTitle: "Full Moon Party Koh Phangan Tickets with Transfer from Koh Samui | Yellodae",

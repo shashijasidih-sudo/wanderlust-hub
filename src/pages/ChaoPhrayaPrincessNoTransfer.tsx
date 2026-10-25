@@ -28,7 +28,7 @@ const ChaoPhrayaPrincessNoTransfer = () => {
       <BangkokActivityTemplate
       tourData={tourData}
       config={{
-        path: "/thailand/bangkok/chao-phraya-princess-dinner-cruise/",
+        path: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise/",
         seoTitle: "Chao Phraya Princess Dinner Cruise Tickets (No Transfer) | Book in INR",
         seoDescription:
           "Book Chao Phraya Princess dinner cruise tickets in Bangkok with Indian or international buffet. Ticket-only option without transfers. Instant confirmation in INR.",

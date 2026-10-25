@@ -26,16 +26,16 @@ import krabiBoatTour from "@/assets/krabi-boat-tour-1.webp";
 import krabiTempleWoman from "@/assets/krabi-temple-woman-1.jpg";
 
 const activities = [
-  { title: "4 Islands by Longtail Boat (No National Park Fee)", price: 2415, image: krabiLongtailBoats, slug: "/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer/" },
-  { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 4589, image: krabiKayaks, slug: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
-  { title: "Emerald Pool + Hot Springs + Tiger Cave with Lunch", price: 3140, image: krabiTempleWoman, slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
-  { title: "Hong Islands by Longtail Boat", price: 3381, image: krabiIslandView, slug: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/" },
-  { title: "7 Islands Sunset Tour BBQ with Longtail boat", price: 3743, image: krabiSailboat, slug: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer/" },
-  { title: "Hong Island Tour (By Speed Boat)", price: 4347, image: krabiSpeedboat, slug: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
-  { title: "4 Islands by Speedboat (With National Park Fee)", price: 4589, image: krabiTourBoat, slug: "/thailand/krabi/4-island-tour-speedboat-with-transfer/" },
-  { title: "Phi Phi Island by Speedboat with Transfer from Krabi", price: 4830, image: krabiBeachWoman, slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
-  { title: "7 Islands Sunset Tour BBQ with Speedboat", price: 4830, image: krabiBoatTour, slug: "/thailand/krabi/7-islands-tour-speedboat-with-transfer/" },
-  { title: "James Bond Island (Phang Nga Bay) Tour with Lunch By Long Tail Boat", price: 4951, image: krabiLongtailBoats, slug: "/thailand/krabi/james-bond-island/" },
+  { title: "4 Islands by Longtail Boat (No National Park Fee)", price: 2415, image: krabiLongtailBoats, slug: "/thailand/krabi-activities/4-island-tour-longtail-boat-no-park-fee-with-transfer/" },
+  { title: "4 Islands by Longtail Boat (With National Park Fee)", price: 4589, image: krabiKayaks, slug: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },
+  { title: "Emerald Pool + Hot Springs + Tiger Cave with Lunch", price: 3140, image: krabiTempleWoman, slug: "/thailand/krabi-activities/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
+  { title: "Hong Islands by Longtail Boat", price: 3381, image: krabiIslandView, slug: "/thailand/krabi-activities/hong-island-tour-longtail-boat-with-transfer/" },
+  { title: "7 Islands Sunset Tour BBQ with Longtail boat", price: 3743, image: krabiSailboat, slug: "/thailand/krabi-activities/7-islands-tour-longtail-boat-with-transfer/" },
+  { title: "Hong Island Tour (By Speed Boat)", price: 4347, image: krabiSpeedboat, slug: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/" },
+  { title: "4 Islands by Speedboat (With National Park Fee)", price: 4589, image: krabiTourBoat, slug: "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/" },
+  { title: "Phi Phi Island by Speedboat with Transfer from Krabi", price: 4830, image: krabiBeachWoman, slug: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
+  { title: "7 Islands Sunset Tour BBQ with Speedboat", price: 4830, image: krabiBoatTour, slug: "/thailand/krabi-activities/7-islands-tour-speedboat-with-transfer/" },
+  { title: "James Bond Island (Phang Nga Bay) Tour with Lunch By Long Tail Boat", price: 4951, image: krabiLongtailBoats, slug: "/thailand/krabi-activities/james-bond-island/" },
 ];
 
 const categories = [

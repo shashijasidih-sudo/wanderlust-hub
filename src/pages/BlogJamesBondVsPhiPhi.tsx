@@ -17,8 +17,8 @@ const BlogJamesBondVsPhiPhi = () => (
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Comparison Guides", link: "/thailand/phuket/destination-guides#comparison" }}
     comparisonItems={[
-      { name: "Phi Phi Island Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
-      { name: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+      { name: "Phi Phi Island Tour", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
+      { name: "James Bond Island Tour", link: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/" },
     ]}
     cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
     sections={[
@@ -27,7 +27,7 @@ const BlogJamesBondVsPhiPhi = () => (
       { type: "paragraph", content: "A full-day speedboat (or big boat) tour visiting Maya Bay, Pileh Lagoon, Monkey Beach, Bamboo Island and 2–3 snorkeling stops. The most popular tour in Phuket — beach + swim + snorkel focused." },
       { type: "heading", content: "What is James Bond Island Tour?" },
       { type: "paragraph", content: "A full-day tour to Phang Nga Bay covering Khao Phing Kan (James Bond Island), Koh Panyee floating village, sea cave canoeing and Hong Island. Less swimming, more sightseeing and cultural exposure." },
-      { type: "cta", content: "Pre-book the iconic Phi Phi speedboat day", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/", linkText: "Book Phi Phi Tour" },
+      { type: "cta", content: "Pre-book the iconic Phi Phi speedboat day", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/", linkText: "Book Phi Phi Tour" },
       { type: "heading", content: "Activities Compared" },
       { type: "list", items: ["Phi Phi: swimming, snorkeling, beach time", "James Bond: canoeing, cave exploration, floating village", "Phi Phi wins for water lovers; James Bond wins for sightseeing"] },
       { type: "heading", content: "Crowds" },
@@ -46,12 +46,12 @@ const BlogJamesBondVsPhiPhi = () => (
       ]},
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Phi Phi wins on Instagram-perfect beaches and water activities. James Bond wins on uniqueness, calm and culture. If you can pick only one, first-timers should go Phi Phi. If budget allows, do both." },
-      { type: "cta", content: "Add the James Bond Island day to your trip", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/", linkText: "Book James Bond Tour" },
+      { type: "cta", content: "Add the James Bond Island day to your trip", link: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/", linkText: "Book James Bond Tour" },
     ]}
     relatedActivities={[
-      { title: "Full-Day Phi Phi Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
-      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
-      { title: "James Bond Island Sea Canoe Tour", link: "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer/" },
+      { title: "Full-Day Phi Phi Speedboat Tour", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/" },
+      { title: "James Bond Island Sea Canoe Tour", link: "/thailand/phuket-activities/james-bond-island-sea-canoe-tour-with-transfer/" },
     ]}
     relatedLinks={[
       { title: "Phi Phi Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat/" },

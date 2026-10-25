@@ -33,7 +33,7 @@ const AyutthayaSunsetCruise = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="ayutthaya-sunset-cruise" />}
       config={{
-        path: "/thailand/bangkok/ayutthaya-sunset-river-cruise/",
+        path: "/thailand/bangkok-activities/ayutthaya-sunset-river-cruise/",
         seoTitle: "Ayutthaya Tour with Sunset River Cruise from Bangkok | Book in INR",
         seoDescription:
           "Book the Ayutthaya day tour with a sunset Chao Phraya river cruise back to Bangkok. UNESCO temples, buffet cruise and transfers with instant confirmation in INR.",

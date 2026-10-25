@@ -33,7 +33,7 @@ const Blog = () => (
       { type: "list", items: ["4 Island — swimming, sandbar walk, snorkeling, beach time","Hong Island — kayaking, lagoon entry, snorkeling, photography"] },
       { type: "heading", content: "6. Cost (2026, INR)" },
       { type: "list", items: ["4 Island longtail — ₹1,200–₹2,000","4 Island speedboat — ₹2,500–₹3,500","Hong Island longtail — ₹2,000–₹3,000","Hong Island speedboat — ₹3,500–₹4,500","Verdict — 4 Island Tour is cheaper"] },
-      { type: "cta", content: "Book the 4 Island Tour with hotel pickup", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/", linkText: "Book 4 Island Tour" },
+      { type: "cta", content: "Book the 4 Island Tour with hotel pickup", link: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/", linkText: "Book 4 Island Tour" },
       { type: "heading", content: "7. Travel Time & Distance" },
       { type: "list", items: ["4 Island — closer to Ao Nang, shorter sailing time","Hong Island — slightly further, longer boat ride"] },
       { type: "heading", content: "8. Photography & Views" },
@@ -47,16 +47,16 @@ const Blog = () => (
       { type: "heading", content: "12. Who Should Choose Which?" },
       { type: "list", items: ["First-timers & budget travelers → 4 Island Tour","Couples, photographers, peace-seekers → Hong Island","Want everything → do both"] },
       { type: "tip-box", content: "Best strategy — Day 1 do the 4 Island Tour, Day 2 do Hong Island. You get variety + premium experience without choosing." },
-      { type: "cta", content: "Book Hong Island Tour by speedboat", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/", linkText: "Book Hong Island Tour" },
+      { type: "cta", content: "Book Hong Island Tour by speedboat", link: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/", linkText: "Book Hong Island Tour" },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Want value and variety? Choose the 4 Island Tour. Want beauty and tranquility? Choose Hong Island. Either way, you won't be disappointed — and if your itinerary allows, do both for the complete Krabi island experience in 2026." },
       { type: "cta", content: "Book your Krabi airport transfer", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
-      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
-      { title: "4 Island Tour by Speedboat", link: "/thailand/krabi/4-island-tour-speedboat-with-transfer/" },
-      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
-      { title: "Hong Island Tour by Longtail Boat", link: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/" },
+      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },
+      { title: "4 Island Tour by Speedboat", link: "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/" },
+      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/" },
+      { title: "Hong Island Tour by Longtail Boat", link: "/thailand/krabi-activities/hong-island-tour-longtail-boat-with-transfer/" },
     ]}
     relatedLinks={[
       { title: "Is 4 Island Tour in Krabi Worth It?", link: "/thailand/krabi/destination-guides/micro/is-4-island-tour-krabi-worth-it/" },

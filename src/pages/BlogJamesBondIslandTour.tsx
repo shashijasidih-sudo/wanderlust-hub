@@ -47,7 +47,7 @@ const BlogJamesBondIslandTour = () => (
     ]}
     relatedActivities={[
       { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour-with-transfer/" },
-      { title: "Phi Phi Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "Phi Phi Speedboat Tour", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
       { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour/" },
     ]}
     relatedLinks={[

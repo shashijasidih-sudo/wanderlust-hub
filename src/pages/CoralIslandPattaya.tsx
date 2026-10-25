@@ -6,7 +6,7 @@ import { CoralIslandPattayaSEO } from "@/components/activity-detail/PattayaActiv
 import { coralIslandPattayaFaqs } from "@/data/pattayaActivityFaqs";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/",
+  path: "/thailand/pattaya-activities/coral-island-tour-with-transfer-and-indian-lunch/",
   city: "pattaya",
   area: "island",
   seoTitle: "Coral Island Pattaya Tour with Indian Lunch & Transfer | Yellodae",

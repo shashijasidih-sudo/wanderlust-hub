@@ -33,7 +33,7 @@ const BangkokGrandPalaceEmerald = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-grand-palace-emerald" />}
       config={{
-        path: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/",
+        path: "/thailand/bangkok-activities/grand-palace-wat-phra-kaew-tour/",
         seoTitle: "Grand Palace & Wat Phra Kaew Tour Bangkok | Book Tickets in INR",
         seoDescription:
           "Book the Grand Palace, Emerald Buddha and Reclining Buddha tour in Bangkok with transfers. Guided half-day royal heritage tour with instant confirmation in INR.",

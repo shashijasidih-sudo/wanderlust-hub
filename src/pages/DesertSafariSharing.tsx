@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { desertSafariFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/desert-safari-sharing/",
+  path: "/dubai-activities/desert-safari-sharing/",
   area: "desert",
   seoTitle: "Dubai Desert Safari with Sharing Transfer & BBQ | Yellodae",
   seoDescription: "Book Dubai desert safari with sharing hotel transfers, dune bashing, camel rides, tanoura show and BBQ dinner. Instant confirmation and INR pricing.",

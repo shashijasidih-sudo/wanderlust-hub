@@ -31,7 +31,7 @@ const Blog = () => (
       { type: "list", items: ["Similar spiritual vibe to Diwali","Perfect for couples & families","Instagram-worthy visuals","Cultural richness"] },
       { type: "heading", content: "Cost for Indian Travelers" },
       { type: "list", items: ["Street celebration: Free","Krathong: ₹50 – ₹200","Dinner cruise: ₹2,500 – ₹6,000","Lantern release: ₹300 – ₹1,000"] },
-      { type: "cta", content: "Top pick for Indians: White Orchid Loy Krathong dinner cruise with Indian veg menu", link: "/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/", linkText: "Reserve Cruise" },
+      { type: "cta", content: "Top pick for Indians: White Orchid Loy Krathong dinner cruise with Indian veg menu", link: "/thailand/koh-samui-activities/white-orchid-river-cruise-loy-krathong-festival/", linkText: "Reserve Cruise" },
       { type: "mid-activities", destination: "thailand", heading: "Plan Your Loy Krathong Trip" },
       { type: "heading", content: "What to Expect" },
       { type: "list", items: ["Floating krathongs released into rivers","Cultural performances — Thai dance and traditional music","Lantern releases (Chiang Mai) — thousands of lanterns light the sky"] },
@@ -44,7 +44,7 @@ const Blog = () => (
       { type: "heading", content: "Best Time to Attend" },
       { type: "list", items: ["Evening: 6 PM onwards","Peak: 7 PM – 10 PM"] },
       { type: "tip-box", content: "Loy Krathong is considered a romantic festival — perfect for honeymooners. For Indian travelers, it offers a rare chance to experience Thailand's spiritual side, completely different from its party image." },
-      { type: "cta", content: "Book the White Orchid Loy Krathong cruise", link: "/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/", linkText: "Reserve Now" },
+      { type: "cta", content: "Book the White Orchid Loy Krathong cruise", link: "/thailand/koh-samui-activities/white-orchid-river-cruise-loy-krathong-festival/", linkText: "Reserve Now" },
     ]}
     relatedActivities={[
       { title: "White Orchid Loy Krathong Cruise Guide", link: "/thailand/koh-samui/destination-guides/activity/white-orchid-river-cruise-loy-krathong-festival-guide/" },
@@ -53,8 +53,8 @@ const Blog = () => (
       { title: "Full Moon Party Guide for Indians", link: "/thailand/koh-samui/destination-guides/activity/full-moon-party-thailand-guide-for-indians/" },
     ]}
     relatedLinks={[
-      { title: "Book the White Orchid Loy Krathong Cruise", link: "/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/" },
-      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" },
+      { title: "Book the White Orchid Loy Krathong Cruise", link: "/thailand/koh-samui-activities/white-orchid-river-cruise-loy-krathong-festival/" },
+      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/" },
       { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
       { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui-activities/" },

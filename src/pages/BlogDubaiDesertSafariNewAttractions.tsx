@@ -57,7 +57,7 @@ const BlogDubaiDesertSafariNewAttractions = () => (
       { type: "image", src: collageImage, alt: "Dubai desert safari highlights — dune bashing, camel rides, sandboarding and desert camp" },
       { type: "paragraph", content: "The official Dubai tourism guide describes desert safaris as a must-do experience, with options ranging from traditional experiences to VIP safaris, quad biking and overnight stays." },
       { type: "paragraph", content: "For travellers visiting Dubai for the first time, an **evening desert safari** is often the most complete option because it combines adventure, sunset views, culture and dinner into one experience." },
-      { type: "cta", content: "Book a desert safari with hotel pickup and BBQ dinner", link: "/dubai/desert-safari-sharing/", linkText: "View Desert Safari Options" },
+      { type: "cta", content: "Book a desert safari with hotel pickup and BBQ dinner", link: "/dubai-activities/desert-safari-sharing/", linkText: "View Desert Safari Options" },
 
       { type: "heading", content: "1. Experience the Thrill of Dune Bashing" },
       { type: "paragraph", content: "The adventure usually begins when your 4x4 enters the dunes." },
@@ -94,7 +94,7 @@ const BlogDubaiDesertSafariNewAttractions = () => (
       { type: "paragraph", content: "Here you may experience:" },
       { type: "list", items: ["Arabic coffee and dates", "Henna painting", "Traditional performances", "Falconry experiences", "Camel rides", "BBQ or buffet dinner", "Sand art", "Shisha in selected packages", "Stargazing and desert photography"] },
       { type: "paragraph", content: "The exact inclusions depend on the safari operator and package. Some experiences also focus heavily on conservation and Emirati heritage rather than entertainment." },
-      { type: "cta", content: "Prefer a relaxed camp evening with shisha included?", link: "/dubai/desert-safari-shisha/", linkText: "Book Desert Safari with Shisha" },
+      { type: "cta", content: "Prefer a relaxed camp evening with shisha included?", link: "/dubai-activities/desert-safari-shisha/", linkText: "Book Desert Safari with Shisha" },
 
       { type: "heading", content: "6. Enjoy a BBQ Dinner Under the Stars" },
       { type: "paragraph", content: "An evening desert safari isn't complete without dinner." },
@@ -172,8 +172,8 @@ const BlogDubaiDesertSafariNewAttractions = () => (
       { type: "paragraph", content: "For example:" },
       { type: "list", items: [
         "**Day 1:** Dubai arrival + [airport transfer](/dubai/budget-airport-transfers/)",
-        "**Day 2:** [Burj Khalifa](/dubai/burj-khalifa-prime/) + Dubai Mall + Downtown Dubai",
-        "**Day 3:** [Dubai Desert Safari](/dubai/desert-safari-sharing/) + sunset + BBQ dinner",
+        "**Day 2:** [Burj Khalifa](/dubai-activities/burj-khalifa-prime/) + Dubai Mall + Downtown Dubai",
+        "**Day 3:** [Dubai Desert Safari](/dubai-activities/desert-safari-sharing/) + sunset + BBQ dinner",
         "**Day 4:** Palm Jumeirah + Marina + Bluewaters",
         "**Day 5:** ARTE MUSEUM + shopping + evening entertainment",
         "**Day 6:** Hatta or another day trip",
@@ -192,10 +192,10 @@ const BlogDubaiDesertSafariNewAttractions = () => (
       { type: "cta-prominent", content: "Book your Dubai activities and transfers with Yellodae", link: "/dubai-activities/", linkText: "Explore Dubai Activities" },
     ]}
     relatedActivities={[
-      { title: "Desert Safari with Sharing Transfer", link: "/dubai/desert-safari-sharing/", image: duneImg },
-      { title: "Desert Safari with Shisha", link: "/dubai/desert-safari-shisha/", image: camelImg },
-      { title: "Burj Khalifa Prime Hours", link: "/dubai/burj-khalifa-prime/", image: skylineNightImg },
-      { title: "Dubai City Tour", link: "/dubai/city-tour/", image: cityNightImg },
+      { title: "Desert Safari with Sharing Transfer", link: "/dubai-activities/desert-safari-sharing/", image: duneImg },
+      { title: "Desert Safari with Shisha", link: "/dubai-activities/desert-safari-shisha/", image: camelImg },
+      { title: "Burj Khalifa Prime Hours", link: "/dubai-activities/burj-khalifa-prime/", image: skylineNightImg },
+      { title: "Dubai City Tour", link: "/dubai-activities/city-tour/", image: cityNightImg },
     ]}
     relatedLinks={[
       { title: "Best Dubai Activities for Every Traveller", link: "/dubai/destination-guides/best-dubai-activities/" },

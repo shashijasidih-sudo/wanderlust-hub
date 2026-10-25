@@ -37,7 +37,7 @@ const ChaoPhrayaPrincessValentine = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="chao-phraya-princess-valentine" />}
       config={{
-        path: "/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise/",
+        path: "/thailand/bangkok-activities/chao-phraya-princess-valentine-dinner-cruise/",
         seoTitle: "Chao Phraya Princess Valentine's Dinner Cruise Bangkok | Book in INR",
         seoDescription:
           "Book the Chao Phraya Princess Valentine's Day dinner cruise in Bangkok \u2014 premium menu, romantic setting and live entertainment. Instant confirmation and INR pricing.",

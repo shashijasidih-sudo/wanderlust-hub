@@ -24,19 +24,19 @@ const activities = [
     title: "Chiang Mai City Temple Tour: Doi Suthep, Chedi Luang & Pha Lat with Transfer",
     price: 3900,
     image: doiSuthep,
-    slug: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/",
+    slug: "/thailand/chiang-mai-activities/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/",
   },
   {
     title: "Doi Inthanon National Park Full Day Tour from Chiang Mai",
     price: 4900,
     image: inthanon,
-    slug: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/",
+    slug: "/thailand/chiang-mai-activities/doi-inthanon-national-park-full-day-tour/",
   },
   {
     title: "Chiang Rai Day Trip: Golden Triangle with Long Neck Tribe",
     price: 6000,
     image: goldenTriangle,
-    slug: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/",
+    slug: "/thailand/chiang-mai-activities/chiang-rai-golden-triangle-long-neck-tribe-day-trip/",
   },
 ];
 

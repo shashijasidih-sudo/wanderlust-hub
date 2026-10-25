@@ -25,23 +25,23 @@ import dubaiDesertCouple from "@/assets/dubai-desert-couple-1.jpg";
 import dubaiFountainShow from "@/assets/dubai-fountain-show-1.jpg";
 
 const activities = [
-  { title: "Dhow Creek Cruise Dinner - Lower Deck with Transfers", price: toursData["dhow-cruise-creek-lower"].basePrice, image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-creek-lower-deck/" },
-  { title: "Dhow Creek Cruise Dinner - Upper Deck with Transfers", price: toursData["dhow-cruise-creek-upper"].basePrice, image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-creek-upper-deck/" },
-  { title: "Desert Safari with Sharing Transfer", price: toursData["desert-safari-sharing"].basePrice, image: dubaiDesertCouple2, slug: "/dubai/desert-safari-sharing/" },
-  { title: "Desert Safari with Shisha on Table", price: toursData["desert-safari-shisha"].basePrice, image: dubaiDesertWoman, slug: "/dubai/desert-safari-shisha/" },
-  { title: "Dubai City Tour", price: toursData["dubai-city-tour"].basePrice, image: dubaiSkylineSunset, slug: "/dubai/city-tour/" },
-  { title: "Dubai City Tour with Dubai Mall", price: toursData["dubai-city-tour-mall"].basePrice, image: dubaiSkylineNight, slug: "/dubai/city-tour-mall/" },
-  { title: "Dhow Dinner Cruise Marina - Lower Deck", price: toursData["dhow-cruise-marina-lower"].basePrice, image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-marina-lower-deck/" },
-  { title: "Dhow Dinner Cruise Marina - Upper Deck", price: toursData["dhow-cruise-marina-upper"].basePrice, image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-marina-upper-deck/" },
-  { title: "Global Village Dubai", price: toursData["global-village-dubai"].basePrice, image: dubaiGlobalVillage, slug: "/dubai/global-village/" },
-  { title: "Abu Dhabi City Tour", price: toursData["abu-dhabi-city-tour"].basePrice, image: dubaiSkylineSunset, slug: "/dubai/abu-dhabi-city-tour/" },
-  { title: "Abu Dhabi City Tour + Ferrari World", price: toursData["abu-dhabi-ferrari-world"].basePrice, image: dubaiSkylineNight, slug: "/dubai/abu-dhabi-ferrari-world/" },
-  { title: "Dubai Aquarium + Penguin Cove", price: toursData["dubai-aquarium-penguin"].basePrice, image: dubaiAquariumFish, slug: "/dubai/aquarium-penguin/" },
-  { title: "Burj Khalifa 124/125 Non-Prime", price: toursData["burj-khalifa-non-prime"].basePrice, image: dubaiSkylineNight, slug: "/dubai/burj-khalifa-non-prime/" },
-  { title: "Burj Khalifa Silver Fast Track (124/125)", price: toursData["burj-khalifa-prime"].basePrice, image: dubaiSkylineSunset, slug: "/dubai/burj-khalifa-prime/" },
-  { title: "Dubai Dolphin & Seal Show", price: toursData["dubai-dolphin-show"].basePrice, image: dubaiAquariumFish, slug: "/dubai/dolphin-show/" },
-  { title: "Miracle Garden Dubai", price: toursData["miracle-garden-dubai"].basePrice, image: dubaiGlobalVillage, slug: "/dubai/miracle-garden/" },
-  { title: "Dubai Fountain Show with Lake Ride Tickets", price: toursData["dubai-fountain-show"].basePrice, image: dubaiFountainShow, slug: "/dubai/fountain-show/" },
+  { title: "Dhow Creek Cruise Dinner - Lower Deck with Transfers", price: toursData["dhow-cruise-creek-lower"].basePrice, image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-creek-lower-deck/" },
+  { title: "Dhow Creek Cruise Dinner - Upper Deck with Transfers", price: toursData["dhow-cruise-creek-upper"].basePrice, image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-creek-upper-deck/" },
+  { title: "Desert Safari with Sharing Transfer", price: toursData["desert-safari-sharing"].basePrice, image: dubaiDesertCouple2, slug: "/dubai-activities/desert-safari-sharing/" },
+  { title: "Desert Safari with Shisha on Table", price: toursData["desert-safari-shisha"].basePrice, image: dubaiDesertWoman, slug: "/dubai-activities/desert-safari-shisha/" },
+  { title: "Dubai City Tour", price: toursData["dubai-city-tour"].basePrice, image: dubaiSkylineSunset, slug: "/dubai-activities/city-tour/" },
+  { title: "Dubai City Tour with Dubai Mall", price: toursData["dubai-city-tour-mall"].basePrice, image: dubaiSkylineNight, slug: "/dubai-activities/city-tour-mall/" },
+  { title: "Dhow Dinner Cruise Marina - Lower Deck", price: toursData["dhow-cruise-marina-lower"].basePrice, image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-marina-lower-deck/" },
+  { title: "Dhow Dinner Cruise Marina - Upper Deck", price: toursData["dhow-cruise-marina-upper"].basePrice, image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-marina-upper-deck/" },
+  { title: "Global Village Dubai", price: toursData["global-village-dubai"].basePrice, image: dubaiGlobalVillage, slug: "/dubai-activities/global-village/" },
+  { title: "Abu Dhabi City Tour", price: toursData["abu-dhabi-city-tour"].basePrice, image: dubaiSkylineSunset, slug: "/dubai-activities/abu-dhabi-city-tour/" },
+  { title: "Abu Dhabi City Tour + Ferrari World", price: toursData["abu-dhabi-ferrari-world"].basePrice, image: dubaiSkylineNight, slug: "/dubai-activities/abu-dhabi-ferrari-world/" },
+  { title: "Dubai Aquarium + Penguin Cove", price: toursData["dubai-aquarium-penguin"].basePrice, image: dubaiAquariumFish, slug: "/dubai-activities/aquarium-penguin/" },
+  { title: "Burj Khalifa 124/125 Non-Prime", price: toursData["burj-khalifa-non-prime"].basePrice, image: dubaiSkylineNight, slug: "/dubai-activities/burj-khalifa-non-prime/" },
+  { title: "Burj Khalifa Silver Fast Track (124/125)", price: toursData["burj-khalifa-prime"].basePrice, image: dubaiSkylineSunset, slug: "/dubai-activities/burj-khalifa-prime/" },
+  { title: "Dubai Dolphin & Seal Show", price: toursData["dubai-dolphin-show"].basePrice, image: dubaiAquariumFish, slug: "/dubai-activities/dolphin-show/" },
+  { title: "Miracle Garden Dubai", price: toursData["miracle-garden-dubai"].basePrice, image: dubaiGlobalVillage, slug: "/dubai-activities/miracle-garden/" },
+  { title: "Dubai Fountain Show with Lake Ride Tickets", price: toursData["dubai-fountain-show"].basePrice, image: dubaiFountainShow, slug: "/dubai-activities/fountain-show/" },
 ];
 
 const categories = [
@@ -106,12 +106,12 @@ const Dubai = () => {
         <QuickBookWidget
           title="⚡ Quick Book Top Dubai Activities"
           items={[
-            { title: "Desert Safari with Sharing Transfer", price: toursData["desert-safari-sharing"].basePrice, image: dubaiDesertCouple2, slug: "/dubai/desert-safari-sharing/", rating: 4.8, badge: "Bestseller" },
-            { title: "Burj Khalifa 124/125 Non-Prime", price: toursData["burj-khalifa-non-prime"].basePrice, image: dubaiSkylineNight, slug: "/dubai/burj-khalifa-non-prime/", rating: 4.9, badge: "Iconic" },
-            { title: "Dhow Creek Cruise Dinner", price: toursData["dhow-cruise-creek-lower"].basePrice, image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-creek-lower-deck/", rating: 4.7 },
-            { title: "Dubai City Tour", price: toursData["dubai-city-tour"].basePrice, image: dubaiSkylineSunset, slug: "/dubai/city-tour/", rating: 4.6 },
-            { title: "Global Village Dubai", price: toursData["global-village-dubai"].basePrice, image: dubaiGlobalVillage, slug: "/dubai/global-village/", rating: 4.5 },
-            { title: "Dubai Fountain Show + Lake Ride", price: toursData["dubai-fountain-show"].basePrice, image: dubaiFountainShow, slug: "/dubai/fountain-show/", rating: 4.8, badge: "Popular" },
+            { title: "Desert Safari with Sharing Transfer", price: toursData["desert-safari-sharing"].basePrice, image: dubaiDesertCouple2, slug: "/dubai-activities/desert-safari-sharing/", rating: 4.8, badge: "Bestseller" },
+            { title: "Burj Khalifa 124/125 Non-Prime", price: toursData["burj-khalifa-non-prime"].basePrice, image: dubaiSkylineNight, slug: "/dubai-activities/burj-khalifa-non-prime/", rating: 4.9, badge: "Iconic" },
+            { title: "Dhow Creek Cruise Dinner", price: toursData["dhow-cruise-creek-lower"].basePrice, image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-creek-lower-deck/", rating: 4.7 },
+            { title: "Dubai City Tour", price: toursData["dubai-city-tour"].basePrice, image: dubaiSkylineSunset, slug: "/dubai-activities/city-tour/", rating: 4.6 },
+            { title: "Global Village Dubai", price: toursData["global-village-dubai"].basePrice, image: dubaiGlobalVillage, slug: "/dubai-activities/global-village/", rating: 4.5 },
+            { title: "Dubai Fountain Show + Lake Ride", price: toursData["dubai-fountain-show"].basePrice, image: dubaiFountainShow, slug: "/dubai-activities/fountain-show/", rating: 4.8, badge: "Popular" },
           ]}
         />
 

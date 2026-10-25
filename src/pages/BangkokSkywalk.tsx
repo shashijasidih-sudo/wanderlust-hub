@@ -40,7 +40,7 @@ const BangkokSkywalk = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-skywalk" />}
       config={{
-        path: "/thailand/bangkok/mahanakhon-skywalk-tickets/",
+        path: "/thailand/bangkok-activities/mahanakhon-skywalk-tickets/",
         seoTitle: "Mahanakhon SkyWalk Bangkok Tickets | Glass Floor Deck | Book in INR",
         seoDescription:
           "Book Mahanakhon SkyWalk Bangkok tickets \u2014 Thailand's highest observation deck with a glass floor and 360-degree skyline views. Instant confirmation and INR pricing.",

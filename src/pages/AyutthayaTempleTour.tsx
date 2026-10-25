@@ -35,7 +35,7 @@ const AyutthayaTempleTour = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="ayutthaya-temple-tour" />}
       config={{
-        path: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok/",
+        path: "/thailand/bangkok-activities/ayutthaya-day-tour-from-bangkok/",
         seoTitle: "Ayutthaya Day Tour from Bangkok with Transfers | Book in INR",
         seoDescription:
           "Full-day Ayutthaya temple tour from Bangkok with hotel transfers. Visit UNESCO World Heritage ruins with a guide. Instant confirmation and INR pricing for Indians.",

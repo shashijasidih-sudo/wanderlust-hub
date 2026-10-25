@@ -42,8 +42,8 @@ const BlogSingaporeFlyerObservationWheel = () => (
       { type: "paragraph", content: "Yes — especially for first-time visitors and travellers who enjoy scenic, relaxed experiences. While it isn't a thrill attraction, the Flyer delivers a premium sightseeing experience that's hard to match elsewhere in Singapore." },
     ]}
     relatedActivities={[
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
-      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+      { title: "Singapore City Tour", link: "/singapore-activities/singapore-city-tour/" },
+      { title: "Sentosa Cable Car Tickets", link: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
     ]}
     relatedLinks={[
       { title: "Gardens by the Bay Attractions Guide", link: "/singapore/destination-guides/activity/gardens-by-the-bay-guide/" },

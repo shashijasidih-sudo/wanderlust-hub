@@ -36,7 +36,7 @@ const SelfieWithTigerATV = () => {
       tourData={pageTourData}
       contentAfterOverview={<PhuketTourItinerary tourKey="selfie-tigers-atv" />}
       config={{
-        path: "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer/",
+        path: "/thailand/phuket-activities/tiger-kingdom-atv-experience-phuket-with-transfer/",
         seoTitle: "Tiger Kingdom & ATV Experience Phuket with Transfers | INR",
         seoDescription: "Book Tiger Kingdom Phuket with an ATV jungle ride and hotel transfers. Tiger photo session plus off-road adventure. Instant confirmation in INR.",
         whatsappTopic: "Tiger Kingdom with ATV experience in Phuket",

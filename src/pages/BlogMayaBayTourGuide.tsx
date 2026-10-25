@@ -30,7 +30,7 @@ const BlogMayaBayTourGuide = () => (
         "National Park fee mandatory at entry",
       ]},
       { type: "tip-box", content: "Maya Bay sometimes closes seasonally for coral regeneration — always check status before booking." },
-      { type: "cta", content: "Book a Maya Bay + Phi Phi speedboat tour from Phuket", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/", linkText: "Book Maya Bay Tour" },
+      { type: "cta", content: "Book a Maya Bay + Phi Phi speedboat tour from Phuket", link: "/thailand/phuket-activities/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/", linkText: "Book Maya Bay Tour" },
       { type: "heading", content: "How to Reach Maya Bay" },
       { type: "paragraph", content: "Only via Phi Phi Island day tours from Phuket — speedboat (1 hr) or big boat (2–3 hrs). Boats dock at the rear jetty; you walk a forest path to the beach viewpoint." },
       { type: "heading", content: "Best Time to Visit" },
@@ -41,9 +41,9 @@ const BlogMayaBayTourGuide = () => (
       { type: "paragraph", content: "Maya Bay is absolutely worth visiting in 2026 — but only if you go early, follow the rules, and pair it with other Phi Phi stops for a complete experience." },
     ]}
     relatedActivities={[
-      { title: "Phi Phi, Maya, Khai Speedboat Tour", link: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/" },
-      { title: "Full-Day Phi Phi Island Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
-      { title: "Phi Phi Premium Speedboat", link: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/" },
+      { title: "Phi Phi, Maya, Khai Speedboat Tour", link: "/thailand/phuket-activities/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/" },
+      { title: "Full-Day Phi Phi Island Tour", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "Phi Phi Premium Speedboat", link: "/thailand/phuket-activities/phi-phi-island-premium-speedboat-tour-with-transfer/" },
     ]}
     relatedLinks={[
       { title: "Best Phi Phi Island Tours", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours/" },

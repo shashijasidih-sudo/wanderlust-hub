@@ -58,7 +58,7 @@ const Blog = () => (
       { title: "Sentosa Cable Car Sky Pass", link: "/singapore/things-to-do/" },
       { title: "Universal Studios Singapore", link: "/singapore/things-to-do/" },
       { title: "Wings of Time Show", link: "/singapore/things-to-do/" },
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
+      { title: "Singapore City Tour", link: "/singapore-activities/singapore-city-tour/" },
     ]}
     relatedLinks={[
       { title: "Sentosa Cable Car Ride Guide (Mount Faber Line)", link: "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line/" },

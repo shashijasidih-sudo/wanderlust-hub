@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { dhowCruiseFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/dhow-cruise-marina-upper-deck/",
+  path: "/dubai-activities/dhow-cruise-marina-upper-deck/",
   area: "marina",
   seoTitle: "Dhow Dinner Cruise Marina Upper Deck with Transfers | Yellodae",
   seoDescription: "Book Dubai Marina dhow dinner cruise upper deck open-air seating with buffet dinner, tanoura show and hotel transfers. INR pricing and Indian support.",

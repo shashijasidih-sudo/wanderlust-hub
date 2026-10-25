@@ -103,11 +103,11 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Koh Samui & Chiang Mai</h4>
             <ul className="space-y-2 text-sm text-background/80">
               <li><Link to="/thailand/koh-samui-activities/" className="hover:text-background transition-colors">Koh Samui Activities</Link></li>
-              <li><Link to="/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" className="hover:text-background transition-colors">Koh Samui Full Moon Party</Link></li>
-              <li><Link to="/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/" className="hover:text-background transition-colors">Loy Krathong Cruise Samui</Link></li>
+              <li><Link to="/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/" className="hover:text-background transition-colors">Koh Samui Full Moon Party</Link></li>
+              <li><Link to="/thailand/koh-samui-activities/white-orchid-river-cruise-loy-krathong-festival/" className="hover:text-background transition-colors">Loy Krathong Cruise Samui</Link></li>
               <li><Link to="/thailand/chiang-mai/things-to-do/" className="hover:text-background transition-colors">Chiang Mai Activities</Link></li>
-              <li><Link to="/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/" className="hover:text-background transition-colors">Doi Inthanon Full Day Tour</Link></li>
-              <li><Link to="/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/" className="hover:text-background transition-colors">Chiang Rai Golden Triangle</Link></li>
+              <li><Link to="/thailand/chiang-mai-activities/doi-inthanon-national-park-full-day-tour/" className="hover:text-background transition-colors">Doi Inthanon Full Day Tour</Link></li>
+              <li><Link to="/thailand/chiang-mai-activities/chiang-rai-golden-triangle-long-neck-tribe-day-trip/" className="hover:text-background transition-colors">Chiang Rai Golden Triangle</Link></li>
               <li><Link to="/thailand/chiang-mai-airport-transfers/" className="hover:text-background transition-colors">Chiang Mai Airport Transfers</Link></li>
             </ul>
           </div>
@@ -118,10 +118,10 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-background/80">
               <li><Link to="/singapore/things-to-do/" className="hover:text-background transition-colors">Singapore Activities</Link></li>
               <li><Link to="/singapore/budget-airport-transfers/" className="hover:text-background transition-colors">Changi Airport Transfers</Link></li>
-              <li><Link to="/singapore/universal-studios-singapore-tickets-and-transfers/" className="hover:text-background transition-colors">Universal Studios Singapore</Link></li>
-              <li><Link to="/singapore/sentosa-cable-car-tickets-and-transfers/" className="hover:text-background transition-colors">Sentosa Cable Car</Link></li>
-              <li><Link to="/singapore/gardens-by-the-bay-tickets-and-transfers/" className="hover:text-background transition-colors">Gardens by the Bay</Link></li>
-              <li><Link to="/singapore/night-safari-singapore-tickets-and-transfers/" className="hover:text-background transition-colors">Night Safari Singapore</Link></li>
+              <li><Link to="/singapore-activities/universal-studios-singapore-tickets-and-transfers/" className="hover:text-background transition-colors">Universal Studios Singapore</Link></li>
+              <li><Link to="/singapore-activities/sentosa-cable-car-tickets-and-transfers/" className="hover:text-background transition-colors">Sentosa Cable Car</Link></li>
+              <li><Link to="/singapore-activities/gardens-by-the-bay-tickets-and-transfers/" className="hover:text-background transition-colors">Gardens by the Bay</Link></li>
+              <li><Link to="/singapore-activities/night-safari-singapore-tickets-and-transfers/" className="hover:text-background transition-colors">Night Safari Singapore</Link></li>
             </ul>
           </div>
 

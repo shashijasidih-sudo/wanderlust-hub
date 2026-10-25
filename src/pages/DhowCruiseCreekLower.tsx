@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { dhowCruiseFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/dhow-cruise-creek-lower-deck/",
+  path: "/dubai-activities/dhow-cruise-creek-lower-deck/",
   area: "creek",
   seoTitle: "Dhow Creek Cruise Dinner Lower Deck with Transfers | Yellodae",
   seoDescription: "Book Dubai Creek dhow dinner cruise lower deck with air-conditioned seating, buffet dinner and hotel transfers. INR pricing and Indian support.",

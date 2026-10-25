@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { miracleGardenFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/miracle-garden/",
+  path: "/dubai-activities/miracle-garden/",
   area: "garden",
   seoTitle: "Dubai Miracle Garden Tickets with Transfer | Yellodae",
   seoDescription: "Book Dubai Miracle Garden entry tickets with hotel transfers. 150 million blooms, Emirates A380 floral display. INR pricing and Indian traveller support.",

@@ -36,7 +36,7 @@ const Blog = () => (
       { type: "list", items: ["You have limited time (day trip)","You want to cover multiple islands in one day","You're comfortable with waves and motion","You want flexible departure times"] },
       { type: "heading", content: "When to Choose Ferry" },
       { type: "list", items: ["Traveling with family, kids or elders","Prefer a smooth, stable ride","On a tighter budget","Carrying lots of luggage (overnight stay on Phi Phi)"] },
-      { type: "cta", content: "Book your Krabi to Phi Phi tour with hotel pickup", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/", linkText: "Book Phi Phi Tour" },
+      { type: "cta", content: "Book your Krabi to Phi Phi tour with hotel pickup", link: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/", linkText: "Book Phi Phi Tour" },
       { type: "heading", content: "Pro Tips for a Smoother Ride" },
       { type: "list", items: ["Choose morning departures for calmer seas","Carry motion sickness medicine for speedboats","Sit at the back — usually less bumpy on speedboats","Wear sunscreen and sunglasses","Pre-book in peak season (Dec–Feb)"] },
       { type: "heading", content: "Final Verdict" },
@@ -44,10 +44,10 @@ const Blog = () => (
       { type: "cta", content: "Book your Krabi airport transfer for a stress-free start", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Airport Transfer" },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" },
-      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
-      { title: "4 Island Tour by Speedboat", link: "/thailand/krabi/4-island-tour-speedboat-with-transfer/" },
-      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/" },
+      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/" },
+      { title: "4 Island Tour by Speedboat", link: "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/" },
+      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },
     ]}
     relatedLinks={[
       { title: "Krabi to Phi Phi: Ferry vs Speedboat", link: "/thailand/krabi/destination-guides/transfer/krabi-to-phi-phi-ferry-vs-speedboat/" },

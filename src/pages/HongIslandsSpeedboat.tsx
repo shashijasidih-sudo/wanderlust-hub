@@ -30,7 +30,7 @@ const HongIslandsSpeedboat = () => {
       tourData={tourData}
       contentAfterOverview={<KrabiTourItinerary tourKey="hong-islands-speedboat" />}
       config={{
-        path: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/",
+        path: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/",
         seoTitle: "Hong Island Speedboat Tour Krabi with Hotel Transfers | Yellodae",
         seoDescription:
           "Book the Hong Island speedboat tour from Krabi — lagoon, viewpoint and Lao Lading beach with hotel transfers, INR pricing and Indian support.",

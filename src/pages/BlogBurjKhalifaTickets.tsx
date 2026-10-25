@@ -16,21 +16,21 @@ import dubaiGlobalVillage from "@/assets/dubai-global-village-1.jpg";
 import dubaiAquariumFish from "@/assets/dubai-aquarium-fish-1.webp";
 
 const burjActivityCards = [
-  { title: "Burj Khalifa Non-Prime", location: "Downtown Dubai", image: heroImg, slug: "/dubai/burj-khalifa-non-prime/" },
-  { title: "Burj Khalifa Prime", location: "Downtown Dubai", image: dubaiSkylineNight, slug: "/dubai/burj-khalifa-prime/" },
-  { title: "Dubai Fountain Show + Lake Ride", location: "Downtown Dubai", image: fountainImg, slug: "/dubai/fountain-show/" },
-  { title: "Desert Safari with Sharing Transfer", location: "Lahbab Desert", image: dubaiDesertCouple2, slug: "/dubai/desert-safari-sharing/" },
-  { title: "Desert Safari with Shisha", location: "Lahbab Desert", image: dubaiDesertWoman, slug: "/dubai/desert-safari-shisha/" },
-  { title: "Dhow Creek Cruise - Lower Deck", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-creek-lower-deck/" },
-  { title: "Dhow Marina Cruise - Lower Deck", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-marina-lower-deck/" },
-  { title: "Dubai City Tour", location: "Dubai", image: cityImg, slug: "/dubai/city-tour/" },
-  { title: "Dubai City Tour with Mall", location: "Dubai", image: heroImg, slug: "/dubai/city-tour-mall/" },
-  { title: "Global Village Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/dubai/global-village/" },
-  { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: heroImg, slug: "/dubai/abu-dhabi-city-tour/" },
-  { title: "Abu Dhabi + Ferrari World", location: "Abu Dhabi", image: dubaiSkylineNight, slug: "/dubai/abu-dhabi-ferrari-world/" },
-  { title: "Dubai Aquarium + Penguin Cove", location: "Dubai Mall", image: dubaiAquariumFish, slug: "/dubai/aquarium-penguin/" },
-  { title: "Dubai Dolphin & Seal Show", location: "Dubai", image: dubaiAquariumFish, slug: "/dubai/dolphin-show/" },
-  { title: "Miracle Garden Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/dubai/miracle-garden/" },
+  { title: "Burj Khalifa Non-Prime", location: "Downtown Dubai", image: heroImg, slug: "/dubai-activities/burj-khalifa-non-prime/" },
+  { title: "Burj Khalifa Prime", location: "Downtown Dubai", image: dubaiSkylineNight, slug: "/dubai-activities/burj-khalifa-prime/" },
+  { title: "Dubai Fountain Show + Lake Ride", location: "Downtown Dubai", image: fountainImg, slug: "/dubai-activities/fountain-show/" },
+  { title: "Desert Safari with Sharing Transfer", location: "Lahbab Desert", image: dubaiDesertCouple2, slug: "/dubai-activities/desert-safari-sharing/" },
+  { title: "Desert Safari with Shisha", location: "Lahbab Desert", image: dubaiDesertWoman, slug: "/dubai-activities/desert-safari-shisha/" },
+  { title: "Dhow Creek Cruise - Lower Deck", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-creek-lower-deck/" },
+  { title: "Dhow Marina Cruise - Lower Deck", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-marina-lower-deck/" },
+  { title: "Dubai City Tour", location: "Dubai", image: cityImg, slug: "/dubai-activities/city-tour/" },
+  { title: "Dubai City Tour with Mall", location: "Dubai", image: heroImg, slug: "/dubai-activities/city-tour-mall/" },
+  { title: "Global Village Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/dubai-activities/global-village/" },
+  { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: heroImg, slug: "/dubai-activities/abu-dhabi-city-tour/" },
+  { title: "Abu Dhabi + Ferrari World", location: "Abu Dhabi", image: dubaiSkylineNight, slug: "/dubai-activities/abu-dhabi-ferrari-world/" },
+  { title: "Dubai Aquarium + Penguin Cove", location: "Dubai Mall", image: dubaiAquariumFish, slug: "/dubai-activities/aquarium-penguin/" },
+  { title: "Dubai Dolphin & Seal Show", location: "Dubai", image: dubaiAquariumFish, slug: "/dubai-activities/dolphin-show/" },
+  { title: "Miracle Garden Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/dubai-activities/miracle-garden/" },
 ];
 
 const BurjActivityCards = () => {
@@ -90,7 +90,7 @@ const BlogBurjKhalifaTickets = () => {
       relatedLinks={[
         { title: "Dubai Marina Cruise Guide", link: "/dubai/destination-guides/dubai-marina-cruise/" },
         { title: "Dubai Desert Safari Guide", link: "/dubai/destination-guides/desert-safari-deals-dubai/" },
-        { title: "Dubai Fountain Show", link: "/dubai/fountain-show/" },
+        { title: "Dubai Fountain Show", link: "/dubai-activities/fountain-show/" },
         { title: "Dubai Transfers", link: "/dubai/budget-airport-transfers/" },
       ]}
       sections={[
@@ -211,7 +211,7 @@ const BlogBurjKhalifaTickets = () => {
         {
           type: "cta",
           content: "Don't miss out on securing the best Burj Khalifa tickets in Dubai with easy and reliable booking.",
-          link: "/dubai/burj-khalifa-non-prime/",
+          link: "/dubai-activities/burj-khalifa-non-prime/",
           linkText: "🏙️ Book Burj Khalifa Tickets Now",
         },
       ]}

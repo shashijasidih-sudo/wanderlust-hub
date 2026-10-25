@@ -33,7 +33,7 @@ const BangkokWatArunChinatown = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-wat-arun-chinatown" />}
       config={{
-        path: "/thailand/bangkok/wat-arun-chinatown-tour/",
+        path: "/thailand/bangkok-activities/wat-arun-chinatown-tour/",
         seoTitle: "Wat Arun Sunset & Chinatown Street Food Tour Bangkok | Book in INR",
         seoDescription:
           "Book the Wat Arun sunset and Yaowarat Chinatown street food tour in Bangkok. Double world heritage city tour with transfers, instant confirmation and INR pricing.",

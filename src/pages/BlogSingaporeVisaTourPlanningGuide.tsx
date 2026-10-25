@@ -53,9 +53,9 @@ const Blog = () => (
       { type: "paragraph", content: "Singapore's visa process is straightforward for Indian travelers — apply 3–4 weeks early through an authorised agent, pre-book your major attractions, and stay near MRT lines. With this plan, you'll cover all the highlights of Singapore in 4 well-paced days." },
     ]}
     relatedActivities={[
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
-      { title: "Universal Studios Singapore", link: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-      { title: "Singapore Cable Car & Sentosa", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+      { title: "Singapore City Tour", link: "/singapore-activities/singapore-city-tour/" },
+      { title: "Universal Studios Singapore", link: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/" },
+      { title: "Singapore Cable Car & Sentosa", link: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
     ]}
     relatedLinks={[
       { title: "Singapore Trip Cost from India with Activities", link: "/singapore/destination-guides/indian-audience/singapore-trip-cost-from-india-with-activities/" },

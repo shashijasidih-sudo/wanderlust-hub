@@ -377,7 +377,7 @@ export const phuketTransferSEO: Record<string, SEOEntry> = {
 
   // 5
   "phuket-city-hourly-rental": {
-    newSlug: "/thailand/phuket/phuket-hotel-to-hotel-transfer-4-hours/",
+    newSlug: "/thailand/phuket-activities/phuket-hotel-to-hotel-transfer-4-hours/",
     oldSlug: "/thailand/phuket/city-hourly-rental/",
     gallery: phuketHourlyGallery,
     seoContent: (

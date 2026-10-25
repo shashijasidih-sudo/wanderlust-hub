@@ -51,9 +51,9 @@ const Blog = () => (
       { type: "cta", content: "Plan your Singapore trip with INR pricing and instant confirmation", link: "/singapore/things-to-do/", linkText: "Explore Singapore Tours" },
     ]}
     relatedActivities={[
-      { title: "Universal Studios Singapore", link: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-      { title: "Night Safari Tickets & Transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers/" },
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
+      { title: "Universal Studios Singapore", link: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/" },
+      { title: "Night Safari Tickets & Transfers", link: "/singapore-activities/night-safari-singapore-tickets-and-transfers/" },
+      { title: "Singapore City Tour", link: "/singapore-activities/singapore-city-tour/" },
     ]}
     relatedLinks={[
       { title: "Singapore Trip Cost from India with Activities", link: "/singapore/destination-guides/indian-audience/singapore-trip-cost-from-india-with-activities/" },

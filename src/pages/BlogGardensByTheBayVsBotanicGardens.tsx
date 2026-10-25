@@ -60,7 +60,7 @@ const Blog = () => (
     ]}
     relatedActivities={[
       { title: "Gardens by the Bay Combo Tickets", link: "/singapore/things-to-do/" },
-      { title: "Singapore City Tour with Shared Transfer", link: "/singapore/singapore-city-tour/" },
+      { title: "Singapore City Tour with Shared Transfer", link: "/singapore-activities/singapore-city-tour/" },
       { title: "Big Bus Singapore Hop-On Hop-Off", link: "/singapore/things-to-do/" },
       { title: "Singapore Flyer Tickets", link: "/singapore/things-to-do/" },
     ]}

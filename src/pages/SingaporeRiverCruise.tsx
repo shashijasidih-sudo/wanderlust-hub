@@ -4,7 +4,7 @@ const SingaporeRiverCruise = () => (
   <SingaporeActivityTemplate
     config={{
       tourKey: "singapore-river-cruise",
-      path: "/singapore/singapore-river-cruise-tickets-and-transfers/",
+      path: "/singapore-activities/singapore-river-cruise-tickets-and-transfers/",
       seoTitle: "Singapore River Cruise Tickets & Transfers | Clarke Quay Bumboat",
       seoDescription:
         "Book Singapore River Cruise tickets with optional hotel transfers — 40-minute bumboat ride past Clarke Quay, Boat Quay, Merlion Park and Marina Bay. Book in INR.",
