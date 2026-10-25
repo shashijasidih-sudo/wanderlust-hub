@@ -490,18 +490,20 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                   </div>
                 </div>
 
-                <div>
-                  <Label className="text-primary font-semibold">Pickup Hotel Name <span className="text-destructive">*</span></Label>
-                  <div className="relative mt-2">
-                    <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
-                    <Input
-                      value={pickupLocation}
-                      onChange={(e) => setPickupLocation(e.target.value)}
-                      className="pl-10"
-                      placeholder="Select Pickup Hotel Name"
-                    />
+                {!isAirportToHotel && (
+                  <div>
+                    <Label className="text-primary font-semibold">Pickup Hotel Name <span className="text-destructive">*</span></Label>
+                    <div className="relative mt-2">
+                      <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
+                      <Input
+                        value={pickupLocation}
+                        onChange={(e) => setPickupLocation(e.target.value)}
+                        className="pl-10"
+                        placeholder="Select Pickup Hotel Name"
+                      />
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
 
               {/* Row 2: Room No, Drop Location */}
