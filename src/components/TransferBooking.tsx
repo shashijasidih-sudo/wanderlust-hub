@@ -506,20 +506,22 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                 )}
               </div>
 
-              {/* Row 2: Room No, Drop Location */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <Label className="text-muted-foreground font-semibold">Room No</Label>
-                  <div className="relative mt-2">
-                    <CalendarIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
-                    <Input
-                      value={roomNo}
-                      onChange={(e) => setRoomNo(e.target.value)}
-                      className="pl-10"
-                      placeholder="Enter Room No."
-                    />
+              {/* Row 2: Room No, Drop Location (Room No hidden for airport → hotel) */}
+              <div className={cn("grid grid-cols-1 gap-4", !isAirportToHotel && "md:grid-cols-2")}>
+                {!isAirportToHotel && (
+                  <div>
+                    <Label className="text-muted-foreground font-semibold">Room No</Label>
+                    <div className="relative mt-2">
+                      <CalendarIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
+                      <Input
+                        value={roomNo}
+                        onChange={(e) => setRoomNo(e.target.value)}
+                        className="pl-10"
+                        placeholder="Enter Room No."
+                      />
+                    </div>
                   </div>
-                </div>
+                )}
 
                 <div>
                   <Label className="text-primary font-semibold">
