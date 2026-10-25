@@ -35,6 +35,14 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 
+// Airport → Hotel transfers: pickup point is the airport, so only the drop hotel is asked
+const AIRPORT_TO_HOTEL_EXTRA_IDS = new Set(["krabi-kbv-aonang-pickup"]);
+const isAirportToHotelTransfer = (id: string) =>
+  AIRPORT_TO_HOTEL_EXTRA_IDS.has(id) ||
+  id.includes("airport-pickup") ||
+  id.includes("airport-to-") ||
+  (id.includes("airport") && id.endsWith("-pickup"));
+
 // Vehicle images - using placeholder URLs
 const vehicleImages = {
   sedan: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&auto=format&fit=crop",
@@ -131,6 +139,10 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
   const selectedVehicleData = transferData.vehicles.find(v => v.id === selectedVehicle);
   const totalPrice = selectedVehicleData ? selectedVehicleData.price : 0;
 
+  // Airport → Hotel: pickup is the airport itself, only the drop hotel is needed
+  const isAirportToHotel = isAirportToHotelTransfer(transferData.id);
+  const airportName = transferData.title.split(/\s+[Tt]o\s+/)[0].trim();
+
   const handlePersonsChange = (increment: boolean) => {
     if (increment && selectedVehicleData) {
       const maxCapacity = parseInt(selectedVehicleData.capacity.split("-")[1]) || 10;
@@ -159,7 +171,12 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
       toast.error("Please select pickup time");
       return null;
     }
-    if (!pickupLocation) {
+    if (isAirportToHotel) {
+      if (!dropLocation) {
+        toast.error("Please enter drop hotel name");
+        return null;
+      }
+    } else if (!pickupLocation) {
       toast.error("Please enter pickup location");
       return null;
     }
@@ -176,7 +193,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
       numberOfPersons,
       pickupDate: format(pickupDate, "yyyy-MM-dd"),
       pickupTime,
-      pickupLocation,
+      pickupLocation: isAirportToHotel ? airportName : pickupLocation,
       dropLocation,
       roomNo,
       slug: tourSlug,
@@ -430,8 +447,8 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
               <CardTitle className="text-lg">Customer Information</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              {/* Row 1: Pickup Date, Time, Location */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Row 1: Pickup Date, Time, Location (location hidden for airport → hotel) */}
+              <div className={cn("grid grid-cols-1 gap-4", isAirportToHotel ? "md:grid-cols-2" : "md:grid-cols-3")}>
                 <div>
                   <Label className="text-primary font-semibold">Pick Up Date <span className="text-destructive">*</span></Label>
                   <Popover>
@@ -473,44 +490,50 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                   </div>
                 </div>
 
-                <div>
-                  <Label className="text-primary font-semibold">Pickup Hotel Name <span className="text-destructive">*</span></Label>
-                  <div className="relative mt-2">
-                    <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
-                    <Input
-                      value={pickupLocation}
-                      onChange={(e) => setPickupLocation(e.target.value)}
-                      className="pl-10"
-                      placeholder="Select Pickup Hotel Name"
-                    />
+                {!isAirportToHotel && (
+                  <div>
+                    <Label className="text-primary font-semibold">Pickup Hotel Name <span className="text-destructive">*</span></Label>
+                    <div className="relative mt-2">
+                      <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
+                      <Input
+                        value={pickupLocation}
+                        onChange={(e) => setPickupLocation(e.target.value)}
+                        className="pl-10"
+                        placeholder="Select Pickup Hotel Name"
+                      />
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
 
-              {/* Row 2: Room No, Drop Location */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <Label className="text-muted-foreground font-semibold">Room No</Label>
-                  <div className="relative mt-2">
-                    <CalendarIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
-                    <Input
-                      value={roomNo}
-                      onChange={(e) => setRoomNo(e.target.value)}
-                      className="pl-10"
-                      placeholder="Enter Room No."
-                    />
+              {/* Row 2: Room No, Drop Location (Room No hidden for airport → hotel) */}
+              <div className={cn("grid grid-cols-1 gap-4", !isAirportToHotel && "md:grid-cols-2")}>
+                {!isAirportToHotel && (
+                  <div>
+                    <Label className="text-muted-foreground font-semibold">Room No</Label>
+                    <div className="relative mt-2">
+                      <CalendarIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
+                      <Input
+                        value={roomNo}
+                        onChange={(e) => setRoomNo(e.target.value)}
+                        className="pl-10"
+                        placeholder="Enter Room No."
+                      />
+                    </div>
                   </div>
-                </div>
+                )}
 
                 <div>
-                  <Label className="text-primary font-semibold">Drop Hotel Name</Label>
+                  <Label className="text-primary font-semibold">
+                    Drop Hotel Name {isAirportToHotel && <span className="text-destructive">*</span>}
+                  </Label>
                   <div className="relative mt-2">
                     <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
                     <Input
                       value={dropLocation}
                       onChange={(e) => setDropLocation(e.target.value)}
                       className="pl-10"
-                      placeholder="Select Drop Hotel Name"
+                      placeholder="Enter Drop Hotel Name"
                     />
                   </div>
                 </div>
