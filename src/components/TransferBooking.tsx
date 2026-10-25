@@ -447,8 +447,8 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
               <CardTitle className="text-lg">Customer Information</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              {/* Row 1: Pickup Date, Time, Location */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Row 1: Pickup Date, Time, Location (location hidden for airport → hotel) */}
+              <div className={cn("grid grid-cols-1 gap-4", isAirportToHotel ? "md:grid-cols-2" : "md:grid-cols-3")}>
                 <div>
                   <Label className="text-primary font-semibold">Pick Up Date <span className="text-destructive">*</span></Label>
                   <Popover>
