@@ -522,14 +522,16 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                 </div>
 
                 <div>
-                  <Label className="text-primary font-semibold">Drop Hotel Name</Label>
+                  <Label className="text-primary font-semibold">
+                    Drop Hotel Name {isAirportToHotel && <span className="text-destructive">*</span>}
+                  </Label>
                   <div className="relative mt-2">
                     <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
                     <Input
                       value={dropLocation}
                       onChange={(e) => setDropLocation(e.target.value)}
                       className="pl-10"
-                      placeholder="Select Drop Hotel Name"
+                      placeholder="Enter Drop Hotel Name"
                     />
                   </div>
                 </div>
