@@ -35,13 +35,35 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 
-// Airport → Hotel transfers: pickup point is the airport, so only the drop hotel is asked
+// Transfers that start or end at an airport need only one hotel field:
+// Airport → Hotel: pickup is the airport, so only the drop hotel is asked.
+// Hotel → Airport: drop is the airport, so only the pickup hotel is asked.
 const AIRPORT_TO_HOTEL_EXTRA_IDS = new Set(["krabi-kbv-aonang-pickup"]);
-const isAirportToHotelTransfer = (id: string) =>
-  AIRPORT_TO_HOTEL_EXTRA_IDS.has(id) ||
-  id.includes("airport-pickup") ||
-  id.includes("airport-to-") ||
-  (id.includes("airport") && id.endsWith("-pickup"));
+const AIRPORT_RE = /airport/i;
+
+const routeSegments = (title: string) =>
+  title.split(/\s+to\s+/i).map((s) => s.trim()).filter(Boolean);
+
+const isAirportToHotelTransfer = (id: string, title: string) => {
+  if (AIRPORT_TO_HOTEL_EXTRA_IDS.has(id)) return true;
+  const segs = routeSegments(title);
+  return segs.length > 1 && AIRPORT_RE.test(segs[0]);
+};
+
+const isHotelToAirportTransfer = (id: string, title: string) => {
+  const segs = routeSegments(title);
+  return segs.length > 1 && AIRPORT_RE.test(segs[segs.length - 1]);
+};
+
+// "Suvarnabhumi International Airport {BKK} Drop Private" -> "Suvarnabhumi International Airport {BKK}"
+const extractAirportName = (segment: string) => {
+  const match = segment.match(/^(.*?\s+Airport(?:\s*\{[A-Z]{3}\})?)/i);
+  return (match ? match[1] : segment)
+    .trim()
+    .replace(/^private\s+/i, "")
+    .replace(/\s+(pick\s*up|pickup|drop\s*off|drop\s*private|drop)$/i, "")
+    .trim();
+};
 
 // Vehicle images - using placeholder URLs
 const vehicleImages = {
@@ -139,9 +161,15 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
   const selectedVehicleData = transferData.vehicles.find(v => v.id === selectedVehicle);
   const totalPrice = selectedVehicleData ? selectedVehicleData.price : 0;
 
-  // Airport → Hotel: pickup is the airport itself, only the drop hotel is needed
-  const isAirportToHotel = isAirportToHotelTransfer(transferData.id);
-  const airportName = transferData.title.split(/\s+[Tt]o\s+/)[0].trim();
+  // Airport → Hotel: pickup is the airport itself, only the drop hotel is needed.
+  // Hotel → Airport: drop is the airport itself, only the pickup hotel is needed.
+  const isAirportToHotel = isAirportToHotelTransfer(transferData.id, transferData.title);
+  const isHotelToAirport =
+    !isAirportToHotel && isHotelToAirportTransfer(transferData.id, transferData.title);
+  const titleSegs = routeSegments(transferData.title);
+  const airportName = extractAirportName(
+    isHotelToAirport ? titleSegs[titleSegs.length - 1] : titleSegs[0] ?? transferData.title
+  );
 
   const handlePersonsChange = (increment: boolean) => {
     if (increment && selectedVehicleData) {
@@ -194,7 +222,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
       pickupDate: format(pickupDate, "yyyy-MM-dd"),
       pickupTime,
       pickupLocation: isAirportToHotel ? airportName : pickupLocation,
-      dropLocation,
+      dropLocation: isHotelToAirport ? airportName : dropLocation,
       roomNo,
       slug: tourSlug,
     };
@@ -506,7 +534,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                 )}
               </div>
 
-              {/* Row 2: Room No, Drop Location (Room No hidden for airport → hotel) */}
+              {/* Row 2: Room No, Drop Location (Room No hidden for airport → hotel, Drop hidden for hotel → airport) */}
               <div className={cn("grid grid-cols-1 gap-4", !isAirportToHotel && "md:grid-cols-2")}>
                 {!isAirportToHotel && (
                   <div>
@@ -523,20 +551,22 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                   </div>
                 )}
 
-                <div>
-                  <Label className="text-primary font-semibold">
-                    Drop Hotel Name {isAirportToHotel && <span className="text-destructive">*</span>}
-                  </Label>
-                  <div className="relative mt-2">
-                    <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
-                    <Input
-                      value={dropLocation}
-                      onChange={(e) => setDropLocation(e.target.value)}
-                      className="pl-10"
-                      placeholder="Enter Drop Hotel Name"
-                    />
+                {!isHotelToAirport && (
+                  <div>
+                    <Label className="text-primary font-semibold">
+                      Drop Hotel Name {isAirportToHotel && <span className="text-destructive">*</span>}
+                    </Label>
+                    <div className="relative mt-2">
+                      <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
+                      <Input
+                        value={dropLocation}
+                        onChange={(e) => setDropLocation(e.target.value)}
+                        className="pl-10"
+                        placeholder="Enter Drop Hotel Name"
+                      />
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </CardContent>
           </Card>
