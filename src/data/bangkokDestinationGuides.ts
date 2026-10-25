@@ -250,7 +250,7 @@ export const bangkokBlogs: BangkokBlogEntry[] = [
     image: cruiseNight,
     date: "Mar 2, 2026",
     readTime: "7 min read",
-    link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/",
+    link: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/",
     external: true,
   },
   {

@@ -10,7 +10,7 @@ export const TOUR_ROUTES: Record<string, string> = {
   "sea-life-madame-tussauds": "/thailand/bangkok-activities/sea-life-madame-tussauds-tickets/",
   "viva-alangka-cruise": "/thailand/bangkok-activities/viva-alangka-dinner-cruise/",
   "ayutthaya-sunset-cruise": "/thailand/bangkok-activities/ayutthaya-sunset-river-cruise/",
-  "chao-phraya-princess-private": "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/",
+  "chao-phraya-princess-private": "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/",
   "chao-phraya-princess-valentine": "/thailand/bangkok-activities/chao-phraya-princess-valentine-dinner-cruise/",
   "chao-phraya-princess-join": "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-transfer/",
   "chao-phraya-princess-no-transfer": "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise/",

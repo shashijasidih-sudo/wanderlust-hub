@@ -147,7 +147,7 @@ const sections: Section[] = [
       "Chao Phraya dinner cruises, Baiyoke Sky Buffet and iconic Bangkok attractions with easy booking.",
     cards: [
       { title: "Chao Phraya Princess Cruise", href: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-transfer/", image: bangkokCruiseImg },
-      { title: "Chao Phraya Private Cruise", href: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/", image: bangkokCruiseImg },
+      { title: "Chao Phraya Private Cruise", href: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/", image: bangkokCruiseImg },
       { title: "Baiyoke Sky Buffet", href: "/thailand/bangkok-activities/baiyoke-buffet/", image: bangkokSkywalkImg },
       { title: "Sea Life + Madame Tussauds", href: "/thailand/bangkok-activities/sea-life-madame-tussauds-tickets/", image: bangkokTempleImg },
     ],

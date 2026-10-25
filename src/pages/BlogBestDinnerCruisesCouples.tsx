@@ -113,7 +113,7 @@ const BlogBestDinnerCruisesCouples = () => (
       {
         type: "cta",
         content: "Plan the perfect romantic night in Bangkok",
-        link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/",
+        link: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/",
         linkText: "Book a Couple Cruise",
       },
     ]}

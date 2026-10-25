@@ -599,7 +599,7 @@ const App = () => (
             <Route path="/thailand/bangkok-activities/sea-life-madame-tussauds-tickets/" element={<SeaLifeMadameTussauds />} />
             <Route path="/thailand/bangkok-activities/viva-alangka-dinner-cruise/" element={<VivaAlangkaCruise />} />
             <Route path="/thailand/bangkok-activities/ayutthaya-sunset-river-cruise/" element={<AyutthayaSunsetCruise />} />
-            <Route path="/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/" element={<ChaoPhrayaPrincessPrivate />} />
+            <Route path="/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/" element={<ChaoPhrayaPrincessPrivate />} />
             <Route path="/thailand/bangkok-activities/chao-phraya-princess-valentine-dinner-cruise/" element={<ChaoPhrayaPrincessValentine />} />
             <Route path="/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-transfer/" element={<ChaoPhrayaPrincessJoin />} />
             <Route path="/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise/" element={<ChaoPhrayaPrincessNoTransfer />} />

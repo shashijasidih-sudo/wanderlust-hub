@@ -130,7 +130,7 @@ const BlogChaoPhrayaPrincessReview = () => (
       {
         type: "cta",
         content: "Ready to sail the Chao Phraya?",
-        link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/",
+        link: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/",
         linkText: "Book Princess Cruise",
       },
     ]}

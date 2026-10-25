@@ -219,4 +219,5 @@ export const LEGACY_REDIRECTS: Record<string, string> = {
   "/thailand/phuket/phuket-night-market-tour-with-transfer/": "/thailand/phuket-activities/phuket-night-market-tour-with-transfer/",
   "/thailand/phuket/simon-cabaret-show-with-transfer/": "/thailand/phuket-activities/simon-cabaret-show-with-transfer/",
   "/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer/": "/thailand/phuket-activities/tiger-kingdom-atv-experience-phuket-with-transfer/",
+  "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/": "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/",
 };

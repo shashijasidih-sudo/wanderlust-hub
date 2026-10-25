@@ -420,3 +420,4 @@ RedirectMatch 301 ^/thailand/phuket/phuket-hotel-to-hotel-transfer-4-hours/?$ /t
 RedirectMatch 301 ^/thailand/phuket/phuket-night-market-tour-with-transfer/?$ /thailand/phuket-activities/phuket-night-market-tour-with-transfer/
 RedirectMatch 301 ^/thailand/phuket/simon-cabaret-show-with-transfer/?$ /thailand/phuket-activities/simon-cabaret-show-with-transfer/
 RedirectMatch 301 ^/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer/?$ /thailand/phuket-activities/tiger-kingdom-atv-experience-phuket-with-transfer/
+RedirectMatch 301 ^/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/?$ /thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/

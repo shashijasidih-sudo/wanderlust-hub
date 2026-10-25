@@ -246,5 +246,8 @@ http://yellodae.com/*         https://yellodae.com/:splat    301!
 /thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer /thailand/phuket-activities/tiger-kingdom-atv-experience-phuket-with-transfer/    301!
 /thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer/ /thailand/phuket-activities/tiger-kingdom-atv-experience-phuket-with-transfer/    301!
 
+/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer /thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/    301!
+/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/ /thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/    301!
+
 # 4) SPA fallback — every other path serves index.html (no redirect chain)
 /*    /index.html    200

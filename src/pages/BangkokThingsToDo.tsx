@@ -127,7 +127,7 @@ const activities: Activity[] = [
     description: "Premium dinner cruise on the Chao Phraya River with private hotel transfer.",
     price: 5545,
     image: cruiseNight2,
-    slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/",
+    slug: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/",
     category: "Dinner Cruises",
   },
   {

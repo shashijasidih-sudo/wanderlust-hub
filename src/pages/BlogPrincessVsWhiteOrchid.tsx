@@ -23,7 +23,7 @@ const BlogPrincessVsWhiteOrchid = () => (
     guidesLabel="Bangkok Destination Guides"
     subCategory={{ label: "Comparison Guides", link: "/thailand/bangkok/destination-guides#comparison" }}
     comparisonItems={[
-      { name: "Chao Phraya Princess Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/" },
+      { name: "Chao Phraya Princess Cruise", link: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/" },
       { name: "White Orchid River Cruise" },
     ]}
     cityHub={{
@@ -93,7 +93,7 @@ const BlogPrincessVsWhiteOrchid = () => (
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "For 80% of Indian travelers, Chao Phraya Princess is the better choice — bigger, newer, more food variety, and a much better photo experience. The ₹500 premium over White Orchid is genuinely worth it for couples, honeymooners and families. Choose White Orchid only if you're traveling on a strict budget, or if you specifically want the traditional Thai dance performance experience. Either way, you can't really go wrong — both deliver the iconic Bangkok-by-night-on-the-river feeling that no rooftop bar can match. Book in advance during peak season (Nov–Feb), and always pick the version with private transfer included." },
 
-      { type: "cta", content: "Book the Chao Phraya Princess cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/", linkText: "Book Princess Cruise" },
+      { type: "cta", content: "Book the Chao Phraya Princess cruise", link: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/", linkText: "Book Princess Cruise" },
     ]}
     relatedActivities={[
       { title: "Wat Arun Bangkok Guide 2026", link: "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/" },

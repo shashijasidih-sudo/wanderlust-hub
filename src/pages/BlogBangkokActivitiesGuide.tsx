@@ -101,7 +101,7 @@ const BlogBangkokActivitiesGuide = () => {
       relatedActivities={[
         { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok-activities/grand-palace-wat-phra-kaew-tour/" },
         { title: "Three Temples Bangkok City Tour", link: "/thailand/bangkok-activities/three-temples-bangkok-city-tour-with-transfer/" },
-        { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/" },
+        { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/" },
         { title: "Safari World & Marine Park", link: "/thailand/bangkok-activities/safari-world/" },
       ]}
       relatedLinks={[

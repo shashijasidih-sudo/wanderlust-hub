@@ -64,7 +64,7 @@ const BlogBangkokCoupleTripCost = () => (
       { type: "tip-box", content: "Splurge on one luxury experience — a riverside dinner cruise or rooftop bar — and save on rest of the trip with affordable boutique stays." },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "A romantic Bangkok trip in 2026 starts at ₹70,000 per couple and goes up to ₹2.5L+ for a true luxury honeymoon. The sweet spot is around ₹1.4L for a 5-day mid-range stay with one big-ticket experience." },
-      { type: "cta", content: "Plan a romantic Bangkok escape", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/", linkText: "Book Dinner Cruise" },
+      { type: "cta", content: "Plan a romantic Bangkok escape", link: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/", linkText: "Book Dinner Cruise" },
     ]}
     relatedLinks={[
       { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },

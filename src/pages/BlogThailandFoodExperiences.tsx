@@ -103,7 +103,7 @@ const BlogThailandFoodExperiences = () => {
         { title: "Maeklong Floating Market Tour", link: "/thailand/bangkok-activities/maeklong-floating-market-tour/" },
         { title: "Bangkok Tuk Tuk Night Food Tour", link: "/thailand/bangkok-activities/tuk-tuk-night-tour-bangkok/" },
         { title: "Baiyoke Sky Buffet Dinner", link: "/thailand/bangkok-activities/baiyoke-buffet/" },
-        { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/" },
+        { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/" },
       ]}
       relatedLinks={[
         { title: "How Much Does Food Cost in Bangkok?", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-food-cost/" },
