@@ -143,7 +143,7 @@ const blogArticles = [
     author: "Food Critic",
     date: "Nov 18, 2024",
     readTime: "7 min read",
-    slug: "/dubai/dhow-cruise/"
+    slug: "/dubai-activities/dhow-cruise/"
   },
   {
     id: 5,
@@ -176,7 +176,7 @@ const blogArticles = [
     author: "Island Explorer",
     date: "Nov 10, 2024",
     readTime: "8 min read",
-    slug: "/dubai/atlantis-aquaventure/"
+    slug: "/dubai-activities/atlantis-aquaventure/"
   },
   {
     id: 8,

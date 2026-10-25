@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { dubaiDolphinShowFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/dolphin-show/",
+  path: "/dubai-activities/dolphin-show/",
   area: "creek",
   seoTitle: "Dubai Dolphin & Seal Show Tickets with Transfer | Yellodae",
   seoDescription: "Book Dubai Dolphinarium dolphin and seal show tickets with hotel transfers at Creek Park. Great for kids, instant confirmation and INR pricing.",

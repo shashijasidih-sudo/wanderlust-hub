@@ -4,7 +4,7 @@ const BigBusDiscover = () => (
   <SingaporeActivityTemplate
     config={{
       tourKey: "big-bus-discover",
-      path: "/singapore/big-bus-hop-on-hop-off-singapore-city-tour/",
+      path: "/singapore-activities/big-bus-hop-on-hop-off-singapore-city-tour/",
       seoTitle: "Big Bus Singapore Hop-On Hop-Off City Tour Tickets | Book in INR",
       seoDescription:
         "Book Big Bus Singapore Discover tickets — hop-on hop-off open-top city tour covering Marina Bay, Chinatown, Little India and Orchard Road. Instant confirmation.",

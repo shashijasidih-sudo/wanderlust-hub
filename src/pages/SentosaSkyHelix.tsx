@@ -4,7 +4,7 @@ const SentosaSkyHelix = () => (
   <SingaporeActivityTemplate
     config={{
       tourKey: "sentosa-sky-helix",
-      path: "/singapore/skyhelix-sentosa-tickets/",
+      path: "/singapore-activities/skyhelix-sentosa-tickets/",
       seoTitle: "SkyHelix Sentosa Tickets | Singapore's Highest Open-Air Ride",
       seoDescription:
         "Book SkyHelix Sentosa tickets — Singapore's highest open-air panoramic ride, 79m above sea level with 360° views. Instant confirmation, INR pricing, Indian support.",

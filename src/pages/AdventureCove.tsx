@@ -4,7 +4,7 @@ const AdventureCove = () => (
   <SingaporeActivityTemplate
     config={{
       tourKey: "adventure-cove",
-      path: "/singapore/adventure-cove-waterpark-tickets/",
+      path: "/singapore-activities/adventure-cove-waterpark-tickets/",
       seoTitle: "Adventure Cove Waterpark Tickets Singapore | Sentosa | Book in INR",
       seoDescription:
         "Book Adventure Cove Waterpark tickets at Resorts World Sentosa — water slides, Adventure River, Rainbow Reef snorkelling and wave pool. Instant confirmation, INR pricing.",

@@ -6,7 +6,7 @@ import { MuayThaiPattayaSEO } from "@/components/activity-detail/PattayaActivity
 import { muayThaiPattayaFaqs } from "@/data/pattayaActivityFaqs";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/pattaya/muay-thai-boxing-show-pattaya/",
+  path: "/thailand/pattaya-activities/muay-thai-boxing-show-pattaya/",
   city: "pattaya",
   area: "show",
   seoTitle: "Muay Thai Pattaya Boxing Show Tickets with Transfer | Yellodae",

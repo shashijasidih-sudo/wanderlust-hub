@@ -497,8 +497,8 @@ const App = () => (
             <Route path="/thailand/krabi/" element={<Navigate to="/thailand/krabi-activities/" replace />} />
             <Route path="/thailand/koh-samui/" element={<Navigate to="/thailand/koh-samui-activities/" replace />} />
             <Route path="/thailand/chiang-mai/" element={<Navigate to="/thailand/chiang-mai-activities/" replace />} />
-            <Route path="/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/" element={<KohSamuiWhiteOrchidLoyKrathongCruise />} />
-            <Route path="/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" element={<KohSamuiFullMoonParty />} />
+            <Route path="/thailand/koh-samui-activities/white-orchid-river-cruise-loy-krathong-festival/" element={<KohSamuiWhiteOrchidLoyKrathongCruise />} />
+            <Route path="/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/" element={<KohSamuiFullMoonParty />} />
             <Route path="/thailand/koh-samui/destination-guides/" element={<KohSamuiDestinationGuides />} />
             <Route path="/thailand/koh-samui/destination-guides/activity/white-orchid-river-cruise-loy-krathong-festival-guide/" element={<BlogWhiteOrchidLoyKrathongCruise />} />
             <Route path="/thailand/koh-samui/destination-guides/activity/first-time-full-moon-party-koh-samui-beginner-guide/" element={<BlogFirstTimeFullMoonPartyKohSamui />} />
@@ -509,9 +509,9 @@ const App = () => (
             <Route path="/thailand/koh-samui/destination-guides/activity/how-to-reach-full-moon-party-from-phuket-and-bangkok/" element={<BlogHowToReachFullMoonParty />} />
             <Route path="/thailand/koh-samui/destination-guides/activity/full-moon-party-thailand-guide-for-indians/" element={<BlogFullMoonPartyForIndians />} />
             <Route path="/thailand/koh-samui/destination-guides/activity/loy-krathong-festival-for-indian-travelers/" element={<BlogLoyKrathongForIndians />} />
-            <Route path="/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/" element={<ChiangMaiCityTempleTour />} />
-            <Route path="/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/" element={<ChiangMaiChiangRaiGoldenTriangle />} />
-            <Route path="/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/" element={<ChiangMaiDoiInthanon />} />
+            <Route path="/thailand/chiang-mai-activities/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/" element={<ChiangMaiCityTempleTour />} />
+            <Route path="/thailand/chiang-mai-activities/chiang-rai-golden-triangle-long-neck-tribe-day-trip/" element={<ChiangMaiChiangRaiGoldenTriangle />} />
+            <Route path="/thailand/chiang-mai-activities/doi-inthanon-national-park-full-day-tour/" element={<ChiangMaiDoiInthanon />} />
             <Route path="/thailand/chiang-mai/destination-guides/" element={<ChiangMaiDestinationGuides />} />
             <Route path="/thailand/chiang-mai/destination-guides/activity/doi-suthep-temple-complete-guide/" element={<BlogDoiSuthepCompleteGuide />} />
             <Route path="/thailand/chiang-mai/destination-guides/activity/chiang-rai-day-trip-golden-triangle-long-neck-tribe/" element={<BlogChiangRaiDayTripGoldenTriangle />} />
@@ -578,73 +578,73 @@ const App = () => (
             <Route path="/japan/destination-guides/price-cost/japan-trip-cost-from-india/" element={<BlogJapanTripCostFromIndia />} />
             <Route path="/japan/destination-guides/price-cost/mount-fuji-tour-cost-from-tokyo/" element={<BlogMountFujiTourCostFromTokyo />} />
             <Route path="/japan/destination-guides/price-cost/tokyo-disneyland-ticket-price-guide/" element={<BlogTokyoDisneylandTicketPriceGuide />} />
-            <Route path="/thailand/bangkok/safari-world/" element={<SafariWorld />} />
-            <Route path="/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" element={<PhiPhiIsland />} />
-            <Route path="/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" element={<JamesBondIsland />} />
-            <Route path="/thailand/bangkok/dolphin-show/" element={<DolphinShow />} />
-            <Route path="/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" element={<SelfieWithTigers />} />
-            <Route path="/thailand/phuket/elephant-safari/" element={<ElephantSafari />} />
-            <Route path="/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" element={<HotSpringEmeralPool />} />
-            <Route path="/thailand/bangkok/mahanakhon-skywalk-tickets/" element={<BangkokSkywalk />} />
-            <Route path="/thailand/bangkok/thai-massage-spa-deals-bangkok/" element={<MassageCoupons />} />
-            <Route path="/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/" element={<BangkokThreeTemples />} />
-            <Route path="/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/" element={<BangkokWatArunPhoTraimit />} />
-            <Route path="/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour/" element={<BangkokCityBoatTour />} />
-            <Route path="/thailand/bangkok/gems-gallery-bangkok-tickets/" element={<BangkokCityGemsGallery />} />
-            <Route path="/thailand/bangkok/wat-arun-chinatown-tour/" element={<BangkokWatArunChinatown />} />
-            <Route path="/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour/" element={<BangkokGoldenMarbleBuddha />} />
-            <Route path="/thailand/bangkok/ayutthaya-day-tour-from-bangkok/" element={<AyutthayaTempleTour />} />
-            <Route path="/thailand/bangkok/grand-palace-wat-phra-kaew-tour/" element={<BangkokGrandPalaceEmerald />} />
-            <Route path="/thailand/bangkok/baiyoke-buffet/" element={<BaiyokeBuffet />} />
-            <Route path="/thailand/bangkok/sea-life-madame-tussauds-tickets/" element={<SeaLifeMadameTussauds />} />
-            <Route path="/thailand/bangkok/viva-alangka-dinner-cruise/" element={<VivaAlangkaCruise />} />
-            <Route path="/thailand/bangkok/ayutthaya-sunset-river-cruise/" element={<AyutthayaSunsetCruise />} />
+            <Route path="/thailand/bangkok-activities/safari-world/" element={<SafariWorld />} />
+            <Route path="/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" element={<PhiPhiIsland />} />
+            <Route path="/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/" element={<JamesBondIsland />} />
+            <Route path="/thailand/bangkok-activities/dolphin-show/" element={<DolphinShow />} />
+            <Route path="/thailand/phuket-activities/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" element={<SelfieWithTigers />} />
+            <Route path="/thailand/phuket-activities/elephant-safari/" element={<ElephantSafari />} />
+            <Route path="/thailand/krabi-activities/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" element={<HotSpringEmeralPool />} />
+            <Route path="/thailand/bangkok-activities/mahanakhon-skywalk-tickets/" element={<BangkokSkywalk />} />
+            <Route path="/thailand/bangkok-activities/thai-massage-spa-deals-bangkok/" element={<MassageCoupons />} />
+            <Route path="/thailand/bangkok-activities/three-temples-bangkok-city-tour-with-transfer/" element={<BangkokThreeTemples />} />
+            <Route path="/thailand/bangkok-activities/wat-arun-wat-pho-golden-buddha-tour/" element={<BangkokWatArunPhoTraimit />} />
+            <Route path="/thailand/bangkok-activities/chao-phraya-river-boat-bangkok-city-tour/" element={<BangkokCityBoatTour />} />
+            <Route path="/thailand/bangkok-activities/gems-gallery-bangkok-tickets/" element={<BangkokCityGemsGallery />} />
+            <Route path="/thailand/bangkok-activities/wat-arun-chinatown-tour/" element={<BangkokWatArunChinatown />} />
+            <Route path="/thailand/bangkok-activities/golden-buddha-marble-temple-bangkok-city-tour/" element={<BangkokGoldenMarbleBuddha />} />
+            <Route path="/thailand/bangkok-activities/ayutthaya-day-tour-from-bangkok/" element={<AyutthayaTempleTour />} />
+            <Route path="/thailand/bangkok-activities/grand-palace-wat-phra-kaew-tour/" element={<BangkokGrandPalaceEmerald />} />
+            <Route path="/thailand/bangkok-activities/baiyoke-buffet/" element={<BaiyokeBuffet />} />
+            <Route path="/thailand/bangkok-activities/sea-life-madame-tussauds-tickets/" element={<SeaLifeMadameTussauds />} />
+            <Route path="/thailand/bangkok-activities/viva-alangka-dinner-cruise/" element={<VivaAlangkaCruise />} />
+            <Route path="/thailand/bangkok-activities/ayutthaya-sunset-river-cruise/" element={<AyutthayaSunsetCruise />} />
             <Route path="/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/" element={<ChaoPhrayaPrincessPrivate />} />
-            <Route path="/thailand/bangkok/chao-phraya-princess-valentine-dinner-cruise/" element={<ChaoPhrayaPrincessValentine />} />
-            <Route path="/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer/" element={<ChaoPhrayaPrincessJoin />} />
-            <Route path="/thailand/bangkok/chao-phraya-princess-dinner-cruise/" element={<ChaoPhrayaPrincessNoTransfer />} />
-            <Route path="/thailand/bangkok/maeklong-floating-market-tour/" element={<MaeklongFloatingMarket />} />
-            <Route path="/thailand/bangkok/tuk-tuk-night-tour-bangkok/" element={<BangkokTukTukNight />} />
-            <Route path="/thailand/bangkok/dream-world-bangkok-tickets/" element={<DreamWorldBangkok />} />
-            <Route path="/thailand/phuket/dolphin-show-phuket-with-transfer/" element={<DolphinBayPhuket />} />
-            <Route path="/thailand/phuket/phuket-night-market-tour-with-transfer/" element={<PhuketCityNightMarket />} />
-            <Route path="/thailand/phuket/simon-cabaret-show-with-transfer/" element={<PhuketSimonCabaret />} />
-            <Route path="/thailand/phuket/carnival-magic-show-tickets-with-transfer/" element={<PhuketCarnivalMagic />} />
-            <Route path="/thailand/phuket/muslim-friendly-tour/" element={<PhuketMuslimFriendlyTour />} />
-            <Route path="/thailand/phuket/tiger-kingdom-atv-experience-phuket-with-transfer/" element={<SelfieWithTigerATV />} />
-            <Route path="/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer/" element={<JamesBondIslandSeaCanoe />} />
-            <Route path="/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/" element={<PhiPhiBigBoat />} />
-            <Route path="/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/" element={<PhiPhiRoyalJet />} />
-            <Route path="/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/" element={<PhiPhiMayaKhaiSpeedboat />} />
+            <Route path="/thailand/bangkok-activities/chao-phraya-princess-valentine-dinner-cruise/" element={<ChaoPhrayaPrincessValentine />} />
+            <Route path="/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-transfer/" element={<ChaoPhrayaPrincessJoin />} />
+            <Route path="/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise/" element={<ChaoPhrayaPrincessNoTransfer />} />
+            <Route path="/thailand/bangkok-activities/maeklong-floating-market-tour/" element={<MaeklongFloatingMarket />} />
+            <Route path="/thailand/bangkok-activities/tuk-tuk-night-tour-bangkok/" element={<BangkokTukTukNight />} />
+            <Route path="/thailand/bangkok-activities/dream-world-bangkok-tickets/" element={<DreamWorldBangkok />} />
+            <Route path="/thailand/phuket-activities/dolphin-show-phuket-with-transfer/" element={<DolphinBayPhuket />} />
+            <Route path="/thailand/phuket-activities/phuket-night-market-tour-with-transfer/" element={<PhuketCityNightMarket />} />
+            <Route path="/thailand/phuket-activities/simon-cabaret-show-with-transfer/" element={<PhuketSimonCabaret />} />
+            <Route path="/thailand/phuket-activities/carnival-magic-show-tickets-with-transfer/" element={<PhuketCarnivalMagic />} />
+            <Route path="/thailand/phuket-activities/muslim-friendly-tour/" element={<PhuketMuslimFriendlyTour />} />
+            <Route path="/thailand/phuket-activities/tiger-kingdom-atv-experience-phuket-with-transfer/" element={<SelfieWithTigerATV />} />
+            <Route path="/thailand/phuket-activities/james-bond-island-sea-canoe-tour-with-transfer/" element={<JamesBondIslandSeaCanoe />} />
+            <Route path="/thailand/phuket-activities/phi-phi-island-big-boat-tour-with-transfer/" element={<PhiPhiBigBoat />} />
+            <Route path="/thailand/phuket-activities/phi-phi-island-premium-speedboat-tour-with-transfer/" element={<PhiPhiRoyalJet />} />
+            <Route path="/thailand/phuket-activities/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/" element={<PhiPhiMayaKhaiSpeedboat />} />
             {/* Legacy Phuket activity slugs → redirects to new canonical SEO URLs */}
             {/* Phuket hub page */}
             <Route path="/thailand/phuket/things-to-do/" element={<PhuketThingsToDo />} />
-            <Route path="/thailand/pattaya/pattaya-floating-market-tour/" element={<PattayaFloatingMarketTour />} />
-            <Route path="/thailand/pattaya/big-buddha-gems-gallery-tour/" element={<PattayaBigBuddhaGems />} />
-            <Route path="/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/" element={<CoralIslandPattaya />} />
-            <Route path="/thailand/pattaya/nong-nooch-tropical-garden-tickets/" element={<NongNoochGarden />} />
-            <Route path="/thailand/pattaya/pattaya-dolphinarium-show-tickets/" element={<PattayaDolphinarium />} />
-            <Route path="/thailand/pattaya/muay-thai-boxing-show-pattaya/" element={<MuayThaiPattaya />} />
-            <Route path="/thailand/pattaya/alcazar-cabaret-show-with-transfer/" element={<AlcazarShowPattaya />} />
-            <Route path="/thailand/pattaya/79-show-pattaya-with-transfer/" element={<Imagine79Show />} />
-            <Route path="/thailand/pattaya/69-show-pattaya-with-transfer/" element={<Show69Pattaya />} />
-            <Route path="/thailand/pattaya/89-show-pattaya-with-transfer/" element={<Show89Pattaya />} />
-            <Route path="/thailand/pattaya/99-show-pattaya-big-eye-with-transfer/" element={<BigEyeShowPattaya />} />
-            <Route path="/thailand/pattaya/pattaya-floating-market-guided-tour/" element={<PattayaFloatingMarketGuided />} />
-            <Route path="/thailand/pattaya/pattaya-nightlife-walking-tour/" element={<PattayaNightlifeWalking />} />
-            <Route path="/thailand/pattaya/pattaya-pub-crawl-night-tour/" element={<PattayaPubCrawl />} />
+            <Route path="/thailand/pattaya-activities/pattaya-floating-market-tour/" element={<PattayaFloatingMarketTour />} />
+            <Route path="/thailand/pattaya-activities/big-buddha-gems-gallery-tour/" element={<PattayaBigBuddhaGems />} />
+            <Route path="/thailand/pattaya-activities/coral-island-tour-with-transfer-and-indian-lunch/" element={<CoralIslandPattaya />} />
+            <Route path="/thailand/pattaya-activities/nong-nooch-tropical-garden-tickets/" element={<NongNoochGarden />} />
+            <Route path="/thailand/pattaya-activities/pattaya-dolphinarium-show-tickets/" element={<PattayaDolphinarium />} />
+            <Route path="/thailand/pattaya-activities/muay-thai-boxing-show-pattaya/" element={<MuayThaiPattaya />} />
+            <Route path="/thailand/pattaya-activities/alcazar-cabaret-show-with-transfer/" element={<AlcazarShowPattaya />} />
+            <Route path="/thailand/pattaya-activities/79-show-pattaya-with-transfer/" element={<Imagine79Show />} />
+            <Route path="/thailand/pattaya-activities/69-show-pattaya-with-transfer/" element={<Show69Pattaya />} />
+            <Route path="/thailand/pattaya-activities/89-show-pattaya-with-transfer/" element={<Show89Pattaya />} />
+            <Route path="/thailand/pattaya-activities/99-show-pattaya-big-eye-with-transfer/" element={<BigEyeShowPattaya />} />
+            <Route path="/thailand/pattaya-activities/pattaya-floating-market-guided-tour/" element={<PattayaFloatingMarketGuided />} />
+            <Route path="/thailand/pattaya-activities/pattaya-nightlife-walking-tour/" element={<PattayaNightlifeWalking />} />
+            <Route path="/thailand/pattaya-activities/pattaya-pub-crawl-night-tour/" element={<PattayaPubCrawl />} />
             {/* Legacy Pattaya activity slugs → redirects to new canonical SEO URLs */}
             {/* Pattaya hub page */}
             <Route path="/thailand/pattaya/things-to-do/" element={<PattayaThingsToDo />} />
-            <Route path="/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/" element={<HongIslandsLongtail />} />
-            <Route path="/thailand/krabi/hong-island-tour-speedboat-with-transfer/" element={<HongIslandsSpeedboat />} />
-            <Route path="/thailand/krabi/7-islands-tour-longtail-boat-with-transfer/" element={<SevenIslandsLongtail />} />
-            <Route path="/thailand/krabi/7-islands-tour-speedboat-with-transfer/" element={<SevenIslandsSpeedboat />} />
-            <Route path="/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" element={<FourIslandsLongtail />} />
-            <Route path="/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer/" element={<FourIslandsLongtailNoParkFee />} />
-            <Route path="/thailand/krabi/4-island-tour-speedboat-with-transfer/" element={<FourIslandsSpeedboat />} />
-            <Route path="/thailand/krabi/james-bond-island/" element={<JamesBondIslandKrabi />} />
-            <Route path="/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" element={<PhiPhiKrabiSpeedboat />} />
+            <Route path="/thailand/krabi-activities/hong-island-tour-longtail-boat-with-transfer/" element={<HongIslandsLongtail />} />
+            <Route path="/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/" element={<HongIslandsSpeedboat />} />
+            <Route path="/thailand/krabi-activities/7-islands-tour-longtail-boat-with-transfer/" element={<SevenIslandsLongtail />} />
+            <Route path="/thailand/krabi-activities/7-islands-tour-speedboat-with-transfer/" element={<SevenIslandsSpeedboat />} />
+            <Route path="/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" element={<FourIslandsLongtail />} />
+            <Route path="/thailand/krabi-activities/4-island-tour-longtail-boat-no-park-fee-with-transfer/" element={<FourIslandsLongtailNoParkFee />} />
+            <Route path="/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/" element={<FourIslandsSpeedboat />} />
+            <Route path="/thailand/krabi-activities/james-bond-island/" element={<JamesBondIslandKrabi />} />
+            <Route path="/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/" element={<PhiPhiKrabiSpeedboat />} />
             {/* Legacy Krabi activity slugs → redirects to new canonical SEO URLs */}
             {/* Krabi hub page */}
             <Route path="/thailand/krabi/things-to-do/" element={<KrabiThingsToDo />} />
@@ -777,7 +777,7 @@ const App = () => (
            <Route path="/thailand/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer/" element={<BangkokTempleTourDmkAirport />} />
            <Route path="/thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer/" element={<BangkokSafariWorldBkkAirport />} />
            <Route path="/thailand/bangkok/bangkok-hotel-safari-world-to-don-mueang-airport-transfer/" element={<BangkokSafariWorldDmkAirport />} />
-           <Route path="/thailand/bangkok/bangkok-hotel-to-hotel-transfer-4-hours/" element={<BangkokCityHourlyRental />} />
+           <Route path="/thailand/bangkok-activities/bangkok-hotel-to-hotel-transfer-4-hours/" element={<BangkokCityHourlyRental />} />
            <Route path="/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer/" element={<BangkokToPattaya />} />
            <Route path="/thailand/bangkok/bangkok-city-tour-to-pattaya-hotel-transfer/" element={<BangkokCityTourPattaya />} />
            <Route path="/thailand/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer/" element={<BangkokTigerTopiaPattaya />} />
@@ -815,7 +815,7 @@ const App = () => (
             <Route path="/thailand/phuket/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer/" element={<PhuketHktAirportCityTour />} />
             <Route path="/thailand/phuket/phuket-hotel-to-phuket-airport-transfer/" element={<PhuketHktAirportDropoff />} />
             <Route path="/thailand/phuket/phuket-city-tour-to-phuket-airport-transfer/" element={<PhuketCityTourHktAirport />} />
-            <Route path="/thailand/phuket/phuket-hotel-to-hotel-transfer-4-hours/" element={<PhuketCityHourlyRental />} />
+            <Route path="/thailand/phuket-activities/phuket-hotel-to-hotel-transfer-4-hours/" element={<PhuketCityHourlyRental />} />
             <Route path="/thailand/phuket/phuket-hotel-to-krabi-hotel-transfer/" element={<PhuketToKrabi />} />
             <Route path="/thailand/phuket/phuket-city-tour-to-krabi-hotel-transfer/" element={<PhuketCityTourKrabi />} />
             <Route path="/thailand/phuket/krabi-city-tour-to-krabi-hotel-transfer/" element={<PhuketKrabiCityTour />} />
@@ -836,27 +836,27 @@ const App = () => (
             <Route path="/dubai/" element={<Navigate to="/dubai-activities/" replace />} />
             <Route path="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" element={<BlogDubaiDesertSafariNewAttractions />} />
             <Route path="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide" element={<Navigate to="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" replace />} />
-            <Route path="/dubai/desert-safari/" element={<Navigate to="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" replace />} />
+            <Route path="/dubai-activities/desert-safari/" element={<Navigate to="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" replace />} />
             <Route path="/dubai/desert-safari" element={<Navigate to="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" replace />} />
-            <Route path="/dubai/desert-safari-shisha/" element={<DesertSafariShisha />} />
-            <Route path="/dubai/desert-safari-sharing/" element={<DesertSafariSharing />} />
-            <Route path="/dubai/dhow-cruise/" element={<DhowCruise />} />
-            <Route path="/dubai/dhow-cruise-creek-lower-deck/" element={<DhowCruiseCreekLower />} />
-            <Route path="/dubai/dhow-cruise-creek-upper-deck/" element={<DhowCruiseCreekUpper />} />
-            <Route path="/dubai/dhow-cruise-marina-lower-deck/" element={<DhowCruiseMarinaLower />} />
-            <Route path="/dubai/dhow-cruise-marina-upper-deck/" element={<DhowCruiseMarinaUpper />} />
-            <Route path="/dubai/atlantis-aquaventure/" element={<AtlantisPalm />} />
-            <Route path="/dubai/city-tour/" element={<DubaiCityTour />} />
-            <Route path="/dubai/city-tour-mall/" element={<DubaiCityTourMall />} />
-            <Route path="/dubai/global-village/" element={<GlobalVillageDubai />} />
-            <Route path="/dubai/abu-dhabi-city-tour/" element={<AbuDhabiCityTour />} />
-            <Route path="/dubai/abu-dhabi-ferrari-world/" element={<AbuDhabiFerrariWorld />} />
-            <Route path="/dubai/aquarium-penguin/" element={<DubaiAquariumPenguin />} />
-            <Route path="/dubai/burj-khalifa-non-prime/" element={<BurjKhalifaNonPrime />} />
-            <Route path="/dubai/burj-khalifa-prime/" element={<BurjKhalifaPrime />} />
-            <Route path="/dubai/dolphin-show/" element={<DubaiDolphinShow />} />
-            <Route path="/dubai/miracle-garden/" element={<MiracleGardenDubai />} />
-            <Route path="/dubai/fountain-show/" element={<DubaiFountainShow />} />
+            <Route path="/dubai-activities/desert-safari-shisha/" element={<DesertSafariShisha />} />
+            <Route path="/dubai-activities/desert-safari-sharing/" element={<DesertSafariSharing />} />
+            <Route path="/dubai-activities/dhow-cruise/" element={<DhowCruise />} />
+            <Route path="/dubai-activities/dhow-cruise-creek-lower-deck/" element={<DhowCruiseCreekLower />} />
+            <Route path="/dubai-activities/dhow-cruise-creek-upper-deck/" element={<DhowCruiseCreekUpper />} />
+            <Route path="/dubai-activities/dhow-cruise-marina-lower-deck/" element={<DhowCruiseMarinaLower />} />
+            <Route path="/dubai-activities/dhow-cruise-marina-upper-deck/" element={<DhowCruiseMarinaUpper />} />
+            <Route path="/dubai-activities/atlantis-aquaventure/" element={<AtlantisPalm />} />
+            <Route path="/dubai-activities/city-tour/" element={<DubaiCityTour />} />
+            <Route path="/dubai-activities/city-tour-mall/" element={<DubaiCityTourMall />} />
+            <Route path="/dubai-activities/global-village/" element={<GlobalVillageDubai />} />
+            <Route path="/dubai-activities/abu-dhabi-city-tour/" element={<AbuDhabiCityTour />} />
+            <Route path="/dubai-activities/abu-dhabi-ferrari-world/" element={<AbuDhabiFerrariWorld />} />
+            <Route path="/dubai-activities/aquarium-penguin/" element={<DubaiAquariumPenguin />} />
+            <Route path="/dubai-activities/burj-khalifa-non-prime/" element={<BurjKhalifaNonPrime />} />
+            <Route path="/dubai-activities/burj-khalifa-prime/" element={<BurjKhalifaPrime />} />
+            <Route path="/dubai-activities/dolphin-show/" element={<DubaiDolphinShow />} />
+            <Route path="/dubai-activities/miracle-garden/" element={<MiracleGardenDubai />} />
+            <Route path="/dubai-activities/fountain-show/" element={<DubaiFountainShow />} />
             <Route path="/dubai/budget-airport-transfers/" element={<DubaiTransfersNew />} />
             <Route path="/dubai/airport-pickup-zone1/" element={<DubaiAirportPickupZone1 />} />
             <Route path="/dubai/airport-dropoff-zone1/" element={<DubaiAirportDropoffZone1 />} />
@@ -903,27 +903,27 @@ const App = () => (
             <Route path="/singapore/" element={<Navigate to="/singapore-activities/" replace />} />
             <Route path="/singapore/things-to-do/" element={<SingaporeThingsToDo />} />
             {/* Singapore Activities — SEO-friendly slugs */}
-            <Route path="/singapore/singapore-city-tour/" element={<SingaporeCityTour />} />
-            <Route path="/singapore/night-safari-singapore-tickets-and-transfers/" element={<NightSafariTickets />} />
+            <Route path="/singapore-activities/singapore-city-tour/" element={<SingaporeCityTour />} />
+            <Route path="/singapore-activities/night-safari-singapore-tickets-and-transfers/" element={<NightSafariTickets />} />
             <Route path="/singapore/night-safari-transfer/" element={<NightSafariTransfer />} />
-            <Route path="/singapore/night-safari-dinner/" element={<NightSafariDinner />} />
-            <Route path="/singapore/sentosa-4d-adventureland-tickets/" element={<Sentosa4D2Rides />} />
-            <Route path="/singapore/sentosa-4d-3-rides/" element={<Sentosa4D3Rides />} />
-            <Route path="/singapore/sentosa-cable-car-tickets-and-transfers/" element={<SentosaCableCar />} />
-            <Route path="/singapore/wings-of-time-show-sentosa-tickets/" element={<SentosaWingsTime />} />
-            <Route path="/singapore/skyhelix-sentosa-tickets/" element={<SentosaSkyHelix />} />
-            <Route path="/singapore/singapore-river-cruise-tickets-and-transfers/" element={<SingaporeRiverCruise />} />
-            <Route path="/singapore/gardens-by-the-bay-tickets-and-transfers/" element={<GardensByTheBay />} />
-            <Route path="/singapore/adventure-cove-waterpark-tickets/" element={<AdventureCove />} />
-            <Route path="/singapore/singapore-flyer-tickets-and-transfers/" element={<SingaporeFlyer />} />
-            <Route path="/singapore/river-wonders-singapore-tickets/" element={<RiverSafari />} />
-            <Route path="/singapore/universal-studios-singapore-tickets-and-transfers/" element={<UniversalStudiosWeekday />} />
-            <Route path="/singapore/universal-studios-singapore-weekend-tickets/" element={<UniversalStudiosWeekend />} />
-            <Route path="/singapore/singapore-zoo-tickets/" element={<SingaporeZoo />} />
-            <Route path="/singapore/rainforest-wild-asia-tickets/" element={<RainforestWildAsia />} />
-            <Route path="/singapore/big-bus-hop-on-hop-off-singapore-city-tour/" element={<BigBusDiscover />} />
-            <Route path="/singapore/big-bus-night-city-tour-singapore/" element={<BigBusNight />} />
-            <Route path="/singapore/sentosa-island/" element={<SentosaIsland />} />
+            <Route path="/singapore-activities/night-safari-dinner/" element={<NightSafariDinner />} />
+            <Route path="/singapore-activities/sentosa-4d-adventureland-tickets/" element={<Sentosa4D2Rides />} />
+            <Route path="/singapore-activities/sentosa-4d-3-rides/" element={<Sentosa4D3Rides />} />
+            <Route path="/singapore-activities/sentosa-cable-car-tickets-and-transfers/" element={<SentosaCableCar />} />
+            <Route path="/singapore-activities/wings-of-time-show-sentosa-tickets/" element={<SentosaWingsTime />} />
+            <Route path="/singapore-activities/skyhelix-sentosa-tickets/" element={<SentosaSkyHelix />} />
+            <Route path="/singapore-activities/singapore-river-cruise-tickets-and-transfers/" element={<SingaporeRiverCruise />} />
+            <Route path="/singapore-activities/gardens-by-the-bay-tickets-and-transfers/" element={<GardensByTheBay />} />
+            <Route path="/singapore-activities/adventure-cove-waterpark-tickets/" element={<AdventureCove />} />
+            <Route path="/singapore-activities/singapore-flyer-tickets-and-transfers/" element={<SingaporeFlyer />} />
+            <Route path="/singapore-activities/river-wonders-singapore-tickets/" element={<RiverSafari />} />
+            <Route path="/singapore-activities/universal-studios-singapore-tickets-and-transfers/" element={<UniversalStudiosWeekday />} />
+            <Route path="/singapore-activities/universal-studios-singapore-weekend-tickets/" element={<UniversalStudiosWeekend />} />
+            <Route path="/singapore-activities/singapore-zoo-tickets/" element={<SingaporeZoo />} />
+            <Route path="/singapore-activities/rainforest-wild-asia-tickets/" element={<RainforestWildAsia />} />
+            <Route path="/singapore-activities/big-bus-hop-on-hop-off-singapore-city-tour/" element={<BigBusDiscover />} />
+            <Route path="/singapore-activities/big-bus-night-city-tour-singapore/" element={<BigBusNight />} />
+            <Route path="/singapore-activities/sentosa-island/" element={<SentosaIsland />} />
             {/* Singapore Activities — legacy redirects */}
             <Route path="/singapore/budget-airport-transfers/" element={<SingaporeTransfersNew />} />
             {/* Singapore Transfers — SEO-friendly slugs */}

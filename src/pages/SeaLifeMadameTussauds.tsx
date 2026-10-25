@@ -33,7 +33,7 @@ const SeaLifeMadameTussauds = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="sea-life-madame-tussauds" />}
       config={{
-        path: "/thailand/bangkok/sea-life-madame-tussauds-tickets/",
+        path: "/thailand/bangkok-activities/sea-life-madame-tussauds-tickets/",
         seoTitle: "Sea Life Bangkok & Madame Tussauds Combo Tickets | Book in INR",
         seoDescription:
           "Book the Sea Life Ocean World and Madame Tussauds Bangkok combo tickets at Siam Paragon. Indoor, air-conditioned fun for families. Instant confirmation in INR.",

@@ -18,12 +18,12 @@ const Blog = () => (
     cityHub={{ city: "Chiang Mai", thingsToDoLink: "/thailand/chiang-mai/things-to-do/", transfersLink: "/thailand/chiang-mai/budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "Chiang Mai is rapidly becoming a favourite destination for Indian travelers — temples, mountains, affordability and a laid-back vibe. The two highest-value bookings for Indians are the Chiang Mai city temple tour with hotel pickup and the Chiang Rai Golden Triangle day trip — both English-speaking, hassle-free and INR-friendly." },
-      { type: "cta", content: "Most-booked by Indians: Doi Suthep + Chedi Luang + Pha Lat with transfer", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/", linkText: "Book Temple Tour" },
+      { type: "cta", content: "Most-booked by Indians: Doi Suthep + Chedi Luang + Pha Lat with transfer", link: "/thailand/chiang-mai-activities/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/", linkText: "Book Temple Tour" },
       { type: "heading", content: "Visa & Travel Basics" },
       { type: "list", items: ["Visa on Arrival available for Indians","Currency: Thai Baht","Ideal trip budget: ₹40,000 – ₹80,000"] },
       { type: "heading", content: "Top Attractions" },
       { type: "list", items: ["Wat Phra That Doi Suthep","Wat Chedi Luang & Wat Pha Lat","Night bazaars","Ethical elephant sanctuaries","Doi Inthanon National Park"] },
-      { type: "cta", content: "Add a full nature day with Doi Inthanon — Thailand's highest peak", link: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/", linkText: "Book Doi Inthanon Tour" },
+      { type: "cta", content: "Add a full nature day with Doi Inthanon — Thailand's highest peak", link: "/thailand/chiang-mai-activities/doi-inthanon-national-park-full-day-tour/", linkText: "Book Doi Inthanon Tour" },
       { type: "mid-activities", destination: "thailand", heading: "Top Picks for Indian Travelers" },
       { type: "heading", content: "Indian Food in Chiang Mai" },
       { type: "list", items: ["Many Indian restaurants in the Old City and Nimman","Vegetarian and Jain food easily available","Street food has solid veg options too"] },
@@ -35,9 +35,9 @@ const Blog = () => (
       { type: "cta", content: "Browse all Indian-friendly Chiang Mai tours and activities", link: "/thailand/chiang-mai/things-to-do/", linkText: "Explore Chiang Mai Tours" },
     ]}
     relatedActivities={[
-      { title: "Chiang Mai City Temple Tour with Transfer", link: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/" },
-      { title: "Chiang Rai & Golden Triangle Day Trip", link: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/" },
-      { title: "Doi Inthanon National Park Full-Day Tour", link: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/" },
+      { title: "Chiang Mai City Temple Tour with Transfer", link: "/thailand/chiang-mai-activities/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/" },
+      { title: "Chiang Rai & Golden Triangle Day Trip", link: "/thailand/chiang-mai-activities/chiang-rai-golden-triangle-long-neck-tribe-day-trip/" },
+      { title: "Doi Inthanon National Park Full-Day Tour", link: "/thailand/chiang-mai-activities/doi-inthanon-national-park-full-day-tour/" },
     ]}
     relatedLinks={[
       { title: "Chiang Rai Day Trip for Indian Travelers", link: "/thailand/chiang-mai/destination-guides/activity/chiang-rai-day-trip-for-indian-travelers/" },

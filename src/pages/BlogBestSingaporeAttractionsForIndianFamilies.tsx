@@ -30,7 +30,7 @@ const Blog = () => (
       { type: "list", items: ["World's first nocturnal zoo — tram ride through forest with lions, tigers, elephants","Creatures of the Night live show","Walking trails for older kids","Different from a regular zoo — kids love it"] },
       { type: "heading", content: "4. River Wonders — Relaxed & Educational" },
       { type: "list", items: ["Home to Singapore's giant pandas","Amazon River Quest boat ride","Manatee tank — perfect for younger kids","Easy to combine with Singapore Zoo + Night Safari in one Mandai day"] },
-      { type: "cta", content: "Pre-book the Night Safari with transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers/", linkText: "Book Night Safari" },
+      { type: "cta", content: "Pre-book the Night Safari with transfers", link: "/singapore-activities/night-safari-singapore-tickets-and-transfers/", linkText: "Book Night Safari" },
       { type: "heading", content: "5. Gardens by the Bay — Futuristic & Free Garden Rhapsody" },
       { type: "list", items: ["Supertree Grove — free OCBC Skyway viewing","Cloud Forest with indoor waterfall","Flower Dome — biggest glass greenhouse in the world","Free Garden Rhapsody light show at 7:45 and 8:45 PM"] },
       { type: "heading", content: "6. Sentosa Cable Car — Transport + Attraction" },
@@ -50,9 +50,9 @@ const Blog = () => (
       { type: "cta", content: "Plan your Singapore family trip with Yellodae", link: "/singapore/things-to-do/", linkText: "See Singapore Tours" },
     ]}
     relatedActivities={[
-      { title: "Universal Studios Singapore", link: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-      { title: "Singapore Night Safari", link: "/singapore/night-safari-singapore-tickets-and-transfers/" },
-      { title: "Sentosa Cable Car", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+      { title: "Universal Studios Singapore", link: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/" },
+      { title: "Singapore Night Safari", link: "/singapore-activities/night-safari-singapore-tickets-and-transfers/" },
+      { title: "Sentosa Cable Car", link: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
     ]}
     relatedLinks={[
       { title: "Singapore Trip Cost from India with Activities", link: "/singapore/destination-guides/indian-audience/singapore-trip-cost-from-india-with-activities/" },

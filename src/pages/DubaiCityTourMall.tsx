@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { dubaiMallCityTourFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/city-tour-mall/",
+  path: "/dubai-activities/city-tour-mall/",
   area: "downtown",
   seoTitle: "Dubai City Tour with Dubai Mall & Transfers | Yellodae",
   seoDescription: "Book the Dubai city tour with Dubai Mall free time and the evening fountain show. Hotel transfers, instant confirmation, INR pricing and Indian support.",

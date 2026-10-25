@@ -6,7 +6,7 @@ const Sentosa4D3Rides = () => (
   <SingaporeActivityTemplate
     config={{
       tourKey: "sentosa-4d-3rides",
-      path: "/singapore/sentosa-4d-3-rides/",
+      path: "/singapore-activities/sentosa-4d-3-rides/",
       seoTitle: "Sentosa 4D Adventureland 3 Rides Tickets | Best Value | Yellodae",
       seoDescription:
         "All 3 Sentosa 4D Adventureland rides in one pass — Extreme Log Ride, Journey 2 and Haunted Mine Ride. Instant confirmation, INR pricing, Indian WhatsApp support.",

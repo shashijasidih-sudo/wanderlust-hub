@@ -13,7 +13,7 @@ import imgKayaks from "@/assets/phuket-kayaks-beach-1.jpg";
 
 
 const TOUR_LINK =
-  "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/";
+  "/thailand/phuket-activities/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/";
 
 const faqs = [
   {
@@ -244,7 +244,7 @@ const BlogPhuketCityTourTigerKingdomTransferGuide = () => (
         "Day 4 – Beach Day: Patong / Kata / Karon",
         "Day 5 – Adventure: rafting, ATV, elephant sanctuary or another Phuket experience",
       ]},
-      { type: "paragraph", content: "This gives you a combination of culture + sightseeing + adventure + relaxation. For day three, compare the [Phi Phi Island tour](/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/) and the [James Bond Island tour](/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/)." },
+      { type: "paragraph", content: "This gives you a combination of culture + sightseeing + adventure + relaxation. For day three, compare the [Phi Phi Island tour](/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/) and the [James Bond Island tour](/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/)." },
 
       { type: "heading", content: "Is the Phuket City Tour with Tiger Kingdom Worth It?" },
       { type: "paragraph", content: "For travellers who want to see several Phuket highlights without spending time organising individual transportation, yes, it can be a practical choice." },
@@ -274,8 +274,8 @@ const BlogPhuketCityTourTigerKingdomTransferGuide = () => (
     ]}
     relatedActivities={[
       { title: "Phuket City Tour with Tiger Kingdom & Transfer", link: TOUR_LINK },
-      { title: "Full Day Phi Phi Island Tour with Transfer", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
-      { title: "James Bond Island Speed Boat Tour with Transfer", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
+      { title: "Full Day Phi Phi Island Tour with Transfer", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "James Bond Island Speed Boat Tour with Transfer", link: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/" },
       { title: "Phuket Airport to Hotel Transfer", link: "/thailand/phuket/phuket-airport-to-phuket-hotel-transfer/" },
     ]}
     relatedLinks={[

@@ -6,7 +6,7 @@ import { PattayaNightlifeWalkingSEO } from "@/components/activity-detail/Pattaya
 import { lostInNightlightFaqs } from "@/data/pattayaActivityFaqs";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/pattaya/pattaya-nightlife-walking-tour/",
+  path: "/thailand/pattaya-activities/pattaya-nightlife-walking-tour/",
   city: "pattaya",
   area: "show",
   seoTitle: "Pattaya Nightlife Walking Tour with Food Tasting | Yellodae",

@@ -113,7 +113,7 @@ const extraActivities: Partial<
     },
     {
       title: "Chao Phraya Princess Dinner Cruise Bangkok",
-      link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise/",
+      link: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise/",
       image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&auto=format&fit=crop",
     },
     {
@@ -123,7 +123,7 @@ const extraActivities: Partial<
     },
     {
       title: "4 Islands Tour Krabi by Longtail Boat",
-      link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/",
+      link: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/",
       image: "https://images.unsplash.com/photo-1544194215-541c2d3561a4?w=800&auto=format&fit=crop",
     },
   ],

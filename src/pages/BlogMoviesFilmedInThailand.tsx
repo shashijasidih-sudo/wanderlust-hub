@@ -10,26 +10,26 @@ import imgJamesBondPoster from "@/assets/movie-james-bond-island.webp";
 import imgDilChahtaHai from "@/assets/movie-dil-chahta-hai-thailand.webp";
 
 /* ---- Yellodae activity links assigned to each movie section ---- */
-const KRABI_4_ISLANDS = "/thailand/krabi/4-island-tour-speedboat-with-transfer/";
-const KRABI_4_ISLANDS_LONGTAIL = "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/";
-const KRABI_HONG_ISLAND = "/thailand/krabi/hong-island-tour-speedboat-with-transfer/";
+const KRABI_4_ISLANDS = "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/";
+const KRABI_4_ISLANDS_LONGTAIL = "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/";
+const KRABI_HONG_ISLAND = "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/";
 const KRABI_THINGS = "/thailand/krabi/things-to-do/";
 const KRABI_TRANSFERS = "/thailand/krabi-airport-transfers/";
-const PHI_PHI = "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/";
-const PHI_PHI_MAYA = "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/";
-const JAMES_BOND = "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/";
-const JAMES_BOND_CANOE = "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer/";
-const JAMES_BOND_KRABI = "/thailand/krabi/james-bond-island/";
-const PHUKET_CITY = "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/";
+const PHI_PHI = "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/";
+const PHI_PHI_MAYA = "/thailand/phuket-activities/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/";
+const JAMES_BOND = "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/";
+const JAMES_BOND_CANOE = "/thailand/phuket-activities/james-bond-island-sea-canoe-tour-with-transfer/";
+const JAMES_BOND_KRABI = "/thailand/krabi-activities/james-bond-island/";
+const PHUKET_CITY = "/thailand/phuket-activities/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/";
 const PHUKET_THINGS = "/thailand/phuket/things-to-do/";
 const PHUKET_TRANSFERS = "/thailand/phuket-airport-transfers/";
-const BANGKOK_CITY = "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/";
-const BANGKOK_TEMPLES = "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/";
-const BANGKOK_CRUISE = "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer/";
+const BANGKOK_CITY = "/thailand/bangkok-activities/three-temples-bangkok-city-tour-with-transfer/";
+const BANGKOK_TEMPLES = "/thailand/bangkok-activities/wat-arun-wat-pho-golden-buddha-tour/";
+const BANGKOK_CRUISE = "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-transfer/";
 const BANGKOK_THINGS = "/thailand/bangkok/things-to-do/";
 const BANGKOK_TRANSFERS = "/thailand/bangkok-airport-transfers/";
 const SAMUI_HUB = "/thailand/koh-samui-activities/";
-const SAMUI_CRUISE = "/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/";
+const SAMUI_CRUISE = "/thailand/koh-samui-activities/white-orchid-river-cruise-loy-krathong-festival/";
 
 const faqs = [
   {

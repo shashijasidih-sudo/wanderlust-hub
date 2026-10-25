@@ -12,7 +12,7 @@ const NightSafariTickets = () => (
   <SingaporeActivityTemplate
     config={{
       tourKey: "night-safari-tickets",
-      path: "/singapore/night-safari-singapore-tickets-and-transfers/",
+      path: "/singapore-activities/night-safari-singapore-tickets-and-transfers/",
       seoTitle: "Night Safari Singapore Tickets & Transfers | Instant Confirmation",
       seoDescription:
         "Book Night Safari Singapore tickets with optional hotel transfers — tram ride, walking trails and Creatures of the Night show. INR pricing, Indian WhatsApp support.",

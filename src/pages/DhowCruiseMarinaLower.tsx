@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { dhowCruiseFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/dhow-cruise-marina-lower-deck/",
+  path: "/dubai-activities/dhow-cruise-marina-lower-deck/",
   area: "marina",
   seoTitle: "Dhow Dinner Cruise Marina Lower Deck with Transfers | Yellodae",
   seoDescription: "Book Dubai Marina dhow dinner cruise lower deck with air-conditioned seating, international buffet and hotel transfers. Instant confirmation, INR pricing.",

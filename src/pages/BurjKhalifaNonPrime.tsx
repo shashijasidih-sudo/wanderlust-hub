@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { burjKhalifaFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/burj-khalifa-non-prime/",
+  path: "/dubai-activities/burj-khalifa-non-prime/",
   area: "downtown",
   seoTitle: "Burj Khalifa 124th & 125th Floor Non-Prime Tickets | Yellodae",
   seoDescription: "Book Burj Khalifa 124th and 125th floor non-prime hour tickets at the best price. Timed slots, instant confirmation, INR pricing and Indian support.",

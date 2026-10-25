@@ -4,7 +4,7 @@ const NightSafariDinner = () => (
   <SingaporeActivityTemplate
     config={{
       tourKey: "night-safari-dinner",
-      path: "/singapore/night-safari-dinner/",
+      path: "/singapore-activities/night-safari-dinner/",
       seoTitle: "Night Safari Singapore with Indian Dinner & Transfers | Yellodae",
       seoDescription:
         "Night Safari Singapore with Indian dinner and round-trip hotel transfers. Tram safari, walking trails, live shows plus a vegetarian-friendly Indian meal. Book in INR.",

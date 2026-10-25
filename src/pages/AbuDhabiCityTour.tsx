@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { abuDhabiCityTourFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/abu-dhabi-city-tour/",
+  path: "/dubai-activities/abu-dhabi-city-tour/",
   area: "abu-dhabi",
   seoTitle: "Abu Dhabi City Tour from Dubai with Transfers | Yellodae",
   seoDescription: "Book the Abu Dhabi day tour from Dubai covering Sheikh Zayed Grand Mosque, Corniche and Emirates Palace. Hotel transfers, INR pricing, Indian support.",

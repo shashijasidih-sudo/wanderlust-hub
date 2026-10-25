@@ -31,7 +31,7 @@ const HongIslandsLongtail = () => {
       tourData={tourData}
       contentAfterOverview={<KrabiTourItinerary tourKey="hong-islands-longtail" />}
       config={{
-        path: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/",
+        path: "/thailand/krabi-activities/hong-island-tour-longtail-boat-with-transfer/",
         seoTitle: "Hong Island Tour Krabi by Longtail Boat with Transfers | Yellodae",
         seoDescription:
           "Book the Hong Island longtail boat tour from Krabi — hidden lagoon, Pakbia and Lao Lading beaches, hotel transfers, INR pricing and Indian support.",

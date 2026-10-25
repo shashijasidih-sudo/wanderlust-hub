@@ -31,7 +31,7 @@ const JamesBondIslandKrabi = () => {
       tourData={tourData}
       contentAfterOverview={<KrabiTourItinerary tourKey="james-bond-island-krabi" />}
       config={{
-        path: "/thailand/krabi/james-bond-island/",
+        path: "/thailand/krabi-activities/james-bond-island/",
         seoTitle: "James Bond Island Tour from Krabi with Hotel Transfers | Yellodae",
         seoDescription:
           "Book the James Bond Island tour from Krabi — Phang Nga Bay karsts, Koh Panyee floating village, canoeing, hotel transfers and INR pricing.",

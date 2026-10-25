@@ -31,7 +31,7 @@ const Blog = () => (
       { type: "list", items: ["Krabi beaches — Railay, Phra Nang Cave, Hong Island, Poda Island (dramatic cliffs + untouched)","Phuket beaches — Patong, Kata, Karon, Freedom (beautiful but often crowded & commercial)","Verdict — Krabi wins for scenic beauty and peaceful beaches"] },
       { type: "heading", content: "4. Island Tours & Activities" },
       { type: "list", items: ["Krabi — 4 Island Tour, Phi Phi, Hong Island, Jungle Tour, Kayaking in Ao Thalane","Phuket — Phi Phi, James Bond Island, Coral Island, water sports, luxury cruises","Krabi tours ₹1,200–₹4,500 | Phuket tours ₹3,500–₹7,500","Verdict — Krabi offers better value"] },
-      { type: "cta", content: "Book the best-rated 4 Island Tour from Krabi", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/", linkText: "Book 4 Island Tour" },
+      { type: "cta", content: "Book the best-rated 4 Island Tour from Krabi", link: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/", linkText: "Book 4 Island Tour" },
       { type: "heading", content: "5. Nightlife & Party Scene" },
       { type: "list", items: ["Krabi — limited, beach bars, chill vibe","Phuket — Bangla Road, nightclubs, beach parties, cabaret shows","Verdict — Phuket clearly wins for nightlife"] },
       { type: "heading", content: "6. Food & Indian Food Availability" },
@@ -58,9 +58,9 @@ const Blog = () => (
       { type: "cta", content: "Book a smooth Krabi airport transfer", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
-      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
-      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
-      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" },
+      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },
+      { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/" },
+      { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/" },
       { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
     ]}
     relatedLinks={[

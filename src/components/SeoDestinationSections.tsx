@@ -72,7 +72,7 @@ const sections: Section[] = [
     description:
       "Most-booked Singapore attractions and airport transfers — Universal Studios tickets, Night Safari and fixed-price Changi pickups and drop-offs.",
     cards: [
-      { title: "Universal Studios Tickets", href: "/singapore/universal-studios-singapore-tickets-and-transfers/", image: universalImg },
+      { title: "Universal Studios Tickets", href: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/", image: universalImg },
       { title: "Night Safari Guide", href: "/blog/night-safari-singapore-guide/", image: singaporeImg },
       { title: "Changi Airport Pickup", href: "/singapore/singapore-airport-pickup/", image: singaporeCityImg },
       { title: "Changi Airport Drop-off", href: "/singapore/singapore-airport-dropoff/", image: singaporeCityImg },
@@ -98,7 +98,7 @@ const sections: Section[] = [
       "Top Krabi tours and activities for Indian travelers — island hopping, Phi Phi day trips, Hong Island and rainforest adventures.",
     cards: [
       { title: "4 Island Tour", href: "/thailand/krabi/krabi-four-island-tour-with-transfer/", image: fourIslandImg },
-      { title: "Phi Phi Tour", href: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/", image: phiPhiImg },
+      { title: "Phi Phi Tour", href: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/", image: phiPhiImg },
       { title: "Hong Island", href: "/thailand/krabi/hong-island-tour-with-transfer/", image: hongIslandImg },
       { title: "Jungle Tour", href: "/thailand/krabi/krabi-jungle-tour-with-transfer/", image: jungleImg },
     ],
@@ -109,10 +109,10 @@ const sections: Section[] = [
     description:
       "Best Phuket tours — Phi Phi speed boat tours, James Bond Island adventures and Phuket city sightseeing for Indian travelers.",
     cards: [
-      { title: "Phi Phi from Phuket", href: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/", image: phiPhiImg },
-      { title: "James Bond Island", href: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/", image: jamesBondImg },
+      { title: "Phi Phi from Phuket", href: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/", image: phiPhiImg },
+      { title: "James Bond Island", href: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/", image: jamesBondImg },
       { title: "Phuket City Guide", href: "/thailand/phuket/destination-guides/", image: phuketImg },
-      { title: "Elephant Safari", href: "/thailand/phuket/elephant-safari/", image: jungleImg },
+      { title: "Elephant Safari", href: "/thailand/phuket-activities/elephant-safari/", image: jungleImg },
     ],
   },
   {
@@ -121,10 +121,10 @@ const sections: Section[] = [
     description:
       "Book Dubai's most loved experiences — desert safari, dhow cruises, Burj Khalifa views and family attractions with instant confirmation.",
     cards: [
-      { title: "Dubai Desert Safari", href: "/dubai/desert-safari/", image: dubaiDesertImg },
-      { title: "Dhow Cruise Marina", href: "/dubai/dhow-cruise-marina-upper-deck/", image: dubaiDhowImg },
-      { title: "Dubai City Tour + Mall", href: "/dubai/city-tour-mall/", image: dubaiCityImg },
-      { title: "Dubai Fountain Show", href: "/dubai/fountain-show/", image: dubaiFountainImg },
+      { title: "Dubai Desert Safari", href: "/dubai-activities/desert-safari/", image: dubaiDesertImg },
+      { title: "Dhow Cruise Marina", href: "/dubai-activities/dhow-cruise-marina-upper-deck/", image: dubaiDhowImg },
+      { title: "Dubai City Tour + Mall", href: "/dubai-activities/city-tour-mall/", image: dubaiCityImg },
+      { title: "Dubai Fountain Show", href: "/dubai-activities/fountain-show/", image: dubaiFountainImg },
     ],
   },
 
@@ -134,10 +134,10 @@ const sections: Section[] = [
     description:
       "Premium Phi Phi cruises, dolphin encounters and Phuket's iconic evening shows with hotel transfers.",
     cards: [
-      { title: "Phi Phi Premium Speedboat", href: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/", image: phiPhiImg },
-      { title: "Maya Bay + Khai Speedboat", href: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/", image: phiPhiImg },
-      { title: "Dolphin Show Phuket", href: "/thailand/phuket/dolphin-show-phuket-with-transfer/", image: pattayaDolphinImg },
-      { title: "Simon Cabaret Show", href: "/thailand/phuket/simon-cabaret-show-with-transfer/", image: alcazarImg },
+      { title: "Phi Phi Premium Speedboat", href: "/thailand/phuket-activities/phi-phi-island-premium-speedboat-tour-with-transfer/", image: phiPhiImg },
+      { title: "Maya Bay + Khai Speedboat", href: "/thailand/phuket-activities/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/", image: phiPhiImg },
+      { title: "Dolphin Show Phuket", href: "/thailand/phuket-activities/dolphin-show-phuket-with-transfer/", image: pattayaDolphinImg },
+      { title: "Simon Cabaret Show", href: "/thailand/phuket-activities/simon-cabaret-show-with-transfer/", image: alcazarImg },
     ],
   },
   {
@@ -146,10 +146,10 @@ const sections: Section[] = [
     description:
       "Chao Phraya dinner cruises, Baiyoke Sky Buffet and iconic Bangkok attractions with easy booking.",
     cards: [
-      { title: "Chao Phraya Princess Cruise", href: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer/", image: bangkokCruiseImg },
+      { title: "Chao Phraya Princess Cruise", href: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-transfer/", image: bangkokCruiseImg },
       { title: "Chao Phraya Private Cruise", href: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/", image: bangkokCruiseImg },
-      { title: "Baiyoke Sky Buffet", href: "/thailand/bangkok/baiyoke-buffet/", image: bangkokSkywalkImg },
-      { title: "Sea Life + Madame Tussauds", href: "/thailand/bangkok/sea-life-madame-tussauds-tickets/", image: bangkokTempleImg },
+      { title: "Baiyoke Sky Buffet", href: "/thailand/bangkok-activities/baiyoke-buffet/", image: bangkokSkywalkImg },
+      { title: "Sea Life + Madame Tussauds", href: "/thailand/bangkok-activities/sea-life-madame-tussauds-tickets/", image: bangkokTempleImg },
     ],
   },
   {
@@ -171,10 +171,10 @@ const sections: Section[] = [
     description:
       "Extra island-hopping variants from Krabi and top day trips from Chiang Mai — perfect for extended stays.",
     cards: [
-      { title: "Hong Island Speedboat", href: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/", image: hongIslandImg },
-      { title: "Hong Island Longtail", href: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/", image: hongIslandImg },
-      { title: "James Bond Island (Krabi)", href: "/thailand/krabi/james-bond-island/", image: jamesBondImg },
-      { title: "Chiang Rai + Golden Triangle", href: "/thailand/chiang-mai/chiang-rai-golden-triangle-long-neck-tribe-day-trip/", image: chiangRaiImg },
+      { title: "Hong Island Speedboat", href: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/", image: hongIslandImg },
+      { title: "Hong Island Longtail", href: "/thailand/krabi-activities/hong-island-tour-longtail-boat-with-transfer/", image: hongIslandImg },
+      { title: "James Bond Island (Krabi)", href: "/thailand/krabi-activities/james-bond-island/", image: jamesBondImg },
+      { title: "Chiang Rai + Golden Triangle", href: "/thailand/chiang-mai-activities/chiang-rai-golden-triangle-long-neck-tribe-day-trip/", image: chiangRaiImg },
     ],
   },
   {

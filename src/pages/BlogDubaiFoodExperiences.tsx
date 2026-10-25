@@ -19,21 +19,21 @@ import dubaiDesertCouple2 from "@/assets/dubai-desert-couple-2.jpg";
 import dubaiGlobalVillage2 from "@/assets/dubai-global-village-2.jpg";
 
 const activityCards = [
-  { title: "Desert Safari with Sharing", location: "Lahbab Desert", image: dubaiDesertCouple2, slug: "/dubai/desert-safari-sharing/" },
-  { title: "Desert Safari with Shisha", location: "Lahbab Desert", image: dubaiDesertWoman, slug: "/dubai/desert-safari-shisha/" },
-  { title: "Dhow Creek Cruise - Lower", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-creek-lower-deck/" },
-  { title: "Dhow Creek Cruise - Upper", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-creek-upper-deck/" },
-  { title: "Dhow Marina Cruise - Lower", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-marina-lower-deck/" },
-  { title: "Dhow Marina Cruise - Upper", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-marina-upper-deck/" },
-  { title: "Dubai City Tour", location: "Dubai", image: dubaiCityNight, slug: "/dubai/city-tour/" },
-  { title: "Dubai City Tour with Mall", location: "Dubai", image: dubaiSkylineSunset, slug: "/dubai/city-tour-mall/" },
-  { title: "Global Village Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/dubai/global-village/" },
-  { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: dubaiSkylineSunset, slug: "/dubai/abu-dhabi-city-tour/" },
-  { title: "Burj Khalifa Non-Prime", location: "Downtown Dubai", image: dubaiSkylineSunset, slug: "/dubai/burj-khalifa-non-prime/" },
-  { title: "Burj Khalifa Prime Time", location: "Downtown Dubai", image: dubaiSkyline, slug: "/dubai/burj-khalifa-prime/" },
-  { title: "Dubai Aquarium + Penguin", location: "Dubai Mall", image: dubaiAquariumFish, slug: "/dubai/aquarium-penguin/" },
-  { title: "Dubai Fountain Show + Ride", location: "Downtown Dubai", image: dubaiFountainShow, slug: "/dubai/fountain-show/" },
-  { title: "Miracle Garden Dubai", location: "Dubai", image: dubaiGlobalVillage2, slug: "/dubai/miracle-garden/" },
+  { title: "Desert Safari with Sharing", location: "Lahbab Desert", image: dubaiDesertCouple2, slug: "/dubai-activities/desert-safari-sharing/" },
+  { title: "Desert Safari with Shisha", location: "Lahbab Desert", image: dubaiDesertWoman, slug: "/dubai-activities/desert-safari-shisha/" },
+  { title: "Dhow Creek Cruise - Lower", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-creek-lower-deck/" },
+  { title: "Dhow Creek Cruise - Upper", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-creek-upper-deck/" },
+  { title: "Dhow Marina Cruise - Lower", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-marina-lower-deck/" },
+  { title: "Dhow Marina Cruise - Upper", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-marina-upper-deck/" },
+  { title: "Dubai City Tour", location: "Dubai", image: dubaiCityNight, slug: "/dubai-activities/city-tour/" },
+  { title: "Dubai City Tour with Mall", location: "Dubai", image: dubaiSkylineSunset, slug: "/dubai-activities/city-tour-mall/" },
+  { title: "Global Village Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/dubai-activities/global-village/" },
+  { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: dubaiSkylineSunset, slug: "/dubai-activities/abu-dhabi-city-tour/" },
+  { title: "Burj Khalifa Non-Prime", location: "Downtown Dubai", image: dubaiSkylineSunset, slug: "/dubai-activities/burj-khalifa-non-prime/" },
+  { title: "Burj Khalifa Prime Time", location: "Downtown Dubai", image: dubaiSkyline, slug: "/dubai-activities/burj-khalifa-prime/" },
+  { title: "Dubai Aquarium + Penguin", location: "Dubai Mall", image: dubaiAquariumFish, slug: "/dubai-activities/aquarium-penguin/" },
+  { title: "Dubai Fountain Show + Ride", location: "Downtown Dubai", image: dubaiFountainShow, slug: "/dubai-activities/fountain-show/" },
+  { title: "Miracle Garden Dubai", location: "Dubai", image: dubaiGlobalVillage2, slug: "/dubai-activities/miracle-garden/" },
 ];
 
 const ActivityCards = () => {

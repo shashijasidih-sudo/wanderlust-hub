@@ -7,13 +7,13 @@ const LINKS =
   "Related reads: [Singapore Airport Pickup](/singapore/singapore-airport-pickup/) · " +
   "[Airport Drop-off](/singapore/singapore-airport-dropoff/) · " +
   "[Night Airport Pickup](/singapore/singapore-airport-night-pickup/) · " +
-  "[Universal Studios Singapore](/singapore/universal-studios-singapore-tickets-and-transfers/) · " +
-  "[Gardens by the Bay](/singapore/gardens-by-the-bay-tickets-and-transfers/) · " +
-  "[Night Safari](/singapore/night-safari-singapore-tickets-and-transfers/) · " +
-  "[Singapore River Cruise](/singapore/singapore-river-cruise-tickets-and-transfers/) · " +
-  "[Sentosa Cable Car](/singapore/sentosa-cable-car-tickets-and-transfers/) · " +
-  "[Sentosa Island](/singapore/sentosa-island/) · " +
-  "[Singapore Flyer](/singapore/singapore-flyer-tickets-and-transfers/).";
+  "[Universal Studios Singapore](/singapore-activities/universal-studios-singapore-tickets-and-transfers/) · " +
+  "[Gardens by the Bay](/singapore-activities/gardens-by-the-bay-tickets-and-transfers/) · " +
+  "[Night Safari](/singapore-activities/night-safari-singapore-tickets-and-transfers/) · " +
+  "[Singapore River Cruise](/singapore-activities/singapore-river-cruise-tickets-and-transfers/) · " +
+  "[Sentosa Cable Car](/singapore-activities/sentosa-cable-car-tickets-and-transfers/) · " +
+  "[Sentosa Island](/singapore-activities/sentosa-island/) · " +
+  "[Singapore Flyer](/singapore-activities/singapore-flyer-tickets-and-transfers/).";
 
 const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
   <BlogArticleLayout
@@ -231,7 +231,7 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
       { type: "paragraph", content: "One of Singapore's most luxurious areas. Popular hotels include Marina Bay Sands, The Fullerton Hotel, Pan Pacific Singapore, Mandarin Oriental Singapore, and The Ritz-Carlton, Millenia Singapore. **Travel Time: 20–25 minutes.** Ideal for luxury holidays, honeymoon couples and business travellers." },
 
       { type: "subheading", content: "Sentosa Island" },
-      { type: "paragraph", content: "[Sentosa](/singapore/sentosa-island/) is home to many of Singapore's most famous attractions. Popular hotels include Village Hotel Sentosa, Equarius Hotel, Hotel Michael, The Outpost Hotel and W Singapore – Sentosa Cove. **Travel Time: 25–35 minutes.** Perfect for visitors planning to explore [Universal Studios Singapore](/singapore/universal-studios-singapore-tickets-and-transfers/), S.E.A. Aquarium, Adventure Cove Waterpark and Wings of Time." },
+      { type: "paragraph", content: "[Sentosa](/singapore-activities/sentosa-island/) is home to many of Singapore's most famous attractions. Popular hotels include Village Hotel Sentosa, Equarius Hotel, Hotel Michael, The Outpost Hotel and W Singapore – Sentosa Cove. **Travel Time: 25–35 minutes.** Perfect for visitors planning to explore [Universal Studios Singapore](/singapore-activities/universal-studios-singapore-tickets-and-transfers/), S.E.A. Aquarium, Adventure Cove Waterpark and Wings of Time." },
 
       { type: "subheading", content: "Orchard Road" },
       { type: "paragraph", content: "Singapore's shopping paradise. Popular hotels: Hilton Singapore Orchard, YOTEL Singapore, Holiday Inn Orchard, Grand Park Orchard and Orchard Hotel Singapore. **Travel Time: 20–30 minutes.** Best for shopping holidays, couples and luxury stays." },
@@ -251,15 +251,15 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
       { type: "heading", content: "Popular Airport Transfer Routes" },
       { type: "paragraph", content: "Every day, thousands of travellers use airport transfers from Changi Airport to hotels across Singapore. Some of the most popular routes include:" },
       { type: "subheading", content: "Changi Airport → Marina Bay Sands" },
-      { type: "paragraph", content: "Approximate travel time: 20–25 minutes. Highlights: [Gardens by the Bay](/singapore/gardens-by-the-bay-tickets-and-transfers/), Marina Bay Sands SkyPark, ArtScience Museum." },
+      { type: "paragraph", content: "Approximate travel time: 20–25 minutes. Highlights: [Gardens by the Bay](/singapore-activities/gardens-by-the-bay-tickets-and-transfers/), Marina Bay Sands SkyPark, ArtScience Museum." },
       { type: "subheading", content: "Changi Airport → Universal Studios Singapore" },
-      { type: "paragraph", content: "Approximate travel time: 25–35 minutes. Perfect for families planning to spend the day at [Universal Studios](/singapore/universal-studios-singapore-tickets-and-transfers/) or Resorts World Sentosa." },
+      { type: "paragraph", content: "Approximate travel time: 25–35 minutes. Perfect for families planning to spend the day at [Universal Studios](/singapore-activities/universal-studios-singapore-tickets-and-transfers/) or Resorts World Sentosa." },
       { type: "subheading", content: "Changi Airport → Orchard Road" },
       { type: "paragraph", content: "Approximate travel time: 20–30 minutes. Ideal for shopping enthusiasts." },
       { type: "subheading", content: "Changi Airport → Little India" },
       { type: "paragraph", content: "Approximate travel time: 20–25 minutes. A popular choice for Indian families looking for familiar food and cultural experiences." },
       { type: "subheading", content: "Changi Airport → Clarke Quay" },
-      { type: "paragraph", content: "Approximate travel time: 25–30 minutes. Great for evening entertainment and [river cruises](/singapore/singapore-river-cruise-tickets-and-transfers/)." },
+      { type: "paragraph", content: "Approximate travel time: 25–30 minutes. Great for evening entertainment and [river cruises](/singapore-activities/singapore-river-cruise-tickets-and-transfers/)." },
       { type: "subheading", content: "Changi Airport → Chinatown" },
       { type: "paragraph", content: "Approximate travel time: 25 minutes. Perfect for cultural exploration and local cuisine." },
 
@@ -355,16 +355,16 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
       { type: "subheading", content: "Planning More Than Just an Airport Transfer?" },
       { type: "paragraph", content: "Yellodae also helps Indian travellers book some of Singapore's most popular experiences, including:" },
       { type: "list", items: [
-        "[Universal Studios Singapore](/singapore/universal-studios-singapore-tickets-and-transfers/)",
-        "[Gardens by the Bay](/singapore/gardens-by-the-bay-tickets-and-transfers/)",
+        "[Universal Studios Singapore](/singapore-activities/universal-studios-singapore-tickets-and-transfers/)",
+        "[Gardens by the Bay](/singapore-activities/gardens-by-the-bay-tickets-and-transfers/)",
         "Marina Bay Sands SkyPark",
-        "[Night Safari](/singapore/night-safari-singapore-tickets-and-transfers/)",
+        "[Night Safari](/singapore-activities/night-safari-singapore-tickets-and-transfers/)",
         "Singapore Zoo",
         "River Wonders",
         "S.E.A. Aquarium",
         "Wings of Time",
-        "[Singapore Cable Car](/singapore/sentosa-cable-car-tickets-and-transfers/)",
-        "[Sentosa attractions](/singapore/sentosa-island/)",
+        "[Singapore Cable Car](/singapore-activities/sentosa-cable-car-tickets-and-transfers/)",
+        "[Sentosa attractions](/singapore-activities/sentosa-island/)",
       ]},
       { type: "paragraph", content: "Booking attractions and airport transfers together makes planning your holiday simpler and more convenient." },
 

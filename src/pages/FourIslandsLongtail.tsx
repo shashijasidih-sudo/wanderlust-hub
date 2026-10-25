@@ -31,7 +31,7 @@ const FourIslandsLongtail = () => {
       tourData={tourData}
       contentAfterOverview={<KrabiTourItinerary tourKey="four-islands-longtail" />}
       config={{
-        path: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/",
+        path: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/",
         seoTitle: "4 Island Tour Krabi by Longtail Boat with Hotel Transfers | Yellodae",
         seoDescription:
           "Book the Krabi 4 Island longtail boat tour — Poda, Chicken, Tub Island and Phra Nang Cave Beach with transfers, INR pricing and Indian support.",

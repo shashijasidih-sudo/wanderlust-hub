@@ -6,7 +6,7 @@ import { AlcazarShowPattayaSEO } from "@/components/activity-detail/PattayaActiv
 import { alcazarShowPattayaFaqs } from "@/data/pattayaActivityFaqs";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/",
+  path: "/thailand/pattaya-activities/alcazar-cabaret-show-with-transfer/",
   city: "pattaya",
   area: "show",
   seoTitle: "Alcazar Cabaret Show Pattaya Tickets with Transfer | Yellodae",

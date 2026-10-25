@@ -53,7 +53,7 @@ const Blog = () => (
       { title: "Krabi Airport to Ao Nang Hotel Transfer", link: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer/" },
       { title: "Krabi Hotel to Krabi Airport Transfer", link: "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer/" },
       { title: "All Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
-      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
+      { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },
     ]}
     relatedLinks={[
       { title: "Phuket to Krabi Transfer Guide", link: "/thailand/krabi/destination-guides/transfer/phuket-to-krabi-transfer-guide/" },

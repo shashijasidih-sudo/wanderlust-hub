@@ -28,7 +28,7 @@ const PhiPhiKrabiSpeedboat = () => {
       tourData={tourData}
       contentAfterOverview={<KrabiTourItinerary tourKey="phi-phi-krabi-speedboat" />}
       config={{
-        path: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/",
+        path: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/",
         seoTitle: "Phi Phi Island Tour from Krabi by Speedboat with Transfers | Yellodae",
         seoDescription:
           "Book the Phi Phi Island speedboat tour from Krabi — Maya Bay, Phi Leh Lagoon, Bamboo Island snorkelling, buffet lunch, hotel transfers and INR pricing.",

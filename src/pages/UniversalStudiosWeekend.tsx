@@ -4,7 +4,7 @@ const UniversalStudiosWeekend = () => (
   <SingaporeActivityTemplate
     config={{
       tourKey: "universal-studios-weekend",
-      path: "/singapore/universal-studios-singapore-weekend-tickets/",
+      path: "/singapore-activities/universal-studios-singapore-weekend-tickets/",
       seoTitle: "Universal Studios Singapore Weekend Tickets | Sentosa | Book in INR",
       seoDescription:
         "Book Universal Studios Singapore weekend tickets — 7 themed zones, Transformers, Jurassic Park and Battlestar Galactica. Instant confirmation, INR pricing, Indian support.",

@@ -4,7 +4,7 @@ const RiverSafari = () => (
   <SingaporeActivityTemplate
     config={{
       tourKey: "river-safari",
-      path: "/singapore/river-wonders-singapore-tickets/",
+      path: "/singapore-activities/river-wonders-singapore-tickets/",
       seoTitle: "River Wonders Singapore Tickets | Giant Pandas & Amazon Flooded Forest",
       seoDescription:
         "Book River Wonders Singapore tickets at Mandai — giant pandas, manatees, Amazon Flooded Forest and the Amazon River Quest. Instant confirmation, INR pricing.",

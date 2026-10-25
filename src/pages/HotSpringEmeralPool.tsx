@@ -31,7 +31,7 @@ const HotSpringEmeralPool = () => {
       tourData={tourData}
       contentAfterOverview={<KrabiTourItinerary tourKey="hot-spring-emerald-pool" />}
       config={{
-        path: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/",
+        path: "/thailand/krabi-activities/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/",
         seoTitle: "Emerald Pool, Hot Springs & Tiger Cave Temple Tour Krabi | Yellodae",
         seoDescription:
           "Book the full-day Emerald Pool, Klong Thom Hot Springs and Tiger Cave Temple tour in Krabi with hotel transfers, INR pricing and Indian support.",

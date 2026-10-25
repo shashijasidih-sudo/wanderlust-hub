@@ -129,7 +129,7 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
       badge: "eSIM",
     },
     {
-      slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise/",
+      slug: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise/",
       title: "Chao Phraya Dinner Cruise",
       description: "Premium river cruise with buffet and live music — a perfect final night.",
       image: U("photo-1508009603885-50cf7c579365"),
@@ -162,7 +162,7 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
       badge: "eSIM",
     },
     {
-      slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/",
+      slug: "/thailand/pattaya-activities/alcazar-cabaret-show-with-transfer/",
       title: "Alcazar Cabaret Show with Transfer",
       description: "Pattaya's most famous cabaret — premium seating available.",
       image: U("photo-1514533212735-5df27d970db0"),
@@ -194,7 +194,7 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
       badge: "eSIM",
     },
     {
-      slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/",
+      slug: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/",
       title: "Phi Phi Island Day Tour",
       description: "Maya Bay, snorkelling and lunch — Phuket's signature day out.",
       image: U("photo-1552465011-b4e21bf6e79a"),
@@ -226,7 +226,7 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
       badge: "eSIM",
     },
     {
-      slug: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/",
+      slug: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/",
       title: "Hong Island Speedboat Tour",
       description: "Emerald lagoons and white-sand beaches on a private-style speedboat.",
       image: U("photo-1537956965359-7573183d1f57"),
@@ -249,14 +249,14 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
       badge: "Airport Transfer",
     },
     {
-      slug: "/singapore/universal-studios-singapore-tickets-and-transfers/",
+      slug: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/",
       title: "Universal Studios Tickets & Transfers",
       description: "Skip the queue with tickets plus optional hotel transfers.",
       image: U("photo-1560347876-aeef00ee58a1"),
       badge: "Premium Experience",
     },
     {
-      slug: "/singapore/gardens-by-the-bay-tickets-and-transfers/",
+      slug: "/singapore-activities/gardens-by-the-bay-tickets-and-transfers/",
       title: "Gardens by the Bay Tickets",
       description: "Cloud Forest and Flower Dome entry with easy transfer add-on.",
       image: U("photo-1508964942454-1a56651d54ac"),

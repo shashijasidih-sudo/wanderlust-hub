@@ -114,15 +114,15 @@ const CITY = {
   cultureNote:
     "Dress modestly at mosques and souks, avoid public displays of affection, ask before photographing locals, and never drink alcohol outside licensed venues.",
   trip: [
-    { title: "Burj Khalifa 124th & 125th Floor", desc: "Skip-the-line observation deck tickets in Downtown Dubai.", image: dubaiSkylineNight, slug: "/dubai/burj-khalifa-non-prime/" },
-    { title: "Desert Safari with BBQ Dinner", desc: "Dune bashing, camel rides, live shows and BBQ dinner.", image: dubaiDesertWoman, slug: "/dubai/desert-safari-sharing/" },
-    { title: "Dhow Dinner Cruise Marina", desc: "Two-hour cruise with buffet dinner and skyline views.", image: dubaiDhowCruise, slug: "/dubai/dhow-cruise-marina-lower-deck/" },
-    { title: "Dubai City Tour", desc: "Old and new Dubai with a guide and hotel transfers.", image: dubaiSkylineSunset, slug: "/dubai/city-tour/" },
-    { title: "Dubai Aquarium & Penguin Cove", desc: "Tunnel walk, Underwater Zoo and Penguin Cove.", image: dubaiAquariumFish, slug: "/dubai/aquarium-penguin/" },
-    { title: "Dubai Fountain Show & Lake Ride", desc: "Closest possible view of the world's tallest fountain.", image: dubaiFountain, slug: "/dubai/fountain-show/" },
-    { title: "Global Village Dubai", desc: "90+ country pavilions, street food and nightly fireworks.", image: dubaiGlobalVillage, slug: "/dubai/global-village/" },
-    { title: "Miracle Garden Dubai", desc: "150 million blooms and the Emirates A380 flower structure.", image: dubaiGlobalVillage2, slug: "/dubai/miracle-garden/" },
-    { title: "Abu Dhabi City Tour", desc: "Sheikh Zayed Grand Mosque, Corniche and Emirates Palace.", image: dubaiCityNight, slug: "/dubai/abu-dhabi-city-tour/" },
+    { title: "Burj Khalifa 124th & 125th Floor", desc: "Skip-the-line observation deck tickets in Downtown Dubai.", image: dubaiSkylineNight, slug: "/dubai-activities/burj-khalifa-non-prime/" },
+    { title: "Desert Safari with BBQ Dinner", desc: "Dune bashing, camel rides, live shows and BBQ dinner.", image: dubaiDesertWoman, slug: "/dubai-activities/desert-safari-sharing/" },
+    { title: "Dhow Dinner Cruise Marina", desc: "Two-hour cruise with buffet dinner and skyline views.", image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-marina-lower-deck/" },
+    { title: "Dubai City Tour", desc: "Old and new Dubai with a guide and hotel transfers.", image: dubaiSkylineSunset, slug: "/dubai-activities/city-tour/" },
+    { title: "Dubai Aquarium & Penguin Cove", desc: "Tunnel walk, Underwater Zoo and Penguin Cove.", image: dubaiAquariumFish, slug: "/dubai-activities/aquarium-penguin/" },
+    { title: "Dubai Fountain Show & Lake Ride", desc: "Closest possible view of the world's tallest fountain.", image: dubaiFountain, slug: "/dubai-activities/fountain-show/" },
+    { title: "Global Village Dubai", desc: "90+ country pavilions, street food and nightly fireworks.", image: dubaiGlobalVillage, slug: "/dubai-activities/global-village/" },
+    { title: "Miracle Garden Dubai", desc: "150 million blooms and the Emirates A380 flower structure.", image: dubaiGlobalVillage2, slug: "/dubai-activities/miracle-garden/" },
+    { title: "Abu Dhabi City Tour", desc: "Sheikh Zayed Grand Mosque, Corniche and Emirates Palace.", image: dubaiCityNight, slug: "/dubai-activities/abu-dhabi-city-tour/" },
   ],
 };
 

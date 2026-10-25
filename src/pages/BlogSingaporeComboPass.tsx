@@ -23,20 +23,20 @@ import gardensBayNight from "@/assets/singapore-gardens-bay-night-1.jpg";
 import bigBus from "@/assets/singapore-big-bus.webp";
 
 const activityCards = [
-  { title: "Gardens by the Bay Tickets", location: "Marina Bay", image: gardensBay, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers/" },
-  { title: "Universal Studios Weekday", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-  { title: "Night Safari with Dinner", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-dinner/" },
-  { title: "Singapore City Tour", location: "Singapore", image: cityTour, slug: "/singapore/singapore-city-tour/" },
-  { title: "Sentosa Cable Car Ride", location: "Sentosa", image: cableCar, slug: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
-  { title: "Singapore Flyer Ticket", location: "Marina Bay", image: flyer, slug: "/singapore/singapore-flyer-tickets-and-transfers/" },
-  { title: "Adventure Cove Water Park", location: "Sentosa", image: adventureCove, slug: "/singapore/adventure-cove-waterpark-tickets/" },
-  { title: "Singapore River Cruise", location: "Clarke Quay", image: riverCruise, slug: "/singapore/singapore-river-cruise-tickets-and-transfers/" },
-  { title: "Singapore Zoo + Tram Ride", location: "Mandai", image: zoo, slug: "/singapore/singapore-zoo-tickets/" },
-  { title: "Sentosa Wings of Time Show", location: "Sentosa", image: wingsTime, slug: "/singapore/wings-of-time-show-sentosa-tickets/" },
-  { title: "Sentosa Sky Helix", location: "Sentosa", image: skyHelix, slug: "/singapore/skyhelix-sentosa-tickets/" },
+  { title: "Gardens by the Bay Tickets", location: "Marina Bay", image: gardensBay, slug: "/singapore-activities/gardens-by-the-bay-tickets-and-transfers/" },
+  { title: "Universal Studios Weekday", location: "Sentosa", image: universalStudios, slug: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/" },
+  { title: "Night Safari with Dinner", location: "Mandai", image: nightSafari, slug: "/singapore-activities/night-safari-dinner/" },
+  { title: "Singapore City Tour", location: "Singapore", image: cityTour, slug: "/singapore-activities/singapore-city-tour/" },
+  { title: "Sentosa Cable Car Ride", location: "Sentosa", image: cableCar, slug: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
+  { title: "Singapore Flyer Ticket", location: "Marina Bay", image: flyer, slug: "/singapore-activities/singapore-flyer-tickets-and-transfers/" },
+  { title: "Adventure Cove Water Park", location: "Sentosa", image: adventureCove, slug: "/singapore-activities/adventure-cove-waterpark-tickets/" },
+  { title: "Singapore River Cruise", location: "Clarke Quay", image: riverCruise, slug: "/singapore-activities/singapore-river-cruise-tickets-and-transfers/" },
+  { title: "Singapore Zoo + Tram Ride", location: "Mandai", image: zoo, slug: "/singapore-activities/singapore-zoo-tickets/" },
+  { title: "Sentosa Wings of Time Show", location: "Sentosa", image: wingsTime, slug: "/singapore-activities/wings-of-time-show-sentosa-tickets/" },
+  { title: "Sentosa Sky Helix", location: "Sentosa", image: skyHelix, slug: "/singapore-activities/skyhelix-sentosa-tickets/" },
   { title: "Sentosa 4D Adventureland", location: "Sentosa", image: sentosa4d, slug: "/sentosa-4d-2rides/" },
-  { title: "Universal Studios Weekend", location: "Sentosa", image: universalStudios, slug: "/singapore/universal-studios-singapore-weekend-tickets/" },
-  { title: "Big Bus Singapore Discover", location: "Singapore", image: bigBus, slug: "/singapore/big-bus-hop-on-hop-off-singapore-city-tour/" },
+  { title: "Universal Studios Weekend", location: "Sentosa", image: universalStudios, slug: "/singapore-activities/universal-studios-singapore-weekend-tickets/" },
+  { title: "Big Bus Singapore Discover", location: "Singapore", image: bigBus, slug: "/singapore-activities/big-bus-hop-on-hop-off-singapore-city-tour/" },
   { title: "Night Safari with Transfer", location: "Mandai", image: nightSafari, slug: "/singapore/night-safari-transfer/" },
 ];
 

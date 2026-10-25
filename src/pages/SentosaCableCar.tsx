@@ -10,7 +10,7 @@ const SentosaCableCar = () => (
   <SingaporeActivityTemplate
     config={{
       tourKey: "sentosa-cable-car",
-      path: "/singapore/sentosa-cable-car-tickets-and-transfers/",
+      path: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/",
       seoTitle: "Sentosa Cable Car Tickets & Transfers | Mount Faber Line | Yellodae",
       seoDescription:
         "Book Singapore Cable Car round-trip tickets on the Mount Faber Line with optional hotel transfers. Panoramic harbour views, instant confirmation, INR pricing.",

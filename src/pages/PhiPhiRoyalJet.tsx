@@ -38,7 +38,7 @@ const PhiPhiRoyalJet = () => {
       tourData={pageTourData}
       contentAfterOverview={<PhuketTourItinerary tourKey="phi-phi-royal-jet" />}
       config={{
-        path: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/",
+        path: "/thailand/phuket-activities/phi-phi-island-premium-speedboat-tour-with-transfer/",
         seoTitle: "Phi Phi Premium Speedboat Tour from Phuket | Book in INR",
         seoDescription: "Book the premium Phi Phi Island speedboat tour from Phuket with private transfers, smaller groups and gourmet lunch. Instant confirmation in INR.",
         whatsappTopic: "the premium Phi Phi speedboat tour",

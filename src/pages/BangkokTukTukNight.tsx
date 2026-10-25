@@ -33,7 +33,7 @@ const BangkokTukTukNight = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-tuk-tuk-night" />}
       config={{
-        path: "/thailand/bangkok/tuk-tuk-night-tour-bangkok/",
+        path: "/thailand/bangkok-activities/tuk-tuk-night-tour-bangkok/",
         seoTitle: "Bangkok Tuk-Tuk Night Tour Tickets | Book in INR",
         seoDescription:
           "Book the Bangkok tuk-tuk night tour \u2014 illuminated temples, flower market and street food after dark. Minimum 2 pax, instant confirmation and INR pricing.",

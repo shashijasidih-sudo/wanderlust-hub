@@ -9,7 +9,7 @@ import valentineCruise from "@/assets/valentine-cruise-1.webp";
 import cityImg from "@/assets/city-kohsamui.jpg";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/",
+  path: "/thailand/koh-samui-activities/white-orchid-river-cruise-loy-krathong-festival/",
   city: "koh-samui",
   area: "cruise",
   seoTitle: "White Orchid Loy Krathong River Cruise Tickets | Yellodae",

@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { abuDhabiFerrariWorldFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/abu-dhabi-ferrari-world/",
+  path: "/dubai-activities/abu-dhabi-ferrari-world/",
   area: "abu-dhabi",
   seoTitle: "Abu Dhabi City Tour + Ferrari World Ticket | Yellodae",
   seoDescription: "Book the Abu Dhabi city tour with Ferrari World Yas Island tickets and hotel transfers from Dubai. Instant confirmation, INR pricing and Indian support.",

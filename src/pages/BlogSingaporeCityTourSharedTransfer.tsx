@@ -42,7 +42,7 @@ const BlogSingaporeCityTourSharedTransfer = () => (
       { type: "list", items: ["Duration: 3–4 hours","Morning tour: 8:30–9:00 AM (recommended — cooler weather, less traffic)","Afternoon tour: 1:30–2:00 PM"] },
       { type: "heading", content: "Cost in 2026 (INR)" },
       { type: "list", items: ["Shared half-day tour — ₹2,200–₹3,500 per person","Private half-day tour — ₹8,500+ per group"] },
-      { type: "cta", content: "Book the Singapore City Tour", link: "/singapore/singapore-city-tour/", linkText: "Book City Tour" },
+      { type: "cta", content: "Book the Singapore City Tour", link: "/singapore-activities/singapore-city-tour/", linkText: "Book City Tour" },
       { type: "heading", content: "Why Shared Transfer Over Private Tour?" },
       { type: "list", items: ["Cost-effective — significantly cheaper than private","Hassle-free — no routes, transport or tickets to figure out","Social — meet fellow travellers","Fixed itinerary — perfect for first-timers"] },
       { type: "heading", content: "Tips to Maximise Your Experience" },
@@ -51,9 +51,9 @@ const BlogSingaporeCityTourSharedTransfer = () => (
       { type: "paragraph", content: "Yes — especially for first-time visitors. It gives you a perfect introduction to the city's layout, culture and major attractions, helping you decide which spots to revisit in depth later." },
     ]}
     relatedActivities={[
-      { title: "Singapore City Tour", link: "/singapore/singapore-city-tour/" },
-      { title: "Night Safari Tickets & Transfers", link: "/singapore/night-safari-singapore-tickets-and-transfers/" },
-      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+      { title: "Singapore City Tour", link: "/singapore-activities/singapore-city-tour/" },
+      { title: "Night Safari Tickets & Transfers", link: "/singapore-activities/night-safari-singapore-tickets-and-transfers/" },
+      { title: "Sentosa Cable Car Tickets", link: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
     ]}
     relatedLinks={[
       { title: "Night Safari Singapore Experience Guide", link: "/singapore/destination-guides/activity/night-safari-singapore-guide/" },

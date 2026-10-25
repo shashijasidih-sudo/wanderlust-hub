@@ -39,7 +39,7 @@ const PhuketCityNightMarket = () => {
       tourData={pageTourData}
       contentAfterOverview={<PhuketTourItinerary tourKey="phuket-city-night-market" />}
       config={{
-        path: "/thailand/phuket/phuket-night-market-tour-with-transfer/",
+        path: "/thailand/phuket-activities/phuket-night-market-tour-with-transfer/",
         seoTitle: "Phuket City & Night Market Tour with Transfers | Book in INR",
         seoDescription: "Book the Phuket city tour with night market and hotel transfers. Big Buddha, Old Town and street food. Instant confirmation with INR pricing.",
         whatsappTopic: "the Phuket city and night market tour",

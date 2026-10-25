@@ -70,7 +70,7 @@ const activities: Activity[] = [
     description: "Visit Big Buddha Hill and the famous Gems Gallery with round-trip Pattaya hotel transfers.",
     price: 1208,
     image: pattayaSailboat,
-    slug: "/thailand/pattaya/big-buddha-gems-gallery-tour/",
+    slug: "/thailand/pattaya-activities/big-buddha-gems-gallery-tour/",
     category: "City Tours & Sightseeing",
   },
   {
@@ -78,7 +78,7 @@ const activities: Activity[] = [
     description: "Full-day Nong Nooch Garden tour with cultural show, lunch and round-trip transfer.",
     price: 3622.5,
     image: pattayaTropicalBeach,
-    slug: "/thailand/pattaya/nong-nooch-tropical-garden-tickets/",
+    slug: "/thailand/pattaya-activities/nong-nooch-tropical-garden-tickets/",
     category: "City Tours & Sightseeing",
   },
 
@@ -88,7 +88,7 @@ const activities: Activity[] = [
     description: "Speedboat day-trip to Coral Island with Indian lunch, water sports options and transfer.",
     price: 603.75,
     image: pattayaBoatsBeach,
-    slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/",
+    slug: "/thailand/pattaya-activities/coral-island-tour-with-transfer-and-indian-lunch/",
     category: "Beach & Island Tours",
   },
   {
@@ -96,7 +96,7 @@ const activities: Activity[] = [
     description: "Family-friendly dolphin show in Pattaya with transfers from your hotel.",
     price: 3650,
     image: dolphinShow1,
-    slug: "/thailand/pattaya/pattaya-dolphinarium-show-tickets/",
+    slug: "/thailand/pattaya-activities/pattaya-dolphinarium-show-tickets/",
     category: "Beach & Island Tours",
   },
 
@@ -106,7 +106,7 @@ const activities: Activity[] = [
     description: "Pattaya floating market tour with city sightseeing and lunch included.",
     price: 2175,
     image: floatingMarket1,
-    slug: "/thailand/pattaya/pattaya-floating-market-tour/",
+    slug: "/thailand/pattaya-activities/pattaya-floating-market-tour/",
     category: "Floating Market Tours",
   },
   {
@@ -114,7 +114,7 @@ const activities: Activity[] = [
     description: "Guided experience at Pattaya's famous Four Regions Floating Market with transfer.",
     price: 3140,
     image: floatingMarket2,
-    slug: "/thailand/pattaya/pattaya-floating-market-guided-tour/",
+    slug: "/thailand/pattaya-activities/pattaya-floating-market-guided-tour/",
     category: "Floating Market Tours",
   },
 
@@ -124,7 +124,7 @@ const activities: Activity[] = [
     description: "World-famous Alcazar cabaret show in Pattaya with reserved seating and transfer.",
     price: 2420,
     image: alcazarShow1,
-    slug: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/",
+    slug: "/thailand/pattaya-activities/alcazar-cabaret-show-with-transfer/",
     category: "Shows & Cabaret",
   },
   {
@@ -132,7 +132,7 @@ const activities: Activity[] = [
     description: "Live Muay Thai boxing show experience at one of Pattaya's premier stadiums.",
     price: 4830,
     image: muayThai1,
-    slug: "/thailand/pattaya/muay-thai-boxing-show-pattaya/",
+    slug: "/thailand/pattaya-activities/muay-thai-boxing-show-pattaya/",
     category: "Shows & Cabaret",
   },
 
@@ -142,7 +142,7 @@ const activities: Activity[] = [
     description: "Guided walking tour of Pattaya's iconic Walking Street with drinks and food tasting.",
     price: 3745,
     image: pattayaNightlife1,
-    slug: "/thailand/pattaya/pattaya-nightlife-walking-tour/",
+    slug: "/thailand/pattaya-activities/pattaya-nightlife-walking-tour/",
     category: "Nightlife & Adult Shows",
   },
   {
@@ -150,7 +150,7 @@ const activities: Activity[] = [
     description: "Sunset club and pub crawling experience along Pattaya's drinking street.",
     price: 6280,
     image: pattayaNightlife2,
-    slug: "/thailand/pattaya/pattaya-pub-crawl-night-tour/",
+    slug: "/thailand/pattaya-activities/pattaya-pub-crawl-night-tour/",
     category: "Nightlife & Adult Shows",
   },
   {
@@ -158,7 +158,7 @@ const activities: Activity[] = [
     description: "Adults-only 69 Show in Pattaya with reserved seating and round-trip transfer.",
     price: 3800,
     image: show69Pattaya1,
-    slug: "/thailand/pattaya/69-show-pattaya-with-transfer/",
+    slug: "/thailand/pattaya-activities/69-show-pattaya-with-transfer/",
     category: "Nightlife & Adult Shows",
   },
   {
@@ -166,7 +166,7 @@ const activities: Activity[] = [
     description: "Imagine 79 Show in Pattaya — adult cabaret experience with hotel transfer.",
     price: 4000,
     image: imagine79Show1,
-    slug: "/thailand/pattaya/79-show-pattaya-with-transfer/",
+    slug: "/thailand/pattaya-activities/79-show-pattaya-with-transfer/",
     category: "Nightlife & Adult Shows",
   },
   {
@@ -174,7 +174,7 @@ const activities: Activity[] = [
     description: "Premium 89 Show Pattaya with VIP-style seating and hotel transfer.",
     price: 6000,
     image: show89Pattaya1,
-    slug: "/thailand/pattaya/89-show-pattaya-with-transfer/",
+    slug: "/thailand/pattaya-activities/89-show-pattaya-with-transfer/",
     category: "Nightlife & Adult Shows",
   },
   {
@@ -182,7 +182,7 @@ const activities: Activity[] = [
     description: "Big Eye 99 adult show in Pattaya with round-trip transfer included.",
     price: 6000,
     image: bigeyeShowPattaya1,
-    slug: "/thailand/pattaya/99-show-pattaya-big-eye-with-transfer/",
+    slug: "/thailand/pattaya-activities/99-show-pattaya-big-eye-with-transfer/",
     category: "Nightlife & Adult Shows",
   },
 ];
@@ -589,16 +589,16 @@ const PattayaThingsToDo = () => {
             <h3 className="text-lg font-semibold">Popular Pattaya Attractions</h3>
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {[
-                { label: "Coral Island Tour with Lunch", to: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/" },
-                { label: "Nong Nooch Tropical Garden", to: "/thailand/pattaya/nong-nooch-tropical-garden-tickets/" },
-                { label: "Alcazar Cabaret Show", to: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/" },
-                { label: "Big Buddha Hill & Gems Gallery", to: "/thailand/pattaya/big-buddha-gems-gallery-tour/" },
-                { label: "Pattaya Dolphinarium Show", to: "/thailand/pattaya/pattaya-dolphinarium-show-tickets/" },
-                { label: "Pattaya Floating Market Tour", to: "/thailand/pattaya/pattaya-floating-market-tour/" },
-                { label: "Muay Thai Boxing Show", to: "/thailand/pattaya/muay-thai-boxing-show-pattaya/" },
-                { label: "Walking Street Nightlife Tour", to: "/thailand/pattaya/pattaya-nightlife-walking-tour/" },
-                { label: "69 Show Pattaya (18+)", to: "/thailand/pattaya/69-show-pattaya-with-transfer/" },
-                { label: "99 Big Eye Show (18+)", to: "/thailand/pattaya/99-show-pattaya-big-eye-with-transfer/" },
+                { label: "Coral Island Tour with Lunch", to: "/thailand/pattaya-activities/coral-island-tour-with-transfer-and-indian-lunch/" },
+                { label: "Nong Nooch Tropical Garden", to: "/thailand/pattaya-activities/nong-nooch-tropical-garden-tickets/" },
+                { label: "Alcazar Cabaret Show", to: "/thailand/pattaya-activities/alcazar-cabaret-show-with-transfer/" },
+                { label: "Big Buddha Hill & Gems Gallery", to: "/thailand/pattaya-activities/big-buddha-gems-gallery-tour/" },
+                { label: "Pattaya Dolphinarium Show", to: "/thailand/pattaya-activities/pattaya-dolphinarium-show-tickets/" },
+                { label: "Pattaya Floating Market Tour", to: "/thailand/pattaya-activities/pattaya-floating-market-tour/" },
+                { label: "Muay Thai Boxing Show", to: "/thailand/pattaya-activities/muay-thai-boxing-show-pattaya/" },
+                { label: "Walking Street Nightlife Tour", to: "/thailand/pattaya-activities/pattaya-nightlife-walking-tour/" },
+                { label: "69 Show Pattaya (18+)", to: "/thailand/pattaya-activities/69-show-pattaya-with-transfer/" },
+                { label: "99 Big Eye Show (18+)", to: "/thailand/pattaya-activities/99-show-pattaya-big-eye-with-transfer/" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">

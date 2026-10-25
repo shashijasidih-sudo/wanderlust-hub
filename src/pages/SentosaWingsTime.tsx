@@ -487,13 +487,13 @@ const IndianTravelerCompanion = () => (
 /* ---------- Complete Your Singapore Trip ---------- */
 
 const tripItems = [
-  { title: "Universal Studios Singapore", desc: "Southeast Asia's only Universal Studios.", image: ussImg, slug: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-  { title: "Gardens by the Bay", desc: "Cloud Forest, Flower Dome & Supertree Grove.", image: gardensByTheBayImg, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers/" },
-  { title: "Night Safari", desc: "World's first nocturnal wildlife park.", image: nightSafariImg, slug: "/singapore/night-safari-singapore-tickets-and-transfers/" },
-  { title: "Sentosa Cable Car", desc: "Iconic ride over the harbour to Sentosa.", image: cableCarImg, slug: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
-  { title: "Singapore City Tour", desc: "Merlion, Chinatown, Little India & more.", image: cityTourImg, slug: "/singapore/singapore-city-tour/" },
+  { title: "Universal Studios Singapore", desc: "Southeast Asia's only Universal Studios.", image: ussImg, slug: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/" },
+  { title: "Gardens by the Bay", desc: "Cloud Forest, Flower Dome & Supertree Grove.", image: gardensByTheBayImg, slug: "/singapore-activities/gardens-by-the-bay-tickets-and-transfers/" },
+  { title: "Night Safari", desc: "World's first nocturnal wildlife park.", image: nightSafariImg, slug: "/singapore-activities/night-safari-singapore-tickets-and-transfers/" },
+  { title: "Sentosa Cable Car", desc: "Iconic ride over the harbour to Sentosa.", image: cableCarImg, slug: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
+  { title: "Singapore City Tour", desc: "Merlion, Chinatown, Little India & more.", image: cityTourImg, slug: "/singapore-activities/singapore-city-tour/" },
   { title: "S.E.A. Aquarium", desc: "One of the world's largest aquariums.", image: seaAquariumImg, slug: "/singapore/things-to-do/" },
-  { title: "Singapore Zoo", desc: "Award-winning open-concept rainforest zoo.", image: singaporeZooImg, slug: "/singapore/singapore-zoo-tickets/" },
+  { title: "Singapore Zoo", desc: "Award-winning open-concept rainforest zoo.", image: singaporeZooImg, slug: "/singapore-activities/singapore-zoo-tickets/" },
   { title: "Bird Paradise", desc: "Asia's largest bird park at Mandai.", image: birdParadiseImg, slug: "/singapore/things-to-do/" },
 ];
 
@@ -605,7 +605,7 @@ const SentosaWingsTime = () => {
   return (
     <>
       <Seo
-        path="/singapore/wings-of-time-show-sentosa-tickets/"
+        path="/singapore-activities/wings-of-time-show-sentosa-tickets/"
         title="Wings of Time Sentosa Tickets with Hotel Transfers | Instant Confirmation"
         description="Book Wings of Time Sentosa tickets with hotel transfers. Standard & Premium seating, instant confirmation, INR pricing, Indian WhatsApp support and easy cancellation."
         type="product"

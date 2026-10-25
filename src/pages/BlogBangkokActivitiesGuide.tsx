@@ -24,21 +24,21 @@ import seaLife from "@/assets/bangkok-city-purple-1.webp";
 import massage from "@/assets/massage-coupon-hero.webp";
 
 const activityCards = [
-  { title: "Grand Palace & Emerald Buddha Temple", location: "Bangkok", image: grandPalace, slug: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/" },
-  { title: "Bangkok Three Temples City Tour", location: "Bangkok", image: threeTemples, slug: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/" },
-  { title: "Wat Arun, Pho & Traimit Tour", location: "Bangkok", image: watArun, slug: "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/" },
-  { title: "Bangkok City & Gems Gallery Tour", location: "Bangkok", image: gemsGallery, slug: "/thailand/bangkok/gems-gallery-bangkok-tickets/" },
-  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/thailand/bangkok/safari-world/" },
-  { title: "King Power Mahanakhon Skywalk", location: "Bangkok", image: skywalk, slug: "/thailand/bangkok/mahanakhon-skywalk-tickets/" },
-  { title: "Floating Market & Railway Market Tour", location: "Bangkok", image: floatingMarket, slug: "/thailand/bangkok/maeklong-floating-market-tour/" },
-  { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: tukTuk, slug: "/thailand/bangkok/tuk-tuk-night-tour-bangkok/" },
-  { title: "Dream World Bangkok", location: "Bangkok", image: dreamWorld, slug: "/thailand/bangkok/dream-world-bangkok-tickets/" },
-  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruise, slug: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer/" },
-  { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: vivaAlangka, slug: "/thailand/bangkok/viva-alangka-dinner-cruise/" },
-  { title: "Ayutthaya Temple Tour", location: "Bangkok", image: ayutthaya, slug: "/thailand/bangkok/ayutthaya-day-tour-from-bangkok/" },
-  { title: "Baiyoke Sky Buffet", location: "Bangkok", image: baiyoke, slug: "/thailand/bangkok/baiyoke-buffet/" },
-  { title: "Sea Life & Madame Tussauds", location: "Bangkok", image: seaLife, slug: "/thailand/bangkok/sea-life-madame-tussauds-tickets/" },
-  { title: "Thai Massage Coupon Packages", location: "Bangkok", image: massage, slug: "/thailand/bangkok/thai-massage-spa-deals-bangkok/" },
+  { title: "Grand Palace & Emerald Buddha Temple", location: "Bangkok", image: grandPalace, slug: "/thailand/bangkok-activities/grand-palace-wat-phra-kaew-tour/" },
+  { title: "Bangkok Three Temples City Tour", location: "Bangkok", image: threeTemples, slug: "/thailand/bangkok-activities/three-temples-bangkok-city-tour-with-transfer/" },
+  { title: "Wat Arun, Pho & Traimit Tour", location: "Bangkok", image: watArun, slug: "/thailand/bangkok-activities/wat-arun-wat-pho-golden-buddha-tour/" },
+  { title: "Bangkok City & Gems Gallery Tour", location: "Bangkok", image: gemsGallery, slug: "/thailand/bangkok-activities/gems-gallery-bangkok-tickets/" },
+  { title: "Safari World & Marine Park", location: "Bangkok", image: safariWorld, slug: "/thailand/bangkok-activities/safari-world/" },
+  { title: "King Power Mahanakhon Skywalk", location: "Bangkok", image: skywalk, slug: "/thailand/bangkok-activities/mahanakhon-skywalk-tickets/" },
+  { title: "Floating Market & Railway Market Tour", location: "Bangkok", image: floatingMarket, slug: "/thailand/bangkok-activities/maeklong-floating-market-tour/" },
+  { title: "Bangkok Tuk Tuk Night Tour", location: "Bangkok", image: tukTuk, slug: "/thailand/bangkok-activities/tuk-tuk-night-tour-bangkok/" },
+  { title: "Dream World Bangkok", location: "Bangkok", image: dreamWorld, slug: "/thailand/bangkok-activities/dream-world-bangkok-tickets/" },
+  { title: "Chao Phraya Princess Dinner Cruise", location: "Bangkok", image: cruise, slug: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-transfer/" },
+  { title: "Viva Alangka Dinner Cruise", location: "Bangkok", image: vivaAlangka, slug: "/thailand/bangkok-activities/viva-alangka-dinner-cruise/" },
+  { title: "Ayutthaya Temple Tour", location: "Bangkok", image: ayutthaya, slug: "/thailand/bangkok-activities/ayutthaya-day-tour-from-bangkok/" },
+  { title: "Baiyoke Sky Buffet", location: "Bangkok", image: baiyoke, slug: "/thailand/bangkok-activities/baiyoke-buffet/" },
+  { title: "Sea Life & Madame Tussauds", location: "Bangkok", image: seaLife, slug: "/thailand/bangkok-activities/sea-life-madame-tussauds-tickets/" },
+  { title: "Thai Massage Coupon Packages", location: "Bangkok", image: massage, slug: "/thailand/bangkok-activities/thai-massage-spa-deals-bangkok/" },
 ];
 
 const ActivityCards = () => {
@@ -99,10 +99,10 @@ const BlogBangkokActivitiesGuide = () => {
         transfersLink: "/thailand/bangkok/suvarnabhumi-airport-bkk-to-bangkok-hotel-transfer/",
       }}
       relatedActivities={[
-        { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok/grand-palace-wat-phra-kaew-tour/" },
-        { title: "Three Temples Bangkok City Tour", link: "/thailand/bangkok/three-temples-bangkok-city-tour-with-transfer/" },
+        { title: "Grand Palace & Emerald Buddha Tour", link: "/thailand/bangkok-activities/grand-palace-wat-phra-kaew-tour/" },
+        { title: "Three Temples Bangkok City Tour", link: "/thailand/bangkok-activities/three-temples-bangkok-city-tour-with-transfer/" },
         { title: "Chao Phraya Princess Dinner Cruise", link: "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/" },
-        { title: "Safari World & Marine Park", link: "/thailand/bangkok/safari-world/" },
+        { title: "Safari World & Marine Park", link: "/thailand/bangkok-activities/safari-world/" },
       ]}
       relatedLinks={[
         { title: "Bangkok Trip Cost from India", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india/" },

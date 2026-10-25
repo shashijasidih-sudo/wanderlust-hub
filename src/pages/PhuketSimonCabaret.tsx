@@ -39,7 +39,7 @@ const PhuketSimonCabaret = () => {
       tourData={pageTourData}
       contentAfterOverview={<PhuketTourItinerary tourKey="phuket-simon-cabaret" />}
       config={{
-        path: "/thailand/phuket/simon-cabaret-show-with-transfer/",
+        path: "/thailand/phuket-activities/simon-cabaret-show-with-transfer/",
         seoTitle: "Simon Cabaret Show Phuket Tickets with Transfers | Book in INR",
         seoDescription: "Book Simon Cabaret Phuket show tickets with hotel transfers. Patong's famous cabaret with instant confirmation and INR pricing for Indian travellers.",
         whatsappTopic: "Simon Cabaret Phuket show tickets",

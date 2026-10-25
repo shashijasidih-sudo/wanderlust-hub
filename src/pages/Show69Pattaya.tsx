@@ -5,7 +5,7 @@ import { pattayaSheetContent } from "@/data/pattayaSheetContent";
 import { adultShowPattayaFaqs } from "@/data/pattayaActivityFaqs";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/pattaya/69-show-pattaya-with-transfer/",
+  path: "/thailand/pattaya-activities/69-show-pattaya-with-transfer/",
   city: "pattaya",
   area: "show",
   seoTitle: "69 Show Pattaya Tickets with Transfer | Yellodae",

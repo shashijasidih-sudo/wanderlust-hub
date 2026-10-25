@@ -23,7 +23,7 @@ const BlogBestPhiPhiIslandTours = () => (
       { type: "list", items: ["Maya Bay (from The Beach movie)", "Pileh Lagoon and Viking Cave", "Monkey Beach and Bamboo Island", "Top snorkeling reefs in Andaman"] },
       { type: "heading", content: "1. Speedboat Tours (Most Popular)" },
       { type: "paragraph", content: "Price ₹3,500–₹8,500 · Duration 7–9 hrs. Fast travel (1 hour each way), covers more islands, less crowded. Best for first-timers, couples, adventure seekers." },
-      { type: "cta", content: "Pre-book the most popular Phi Phi speedboat day", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/", linkText: "Book Phi Phi Speedboat" },
+      { type: "cta", content: "Pre-book the most popular Phi Phi speedboat day", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/", linkText: "Book Phi Phi Speedboat" },
       { type: "heading", content: "2. Big Boat Tours (Budget Pick)" },
       { type: "paragraph", content: "Price ₹2,000–₹4,200 · Duration 8–10 hrs. Comfortable, stable ride with onboard toilets and buffet. Best for families and budget travelers." },
       { type: "heading", content: "3. Luxury / Premium Tours" },
@@ -41,9 +41,9 @@ const BlogBestPhiPhiIslandTours = () => (
       { type: "paragraph", content: "For most Indian travelers a mid-range speedboat tour is the sweet spot — covers Maya, Pileh, Bamboo and snorkeling without breaking the budget." },
     ]}
     relatedActivities={[
-      { title: "Full-Day Phi Phi Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
-      { title: "Phi Phi Big Boat Tour", link: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/" },
-      { title: "Phi Phi Premium Speedboat Tour", link: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/" },
+      { title: "Full-Day Phi Phi Speedboat Tour", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "Phi Phi Big Boat Tour", link: "/thailand/phuket-activities/phi-phi-island-big-boat-tour-with-transfer/" },
+      { title: "Phi Phi Premium Speedboat Tour", link: "/thailand/phuket-activities/phi-phi-island-premium-speedboat-tour-with-transfer/" },
     ]}
     relatedLinks={[
       { title: "Phi Phi Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat/" },

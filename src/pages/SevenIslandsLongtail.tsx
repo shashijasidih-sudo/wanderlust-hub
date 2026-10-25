@@ -31,7 +31,7 @@ const SevenIslandsLongtail = () => {
       tourData={tourData}
       contentAfterOverview={<KrabiTourItinerary tourKey="seven-islands-longtail" />}
       config={{
-        path: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer/",
+        path: "/thailand/krabi-activities/7-islands-tour-longtail-boat-with-transfer/",
         seoTitle: "7 Islands Sunset Tour Krabi by Longtail Boat with Transfers | Yellodae",
         seoDescription:
           "Book the Krabi 7 Islands sunset longtail tour with BBQ dinner, plankton swim, hotel transfers, INR pricing and Indian traveller support.",

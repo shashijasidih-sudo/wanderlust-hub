@@ -6,7 +6,7 @@ import { PattayaBigBuddhaGemsSEO } from "@/components/activity-detail/PattayaAct
 import { pattayaBigBuddhaGemsFaqs } from "@/data/pattayaActivityFaqs";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/pattaya/big-buddha-gems-gallery-tour/",
+  path: "/thailand/pattaya-activities/big-buddha-gems-gallery-tour/",
   city: "pattaya",
   area: "city",
   seoTitle: "Pattaya Big Buddha Hill & Gems Gallery Tour with Transfer | Yellodae",

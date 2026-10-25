@@ -30,7 +30,7 @@ const FourIslandsSpeedboat = () => {
       tourData={tourData}
       contentAfterOverview={<KrabiTourItinerary tourKey="four-islands-speedboat" />}
       config={{
-        path: "/thailand/krabi/4-island-tour-speedboat-with-transfer/",
+        path: "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/",
         seoTitle: "4 Island Speedboat Tour Krabi with Hotel Transfers | Yellodae",
         seoDescription:
           "Book the Krabi 4 Island speedboat tour — Poda, Chicken, Tub Island and Phra Nang Cave Beach with hotel transfers, INR pricing and Indian support.",

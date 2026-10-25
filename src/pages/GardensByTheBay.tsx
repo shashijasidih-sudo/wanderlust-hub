@@ -494,13 +494,13 @@ const IndianTravelerCompanion = () => (
 );
 
 const tripItems = [
-  { title: "Universal Studios Singapore", desc: "Tickets + hotel transfers combo.", image: ussImg, slug: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-  { title: "Night Safari", desc: "World's first nocturnal wildlife park.", image: nightSafariImg, slug: "/singapore/night-safari-singapore-tickets-and-transfers/" },
+  { title: "Universal Studios Singapore", desc: "Tickets + hotel transfers combo.", image: ussImg, slug: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/" },
+  { title: "Night Safari", desc: "World's first nocturnal wildlife park.", image: nightSafariImg, slug: "/singapore-activities/night-safari-singapore-tickets-and-transfers/" },
   { title: "Airport Transfer", desc: "Reliable Changi pickup & drop-off.", image: airportTransferImg, slug: "/singapore/things-to-do/" },
-  { title: "Wings of Time", desc: "Sentosa's spectacular outdoor night show.", image: wingsOfTimeImg, slug: "/singapore/wings-of-time-show-sentosa-tickets/" },
-  { title: "Sentosa Cable Car", desc: "Iconic ride over the harbour to Sentosa.", image: cableCarImg, slug: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
+  { title: "Wings of Time", desc: "Sentosa's spectacular outdoor night show.", image: wingsOfTimeImg, slug: "/singapore-activities/wings-of-time-show-sentosa-tickets/" },
+  { title: "Sentosa Cable Car", desc: "Iconic ride over the harbour to Sentosa.", image: cableCarImg, slug: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
   { title: "S.E.A. Aquarium", desc: "One of the world's largest aquariums.", image: seaAquariumImg, slug: "/singapore/things-to-do/" },
-  { title: "Singapore Zoo", desc: "Award-winning open-concept rainforest zoo.", image: singaporeZooImg, slug: "/singapore/singapore-zoo-tickets/" },
+  { title: "Singapore Zoo", desc: "Award-winning open-concept rainforest zoo.", image: singaporeZooImg, slug: "/singapore-activities/singapore-zoo-tickets/" },
   { title: "Bird Paradise", desc: "Asia's largest bird park at Mandai.", image: birdParadiseImg, slug: "/singapore/things-to-do/" },
 ];
 
@@ -601,7 +601,7 @@ const GardensByTheBay = () => {
   return (
     <>
       <Seo
-        path="/singapore/gardens-by-the-bay-tickets-and-transfers/"
+        path="/singapore-activities/gardens-by-the-bay-tickets-and-transfers/"
         title="Gardens by the Bay Tickets & Transfers | Skip-the-Line | Indian Support"
         description="Book Gardens by the Bay tickets with hotel transfers — Flower Dome, Cloud Forest with Jurassic World & Supertree Grove. Instant confirmation, INR pricing, Indian WhatsApp support."
         type="product"

@@ -67,7 +67,7 @@ const activities: Activity[] = [
     description: "Experience Singapore's highest open-air panoramic ride, 79m above sea level on Sentosa Island.",
     price: 1811.25,
     image: singaporeSkyHelix,
-    slug: "/singapore/skyhelix-sentosa-tickets/",
+    slug: "/singapore-activities/skyhelix-sentosa-tickets/",
     category: "Sentosa Island Attractions",
   },
   {
@@ -75,7 +75,7 @@ const activities: Activity[] = [
     description: "Two thrilling 4D rides at Sentosa's interactive AdventureLand — perfect for families.",
     price: 2060,
     image: singaporeSentosa4d,
-    slug: "/singapore/sentosa-4d-adventureland-tickets/",
+    slug: "/singapore-activities/sentosa-4d-adventureland-tickets/",
     category: "Sentosa Island Attractions",
   },
   {
@@ -83,7 +83,7 @@ const activities: Activity[] = [
     description: "Sky-high cable car ride between Mount Faber and Sentosa Island with stunning harbour views.",
     price: 2180,
     image: singaporeCableCar,
-    slug: "/singapore/sentosa-cable-car-tickets-and-transfers/",
+    slug: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/",
     category: "Sentosa Island Attractions",
   },
   {
@@ -91,7 +91,7 @@ const activities: Activity[] = [
     description: "Open-air night show at Siloso Beach with water, lasers, fire and live music.",
     price: 2656.5,
     image: singaporeWingsTime,
-    slug: "/singapore/wings-of-time-show-sentosa-tickets/",
+    slug: "/singapore-activities/wings-of-time-show-sentosa-tickets/",
     category: "Sentosa Island Attractions",
   },
 
@@ -101,7 +101,7 @@ const activities: Activity[] = [
     description: "Hollywood blockbuster movies come to life — 7 themed zones at USS on weekdays.",
     price: 6762,
     image: singaporeUniversalStudios,
-    slug: "/singapore/universal-studios-singapore-tickets-and-transfers/",
+    slug: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/",
     category: "Theme Parks & Water Parks",
   },
   {
@@ -109,7 +109,7 @@ const activities: Activity[] = [
     description: "Same iconic Universal Studios experience with weekend access — perfect for short trips.",
     price: 7872.9,
     image: singaporeUniversalStudios,
-    slug: "/singapore/universal-studios-singapore-weekend-tickets/",
+    slug: "/singapore-activities/universal-studios-singapore-weekend-tickets/",
     category: "Theme Parks & Water Parks",
   },
   {
@@ -117,7 +117,7 @@ const activities: Activity[] = [
     description: "Thrilling water slides, snorkeling with 20,000 fish and a lazy river at RWS.",
     price: 2656.5,
     image: singaporeAdventureCove,
-    slug: "/singapore/adventure-cove-waterpark-tickets/",
+    slug: "/singapore-activities/adventure-cove-waterpark-tickets/",
     category: "Theme Parks & Water Parks",
   },
 
@@ -127,7 +127,7 @@ const activities: Activity[] = [
     description: "World's first nocturnal wildlife park — tram safari with 900+ animals after dark.",
     price: 4470,
     image: singaporeNightSafari,
-    slug: "/singapore/night-safari-singapore-tickets-and-transfers/",
+    slug: "/singapore-activities/night-safari-singapore-tickets-and-transfers/",
     category: "Wildlife & Safari",
   },
   {
@@ -135,7 +135,7 @@ const activities: Activity[] = [
     description: "Award-winning open-concept zoo with tram ride and 2,800+ animals across 11 zones.",
     price: 3743.25,
     image: singaporeZoo,
-    slug: "/singapore/singapore-zoo-tickets/",
+    slug: "/singapore-activities/singapore-zoo-tickets/",
     category: "Wildlife & Safari",
   },
   {
@@ -143,7 +143,7 @@ const activities: Activity[] = [
     description: "Asia's first river-themed wildlife park featuring Giant Pandas and the Amazon River Quest.",
     price: 4468,
     image: singaporeRiverSafari,
-    slug: "/singapore/river-wonders-singapore-tickets/",
+    slug: "/singapore-activities/river-wonders-singapore-tickets/",
     category: "Wildlife & Safari",
   },
   {
@@ -151,7 +151,7 @@ const activities: Activity[] = [
     description: "Singapore's newest immersive wildlife park exploring South-East Asia's rainforest habitats.",
     price: 3441.375,
     image: singaporeZoo,
-    slug: "/singapore/rainforest-wild-asia-tickets/",
+    slug: "/singapore-activities/rainforest-wild-asia-tickets/",
     category: "Wildlife & Safari",
   },
 
@@ -161,7 +161,7 @@ const activities: Activity[] = [
     description: "Half-day guided Singapore city tour covering Merlion, Chinatown, Little India and more.",
     price: 1815,
     image: singaporeCityTour,
-    slug: "/singapore/singapore-city-tour/",
+    slug: "/singapore-activities/singapore-city-tour/",
     category: "City Tours & Sightseeing",
   },
   {
@@ -169,7 +169,7 @@ const activities: Activity[] = [
     description: "Flexible hop-on hop-off open-top bus pass covering Singapore's top attractions.",
     price: 4709.25,
     image: singaporeBigBus,
-    slug: "/singapore/big-bus-hop-on-hop-off-singapore-city-tour/",
+    slug: "/singapore-activities/big-bus-hop-on-hop-off-singapore-city-tour/",
     category: "City Tours & Sightseeing",
   },
   {
@@ -177,7 +177,7 @@ const activities: Activity[] = [
     description: "See Singapore's iconic landmarks beautifully lit up on this open-top night bus tour.",
     price: 4709.25,
     image: singaporeBigBus,
-    slug: "/singapore/big-bus-night-city-tour-singapore/",
+    slug: "/singapore-activities/big-bus-night-city-tour-singapore/",
     category: "City Tours & Sightseeing",
   },
   {
@@ -185,7 +185,7 @@ const activities: Activity[] = [
     description: "Scenic bumboat cruise along the Singapore River past Marina Bay and Clarke Quay.",
     price: 2173.5,
     image: singaporeRiverCruise,
-    slug: "/singapore/singapore-river-cruise-tickets-and-transfers/",
+    slug: "/singapore-activities/singapore-river-cruise-tickets-and-transfers/",
     category: "City Tours & Sightseeing",
   },
 
@@ -195,7 +195,7 @@ const activities: Activity[] = [
     description: "Visit the iconic Cloud Forest and Flower Dome at Singapore's futuristic garden park.",
     price: 2660,
     image: singaporeGardensBay,
-    slug: "/singapore/gardens-by-the-bay-tickets-and-transfers/",
+    slug: "/singapore-activities/gardens-by-the-bay-tickets-and-transfers/",
     category: "Iconic Landmarks",
   },
   {
@@ -203,7 +203,7 @@ const activities: Activity[] = [
     description: "Asia's largest observation wheel — 165m high panoramic views over Marina Bay.",
     price: 3381,
     image: singaporeFlyer,
-    slug: "/singapore/singapore-flyer-tickets-and-transfers/",
+    slug: "/singapore-activities/singapore-flyer-tickets-and-transfers/",
     category: "Iconic Landmarks",
   },
 ];
@@ -494,18 +494,18 @@ const SingaporeThingsToDo = () => {
             <h3 className="text-lg font-semibold">Popular Singapore Tours</h3>
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {[
-                { label: "Universal Studios Weekday", to: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-                { label: "Universal Studios Weekend", to: "/singapore/universal-studios-singapore-weekend-tickets/" },
-                { label: "Gardens by the Bay", to: "/singapore/gardens-by-the-bay-tickets-and-transfers/" },
-                { label: "Singapore Flyer", to: "/singapore/singapore-flyer-tickets-and-transfers/" },
-                { label: "Night Safari Singapore", to: "/singapore/night-safari-singapore-tickets-and-transfers/" },
-                { label: "Singapore Zoo", to: "/singapore/singapore-zoo-tickets/" },
-                { label: "River Wonders Singapore", to: "/singapore/river-wonders-singapore-tickets/" },
-                { label: "SkyHelix Sentosa", to: "/singapore/skyhelix-sentosa-tickets/" },
-                { label: "Sentosa Cable Car", to: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
-                { label: "Wings of Time Show", to: "/singapore/wings-of-time-show-sentosa-tickets/" },
-                { label: "Singapore River Cruise", to: "/singapore/singapore-river-cruise-tickets-and-transfers/" },
-                { label: "Singapore City Tour", to: "/singapore/singapore-city-tour/" },
+                { label: "Universal Studios Weekday", to: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/" },
+                { label: "Universal Studios Weekend", to: "/singapore-activities/universal-studios-singapore-weekend-tickets/" },
+                { label: "Gardens by the Bay", to: "/singapore-activities/gardens-by-the-bay-tickets-and-transfers/" },
+                { label: "Singapore Flyer", to: "/singapore-activities/singapore-flyer-tickets-and-transfers/" },
+                { label: "Night Safari Singapore", to: "/singapore-activities/night-safari-singapore-tickets-and-transfers/" },
+                { label: "Singapore Zoo", to: "/singapore-activities/singapore-zoo-tickets/" },
+                { label: "River Wonders Singapore", to: "/singapore-activities/river-wonders-singapore-tickets/" },
+                { label: "SkyHelix Sentosa", to: "/singapore-activities/skyhelix-sentosa-tickets/" },
+                { label: "Sentosa Cable Car", to: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
+                { label: "Wings of Time Show", to: "/singapore-activities/wings-of-time-show-sentosa-tickets/" },
+                { label: "Singapore River Cruise", to: "/singapore-activities/singapore-river-cruise-tickets-and-transfers/" },
+                { label: "Singapore City Tour", to: "/singapore-activities/singapore-city-tour/" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">{l.label}</Link>

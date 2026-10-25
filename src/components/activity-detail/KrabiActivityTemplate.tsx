@@ -560,14 +560,14 @@ const IndianTravelerCompanion = ({ config }: { config: KrabiActivityConfig }) =>
 /* ----------------------- complete your Krabi trip ----------------------- */
 
 const TRIP_POOL = [
-  { title: "4 Island Tour by Longtail Boat", desc: "Poda, Chicken, Tub Island and Phra Nang Cave Beach.", image: fourIslandsImg, slug: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
-  { title: "4 Island Tour by Speedboat", desc: "Faster island hopping with more time on the sand.", image: fourIslands2Img, slug: "/thailand/krabi/4-island-tour-speedboat-with-transfer/" },
-  { title: "Hong Island Longtail Tour", desc: "The hidden Hong lagoon and Pakbia Island.", image: hongImg, slug: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/" },
-  { title: "Hong Island Speedboat Tour", desc: "Lagoon, viewpoint and Lao Lading beach.", image: hong2Img, slug: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
-  { title: "7 Islands Sunset Longtail Tour", desc: "Sunset cruise with BBQ dinner and plankton swim.", image: sevenImg, slug: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer/" },
-  { title: "7 Islands Sunset Speedboat Tour", desc: "Seven islands, snorkelling and beach BBQ.", image: seven2Img, slug: "/thailand/krabi/7-islands-tour-speedboat-with-transfer/" },
-  { title: "James Bond Island Tour", desc: "Phang Nga Bay karsts and Koh Panyee village.", image: jamesBondImg, slug: "/thailand/krabi/james-bond-island/" },
-  { title: "Emerald Pool & Hot Springs", desc: "Tiger Cave Temple, hot springs and jungle pools.", image: emeraldImg, slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
+  { title: "4 Island Tour by Longtail Boat", desc: "Poda, Chicken, Tub Island and Phra Nang Cave Beach.", image: fourIslandsImg, slug: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },
+  { title: "4 Island Tour by Speedboat", desc: "Faster island hopping with more time on the sand.", image: fourIslands2Img, slug: "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/" },
+  { title: "Hong Island Longtail Tour", desc: "The hidden Hong lagoon and Pakbia Island.", image: hongImg, slug: "/thailand/krabi-activities/hong-island-tour-longtail-boat-with-transfer/" },
+  { title: "Hong Island Speedboat Tour", desc: "Lagoon, viewpoint and Lao Lading beach.", image: hong2Img, slug: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/" },
+  { title: "7 Islands Sunset Longtail Tour", desc: "Sunset cruise with BBQ dinner and plankton swim.", image: sevenImg, slug: "/thailand/krabi-activities/7-islands-tour-longtail-boat-with-transfer/" },
+  { title: "7 Islands Sunset Speedboat Tour", desc: "Seven islands, snorkelling and beach BBQ.", image: seven2Img, slug: "/thailand/krabi-activities/7-islands-tour-speedboat-with-transfer/" },
+  { title: "James Bond Island Tour", desc: "Phang Nga Bay karsts and Koh Panyee village.", image: jamesBondImg, slug: "/thailand/krabi-activities/james-bond-island/" },
+  { title: "Emerald Pool & Hot Springs", desc: "Tiger Cave Temple, hot springs and jungle pools.", image: emeraldImg, slug: "/thailand/krabi-activities/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
 ];
 
 const CompleteYourKrabiTrip = ({ currentPath, title }: { currentPath: string; title: string }) => {

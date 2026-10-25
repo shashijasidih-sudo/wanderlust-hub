@@ -17,12 +17,12 @@ export const TOUR_LINK_MAP: TourLink[] = [
   // ---------- Phuket ----------
   {
     phrase: "Phi Phi Island Tour",
-    path: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/",
+    path: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/",
     aliases: ["Phi Phi Island Speedboat Tour", "Phi Phi Islands Tour", "Phi Phi tour", "Phi Phi Island"],
   },
   {
     phrase: "James Bond Island Tour",
-    path: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/",
+    path: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/",
     aliases: ["James Bond Island", "James Bond Island Speedboat Tour"],
   },
   {
@@ -44,12 +44,12 @@ export const TOUR_LINK_MAP: TourLink[] = [
   // ---------- Bangkok ----------
   {
     phrase: "Safari World Bangkok",
-    path: "/thailand/bangkok/safari-world/",
+    path: "/thailand/bangkok-activities/safari-world/",
     aliases: ["Safari World"],
   },
   {
     phrase: "Chao Phraya Dinner Cruise",
-    path: "/thailand/bangkok/chao-phraya-princess-dinner-cruise/",
+    path: "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise/",
     aliases: ["Chao Phraya Princess Cruise", "Chao Phraya Cruise"],
   },
   {
@@ -78,12 +78,12 @@ export const TOUR_LINK_MAP: TourLink[] = [
   // ---------- Pattaya ----------
   {
     phrase: "Coral Island Pattaya",
-    path: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/",
+    path: "/thailand/pattaya-activities/coral-island-tour-with-transfer-and-indian-lunch/",
     aliases: ["Coral Island Tour", "Coral Island"],
   },
   {
     phrase: "Alcazar Cabaret Show",
-    path: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/",
+    path: "/thailand/pattaya-activities/alcazar-cabaret-show-with-transfer/",
     aliases: ["Alcazar Show Pattaya", "Alcazar Show", "Alcazar Cabaret"],
   },
   {
@@ -111,25 +111,25 @@ export const TOUR_LINK_MAP: TourLink[] = [
   // ---------- Singapore ----------
   {
     phrase: "Universal Studios Singapore",
-    path: "/singapore/universal-studios-singapore-tickets-and-transfers/",
+    path: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/",
     aliases: ["Universal Studios", "USS"],
   },
   {
     phrase: "Night Safari Singapore",
-    path: "/singapore/night-safari-singapore-tickets-and-transfers/",
+    path: "/singapore-activities/night-safari-singapore-tickets-and-transfers/",
     aliases: ["Night Safari"],
   },
   {
     phrase: "Sentosa Cable Car",
-    path: "/singapore/sentosa-cable-car-tickets-and-transfers/",
+    path: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/",
   },
   {
     phrase: "Gardens by the Bay",
-    path: "/singapore/gardens-by-the-bay-tickets-and-transfers/",
+    path: "/singapore-activities/gardens-by-the-bay-tickets-and-transfers/",
   },
   {
     phrase: "Singapore Flyer",
-    path: "/singapore/singapore-flyer-tickets-and-transfers/",
+    path: "/singapore-activities/singapore-flyer-tickets-and-transfers/",
   },
 
   // ---------- Country / hub ----------

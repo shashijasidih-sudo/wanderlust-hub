@@ -6,7 +6,7 @@ import { PattayaFloatingMarketSEO } from "@/components/activity-detail/PattayaAc
 import { pattayaFloatingMarketFaqs } from "@/data/pattayaActivityFaqs";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/pattaya/pattaya-floating-market-tour/",
+  path: "/thailand/pattaya-activities/pattaya-floating-market-tour/",
   city: "pattaya",
   area: "city",
   seoTitle: "Pattaya Floating Market Tour Tickets with Transfer | Yellodae",

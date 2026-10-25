@@ -11,7 +11,7 @@ import vanImg from "@/assets/chiang-mai-transfer-van-1.webp";
 const TOUR_KEY = "chiang-mai-doi-inthanon-national-park-full-day-tour";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/chiang-mai/doi-inthanon-national-park-full-day-tour/",
+  path: "/thailand/chiang-mai-activities/doi-inthanon-national-park-full-day-tour/",
   city: "chiang-mai",
   area: "mountain",
   seoTitle: "Doi Inthanon National Park Full Day Tour from Chiang Mai | Yellodae",

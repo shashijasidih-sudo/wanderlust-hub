@@ -33,7 +33,7 @@ const BaiyokeBuffet = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="baiyoke-buffet" />}
       config={{
-        path: "/thailand/bangkok/baiyoke-buffet/",
+        path: "/thailand/bangkok-activities/baiyoke-buffet/",
         seoTitle: "Baiyoke Sky Buffet & Observation Deck Tickets Bangkok | Book in INR",
         seoDescription:
           "Book Baiyoke Sky Tower buffet and observation deck tickets in Bangkok. 360-degree revolving views with an international buffet. Instant confirmation and INR pricing.",

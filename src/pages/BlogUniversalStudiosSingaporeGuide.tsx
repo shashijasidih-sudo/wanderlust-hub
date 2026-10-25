@@ -55,8 +55,8 @@ const BlogUniversalStudiosSingaporeGuide = () => (
       { type: "paragraph", content: "Absolutely. It's one of the best theme parks in Asia and delivers a complete entertainment experience — especially worth it for families, friend groups and thrill-seekers wanting a full-day activity." },
     ]}
     relatedActivities={[
-      { title: "Sentosa Cable Car Tickets", link: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
-      { title: "Sentosa 4D Adventureland", link: "/singapore/sentosa-4d-adventureland-tickets/" },
+      { title: "Sentosa Cable Car Tickets", link: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
+      { title: "Sentosa 4D Adventureland", link: "/singapore-activities/sentosa-4d-adventureland-tickets/" },
     ]}
     relatedLinks={[
       { title: "Sentosa 4D Adventureland Complete Experience", link: "/singapore/destination-guides/activity/sentosa-4d-adventureland-guide/" },

@@ -47,7 +47,7 @@ const BangkokCityBoatTour = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-city-boat-tour" />}
       config={{
-        path: "/thailand/bangkok/chao-phraya-river-boat-bangkok-city-tour/",
+        path: "/thailand/bangkok-activities/chao-phraya-river-boat-bangkok-city-tour/",
         seoTitle: "Chao Phraya River Boat Bangkok City Tour | Book in INR",
         seoDescription:
           "Book the Chao Phraya river boat Bangkok city tour \u2014 canal cruise past riverside temples and local communities. Instant confirmation, Indian support, INR pricing.",

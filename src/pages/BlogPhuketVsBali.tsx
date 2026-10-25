@@ -155,9 +155,9 @@ const BlogPhuketVsBali = () => (
       },
     ]}
     relatedActivities={[
-      { title: "Full-Day Phi Phi Island Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
-      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
-      { title: "Phuket Simon Cabaret Show", link: "/thailand/phuket/simon-cabaret-show-with-transfer/" },
+      { title: "Full-Day Phi Phi Island Tour", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/" },
+      { title: "Phuket Simon Cabaret Show", link: "/thailand/phuket-activities/simon-cabaret-show-with-transfer/" },
       { title: "Phuket HKT Airport Pickup", link: "/thailand/phuket/phuket-hkt-airport-pickup/" },
     ]}
     relatedLinks={[

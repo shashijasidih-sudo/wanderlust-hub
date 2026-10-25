@@ -11,7 +11,7 @@ import vanImg from "@/assets/chiang-mai-transfer-van-1.webp";
 const TOUR_KEY = "chiang-mai-city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/chiang-mai/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/",
+  path: "/thailand/chiang-mai-activities/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/",
   city: "chiang-mai",
   area: "city",
   seoTitle: "Chiang Mai City Temple Tour: Doi Suthep, Chedi Luang & Pha Lat | Yellodae",

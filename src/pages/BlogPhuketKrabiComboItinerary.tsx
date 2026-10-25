@@ -27,7 +27,7 @@ const BlogPhuketKrabiComboItinerary = () => (
       { type: "paragraph", content: "Direct international flights make Phuket the ideal entry point. Private transfer to hotel, light dinner, sleep early." },
       { type: "heading", content: "Day 2: Phi Phi Island Tour from Phuket" },
       { type: "paragraph", content: "Your 'wow' day — turquoise water, Maya Bay, Pileh Lagoon, snorkeling. Cost ₹5,000–₹8,500. Speedboat strongly recommended." },
-      { type: "cta", content: "Book the Phi Phi day from Phuket", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/", linkText: "Book Phi Phi Tour" },
+      { type: "cta", content: "Book the Phi Phi day from Phuket", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/", linkText: "Book Phi Phi Tour" },
       { type: "heading", content: "Day 3: Phuket Exploration" },
       { type: "paragraph", content: "City tour — Big Buddha, Wat Chalong, Old Town and an adventure activity in the afternoon (₹3,000–₹6,000). Evening: Patong or beach club." },
       { type: "heading", content: "Day 4: Phuket → Krabi Transfer (Buffer Day)" },
@@ -50,10 +50,10 @@ const BlogPhuketKrabiComboItinerary = () => (
       { type: "cta", content: "Plan your full southern Thailand trip", link: "/thailand/krabi-activities/", linkText: "Explore Krabi Tours" },
     ]}
     relatedActivities={[
-      { title: "Full-Day Phi Phi Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
-      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
-      { title: "Krabi Emerald Pool & Hot Springs Tour", link: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
-      { title: "Phuket City Tour with Tiger Kingdom", link: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" },
+      { title: "Full-Day Phi Phi Speedboat Tour", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/" },
+      { title: "Krabi Emerald Pool & Hot Springs Tour", link: "/thailand/krabi-activities/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
+      { title: "Phuket City Tour with Tiger Kingdom", link: "/thailand/phuket-activities/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" },
     ]}
     relatedLinks={[
       { title: "5 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary/" },

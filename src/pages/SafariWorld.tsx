@@ -76,7 +76,7 @@ const SafariWorld = () => {
         <BangkokActivityTemplate
       tourData={tourData}
       config={{
-        path: "/thailand/bangkok/safari-world/",
+        path: "/thailand/bangkok-activities/safari-world/",
         seoTitle: "Safari World Bangkok Tickets with Lunch & Transfers | Book in INR",
         seoDescription:
           "Book Safari World and Marine Park Bangkok tickets with lunch and hotel transfers. Drive-through safari, dolphin and orangutan shows. Instant confirmation in INR.",

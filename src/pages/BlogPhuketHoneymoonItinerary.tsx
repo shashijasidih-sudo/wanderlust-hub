@@ -25,7 +25,7 @@ const BlogPhuketHoneymoonItinerary = () => (
       { type: "paragraph", content: "Private airport transfer (~1 hour). Check in at Kata/Karon (peaceful), Kamala (luxury) or Patong (lively). Evening: pre-booked candlelight dinner at a beachfront or rooftop restaurant. Keep Day 1 relaxed and romantic." },
       { type: "heading", content: "Day 2: Phi Phi Island Tour (Romantic & Scenic)" },
       { type: "paragraph", content: "Premium speedboat to Maya Bay, Pileh Lagoon and Monkey Beach. Swim together in the lagoon, walk the beaches and click couple photos. Cost ₹6,000–₹10,000. Upgrade option: a private island tour is unbeatable for honeymoon." },
-      { type: "cta", content: "Book the premium Phi Phi speedboat for honeymoon", link: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/", linkText: "Book Premium Phi Phi" },
+      { type: "cta", content: "Book the premium Phi Phi speedboat for honeymoon", link: "/thailand/phuket-activities/phi-phi-island-premium-speedboat-tour-with-transfer/", linkText: "Book Premium Phi Phi" },
       { type: "heading", content: "Day 3: Relaxation + Spa + Sunset" },
       { type: "paragraph", content: "Morning couple spa — Thai massage or aromatherapy (₹2,000–₹5,000). Afternoon: relax at Kata/Karon beach and café-hop. Evening: Promthep Cape sunset viewpoint or a beach club. The most romantic day of the trip." },
       { type: "heading", content: "Day 4: City Tour + Couple Activities" },
@@ -46,10 +46,10 @@ const BlogPhuketHoneymoonItinerary = () => (
       { type: "cta", content: "Curate your Phuket honeymoon experiences", link: "/thailand/phuket/things-to-do/", linkText: "Explore Phuket Tours" },
     ]}
     relatedActivities={[
-      { title: "Phi Phi Premium Speedboat Tour", link: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/" },
-      { title: "Full-Day Phi Phi Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
-      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
-      { title: "Phuket City Tour with Tiger Kingdom", link: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" },
+      { title: "Phi Phi Premium Speedboat Tour", link: "/thailand/phuket-activities/phi-phi-island-premium-speedboat-tour-with-transfer/" },
+      { title: "Full-Day Phi Phi Speedboat Tour", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/" },
+      { title: "Phuket City Tour with Tiger Kingdom", link: "/thailand/phuket-activities/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" },
     ]}
     relatedLinks={[
       { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary/" },

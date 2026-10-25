@@ -497,14 +497,14 @@ const IndianTravelerCompanion = () => (
 );
 
 const tripItems = [
-  { title: "Universal Studios Singapore", desc: "Tickets + hotel transfers combo.", image: ussImg, slug: "/singapore/universal-studios-singapore-tickets-and-transfers/" },
-  { title: "Gardens by the Bay", desc: "Flower Dome, Cloud Forest & Supertrees.", image: gardensImg, slug: "/singapore/gardens-by-the-bay-tickets-and-transfers/" },
-  { title: "Singapore Flyer", desc: "360° views 165m above Marina Bay.", image: flyerImg, slug: "/singapore/singapore-flyer-tickets-and-transfers/" },
-  { title: "Night Safari", desc: "World's first nocturnal wildlife park.", image: nightSafariImg, slug: "/singapore/night-safari-singapore-tickets-and-transfers/" },
-  { title: "Wings of Time", desc: "Sentosa's spectacular outdoor night show.", image: wingsOfTimeImg, slug: "/singapore/wings-of-time-show-sentosa-tickets/" },
-  { title: "Sentosa Cable Car", desc: "Iconic ride over the harbour to Sentosa.", image: cableCarImg, slug: "/singapore/sentosa-cable-car-tickets-and-transfers/" },
-  { title: "Singapore Zoo", desc: "Award-winning open-concept rainforest zoo.", image: singaporeZooImg, slug: "/singapore/singapore-zoo-tickets/" },
-  { title: "Big Bus Hop-On Hop-Off", desc: "Explore the city at your own pace.", image: bigBusImg, slug: "/singapore/big-bus-hop-on-hop-off-singapore-city-tour/" },
+  { title: "Universal Studios Singapore", desc: "Tickets + hotel transfers combo.", image: ussImg, slug: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/" },
+  { title: "Gardens by the Bay", desc: "Flower Dome, Cloud Forest & Supertrees.", image: gardensImg, slug: "/singapore-activities/gardens-by-the-bay-tickets-and-transfers/" },
+  { title: "Singapore Flyer", desc: "360° views 165m above Marina Bay.", image: flyerImg, slug: "/singapore-activities/singapore-flyer-tickets-and-transfers/" },
+  { title: "Night Safari", desc: "World's first nocturnal wildlife park.", image: nightSafariImg, slug: "/singapore-activities/night-safari-singapore-tickets-and-transfers/" },
+  { title: "Wings of Time", desc: "Sentosa's spectacular outdoor night show.", image: wingsOfTimeImg, slug: "/singapore-activities/wings-of-time-show-sentosa-tickets/" },
+  { title: "Sentosa Cable Car", desc: "Iconic ride over the harbour to Sentosa.", image: cableCarImg, slug: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
+  { title: "Singapore Zoo", desc: "Award-winning open-concept rainforest zoo.", image: singaporeZooImg, slug: "/singapore-activities/singapore-zoo-tickets/" },
+  { title: "Big Bus Hop-On Hop-Off", desc: "Explore the city at your own pace.", image: bigBusImg, slug: "/singapore-activities/big-bus-hop-on-hop-off-singapore-city-tour/" },
 ];
 
 const CompleteYourSingaporeTrip = () => (
@@ -609,7 +609,7 @@ const SingaporeCityTour = () => {
   return (
     <>
       <Seo
-        path="/singapore/singapore-city-tour/"
+        path="/singapore-activities/singapore-city-tour/"
         title="Singapore City Tour with Guide & Transfers | Indian Support"
         description="Book a half-day Singapore city tour with guide and hotel transfers — Merlion Park, Suntec City, Chinatown and Little India. Instant confirmation, INR pricing, Indian WhatsApp support."
         type="product"

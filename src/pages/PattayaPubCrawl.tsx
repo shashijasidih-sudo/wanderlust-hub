@@ -6,7 +6,7 @@ import { PattayaPubCrawlSEO } from "@/components/activity-detail/PattayaActivity
 import { pubCrawlPattayaFaqs } from "@/data/pattayaActivityFaqs";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/pattaya/pattaya-pub-crawl-night-tour/",
+  path: "/thailand/pattaya-activities/pattaya-pub-crawl-night-tour/",
   city: "pattaya",
   area: "show",
   seoTitle: "Pattaya Pub Crawl Night Tour Tickets | Yellodae",

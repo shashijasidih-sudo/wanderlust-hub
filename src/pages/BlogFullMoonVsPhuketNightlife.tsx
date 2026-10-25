@@ -17,7 +17,7 @@ const Blog = () => (
     subCategory={{ label: "Activity Guides", link: "/thailand/koh-samui/destination-guides#activity" }}
     cityHub={{ city: "Koh Samui", thingsToDoLink: "/thailand/koh-samui/things-to-do/", transfersLink: "/thailand/koh-samui-activities/" }}
     comparisonItems={[
-      { name: "Full Moon Party Koh Phangan", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" },
+      { name: "Full Moon Party Koh Phangan", link: "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/" },
       { name: "Phuket Nightlife", link: "/thailand/phuket-activities/" },
     ]}
     sections={[
@@ -33,7 +33,7 @@ const Blog = () => (
       { type: "list", items: ["Full Moon: EDM, techno, fire shows","Phuket: EDM, hip-hop, live music, shows — wider variety"] },
       { type: "heading", content: "3. Cost Comparison" },
       { type: "list", items: ["Entry — Full Moon ₹200–₹500 vs Phuket ₹500–₹2,000","Drinks — Full Moon ₹300–₹800 vs Phuket ₹500–₹1,500","Overall — Full Moon = budget, Phuket = moderate to expensive"] },
-      { type: "cta", content: "Picking Full Moon? Book the Samui → Koh Phangan transfer + party entry combo now", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/", linkText: "Reserve Combo" },
+      { type: "cta", content: "Picking Full Moon? Book the Samui → Koh Phangan transfer + party entry combo now", link: "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/", linkText: "Reserve Combo" },
       { type: "mid-activities", destination: "thailand", heading: "Plan Your Thailand Nightlife Trip" },
       { type: "heading", content: "4. Crowd & Experience" },
       { type: "list", items: ["Full Moon: Younger, international backpackers","Phuket: Couples, groups, luxury travelers"] },
@@ -44,7 +44,7 @@ const Blog = () => (
       { type: "tip-box", content: "Pro tip: combine both. Start in Phuket for clubbing, end in Koh Samui for the Full Moon Party." },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Full Moon Party = experience. Phuket Nightlife = lifestyle. If you're a true party lover, do both." },
-      { type: "cta", content: "Book Full Moon Party with transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/", linkText: "Book Now" },
+      { type: "cta", content: "Book Full Moon Party with transfer", link: "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/", linkText: "Book Now" },
     ]}
     relatedActivities={[
       { title: "First-Time Full Moon Party Beginner Guide", link: "/thailand/koh-samui/destination-guides/activity/first-time-full-moon-party-koh-samui-beginner-guide/" },
@@ -53,7 +53,7 @@ const Blog = () => (
       { title: "How to Reach Full Moon Party from Phuket and Bangkok", link: "/thailand/koh-samui/destination-guides/activity/how-to-reach-full-moon-party-from-phuket-and-bangkok/" },
     ]}
     relatedLinks={[
-      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" },
+      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/" },
       { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
       { title: "Explore Phuket Tours & Activities", link: "/thailand/phuket-activities/" },

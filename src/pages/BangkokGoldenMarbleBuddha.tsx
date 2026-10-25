@@ -33,7 +33,7 @@ const BangkokGoldenMarbleBuddha = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-golden-marble-buddha" />}
       config={{
-        path: "/thailand/bangkok/golden-buddha-marble-temple-bangkok-city-tour/",
+        path: "/thailand/bangkok-activities/golden-buddha-marble-temple-bangkok-city-tour/",
         seoTitle: "Golden Buddha & Marble Temple Bangkok City Tour | Book in INR",
         seoDescription:
           "Half-day Bangkok city tour covering the Golden Buddha, Marble Temple, Reclining Buddha and Gems Gallery with transfers. Instant confirmation and INR pricing.",

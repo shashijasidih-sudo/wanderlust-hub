@@ -23,21 +23,21 @@ import krabiKayaks from "@/assets/krabi-kayaks-beach-1.jpg";
 import heroThailandIsland from "@/assets/hero-thailand-island.jpg";
 
 const activityCards = [
-  { title: "Phi Phi Island by Speedboat", location: "Phuket", image: phiPhi3, slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
-  { title: "Phi Phi Island Big Boat", location: "Phuket", image: phiPhiBoat, slug: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/" },
-  { title: "Phi Phi Royal Jet Tour", location: "Phuket", image: phuketSpeedboat, slug: "/thailand/phuket/phi-phi-island-premium-speedboat-tour-with-transfer/" },
-  { title: "Phi Phi Maya Khai Speedboat", location: "Phuket", image: phuketMayaBay, slug: "/thailand/phuket/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/" },
-  { title: "James Bond Island Tour", location: "Phuket", image: jamesBond1, slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
-  { title: "James Bond Island Sea Canoe", location: "Phuket", image: jamesBond1, slug: "/thailand/phuket/james-bond-island-sea-canoe-tour-with-transfer/" },
-  { title: "James Bond Island from Krabi", location: "Krabi", image: jamesBond1, slug: "/thailand/krabi/james-bond-island/" },
-  { title: "4 Islands Longtail Tour", location: "Krabi", image: krabiLongtail, slug: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
-  { title: "4 Islands Speedboat Tour", location: "Krabi", image: krabiSpeedboat, slug: "/thailand/krabi/4-island-tour-speedboat-with-transfer/" },
-  { title: "Hong Islands Longtail", location: "Krabi", image: krabiBoatTour, slug: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/" },
-  { title: "Hong Islands Speedboat", location: "Krabi", image: krabiKayaks, slug: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
-  { title: "7 Islands Longtail Tour", location: "Krabi", image: krabiLongtail, slug: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer/" },
-  { title: "7 Islands Speedboat Tour", location: "Krabi", image: krabiSpeedboat, slug: "/thailand/krabi/7-islands-tour-speedboat-with-transfer/" },
-  { title: "Coral Island Pattaya", location: "Pattaya", image: phuketLongtailBoats, slug: "/thailand/pattaya/coral-island-tour-with-transfer-and-indian-lunch/" },
-  { title: "Hot Spring & Emerald Pool", location: "Krabi", image: krabiIslandView, slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
+  { title: "Phi Phi Island by Speedboat", location: "Phuket", image: phiPhi3, slug: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
+  { title: "Phi Phi Island Big Boat", location: "Phuket", image: phiPhiBoat, slug: "/thailand/phuket-activities/phi-phi-island-big-boat-tour-with-transfer/" },
+  { title: "Phi Phi Royal Jet Tour", location: "Phuket", image: phuketSpeedboat, slug: "/thailand/phuket-activities/phi-phi-island-premium-speedboat-tour-with-transfer/" },
+  { title: "Phi Phi Maya Khai Speedboat", location: "Phuket", image: phuketMayaBay, slug: "/thailand/phuket-activities/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/" },
+  { title: "James Bond Island Tour", location: "Phuket", image: jamesBond1, slug: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/" },
+  { title: "James Bond Island Sea Canoe", location: "Phuket", image: jamesBond1, slug: "/thailand/phuket-activities/james-bond-island-sea-canoe-tour-with-transfer/" },
+  { title: "James Bond Island from Krabi", location: "Krabi", image: jamesBond1, slug: "/thailand/krabi-activities/james-bond-island/" },
+  { title: "4 Islands Longtail Tour", location: "Krabi", image: krabiLongtail, slug: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },
+  { title: "4 Islands Speedboat Tour", location: "Krabi", image: krabiSpeedboat, slug: "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/" },
+  { title: "Hong Islands Longtail", location: "Krabi", image: krabiBoatTour, slug: "/thailand/krabi-activities/hong-island-tour-longtail-boat-with-transfer/" },
+  { title: "Hong Islands Speedboat", location: "Krabi", image: krabiKayaks, slug: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/" },
+  { title: "7 Islands Longtail Tour", location: "Krabi", image: krabiLongtail, slug: "/thailand/krabi-activities/7-islands-tour-longtail-boat-with-transfer/" },
+  { title: "7 Islands Speedboat Tour", location: "Krabi", image: krabiSpeedboat, slug: "/thailand/krabi-activities/7-islands-tour-speedboat-with-transfer/" },
+  { title: "Coral Island Pattaya", location: "Pattaya", image: phuketLongtailBoats, slug: "/thailand/pattaya-activities/coral-island-tour-with-transfer-and-indian-lunch/" },
+  { title: "Hot Spring & Emerald Pool", location: "Krabi", image: krabiIslandView, slug: "/thailand/krabi-activities/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
 ];
 
 const ActivityCards = () => {

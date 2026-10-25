@@ -17,7 +17,7 @@ const Blog = () => (
     subCategory={{ label: "Activity Guides", link: "/thailand/koh-samui/destination-guides#activity" }}
     cityHub={{ city: "Koh Samui", thingsToDoLink: "/thailand/koh-samui/things-to-do/", transfersLink: "/thailand/koh-samui-activities/" }}
     comparisonItems={[
-      { name: "Full Moon Party (Haad Rin)", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" },
+      { name: "Full Moon Party (Haad Rin)", link: "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/" },
       { name: "Half Moon Party (Jungle)" },
     ]}
     sections={[
@@ -34,7 +34,7 @@ const Blog = () => (
       { type: "list", items: ["Full Moon: Mixed genres","Half Moon: Primarily EDM"] },
       { type: "heading", content: "4. Ticket Prices" },
       { type: "list", items: ["Full Moon: ₹200–₹500","Half Moon: ₹2,000–₹4,000"] },
-      { type: "cta", content: "Going for Full Moon? Bundle the Samui → Koh Phangan transfer + party entry in one booking", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/", linkText: "Book Bundle" },
+      { type: "cta", content: "Going for Full Moon? Bundle the Samui → Koh Phangan transfer + party entry in one booking", link: "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/", linkText: "Book Bundle" },
       { type: "mid-activities", destination: "thailand", heading: "Plan Your Koh Phangan Trip" },
       { type: "heading", content: "5. Safety & Organization" },
       { type: "paragraph", content: "Half Moon is more premium and better organized; Full Moon is rawer and more chaotic." },
@@ -43,7 +43,7 @@ const Blog = () => (
       { type: "tip-box", content: "Insider tip: Many travelers attend both for a complete Thailand nightlife experience." },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Full Moon = legendary & wild. Half Moon = premium & organized. Best choice depends on your vibe." },
-      { type: "cta", content: "Book Full Moon Party with transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/", linkText: "Book Now" },
+      { type: "cta", content: "Book Full Moon Party with transfer", link: "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/", linkText: "Book Now" },
     ]}
     relatedActivities={[
       { title: "First-Time Full Moon Party Beginner Guide", link: "/thailand/koh-samui/destination-guides/activity/first-time-full-moon-party-koh-samui-beginner-guide/" },
@@ -52,7 +52,7 @@ const Blog = () => (
       { title: "How to Reach Full Moon Party from Phuket and Bangkok", link: "/thailand/koh-samui/destination-guides/activity/how-to-reach-full-moon-party-from-phuket-and-bangkok/" },
     ]}
     relatedLinks={[
-      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" },
+      { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/" },
       { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
       { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/" },

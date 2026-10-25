@@ -6,7 +6,7 @@ import { PattayaDolphinariumSEO } from "@/components/activity-detail/PattayaActi
 import { pattayaDolphinariumFaqs } from "@/data/pattayaActivityFaqs";
 
 const config: ThaiActivityConfig = {
-  path: "/thailand/pattaya/pattaya-dolphinarium-show-tickets/",
+  path: "/thailand/pattaya-activities/pattaya-dolphinarium-show-tickets/",
   city: "pattaya",
   area: "city",
   seoTitle: "Pattaya Dolphinarium Show Tickets with Transfer | Yellodae",

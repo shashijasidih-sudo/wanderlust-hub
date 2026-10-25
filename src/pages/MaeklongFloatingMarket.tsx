@@ -33,7 +33,7 @@ const MaeklongFloatingMarket = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="maeklong-floating-market" />}
       config={{
-        path: "/thailand/bangkok/maeklong-floating-market-tour/",
+        path: "/thailand/bangkok-activities/maeklong-floating-market-tour/",
         seoTitle: "Maeklong Railway & Damnoen Saduak Floating Market Tour | Book in INR",
         seoDescription:
           "Book the Maeklong Railway Market and Damnoen Saduak Floating Market tour from Bangkok with transfers. Full-day trip, instant confirmation and INR pricing.",

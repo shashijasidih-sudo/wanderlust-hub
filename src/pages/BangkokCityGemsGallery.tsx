@@ -33,7 +33,7 @@ const BangkokCityGemsGallery = () => {
       tourData={pageTourData}
       contentAfterOverview={<BangkokTourItinerary tourKey="bangkok-city-gems-gallery" />}
       config={{
-        path: "/thailand/bangkok/gems-gallery-bangkok-tickets/",
+        path: "/thailand/bangkok-activities/gems-gallery-bangkok-tickets/",
         seoTitle: "Bangkok City & Temple Tour with Gems Gallery | Book in INR",
         seoDescription:
           "Book the Bangkok city and temple tour with a Gems Gallery visit. Air-conditioned half-day sightseeing with transfers, instant confirmation and INR pricing.",

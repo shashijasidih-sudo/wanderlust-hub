@@ -62,7 +62,7 @@ const activities: Activity[] = [
     description: "Visit Krabi's famous 4 islands with snorkeling, lunch and longtail boat — without national park fees.",
     price: 2415,
     image: krabiLongtailBoats,
-    slug: "/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer/",
+    slug: "/thailand/krabi-activities/4-island-tour-longtail-boat-no-park-fee-with-transfer/",
     category: "4 Islands & Day Tours",
   },
   {
@@ -70,7 +70,7 @@ const activities: Activity[] = [
     description: "Krabi's iconic 4 islands tour with longtail boat, lunch, snorkeling and round-trip transfer.",
     price: 4589,
     image: krabiKayaks,
-    slug: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/",
+    slug: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/",
     category: "4 Islands & Day Tours",
   },
   {
@@ -78,7 +78,7 @@ const activities: Activity[] = [
     description: "Faster speedboat version of the famous 4 islands Krabi tour with lunch and transfer.",
     price: 4589,
     image: krabiTourBoat,
-    slug: "/thailand/krabi/4-island-tour-speedboat-with-transfer/",
+    slug: "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/",
     category: "4 Islands & Day Tours",
   },
 
@@ -88,7 +88,7 @@ const activities: Activity[] = [
     description: "Discover Hong Island's hidden lagoon and pristine beaches by longtail boat with lunch and transfer.",
     price: 3381,
     image: krabiIslandView,
-    slug: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/",
+    slug: "/thailand/krabi-activities/hong-island-tour-longtail-boat-with-transfer/",
     category: "Hong Islands Tours",
   },
   {
@@ -96,7 +96,7 @@ const activities: Activity[] = [
     description: "Speedboat version of the Hong Island tour — see more in less time with lunch and transfer.",
     price: 4347,
     image: krabiSpeedboat,
-    slug: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/",
+    slug: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/",
     category: "Hong Islands Tours",
   },
 
@@ -106,7 +106,7 @@ const activities: Activity[] = [
     description: "Romantic 7 islands sunset tour with snorkeling, BBQ dinner and plankton viewing.",
     price: 3743,
     image: krabiSailboat,
-    slug: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer/",
+    slug: "/thailand/krabi-activities/7-islands-tour-longtail-boat-with-transfer/",
     category: "7 Islands Sunset Tours",
   },
   {
@@ -114,7 +114,7 @@ const activities: Activity[] = [
     description: "Speedboat 7 islands sunset experience with BBQ dinner, snorkeling and transfer.",
     price: 4830,
     image: krabiBoatTour,
-    slug: "/thailand/krabi/7-islands-tour-speedboat-with-transfer/",
+    slug: "/thailand/krabi-activities/7-islands-tour-speedboat-with-transfer/",
     category: "7 Islands Sunset Tours",
   },
 
@@ -124,7 +124,7 @@ const activities: Activity[] = [
     description: "Day-trip to Phi Phi Island from Krabi by speedboat with lunch, snorkeling and transfer.",
     price: 4830,
     image: krabiBeachWoman,
-    slug: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/",
+    slug: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/",
     category: "Phi Phi & James Bond from Krabi",
   },
   {
@@ -132,7 +132,7 @@ const activities: Activity[] = [
     description: "Visit James Bond Island and Phang Nga Bay from Krabi by longtail boat with lunch.",
     price: 4951,
     image: krabiLongtailBoats,
-    slug: "/thailand/krabi/james-bond-island/",
+    slug: "/thailand/krabi-activities/james-bond-island/",
     category: "Phi Phi & James Bond from Krabi",
   },
 
@@ -142,7 +142,7 @@ const activities: Activity[] = [
     description: "Full-day tour of Krabi's Emerald Pool, natural hot springs and the Tiger Cave Temple with lunch.",
     price: 3140,
     image: krabiTempleWoman,
-    slug: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/",
+    slug: "/thailand/krabi-activities/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/",
     category: "Nature & Adventure",
   },
 ];
@@ -440,16 +440,16 @@ const KrabiThingsToDo = () => {
             <h3 className="text-lg font-semibold">Popular Krabi Tours</h3>
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {[
-                { label: "4 Islands Longtail (No Park Fee)", to: "/thailand/krabi/4-island-tour-longtail-boat-no-park-fee-with-transfer/" },
-                { label: "4 Islands Longtail Boat Tour", to: "/thailand/krabi/4-island-tour-longtail-boat-with-transfer/" },
-                { label: "4 Islands Speedboat Tour", to: "/thailand/krabi/4-island-tour-speedboat-with-transfer/" },
-                { label: "Hong Island Longtail Tour", to: "/thailand/krabi/hong-island-tour-longtail-boat-with-transfer/" },
-                { label: "Hong Island Speedboat Tour", to: "/thailand/krabi/hong-island-tour-speedboat-with-transfer/" },
-                { label: "7 Islands Sunset BBQ Longtail", to: "/thailand/krabi/7-islands-tour-longtail-boat-with-transfer/" },
-                { label: "7 Islands Sunset BBQ Speedboat", to: "/thailand/krabi/7-islands-tour-speedboat-with-transfer/" },
-                { label: "Phi Phi Island from Krabi", to: "/thailand/krabi/phi-phi-island-tour-from-krabi-with-transfer/" },
-                { label: "James Bond Island from Krabi", to: "/thailand/krabi/james-bond-island/" },
-                { label: "Emerald Pool + Tiger Cave Temple", to: "/thailand/krabi/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
+                { label: "4 Islands Longtail (No Park Fee)", to: "/thailand/krabi-activities/4-island-tour-longtail-boat-no-park-fee-with-transfer/" },
+                { label: "4 Islands Longtail Boat Tour", to: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },
+                { label: "4 Islands Speedboat Tour", to: "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/" },
+                { label: "Hong Island Longtail Tour", to: "/thailand/krabi-activities/hong-island-tour-longtail-boat-with-transfer/" },
+                { label: "Hong Island Speedboat Tour", to: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/" },
+                { label: "7 Islands Sunset BBQ Longtail", to: "/thailand/krabi-activities/7-islands-tour-longtail-boat-with-transfer/" },
+                { label: "7 Islands Sunset BBQ Speedboat", to: "/thailand/krabi-activities/7-islands-tour-speedboat-with-transfer/" },
+                { label: "Phi Phi Island from Krabi", to: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/" },
+                { label: "James Bond Island from Krabi", to: "/thailand/krabi-activities/james-bond-island/" },
+                { label: "Emerald Pool + Tiger Cave Temple", to: "/thailand/krabi-activities/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">{l.label}</Link>

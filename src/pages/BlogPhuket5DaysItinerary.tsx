@@ -25,7 +25,7 @@ const BlogPhuket5DaysItinerary = () => (
       { type: "paragraph", content: "Private transfer from HKT airport (₹1,500–₹2,500, 45–60 min). Check in at Patong (nightlife) or Kata/Karon (peaceful). Evening: relax at the beach, dinner at an Indian or Thai restaurant. Sleep early — Day 2 starts at 7 AM." },
       { type: "heading", content: "Day 2: Phi Phi Island Tour" },
       { type: "paragraph", content: "Speedboat tour 7 AM–4:30 PM covering Maya Bay, Pileh Lagoon, Monkey Beach and Viking Cave with snorkeling, swimming and beach time. Cost ₹5,000–₹8,500 per person. The single most important day of your trip." },
-      { type: "cta", content: "Book your Phi Phi speedboat day", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/", linkText: "Book Phi Phi Tour" },
+      { type: "cta", content: "Book your Phi Phi speedboat day", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/", linkText: "Book Phi Phi Tour" },
       { type: "heading", content: "Day 3: James Bond Island Tour" },
       { type: "paragraph", content: "Day trip to Phang Nga Bay — James Bond Island, Koh Panyee floating Muslim village and sea canoeing through limestone caves. Cost ₹3,500–₹6,000. Calmer, more scenic and less crowded than Phi Phi — a relaxing contrast." },
       { type: "tip-box", content: "Don't do Phi Phi and James Bond on consecutive days without sleep. The 5-day plan exists exactly to space them out." },
@@ -44,10 +44,10 @@ const BlogPhuket5DaysItinerary = () => (
       { type: "cta", content: "Pre-book your Phuket activities", link: "/thailand/phuket/things-to-do/", linkText: "Explore Phuket Tours" },
     ]}
     relatedActivities={[
-      { title: "Full-Day Phi Phi Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
-      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
-      { title: "Phuket City Tour with Tiger Kingdom", link: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" },
-      { title: "Phuket Elephant Safari", link: "/thailand/phuket/elephant-safari/" },
+      { title: "Full-Day Phi Phi Speedboat Tour", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
+      { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/" },
+      { title: "Phuket City Tour with Tiger Kingdom", link: "/thailand/phuket-activities/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" },
+      { title: "Phuket Elephant Safari", link: "/thailand/phuket-activities/elephant-safari/" },
     ]}
     relatedLinks={[
       { title: "4 Days Phuket Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary/" },

@@ -560,14 +560,14 @@ const IndianTravelerCompanion = ({ config }: { config: PhuketActivityConfig }) =
 /* ----------------------- complete your Phuket trip ----------------------- */
 
 const TRIP_POOL = [
-  { title: "Phi Phi Island Speedboat Tour", desc: "Maya Bay, snorkelling and island hopping.", image: mayaBayImg, slug: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
-  { title: "James Bond Island Tour", desc: "Phang Nga Bay karsts by speedboat.", image: jamesBondImg, slug: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
-  { title: "Tiger Kingdom & City Tour", desc: "Tiger photos plus Phuket's top viewpoints.", image: tigerImg, slug: "/thailand/phuket/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" },
-  { title: "Elephant Safari & Adventure", desc: "Jungle safari, rafting and ATV fun.", image: elephantImg, slug: "/thailand/phuket/elephant-safari/" },
-  { title: "Dolphin Show Phuket", desc: "Family-favourite marine show with transfers.", image: dolphinImg, slug: "/thailand/phuket/dolphin-show-phuket-with-transfer/" },
-  { title: "Phuket Night Market Tour", desc: "Old Town, Big Buddha and street food.", image: nightMarketImg, slug: "/thailand/phuket/phuket-night-market-tour-with-transfer/" },
-  { title: "Carnival Magic Show", desc: "Thailand's biggest night carnival park.", image: carnivalImg, slug: "/thailand/phuket/carnival-magic-show-tickets-with-transfer/" },
-  { title: "Phi Phi Big Boat Tour", desc: "Relaxed big-boat cruise with buffet lunch.", image: bigBoatImg, slug: "/thailand/phuket/phi-phi-island-big-boat-tour-with-transfer/" },
+  { title: "Phi Phi Island Speedboat Tour", desc: "Maya Bay, snorkelling and island hopping.", image: mayaBayImg, slug: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
+  { title: "James Bond Island Tour", desc: "Phang Nga Bay karsts by speedboat.", image: jamesBondImg, slug: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/" },
+  { title: "Tiger Kingdom & City Tour", desc: "Tiger photos plus Phuket's top viewpoints.", image: tigerImg, slug: "/thailand/phuket-activities/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/" },
+  { title: "Elephant Safari & Adventure", desc: "Jungle safari, rafting and ATV fun.", image: elephantImg, slug: "/thailand/phuket-activities/elephant-safari/" },
+  { title: "Dolphin Show Phuket", desc: "Family-favourite marine show with transfers.", image: dolphinImg, slug: "/thailand/phuket-activities/dolphin-show-phuket-with-transfer/" },
+  { title: "Phuket Night Market Tour", desc: "Old Town, Big Buddha and street food.", image: nightMarketImg, slug: "/thailand/phuket-activities/phuket-night-market-tour-with-transfer/" },
+  { title: "Carnival Magic Show", desc: "Thailand's biggest night carnival park.", image: carnivalImg, slug: "/thailand/phuket-activities/carnival-magic-show-tickets-with-transfer/" },
+  { title: "Phi Phi Big Boat Tour", desc: "Relaxed big-boat cruise with buffet lunch.", image: bigBoatImg, slug: "/thailand/phuket-activities/phi-phi-island-big-boat-tour-with-transfer/" },
 ];
 
 const CompleteYourPhuketTrip = ({ currentPath, title }: { currentPath: string; title: string }) => {

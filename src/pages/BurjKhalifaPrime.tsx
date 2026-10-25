@@ -3,7 +3,7 @@ import { toursData } from "@/data/tourData";
 import { burjKhalifaFaqs } from "@/data/dubaiActivityFaqs";
 
 const config: DubaiActivityConfig = {
-  path: "/dubai/burj-khalifa-prime/",
+  path: "/dubai-activities/burj-khalifa-prime/",
   area: "downtown",
   seoTitle: "Burj Khalifa Silver Fast Track Access – Levels 124 & 125 | Yellodae",
   seoDescription: "Book Burj Khalifa Silver Fast Track Access to Levels 124 and 125. Choose ticket-only Fast Track or the separate Prime Hours with Transfers option, with INR pricing.",
