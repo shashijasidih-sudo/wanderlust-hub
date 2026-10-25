@@ -35,6 +35,14 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 
+// Airport → Hotel transfers: pickup point is the airport, so only the drop hotel is asked
+const AIRPORT_TO_HOTEL_EXTRA_IDS = new Set(["krabi-kbv-aonang-pickup"]);
+const isAirportToHotelTransfer = (id: string) =>
+  AIRPORT_TO_HOTEL_EXTRA_IDS.has(id) ||
+  id.includes("airport-pickup") ||
+  id.includes("airport-to-") ||
+  (id.includes("airport") && id.endsWith("-pickup"));
+
 // Vehicle images - using placeholder URLs
 const vehicleImages = {
   sedan: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&auto=format&fit=crop",
