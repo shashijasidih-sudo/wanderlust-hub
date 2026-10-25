@@ -490,6 +490,13 @@ const App = () => (
             <Route path="/thailand/koh-samui-activities/" element={<KohSamui />} />
             <Route path="/thailand/chiang-mai-activities/" element={<ChiangMai />} />
             <Route path="/thailand/chiang-mai-airport-transfers/" element={<ChiangMaiTransfers />} />
+            {/* Legacy city listing URLs → new -activities slugs */}
+            <Route path="/thailand/bangkok/" element={<Navigate to="/thailand/bangkok-activities/" replace />} />
+            <Route path="/thailand/pattaya/" element={<Navigate to="/thailand/pattaya-activities/" replace />} />
+            <Route path="/thailand/phuket/" element={<Navigate to="/thailand/phuket-activities/" replace />} />
+            <Route path="/thailand/krabi/" element={<Navigate to="/thailand/krabi-activities/" replace />} />
+            <Route path="/thailand/koh-samui/" element={<Navigate to="/thailand/koh-samui-activities/" replace />} />
+            <Route path="/thailand/chiang-mai/" element={<Navigate to="/thailand/chiang-mai-activities/" replace />} />
             <Route path="/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/" element={<KohSamuiWhiteOrchidLoyKrathongCruise />} />
             <Route path="/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" element={<KohSamuiFullMoonParty />} />
             <Route path="/thailand/koh-samui/destination-guides/" element={<KohSamuiDestinationGuides />} />
