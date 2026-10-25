@@ -193,7 +193,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
       numberOfPersons,
       pickupDate: format(pickupDate, "yyyy-MM-dd"),
       pickupTime,
-      pickupLocation,
+      pickupLocation: isAirportToHotel ? airportName : pickupLocation,
       dropLocation,
       roomNo,
       slug: tourSlug,
