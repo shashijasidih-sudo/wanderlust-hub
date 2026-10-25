@@ -64,7 +64,7 @@ const KohSamuiHighlightsHome = () => {
             </p>
           </div>
           <Link
-            to="/thailand/koh-samui/"
+            to="/thailand/koh-samui-activities/"
             className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
           >
             View all Koh Samui <ArrowRight className="h-4 w-4" />

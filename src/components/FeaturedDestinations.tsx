@@ -17,7 +17,7 @@ const destinations = [
     name: "Dubai",
     duration: "4 Nights 5 Days",
     price: 25000,
-    link: "/dubai/"
+    link: "/dubai-activities/"
   },
   {
     image: maldivesImage,

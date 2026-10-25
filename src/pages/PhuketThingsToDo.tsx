@@ -286,7 +286,7 @@ const PhuketThingsToDo = () => {
   const breadcrumbItems = [
     { name: "Home", url: "/" },
     { name: "Thailand", url: "/thailand/" },
-    { name: "Phuket", url: "/thailand/phuket/" },
+    { name: "Phuket", url: "/thailand/phuket-activities/" },
     { name: "Things to Do", url: PAGE_PATH },
   ];
 
@@ -326,7 +326,7 @@ const PhuketThingsToDo = () => {
             <BreadcrumbSeparator />
             <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/">Thailand</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/phuket/">Phuket</Link></BreadcrumbLink></BreadcrumbItem>
+            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/phuket-activities/">Phuket</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem><BreadcrumbPage>Things to Do</BreadcrumbPage></BreadcrumbItem>
           </BreadcrumbList>
@@ -399,7 +399,7 @@ const PhuketThingsToDo = () => {
             <h2 className="text-2xl font-bold md:text-3xl">All Phuket Activities</h2>
             <p className="mt-1 text-muted-foreground">Browse every Phuket activity available on Yellodae.</p>
           </div>
-          <Button variant="outline" asChild><Link to="/thailand/phuket/">View Phuket City Page</Link></Button>
+          <Button variant="outline" asChild><Link to="/thailand/phuket-activities/">View Phuket City Page</Link></Button>
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {allSorted.slice(0, visibleAll).map((a) => <Card key={`all-${a.slug}`} a={a} />)}
@@ -499,7 +499,7 @@ const PhuketThingsToDo = () => {
           <h2 className="text-xl font-semibold">Plan Your Phuket Trip</h2>
           <p className="mt-1 text-sm text-muted-foreground">Combine activities with reliable airport and city transfers.</p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Button asChild variant="default"><Link to="/thailand/phuket/">Phuket City Guide</Link></Button>
+            <Button asChild variant="default"><Link to="/thailand/phuket-activities/">Phuket City Guide</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/phuket/budget-airport-transfers/">Phuket Transfers</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/krabi/things-to-do/">Things to Do in Krabi</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do/">Things to Do in Chiang Mai</Link></Button>

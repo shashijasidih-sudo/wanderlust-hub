@@ -28,7 +28,7 @@ const BANGKOK_TEMPLES = "/thailand/bangkok/wat-arun-wat-pho-golden-buddha-tour/"
 const BANGKOK_CRUISE = "/thailand/bangkok/chao-phraya-princess-dinner-cruise-with-transfer/";
 const BANGKOK_THINGS = "/thailand/bangkok/things-to-do/";
 const BANGKOK_TRANSFERS = "/thailand/bangkok-airport-transfers/";
-const SAMUI_HUB = "/thailand/koh-samui/";
+const SAMUI_HUB = "/thailand/koh-samui-activities/";
 const SAMUI_CRUISE = "/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/";
 
 const faqs = [

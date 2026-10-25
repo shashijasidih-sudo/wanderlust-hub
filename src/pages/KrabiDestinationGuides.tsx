@@ -84,7 +84,7 @@ const KrabiDestinationGuides = () => {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link to="/thailand/krabi/">Krabi</Link>
+                  <Link to="/thailand/krabi-activities/">Krabi</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />

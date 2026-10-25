@@ -47,7 +47,7 @@ const BlogPhuketKrabiComboItinerary = () => (
       { type: "list", items: ["Skipping the leisure day in Krabi","Doing too many tours back-to-back","Poor transfer planning between cities","Choosing only budget options end-to-end"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "A 6–7 day Phuket + Krabi combo gives you the complete southern Thailand experience — energy in Phuket and calm in Krabi. Follow the day-by-day plan and your trip will feel complete, relaxed and memorable." },
-      { type: "cta", content: "Plan your full southern Thailand trip", link: "/thailand/krabi/", linkText: "Explore Krabi Tours" },
+      { type: "cta", content: "Plan your full southern Thailand trip", link: "/thailand/krabi-activities/", linkText: "Explore Krabi Tours" },
     ]}
     relatedActivities={[
       { title: "Full-Day Phi Phi Speedboat Tour", link: "/thailand/phuket/full-day-phi-phi-island-tour-with-transfer/" },
@@ -60,7 +60,7 @@ const BlogPhuketKrabiComboItinerary = () => (
       { title: "Phuket vs Krabi for Indian Travelers", link: "/thailand/phuket/destination-guides/comparison/phuket-vs-krabi-for-indians/" },
       { title: "Phuket Honeymoon Itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary/" },
       { title: "Explore All Phuket Tours", link: "/thailand/phuket/things-to-do/" },
-      { title: "Explore All Krabi Tours", link: "/thailand/krabi/" },
+      { title: "Explore All Krabi Tours", link: "/thailand/krabi-activities/" },
     ]}
       internalLinks={getPhuketInternalLinks("/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary")}
   />

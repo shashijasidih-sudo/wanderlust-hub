@@ -117,11 +117,11 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
   };
   // Per-city landing page URLs
   const cityHomeUrls: Record<string, string> = {
-    bangkok: "/thailand/bangkok/",
-    pattaya: "/thailand/pattaya/",
-    phuket: "/thailand/phuket/",
-    krabi: "/thailand/krabi/",
-    singapore: "/singapore/",
+    bangkok: "/thailand/bangkok-activities/",
+    pattaya: "/thailand/pattaya-activities/",
+    phuket: "/thailand/phuket-activities/",
+    krabi: "/thailand/krabi-activities/",
+    singapore: "/singapore-activities/",
   };
   const cityHomeUrl = cityHomeUrls[cityKey] || `/${citySlug}`;
   const thingsToDoUrl = thingsToDoHubs[cityKey];

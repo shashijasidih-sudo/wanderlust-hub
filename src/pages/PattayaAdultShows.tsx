@@ -68,7 +68,7 @@ const PattayaAdultShows = () => {
 
       <div className="container mx-auto px-4 py-8">
         <div className="bg-card shadow-card rounded-lg p-4 md:p-6 mb-8">
-          <Link to="/thailand/pattaya/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-3">
+          <Link to="/thailand/pattaya-activities/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-3">
             <ArrowLeft className="h-4 w-4" /> Back to all Pattaya activities
           </Link>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">

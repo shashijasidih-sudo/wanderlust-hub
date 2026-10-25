@@ -480,15 +480,15 @@ const App = () => (
           <Route path="/auth/callback/" element={<AuthCallback />} />
           {/* Thailand routes */}
             <Route path="/thailand/" element={<Thailand />} />
-            <Route path="/thailand/bangkok/" element={<Bangkok />} />
+            <Route path="/thailand/bangkok-activities/" element={<Bangkok />} />
             <Route path="/thailand/bangkok/things-to-do/" element={<BangkokThingsToDo />} />
-            <Route path="/thailand/pattaya/" element={<Pattaya />} />
+            <Route path="/thailand/pattaya-activities/" element={<Pattaya />} />
             <Route path="/thailand/pattaya/adultshows/" element={<PattayaAdultShows />} />
             <Route path="/thailand/pattaya/adultshows" element={<PattayaAdultShows />} />
-            <Route path="/thailand/phuket/" element={<Phuket />} />
-            <Route path="/thailand/krabi/" element={<Krabi />} />
-            <Route path="/thailand/koh-samui/" element={<KohSamui />} />
-            <Route path="/thailand/chiang-mai/" element={<ChiangMai />} />
+            <Route path="/thailand/phuket-activities/" element={<Phuket />} />
+            <Route path="/thailand/krabi-activities/" element={<Krabi />} />
+            <Route path="/thailand/koh-samui-activities/" element={<KohSamui />} />
+            <Route path="/thailand/chiang-mai-activities/" element={<ChiangMai />} />
             <Route path="/thailand/chiang-mai-airport-transfers/" element={<ChiangMaiTransfers />} />
             <Route path="/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/" element={<KohSamuiWhiteOrchidLoyKrathongCruise />} />
             <Route path="/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" element={<KohSamuiFullMoonParty />} />
@@ -825,7 +825,7 @@ const App = () => (
             <Route path="/dubai/destination-guides/burj-khalifa-tickets-dubai/" element={<BlogBurjKhalifaTickets />} />
             <Route path="/dubai/destination-guides/dubai-shopping-tours/" element={<BlogDubaiShoppingTours />} />
             <Route path="/dubai/destination-guides/dubai-food-experiences/" element={<BlogDubaiFoodExperiences />} />
-            <Route path="/dubai/" element={<Dubai />} />
+            <Route path="/dubai-activities/" element={<Dubai />} />
             <Route path="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" element={<BlogDubaiDesertSafariNewAttractions />} />
             <Route path="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide" element={<Navigate to="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" replace />} />
             <Route path="/dubai/desert-safari/" element={<Navigate to="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" replace />} />
@@ -891,7 +891,7 @@ const App = () => (
             <Route path="/blog/sentosa-activities-singapore/" element={<BlogSentosaActivities />} />
             <Route path="/blog/singapore-combo-pass/" element={<BlogSingaporeComboPass />} />
             <Route path="/blog/singapore-food-experiences/" element={<BlogSingaporeFoodExperiences />} />
-            <Route path="/singapore/" element={<Singapore />} />
+            <Route path="/singapore-activities/" element={<Singapore />} />
             <Route path="/singapore/things-to-do/" element={<SingaporeThingsToDo />} />
             {/* Singapore Activities — SEO-friendly slugs */}
             <Route path="/singapore/singapore-city-tour/" element={<SingaporeCityTour />} />

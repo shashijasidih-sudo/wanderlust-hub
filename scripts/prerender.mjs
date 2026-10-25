@@ -98,17 +98,17 @@ function withPreload(html, pathname) {
  * owns the head, and the H1 text matches the page's own topic.
  */
 const TITLE_OVERRIDES = {
-  "/singapore/": ["Singapore Tours & Activities", "Attraction tickets, theme parks and private transfers — booked in minutes."],
+  "/singapore-activities/": ["Singapore Tours & Activities", "Attraction tickets, theme parks and private transfers — booked in minutes."],
   "/singapore/transfers/": ["Singapore Airport Transfers", "Private Changi Airport pickups and drop-offs with meet & greet."],
   "/thailand/": ["Thailand Tours & Activities", "Bangkok, Phuket, Krabi, Pattaya and Koh Samui experiences for Indian travellers."],
-  "/dubai/": ["Dubai Tours & Activities", "Desert safaris, city tours and attraction tickets across Dubai."],
+  "/dubai-activities/": ["Dubai Tours & Activities", "Desert safaris, city tours and attraction tickets across Dubai."],
   "/japan/": ["Japan Tours & Activities", "Curated Japan experiences, tickets and transfers."],
-  "/thailand/bangkok/": ["Bangkok Tours & Activities", "Temples, cruises, shows and day trips with hotel transfers."],
-  "/thailand/phuket/": ["Phuket Tours & Activities", "Island hopping, speedboat tours and Phuket attraction tickets."],
-  "/thailand/krabi/": ["Krabi Tours & Activities", "Four Islands, Phi Phi and Hong Island tours with transfers."],
-  "/thailand/pattaya/": ["Pattaya Tours & Activities", "Coral Island, shows and Pattaya day tours with transfers."],
-  "/thailand/koh-samui/": ["Koh Samui Tours & Activities", "Island tours, snorkelling trips and Koh Samui transfers."],
-  "/thailand/chiang-mai/": ["Chiang Mai Tours & Activities", "Elephant sanctuaries, temples and Chiang Mai day tours."],
+  "/thailand/bangkok-activities/": ["Bangkok Tours & Activities", "Temples, cruises, shows and day trips with hotel transfers."],
+  "/thailand/phuket-activities/": ["Phuket Tours & Activities", "Island hopping, speedboat tours and Phuket attraction tickets."],
+  "/thailand/krabi-activities/": ["Krabi Tours & Activities", "Four Islands, Phi Phi and Hong Island tours with transfers."],
+  "/thailand/pattaya-activities/": ["Pattaya Tours & Activities", "Coral Island, shows and Pattaya day tours with transfers."],
+  "/thailand/koh-samui-activities/": ["Koh Samui Tours & Activities", "Island tours, snorkelling trips and Koh Samui transfers."],
+  "/thailand/chiang-mai-activities/": ["Chiang Mai Tours & Activities", "Elephant sanctuaries, temples and Chiang Mai day tours."],
 };
 
 const titleCase = (s) =>

@@ -18,7 +18,7 @@ const BlogIsCoralIslandWorthIt = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "Every Pattaya traveler asks the same question: is Coral Island actually worth a day trip? Short answer — yes, for most first-timers, but only if you plan it right. Pattaya Beach itself isn't great for swimming, so Coral Island (Koh Larn) is what gives you the real Thai beach experience." },
@@ -55,7 +55,7 @@ const BlogIsCoralIslandWorthIt = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

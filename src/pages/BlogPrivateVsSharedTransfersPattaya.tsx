@@ -18,7 +18,7 @@ const BlogPrivateVsSharedTransfersPattaya = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "Booking a Pattaya transfer comes down to one big decision — private or shared? Both work for different travelers. Private gives door-to-door comfort; shared saves money. Here's the 2026 honest comparison so you don't waste cash or sit in a cramped van for 3 hours." },
@@ -48,7 +48,7 @@ const BlogPrivateVsSharedTransfersPattaya = () => (
       { type: "list", items: ["Always pre-book online — walk-in prices are higher","Confirm vehicle type matches your group size","Check if meet & greet at airport is included","Save the driver's contact number after pickup"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "For 90% of Indian travelers heading to Pattaya — families, couples, groups — a private transfer wins on comfort, time and (when split among 3+ people) even cost. Shared transfers are great only for solo budget backpackers traveling light. Pick based on your group size and luggage, and you'll start your Pattaya trip the right way." },
-      { type: "cta", content: "Book your Pattaya transfer", link: "/thailand/pattaya/", linkText: "Explore Pattaya Services" }
+      { type: "cta", content: "Book your Pattaya transfer", link: "/thailand/pattaya-activities/", linkText: "Explore Pattaya Services" }
     ]}
     relatedActivities={[
       { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/" },
@@ -61,7 +61,7 @@ const BlogPrivateVsSharedTransfersPattaya = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

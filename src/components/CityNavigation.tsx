@@ -8,12 +8,12 @@ import pattayaImg from "@/assets/city-pattaya.jpg";
 import chiangMaiImg from "@/assets/city-chiang-mai.webp";
 
 const cities = [
-  { name: "Bangkok", image: bangkokImg, link: "/thailand/bangkok/" },
-  { name: "Phuket", image: phuketImg, link: "/thailand/phuket/" },
-  { name: "Krabi", image: krabiImg, link: "/thailand/krabi/" },
-  { name: "Pattaya", image: pattayaImg, link: "/thailand/pattaya/" },
-  { name: "Koh Samui", image: kohsamuiImg, link: "/thailand/koh-samui/" },
-  { name: "Chiang Mai", image: chiangMaiImg, link: "/thailand/chiang-mai/" },
+  { name: "Bangkok", image: bangkokImg, link: "/thailand/bangkok-activities/" },
+  { name: "Phuket", image: phuketImg, link: "/thailand/phuket-activities/" },
+  { name: "Krabi", image: krabiImg, link: "/thailand/krabi-activities/" },
+  { name: "Pattaya", image: pattayaImg, link: "/thailand/pattaya-activities/" },
+  { name: "Koh Samui", image: kohsamuiImg, link: "/thailand/koh-samui-activities/" },
+  { name: "Chiang Mai", image: chiangMaiImg, link: "/thailand/chiang-mai-activities/" },
 ];
 
 interface CityNavigationProps {

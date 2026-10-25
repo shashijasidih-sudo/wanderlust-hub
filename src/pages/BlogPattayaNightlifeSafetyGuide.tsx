@@ -18,7 +18,7 @@ const BlogPattayaNightlifeSafetyGuide = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "Pattaya nightlife is famous worldwide — but it's also where most tourist scams happen. The good news: with a few simple rules, you can enjoy a safe, fun and budget-friendly night out. This 2026 guide covers the best zones, scams to avoid and exact safety tips that actually matter." },
@@ -56,7 +56,7 @@ const BlogPattayaNightlifeSafetyGuide = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

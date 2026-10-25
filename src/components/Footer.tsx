@@ -9,7 +9,7 @@ import BangkokSmartGuides from "@/components/BangkokSmartGuides";
 
 const Footer = () => {
   const { pathname } = useLocation();
-  const isBangkokPage = pathname === "/thailand/bangkok" || pathname.startsWith("/thailand/bangkok/");
+  const isBangkokPage = pathname === "/thailand/bangkok" || pathname.startsWith("/thailand/bangkok-activities/");
   const isBlogPage = pathname.startsWith("/blog/");
   const isHomePage = pathname === "/";
   const isBookingPage = pathname.startsWith("/booking/");
@@ -102,7 +102,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Koh Samui & Chiang Mai</h4>
             <ul className="space-y-2 text-sm text-background/80">
-              <li><Link to="/thailand/koh-samui/" className="hover:text-background transition-colors">Koh Samui Activities</Link></li>
+              <li><Link to="/thailand/koh-samui-activities/" className="hover:text-background transition-colors">Koh Samui Activities</Link></li>
               <li><Link to="/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" className="hover:text-background transition-colors">Koh Samui Full Moon Party</Link></li>
               <li><Link to="/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/" className="hover:text-background transition-colors">Loy Krathong Cruise Samui</Link></li>
               <li><Link to="/thailand/chiang-mai/things-to-do/" className="hover:text-background transition-colors">Chiang Mai Activities</Link></li>

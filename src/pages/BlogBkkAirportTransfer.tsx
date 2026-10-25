@@ -52,7 +52,7 @@ const BlogBkkAirportTransfer = () => (
       { title: "Bangkok 2 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary/" },
       { title: "Don Mueang Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/" },
       { title: "Bangkok to Pattaya Transfer", link: "/thailand/bangkok/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
-      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok/" },
+      { title: "Explore All Bangkok Tours & Activities", link: "/thailand/bangkok-activities/" },
     ]}
   />
 );

@@ -18,7 +18,7 @@ const BlogPattayaTravelMistakesToAvoid = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "Pattaya is one of the easiest international destinations from India — but first-timers consistently make the same expensive mistakes. This 2026 guide breaks down the 13 most common Pattaya travel mistakes and exactly what to do instead, so you save money, avoid scams and actually enjoy your trip." },
@@ -69,7 +69,7 @@ const BlogPattayaTravelMistakesToAvoid = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

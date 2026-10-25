@@ -18,7 +18,7 @@ const BlogPattayaNightlifeItinerary = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "Pattaya nightlife is best done in two distinct nights, not one giant marathon. Night 1 should be a balanced introduction (live-music bars, food, light drinks). Night 2 is when you commit — Walking Street, big clubs, late finish. Doing it in this order means you stay safe, spend smartly, and actually remember the trip. Here's a tested 2-night plan." },
@@ -51,7 +51,7 @@ const BlogPattayaNightlifeItinerary = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

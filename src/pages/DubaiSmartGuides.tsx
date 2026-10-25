@@ -121,7 +121,7 @@ const blogArticles = [
     author: "Architecture Buff",
     date: "Nov 22, 2024",
     readTime: "10 min read",
-    slug: "/dubai/"
+    slug: "/dubai-activities/"
   },
   {
     id: 3,
@@ -132,7 +132,7 @@ const blogArticles = [
     author: "History Guide",
     date: "Nov 20, 2024",
     readTime: "12 min read",
-    slug: "/dubai/"
+    slug: "/dubai-activities/"
   },
   {
     id: 4,
@@ -154,7 +154,7 @@ const blogArticles = [
     author: "Style Expert",
     date: "Nov 15, 2024",
     readTime: "9 min read",
-    slug: "/dubai/"
+    slug: "/dubai-activities/"
   },
   {
     id: 6,
@@ -165,7 +165,7 @@ const blogArticles = [
     author: "Family Travel",
     date: "Nov 12, 2024",
     readTime: "11 min read",
-    slug: "/dubai/"
+    slug: "/dubai-activities/"
   },
   {
     id: 7,
@@ -187,7 +187,7 @@ const blogArticles = [
     author: "Local Guide",
     date: "Nov 8, 2024",
     readTime: "6 min read",
-    slug: "/dubai/"
+    slug: "/dubai-activities/"
   },
   {
     id: 9,
@@ -198,7 +198,7 @@ const blogArticles = [
     author: "Day Tripper",
     date: "Nov 5, 2024",
     readTime: "10 min read",
-    slug: "/dubai/"
+    slug: "/dubai-activities/"
   },
   {
     id: 10,
@@ -209,7 +209,7 @@ const blogArticles = [
     author: "Beach Lover",
     date: "Nov 2, 2024",
     readTime: "7 min read",
-    slug: "/dubai/"
+    slug: "/dubai-activities/"
   },
   {
     id: 11,
@@ -220,7 +220,7 @@ const blogArticles = [
     author: "Food Explorer",
     date: "Oct 30, 2024",
     readTime: "9 min read",
-    slug: "/dubai/"
+    slug: "/dubai-activities/"
   },
   {
     id: 12,
@@ -231,7 +231,7 @@ const blogArticles = [
     author: "Night Owl",
     date: "Oct 28, 2024",
     readTime: "8 min read",
-    slug: "/dubai/"
+    slug: "/dubai-activities/"
   }
 ];
 
@@ -293,7 +293,7 @@ const DubaiSmartGuides = () => {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link to="/dubai/">Dubai</Link>
+                  <Link to="/dubai-activities/">Dubai</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />

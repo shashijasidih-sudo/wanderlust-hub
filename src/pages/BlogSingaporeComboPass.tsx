@@ -146,7 +146,7 @@ const BlogSingaporeComboPass = () => {
           "Reliable 24/7 customer support via WhatsApp",
           "Smooth Singapore transfers and activity planning",
         ]},
-        { type: "cta", content: "Ready to explore Singapore with a combo pass? Browse all attractions and book at the best prices!", link: "/singapore/", linkText: "🇸🇬 Explore Singapore Activities" },
+        { type: "cta", content: "Ready to explore Singapore with a combo pass? Browse all attractions and book at the best prices!", link: "/singapore-activities/", linkText: "🇸🇬 Explore Singapore Activities" },
       ]}
     >
       <ActivityCards />

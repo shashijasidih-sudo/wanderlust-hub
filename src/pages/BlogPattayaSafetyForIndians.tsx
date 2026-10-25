@@ -18,7 +18,7 @@ const BlogPattayaSafetyForIndians = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "If you're planning your first Thailand trip, the most common question is: is Pattaya safe for Indian tourists? Short answer — yes, Pattaya is generally safe if you follow basic travel precautions. Thousands of Indian travelers visit every year for beaches, nightlife, shopping and budget-friendly vacations. But like any popular tourist city, there are areas and situations where you need to be cautious. This 2026 guide breaks down crime levels, nightlife safety, scams, women's safety and pro tips so you can travel confidently." },
@@ -61,7 +61,7 @@ const BlogPattayaSafetyForIndians = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

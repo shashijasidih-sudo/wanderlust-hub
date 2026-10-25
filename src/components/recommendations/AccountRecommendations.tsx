@@ -67,7 +67,7 @@ const ACTIVITIES_TRANSFERS: ExploreCard[] = [
     title: "Dubai Activities & Transfers",
     description: "Desert safaris, Burj Khalifa, dhow cruises and DXB airport transfers by zone.",
     image: dubaiImg,
-    link: "/dubai/",
+    link: "/dubai-activities/",
     badge: "Dubai",
   },
   {
@@ -81,7 +81,7 @@ const ACTIVITIES_TRANSFERS: ExploreCard[] = [
     title: "Koh Samui Activities & Transfers",
     description: "Full Moon Party, island hopping, Ang Thong marine park and Samui transfers.",
     image: kohSamuiImg,
-    link: "/thailand/koh-samui/",
+    link: "/thailand/koh-samui-activities/",
     badge: "Koh Samui",
   },
 ];

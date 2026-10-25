@@ -18,7 +18,7 @@ const BlogPattayaCoralIslandComboItinerary = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "If you're heading to Pattaya, Coral Island (Koh Larn) is non-negotiable — it's the experience that turns a city trip into an actual beach holiday. Pattaya gives you nightlife, shows and city attractions; Coral Island gives you clear water, clean beaches, water sports and proper island vibes. Combining both creates the perfect balance of adventure and relaxation. Here's the optimised 2–3 day combo plan." },
@@ -53,7 +53,7 @@ const BlogPattayaCoralIslandComboItinerary = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

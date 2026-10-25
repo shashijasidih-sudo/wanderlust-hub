@@ -18,7 +18,7 @@ const BlogPattaya2DayItinerary = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "If you only have a weekend and Pattaya is on your list, the answer is yes — 48 hours is enough to cover the city's biggest experiences if you sequence the days correctly. The trick is to keep Day 1 light (arrival, city + nightlife) and pack Day 2 with the must-do Coral Island trip. This 2-day Pattaya itinerary is the same plan we hand to weekend travelers from Bangkok and works perfectly for first-time visitors, couples and small groups." },
@@ -57,7 +57,7 @@ const BlogPattaya2DayItinerary = () => (
       { title: "Bangkok + Pattaya 5 Days Itinerary", link: "/thailand/pattaya/destination-guides/itinerary/bangkok-pattaya-5-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

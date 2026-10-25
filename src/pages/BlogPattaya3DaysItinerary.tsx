@@ -18,7 +18,7 @@ const BlogPattaya3DaysItinerary = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "Three days is the sweet spot for Pattaya. You get Coral Island, water sports, cultural attractions, cabaret shows AND enough downtime to actually enjoy your hotel pool. This itinerary is the most-requested plan from Indian travelers visiting Pattaya — balanced pacing, no rushed transfers and a logical mix of adventure, culture and entertainment." },
@@ -55,7 +55,7 @@ const BlogPattaya3DaysItinerary = () => (
       { title: "Bangkok + Pattaya 5 Days Itinerary", link: "/thailand/pattaya/destination-guides/itinerary/bangkok-pattaya-5-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

@@ -15,7 +15,7 @@ const Blog = () => (
     guidesLink="/thailand/koh-samui/destination-guides"
     guidesLabel="Koh Samui Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/koh-samui/destination-guides#activity" }}
-    cityHub={{ city: "Koh Samui", thingsToDoLink: "/thailand/koh-samui/things-to-do/", transfersLink: "/thailand/koh-samui/" }}
+    cityHub={{ city: "Koh Samui", thingsToDoLink: "/thailand/koh-samui/things-to-do/", transfersLink: "/thailand/koh-samui-activities/" }}
     sections={[
       { type: "paragraph", content: "Most people think the Full Moon Party is dirt cheap. The entry fee is — but the real bill stacks up fast. Here are the hidden costs to plan for in 2026." },
       { type: "heading", content: "1. Transfer Costs" },
@@ -56,7 +56,7 @@ const Blog = () => (
       { title: "Bangkok Trip Cost from India 2026", link: "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india/" },
       { title: "Pattaya 3 Days Trip Cost", link: "/thailand/pattaya/destination-guides/price-cost/pattaya-3-days-trip-cost/" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
-      { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui/" },
+      { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui-activities/" },
     ]}
   />
 );

@@ -335,7 +335,7 @@ const BangkokThingsToDo = () => {
   const breadcrumbItems = [
     { name: "Home", url: "/" },
     { name: "Thailand", url: "/thailand/" },
-    { name: "Bangkok", url: "/thailand/bangkok/" },
+    { name: "Bangkok", url: "/thailand/bangkok-activities/" },
     { name: "Things to Do", url: PAGE_PATH },
   ];
 
@@ -390,7 +390,7 @@ const BangkokThingsToDo = () => {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink asChild><Link to="/thailand/bangkok/">Bangkok</Link></BreadcrumbLink>
+              <BreadcrumbLink asChild><Link to="/thailand/bangkok-activities/">Bangkok</Link></BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -489,7 +489,7 @@ const BangkokThingsToDo = () => {
             </p>
           </div>
           <Button variant="outline" asChild>
-            <Link to="/thailand/bangkok/">View Bangkok City Page</Link>
+            <Link to="/thailand/bangkok-activities/">View Bangkok City Page</Link>
           </Button>
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -660,7 +660,7 @@ const BangkokThingsToDo = () => {
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <Button asChild variant="default">
-              <Link to="/thailand/bangkok/">Bangkok City Guide</Link>
+              <Link to="/thailand/bangkok-activities/">Bangkok City Guide</Link>
             </Button>
             <Button asChild variant="outline">
               <Link to="/thailand/bangkok/transfers/">Bangkok Transfers</Link>

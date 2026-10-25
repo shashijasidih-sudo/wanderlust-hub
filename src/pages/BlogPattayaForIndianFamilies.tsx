@@ -18,7 +18,7 @@ const BlogPattayaForIndianFamilies = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "Pattaya is one of the most popular international family destinations for Indians — affordable, easy to reach from any Indian metro, packed with kid-friendly attractions and overflowing with Indian food options. This complete 2026 guide covers what Indian families can really expect: safety, where to stay, what to eat, the best attractions for kids, costs, transport and a tested 4-5 day plan." },
@@ -60,7 +60,7 @@ const BlogPattayaForIndianFamilies = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

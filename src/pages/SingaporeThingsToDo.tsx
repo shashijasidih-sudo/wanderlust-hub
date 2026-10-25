@@ -311,7 +311,7 @@ const SingaporeThingsToDo = () => {
 
   const breadcrumbItems = [
     { name: "Home", url: "/" },
-    { name: "Singapore", url: "/singapore/" },
+    { name: "Singapore", url: "/singapore-activities/" },
     { name: "Things to Do", url: PAGE_PATH },
   ];
 
@@ -349,7 +349,7 @@ const SingaporeThingsToDo = () => {
           <BreadcrumbList>
             <BreadcrumbItem><BreadcrumbLink asChild><Link to="/">Home</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/singapore/">Singapore</Link></BreadcrumbLink></BreadcrumbItem>
+            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/singapore-activities/">Singapore</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem><BreadcrumbPage>Things to Do</BreadcrumbPage></BreadcrumbItem>
           </BreadcrumbList>
@@ -420,7 +420,7 @@ const SingaporeThingsToDo = () => {
             <h2 className="text-2xl font-bold md:text-3xl">All Singapore Activities</h2>
             <p className="mt-1 text-muted-foreground">Browse every Singapore activity available on Yellodae.</p>
           </div>
-          <Button variant="outline" asChild><Link to="/singapore/">View Singapore City Page</Link></Button>
+          <Button variant="outline" asChild><Link to="/singapore-activities/">View Singapore City Page</Link></Button>
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {allSorted.slice(0, visibleAll).map((a) => <Card key={`all-${a.slug}`} a={a} />)}
@@ -521,7 +521,7 @@ const SingaporeThingsToDo = () => {
           <h2 className="text-xl font-semibold">Plan Your Singapore Trip</h2>
           <p className="mt-1 text-sm text-muted-foreground">Combine activities with reliable Changi airport transfers.</p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Button asChild variant="default"><Link to="/singapore/">Singapore City Guide</Link></Button>
+            <Button asChild variant="default"><Link to="/singapore-activities/">Singapore City Guide</Link></Button>
             <Button asChild variant="outline"><Link to="/singapore/budget-airport-transfers/">Singapore Transfers</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/bangkok/things-to-do/">Things to Do in Bangkok</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do/">Things to Do in Chiang Mai</Link></Button>
