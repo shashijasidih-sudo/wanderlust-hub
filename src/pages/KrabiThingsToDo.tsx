@@ -251,7 +251,7 @@ const KrabiThingsToDo = () => {
   const breadcrumbItems = [
     { name: "Home", url: "/" },
     { name: "Thailand", url: "/thailand/" },
-    { name: "Krabi", url: "/thailand/krabi/" },
+    { name: "Krabi", url: "/thailand/krabi-activities/" },
     { name: "Things to Do", url: PAGE_PATH },
   ];
 
@@ -291,7 +291,7 @@ const KrabiThingsToDo = () => {
             <BreadcrumbSeparator />
             <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/">Thailand</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/krabi/">Krabi</Link></BreadcrumbLink></BreadcrumbItem>
+            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/krabi-activities/">Krabi</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem><BreadcrumbPage>Things to Do</BreadcrumbPage></BreadcrumbItem>
           </BreadcrumbList>
@@ -365,7 +365,7 @@ const KrabiThingsToDo = () => {
             <h2 className="text-2xl font-bold md:text-3xl">All Krabi Activities</h2>
             <p className="mt-1 text-muted-foreground">Browse every Krabi activity available on Yellodae.</p>
           </div>
-          <Button variant="outline" asChild><Link to="/thailand/krabi/">View Krabi City Page</Link></Button>
+          <Button variant="outline" asChild><Link to="/thailand/krabi-activities/">View Krabi City Page</Link></Button>
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {allSorted.slice(0, visibleAll).map((a) => <Card key={`all-${a.slug}`} a={a} />)}
@@ -465,7 +465,7 @@ const KrabiThingsToDo = () => {
           <h2 className="text-xl font-semibold">Plan Your Krabi Trip</h2>
           <p className="mt-1 text-sm text-muted-foreground">Combine activities with reliable airport and city transfers.</p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Button asChild variant="default"><Link to="/thailand/krabi/">Krabi City Guide</Link></Button>
+            <Button asChild variant="default"><Link to="/thailand/krabi-activities/">Krabi City Guide</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/krabi/budget-airport-transfers/">Krabi Transfers</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/phuket/things-to-do/">Things to Do in Phuket</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do/">Things to Do in Chiang Mai</Link></Button>

@@ -301,3 +301,13 @@ RedirectMatch 301 ^/blog/burj-khalifa-tickets-dubai/?$ /dubai/destination-guides
 RedirectMatch 301 ^/blog/dubai-shopping-tours/?$ /dubai/destination-guides/dubai-shopping-tours/
 RedirectMatch 301 ^/blog/dubai-food-experiences/?$ /dubai/destination-guides/dubai-food-experiences/
 RedirectMatch 301 ^/blog/dubai-desert-safari-new-attractions-guide/?$ /dubai/destination-guides/dubai-desert-safari-new-attractions-guide/
+
+# City activity listing pages moved to -activities slugs (301)
+RedirectMatch 301 ^/thailand/bangkok/?$ /thailand/bangkok-activities/
+RedirectMatch 301 ^/thailand/pattaya/?$ /thailand/pattaya-activities/
+RedirectMatch 301 ^/thailand/phuket/?$ /thailand/phuket-activities/
+RedirectMatch 301 ^/thailand/krabi/?$ /thailand/krabi-activities/
+RedirectMatch 301 ^/thailand/koh-samui/?$ /thailand/koh-samui-activities/
+RedirectMatch 301 ^/thailand/chiang-mai/?$ /thailand/chiang-mai-activities/
+RedirectMatch 301 ^/dubai/?$ /dubai-activities/
+RedirectMatch 301 ^/singapore/?$ /singapore-activities/

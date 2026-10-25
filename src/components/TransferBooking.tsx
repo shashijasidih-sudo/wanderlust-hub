@@ -294,12 +294,12 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
         {(() => {
           const cityKey = transferData.city?.toLowerCase().trim() || "";
           const cityHomeMap: Record<string, { name: string; url: string }> = {
-            bangkok: { name: "Bangkok", url: "/thailand/bangkok/" },
-            phuket: { name: "Phuket", url: "/thailand/phuket/" },
-            krabi: { name: "Krabi", url: "/thailand/krabi/" },
-            pattaya: { name: "Pattaya", url: "/thailand/pattaya/" },
-            "chiang mai": { name: "Chiang Mai", url: "/thailand/chiang-mai/" },
-            singapore: { name: "Singapore", url: "/singapore/" },
+            bangkok: { name: "Bangkok", url: "/thailand/bangkok-activities/" },
+            phuket: { name: "Phuket", url: "/thailand/phuket-activities/" },
+            krabi: { name: "Krabi", url: "/thailand/krabi-activities/" },
+            pattaya: { name: "Pattaya", url: "/thailand/pattaya-activities/" },
+            "chiang mai": { name: "Chiang Mai", url: "/thailand/chiang-mai-activities/" },
+            singapore: { name: "Singapore", url: "/singapore-activities/" },
           };
           const cityTransfersMap: Record<string, { name: string; url: string }> = {
             bangkok: { name: "Bangkok Transfers", url: "/thailand/bangkok-airport-transfers/" },

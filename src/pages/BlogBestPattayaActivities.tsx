@@ -139,7 +139,7 @@ const BlogBestPattayaActivities = () => {
         { type: "paragraph", content: "Pattaya is easily accessible from Bangkok. Book a private transfer from Suvarnabhumi (BKK) or Don Mueang (DMK) airport directly to your Pattaya hotel. The drive takes about 90 minutes on the motorway. Yellodae offers comfortable airport transfers with meet-and-greet service." },
         { type: "heading", content: "Best Time to Visit Pattaya" },
         { type: "paragraph", content: "November to February offers the best weather with pleasant temperatures and minimal rain. March–May is hot but great for water sports. June–October has occasional rain but fewer tourists and lower prices." },
-        { type: "cta", content: "Ready to explore Pattaya? Book your activities at the best prices!", link: "/thailand/pattaya/", linkText: "🏖️ Browse Pattaya Activities" },
+        { type: "cta", content: "Ready to explore Pattaya? Book your activities at the best prices!", link: "/thailand/pattaya-activities/", linkText: "🏖️ Browse Pattaya Activities" },
       ]}
     >
       <ActivityCards />

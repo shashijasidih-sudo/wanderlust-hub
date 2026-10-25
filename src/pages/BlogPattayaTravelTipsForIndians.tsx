@@ -18,7 +18,7 @@ const BlogPattayaTravelTipsForIndians = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "Planning your first Pattaya trip from India? This 2026 guide covers everything you need to know before you fly — visa, currency, SIM cards, transport, food, must-do activities, real costs, safety and the best time to visit. Pattaya is one of the easiest, most affordable international destinations for Indians and this checklist will save you 5–10% of your total trip cost in mistakes alone." },
@@ -65,7 +65,7 @@ const BlogPattayaTravelTipsForIndians = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

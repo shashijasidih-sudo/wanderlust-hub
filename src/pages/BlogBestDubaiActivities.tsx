@@ -144,7 +144,7 @@ const BlogBestDubaiActivities = () => {
         "Trusted by 50,000+ Indian travelers",
         "Flexible rescheduling options",
       ]},
-      { type: "cta", content: "Ready to explore Dubai? Browse all activities and book at the best prices!", link: "/dubai/", linkText: "🇦🇪 Explore Dubai Activities" },
+      { type: "cta", content: "Ready to explore Dubai? Browse all activities and book at the best prices!", link: "/dubai-activities/", linkText: "🇦🇪 Explore Dubai Activities" },
     ]}
   >
     <ActivityCards />

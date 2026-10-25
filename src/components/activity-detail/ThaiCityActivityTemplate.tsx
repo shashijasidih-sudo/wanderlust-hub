@@ -201,7 +201,7 @@ const CITIES: Record<ThaiCity, CityPreset> = {
 
   "koh-samui": {
     name: "Koh Samui",
-    hubPath: "/thailand/koh-samui/",
+    hubPath: "/thailand/koh-samui-activities/",
     airport: "Samui International Airport (USM)",
     simNote: "AIS and TrueMove counters at Samui Airport; 7-Eleven stores in Chaweng and Lamai sell tourist SIMs and top-ups.",
     taxiNote: "Samui taxis are meter-free and pricey — agree the fare first, or use Grab / Bolt where available.",

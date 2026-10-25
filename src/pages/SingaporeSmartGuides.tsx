@@ -122,7 +122,7 @@ const SingaporeSmartGuides = () => {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link to="/singapore/">Singapore</Link>
+                  <Link to="/singapore-activities/">Singapore</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />

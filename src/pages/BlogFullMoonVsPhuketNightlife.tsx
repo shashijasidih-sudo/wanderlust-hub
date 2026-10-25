@@ -15,10 +15,10 @@ const Blog = () => (
     guidesLink="/thailand/koh-samui/destination-guides"
     guidesLabel="Koh Samui Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/koh-samui/destination-guides#activity" }}
-    cityHub={{ city: "Koh Samui", thingsToDoLink: "/thailand/koh-samui/things-to-do/", transfersLink: "/thailand/koh-samui/" }}
+    cityHub={{ city: "Koh Samui", thingsToDoLink: "/thailand/koh-samui/things-to-do/", transfersLink: "/thailand/koh-samui-activities/" }}
     comparisonItems={[
       { name: "Full Moon Party Koh Phangan", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" },
-      { name: "Phuket Nightlife", link: "/thailand/phuket/" },
+      { name: "Phuket Nightlife", link: "/thailand/phuket-activities/" },
     ]}
     sections={[
       { type: "paragraph", content: "Both offer completely different experiences. One is a wild beach rave under the moon, the other is a diverse, club-centric nightlife hub. Let's break it down for 2026." },
@@ -56,8 +56,8 @@ const Blog = () => (
       { title: "Book Full Moon Party + Samui–Koh Phangan Transfer", link: "/thailand/koh-samui/full-moon-party-koh-phangan-with-transfer/" },
       { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
-      { title: "Explore Phuket Tours & Activities", link: "/thailand/phuket/" },
-      { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui/" },
+      { title: "Explore Phuket Tours & Activities", link: "/thailand/phuket-activities/" },
+      { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui-activities/" },
     ]}
   />
 );

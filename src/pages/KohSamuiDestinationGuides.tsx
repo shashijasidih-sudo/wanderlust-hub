@@ -59,7 +59,7 @@ const KohSamuiDestinationGuides = () => {
               <BreadcrumbSeparator />
               <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/">Thailand</Link></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
-              <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/koh-samui/">Koh Samui</Link></BreadcrumbLink></BreadcrumbItem>
+              <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/koh-samui-activities/">Koh Samui</Link></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem><BreadcrumbPage>Destination Guides</BreadcrumbPage></BreadcrumbItem>
             </BreadcrumbList>

@@ -84,7 +84,7 @@ const DOWNTOWN_FOOD = [
 
 const CITY = {
   name: "Dubai",
-  hubPath: "/dubai/",
+  hubPath: "/dubai-activities/",
   airport: "Dubai International Airport (DXB) / Al Maktoum (DWC)",
   simNote:
     "du and Etisalat counters are right at DXB arrivals; tourist SIMs with data start around AED 50. Supermarkets and malls also sell top-ups.",

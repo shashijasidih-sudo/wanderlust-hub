@@ -18,7 +18,7 @@ const BlogIndianRestaurantsInPattaya = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "Indian food is one of the biggest reasons families and first-time travelers love Pattaya — there's a strong cluster of authentic North Indian, South Indian, vegetarian and even Jain-friendly restaurants across Central Pattaya, Soi 13/2 and Beach Road. This 2026 guide covers the best Indian restaurants in Pattaya, what they serve, real prices and pro tips so you never have a bad meal on your trip." },
@@ -58,7 +58,7 @@ const BlogIndianRestaurantsInPattaya = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

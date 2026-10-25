@@ -18,7 +18,7 @@ const BlogPattayaFamilyItinerary = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "Pattaya gets a wild reputation, but for families it's actually one of the easiest and best-value international destinations from India. Stay on the Jomtien side, skip the late-night areas, and you'll find a city built for kids — Ramayana water park, Underwater World aquarium, Nong Nooch elephant shows, gentle Coral Island water sports and dozens of Indian-friendly restaurants. Here's a tested 4-day family plan." },
@@ -55,7 +55,7 @@ const BlogPattayaFamilyItinerary = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

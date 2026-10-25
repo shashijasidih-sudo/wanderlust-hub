@@ -148,7 +148,7 @@ const BlogDubaiFoodExperiences = () => {
           "Exclusive deals & combo packages at the best prices",
           "Complete travel assistance for your trip",
         ]},
-        { type: "cta", content: "Ready to taste the best of Dubai? Browse all activities and book at the best prices!", link: "/dubai/", linkText: "🇦🇪 Explore Dubai Activities" },
+        { type: "cta", content: "Ready to taste the best of Dubai? Browse all activities and book at the best prices!", link: "/dubai-activities/", linkText: "🇦🇪 Explore Dubai Activities" },
       ]}
     >
       <ActivityCards />

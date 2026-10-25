@@ -18,7 +18,7 @@ const BlogBangkokPattaya5DaysItinerary = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "If you're flying into Thailand from India for the first time and have 5 days, the Bangkok + Pattaya combo is the route locals quietly recommend. Bangkok gives you culture, shopping and food. Pattaya gives you beaches, Coral Island and nightlife. Together they cover 80% of what most first-time visitors actually want — without flights between cities. Here's the day-by-day plan." },
@@ -55,7 +55,7 @@ const BlogBangkokPattaya5DaysItinerary = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

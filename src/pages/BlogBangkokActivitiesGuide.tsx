@@ -148,7 +148,7 @@ const BlogBangkokActivitiesGuide = () => {
         { type: "tip-box", content: "💡 Bangkok Tip: Many Bangkok tours offer hotel pickup from Sukhumvit, Silom, and Khao San Road areas. BTS Skytrain is excellent for getting around the city independently." },
         { type: "heading", content: "Best Time to Visit Bangkok" },
         { type: "paragraph", content: "November to February is ideal with cooler, drier weather (25-32°C). March–May is very hot (35°C+). June–October sees occasional rain but fewer crowds and better prices." },
-        { type: "cta", content: "Ready to explore Bangkok? Book your activities at the best prices!", link: "/thailand/bangkok/", linkText: "🏯 Browse Bangkok Activities" },
+        { type: "cta", content: "Ready to explore Bangkok? Book your activities at the best prices!", link: "/thailand/bangkok-activities/", linkText: "🏯 Browse Bangkok Activities" },
       ]}
     >
       <ActivityCards />

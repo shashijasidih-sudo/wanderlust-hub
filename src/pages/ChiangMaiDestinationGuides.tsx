@@ -59,7 +59,7 @@ const ChiangMaiDestinationGuides = () => {
               <BreadcrumbSeparator />
               <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/">Thailand</Link></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
-              <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/chiang-mai/">Chiang Mai</Link></BreadcrumbLink></BreadcrumbItem>
+              <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/chiang-mai-activities/">Chiang Mai</Link></BreadcrumbLink></BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem><BreadcrumbPage>Destination Guides</BreadcrumbPage></BreadcrumbItem>
             </BreadcrumbList>

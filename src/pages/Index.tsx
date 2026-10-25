@@ -164,8 +164,8 @@ const Index = () => {
             <Link to="/thailand/bangkok/transfers/" className="underline underline-offset-2 hover:text-primary">airport transfers</Link>{" "}
             and curated travel experiences across{" "}
             <Link to="/thailand/" className="underline underline-offset-2 hover:text-primary">Thailand</Link>,{" "}
-            <Link to="/singapore/" className="underline underline-offset-2 hover:text-primary">Singapore</Link>,{" "}
-            <Link to="/dubai/" className="underline underline-offset-2 hover:text-primary">Dubai</Link> and{" "}
+            <Link to="/singapore-activities/" className="underline underline-offset-2 hover:text-primary">Singapore</Link>,{" "}
+            <Link to="/dubai-activities/" className="underline underline-offset-2 hover:text-primary">Dubai</Link> and{" "}
             <Link to="/japan/" className="underline underline-offset-2 hover:text-primary">Japan</Link>. Yellodae Trails, also known
             simply as <strong className="text-foreground">Yellodae</strong>, curates holiday packages, transfers and skip-the-line tickets
             for Indian travellers — with 24/7 WhatsApp support. Learn more{" "}

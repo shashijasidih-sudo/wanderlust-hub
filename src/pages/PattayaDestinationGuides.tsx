@@ -84,7 +84,7 @@ const PattayaDestinationGuides = () => {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link to="/thailand/pattaya/">Pattaya</Link>
+                  <Link to="/thailand/pattaya-activities/">Pattaya</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />

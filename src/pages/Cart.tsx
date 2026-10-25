@@ -237,10 +237,10 @@ const Cart = () => {
               <Link to="/thailand/">
                 <Button className="w-full">Browse Thailand Tours</Button>
               </Link>
-              <Link to="/singapore/">
+              <Link to="/singapore-activities/">
                 <Button variant="outline" className="w-full">Browse Singapore Activities</Button>
               </Link>
-              <Link to="/dubai/">
+              <Link to="/dubai-activities/">
                 <Button variant="outline" className="w-full">Browse Dubai Experiences</Button>
               </Link>
             </div>

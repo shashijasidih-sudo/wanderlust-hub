@@ -18,7 +18,7 @@ const BlogPattayaHoneymoonItinerary = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "Pattaya isn't the first city most people associate with honeymoons — but if you skip Walking Street and lean into the cleaner side of the city (Jomtien beach, Sanctuary of Truth at sunset, Nong Nooch garden walks, private speedboat to Coral Island), it becomes a stunning, affordable couple's destination. This 4-day Pattaya honeymoon itinerary is built specifically for couples and first-time international honeymooners from India." },
@@ -53,7 +53,7 @@ const BlogPattayaHoneymoonItinerary = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Bangkok to Pattaya Transfer Guide", link: "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );

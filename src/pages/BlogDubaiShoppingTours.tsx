@@ -133,7 +133,7 @@ const BlogDubaiShoppingTours = () => {
           "Perfect for couples, families, and groups",
         ]},
         { type: "tip-box", content: "💡 Pro Tip: Combine your shopping tour with a Dubai City Tour for the complete experience — explore landmarks in the morning and shop in the evening!" },
-        { type: "cta", content: "Ready to shop in Dubai? Browse all activities and book at the best prices!", link: "/dubai/", linkText: "🇦🇪 Explore Dubai Activities" },
+        { type: "cta", content: "Ready to shop in Dubai? Browse all activities and book at the best prices!", link: "/dubai-activities/", linkText: "🇦🇪 Explore Dubai Activities" },
       ]}
     >
       <ActivityCards />

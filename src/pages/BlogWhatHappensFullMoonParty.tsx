@@ -15,7 +15,7 @@ const Blog = () => (
     guidesLink="/thailand/koh-samui/destination-guides"
     guidesLabel="Koh Samui Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/koh-samui/destination-guides#activity" }}
-    cityHub={{ city: "Koh Samui", thingsToDoLink: "/thailand/koh-samui/things-to-do/", transfersLink: "/thailand/koh-samui/" }}
+    cityHub={{ city: "Koh Samui", thingsToDoLink: "/thailand/koh-samui/things-to-do/", transfersLink: "/thailand/koh-samui-activities/" }}
     sections={[
       { type: "paragraph", content: "The Full Moon Party at Haad Rin Beach is one of the most iconic nightlife experiences on the planet. But what actually happens once you're there? Here's the real, unfiltered breakdown." },
       { type: "heading", content: "Arrival Vibe" },
@@ -49,7 +49,7 @@ const Blog = () => (
       { title: "White Orchid Loy Krathong Cruise", link: "/thailand/koh-samui/white-orchid-river-cruise-loy-krathong-festival/" },
       { title: "Bangkok 3 Day Itinerary 2026", link: "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/" },
       { title: "Suvarnabhumi Airport Transfer Guide", link: "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/" },
-      { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui/" },
+      { title: "Explore All Koh Samui Tours & Activities", link: "/thailand/koh-samui-activities/" },
     ]}
   />
 );

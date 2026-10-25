@@ -139,7 +139,7 @@ const BlogTopThingsSingapore = () => {
         "Trusted by 50,000+ Indian travelers",
         "Flexible cancellation policies",
       ]},
-      { type: "cta", content: "Ready to explore Singapore? Browse all activities and book at the best prices!", link: "/singapore/", linkText: "🇸🇬 Explore All Singapore Activities" },
+      { type: "cta", content: "Ready to explore Singapore? Browse all activities and book at the best prices!", link: "/singapore-activities/", linkText: "🇸🇬 Explore All Singapore Activities" },
     ]}
   >
     <ActivityCards />

@@ -150,7 +150,7 @@ const BlogBestSingaporeAttractions = () => {
         "Trusted by 50,000+ Indian travelers",
         "Free rescheduling on most tickets",
       ]},
-      { type: "cta", content: "Ready to explore Singapore? Browse all attractions and book at the best prices!", link: "/singapore/", linkText: "🇸🇬 Explore Singapore Activities" },
+      { type: "cta", content: "Ready to explore Singapore? Browse all attractions and book at the best prices!", link: "/singapore-activities/", linkText: "🇸🇬 Explore Singapore Activities" },
     ]}
   >
     <ActivityCards />

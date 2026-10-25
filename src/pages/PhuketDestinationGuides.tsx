@@ -84,7 +84,7 @@ const PhuketDestinationGuides = () => {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link to="/thailand/phuket/">Phuket</Link>
+                  <Link to="/thailand/phuket-activities/">Phuket</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />

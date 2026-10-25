@@ -142,7 +142,7 @@ const BlogSingaporeFoodExperiences = () => {
           "Affordable pricing with competitive rates",
           "Hassle-free travel planning in one place",
         ]},
-        { type: "cta", content: "Ready to explore Singapore's incredible food scene? Browse all activities and book at the best prices!", link: "/singapore/", linkText: "🇸🇬 Explore Singapore Activities" },
+        { type: "cta", content: "Ready to explore Singapore's incredible food scene? Browse all activities and book at the best prices!", link: "/singapore-activities/", linkText: "🇸🇬 Explore Singapore Activities" },
       ]}
     >
       <ActivityCards />

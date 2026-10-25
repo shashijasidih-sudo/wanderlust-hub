@@ -136,7 +136,7 @@ const ChiangMaiThingsToDo = () => {
   const breadcrumbItems = [
     { name: "Home", url: "/" },
     { name: "Thailand", url: "/thailand/" },
-    { name: "Chiang Mai", url: "/thailand/chiang-mai/" },
+    { name: "Chiang Mai", url: "/thailand/chiang-mai-activities/" },
     { name: "Things to Do", url: PAGE_PATH },
   ];
 
@@ -181,7 +181,7 @@ const ChiangMaiThingsToDo = () => {
             <BreadcrumbSeparator />
             <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/">Thailand</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
-            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/chiang-mai/">Chiang Mai</Link></BreadcrumbLink></BreadcrumbItem>
+            <BreadcrumbItem><BreadcrumbLink asChild><Link to="/thailand/chiang-mai-activities/">Chiang Mai</Link></BreadcrumbLink></BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem><BreadcrumbPage>Things to Do</BreadcrumbPage></BreadcrumbItem>
           </BreadcrumbList>
@@ -209,7 +209,7 @@ const ChiangMaiThingsToDo = () => {
           <div className="mt-6 flex flex-wrap gap-3">
             <Button size="lg" asChild><a href="#all-activities">Explore Activities</a></Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/thailand/chiang-mai/">Chiang Mai City Page</Link>
+              <Link to="/thailand/chiang-mai-activities/">Chiang Mai City Page</Link>
             </Button>
           </div>
         </div>
@@ -245,7 +245,7 @@ const ChiangMaiThingsToDo = () => {
             <h2 className="text-2xl font-bold md:text-3xl">All Chiang Mai Activities</h2>
             <p className="mt-1 text-muted-foreground">Browse every Chiang Mai tour available on Yellodae.</p>
           </div>
-          <Button variant="outline" asChild><Link to="/thailand/chiang-mai/">View Chiang Mai City Page</Link></Button>
+          <Button variant="outline" asChild><Link to="/thailand/chiang-mai-activities/">View Chiang Mai City Page</Link></Button>
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {sortedActivities.map((a) => <Card key={a.slug} a={a} />)}
@@ -268,7 +268,7 @@ const ChiangMaiThingsToDo = () => {
                 Combine Chiang Mai tours with reliable airport transfers and explore other Thailand destinations.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
-                <Button asChild variant="default"><Link to="/thailand/chiang-mai/">Chiang Mai City Guide</Link></Button>
+                <Button asChild variant="default"><Link to="/thailand/chiang-mai-activities/">Chiang Mai City Guide</Link></Button>
                 <Button asChild variant="outline"><Link to="/thailand/bangkok/things-to-do/">Things to Do in Bangkok</Link></Button>
                 <Button asChild variant="outline"><Link to="/thailand/phuket/things-to-do/">Things to Do in Phuket</Link></Button>
                 <Button asChild variant="outline"><Link to="/thailand/">Thailand Destinations</Link></Button>

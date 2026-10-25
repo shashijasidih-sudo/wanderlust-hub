@@ -151,11 +151,11 @@ const activities = [
 ];
 
 const cities = [
-  { name: "Bangkok", image: bangkokImg, link: "/thailand/bangkok/" },
-  { name: "Phuket", image: phuketImg, link: "/thailand/phuket/" },
-  { name: "Krabi", image: krabiImg, link: "/thailand/krabi/" },
+  { name: "Bangkok", image: bangkokImg, link: "/thailand/bangkok-activities/" },
+  { name: "Phuket", image: phuketImg, link: "/thailand/phuket-activities/" },
+  { name: "Krabi", image: krabiImg, link: "/thailand/krabi-activities/" },
   { name: "Koh Samui", image: kohsamuiImg, link: "/thailand/" },
-  { name: "Pattaya", image: pattayaImg, link: "/thailand/pattaya/" },
+  { name: "Pattaya", image: pattayaImg, link: "/thailand/pattaya-activities/" },
 ];
 
 const placeholderCities = ["Phuket", "Krabi", "Chiang Mai", "Pattaya", "Bangkok"];

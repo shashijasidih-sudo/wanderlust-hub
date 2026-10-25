@@ -149,7 +149,7 @@ const BlogTopPhuketTours = () => {
           "Dedicated WhatsApp support for Indian travelers",
           "Genuine reviews from Indian families and couples",
         ]},
-        { type: "cta", content: "Ready to explore Phuket's stunning islands? Book your tour now!", link: "/thailand/phuket/", linkText: "🏝️ Browse Phuket Tours" },
+        { type: "cta", content: "Ready to explore Phuket's stunning islands? Book your tour now!", link: "/thailand/phuket-activities/", linkText: "🏝️ Browse Phuket Tours" },
       ]}
     >
       <ActivityCards />

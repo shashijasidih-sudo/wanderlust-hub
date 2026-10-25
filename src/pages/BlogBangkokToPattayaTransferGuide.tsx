@@ -18,7 +18,7 @@ const BlogBangkokToPattayaTransferGuide = () => (
     cityHub={{
       city: "Pattaya",
       thingsToDoLink: "/thailand/pattaya/things-to-do/",
-      transfersLink: "/thailand/pattaya/",
+      transfersLink: "/thailand/pattaya-activities/",
     }}
     sections={[
       { type: "paragraph", content: "Pattaya is only ~150 km from Bangkok — the country's most popular city-to-beach hop. The catch is choosing between taxi, Grab, private car, public bus or shared van. Each has very different cost, comfort and timing trade-offs. Here's everything Indian travelers need to know in 2026." },
@@ -46,7 +46,7 @@ const BlogBangkokToPattayaTransferGuide = () => (
       { type: "list", items: ["Taking a random taxi without confirming price","Picking the cheapest option without checking luggage space","Booking shared van with 2 large suitcases","Traveling Friday evening Bangkok → Pattaya"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "For most travelers — especially Indian families and couples — a pre-booked private car transfer wins on comfort, reliability and zero stress. Public bus is unbeatable for solo budget travelers, taxi/Grab works best for couples on a quick hop. Pick based on your group size and time of arrival, and you'll be in Pattaya within 2 hours." },
-      { type: "cta", content: "Book your Pattaya transfer", link: "/thailand/pattaya/", linkText: "Explore Pattaya Tours" }
+      { type: "cta", content: "Book your Pattaya transfer", link: "/thailand/pattaya-activities/", linkText: "Explore Pattaya Tours" }
     ]}
     relatedActivities={[
       { title: "Coral Island Pattaya Guide 2026", link: "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/" },
@@ -59,7 +59,7 @@ const BlogBangkokToPattayaTransferGuide = () => (
       { title: "Pattaya 2 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/" },
       { title: "Suvarnabhumi to Pattaya Cost & Time", link: "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/" },
       { title: "Don Mueang to Pattaya Transfer", link: "/thailand/pattaya/destination-guides/transfer/don-mueang-to-pattaya/" },
-      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya/" },
+      { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
 );
