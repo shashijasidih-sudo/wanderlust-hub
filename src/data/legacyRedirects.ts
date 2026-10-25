@@ -111,7 +111,7 @@ export const LEGACY_REDIRECTS: Record<string, string> = {
   "/thailand/phuket/phuket-to-krabi/": "/thailand/phuket/things-to-do/",
   "/thailand/phuket/simon-cabaret-show/": "/thailand/phuket-activities/simon-cabaret-show-with-transfer/",
   "/thailand/phuket/transfers/": "/thailand/phuket/things-to-do/",
-  "/thailand/transfers/": "/thailand/airport-transfers/"
+  "/thailand/transfers/": "/thailand/airport-transfers/",
   "/dubai/abu-dhabi-city-tour/": "/dubai-activities/abu-dhabi-city-tour/",
   "/dubai/abu-dhabi-ferrari-world/": "/dubai-activities/abu-dhabi-ferrari-world/",
   "/dubai/aquarium-penguin/": "/dubai-activities/aquarium-penguin/",
