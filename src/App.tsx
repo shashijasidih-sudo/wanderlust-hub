@@ -833,6 +833,7 @@ const App = () => (
             <Route path="/dubai/destination-guides/dubai-shopping-tours/" element={<BlogDubaiShoppingTours />} />
             <Route path="/dubai/destination-guides/dubai-food-experiences/" element={<BlogDubaiFoodExperiences />} />
             <Route path="/dubai-activities/" element={<Dubai />} />
+            <Route path="/dubai/" element={<Navigate to="/dubai-activities/" replace />} />
             <Route path="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" element={<BlogDubaiDesertSafariNewAttractions />} />
             <Route path="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide" element={<Navigate to="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" replace />} />
             <Route path="/dubai/desert-safari/" element={<Navigate to="/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/" replace />} />
@@ -899,6 +900,7 @@ const App = () => (
             <Route path="/blog/singapore-combo-pass/" element={<BlogSingaporeComboPass />} />
             <Route path="/blog/singapore-food-experiences/" element={<BlogSingaporeFoodExperiences />} />
             <Route path="/singapore-activities/" element={<Singapore />} />
+            <Route path="/singapore/" element={<Navigate to="/singapore-activities/" replace />} />
             <Route path="/singapore/things-to-do/" element={<SingaporeThingsToDo />} />
             {/* Singapore Activities — SEO-friendly slugs */}
             <Route path="/singapore/singapore-city-tour/" element={<SingaporeCityTour />} />
