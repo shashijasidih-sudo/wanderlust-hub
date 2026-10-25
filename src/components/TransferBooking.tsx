@@ -171,7 +171,12 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
       toast.error("Please select pickup time");
       return null;
     }
-    if (!pickupLocation) {
+    if (isAirportToHotel) {
+      if (!dropLocation) {
+        toast.error("Please enter drop hotel name");
+        return null;
+      }
+    } else if (!pickupLocation) {
       toast.error("Please enter pickup location");
       return null;
     }
