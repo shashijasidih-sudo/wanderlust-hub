@@ -423,7 +423,7 @@ const BangkokThingsToDo = () => {
               <a href="#all-activities">Explore Activities</a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/thailand/bangkok/transfers/">Bangkok Transfers</Link>
+              <Link to="/thailand/bangkok-airport-transfers/">Bangkok Transfers</Link>
             </Button>
           </div>
         </div>
@@ -617,7 +617,7 @@ const BangkokThingsToDo = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/thailand/bangkok/transfers/" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">
+                <Link to="/thailand/bangkok-airport-transfers/" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">
                   Bangkok Airport & City Transfers
                 </Link>
               </li>
@@ -663,7 +663,7 @@ const BangkokThingsToDo = () => {
               <Link to="/thailand/bangkok-activities/">Bangkok City Guide</Link>
             </Button>
             <Button asChild variant="outline">
-              <Link to="/thailand/bangkok/transfers/">Bangkok Transfers</Link>
+              <Link to="/thailand/bangkok-airport-transfers/">Bangkok Transfers</Link>
             </Button>
             <Button asChild variant="outline">
               <Link to="/thailand/pattaya/things-to-do/">Things to Do in Pattaya</Link>

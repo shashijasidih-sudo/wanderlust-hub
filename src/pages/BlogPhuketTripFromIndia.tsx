@@ -13,7 +13,7 @@ const BlogPhuketTripFromIndia = () => (
     readTime="11 min read"
     category="Indian Audience Blogs"
     keywords={["phuket trip from india", "phuket visa for indians", "phuket budget india", "phuket flights from india", "phuket itinerary india"]}
-    guidesLink="/thailand/phuket/destination-guides"
+    guidesLink="/thailand/phuket/destination-guides/"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "For Indian Travelers", link: "/thailand/phuket/destination-guides#indian-audience" }}
     cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
@@ -114,7 +114,7 @@ const BlogPhuketTripFromIndia = () => (
     ]}
     relatedActivities={[
       { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour/" },
-      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour/" },
+      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
       { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour/" },
     ]}
     relatedLinks={[

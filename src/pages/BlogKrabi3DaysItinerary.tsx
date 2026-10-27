@@ -13,7 +13,7 @@ const BlogKrabi3DaysItinerary = () => (
     readTime="9 min read"
     category="Itinerary Blogs"
     keywords={["3 days krabi itinerary","krabi short trip","krabi 3 day plan","krabi itinerary indian travelers","krabi weekend trip"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Itinerary Guides", link: "/thailand/krabi/destination-guides#itinerary" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -49,7 +49,7 @@ const BlogKrabi3DaysItinerary = () => (
       { title: "Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do/" },
       { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/things-to-do/" },
       { title: "Krabi Jungle & Emerald Pool Tour", link: "/thailand/krabi/things-to-do/" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi-airport-transfers/" },
     ]}
     relatedLinks={[
       { title: "4 Days Krabi Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary/" },

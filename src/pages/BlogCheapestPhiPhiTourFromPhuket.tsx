@@ -20,7 +20,7 @@ const BlogCheapestPhiPhiTourFromPhuket = () => (
       "phi phi tour cost in inr",
       "cheap phuket tours 2026",
     ]}
-    guidesLink="/thailand/phuket/destination-guides"
+    guidesLink="/thailand/phuket/destination-guides/"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Price & Cost Guides", link: "/thailand/phuket/destination-guides#price-cost" }}
     cityHub={{
@@ -131,7 +131,7 @@ const BlogCheapestPhiPhiTourFromPhuket = () => (
     relatedActivities={[
       { title: "Phuket Phi Phi Island Tour (Big Boat)", link: "/thailand/phuket/phuket-phi-phi-island-tour/" },
       { title: "Phi Phi Speedboat Day Tour from Phuket", link: "/thailand/phuket/phuket-phi-phi-speedboat/" },
-      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-tour/" },
+      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
     ]}
     relatedLinks={[
       { title: "Best Phi Phi Island Tours from Phuket (2026)", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours/" },

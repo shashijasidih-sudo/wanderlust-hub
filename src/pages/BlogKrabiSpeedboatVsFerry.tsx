@@ -13,7 +13,7 @@ const Blog = () => (
     readTime="8 min read"
     category="Transfer Blogs"
     keywords={["krabi speedboat vs ferry","krabi ferry","krabi speedboat","krabi to phi phi speedboat","krabi island transfer"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Transfer Blogs", link: "/thailand/krabi/destination-guides#transfer" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -41,7 +41,7 @@ const Blog = () => (
       { type: "list", items: ["Choose morning departures for calmer seas","Carry motion sickness medicine for speedboats","Sit at the back — usually less bumpy on speedboats","Wear sunscreen and sunglasses","Pre-book in peak season (Dec–Feb)"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Your choice depends on what matters more — time or comfort. Speedboat wins for speed and flexibility. Ferry wins for comfort and budget. For most Indian families, the ferry is the safer, more relaxing choice. For couples and time-pressed travelers on day trips, the speedboat is the smart pick." },
-      { type: "cta", content: "Book your Krabi airport transfer for a stress-free start", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Airport Transfer" },
+      { type: "cta", content: "Book your Krabi airport transfer for a stress-free start", link: "/thailand/krabi-airport-transfers/", linkText: "Book Krabi Airport Transfer" },
     ]}
     relatedActivities={[
       { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/" },

@@ -161,7 +161,7 @@ const Index = () => {
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
             Welcome to <strong className="text-foreground">Yellodae Trails</strong>, India's trusted online travel platform for booking{" "}
             <Link to="/about-us/" className="underline underline-offset-2 hover:text-primary">tours</Link>, attraction tickets,{" "}
-            <Link to="/thailand/bangkok/transfers/" className="underline underline-offset-2 hover:text-primary">airport transfers</Link>{" "}
+            <Link to="/thailand/bangkok-airport-transfers/" className="underline underline-offset-2 hover:text-primary">airport transfers</Link>{" "}
             and curated travel experiences across{" "}
             <Link to="/thailand/" className="underline underline-offset-2 hover:text-primary">Thailand</Link>,{" "}
             <Link to="/singapore-activities/" className="underline underline-offset-2 hover:text-primary">Singapore</Link>,{" "}

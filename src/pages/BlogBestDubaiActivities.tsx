@@ -80,7 +80,7 @@ const BlogBestDubaiActivities = () => {
     readTime="11 min read"
     category="Dubai Travel Guide"
     keywords={["Dubai activities booking online", "best things to do in Dubai", "Dubai tour booking", "desert safari Dubai", "Burj Khalifa tickets", "Dubai dhow cruise", "Dubai city tour", "Dubai travel guide 2026", "Yellodae Dubai"]}
-    guidesLink="/dubai/destination-guides"
+    guidesLink="/dubai/destination-guides/"
     guidesLabel="Dubai Guides"
     relatedLinks={[
       { title: "Best Dubai Desert Safari Packages", link: "/dubai/destination-guides/desert-safari-deals-dubai/" },

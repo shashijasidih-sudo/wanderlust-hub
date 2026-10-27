@@ -13,7 +13,7 @@ const Blog = () => (
     readTime="10 min read"
     category="Transfer Blogs"
     keywords={["phuket to krabi","phuket to krabi transfer","phuket to krabi ferry","phuket to krabi taxi","phuket krabi distance"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Transfer Blogs", link: "/thailand/krabi/destination-guides#transfer" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -43,13 +43,13 @@ const Blog = () => (
       { type: "list", items: ["Booking ferry during monsoon without a backup plan","Choosing the cheapest van without checking reviews","Underestimating road travel time during weekends","Not confirming hotel pickup is included"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "For most Indian travelers, a private taxi is the best overall option for the Phuket to Krabi route — fast, comfortable and surprisingly affordable when shared. Budget solo travelers should pick the bus, while couples chasing a unique experience can take the ferry one way." },
-      { type: "cta", content: "Book your Krabi airport or hotel transfer with English-speaking driver", link: "/thailand/krabi/budget-airport-transfers/", linkText: "View All Krabi Transfers" },
+      { type: "cta", content: "Book your Krabi airport or hotel transfer with English-speaking driver", link: "/thailand/krabi-airport-transfers/", linkText: "View All Krabi Transfers" },
     ]}
     relatedActivities={[
       { title: "Krabi Hotel to Phuket Hotel Transfer", link: "/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer/" },
       { title: "Krabi Hotel to Phuket Airport Transfer", link: "/thailand/krabi/krabi-hotel-to-phuket-airport-transfer/" },
       { title: "Krabi Airport to Phuket Hotel Transfer", link: "/thailand/krabi/krabi-airport-to-phuket-hotel-transfer/" },
-      { title: "All Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+      { title: "All Krabi Airport Transfers", link: "/thailand/krabi-airport-transfers/" },
     ]}
     relatedLinks={[
       { title: "Krabi Airport to Ao Nang Transfer Guide", link: "/thailand/krabi/destination-guides/transfer/krabi-airport-to-ao-nang-transfer-guide/" },

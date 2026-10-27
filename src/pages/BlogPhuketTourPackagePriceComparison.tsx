@@ -19,7 +19,7 @@ const BlogPhuketTourPackagePriceComparison = () => (
       "phuket 5 days package price",
       "phuket honeymoon package cost",
     ]}
-    guidesLink="/thailand/phuket/destination-guides"
+    guidesLink="/thailand/phuket/destination-guides/"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Price & Cost Guides", link: "/thailand/phuket/destination-guides#price-cost" }}
     cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
@@ -93,7 +93,7 @@ const BlogPhuketTourPackagePriceComparison = () => (
     ]}
     relatedActivities={[
       { title: "Phi Phi Island Tour (Big Boat)", link: "/thailand/phuket/phuket-phi-phi-island-tour/" },
-      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-tour/" },
+      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
       { title: "Phuket City Tour with Big Buddha", link: "/thailand/phuket/phuket-city-tour/" },
     ]}
     relatedLinks={[

@@ -13,7 +13,7 @@ const Blog = () => (
     readTime="10 min read"
     category="Comparisons"
     keywords={["4 island vs hong island krabi","krabi 4 island tour","krabi hong island tour","krabi island hopping comparison","krabi tour comparison 2026"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Comparisons", link: "/thailand/krabi/destination-guides#comparison" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -50,7 +50,7 @@ const Blog = () => (
       { type: "cta", content: "Book Hong Island Tour by speedboat", link: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/", linkText: "Book Hong Island Tour" },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Want value and variety? Choose the 4 Island Tour. Want beauty and tranquility? Choose Hong Island. Either way, you won't be disappointed — and if your itinerary allows, do both for the complete Krabi island experience in 2026." },
-      { type: "cta", content: "Book your Krabi airport transfer", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
+      { type: "cta", content: "Book your Krabi airport transfer", link: "/thailand/krabi-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
       { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },

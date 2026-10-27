@@ -13,7 +13,7 @@ const BlogIndianFoodInPhuket = () => (
     readTime="9 min read"
     category="Indian Audience Blogs"
     keywords={["indian food in phuket", "vegetarian food phuket", "jain food phuket", "indian restaurants patong", "phuket food cost india"]}
-    guidesLink="/thailand/phuket/destination-guides"
+    guidesLink="/thailand/phuket/destination-guides/"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "For Indian Travelers", link: "/thailand/phuket/destination-guides#indian-audience" }}
     cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
@@ -90,7 +90,7 @@ const BlogIndianFoodInPhuket = () => (
     relatedActivities={[
       { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour/" },
       { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour/" },
-      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour/" },
+      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
     ]}
     relatedLinks={[
       { title: "Phuket Trip from India: Complete Guide", link: "/thailand/phuket/destination-guides/indian-audience/phuket-trip-from-india/" },

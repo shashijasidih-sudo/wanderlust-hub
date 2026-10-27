@@ -13,7 +13,7 @@ const Blog = () => (
     readTime="11 min read"
     category="Indian Audience Blogs"
     keywords={["krabi honeymoon guide","krabi honeymoon for indian couples","krabi honeymoon 2026","railay honeymoon","krabi honeymoon budget inr"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Indian Audience Guides", link: "/thailand/krabi/destination-guides#indian-audience" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -23,7 +23,7 @@ const Blog = () => (
       { type: "list", items: ["Peaceful environment","Affordable luxury","Easy travel from India","Beautiful beaches and dramatic cliffs","Plenty of romantic experiences"] },
       { type: "heading", content: "Best Places to Stay for Honeymoon" },
       { type: "list", items: ["Railay Beach — most romantic, private and secluded with premium resorts","Ao Nang — best value, easy access to tours","Tubkaek Beach — quiet, exclusive, ideal for privacy"] },
-      { type: "cta", content: "Book your romantic Krabi airport pickup", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
+      { type: "cta", content: "Book your romantic Krabi airport pickup", link: "/thailand/krabi-airport-transfers/", linkText: "Book Krabi Transfer" },
       { type: "heading", content: "Best Honeymoon Experiences in Krabi" },
       { type: "list", items: ["Private island tour — personalized, no crowds, flexible timing","Phi Phi Islands — Maya Bay, Pileh Lagoon, snorkeling","Sunset cruise — golden views with romantic dinner","Couple spa — Thai massage and aromatherapy","Beach candlelight dinner — private setup with ocean views"] },
       { type: "heading", content: "Ideal Honeymoon Itinerary (5 Days)" },
@@ -49,7 +49,7 @@ const Blog = () => (
       { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/" },
       { title: "4 Island Tour by Speedboat", link: "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/" },
       { title: "Hong Island Longtail Tour", link: "/thailand/krabi-activities/hong-island-tour-longtail-boat-with-transfer/" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi-airport-transfers/" },
     ]}
     relatedLinks={[
       { title: "5 Days Krabi Honeymoon Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-honeymoon-itinerary/" },

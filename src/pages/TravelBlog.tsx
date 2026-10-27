@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 import SafeImage from "@/components/SafeImage";
 import Seo from "@/components/seo/Seo";
 import thailand from "@/assets/hero-thailand-beach.jpg";
-import singapore from "@/assets/singapore-city-1.webp";
-import dubai from "@/assets/dubai-skyline-night.webp";
+import singapore from "@/assets/singapore-city-night.webp";
+import dubai from "@/assets/dubai-skyline-night-1.jpg";
 import japan from "@/assets/japan-mount-fuji-1.webp";
 
 const destinations = [

@@ -81,7 +81,7 @@ const BlogDubaiShoppingTours = () => {
       readTime="12 min read"
       category="Dubai Travel Guide"
       keywords={["Dubai shopping tours", "Dubai shopping tours booking", "best Dubai shopping tours", "Dubai Mall shopping", "Gold Souk Dubai", "Dubai shopping guide", "Yellodae Dubai"]}
-      guidesLink="/dubai/destination-guides"
+      guidesLink="/dubai/destination-guides/"
       guidesLabel="Dubai Guides"
       relatedLinks={[
         { title: "Top Dubai Activities to Book Online", link: "/dubai/destination-guides/best-dubai-activities/" },

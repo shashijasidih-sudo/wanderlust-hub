@@ -18,7 +18,7 @@ const BlogAlcazarShowPattayaGuide = () => (
       "pattaya cabaret show review",
       "alcazar vs tiffany",
     ]}
-    guidesLink="/thailand/pattaya/destination-guides"
+    guidesLink="/thailand/pattaya/destination-guides/"
     guidesLabel="Pattaya Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/pattaya/destination-guides#activity" }}
     cityHub={{
@@ -85,7 +85,7 @@ const BlogAlcazarShowPattayaGuide = () => (
       ]},
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Alcazar Cabaret Show is one of Pattaya's top evening experiences — high production quality at a very reasonable price. If you're picking only one show, Alcazar is the safest, most-loved choice." },
-      { type: "cta", content: "Book Alcazar Cabaret Show tickets", link: "/thailand/pattaya/alcazar-show/", linkText: "View Tickets" },
+      { type: "cta", content: "Book Alcazar Cabaret Show tickets", link: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/", linkText: "View Tickets" },
     ]}
     relatedLinks={[
       { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },

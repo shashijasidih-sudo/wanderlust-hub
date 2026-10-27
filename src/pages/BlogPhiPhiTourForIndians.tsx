@@ -13,7 +13,7 @@ const BlogPhiPhiTourForIndians = () => (
     readTime="10 min read"
     category="Indian Audience Blogs"
     keywords={["phi phi island for indians", "phi phi tour cost india", "phi phi vegetarian food", "phi phi speedboat vs big boat", "phuket phi phi tour"]}
-    guidesLink="/thailand/phuket/destination-guides"
+    guidesLink="/thailand/phuket/destination-guides/"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "For Indian Travelers", link: "/thailand/phuket/destination-guides#indian-audience" }}
     cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
@@ -95,7 +95,7 @@ const BlogPhiPhiTourForIndians = () => (
     relatedActivities={[
       { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour/" },
       { title: "Phi Phi Island by Big Boat", link: "/thailand/phuket/phi-phi-island-big-boat-tour/" },
-      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour/" },
+      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
     ]}
     relatedLinks={[
       { title: "Best Phi Phi Island Tours from Phuket", link: "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours/" },

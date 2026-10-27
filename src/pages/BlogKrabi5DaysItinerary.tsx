@@ -13,7 +13,7 @@ const BlogKrabi5DaysItinerary = () => (
     readTime="11 min read"
     category="Itinerary Blogs"
     keywords={["5 days krabi itinerary","krabi phi phi itinerary","krabi 5 day plan","krabi itinerary indian travelers","krabi trip plan 2026"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Itinerary Guides", link: "/thailand/krabi/destination-guides#itinerary" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -50,7 +50,7 @@ const BlogKrabi5DaysItinerary = () => (
       { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/things-to-do/" },
       { title: "Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do/" },
       { title: "Hong Island Tour from Krabi", link: "/thailand/krabi/things-to-do/" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi-airport-transfers/" },
     ]}
     relatedLinks={[
       { title: "4 Days Krabi Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary/" },

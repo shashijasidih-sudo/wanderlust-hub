@@ -73,7 +73,7 @@ const BlogDubaiMarinaCruise = () => {
       date="Feb 26, 2026"
       readTime="9 min read"
       category="Dubai Cruises"
-      guidesLink="/dubai/destination-guides"
+      guidesLink="/dubai/destination-guides/"
       guidesLabel="Dubai Guides"
       keywords={[
         "Dubai Marina cruise",

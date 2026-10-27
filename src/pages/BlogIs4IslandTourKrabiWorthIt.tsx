@@ -13,7 +13,7 @@ const Blog = () => (
     readTime="9 min read"
     category="Micro Guides"
     keywords={["4 island tour krabi worth it","krabi 4 island tour 2026","krabi island hopping","longtail vs speedboat krabi","krabi tour cost"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Micro Guides", link: "/thailand/krabi/destination-guides#micro" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -50,13 +50,13 @@ const Blog = () => (
       { type: "paragraph", content: "Most travelers agree — it's crowded but totally worth it. The combination of variety, scenery and affordability makes it a Krabi essential." },
       { type: "heading", content: "Final Verdict (Honest Answer)" },
       { type: "paragraph", content: "Yes — the 4 Island Tour is worth it in 2026, especially for first-time visitors and budget travelers. It's not ideal for luxury seekers or crowd-averse travelers, but for everyone else it remains a must-do Krabi activity. Best strategy: combine it with a premium experience like Hong Island or Phi Phi for the perfect mix of value and exclusivity." },
-      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
+      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival", link: "/thailand/krabi-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
       { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },
       { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/" },
       { title: "Hong Island Tour", link: "/thailand/krabi/hong-island-tour-by-speedboat-with-transfer/" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi-airport-transfers/" },
     ]}
     relatedLinks={[
       { title: "Best Time for Island Hopping in Krabi (Month-wise Guide)", link: "/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi/" },

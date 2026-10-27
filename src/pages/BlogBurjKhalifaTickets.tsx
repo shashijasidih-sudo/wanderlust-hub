@@ -73,7 +73,7 @@ const BlogBurjKhalifaTickets = () => {
       date="Feb 27, 2026"
       readTime="8 min read"
       category="Dubai Landmarks"
-      guidesLink="/dubai/destination-guides"
+      guidesLink="/dubai/destination-guides/"
       guidesLabel="Dubai Guides"
       keywords={[
         "Burj Khalifa tickets Dubai",

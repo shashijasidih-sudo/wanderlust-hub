@@ -27,7 +27,7 @@ const BlogThailandTripCostFromIndia = () => {
         "Thailand visa cost Indians",
         "Phuket Krabi Bangkok budget",
       ]}
-      guidesLink="/thailand/destination-guides"
+      guidesLink="/thailand/destination-guides/"
       guidesLabel="Thailand Guides"
       relatedLinks={[
         { title: "Complete Guide to Thailand Island Combos", link: "/blog/thailand-island-combos/" },
@@ -88,7 +88,7 @@ const BlogThailandTripCostFromIndia = () => {
           "Bangkok (BTS, MRT, Taxi, Grab): ₹200 – ₹600/day",
           "Phuket & Krabi (taxis, island transfers): ₹500 – ₹2,000/day",
         ]},
-        { type: "cta", content: "Skip airport haggling — book reliable Thailand airport transfers in advance.", link: "/thailand/transfers/", linkText: "Browse Thailand Transfers" },
+        { type: "cta", content: "Skip airport haggling — book reliable Thailand airport transfers in advance.", link: "/thailand/airport-transfers/", linkText: "Browse Thailand Transfers" },
 
         { type: "heading", content: "Popular Thailand Tours & Approximate Cost" },
         { type: "list", items: [

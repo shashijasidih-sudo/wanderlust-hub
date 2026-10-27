@@ -1,3 +1,4 @@
+import Seo from "@/components/seo/Seo";
 import { useState } from "react";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import { Grid, List, ShoppingCart, Mail } from "lucide-react";
@@ -107,6 +108,7 @@ const Singapore = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo title="Singapore Activities & Tours | Yellodae" description="Explore Singapore activities, attraction tickets and tours with Yellodae. Compare experiences and book your next trip." path="/singapore-activities/" />
       <Header />
       
       <div className="container mx-auto px-4 py-8">

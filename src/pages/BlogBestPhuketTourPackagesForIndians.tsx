@@ -13,7 +13,7 @@ const BlogBestPhuketTourPackagesForIndians = () => (
     readTime="11 min read"
     category="Indian Audience Blogs"
     keywords={["phuket tour packages from india", "phuket package cost india", "best phuket package indian", "phuket honeymoon package", "phuket family package"]}
-    guidesLink="/thailand/phuket/destination-guides"
+    guidesLink="/thailand/phuket/destination-guides/"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "For Indian Travelers", link: "/thailand/phuket/destination-guides#indian-audience" }}
     cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
@@ -100,7 +100,7 @@ const BlogBestPhuketTourPackagesForIndians = () => (
     ]}
     relatedActivities={[
       { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour/" },
-      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour/" },
+      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
       { title: "Phuket City Tour", link: "/thailand/phuket/phuket-city-tour/" },
     ]}
     relatedLinks={[
