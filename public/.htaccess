@@ -319,7 +319,7 @@ RedirectMatch 301 ^/dubai/aquarium-penguin/?$ /dubai-activities/aquarium-penguin
 RedirectMatch 301 ^/dubai/atlantis-aquaventure/?$ /dubai-activities/atlantis-aquaventure/
 RedirectMatch 301 ^/dubai/burj-khalifa-non-prime/?$ /dubai-activities/burj-khalifa-non-prime/
 RedirectMatch 301 ^/dubai/burj-khalifa-prime/?$ /dubai-activities/burj-khalifa-prime/
-RedirectMatch 301 ^/dubai/city-tour-mall/?$ /dubai-activities/city-tour-mall/
+RedirectMatch 301 ^/dubai/city-tour-mall/?$ /dubai-activities/dubai-city-tour-with-dubai-mall/
 RedirectMatch 301 ^/dubai-activities/city-tour-mall/?$ /dubai-activities/dubai-city-tour-with-dubai-mall/
 RedirectMatch 301 ^/dubai/city-tour/?$ /dubai-activities/city-tour/
 RedirectMatch 301 ^/dubai/desert-safari-sharing/?$ /dubai-activities/desert-safari-sharing/
