@@ -208,7 +208,7 @@ RedirectMatch 301 ^/pattaya-dolphinarium/?$ /thailand/pattaya/pattaya-dolphinari
 RedirectMatch 301 ^/alcazar-show-pattaya/?$ /thailand/pattaya/alcazar-cabaret-show-with-transfer
 RedirectMatch 301 ^/big-eye-show-pattaya/?$ /thailand/pattaya/99-show-pattaya-big-eye-with-transfer
 RedirectMatch 301 ^/desert-safari-shisha/?$ /dubai/desert-safari-shisha
-RedirectMatch 301 ^/dubai-city-tour-mall/?$ /dubai/city-tour-mall
+RedirectMatch 301 ^/dubai-city-tour-mall/?$ /dubai-activities/dubai-city-tour-with-dubai-mall/
 RedirectMatch 301 ^/global-village-dubai/?$ /dubai/global-village
 RedirectMatch 301 ^/miracle-garden-dubai/?$ /dubai/miracle-garden
 RedirectMatch 301 ^/night-safari-tickets/?$ /singapore/night-safari-singapore-tickets-and-transfers
@@ -320,6 +320,7 @@ RedirectMatch 301 ^/dubai/atlantis-aquaventure/?$ /dubai-activities/atlantis-aqu
 RedirectMatch 301 ^/dubai/burj-khalifa-non-prime/?$ /dubai-activities/burj-khalifa-non-prime/
 RedirectMatch 301 ^/dubai/burj-khalifa-prime/?$ /dubai-activities/burj-khalifa-prime/
 RedirectMatch 301 ^/dubai/city-tour-mall/?$ /dubai-activities/city-tour-mall/
+RedirectMatch 301 ^/dubai-activities/city-tour-mall/?$ /dubai-activities/dubai-city-tour-with-dubai-mall/
 RedirectMatch 301 ^/dubai/city-tour/?$ /dubai-activities/city-tour/
 RedirectMatch 301 ^/dubai/desert-safari-sharing/?$ /dubai-activities/desert-safari-sharing/
 RedirectMatch 301 ^/dubai/desert-safari-shisha/?$ /dubai-activities/desert-safari-shisha/

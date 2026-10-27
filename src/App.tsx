@@ -847,7 +847,8 @@ const App = () => (
             <Route path="/dubai-activities/dhow-cruise-marina-upper-deck/" element={<DhowCruiseMarinaUpper />} />
             <Route path="/dubai-activities/atlantis-aquaventure/" element={<AtlantisPalm />} />
             <Route path="/dubai-activities/city-tour/" element={<DubaiCityTour />} />
-            <Route path="/dubai-activities/city-tour-mall/" element={<DubaiCityTourMall />} />
+            <Route path="/dubai-activities/dubai-city-tour-with-dubai-mall/" element={<DubaiCityTourMall />} />
+            <Route path="/dubai-activities/city-tour-mall/" element={<Navigate to="/dubai-activities/dubai-city-tour-with-dubai-mall/" replace />} />
             <Route path="/dubai-activities/global-village/" element={<GlobalVillageDubai />} />
             <Route path="/dubai-activities/abu-dhabi-city-tour/" element={<AbuDhabiCityTour />} />
             <Route path="/dubai-activities/abu-dhabi-ferrari-world/" element={<AbuDhabiFerrariWorld />} />

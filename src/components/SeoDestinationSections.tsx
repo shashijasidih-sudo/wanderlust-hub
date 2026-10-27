@@ -123,7 +123,7 @@ const sections: Section[] = [
     cards: [
       { title: "Dubai Desert Safari", href: "/dubai-activities/desert-safari/", image: dubaiDesertImg },
       { title: "Dhow Cruise Marina", href: "/dubai-activities/dhow-cruise-marina-upper-deck/", image: dubaiDhowImg },
-      { title: "Dubai City Tour + Mall", href: "/dubai-activities/city-tour-mall/", image: dubaiCityImg },
+      { title: "Dubai City Tour + Mall", href: "/dubai-activities/dubai-city-tour-with-dubai-mall/", image: dubaiCityImg },
       { title: "Dubai Fountain Show", href: "/dubai-activities/fountain-show/", image: dubaiFountainImg },
     ],
   },

@@ -25,7 +25,7 @@ const cruiseActivityCards = [
   { title: "Burj Khalifa Non-Prime", location: "Downtown Dubai", image: dubaiSkylineSunset, slug: "/dubai-activities/burj-khalifa-non-prime/" },
   { title: "Burj Khalifa Prime", location: "Downtown Dubai", image: heroImg, slug: "/dubai-activities/burj-khalifa-prime/" },
   { title: "Dubai City Tour", location: "Dubai", image: marinaImg, slug: "/dubai-activities/city-tour/" },
-  { title: "Dubai City Tour with Mall", location: "Dubai", image: dubaiSkylineSunset, slug: "/dubai-activities/city-tour-mall/" },
+  { title: "Dubai City Tour with Mall", location: "Dubai", image: dubaiSkylineSunset, slug: "/dubai-activities/dubai-city-tour-with-dubai-mall/" },
   { title: "Global Village Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/dubai-activities/global-village/" },
   { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: dubaiSkylineSunset, slug: "/dubai-activities/abu-dhabi-city-tour/" },
   { title: "Dubai Aquarium + Penguin Cove", location: "Dubai Mall", image: dubaiAquariumFish, slug: "/dubai-activities/aquarium-penguin/" },
