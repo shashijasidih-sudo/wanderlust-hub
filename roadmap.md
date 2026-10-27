@@ -1,5 +1,8 @@
-# Dubai activity pricing
+# Approved URL audit fixes
 
-- [x] Apply the Updated Price sheet to adult, child, option, and add-on rates.
-- [x] Replace the existing Prime Hours ticket with Fast Track and synchronize listing prices.
-- [x] Verify updated prices and a booking calculation in the website.
+- [ ] Add self-referencing canonicals to eight destination listings.
+- [ ] Restore intended blog and Japan destinations without deleting content.
+- [ ] Flatten existing redirects and correct affected links and breadcrumbs.
+- [ ] Deduplicate sitemap and consolidate the preferred business course URL.
+- [ ] Test affected URLs and booking functionality; check production deployment status.
+- [ ] Leave issue 7, pricing, checkout, payments, and booking backend unchanged.
