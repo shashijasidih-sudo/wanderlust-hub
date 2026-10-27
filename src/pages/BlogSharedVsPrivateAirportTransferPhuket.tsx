@@ -13,7 +13,7 @@ const BlogSharedVsPrivateAirportTransferPhuket = () => (
     readTime="8 min read"
     category="Comparison Blogs"
     keywords={["phuket airport transfer", "shared vs private transfer phuket", "hkt airport transfer", "phuket private car"]}
-    guidesLink="/thailand/phuket/destination-guides"
+    guidesLink="/thailand/phuket/destination-guides/"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Comparison Guides", link: "/thailand/phuket/destination-guides#comparison" }}
     comparisonItems={[{ name: "Shared Transfer" }, { name: "Private Transfer" }]}
@@ -25,7 +25,7 @@ const BlogSharedVsPrivateAirportTransferPhuket = () => (
       { type: "heading", content: "Private Transfer" },
       { type: "paragraph", content: "Dedicated car or van just for your group. Direct route, no stops. Cost: ₹1,500–₹3,000 per car." },
       { type: "tip-box", content: "Group of 2–3? Per-person cost of a private transfer becomes nearly equal to shared — go private." },
-      { type: "cta", content: "Pre-book a private Phuket airport transfer", link: "/thailand/phuket/transfers/", linkText: "Book Phuket Transfer" },
+      { type: "cta", content: "Pre-book a private Phuket airport transfer", link: "/thailand/phuket-airport-transfers/", linkText: "Book Phuket Transfer" },
       { type: "heading", content: "Comfort & Speed" },
       { type: "list", items: ["Shared: longer waits, multiple drops", "Private: AC, no interruptions, direct — Winner"] },
       { type: "heading", content: "Cost Per Person (Indian Travelers)" },

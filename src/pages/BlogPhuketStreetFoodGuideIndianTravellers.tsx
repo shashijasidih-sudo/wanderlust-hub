@@ -247,7 +247,7 @@ const BlogPhuketStreetFoodGuideIndianTravellers = () => (
     relatedActivities={[
       { title: "Phuket City Tour with Big Buddha", link: "/thailand/phuket/phuket-city-tour/" },
       { title: "Phi Phi Island Tour from Phuket", link: "/thailand/phuket/phuket-phi-phi-island-tour/" },
-      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-tour/" },
+      { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
       { title: "Phuket Airport to Hotel Transfer", link: "/thailand/phuket/phuket-airport-to-phuket-hotel-transfer/" },
     ]}
     relatedLinks={[

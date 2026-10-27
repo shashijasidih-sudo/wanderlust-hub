@@ -13,7 +13,7 @@ const Blog = () => (
     readTime="9 min read"
     category="Indian Audience Blogs"
     keywords={["indian restaurants krabi","vegetarian food krabi","jain food krabi","indian food ao nang","krabi food guide indian travelers"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Indian Audience Guides", link: "/thailand/krabi/destination-guides#indian-audience" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -45,13 +45,13 @@ const Blog = () => (
       { type: "list", items: ["Cheaper than Europe and Dubai","Similar to Bali","Affordable for most Indian travelers"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Indian food in Krabi is easily available, affordable and diverse. Whether you're vegetarian, Jain or non-veg, you'll find plenty of options — especially in Ao Nang. Plan your stay around food hubs and Krabi becomes one of the most comfortable international trips for Indian families." },
-      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
+      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival", link: "/thailand/krabi-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
       { title: "4 Island Tour from Krabi", link: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },
       { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/" },
       { title: "Emerald Pool & Hot Springs Day Tour", link: "/thailand/krabi-activities/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi-airport-transfers/" },
     ]}
     relatedLinks={[
       { title: "Best Krabi Packages for Indian Couples", link: "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples/" },

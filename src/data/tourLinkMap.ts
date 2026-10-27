@@ -37,7 +37,7 @@ export const TOUR_LINK_MAP: TourLink[] = [
   },
   {
     phrase: "Phuket Transfers",
-    path: "/thailand/phuket/transfers/",
+    path: "/thailand/phuket-airport-transfers/",
     aliases: ["HKT airport transfer", "Phuket airport transfer"],
   },
 
@@ -71,7 +71,7 @@ export const TOUR_LINK_MAP: TourLink[] = [
   },
   {
     phrase: "Bangkok Transfers",
-    path: "/thailand/bangkok/transfers/",
+    path: "/thailand/bangkok-airport-transfers/",
     aliases: ["Bangkok airport transfer"],
   },
 
@@ -88,7 +88,7 @@ export const TOUR_LINK_MAP: TourLink[] = [
   },
   {
     phrase: "Pattaya Transfers",
-    path: "/thailand/pattaya/transfers/",
+    path: "/thailand/pattaya-transfers/",
     aliases: ["Pattaya airport transfer"],
   },
 
@@ -105,7 +105,7 @@ export const TOUR_LINK_MAP: TourLink[] = [
   },
   {
     phrase: "Krabi Transfers",
-    path: "/thailand/krabi/transfers/",
+    path: "/thailand/krabi-airport-transfers/",
   },
 
   // ---------- Singapore ----------
@@ -135,7 +135,7 @@ export const TOUR_LINK_MAP: TourLink[] = [
   // ---------- Country / hub ----------
   {
     phrase: "Thailand transfers",
-    path: "/thailand/transfers/",
+    path: "/thailand/airport-transfers/",
     aliases: ["Thailand airport transfers"],
   },
   {

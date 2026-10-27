@@ -18,7 +18,7 @@ const BlogAlcazarVsTiffanyShow = () => (
       "tiffany show pattaya",
       "best cabaret show pattaya",
     ]}
-    guidesLink="/thailand/pattaya/destination-guides"
+    guidesLink="/thailand/pattaya/destination-guides/"
     guidesLabel="Pattaya Destination Guides"
     subCategory={{ label: "Comparison Guides", link: "/thailand/pattaya/destination-guides#comparison" }}
     cityHub={{
@@ -27,7 +27,7 @@ const BlogAlcazarVsTiffanyShow = () => (
       transfersLink: "/thailand/pattaya/bangkok-airport-to-pattaya-transfer/",
     }}
     comparisonItems={[
-      { name: "Alcazar Cabaret Show", link: "/thailand/pattaya/alcazar-show/" },
+      { name: "Alcazar Cabaret Show", link: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/" },
       { name: "Tiffany Show Pattaya", link: "/thailand/pattaya/tiffany-show/" },
     ]}
     relatedActivities={[
@@ -105,7 +105,7 @@ const BlogAlcazarVsTiffanyShow = () => (
       { type: "paragraph", content: "Not necessary — both shows are similar in concept and you'll get diminishing returns watching both on the same trip. Pick one based on your budget and vibe." },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "For most travelers → Alcazar Show. For premium experience seekers → Tiffany Show. Both are excellent — there's no wrong choice, only a question of price vs polish." },
-      { type: "cta", content: "Book your Pattaya cabaret show", link: "/thailand/pattaya/alcazar-show/", linkText: "View Tickets" },
+      { type: "cta", content: "Book your Pattaya cabaret show", link: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/", linkText: "View Tickets" },
     ]}
     relatedLinks={[
       { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },

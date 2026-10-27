@@ -18,7 +18,7 @@ const BlogAdultShowsPattayaComparison = () => (
       "pattaya adult show comparison",
       "pattaya nightlife guide",
     ]}
-    guidesLink="/thailand/pattaya/destination-guides"
+    guidesLink="/thailand/pattaya/destination-guides/"
     guidesLabel="Pattaya Destination Guides"
     subCategory={{ label: "Comparison Guides", link: "/thailand/pattaya/destination-guides#comparison" }}
     cityHub={{
@@ -30,7 +30,7 @@ const BlogAdultShowsPattayaComparison = () => (
       { name: "Big Eye Show" },
       { name: "Show 69" },
       { name: "Show 89" },
-      { name: "Alcazar Cabaret", link: "/thailand/pattaya/alcazar-show/" },
+      { name: "Alcazar Cabaret", link: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/" },
       { name: "Tiffany Show", link: "/thailand/pattaya/tiffany-show/" },
     ]}
     relatedActivities={[
@@ -109,7 +109,7 @@ const BlogAdultShowsPattayaComparison = () => (
       ]},
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Best overall → Big Eye Show. Budget option → Show 69. Balanced → Show 89. But honestly, if you're picking one Pattaya evening experience, Alcazar or Tiffany cabaret will give you more entertainment, better photos and a memory you'll actually share." },
-      { type: "cta", content: "Book a Pattaya cabaret show instead", link: "/thailand/pattaya/alcazar-show/", linkText: "View Alcazar Tickets" },
+      { type: "cta", content: "Book a Pattaya cabaret show instead", link: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/", linkText: "View Alcazar Tickets" },
     ]}
     relatedLinks={[
       { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },

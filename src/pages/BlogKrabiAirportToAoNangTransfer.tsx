@@ -13,7 +13,7 @@ const Blog = () => (
     readTime="9 min read"
     category="Transfer Blogs"
     keywords={["krabi airport to ao nang","krabi airport transfer","krabi taxi cost","ao nang shuttle","krabi airport to ao nang taxi price"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Transfer Blogs", link: "/thailand/krabi/destination-guides#transfer" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -47,12 +47,12 @@ const Blog = () => (
       { type: "list", items: ["Always use official airport counters or pre-booked transfers","Avoid unlicensed taxis","Keep your hotel address and Google Maps pin ready","Share trip details with family back home"] },
       { type: "heading", content: "Final Recommendation" },
       { type: "paragraph", content: "For most Indian travelers landing in Krabi, a pre-booked private taxi or hotel transfer is the smartest choice — affordable when shared, fast, comfortable and stress-free after a long flight. Budget solo travelers can comfortably stick to shared shuttles." },
-      { type: "cta", content: "Book your Krabi Airport transfer at a fixed INR price with English-speaking driver", link: "/thailand/krabi/budget-airport-transfers/", linkText: "View All Krabi Transfers" },
+      { type: "cta", content: "Book your Krabi Airport transfer at a fixed INR price with English-speaking driver", link: "/thailand/krabi-airport-transfers/", linkText: "View All Krabi Transfers" },
     ]}
     relatedActivities={[
       { title: "Krabi Airport to Ao Nang Hotel Transfer", link: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer/" },
       { title: "Krabi Hotel to Krabi Airport Transfer", link: "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer/" },
-      { title: "All Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+      { title: "All Krabi Airport Transfers", link: "/thailand/krabi-airport-transfers/" },
       { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },
     ]}
     relatedLinks={[

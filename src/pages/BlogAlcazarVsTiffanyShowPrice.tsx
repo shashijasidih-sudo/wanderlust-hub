@@ -18,11 +18,11 @@ const BlogAlcazarVsTiffanyShowPrice = () => (
       "tiffany show pattaya cost",
       "best cabaret show in pattaya",
     ]}
-    guidesLink="/thailand/pattaya/destination-guides"
+    guidesLink="/thailand/pattaya/destination-guides/"
     guidesLabel="Pattaya Destination Guides"
     subCategory={{ label: "Price & Cost Guides", link: "/thailand/pattaya/destination-guides#price-cost" }}
     comparisonItems={[
-      { name: "Alcazar Cabaret Show", link: "/thailand/pattaya/alcazar-show/" },
+      { name: "Alcazar Cabaret Show", link: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/" },
       { name: "Tiffany's Cabaret Show", link: "/thailand/pattaya/tiffany-show/" },
     ]}
     cityHub={{
@@ -79,7 +79,7 @@ const BlogAlcazarVsTiffanyShowPrice = () => (
       ]},
       { type: "heading", content: "How to Slot It in Your Itinerary" },
       { type: "paragraph", content: "Both shows run multiple slots from late afternoon to late evening. Pair with a Coral Island day or Nong Nooch garden visit so you arrive in Pattaya proper for the 7 PM or 8:30 PM show." },
-      { type: "cta", content: "Book the right cabaret show", link: "/thailand/pattaya/alcazar-show/", linkText: "View Cabaret Tickets" },
+      { type: "cta", content: "Book the right cabaret show", link: "/thailand/pattaya/alcazar-cabaret-show-with-transfer/", linkText: "View Cabaret Tickets" },
     ]}
     relatedLinks={[
       { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },

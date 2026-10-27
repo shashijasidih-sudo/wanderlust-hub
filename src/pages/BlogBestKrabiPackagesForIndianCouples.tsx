@@ -13,7 +13,7 @@ const Blog = () => (
     readTime="10 min read"
     category="Indian Audience Blogs"
     keywords={["krabi packages for indian couples","krabi honeymoon package 2026","krabi tour package india","krabi couple package inr","best krabi package"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Indian Audience Guides", link: "/thailand/krabi/destination-guides#indian-audience" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -56,7 +56,7 @@ const Blog = () => (
       { title: "4 Island Tour from Krabi", link: "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/" },
       { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/" },
       { title: "Hong Island Speedboat Tour", link: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi-airport-transfers/" },
     ]}
     relatedLinks={[
       { title: "5 Days Krabi Honeymoon Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-honeymoon-itinerary/" },

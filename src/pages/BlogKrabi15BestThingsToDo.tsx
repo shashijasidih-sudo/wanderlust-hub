@@ -13,7 +13,7 @@ const BlogKrabi15BestThingsToDo = () => (
     readTime="11 min read"
     category="Activity Blogs"
     keywords={["things to do in krabi","krabi activities","krabi for first-time travelers","krabi 2026 guide","krabi tours indian travelers"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/krabi/destination-guides#activity" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -59,7 +59,7 @@ const BlogKrabi15BestThingsToDo = () => (
       { title: "Krabi 4 Island Tour", link: "/thailand/krabi/things-to-do/" },
       { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/things-to-do/" },
       { title: "Hong Island Tour", link: "/thailand/krabi/things-to-do/" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi-airport-transfers/" },
     ]}
     relatedLinks={[
       { title: "4 Island Tour Krabi Guide", link: "/thailand/krabi/destination-guides/activity/4-island-tour-krabi-guide/" },

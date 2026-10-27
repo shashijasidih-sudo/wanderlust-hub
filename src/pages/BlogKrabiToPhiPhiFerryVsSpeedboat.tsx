@@ -13,7 +13,7 @@ const Blog = () => (
     readTime="9 min read"
     category="Transfer Blogs"
     keywords={["krabi to phi phi","krabi to phi phi ferry","krabi to phi phi speedboat","phi phi transfer cost","ao nang to phi phi"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Transfer Blogs", link: "/thailand/krabi/destination-guides#transfer" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -41,13 +41,13 @@ const Blog = () => (
       { type: "list", items: ["Booking the cheapest option without checking inclusions","Missing the last return ferry/speedboat","Not pre-booking during peak season","Skipping motion sickness medicine on rough days"] },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Both ferry and speedboat are great options — your choice depends on time, budget and comfort. For relaxed family travel, choose the ferry. For day-trippers and couples wanting maximum island time, the speedboat is worth the extra rupees." },
-      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival before your Phi Phi day", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
+      { type: "cta", content: "Book your Krabi airport transfer for a smooth arrival before your Phi Phi day", link: "/thailand/krabi-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
       { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/" },
       { title: "4 Island Tour by Speedboat", link: "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/" },
       { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi-airport-transfers/" },
     ]}
     relatedLinks={[
       { title: "Krabi Speedboat vs Ferry: Which is Faster?", link: "/thailand/krabi/destination-guides/transfer/krabi-speedboat-vs-ferry-which-is-faster/" },

@@ -13,7 +13,7 @@ const BlogKrabiHoneymoonItinerary = () => (
     readTime="11 min read"
     category="Itinerary Blogs"
     keywords={["krabi honeymoon itinerary","krabi honeymoon for indian couples","krabi 5 days romantic plan","krabi honeymoon 2026","railay honeymoon"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Itinerary Guides", link: "/thailand/krabi/destination-guides#itinerary" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -53,7 +53,7 @@ const BlogKrabiHoneymoonItinerary = () => (
       { title: "Krabi Sunset Cruise", link: "/thailand/krabi/things-to-do/" },
       { title: "Private 4 Island Tour from Krabi", link: "/thailand/krabi/things-to-do/" },
       { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi/things-to-do/" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi-airport-transfers/" },
     ]}
     relatedLinks={[
       { title: "4 Days Krabi Itinerary", link: "/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary/" },

@@ -81,7 +81,7 @@ const BlogDubaiFoodExperiences = () => {
       readTime="10 min read"
       category="Dubai Travel Guide"
       keywords={["Dubai food experiences", "Dubai food tours", "best Dubai food", "Dubai culinary guide", "Emirati cuisine", "Dubai street food", "Dubai dining", "Yellodae Dubai"]}
-      guidesLink="/dubai/destination-guides"
+      guidesLink="/dubai/destination-guides/"
       guidesLabel="Dubai Guides"
       relatedLinks={[
         { title: "Top Dubai Activities to Book Online", link: "/dubai/destination-guides/best-dubai-activities/" },

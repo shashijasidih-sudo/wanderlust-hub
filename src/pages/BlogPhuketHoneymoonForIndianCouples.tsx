@@ -13,7 +13,7 @@ const BlogPhuketHoneymoonForIndianCouples = () => (
     readTime="18 min read"
     category="Indian Audience Blogs"
     keywords={["phuket honeymoon for indians", "phuket honeymoon activities", "khao lak honeymoon", "koh samui honeymoon", "thailand honeymoon from india", "phuket honeymoon itinerary"]}
-    guidesLink="/thailand/phuket/destination-guides"
+    guidesLink="/thailand/phuket/destination-guides/"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "For Indian Travelers", link: "/thailand/phuket/destination-guides#indian-audience" }}
     cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
@@ -69,7 +69,7 @@ const BlogPhuketHoneymoonForIndianCouples = () => (
       { type: "paragraph", content: "Phang Nga Bay is known for its spectacular rock formations rising vertically from the sea, and the Tourism Authority of Thailand specifically recommends sea kayaking through the area's caves and islands. The TAT itinerary for Phang Nga includes:" },
       { type: "list", items: ["Ko Tapu — James Bond Island", "Ko Phing Kan", "Tham Lot", "Ko Panyi", "Phang Nga Bay"] },
       { type: "paragraph", content: "Why it's great for honeymooners — This is the type of experience where the journey becomes part of the memory. You sit together on the boat. The limestone cliffs surround you. You explore caves or canoe through calm waters. And suddenly, your honeymoon feels like an adventure rather than just a resort holiday." },
-      { type: "cta", content: "Add James Bond Island & Phang Nga Bay to your honeymoon", link: "/thailand/phuket/james-bond-island-tour/", linkText: "View James Bond Island Tour" },
+      { type: "cta", content: "Add James Bond Island & Phang Nga Bay to your honeymoon", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/", linkText: "View James Bond Island Tour" },
 
       { type: "subheading", content: "4. Enjoy a Phuket City & Cultural Tour" },
       { type: "paragraph", content: "Your Phuket honeymoon shouldn't be only beaches. Spend at least half a day exploring the island's cultural side. A Phuket sightseeing route can include Phuket Old Town." },
@@ -142,7 +142,7 @@ const BlogPhuketHoneymoonForIndianCouples = () => (
       { type: "subheading", content: "Day 1 — Arrival + Romantic Evening" },
       { type: "list", items: ["Phuket Airport", "Airport → Hotel transfer", "Check-in", "Relax", "Sunset", "Romantic dinner"] },
       { type: "paragraph", content: "Keep Day 1 light. After an international flight from India, you probably won't want to immediately start a 10-hour sightseeing tour." },
-      { type: "cta", content: "Pre-book a private Phuket airport transfer for your arrival", link: "/thailand/phuket/transfers/", linkText: "Book Phuket Transfer" },
+      { type: "cta", content: "Pre-book a private Phuket airport transfer for your arrival", link: "/thailand/phuket-airport-transfers/", linkText: "Book Phuket Transfer" },
 
       { type: "subheading", content: "Day 2 — Phi Phi Island" },
       { type: "list", items: ["Phi Phi Islands", "Maya Bay", "Pileh Lagoon", "Snorkelling", "Couple photographs", "Return to Phuket", "Dinner"] },
@@ -322,7 +322,7 @@ const BlogPhuketHoneymoonForIndianCouples = () => (
       { type: "paragraph", content: "This is one of the least glamorous parts of honeymoon planning—but one of the most important. Imagine arriving after a long flight from India with:" },
       { type: "list", items: ["Two large suitcases", "Hand luggage", "Little sleep", "Excitement"] },
       { type: "paragraph", content: "The last thing you want is to stand outside the airport trying to figure out transportation. Pre-booking your airport transfer can make arrival much easier. The same applies when moving between destinations. If you're doing Phuket → Khao Lak or a longer multi-destination itinerary, plan the transfers in advance. A honeymoon should feel effortless." },
-      { type: "cta", content: "Sort your Phuket airport and hotel transfers in advance", link: "/thailand/phuket/transfers/", linkText: "Book Transfers" },
+      { type: "cta", content: "Sort your Phuket airport and hotel transfers in advance", link: "/thailand/phuket-airport-transfers/", linkText: "Book Transfers" },
 
       { type: "heading", content: "Special Tips for Indian Honeymoon Couples" },
       { type: "list", items: [
@@ -407,9 +407,9 @@ const BlogPhuketHoneymoonForIndianCouples = () => (
     ]}
     relatedActivities={[
       { title: "Phi Phi Island by Speedboat", link: "/thailand/phuket/phi-phi-island-speedboat-tour/" },
-      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-tour/" },
+      { title: "James Bond Island Tour", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
       { title: "Phuket Sunset Cruise", link: "/thailand/phuket/phuket-sunset-cruise/" },
-      { title: "Phuket Airport Transfers", link: "/thailand/phuket/transfers/" },
+      { title: "Phuket Airport Transfers", link: "/thailand/phuket-airport-transfers/" },
     ]}
     relatedLinks={[
       { title: "Phuket Honeymoon Itinerary (4–5 Days)", link: "/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary/" },

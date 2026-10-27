@@ -17,7 +17,7 @@ const BlogDubaiAirportTransfer = () => {
       date="Feb 17, 2026"
       readTime="9 min read"
       category="Dubai Transfers"
-      guidesLink="/dubai/destination-guides"
+      guidesLink="/dubai/destination-guides/"
       guidesLabel="Dubai Guides"
       keywords={[
         "Dubai airport transfer booking",

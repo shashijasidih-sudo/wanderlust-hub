@@ -18,7 +18,7 @@ const BlogNongNoochGardenPattayaGuide = () => (
       "nong nooch skywalk",
       "pattaya gardens guide",
     ]}
-    guidesLink="/thailand/pattaya/destination-guides"
+    guidesLink="/thailand/pattaya/destination-guides/"
     guidesLabel="Pattaya Destination Guides"
     subCategory={{ label: "Activity Guides", link: "/thailand/pattaya/destination-guides#activity" }}
     cityHub={{
@@ -82,7 +82,7 @@ const BlogNongNoochGardenPattayaGuide = () => (
       ]},
       { type: "heading", content: "Is Nong Nooch Worth It?" },
       { type: "paragraph", content: "Yes — especially for families, couples and senior travelers. Nong Nooch is one of the easiest, most enjoyable half-day experiences in Pattaya and pairs beautifully with the Sanctuary of Truth or an evening cabaret show." },
-      { type: "cta", content: "Book Nong Nooch Garden tickets", link: "/thailand/pattaya/nong-nooch-garden/", linkText: "View Tickets" },
+      { type: "cta", content: "Book Nong Nooch Garden tickets", link: "/thailand/pattaya-activities/nong-nooch-tropical-garden-tickets/", linkText: "View Tickets" },
     ]}
     relatedLinks={[
       { title: "Pattaya 3 Days Itinerary 2026", link: "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/" },

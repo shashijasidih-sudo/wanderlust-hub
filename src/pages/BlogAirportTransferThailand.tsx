@@ -31,9 +31,9 @@ const BlogAirportTransferThailand = () => {
       ]}
       relatedLinks={[
         { title: "Phi Phi Island Tours Guide", link: "/blog/phi-phi-island-tours-thailand/" },
-        { title: "Bangkok Transfers", link: "/thailand/bangkok/budget-airport-transfers/" },
-        { title: "Phuket Transfers", link: "/thailand/phuket/budget-airport-transfers/" },
-        { title: "Krabi Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+        { title: "Bangkok Transfers", link: "/thailand/bangkok-airport-transfers/" },
+        { title: "Phuket Transfers", link: "/thailand/phuket-airport-transfers/" },
+        { title: "Krabi Transfers", link: "/thailand/krabi-airport-transfers/" },
       ]}
       sections={[
         {
@@ -189,7 +189,7 @@ const BlogAirportTransferThailand = () => {
         {
           type: "cta",
           content: "Ready to book your Thailand airport transfer? Plan smarter. Travel better. Choose comfort from the moment you land.",
-          link: "/thailand/budget-airport-transfers/",
+          link: "/thailand/airport-transfers/",
           linkText: "🚖 Book Your Transfer Now",
         },
       ]}

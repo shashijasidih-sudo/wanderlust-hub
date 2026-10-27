@@ -122,6 +122,12 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
     phuket: "/thailand/phuket-activities/",
     krabi: "/thailand/krabi-activities/",
     singapore: "/singapore-activities/",
+    dubai: "/dubai-activities/",
+    "abu dhabi": "/dubai-activities/",
+    "koh-samui": "/thailand/koh-samui-activities/",
+    "koh samui": "/thailand/koh-samui-activities/",
+    "chiang-mai": "/thailand/chiang-mai-activities/",
+    "chiang mai": "/thailand/chiang-mai-activities/",
   };
   const cityHomeUrl = cityHomeUrls[cityKey] || `/${citySlug}`;
   const thingsToDoUrl = thingsToDoHubs[cityKey];

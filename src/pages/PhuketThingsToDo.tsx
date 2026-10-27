@@ -349,7 +349,7 @@ const PhuketThingsToDo = () => {
           <div className="mt-6 flex flex-wrap gap-3">
             <Button size="lg" asChild><a href="#all-activities">Explore Activities</a></Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/thailand/phuket/budget-airport-transfers/">Phuket Transfers</Link>
+              <Link to="/thailand/phuket-airport-transfers/">Phuket Transfers</Link>
             </Button>
           </div>
         </div>
@@ -466,7 +466,7 @@ const PhuketThingsToDo = () => {
               <li><Link to="/thailand/phuket/things-to-do#city-tours-tiger-experiences" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">City Tours & Tiger Kingdom</Link></li>
               <li><Link to="/thailand/phuket/things-to-do#shows-entertainment" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Shows & Entertainment</Link></li>
               <li><Link to="/thailand/phuket/things-to-do#special-experiences" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Special Experiences</Link></li>
-              <li><Link to="/thailand/phuket/budget-airport-transfers/" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Phuket Airport & City Transfers</Link></li>
+              <li><Link to="/thailand/phuket-airport-transfers/" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Phuket Airport & City Transfers</Link></li>
             </ul>
           </div>
 
@@ -500,7 +500,7 @@ const PhuketThingsToDo = () => {
           <p className="mt-1 text-sm text-muted-foreground">Combine activities with reliable airport and city transfers.</p>
           <div className="mt-4 flex flex-wrap gap-3">
             <Button asChild variant="default"><Link to="/thailand/phuket-activities/">Phuket City Guide</Link></Button>
-            <Button asChild variant="outline"><Link to="/thailand/phuket/budget-airport-transfers/">Phuket Transfers</Link></Button>
+            <Button asChild variant="outline"><Link to="/thailand/phuket-airport-transfers/">Phuket Transfers</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/krabi/things-to-do/">Things to Do in Krabi</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do/">Things to Do in Chiang Mai</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/">Thailand Destinations</Link></Button>

@@ -33,7 +33,7 @@ export const cityseoFaqs: Record<string, SeoFaq[]> = {
   bangkok: [
     {
       question: "What are the best things to do in Bangkok for first-time visitors?",
-      answer: `First-time visitors should explore the Grand Palace, Wat Arun and Wat Pho, take a Chao Phraya River dinner cruise, and try Bangkok's famous street food. Browse our full ${link("/bangkok-things-to-do", "Bangkok things to do")} list or read the ${link("/blog/bangkok-activities-guide", "Bangkok activities guide")} for itineraries.`,
+      answer: `First-time visitors should explore the Grand Palace, Wat Arun and Wat Pho, take a Chao Phraya River dinner cruise, and try Bangkok's famous street food. Browse our full ${link("/bangkok-things-to-do", "Bangkok things to do")} list or read the ${link("/blog/bangkok-activities-guide/", "Bangkok activities guide")} for itineraries.`,
     },
     {
       question: "How many days are enough to explore Bangkok?",
@@ -64,7 +64,7 @@ export const cityseoFaqs: Record<string, SeoFaq[]> = {
   pattaya: [
     {
       question: "What are the top things to do in Pattaya?",
-      answer: `Top experiences include Coral Island, Nong Nooch Tropical Garden, Alcazar Show, Sanctuary of Truth and Walking Street nightlife. See the full ${link("/pattaya-things-to-do", "Pattaya things to do")} list or our ${link("/blog/best-pattaya-activities", "best Pattaya activities guide")}.`,
+      answer: `Top experiences include Coral Island, Nong Nooch Tropical Garden, Alcazar Show, Sanctuary of Truth and Walking Street nightlife. See the full ${link("/pattaya-things-to-do", "Pattaya things to do")} list or our ${link("/blog/best-pattaya-activities/", "best Pattaya activities guide")}.`,
     },
     {
       question: "Which is the best cabaret show in Pattaya?",
@@ -157,7 +157,7 @@ export const cityseoFaqs: Record<string, SeoFaq[]> = {
   singapore: [
     {
       question: "What are the top attractions in Singapore?",
-      answer: `Marina Bay Sands, Gardens by the Bay, Sentosa Island, Universal Studios and Singapore Zoo top the list. Browse all ${link("/singapore-things-to-do", "Singapore activities")} or see our ${link("/blog/top-things-singapore", "top things to do in Singapore")} guide.`,
+      answer: `Marina Bay Sands, Gardens by the Bay, Sentosa Island, Universal Studios and Singapore Zoo top the list. Browse all ${link("/singapore-things-to-do", "Singapore activities")} or see our ${link("/blog/top-things-singapore/", "top things to do in Singapore")} guide.`,
     },
     {
       question: "Is Universal Studios Singapore worth it?",
@@ -169,7 +169,7 @@ export const cityseoFaqs: Record<string, SeoFaq[]> = {
     },
     {
       question: "How many days do I need in Singapore?",
-      answer: `3 to 4 days covers Marina Bay, Sentosa, Gardens by the Bay, the Zoo and shopping. Combine with a ${link("/blog/singapore-summer-activities", "summer activities itinerary")} for outdoor experiences.`,
+      answer: `3 to 4 days covers Marina Bay, Sentosa, Gardens by the Bay, the Zoo and shopping. Combine with a ${link("/blog/singapore-summer-activities/", "summer activities itinerary")} for outdoor experiences.`,
     },
     {
       question: "How do I get from Changi Airport to the city?",
@@ -177,7 +177,7 @@ export const cityseoFaqs: Record<string, SeoFaq[]> = {
     },
     {
       question: "Is Singapore expensive for Indian tourists?",
-      answer: `It's pricier than Thailand but mid-range with smart booking. Use a ${link("/blog/singapore-combo-pass", "Singapore combo pass")}, eat at hawker centers (S$5–8 meals), and book attractions online for discounts.`,
+      answer: `It's pricier than Thailand but mid-range with smart booking. Use a ${link("/blog/singapore-combo-pass/", "Singapore combo pass")}, eat at hawker centers (S$5–8 meals), and book attractions online for discounts.`,
     },
     {
       question: "What is the best time to visit Singapore?",
@@ -188,7 +188,7 @@ export const cityseoFaqs: Record<string, SeoFaq[]> = {
   dubai: [
     {
       question: "What are the must-do activities in Dubai?",
-      answer: `Burj Khalifa, Desert Safari, Dubai Marina Cruise, Dubai Frame and Global Village are unmissable. See our ${link("/dubai/destination-guides/best-dubai-activities", "best Dubai activities guide")}.`,
+      answer: `Burj Khalifa, Desert Safari, Dubai Marina Cruise, Dubai Frame and Global Village are unmissable. See our ${link("/dubai/destination-guides/best-dubai-activities/", "best Dubai activities guide")}.`,
     },
     {
       question: "Is Desert Safari worth doing in Dubai?",
@@ -200,7 +200,7 @@ export const cityseoFaqs: Record<string, SeoFaq[]> = {
     },
     {
       question: "How is Dubai Marina Cruise different from Dhow Cruise Creek?",
-      answer: `${link("/dhow-cruise-marina-upper", "Marina Cruise")} sails past modern skyscrapers; ${link("/dhow-cruise-creek-upper", "Creek Cruise")} shows old Dubai. Read the ${link("/dubai/destination-guides/dubai-marina-cruise", "Marina Cruise guide")} to choose.`,
+      answer: `${link("/dhow-cruise-marina-upper", "Marina Cruise")} sails past modern skyscrapers; ${link("/dhow-cruise-creek-upper", "Creek Cruise")} shows old Dubai. Read the ${link("/dubai/destination-guides/dubai-marina-cruise/", "Marina Cruise guide")} to choose.`,
     },
     {
       question: "What is the best time to visit Dubai?",

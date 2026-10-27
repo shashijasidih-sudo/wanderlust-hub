@@ -19,7 +19,7 @@ const BlogPhuketHotelPriceGuide = () => (
       "patong hotel cost",
       "phuket resort price 2026",
     ]}
-    guidesLink="/thailand/phuket/destination-guides"
+    guidesLink="/thailand/phuket/destination-guides/"
     guidesLabel="Phuket Destination Guides"
     subCategory={{ label: "Price & Cost Guides", link: "/thailand/phuket/destination-guides#price-cost" }}
     cityHub={{ city: "Phuket", thingsToDoLink: "/thailand/phuket/things-to-do/", transfersLink: "/thailand/phuket/transfers/" }}
@@ -84,7 +84,7 @@ const BlogPhuketHotelPriceGuide = () => (
     relatedActivities={[
       { title: "Phuket City Tour with Big Buddha", link: "/thailand/phuket/phuket-city-tour/" },
       { title: "Phi Phi Island Tour from Phuket", link: "/thailand/phuket/phuket-phi-phi-island-tour/" },
-      { title: "Phuket Airport Pickup (HKT)", link: "/thailand/phuket/transfers/" },
+      { title: "Phuket Airport Pickup (HKT)", link: "/thailand/phuket-airport-transfers/" },
     ]}
     relatedLinks={[
       { title: "Phuket Trip Cost from India 2026", link: "/thailand/phuket/destination-guides/price-cost/phuket-trip-cost-from-india/" },

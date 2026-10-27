@@ -13,7 +13,7 @@ const Blog = () => (
     readTime="11 min read"
     category="Comparisons"
     keywords={["krabi vs phuket","krabi or phuket for indians","thailand krabi vs phuket","krabi phuket comparison 2026","best thailand island for indians"]}
-    guidesLink="/thailand/krabi/destination-guides"
+    guidesLink="/thailand/krabi/destination-guides/"
     guidesLabel="Krabi Destination Guides"
     subCategory={{ label: "Comparisons", link: "/thailand/krabi/destination-guides#comparison" }}
     cityHub={{ city: "Krabi", thingsToDoLink: "/thailand/krabi/things-to-do/", transfersLink: "/thailand/krabi/budget-airport-transfers/" }}
@@ -55,13 +55,13 @@ const Blog = () => (
       { type: "cta", content: "See our 6–7 day Phuket + Krabi combo itinerary", link: "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary/", linkText: "View Combo Itinerary" },
       { type: "heading", content: "Final Verdict" },
       { type: "paragraph", content: "Krabi is ideal for experience and value. Phuket is ideal for energy and entertainment. If it's your first international trip, Krabi is usually the better and more comfortable choice. If you want a bit of everything, do both." },
-      { type: "cta", content: "Book a smooth Krabi airport transfer", link: "/thailand/krabi/budget-airport-transfers/", linkText: "Book Krabi Transfer" },
+      { type: "cta", content: "Book a smooth Krabi airport transfer", link: "/thailand/krabi-airport-transfers/", linkText: "Book Krabi Transfer" },
     ]}
     relatedActivities={[
       { title: "4 Island Tour by Longtail Boat", link: "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/" },
       { title: "Hong Island Tour by Speedboat", link: "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/" },
       { title: "Phi Phi Island Tour from Krabi", link: "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/" },
-      { title: "Krabi Airport Transfers", link: "/thailand/krabi/budget-airport-transfers/" },
+      { title: "Krabi Airport Transfers", link: "/thailand/krabi-airport-transfers/" },
     ]}
     relatedLinks={[
       { title: "5 Days Krabi Itinerary with Phi Phi", link: "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary/" },

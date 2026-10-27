@@ -32,7 +32,7 @@ import {
 import heroImage from "@/assets/digital-marketing-course-hero.jpg";
 import playlistImage from "@/assets/dm-course-playlist.jpg";
 
-const PAGE_PATH = "/free-digital-marketing-course-for-businesses/";
+const PAGE_PATH = "/free-business-course/free-digital-marketing-course-for-businesses/";
 const CANONICAL = `https://yellodae.com${PAGE_PATH}`;
 
 const faqs = [

@@ -68,16 +68,14 @@ function isCanonical(path, element) {
 const src = readFileSync(APP_TSX, "utf8");
 const routes = extractRoutes(src);
 const canonical = Array.from(
-  new Set(routes.filter((r) => isCanonical(r.path, r.element)).map((r) => r.path))
+  new Set(routes.filter((r) => isCanonical(r.path, r.element)).map((r) => r.path === "/" || r.path.endsWith("/") ? r.path : `${r.path}/`))
 ).sort();
-
-const today = new Date().toISOString().slice(0, 10);
 
 const body = canonical
   .map((p) => {
     // Hosting enforces trailing slash — emit it in the sitemap so Google fetches the final URL directly.
     const withSlash = p === "/" || p.endsWith("/") ? p : `${p}/`;
-    return `  <url><loc>${ORIGIN}${withSlash}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>${priorityFor(
+    return `  <url><loc>${ORIGIN}${withSlash}</loc><changefreq>weekly</changefreq><priority>${priorityFor(
       p
     )}</priority></url>`;
   })

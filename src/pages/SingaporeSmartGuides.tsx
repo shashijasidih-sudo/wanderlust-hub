@@ -80,7 +80,7 @@ const SingaporeSmartGuides = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <CanonicalUrl path="/singapore-smart-guides/" />
+      <CanonicalUrl path="/singapore/destination-guides/" />
       <Header />
 
       <main className="flex-1 bg-secondary/30">

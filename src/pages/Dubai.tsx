@@ -1,3 +1,4 @@
+import Seo from "@/components/seo/Seo";
 import { useState } from "react";
 import { toursData } from "@/data/tourData";
 import { useCurrency } from "@/contexts/CurrencyContext";
@@ -99,6 +100,7 @@ const Dubai = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo title="Dubai Activities & Tours | Yellodae" description="Explore Dubai activities, attraction tickets and tours with Yellodae. Compare experiences and book your next trip." path="/dubai-activities/" />
       <Header />
       
       <div className="container mx-auto px-4 py-8">

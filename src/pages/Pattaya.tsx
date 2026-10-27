@@ -1,3 +1,4 @@
+import Seo from "@/components/seo/Seo";
 import { useState } from "react";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import { useNavigate } from "react-router-dom";
@@ -51,6 +52,7 @@ const Pattaya = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo title="Pattaya Activities & Tours | Yellodae" description="Explore Pattaya activities, attraction tickets and tours with Yellodae. Compare experiences and book your next trip." path="/thailand/pattaya-activities/" />
       <Header />
       
       <div className="container mx-auto px-4 py-8">
