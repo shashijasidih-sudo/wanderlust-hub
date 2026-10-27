@@ -26,7 +26,7 @@ const activityCards = [
   { title: "Dhow Marina Cruise - Lower", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-marina-lower-deck/" },
   { title: "Dhow Marina Cruise - Upper", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-marina-upper-deck/" },
   { title: "Dubai City Tour", location: "Dubai", image: dubaiCityNight, slug: "/dubai-activities/city-tour/" },
-  { title: "Dubai City Tour with Mall", location: "Dubai", image: dubaiSkylineSunset, slug: "/dubai-activities/city-tour-mall/" },
+  { title: "Dubai City Tour with Mall", location: "Dubai", image: dubaiSkylineSunset, slug: "/dubai-activities/dubai-city-tour-with-dubai-mall/" },
   { title: "Global Village Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/dubai-activities/global-village/" },
   { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: dubaiSkylineSunset, slug: "/dubai-activities/abu-dhabi-city-tour/" },
   { title: "Burj Khalifa Non-Prime", location: "Downtown Dubai", image: dubaiSkylineSunset, slug: "/dubai-activities/burj-khalifa-non-prime/" },

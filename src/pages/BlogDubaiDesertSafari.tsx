@@ -23,7 +23,7 @@ const desertActivityCards = [
   { title: "Dhow Creek Cruise - Lower Deck", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-creek-lower-deck/" },
   { title: "Dhow Marina Cruise - Lower Deck", location: "Dubai Marina", image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-marina-lower-deck/" },
   { title: "Dubai City Tour", location: "Dubai", image: dubaiCityNight, slug: "/dubai-activities/city-tour/" },
-  { title: "Dubai City Tour with Mall", location: "Dubai", image: sunsetImg, slug: "/dubai-activities/city-tour-mall/" },
+  { title: "Dubai City Tour with Mall", location: "Dubai", image: sunsetImg, slug: "/dubai-activities/dubai-city-tour-with-dubai-mall/" },
   { title: "Global Village Dubai", location: "Dubai", image: villageImg, slug: "/dubai-activities/global-village/" },
   { title: "Abu Dhabi City Tour", location: "Abu Dhabi", image: sunsetImg, slug: "/dubai-activities/abu-dhabi-city-tour/" },
   { title: "Abu Dhabi + Ferrari World", location: "Abu Dhabi", image: dubaiSkylineNight, slug: "/dubai-activities/abu-dhabi-ferrari-world/" },

@@ -20,7 +20,7 @@ import dubaiGlobalVillage2 from "@/assets/dubai-global-village-2.jpg";
 
 const activityCards = [
   { title: "Dubai City Tour", location: "Dubai", image: dubaiCityNight, slug: "/dubai-activities/city-tour/" },
-  { title: "Dubai City Tour with Mall", location: "Dubai", image: dubaiSkylineSunset, slug: "/dubai-activities/city-tour-mall/" },
+  { title: "Dubai City Tour with Mall", location: "Dubai", image: dubaiSkylineSunset, slug: "/dubai-activities/dubai-city-tour-with-dubai-mall/" },
   { title: "Global Village Dubai", location: "Dubai", image: dubaiGlobalVillage, slug: "/dubai-activities/global-village/" },
   { title: "Desert Safari with Sharing", location: "Lahbab Desert", image: dubaiDesertCouple2, slug: "/dubai-activities/desert-safari-sharing/" },
   { title: "Dhow Creek Cruise - Lower", location: "Dubai Creek", image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-creek-lower-deck/" },

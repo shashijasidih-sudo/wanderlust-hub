@@ -30,7 +30,7 @@ const activities = [
   { title: "Desert Safari with Sharing Transfer", price: toursData["desert-safari-sharing"].basePrice, image: dubaiDesertCouple2, slug: "/dubai-activities/desert-safari-sharing/" },
   { title: "Desert Safari with Shisha on Table", price: toursData["desert-safari-shisha"].basePrice, image: dubaiDesertWoman, slug: "/dubai-activities/desert-safari-shisha/" },
   { title: "Dubai City Tour", price: toursData["dubai-city-tour"].basePrice, image: dubaiSkylineSunset, slug: "/dubai-activities/city-tour/" },
-  { title: "Dubai City Tour with Dubai Mall", price: toursData["dubai-city-tour-mall"].basePrice, image: dubaiSkylineNight, slug: "/dubai-activities/city-tour-mall/" },
+  { title: "Dubai City Tour with Dubai Mall", price: toursData["dubai-city-tour-mall"].basePrice, image: dubaiSkylineNight, slug: "/dubai-activities/dubai-city-tour-with-dubai-mall/" },
   { title: "Dhow Dinner Cruise Marina - Lower Deck", price: toursData["dhow-cruise-marina-lower"].basePrice, image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-marina-lower-deck/" },
   { title: "Dhow Dinner Cruise Marina - Upper Deck", price: toursData["dhow-cruise-marina-upper"].basePrice, image: dubaiDhowCruise, slug: "/dubai-activities/dhow-cruise-marina-upper-deck/" },
   { title: "Global Village Dubai", price: toursData["global-village-dubai"].basePrice, image: dubaiGlobalVillage, slug: "/dubai-activities/global-village/" },

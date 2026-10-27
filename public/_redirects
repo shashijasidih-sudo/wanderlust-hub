@@ -43,8 +43,10 @@ http://yellodae.com/*         https://yellodae.com/:splat    301!
 /dubai/burj-khalifa-non-prime/                               /dubai-activities/burj-khalifa-non-prime/    301!
 /dubai/burj-khalifa-prime                                    /dubai-activities/burj-khalifa-prime/    301!
 /dubai/burj-khalifa-prime/                                   /dubai-activities/burj-khalifa-prime/    301!
-/dubai/city-tour-mall                                        /dubai-activities/city-tour-mall/    301!
-/dubai/city-tour-mall/                                       /dubai-activities/city-tour-mall/    301!
+/dubai/city-tour-mall                                        /dubai-activities/dubai-city-tour-with-dubai-mall/    301!
+/dubai/city-tour-mall/                                       /dubai-activities/dubai-city-tour-with-dubai-mall/    301!
+/dubai-activities/city-tour-mall                              /dubai-activities/dubai-city-tour-with-dubai-mall/    301!
+/dubai-activities/city-tour-mall/                             /dubai-activities/dubai-city-tour-with-dubai-mall/    301!
 /dubai/city-tour                                             /dubai-activities/city-tour/    301!
 /dubai/city-tour/                                            /dubai-activities/city-tour/    301!
 /dubai/desert-safari-sharing                                 /dubai-activities/desert-safari-sharing/    301!
