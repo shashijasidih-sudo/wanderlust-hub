@@ -460,6 +460,7 @@ const BlogKrabiNightMarketsGuide = lazy(() => import("./pages/BlogKrabiNightMark
 const BlogKayakingAoThalaneKrabi = lazy(() => import("./pages/BlogKayakingAoThalaneKrabi"));
 const FreeDigitalMarketingCourse = lazy(() => import("./pages/FreeDigitalMarketingCourse"));
 const FreeAIToolsBusinessCourse = lazy(() => import("./pages/FreeAIToolsBusinessCourse"));
+const TravelBlog = lazy(() => import("./pages/TravelBlog"));
 
 
 const queryClient = new QueryClient();
@@ -477,6 +478,8 @@ const App = () => (
           <ApprovalBadge />
           <Suspense fallback={<InitialShellFallback />}><Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/blog/" element={<TravelBlog />} />
+          <Route path="/japan/" element={<Navigate to="/japan/destination-guides/" replace />} />
           <Route path="/auth/callback/" element={<AuthCallback />} />
           {/* Thailand routes */}
             <Route path="/thailand/" element={<Thailand />} />
@@ -948,8 +951,8 @@ const App = () => (
           <Route path="/booking-history/" element={<BookingHistory />} />
           <Route path="/quick-pay/" element={<QuickPay />} />
           <Route path="/about-us/" element={<AboutUs />} />
-          <Route path="/free-digital-marketing-course-for-businesses/" element={<FreeDigitalMarketingCourse />} />
-          <Route path="/free-digital-marketing-course-for-businesses" element={<FreeDigitalMarketingCourse />} />
+          <Route path="/free-digital-marketing-course-for-businesses/" element={<Navigate to="/free-business-course/free-digital-marketing-course-for-businesses/" replace />} />
+          <Route path="/free-digital-marketing-course-for-businesses" element={<Navigate to="/free-business-course/free-digital-marketing-course-for-businesses/" replace />} />
           <Route path="/free-business-course/free-digital-marketing-course-for-businesses/" element={<FreeDigitalMarketingCourse />} />
           <Route path="/free-business-course/free-digital-marketing-course-for-businesses" element={<FreeDigitalMarketingCourse />} />
           <Route path="/free-business-course/ai-tools-in-business-course/" element={<FreeAIToolsBusinessCourse />} />
