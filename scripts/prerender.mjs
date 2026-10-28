@@ -202,6 +202,21 @@ function withShell(html, pathname) {
   return html.replace(/<div id="root">\s*<\/div>/, `<div id="root">${shell}</div>`);
 }
 
+// These audited routes publish their canonical in the initial HTML as well as
+// React's head. data-rh lets Helmet replace it rather than add a duplicate.
+const AUDITED_CANONICAL_PATHS = new Set([
+  "/thailand/bangkok-activities/", "/thailand/pattaya-activities/",
+  "/thailand/phuket-activities/", "/thailand/krabi-activities/",
+  "/thailand/koh-samui-activities/", "/thailand/chiang-mai-activities/",
+  "/dubai-activities/", "/singapore-activities/", "/blog/",
+  "/free-business-course/free-digital-marketing-course-for-businesses/",
+]);
+function withAuditedCanonical(html, pathname) {
+  if (!AUDITED_CANONICAL_PATHS.has(pathname)) return html;
+  return html.replace(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi, "")
+    .replace("</head>", `<link data-rh="true" rel="canonical" href="https://yellodae.com${pathname}">\n</head>`);
+}
+
 // Homepage: preload the final hero image, but keep #root empty until React
 // mounts. A static image-first shell causes a visible flash before the real
 // header, search controls and navigation appear.
@@ -220,7 +235,7 @@ for (const loc of locs) {
   // Don't overwrite real built assets/files
   if (existsSync(outFile)) continue;
   mkdirSync(outDir, { recursive: true });
-  writeFileSync(outFile, withShell(blogPreload(withPreload(baseHtml, pathname), pathname), pathname));
+  writeFileSync(outFile, withAuditedCanonical(withShell(blogPreload(withPreload(baseHtml, pathname), pathname), pathname), pathname));
   written++;
 }
 
