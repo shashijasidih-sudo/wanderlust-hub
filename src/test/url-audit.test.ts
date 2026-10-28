@@ -1,3 +1,4 @@
+/// <reference types="node" />
 // URL migration safeguards: routing rules only, not copy or presentation.
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
