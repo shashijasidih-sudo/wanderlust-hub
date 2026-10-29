@@ -1,5 +1,8 @@
 # Approved URL audit fixes
 
+## Airport transfers article
+- [ ] Add the supplied article unchanged, both images, exact metadata, Thailand guide links and sitemap entry; verify the preview.
+
 - [x] Add self-referencing canonicals to eight destination listings; verified rendered production tags.
 - [x] Restore intended blog and Japan destinations without deleting content; production blog 200 and Japan direct 301 to its existing guides.
 - [x] Flatten existing redirects and correct affected links and breadcrumbs; 370 production permanent redirects match final targets.

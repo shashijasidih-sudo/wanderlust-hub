@@ -196,6 +196,8 @@ function blogPreload(html, pathname) {
 }
 
 function withShell(html, pathname) {
+  // This poster article reserves its final artwork in React, never a mismatched static hero.
+  if (pathname === "/blog/airport-transfers-international-transport/") return html;
   // Only articles have a real-content shell; never inject generic card skeletons.
   const shell = blogShell(pathname);
   if (!shell) return html;
@@ -212,6 +214,28 @@ const AUDITED_CANONICAL_PATHS = new Set([
   "/free-business-course/free-digital-marketing-course-for-businesses/",
 ]);
 function withAuditedCanonical(html, pathname) {
+  if (pathname === "/blog/airport-transfers-international-transport/") {
+    const meta = BLOG_META[pathname];
+    if (!meta) return html;
+    const escape = (value) => String(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+    const title = escape(meta.metaTitle || meta.title);
+    const description = escape(meta.description);
+    const url = `https://yellodae.com${pathname}`;
+    return html.replace(/<title>[\s\S]*?<\/title>/i, "")
+      .replace(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi, "")
+      .replace(/<meta\b[^>]*(?:name|property)=["'](?:description|og:title|og:description|og:type|og:url|twitter:title|twitter:description|twitter:card)["'][^>]*>/gi, "")
+      .replace("</head>", `<title data-rh="true">${title}</title>
+<meta data-rh="true" name="description" content="${description}">
+<link data-rh="true" rel="canonical" href="${url}">
+<meta data-rh="true" property="og:title" content="${title}">
+<meta data-rh="true" property="og:description" content="${description}">
+<meta data-rh="true" property="og:type" content="article">
+<meta data-rh="true" property="og:url" content="${url}">
+<meta data-rh="true" name="twitter:title" content="${title}">
+<meta data-rh="true" name="twitter:description" content="${description}">
+<meta data-rh="true" name="twitter:card" content="summary_large_image">
+</head>`);
+  }
   if (!AUDITED_CANONICAL_PATHS.has(pathname)) return html;
   return html.replace(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi, "")
     .replace("</head>", `<link data-rh="true" rel="canonical" href="https://yellodae.com${pathname}">\n</head>`);

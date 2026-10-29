@@ -1,4 +1,5 @@
 import moviesThailandHero from "@/assets/movies-thailand-hero.webp";
+import airportTransfersHero from "@/assets/airport-transfers-around-the-world.webp.asset.json";
 import SafeImage from "@/components/SafeImage";
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -42,6 +43,7 @@ interface BlogArticle {
 }
 
 const blogArticles: BlogArticle[] = [
+  { id: -7, title: "Airport Transfers and International Transport: Everything You Need to Know", description: "Planning airport transfers abroad? Compare private transfers, taxis, vehicle sizes, flight delays and pickup tips for Thailand, Singapore and Dubai.", category: "Thailand Transfers", image: `https://id-preview--72e37307-dbb0-4c5e-9a42-c8633824894d.lovable.app${airportTransfersHero.url}`, author: "Yellodae Travel Expert", date: "Oct 29, 2026", readTime: "12 min read", slug: "/blog/airport-transfers-international-transport/", city: "multi-city" },
   { id: -6, title: "Bollywood to Hollywood: 15 Famous Movies Filmed in Thailand", description: "Discover famous Bollywood and Hollywood movies filmed in Thailand, from Kaho Naa Pyaar Hai and The Beach to James Bond — plus the real locations and tours to visit them.", category: "Thailand Travel Guide", image: moviesThailandHero, author: "Yellodae Travel Expert", date: "Aug 16, 2026", readTime: "15 min read", slug: "/thailand/phuket/destination-guides/activity/movies-filmed-in-thailand/", city: "multi-city" },
   { id: -5, title: "Thailand Trip Cost From India (2026 Guide): Budget vs Mid-Range vs Luxury", description: "Complete 2026 breakdown of Thailand trip cost from India — flights, hotels, visa, food, transfers and activities for budget, mid-range and luxury travelers.", category: "Thailand Travel Guide", image: bangkokCityImg, author: "Yellodae Travel Expert", date: "Jun 4, 2026", readTime: "12 min read", slug: "/blog/thailand-trip-cost-from-india/", city: "multi-city" },
   { id: -3, title: "Complete Guide to Thailand Island Combos", description: "Discover the best Thailand island combos — Phuket + Phi Phi, Krabi combos, Koh Samui packages. Plan your dream tropical escape.", category: "Island Adventures", image: phiPhiImg, author: "Yellodae Travel Expert", date: "Mar 3, 2026", readTime: "10 min read", slug: "/blog/thailand-island-combos/", city: "multi-city" },
