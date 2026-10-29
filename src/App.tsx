@@ -190,6 +190,7 @@ const BlogBangkokAirportRail = lazy(() => import("./pages/BlogBangkokAirportRail
 const BlogBangkokPrivateTransfer = lazy(() => import("./pages/BlogBangkokPrivateTransfer"));
 const BlogBangkokGrabTaxi = lazy(() => import("./pages/BlogBangkokGrabTaxi"));
 const BlogAirportTransferThailand = lazy(() => import("./pages/BlogAirportTransferThailand"));
+const BlogInternationalAirportTransfers = lazy(() => import("./pages/BlogInternationalAirportTransfers"));
 const BlogPhiPhiIslandTours = lazy(() => import("./pages/BlogPhiPhiIslandTours"));
 const BlogBestThailandActivities = lazy(() => import("./pages/BlogBestThailandActivities"));
 const BlogThailandAdventureActivities2026 = lazy(() => import("./pages/BlogThailandAdventureActivities2026"));
@@ -749,6 +750,7 @@ const App = () => (
            <Route path="/thailand/pattaya/destination-guides/transfer/don-mueang-to-pattaya/" element={<BlogDonMueangToPattaya />} />
            <Route path="/thailand/pattaya/destination-guides/transfer/private-vs-shared-transfers-pattaya/" element={<BlogPrivateVsSharedTransfersPattaya />} />
             <Route path="/blog/airport-transfer-booking-thailand/" element={<BlogAirportTransferThailand />} />
+            <Route path="/blog/airport-transfers-international-transport/" element={<BlogInternationalAirportTransfers />} />
             <Route path="/blog/phi-phi-island-tours-thailand/" element={<BlogPhiPhiIslandTours />} />
             <Route path="/thailand/phuket/destination-guides/activity/movies-filmed-in-thailand/" element={<BlogMoviesFilmedInThailand />} />
             <Route path="/thailand/phuket/destination-guides/activity/movies-filmed-in-thailand" element={<BlogMoviesFilmedInThailand />} />

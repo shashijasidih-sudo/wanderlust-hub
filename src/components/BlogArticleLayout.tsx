@@ -33,6 +33,8 @@ interface BlogSection {
   items?: string[];
   src?: string;
   alt?: string;
+  width?: number;
+  height?: number;
   caption?: string;
   link?: string;
   linkText?: string;
@@ -81,6 +83,9 @@ interface InternalLinks {
 
 interface BlogArticleProps {
   title: string;
+  /** Exact SEO title when it differs from the visible article headline. */
+  metaTitle?: string;
+  autoVideo?: boolean;
   description: string;
   heroImage: string;
   heroAlt: string;
@@ -173,7 +178,7 @@ const renderInline = (text: string): React.ReactNode => {
 
 
 const BlogArticleLayout = ({
-  title, description, heroImage, heroAlt, heroContain = false, author, date,
+  title, metaTitle, autoVideo = true, description, heroImage, heroAlt, heroContain = false, author, date,
   readTime, category, keywords, sections, inlineImages, relatedLinks,
   relatedActivities: relatedActivitiesProp, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
@@ -214,7 +219,7 @@ const BlogArticleLayout = ({
     if (p.includes("bangkok")) return { id: "0rh5V-q9eHQ", name: "Bangkok" };
     return null;
   };
-  const ytShort = getYouTubeShort(currentPath, title);
+  const ytShort = autoVideo ? getYouTubeShort(currentPath, title) : null;
   const ytInjectIndex = ytShort ? Math.floor(sections.length / 2) : -1;
 
   // Inject a supporting image after every two paragraphs (cycles the pool).
@@ -340,7 +345,7 @@ const BlogArticleLayout = ({
   return (
     <div className="min-h-screen flex flex-col">
       <Seo
-        title={`${seoTitle} | Yellodae`}
+        title={metaTitle ?? `${seoTitle} | Yellodae`}
         description={trimmedDesc}
         path={pathname}
         type="article"
@@ -479,7 +484,7 @@ const BlogArticleLayout = ({
                   case "image":
                     rendered = (
                       <figure className="my-8 rounded-xl overflow-hidden shadow-lg">
-                        <SafeImage src={section.src} alt={section.alt || ""} className="w-full h-auto object-cover" loading="lazy" />
+                        <SafeImage src={section.src} alt={section.alt || ""} width={section.width} height={section.height} className="w-full h-auto object-cover" loading="lazy" />
                         {section.caption && <figcaption className="text-sm text-muted-foreground text-center py-3 bg-secondary/30">{section.caption}</figcaption>}
                       </figure>
                     );
