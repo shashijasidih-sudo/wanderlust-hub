@@ -3,7 +3,8 @@ import heroAsset from "@/assets/airport-transfers-around-the-world.webp.asset.js
 import inlineImage from "@/assets/airport-transfers-international-transportation.webp.asset.json";
 
 // Search intent: Informational / Commercial. Article wording preserved from the supplied document.
-const heroImage = heroAsset.url;
+const assetOrigin = "https://id-preview--72e37307-dbb0-4c5e-9a42-c8633824894d.lovable.app";
+const heroImage = `${assetOrigin}${heroAsset.url}`;
 
 export default function BlogInternationalAirportTransfers() {
   return (
@@ -21,7 +22,7 @@ export default function BlogInternationalAirportTransfers() {
       category="Thailand Transfers"
       guidesLink="/thailand/destination-guides/"
       guidesLabel="Thailand Destination Guides"
-      bodyClassName="break-words [&_a]:break-words"
+      bodyClassName="break-words [overflow-wrap:anywhere] [&_li>span:last-child]:min-w-0 [&_a]:[overflow-wrap:anywhere]"
       keywords={["international airport transfers", "airport transfer booking", "private airport transfer", "Thailand airport transfers", "Singapore airport transfers", "Dubai airport transfers", "airport taxi booking"]}
       sections={[
       {
@@ -144,7 +145,7 @@ export default function BlogInternationalAirportTransfers() {
       },
       {
             "type": "image",
-            "src": inlineImage.url,
+            "src": `${assetOrigin}${inlineImage.url}`,
             "alt": "Airport transfers and international transportation: advance booking, vehicle sizes, flight delays and pickup advice",
             "width": 1080,
             "height": 1920
