@@ -197,7 +197,7 @@ function blogPreload(html, pathname) {
 
 function withShell(html, pathname) {
   // This poster article reserves its final artwork in React, never a mismatched static hero.
-  if (pathname === "/blog/airport-transfers-international-transport/") return html;
+  if (pathname === "/thailand/destination-guides/airport-transfers-international-transport/") return html;
   // Only articles have a real-content shell; never inject generic card skeletons.
   const shell = blogShell(pathname);
   if (!shell) return html;
@@ -214,7 +214,7 @@ const AUDITED_CANONICAL_PATHS = new Set([
   "/free-business-course/free-digital-marketing-course-for-businesses/",
 ]);
 function withAuditedCanonical(html, pathname) {
-  if (pathname === "/blog/airport-transfers-international-transport/") {
+  if (pathname === "/thailand/destination-guides/airport-transfers-international-transport/") {
     const meta = BLOG_META[pathname];
     if (!meta) return html;
     const escape = (value) => String(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");

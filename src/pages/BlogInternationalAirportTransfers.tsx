@@ -106,6 +106,16 @@ export default function BlogInternationalAirportTransfers() {
             "content": "Comfort becomes more important than cost for larger families while small families can do well with official taxis or public transports."
       },
       {
+            "type": "cta",
+            "content": "Compare airport pickup and hotel-to-airport options for your Thailand holiday.",
+            "link": "/thailand/airport-transfers/",
+            "linkText": "Book Thailand Transfers"
+      },
+      {
+            "type": "paragraph",
+            "content": "Arriving in Bangkok or Phuket? Compare [Bangkok Transfers](/thailand/bangkok-airport-transfers/) for Suvarnabhumi and Don Mueang, or [Phuket Transfers](/thailand/phuket-airport-transfers/) for your airport-to-hotel and return journey. Check the route, vehicle capacity and booking conditions before choosing your transfer."
+      },
+      {
             "type": "heading",
             "content": "3. How Do I Choose the Right Transfer Vehicle for My Group Size and Luggage?"
       },
@@ -313,6 +323,10 @@ export default function BlogInternationalAirportTransfers() {
       {
             "type": "paragraph",
             "content": "When booking Thailand airport transfers, Singapore airport transfers or Dubai airport transfers, confirm the total fare, passenger and luggage capacity, waiting-time policy, flight-delay procedure, cancellation terms and exact meeting point. Keep your booking confirmation and the provider’s contact details accessible during the journey."
+      },
+      {
+            "type": "paragraph",
+            "content": "For your Dubai arrival or departure, compare [Dubai Transfers](/dubai/budget-airport-transfers/) and select the appropriate hotel zone. For Changi Airport journeys, browse [Singapore Transfers](/singapore/budget-airport-transfers/) and check the pickup or dropoff option, passenger capacity and arrival time before booking."
       },
       {
             "type": "paragraph",

@@ -251,5 +251,8 @@ http://yellodae.com/*         https://yellodae.com/:splat    301!
 /thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer /thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/    301!
 /thailand/bangkok/chao-phraya-princess-dinner-cruise-with-private-transfer/ /thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/    301!
 
+/blog/airport-transfers-international-transport/    /thailand/destination-guides/airport-transfers-international-transport/    301!
+/blog/airport-transfers-international-transport    /thailand/destination-guides/airport-transfers-international-transport/    301!
+
 # 4) SPA fallback — every other path serves index.html (no redirect chain)
 /*    /index.html    200

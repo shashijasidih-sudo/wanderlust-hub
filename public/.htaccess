@@ -24,6 +24,7 @@
 # ============================================================================
 
 # ---- Legacy 301 redirects (auto-generated from src/App.tsx <Navigate>) ----
+RedirectMatch 301 ^/blog/airport-transfers-international-transport/?$ /thailand/destination-guides/airport-transfers-international-transport/
 RedirectMatch 301 ^/thailand/bangkok/airport-transfers/safari-world-bkk/?$ /thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer/
 RedirectMatch 301 ^/thailand/bangkok/airport-transfers/safari-world-dmk/?$ /thailand/bangkok/bangkok-hotel-safari-world-to-don-mueang-airport-transfer/
 RedirectMatch 301 ^/thailand/bangkok/chao-phraya-princess-with-transfer/?$ /thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-transfer/
