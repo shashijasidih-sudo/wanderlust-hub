@@ -2,7 +2,7 @@
 
 ## Airport transfers article
 - [x] Add the supplied article unchanged, both images, exact metadata, Thailand guide links and sitemap entry; verify the preview.
-- [ ] Move the article to the requested Thailand destination-guide URL, retain its old redirect, add five contextual transfer booking links and verify.
+- [x] Move the article to the requested Thailand destination-guide URL, retain its old redirect, add five contextual transfer booking links and verify in preview.
 
 - [x] Add self-referencing canonicals to eight destination listings; verified rendered production tags.
 - [x] Restore intended blog and Japan destinations without deleting content; production blog 200 and Japan direct 301 to its existing guides.
