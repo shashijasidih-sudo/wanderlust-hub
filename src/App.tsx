@@ -750,7 +750,8 @@ const App = () => (
            <Route path="/thailand/pattaya/destination-guides/transfer/don-mueang-to-pattaya/" element={<BlogDonMueangToPattaya />} />
            <Route path="/thailand/pattaya/destination-guides/transfer/private-vs-shared-transfers-pattaya/" element={<BlogPrivateVsSharedTransfersPattaya />} />
             <Route path="/blog/airport-transfer-booking-thailand/" element={<BlogAirportTransferThailand />} />
-            <Route path="/blog/airport-transfers-international-transport/" element={<BlogInternationalAirportTransfers />} />
+            <Route path="/thailand/destination-guides/airport-transfers-international-transport/" element={<BlogInternationalAirportTransfers />} />
+            <Route path="/blog/airport-transfers-international-transport/" element={<Navigate to="/thailand/destination-guides/airport-transfers-international-transport/" replace />} />
             <Route path="/blog/phi-phi-island-tours-thailand/" element={<BlogPhiPhiIslandTours />} />
             <Route path="/thailand/phuket/destination-guides/activity/movies-filmed-in-thailand/" element={<BlogMoviesFilmedInThailand />} />
             <Route path="/thailand/phuket/destination-guides/activity/movies-filmed-in-thailand" element={<BlogMoviesFilmedInThailand />} />

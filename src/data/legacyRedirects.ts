@@ -1,6 +1,7 @@
 // Auto-generated map of legacy / mistyped internal URLs -> live routes.
 // Prevents 404s from older blog and data links. Keys and values are lowercase, trailing-slash paths.
 export const LEGACY_REDIRECTS: Record<string, string> = {
+  "/blog/airport-transfers-international-transport/": "/thailand/destination-guides/airport-transfers-international-transport/",
   "/blog/best-dubai-activities/": "/dubai/destination-guides/best-dubai-activities/",
   "/blog/airport-transfer-booking-dubai/": "/dubai/destination-guides/airport-transfer-booking-dubai/",
   "/blog/desert-safari-deals-dubai/": "/dubai/destination-guides/desert-safari-deals-dubai/",
