@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import Seo from "@/components/seo/Seo";
+import ChunkErrorBoundary from "@/components/ChunkErrorBoundary";
 
 // Lazy-load everything below the hero — improves FCP/LCP on mobile.
 const SeoDestinationSections = lazy(() => import("@/components/SeoDestinationSections"));
@@ -174,7 +175,7 @@ const Index = () => {
             <Link to="/contact-us/" className="underline underline-offset-2 hover:text-primary">contact us</Link> to plan your trip.
           </p>
         </section>
-        <Suspense fallback={null}>
+        <ChunkErrorBoundary><Suspense fallback={null}>
           <KohSamuiHighlightsHome />
           <SeoDestinationSections />
           <AboutYellodaeSection />
@@ -191,11 +192,11 @@ const Index = () => {
           <ActivityCategories />
           <HomeFAQ />
           <HomeYouTubeSection />
-        </Suspense>
+        </Suspense></ChunkErrorBoundary>
       </main>
-      <Suspense fallback={null}>
+      <ChunkErrorBoundary><Suspense fallback={null}>
         <Footer />
-      </Suspense>
+      </Suspense></ChunkErrorBoundary>
     </div>
   );
 };

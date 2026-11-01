@@ -1,5 +1,7 @@
 # Project Architecture Rules
 
+- Catch lazy-module failures at the app and homepage deferred-section boundaries; reload stale documents at most once per minute per tab and offer manual retry afterward so missing deployment chunks never blank the whole page or create reload loops.
+
 - Keep the homepage root empty before React mounts; preload its LCP image without injecting an image-first static shell to prevent a mismatched loading flash.
 - Keep non-article prerendered roots empty and loading placeholders invisible while reserving their layout space, so temporary skeletons never flash before the real interface.
 - Use SafeImage for activity and curriculum cards inside fixed-size or aspect-ratio frames; decode lazy images before revealing them and reset loading state when their source changes to prevent image flashes.
