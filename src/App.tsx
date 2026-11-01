@@ -202,6 +202,7 @@ const DubaiSmartGuides = lazy(() => import("./pages/DubaiSmartGuides"));
 const BlogDubaiAirportTransfer = lazy(() => import("./pages/BlogDubaiAirportTransfer"));
 const BlogDubaiDesertSafari = lazy(() => import("./pages/BlogDubaiDesertSafari"));
 const BlogDubaiDesertSafariNewAttractions = lazy(() => import("./pages/BlogDubaiDesertSafariNewAttractions"));
+const BlogDubaiActivitiesBookingGuide = lazy(() => import("./pages/BlogDubaiActivitiesBookingGuide"));
 const BlogDubaiMarinaCruise = lazy(() => import("./pages/BlogDubaiMarinaCruise"));
 const BlogBurjKhalifaTickets = lazy(() => import("./pages/BlogBurjKhalifaTickets"));
 const BlogBestDubaiActivities = lazy(() => import("./pages/BlogBestDubaiActivities"));
@@ -832,6 +833,7 @@ const App = () => (
           {/* Dubai routes */}
             <Route path="/dubai/destination-guides/best-dubai-activities/" element={<BlogBestDubaiActivities />} />
             <Route path="/dubai/destination-guides/" element={<DubaiSmartGuides />} />
+            <Route path="/dubai/destination-guides/dubai-activities-attraction-tickets-booking-guide/" element={<BlogDubaiActivitiesBookingGuide />} />
             <Route path="/dubai/destination-guides/airport-transfer-booking-dubai/" element={<BlogDubaiAirportTransfer />} />
             <Route path="/dubai/destination-guides/desert-safari-deals-dubai/" element={<BlogDubaiDesertSafari />} />
             <Route path="/dubai/destination-guides/dubai-marina-cruise/" element={<BlogDubaiMarinaCruise />} />
