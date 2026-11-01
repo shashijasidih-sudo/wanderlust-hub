@@ -93,6 +93,8 @@ interface BlogArticleProps {
   heroAlt: string;
   /** Show the hero fully (letterboxed) instead of cropping it — for poster/infographic artwork. */
   heroContain?: boolean;
+  /** Larger contextual booking images, enabled per article. */
+  largeLinkImages?: boolean;
   author: string;
   date: string;
   readTime: string;
@@ -180,7 +182,7 @@ const renderInline = (text: string): React.ReactNode => {
 
 
 const BlogArticleLayout = ({
-  title, metaTitle, metaDescription, autoVideo = true, description, heroImage, heroAlt, heroContain = false, author, date,
+  title, metaTitle, metaDescription, autoVideo = true, description, heroImage, heroAlt, heroContain = false, largeLinkImages = false, author, date,
   readTime, category, keywords, sections, inlineImages, relatedLinks,
   relatedActivities: relatedActivitiesProp, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
@@ -494,6 +496,11 @@ const BlogArticleLayout = ({
                   case "cta":
                     rendered = (
                       <div className="my-10 p-5 md:p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl text-center overflow-hidden">
+                        {largeLinkImages && (
+                          <Link to={section.link || "/thailand/"} className="block mx-auto mb-5 max-w-sm aspect-video overflow-hidden rounded-lg">
+                            <SafeImage src={section.src || getBlogLinkImage(section.link || "")} alt={section.linkText || "Book Now"} loading="lazy" className="w-full h-full object-cover" />
+                          </Link>
+                        )}
                         <p className="text-base md:text-lg font-semibold text-foreground mb-4 break-words">{section.content}</p>
                         <Button
                           asChild
@@ -501,12 +508,12 @@ const BlogArticleLayout = ({
                           className="w-full sm:w-auto max-w-full h-auto min-h-11 py-3 whitespace-normal break-words"
                         >
                           <Link to={section.link || "/thailand"} className="flex items-center justify-center gap-3 text-center">
-                            <SafeImage
+                            {!largeLinkImages && <SafeImage
                               src={section.src || getBlogLinkImage(section.link || "")}
                               alt=""
                               loading="lazy"
                               className="h-9 w-9 rounded-md object-cover flex-shrink-0"
-                            />
+                            />}
                             <span className="min-w-0">{section.linkText || "Book Now"}</span>
                           </Link>
                         </Button>
@@ -520,13 +527,13 @@ const BlogArticleLayout = ({
                         <div className="flex flex-col lg:flex-row lg:items-center gap-5 md:gap-6">
                           <Link
                             to={section.link || "/thailand/"}
-                            className="block w-full lg:w-40 flex-shrink-0 overflow-hidden rounded-xl"
+                            className={largeLinkImages ? "block w-full lg:w-64 aspect-video flex-shrink-0 overflow-hidden rounded-lg" : "block w-full lg:w-40 flex-shrink-0 overflow-hidden rounded-xl"}
                           >
                             <SafeImage
                               src={section.src || getBlogLinkImage(section.link || "")}
                               alt={section.linkText || section.content || ""}
                               loading="lazy"
-                              className="h-28 w-full object-cover lg:h-24"
+                              className={largeLinkImages ? "h-full w-full object-cover" : "h-28 w-full object-cover lg:h-24"}
                             />
                           </Link>
                           <div className="flex-1 min-w-0">

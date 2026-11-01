@@ -1,5 +1,7 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroAsset from "@/assets/dubai-activities-booking-guide-attached.jpg.asset.json";
+import { dubaiBookingGuideImage } from "@/assets/dubaiBookingGuideImage";
+import desertSafariImage from "@/assets/dubai-desert-couple-1.webp";
+import cityTourImage from "@/assets/dubai-city-night-1.jpg";
 
 // Search intent: Informational / Commercial. Audience: Indian couples, families and first-time visitors.
 // Supplied document wording retained; repeated source-filename citation artifacts removed.
@@ -10,9 +12,10 @@ export default function BlogDubaiActivitiesBookingGuide() {
       metaTitle="Dubai Activities & Attraction Tickets: Complete Booking Guide"
       description="Plan Dubai activities and attraction tickets with expert booking tips. Compare desert safaris, Burj Khalifa tickets, cruises, combo passes, cancellations & family tours."
       metaDescription="Plan Dubai activities and attraction tickets with expert booking tips. Compare desert safaris, Burj Khalifa tickets, cruises, combo passes, cancellations & family tours."
-      heroImage={heroAsset.url}
+      heroImage={dubaiBookingGuideImage}
       heroAlt="Dubai activities collage featuring Burj Khalifa, a dhow cruise, desert safari and attraction tickets"
       heroContain
+      largeLinkImages
       autoVideo={false}
       author="Yellodae Travel Expert"
       date="Nov 1, 2026"
@@ -106,6 +109,7 @@ export default function BlogDubaiActivitiesBookingGuide() {
       {
             "type": "cta",
             "content": "Compare ticket options, pickup details and inclusions before booking.",
+            "src": dubaiBookingGuideImage,
             "link": "/dubai-activities/",
             "linkText": "Explore Dubai Activities"
       },
@@ -198,6 +202,7 @@ export default function BlogDubaiActivitiesBookingGuide() {
       {
             "type": "cta",
             "content": "Check the sightseeing itinerary and included stops before selecting your city tour.",
+            "src": cityTourImage,
             "link": "/dubai-activities/dubai-city-tour-with-dubai-mall/",
             "linkText": "View Dubai City Tour with Dubai Mall"
       },
@@ -280,6 +285,7 @@ export default function BlogDubaiActivitiesBookingGuide() {
       {
             "type": "cta",
             "content": "Review your safari’s inclusions, hotel pickup and cancellation conditions.",
+            "src": desertSafariImage,
             "link": "/dubai-activities/desert-safari-sharing/",
             "linkText": "View Desert Safari Options"
       },
@@ -384,6 +390,7 @@ export default function BlogDubaiActivitiesBookingGuide() {
       {
             "type": "cta-prominent",
             "content": "Choose Dubai experiences that suit your family, travel dates and budget.",
+            "src": dubaiBookingGuideImage,
             "link": "/dubai-activities/",
             "linkText": "Book Dubai Activities"
       }
