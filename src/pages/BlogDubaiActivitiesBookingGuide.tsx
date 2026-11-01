@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroImage from "@/assets/dubai-activities-booking-guide-hero.jpg";
+import heroAsset from "@/assets/dubai-activities-booking-guide-attached.jpg.asset.json";
 
 // Search intent: Informational / Commercial. Audience: Indian couples, families and first-time visitors.
 // Supplied document wording retained; repeated source-filename citation artifacts removed.
@@ -10,8 +10,9 @@ export default function BlogDubaiActivitiesBookingGuide() {
       metaTitle="Dubai Activities & Attraction Tickets: Complete Booking Guide"
       description="Plan Dubai activities and attraction tickets with expert booking tips. Compare desert safaris, Burj Khalifa tickets, cruises, combo passes, cancellations & family tours."
       metaDescription="Plan Dubai activities and attraction tickets with expert booking tips. Compare desert safaris, Burj Khalifa tickets, cruises, combo passes, cancellations & family tours."
-      heroImage={heroImage}
-      heroAlt="Dubai Downtown skyline with Burj Khalifa, Dubai Mall and the fountain lake"
+      heroImage={heroAsset.url}
+      heroAlt="Dubai activities collage featuring Burj Khalifa, a dhow cruise, desert safari and attraction tickets"
+      heroContain
       autoVideo={false}
       author="Yellodae Travel Expert"
       date="Nov 1, 2026"
@@ -59,6 +60,10 @@ export default function BlogDubaiActivitiesBookingGuide() {
             "content": "For the most dramatic experience, choose a sunset slot. You get daylight views, the golden-hour glow, and Dubai’s illuminated skyline after dark—all in one visit. Just remember that prime-time tickets, especially around sunset, often cost more and sell out faster."
       },
       {
+            "type": "paragraph",
+            "content": "Compare [Burj Khalifa tickets](/dubai-activities/burj-khalifa-prime/) and check the available entry options before booking."
+      },
+      {
             "type": "subheading",
             "content": "Desert safari: For adventure and culture"
       },
@@ -71,6 +76,10 @@ export default function BlogDubaiActivitiesBookingGuide() {
             "content": "It is ideal for travellers who enjoy adventure and photography. However, dune bashing may not suit young children, elderly travellers, pregnant visitors, or anyone prone to motion sickness. If that applies to your group, look for a private desert tour or a more relaxed safari option without aggressive dune driving."
       },
       {
+            "type": "paragraph",
+            "content": "Review [Dubai desert safari packages](/dubai-activities/desert-safari-sharing/) for pickup details, inclusions and available options."
+      },
+      {
             "type": "subheading",
             "content": "Dubai Marina cruise: For a relaxed evening"
       },
@@ -81,6 +90,10 @@ export default function BlogDubaiActivitiesBookingGuide() {
       {
             "type": "paragraph",
             "content": "This is especially good for couples, families, and travellers who want a memorable evening without too much walking or physical activity."
+      },
+      {
+            "type": "paragraph",
+            "content": "Check the [Dubai Marina cruise](/dubai-activities/dhow-cruise-marina-lower-deck/) itinerary, dinner inclusions and transfer arrangements."
       },
       {
             "type": "subheading",
@@ -123,6 +136,10 @@ export default function BlogDubaiActivitiesBookingGuide() {
       {
             "type": "paragraph",
             "content": "Advance booking also saves time. Instead of standing in ticket queues, you can spend your holiday exploring Dubai Mall, Jumeirah Beach, Old Dubai, or the Gold Souk."
+      },
+      {
+            "type": "paragraph",
+            "content": "For a longer holiday, compare [Dubai tour packages from India](/tour-packages/) and review each package’s hotel, sightseeing and transfer inclusions."
       },
       {
             "type": "paragraph",
