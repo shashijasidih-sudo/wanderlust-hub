@@ -6,7 +6,7 @@ import fountain from "@/assets/dubai-fountain-show-1.webp";
 import globalVillage from "@/assets/dubai-global-village-1.jpg";
 import cityNight from "@/assets/dubai-city-night-1.jpg";
 import aquarium from "@/assets/dubai-aquarium-fish-1.webp";
-import bookingGuideImage from "@/assets/dubai-activities-booking-guide-hero.jpg";
+import bookingGuideAsset from "@/assets/dubai-activities-booking-guide-attached.jpg.asset.json";
 
 export interface DubaiGuide {
   id: number;
@@ -21,7 +21,7 @@ export interface DubaiGuide {
 }
 
 export const dubaiGuides: DubaiGuide[] = [
-  { id: 9, title: "Dubai Activities & Attraction Tickets: Complete Booking Guide", description: "Compare Dubai attraction tickets, desert safaris, cruises, combo passes and family tours before booking.", category: "Dubai Activities", image: bookingGuideImage, author: "Yellodae Travel Expert", date: "Nov 1, 2026", readTime: "10 min read", slug: "/dubai/destination-guides/dubai-activities-attraction-tickets-booking-guide/" },
+  { id: 9, title: "Dubai Activities & Attraction Tickets: Complete Booking Guide", description: "Compare Dubai attraction tickets, desert safaris, cruises, combo passes and family tours before booking.", category: "Dubai Activities", image: bookingGuideAsset.url, author: "Yellodae Travel Expert", date: "Nov 1, 2026", readTime: "10 min read", slug: "/dubai/destination-guides/dubai-activities-attraction-tickets-booking-guide/" },
   { id: 1, title: "Best Dubai Activities for Every Traveler", description: "Top-rated Dubai experiences from desert safaris to skyline tours.", category: "City Highlights", image: skylineNight, author: "Yellodae Travel Expert", date: "Mar 1, 2026", readTime: "10 min read", slug: "/dubai/destination-guides/best-dubai-activities/" },
   { id: 2, title: "Burj Khalifa Tickets: Prime vs Non-Prime Hours", description: "Everything you need to know about visiting the world's tallest tower.", category: "Landmarks", image: skylineSunset, author: "Yellodae Travel Expert", date: "Feb 28, 2026", readTime: "8 min read", slug: "/dubai/destination-guides/burj-khalifa-tickets-dubai/" },
   { id: 3, title: "Dubai Desert Safari: Best Deals & Packages", description: "Compare evening, premium, and overnight desert safari options.", category: "Adventure", image: desert, author: "Adventure Pro", date: "Feb 26, 2026", readTime: "9 min read", slug: "/dubai/destination-guides/desert-safari-deals-dubai/" },
