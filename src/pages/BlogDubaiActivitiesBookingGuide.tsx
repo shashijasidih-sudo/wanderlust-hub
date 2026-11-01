@@ -1,5 +1,7 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import { dubaiBookingGuideImage } from "@/assets/dubaiBookingGuideImage";
+import desertSafariImage from "@/assets/dubai-desert-couple-1.webp";
+import cityTourImage from "@/assets/dubai-city-night-1.jpg";
 
 // Search intent: Informational / Commercial. Audience: Indian couples, families and first-time visitors.
 // Supplied document wording retained; repeated source-filename citation artifacts removed.
@@ -107,6 +109,7 @@ export default function BlogDubaiActivitiesBookingGuide() {
       {
             "type": "cta",
             "content": "Compare ticket options, pickup details and inclusions before booking.",
+            "src": dubaiBookingGuideImage,
             "link": "/dubai-activities/",
             "linkText": "Explore Dubai Activities"
       },
@@ -199,6 +202,7 @@ export default function BlogDubaiActivitiesBookingGuide() {
       {
             "type": "cta",
             "content": "Check the sightseeing itinerary and included stops before selecting your city tour.",
+            "src": cityTourImage,
             "link": "/dubai-activities/dubai-city-tour-with-dubai-mall/",
             "linkText": "View Dubai City Tour with Dubai Mall"
       },
@@ -281,6 +285,7 @@ export default function BlogDubaiActivitiesBookingGuide() {
       {
             "type": "cta",
             "content": "Review your safari’s inclusions, hotel pickup and cancellation conditions.",
+            "src": desertSafariImage,
             "link": "/dubai-activities/desert-safari-sharing/",
             "linkText": "View Desert Safari Options"
       },
@@ -385,6 +390,7 @@ export default function BlogDubaiActivitiesBookingGuide() {
       {
             "type": "cta-prominent",
             "content": "Choose Dubai experiences that suit your family, travel dates and budget.",
+            "src": dubaiBookingGuideImage,
             "link": "/dubai-activities/",
             "linkText": "Book Dubai Activities"
       }
