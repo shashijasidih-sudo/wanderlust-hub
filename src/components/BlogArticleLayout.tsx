@@ -85,6 +85,8 @@ interface BlogArticleProps {
   title: string;
   /** Exact SEO title when it differs from the visible article headline. */
   metaTitle?: string;
+  /** Exact supplied meta description, without automatic shortening. */
+  metaDescription?: string;
   autoVideo?: boolean;
   description: string;
   heroImage: string;
@@ -178,7 +180,7 @@ const renderInline = (text: string): React.ReactNode => {
 
 
 const BlogArticleLayout = ({
-  title, metaTitle, autoVideo = true, description, heroImage, heroAlt, heroContain = false, author, date,
+  title, metaTitle, metaDescription, autoVideo = true, description, heroImage, heroAlt, heroContain = false, author, date,
   readTime, category, keywords, sections, inlineImages, relatedLinks,
   relatedActivities: relatedActivitiesProp, cityHub,
   guidesLink = "/thailand/destination-guides", guidesLabel = "Thailand Guides",
@@ -346,7 +348,7 @@ const BlogArticleLayout = ({
     <div className="min-h-screen flex flex-col">
       <Seo
         title={metaTitle ?? `${seoTitle} | Yellodae`}
-        description={trimmedDesc}
+        description={metaDescription ?? trimmedDesc}
         path={pathname}
         type="article"
         image={heroImage}

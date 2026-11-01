@@ -56,7 +56,7 @@ export function collectBlogMeta() {
     out[path.endsWith("/") ? path : path + "/"] = {
       title,
       metaTitle: prop(block, "metaTitle"),
-      description: prop(block, "description") || "",
+      description: prop(block, "metaDescription") || prop(block, "description") || "",
       category: prop(block, "category") || "Travel Guide",
       date: prop(block, "date") || "",
       readTime: prop(block, "readTime") || "",

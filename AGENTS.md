@@ -1,5 +1,7 @@
 # Project Architecture Rules
 
+- Catch lazy-module failures at the app and homepage deferred-section boundaries; reload stale documents at most once per minute per tab and offer manual retry afterward so missing deployment chunks never blank the whole page or create reload loops.
+
 - Keep the homepage root empty before React mounts; preload its LCP image without injecting an image-first static shell to prevent a mismatched loading flash.
 - Keep non-article prerendered roots empty and loading placeholders invisible while reserving their layout space, so temporary skeletons never flash before the real interface.
 - Use SafeImage for activity and curriculum cards inside fixed-size or aspect-ratio frames; decode lazy images before revealing them and reset loading state when their source changes to prevent image flashes.
@@ -7,4 +9,4 @@
 - Dubai activity listing and quick-book prices must read from toursData so cards and booking calculators stay synchronized.
 - Normalize sitemap paths before deduplicating, exclude redirect aliases, and omit lastmod unless backed by page-specific content timestamps to avoid duplicate URLs and artificial freshness.
 - Keep the blog root as a guide-directory page and redirect the Japan root to its existing destination-guide hub, so nested static output never masks useful content with directory access errors.
-- Use optional exact article metadata overrides when the supplied SEO title differs from the H1, preserving existing articles' default titles.
+- Use optional exact article metadata overrides for supplied SEO titles and descriptions, preserving existing articles' defaults without truncating requested metadata.
