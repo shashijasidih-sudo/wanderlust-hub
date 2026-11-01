@@ -1,5 +1,5 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
-import heroAsset from "@/assets/dubai-activities-booking-guide-attached.jpg.asset.json";
+import { dubaiBookingGuideImage } from "@/assets/dubaiBookingGuideImage";
 
 // Search intent: Informational / Commercial. Audience: Indian couples, families and first-time visitors.
 // Supplied document wording retained; repeated source-filename citation artifacts removed.
@@ -10,9 +10,10 @@ export default function BlogDubaiActivitiesBookingGuide() {
       metaTitle="Dubai Activities & Attraction Tickets: Complete Booking Guide"
       description="Plan Dubai activities and attraction tickets with expert booking tips. Compare desert safaris, Burj Khalifa tickets, cruises, combo passes, cancellations & family tours."
       metaDescription="Plan Dubai activities and attraction tickets with expert booking tips. Compare desert safaris, Burj Khalifa tickets, cruises, combo passes, cancellations & family tours."
-      heroImage={heroAsset.url}
+      heroImage={dubaiBookingGuideImage}
       heroAlt="Dubai activities collage featuring Burj Khalifa, a dhow cruise, desert safari and attraction tickets"
       heroContain
+      largeLinkImages
       autoVideo={false}
       author="Yellodae Travel Expert"
       date="Nov 1, 2026"

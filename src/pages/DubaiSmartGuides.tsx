@@ -25,7 +25,7 @@ import dubaiSkylineSunset from "@/assets/dubai-skyline-sunset-1.jpg";
 import dubaiGlobalVillage2 from "@/assets/dubai-global-village-2.jpg";
 import dubaiDesertWoman from "@/assets/dubai-desert-woman-1.jpg";
 import CityExploreLinks from "@/components/CityExploreLinks";
-import bookingGuideAsset from "@/assets/dubai-activities-booking-guide-attached.jpg.asset.json";
+import { dubaiBookingGuideImage } from "@/assets/dubaiBookingGuideImage";
 
 
 const heroSlides = [
@@ -41,7 +41,7 @@ const blogArticles = [
     title: "Dubai Activities & Attraction Tickets: Complete Booking Guide",
     description: "Compare desert safaris, Burj Khalifa tickets, cruises, combo passes, cancellations and family tours before booking.",
     category: "Dubai Activities",
-    image: bookingGuideAsset.url,
+    image: dubaiBookingGuideImage,
     author: "Yellodae Travel Expert",
     date: "Nov 1, 2026",
     readTime: "10 min read",

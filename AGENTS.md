@@ -1,5 +1,7 @@
 # Project Architecture Rules
 
+- Share the Dubai booking guide's uploaded image URL across article and discovery cards, resolving it against its verified Lovable asset-serving origin because the external custom-domain host returns HTML for relative asset paths.
+
 - Catch lazy-module failures at the app and homepage deferred-section boundaries; reload stale documents at most once per minute per tab and offer manual retry afterward so missing deployment chunks never blank the whole page or create reload loops.
 
 - Keep the homepage root empty before React mounts; preload its LCP image without injecting an image-first static shell to prevent a mismatched loading flash.
