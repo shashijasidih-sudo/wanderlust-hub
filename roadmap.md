@@ -1,7 +1,7 @@
 # Approved URL audit fixes
 
 ## Dubai activities booking guide
-- [ ] Add the supplied document as a Dubai destination guide with exact SEO details, relevant imagery and booking links; verify discovery, metadata and sitemap in preview.
+- [x] Add the supplied document as a Dubai destination guide with exact SEO details, relevant imagery and booking links; verified document completeness, guide discovery, metadata, sitemap, booking CTA and mobile layout in preview.
 
 ## Airport transfers article
 - [x] Add the supplied article unchanged, both images, exact metadata, Thailand guide links and sitemap entry; verify the preview.
