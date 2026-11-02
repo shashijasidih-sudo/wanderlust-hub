@@ -36,7 +36,7 @@ export const adultShowActivities: PattayaActivity[] = [
   { title: "Alcazar Show Pattaya Ticket with Transfer", price: 2420, image: alcazarShow1, slug: "/thailand/pattaya-activities/alcazar-cabaret-show-with-transfer/" },
   { title: "Imagine 79 Show Pattaya with Transfer", price: 4000, image: imagine79Show1, slug: "/thailand/pattaya-activities/79-show-pattaya-with-transfer/" },
   { title: "Show 69 in Pattaya with Transfer", price: 3800, image: show69Pattaya1, slug: "/thailand/pattaya-activities/69-show-pattaya-with-transfer/" },
-  { title: "Show 89 in Pattaya with Transfer", price: 6000, image: show89Pattaya1, slug: "/thailand/pattaya-activities/89-show-pattaya-with-transfer/" },
+  { title: "Show 89 in Pattaya with Transfer", price: 4500, image: show89Pattaya1, slug: "/thailand/pattaya-activities/89-show-pattaya-with-transfer/" },
   { title: "Big Eye Show in Pattaya with Transfer", price: 6000, image: bigeyeShowPattaya1, slug: "/thailand/pattaya-activities/99-show-pattaya-big-eye-with-transfer/" },
 ];
 

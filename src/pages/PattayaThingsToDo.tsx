@@ -172,7 +172,7 @@ const activities: Activity[] = [
   {
     title: "89 Show Pattaya with Transfer (18+)",
     description: "Premium 89 Show Pattaya with VIP-style seating and hotel transfer.",
-    price: 6000,
+    price: 4500,
     image: show89Pattaya1,
     slug: "/thailand/pattaya-activities/89-show-pattaya-with-transfer/",
     category: "Nightlife & Adult Shows",

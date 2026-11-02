@@ -2337,7 +2337,7 @@ export const toursData: Record<string, TourData> = {
     shortDescription: "Premium adult entertainment show in Pattaya with round-trip hotel transfer. Daily performances.",
     location: "Pattaya, Thailand",
     city: "pattaya",
-    basePrice: 6000,
+    basePrice: 4500,
     duration: "3 Hours",
     rating: 4.6,
     reviews: 198,
@@ -2374,8 +2374,7 @@ export const toursData: Record<string, TourData> = {
     ],
     tourTimings: ["08:00 PM"],
     tourOptions: [
-      { label: "Indian / Bangladesh / Sri Lanka / Pakistan Nationals", adultPrice: 4500 },
-      { label: "Other Nationalities", adultPrice: 6000 }
+      { label: "Indian / Bangladesh / Sri Lanka / Pakistan Nationals", adultPrice: 4500 }
     ],
     inclusions: ["Round-trip transfer from Pattaya hotel", "Admission ticket"],
     exclusions: ["Food and beverages", "Personal expenses", "Tips"],
