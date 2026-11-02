@@ -1,5 +1,8 @@
 # Approved URL audit fixes
 
+## International holiday packages guide
+- [ ] Add the supplied Word article under Bangkok Destination Guides with the attached thumbnail, exact SEO metadata and contextual travel links; verify discovery, images, sitemap and article rendering.
+
 ## Dubai activities booking guide
 - [x] Add the supplied document as a Dubai destination guide with exact SEO details, relevant imagery and booking links; verified document completeness, guide discovery, metadata, sitemap, booking CTA and mobile layout in preview.
 
