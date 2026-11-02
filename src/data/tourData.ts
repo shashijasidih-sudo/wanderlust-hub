@@ -2372,6 +2372,10 @@ export const toursData: Record<string, TourData> = {
       { time: "09:30 PM", title: "Return Transfer", description: "Drop-off at your hotel" }
     ],
     tourTimings: ["08:00 PM"],
+    tourOptions: [
+      { label: "Indian / Bangladesh / Sri Lanka / Pakistan Nationals", adultPrice: 4500 },
+      { label: "Other Nationalities", adultPrice: 6000 }
+    ],
     inclusions: ["Round-trip transfer from Pattaya hotel", "Admission ticket"],
     exclusions: ["Food and beverages", "Personal expenses", "Tips"],
     bookingPolicy: ["Minimum booking for 2 people", "Confirmation within 24 hours", "Not available for citizens of China, Hong Kong, Taiwan, Vietnam and Thailand"],
