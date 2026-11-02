@@ -13,3 +13,4 @@
 - Normalize sitemap paths before deduplicating, exclude redirect aliases, and omit lastmod unless backed by page-specific content timestamps to avoid duplicate URLs and artificial freshness.
 - Keep the blog root as a guide-directory page and redirect the Japan root to its existing destination-guide hub, so nested static output never masks useful content with directory access errors.
 - Use optional exact article metadata overrides for supplied SEO titles and descriptions, preserving existing articles' defaults without truncating requested metadata.
+- Treat a tour's child rate as optional in the booking calculator and keep price formatting tolerant of missing amounts, so a tour record without a child price never blanks the widget with a crash.
