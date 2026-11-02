@@ -2343,6 +2343,7 @@ export const toursData: Record<string, TourData> = {
     reviews: 198,
     isAdultOnly: true,
     minimumAdults: 2,
+    hideChildren: true,
     heroImages: [
       { src: pattayaNightlife2, title: "Show 89 Pattaya" },
       { src: pattayaNightlife1, title: "Premium Adult Show" },
