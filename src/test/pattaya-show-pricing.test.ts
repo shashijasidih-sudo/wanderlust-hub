@@ -19,8 +19,9 @@ describe("89 Show Pattaya nationality rates", () => {
     );
   });
 
-  it("keeps ₹6,000 per adult for other nationalities", () => {
-    expect(show).toContain('{ label: "Other Nationalities", adultPrice: 6000 }');
+  it("does not offer an other-nationalities rate", () => {
+    expect(show).not.toContain("Other Nationalities");
+    expect(show).toContain("basePrice: 4500");
   });
 
   it("hides the child selector on this adult-only show", () => {
