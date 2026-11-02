@@ -2239,6 +2239,7 @@ export const toursData: Record<string, TourData> = {
     reviews: 312,
     isAdultOnly: true,
     minimumAdults: 2,
+    hideChildren: true,
     heroImages: [
       { src: alcazarShow1, title: "Imagine 79 Show Pattaya" },
       { src: pattayaNightlife1, title: "Pattaya Nightlife Entertainment" },
@@ -2291,6 +2292,7 @@ export const toursData: Record<string, TourData> = {
     reviews: 287,
     isAdultOnly: true,
     minimumAdults: 2,
+    hideChildren: true,
     heroImages: [
       { src: pattayaNightlife1, title: "Show 69 Pattaya" },
       { src: pattayaNightlife2, title: "Adult Entertainment" },
@@ -2399,6 +2401,7 @@ export const toursData: Record<string, TourData> = {
     reviews: 234,
     isAdultOnly: true,
     minimumAdults: 2,
+    hideChildren: true,
     heroImages: [
       { src: pattayaNightlife3, title: "Big Eye Show Pattaya" },
       { src: pattayaNightlife1, title: "Adult Entertainment" },
