@@ -1,6 +1,7 @@
 # Project Architecture Rules
 
 - Share the Dubai booking guide's uploaded image URL across article and discovery cards, resolving it against its verified Lovable asset-serving origin because the external custom-domain host returns HTML for relative asset paths.
+- Share the international holiday planning guide's uploaded thumbnail through one image resolver across its article and Bangkok listing, using the verified asset-serving origin to avoid blank custom-domain images.
 
 - Catch lazy-module failures at the app and homepage deferred-section boundaries; reload stale documents at most once per minute per tab and offer manual retry afterward so missing deployment chunks never blank the whole page or create reload loops.
 

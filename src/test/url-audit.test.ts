@@ -12,6 +12,11 @@ const preferredCourse = "/free-business-course/free-digital-marketing-course-for
 const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
 
 describe("Approved URL migration safeguards", () => {
+  it("includes the holiday planning article only at its requested Bangkok guide URL", () => {
+    expect(urls.filter(url => url.includes("international-holiday-packages-itinerary-planning"))).toEqual([
+      "https://yellodae.com/thailand/bangkok/destination-guides/international-holiday-packages-itinerary-planning/",
+    ]);
+  });
   it("includes the Dubai activities booking article only at the requested guide URL", () => {
     expect(urls.filter(url => url.includes("dubai-activities-attraction-tickets-booking-guide"))).toEqual([
       "https://yellodae.com/dubai/destination-guides/dubai-activities-attraction-tickets-booking-guide/",
