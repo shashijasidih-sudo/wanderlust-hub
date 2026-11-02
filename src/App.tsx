@@ -191,6 +191,7 @@ const BlogBangkokPrivateTransfer = lazy(() => import("./pages/BlogBangkokPrivate
 const BlogBangkokGrabTaxi = lazy(() => import("./pages/BlogBangkokGrabTaxi"));
 const BlogAirportTransferThailand = lazy(() => import("./pages/BlogAirportTransferThailand"));
 const BlogInternationalAirportTransfers = lazy(() => import("./pages/BlogInternationalAirportTransfers"));
+const BlogInternationalHolidayPlanning = lazy(() => import("./pages/BlogInternationalHolidayPlanning"));
 const BlogPhiPhiIslandTours = lazy(() => import("./pages/BlogPhiPhiIslandTours"));
 const BlogBestThailandActivities = lazy(() => import("./pages/BlogBestThailandActivities"));
 const BlogThailandAdventureActivities2026 = lazy(() => import("./pages/BlogThailandAdventureActivities2026"));
@@ -657,6 +658,7 @@ const App = () => (
             <Route path="/thailand/esim-ais/" element={<EsimThailandAis />} />
             <Route path="/thailand/destination-guides/" element={<ThailandSmartGuides />} />
             <Route path="/thailand/bangkok/destination-guides/" element={<BangkokDestinationGuides />} />
+            <Route path="/thailand/bangkok/destination-guides/international-holiday-packages-itinerary-planning/" element={<BlogInternationalHolidayPlanning />} />
             <Route path="/thailand/bangkok/destination-guides/activity/chao-phraya-princess-cruise-review/" element={<BlogChaoPhrayaPrincessReview />} />
             <Route path="/thailand/bangkok/destination-guides/activity/best-dinner-cruises-bangkok-couples/" element={<BlogBestDinnerCruisesCouples />} />
             <Route path="/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/" element={<BlogWatArunGuide />} />

@@ -1,4 +1,5 @@
 import blogChaoPhrayaCruise from "@/assets/blog-chao-phraya-cruise-night.webp";
+import { holidayPlanningGuideImage } from "@/assets/holidayPlanningGuideImage";
 import blogCruiseCouples from "@/assets/blog-cruise-couples-watarun.webp";
 import blogWatArunSunset from "@/assets/blog-wat-arun-sunset.webp";
 import blogGrandPalace from "@/assets/blog-grand-palace-spires.jpg";
@@ -137,6 +138,15 @@ export interface BangkokBlogEntry {
 }
 
 export const bangkokBlogs: BangkokBlogEntry[] = [
+  {
+    title: "International Holiday Packages & Itinerary Planning Guide",
+    description: "Plan international holidays with itinerary tips, Thailand packages, sightseeing ideas and travel budgets for Indian travellers.",
+    category: "itinerary",
+    image: holidayPlanningGuideImage,
+    date: "Nov 2, 2026",
+    readTime: "12 min read",
+    link: "/thailand/bangkok/destination-guides/international-holiday-packages-itinerary-planning/",
+  },
   // ===================== ACTIVITY BLOGS (new from doc) =====================
   {
     title: "Chao Phraya Princess Dinner Cruise Review: Is It Worth It in 2026?",
