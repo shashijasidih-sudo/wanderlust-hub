@@ -38,7 +38,7 @@ interface PricingCalculatorProps {
 
 const PricingCalculator = ({ 
   basePrice, 
-  childPrice, 
+  childPrice = 0, 
   activityName, 
   tourTimings,
   pricePerVehicle = false,
