@@ -31,7 +31,6 @@ const BangkokDestinationGuides = () => {
   const [active, setActive] = useState<BangkokBlogCategory | "all">("all");
 
   useEffect(() => {
-    const prevTitle = document.title;
     document.title = `${SEO_TITLE} | Yellodae`;
     const upsertMeta = (sel: string, attr: string, val: string, content: string) => {
       let m = document.querySelector<HTMLMetaElement>(sel);
@@ -45,9 +44,7 @@ const BangkokDestinationGuides = () => {
     upsertMeta('meta[name="description"]', "name", "description", SEO_DESC);
     upsertMeta('meta[property="og:title"]', "property", "og:title", SEO_TITLE);
     upsertMeta('meta[property="og:description"]', "property", "og:description", SEO_DESC);
-    return () => {
-      document.title = prevTitle;
-    };
+    // The next page owns its title; restoring here can overwrite its SEO title.
   }, []);
 
   const grouped = useMemo(
