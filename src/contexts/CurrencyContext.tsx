@@ -90,7 +90,7 @@ export const CurrencyProvider = ({ children }: { children: ReactNode }) => {
   }, [currency, rates]);
 
   const formatPrice = useCallback((amountInINR: number) => {
-    const converted = convertPrice(amountInINR);
+    const converted = convertPrice(Number.isFinite(amountInINR) ? amountInINR : 0);
     return `${currencyInfo.symbol}${converted.toLocaleString(undefined, { minimumFractionDigits: currency === "INR" ? 0 : 2, maximumFractionDigits: 2 })}`;
   }, [convertPrice, currencyInfo, currency]);
 
