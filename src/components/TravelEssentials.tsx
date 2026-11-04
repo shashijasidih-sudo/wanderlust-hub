@@ -131,8 +131,6 @@ const Card = ({ item }: { item: Item }) => {
       target="_blank"
       rel="noopener noreferrer nofollow"
       className="group flex flex-col rounded-xl border border-border bg-card hover:border-primary hover:shadow-lg transition-all overflow-hidden"
-      itemScope
-      itemType="https://schema.org/Product"
     >
       <div className="relative aspect-[4/3] overflow-hidden bg-muted">
         <SafeImage
@@ -141,7 +139,6 @@ const Card = ({ item }: { item: Item }) => {
           width={600}
           height={450}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-          itemProp="image"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
         <div className="absolute top-2 left-2 w-8 h-8 rounded-lg bg-white/95 backdrop-blur text-primary flex items-center justify-center shadow-sm">
@@ -153,7 +150,7 @@ const Card = ({ item }: { item: Item }) => {
         </span>
       </div>
       <div className="p-3">
-        <h4 className="text-sm font-semibold text-foreground leading-snug group-hover:text-primary transition-colors" itemProp="name">
+        <h4 className="text-sm font-semibold text-foreground leading-snug group-hover:text-primary transition-colors">
           {item.title}
         </h4>
       </div>
