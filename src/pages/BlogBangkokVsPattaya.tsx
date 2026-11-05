@@ -1,8 +1,16 @@
 import BlogArticleLayout from "@/components/BlogArticleLayout";
 import heroImg from "@/assets/blog-bangkok-vs-pattaya.webp";
+import { useLocation } from "react-router-dom";
+import seoFallbackMeta from "@/data/seoFallbackMeta.json";
 
-const BlogBangkokVsPattaya = () => (
+const BlogBangkokVsPattaya = () => {
+  // Served at a Bangkok and a Pattaya guide address; each gets its own title and description.
+  const { pathname } = useLocation();
+  const pathMeta = (seoFallbackMeta as Record<string, { title: string; description: string }>)[pathname.endsWith("/") ? pathname : `${pathname}/`];
+  return (
   <BlogArticleLayout
+    metaTitle={pathMeta?.title}
+    metaDescription={pathMeta?.description}
     /* SEO — Primary: bangkok vs pattaya | Intent: Informational */
     title="Bangkok vs Pattaya 2026: Which to Pick for Your Trip"
     description="Bangkok or Pattaya in 2026? Compare nightlife, family activities, beaches, costs and travel time — written for Indian travellers planning Thailand."
@@ -115,6 +123,7 @@ const BlogBangkokVsPattaya = () => (
       { title: "Explore All Pattaya Tours & Activities", link: "/thailand/pattaya-activities/" },
     ]}
   />
-);
+  );
+};
 
 export default BlogBangkokVsPattaya;
