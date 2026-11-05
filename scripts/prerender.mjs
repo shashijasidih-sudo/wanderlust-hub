@@ -260,7 +260,12 @@ function withPageHead(html, pathname) {
 // Homepage: preload the final hero image, but keep #root empty until React
 // mounts. A static image-first shell causes a visible flash before the real
 // header, search controls and navigation appear.
-writeFileSync(INDEX, withPreload(baseHtml, "/"));
+writeFileSync(
+  INDEX,
+  withPreload(baseHtml, "/")
+    .replace(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi, "")
+    .replace("</head>", `<link data-rh="true" rel="canonical" href="${ORIGIN}/">\n</head>`)
+);
 
 
 let written = 0;
