@@ -1,0 +1,1611 @@
+{
+ "private": [
+  "/cart/",
+  "/customer-information/",
+  "/my-bookings/",
+  "/profile/",
+  "/routes-health-check/",
+  "/settings/",
+  "/user-bookings/",
+  "/user-profile/",
+  "/wishlist/"
+ ],
+ "pages": {
+  "/blog/": {
+   "title": "Travel Blog & Destination Guides | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/airport-transfer-booking-singapore/": {
+   "title": "Complete Guide to Airport Transfer Booking in Singapore | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/airport-transfer-booking-thailand/": {
+   "title": "Complete Guide to Airport Transfer Booking in Thailand | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/bangkok-activities-guide/": {
+   "title": "Bangkok Activities 2026: 15 Best Things to Book Online | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/best-pattaya-activities/": {
+   "title": "Best Pattaya Activities for First-Time Visitors — 2026 Guide | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/best-singapore-attractions/": {
+   "title": "Best Singapore Attraction Tickets for Indian Travelers 2026 | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/best-thailand-activities/": {
+   "title": "Best Thailand Activities 2026: 15 Top Tours to Book Online | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/night-safari-singapore-guide/": {
+   "title": "Singapore Night Safari Booking Guide 2026 | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/phi-phi-island-tours-thailand/": {
+   "title": "Complete Guide to Phi Phi Island Tours in Thailand | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/phuket-city-tour-tiger-kingdom-transfer-guide/": {
+   "title": "Phuket City Tour with Tiger Kingdom & Transfer: Complete ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/sentosa-activities-singapore/": {
+   "title": "Complete Guide to Sentosa Activities in Singapore | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/singapore-combo-pass/": {
+   "title": "Complete Guide to Singapore Combo Pass — Save Up to 40% | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/singapore-food-experiences/": {
+   "title": "Complete Guide to Singapore Food Experiences — Best Culin... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/singapore-summer-activities/": {
+   "title": "Best Singapore Summer Activities 2026 | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/thailand-adventure-activities-2026/": {
+   "title": "The Ultimate Guide to Adventure Activities in Thailand fo... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/thailand-food-experiences/": {
+   "title": "Thailand Food Experiences 2026: Street Food to Rooftop Guide | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/thailand-island-combos/": {
+   "title": "Complete Guide to Thailand Island Combos — Best Tropical ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/thailand-trip-cost-from-india/": {
+   "title": "Thailand Trip Cost From India (2026 Guide): Budget vs Mid... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/top-phuket-island-tours/": {
+   "title": "Top Phuket Island Tours for Indian Travelers — 2026 Guide | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/top-things-singapore/": {
+   "title": "Top Things to Do in Singapore — Complete 2026 Guide | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/blog/universal-studios-singapore-guide/": {
+   "title": "Universal Studios Singapore Ticket Guide 2026 | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/": {
+   "title": "Dubai Activities & Tours | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/abu-dhabi-city-tour/": {
+   "title": "Abu Dhabi City Tour | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/abu-dhabi-ferrari-world/": {
+   "title": "Abu Dhabi City Tour + Ferrari World Ticket with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/aquarium-penguin/": {
+   "title": "Dubai Aquarium and Underwater Zoo with Penguin Cove | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/burj-khalifa-non-prime/": {
+   "title": "Burj Khalifa 124th + 125th Floor: Non Prime Hours | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/burj-khalifa-prime/": {
+   "title": "Burj Khalifa Silver - Fast Track Access (Levels 124 & 125) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/city-tour/": {
+   "title": "Dubai City Tour | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/desert-safari-sharing/": {
+   "title": "Desert Safari with Sharing Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/desert-safari-shisha/": {
+   "title": "Desert Safari with Shisha on Table with Sharing Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/dhow-cruise-creek-lower-deck/": {
+   "title": "Dhow Creek Cruise Dinner - Lower Deck with Transfers | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/dhow-cruise-creek-upper-deck/": {
+   "title": "Dhow Creek Cruise Dinner - Upper Deck with Transfers | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/dhow-cruise-marina-lower-deck/": {
+   "title": "Dhow Dinner Cruise Marina - Lower Deck with Transfers | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/dhow-cruise-marina-upper-deck/": {
+   "title": "Dhow Dinner Cruise Marina - Upper Deck with Transfers | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/dolphin-show/": {
+   "title": "Dubai Dolphin & Seal Show Ticket with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/dubai-city-tour-with-dubai-mall/": {
+   "title": "Dubai City Tour with Dubai Mall | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/fountain-show/": {
+   "title": "Dubai Fountain Show with Lake Ride Tickets | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/global-village/": {
+   "title": "Global Village Dubai | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai-activities/miracle-garden/": {
+   "title": "Miracle Garden Dubai | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/airport-dropoff-zone1/": {
+   "title": "Zone 1 Hotel to Dubai Airport Drop Off - Deira / Bur Dubai / Al Nahda | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/airport-dropoff-zone2/": {
+   "title": "Zone 2 Hotel to Dubai Airport Drop Off - Downtown / DIFC / Business Bay | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/airport-dropoff-zone3/": {
+   "title": "Zone 3 Hotel to Dubai Airport Drop Off - Marina / JBR / The Palm | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/airport-dropoff-zone4/": {
+   "title": "Zone 4 Hotel to Dubai Airport Drop Off - Dubai Parks / Expo / Jebel Ali | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/airport-dropoff-zone5/": {
+   "title": "Zone 5 Hotel to Dubai Airport Drop Off - Bab Al Shams / Al Maha | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/airport-pickup-zone1/": {
+   "title": "Dubai Airport Pickup to Zone 1 - Deira / Bur Dubai / Al Nahda | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/airport-pickup-zone2/": {
+   "title": "Dubai Airport Pickup to Zone 2 - Downtown / DIFC / Business Bay | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/airport-pickup-zone3/": {
+   "title": "Dubai Airport Pickup to Zone 3 - Marina / JBR / The Palm | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/airport-pickup-zone4/": {
+   "title": "Dubai Airport Pickup to Zone 4 - Dubai Parks / Expo / Jebel Ali | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/airport-pickup-zone5/": {
+   "title": "Dubai Airport Pickup to Zone 5 - Bab Al Shams / Al Maha | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/destination-guides/airport-transfer-booking-dubai/": {
+   "title": "Complete Guide to Airport Transfer Booking in Dubai | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/destination-guides/best-dubai-activities/": {
+   "title": "Top Dubai Activities to Book Online in 2026 | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/destination-guides/burj-khalifa-tickets-dubai/": {
+   "title": "Complete Guide to Burj Khalifa Tickets in Dubai | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/destination-guides/desert-safari-deals-dubai/": {
+   "title": "Complete Guide to Desert Safari Deals in Dubai | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/destination-guides/dubai-activities-attraction-tickets-booking-guide/": {
+   "title": "Dubai Activities & Attraction Tickets: Complete Booking Guide",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/destination-guides/dubai-desert-safari-new-attractions-guide/": {
+   "title": "Ultimate Guide to Dubai Desert Safari & New Attractions i... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/destination-guides/dubai-food-experiences/": {
+   "title": "Complete Guide to Dubai Food Experiences — Best Culinary ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/destination-guides/dubai-marina-cruise/": {
+   "title": "Complete Guide to Dubai Marina Cruise in Dubai | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/dubai/destination-guides/dubai-shopping-tours/": {
+   "title": "Dubai Shopping Tours Experience — A Complete Guide 2026 | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/free-business-course/ai-tools-in-business-course/": {
+   "title": "AI Tools in Business Course | Practical AI for Business",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/free-business-course/free-digital-marketing-course-for-businesses/": {
+   "title": "Free Digital Marketing Course | Fundamentals for Beginners",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/japan/destination-guides/": {
+   "title": "Japan Smart Guides — Mount Fuji, Tokyo & Kyoto Activities | Yellodae",
+   "description": "Japan travel blogs — Mount Fuji day tours from Tokyo, Tokyo city tour guide and Kyoto temple itineraries for 2026."
+  },
+  "/japan/destination-guides/activity/kyoto-temple-tour-guide/": {
+   "title": "Kyoto Temple Tour Guide: Fushimi Inari, Arashiyama & Gold... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/japan/destination-guides/activity/mount-fuji-day-tour-from-tokyo/": {
+   "title": "Mount Fuji Day Tour from Tokyo: Best Views, Routes & Insi... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/japan/destination-guides/activity/tokyo-city-tour-guide/": {
+   "title": "Tokyo City Tour Guide: Top Attractions, Hidden Gems & Loc... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/japan/destination-guides/price-cost/japan-trip-cost-from-india/": {
+   "title": "Japan Trip Cost from India (2026): Full Budget Breakdown ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/japan/destination-guides/price-cost/mount-fuji-tour-cost-from-tokyo/": {
+   "title": "Mount Fuji Tour Cost from Tokyo: Budget vs Premium Option... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/japan/destination-guides/price-cost/tokyo-disneyland-ticket-price-guide/": {
+   "title": "Tokyo Disneyland Ticket Price Guide: Latest Costs, Offers... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/": {
+   "title": "Singapore Activities & Tours | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/adventure-cove-waterpark-tickets/": {
+   "title": "Adventure Cove Water Park | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/big-bus-hop-on-hop-off-singapore-city-tour/": {
+   "title": "Big Bus Singapore - Discover Ticket | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/big-bus-night-city-tour-singapore/": {
+   "title": "Big Bus Singapore Night City Tour | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/gardens-by-the-bay-tickets-and-transfers/": {
+   "title": "Gardens by the Bay Tickets & Transfers | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/night-safari-dinner/": {
+   "title": "Night Safari Singapore with Indian Dinner & Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/night-safari-singapore-tickets-and-transfers/": {
+   "title": "Night Safari Singapore | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/rainforest-wild-asia-tickets/": {
+   "title": "Rainforest Wild Asia with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/river-wonders-singapore-tickets/": {
+   "title": "Singapore River Safari | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/sentosa-4d-3-rides/": {
+   "title": "Sentosa 4D Adventureland with 3 Rides Tickets Only | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/sentosa-4d-adventureland-tickets/": {
+   "title": "Sentosa 4D Adventureland | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/sentosa-cable-car-tickets-and-transfers/": {
+   "title": "Sentosa Cable Ride | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/singapore-city-tour/": {
+   "title": "Singapore City Tour with Guide & Transfers | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/singapore-flyer-tickets-and-transfers/": {
+   "title": "Singapore Flyer Tickets & Transfers | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/singapore-river-cruise-tickets-and-transfers/": {
+   "title": "Singapore River Cruise | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/singapore-zoo-tickets/": {
+   "title": "Singapore Zoo + Tram Ride Tickets Only | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/skyhelix-sentosa-tickets/": {
+   "title": "Sentosa Sky Helix | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/universal-studios-singapore-tickets-and-transfers/": {
+   "title": "Universal Studios Singapore Tickets with Hotel Transfers | Instant Confirmation | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/universal-studios-singapore-weekend-tickets/": {
+   "title": "Universal Studios Singapore Weekend Ticket | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore-activities/wings-of-time-show-sentosa-tickets/": {
+   "title": "Wings of Time Sentosa Show Tickets & Transfers | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/": {
+   "title": "Singapore Smart Guides — Itineraries, Activities & Indian Traveler Tips | Yellodae",
+   "description": "Singapore travel blogs across 4 categories — itineraries, activities, comparisons and Indian-traveler tips. Plan your 2026 Singapore trip with INR pricing."
+  },
+  "/singapore/destination-guides/activity/big-bus-singapore-hop-on-hop-off/": {
+   "title": "Big Bus Singapore Hop-On Hop-Off Experience — Routes, Tip... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/activity/gardens-by-the-bay-guide/": {
+   "title": "Gardens by the Bay Attractions Guide — Cloud Forest, Flow... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/activity/night-safari-singapore-guide/": {
+   "title": "Night Safari Singapore Experience Guide (Tram, Trails & T... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/activity/sentosa-4d-adventureland-guide/": {
+   "title": "Sentosa 4D Adventureland Complete Experience (Rides, Tips... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/activity/sentosa-cable-car-mount-faber-line/": {
+   "title": "Sentosa Cable Car Ride Guide (Mount Faber Line) — 2026 | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/activity/singapore-airport-pickup-guide-indian-travellers/": {
+   "title": "Singapore Airport Pickup Guide for Indian Travellers (2026) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/activity/singapore-city-tour-with-shared-transfer/": {
+   "title": "Singapore City Tour with Guide & Shared Transfer Itinerar... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/activity/singapore-flyer-observation-wheel/": {
+   "title": "Singapore Flyer Observation Wheel Experience — Complete 2... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/activity/singapore-river-cruise-guide/": {
+   "title": "Singapore River Cruise Experience — Day vs Night & Route ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/activity/universal-studios-singapore-guide/": {
+   "title": "Universal Studios Singapore Full Experience — Rides, Tips... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/activity/why-everyone-goes-to-marina-bay-sands-12-local-experiences-instead/": {
+   "title": "Why Everyone Goes to Marina Bay Sands… But Locals Recomme... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/activity/wings-of-time-singapore-show/": {
+   "title": "Wings of Time Singapore Show — Seating, Timings & Tips (2... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/comparison/gardens-by-the-bay-vs-singapore-botanic-gardens/": {
+   "title": "Gardens by the Bay vs Singapore Botanic Gardens — Which G... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/comparison/night-safari-vs-singapore-zoo-vs-river-wonders/": {
+   "title": "Night Safari vs Singapore Zoo vs River Wonders — Which Wi... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/comparison/sentosa-cable-car-vs-sentosa-monorail/": {
+   "title": "Sentosa Cable Car vs Sentosa Express Monorail — Best Way ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/comparison/singapore-flyer-vs-skyhelix-sentosa/": {
+   "title": "Singapore Flyer vs SkyHelix Sentosa — Which View Experien... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/comparison/universal-studios-vs-adventure-cove-singapore/": {
+   "title": "Universal Studios vs Adventure Cove Waterpark — Which Is ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/indian-audience/best-singapore-attractions-for-indian-families/": {
+   "title": "Best Singapore Attractions for Indian Families (2026 Guide) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/indian-audience/is-singapore-expensive-for-indian-travelers/": {
+   "title": "Is Singapore Expensive for Indian Travelers? (Complete 20... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/indian-audience/singapore-trip-cost-from-india-with-activities/": {
+   "title": "Singapore Trip Cost from India with Activities (2026 Comp... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/indian-audience/singapore-visa-and-tour-planning-guide-for-indians/": {
+   "title": "Singapore Visa + Tour Planning Guide for Indians (2026 Ed... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/itinerary/singapore-3-days-itinerary-with-uss-sentosa/": {
+   "title": "3 Days Singapore Itinerary with Universal Studios & Sento... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/itinerary/singapore-4-days-itinerary-with-night-safari/": {
+   "title": "4 Days Singapore Itinerary with Night Safari & City Tour ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/itinerary/singapore-5-days-complete-itinerary/": {
+   "title": "5 Days Singapore Itinerary — Complete Plan with Sentosa, ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/destination-guides/itinerary/singapore-honeymoon-itinerary/": {
+   "title": "Singapore Honeymoon Itinerary (5 Days) — Romantic Plan fo... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/night-safari-transfer/": {
+   "title": "Night Safari Singapore with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/singapore-airport-dropoff/": {
+   "title": "Private Singapore Hotel to Changi Airport Drop Off | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/singapore-airport-night-pickup/": {
+   "title": "Private Singapore Changi Airport Night Pick Up to Hotel | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/singapore-airport-pickup/": {
+   "title": "Private Singapore Changi Airport Pick Up to Hotel | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/singapore/things-to-do/": {
+   "title": "Top Things to Do in Singapore (2026) | Tours & Tickets",
+   "description": "Discover best things to do in Singapore including Universal Studios, Gardens by the Bay, Sentosa, Night Safari & Singapore Flyer. Book Singapore activities online."
+  },
+  "/thailand/bangkok-activities/": {
+   "title": "Bangkok Activities & Tours | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/ayutthaya-day-tour-from-bangkok/": {
+   "title": "Ayutthaya Temple Join Tour from Bangkok by Road with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/ayutthaya-sunset-river-cruise/": {
+   "title": "Ayutthaya Glittering Tours from Bangkok with Sunset Cruise Experience with transfers | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/baiyoke-buffet/": {
+   "title": "Baiyoke Sky Restaurant Admission Ticket | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/bangkok-hotel-to-hotel-transfer-4-hours/": {
+   "title": "Bangkok Hotel to Bangkok Hotel (4 Hrs) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-private-transfer/": {
+   "title": "Chao Phraya Princess Dinner Cruise in Bangkok with Private Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise-with-transfer/": {
+   "title": "Chaophraya Princess River Dinner Cruise Over Chaophraya River with Join Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/chao-phraya-princess-dinner-cruise/": {
+   "title": "River Cruise by Chao Phraya Princess Admission Ticket With Indian or International Dinner (No Transfer) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/chao-phraya-princess-valentine-dinner-cruise/": {
+   "title": "Chao Phraya Princess Dinner Cruise: Valentine's Day Celebration | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/chao-phraya-river-boat-bangkok-city-tour/": {
+   "title": "Bangkok City Tour by Boat from Meeting Point | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/dream-world-bangkok-tickets/": {
+   "title": "Dream World Bangkok Super Visa Admission Ticket with Lunch + Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/gems-gallery-bangkok-tickets/": {
+   "title": "Bangkok City and Temple Tours with Gems Gallery | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/golden-buddha-marble-temple-bangkok-city-tour/": {
+   "title": "Bangkok City and Temple Tour with Golden Buddha, Marble Temple, Mini Reclining Buddha, and Gems Gallery | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/grand-palace-wat-phra-kaew-tour/": {
+   "title": "The Best of Bangkok: Royal Grand Palace, Emerald Buddha and Reclining Buddha | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/maeklong-floating-market-tour/": {
+   "title": "Maeklong Railway Market and Damnoensaduak Floating Market Tour in Bangkok | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/mahanakhon-skywalk-tickets/": {
+   "title": "Bangkok Mahanakhon Sky Walk Admission Ticket | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/safari-world/": {
+   "title": "Safari World & Marine Park (Join Transfer) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/sea-life-madame-tussauds-tickets/": {
+   "title": "Bangkok Sea Life Aquarium and Madame Tussauds Admission Ticket (Off Peak Day Timing) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/thai-massage-spa-deals-bangkok/": {
+   "title": "Health Land Gift Voucher: Traditional Thai Massage (120 Min) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/three-temples-bangkok-city-tour-with-transfer/": {
+   "title": "Bangkok's Famous Three Temple Wat Arun, Wat Pho, and Wat Traimit Private City and Cultural Tour | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/tuk-tuk-night-tour-bangkok/": {
+   "title": "Bangkok Night Tour on TUK-TUK Minimum 2 PAX | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/viva-alangka-dinner-cruise/": {
+   "title": "Viva Alangka Dinner Cruise from Asiatique with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/wat-arun-chinatown-tour/": {
+   "title": "Double World Heritage Bangkok City Tour: Sunset at Wat Arun and Chinatown Street Food Experience | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok-activities/wat-arun-wat-pho-golden-buddha-tour/": {
+   "title": "Bangkok's Iconic Three Temple Tour with Grand Palace and Canal Tour | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/bangkok-city-tour-to-pattaya-hotel-transfer/": {
+   "title": "Bangkok Hotel To Bangkok City Tour To Pattaya Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/bangkok-hotel-safari-world-to-don-mueang-airport-transfer/": {
+   "title": "Bangkok Hotel to Safari World to Don Mueang International Airport {DMK} Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/bangkok-hotel-safari-world-to-pattaya-hotel-transfer/": {
+   "title": "Bangkok Hotel To Bangkok Safari World To Pattaya Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer/": {
+   "title": "Bangkok Hotel to Safari World to Suvarnabhumi International Airport {BKK} Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/bangkok-hotel-to-don-mueang-airport-transfer/": {
+   "title": "Bangkok Hotel to Don Mueang Airport {DMK} | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer/": {
+   "title": "Bangkok Hotel To Pattaya Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer/": {
+   "title": "Bangkok Hotel to Suvarnabhumi International Airport {BKK} | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer/": {
+   "title": "Bangkok Hotel to Bangkok 2 Temple Tour to Don Mueang International Airport {DMK} Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer/": {
+   "title": "Bangkok Hotel to Bangkok 2 Temple Tour to Suvarnabhumi International Airport {BKK} Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/": {
+   "title": "Bangkok Destination Guides — Activities, Cost & Itineraries | Yellodae",
+   "description": "Bangkok travel blogs across 7 categories — activities, cost, comparisons, itineraries, Indian tips, micro guides and transfers."
+  },
+  "/thailand/bangkok/destination-guides/activity/bangkok-temple-tour-half-vs-full-day/": {
+   "title": "Bangkok Temple Tour: Half-Day or Full-Day? (2026) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/activity/best-dinner-cruises-bangkok-couples/": {
+   "title": "Best Dinner Cruise in Bangkok for Couples (2026) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/activity/chao-phraya-princess-cruise-review/": {
+   "title": "Chao Phraya Princess Cruise Review 2026: Worth It? | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/activity/grand-palace-bangkok-guide/": {
+   "title": "Grand Palace Bangkok 2026: Dress Code & Ticket Guide | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/activity/mahanakhon-skywalk-tickets-guide/": {
+   "title": "Mahanakhon Skywalk 2026: Ticket Price & Sunset Tips | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/activity/safari-world-bangkok-guide/": {
+   "title": "Safari World Bangkok 2026: Tickets, Shows & Timings | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/activity/sea-life-bangkok-guide/": {
+   "title": "Sea Life Bangkok 2026: Ticket Price & Combo Tips | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/activity/wat-arun-bangkok-guide/": {
+   "title": "Wat Arun Bangkok 2026: Ticket Price, Timings & Photos | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/comparison/bangkok-vs-pattaya/": {
+   "title": "Bangkok vs Pattaya 2026: Which to Pick for Your Trip | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/comparison/bangkok-vs-phuket/": {
+   "title": "Bangkok vs Phuket 2026: Which to Visit First from India | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/comparison/bts-vs-taxi-bangkok/": {
+   "title": "Bangkok BTS vs Taxi 2026: Cost, Speed & When to Use | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/comparison/chao-phraya-princess-vs-white-orchid/": {
+   "title": "Chao Phraya Princess vs White Orchid 2026: Which Wins? | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/comparison/safari-world-vs-sea-life-bangkok/": {
+   "title": "Safari World vs Sea Life Bangkok 2026: Which for Families? | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/comparison/wat-arun-vs-grand-palace/": {
+   "title": "Wat Arun vs Grand Palace 2026: Which to Visit First | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/indian-audience/bangkok-honeymoon-for-indians/": {
+   "title": "Bangkok Honeymoon Guide 2026: Best Plan for Indian Couples | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/indian-audience/bangkok-safety-for-indians/": {
+   "title": "Is Bangkok Safe for Indian Tourists 2026? Honest Safety G... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/indian-audience/bangkok-tips-indian-families/": {
+   "title": "Bangkok Tips for Indian Families 2026: 15 Things to Know | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/indian-audience/best-indian-restaurants-bangkok/": {
+   "title": "Best Indian Restaurants in Bangkok 2026: Pure Veg & Jain ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/indian-audience/inr-to-thai-baht-guide/": {
+   "title": "INR to Thai Baht 2026: Bangkok Currency Guide for Indians | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/indian-audience/thailand-visa-for-indians/": {
+   "title": "Thailand Visa for Indians 2026: Bangkok Trip Visa Guide | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/international-holiday-packages-itinerary-planning/": {
+   "title": "International Holiday Packages & Itinerary Planning Guide",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/itinerary/bangkok-2-day-itinerary/": {
+   "title": "Bangkok 2-Day Itinerary 2026: Perfect Short Trip Plan | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/itinerary/bangkok-3-day-itinerary/": {
+   "title": "Bangkok 3-Day Itinerary 2026: The Perfect First-Time Plan | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/itinerary/bangkok-4-day-itinerary/": {
+   "title": "Bangkok 4-Day Itinerary 2026: Temples, Markets & Day Trips | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/itinerary/bangkok-couple-itinerary/": {
+   "title": "Bangkok Couple Itinerary 2026: Perfect 4-Night Romantic Trip | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/itinerary/bangkok-family-itinerary/": {
+   "title": "Bangkok Family Itinerary 2026: Best 5-Day Trip with Kids | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/itinerary/bangkok-solo-itinerary/": {
+   "title": "Bangkok Solo Itinerary 2026: Safe & Fun 4-Day Plan | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/micro/bangkok-monsoon-guide/": {
+   "title": "Bangkok in Monsoon 2026: Should You Visit in Rain Season? | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/micro/bangkok-shopping-guide/": {
+   "title": "Bangkok Shopping Guide 2026: Best Markets, Malls & Bargai... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/micro/bangkok-sim-card-guide/": {
+   "title": "Bangkok SIM Card 2026: Best Tourist Plans for Indian Trav... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/micro/bangkok-temple-dress-code/": {
+   "title": "Bangkok Temple Dress Code 2026: What to Wear (and Avoid) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/micro/bangkok-tipping-guide/": {
+   "title": "Bangkok Tipping Guide 2026: How Much to Tip Where | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/micro/best-time-to-visit-bangkok/": {
+   "title": "Best Time to Visit Bangkok 2026: Month-by-Month Guide | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/price-cost/bangkok-attraction-ticket-prices/": {
+   "title": "Bangkok Ticket Prices 2026: Attractions Cost & Online Dis... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/price-cost/bangkok-couple-trip-cost/": {
+   "title": "Bangkok Couple Trip Cost 2026: Honeymoon Budget from India | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/price-cost/bangkok-family-trip-cost/": {
+   "title": "Bangkok Family Trip Cost 2026: Family of 4 Budget from India | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/price-cost/bangkok-food-cost/": {
+   "title": "Bangkok Food Cost 2026: Daily Budget for Indian Travellers | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/price-cost/bangkok-trip-cost-from-india/": {
+   "title": "Bangkok Trip Cost from India 2026: Full Budget Breakdown | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/price-cost/cheapest-time-to-visit-bangkok/": {
+   "title": "Cheapest Time to Visit Bangkok 2026: Save 30–40% from India | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/transfer/bangkok-airport-rail-link/": {
+   "title": "Bangkok Airport Rail Link 2026: Cheapest Way to City Center | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/transfer/bangkok-private-transfer/": {
+   "title": "Bangkok Private Transfer 2026: Is It Worth the Extra Cost? | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/transfer/bangkok-to-pattaya-transfer/": {
+   "title": "Bangkok to Pattaya Transfer 2026: Bus, Taxi & Private Car | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/transfer/don-mueang-airport-transfer/": {
+   "title": "Don Mueang (DMK) Airport Transfer 2026: How to Reach Bangkok | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/transfer/grab-vs-taxi-bangkok/": {
+   "title": "Grab vs Taxi in Bangkok 2026: Which Should You Use? | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/destination-guides/transfer/suvarnabhumi-airport-transfer/": {
+   "title": "Suvarnabhumi (BKK) Airport Transfer 2026: Best Options & ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/don-mueang-airport-tiger-topia-to-pattaya-hotel-transfer/": {
+   "title": "Don Mueang International Airport {DMK} To Tiger Topia Sriracha Zoo To Pattaya Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer/": {
+   "title": "Don Mueang International Airport {DMK} To Bangkok Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/don-mueang-airport-to-pattaya-hotel-transfer/": {
+   "title": "Don Mueang International Airport {DMK} To Pattaya Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/suvarnabhumi-airport-tiger-topia-to-pattaya-hotel-transfer/": {
+   "title": "Suvarnabhumi International Airport {BKK} To Tiger Topia Sriracha Zoo To Pattaya Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer/": {
+   "title": "Suvarnabhumi International Airport {BKK} To Bangkok Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/suvarnabhumi-airport-to-pattaya-hotel-transfer/": {
+   "title": "Suvarnabhumi International Airport {BKK} To Pattaya Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/bangkok/things-to-do/": {
+   "title": "Top Things to Do in Bangkok (2025) | Tours & Activities",
+   "description": "Discover best things to do in Bangkok including cruises, temples, tours & attractions. Book Bangkok activities online with best prices."
+  },
+  "/thailand/bangkok/tiger-topia-sriracha-zoo-to-pattaya-hotel-transfer/": {
+   "title": "Bangkok Hotel To Tiger Topia Sriracha Zoo To Pattaya Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/chiang-mai-activities/": {
+   "title": "Chiang Mai Activities & Tours | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/chiang-mai-activities/chiang-rai-golden-triangle-long-neck-tribe-day-trip/": {
+   "title": "Chiang Rai Day Trip: Golden Triangle with Long Neck Tribe from Chiang Mai (Join Tour) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/chiang-mai-activities/city-temple-tour-doi-suthep-chedi-luang-pha-lat-with-transfer/": {
+   "title": "Chiang Mai City Temple Tour: Wat Phra That Doi Suthep, Wat Chedi Luang & Wat Pha Lat with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/chiang-mai-activities/doi-inthanon-national-park-full-day-tour/": {
+   "title": "Doi Inthanon National Park Full Day Tour from Chiang Mai (Join Tour) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/chiang-mai/destination-guides/": {
+   "title": "Chiang Mai Destination Guides — Temples, Day Trips & Tour Costs | Yellodae",
+   "description": "Chiang Mai activity blogs — Doi Suthep, Chiang Rai day trips, Doi Inthanon, temple tour costs and Indian traveler tips."
+  },
+  "/thailand/chiang-mai/destination-guides/activity/best-day-trips-from-chiang-mai/": {
+   "title": "Best Day Trips from Chiang Mai for First-Time Visitors | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/chiang-mai/destination-guides/activity/chiang-mai-temple-tour-price-guide-2026/": {
+   "title": "Chiang Mai Temple Tour Price Guide: What Does It Cost in ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/chiang-mai/destination-guides/activity/chiang-mai-tour-guide-for-indians/": {
+   "title": "Chiang Mai Tour Guide for Indians: Temples, Food & Travel... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/chiang-mai/destination-guides/activity/chiang-rai-day-trip-for-indian-travelers/": {
+   "title": "Chiang Rai Day Trip from Chiang Mai for Indian Travelers | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/chiang-mai/destination-guides/activity/chiang-rai-day-trip-golden-triangle-long-neck-tribe/": {
+   "title": "Chiang Rai Day Trip Guide: Golden Triangle & Long Neck Tr... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/chiang-mai/destination-guides/activity/chiang-rai-vs-doi-inthanon-day-trip/": {
+   "title": "Chiang Rai vs Doi Inthanon Tour: Which Day Trip Should Yo... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/chiang-mai/destination-guides/activity/doi-suthep-temple-complete-guide/": {
+   "title": "Complete Guide to Doi Suthep Temple: History, Views & Tra... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/chiang-mai/destination-guides/activity/visit-doi-suthep-without-climbing-steps/": {
+   "title": "How to Visit Wat Phra That Doi Suthep Without Climbing 30... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/chiang-mai/things-to-do/": {
+   "title": "Top Things to Do in Chiang Mai (2026) | Tours & Activities",
+   "description": "Best things to do in Chiang Mai — Doi Suthep, Doi Inthanon, Chiang Rai Golden Triangle & Long Neck Tribe day trips. Book Chiang Mai tours online with Yellodae."
+  },
+  "/thailand/destination-guides/airport-transfers-international-transport/": {
+   "title": "Airport Transfers Abroad: Thailand, Singapore & Dubai Guide",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/esim-ais/": {
+   "title": "5G eSIM Thailand | AIS | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/koh-samui-activities/": {
+   "title": "Koh Samui Activities & Tours | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/": {
+   "title": "Full Moon Party with Transfer, Koh Samui | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/koh-samui-activities/white-orchid-river-cruise-loy-krathong-festival/": {
+   "title": "White Orchid River Cruise – Loy Krathong Festival (Full Moon Night Party) Join Tour | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/koh-samui/destination-guides/": {
+   "title": "Koh Samui Destination Guides — Full Moon Party & Activities | Yellodae",
+   "description": "Koh Samui activity blogs — Full Moon Party, Loy Krathong cruises, costs, transfers and Indian traveler tips."
+  },
+  "/thailand/koh-samui/destination-guides/activity/first-time-full-moon-party-koh-samui-beginner-guide/": {
+   "title": "First-Time Full Moon Party in Koh Samui: Complete Beginne... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/koh-samui/destination-guides/activity/full-moon-party-thailand-guide-for-indians/": {
+   "title": "Full Moon Party Thailand Guide for Indians: Tips, Costs, ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/koh-samui/destination-guides/activity/full-moon-vs-half-moon-party-thailand/": {
+   "title": "Full Moon Party vs Half Moon Party Thailand: Key Differen... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/koh-samui/destination-guides/activity/hidden-costs-full-moon-party-thailand-2026/": {
+   "title": "Hidden Costs of Full Moon Party Thailand 2026 (Avoid Thes... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/koh-samui/destination-guides/activity/how-to-reach-full-moon-party-from-phuket-and-bangkok/": {
+   "title": "How to Reach Full Moon Party from Phuket and Bangkok | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/koh-samui/destination-guides/activity/koh-samui-full-moon-party-vs-phuket-nightlife/": {
+   "title": "Koh Samui Full Moon Party vs Phuket Nightlife: What's Bet... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/koh-samui/destination-guides/activity/loy-krathong-festival-for-indian-travelers/": {
+   "title": "Loy Krathong Festival for Indian Travelers: What You Must... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/koh-samui/destination-guides/activity/what-happens-at-full-moon-party-thailand/": {
+   "title": "What Happens at a Full Moon Party in Thailand? Real Exper... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/koh-samui/destination-guides/activity/white-orchid-river-cruise-loy-krathong-festival-guide/": {
+   "title": "White Orchid River Cruise Loy Krathong Festival: Full Moo... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi-activities/": {
+   "title": "Krabi Activities & Tours | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi-activities/4-island-tour-longtail-boat-no-park-fee-with-transfer/": {
+   "title": "4 Islands by Longtail Boat (No National Park Fee) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi-activities/4-island-tour-longtail-boat-with-transfer/": {
+   "title": "4 Islands by Longtail Boat (With National Park Fee) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi-activities/4-island-tour-speedboat-with-transfer/": {
+   "title": "4 Islands by Speedboat (With National Park Fee) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi-activities/7-islands-tour-longtail-boat-with-transfer/": {
+   "title": "7 Islands Sunset Tour BBQ with Longtail boat | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi-activities/7-islands-tour-speedboat-with-transfer/": {
+   "title": "7 Islands Sunset Tour BBQ with Speedboat | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi-activities/full-day-emerald-pool-hot-springs-tiger-temple-tour-with-transfer/": {
+   "title": "Emerald Pool + Hot Springs + Tiger Cave with Lunch | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi-activities/hong-island-tour-longtail-boat-with-transfer/": {
+   "title": "Hong Islands by Longtail Boat | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi-activities/hong-island-tour-speedboat-with-transfer/": {
+   "title": "Hong Island Tour (By Speed Boat) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi-activities/james-bond-island/": {
+   "title": "James Bond Island (Phang Nga Bay) Tour with Lunch By Long Tail Boat | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi-activities/phi-phi-island-tour-from-krabi-with-transfer/": {
+   "title": "Phi Phi Island by Speedboat with Transfer from Krabi | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/": {
+   "title": "Krabi Destination Guides — Itineraries, Activities & Transfers | Yellodae",
+   "description": "Krabi travel blogs across 6 categories — itineraries, activities, comparisons, Indian tips, micro guides and transfers."
+  },
+  "/thailand/krabi/destination-guides/activity/15-best-things-to-do-in-krabi/": {
+   "title": "15 Best Things to Do in Krabi for First-Time Travelers (2... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/activity/4-island-tour-krabi-guide/": {
+   "title": "4 Island Tour Krabi Guide: What to Expect + Hidden Tips (... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/activity/hong-island-tour-krabi/": {
+   "title": "Hong Island Tour Krabi: Why It's the Most Beautiful Lagoo... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/activity/kayaking-in-ao-thalane-krabi/": {
+   "title": "Kayaking in Ao Thalane Krabi: Mangrove Adventure Guide (2... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/activity/krabi-emerald-pool-hot-springs-guide/": {
+   "title": "Krabi Emerald Pool & Hot Springs Guide: Worth Visiting in... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/activity/krabi-night-markets-guide/": {
+   "title": "Krabi Night Markets Guide: Food, Shopping & Timings (2026) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/activity/phi-phi-island-tour-from-krabi/": {
+   "title": "Phi Phi Island Tour from Krabi: Full Day Experience Expla... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/comparison/4-island-vs-hong-island-tour-krabi/": {
+   "title": "4 Island Tour vs Hong Island Tour Krabi: Which is Better?... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/comparison/krabi-vs-phi-phi-where-to-stay/": {
+   "title": "Krabi vs Phi Phi Stay: Where Should You Stay? (2026 Guide) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/comparison/krabi-vs-phuket-for-indian-travelers/": {
+   "title": "Krabi vs Phuket: Which is Better for Indian Travelers? (2... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/comparison/longtail-vs-speedboat-in-krabi/": {
+   "title": "Longtail Boat vs Speedboat in Krabi: Which to Choose? (2026) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/indian-audience/best-krabi-packages-for-indian-couples/": {
+   "title": "Best Krabi Packages for Indian Couples (2026 Guide) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/indian-audience/indian-restaurants-in-krabi/": {
+   "title": "Indian Restaurants in Krabi: Where to Eat Vegetarian Food... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/indian-audience/krabi-honeymoon-guide-for-indian-couples/": {
+   "title": "Krabi Honeymoon Guide for Indian Couples (2026) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/itinerary/krabi-3-days-itinerary/": {
+   "title": "3 Days Krabi Itinerary 2026: Short Trip Plan for Phi Phi ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/itinerary/krabi-4-days-itinerary/": {
+   "title": "4 Days Krabi Itinerary 2026: Islands, Beaches & Adventure... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/itinerary/krabi-5-days-itinerary/": {
+   "title": "5 Days Krabi Itinerary with Phi Phi Islands (2026 Complet... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/itinerary/krabi-honeymoon-itinerary/": {
+   "title": "5 Days Krabi Honeymoon Itinerary for Indian Couples (2026... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/micro/best-time-for-island-hopping-in-krabi/": {
+   "title": "Best Time for Island Hopping in Krabi (Month-wise Guide 2... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/micro/is-4-island-tour-krabi-worth-it/": {
+   "title": "Is 4 Island Tour in Krabi Worth It in 2026? (Complete Guide) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/transfer/krabi-airport-to-ao-nang-transfer-guide/": {
+   "title": "Krabi Airport to Ao Nang Transfer Guide (Taxi, Shuttle, C... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/transfer/krabi-speedboat-vs-ferry-which-is-faster/": {
+   "title": "Krabi Speedboat Transfers vs Ferry: Which is Faster? (202... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/transfer/krabi-to-phi-phi-ferry-vs-speedboat/": {
+   "title": "Krabi to Phi Phi Transfer: Ferry vs Speedboat (2026 Guide) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/destination-guides/transfer/phuket-to-krabi-transfer-guide/": {
+   "title": "Phuket to Krabi Transfer Guide (Bus, Ferry, Taxi — 2026) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer/": {
+   "title": "Krabi International Airport {KBV} To Ao Nang Krabi Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/krabi-airport-to-phuket-hotel-transfer/": {
+   "title": "Krabi International Airport {KBV} To Phuket Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer/": {
+   "title": "Krabi Hotel to Krabi International Airport {KBV} Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/krabi-hotel-to-phuket-airport-transfer/": {
+   "title": "Krabi Hotel to Phuket International Airport {HKT} Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer/": {
+   "title": "Krabi Hotel To Phuket Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/phuket-city-tour-to-phuket-hotel-transfer/": {
+   "title": "Krabi Hotel to Phuket City Tour 4 Hours to Phuket Hotel Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/krabi/things-to-do/": {
+   "title": "Top Things to Do in Krabi (2025) | Tours & Activities",
+   "description": "Discover best things to do in Krabi including 4 Islands tour, Hong Island, 7 Islands sunset BBQ, Phi Phi & Emerald Pool. Book Krabi activities online."
+  },
+  "/thailand/pattaya-activities/": {
+   "title": "Pattaya Activities & Tours | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/69-show-pattaya-with-transfer/": {
+   "title": "Show 69 in Pattaya with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/79-show-pattaya-with-transfer/": {
+   "title": "Imagine 79 Show Pattaya with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/89-show-pattaya-with-transfer/": {
+   "title": "Show 89 in Pattaya with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/99-show-pattaya-big-eye-with-transfer/": {
+   "title": "Big Eye Show in Pattaya with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/alcazar-cabaret-show-with-transfer/": {
+   "title": "Alcazar Show Pattaya Ticket with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/big-buddha-gems-gallery-tour/": {
+   "title": "Pattaya City Tour: Big Buddha Hill, Gems Museum and Gallery with Round Trip Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/coral-island-tour-with-transfer-and-indian-lunch/": {
+   "title": "Coral Island Join Tour with Indian Lunch | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/muay-thai-boxing-show-pattaya/": {
+   "title": "Muay Thai Pattaya Admission Ticket | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/nong-nooch-tropical-garden-tickets/": {
+   "title": "Nong Nooch Admission Fees with Show, Lunch and Round Trip Transfer from Pattaya | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/pattaya-dolphinarium-show-tickets/": {
+   "title": "Pattaya Dolphinarium Admission Ticket with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/pattaya-floating-market-guided-tour/": {
+   "title": "Pattaya Floating Market Guided Tour with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/pattaya-floating-market-tour/": {
+   "title": "Discovery Pattaya City Tours with Floating Market - Join Tour | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/pattaya-nightlife-walking-tour/": {
+   "title": "Lost in Nightlight - A Walking, Drinking, and Food Tasting Experience at Pattaya's Red Light District | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya-activities/pattaya-pub-crawl-night-tour/": {
+   "title": "Sunset Club and Pub Crawling Experience at Drinking Street in Pattaya | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/adultshows/": {
+   "title": "Pattaya Adult Shows 18+ | Alcazar, 79, 69, 89 & Big Eye Tickets",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/": {
+   "title": "Pattaya Destination Guides — Activities, Cost & Itineraries | Yellodae",
+   "description": "Pattaya travel blogs across 7 categories — activities, cost, comparisons, itineraries, Indian tips, micro guides and transfers."
+  },
+  "/thailand/pattaya/destination-guides/activity/alcazar-show-pattaya-guide/": {
+   "title": "Alcazar Cabaret Show Pattaya: Seating, Tickets & What to ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/activity/coral-island-pattaya-guide/": {
+   "title": "Coral Island Pattaya Guide: Parasailing, Sea Walk & Full ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/activity/nong-nooch-garden-guide/": {
+   "title": "Nong Nooch Tropical Garden Pattaya Guide: Shows, Tickets ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/activity/pattaya-floating-market-guide/": {
+   "title": "Pattaya Floating Market Guide: Shopping, Food & Entry Tips | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/activity/ramayana-water-park-guide/": {
+   "title": "Ramayana Water Park Pattaya: Rides, Tickets & Tips (Compl... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/activity/sanctuary-of-truth-guide/": {
+   "title": "Sanctuary of Truth Pattaya: Tickets, Architecture & Visit... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/activity/tiffany-show-pattaya-review/": {
+   "title": "Tiffany Show Pattaya Review: Tickets, Seating & Which Sho... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/activity/underwater-world-pattaya-guide/": {
+   "title": "Underwater World Pattaya: Is It Worth Visiting? (Complete... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/comparison/adult-shows-pattaya-comparison/": {
+   "title": "Big Eye vs Show 69 vs Show 89 Pattaya: Honest Comparison ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/comparison/alcazar-vs-tiffany-show/": {
+   "title": "Alcazar vs Tiffany Show Pattaya: Which One Should You Cho... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/comparison/bangkok-vs-pattaya/": {
+   "title": "Bangkok vs Pattaya 2026: Which to Pick for Your Trip | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/comparison/coral-island-tour-vs-koh-larn-diy/": {
+   "title": "Coral Island Tour vs Koh Larn DIY: Which is Better? (2026... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/comparison/pattaya-vs-phuket/": {
+   "title": "Pattaya vs Phuket: Which is Better for Indian Travelers? ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/comparison/ramayana-vs-cartoon-network-water-park/": {
+   "title": "Ramayana vs Cartoon Network Water Park Pattaya: Which is ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/comparison/speedboat-vs-ferry-coral-island/": {
+   "title": "Speedboat vs Ferry to Coral Island Pattaya: Which is Bett... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/indian-audience/indian-restaurants-in-pattaya/": {
+   "title": "Indian Restaurants in Pattaya 2026: Best Places to Eat (V... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/indian-audience/pattaya-for-indian-families/": {
+   "title": "Pattaya for Indian Families 2026: What to Expect (Complet... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/indian-audience/pattaya-safety-for-indians/": {
+   "title": "Is Pattaya Safe for Indian Tourists? 2026 Complete Safety... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/indian-audience/pattaya-travel-tips-for-indians/": {
+   "title": "Pattaya Travel Tips for Indians 2026: First-Time Guide (V... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/itinerary/bangkok-pattaya-5-days-itinerary/": {
+   "title": "Bangkok + Pattaya 5 Days Itinerary 2026: Most Popular Route | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/itinerary/pattaya-2-days-itinerary/": {
+   "title": "Pattaya 2 Days Itinerary 2026: Perfect Weekend Plan | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/itinerary/pattaya-3-days-itinerary/": {
+   "title": "Pattaya 3 Days Itinerary 2026: Activities + Island + Shows | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/itinerary/pattaya-coral-island-combo-itinerary/": {
+   "title": "Pattaya + Coral Island Itinerary 2026: Best Combo Plan | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/itinerary/pattaya-family-itinerary/": {
+   "title": "Pattaya Family Itinerary 2026: 4 Days Plan with Kids | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/itinerary/pattaya-honeymoon-itinerary/": {
+   "title": "Pattaya Honeymoon Itinerary 2026: 4 Days Romantic Plan | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/itinerary/pattaya-nightlife-itinerary/": {
+   "title": "Pattaya Nightlife Itinerary 2026: 2 Nights Plan (Safe & S... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/micro/best-time-to-visit-pattaya/": {
+   "title": "Best Time to Visit Pattaya 2026: Weather, Season & Travel... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/micro/is-coral-island-worth-it/": {
+   "title": "Is Coral Island Worth It? Honest Pattaya Travel Guide 2026 | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/micro/pattaya-beach-activities-tickets/": {
+   "title": "Do You Need Tickets for Pattaya Beach Activities? 2026 Guide | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/micro/pattaya-nightlife-safety-guide/": {
+   "title": "Pattaya Nightlife Safety Guide 2026: How to Enjoy It Safely | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/micro/pattaya-temple-dress-code/": {
+   "title": "What to Wear in Pattaya Temples 2026: Complete Dress Code... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/micro/pattaya-travel-mistakes-to-avoid/": {
+   "title": "Pattaya Travel Mistakes to Avoid 2026: Honest First-Timer... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/price-cost/alcazar-vs-tiffany-show-price/": {
+   "title": "Alcazar vs Tiffany Show Price Comparison 2026: Which Is W... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/price-cost/coral-island-pattaya-price-guide/": {
+   "title": "Coral Island Pattaya Price Guide: Tours vs Self-Planning ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/price-cost/pattaya-3-days-trip-cost/": {
+   "title": "Pattaya 3 Days Trip Cost 2026: Budget vs Luxury (Day-Wise) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/price-cost/pattaya-activity-prices/": {
+   "title": "Pattaya Activity Prices 2026: Full List (Shows, Islands, ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/price-cost/pattaya-trip-cost/": {
+   "title": "Pattaya Trip Cost from India 2026: Complete Budget Breakdown | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/price-cost/pattaya-water-sports-price-guide/": {
+   "title": "Pattaya Water Sports Price Guide 2026: Parasailing, Jet S... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/price-cost/sanctuary-of-truth-ticket-price/": {
+   "title": "Sanctuary of Truth Ticket Price 2026 + Hidden Costs (Patt... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/transfer/bangkok-to-pattaya-transfer/": {
+   "title": "Bangkok to Pattaya Transfer 2026: Taxi, Bus & Private Car... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/transfer/don-mueang-to-pattaya/": {
+   "title": "Don Mueang Airport to Pattaya 2026: Complete Transfer Guide | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/transfer/pattaya-to-bangkok-airport-transfer/": {
+   "title": "Pattaya to Bangkok Airport Transfer 2026: Best Options & ... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/transfer/private-vs-shared-transfers-pattaya/": {
+   "title": "Private vs Shared Transfers in Pattaya 2026: Which is Bet... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/destination-guides/transfer/suvarnabhumi-to-pattaya/": {
+   "title": "Suvarnabhumi Airport to Pattaya 2026: Cost, Travel Time &... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/pattaya-hotel-indra-square-shopping-to-don-mueang-airport-transfer/": {
+   "title": "Pattaya Hotel To Indra Square Shopping To Don Mueang International Airport {DMK} Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/pattaya-hotel-safari-world-to-suvarnabhumi-airport-transfer/": {
+   "title": "Pattaya Hotel to Safari World to Suvarnabhumi International Airport {BKK} Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/pattaya-hotel-to-bangkok-hotel-transfer/": {
+   "title": "Pattaya Hotel To Bangkok Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/pattaya-hotel-to-don-mueang-airport-transfer/": {
+   "title": "Pattaya Hotel to Don Mueang International Airport {DMK} Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/pattaya-hotel-to-suvarnabhumi-airport-transfer/": {
+   "title": "Pattaya Hotel to Suvarnabhumi International Airport {BKK} | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/pattaya-hotel-two-temple-tour-to-don-mueang-airport-transfer/": {
+   "title": "Pattaya Hotel → 2-Temple Tour → Don Mueang (DMK) Airport | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/pattaya-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer/": {
+   "title": "Pattaya Hotel to Bangkok 2 Temple Tour to Suvarnabhumi International Airport {BKK} Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/pattaya-private-car-4-hours/": {
+   "title": "Pattaya City Private Car (4 Hrs) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/pattaya-to-bangkok-city-tour-and-hotel-transfer/": {
+   "title": "Pattaya Hotel To Bangkok City Tour To Bangkok Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/pattaya/things-to-do/": {
+   "title": "Top Things to Do in Pattaya (2025) | Tours & Activities",
+   "description": "Discover best things to do in Pattaya including Coral Island, Alcazar show, floating markets, nightlife & cabaret tours. Book Pattaya activities online."
+  },
+  "/thailand/pattaya/u-tapao-airport-to-pattaya-hotel-transfer/": {
+   "title": "U-Tapao Rayong-Pattaya International Airport (UTP) To Pattaya Hotel Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/": {
+   "title": "Phuket Activities & Tours | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/carnival-magic-show-tickets-with-transfer/": {
+   "title": "Phuket Carnival Magic Admission Ticket with Hotel Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/dolphin-show-phuket-with-transfer/": {
+   "title": "Dolphin Bay Phuket Admission Ticket with Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/elephant-safari/": {
+   "title": "5 km Rafting Adventure + Monkey Caves + ATV Ride + Elephant Trekking + Flying Fox + Lunch | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/": {
+   "title": "Full Day Tour from Phuket to Phi Phi Island, Maya Bay and Khai Island by Speedboat with National Park Fee | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/james-bond-island-sea-canoe-tour-with-transfer/": {
+   "title": "Phang Nga Bay (James Bond Island) Sea Canoe Tour by Long tail Boat | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/": {
+   "title": "James Bond Island (Phang Nga Bay) Tour with Lunch By Long Tail Boat | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/muslim-friendly-tour/": {
+   "title": "Muslim-Friendly Phuket Tour: A Halal Travel Experience | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/phi-phi-island-big-boat-tour-with-transfer/": {
+   "title": "From Phuket: Phi Phi Island Guided Tour by Big Boat with Normal Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/phi-phi-island-premium-speedboat-tour-with-transfer/": {
+   "title": "Phi Phi Island Tour by Big Boat By Royal Jet Cruiser (First Class) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/phi-phi-maya-bay-khai-island-speedboat-tour-with-transfer/": {
+   "title": "Phi Phi-Maya Bay-Khai Full day Tour by Speedboat (Excluded national marine fee) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/phuket-city-tour-with-tiger-kingdom-phuket-tickets-with-transfer/": {
+   "title": "Phuket City Tour and Tiger Experience: Tiger Only | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/phuket-hotel-to-hotel-transfer-4-hours/": {
+   "title": "Phuket City Hourly Rental (4 Hours) Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/phuket-night-market-tour-with-transfer/": {
+   "title": "Phuket City Tour: Sightseeing and Night Market Everyday | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/simon-cabaret-show-with-transfer/": {
+   "title": "Phuket Simon Cabaret Show Ticket with Join Roundtrip Transfer | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket-activities/tiger-kingdom-atv-experience-phuket-with-transfer/": {
+   "title": "Phuket City Tour and Tiger Experience: Tiger + ATV (30 Mins) | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/": {
+   "title": "Phuket Destination Guides — Activities, Cost & Itineraries | Yellodae",
+   "description": "Phuket travel blogs across 6 categories — activities, comparisons, cost, itineraries, Indian tips and transfers."
+  },
+  "/thailand/phuket/destination-guides/activity/25-best-things-to-do-in-phuket-2026/": {
+   "title": "25 Best Things to Do in Phuket in 2026 | Prices & Booking... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/activity/best-phi-phi-island-tours/": {
+   "title": "Best Phi Phi Island Tours from Phuket (2026 Updated Guide) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/activity/big-buddha-phuket-guide/": {
+   "title": "Big Buddha Phuket: Timings, Entry & Complete Visitor Guid... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/activity/dolphin-show-phuket/": {
+   "title": "Dolphin Show Phuket: Tickets, Timing & Honest Review (2026) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/activity/james-bond-island-tour-guide/": {
+   "title": "James Bond Island Tour from Phuket: Complete Experience G... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/activity/maya-bay-tour-guide/": {
+   "title": "Maya Bay Tour Guide: Rules, Best Time & What to Expect (2... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/activity/movies-filmed-in-thailand/": {
+   "title": "Bollywood to Hollywood: 15 Famous Movies Filmed in Thaila... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/activity/phuket-city-tour-guide/": {
+   "title": "Phuket City Tour: Big Buddha, Wat Chalong & Old Town Guid... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/activity/snorkeling-in-phuket-guide/": {
+   "title": "Snorkeling in Phuket: Best Spots, Tours & Cost Guide (2026) | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/comparison/phuket-vs-bali/": {
+   "title": "Phuket vs Bali: Budget, Beaches & Activities Comparison (... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/indian-audience/phuket-honeymoon-for-indian-couples/": {
+   "title": "Phuket Honeymoon for Indians: Best Activities, Khao Lak &... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/itinerary/phuket-4-days-itinerary/": {
+   "title": "4 Days Phuket Itinerary 2026: Phi Phi, City Tour & Activi... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/itinerary/phuket-5-days-itinerary/": {
+   "title": "5 Days Phuket Itinerary 2026: Phi Phi & James Bond Island... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/itinerary/phuket-honeymoon-itinerary/": {
+   "title": "Phuket Honeymoon Itinerary 2026: 4–5 Days Romantic Plan | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/itinerary/phuket-krabi-combo-itinerary/": {
+   "title": "Phuket + Krabi Combo Itinerary 2026: 6–7 Days Thailand Plan | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/itinerary/phuket-luxury-itinerary/": {
+   "title": "Phuket Luxury Itinerary 2026: Premium 5–6 Day Plan & Resorts | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/price-cost/cheapest-phi-phi-tour-from-phuket/": {
+   "title": "Cheapest Phi Phi Island Tour from Phuket: 2026 Deals & Bu... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/price-cost/phuket-hotel-price-guide/": {
+   "title": "Phuket Hotel Price Guide 2026: Cost by Area, Season & Sta... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/price-cost/phuket-street-food-guide-indian-travellers/": {
+   "title": "Phuket Street Food Guide for Indian Travellers (2026): 12... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/price-cost/phuket-tour-package-price-comparison/": {
+   "title": "Phuket Tour Package Price Comparison 2026: 3D, 4D, 5D & 7... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/price-cost/phuket-trip-cost-from-india/": {
+   "title": "Phuket Trip Cost from India 2026: Complete Budget Breakdo... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/destination-guides/transfer/phuket-airport-to-patong/": {
+   "title": "Phuket Airport to Patong: Best Transfer Options (Taxi, Pr... | Yellodae",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/krabi-city-tour-to-krabi-hotel-transfer/": {
+   "title": "Phuket Hotel + 6 Hour Krabi City Tour to Krabi Hotel Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer/": {
+   "title": "HKT Airport + 4 Hour City Tour to Phuket Hotel Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/phuket-airport-to-krabi-hotel-transfer/": {
+   "title": "Phuket International Airport {HKT} to Krabi Hotel Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/phuket-airport-to-phuket-hotel-transfer/": {
+   "title": "Phuket International Airport {HKT} to Phuket Hotel Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/phuket-city-tour-to-krabi-hotel-transfer/": {
+   "title": "Phuket Hotel + 4 Hour City Tour to Krabi Hotel Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/phuket-city-tour-to-phuket-airport-transfer/": {
+   "title": "Phuket Hotel + City Tour to HKT Airport Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/phuket-hotel-to-krabi-airport-transfer/": {
+   "title": "Phuket Hotel to Krabi International Airport {KBV} Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/phuket-hotel-to-krabi-hotel-transfer/": {
+   "title": "Phuket Hotel To Krabi Hotel Drop Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/phuket-hotel-to-phuket-airport-transfer/": {
+   "title": "Phuket Hotel to Phuket International Airport {HKT} Private | Yellodae Trails",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  },
+  "/thailand/phuket/things-to-do/": {
+   "title": "Top Things to Do in Phuket (2025) | Tours & Activities",
+   "description": "Discover best things to do in Phuket including Phi Phi Island, James Bond Island, Tiger Kingdom, Simon Cabaret & more. Book Phuket activities online."
+  },
+  "/why-yellodae/": {
+   "title": "Why choose Yellodae Trails | Trusted Travel Platform for Indians",
+   "description": "Yellodae Trails — India's trusted travel platform for Thailand, Singapore, Dubai and Japan tours, attraction tickets and airport transfers. Book with Yellodae."
+  }
+ }
+}
