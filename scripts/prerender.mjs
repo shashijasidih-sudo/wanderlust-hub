@@ -230,7 +230,10 @@ function headMetaFor(pathname) {
 function withPageHead(html, pathname) {
   if (PRIVATE_PATHS.has(pathname)) {
     // Account/utility pages: keep out of search results.
-    return html.replace("</head>", '<meta name="robots" content="noindex,nofollow" data-rh="true" />\n</head>');
+    return html
+      .replace(/<meta\b[^>]*name=["']robots["'][^>]*>\s*/gi, "")
+      .replace(/<link\b[^>]*rel=["']canonical["'][^>]*>\s*/gi, "")
+      .replace("</head>", '<meta name="robots" content="noindex,nofollow" data-rh="true" />\n</head>');
   }
   const meta = headMetaFor(pathname);
   const escape = (value) => String(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
