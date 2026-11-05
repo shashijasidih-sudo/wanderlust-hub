@@ -204,41 +204,57 @@ function withShell(html, pathname) {
   return html.replace(/<div id="root">\s*<\/div>/, `<div id="root">${shell}</div>`);
 }
 
-// These audited routes publish their canonical in the initial HTML as well as
-// React's head. data-rh lets Helmet replace it rather than add a duplicate.
-const AUDITED_CANONICAL_PATHS = new Set([
-  "/thailand/bangkok-activities/", "/thailand/pattaya-activities/",
-  "/thailand/phuket-activities/", "/thailand/krabi-activities/",
-  "/thailand/koh-samui-activities/", "/thailand/chiang-mai-activities/",
-  "/dubai-activities/", "/singapore-activities/", "/blog/",
-  "/free-business-course/free-digital-marketing-course-for-businesses/",
-]);
-function withAuditedCanonical(html, pathname) {
-  if (pathname === "/thailand/destination-guides/airport-transfers-international-transport/") {
-    const meta = BLOG_META[pathname];
-    if (!meta) return html;
-    const escape = (value) => String(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
-    const title = escape(meta.metaTitle || meta.title);
-    const description = escape(meta.description);
-    const url = `https://yellodae.com${pathname}`;
-    return html.replace(/<title>[\s\S]*?<\/title>/i, "")
-      .replace(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi, "")
-      .replace(/<meta\b[^>]*(?:name|property)=["'](?:description|og:title|og:description|og:type|og:url|twitter:title|twitter:description|twitter:card)["'][^>]*>/gi, "")
-      .replace("</head>", `<title data-rh="true">${title}</title>
-<meta data-rh="true" name="description" content="${description}">
-<link data-rh="true" rel="canonical" href="${url}">
-<meta data-rh="true" property="og:title" content="${title}">
-<meta data-rh="true" property="og:description" content="${description}">
-<meta data-rh="true" property="og:type" content="article">
-<meta data-rh="true" property="og:url" content="${url}">
-<meta data-rh="true" name="twitter:title" content="${title}">
-<meta data-rh="true" name="twitter:description" content="${description}">
-<meta data-rh="true" name="twitter:card" content="summary_large_image">
-</head>`);
-  }
-  if (!AUDITED_CANONICAL_PATHS.has(pathname)) return html;
-  return html.replace(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi, "")
-    .replace("</head>", `<link data-rh="true" rel="canonical" href="https://yellodae.com${pathname}">\n</head>`);
+// Every indexable sitemap page gets its own canonical, title and description
+// in the initial HTML. data-rh lets Helmet replace these tags on hydration
+// instead of adding duplicates. Sources, in priority order: blog source props,
+// hand-written fallbacks (pages without their own <Seo>), the rendered-head
+// snapshot in scripts/seo-meta.json. Private/account pages get no canonical.
+const ORIGIN = "https://yellodae.com";
+const SEO_SNAPSHOT = JSON.parse(readFileSync(resolve(__dirname, "seo-meta.json"), "utf8"));
+const SEO_FALLBACK = JSON.parse(readFileSync(resolve(ROOT, "src/data/seoFallbackMeta.json"), "utf8"));
+const PRIVATE_PATHS = new Set(SEO_SNAPSHOT.private);
+const missingMeta = [];
+
+function headMetaFor(pathname) {
+  const blog = BLOG_META[pathname];
+  if (blog) return { title: blog.metaTitle || blog.title, description: blog.description, type: "article" };
+  const meta = SEO_FALLBACK[pathname] || SEO_SNAPSHOT.pages[pathname];
+  if (meta) return { ...meta, type: "website" };
+  missingMeta.push(pathname);
+  const segs = pathname.split("/").filter(Boolean);
+  const title = `${titleCase(segs[segs.length - 1] || "")} | Yellodae Trails`;
+  return { title, description: null, type: "website" };
+}
+
+function withPageHead(html, pathname) {
+  if (PRIVATE_PATHS.has(pathname)) return html;
+  const meta = headMetaFor(pathname);
+  const escape = (value) => String(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+  const title = escape(meta.title);
+  const url = `${ORIGIN}${pathname.endsWith("/") ? pathname : pathname + "/"}`;
+  const keepDescription = !meta.description;
+  const description = meta.description ? escape(meta.description) : null;
+  const strip = keepDescription
+    ? "og:title|og:type|og:url|twitter:title|twitter:card|twitter:url"
+    : "description|og:title|og:description|og:type|og:url|twitter:title|twitter:description|twitter:card|twitter:url";
+  const tags = [
+    `<title data-rh="true">${title}</title>`,
+    description && `<meta data-rh="true" name="description" content="${description}">`,
+    `<link data-rh="true" rel="canonical" href="${url}">`,
+    `<meta data-rh="true" property="og:title" content="${title}">`,
+    description && `<meta data-rh="true" property="og:description" content="${description}">`,
+    `<meta data-rh="true" property="og:type" content="${meta.type}">`,
+    `<meta data-rh="true" property="og:url" content="${url}">`,
+    `<meta data-rh="true" name="twitter:card" content="summary_large_image">`,
+    `<meta data-rh="true" name="twitter:title" content="${title}">`,
+    description && `<meta data-rh="true" name="twitter:description" content="${description}">`,
+    `<meta data-rh="true" name="twitter:url" content="${url}">`,
+  ].filter(Boolean);
+  return html
+    .replace(/<title>[\s\S]*?<\/title>/i, "")
+    .replace(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi, "")
+    .replace(new RegExp(`<meta\\b[^>]*(?:name|property)=["'](?:${strip})["'][^>]*>`, "gi"), "")
+    .replace("</head>", `${tags.join("\n")}\n</head>`);
 }
 
 // Homepage: preload the final hero image, but keep #root empty until React
@@ -259,10 +275,11 @@ for (const loc of locs) {
   // Don't overwrite real built assets/files
   if (existsSync(outFile)) continue;
   mkdirSync(outDir, { recursive: true });
-  writeFileSync(outFile, withAuditedCanonical(withShell(blogPreload(withPreload(baseHtml, pathname), pathname), pathname), pathname));
+  writeFileSync(outFile, withPageHead(withShell(blogPreload(withPreload(baseHtml, pathname), pathname), pathname), pathname));
   written++;
 }
 
+if (missingMeta.length) console.warn(`[prerender] ${missingMeta.length} pages lack title/description metadata (add them to scripts/seo-meta.json): ${missingMeta.join(", ")}`);
 console.log(`[prerender] wrote ${written} static HTML files for ${locs.length} sitemap URLs.`);
 
 
