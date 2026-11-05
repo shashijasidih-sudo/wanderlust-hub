@@ -273,7 +273,8 @@ writeFileSync(
 
 
 let written = 0;
-for (const loc of locs) {
+// Private account pages are not in the sitemap but still get a static noindex copy.
+for (const loc of [...locs, ...SEO_SNAPSHOT.private.map((p) => ORIGIN + p)]) {
   let pathname;
   try { pathname = new URL(loc).pathname; } catch { continue; }
   if (pathname === "/" || pathname === "") continue;
