@@ -10,6 +10,7 @@ import { CurrencyProvider } from "@/contexts/CurrencyContext";
 import ApprovalBadge from "@/components/ApprovalBadge";
 import FloatingWhatsApp from "@/components/DeferredFloatingWhatsApp";
 import ScrollToTop from "@/components/ScrollToTop";
+import RouteSeoFallback from "@/components/seo/RouteSeoFallback";
 import AnalyticsInit from "@/components/AnalyticsInit";
 import Index from "./pages/Index";
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -477,6 +478,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <RouteSeoFallback />
           <AnalyticsInit />
           <ApprovalBadge />
           <Suspense fallback={<InitialShellFallback />}><Routes>

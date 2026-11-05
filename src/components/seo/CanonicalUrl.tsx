@@ -1,45 +1,27 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 interface CanonicalUrlProps {
-  /** Path beginning with `/`, e.g. "/thailand/bangkok/mahanakhon-skywalk-tickets" */
+  /** Path beginning with `/`, e.g. "/thailand/bangkok/mahanakhon-skywalk-tickets/" */
   path: string;
   /** Origin override; defaults to https://yellodae.com */
   origin?: string;
 }
 
 /**
- * Adds (or updates) <link rel="canonical">, <meta property="og:url">,
- * and <meta name="twitter:url"> tags in <head>, all pointing to a stable
- * absolute URL for the page.
+ * Sets the page's canonical, og:url and twitter:url through Helmet, so it
+ * replaces (never duplicates) the prerendered canonical and any canonical
+ * rendered by <Seo>. Paths are normalised to the trailing-slash form.
  */
 const CanonicalUrl = ({ path, origin = "https://yellodae.com" }: CanonicalUrlProps) => {
-  useEffect(() => {
-    const href = `${origin}${path}`;
-
-    // Canonical link
-    let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-    if (!link) {
-      link = document.createElement("link");
-      link.setAttribute("rel", "canonical");
-      document.head.appendChild(link);
-    }
-    link.setAttribute("href", href);
-
-    // Open Graph URL
-    const upsertMeta = (selector: string, attr: string, attrValue: string) => {
-      let meta = document.querySelector<HTMLMetaElement>(selector);
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.setAttribute(attr, attrValue);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute("content", href);
-    };
-    upsertMeta('meta[property="og:url"]', "property", "og:url");
-    upsertMeta('meta[name="twitter:url"]', "name", "twitter:url");
-  }, [path, origin]);
-
-  return null;
+  const normalized = path === "/" || path.endsWith("/") ? path : `${path}/`;
+  const href = `${origin}${normalized}`;
+  return (
+    <Helmet prioritizeSeoTags>
+      <link rel="canonical" href={href} />
+      <meta property="og:url" content={href} />
+      <meta name="twitter:url" content={href} />
+    </Helmet>
+  );
 };
 
 export default CanonicalUrl;
