@@ -216,6 +216,7 @@ const PRIVATE_PATHS = new Set(SEO_SNAPSHOT.private);
 const missingMeta = [];
 
 function headMetaFor(pathname) {
+  if (SEO_FALLBACK[pathname]) return { ...SEO_FALLBACK[pathname], type: BLOG_META[pathname] ? "article" : "website" };
   const blog = BLOG_META[pathname];
   if (blog) return { title: blog.metaTitle || blog.title, description: blog.description, type: "article" };
   const meta = SEO_FALLBACK[pathname] || SEO_SNAPSHOT.pages[pathname];
@@ -227,7 +228,10 @@ function headMetaFor(pathname) {
 }
 
 function withPageHead(html, pathname) {
-  if (PRIVATE_PATHS.has(pathname)) return html;
+  if (PRIVATE_PATHS.has(pathname)) {
+    // Account/utility pages: keep out of search results.
+    return html.replace("</head>", '<meta name="robots" content="noindex,nofollow" data-rh="true" />\n</head>');
+  }
   const meta = headMetaFor(pathname);
   const escape = (value) => String(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
   const title = escape(meta.title);
