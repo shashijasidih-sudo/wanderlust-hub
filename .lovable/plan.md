@@ -117,53 +117,49 @@ $function$;
 
 ## Does save-booking require code changes?
 
-**For an authenticated booking with valid travel date:** no code change or redeployment is needed to fix these defaults; correcting the existing RPC handles the current payload and retains its confirmation call.
+**Defaults fix, authenticated valid-date booking:** no save-booking edit/redeployment is required; the corrected RPC accepts its current payload and retains the confirmation call.
 
-**For reliable guest/retry behavior:** yes, separate controlled corrections are needed:
+**Reliable recovery/retries:** separately scoped changes are necessary:
+- Reject missing/invalid ownership early: production user_id is NOT NULL, while guest requests produce NULL. Never invent an owner, trust body user_id or relax NOT NULL. Quick Pay and the legacy modal currently send no token.
+- Remove unsupported payment_status if retaining direct-table fallback; preferably fail safely when the transactional RPC is unavailable rather than use non-atomic insert/delete compensation.
+- Handle idempotency lookup errors and verify owner/payment/order before returning an existing booking. Check-then-insert is race-prone; inspect production indexes and duplicates before approving transactional deduplication.
+- Validate Razorpay captured state, order, amount and currency server-side at save time. This deployed source trusts payment fields and marks confirmed without those checks; frontend verification cannot secure a directly callable save endpoint.
+- Check confirmation HTTP status/body and prevent deletion of committed bookings after later failures. Existing-booking retries skip email, so they cannot recover failed delivery automatically.
 
-1. `ownerId` can be NULL for no token, while production user_id is NOT NULL. Body user_id is intentionally ignored. Require and validate a production auth token for this schema; do not invent an owner, accept an untrusted body ID, or relax NOT NULL. Quick Pay and the legacy modal send no token. A guest flow would require separately approved design/schema changes, not this minimum fix.
-2. Remove the unsupported payment_status key from the parent payload if retaining direct-table fallback. The RPC currently ignores it; do not mistake it for stored payment verification. Prefer failing safely when the expected transactional RPC is unavailable instead of a non-atomic insert/delete fallback.
-3. Check errors from the existing-payment lookup; check payment/order/owner consistency before returning existing data. A pre-insert lookup alone is race-prone. Inspect production indexes/duplicates before proposing a uniqueness guard or transactional payment-key lock/check.
-4. Validate captured Razorpay payment, order association, amount and currency server-side at save time. This source marks confirmed without such validation and without requiring a payment_id. Frontend signature verification cannot secure a directly callable save endpoint.
-5. Check send-confirmation HTTP status/body, distinguish delivery from saved booking success, and don't delete a committed booking on later failures. Existing-payment retries currently return before sending confirmation, so a failed initial email isn't retried automatically.
-
-These are findings/proposed changes, **not implemented**. Payment credentials, refunds, database roles and Hostinger settings stay unchanged.
+These are findings, not implemented changes. Credentials, refunds and Hostinger settings remain unchanged. UUID/default correction alone does not prove payment/retry safety.
 
 ## Confirmation and voucher evidence
 
-The deployed save-booking export calls send-confirmation **after a returned saved UUID**, with bookingId/paymentId/orderId; it never reaches that call on the reported transaction failure. A successful call's delivery result is currently unchecked.
+The deployed save-booking calls send-confirmation only **after a returned booking UUID**, with bookingId/paymentId/orderId. The reported transaction failure never reaches that call; delivery responses are currently unchecked.
 
-Only the repository send-confirmation source was available: it loads saved parent/items and sends Yellodae-branded Hostinger SMTP email, displaying existing voucher numbers. It does not generate PDF vouchers or populate voucher URLs. The actual deployed confirmation source/logs and any separate supplier voucher process were **not** supplied, so delivery/voucher generation cannot be confirmed. The repository verify-payment checks signature only and does not create another booking; deployed verification source is still unverified.
+Repository send-confirmation reads parent/items and sends branded Hostinger SMTP email, displaying existing voucher numbers; no PDF generation or voucher URL creation is present. Deployed confirmation source/logs and any supplier voucher process were not supplied. Repository verify-payment checks signature and **does not save a booking**; its deployed copy is still unverified.
 
-## Safe reconciliation of the already-captured Coral Island payment
+## Reconcile the captured Coral Island payment safely
 
-**Do not create a new Razorpay order, charge again, refund automatically or change payment records.**
+1. Obtain exact payment/order IDs, original item/contact/travel details and verified production owner UUID. The exports contain no actual payment IDs; `YL-2026-1014` is not a payment deduplication key.
+2. Read authorized Razorpay payment details: captured state, order association, amount/currency and customer context. Do not create another order, charge again, refund automatically or alter payment records.
+3. Read production bookings by payment/order references and inspect their items. Error 23502 in this atomic RPC means that invocation saved nothing, but another retry may have succeeded.
+4. Reuse a complete matching booking and retry only verified-missing delivery. Stop on incomplete/conflicting/duplicate records; do not overwrite/delete them.
+5. Only after SQL verification and explicit deployment/recovery approval, create the missing booking once using the original verified payment, owner and full details. Serialize recovery against concurrent live retries using reviewed database idempotency protection; today's precheck is insufficient.
+6. Read back UUID, items, prices, dates, guests, pickup details and payment references, then invoke the existing confirmation workflow. Do not claim a voucher exists unless verified.
 
-1. Retrieve the exact payment/order IDs and original saved item/contact/travel payload from redacted production logs or the customer's preserved booking snapshot. The uploaded sources contain no actual payment IDs; `YL-2026-1014` alone is not a payment deduplication key.
-2. Read Razorpay payment details with authorized production access: captured state, order ID, amount, currency and customer/merchant context. Match them to the original booking and authenticated customer's production UUID, not a guessed user.
-3. Read production bookings by `item_details->>payment_id` and order reference, including corresponding booking_items. Check for duplicates/incomplete bookings. Error 23502 in this atomic RPC implies that invocation saved nothing, but other retries may already have succeeded.
-4. If a complete matching booking exists, return/reuse its UUID and retry only verified-missing confirmation/voucher delivery. If incomplete or conflicting, stop for manual review; don't overwrite or delete it.
-5. After SQL testing and explicit deployment/recovery approval, create the missing booking once through the corrected RPC using the original verified payment, owner and full item details. Serialize recovery against live retries with reviewed database idempotency safeguards; the current check-then-insert is not sufficient.
-6. Read back parent/items, price, date, guests, pickup details and payment references. Only then invoke the existing confirmation workflow. Log recovery outcome without exposing customer data. Customer email should not imply a voucher was generated unless verified.
+## Affected files and SQL
 
-## Proposed affected files and SQL
+- **Changed now:** only roadmap.md and this proposal; no application or database edits.
+- **Minimum correction after approval:** public.create_booking_with_items(jsonb,jsonb) and a reviewed SQL migration artifact, not yet created/applied. No table change or Edge Function deployment required for authenticated valid input.
+- **Separate safety work if approved:** save-booking/index.ts, targeted tests and transactional payment idempotency SQL after index/duplicate/access review. Frontend recovery changes may affect PaymentInformation.tsx, QuickPay.tsx and a reachable BookingModal.tsx; not bundled into this SQL proposal.
+- No refund, role/RLS, payment credential, unrelated function, Cloud project or publication changes.
 
-- **Now changed:** roadmap.md and this review proposal only.
-- **Minimum fix after approval:** public.create_booking_with_items(jsonb,jsonb); a reviewed production SQL migration artifact, not yet created/applied. No table changes or Edge Function deployment required for an authenticated valid payload.
-- **Separate safety batch if approved:** supabase/functions/save-booking/index.ts and targeted tests; transactional payment idempotency SQL only after index/duplicate/access review. Frontend recovery changes would affect PaymentInformation.tsx, QuickPay.tsx and any reachable BookingModal.tsx, not bundled silently into the SQL fix.
-- No refund, checkout UI, role policies, payment credentials, Cloud project or unrelated deployment changes.
+## Verification and remaining evidence
 
-## Verification plan and outstanding evidence
+Before deploying, obtain production constraints/FKs/indexes/triggers, booking_status enum values, function owner/execute grants and deployed confirmation/verification configuration. The supplied exports do not include these; no live production inspection was performed.
 
-Before deploying, obtain production constraints/FKs/indexes/triggers, booking_status enum values, function owner/execute grants and deployed confirmation/verification configuration. The column export does not establish these. Verify the target reference again immediately before any approved production action.
+In an isolated disposable database matching those definitions:
+- Reproduce original parent ID/timestamp and child ID/timestamp failures.
+- Test omitted/null/supplied/malformed IDs, each exported default, explicit-null constraints, missing owner/date, and preservation of all supported fields/return record.
+- Test multiple activity/transfer items, distinct UUIDs, forced parent relationships, 0/11-item rejection and malformed JSON; force a child failure and assert full rollback.
+- For separately approved safety work, test concurrent retries, lookup errors, mismatched owner/order/amount and dropped responses: one complete booking, no second charge.
+- Simulate confirmation HTTP failure: saved booking survives; no false delivery claim or duplicate booking. Verify Hostinger/voucher outcomes only with authorized deployed evidence.
+- Run targeted tests and check the automatic production build if application code changes; verify project reference again before any approved production action.
 
-In an isolated disposable database matching the exports and those additional definitions:
-
-1. Reproduce parent ID, parent timestamp, item ID and item timestamp failures with the original function and deployed payload; no paid production writes.
-2. Test omitted/null/supplied/malformed IDs, every default above, explicit NULL constraints, and rejection of missing owner/date. Assert exact returned UUID/record and preservation of every supported field, including optional voucher/refund fields.
-3. Test activity/transfer multi-items, distinct item UUIDs, correct relationships, totals, dates and pickup details; test 0/11 items and malformed JSON. Force child failure and confirm neither parent nor items persists.
-4. For any separately approved retry work, test concurrent same-payment requests, lookup failure, ownership/order/amount mismatch and lost responses. Exactly one complete booking; recovery never charges again.
-5. Simulate confirmation HTTP failure: saved booking survives; no false delivery claim or extra booking. Verify real Hostinger delivery/voucher status only with explicit authorization and deployed evidence.
-6. Run targeted tests and check the automatic production build only if application files change. No production build was run for this documentation-only investigation, and no runtime SQL tests or live reconciliation have occurred.
-
-**Waiting for your approval of the minimum SQL proposal.** Additional safety work and deployment/reconciliation require explicit scope approval and the missing production evidence; approval of the report alone does not authorize publishing or production writes.
+No SQL runtime tests, production build or live payment reconciliation were performed in this documentation-only investigation. **Waiting for approval of the proposal; deployment/recovery also requires the missing evidence and explicit authorization.**
