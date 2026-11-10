@@ -37,23 +37,26 @@ const TransferCartItem = ({ item, onRemove, onUpdateQuantity }: {
               <h3 className="font-semibold text-sm md:text-lg leading-tight line-clamp-2 break-words">{item.title}</h3>
               <p className="text-primary text-xs md:text-sm font-medium">{item.vehicleName}</p>
             </Link>
-            <div className="flex items-center gap-0.5 shrink-0">
+          </div>
+          <div className="flex items-center justify-end gap-1 mt-1">
               <WishlistButton
                 tourSlug={item.slug}
                 tourName={item.title}
                 tourPrice={item.price}
+                accessibleLabel={`Wishlist: ${item.title}`}
                 size="sm"
-                className="h-6 w-6 md:h-8 md:w-8 bg-transparent hover:bg-muted"
+                className="h-8 w-8 bg-transparent hover:bg-muted border border-border"
               />
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => onRemove(item.id)}
-                className="text-destructive hover:bg-destructive/10 h-6 w-6 md:h-8 md:w-8 shrink-0"
+                aria-label={`Delete ${item.title} from cart`}
+                title="Delete from cart"
+                className="text-destructive hover:bg-destructive/10 h-8 w-8 shrink-0 border border-border"
               >
                 <Trash2 className="h-3.5 w-3.5 md:h-5 md:w-5" />
               </Button>
-            </div>
           </div>
           
           <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-xs text-muted-foreground">
@@ -114,23 +117,26 @@ const ActivityCartItem = ({ item, onRemove, onUpdateQuantity }: {
               <h3 className="font-semibold text-sm md:text-lg leading-tight line-clamp-2 break-words">{item.title}</h3>
               <p className="text-xs text-muted-foreground">Activity / Tour</p>
             </Link>
-            <div className="flex items-center gap-0.5 shrink-0">
+          </div>
+          <div className="flex items-center justify-end gap-1 mt-1">
               <WishlistButton
                 tourSlug={item.slug}
                 tourName={item.title}
                 tourPrice={item.price}
+                accessibleLabel={`Wishlist: ${item.title}`}
                 size="sm"
-                className="h-6 w-6 md:h-8 md:w-8 bg-transparent hover:bg-muted"
+                className="h-8 w-8 bg-transparent hover:bg-muted border border-border"
               />
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => onRemove(item.id)}
-                className="text-destructive hover:bg-destructive/10 h-6 w-6 md:h-8 md:w-8 shrink-0"
+                aria-label={`Delete ${item.title} from cart`}
+                title="Delete from cart"
+                className="text-destructive hover:bg-destructive/10 h-8 w-8 shrink-0 border border-border"
               >
                 <Trash2 className="h-3.5 w-3.5 md:h-5 md:w-5" />
               </Button>
-            </div>
           </div>
           
           <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-xs text-muted-foreground">
@@ -252,13 +258,20 @@ const Cart = () => {
   }
 
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  const activityCount = cartItems.filter(item => item.itemType === "activity").reduce((sum, item) => sum + item.quantity, 0);
+  const transferCount = totalItems - activityCount;
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <div className="container mx-auto px-3 md:px-4 py-3 md:py-8">
         <div className="flex items-center justify-between mb-3 md:mb-8">
-          <h1 className="text-xl md:text-3xl font-bold">Your Cart</h1>
+          <div>
+            <h1 className="text-xl md:text-3xl font-bold">Your Cart</h1>
+            <p className="text-xs md:text-sm text-muted-foreground mt-1">
+              {activityCount} {activityCount === 1 ? "activity" : "activities"} · {transferCount} {transferCount === 1 ? "transfer" : "transfers"}
+            </p>
+          </div>
           <Button 
             variant="outline" 
             size="sm" 

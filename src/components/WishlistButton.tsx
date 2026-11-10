@@ -14,9 +14,10 @@ interface WishlistButtonProps {
   tourPrice?: number;
   className?: string;
   size?: "sm" | "default";
+  accessibleLabel?: string;
 }
 
-const WishlistButton = ({ tourSlug, tourName, tourImage, tourPrice, className, size = "default" }: WishlistButtonProps) => {
+const WishlistButton = ({ tourSlug, tourName, tourImage, tourPrice, className, size = "default", accessibleLabel }: WishlistButtonProps) => {
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isReady, setIsReady] = useState(false);
@@ -90,6 +91,8 @@ const WishlistButton = ({ tourSlug, tourName, tourImage, tourPrice, className, s
       size="icon"
       onClick={handleToggleWishlist}
       disabled={isLoading}
+      aria-label={accessibleLabel}
+      title={accessibleLabel}
       className={cn("rounded-full bg-white/80 hover:bg-white transition-colors", size === "sm" ? "h-8 w-8" : "h-10 w-10", className)}
     >
       <Heart
