@@ -1,5 +1,8 @@
 # Approved URL audit fixes
 
+## Direct activity booking
+- [ ] Make the activity calculator add selected dates, guests, options and add-ons to the cart and open Customer Information without a second form; test validation, insertion failures and the live preview flow.
+
 ## International holiday packages guide
 - [x] Add the supplied Word article under Bangkok Destination Guides with the attached thumbnail, exact SEO metadata and contextual travel links; verified document completeness, discovery thumbnail, article image, metadata, canonical, sitemap and transfer CTA in preview. Publication remains pending.
 
