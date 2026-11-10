@@ -2,7 +2,8 @@
 
 ## Production booking investigation (no deployment approved)
 - [x] Inspect local booking, payment verification and confirmation code; prepare a SQL correction and verification proposal without changing application code or either database.
-- [ ] Verify the complete schema, constraints, indexes, triggers, function definition and deployed booking functions in production `cymzgmfnhtnqledwwojt`: blocked by unavailable production read access or schema/function exports.
+- [x] Inspect the supplied production column schema, complete create_booking_with_items definition and deployed save-booking source; revise the minimum correction and paid-booking reconciliation proposal.
+- [ ] Verify production constraints, indexes, triggers, function grants and deployed confirmation/payment verification configuration: these were not included in the exports and live production read access is unavailable.
 - [ ] Apply and verify an approved correction: blocked pending production inspection and explicit implementation approval; no deployment or publishing authorised.
 
 ## Direct activity booking
