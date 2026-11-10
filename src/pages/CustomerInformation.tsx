@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import TripRecommendations from "@/components/recommendations/TripRecommendations";
 import BookingSteps from "@/components/BookingSteps";
 import BookingSummary from "@/components/BookingSummary";
+import WishlistButton from "@/components/WishlistButton";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -18,7 +19,7 @@ import { useCart } from "@/contexts/CartContext";
 import { useAuth } from "@/lib/auth";
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
-import { Hotel, MapPin, Globe, Plane, Wifi, Ticket, Clock } from "lucide-react";
+import { Hotel, MapPin, Globe, Plane, Wifi, Ticket, Clock, Trash2 } from "lucide-react";
 import { detectProductType, pickupTypeFor, emptyItemForm, type BookingItemForm } from "@/lib/bookingItems";
 
 const countries = [
@@ -30,7 +31,7 @@ const countries = [
 
 const CustomerInformation = () => {
   const navigate = useNavigate();
-  const { cartItems } = useCart();
+  const { cartItems, removeFromCart } = useCart();
   const { user } = useAuth();
   const [customerName, setCustomerName] = useState("");
   const [email, setEmail] = useState("");
@@ -44,6 +45,9 @@ const CustomerInformation = () => {
 
   // Per-item details keyed by cart item id
   const [itemDetails, setItemDetails] = useState<Record<string, BookingItemForm>>({});
+  const [removingItemId, setRemovingItemId] = useState<string | null>(null);
+  const activityCount = cartItems.filter(item => item.itemType === "activity").reduce((sum, item) => sum + item.quantity, 0);
+  const transferCount = cartItems.filter(item => item.itemType === "transfer").reduce((sum, item) => sum + item.quantity, 0);
 
   useEffect(() => {
     if (user) {
@@ -76,6 +80,23 @@ const CustomerInformation = () => {
       ...prev,
       [itemId]: { ...(prev[itemId] || emptyItemForm()), [field]: value },
     }));
+  };
+
+  const handleRemoveItem = async (itemId: string) => {
+    if (removingItemId) return;
+    setRemovingItemId(itemId);
+    try {
+      await removeFromCart(itemId);
+      setItemDetails(prev => {
+        const updated = { ...prev };
+        delete updated[itemId];
+        return updated;
+      });
+    } catch {
+      toast.error("Could not remove this item. Please try again.");
+    } finally {
+      setRemovingItemId(null);
+    }
   };
 
   if (cartItems.length === 0) {
@@ -167,6 +188,9 @@ const CustomerInformation = () => {
                 {/* Per-item details section */}
                 <Separator className="my-8" />
                 <h2 className="text-xl font-bold mb-2">Activity / Transfer Details</h2>
+                <p className="text-xs md:text-sm text-muted-foreground mb-2">
+                  {activityCount} {activityCount === 1 ? "activity" : "activities"} · {transferCount} {transferCount === 1 ? "transfer" : "transfers"}
+                </p>
                 <p className="text-sm text-muted-foreground mb-6">Please provide pickup details for each item in your booking.</p>
 
                 <div className="space-y-6">
@@ -184,6 +208,28 @@ const CustomerInformation = () => {
                             <span className="flex-1 min-w-0 truncate">{item.title}</span>
                             <span className="text-xs px-2 py-0.5 rounded-full bg-muted text-muted-foreground flex items-center gap-1">{typeIcon}{typeLabel}</span>
                           </p>
+
+                          <div className="flex items-center justify-end gap-1 mb-4">
+                            <WishlistButton
+                              tourSlug={item.slug}
+                              tourName={item.title}
+                              tourPrice={item.price}
+                              accessibleLabel={`Wishlist: ${item.title}`}
+                              size="sm"
+                              className="h-8 w-8 bg-transparent hover:bg-muted border border-border"
+                            />
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              onClick={() => handleRemoveItem(item.id)}
+                              disabled={removingItemId !== null}
+                              aria-label={`Delete ${item.title} from cart`}
+                              title="Delete from cart"
+                              className="text-destructive hover:bg-destructive/10 h-8 w-8 shrink-0 border border-border"
+                            >
+                              <Trash2 className="h-3.5 w-3.5 md:h-5 md:w-5" />
+                            </Button>
+                          </div>
 
                           {pt === "esim" && (
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
