@@ -1,5 +1,10 @@
 # Approved URL audit fixes
 
+## Production booking investigation (no deployment approved)
+- [x] Inspect local booking, payment verification and confirmation code; prepare a SQL correction and verification proposal without changing application code or either database.
+- [ ] Verify the complete schema, constraints, indexes, triggers, function definition and deployed booking functions in production `cymzgmfnhtnqledwwojt`: blocked by unavailable production read access or schema/function exports.
+- [ ] Apply and verify an approved correction: blocked pending production inspection and explicit implementation approval; no deployment or publishing authorised.
+
 ## Direct activity booking
 - [x] Activity Book Now adds selected dates, guests, options and add-ons to the cart and opens Customer Information without a second form; seven regression tests pass and the guest preview flow preserves the ₹9,000 two-adult booking through reload.
 
