@@ -15,3 +15,4 @@
 - Keep the blog root as a guide-directory page and redirect the Japan root to its existing destination-guide hub, so nested static output never masks useful content with directory access errors.
 - Use optional exact article metadata overrides for supplied SEO titles and descriptions, preserving existing articles' defaults without truncating requested metadata.
 - Treat a tour's child rate as optional in the booking calculator and keep price formatting tolerant of missing amounts, so a tour record without a child price never blanks the widget with a crash.
+- Activity calculator Book Now must await the existing cart insertion before navigating to Customer Information, preserving selections without a second booking modal; share insertion with Add to Cart so both actions retain identical booking details.

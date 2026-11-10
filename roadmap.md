@@ -1,5 +1,8 @@
 # Approved URL audit fixes
 
+## Direct activity booking
+- [x] Activity Book Now adds selected dates, guests, options and add-ons to the cart and opens Customer Information without a second form; seven regression tests pass and the guest preview flow preserves the ₹9,000 two-adult booking through reload.
+
 ## International holiday packages guide
 - [x] Add the supplied Word article under Bangkok Destination Guides with the attached thumbnail, exact SEO metadata and contextual travel links; verified document completeness, discovery thumbnail, article image, metadata, canonical, sitemap and transfer CTA in preview. Publication remains pending.
 

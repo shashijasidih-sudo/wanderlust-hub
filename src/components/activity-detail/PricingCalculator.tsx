@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Calendar, Users, Minus, Plus, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
-import BookingModal from "@/components/BookingModal";
 import { useCart } from "@/contexts/CartContext";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import { trackAddToCart, destinationFromSlug } from "@/lib/analytics";
@@ -52,6 +52,7 @@ const PricingCalculator = ({
   hideChildren = false
 }: PricingCalculatorProps) => {
   const { addToCart } = useCart();
+  const navigate = useNavigate();
   const { formatPrice } = useCurrency();
   const effectiveMin = pricePerVehicle ? 1 : Math.max(minAdults, 1);
   const [adults, setAdults] = useState(pricePerVehicle ? 1 : Math.max(effectiveMin, 2));
@@ -59,7 +60,8 @@ const PricingCalculator = ({
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [vehicles, setVehicles] = useState(1);
-  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [isAddingToCart, setIsAddingToCart] = useState(false);
+  const addingToCart = useRef(false);
   const [selectedOption, setSelectedOption] = useState(tourOptions?.[0]?.label || "");
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
 
@@ -98,19 +100,8 @@ const PricingCalculator = ({
     ? vehicles * basePrice 
     : adults * currentAdultPrice + children * currentChildPrice + addOnTotal;
 
-  const handleBookNow = () => {
-    if (!selectedDate) {
-      toast.error("Please select a date");
-      return;
-    }
-    if (!selectedTime) {
-      toast.error("Please select a tour timing");
-      return;
-    }
-    setIsBookingModalOpen(true);
-  };
-
-  const handleAddToCart = async () => {
+  const handleAddToCart = async (bookNow = false) => {
+    if (addingToCart.current) return;
     if (!selectedDate) {
       toast.error("Please select a date");
       return;
@@ -120,18 +111,29 @@ const PricingCalculator = ({
       return;
     }
 
+    addingToCart.current = true;
+    setIsAddingToCart(true);
+    try {
+    const selections = [selectedOption, ...selectedAddOns].filter(Boolean);
     await addToCart({
       itemType: 'activity',
-      title: activityName,
+      title: selections.length ? `${activityName} — ${selections.join(" + ")}` : activityName,
       price: totalPrice,
       slug: tourSlug,
-      adults: pricePerVehicle ? adults : adults,
+      adults: adults,
       children: children,
-      childPrice: childPrice,
+      childPrice: currentChildPrice,
       selectedDate: selectedDate,
       selectedTime: selectedTime,
       numberOfPersons: adults + children,
+      ...(pricePerVehicle ? {
+        vehicleName: `Private Vehicle (${vehicleCapacity} Seater) × ${vehicles}`,
+        capacity: String(vehicles * vehicleCapacity),
+      } : {}),
     });
+
+    if (bookNow) navigate("/customer-information/");
+    else toast.success("Added to cart successfully!");
 
     trackAddToCart({
       item_id: tourSlug || activityName,
@@ -141,7 +143,13 @@ const PricingCalculator = ({
       quantity: 1,
     });
 
-    toast.success("Added to cart successfully!");
+    } catch (error) {
+      console.error("Failed to add selected activity to cart:", error);
+      toast.error("Could not add this activity to your cart. Please try again.");
+    } finally {
+      addingToCart.current = false;
+      setIsAddingToCart(false);
+    }
   };
 
   return (
@@ -474,14 +482,16 @@ const PricingCalculator = ({
 
         <div className="flex gap-3">
           <Button 
-            onClick={handleAddToCart}
+            onClick={() => handleAddToCart()}
+            disabled={isAddingToCart}
             variant="outline"
             className="flex-1 text-lg py-6 border-2 border-primary hover:bg-primary/10"
           >
             Add to Cart
           </Button>
           <Button 
-            onClick={handleBookNow}
+            onClick={() => handleAddToCart(true)}
+            disabled={isAddingToCart}
             className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-6"
           >
             Book Now
@@ -501,14 +511,6 @@ const PricingCalculator = ({
         </div>
       </CardContent>
 
-      <BookingModal
-        isOpen={isBookingModalOpen}
-        onClose={() => setIsBookingModalOpen(false)}
-        tourName={activityName}
-        tourSlug={tourSlug}
-        pricePerAdult={currentAdultPrice}
-        pricePerChild={currentChildPrice}
-      />
     </Card>
   );
 };
