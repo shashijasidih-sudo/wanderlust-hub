@@ -1,7 +1,7 @@
 # Approved URL audit fixes
 
 ## Production booking investigation (no deployment approved)
-- [ ] Prepare SQL Pack v6 with complete review-only order ownership, pricing reconciliation, frontend log removal, test and rollback proposals; do not change application or production code.
+- [x] Prepare SQL Pack v6 and review-only source ZIP with authenticated order ownership, exact checkout pricing reconciliation, proposed browser log removal, 25 passing isolated tests and coordinated rollback; application and production unchanged. Live deployed create-order/frontend comparison and authenticated end-to-end checks remain blocked by unavailable production read access and implementation approval.
 - [x] Inspect local booking, payment verification and confirmation code; prepare a SQL correction and verification proposal without changing application code or either database.
 - [x] Inspect the supplied production column schema, complete create_booking_with_items definition and deployed save-booking source; revise the minimum correction and paid-booking reconciliation proposal.
 - [ ] Verify production constraints, indexes, triggers, function grants and deployed confirmation/payment verification configuration: these were not included in the exports and live production read access is unavailable.
