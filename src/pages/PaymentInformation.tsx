@@ -32,7 +32,7 @@ interface CustomerInfo {
 }
 
 import { buildBookingItemsFromCart, type BookingItemForm } from "@/lib/bookingItems";
-import { supabase } from "@/lib/supabaseClient";
+import { bookingRequest, CheckoutSignInRequired, clearCheckoutSnapshot, postCheckout, prepareCheckout, requireCheckoutSession } from "@/lib/checkoutRequests";
 
 
 const PaymentInformation = () => {
@@ -109,52 +109,47 @@ const PaymentInformation = () => {
   }
 
   const handlePayment = async () => {
+    if (isProcessing) return;
     setIsProcessing(true);
     try {
+      await requireCheckoutSession();
       const totalAmountPaise = Math.round(getCartTotal() * 100);
 
       // Save booking data to localStorage BEFORE payment
       const bookingItems = buildBookingItemsFromCart(cartItems, savedItemDetails, "INR");
-      const bookingData = {
+      const bookingData = prepareCheckout({
         customer_name: customerInfo?.customerName || "",
         customer_email: customerInfo?.email || "",
         customer_phone: customerInfo?.phone || "",
         tour_name: cartItems.length > 1 ? `${cartItems.length} experiences` : cartItems[0]?.title || "",
         tour_slug: cartItems[0]?.slug || "cart-booking",
-        tour_date: cartItems[0]?.selectedDate || cartItems[0]?.pickupDate || new Date().toISOString().split("T")[0],
+        tour_date: cartItems[0]?.selectedDate || cartItems[0]?.pickupDate || "",
         adults: cartItems.reduce((sum, i) => sum + (i.adults || i.quantity || 1), 0),
         children: cartItems.reduce((sum, i) => sum + (i.children || 0), 0),
         amount: totalAmountPaise,
         currency: "INR",
         total_price: getCartTotal(),
         items: bookingItems,
-      };
-      localStorage.setItem("booking_data", JSON.stringify(bookingData));
-      console.log("Booking data saved to localStorage before payment:", bookingData);
-
-      const response = await fetch(
-        "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/create-order",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "apikey": "sb_publishable_g-zBlAMHwj9NJLvq13RjWg_BEIq-Frq",
-            "Authorization": "Bearer sb_publishable_g-zBlAMHwj9NJLvq13RjWg_BEIq-Frq",
-          },
-          body: JSON.stringify({ amount: totalAmountPaise }),
-        }
-      );
+      });
+      const response = await postCheckout("create-order", {
+        amount: bookingData.amount, currency: bookingData.currency,
+        checkout_ref: bookingData.checkout_ref, items: bookingData.items,
+      });
 
       const data = await response.json();
 
       if (!response.ok) {
-        console.error("Order error:", data);
+        console.error("Order error", { code: data?.code });
         toast.error("Failed to create payment order");
         setIsProcessing(false);
         return;
       }
 
-      console.log("Order created:", data);
+      if (!data?.id || data.amount !== bookingData.amount || data.currency !== bookingData.currency || data.checkout_ref !== bookingData.checkout_ref) {
+        toast.error("Failed to create payment order");
+        setIsProcessing(false);
+        return;
+      }
 
       const options = {
         key: "rzp_live_STVnS52vFJiowF",
@@ -165,7 +160,7 @@ const PaymentInformation = () => {
         order_id: data.id,
 
         handler: async function (resp: any) {
-          console.log("Payment success:", resp);
+
 
           try {
             // Server-side signature verification BEFORE trusting the payment
@@ -187,53 +182,19 @@ const PaymentInformation = () => {
             );
             const verifyData = await verifyRes.json().catch(() => ({}));
             if (!verifyRes.ok || !verifyData?.verified) {
-              console.error("Payment signature verification failed:", verifyData);
+              console.error("Payment signature verification failed", { code: "signature_verification_failed" });
               toast.error("Payment could not be verified. Please contact support.");
               setIsProcessing(false);
               return;
             }
 
-            // Retrieve saved booking data
-            const savedData = JSON.parse(localStorage.getItem("booking_data") || "{}");
-            const finalData = {
-              payment_id: resp.razorpay_payment_id,
-              order_id: resp.razorpay_order_id,
-              // user_id is derived server-side from the bearer token, never sent from the client
-              tour_name: savedData.tour_name,
-              tour_slug: savedData.tour_slug,
-              tour_date: savedData.tour_date,
-              total_price: savedData.total_price,
-              contact_name: savedData.customer_name,
-              contact_email: savedData.customer_email,
-              contact_phone: savedData.customer_phone || "",
-              adults: savedData.adults || 1,
-              children: savedData.children || 0,
-              currency: savedData.currency || "INR",
-              special_requests: savedData.special_requests || null,
-              items: savedData.items || [],
-            };
-            console.log("FINAL DATA to save:", finalData);
-
-            // Save booking (atomic: parent booking + all items, or nothing)
-            const { data: sessionData } = await supabase.auth.getSession();
-            const accessToken = sessionData?.session?.access_token;
-
-            const saveRes = await fetch(
-              "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/save-booking",
-              {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                  ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
-                },
-                body: JSON.stringify(finalData),
-              }
-            );
+            const finalData = bookingRequest(bookingData, resp, data.id);
+            const saveRes = await postCheckout("save-booking", finalData);
 
             const saveResult = await saveRes.json().catch(() => ({} as any));
 
             if (!saveRes.ok || !saveResult?.success) {
-              console.error("Save booking failed:", saveResult);
+              console.error("Save booking failed", { code: saveResult?.code });
               toast.error(
                 saveResult?.error ||
                   "Your payment went through but we could not save the booking. Please contact support with payment ID " +
@@ -244,7 +205,7 @@ const PaymentInformation = () => {
               return; // do NOT clear the cart or show the confirmation page
             }
 
-            console.log("Booking saved, send-confirmation triggered server-side:", saveResult);
+
             const bookingId: string =
               saveResult?.booking?.id ||
               saveResult?.booking?.booking_id ||
@@ -271,9 +232,11 @@ const PaymentInformation = () => {
               },
             });
 
-            localStorage.removeItem("booking_data");
+            clearCheckoutSnapshot(bookingData.checkout_ref);
           } catch (err) {
-            console.error("Failed to save booking or send confirmation:", err);
+            console.error("Failed to save booking", { code: "booking_save_failed" });
+            setIsProcessing(false);
+            return;
           }
 
           clearCart();
@@ -318,7 +281,12 @@ const PaymentInformation = () => {
       });
       rzp.open();
     } catch (error) {
-      console.error("Payment error:", error);
+      if (error instanceof CheckoutSignInRequired) {
+        setIsProcessing(false);
+        navigate("/auth/");
+        return;
+      }
+      console.error("Payment error", { code: "checkout_failed" });
       toast.error("Something went wrong");
       setIsProcessing(false);
     }

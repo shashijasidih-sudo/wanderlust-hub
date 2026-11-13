@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { bookingRequest, CheckoutSignInRequired, clearCheckoutSnapshot, postCheckout, prepareCheckout, requireCheckoutSession } from "@/lib/checkoutRequests";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -21,6 +23,7 @@ declare global {
 }
 
 const QuickPay = () => {
+  const navigate = useNavigate();
   const [amount, setAmount] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -39,6 +42,7 @@ const QuickPay = () => {
   }, []);
 
   const handlePayment = async () => {
+    if (isProcessing) return;
     const amountNum = parseFloat(amount);
     if (!amountNum || amountNum < 1) { toast.error("Please enter a valid amount (minimum ₹1)"); return; }
     if (amountNum > 500000) { toast.error("Maximum amount is ₹5,00,000"); return; }
@@ -48,12 +52,13 @@ const QuickPay = () => {
 
     setIsProcessing(true);
     try {
+      await requireCheckoutSession();
       if (!window.Razorpay) { toast.error("Payment gateway is loading. Please try again."); setIsProcessing(false); return; }
 
       const totalAmountPaise = Math.round(amountNum * 100);
 
       // Save booking data to localStorage BEFORE payment
-      const bookingData = {
+      const bookingData = prepareCheckout({
         customer_name: name.trim(),
         customer_email: email.trim(),
         customer_phone: phone.trim(),
@@ -65,24 +70,14 @@ const QuickPay = () => {
         amount: totalAmountPaise,
         currency: "INR",
         total_price: amountNum,
-      };
-      localStorage.setItem("booking_data", JSON.stringify(bookingData));
-      console.log("Booking data saved to localStorage before payment:", bookingData);
+      });
 
       let order: any;
       try {
-        const res = await fetch(
-          "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/create-order",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "apikey": "sb_publishable_g-zBlAMHwj9NJLvq13RjWg_BEIq-Frq",
-              "Authorization": "Bearer sb_publishable_g-zBlAMHwj9NJLvq13RjWg_BEIq-Frq",
-            },
-            body: JSON.stringify({ amount: totalAmountPaise }),
-          }
-        );
+        const res = await postCheckout("create-order", {
+          amount: bookingData.amount, currency: bookingData.currency,
+          checkout_ref: bookingData.checkout_ref, items: bookingData.items,
+        });
         const data = await res.json();
         if (!res.ok) throw new Error(data?.error || "Order creation failed");
         order = data;
@@ -91,7 +86,7 @@ const QuickPay = () => {
         setIsProcessing(false); return;
       }
 
-      if (!order?.id) { toast.error("Failed to create payment order. Please try again."); setIsProcessing(false); return; }
+      if (!order?.id || order.amount !== bookingData.amount || order.currency !== bookingData.currency || order.checkout_ref !== bookingData.checkout_ref) { toast.error("Failed to create payment order. Please try again."); setIsProcessing(false); return; }
 
       const options = {
         key: RAZORPAY_KEY_ID, amount: totalAmountPaise, currency: "INR", order_id: order.id,
@@ -100,7 +95,7 @@ const QuickPay = () => {
         prefill: { name: name.trim(), email: email.trim(), contact: phone.trim() },
         theme: { color: "#f97316" },
         handler: async function (response: any) {
-          console.log("Payment success:", response);
+
           try {
             // Server-side signature verification BEFORE trusting the payment
             const verifyRes = await fetch(
@@ -121,55 +116,21 @@ const QuickPay = () => {
             );
             const verifyData = await verifyRes.json().catch(() => ({}));
             if (!verifyRes.ok || !verifyData?.verified) {
-              console.error("Payment signature verification failed:", verifyData);
+              console.error("Payment signature verification failed", { code: "signature_verification_failed" });
               toast.error("Payment could not be verified. Please contact support.");
               setIsProcessing(false);
               return;
             }
 
-            // Retrieve saved booking data
-            const savedData = JSON.parse(localStorage.getItem("booking_data") || "{}");
-            const finalData = {
-              payment_id: response.razorpay_payment_id,
-              order_id: response.razorpay_order_id,
-              user_id: savedData.user_id || "",
-              contact_name: savedData.customer_name || name.trim(),
-              contact_email: savedData.customer_email || email.trim(),
-              contact_phone: savedData.customer_phone || "",
-              tour_name: savedData.tour_name || description.trim() || "Quick Payment",
-              tour_slug: savedData.tour_slug || "quick-pay",
-              tour_date: savedData.tour_date || new Date().toISOString().split("T")[0],
-              total_price: savedData.total_price || Number(amount),
-              currency: savedData.currency || "INR",
-              adults: savedData.adults || 1,
-              children: savedData.children || 0,
-              special_requests: savedData.special_requests || null,
-            };
-            console.log("FINAL DATA to save:", finalData);
-
-            // Save booking
-            const saveRes = await fetch(
-              "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/save-booking",
-              {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(finalData),
-              }
-            );
-
-            let bookingId: string | undefined;
-            if (saveRes.ok) {
-              const saveResult = await saveRes.json();
-              console.log("Booking saved, send-confirmation triggered server-side:", saveResult);
-              bookingId =
-                saveResult?.booking?.id ||
-                saveResult?.booking?.booking_id ||
-                saveResult?.id ||
-                response.razorpay_payment_id;
-            } else {
-              console.error("Save booking failed:", await saveRes.text());
-              bookingId = response.razorpay_payment_id;
+            const finalData = bookingRequest(bookingData, response, order.id);
+            const saveRes = await postCheckout("save-booking", finalData);
+            const saveResult = await saveRes.json().catch(() => ({}));
+            if (!saveRes.ok || !saveResult?.success || !saveResult?.booking?.id) {
+              console.error("Save booking failed", { code: saveResult?.code ?? "booking_save_failed" });
+              setIsProcessing(false);
+              return;
             }
+            const bookingId = saveResult.booking.id;
 
             // GA4 purchase — fires ONCE, only after booking saved
             const nameParts = (finalData.contact_name || "").trim().split(/\s+/);
@@ -187,12 +148,15 @@ const QuickPay = () => {
               },
             });
 
-            localStorage.removeItem("booking_data");
+            clearCheckoutSnapshot(bookingData.checkout_ref);
           } catch (err) {
-            console.error("Failed to save booking or send confirmation:", err);
+            console.error("Failed to save booking", { code: "booking_save_failed" });
+            setIsProcessing(false);
+            return;
           }
           toast.success(`Payment successful! ID: ${response.razorpay_payment_id}`);
           setAmount(""); setDescription(""); setName(""); setEmail(""); setPhone("");
+          setIsProcessing(false);
         },
         modal: {
           ondismiss: () => {
@@ -226,9 +190,12 @@ const QuickPay = () => {
       });
       razorpay.open();
     } catch (error) {
-      console.error("Payment error:", error);
+      if (error instanceof CheckoutSignInRequired) {
+        navigate("/auth/");
+        return;
+      }
+      console.error("Payment error", { code: "checkout_failed" });
       toast.error("Failed to initiate payment. Please try again.");
-    } finally {
       setIsProcessing(false);
     }
   };

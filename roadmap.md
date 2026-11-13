@@ -1,6 +1,7 @@
 # Approved URL audit fixes
 
 ## Production booking investigation (no deployment approved)
+- [ ] Prepare coordinated v6/v6.1 repository implementation: review-only unchanged atomic SQL, authenticated/fingerprinted create-order and signature/API-verified RPC-only save-booking, active cart and Quick Pay contract integration without wording/layout changes, offline tests and release-blocker report. SQL execution, deployment, publication, credential changes and payments are prohibited.
 - [x] Prepare v6.1 clarification report only: production comparison checklist, pricing/authentication limits, rerun Deno checks and 25 mocked tests, successful temporary-copy frontend type-check, SQL dependency and payment-pause sequence; no production access or deployment.
 - [x] Prepare SQL Pack v6 and review-only source ZIP with authenticated order ownership, exact checkout pricing reconciliation, proposed browser log removal, 25 passing isolated tests and coordinated rollback; application and production unchanged. Live deployed create-order/frontend comparison and authenticated end-to-end checks remain blocked by unavailable production read access and implementation approval.
 - [x] Inspect local booking, payment verification and confirmation code; prepare a SQL correction and verification proposal without changing application code or either database.
