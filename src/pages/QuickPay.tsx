@@ -191,6 +191,7 @@ const QuickPay = () => {
       razorpay.open();
     } catch (error) {
       if (error instanceof CheckoutSignInRequired) {
+        setIsProcessing(false);
         navigate("/auth/");
         return;
       }

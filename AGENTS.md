@@ -16,3 +16,6 @@
 - Use optional exact article metadata overrides for supplied SEO titles and descriptions, preserving existing articles' defaults without truncating requested metadata.
 - Treat a tour's child rate as optional in the booking calculator and keep price formatting tolerant of missing amounts, so a tour record without a child price never blanks the widget with a crash.
 - Activity calculator Book Now must await the existing cart insertion before navigating to Customer Information, preserving selections without a second booking modal; share insertion with Add to Cart so both actions retain identical booking details.
+- Keep checkout pricing/fingerprint helpers byte-identical in browser and Edge Function bundles; item prices are extended line totals, so aggregate rounding must not multiply quantity or guests again.
+- Active payment callers use the existing production auth client, retain per-checkout snapshots and send session, reference and signature to RPC-only booking saving; this binds each callback to its originating checkout without a guest bypass.
+- Keep unexecuted booking SQL review scripts outside automatic migrations; deploying requires separately approved SQL, compatible frontend/functions and verified service-role-only RPC privileges.

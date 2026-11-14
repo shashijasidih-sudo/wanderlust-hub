@@ -21,6 +21,13 @@ export async function requireCheckoutSession(): Promise<string> {
   return token;
 }
 export function prepareCheckout(snapshot: BookingSnapshot) {
+  if (!snapshot.customer_name.trim() || snapshot.customer_name.trim().length > 100 ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(snapshot.customer_email) || snapshot.customer_email.length > 255 ||
+      !snapshot.tour_name.trim() || snapshot.tour_name.length > 2000 ||
+      !Number.isInteger(snapshot.adults) || snapshot.adults < 0 ||
+      !Number.isInteger(snapshot.children) || snapshot.children < 0) {
+    throw new Error("invalid_checkout_details");
+  }
   const currency = normaliseCurrency(snapshot.currency);
   if (!currency) throw new Error("This payment currency is not supported.");
   const items: BookingItemPayload[] = snapshot.items?.length ? snapshot.items : [{

@@ -193,7 +193,7 @@ const PaymentInformation = () => {
 
             const saveResult = await saveRes.json().catch(() => ({} as any));
 
-            if (!saveRes.ok || !saveResult?.success) {
+            if (!saveRes.ok || !saveResult?.success || !saveResult?.booking?.id) {
               console.error("Save booking failed", { code: saveResult?.code });
               toast.error(
                 saveResult?.error ||
