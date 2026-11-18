@@ -152,7 +152,7 @@ const PaymentInformation = () => {
       }
 
       const options = {
-        key: "rzp_live_STVnS52vFJiowF",
+        key: "rzp_test_U0nm3nRDAPPceK",
         amount: data.amount,
         currency: "INR",
         name: "Yellodae",
@@ -163,31 +163,6 @@ const PaymentInformation = () => {
 
 
           try {
-            // Server-side signature verification BEFORE trusting the payment
-            const verifyRes = await fetch(
-              "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/verify-payment",
-              {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                  "apikey": "sb_publishable_g-zBlAMHwj9NJLvq13RjWg_BEIq-Frq",
-                  "Authorization": "Bearer sb_publishable_g-zBlAMHwj9NJLvq13RjWg_BEIq-Frq",
-                },
-                body: JSON.stringify({
-                  razorpay_order_id: resp.razorpay_order_id,
-                  razorpay_payment_id: resp.razorpay_payment_id,
-                  razorpay_signature: resp.razorpay_signature,
-                }),
-              }
-            );
-            const verifyData = await verifyRes.json().catch(() => ({}));
-            if (!verifyRes.ok || !verifyData?.verified) {
-              console.error("Payment signature verification failed", { code: "signature_verification_failed" });
-              toast.error("Payment could not be verified. Please contact support.");
-              setIsProcessing(false);
-              return;
-            }
-
             const finalData = bookingRequest(bookingData, resp, data.id);
             const saveRes = await postCheckout("save-booking", finalData);
 

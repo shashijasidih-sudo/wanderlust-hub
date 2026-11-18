@@ -23,7 +23,7 @@ import {
 } from "@/lib/analytics";
 
 
-const RAZORPAY_KEY_ID = "rzp_live_STVnS52vFJiowF";
+const RAZORPAY_KEY_ID = "rzp_test_U0nm3nRDAPPceK";
 const SUPABASE_ANON_KEY = "sb_publishable_g-zBlAMHwj9NJLvq13RjWg_BEIq-Frq";
 const SUPABASE_FUNCTIONS_URL = "https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1";
 
