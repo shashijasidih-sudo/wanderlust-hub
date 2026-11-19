@@ -124,7 +124,24 @@ const BookingDetail = () => {
 
   if (!booking) return null;
 
-  const tourData: TourData | undefined = toursData[booking.tour_slug];
+  // Resolve tour content by the saved slug first. If older bookings use a
+  // different slug format, fall back to the activity/tour name saved with
+  // the booking so gallery, overview, itinerary and policies can still load.
+  const normalizeTourName = (value?: string | null) =>
+    String(value || "").trim().toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
+  const bookingTourNames = [
+    ...(booking.booking_items || []).map((item: any) => item?.activity_name || item?.tour_name),
+    booking.tour_name,
+  ]
+    .map(normalizeTourName)
+    .filter(Boolean);
+
+  const tourData: TourData | undefined =
+    toursData[booking.tour_slug] ||
+    (Object.values(toursData) as TourData[]).find((tour) =>
+      bookingTourNames.includes(normalizeTourName(tour.title))
+    );
   const status = statusConfig[booking.status] || statusConfig.confirmed;
 
   return (
