@@ -63,7 +63,20 @@ const BookingDetail = () => {
         .eq("user_id", user.id)
         .single();
       if (error) throw error;
-      setBooking(data);
+
+      // Fetch the activity/transfer details saved against this booking.
+      // The parent booking is already restricted to the signed-in user above.
+      const { data: itemRows, error: itemError } = await supabase
+        .from("booking_items")
+        .select("*")
+        .eq("booking_id", id);
+
+      if (itemError) {
+        // Keep the main booking page available if item details cannot be loaded.
+        console.error("Failed to fetch booking items:", itemError);
+      }
+
+      setBooking({ ...data, booking_items: itemRows || [] });
     } catch (err) {
       console.error("Failed to fetch booking:", err);
       toast({ title: "Error", description: "Booking not found", variant: "destructive" });
@@ -369,16 +382,41 @@ const BookingDetail = () => {
                     </>
                   )}
 
-                  {/* Pickup Details */}
-                  {booking.item_details && (
+                  {/* Saved activity and pickup details */}
+                  {((booking.booking_items?.length || 0) > 0 || booking.item_details) && (
                     <>
                       <Separator />
                       <div>
-                        <h3 className="font-semibold text-xs text-muted-foreground uppercase tracking-wide mb-2">Pickup Details</h3>
-                        <div className="bg-muted/50 p-3 rounded-lg text-sm space-y-1">
-                          {booking.item_details.hotel_name && <p><span className="text-muted-foreground">Hotel:</span> {booking.item_details.hotel_name}</p>}
-                          {booking.item_details.pickup_address && <p><span className="text-muted-foreground">Pickup:</span> {booking.item_details.pickup_address}</p>}
-                          {booking.item_details.country && <p><span className="text-muted-foreground">Country:</span> {booking.item_details.country}</p>}
+                        <h3 className="font-semibold text-xs text-muted-foreground uppercase tracking-wide mb-2">Activity & Pickup Details</h3>
+                        <div className="space-y-3">
+                          {(booking.booking_items?.length ? booking.booking_items : [booking.item_details]).map((item: any, index: number) => {
+                            const details = item?.item_details || {};
+                            const fields = [
+                              ["Activity", item?.activity_name || item?.tour_name || booking.tour_name],
+                              ["Destination", item?.destination],
+                              ["Travel Date", item?.travel_date],
+                              ["Adults", item?.adults],
+                              ["Children", item?.children],
+                              ["Hotel", item?.hotel_name || details.hotel_name],
+                              ["Pickup Location", item?.pickup_location || item?.pickup_address || details.pickup_address],
+                              ["Pickup Time", item?.pickup_time || details.pickup_time],
+                              ["Meeting Point", item?.meeting_point || details.meeting_point],
+                              ["Drop Location", item?.drop_location || details.drop_location],
+                              ["Country", item?.country || details.country],
+                              ["Flight Number", item?.flight_number || details.flight_number],
+                              ["Airline", item?.airline || details.airline],
+                              ["Terminal", item?.terminal || details.terminal],
+                              ["Special Requests", item?.special_requests || details.special_requests],
+                            ].filter(([, value]) => value !== null && value !== undefined && String(value).trim() !== "");
+
+                            return (
+                              <div key={item?.id || index} className="bg-muted/50 p-3 rounded-lg text-sm space-y-1">
+                                {fields.map(([label, value]) => (
+                                  <p key={String(label)}><span className="text-muted-foreground">{label}:</span> {String(value)}</p>
+                                ))}
+                              </div>
+                            );
+                          })}
                         </div>
                       </div>
                     </>
