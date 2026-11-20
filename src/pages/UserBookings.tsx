@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import AccountRecommendations from "@/components/recommendations/AccountRecommendations";
 import { format } from "date-fns";
 import { useToast } from "@/hooks/use-toast";
+import { itemKindLabel } from "@/lib/bookingItemCancellation";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -34,6 +35,14 @@ interface Booking {
   created_at: string;
 }
 
+interface BookingItemSummary {
+  id: string;
+  booking_id: string;
+  activity_name: string | null;
+  product_type: string | null;
+  status: string | null;
+}
+
 const statusColors: Record<string, string> = {
   pending: "bg-yellow-100 text-yellow-800 border-yellow-200",
   confirmed: "bg-green-100 text-green-800 border-green-200",
@@ -48,6 +57,7 @@ const UserBookings = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [cancellingId, setCancellingId] = useState<string | null>(null);
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
+  const [itemsByBooking, setItemsByBooking] = useState<Record<string, BookingItemSummary[]>>({});
   const [viewBooking, setViewBooking] = useState<Booking | null>(null);
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -73,6 +83,19 @@ const UserBookings = () => {
         .order("created_at", { ascending: false });
       if (error) throw error;
       setBookings(data || []);
+      const ids = (data || []).map((b: Booking) => b.id);
+      if (ids.length) {
+        // Item names only; a failure keeps the list working with the parent title.
+        const { data: items, error: itemError } = await supabase
+          .from("booking_items")
+          .select("id, booking_id, activity_name, product_type, status")
+          .in("booking_id", ids)
+          .order("created_at", { ascending: true });
+        if (itemError) console.error("Failed to fetch booking items:", itemError.message);
+        const grouped: Record<string, BookingItemSummary[]> = {};
+        (items || []).forEach((it: BookingItemSummary) => { (grouped[it.booking_id] ||= []).push(it); });
+        setItemsByBooking(grouped);
+      }
     } catch (err) {
       console.error("Failed to fetch bookings:", err);
     } finally {
@@ -240,9 +263,23 @@ const UserBookings = () => {
                   <CardContent className="p-0">
                     <div className="flex flex-col sm:flex-row">
                       <div className="flex-1 p-5">
-                        <div className="flex items-start justify-between mb-3">
-                          <div>
-                            <h3 className="font-semibold text-lg">{booking.tour_name}</h3>
+                        <div className="flex items-start justify-between gap-3 mb-3">
+                          <div className="min-w-0">
+                            {(() => {
+                              const named = (itemsByBooking[booking.id] || []).filter((it) => it.activity_name?.trim());
+                              if (named.length < 2) return <h3 className="font-semibold text-lg break-words">{named[0]?.activity_name || booking.tour_name}</h3>;
+                              return (
+                                <ul className="space-y-1.5">
+                                  {named.map((it) => (
+                                    <li key={it.id} className="break-words">
+                                      <span className="text-xs uppercase tracking-wide text-muted-foreground mr-2">{itemKindLabel(it)}</span>
+                                      <span className={`font-semibold text-base ${it.status === "cancelled" ? "line-through text-muted-foreground" : ""}`}>{it.activity_name}</span>
+                                      {it.status === "cancelled" && <span className="ml-2 text-xs text-destructive">Cancelled</span>}
+                                    </li>
+                                  ))}
+                                </ul>
+                              );
+                            })()}
                             <p className="text-sm text-muted-foreground">
                               Booked on {format(new Date(booking.created_at), "MMM dd, yyyy")}
                             </p>
@@ -280,7 +317,7 @@ const UserBookings = () => {
                         >
                           View & Manage Booking
                         </Button>
-                        {(booking.status === "pending" || booking.status === "confirmed") && (
+                        {(booking.status === "pending" || booking.status === "confirmed") && (itemsByBooking[booking.id]?.length || 0) < 2 && (
                           <AlertDialog>
                             <AlertDialogTrigger asChild>
                               <Button variant="destructive" size="sm" disabled={cancellingId === booking.id}>

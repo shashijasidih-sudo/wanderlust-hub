@@ -28,6 +28,7 @@ import {
   Image as ImageIcon, FileText, Route, Star,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { canCancelItem, nextParentStatus, itemKindLabel, itemDisplayNames } from "@/lib/bookingItemCancellation";
 
 const statusConfig: Record<string, { color: string; icon: React.ReactNode; label: string }> = {
   pending: { color: "bg-yellow-100 text-yellow-800 border-yellow-200", icon: <Clock className="h-4 w-4" />, label: "Pending" },
@@ -118,6 +119,53 @@ const BookingDetail = () => {
     }
   };
 
+  const escapeHtml = (v: unknown) => String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c] as string));
+
+  // Cancels one booking item only. RLS limits updates to items of the signed-in user's own booking.
+  const handleCancelItem = async (item: any) => {
+    if (!booking || !user || !item?.id || !canCancelItem(item.status)) return;
+    const kind = itemKindLabel(item);
+    const name = item.activity_name || booking.tour_name;
+    setCancellingId(item.id);
+    try {
+      const { data: updated, error } = await supabase
+        .from("booking_items")
+        .update({ status: "cancelled" })
+        .eq("id", item.id)
+        .eq("booking_id", booking.id)
+        .select("id, status");
+      if (error) throw error;
+      if (!updated?.length) throw new Error("This item could not be cancelled. Please contact support.");
+
+      const items = (booking.booking_items || []).map((i: any) => (i.id === item.id ? { ...i, status: "cancelled" } : i));
+      const parentStatus = nextParentStatus(items, booking.status);
+      if (parentStatus !== booking.status) {
+        const { error: parentError } = await supabase
+          .from("bookings").update({ status: parentStatus }).eq("id", booking.id).eq("user_id", user.id);
+        if (parentError) console.error("Parent booking status update failed:", parentError.message);
+      }
+      setBooking({ ...booking, booking_items: items, status: parentStatus });
+      toast({ title: `${kind} Cancelled`, description: `${name} has been cancelled. Our team will review any refund under the cancellation policy.` });
+
+      if (booking.contact_email) {
+        const html = `<!DOCTYPE html><html><head><meta charset="utf-8"></head><body style="margin:0;padding:0;background-color:#f4f4f5;font-family:Arial,sans-serif;"><table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f4f5;padding:32px 16px;"><tr><td align="center"><table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-radius:12px;overflow:hidden;"><tr><td style="background:linear-gradient(135deg,#f59e0b,#d97706);padding:32px;text-align:center;"><h1 style="color:#ffffff;margin:0;font-size:28px;">Yellodae</h1></td></tr><tr><td style="padding:32px;text-align:center;"><h2 style="color:#dc2626;">${kind} Cancelled</h2><p>Booking ID: ${escapeHtml(booking.id.slice(0, 8))}</p><p>Cancelled ${kind.toLowerCase()}: <strong>${escapeHtml(name)}</strong></p>${item.travel_date ? `<p>Travel date: ${escapeHtml(item.travel_date)}</p>` : ""}<p>${parentStatus === "cancelled" ? "All items in this booking are now cancelled." : "Other items in this booking remain active."}</p><p>Our team will review any refund under the cancellation policy.</p></td></tr></table></td></tr></table></body></html>`;
+        const subject = `${kind} Cancelled - ${name}`;
+        fetch("https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-email", {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ to: booking.contact_email, subject: `${subject} | Yellodae`, html }),
+        }).catch(() => console.error("Item cancellation email failed"));
+        fetch("https://cymzgmfnhtnqledwwojt.supabase.co/functions/v1/send-email", {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ to: "support@yellodae.com", subject: `${subject} | ${booking.contact_name}`, html, replyTo: booking.contact_email }),
+        }).catch(() => console.error("Item cancellation admin email failed"));
+      }
+    } catch (err: any) {
+      toast({ title: "Error", description: err.message, variant: "destructive" });
+    } finally {
+      setCancellingId(null);
+    }
+  };
+
   if (isAuthLoading || isLoading) {
     return <div className="min-h-screen flex items-center justify-center"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>;
   }
@@ -143,6 +191,9 @@ const BookingDetail = () => {
       bookingTourNames.includes(normalizeTourName(tour.title))
     );
   const status = statusConfig[booking.status] || statusConfig.confirmed;
+  const itemRows: any[] = booking.booking_items || [];
+  const itemNames = itemDisplayNames(itemRows);
+  const pageTitle = itemNames.length > 1 ? itemNames.join(" + ") : booking.tour_name;
 
   return (
     <div className="min-h-screen bg-background">
@@ -157,7 +208,7 @@ const BookingDetail = () => {
           {/* Header */}
           <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-10">
             <div className="space-y-3">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">{booking.tour_name}</h1>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">{pageTitle}</h1>
               {tourData && (
                 <div className="flex flex-wrap gap-4 text-base text-muted-foreground">
                   <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4" />{tourData.location}</span>
@@ -399,17 +450,22 @@ const BookingDetail = () => {
                     </>
                   )}
 
-                  {/* Saved activity and pickup details */}
-                  {((booking.booking_items?.length || 0) > 0 || booking.item_details) && (
+                  {/* Saved activity and pickup details: one card per booking item */}
+                  {(itemRows.length > 0 || booking.item_details) && (
                     <>
                       <Separator />
                       <div>
-                        <h3 className="font-semibold text-xs text-muted-foreground uppercase tracking-wide mb-2">Activity & Pickup Details</h3>
+                        <h3 className="font-semibold text-xs text-muted-foreground uppercase tracking-wide mb-2">
+                          {itemRows.length > 1 ? `Booked Items (${itemRows.length})` : "Activity & Pickup Details"}
+                        </h3>
                         <div className="space-y-3">
-                          {(booking.booking_items?.length ? booking.booking_items : [booking.item_details]).map((item: any, index: number) => {
+                          {(itemRows.length ? itemRows : [booking.item_details]).map((item: any, index: number) => {
                             const details = item?.item_details || {};
+                            const kind = itemKindLabel(item || {});
+                            const isRealItem = itemRows.length > 0 && !!item?.id;
+                            const itemStatusKey = String(item?.status || booking.status || "confirmed").toLowerCase();
+                            const itemStatus = statusConfig[itemStatusKey] || statusConfig.confirmed;
                             const fields = [
-                              ["Activity", item?.activity_name || item?.tour_name || booking.tour_name],
                               ["Destination", item?.destination],
                               ["Travel Date", item?.travel_date],
                               ["Adults", item?.adults],
@@ -425,12 +481,48 @@ const BookingDetail = () => {
                               ["Terminal", item?.terminal || details.terminal],
                               ["Special Requests", item?.special_requests || details.special_requests],
                             ].filter(([, value]) => value !== null && value !== undefined && String(value).trim() !== "");
+                            const name = item?.activity_name || item?.tour_name || booking.tour_name;
 
                             return (
-                              <div key={item?.id || index} className="bg-muted/50 p-3 rounded-lg text-sm space-y-1">
-                                {fields.map(([label, value]) => (
-                                  <p key={String(label)}><span className="text-muted-foreground">{label}:</span> {String(value)}</p>
-                                ))}
+                              <div key={item?.id || index} className="bg-muted/50 p-3 rounded-lg text-sm space-y-2 border border-border">
+                                <div className="flex items-start justify-between gap-2">
+                                  <div className="min-w-0">
+                                    <p className="text-xs uppercase tracking-wide text-muted-foreground">{kind}</p>
+                                    <p className="font-semibold break-words">{name}</p>
+                                  </div>
+                                  {isRealItem && (
+                                    <Badge variant="outline" className={`${itemStatus.color} shrink-0 text-xs`}>{itemStatus.label}</Badge>
+                                  )}
+                                </div>
+                                <div className="space-y-1">
+                                  {fields.map(([label, value]) => (
+                                    <p key={String(label)}><span className="text-muted-foreground">{label}:</span> {String(value)}</p>
+                                  ))}
+                                </div>
+                                {isRealItem && booking.status !== "cancelled" && booking.status !== "completed" && canCancelItem(item.status) && (
+                                  <AlertDialog>
+                                    <AlertDialogTrigger asChild>
+                                      <Button variant="destructive" size="sm" className="w-full" disabled={cancellingId === item.id}>
+                                        {cancellingId === item.id ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <XCircle className="h-4 w-4 mr-2" />}
+                                        Cancel {kind}
+                                      </Button>
+                                    </AlertDialogTrigger>
+                                    <AlertDialogContent>
+                                      <AlertDialogHeader>
+                                        <AlertDialogTitle>Cancel this {kind.toLowerCase()}?</AlertDialogTitle>
+                                        <AlertDialogDescription>
+                                          You are cancelling only <strong>{name}</strong>{item.travel_date ? ` on ${item.travel_date}` : ""}.
+                                          {itemRows.filter((i) => canCancelItem(i.status)).length > 1 && " Other items in this booking stay active."}
+                                          <br /><br />Our team will review any refund under the cancellation policy.
+                                        </AlertDialogDescription>
+                                      </AlertDialogHeader>
+                                      <AlertDialogFooter>
+                                        <AlertDialogCancel>Keep {kind}</AlertDialogCancel>
+                                        <AlertDialogAction onClick={() => handleCancelItem(item)}>Yes, Cancel {kind}</AlertDialogAction>
+                                      </AlertDialogFooter>
+                                    </AlertDialogContent>
+                                  </AlertDialog>
+                                )}
                               </div>
                             );
                           })}
@@ -439,8 +531,8 @@ const BookingDetail = () => {
                     </>
                   )}
 
-                  {/* Cancel Button */}
-                  {(booking.status === "pending" || booking.status === "confirmed") && (
+                  {/* Whole-booking cancel: only for older bookings without saved items */}
+                  {itemRows.length === 0 && (booking.status === "pending" || booking.status === "confirmed") && (
                     <>
                       <Separator />
                       <AlertDialog>
