@@ -139,13 +139,29 @@ const BookingDetail = () => {
 
       const items = (booking.booking_items || []).map((i: any) => (i.id === item.id ? { ...i, status: "cancelled" } : i));
       const parentStatus = nextParentStatus(items, booking.status);
+      let parentUpdateFailed = false;
       if (parentStatus !== booking.status) {
         const { error: parentError } = await supabase
           .from("bookings").update({ status: parentStatus }).eq("id", booking.id).eq("user_id", user.id);
-        if (parentError) console.error("Parent booking status update failed:", parentError.message);
+        if (parentError) {
+          console.error("Parent booking status update failed:", parentError.message);
+          parentUpdateFailed = true;
+        }
       }
-      setBooking({ ...booking, booking_items: items, status: parentStatus });
-      toast({ title: `${kind} Cancelled`, description: `${name} has been cancelled. Our team will review any refund under the cancellation policy.` });
+      if (parentUpdateFailed) {
+        // The item is cancelled, but the overall booking status could not be
+        // updated. Tell the customer and reload the booking so the page shows
+        // the actual database status instead of an optimistic guess.
+        toast({
+          title: "Status Update Issue",
+          description: `${name} was cancelled, but the overall booking status could not be updated. The page has been refreshed with the latest status. Please contact support if it looks incorrect.`,
+          variant: "destructive",
+        });
+        await fetchBooking();
+      } else {
+        setBooking({ ...booking, booking_items: items, status: parentStatus });
+        toast({ title: `${kind} Cancelled`, description: `${name} has been cancelled. Our team will review any refund under the cancellation policy.` });
+      }
 
       if (booking.contact_email) {
         const html = `<!DOCTYPE html><html><head><meta charset="utf-8"></head><body style="margin:0;padding:0;background-color:#f4f4f5;font-family:Arial,sans-serif;"><table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f4f5;padding:32px 16px;"><tr><td align="center"><table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-radius:12px;overflow:hidden;"><tr><td style="background:linear-gradient(135deg,#f59e0b,#d97706);padding:32px;text-align:center;"><h1 style="color:#ffffff;margin:0;font-size:28px;">Yellodae</h1></td></tr><tr><td style="padding:32px;text-align:center;"><h2 style="color:#dc2626;">${kind} Cancelled</h2><p>Booking ID: ${escapeHtml(booking.id.slice(0, 8))}</p><p>Cancelled ${kind.toLowerCase()}: <strong>${escapeHtml(name)}</strong></p>${item.travel_date ? `<p>Travel date: ${escapeHtml(item.travel_date)}</p>` : ""}<p>${parentStatus === "cancelled" ? "All items in this booking are now cancelled." : "Other items in this booking remain active."}</p><p>Our team will review any refund under the cancellation policy.</p></td></tr></table></td></tr></table></body></html>`;
