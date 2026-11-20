@@ -28,7 +28,7 @@ import {
   Image as ImageIcon, FileText, Route, Star,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { canCancelItem, nextParentStatus, itemKindLabel, itemDisplayNames } from "@/lib/bookingItemCancellation";
+import { canCancelItem, nextParentStatus, itemKindLabel, isTransferItem } from "@/lib/bookingItemCancellation";
 
 const statusConfig: Record<string, { color: string; icon: React.ReactNode; label: string }> = {
   pending: { color: "bg-yellow-100 text-yellow-800 border-yellow-200", icon: <Clock className="h-4 w-4" />, label: "Pending" },
@@ -195,21 +195,29 @@ const BookingDetail = () => {
     String(value || "").trim().toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 
   const bookingTourNames = [
-    ...(booking.booking_items || []).map((item: any) => item?.activity_name || item?.tour_name),
-    booking.tour_name,
+    ...(booking.booking_items || []).filter((item: any) => !isTransferItem(item || {})).map((item: any) => item?.activity_name || item?.tour_name),
+    ...((booking.booking_items || []).length ? [] : [booking.tour_name]),
   ]
     .map(normalizeTourName)
     .filter(Boolean);
 
-  const tourData: TourData | undefined =
-    toursData[booking.tour_slug] ||
+  const hasActivityItems = (booking.booking_items || []).length === 0 || (booking.booking_items || []).some((i: any) => !isTransferItem(i || {}));
+  const tourData: TourData | undefined = !hasActivityItems ? undefined :
+    (toursData[booking.tour_slug] && !isTransferItem({ activity_name: toursData[booking.tour_slug].title }) ? toursData[booking.tour_slug] : undefined) ||
     (Object.values(toursData) as TourData[]).find((tour) =>
       bookingTourNames.includes(normalizeTourName(tour.title))
     );
   const status = statusConfig[booking.status] || statusConfig.confirmed;
   const itemRows: any[] = booking.booking_items || [];
-  const itemNames = itemDisplayNames(itemRows);
-  const pageTitle = itemNames.length > 1 ? itemNames.join(" + ") : booking.tour_name;
+  const activityItems = itemRows.filter((i) => !isTransferItem(i));
+  const transferItems = itemRows.filter((i) => isTransferItem(i));
+  const activityName = activityItems.map((i) => i.activity_name).filter(Boolean).join(", ") || (itemRows.length ? "" : booking.tour_name);
+  const showActivity = itemRows.length === 0 || activityItems.length > 0;
+  const tf = (item: any, key: string, ...alts: string[]) => {
+    const d = item?.item_details || {};
+    for (const k of [key, ...alts]) { const v = item?.[k] ?? d[k]; if (v !== null && v !== undefined && String(v).trim() !== "") return String(v); }
+    return "";
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -224,8 +232,11 @@ const BookingDetail = () => {
           {/* Header */}
           <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-10">
             <div className="space-y-3">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">{pageTitle}</h1>
-              {tourData && (
+              <h1 className="text-2xl md:text-3xl font-bold leading-tight">Booking Details</h1>
+              {showActivity && activityName && (
+                <h2 className="text-lg md:text-xl font-semibold text-foreground">{activityName}</h2>
+              )}
+              {showActivity && tourData && (
                 <div className="flex flex-wrap gap-4 text-base text-muted-foreground">
                   <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4" />{tourData.location}</span>
                   <span className="flex items-center gap-1.5"><Clock className="h-4 w-4" />{tourData.duration}</span>
@@ -241,7 +252,7 @@ const BookingDetail = () => {
           </div>
 
           {/* Photo Gallery */}
-          {tourData && tourData.galleryImages?.length > 0 && (
+          {showActivity && tourData && tourData.galleryImages?.length > 0 && (
             <Card className="mb-8 overflow-hidden">
               <CardContent className="p-5 md:p-6">
                 <h2 className="font-semibold text-xl md:text-2xl flex items-center gap-2 mb-4">
@@ -272,6 +283,47 @@ const BookingDetail = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Tour Info */}
             <div className="lg:col-span-2 space-y-8">
+              {/* Transfer Details */}
+              {transferItems.map((item) => {
+                const pax = [Number(item.adults) > 0 ? `${item.adults} Adult${item.adults > 1 ? "s" : ""}` : "", Number(item.children) > 0 ? `${item.children} Child${item.children > 1 ? "ren" : ""}` : ""].filter(Boolean).join(", ");
+                const airline = [tf(item, "airline"), tf(item, "terminal") && `Terminal ${tf(item, "terminal")}`].filter(Boolean).join(" · ");
+                const dateTime = [item.travel_date ? format(new Date(item.travel_date), "EEE, MMM dd, yyyy") : "", tf(item, "pickup_time")].filter(Boolean).join(" · ");
+                const rows: [string, string][] = ([
+                  ["Pickup Location", tf(item, "pickup_location", "pickup_address", "hotel_name")],
+                  ["Drop-off Location", tf(item, "drop_location", "dropoff_location")],
+                  ["Travel Date & Pickup Time", dateTime],
+                  ["Passengers", pax],
+                  ["Flight Number", tf(item, "flight_number")],
+                  ["Airline & Terminal", airline],
+                  ["Vehicle Type", tf(item, "vehicle_type", "vehicle_name", "vehicle")],
+                ] as [string, string][]).filter(([, v]) => v);
+                const notes = tf(item, "special_requests");
+                return (
+                  <Card key={item.id}>
+                    <CardContent className="p-6 md:p-7 space-y-4">
+                      <div>
+                        <p className="text-xs uppercase tracking-wide text-muted-foreground flex items-center gap-1.5"><Route className="h-4 w-4 text-primary" /> Transfer Details</p>
+                        <h2 className="font-semibold text-lg md:text-xl mt-1">{item.activity_name || "Transfer"}</h2>
+                      </div>
+                      <dl className="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-base">
+                        {rows.map(([label, value]) => (
+                          <div key={label}>
+                            <dt className="text-sm text-muted-foreground">{label}</dt>
+                            <dd className="font-medium break-words">{value}</dd>
+                          </div>
+                        ))}
+                      </dl>
+                      {notes && (
+                        <div className="bg-muted/50 p-3 rounded-lg text-sm">
+                          <p className="text-muted-foreground font-medium text-xs mb-1">Special Requests</p>
+                          <p>{notes}</p>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                );
+              })}
+
               {/* Tour Overview */}
               {tourData?.description && (
                 <Card>
@@ -481,7 +533,9 @@ const BookingDetail = () => {
                             const isRealItem = itemRows.length > 0 && !!item?.id;
                             const itemStatusKey = String(item?.status || booking.status || "confirmed").toLowerCase();
                             const itemStatus = statusConfig[itemStatusKey] || statusConfig.confirmed;
-                            const fields = [
+                            const fields = (isTransferItem(item || {}) ? [
+                              ["Travel Date", item?.travel_date],
+                            ] : [
                               ["Destination", item?.destination],
                               ["Travel Date", item?.travel_date],
                               ["Adults", item?.adults],
@@ -496,7 +550,7 @@ const BookingDetail = () => {
                               ["Airline", item?.airline || details.airline],
                               ["Terminal", item?.terminal || details.terminal],
                               ["Special Requests", item?.special_requests || details.special_requests],
-                            ].filter(([, value]) => value !== null && value !== undefined && String(value).trim() !== "");
+                            ]).filter(([, value]) => value !== null && value !== undefined && String(value).trim() !== "");
                             const name = item?.activity_name || item?.tour_name || booking.tour_name;
 
                             return (
