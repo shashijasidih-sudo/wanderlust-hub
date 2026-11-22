@@ -1,5 +1,8 @@
 # Approved URL audit fixes
 
+## Admin combined booking display
+- [x] Show associated saved item names in the admin list and separate activity/transfer details in a dedicated admin View modal; preserve all action handlers and customer UI. All 60 tests pass, cancellation 4/4, automated build OK; desktop/mobile sample-record checks pass. Live production admin data and effective item-read permissions remain unverified because no production admin session is available; no backend changes or deployment.
+
 ## Production booking investigation (no deployment approved)
 - [x] Prepare coordinated v6/v6.1 repository implementation: unchanged review-only atomic SQL, authenticated/fingerprinted create-order and signature/API-verified RPC-only save-booking, active cart/Quick Pay contract, 48 frontend and 29 offline backend tests passing; report in docs/booking-fix/implementation-review.md. No SQL, deployment, publication, credential changes or payments.
 - [x] Prepare v6.1 clarification report only: production comparison checklist, pricing/authentication limits, rerun Deno checks and 25 mocked tests, successful temporary-copy frontend type-check, SQL dependency and payment-pause sequence; no production access or deployment.

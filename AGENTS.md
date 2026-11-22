@@ -1,5 +1,7 @@
 # Project Architecture Rules
 
+- Keep the admin combined-booking modal separate from the shared customer modal and join read-only item data by booking_id; this isolates admin presentation changes from customer cancellation and legacy-booking behavior.
+
 - Share the Dubai booking guide's uploaded image URL across article and discovery cards, resolving it against its verified Lovable asset-serving origin because the external custom-domain host returns HTML for relative asset paths.
 - Share the international holiday planning guide's uploaded thumbnail through one image resolver across its article and Bangkok listing, using the verified asset-serving origin to avoid blank custom-domain images.
 

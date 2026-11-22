@@ -21,7 +21,8 @@ import {
   Search, Download, ArrowUpDown, BarChart3, IndianRupee, Clock, RefreshCw,
   ChevronLeft, ChevronRight, Eye,
 } from "lucide-react";
-import ViewBookingModal from "@/components/ViewBookingModal";
+import AdminViewBookingModal from "@/components/admin/AdminViewBookingModal";
+import { adminDisplayItems, adminItemKind, attachBookingItems, type SavedBookingItem } from "@/lib/adminBookingDisplay";
 import { toast } from "@/hooks/use-toast";
 import { format } from "date-fns";
 
@@ -55,6 +56,8 @@ interface Booking {
   created_at: string;
   updated_at: string;
   user_id: string;
+  booking_items?: SavedBookingItem[];
+  items_load_error?: boolean;
 }
 
 type StatusFilter = "all" | "pending" | "confirmed" | "cancelled" | "completed" | "refunded";
@@ -205,7 +208,26 @@ const AdminDashboard = () => {
       }
 
 
-      setBookings(fetchedBookings);
+      // Read existing items through the same production client; no backend changes.
+      // Page both booking IDs and results to avoid silently truncating larger lists.
+      try {
+        const itemRows: SavedBookingItem[] = [];
+        for (let start = 0; start < fetchedBookings.length; start += 100) {
+          const ids = fetchedBookings.slice(start, start + 100).map(booking => booking.id);
+          for (let offset = 0; ; offset += 500) {
+            const { data: items, error: itemError } = await supabase.from("booking_items")
+              .select("*").in("booking_id", ids).order("id").range(offset, offset + 499);
+            if (itemError) throw itemError;
+            itemRows.push(...(items || []));
+            if (!items || items.length < 500) break;
+          }
+        }
+        setBookings(attachBookingItems(fetchedBookings, itemRows));
+      } catch (itemError) {
+        console.error("Failed to fetch admin booking items:", itemError);
+        setBookings(fetchedBookings.map(booking => ({ ...booking, items_load_error: true })));
+        toast({ title: "Item details unavailable", description: "Booking summaries remain available. Refresh to retry loading individual items.", variant: "destructive" });
+      }
     } catch (err) {
       console.error("Failed to fetch bookings:", err);
     } finally {
@@ -327,7 +349,8 @@ const AdminDashboard = () => {
         b.contact_name?.toLowerCase().includes(q) ||
         b.contact_email?.toLowerCase().includes(q) ||
         b.tour_name?.toLowerCase().includes(q) ||
-        b.tour_slug?.toLowerCase().includes(q)
+        b.tour_slug?.toLowerCase().includes(q) ||
+        b.booking_items?.some(item => item.activity_name?.toLowerCase().includes(q))
       );
     }
     result.sort((a, b) => {
@@ -558,7 +581,17 @@ const AdminDashboard = () => {
                             <div className="text-xs text-muted-foreground">{booking.contact_email}</div>
                           </TableCell>
                           <TableCell className="text-sm">{booking.contact_phone || "—"}</TableCell>
-                          <TableCell className="max-w-[200px] truncate">{booking.tour_name}</TableCell>
+                          <TableCell className="min-w-[200px] max-w-[320px]">
+                            <div className="space-y-2">
+                              {adminDisplayItems(booking).map(item => (
+                                <div key={item.id} className="text-sm break-words">
+                                  <span className="block text-xs font-semibold text-primary">{adminItemKind(item)}</span>
+                                  {item.activity_name || booking.tour_name}
+                                </div>
+                              ))}
+                              {booking.items_load_error && <p className="text-xs text-destructive">Item details unavailable</p>}
+                            </div>
+                          </TableCell>
                           <TableCell className="whitespace-nowrap">{booking.tour_date}</TableCell>
                           <TableCell>{booking.adults}A / {booking.children}C</TableCell>
                           <TableCell className="font-semibold">₹{booking.total_price.toLocaleString()}</TableCell>
@@ -656,7 +689,7 @@ const AdminDashboard = () => {
           </Card>
         </div>
       </main>
-      <ViewBookingModal
+      <AdminViewBookingModal
         booking={viewBooking as any}
         open={viewOpen}
         onOpenChange={setViewOpen}
