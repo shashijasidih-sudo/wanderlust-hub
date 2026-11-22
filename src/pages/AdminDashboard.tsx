@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import AdminViewBookingModal from "@/components/admin/AdminViewBookingModal";
 import { adminDisplayItems, adminItemKind, attachBookingItems, type SavedBookingItem } from "@/lib/adminBookingDisplay";
+import { adminCancellationMode, canCancelAdminItem, cancelAdminBookingItem, AdminItemCancellationError } from "@/lib/adminItemCancellation";
 import { toast } from "@/hooks/use-toast";
 import { format } from "date-fns";
 
@@ -87,6 +88,11 @@ const AdminDashboard = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [viewBooking, setViewBooking] = useState<Booking | null>(null);
   const [viewOpen, setViewOpen] = useState(false);
+  const [cancellingItemId, setCancellingItemId] = useState<string | null>(null);
+
+  useEffect(() => {
+    setViewBooking(current => current ? bookings.find(booking => booking.id === current.id) || current : null);
+  }, [bookings]);
 
   // Wait for auth to fully resolve before checking admin status
   useEffect(() => {
@@ -300,6 +306,35 @@ const AdminDashboard = () => {
       toast({ title: "Cancellation email sent", description: `Notification sent to ${booking.contact_email}` });
     } else {
       toast({ title: "Booking cancelled — email failed", description: emailRes.error, variant: "destructive" });
+    }
+  };
+
+  const handleCancelItem = async (booking: Booking, item: SavedBookingItem) => {
+    if (cancellingItemId || !canCancelAdminItem(item, booking)) return;
+    const kind = adminItemKind(item) === "TRANSFER" ? "Transfer" : "Activity";
+    if (!confirm(`Cancel ${kind} "${item.activity_name || kind}"? Only this item will be cancelled. Other items will not be changed. The booking will be marked cancelled only if all its items are cancelled. No automatic cancellation email will be sent while item-specific email support awaits approval.`)) return;
+    setCancellingItemId(item.id);
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) { redirectToLogin(); return; }
+      if (!(await isAdminUser(session.user.id))) {
+        toast({ title: "Admin access only", variant: "destructive" });
+        return;
+      }
+      const result = await cancelAdminBookingItem(supabase, booking.id, item.id);
+      toast({
+        title: `${kind} cancelled`,
+        description: `${item.activity_name || kind}. ${result.allCancelled ? "All items are cancelled; the booking is cancelled." : "Other items are unchanged."} No cancellation email sent; item-specific emails await approval.`,
+      });
+    } catch (error) {
+      toast({
+        title: error instanceof AdminItemCancellationError && error.itemCancelled ? "Item cancelled — booking refresh required" : "Cancellation failed",
+        description: error instanceof Error ? error.message : "Could not cancel this item.",
+        variant: "destructive",
+      });
+    } finally {
+      await fetchAllBookings();
+      setCancellingItemId(null);
     }
   };
 
@@ -625,7 +660,7 @@ const AdminDashboard = () => {
                                   <SelectItem value="refunded">Refunded</SelectItem>
                                 </SelectContent>
                               </Select>
-                              {booking.status !== "cancelled" && booking.status !== "refunded" && (
+                              {adminCancellationMode(booking) === "legacy" && booking.status !== "cancelled" && booking.status !== "refunded" && (
                                 <Button
                                   variant="outline"
                                   size="sm"
@@ -693,6 +728,8 @@ const AdminDashboard = () => {
         booking={viewBooking as any}
         open={viewOpen}
         onOpenChange={setViewOpen}
+        onCancelItem={(item) => { if (viewBooking) void handleCancelItem(viewBooking, item); }}
+        cancellingItemId={cancellingItemId}
       />
       <Footer />
     </div>

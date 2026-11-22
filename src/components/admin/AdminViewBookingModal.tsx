@@ -1,12 +1,14 @@
 import { format } from "date-fns";
-import { ReceiptText } from "lucide-react";
+import { ReceiptText, XCircle, Loader2 } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SafeImage from "@/components/SafeImage";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import { toursData } from "@/data/tourData";
 import { adminDisplayItems, adminItemKind, resolveAdminTour, savedValue, type SavedBookingItem } from "@/lib/adminBookingDisplay";
+import { canCancelAdminItem } from "@/lib/adminItemCancellation";
 
 type AdminBooking = Record<string, unknown> & { id: string; booking_items?: SavedBookingItem[]; items_load_error?: boolean };
 
@@ -27,7 +29,7 @@ const Fields = ({ rows }: { rows: [string, string][] }) => (
   </dl>
 );
 
-const ItemDetails = ({ item }: { item: SavedBookingItem }) => {
+const ItemDetails = ({ item, onCancel, cancellationBusy, cancelling }: { item: SavedBookingItem; onCancel?: () => void; cancellationBusy: boolean; cancelling: boolean }) => {
   const transfer = adminItemKind(item) === "TRANSFER";
   const tour = resolveAdminTour(item, toursData);
   const v = (...keys: string[]) => savedValue(item, ...keys);
@@ -67,6 +69,10 @@ const ItemDetails = ({ item }: { item: SavedBookingItem }) => {
         {v("status") && <Badge variant="outline" className="capitalize shrink-0">{v("status")}</Badge>}
       </div>
       <Fields rows={rows} />
+      {onCancel && <Button variant="outline" size="sm" className="border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground" disabled={cancellationBusy} aria-label={`Cancel ${transfer ? "Transfer" : "Activity"}: ${v("activity_name")}`} onClick={onCancel}>
+        {cancelling ? <Loader2 className="h-4 w-4 mr-2 animate-spin" /> : <XCircle className="h-4 w-4 mr-2" />}
+        Cancel {transfer ? "Transfer" : "Activity"}
+      </Button>}
       {tour?.description?.overview && <div className="space-y-2"><h4 className="font-semibold text-sm">Tour Overview</h4><p className="text-sm text-muted-foreground whitespace-pre-line">{tour.description.overview}</p></div>}
       {!!tour?.galleryImages?.length && (
         <div className="space-y-2">
@@ -86,13 +92,16 @@ const ItemDetails = ({ item }: { item: SavedBookingItem }) => {
   );
 };
 
-const AdminViewBookingModal = ({ booking, open, onOpenChange }: { booking: AdminBooking | null; open: boolean; onOpenChange: (open: boolean) => void }) => {
+const AdminViewBookingModal = ({ booking, open, onOpenChange, onCancelItem, cancellingItemId = null }: { booking: AdminBooking | null; open: boolean; onOpenChange: (open: boolean) => void; onCancelItem?: (item: SavedBookingItem) => void; cancellingItemId?: string | null }) => {
   const { formatPrice } = useCurrency();
   if (!booking) return null;
   const v = (...keys: string[]) => savedValue(booking, ...keys);
   const items = adminDisplayItems(booking);
   const activities = items.filter(item => adminItemKind(item) === "ACTIVITY");
   const transfers = items.filter(item => adminItemKind(item) === "TRANSFER");
+  const renderItem = (item: SavedBookingItem) => <ItemDetails key={item.id} item={item}
+    onCancel={onCancelItem && canCancelAdminItem(item, booking) ? () => onCancelItem(item) : undefined}
+    cancellationBusy={cancellingItemId !== null} cancelling={cancellingItemId === item.id} />;
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="w-[96vw] max-w-none h-[96dvh] sm:w-[94vw] sm:h-[94dvh] flex flex-col gap-0 overflow-hidden p-0">
@@ -104,8 +113,8 @@ const AdminViewBookingModal = ({ booking, open, onOpenChange }: { booking: Admin
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="space-y-8 lg:col-span-2">
         {booking.items_load_error && <p role="alert" className="text-sm text-destructive">Booked item details could not be loaded. Only the available booking summary is shown; close this window and refresh to retry.</p>}
-        {activities.length > 0 && <section className="space-y-4"><h2 className="font-semibold text-lg text-primary">Activity Details</h2>{activities.map(item => <ItemDetails key={item.id} item={item} />)}</section>}
-        {transfers.length > 0 && <section className="space-y-4"><h2 className="font-semibold text-lg text-primary">Transfer Details</h2>{transfers.map(item => <ItemDetails key={item.id} item={item} />)}</section>}
+        {activities.length > 0 && <section className="space-y-4"><h2 className="font-semibold text-lg text-primary">Activity Details</h2>{activities.map(renderItem)}</section>}
+        {transfers.length > 0 && <section className="space-y-4"><h2 className="font-semibold text-lg text-primary">Transfer Details</h2>{transfers.map(renderItem)}</section>}
         </div>
         <div className="space-y-6 min-w-0">
         <section className="space-y-3">
