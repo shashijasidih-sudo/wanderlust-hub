@@ -280,28 +280,6 @@ const BookingDetail = () => {
             </Badge>
           </div>
 
-          {/* Photo Gallery */}
-          {showActivity && tourData && tourData.galleryImages?.length > 0 && (
-            <Card className="mb-8 overflow-hidden">
-              <CardContent className="p-5 md:p-6">
-                <h2 className="font-semibold text-xl md:text-2xl flex items-center gap-2 mb-4">
-                  <ImageIcon className="h-6 w-6 text-primary" /> Photo Gallery
-                </h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                  {tourData.galleryImages.slice(0, 8).map((img, i) => (
-                    <div
-                      key={i}
-                      className="aspect-video rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() => setSelectedImage(img.src)}
-                    >
-                      <SafeImage src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          )}
-
           {/* Image Lightbox */}
           {selectedImage && (
             <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
@@ -310,56 +288,42 @@ const BookingDetail = () => {
           )}
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Tour Info */}
-            <div className="lg:col-span-2 space-y-8">
-              {/* Transfer Details */}
-              {transferItems.map((item) => {
-                const pax = [Number(item.adults) > 0 ? `${item.adults} Adult${item.adults > 1 ? "s" : ""}` : "", Number(item.children) > 0 ? `${item.children} Child${item.children > 1 ? "ren" : ""}` : ""].filter(Boolean).join(", ");
-                const airline = [tf(item, "airline"), tf(item, "terminal") && `Terminal ${tf(item, "terminal")}`].filter(Boolean).join(" · ");
-                const dateTime = [item.travel_date ? format(new Date(item.travel_date), "EEE, MMM dd, yyyy") : "", tf(item, "pickup_time")].filter(Boolean).join(" · ");
-                const rows: [string, string][] = ([
-                  ["Pickup Location", tf(item, "pickup_location", "pickup_address", "hotel_name")],
-                  ["Drop-off Location", tf(item, "drop_location", "dropoff_location")],
-                  ["Travel Date & Pickup Time", dateTime],
-                  ["Passengers", pax],
-                  ["Flight Number", tf(item, "flight_number")],
-                  ["Airline & Terminal", airline],
-                  ["Vehicle Type", tf(item, "vehicle_type", "vehicle_name", "vehicle")],
-                ] as [string, string][]).filter(([, v]) => v);
-                const notes = tf(item, "special_requests");
-                return (
-                  <Card key={item.id}>
-                    <CardContent className="p-6 md:p-7 space-y-4">
-                      <div>
-                        <p className="text-xs uppercase tracking-wide text-muted-foreground flex items-center gap-1.5"><Route className="h-4 w-4 text-primary" /> Transfer Details</p>
-                        <h2 className="font-semibold text-lg md:text-xl mt-1">{itemNameLink(item, item.activity_name || "Transfer", "font-semibold")}</h2>
-                      </div>
-                      <dl className="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-base">
-                        {rows.map(([label, value]) => (
-                          <div key={label}>
-                            <dt className="text-sm text-muted-foreground">{label}</dt>
-                            <dd className="font-medium break-words">{value}</dd>
-                          </div>
-                        ))}
-                      </dl>
-                      {notes && (
-                        <div className="bg-muted/50 p-3 rounded-lg text-sm">
-                          <p className="text-muted-foreground font-medium text-xs mb-1">Special Requests</p>
-                          <p>{notes}</p>
+            {/* Left Column - Activity & Transfer Details */}
+            <div className="lg:col-span-2 space-y-10">
+              {/* Activity Details */}
+              {showActivity && (
+                <section className="space-y-8">
+                  <h2 className="font-semibold text-xl md:text-2xl">Activity Details</h2>
+
+                  {/* Photo Gallery */}
+                  {tourData && tourData.galleryImages?.length > 0 && (
+                    <Card className="overflow-hidden">
+                      <CardContent className="p-5 md:p-6">
+                        <h3 className="font-semibold text-lg md:text-xl flex items-center gap-2 mb-4">
+                          <ImageIcon className="h-6 w-6 text-primary" /> Photo Gallery
+                        </h3>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                          {tourData.galleryImages.slice(0, 8).map((img, i) => (
+                            <div
+                              key={i}
+                              className="aspect-video rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                              onClick={() => setSelectedImage(img.src)}
+                            >
+                              <SafeImage src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
+                            </div>
+                          ))}
                         </div>
-                      )}
-                    </CardContent>
-                  </Card>
-                );
-              })}
+                      </CardContent>
+                    </Card>
+                  )}
 
               {/* Tour Overview */}
               {tourData?.description && (
                 <Card>
                   <CardContent className="p-6 md:p-7">
-                    <h2 className="font-semibold text-xl md:text-2xl flex items-center gap-2 mb-4">
+                    <h3 className="font-semibold text-lg md:text-xl flex items-center gap-2 mb-4">
                       <FileText className="h-6 w-6 text-primary" /> Tour Overview
-                    </h2>
+                    </h3>
                     <p className="text-base text-muted-foreground leading-relaxed mb-5">{tourData.description.overview}</p>
                     {tourData.description.whatToExpect && (
                       <>
@@ -375,9 +339,9 @@ const BookingDetail = () => {
               {tourData?.itinerary?.length > 0 && (
                 <Card>
                   <CardContent className="p-6 md:p-7">
-                    <h2 className="font-semibold text-xl md:text-2xl flex items-center gap-2 mb-5">
+                    <h3 className="font-semibold text-lg md:text-xl flex items-center gap-2 mb-5">
                       <Route className="h-6 w-6 text-primary" /> Itinerary
-                    </h2>
+                    </h3>
                     <div className="space-y-4">
                       {tourData.itinerary.map((step, i) => (
                         <div key={i} className="flex gap-4">
@@ -403,7 +367,7 @@ const BookingDetail = () => {
               {tourData && (
                 <Card>
                   <CardContent className="p-6 md:p-7">
-                    <h2 className="font-semibold text-xl md:text-2xl mb-4">Policies & Information</h2>
+                    <h3 className="font-semibold text-lg md:text-xl mb-4">Policies & Information</h3>
                     <Accordion type="multiple" className="w-full">
                       {tourData.inclusions?.length > 0 && (
                         <AccordionItem value="inclusions">
@@ -478,6 +442,54 @@ const BookingDetail = () => {
                     </Accordion>
                   </CardContent>
                 </Card>
+              )}
+                </section>
+              )}
+
+              {/* Transfer Details */}
+              {transferItems.length > 0 && (
+                <section className="space-y-8">
+                  <h2 className="font-semibold text-xl md:text-2xl">Transfer Details</h2>
+                  {transferItems.map((item) => {
+                    const pax = [Number(item.adults) > 0 ? `${item.adults} Adult${item.adults > 1 ? "s" : ""}` : "", Number(item.children) > 0 ? `${item.children} Child${item.children > 1 ? "ren" : ""}` : ""].filter(Boolean).join(", ");
+                    const airline = [tf(item, "airline"), tf(item, "terminal") && `Terminal ${tf(item, "terminal")}`].filter(Boolean).join(" · ");
+                    const dateTime = [item.travel_date ? format(new Date(item.travel_date), "EEE, MMM dd, yyyy") : "", tf(item, "pickup_time")].filter(Boolean).join(" · ");
+                    const rows: [string, string][] = ([
+                      ["Pickup Location", tf(item, "pickup_location", "pickup_address", "hotel_name")],
+                      ["Drop-off Location", tf(item, "drop_location", "dropoff_location")],
+                      ["Travel Date & Pickup Time", dateTime],
+                      ["Passengers", pax],
+                      ["Flight Number", tf(item, "flight_number")],
+                      ["Airline & Terminal", airline],
+                      ["Vehicle Type", tf(item, "vehicle_type", "vehicle_name", "vehicle")],
+                    ] as [string, string][]).filter(([, v]) => v);
+                    const notes = tf(item, "special_requests");
+                    return (
+                      <Card key={item.id}>
+                        <CardContent className="p-6 md:p-7 space-y-4">
+                          <div>
+                            <p className="text-xs uppercase tracking-wide text-muted-foreground flex items-center gap-1.5"><Route className="h-4 w-4 text-primary" /> Transfer</p>
+                            <h3 className="font-semibold text-lg md:text-xl mt-1">{itemNameLink(item, item.activity_name || "Transfer", "font-semibold")}</h3>
+                          </div>
+                          <dl className="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-base">
+                            {rows.map(([label, value]) => (
+                              <div key={label}>
+                                <dt className="text-sm text-muted-foreground">{label}</dt>
+                                <dd className="font-medium break-words">{value}</dd>
+                              </div>
+                            ))}
+                          </dl>
+                          {notes && (
+                            <div className="bg-muted/50 p-3 rounded-lg text-sm">
+                              <p className="text-muted-foreground font-medium text-xs mb-1">Special Requests</p>
+                              <p>{notes}</p>
+                            </div>
+                          )}
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
+                </section>
               )}
             </div>
 
