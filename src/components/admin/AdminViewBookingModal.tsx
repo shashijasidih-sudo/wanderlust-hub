@@ -95,17 +95,24 @@ const AdminViewBookingModal = ({ booking, open, onOpenChange }: { booking: Admin
   const transfers = items.filter(item => adminItemKind(item) === "TRANSFER");
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="w-[calc(100%-2rem)] max-w-3xl max-h-[90dvh] overflow-y-auto">
-        <DialogHeader>
+      <DialogContent className="w-[96vw] max-w-none h-[96dvh] sm:w-[94vw] sm:h-[94dvh] flex flex-col gap-0 overflow-hidden p-0">
+        <DialogHeader className="shrink-0 border-b border-border px-5 py-5 sm:px-8 pr-12 sm:pr-12">
           <DialogTitle className="text-xl flex items-center gap-2"><ReceiptText className="h-5 w-5 text-primary" />Booking Details</DialogTitle>
           <DialogDescription className="sr-only">Booking, customer and booked item information</DialogDescription>
         </DialogHeader>
+        <div className="min-h-0 flex-1 overflow-y-auto p-5 sm:p-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="space-y-8 lg:col-span-2">
+        {booking.items_load_error && <p role="alert" className="text-sm text-destructive">Booked item details could not be loaded. Only the available booking summary is shown; close this window and refresh to retry.</p>}
+        {activities.length > 0 && <section className="space-y-4"><h2 className="font-semibold text-lg text-primary">Activity Details</h2>{activities.map(item => <ItemDetails key={item.id} item={item} />)}</section>}
+        {transfers.length > 0 && <section className="space-y-4"><h2 className="font-semibold text-lg text-primary">Transfer Details</h2>{transfers.map(item => <ItemDetails key={item.id} item={item} />)}</section>}
+        </div>
+        <div className="space-y-6 min-w-0">
         <section className="space-y-3">
           <h2 className="font-semibold text-base">Booking Information</h2>
           <Fields rows={[
             ["Booking ID", v("booking_number") || booking.id], ["Booking Date", dateValue(v("created_at"))],
-            ["Overall Booking Status", v("status")], ["Total Amount", formatPrice(Number(booking.total_price || 0))],
-            ["Currency", v("currency")], ["Payment Status", v("payment_status")], ["Payment ID", v("payment_id")],
+            ["Overall Booking Status", v("status")],
             ["Tour Date", dateValue(v("tour_date"))], ["Adults", v("adults")], ["Children", v("children")],
           ]} />
         </section>
@@ -113,9 +120,16 @@ const AdminViewBookingModal = ({ booking, open, onOpenChange }: { booking: Admin
           <h2 className="font-semibold text-base">Customer Information</h2>
           <Fields rows={[["Customer Name", v("contact_name")], ["Email", v("contact_email")], ["Phone Number", v("contact_phone")], ["Special Requests", v("special_requests")]]} />
         </section>
-        {booking.items_load_error && <p role="alert" className="text-sm text-destructive">Booked item details could not be loaded. Only the available booking summary is shown; close this window and refresh to retry.</p>}
-        {activities.length > 0 && <section className="border-t border-border pt-5 space-y-3"><h2 className="font-semibold text-base text-primary">Activity Details</h2>{activities.map(item => <ItemDetails key={item.id} item={item} />)}</section>}
-        {transfers.length > 0 && <section className="border-t border-border pt-5 space-y-3"><h2 className="font-semibold text-base text-primary">Transfer Details</h2>{transfers.map(item => <ItemDetails key={item.id} item={item} />)}</section>}
+        <section className="border-t border-border pt-5 space-y-3">
+          <h2 className="font-semibold text-base">Payment Information</h2>
+          <Fields rows={[
+            ["Total Amount", formatPrice(Number(booking.total_price || 0))],
+            ["Currency", v("currency")], ["Payment Status", v("payment_status")], ["Payment ID", v("payment_id")],
+          ]} />
+        </section>
+        </div>
+        </div>
+        </div>
       </DialogContent>
     </Dialog>
   );

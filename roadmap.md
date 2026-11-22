@@ -1,5 +1,9 @@
 # Approved URL audit fixes
 
+## Admin full-size modal and individual cancellation
+- [x] Enlarge the admin View Booking window to 94% desktop / 96% mobile dimensions, retain all information and separate payment section; automated build OK and all 60 tests pass. Desktop/mobile sample checks verify five sections, internal scrolling, no horizontal overflow and accessible close control. Live authenticated production display remains unverified.
+- [ ] Implement and test individual admin cancellation only after actual production schema and effective admin SELECT/UPDATE permissions are verified; production inspection is unavailable through the connected Cloud tools, which target the excluded project. Refund, status-update and historical cancellation handlers must remain unchanged. No backend changes or deployment approved.
+
 ## Admin combined booking display
 - [x] Show associated saved item names in the admin list and separate activity/transfer details in a dedicated admin View modal; preserve all action handlers and customer UI. All 60 tests pass, cancellation 4/4, automated build OK; desktop/mobile sample-record checks pass. Live production admin data and effective item-read permissions remain unverified because no production admin session is available; no backend changes or deployment.
 
