@@ -1,6 +1,6 @@
 import SafeImage from "@/components/SafeImage";
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { format } from "date-fns";
 import { useAuth } from "@/lib/auth";
 import { supabase } from "@/lib/supabaseClient";
@@ -25,7 +25,7 @@ import {
 import {
   CalendarDays, Users, MapPin, Clock, CreditCard, Mail, Phone, User,
   CheckCircle2, XCircle, ShieldCheck, Baby, Ban, ArrowLeft, Loader2,
-  Image as ImageIcon, FileText, Route, Star,
+  Image as ImageIcon, FileText, Route, Star, ArrowUpRight,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { canCancelItem, nextParentStatus, itemKindLabel, isTransferItem } from "@/lib/bookingItemCancellation";
@@ -219,6 +219,26 @@ const BookingDetail = () => {
     return "";
   };
 
+  // Product page URL for a booked item. Cart and transfer pages save the
+  // page path as the item slug (e.g. "thailand/bangkok/...-transfer"), so the
+  // saved activity_slug/product_id maps directly to the product route.
+  const itemProductUrl = (item: any): string | null => {
+    const raw = String(item?.activity_slug || item?.product_id || "").trim();
+    const slug = raw.replace(/^\/+|\/+$/g, "");
+    return slug ? `/${slug}/` : null;
+  };
+
+  const itemNameLink = (item: any, name: string, className: string) => {
+    const url = itemProductUrl(item);
+    if (!url) return <span className={className}>{name}</span>;
+    return (
+      <Link to={url} className={`${className} text-primary hover:underline inline-flex items-start gap-1`}>
+        <span>{name}</span>
+        <ArrowUpRight className="h-4 w-4 shrink-0 mt-0.5" />
+      </Link>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -234,7 +254,16 @@ const BookingDetail = () => {
             <div className="space-y-3">
               <h1 className="text-2xl md:text-3xl font-bold leading-tight">Booking Details</h1>
               {showActivity && activityName && (
-                <h2 className="text-lg md:text-xl font-semibold text-foreground">{activityName}</h2>
+                <h2 className="text-lg md:text-xl font-semibold text-foreground">
+                  {activityItems.length > 0
+                    ? activityItems.map((item: any, i: number) => (
+                        <span key={item.id || i}>
+                          {i > 0 && ", "}
+                          {itemNameLink(item, item.activity_name || booking.tour_name, "font-semibold")}
+                        </span>
+                      ))
+                    : activityName}
+                </h2>
               )}
               {showActivity && tourData && (
                 <div className="flex flex-wrap gap-4 text-base text-muted-foreground">
@@ -303,7 +332,7 @@ const BookingDetail = () => {
                     <CardContent className="p-6 md:p-7 space-y-4">
                       <div>
                         <p className="text-xs uppercase tracking-wide text-muted-foreground flex items-center gap-1.5"><Route className="h-4 w-4 text-primary" /> Transfer Details</p>
-                        <h2 className="font-semibold text-lg md:text-xl mt-1">{item.activity_name || "Transfer"}</h2>
+                        <h2 className="font-semibold text-lg md:text-xl mt-1">{itemNameLink(item, item.activity_name || "Transfer", "font-semibold")}</h2>
                       </div>
                       <dl className="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-base">
                         {rows.map(([label, value]) => (
@@ -558,7 +587,7 @@ const BookingDetail = () => {
                                 <div className="flex items-start justify-between gap-2">
                                   <div className="min-w-0">
                                     <p className="text-xs uppercase tracking-wide text-muted-foreground">{kind}</p>
-                                    <p className="font-semibold break-words">{name}</p>
+                                    <p className="font-semibold break-words">{itemNameLink(item, name, "font-semibold")}</p>
                                   </div>
                                   {isRealItem && (
                                     <Badge variant="outline" className={`${itemStatus.color} shrink-0 text-xs`}>{itemStatus.label}</Badge>
