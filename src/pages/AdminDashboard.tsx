@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
+import { getRefundPaymentId, readFunctionErrorMessage } from "@/lib/adminRefund";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
 import { supabase } from "@/lib/supabaseClient";
@@ -182,7 +183,8 @@ const AdminDashboard = () => {
 
     if (error) {
       console.error(`${path} error:`, error);
-      return { ok: false, data: null, error };
+      const message = await readFunctionErrorMessage(error);
+      return { ok: false, data: null, error: { ...error, message } };
     }
 
     return { ok: true, data, error: null };
@@ -340,11 +342,16 @@ const AdminDashboard = () => {
 
   const handleRefund = async (booking: Booking) => {
     if (!confirm(`Process refund for "${booking.contact_name}" - ₹${booking.total_price.toLocaleString()}?`)) return;
+    const paymentId = getRefundPaymentId(booking);
+    if (!paymentId) {
+      toast({ title: "Refund not started", description: "No Razorpay payment ID saved for this booking.", variant: "destructive" });
+      return;
+    }
     try {
       const res = await fetchAdminFunction("refund-payment", {
         method: "POST",
         body: JSON.stringify({
-          payment_id: booking.payment_id,
+          payment_id: paymentId,
           amount: booking.total_price,
           booking_id: booking.id,
         }),
