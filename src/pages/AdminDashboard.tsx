@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { getRefundPaymentId, readFunctionErrorMessage } from "@/lib/adminRefund";
+import { getRefundPaymentId, readFunctionErrorMessage, buildRefundRequest, canFullRefund, formatMinorAmount, type RefundLedgerRow } from "@/lib/adminRefund";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
 import { supabase } from "@/lib/supabaseClient";
@@ -58,6 +58,8 @@ interface Booking {
   created_at: string;
   updated_at: string;
   user_id: string;
+  refund_status?: string;
+  item_details?: unknown;
   booking_items?: SavedBookingItem[];
   items_load_error?: boolean;
 }
@@ -300,6 +302,9 @@ const AdminDashboard = () => {
     return { ok: true };
   };
 
+  const [refundLedger, setRefundLedger] = useState<RefundLedgerRow[]>([]);
+  const [refundBusy, setRefundBusy] = useState<string | null>(null);
+
   const handleCancelBooking = async (booking: Booking) => {
     if (!confirm(`Cancel booking for "${booking.contact_name}" - ${booking.tour_name}?`)) return;
     await handleStatusUpdate(booking.id, "cancelled");
@@ -340,45 +345,61 @@ const AdminDashboard = () => {
     }
   };
 
-  const handleRefund = async (booking: Booking) => {
-    if (!confirm(`Process refund for "${booking.contact_name}" - ₹${booking.total_price.toLocaleString()}?`)) return;
-    const paymentId = getRefundPaymentId(booking);
+  const loadRefundLedger = async (bookingId: string) => {
+    const { data, error } = await (supabase as any).from("booking_refunds")
+      .select("id, booking_item_id, scope, status, amount_minor, currency, email_status, email_last_error")
+      .eq("booking_id", bookingId).order("created_at", { ascending: true });
+    setRefundLedger(error ? [] : ((data || []) as RefundLedgerRow[]));
+  };
+  useEffect(() => { if (viewOpen && viewBooking) void loadRefundLedger(viewBooking.id); else setRefundLedger([]); }, [viewOpen, viewBooking?.id]);
+
+  // Server computes amounts, calls Razorpay, records the refund, updates statuses and sends the email.
+  const runRefund = async (booking: Booking, item?: SavedBookingItem) => {
+    if (refundBusy) return;
+    const paymentId = getRefundPaymentId(booking as any);
     if (!paymentId) {
       toast({ title: "Refund not started", description: "No Razorpay payment ID saved for this booking.", variant: "destructive" });
       return;
     }
+    const label = item ? `${adminItemKind(item) === "TRANSFER" ? "Transfer" : "Activity"} "${item.activity_name || "item"}"` : `the full remaining balance of "${booking.contact_name}" - ${booking.tour_name}`;
+    if (!confirm(`Refund ${label}? The amount is calculated on the server from the saved booking${item ? "; other items stay active" : ""}. Razorpay Test/Live mode follows the server keys.`)) return;
+    setRefundBusy(item?.id || booking.id);
     try {
-      const res = await fetchAdminFunction("refund-payment", {
-        method: "POST",
-        body: JSON.stringify({
-          payment_id: paymentId,
-          amount: booking.total_price,
-          booking_id: booking.id,
-        }),
-      });
-
-      if (!res) {
-        return;
-      }
-
-      const resData = res.data || {};
-      console.log("Refund API response data:", resData);
-
-      if (!res.ok) {
-        throw new Error(resData.error || res.error?.message || `Refund failed`);
-      }
-
-
-      await handleStatusUpdate(booking.id, "refunded");
-      const emailRes = await sendNotificationEmail(booking, "refund");
-      if (emailRes.ok) {
-        toast({ title: "Refund processed & email sent", description: `₹${booking.total_price.toLocaleString()} refund initiated` });
+      const res = await fetchAdminFunction("refund-payment", { method: "POST", body: JSON.stringify(buildRefundRequest(booking.id, item?.id)) });
+      if (!res) return;
+      const d = res.data || {};
+      if (!res.ok) throw new Error(d.error || res.error?.message || "Refund failed");
+      if (d.pending) {
+        toast({ title: "Refund pending confirmation", description: d.message });
       } else {
-        toast({ title: "Refund processed — email failed", description: emailRes.error, variant: "destructive" });
+        const amount = d.refund ? formatMinorAmount(Number(d.refund.amount_minor), d.refund.currency) : "";
+        toast(d.email?.status === "sent"
+          ? { title: "Refund processed & email sent", description: `${amount} · ${d.refund?.razorpay_refund_id || ""}` }
+          : { title: "Refund processed — email failed", description: `${amount}. ${d.email?.error || ""} Use "Retry refund email".`, variant: "destructive" });
       }
     } catch (err: any) {
-      console.error("Refund failed:", err);
       toast({ title: "Refund failed", description: err.message || "Could not process refund", variant: "destructive" });
+    } finally {
+      setRefundBusy(null);
+      await fetchAllBookings();
+      if (viewBooking) await loadRefundLedger(viewBooking.id);
+    }
+  };
+  const handleRefund = (booking: Booking) => runRefund(booking);
+
+  const retryRefundEmail = async (row: RefundLedgerRow) => {
+    if (refundBusy) return;
+    setRefundBusy(row.id);
+    try {
+      const res = await fetchAdminFunction("refund-payment", { method: "POST", body: JSON.stringify({ action: "retry_email", refund_id: row.id }) });
+      if (!res) return;
+      if (!res.ok) throw new Error(res.data?.error || res.data?.email?.error || "Email failed");
+      toast({ title: "Refund email sent" });
+    } catch (err: any) {
+      toast({ title: "Refund email failed", description: err.message, variant: "destructive" });
+    } finally {
+      setRefundBusy(null);
+      if (viewBooking) await loadRefundLedger(viewBooking.id);
     }
   };
 
@@ -677,7 +698,7 @@ const AdminDashboard = () => {
                                   <XCircle className="h-3 w-3 mr-1" /> Cancel
                                 </Button>
                               )}
-                              {["confirmed", "completed", "cancelled"].includes(booking.status || "") && (
+                              {canFullRefund(booking as any) && (
                                 <Button
                                   variant="outline"
                                   size="sm"
@@ -737,6 +758,11 @@ const AdminDashboard = () => {
         onOpenChange={setViewOpen}
         onCancelItem={(item) => { if (viewBooking) void handleCancelItem(viewBooking, item); }}
         cancellingItemId={cancellingItemId}
+        refundLedger={refundLedger}
+        refundBusy={refundBusy}
+        onRefundItem={(item) => { if (viewBooking) void runRefund(viewBooking, item); }}
+        onRefundFull={() => { if (viewBooking) void runRefund(viewBooking); }}
+        onRetryRefundEmail={(row) => void retryRefundEmail(row)}
       />
       <Footer />
     </div>

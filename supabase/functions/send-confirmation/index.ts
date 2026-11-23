@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
+import { buildRefundEmails, checkRefundRequest, isServiceCaller, validateRefundForEmail } from "./refund_email.ts";
 import { buildItemCancellationEmail, checkItemRequest } from "./item_cancellation.ts";
 
 // ---- Hostinger SMTP ----
@@ -441,10 +442,15 @@ serve(async (req) => {
       return new Response(JSON.stringify({ error: "Email service not configured (SMTP secrets missing)" }), { status: 500, headers: corsHeaders });
     }
 
-    const { bookingId, paymentId, orderId, type, adminOnly, itemId: rawItemId } = await req.json();
+    const { bookingId, paymentId, orderId, type, adminOnly, itemId: rawItemId, refundId: rawRefundId } = await req.json();
     if (!bookingId) return new Response(JSON.stringify({ error: "Missing bookingId" }), { status: 400, headers: corsHeaders });
     const itemCheck = checkItemRequest(type, rawItemId);
     if (!itemCheck.ok) return new Response(JSON.stringify({ error: itemCheck.error }), { status: 400, headers: corsHeaders });
+    const refundCheck = checkRefundRequest(type, rawRefundId, rawItemId);
+    if (!refundCheck.ok) return new Response(JSON.stringify({ error: refundCheck.error }), { status: 400, headers: corsHeaders });
+    if (refundCheck.refundId && !isServiceCaller(req.headers.get("Authorization"), Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"))) {
+      return new Response(JSON.stringify({ error: "Forbidden" }), { status: 403, headers: corsHeaders });
+    }
     const emailType: "confirmation" | "cancellation" | "refund" =
       type === "cancellation" || type === "refund" ? type : "confirmation";
 
@@ -517,6 +523,33 @@ serve(async (req) => {
         terminal: (legacy.terminal as string) || null,
         special_requests: booking.special_requests || null,
       }];
+    }
+
+    // ---- Ledger-based refund email (only when a valid refundId is supplied by the server) ----
+    if (refundCheck.refundId) {
+      const { data: refundRow } = await supabase.from("booking_refunds").select("*").eq("id", refundCheck.refundId).maybeSingle();
+      const valid = validateRefundForEmail(refundRow, String(bookingId), items as any[]);
+      if (!valid.ok) return new Response(JSON.stringify({ error: valid.error }), { status: valid.status, headers: corsHeaders });
+      const { data: claimed, error: claimError } = await supabase.rpc("refund_email_claim", { _refund_id: refundCheck.refundId, _booking_id: bookingId });
+      if (claimError || !claimed?.id) {
+        return new Response(JSON.stringify({ error: claimError ? "Could not record email attempt" : "Refund email already sent or in progress" }), { status: 409, headers: corsHeaders });
+      }
+      const mail = buildRefundEmails({ row: refundRow, item: valid.item, items: items as any[], name, bookingRef: bookingShort, bookingId: String(bookingId), tourTitle });
+      if (!adminOnly) {
+        try {
+          await smtpSend(recipientEmail, mail.subject, shell(mail.inner, mail.preview));
+        } catch (err) {
+          const msg = err instanceof Error ? err.message : String(err);
+          console.error("refund customer SMTP send failed:", msg);
+          await supabase.rpc("refund_email_mark", { _refund_id: refundCheck.refundId, _sent: false, _error: msg });
+          return new Response(JSON.stringify({ success: false, error: `SMTP send failed: ${msg}`, retryable: true }), { status: 502, headers: corsHeaders });
+        }
+      }
+      await supabase.rpc("refund_email_mark", { _refund_id: refundCheck.refundId, _sent: true, _error: null });
+      let refundAdminNotification = "sent";
+      try { await smtpSendText("support@yellodae.com", mail.supportSubject, mail.supportText); }
+      catch (err) { refundAdminNotification = "failed"; console.error("Refund admin notification failed:", err instanceof Error ? err.message : String(err)); }
+      return new Response(JSON.stringify({ success: true, type: "refund", refundId: refundCheck.refundId, customerEmail: adminOnly ? "skipped" : "sent", adminNotification: refundAdminNotification }), { status: 200, headers: corsHeaders });
     }
 
     // ---- Item-level cancellation (only when a valid itemId is supplied) ----

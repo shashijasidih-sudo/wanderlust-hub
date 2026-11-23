@@ -35,3 +35,40 @@ export async function readFunctionErrorMessage(error: any): Promise<string> {
     return fallback;
   }
 }
+
+// ---- Ledger-based refunds (refund-payment v2) ----
+export interface RefundableItem { id: string; status?: string | null; refund_status?: string | null }
+export interface RefundableBooking { id: string; status?: string | null; refund_status?: string | null; booking_items?: RefundableItem[] }
+export interface RefundLedgerRow { id: string; booking_item_id: string | null; scope: string; status: string; amount_minor: number; currency: string; email_status: string; email_last_error?: string | null }
+
+const REFUNDABLE_BOOKING = ["confirmed", "completed", "cancelled"];
+
+/** Item refund button: booking paid/active, item not already refunded or in progress, no open refund on the booking. */
+export function canRefundItem(item: RefundableItem, booking: RefundableBooking, ledger: RefundLedgerRow[] = []): boolean {
+  if (!REFUNDABLE_BOOKING.includes(String(booking.status || ""))) return false;
+  if (booking.refund_status === "full") return false;
+  if (item.refund_status === "refunded" || item.refund_status === "pending") return false;
+  if (ledger.some((r) => r.status === "pending" || r.status === "review")) return false;
+  return !ledger.some((r) => r.booking_item_id === item.id && r.status === "processed");
+}
+
+/** Full (or remaining-balance) refund button. */
+export function canFullRefund(booking: RefundableBooking, ledger: RefundLedgerRow[] = []): boolean {
+  if (!REFUNDABLE_BOOKING.includes(String(booking.status || ""))) return false;
+  if (booking.refund_status === "full") return false;
+  return !ledger.some((r) => r.status === "pending" || r.status === "review" || (r.scope === "full" && r.status === "processed"));
+}
+
+/** The only fields the browser sends. Amounts are computed on the server from saved data. */
+export function buildRefundRequest(bookingId: string, itemId?: string | null) {
+  return itemId ? { action: "refund", booking_id: bookingId, scope: "item", item_id: itemId } : { action: "refund", booking_id: bookingId, scope: "full" };
+}
+
+export function refundsNeedingEmailRetry(ledger: RefundLedgerRow[]): RefundLedgerRow[] {
+  return ledger.filter((r) => r.status === "processed" && r.email_status === "failed");
+}
+
+export function formatMinorAmount(minor: number, currency = "INR"): string {
+  try { return new Intl.NumberFormat("en-IN", { style: "currency", currency, minimumFractionDigits: 2 }).format(Number(minor) / 100); }
+  catch { return `${currency} ${(Number(minor) / 100).toFixed(2)}`; }
+}
