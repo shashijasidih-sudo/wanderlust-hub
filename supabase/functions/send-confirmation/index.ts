@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
+import { buildItemCancellationEmail, checkItemRequest } from "./item_cancellation.ts";
 
 // ---- Hostinger SMTP ----
 const SMTP_HOST = Deno.env.get("SMTP_HOST")?.trim() || "";
@@ -41,6 +42,39 @@ async function smtpSend(to: string, subject: string, html: string, replyTo?: str
       }
     } catch (_) {
       // ignore close errors
+    }
+  }
+}
+
+
+// Plain-text sender for internal admin notifications. This avoids multipart HTML
+// rendering issues in some mailbox clients while leaving customer HTML untouched.
+async function smtpSendText(to: string, subject: string, textBody: string, replyTo?: string) {
+  if (!SMTP_HOST || !SMTP_USERNAME || !SMTP_PASSWORD) {
+    throw new Error("SMTP not configured (missing SMTP_HOST/USERNAME/PASSWORD)");
+  }
+  const client = new SMTPClient({
+    connection: {
+      hostname: SMTP_HOST,
+      port: SMTP_PORT,
+      tls: SMTP_PORT === 465,
+      auth: { username: SMTP_USERNAME, password: SMTP_PASSWORD },
+    },
+  });
+  try {
+    await client.send({
+      from: `Yellodae <${SMTP_FROM}>`,
+      to,
+      subject,
+      content: textBody,
+      ...(replyTo ? { replyTo } : {}),
+    });
+  } finally {
+    try {
+      const maybe = client.close();
+      if (maybe && typeof (maybe as Promise<unknown>).then === "function") await maybe;
+    } catch (_) {
+      // Ignore SMTP connection close errors.
     }
   }
 }
@@ -97,6 +131,8 @@ function detectDestination(slug: string, tourName: string): string {
 
 // ---- Itemized booking rendering ----
 interface BookingItemRow {
+  id?: string | null;
+  status?: string | null;
   activity_name?: string | null;
   product_type?: string | null;
   activity_slug?: string | null;
@@ -269,74 +305,57 @@ function customerEmail(p: CustomerParams) {
       <td style="padding:10px 0;border-bottom:1px solid ${BRAND.border};color:${opts?.color || BRAND.ink};font-size:14px;font-weight:${opts?.strong ? 700 : 500};text-align:right;">${value}</td>
     </tr>`;
 
-
-
+  const safeName = esc(p.name || "Valued Traveler");
+  const safeBookingShort = esc(p.bookingShort);
+  const safeTourDate = esc(p.tourDate);
+  const safeGuests = esc(p.guests);
+  const safeAmount = esc(p.amount);
+  const safeTourTitle = esc(p.tourTitle);
 
   const inner = `
-<tr><td style="padding:36px 32px 8px;text-align:center;">
-  <div style="display:inline-block;background:#dcfce7;border-radius:999px;padding:10px 18px;color:${BRAND.success};font-size:12px;font-weight:700;letter-spacing:0.5px;">✓ BOOKING CONFIRMED</div>
-  <h1 style="color:${BRAND.ink};margin:20px 0 12px;font-size:26px;line-height:1.25;font-weight:800;">🎉 You're all set, ${p.name}!</h1>
-  <p style="color:${BRAND.text};margin:0 0 10px;font-size:15px;line-height:1.6;">Thank you for choosing <strong>Yellodae Trails</strong>.</p>
-  <p style="color:${BRAND.text};margin:0 0 10px;font-size:15px;line-height:1.6;">Your booking has been successfully confirmed.</p>
-  <p style="color:${BRAND.muted};margin:0;font-size:14px;line-height:1.6;">You will be receiving your voucher via email and WhatsApp shortly.</p>
+<tr><td style="padding:32px 32px 8px;text-align:left;">
+  <p style="margin:0 0 10px;color:${BRAND.success};font-size:12px;font-weight:700;letter-spacing:0.5px;">BOOKING CONFIRMED</p>
+  <h1 style="color:${BRAND.ink};margin:0 0 12px;font-size:25px;line-height:1.3;font-weight:800;">Your booking is confirmed</h1>
+  <p style="color:${BRAND.text};margin:0 0 8px;font-size:15px;line-height:1.6;">Hello ${safeName},</p>
+  <p style="color:${BRAND.text};margin:0;font-size:14px;line-height:1.6;">Thank you for booking with Yellodae Trails. Your booking has been successfully confirmed. Please keep this email for your records.</p>
+</td></tr>
+
+<tr><td style="padding:22px 32px 0;">
+  <p style="margin:0 0 10px;color:${BRAND.primaryDark};font-size:11px;font-weight:700;letter-spacing:1px;">BOOKING SUMMARY</p>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid ${BRAND.border};border-radius:10px;padding:0 14px;">
+    ${row("Booking Reference", `<span style="font-family:monospace;">${safeBookingShort}</span>`, { strong: true })}
+    ${row("Booking", safeTourTitle)}
+    ${row("Travel Date", safeTourDate)}
+    ${row("Travellers", safeGuests)}
+    ${row("Booking Status", `<span style="color:${BRAND.success};font-weight:700;">Confirmed</span>`)}
+    <tr>
+      <td style="padding:14px 0 12px;color:${BRAND.ink};font-size:14px;font-weight:700;">Amount Paid</td>
+      <td style="padding:14px 0 12px;color:${BRAND.primaryDark};font-size:18px;font-weight:800;text-align:right;">${safeAmount}</td>
+    </tr>
+  </table>
 </td></tr>
 
 <tr><td style="padding:24px 32px 0;">
-  <p style="margin:0 0 12px;color:${BRAND.primaryDark};font-size:11px;font-weight:700;letter-spacing:1px;">BOOKING SUMMARY${p.itemCount > 1 ? ` · ${p.itemCount} ITEMS` : ""}</p>
-  ${p.itemsHtml}
+  <p style="margin:0 0 12px;color:${BRAND.primaryDark};font-size:11px;font-weight:700;letter-spacing:1px;">ACTIVITY AND TRAVEL DETAILS${p.itemCount > 1 ? ` (${p.itemCount} ITEMS)` : ""}</p>
+  ${p.itemsHtml || `<p style="margin:0;color:${BRAND.muted};font-size:13px;line-height:1.6;">Detailed activity information is not available in the booking record yet. Please contact our support team if you need help confirming your arrangements.</p>`}
 </td></tr>
 
-<tr><td style="padding:4px 32px 8px;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-    ${row("Booking Status", `<span style="color:${BRAND.success};font-weight:700;">✅ Confirmed</span>`)}
-    ${row("Booking ID", `<span style="font-family:monospace;">${p.bookingShort}</span>`, { strong: true })}
-    <tr>
-      <td style="padding:14px 0 4px;color:${BRAND.ink};font-size:15px;font-weight:700;">Amount Paid</td>
-      <td style="padding:14px 0 4px;color:${BRAND.primaryDark};font-size:20px;font-weight:800;text-align:right;">${p.amount}</td>
-    </tr>
-  </table>
-</td></tr>
-
-
-
-<tr><td style="padding:24px 32px 8px;">
-  <div style="background:${BRAND.surface};border:1px solid ${BRAND.border};border-radius:12px;padding:20px 22px;">
-    <p style="margin:0 0 12px;color:${BRAND.ink};font-size:15px;font-weight:800;">What's Next?</p>
-    <ul style="margin:0;padding:0 0 0 18px;color:${BRAND.text};font-size:13px;line-height:1.75;">
-      <li>You will receive your voucher via email and WhatsApp shortly.</li>
-      <li>Please carry a valid Passport/ID wherever required.</li>
-      <li>Reach the meeting point 10–15 minutes before the reporting time.</li>
-      <li>Contact our support team anytime if you need assistance.</li>
-    </ul>
+<tr><td style="padding:22px 32px 8px;">
+  <div style="background:${BRAND.surface};border:1px solid ${BRAND.border};border-radius:10px;padding:18px 20px;">
+    <p style="margin:0 0 8px;color:${BRAND.ink};font-size:14px;font-weight:700;">Before you travel</p>
+    <p style="margin:0;color:${BRAND.text};font-size:13px;line-height:1.7;">Please review the travel date and any pickup or meeting-point details above. Where applicable, carry the required passport or ID and arrive at the stated meeting point on time. If any details are missing or need correction, contact us before your travel date.</p>
   </div>
 </td></tr>
 
-<tr><td style="padding:24px 32px 8px;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-    <tr>
-      <td align="center" style="padding-bottom:12px;">
-        <a href="${p.viewUrl}" style="display:inline-block;background:${BRAND.primary};color:#ffffff;text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:700;font-size:15px;">View Booking</a>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <a href="${p.exploreUrl}" style="display:inline-block;background:#ffffff;color:${BRAND.ink};text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:600;font-size:14px;border:1.5px solid ${BRAND.border};margin:0 4px 8px;">Explore Activities</a>
-        <a href="${p.supportUrl}" style="display:inline-block;background:#ffffff;color:${BRAND.ink};text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:600;font-size:14px;border:1.5px solid ${BRAND.border};margin:0 4px 8px;">Contact Support</a>
-      </td>
-    </tr>
-  </table>
+<tr><td style="padding:22px 32px 8px;" align="center">
+  <a href="${p.viewUrl}" style="display:inline-block;background:${BRAND.primary};color:#ffffff;text-decoration:none;padding:13px 26px;border-radius:8px;font-weight:700;font-size:14px;">View Your Booking</a>
 </td></tr>
 
-<tr><td style="padding:8px 32px 32px;">
-  <div style="background:${BRAND.surface};border-radius:10px;padding:16px 20px;">
-    <p style="margin:0;color:${BRAND.muted};font-size:13px;line-height:1.6;">
-      Need help? Email <a href="mailto:support@yellodae.com" style="color:${BRAND.primaryDark};">support@yellodae.com</a> or WhatsApp
-      <a href="https://wa.me/917061710810" style="color:${BRAND.primaryDark};">+91 7061710810</a>.
-    </p>
-  </div>
+<tr><td style="padding:12px 32px 30px;">
+  <p style="margin:0;color:${BRAND.muted};font-size:13px;line-height:1.7;">Need assistance? Reply to this email or contact <a href="mailto:support@yellodae.com" style="color:${BRAND.primaryDark};">support@yellodae.com</a> or WhatsApp +91 7061710810.</p>
 </td></tr>`;
 
-  return shell(inner, `Booking confirmed: ${p.tourTitle} on ${p.tourDate}`);
+  return shell(inner, `Booking confirmed. Reference ${safeBookingShort}. Travel date: ${safeTourDate}.`);
 }
 
 interface SupportParams extends CustomerParams {
@@ -422,8 +441,10 @@ serve(async (req) => {
       return new Response(JSON.stringify({ error: "Email service not configured (SMTP secrets missing)" }), { status: 500, headers: corsHeaders });
     }
 
-    const { bookingId, paymentId, orderId, type } = await req.json();
+    const { bookingId, paymentId, orderId, type, adminOnly, itemId: rawItemId } = await req.json();
     if (!bookingId) return new Response(JSON.stringify({ error: "Missing bookingId" }), { status: 400, headers: corsHeaders });
+    const itemCheck = checkItemRequest(type, rawItemId);
+    if (!itemCheck.ok) return new Response(JSON.stringify({ error: itemCheck.error }), { status: 400, headers: corsHeaders });
     const emailType: "confirmation" | "cancellation" | "refund" =
       type === "cancellation" || type === "refund" ? type : "confirmation";
 
@@ -498,6 +519,48 @@ serve(async (req) => {
       }];
     }
 
+    // ---- Item-level cancellation (only when a valid itemId is supplied) ----
+    if (itemCheck.itemId) {
+      const cancelledItem = items.find((it) => String(it.id || "").toLowerCase() === itemCheck.itemId);
+      if (!cancelledItem) {
+        return new Response(JSON.stringify({ error: "Booking item not found for this booking" }), { status: 404, headers: corsHeaders });
+      }
+      if (String(cancelledItem.status || "").toLowerCase() !== "cancelled") {
+        return new Response(JSON.stringify({ error: "Booking item is not cancelled" }), { status: 409, headers: corsHeaders });
+      }
+      const itemEmail = buildItemCancellationEmail({
+        name, recipientEmail, customerPhone: booking.contact_phone || "", bookingId: String(bookingId), bookingShort,
+        item: cancelledItem, allItems: items, formatDate: fmtDate, formatMoney: money,
+        fallbackCurrency: booking.currency || "INR", viewUrl: `${SITE}/user-bookings`, brand: BRAND,
+      });
+      if (!adminOnly) {
+        try {
+          await smtpSend(recipientEmail, itemEmail.customerSubject, shell(itemEmail.customerInner, itemEmail.previewText));
+        } catch (err) {
+          const msg = err instanceof Error ? err.message : String(err);
+          console.error("item cancellation customer SMTP send failed:", msg);
+          return new Response(JSON.stringify({ success: false, error: `SMTP send failed: ${msg}` }), { status: 502, headers: corsHeaders });
+        }
+      }
+      let itemAdminNotification = "sent";
+      try {
+        await smtpSendText("support@yellodae.com", itemEmail.supportSubject, itemEmail.supportText);
+      } catch (err) {
+        itemAdminNotification = "failed";
+        console.error("Item cancellation admin SMTP send failed:", err instanceof Error ? err.message : String(err));
+      }
+      return new Response(JSON.stringify({
+        success: true,
+        type: "item_cancellation",
+        itemId: itemCheck.itemId,
+        itemType: itemEmail.kind.toLowerCase(),
+        remainingActiveItems: itemEmail.remaining.length,
+        customerEmail: adminOnly ? "skipped" : "sent",
+        recipient: recipientEmail,
+        adminNotification: itemAdminNotification,
+      }), { status: 200, headers: corsHeaders });
+    }
+
     const itemsHtml = renderItems(items, booking.currency || "INR");
     const itemCount = items.length;
     const summaryTitle = itemCount > 1
@@ -528,12 +591,12 @@ serve(async (req) => {
     const sendMail = smtpSend;
 
     // Build subject + body per email type
-    let customerSubject = `Booking Confirmed · ${tourTitle} · Yellodae`;
+    let customerSubject = `Booking confirmed - ${tourTitle} - Yellodae`;
     let customerBody = customerHtml;
     let supportSubject = `🆕 New Booking · ${name} · ${tourTitle}`;
 
     if (emailType === "cancellation") {
-      customerSubject = `Booking Cancelled · ${tourTitle} · Yellodae`;
+      customerSubject = `Booking cancelled - ${tourTitle} - Yellodae`;
       supportSubject = `❌ Booking Cancelled · ${name} · ${tourTitle}`;
       customerBody = shell(`
 <tr><td style="padding:36px 32px 8px;text-align:center;">
@@ -548,7 +611,7 @@ serve(async (req) => {
   </div>
 </td></tr>`, `Your booking for ${tourTitle} has been cancelled.`);
     } else if (emailType === "refund") {
-      customerSubject = `Refund Initiated · ${tourTitle} · Yellodae`;
+      customerSubject = `Refund initiated - ${tourTitle} - Yellodae`;
       supportSubject = `💸 Refund Issued · ${name} · ${tourTitle}`;
       customerBody = shell(`
 <tr><td style="padding:36px 32px 8px;text-align:center;">
@@ -564,20 +627,90 @@ serve(async (req) => {
 </td></tr>`, `Refund of ${amount} initiated for ${tourTitle}.`);
     }
 
-    try {
-      await sendMail(recipientEmail, customerSubject, customerBody);
-    } catch (err) {
-      const msg = err instanceof Error ? err.message : String(err);
-      console.error(`${emailType} customer SMTP send failed:`, msg);
-      return new Response(JSON.stringify({ success: false, error: `SMTP send failed: ${msg}` }), { status: 502, headers: corsHeaders });
+    if (!adminOnly) {
+      try {
+        await sendMail(recipientEmail, customerSubject, customerBody);
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.error(`${emailType} customer SMTP send failed:`, msg);
+        return new Response(JSON.stringify({ success: false, error: `SMTP send failed: ${msg}` }), { status: 502, headers: corsHeaders });
+      }
+    } else {
+      console.log("Customer email skipped for admin-only test", { bookingId, type: emailType });
     }
 
-    // Support notification — best-effort, doesn't block customer success
-    sendMail("support@yellodae.com", supportSubject, supportHtml, recipientEmail)
-      .catch((err) => console.error("Support SMTP send failed:", err instanceof Error ? err.message : err));
+    // Internal admin notification is plain text to avoid raw multipart/HTML
+    // rendering in some mailbox clients. Customer confirmation remains unchanged.
+    const supportText = [
+      "YELLODAE - BOOKING NOTIFICATION",
+      "================================",
+      `Notification type: ${emailType.toUpperCase()}`,
+      "",
+      "CUSTOMER",
+      `Name: ${name}`,
+      `Email: ${recipientEmail}`,
+      `Phone: ${booking.contact_phone || "Not provided"}`,
+      "",
+      "BOOKING",
+      `Booking ID: ${bookingId}`,
+      `Booking reference: ${bookingShort}`,
+      `Tour: ${summaryTitle}`,
+      `Destination: ${destination || "Not specified"}`,
+      `Travel date: ${tourDate}`,
+      `Guests: ${guests}`,
+      `Status: ${status}`,
+      `Booked at: ${bookedAt}`,
+      "",
+      "BOOKED ITEMS",
+      ...items.flatMap((it, index) => [
+        `${index + 1}. ${it.activity_name || "Travel Experience"}`,
+        `   Type: ${prettyType(it.product_type)}`,
+        `   Destination: ${it.destination || detectDestination(it.activity_slug || "", it.activity_name || "") || "Not specified"}`,
+        `   Travel date: ${fmtDate(it.travel_date)}`,
+        `   Adults: ${Number(it.adults ?? 0)} | Children: ${Number(it.children ?? 0)} | Quantity: ${Number(it.quantity ?? 1)}`,
+        `   Price: ${money(Number(it.price || 0), it.currency || booking.currency || "INR")}`,
+        `   Pickup required: ${it.pickup_required ? "Yes" : "No"}`,
+        ...(it.hotel_name ? [`   Hotel: ${it.hotel_name}`] : []),
+        ...(it.pickup_location ? [`   Pickup location: ${it.pickup_location}`] : []),
+        ...(it.meeting_point ? [`   Meeting point: ${it.meeting_point}`] : []),
+        ...(it.pickup_time ? [`   Pickup time: ${it.pickup_time}`] : []),
+        ...(it.drop_location ? [`   Drop location: ${it.drop_location}`] : []),
+        ...(it.flight_number ? [`   Flight number: ${it.flight_number}`] : []),
+        ...(it.airline ? [`   Airline: ${it.airline}`] : []),
+        ...(it.terminal ? [`   Terminal: ${it.terminal}`] : []),
+        ...(it.voucher_number ? [`   Voucher number: ${it.voucher_number}`] : []),
+        ...(it.special_requests ? [`   Item special requests: ${it.special_requests}`] : []),
+        "",
+      ]),
+      "PAYMENT",
+      `Total amount: ${amount}`,
+      `Payment ID: ${paymentId || "Not provided"}`,
+      `Order ID: ${orderId || "Not provided"}`,
+      `Booking special requests: ${booking.special_requests || "None"}`,
+      "",
+      `Open bookings: ${viewUrl}`,
+      "",
+      "Yellodae Trails",
+      "support@yellodae.com | +91 7061710810",
+    ].join("\n");
 
+    let adminNotification = "sent";
+    const plainAdminSubject = `Yellodae booking notification - ${bookingShort}`;
+    try {
+      await smtpSendText("support@yellodae.com", plainAdminSubject, supportText);
+      console.log("Admin notification SMTP accepted", { bookingId, type: emailType });
+    } catch (err) {
+      adminNotification = "failed";
+      console.error("Admin notification SMTP send failed:", err instanceof Error ? err.message : String(err));
+    }
 
-    return new Response(JSON.stringify({ success: true, type: emailType, recipient: recipientEmail }), { status: 200, headers: corsHeaders });
+    return new Response(JSON.stringify({
+      success: true,
+      type: emailType,
+      customerEmail: adminOnly ? "skipped" : "sent",
+      recipient: recipientEmail,
+      adminNotification,
+    }), { status: 200, headers: corsHeaders });
   } catch (error) {
     console.error("Send confirmation error:", error);
     return new Response(JSON.stringify({ success: false, error: error instanceof Error ? error.message : "Unknown error" }), { status: 500, headers: corsHeaders });
