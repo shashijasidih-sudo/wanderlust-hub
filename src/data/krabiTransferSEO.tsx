@@ -117,7 +117,7 @@ type SEOEntry = {
 export const krabiTransferSEO: Record<string, SEOEntry> = {
   // 1 — Krabi Airport (KBV) → Phuket Hotel
   "krabi-kbv-airport-phuket-pickup": {
-    newSlug: "/thailand/krabi/krabi-airport-to-phuket-hotel-transfer/",
+    newSlug: "/thailand/krabi-airport-transfers/krabi-airport-to-phuket-hotel-transfer/",
     oldSlug: "/thailand/krabi/kbv-airport-phuket-pickup/",
     gallery: kbvToPhuketGallery,
     seoContent: (
@@ -183,7 +183,7 @@ export const krabiTransferSEO: Record<string, SEOEntry> = {
 
   // 2 — Krabi Hotel → Krabi Airport (KBV)
   "krabi-hotel-kbv-airport": {
-    newSlug: "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer/",
+    newSlug: "/thailand/krabi-airport-transfers/krabi-hotel-to-krabi-airport-transfer/",
     oldSlug: "/thailand/krabi/krabi-hotel-kbv-airport/",
     gallery: krabiHotelKbvGallery,
     seoContent: (
@@ -234,7 +234,7 @@ export const krabiTransferSEO: Record<string, SEOEntry> = {
 
   // 3 — Krabi Hotel → Phuket Hotel
   "krabi-to-phuket": {
-    newSlug: "/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer/",
+    newSlug: "/thailand/krabi-airport-transfers/krabi-hotel-to-phuket-hotel-transfer/",
     oldSlug: "/thailand/krabi/krabi-to-phuket/",
     gallery: krabiToPhuketGallery,
     seoContent: (
@@ -287,7 +287,7 @@ export const krabiTransferSEO: Record<string, SEOEntry> = {
 
   // 4 — Krabi Hotel → Phuket City Tour 4hr → Phuket Hotel
   "krabi-phuket-city-tour": {
-    newSlug: "/thailand/krabi/phuket-city-tour-to-phuket-hotel-transfer/",
+    newSlug: "/thailand/krabi-airport-transfers/phuket-city-tour-to-phuket-hotel-transfer/",
     oldSlug: "/thailand/krabi/krabi-phuket-city-tour/",
     gallery: krabiPhuketCityTourGallery,
     seoContent: (
@@ -336,7 +336,7 @@ export const krabiTransferSEO: Record<string, SEOEntry> = {
 
   // 5 — Krabi Hotel → HKT Phuket Airport
   "krabi-hkt-airport-dropoff": {
-    newSlug: "/thailand/krabi/krabi-hotel-to-phuket-airport-transfer/",
+    newSlug: "/thailand/krabi-airport-transfers/krabi-hotel-to-phuket-airport-transfer/",
     oldSlug: "/thailand/krabi/krabi-hkt-airport-dropoff/",
     gallery: krabiToHktGallery,
     seoContent: (
@@ -385,7 +385,7 @@ export const krabiTransferSEO: Record<string, SEOEntry> = {
 
   // 6 — Krabi Airport (KBV) → Ao Nang Hotel
   "krabi-kbv-aonang-pickup": {
-    newSlug: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer/",
+    newSlug: "/thailand/krabi-airport-transfers/krabi-airport-to-ao-nang-hotel-transfer/",
     oldSlug: "/thailand/krabi/kbv-aonang-pickup/",
     gallery: kbvToAoNangGallery,
     seoContent: (

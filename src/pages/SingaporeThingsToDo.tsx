@@ -442,9 +442,9 @@ const SingaporeThingsToDo = () => {
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { title: "Singapore Changi Airport Pickup", desc: "Private air-conditioned transfer from Changi airport to your Singapore hotel.", price: 4000, img: singaporeCityTour, slug: "/singapore/singapore-airport-pickup/" },
-            { title: "Singapore Hotel to Changi Airport Dropoff", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 4000, img: singaporeMarinaBay, slug: "/singapore/singapore-airport-dropoff/" },
-            { title: "Singapore Airport Night Pickup", desc: "Late-night and early-morning Changi airport pickup with meet & greet.", price: 5000, img: singaporeRiverCruise, slug: "/singapore/singapore-airport-night-pickup/" },
+            { title: "Singapore Changi Airport Pickup", desc: "Private air-conditioned transfer from Changi airport to your Singapore hotel.", price: 4000, img: singaporeCityTour, slug: "/singapore/budget-airport-transfers/singapore-airport-pickup/" },
+            { title: "Singapore Hotel to Changi Airport Dropoff", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 4000, img: singaporeMarinaBay, slug: "/singapore/budget-airport-transfers/singapore-airport-dropoff/" },
+            { title: "Singapore Airport Night Pickup", desc: "Late-night and early-morning Changi airport pickup with meet & greet.", price: 5000, img: singaporeRiverCruise, slug: "/singapore/budget-airport-transfers/singapore-airport-night-pickup/" },
           ].map((t) => (
             <article key={t.slug} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
               <Link to={t.slug} className="block aspect-[4/3] overflow-hidden bg-muted">

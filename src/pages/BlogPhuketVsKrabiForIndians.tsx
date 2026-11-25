@@ -52,7 +52,7 @@ const BlogPhuketVsKrabiForIndians = () => (
     relatedActivities={[
       { title: "Full-Day Phi Phi Island Tour", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
       { title: "James Bond Island Speedboat Tour", link: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/" },
-      { title: "Phuket to Krabi Transfer", link: "/thailand/phuket/phuket-hotel-to-krabi-hotel-transfer/" },
+      { title: "Phuket to Krabi Transfer", link: "/thailand/phuket-airport-transfers/phuket-hotel-to-krabi-hotel-transfer/" },
     ]}
     relatedLinks={[
       { title: "Phi Phi Speedboat vs Big Boat", link: "/thailand/phuket/destination-guides/comparison/phi-phi-speedboat-vs-big-boat/" },

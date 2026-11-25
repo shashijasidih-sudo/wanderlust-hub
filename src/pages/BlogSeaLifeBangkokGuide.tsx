@@ -25,7 +25,7 @@ const BlogSeaLifeBangkokGuide = () => (
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do/",
-      transfersLink: "/thailand/bangkok/bangkok-hotel-to-don-mueang-airport-transfer/",
+      transfersLink: "/thailand/bangkok-airport-transfers/bangkok-hotel-to-don-mueang-airport-transfer/",
     }}
     sections={[
       {

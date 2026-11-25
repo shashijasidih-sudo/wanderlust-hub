@@ -37,7 +37,7 @@ const BlogBangkokVsPattaya = () => {
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do/",
-      transfersLink: "/thailand/bangkok/bangkok-hotel-to-pattaya-hotel-transfer/",
+      transfersLink: "/thailand/bangkok-airport-transfers/bangkok-hotel-to-pattaya-hotel-transfer/",
     }}
     sections={[
       { type: "paragraph", content: "Bangkok and Pattaya are just two hours apart by road, which is why most Indian travelers club them together on their first Thailand trip. But if your holiday is short — say four or five days — and you have to pick just one, the choice gets tricky. Bangkok offers culture, food and shopping at a scale Pattaya can't match. Pattaya offers beaches, islands, water sports and cabaret shows that Bangkok simply doesn't have. In this honest 2026 comparison we break down both cities across vibe, cost, family-friendliness, nightlife, and travel logistics so you can plan a trip that maximizes every day." },

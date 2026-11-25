@@ -25,7 +25,7 @@ const BlogBestDinnerCruisesCouples = () => (
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do/",
-      transfersLink: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer/",
+      transfersLink: "/thailand/bangkok-airport-transfers/bangkok-hotel-to-suvarnabhumi-airport-transfer/",
     }}
     sections={[
       {

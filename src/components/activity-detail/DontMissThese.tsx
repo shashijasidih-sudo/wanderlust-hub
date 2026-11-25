@@ -43,7 +43,7 @@ const items: DontMissItem[] = [
     title: "Singapore Airport Transfer",
     description: "Reliable Changi airport pickup and drop-off for a hassle-free trip.",
     image: airportTransferImg,
-    slug: "/singapore/singapore-airport-pickup/",
+    slug: "/singapore/budget-airport-transfers/singapore-airport-pickup/",
   },
 ];
 

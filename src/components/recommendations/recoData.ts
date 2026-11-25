@@ -106,7 +106,7 @@ export interface AddOnProduct {
 export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
   bangkok: [
     {
-      slug: "/thailand/bangkok/suvarnabhumi-airport-to-bangkok-hotel-transfer/",
+      slug: "/thailand/bangkok-airport-transfers/suvarnabhumi-airport-to-bangkok-hotel-transfer/",
       title: "Suvarnabhumi Airport Pickup",
       description: "Private meet & greet transfer from BKK airport to your Bangkok hotel.",
       image: U("photo-1436491865332-7a61a109cc05"),
@@ -114,7 +114,7 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
       badge: "Airport Transfer",
     },
     {
-      slug: "/thailand/bangkok/bangkok-hotel-to-suvarnabhumi-airport-transfer/",
+      slug: "/thailand/bangkok-airport-transfers/bangkok-hotel-to-suvarnabhumi-airport-transfer/",
       title: "Hotel to BKK Airport Drop",
       description: "Punctual departure transfer so you never miss your flight home.",
       image: U("photo-1521737604893-d14cc237f11d"),
@@ -139,7 +139,7 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
   ],
   pattaya: [
     {
-      slug: "/thailand/bangkok/suvarnabhumi-airport-to-pattaya-hotel-transfer/",
+      slug: "/thailand/pattaya-transfers/suvarnabhumi-airport-to-pattaya-hotel-transfer/",
       title: "BKK Airport to Pattaya Transfer",
       description: "Private airport pickup straight to your Pattaya hotel, 24/7.",
       image: U("photo-1436491865332-7a61a109cc05"),
@@ -147,7 +147,7 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
       badge: "Airport Transfer",
     },
     {
-      slug: "/thailand/pattaya/pattaya-hotel-to-suvarnabhumi-airport-transfer/",
+      slug: "/thailand/pattaya-transfers/pattaya-hotel-to-suvarnabhumi-airport-transfer/",
       title: "Pattaya to BKK Airport Drop",
       description: "Comfortable departure transfer with luggage assistance.",
       image: U("photo-1521737604893-d14cc237f11d"),
@@ -171,7 +171,7 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
   ],
   phuket: [
     {
-      slug: "/thailand/phuket/phuket-airport-to-phuket-hotel-transfer/",
+      slug: "/thailand/phuket-airport-transfers/phuket-airport-to-phuket-hotel-transfer/",
       title: "Phuket Airport Pickup",
       description: "Private transfer from HKT airport to Patong, Karon or Kata hotels.",
       image: U("photo-1436491865332-7a61a109cc05"),
@@ -179,7 +179,7 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
       badge: "Airport Transfer",
     },
     {
-      slug: "/thailand/phuket/phuket-hotel-to-phuket-airport-transfer/",
+      slug: "/thailand/phuket-airport-transfers/phuket-hotel-to-phuket-airport-transfer/",
       title: "Phuket Hotel to Airport Drop",
       description: "Timed departure transfer with meet & greet and luggage help.",
       image: U("photo-1521737604893-d14cc237f11d"),
@@ -203,7 +203,7 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
   ],
   krabi: [
     {
-      slug: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer/",
+      slug: "/thailand/krabi-airport-transfers/krabi-airport-to-ao-nang-hotel-transfer/",
       title: "Krabi Airport to Ao Nang Transfer",
       description: "Private airport transfer to Ao Nang, Railay pier or Krabi town.",
       image: U("photo-1436491865332-7a61a109cc05"),
@@ -211,7 +211,7 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
       badge: "Airport Transfer",
     },
     {
-      slug: "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer/",
+      slug: "/thailand/krabi-airport-transfers/krabi-hotel-to-krabi-airport-transfer/",
       title: "Krabi Hotel to Airport Drop",
       description: "On-time departure transfer for early and late flights.",
       image: U("photo-1521737604893-d14cc237f11d"),
@@ -235,14 +235,14 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
   ],
   singapore: [
     {
-      slug: "/singapore/singapore-airport-pickup/",
+      slug: "/singapore/budget-airport-transfers/singapore-airport-pickup/",
       title: "Singapore Airport Pickup",
       description: "Changi arrivals meet & greet with name board and private vehicle.",
       image: U("photo-1436491865332-7a61a109cc05"),
       badge: "Airport Pickup",
     },
     {
-      slug: "/singapore/singapore-airport-dropoff/",
+      slug: "/singapore/budget-airport-transfers/singapore-airport-dropoff/",
       title: "Singapore Airport Drop-off",
       description: "Private hotel-to-Changi transfer timed to your departure.",
       image: U("photo-1521737604893-d14cc237f11d"),

@@ -167,7 +167,7 @@ const BlogPhuketCityTourTigerKingdomTransferGuide = () => (
       { type: "paragraph", content: "One of the biggest advantages of this experience is organised transportation. Phuket's attractions are spread across the island." },
       { type: "paragraph", content: "For first-time visitors, travelling between Patong, Karon, Chalong, Nakkerd Hill and other areas independently can take time and require multiple taxi or ride-hailing arrangements. A tour with transfers simplifies the logistics." },
       { type: "paragraph", content: "Instead of finding a taxi, explaining your destination, negotiating fares, waiting for transportation and navigating unfamiliar roads, you can simply get picked up, enjoy the tour and return to your hotel." },
-      { type: "paragraph", content: "If you are also arriving or moving between destinations, you can pre-book a [Phuket airport transfer](/thailand/phuket/phuket-airport-to-phuket-hotel-transfer/), a [Phuket to Krabi hotel transfer](/thailand/phuket/phuket-hotel-to-krabi-hotel-transfer/) or a [Krabi to Phuket hotel transfer](/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer/) alongside your sightseeing day." },
+      { type: "paragraph", content: "If you are also arriving or moving between destinations, you can pre-book a [Phuket airport transfer](/thailand/phuket-airport-transfers/phuket-airport-to-phuket-hotel-transfer/), a [Phuket to Krabi hotel transfer](/thailand/phuket-airport-transfers/phuket-hotel-to-krabi-hotel-transfer/) or a [Krabi to Phuket hotel transfer](/thailand/krabi-airport-transfers/krabi-hotel-to-phuket-hotel-transfer/) alongside your sightseeing day." },
 
       { type: "heading", content: "Who Should Book This Phuket City Tour?" },
       { type: "subheading", content: "Families" },
@@ -276,12 +276,12 @@ const BlogPhuketCityTourTigerKingdomTransferGuide = () => (
       { title: "Phuket City Tour with Tiger Kingdom & Transfer", link: TOUR_LINK },
       { title: "Full Day Phi Phi Island Tour with Transfer", link: "/thailand/phuket-activities/full-day-phi-phi-island-tour-with-transfer/" },
       { title: "James Bond Island Speed Boat Tour with Transfer", link: "/thailand/phuket-activities/james-bond-island-speed-boat-tour-with-transfer/" },
-      { title: "Phuket Airport to Hotel Transfer", link: "/thailand/phuket/phuket-airport-to-phuket-hotel-transfer/" },
+      { title: "Phuket Airport to Hotel Transfer", link: "/thailand/phuket-airport-transfers/phuket-airport-to-phuket-hotel-transfer/" },
     ]}
     relatedLinks={[
       { title: "All Phuket Activities", link: "/thailand/phuket/things-to-do/" },
-      { title: "Phuket Hotel to Krabi Hotel Transfer", link: "/thailand/phuket/phuket-hotel-to-krabi-hotel-transfer/" },
-      { title: "Krabi Hotel to Phuket Hotel Transfer", link: "/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer/" },
+      { title: "Phuket Hotel to Krabi Hotel Transfer", link: "/thailand/phuket-airport-transfers/phuket-hotel-to-krabi-hotel-transfer/" },
+      { title: "Krabi Hotel to Phuket Hotel Transfer", link: "/thailand/krabi-airport-transfers/krabi-hotel-to-phuket-hotel-transfer/" },
     ]}
     internalLinks={getPhuketInternalLinks("/blog/phuket-city-tour-tiger-kingdom-transfer-guide/")}
   >

@@ -421,10 +421,10 @@ const PhuketThingsToDo = () => {
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { title: "Phuket Airport (HKT) to Phuket Hotel Transfer", desc: "Private air-conditioned transfer from HKT airport to your Phuket hotel.", price: 1800, img: phuketBoatTour, slug: "/thailand/phuket/phuket-airport-to-phuket-hotel-transfer/" },
-            { title: "Phuket Hotel to Phuket Airport (HKT) Transfer", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 1800, img: phuketSpeedboat, slug: "/thailand/phuket/phuket-hotel-to-phuket-airport-transfer/" },
+            { title: "Phuket Airport (HKT) to Phuket Hotel Transfer", desc: "Private air-conditioned transfer from HKT airport to your Phuket hotel.", price: 1800, img: phuketBoatTour, slug: "/thailand/phuket-airport-transfers/phuket-airport-to-phuket-hotel-transfer/" },
+            { title: "Phuket Hotel to Phuket Airport (HKT) Transfer", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 1800, img: phuketSpeedboat, slug: "/thailand/phuket-airport-transfers/phuket-hotel-to-phuket-airport-transfer/" },
             { title: "Phuket 4-Hour Private Car Rental", desc: "Flexible 4-hour private vehicle for sightseeing, shopping or hotel transfers.", price: 4200, img: phuketIslandView, slug: "/thailand/phuket-activities/phuket-hotel-to-hotel-transfer-4-hours/" },
-            { title: "Phuket Hotel to Krabi Hotel Transfer", desc: "Private direct transfer from Phuket to Krabi for a smooth multi-city trip.", price: 5800, img: phuketLongtailBoat, slug: "/thailand/phuket/phuket-hotel-to-krabi-hotel-transfer/" },
+            { title: "Phuket Hotel to Krabi Hotel Transfer", desc: "Private direct transfer from Phuket to Krabi for a smooth multi-city trip.", price: 5800, img: phuketLongtailBoat, slug: "/thailand/phuket-airport-transfers/phuket-hotel-to-krabi-hotel-transfer/" },
           ].map((t) => (
             <article key={t.slug} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
               <Link to={t.slug} className="block aspect-[4/3] overflow-hidden bg-muted">

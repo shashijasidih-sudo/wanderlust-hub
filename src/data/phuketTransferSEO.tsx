@@ -157,7 +157,7 @@ type SEOEntry = {
 export const phuketTransferSEO: Record<string, SEOEntry> = {
   // 1
   "phuket-hkt-airport-pickup": {
-    newSlug: "/thailand/phuket/phuket-airport-to-phuket-hotel-transfer/",
+    newSlug: "/thailand/phuket-airport-transfers/phuket-airport-to-phuket-hotel-transfer/",
     oldSlug: "/thailand/phuket/hkt-airport-pickup/",
     gallery: hktToPhuketGallery,
     seoContent: (
@@ -225,7 +225,7 @@ export const phuketTransferSEO: Record<string, SEOEntry> = {
 
   // 2
   "phuket-hkt-airport-city-tour": {
-    newSlug: "/thailand/phuket/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer/",
+    newSlug: "/thailand/phuket-airport-transfers/phuket-airport-phuket-city-tour-to-phuket-hotel-transfer/",
     oldSlug: "/thailand/phuket/hkt-airport-city-tour/",
     gallery: hktCityTourPhuketGallery,
     seoContent: (
@@ -280,7 +280,7 @@ export const phuketTransferSEO: Record<string, SEOEntry> = {
 
   // 3
   "phuket-hkt-airport-dropoff": {
-    newSlug: "/thailand/phuket/phuket-hotel-to-phuket-airport-transfer/",
+    newSlug: "/thailand/phuket-airport-transfers/phuket-hotel-to-phuket-airport-transfer/",
     oldSlug: "/thailand/phuket/hkt-airport-dropoff/",
     gallery: phuketToHktGallery,
     seoContent: (
@@ -328,7 +328,7 @@ export const phuketTransferSEO: Record<string, SEOEntry> = {
 
   // 4
   "phuket-city-tour-hkt-airport": {
-    newSlug: "/thailand/phuket/phuket-city-tour-to-phuket-airport-transfer/",
+    newSlug: "/thailand/phuket-airport-transfers/phuket-city-tour-to-phuket-airport-transfer/",
     oldSlug: "/thailand/phuket/city-tour-hkt-airport/",
     gallery: phuketCityTourHktGallery,
     seoContent: (
@@ -428,7 +428,7 @@ export const phuketTransferSEO: Record<string, SEOEntry> = {
 
   // 6
   "phuket-to-krabi": {
-    newSlug: "/thailand/phuket/phuket-hotel-to-krabi-hotel-transfer/",
+    newSlug: "/thailand/phuket-airport-transfers/phuket-hotel-to-krabi-hotel-transfer/",
     oldSlug: "/thailand/phuket/phuket-to-krabi/",
     gallery: phuketToKrabiGallery,
     seoContent: (
@@ -481,7 +481,7 @@ export const phuketTransferSEO: Record<string, SEOEntry> = {
 
   // 7
   "phuket-city-tour-krabi": {
-    newSlug: "/thailand/phuket/phuket-city-tour-to-krabi-hotel-transfer/",
+    newSlug: "/thailand/phuket-airport-transfers/phuket-city-tour-to-krabi-hotel-transfer/",
     oldSlug: "/thailand/phuket/city-tour-krabi/",
     gallery: phuketCityTourKrabiGallery,
     seoContent: (
@@ -529,7 +529,7 @@ export const phuketTransferSEO: Record<string, SEOEntry> = {
 
   // 8
   "phuket-krabi-city-tour": {
-    newSlug: "/thailand/phuket/krabi-city-tour-to-krabi-hotel-transfer/",
+    newSlug: "/thailand/phuket-airport-transfers/krabi-city-tour-to-krabi-hotel-transfer/",
     oldSlug: "/thailand/phuket/krabi-city-tour/",
     gallery: krabiCityTourKrabiGallery,
     seoContent: (
@@ -579,7 +579,7 @@ export const phuketTransferSEO: Record<string, SEOEntry> = {
 
   // 9 — uses krabi-hkt-airport-pickup data (Phuket Airport → Krabi Hotel)
   "krabi-hkt-airport-pickup": {
-    newSlug: "/thailand/phuket/phuket-airport-to-krabi-hotel-transfer/",
+    newSlug: "/thailand/krabi-airport-transfers/phuket-airport-to-krabi-hotel-transfer/",
     oldSlug: "/thailand/krabi/hkt-airport-pickup/",
     gallery: hktToKrabiGallery,
     seoContent: (
@@ -627,7 +627,7 @@ export const phuketTransferSEO: Record<string, SEOEntry> = {
 
   // 10 — uses krabi-phuket-kbv-airport-dropoff data (Phuket Hotel → Krabi Airport KBV)
   "krabi-phuket-kbv-airport-dropoff": {
-    newSlug: "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer/",
+    newSlug: "/thailand/krabi-airport-transfers/krabi-hotel-to-krabi-airport-transfer/",
     oldSlug: "/thailand/krabi/phuket-kbv-airport-dropoff/",
     gallery: phuketToKbvGallery,
     seoContent: (

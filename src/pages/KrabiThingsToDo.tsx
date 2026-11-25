@@ -387,10 +387,10 @@ const KrabiThingsToDo = () => {
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { title: "Krabi Airport (KBV) to Ao Nang Hotel Transfer", desc: "Private air-conditioned transfer from KBV airport to your Ao Nang hotel.", price: 1500, img: krabiBoatTour, slug: "/thailand/krabi/krabi-airport-to-ao-nang-hotel-transfer/" },
-            { title: "Krabi Hotel to Krabi Airport (KBV) Transfer", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 1500, img: krabiTourBoat, slug: "/thailand/krabi/krabi-hotel-to-krabi-airport-transfer/" },
-            { title: "Krabi Hotel to Phuket Hotel Transfer", desc: "Private direct transfer from Krabi to Phuket for a smooth multi-city trip.", price: 5800, img: krabiSpeedboat, slug: "/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer/" },
-            { title: "Krabi Airport to Phuket Hotel Transfer", desc: "Direct transfer from Krabi airport to your Phuket hotel — convenient and stress-free.", price: 6500, img: krabiSailboat, slug: "/thailand/krabi/krabi-airport-to-phuket-hotel-transfer/" },
+            { title: "Krabi Airport (KBV) to Ao Nang Hotel Transfer", desc: "Private air-conditioned transfer from KBV airport to your Ao Nang hotel.", price: 1500, img: krabiBoatTour, slug: "/thailand/krabi-airport-transfers/krabi-airport-to-ao-nang-hotel-transfer/" },
+            { title: "Krabi Hotel to Krabi Airport (KBV) Transfer", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 1500, img: krabiTourBoat, slug: "/thailand/krabi-airport-transfers/krabi-hotel-to-krabi-airport-transfer/" },
+            { title: "Krabi Hotel to Phuket Hotel Transfer", desc: "Private direct transfer from Krabi to Phuket for a smooth multi-city trip.", price: 5800, img: krabiSpeedboat, slug: "/thailand/krabi-airport-transfers/krabi-hotel-to-phuket-hotel-transfer/" },
+            { title: "Krabi Airport to Phuket Hotel Transfer", desc: "Direct transfer from Krabi airport to your Phuket hotel — convenient and stress-free.", price: 6500, img: krabiSailboat, slug: "/thailand/krabi-airport-transfers/krabi-airport-to-phuket-hotel-transfer/" },
           ].map((t) => (
             <article key={t.slug} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
               <Link to={t.slug} className="block aspect-[4/3] overflow-hidden bg-muted">

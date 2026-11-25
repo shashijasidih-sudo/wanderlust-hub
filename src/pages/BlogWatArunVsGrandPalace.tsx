@@ -29,7 +29,7 @@ const BlogWatArunVsGrandPalace = () => (
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do/",
-      transfersLink: "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer/",
+      transfersLink: "/thailand/bangkok-airport-transfers/bangkok-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer/",
     }}
     sections={[
       { type: "paragraph", content: "Wat Arun and the Grand Palace are the two most famous landmarks in Bangkok — and most travelers want to do both. But if you only have one morning free, or you're suffering from temple fatigue, which one deserves your time? They look superficially similar from photos, but the experience is wildly different. Grand Palace is grand, golden, royal and crowded. Wat Arun is quieter, riverside, photogenic and steeper. Here's an honest 2026 comparison so you choose the right one for your style of travel." },

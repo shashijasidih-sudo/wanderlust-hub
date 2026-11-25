@@ -30,7 +30,7 @@ const Blog = () => (
       { type: "tip-box", content: "Ferries usually run from November to April. During monsoon (May–October), services can be cancelled — book private taxi as a safer backup." },
       { type: "heading", content: "3. Private Taxi (Best Overall Option)" },
       { type: "list", items: ["Cost — ₹4,000–₹7,000 per vehicle (4–8 seater)","Duration — 2.5 to 3 hours, fastest road option","Pros — door-to-door, no waiting, ideal for families and groups","Cons — expensive for solo travelers","Best for families, couples and groups of 3+"] },
-      { type: "cta", content: "Book a private Phuket → Krabi transfer at a fixed INR price", link: "/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer/", linkText: "Book Phuket–Krabi Transfer" },
+      { type: "cta", content: "Book a private Phuket → Krabi transfer at a fixed INR price", link: "/thailand/krabi-airport-transfers/krabi-hotel-to-phuket-hotel-transfer/", linkText: "Book Phuket–Krabi Transfer" },
       { type: "heading", content: "Cost Comparison (2026)" },
       { type: "list", items: ["Bus / Van — ₹600–₹1,200 per person","Ferry — ₹1,200–₹2,500 per person","Private Taxi — ₹4,000–₹7,000 per vehicle (₹1,000–₹1,750 per person for 4 pax)"] },
       { type: "heading", content: "Which Option Should You Choose?" },
@@ -46,9 +46,9 @@ const Blog = () => (
       { type: "cta", content: "Book your Krabi airport or hotel transfer with English-speaking driver", link: "/thailand/krabi-airport-transfers/", linkText: "View All Krabi Transfers" },
     ]}
     relatedActivities={[
-      { title: "Krabi Hotel to Phuket Hotel Transfer", link: "/thailand/krabi/krabi-hotel-to-phuket-hotel-transfer/" },
-      { title: "Krabi Hotel to Phuket Airport Transfer", link: "/thailand/krabi/krabi-hotel-to-phuket-airport-transfer/" },
-      { title: "Krabi Airport to Phuket Hotel Transfer", link: "/thailand/krabi/krabi-airport-to-phuket-hotel-transfer/" },
+      { title: "Krabi Hotel to Phuket Hotel Transfer", link: "/thailand/krabi-airport-transfers/krabi-hotel-to-phuket-hotel-transfer/" },
+      { title: "Krabi Hotel to Phuket Airport Transfer", link: "/thailand/krabi-airport-transfers/krabi-hotel-to-phuket-airport-transfer/" },
+      { title: "Krabi Airport to Phuket Hotel Transfer", link: "/thailand/krabi-airport-transfers/krabi-airport-to-phuket-hotel-transfer/" },
       { title: "All Krabi Airport Transfers", link: "/thailand/krabi-airport-transfers/" },
     ]}
     relatedLinks={[

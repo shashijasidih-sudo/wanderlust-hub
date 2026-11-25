@@ -25,7 +25,7 @@ const BlogGrandPalaceGuide = () => (
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do/",
-      transfersLink: "/thailand/bangkok/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer/",
+      transfersLink: "/thailand/bangkok-airport-transfers/bangkok-hotel-two-temple-tour-to-don-mueang-airport-transfer/",
     }}
     sections={[
       {

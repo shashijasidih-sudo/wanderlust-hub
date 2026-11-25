@@ -18,7 +18,7 @@ const BlogDmkAirportTransfer = () => (
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do/",
-      transfersLink: "/thailand/bangkok/don-mueang-airport-to-bangkok-hotel-transfer/",
+      transfersLink: "/thailand/bangkok-airport-transfers/don-mueang-airport-to-bangkok-hotel-transfer/",
     }}
     sections={[
       { type: "paragraph", content: "Don Mueang (DMK) is Bangkok's older domestic and budget airline airport — most Air Asia, Nok Air and Thai Lion flights land here. It's smaller, north of the city, and a bit further from central Bangkok than Suvarnabhumi. Getting to your hotel is straightforward if you pick the right option for your budget and luggage." },

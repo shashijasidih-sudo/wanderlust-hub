@@ -1,3 +1,8 @@
+# Nested transfer detail URLs
+
+## Transfer URL nesting (all cities)
+- [x] Nest all 53 transfer detail pages under their own transfers listing (e.g. /thailand/bangkok-airport-transfers/don-mueang-airport-to-bangkok-hotel-transfer/): routes, listing cards, canonicals, related links, blogs, prerender head tags and in-app aliases updated; old flat URLs 301 to the nested URL in .htaccess, _redirects and a <Navigate replace> route. Sitemap holds 424 canonical URLs with zero old transfer URLs; 6 new nesting tests plus 90 total tests pass and automated build OK. Bangkok/Singapore/Dubai card clicks, six cross-city old-URL redirects and the nested canonical verified in the browser. Hourly car-hire routes pinned by url-audit stay unchanged. Chiang Mai transfer cards still point at the legacy things-to-do redirect because no Chiang Mai transfer detail page exists.
+
 # Approved URL audit fixes
 
 ## Admin full-size modal and individual cancellation

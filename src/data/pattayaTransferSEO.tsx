@@ -193,7 +193,7 @@ type SEOEntry = {
 export const pattayaTransferSEO: Record<string, SEOEntry> = {
   // 1
   "pattaya-bkk-airport-pickup": {
-    newSlug: "/thailand/bangkok/suvarnabhumi-airport-to-pattaya-hotel-transfer/",
+    newSlug: "/thailand/pattaya-transfers/suvarnabhumi-airport-to-pattaya-hotel-transfer/",
     oldSlug: "/thailand/pattaya/bkk-airport-pickup/",
     gallery: bkkToPattayaGallery,
     seoContent: (
@@ -321,7 +321,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
 
   // 2
   "pattaya-bkk-tiger-topia-pickup": {
-    newSlug: "/thailand/bangkok/suvarnabhumi-airport-tiger-topia-to-pattaya-hotel-transfer/",
+    newSlug: "/thailand/pattaya-transfers/suvarnabhumi-airport-tiger-topia-to-pattaya-hotel-transfer/",
     oldSlug: "/thailand/pattaya/bkk-tiger-topia-pickup/",
     gallery: tigerTopiaGallery,
     seoContent: (
@@ -387,7 +387,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
 
   // 3
   "pattaya-dmk-airport-pickup": {
-    newSlug: "/thailand/bangkok/don-mueang-airport-to-pattaya-hotel-transfer/",
+    newSlug: "/thailand/pattaya-transfers/don-mueang-airport-to-pattaya-hotel-transfer/",
     oldSlug: "/thailand/pattaya/dmk-airport-pickup/",
     gallery: dmkToPattayaGallery,
     seoContent: (
@@ -459,7 +459,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
 
   // 4
   "pattaya-dmk-tiger-topia-pickup": {
-    newSlug: "/thailand/bangkok/don-mueang-airport-tiger-topia-to-pattaya-hotel-transfer/",
+    newSlug: "/thailand/pattaya-transfers/don-mueang-airport-tiger-topia-to-pattaya-hotel-transfer/",
     oldSlug: "/thailand/pattaya/dmk-tiger-topia-pickup/",
     gallery: tigerTopiaGallery,
     seoContent: (
@@ -514,7 +514,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
 
   // 5
   "pattaya-bkk-airport-dropoff": {
-    newSlug: "/thailand/pattaya/pattaya-hotel-to-suvarnabhumi-airport-transfer/",
+    newSlug: "/thailand/pattaya-transfers/pattaya-hotel-to-suvarnabhumi-airport-transfer/",
     oldSlug: "/thailand/pattaya/bkk-airport-dropoff/",
     gallery: pattayaToBkkGallery,
     seoContent: (
@@ -572,7 +572,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
 
   // 6
   "pattaya-temple-tour-bkk-airport": {
-    newSlug: "/thailand/pattaya/pattaya-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer/",
+    newSlug: "/thailand/pattaya-transfers/pattaya-hotel-two-temple-tour-to-suvarnabhumi-airport-transfer/",
     oldSlug: "/thailand/pattaya/temple-tour-bkk-airport/",
     gallery: templeBkkGallery,
     seoContent: (
@@ -629,7 +629,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
 
   // 7
   "pattaya-safari-world-bkk-airport": {
-    newSlug: "/thailand/pattaya/pattaya-hotel-safari-world-to-suvarnabhumi-airport-transfer/",
+    newSlug: "/thailand/pattaya-transfers/pattaya-hotel-safari-world-to-suvarnabhumi-airport-transfer/",
     oldSlug: "/thailand/pattaya/safari-world-bkk-airport/",
     gallery: safariBkkGallery,
     seoContent: (
@@ -677,7 +677,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
 
   // 8
   "pattaya-dmk-airport-dropoff": {
-    newSlug: "/thailand/pattaya/pattaya-hotel-to-don-mueang-airport-transfer/",
+    newSlug: "/thailand/pattaya-transfers/pattaya-hotel-to-don-mueang-airport-transfer/",
     oldSlug: "/thailand/pattaya/dmk-airport-dropoff/",
     gallery: pattayaToDmkGallery,
     seoContent: (
@@ -728,7 +728,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
 
   // 9
   "pattaya-temple-tour-dmk-airport": {
-    newSlug: "/thailand/pattaya/pattaya-hotel-two-temple-tour-to-don-mueang-airport-transfer/",
+    newSlug: "/thailand/pattaya-transfers/pattaya-hotel-two-temple-tour-to-don-mueang-airport-transfer/",
     oldSlug: "/thailand/pattaya/temple-tour-dmk-airport/",
     gallery: templeDmkGallery,
     seoContent: (
@@ -784,7 +784,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
 
   // 10
   "pattaya-indra-square-dmk-airport": {
-    newSlug: "/thailand/pattaya/pattaya-hotel-indra-square-shopping-to-don-mueang-airport-transfer/",
+    newSlug: "/thailand/pattaya-transfers/pattaya-hotel-indra-square-shopping-to-don-mueang-airport-transfer/",
     oldSlug: "/thailand/pattaya/indra-square-dmk-airport/",
     gallery: indraSquareGallery,
     seoContent: (
@@ -892,8 +892,8 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
 
   // 12 — NEW
   "pattaya-to-bangkok-hotel": {
-    newSlug: "/thailand/pattaya/pattaya-hotel-to-bangkok-hotel-transfer/",
-    oldSlug: "/thailand/pattaya/pattaya-hotel-to-bangkok-hotel-transfer/",
+    newSlug: "/thailand/pattaya-transfers/pattaya-hotel-to-bangkok-hotel-transfer/",
+    oldSlug: "/thailand/pattaya-transfers/pattaya-hotel-to-bangkok-hotel-transfer/",
     gallery: pattayaToBangkokHotelGallery,
     seoContent: (
       <>
@@ -954,7 +954,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
 
   // 13 — NEW
   "pattaya-to-bangkok-city-tour": {
-    newSlug: "/thailand/pattaya/pattaya-to-bangkok-city-tour-and-hotel-transfer/",
+    newSlug: "/thailand/pattaya-transfers/pattaya-to-bangkok-city-tour-and-hotel-transfer/",
     oldSlug: "/thailand/pattaya/pattaya-to-bangkok-city-tour/",
     gallery: pattayaToBangkokCityTourGallery,
     seoContent: (
@@ -1013,7 +1013,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
 
   // 14 — NEW
   "bangkok-safari-world-pattaya": {
-    newSlug: "/thailand/bangkok/bangkok-hotel-safari-world-to-pattaya-hotel-transfer/",
+    newSlug: "/thailand/bangkok-airport-transfers/bangkok-hotel-safari-world-to-pattaya-hotel-transfer/",
     oldSlug: "/thailand/bangkok/bangkok-safari-world-pattaya/",
     gallery: bangkokSafariPattayaGallery,
     seoContent: (
@@ -1069,7 +1069,7 @@ export const pattayaTransferSEO: Record<string, SEOEntry> = {
 
   // 15 — NEW
   "utapao-airport-to-pattaya": {
-    newSlug: "/thailand/pattaya/u-tapao-airport-to-pattaya-hotel-transfer/",
+    newSlug: "/thailand/pattaya-transfers/u-tapao-airport-to-pattaya-hotel-transfer/",
     oldSlug: "/thailand/pattaya/utapao-airport-pickup/",
     gallery: utapaoGallery,
     seoContent: (

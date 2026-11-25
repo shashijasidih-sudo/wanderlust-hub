@@ -74,8 +74,8 @@ const sections: Section[] = [
     cards: [
       { title: "Universal Studios Tickets", href: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/", image: universalImg },
       { title: "Night Safari Guide", href: "/blog/night-safari-singapore-guide/", image: singaporeImg },
-      { title: "Changi Airport Pickup", href: "/singapore/singapore-airport-pickup/", image: singaporeCityImg },
-      { title: "Changi Airport Drop-off", href: "/singapore/singapore-airport-dropoff/", image: singaporeCityImg },
+      { title: "Changi Airport Pickup", href: "/singapore/budget-airport-transfers/singapore-airport-pickup/", image: singaporeCityImg },
+      { title: "Changi Airport Drop-off", href: "/singapore/budget-airport-transfers/singapore-airport-dropoff/", image: singaporeCityImg },
     ],
   },
   {

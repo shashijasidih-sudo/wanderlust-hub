@@ -26,7 +26,7 @@ const BlogSafariWorldGuide = () => (
     cityHub={{
       city: "Bangkok",
       thingsToDoLink: "/thailand/bangkok/things-to-do/",
-      transfersLink: "/thailand/bangkok/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer/",
+      transfersLink: "/thailand/bangkok-airport-transfers/bangkok-hotel-safari-world-to-suvarnabhumi-airport-transfer/",
     }}
     sections={[
       {

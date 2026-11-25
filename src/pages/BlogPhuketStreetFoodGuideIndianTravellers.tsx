@@ -241,14 +241,14 @@ const BlogPhuketStreetFoodGuideIndianTravellers = () => (
       { type: "paragraph", content: "And that's what travel is supposed to be about." },
       { type: "paragraph", content: "**Phuket isn't just a destination you see.**" },
       { type: "paragraph", content: "**It's a destination you taste. 🇹🇭🌶️**" },
-      { type: "paragraph", content: "If you're planning a Phuket holiday from India, combine your food exploration with [things to do in Phuket](/thailand/phuket/things-to-do/), island tours and a convenient [Phuket Airport Transfer](/thailand/phuket/phuket-airport-to-phuket-hotel-transfer/) or [Phuket hotel transfers](/thailand/phuket-airport-transfers/) so you spend less time figuring out logistics and more time experiencing the island." },
+      { type: "paragraph", content: "If you're planning a Phuket holiday from India, combine your food exploration with [things to do in Phuket](/thailand/phuket/things-to-do/), island tours and a convenient [Phuket Airport Transfer](/thailand/phuket-airport-transfers/phuket-airport-to-phuket-hotel-transfer/) or [Phuket hotel transfers](/thailand/phuket-airport-transfers/) so you spend less time figuring out logistics and more time experiencing the island." },
       { type: "cta-prominent", content: "Planning a Phuket trip? Explore Phuket activities and transfers with Yellodae Trails.", link: "/thailand/phuket/things-to-do/", linkText: "Explore Phuket Experiences" },
     ]}
     relatedActivities={[
       { title: "Phuket City Tour with Big Buddha", link: "/thailand/phuket/phuket-city-tour/" },
       { title: "Phi Phi Island Tour from Phuket", link: "/thailand/phuket/phuket-phi-phi-island-tour/" },
       { title: "James Bond Island Tour from Phuket", link: "/thailand/phuket/james-bond-island-speed-boat-tour-with-transfer/" },
-      { title: "Phuket Airport to Hotel Transfer", link: "/thailand/phuket/phuket-airport-to-phuket-hotel-transfer/" },
+      { title: "Phuket Airport to Hotel Transfer", link: "/thailand/phuket-airport-transfers/phuket-airport-to-phuket-hotel-transfer/" },
     ]}
     relatedLinks={[
       { title: "Indian Food in Phuket: Best Restaurants", link: "/thailand/phuket/destination-guides/indian-audience/indian-food-in-phuket/" },
