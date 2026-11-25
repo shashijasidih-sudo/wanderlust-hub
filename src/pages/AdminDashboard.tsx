@@ -686,7 +686,7 @@ const AdminDashboard = () => {
                                   <SelectItem value="confirmed">Confirmed</SelectItem>
                                   <SelectItem value="completed">Completed</SelectItem>
                                   <SelectItem value="cancelled">Cancelled</SelectItem>
-                                  <SelectItem value="refunded">Refunded</SelectItem>
+                                  <SelectItem value="refunded" disabled>Refunded</SelectItem>
                                 </SelectContent>
                               </Select>
                               {adminCancellationMode(booking) === "legacy" && booking.status !== "cancelled" && booking.status !== "refunded" && (
