@@ -59,6 +59,7 @@ interface Booking {
   updated_at: string;
   user_id: string;
   refund_status?: string;
+  refund_state?: string;
   item_details?: unknown;
   booking_items?: SavedBookingItem[];
   items_load_error?: boolean;
