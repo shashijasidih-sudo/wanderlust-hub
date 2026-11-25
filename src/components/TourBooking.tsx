@@ -102,19 +102,11 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
   const safeHeroImages = tourData.heroImages || [];
   const safeGalleryImages = tourData.galleryImages || [];
 
-  // Build breadcrumbs: Home > City > Things to Do > Tour
+  // Build breadcrumbs: Home > City > Tour
   const cityName = tourData.city || tourData.location || "";
   const cityKey = cityName.toLowerCase().trim();
   const citySlug = cityKey.replace(/\s+/g, "-");
   const cityDisplay = cityName ? cityName.charAt(0).toUpperCase() + cityName.slice(1) : "";
-  // Per-city Things-to-Do hub URLs (only cities with a published hub page)
-  const thingsToDoHubs: Record<string, string> = {
-    bangkok: "/thailand/bangkok/things-to-do/",
-    pattaya: "/thailand/pattaya/things-to-do/",
-    phuket: "/thailand/phuket/things-to-do/",
-    krabi: "/thailand/krabi/things-to-do/",
-    singapore: "/singapore/things-to-do/",
-  };
   // Per-city landing page URLs
   const cityHomeUrls: Record<string, string> = {
     bangkok: "/thailand/bangkok-activities/",
@@ -130,11 +122,9 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
     "chiang mai": "/thailand/chiang-mai-activities/",
   };
   const cityHomeUrl = cityHomeUrls[cityKey] || `/${citySlug}`;
-  const thingsToDoUrl = thingsToDoHubs[cityKey];
   const breadcrumbItems = [
     { name: "Home", url: "/" },
     ...(cityName ? [{ name: cityDisplay, url: cityHomeUrl }] : []),
-    ...(thingsToDoUrl ? [{ name: "Things to Do", url: thingsToDoUrl }] : []),
     { name: tourData.title, url: `/${tourSlug}` },
   ];
 
@@ -224,16 +214,6 @@ const TourBooking = ({ tourData, extraContentBeforeReviews, extraContentBeforeSu
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
                     <Link to={cityHomeUrl}>{cityDisplay}</Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-              </>
-            )}
-            {thingsToDoUrl && (
-              <>
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link to={thingsToDoUrl}>Things to Do</Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
