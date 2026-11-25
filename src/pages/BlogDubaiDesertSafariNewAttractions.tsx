@@ -45,7 +45,7 @@ const BlogDubaiDesertSafariNewAttractions = () => (
     ]}
     guidesLink="/dubai/destination-guides/"
     guidesLabel="Dubai Smart Guides"
-    cityHub={{ city: "Dubai", thingsToDoLink: "/dubai-activities/", transfersLink: "/dubai/budget-airport-transfers/" }}
+    cityHub={{ city: "Dubai", thingsToDoLink: "/dubai-activities/", transfersLink: "/dubai-budget-airport-transfers/" }}
     sections={[
       { type: "paragraph", content: "**Dubai** is known for its futuristic skyline, luxury shopping malls and world-famous landmarks, but beyond the skyscrapers lies another side of the emirate: vast golden dunes, traditional Bedouin culture, desert wildlife and unforgettable Arabian experiences." },
       { type: "paragraph", content: "For first-time visitors, a **Dubai desert safari** is one of the best ways to experience this side of the destination. And in 2026, Dubai has even more attractions and experiences to add to your itinerary, from immersive art and entertainment to new desert experiences." },
@@ -171,7 +171,7 @@ const BlogDubaiDesertSafariNewAttractions = () => (
       { type: "paragraph", content: "A good Dubai itinerary should combine **city sightseeing, desert adventure and newer attractions** rather than spending every day visiting shopping malls." },
       { type: "paragraph", content: "For example:" },
       { type: "list", items: [
-        "**Day 1:** Dubai arrival + [airport transfer](/dubai/budget-airport-transfers/)",
+        "**Day 1:** Dubai arrival + [airport transfer](/dubai-budget-airport-transfers/)",
         "**Day 2:** [Burj Khalifa](/dubai-activities/burj-khalifa-prime/) + Dubai Mall + Downtown Dubai",
         "**Day 3:** [Dubai Desert Safari](/dubai-activities/desert-safari-sharing/) + sunset + BBQ dinner",
         "**Day 4:** Palm Jumeirah + Marina + Bluewaters",
@@ -188,7 +188,7 @@ const BlogDubaiDesertSafariNewAttractions = () => (
       { type: "paragraph", content: "From dune bashing and camel rides to sunset photography, Bedouin culture and BBQ dinners, a desert safari gives you an experience that you cannot get from the city centre." },
       { type: "paragraph", content: "And with attractions such as ARTE MUSEUM, La Perle and expanded experiences around Hatta, there is always something new to add to your Dubai itinerary." },
       { type: "paragraph", content: "**Planning your Dubai holiday?**" },
-      { type: "paragraph", content: "Explore [Dubai activities](/dubai/), desert safaris and [Dubai airport transfers](/dubai/budget-airport-transfers/) with **Yellodae Trails** and build your trip around the experiences that suit your budget and travel style." },
+      { type: "paragraph", content: "Explore [Dubai activities](/dubai/), desert safaris and [Dubai airport transfers](/dubai-budget-airport-transfers/) with **Yellodae Trails** and build your trip around the experiences that suit your budget and travel style." },
       { type: "cta-prominent", content: "Book your Dubai activities and transfers with Yellodae", link: "/dubai-activities/", linkText: "Explore Dubai Activities" },
     ]}
     relatedActivities={[

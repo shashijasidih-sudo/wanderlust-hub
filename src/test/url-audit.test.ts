@@ -44,7 +44,7 @@ describe("Approved URL migration safeguards", () => {
     expect(apache).toContain("RedirectMatch 301 ^/thailand/phuket/?$ /thailand/phuket-activities/");
   });
   it("points existing Singapore pickup redirects directly to the slash URL", () => {
-    expect(apache).toContain("RedirectMatch 301 ^/singapore/airport-pickup/?$ /singapore/budget-airport-transfers/singapore-airport-pickup/");
+    expect(apache).toContain("RedirectMatch 301 ^/singapore/airport-pickup/?$ /singapore-budget-airport-transfers/singapore-airport-pickup/");
   });
   it("keeps issue 7 rental routes unchanged", () => {
     for (const city of ["bangkok", "phuket"]) {

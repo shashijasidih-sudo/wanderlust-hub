@@ -45,11 +45,11 @@ const cityHubLinks: Record<
   },
   singapore: {
     thingsToDoLink: "/singapore/things-to-do/",
-    transfersLink: "/singapore/budget-airport-transfers/",
+    transfersLink: "/singapore-budget-airport-transfers/",
   },
   dubai: {
     thingsToDoLink: "/dubai/things-to-do/",
-    transfersLink: "/dubai/budget-airport-transfers/",
+    transfersLink: "/dubai-budget-airport-transfers/",
   },
   thailand: {
     thingsToDoLink: "/thailand/",

@@ -557,7 +557,7 @@ const BlogArticleLayout = ({
                             size="lg"
                             className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 w-full lg:w-auto max-w-full h-auto min-h-11 py-3 whitespace-normal break-words shadow-md hover:shadow-lg transition-all"
                           >
-                            <Link to={section.link || "/singapore/budget-airport-transfers/singapore-airport-pickup/"} className="flex items-center justify-center gap-3 text-center">
+                            <Link to={section.link || "/singapore-budget-airport-transfers/singapore-airport-pickup/"} className="flex items-center justify-center gap-3 text-center">
                               {section.src && (
                                 <SafeImage
                                   src={section.src}

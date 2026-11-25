@@ -117,7 +117,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Singapore</h4>
             <ul className="space-y-2 text-sm text-background/80">
               <li><Link to="/singapore/things-to-do/" className="hover:text-background transition-colors">Singapore Activities</Link></li>
-              <li><Link to="/singapore/budget-airport-transfers/" className="hover:text-background transition-colors">Changi Airport Transfers</Link></li>
+              <li><Link to="/singapore-budget-airport-transfers/" className="hover:text-background transition-colors">Changi Airport Transfers</Link></li>
               <li><Link to="/singapore-activities/universal-studios-singapore-tickets-and-transfers/" className="hover:text-background transition-colors">Universal Studios Singapore</Link></li>
               <li><Link to="/singapore-activities/sentosa-cable-car-tickets-and-transfers/" className="hover:text-background transition-colors">Sentosa Cable Car</Link></li>
               <li><Link to="/singapore-activities/gardens-by-the-bay-tickets-and-transfers/" className="hover:text-background transition-colors">Gardens by the Bay</Link></li>

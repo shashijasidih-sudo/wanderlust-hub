@@ -38,7 +38,7 @@ const BlogMarinaBaySands12LocalExperiences = () => (
     cityHub={{
       city: "Singapore",
       thingsToDoLink: "/singapore/things-to-do/",
-      transfersLink: "/singapore/budget-airport-transfers/singapore-airport-pickup/",
+      transfersLink: "/singapore-budget-airport-transfers/singapore-airport-pickup/",
     }}
     bodyClassName="[&_p]:!text-black [&_li]:!text-black [&_li_span]:!text-black [&_td]:!text-black [&_th]:!text-black"
     sections={[
@@ -280,8 +280,8 @@ const BlogMarinaBaySands12LocalExperiences = () => (
       { title: "Sentosa Cable Car", link: "/singapore-activities/sentosa-cable-car-tickets-and-transfers/" },
       { title: "Universal Studios Singapore", link: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/" },
       { title: "Singapore Flyer", link: "/singapore-activities/singapore-flyer-tickets-and-transfers/" },
-      { title: "Singapore Airport Pickup", link: "/singapore/budget-airport-transfers/singapore-airport-pickup/" },
-      { title: "Singapore Airport Drop-off", link: "/singapore/budget-airport-transfers/singapore-airport-dropoff/" },
+      { title: "Singapore Airport Pickup", link: "/singapore-budget-airport-transfers/singapore-airport-pickup/" },
+      { title: "Singapore Airport Drop-off", link: "/singapore-budget-airport-transfers/singapore-airport-dropoff/" },
     ]}
     relatedLinks={[
       { title: "Singapore River Cruise Experience Guide", link: "/singapore/destination-guides/activity/singapore-river-cruise-guide/" },

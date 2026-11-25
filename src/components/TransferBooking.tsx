@@ -307,7 +307,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
             krabi: { name: "Krabi Transfers", url: "/thailand/krabi-airport-transfers/" },
             pattaya: { name: "Pattaya Transfers", url: "/thailand/pattaya-transfers/" },
             "chiang mai": { name: "Chiang Mai Transfers", url: "/thailand/chiang-mai-airport-transfers/" },
-            singapore: { name: "Singapore Transfers", url: "/singapore/budget-airport-transfers/" },
+            singapore: { name: "Singapore Transfers", url: "/singapore-budget-airport-transfers/" },
           };
           const cityHome = cityHomeMap[cityKey];
           const cityTransfers = cityTransfersMap[cityKey];

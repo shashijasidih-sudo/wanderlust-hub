@@ -371,7 +371,7 @@ const SingaporeThingsToDo = () => {
           <div className="mt-6 flex flex-wrap gap-3">
             <Button size="lg" asChild><a href="#all-activities">Explore Activities</a></Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/singapore/budget-airport-transfers/">Singapore Transfers</Link>
+              <Link to="/singapore-budget-airport-transfers/">Singapore Transfers</Link>
             </Button>
           </div>
         </div>
@@ -442,9 +442,9 @@ const SingaporeThingsToDo = () => {
         </header>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { title: "Singapore Changi Airport Pickup", desc: "Private air-conditioned transfer from Changi airport to your Singapore hotel.", price: 4000, img: singaporeCityTour, slug: "/singapore/budget-airport-transfers/singapore-airport-pickup/" },
-            { title: "Singapore Hotel to Changi Airport Dropoff", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 4000, img: singaporeMarinaBay, slug: "/singapore/budget-airport-transfers/singapore-airport-dropoff/" },
-            { title: "Singapore Airport Night Pickup", desc: "Late-night and early-morning Changi airport pickup with meet & greet.", price: 5000, img: singaporeRiverCruise, slug: "/singapore/budget-airport-transfers/singapore-airport-night-pickup/" },
+            { title: "Singapore Changi Airport Pickup", desc: "Private air-conditioned transfer from Changi airport to your Singapore hotel.", price: 4000, img: singaporeCityTour, slug: "/singapore-budget-airport-transfers/singapore-airport-pickup/" },
+            { title: "Singapore Hotel to Changi Airport Dropoff", desc: "Punctual hotel-to-airport transfer so you never miss your flight.", price: 4000, img: singaporeMarinaBay, slug: "/singapore-budget-airport-transfers/singapore-airport-dropoff/" },
+            { title: "Singapore Airport Night Pickup", desc: "Late-night and early-morning Changi airport pickup with meet & greet.", price: 5000, img: singaporeRiverCruise, slug: "/singapore-budget-airport-transfers/singapore-airport-night-pickup/" },
           ].map((t) => (
             <article key={t.slug} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:shadow-md">
               <Link to={t.slug} className="block aspect-[4/3] overflow-hidden bg-muted">
@@ -486,7 +486,7 @@ const SingaporeThingsToDo = () => {
               <li><Link to="/singapore/things-to-do#wildlife-safari" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Wildlife & Safari</Link></li>
               <li><Link to="/singapore/things-to-do#city-tours-sightseeing" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">City Tours & Sightseeing</Link></li>
               <li><Link to="/singapore/things-to-do#iconic-landmarks" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Iconic Landmarks</Link></li>
-              <li><Link to="/singapore/budget-airport-transfers/" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Singapore Airport Transfers</Link></li>
+              <li><Link to="/singapore-budget-airport-transfers/" className="block rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-primary hover:text-primary">Singapore Airport Transfers</Link></li>
             </ul>
           </div>
 
@@ -522,7 +522,7 @@ const SingaporeThingsToDo = () => {
           <p className="mt-1 text-sm text-muted-foreground">Combine activities with reliable Changi airport transfers.</p>
           <div className="mt-4 flex flex-wrap gap-3">
             <Button asChild variant="default"><Link to="/singapore-activities/">Singapore City Guide</Link></Button>
-            <Button asChild variant="outline"><Link to="/singapore/budget-airport-transfers/">Singapore Transfers</Link></Button>
+            <Button asChild variant="outline"><Link to="/singapore-budget-airport-transfers/">Singapore Transfers</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/bangkok/things-to-do/">Things to Do in Bangkok</Link></Button>
             <Button asChild variant="outline"><Link to="/thailand/chiang-mai/things-to-do/">Things to Do in Chiang Mai</Link></Button>
             <Button asChild variant="outline"><Link to="/singapore/destination-guides/">Singapore Smart Guides</Link></Button>

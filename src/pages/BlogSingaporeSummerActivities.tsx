@@ -242,7 +242,7 @@ const BlogSingaporeSummerActivities = () => {
       ]}
       relatedLinks={[
         { title: "Singapore Things to Do", link: "/singapore/things-to-do/" },
-        { title: "Singapore Airport Transfers", link: "/singapore/budget-airport-transfers/" },
+        { title: "Singapore Airport Transfers", link: "/singapore-budget-airport-transfers/" },
         { title: "Singapore Destination Guides", link: "/singapore/destination-guides/" },
         { title: "Thailand Adventure Activities 2026", link: "/blog/thailand-adventure-activities-2026/" },
       ]}

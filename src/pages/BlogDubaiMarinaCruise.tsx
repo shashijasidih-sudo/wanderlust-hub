@@ -90,7 +90,7 @@ const BlogDubaiMarinaCruise = () => {
       relatedLinks={[
         { title: "Dubai Desert Safari Guide", link: "/dubai/destination-guides/desert-safari-deals-dubai/" },
         { title: "Burj Khalifa Tickets Guide", link: "/dubai/destination-guides/burj-khalifa-tickets-dubai/" },
-        { title: "Dubai Transfers", link: "/dubai/budget-airport-transfers/" },
+        { title: "Dubai Transfers", link: "/dubai-budget-airport-transfers/" },
         { title: "Dhow Cruise Dubai", link: "/dubai-activities/dhow-cruise/" },
       ]}
       sections={[

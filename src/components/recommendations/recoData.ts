@@ -235,14 +235,14 @@ export const ADD_ONS: Partial<Record<DestinationKey, AddOnProduct[]>> = {
   ],
   singapore: [
     {
-      slug: "/singapore/budget-airport-transfers/singapore-airport-pickup/",
+      slug: "/singapore-budget-airport-transfers/singapore-airport-pickup/",
       title: "Singapore Airport Pickup",
       description: "Changi arrivals meet & greet with name board and private vehicle.",
       image: U("photo-1436491865332-7a61a109cc05"),
       badge: "Airport Pickup",
     },
     {
-      slug: "/singapore/budget-airport-transfers/singapore-airport-dropoff/",
+      slug: "/singapore-budget-airport-transfers/singapore-airport-dropoff/",
       title: "Singapore Airport Drop-off",
       description: "Private hotel-to-Changi transfer timed to your departure.",
       image: U("photo-1521737604893-d14cc237f11d"),

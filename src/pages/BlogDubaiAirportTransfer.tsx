@@ -33,7 +33,7 @@ const BlogDubaiAirportTransfer = () => {
       ]}
       relatedLinks={[
         { title: "Dubai Desert Safari Guide", link: "/dubai/destination-guides/desert-safari-deals-dubai/" },
-        { title: "Dubai Transfers", link: "/dubai/budget-airport-transfers/" },
+        { title: "Dubai Transfers", link: "/dubai-budget-airport-transfers/" },
         { title: "Dubai City Tour", link: "/dubai-activities/city-tour/" },
         { title: "Dhow Cruise Dubai", link: "/dubai-activities/dhow-cruise/" },
       ]}
@@ -179,7 +179,7 @@ const BlogDubaiAirportTransfer = () => {
         {
           type: "cta",
           content: "Ready to book your Dubai airport transfer? Choose comfort, safety, and transparent pricing from the moment you land.",
-          link: "/dubai/budget-airport-transfers/",
+          link: "/dubai-budget-airport-transfers/",
           linkText: "🚖 Book Dubai Transfer Now",
         },
       ]}

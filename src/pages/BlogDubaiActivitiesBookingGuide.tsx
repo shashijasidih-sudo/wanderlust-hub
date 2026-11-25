@@ -23,7 +23,7 @@ export default function BlogDubaiActivitiesBookingGuide() {
       category="Dubai Activities"
       guidesLink="/dubai/destination-guides/"
       guidesLabel="Dubai Destination Guides"
-      cityHub={{ city: "Dubai", thingsToDoLink: "/dubai-activities/", transfersLink: "/dubai/budget-airport-transfers/" }}
+      cityHub={{ city: "Dubai", thingsToDoLink: "/dubai-activities/", transfersLink: "/dubai-budget-airport-transfers/" }}
       keywords={["Dubai activities and attraction tickets", "Dubai tour booking tips", "Dubai attraction tickets online", "Dubai desert safari booking", "Burj Khalifa tickets", "Dubai combo tickets", "Dubai activities for Indian families"]}
       sections={[
       {

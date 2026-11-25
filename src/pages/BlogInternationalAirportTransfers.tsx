@@ -326,7 +326,7 @@ export default function BlogInternationalAirportTransfers() {
       },
       {
             "type": "paragraph",
-            "content": "For your Dubai arrival or departure, compare [Dubai Transfers](/dubai/budget-airport-transfers/) and select the appropriate hotel zone. For Changi Airport journeys, browse [Singapore Transfers](/singapore/budget-airport-transfers/) and check the pickup or dropoff option, passenger capacity and arrival time before booking."
+            "content": "For your Dubai arrival or departure, compare [Dubai Transfers](/dubai-budget-airport-transfers/) and select the appropriate hotel zone. For Changi Airport journeys, browse [Singapore Transfers](/singapore-budget-airport-transfers/) and check the pickup or dropoff option, passenger capacity and arrival time before booking."
       },
       {
             "type": "paragraph",

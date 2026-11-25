@@ -326,13 +326,13 @@ const Header = () => {
               </DropdownMenuItem>
               <div className="h-px bg-border my-2" />
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/singapore/budget-airport-transfers/">
+                <Link to="/singapore-budget-airport-transfers/">
                   <TreePine className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Singapore</span>
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className={menuItemClass}>
-                <Link to="/dubai/budget-airport-transfers/">
+                <Link to="/dubai-budget-airport-transfers/">
                   <Castle className="h-5 w-5 mr-3 text-primary" />
                   <span className="font-medium">Dubai</span>
                 </Link>
@@ -536,13 +536,13 @@ const Header = () => {
                 </DropdownMenuItem>
                 <div className="h-px bg-border my-1" />
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/singapore/budget-airport-transfers/" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/singapore-budget-airport-transfers/" onClick={() => setIsMenuOpen(false)}>
                     <TreePine className="h-4 w-4 mr-2 text-primary" />
                     Singapore
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className={mobileMenuItemClass}>
-                  <Link to="/dubai/budget-airport-transfers/" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/dubai-budget-airport-transfers/" onClick={() => setIsMenuOpen(false)}>
                     <Castle className="h-4 w-4 mr-2 text-primary" />
                     Dubai
                   </Link>

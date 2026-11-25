@@ -211,7 +211,7 @@ const HeroSection = () => {
               variant="secondary"
               size="sm"
               className="bg-white/90 hover:bg-white active:bg-primary active:text-primary-foreground active:scale-95 hover:scale-105 hover:shadow-md backdrop-blur-sm rounded-full text-xs md:text-sm h-8 md:h-10 px-3 md:px-4 transition-all duration-200 touch-manipulation focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-              onClick={() => navigate("/singapore/budget-airport-transfers/")}
+              onClick={() => navigate("/singapore-budget-airport-transfers/")}
             >
               <span className="md:hidden">SG Transfers</span>
               <span className="hidden md:inline">Singapore Transfers</span>
@@ -220,7 +220,7 @@ const HeroSection = () => {
               variant="secondary"
               size="sm"
               className="bg-white/90 hover:bg-white active:bg-primary active:text-primary-foreground active:scale-95 hover:scale-105 hover:shadow-md backdrop-blur-sm rounded-full text-xs md:text-sm h-8 md:h-10 px-3 md:px-4 transition-all duration-200 touch-manipulation focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-              onClick={() => navigate("/dubai/budget-airport-transfers/")}
+              onClick={() => navigate("/dubai-budget-airport-transfers/")}
             >
               <span className="md:hidden">DXB Transfers</span>
               <span className="hidden md:inline">Dubai Transfers</span>

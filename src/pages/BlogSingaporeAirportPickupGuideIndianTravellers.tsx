@@ -4,9 +4,9 @@ import heroImg from "@/assets/singapore-changi-arrivals.jpg.asset.json";
 const HERO = heroImg.url;
 
 const LINKS =
-  "Related reads: [Singapore Airport Pickup](/singapore/budget-airport-transfers/singapore-airport-pickup/) · " +
-  "[Airport Drop-off](/singapore/budget-airport-transfers/singapore-airport-dropoff/) · " +
-  "[Night Airport Pickup](/singapore/budget-airport-transfers/singapore-airport-night-pickup/) · " +
+  "Related reads: [Singapore Airport Pickup](/singapore-budget-airport-transfers/singapore-airport-pickup/) · " +
+  "[Airport Drop-off](/singapore-budget-airport-transfers/singapore-airport-dropoff/) · " +
+  "[Night Airport Pickup](/singapore-budget-airport-transfers/singapore-airport-night-pickup/) · " +
   "[Universal Studios Singapore](/singapore-activities/universal-studios-singapore-tickets-and-transfers/) · " +
   "[Gardens by the Bay](/singapore-activities/gardens-by-the-bay-tickets-and-transfers/) · " +
   "[Night Safari](/singapore-activities/night-safari-singapore-tickets-and-transfers/) · " +
@@ -38,7 +38,7 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
     cityHub={{
       city: "Singapore",
       thingsToDoLink: "/singapore/things-to-do/",
-      transfersLink: "/singapore/budget-airport-transfers/singapore-airport-pickup/",
+      transfersLink: "/singapore-budget-airport-transfers/singapore-airport-pickup/",
     }}
     bodyClassName="[&_p]:!text-black [&_li]:!text-black [&_li_span]:!text-black [&_td]:!text-black [&_th]:!text-black [&_h2]:!text-black [&_h3]:!text-black"
     sections={[
@@ -47,7 +47,7 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
       { type: "heading", content: "Introduction" },
       { type: "paragraph", content: "Singapore is one of the most popular international destinations for Indian travellers, attracting millions of visitors every year with its world-class attractions, efficient public transport, clean streets, and family-friendly experiences. Whether you're visiting for a holiday, honeymoon, business trip, or a family vacation, your journey begins the moment your flight lands at **Singapore Changi Airport (SIN)**." },
       { type: "paragraph", content: "After a flight of four to six hours from major Indian cities like Delhi, Mumbai, Bengaluru, Chennai, Hyderabad, or Kolkata, the last thing most travellers want is to stand in long taxi queues, struggle with heavy luggage, or figure out an unfamiliar transport system. If you're travelling with young children, senior citizens, or multiple suitcases, the challenge becomes even greater." },
-      { type: "paragraph", content: "This is where a [Singapore Airport Pickup](/singapore/budget-airport-transfers/singapore-airport-pickup/) service makes a significant difference." },
+      { type: "paragraph", content: "This is where a [Singapore Airport Pickup](/singapore-budget-airport-transfers/singapore-airport-pickup/) service makes a significant difference." },
       { type: "paragraph", content: "A pre-booked **Singapore Airport Transfer** ensures that your journey from the airport to your hotel is smooth, comfortable, and stress-free. Your driver monitors your flight, waits for your arrival, assists with luggage, and takes you directly to your destination without unnecessary delays." },
       { type: "paragraph", content: "In this comprehensive guide, we'll explain everything Indian travellers need to know about booking a **Changi Airport Transfer**, compare private transfers with taxis and Grab, discuss vehicle options, luggage capacity, pricing, hotel coverage, frequently asked questions, and share practical travel tips to help you start your Singapore holiday with confidence." },
       { type: "paragraph", content: "Whether it's your first trip to Singapore or your fifth, this guide will help you choose the best airport transfer option for your needs." },
@@ -62,7 +62,7 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
           "24/7 arrivals including late-night flights",
           "Instant online confirmation",
         ],
-        link: "/singapore/budget-airport-transfers/singapore-airport-pickup/",
+        link: "/singapore-budget-airport-transfers/singapore-airport-pickup/",
         linkText: "Book Airport Pickup",
       },
 
@@ -126,7 +126,7 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
       { type: "paragraph", content: "During these periods, the fare can be significantly higher than expected. In addition, you'll still need to request the ride after collecting your luggage, wait for driver confirmation, and walk to the designated pickup point." },
 
       { type: "subheading", content: "Option 3: Private Singapore Airport Transfer" },
-      { type: "paragraph", content: "A [private airport transfer](/singapore/budget-airport-transfers/singapore-airport-pickup/) combines convenience, reliability, and comfort. Your booking is confirmed before your trip, your driver tracks your flight, and your pickup is organised in advance." },
+      { type: "paragraph", content: "A [private airport transfer](/singapore-budget-airport-transfers/singapore-airport-pickup/) combines convenience, reliability, and comfort. Your booking is confirmed before your trip, your driver tracks your flight, and your pickup is organised in advance." },
       { type: "paragraph", content: "**Advantages**" },
       { type: "list", items: [
         "Fixed pricing",
@@ -139,7 +139,7 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
         "Spacious luggage capacity",
       ]},
       { type: "paragraph", content: "For travellers visiting Singapore for the first time, this option provides the smoothest airport arrival experience." },
-      { type: "cta", content: "Book your Singapore Airport Pickup", link: "/singapore/budget-airport-transfers/singapore-airport-pickup/", linkText: "Book Airport Pickup" },
+      { type: "cta", content: "Book your Singapore Airport Pickup", link: "/singapore-budget-airport-transfers/singapore-airport-pickup/", linkText: "Book Airport Pickup" },
 
       { type: "heading", content: "How Meet & Greet Airport Pickup Works" },
       { type: "paragraph", content: "Many Indian travellers are unfamiliar with the concept of airport meet-and-greet services. Fortunately, the process is straightforward and designed to make arrivals as stress-free as possible." },
@@ -170,7 +170,7 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
           "WhatsApp updates before pickup",
           "No surge pricing or hidden fees",
         ],
-        link: "/singapore/budget-airport-transfers/singapore-airport-pickup/",
+        link: "/singapore-budget-airport-transfers/singapore-airport-pickup/",
         linkText: "Reserve My Transfer",
       },
 
@@ -315,11 +315,11 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
       { type: "subheading", content: "4. How do I find my driver?" },
       { type: "paragraph", content: "After collecting your luggage and exiting into the arrivals hall, your driver will usually hold a sign with your name or booking details, contact you via WhatsApp, call your registered mobile number, or guide you to the designated pickup location. Many providers also send pickup instructions before your travel date." },
       { type: "subheading", content: "5. Can I book an airport pickup for a late-night arrival?" },
-      { type: "paragraph", content: "Absolutely. [Singapore Airport Pickup services](/singapore/budget-airport-transfers/singapore-airport-night-pickup/) operate 24 hours a day, making them suitable even if your flight lands after midnight or early in the morning." },
+      { type: "paragraph", content: "Absolutely. [Singapore Airport Pickup services](/singapore-budget-airport-transfers/singapore-airport-night-pickup/) operate 24 hours a day, making them suitable even if your flight lands after midnight or early in the morning." },
       { type: "subheading", content: "6. Is the price charged per person?" },
       { type: "paragraph", content: "No. Private airport transfers are generally priced per vehicle rather than per passenger. When the total cost is shared among four or five passengers, the per-person price is often very reasonable." },
       { type: "subheading", content: "7. Can I book both arrival and departure transfers?" },
-      { type: "paragraph", content: "Yes. Many travellers prefer booking [Changi Airport → Hotel](/singapore/budget-airport-transfers/singapore-airport-pickup/) and [Hotel → Changi Airport](/singapore/budget-airport-transfers/singapore-airport-dropoff/) at the same time. Booking return transfers in advance saves time during your holiday and ensures you have reliable transportation back to the airport." },
+      { type: "paragraph", content: "Yes. Many travellers prefer booking [Changi Airport → Hotel](/singapore-budget-airport-transfers/singapore-airport-pickup/) and [Hotel → Changi Airport](/singapore-budget-airport-transfers/singapore-airport-dropoff/) at the same time. Booking return transfers in advance saves time during your holiday and ensures you have reliable transportation back to the airport." },
       { type: "subheading", content: "8. Can I request multiple hotel drop-offs?" },
       { type: "paragraph", content: "Some providers allow multiple drop-off locations for an additional charge. If your group is staying at different hotels, mention this while booking so suitable arrangements can be made." },
       { type: "subheading", content: "9. Are child seats available?" },
@@ -387,7 +387,7 @@ const BlogSingaporeAirportPickupGuideIndianTravellers = () => (
           "Suitable for solo travellers, couples, families & groups",
           "Easy online booking with instant confirmation",
         ],
-        link: "/singapore/budget-airport-transfers/singapore-airport-pickup/",
+        link: "/singapore-budget-airport-transfers/singapore-airport-pickup/",
         linkText: "Book Singapore Airport Pickup",
       },
       { type: "paragraph", content: "**Safe travels, and we look forward to welcoming you to Singapore!**" },

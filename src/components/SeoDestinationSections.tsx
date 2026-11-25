@@ -74,8 +74,8 @@ const sections: Section[] = [
     cards: [
       { title: "Universal Studios Tickets", href: "/singapore-activities/universal-studios-singapore-tickets-and-transfers/", image: universalImg },
       { title: "Night Safari Guide", href: "/blog/night-safari-singapore-guide/", image: singaporeImg },
-      { title: "Changi Airport Pickup", href: "/singapore/budget-airport-transfers/singapore-airport-pickup/", image: singaporeCityImg },
-      { title: "Changi Airport Drop-off", href: "/singapore/budget-airport-transfers/singapore-airport-dropoff/", image: singaporeCityImg },
+      { title: "Changi Airport Pickup", href: "/singapore-budget-airport-transfers/singapore-airport-pickup/", image: singaporeCityImg },
+      { title: "Changi Airport Drop-off", href: "/singapore-budget-airport-transfers/singapore-airport-dropoff/", image: singaporeCityImg },
     ],
   },
   {
@@ -159,8 +159,8 @@ const sections: Section[] = [
       "Fixed-price airport pickups and drop-offs with professional drivers — Bangkok, Singapore, Dubai and Phuket.",
     cards: [
       { title: "Bangkok Transfers", href: "/thailand/bangkok-airport-transfers/", image: bangkokSkywalkImg },
-      { title: "Singapore Transfers", href: "/singapore/budget-airport-transfers/", image: singaporeCityImg },
-      { title: "Dubai Transfers", href: "/dubai/budget-airport-transfers/", image: dubaiSkylineImg },
+      { title: "Singapore Transfers", href: "/singapore-budget-airport-transfers/", image: singaporeCityImg },
+      { title: "Dubai Transfers", href: "/dubai-budget-airport-transfers/", image: dubaiSkylineImg },
       { title: "Phuket Transfers", href: "/thailand/phuket-airport-transfers/", image: phuketImg },
     ],
   },

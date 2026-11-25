@@ -91,7 +91,7 @@ const BlogBurjKhalifaTickets = () => {
         { title: "Dubai Marina Cruise Guide", link: "/dubai/destination-guides/dubai-marina-cruise/" },
         { title: "Dubai Desert Safari Guide", link: "/dubai/destination-guides/desert-safari-deals-dubai/" },
         { title: "Dubai Fountain Show", link: "/dubai-activities/fountain-show/" },
-        { title: "Dubai Transfers", link: "/dubai/budget-airport-transfers/" },
+        { title: "Dubai Transfers", link: "/dubai-budget-airport-transfers/" },
       ]}
       sections={[
         {

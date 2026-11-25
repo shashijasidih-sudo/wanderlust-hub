@@ -51,7 +51,7 @@ const cityConfig: Record<
   singapore: {
     name: "Singapore",
     thingsToDo: "/singapore/things-to-do/",
-    transfers: "/singapore/budget-airport-transfers/",
+    transfers: "/singapore-budget-airport-transfers/",
     cityHome: "/singapore-activities/",
     guideLabel: "Singapore Smart Guides",
     guideHref: "/singapore-activities/",
@@ -75,7 +75,7 @@ const cityConfig: Record<
   dubai: {
     name: "Dubai",
     thingsToDo: "/dubai/things-to-do/",
-    transfers: "/dubai/budget-airport-transfers/",
+    transfers: "/dubai-budget-airport-transfers/",
     cityHome: "/dubai-activities/",
     guideLabel: "Dubai Smart Guides",
     guideHref: "/dubai/destination-guides/",
