@@ -1,3 +1,6 @@
+# Admin booking classification and pickup display
+- [x] Correct admin-only type classification and hotel/pickup display; action handlers and backend unchanged. Automated build OK; 16 display, 16 cancellation and 5 payment-ID tests pass; 6/7 refund-ledger tests pass with a pre-existing refund_status/refund_state mismatch left untouched under the refund-workflow safeguard. Desktop/mobile isolated modal checks pass; live production booking verification remains unavailable without a production admin session.
+
 # Nested transfer detail URLs
 
 ## Transfer URL nesting (all cities)

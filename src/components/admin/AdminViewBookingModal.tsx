@@ -7,7 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import SafeImage from "@/components/SafeImage";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import { toursData } from "@/data/tourData";
-import { adminDisplayItems, adminItemKind, resolveAdminTour, savedValue, type SavedBookingItem } from "@/lib/adminBookingDisplay";
+import { adminDisplayItems, adminItemKind, adminPickupValue, resolveAdminTour, savedValue, type SavedBookingItem } from "@/lib/adminBookingDisplay";
 import { canCancelAdminItem } from "@/lib/adminItemCancellation";
 import { canRefundItem, canFullRefund, formatMinorAmount, refundsNeedingEmailRetry, type RefundLedgerRow } from "@/lib/adminRefund";
 
@@ -30,18 +30,21 @@ const Fields = ({ rows }: { rows: [string, string][] }) => (
   </dl>
 );
 
-const ItemDetails = ({ item, onCancel, cancellationBusy, cancelling, onRefund, refundBusy = false, refunding = false }: { item: SavedBookingItem; onCancel?: () => void; cancellationBusy: boolean; cancelling: boolean; onRefund?: () => void; refundBusy?: boolean; refunding?: boolean }) => {
+const ItemDetails = ({ item, booking, onCancel, cancellationBusy, cancelling, onRefund, refundBusy = false, refunding = false }: { item: SavedBookingItem; booking: AdminBooking; onCancel?: () => void; cancellationBusy: boolean; cancelling: boolean; onRefund?: () => void; refundBusy?: boolean; refunding?: boolean }) => {
   const transfer = adminItemKind(item) === "TRANSFER";
   const tour = resolveAdminTour(item, toursData);
   const v = (...keys: string[]) => savedValue(item, ...keys);
+  const pickup = (...keys: string[]) => adminPickupValue(item, booking, ...keys);
   const adults = v("adults");
   const children = v("children");
   const passengerCount = v("passengers", "number_of_persons", "numberOfPersons") ||
     (adults || children ? String(Number(adults || 0) + Number(children || 0)) : "");
   const common: [string, string][] = [
     ["Travel Date", dateValue(v("travel_date", "travelDate", "tour_date", "date"))],
-    ["Pickup Location", v("pickup_location", "pickup_address", "pickupLocation")],
-    ["Pickup Time", v("pickup_time", "pickupTime")],
+    ["Hotel Name", pickup("hotel_name", "hotelName")],
+    ["Pickup Location", pickup("pickup_location", "pickup_address", "pickupLocation")],
+    ["Pickup Time", pickup("pickup_time", "pickupTime")],
+    ["Meeting Point", pickup("meeting_point", "meetingPoint")],
     ["Special Requests", v("special_requests", "specialRequests")],
   ];
   const rows: [string, string][] = transfer ? [
@@ -54,8 +57,6 @@ const ItemDetails = ({ item, onCancel, cancellationBusy, cancelling, onRefund, r
   ] : [
     ["Destination", v("destination")], ...common,
     ["Adults", adults], ["Children", children],
-    ["Hotel Name", v("hotel_name", "hotelName")],
-    ["Meeting Point", v("meeting_point", "meetingPoint")],
   ];
   const policies: [string, string[] | undefined][] = tour ? [
     ["Inclusions", tour.inclusions], ["Exclusions", tour.exclusions],
@@ -107,7 +108,7 @@ const AdminViewBookingModal = ({ booking, open, onOpenChange, onCancelItem, canc
   const items = adminDisplayItems(booking);
   const activities = items.filter(item => adminItemKind(item) === "ACTIVITY");
   const transfers = items.filter(item => adminItemKind(item) === "TRANSFER");
-  const renderItem = (item: SavedBookingItem) => <ItemDetails key={item.id} item={item}
+  const renderItem = (item: SavedBookingItem) => <ItemDetails key={item.id} item={item} booking={booking}
     onCancel={onCancelItem && canCancelAdminItem(item, booking) ? () => onCancelItem(item) : undefined}
     cancellationBusy={cancellingItemId !== null} cancelling={cancellingItemId === item.id}
     onRefund={onRefundItem && item.id && !String(item.id).startsWith("legacy") && canRefundItem(item as any, booking as any, refundLedger) ? () => onRefundItem(item) : undefined}

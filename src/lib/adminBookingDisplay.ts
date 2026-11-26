@@ -1,4 +1,3 @@
-import { isTransferItem } from "@/lib/bookingItemCancellation";
 import type { TourData } from "@/data/tourData";
 
 export type SavedBookingItem = Record<string, unknown> & {
@@ -32,10 +31,26 @@ export const adminDisplayItems = (booking: { id: string; booking_items?: SavedBo
     travel_date: savedValue(booking, "tour_date") }];
 };
 
-export const adminItemKind = (item: SavedBookingItem) => isTransferItem(item) ? "TRANSFER" : "ACTIVITY";
+/** Saved product type is authoritative; pickup and title words are not categories. */
+export const adminItemKind = (item: SavedBookingItem) => {
+  const type = savedValue(item, "product_type").trim().toLowerCase();
+  return type === "transfer" || type.endsWith("_transfer") ? "TRANSFER" : "ACTIVITY";
+};
+
+/** Parent pickup data is unambiguous only for a single item or legacy record. */
+export const adminPickupValue = (
+  item: SavedBookingItem,
+  booking: Record<string, unknown> & { id: string; booking_items?: SavedBookingItem[] },
+  ...keys: string[]
+): string => {
+  const value = savedValue(item, ...keys);
+  if (value || item.booking_id !== booking.id) return value;
+  const siblings = (booking.booking_items || []).filter(row => row.booking_id === booking.id);
+  return siblings.length <= 1 ? savedValue(booking, ...keys) : "";
+};
 
 export const resolveAdminTour = (item: SavedBookingItem, catalog: Record<string, TourData>): TourData | undefined => {
-  if (isTransferItem(item)) return undefined;
+  if (adminItemKind(item) === "TRANSFER") return undefined;
   for (const key of ["activity_slug", "product_id"]) {
     const slug = savedValue(item, key).replace(/^\/+|\/+$/g, "");
     const direct = catalog[slug] || catalog[slug.split("/").pop() || ""];
