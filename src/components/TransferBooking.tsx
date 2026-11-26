@@ -317,7 +317,6 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
               <BreadcrumbJsonLd
                 items={[
                   { name: "Home", url: "/" },
-                  cityHome,
                   cityTransfers,
                   { name: transferData.title, url: location.pathname },
                 ]}
@@ -329,10 +328,6 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
                 <ol className="flex flex-wrap items-center gap-1">
                   <li>
                     <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-                  </li>
-                  <li aria-hidden="true"><ChevronRight className="h-4 w-4 inline" /></li>
-                  <li>
-                    <Link to={cityHome.url} className="hover:text-primary transition-colors">{cityHome.name}</Link>
                   </li>
                   <li aria-hidden="true"><ChevronRight className="h-4 w-4 inline" /></li>
                   <li>
