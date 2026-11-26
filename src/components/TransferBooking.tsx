@@ -292,7 +292,9 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
       <main className="container mx-auto px-4 py-8">
         {/* Breadcrumb Sitemap */}
         {(() => {
-          const cityKey = transferData.city?.toLowerCase().trim() || "";
+          const cityKey =
+            transferData.city?.toLowerCase().trim() ||
+            (location.pathname.startsWith("/dubai-budget-airport-transfers/") ? "dubai" : "");
           const cityHomeMap: Record<string, { name: string; url: string }> = {
             bangkok: { name: "Bangkok", url: "/thailand/bangkok-activities/" },
             phuket: { name: "Phuket", url: "/thailand/phuket-activities/" },
@@ -300,6 +302,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
             pattaya: { name: "Pattaya", url: "/thailand/pattaya-activities/" },
             "chiang mai": { name: "Chiang Mai", url: "/thailand/chiang-mai-activities/" },
             singapore: { name: "Singapore", url: "/singapore-activities/" },
+            dubai: { name: "Dubai", url: "/dubai-activities/" },
           };
           const cityTransfersMap: Record<string, { name: string; url: string }> = {
             bangkok: { name: "Bangkok Transfers", url: "/thailand/bangkok-airport-transfers/" },
@@ -308,6 +311,7 @@ const TransferBooking = ({ transferData, galleryImages, seoContent, faqs, relate
             pattaya: { name: "Pattaya Transfers", url: "/thailand/pattaya-transfers/" },
             "chiang mai": { name: "Chiang Mai Transfers", url: "/thailand/chiang-mai-airport-transfers/" },
             singapore: { name: "Singapore Transfers", url: "/singapore-budget-airport-transfers/" },
+            dubai: { name: "Dubai Transfers", url: "/dubai-budget-airport-transfers/" },
           };
           const cityHome = cityHomeMap[cityKey];
           const cityTransfers = cityTransfersMap[cityKey];
