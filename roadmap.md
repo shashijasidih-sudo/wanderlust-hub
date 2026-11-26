@@ -1,5 +1,7 @@
 # Admin booking classification and pickup display
 - [x] Correct admin-only type classification and hotel/pickup display; action handlers and backend unchanged. Automated build OK; 16 display, 16 cancellation and 5 payment-ID tests pass; 6/7 refund-ledger tests pass with a pre-existing refund_status/refund_state mismatch left untouched under the refund-workflow safeguard. Desktop/mobile isolated modal checks pass; live production booking verification remains unavailable without a production admin session.
+- [x] Keep the classification fix admin-only: customer Booking Details keeps its existing title-based grouping, confirmed by the user.
+- [x] Close the refund-ledger mismatch: the fully-refunded guard now reads bookings.refund_status (the approved migration's column) as well as refund_state, so a fully refunded booking offers no Refund button. Strictly narrowing — it only blocks, never enables. 99 tests pass.
 
 # Nested transfer detail URLs
 

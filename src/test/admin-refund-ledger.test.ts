@@ -15,6 +15,10 @@ describe("ledger refunds in the Admin Panel", () => {
     expect(canRefundItem({ ...act, refund_status: "refunded" }, booking, ledger)).toBe(false);
     expect(canRefundItem(tr, booking, ledger)).toBe(true);
   });
+  it("no item refund buttons once the booking is marked fully refunded", () => {
+    expect(canRefundItem(tr, { ...booking, refund_status: "full" }, [])).toBe(false);
+    expect(canRefundItem(tr, { ...booking, refund_state: "full" }, [])).toBe(false);
+  });
   it("no refund buttons while a refund is pending or under review", () => {
     for (const status of ["pending", "review"]) {
       const ledger = [row({ status })];

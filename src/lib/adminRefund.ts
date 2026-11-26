@@ -46,9 +46,9 @@ export interface RefundableItem {
 export interface RefundableBooking {
   id: string;
   status?: string | null;
-  /** New ledger-based aggregate state from bookings.refund_state. */
+  /** Aggregate refund state. The approved migration saves it as bookings.refund_status
+   *  ('none' | 'partial' | 'full'); refund_state is accepted for older payloads. */
   refund_state?: string | null;
-  /** Legacy column retained for compatibility; do not use it for the new refund workflow. */
   refund_status?: string | null;
   booking_items?: RefundableItem[];
 }
@@ -66,10 +66,15 @@ export interface RefundLedgerRow {
 
 const REFUNDABLE_BOOKING = ["confirmed", "completed", "cancelled"];
 
+/** True once the booking itself is marked fully refunded, under either field name. */
+function isFullyRefunded(booking: RefundableBooking): boolean {
+  return booking.refund_state === "full" || booking.refund_status === "full";
+}
+
 /** Item refund button: eligible booking, item not already refunded or in progress, no open refund on the booking. */
 export function canRefundItem(item: RefundableItem, booking: RefundableBooking, ledger: RefundLedgerRow[] = []): boolean {
   if (!REFUNDABLE_BOOKING.includes(String(booking.status || ""))) return false;
-  if (booking.refund_state === "full") return false;
+  if (isFullyRefunded(booking)) return false;
   if (item.refund_status === "refunded" || item.refund_status === "pending") return false;
   if (ledger.some((r) => r.status === "pending" || r.status === "review")) return false;
   return !ledger.some((r) => r.booking_item_id === item.id && r.status === "processed");
@@ -78,7 +83,7 @@ export function canRefundItem(item: RefundableItem, booking: RefundableBooking, 
 /** Full (or remaining-balance) refund button. */
 export function canFullRefund(booking: RefundableBooking, ledger: RefundLedgerRow[] = []): boolean {
   if (!REFUNDABLE_BOOKING.includes(String(booking.status || ""))) return false;
-  if (booking.refund_state === "full") return false;
+  if (isFullyRefunded(booking)) return false;
   return !ledger.some((r) => r.status === "pending" || r.status === "review" || (r.scope === "full" && r.status === "processed"));
 }
 
