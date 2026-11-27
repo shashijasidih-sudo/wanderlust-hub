@@ -12,8 +12,11 @@ const CLOSED = new Set(["cancelled", "completed"]);
 /** An item can be cancelled only while it is still pending or confirmed. */
 export const canCancelItem = (status: ItemStatus) => !CLOSED.has(String(status || "confirmed").toLowerCase());
 
-export const isTransferItem = (item: BookingItemLike) =>
-  /transfer/i.test(String(item.product_type || "")) || /airport|transfer/i.test(String(item.activity_name || ""));
+/** Saved product type is authoritative; title words such as "with Transfer" are not categories. */
+export const isTransferItem = (item: BookingItemLike) => {
+  const type = String(item.product_type || "").trim().toLowerCase();
+  return type === "transfer" || type.endsWith("_transfer");
+};
 
 export const itemKindLabel = (item: BookingItemLike) => (isTransferItem(item) ? "Transfer" : "Activity");
 

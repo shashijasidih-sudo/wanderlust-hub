@@ -17,5 +17,7 @@ describe("individual booking item cancellation", () => {
   it("labels transfers and activities", () => {
     expect(itemKindLabel({ product_type: "transfer" })).toBe("Transfer");
     expect(itemKindLabel({ product_type: "activity", activity_name: "Coral Island Tour" })).toBe("Activity");
+    expect(itemKindLabel({ product_type: "activity", activity_name: "Pattaya Floating Market Guided Tour with Transfer" })).toBe("Activity");
+    expect(itemKindLabel({ product_type: "airport_transfer", activity_name: "Private ride" })).toBe("Transfer");
   });
 });
