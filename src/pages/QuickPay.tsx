@@ -16,7 +16,7 @@ import {
 } from "@/lib/analytics";
 
 
-const RAZORPAY_KEY_ID = "rzp_test_U0nm3nRDAPPceK";
+const RAZORPAY_KEY_ID = "rzp_live_U4soBxJKj1sK7o";
 
 declare global {
   interface Window { Razorpay: any; }
