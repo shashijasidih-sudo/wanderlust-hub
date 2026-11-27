@@ -1,5 +1,5 @@
 import { format } from "date-fns";
-import { ReceiptText, XCircle, Loader2, RefreshCw } from "lucide-react";
+import { ReceiptText, XCircle, Loader2, RefreshCw, ArrowUpRight } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,7 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import SafeImage from "@/components/SafeImage";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import { toursData } from "@/data/tourData";
-import { adminDisplayItems, adminItemKind, adminPickupValue, resolveAdminTour, savedValue, type SavedBookingItem } from "@/lib/adminBookingDisplay";
+import { adminDisplayItems, adminItemKind, adminPickupValue, adminProductHref, resolveAdminTour, savedValue, type SavedBookingItem } from "@/lib/adminBookingDisplay";
 import { canCancelAdminItem } from "@/lib/adminItemCancellation";
 import { canRefundItem, canFullRefund, formatMinorAmount, refundsNeedingEmailRetry, type RefundLedgerRow } from "@/lib/adminRefund";
 
@@ -33,6 +33,7 @@ const Fields = ({ rows }: { rows: [string, string][] }) => (
 const ItemDetails = ({ item, booking, onCancel, cancellationBusy, cancelling, onRefund, refundBusy = false, refunding = false }: { item: SavedBookingItem; booking: AdminBooking; onCancel?: () => void; cancellationBusy: boolean; cancelling: boolean; onRefund?: () => void; refundBusy?: boolean; refunding?: boolean }) => {
   const transfer = adminItemKind(item) === "TRANSFER";
   const tour = resolveAdminTour(item, toursData);
+  const productHref = adminProductHref(item);
   const v = (...keys: string[]) => savedValue(item, ...keys);
   const pickup = (...keys: string[]) => adminPickupValue(item, booking, ...keys);
   const adults = v("adults");
@@ -67,7 +68,11 @@ const ItemDetails = ({ item, booking, onCancel, cancellationBusy, cancelling, on
   return (
     <article className="border border-border rounded-lg p-4 sm:p-5 space-y-4 min-w-0">
       <div className="flex flex-wrap items-start justify-between gap-2">
-        <h3 className="text-base font-semibold min-w-0 break-words">{v("activity_name") || (transfer ? "Transfer" : "Activity")}</h3>
+        <h3 className="text-base font-semibold min-w-0 break-words">
+          {productHref ? <a href={productHref} className="text-primary hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm">
+            {v("activity_name") || (transfer ? "Transfer" : "Activity")}<ArrowUpRight className="inline-block h-4 w-4 ml-1 align-middle" aria-hidden="true" />
+          </a> : v("activity_name") || (transfer ? "Transfer" : "Activity")}
+        </h3>
         <div className="flex gap-2 shrink-0">
           {v("status") && <Badge variant="outline" className="capitalize">{v("status")}</Badge>}
           {v("refund_status") && v("refund_status") !== "none" && <Badge variant="secondary" className="capitalize">Refund: {v("refund_status")}</Badge>}

@@ -1,11 +1,27 @@
 import { describe, expect, it } from "vitest";
-import { adminDisplayItems, adminItemKind, adminPickupValue, attachBookingItems, resolveAdminTour, savedValue, type SavedBookingItem } from "@/lib/adminBookingDisplay";
+import { adminDisplayItems, adminItemKind, adminPickupValue, adminProductHref, attachBookingItems, resolveAdminTour, savedValue, type SavedBookingItem } from "@/lib/adminBookingDisplay";
 import type { TourData } from "@/data/tourData";
 
 const activity: SavedBookingItem = { id: "activity-1", booking_id: "combined", product_type: "activity", activity_name: "Coral Island Join Tour with Indian Lunch" };
 const transfer: SavedBookingItem = { id: "transfer-1", booking_id: "combined", product_type: "transfer", activity_name: "Don Mueang International Airport to Bangkok Hotel Drop Private" };
 
 describe("admin combined booking data", () => {
+  it.each(["confirmed", "cancelled"])("links %s activities to their saved original page", status => {
+    expect(adminProductHref({ ...activity, status, activity_slug: "thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/" }))
+      .toBe("/thailand/koh-samui-activities/full-moon-party-koh-phangan-with-transfer/");
+  });
+  it("links a cancelled transfer through its established historical redirect", () => {
+    expect(adminProductHref({ ...transfer, status: "cancelled", activity_slug: "singapore/budget-airport-transfers/singapore-airport-pickup" }))
+      .toBe("/singapore-budget-airport-transfers/singapore-airport-pickup/");
+  });
+  it("resolves catalog IDs and historical parent slugs without constructing ID URLs", () => {
+    expect(adminProductHref({ ...activity, product_id: "coral-island-pattaya" })).toBe("/thailand/pattaya-activities/coral-island-tour-with-transfer-and-indian-lunch/");
+    const [legacy] = adminDisplayItems({ id: "old", tour_slug: "singapore-budget-airport-transfers/singapore-airport-pickup/" });
+    expect(adminProductHref(legacy)).toBe("/singapore-budget-airport-transfers/singapore-airport-pickup/");
+  });
+  it.each(["", "unknown-id", "https://example.com/tour", "//example.com/tour", "../admin", "thailand/../admin"])("does not invent or allow unsafe links for %s", activity_slug => {
+    expect(adminProductHref({ ...activity, activity_slug })).toBeNull();
+  });
   it("keeps the Floating Market activity with Transfer in its title an activity", () => {
     expect(adminItemKind({ ...activity, activity_name: "Pattaya Floating Market Guided Tour with Transfer" })).toBe("ACTIVITY");
   });

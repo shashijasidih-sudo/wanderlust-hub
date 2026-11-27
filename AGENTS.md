@@ -2,6 +2,7 @@
 
 - Keep the admin combined-booking modal separate from the shared customer modal, join item data by booking_id, and isolate authenticated item cancellation in its own helper; this preserves customer and legacy handlers while verifying targeted writes and all-item parent cancellation. Do not call whole-booking email notifications for individual admin cancellation before approved item-email support is deployed.
 - Admin display classification uses saved product_type, never title words; pickup fields prefer item data and use parent fallback only for a single associated item or legacy record to avoid cross-item hotel attribution.
+- Admin product-name links resolve saved cart page paths through existing redirects or catalog ID routes; unknown IDs remain plain text to avoid invented product URLs.
 
 - Share the Dubai booking guide's uploaded image URL across article and discovery cards, resolving it against its verified Lovable asset-serving origin because the external custom-domain host returns HTML for relative asset paths.
 - Share the international holiday planning guide's uploaded thumbnail through one image resolver across its article and Bangkok listing, using the verified asset-serving origin to avoid blank custom-domain images.

@@ -1,4 +1,6 @@
 import type { TourData } from "@/data/tourData";
+import { TOUR_ROUTES } from "@/data/tourRoutes";
+import { LEGACY_REDIRECTS } from "@/data/legacyRedirects";
 
 export type SavedBookingItem = Record<string, unknown> & {
   id: string;
@@ -16,6 +18,25 @@ export const savedValue = (item: Record<string, unknown>, ...keys: string[]): st
     }
   }
   return "";
+};
+
+/** Cart slugs are saved page paths; short catalog IDs require an established route. */
+export const adminProductHref = (item: SavedBookingItem): string | null => {
+  for (const key of ["activity_slug", "product_id", "tour_slug"]) {
+    const raw = savedValue(item, key).trim();
+    if (!raw || /[\\?#\s:]/.test(raw) || raw.startsWith("//")) continue;
+    const slug = raw.replace(/^\/+|\/+$/g, "");
+    if (!slug || slug.split("/").some(part => part === "." || part === "..")) continue;
+    let path = slug.includes("/") ? `/${slug}/` : TOUR_ROUTES[slug];
+    if (!path) continue;
+    const visited = new Set<string>();
+    while (LEGACY_REDIRECTS[path] && !visited.has(path)) {
+      visited.add(path);
+      path = LEGACY_REDIRECTS[path];
+    }
+    return path;
+  }
+  return null;
 };
 
 /** Never attach another parent's item, even if an upstream response includes it. */
