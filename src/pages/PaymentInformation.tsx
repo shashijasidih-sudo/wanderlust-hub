@@ -152,7 +152,7 @@ const PaymentInformation = () => {
       }
 
       const options = {
-        key: "rzp_test_U0nm3nRDAPPceK",
+        key: "rzp_live_U4soBxJKj1sK7o",
         amount: data.amount,
         currency: "INR",
         name: "Yellodae",
